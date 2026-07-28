@@ -1,0 +1,101 @@
+study_id: guo2013_bp
+citation: "Guo X, Zheng L, Wang J, Zhang X, Zhang X, Li J, Sun Y. Epidemiological evidence for the link between sleep duration and high blood pressure: a systematic review and meta-analysis. Sleep Med. 2013 Apr;14(4):324-332."
+doi: "10.1016/j.sleep.2012.12.001"
+pmid: "23394772"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Epidemiological evidence for the link between sleep duration and high blood pressure: a systematic review and meta-analysis"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 225858
+n_studies_pooled: 21
+population:
+  age_mean: null
+  age_range: [18, 106]
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: cardiovascular
+    outcome_construct: incident_hypertension
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "short sleep vs normal, longitudinal studies only"}
+    scale: log_rr
+    unit: null
+    value: 0.20701
+    se: 0.07459
+    ci: [0.05827, 0.35066]
+    conversion_formula: "log_rr = ln(1.23) = 0.20701; se = (ln(1.42) - ln(1.06))/3.92 = 0.07459"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = elevated incident-hypertension risk with short sleep (RR 1.23). The pooled longitudinal estimate requested by target #3."
+    covariates: ["per-study adjustment sets, not harmonised"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_longitudinal"
+    quote: "Pooled analysis from the longitudinal studies indicated a significant association between short sleep duration and hypertension (RR, 1.23; 95% CI, 1.06-1.42; P=0.005), but an insignificant relationship between long sleep duration and hypertension (RR, 1.02; 95% CI, 0.91-1.14; P=0.732)."
+  - outcome_domain: cardiovascular
+    outcome_construct: prevalent_hypertension
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "short sleep vs normal, cross-sectional studies"}
+    scale: log_or
+    unit: null
+    value: 0.19062
+    se: 0.05268
+    ci: [0.08618, 0.29267]
+    conversion_formula: "log_or = ln(1.21) = 0.19062; se = (ln(1.34) - ln(1.09))/3.92 = 0.05268"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher odds of prevalent hypertension with short sleep (OR 1.21). Cross-sectional; no temporal ordering."
+    covariates: ["per-study adjustment sets"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_crosssectional"
+    quote: "The pooled results from the cross-sectional studies showed that short sleep duration was associated with a greater risk for hypertension (OR, 1.21; 95% confidence interval [CI], 1.09-1.34; P<0.001), and long sleep duration also increased the risk for hypertension (OR, 1.11; 95% CI, 1.04-1.18; P=0.003)."
+  - outcome_domain: cardiovascular
+    outcome_construct: incident_hypertension_long_sleep_comparator
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "LONG sleep vs normal, longitudinal - comparator only"}
+    scale: log_rr
+    unit: null
+    value: 0.01980
+    se: 0.05752
+    ci: [-0.09431, 0.13103]
+    conversion_formula: "log_rr = ln(1.02) = 0.01980; se = (ln(1.14) - ln(0.91))/3.92 = 0.05752"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = elevated risk with long sleep, but NULL (RR 1.02, CI 0.91-1.14). Recorded because
+      hypertension is the ONE outcome in this shard where the short-sleep arm is clearly stronger than
+      the long-sleep arm; for CHD, stroke and total CVD the long arm dominates. That asymmetry makes
+      the hypertension association somewhat less likely to be pure reverse causation.
+    covariates: ["per-study adjustment sets"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_longitudinal"
+    quote: "but an insignificant relationship between long sleep duration and hypertension (RR, 1.02; 95% CI, 0.91-1.14; P=0.732)"
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    24 studies met inclusion, 21 pooled, 225 858 subjects, search to February 2012. Reports that
+    "the effects of sleep duration differed by gender, location of the population, and definitions of
+    short or long sleep duration" and that meta-regression on seven variables failed to locate the
+    source of heterogeneity - i.e. unexplained heterogeneity is acknowledged. Mixes cross-sectional
+    and longitudinal designs but pools them separately, which is correct. Four published Letters to
+    the Editor commenting on this paper are indexed in PubMed, at least one of which concerns the
+    definition of sleep duration used in the meta-analysis - the estimate is contested.
+funding: null
+notes: >
+  Target extraction #3, main pooled estimate. This is the "Guo et al." named in the task; the real
+  paper is about high blood pressure generally rather than incident hypertension alone, and it
+  pools cross-sectional and longitudinal evidence separately (OR 1.21 and RR 1.23 respectively -
+  reassuringly similar).
+  age_range 18-106 is the range of the CONTRIBUTING STUDIES' eligibility, not a mean; the paper
+  states "Twenty-four adult studies met our inclusion criteria, with ages ranging from 18 to 106
+  years". adolescent_match is set to mixed rather than exact_16_19 on that basis - the lower bound
+  touches 18 but no estimate is reported for the youngest stratum, and the pooled estimate is
+  dominated by midlife cohorts.
+  No absolute hypertension incidence is reported.
+shard: "s08_cardiovascular"

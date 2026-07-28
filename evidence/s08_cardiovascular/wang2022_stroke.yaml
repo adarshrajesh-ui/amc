@@ -1,0 +1,100 @@
+study_id: wang2022_stroke
+citation: "Wang H, Sun J, Sun M, Liu N, Wang M. Relationship of sleep duration with the risk of stroke incidence and stroke mortality: an updated systematic review and dose-response meta-analysis of prospective cohort studies. Sleep Med. 2022 Feb;90:267-278."
+doi: "10.1016/j.sleep.2021.11.001"
+pmid: "35245890"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Relationship of sleep duration with the risk of stroke incidence and stroke mortality: an updated systematic review and dose-response meta-analysis of prospective cohort studies"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: dose_response_meta_analysis
+tier: T5
+n: null
+n_studies_pooled: 20
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: cardiovascular
+    outcome_construct: stroke_incidence
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "short sleep vs referent (study-specific cutpoints); 15 reports"}
+    scale: log_rr
+    unit: null
+    value: 0.28518
+    se: 0.05735
+    ci: [0.17395, 0.39878]
+    conversion_formula: "log_rr = ln(1.33) = 0.28518; se = (ln(1.49) - ln(1.19))/3.92 = 0.05735"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = elevated stroke incidence with short sleep (RR 1.33). NOTE the severe disagreement
+      with the other stroke syntheses: Cappuccio 2011 gives 1.15 (1.00-1.31), Yin 2017's spline gives
+      1.02 (0.96-1.08) at 5 h and 0.99 at 6 h. The CIs of this estimate and Yin's barely overlap.
+    covariates: ["adjusted per-study estimates; adjustment sets not harmonised"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_20_articles"
+    quote: "Meta-analysis showed that short sleep was linked to an increased risk of stroke incidence and stroke mortality (RR: 1.33, 95% CI: 1.19-1.49 and RR: 1.37, 95% CI: 1.16-1.62 respectively)."
+  - outcome_domain: cardiovascular
+    outcome_construct: stroke_mortality
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "short sleep vs referent; 12 reports"}
+    scale: log_rr
+    unit: null
+    value: 0.31481
+    se: 0.08496
+    ci: [0.14842, 0.48243]
+    conversion_formula: "log_rr = ln(1.37) = 0.31481; se = (ln(1.62) - ln(1.16))/3.92 = 0.08496"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = elevated stroke mortality with short sleep (RR 1.37). Mortality effect exceeds incidence effect, the pattern expected if illness drives short sleep rather than vice versa."
+    covariates: ["adjusted per-study estimates"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_20_articles"
+    quote: "Meta-analysis showed that short sleep was linked to an increased risk of stroke incidence and stroke mortality (RR: 1.33, 95% CI: 1.19-1.49 and RR: 1.37, 95% CI: 1.16-1.62 respectively)."
+  - outcome_domain: cardiovascular
+    outcome_construct: stroke_incidence_long_sleep_comparator
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "LONG sleep vs referent - included only as a comparator for asymmetry"}
+    scale: log_rr
+    unit: null
+    value: 0.53649
+    se: 0.06679
+    ci: [0.40546, 0.66783]
+    conversion_formula: "log_rr = ln(1.71) = 0.53649; se = (ln(1.95) - ln(1.50))/3.92 = 0.06679"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = elevated stroke incidence with LONG sleep (RR 1.71), materially larger than the
+      short-sleep RR of 1.33 in the same analysis; long-sleep stroke MORTALITY reaches RR 2.41
+      (1.87-3.09). Recorded to quantify the asymmetry that argues for confounding/reverse causation.
+    covariates: ["adjusted per-study estimates"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_20_articles"
+    quote: "Long sleep was also associated with an increased risk of stroke incidence and stroke-related death (RR: 1.71, 95% CI: 1.50-1.95 and RR: 2.41, 95% CI: 1.87-3.09, respectively)."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    Prospective cohorts only, searched five databases including Chinese-language sources (CNKI,
+    Wanfang), which broadens coverage relative to Cappuccio 2011 but may also import lower-quality
+    cohorts. Total participant count is not stated in the abstract and I did not obtain the full text,
+    so n is null. The dichotomous "short sleep" contrast is again undefined in dose terms, and the
+    paper's own conclusion notes the long-sleep arm dominates.
+funding: null
+notes: >
+  Retained as the most recent stroke-specific dose-response synthesis, and above all as a marker of
+  how UNSTABLE the stroke estimate is across meta-analyses of largely overlapping literature:
+  RR 1.33 here vs 1.15 (Cappuccio 2011) vs 1.02 at 5 h (Yin 2017) vs no significant MR effect for
+  sleep duration on stroke (Guo 2024). Stroke is the outcome where this shard's evidence is least
+  internally consistent, and the downstream model should widen the stroke interval accordingly.
+  The paper's own conclusion - "Extended sleep duration was more associated with adverse outcomes
+  compared with short sleep duration" - matches Kwok 2018 and Yin 2017 on the asymmetry.
+  Absolute stroke rates are not reported. Cohort ages not reported in the abstract; contributing
+  cohorts are adult/older adult.
+shard: "s08_cardiovascular"

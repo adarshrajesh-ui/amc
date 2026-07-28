@@ -1,0 +1,162 @@
+study_id: zhao2025_mr
+citation: "Zhao H, Wang X, Guo L, Li X, Teopiz KM, McIntyre RS, Wang W, Lu C. Investigating the impact of multidimensional sleep traits on cardiovascular diseases and the mediating role of depression. Open Heart. 2025 Mar 13;12(1):e002866."
+doi: "10.1136/openhrt-2024-002866"
+pmid: "40086821"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Investigating the impact of multidimensional sleep traits on cardiovascular diseases and the mediating role of depression"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "mainly UK Biobank-derived GWAS summary statistics"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: cardiovascular
+    outcome_construct: mi_mr_per_hour_more_sleep
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "two-sample MR, per +1 h/day genetically predicted sleep duration, MI"}
+    scale: log_or
+    unit: "per +1 h genetically predicted sleep"
+    value: -0.11653
+    se: 0.05436
+    ci: [-0.22314, -0.01005]
+    conversion_formula: "log_or = ln(0.89) = -0.11653; se = (ln(0.99) - ln(0.80))/3.92 = 0.05436. Inverted to per-hour-LESS: OR 1.12 (1.01-1.25)."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      NEGATIVE = each extra genetically predicted hour of sleep lowers MI odds (OR 0.89); per hour LESS,
+      OR 1.12 (1.01-1.25). INDEPENDENT REPLICATION of Daghlas 2019's per-hour MR, at roughly HALF the
+      magnitude on the log scale (ln 1.12 = 0.117 vs Daghlas's ln 1.25 = 0.223). Labelled only
+      "suggestive" by the authors (did not survive their multiple-testing threshold).
+    covariates: ["MR; MR-Egger intercept test showed no significant horizontal pleiotropy (p>0.05)"]
+    followup_years: null
+    cohort_family: "UK_Biobank_GWAS_plus_CARDIoGRAM"
+    quote: "Genetically predicted per hour/day increase in sleep duration was associated with suggestively decreased risks of CAD (OR 0.88 (95% CI 0.80 to 0.97)), MI (OR 0.89 (95% CI 0.80 to 0.99)) and HF (OR 0.90 (95% CI 0.83 to 0.98))."
+  - outcome_domain: cardiovascular
+    outcome_construct: cad_mr_short_sleep_binary
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: null, duration_days: null,
+               contrast_label: "two-sample MR, per log-odds increase in genetically predicted short sleep (defined <=6 h), CAD"}
+    scale: log_or
+    unit: "per log-odds increase in genetic liability to short sleep"
+    value: 0.43825
+    se: 0.14431
+    ci: [0.15700, 0.72271]
+    conversion_formula: "log_or = ln(1.55) = 0.43825; se = (ln(2.06) - ln(1.17))/3.92 = 0.14431"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = elevated CAD odds with genetic liability to short sleep (OR 1.55). Substantially
+      LARGER than Daghlas's short-sleep MR estimate for CAD (1.24, 1.11-1.38), with a wide CI. Short
+      sleep here is explicitly defined as <=6 h, which brackets the subject's weekday exposure.
+    covariates: ["MR; no significant horizontal pleiotropy by MR-Egger intercept"]
+    followup_years: null
+    cohort_family: "UK_Biobank_GWAS_plus_CARDIoGRAM"
+    quote: "Likewise, genetically predicted per log odds increase in short sleep was associated with significantly increased risks of CAD (OR 1.55 (95% CI 1.17 to 2.06)) and suggestively increased risk of MI (OR 1.50 (95% CI 1.09 to 2.05)) and HF (OR 1.38 (95% CI 1.09 to 1.75))."
+  - outcome_domain: cardiovascular
+    outcome_construct: stroke_mr_short_sleep_null
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: null, duration_days: null,
+               contrast_label: "two-sample MR, genetic liability to short sleep, STROKE"}
+    scale: log_or
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      No estimate reported for short sleep on stroke because it was not among the significant or
+      suggestive pairs. The quoted sentence is the paper's complete enumeration of short-sleep results
+      and names CAD, MI and HF only - stroke and AF are absent from it, whereas the immediately
+      preceding sentence DOES report a stroke effect for insomnia (OR 1.26, 95% CI 1.03 to 1.54),
+      confirming that stroke was tested. Recorded as a directional null with se null - not fabricating
+      a value.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      zero = NO causal effect of genetic liability to short sleep on stroke detected. Converges with
+      guo2024_stroke_mr, which also found no MR support for sleep duration on stroke while confirming
+      insomnia. The stroke arm of the short-sleep hypothesis has NO MR support from either study.
+    covariates: ["MR"]
+    followup_years: null
+    cohort_family: "UK_Biobank_GWAS_plus_GIGASTROKE"
+    quote: "Likewise, genetically predicted per log odds increase in short sleep was associated with significantly increased risks of CAD (OR 1.55 (95% CI 1.17 to 2.06)) and suggestively increased risk of MI (OR 1.50 (95% CI 1.09 to 2.05)) and HF (OR 1.38 (95% CI 1.09 to 1.75))."
+  - outcome_domain: psychiatric
+    outcome_construct: depression_mediated_fraction_of_short_sleep_effect_on_mi
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: null, duration_days: null,
+               contrast_label: "proportion of the genetic short-sleep -> MI effect mediated by major depressive disorder"}
+    scale: pct_change
+    unit: "percent of total causal effect mediated by MDD"
+    value: 11.43
+    se: 5.6862
+    ci: [0.28, 22.57]
+    conversion_formula: "se = (22.57 - 0.28)/3.92 = 22.29/3.92 = 5.6862"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = share of the short-sleep effect on MI that runs THROUGH depression rather than through
+      a direct vascular pathway (11.43%). Also CAD 8.92% (0.87-16.97) and HF 12.65% (1.35-23.96).
+      DIRECTLY ANSWERS the depression component of target #7: roughly 9-13% of even the CAUSAL
+      short-sleep effect is depression-mediated, so adjusting for depression should remove about that
+      much - and any residual confounding by depression would remove more.
+    covariates: ["two-step MR mediation analysis"]
+    followup_years: null
+    cohort_family: "UK_Biobank_GWAS"
+    quote: "The effect of short sleep duration was partially mediated by MDD on the risk of CAD (proportion mediated 8.92% (95% CI 0.87% to 16.97%)), MI (proportion mediated 11.43% (95% CI 0.28% to 22.57%)) and HF (proportion mediated 12.65% (95% CI 1.35% to 23.96%))."
+  - outcome_domain: psychiatric
+    outcome_construct: short_sleep_to_depression_mr
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: null, duration_days: null,
+               contrast_label: "MR, genetic liability to short sleep -> major depressive disorder"}
+    scale: log_or
+    unit: null
+    value: 0.60432
+    se: 0.12277
+    ci: [0.36464, 0.84587]
+    conversion_formula: "log_or = ln(1.83) = 0.60432; se = (ln(2.33) - ln(1.44))/3.92 = 0.12277"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = genetic liability to short sleep raises depression odds (OR 1.83). Recorded because it
+      is much LARGER than any cardiovascular effect of short sleep in this shard, and because it makes
+      depression a plausible confounder-and-mediator of every observational sleep-CVD association.
+    covariates: ["MR"]
+    followup_years: null
+    cohort_family: "UK_Biobank_GWAS"
+    quote: "Figure 3 illustrates that genetically predicted insomnia (OR 2.07 (95% CI 1.79 to 2.40)), short sleep (OR 1.83 (95% CI 1.44 to 2.33)), long sleep (OR 1.74 (95% CI 1.15 to 2.64)), daytime napping (OR 1.42 (95% CI 1.06 to 1.89)) and daytime sleepiness (OR 1.67 (95% CI 1.28 to 2.16)) were associated with a significantly increased risk of MDD."
+rob:
+  tool: MR-STROBE
+  judgement: some_concerns
+  notes: >
+    Reports MR-Egger intercept tests showing no significant directional pleiotropy, and uses a
+    defensible two-step mediation framework. Concerns: 50 exposure-outcome pairs were tested and the
+    authors themselves grade many results as merely "suggestive" rather than significant, so
+    multiple-testing inflation is a live issue; exposure GWAS are mainly UK Biobank while several
+    outcome GWAS also include UK Biobank, so sample overlap and weak-instrument bias are possible;
+    total sample sizes for each pairing are not stated in the text I retrieved, hence n is null; the
+    short-sleep and continuous-sleep instruments are derived from the same underlying trait and are
+    reported as if independent evidence.
+funding: "Not stated in the retrieved text. Competing interests: RSM reports extensive pharmaceutical consultancy/speaker fees and is CEO of Braxia Scientific; KMT reports personal fees from Braxia Scientific; other authors declare none."
+notes: >
+  Second MR record, serving three purposes for this shard.
+  (1) INDEPENDENT REPLICATION of the per-hour MR effect on MI: OR 0.89 per extra hour here vs 0.80 in
+      Daghlas. Both point the same way; this one is about half the magnitude on the log scale. A
+      defensible MR consensus for MI is therefore roughly OR 1.12-1.25 per hour of sleep LOST, with
+      the truth plausibly nearer the smaller end given this study's larger and later instrument set.
+  (2) STROKE NULL: short sleep shows no causal effect on stroke, matching guo2024_stroke_mr. Insomnia,
+      by contrast, does (OR 1.26, 1.03-1.54 here; OR 1.27, 1.10-1.47 in Guo 2024). The sleep-stroke
+      pathway appears to run through insomnia, not through duration.
+  (3) DEPRESSION AS MEDIATOR (target #7): 8.9-12.7% of the short-sleep effect on CAD/MI/HF is mediated
+      by MDD, and short sleep raises depression odds by 83%. For an undergraduate whose short sleep is
+      volitional and academic rather than a symptom of depression, this mediated fraction is arguably
+      not applicable to him at all, which further shrinks his expected effect.
+  The paper also notes that a prior MR by Zhuang et al "failed to establish a causal relationship
+  between sleep duration and the risk of CAD and MI", and that a 116 632-person 21-country prospective
+  study "reported that short sleep duration was not associated with an increased risk of CVDs" - two
+  further discordant results I did not independently retrieve and therefore do not extract.
+shard: "s08_cardiovascular"

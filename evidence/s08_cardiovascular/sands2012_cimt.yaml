@@ -1,0 +1,93 @@
+study_id: sands2012_cimt
+citation: "Sands MR, Lauderdale DS, Liu K, Knutson KL, Matthews KA, Eaton CB, Linkletter CD, Loucks EB. Short sleep duration is associated with carotid intima-media thickness among men in the Coronary Artery Risk Development in Young Adults (CARDIA) Study. Stroke. 2012 Nov;43(11):2858-2864."
+doi: "10.1161/STROKEAHA.112.660332"
+pmid: "22935396"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Short Sleep Duration Is Associated With Carotid Intima-Media Thickness Among Men in the Coronary Artery Risk Development in Young Adults (CARDIA) Study"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 617
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [37, 52]
+  pct_female: 58.0
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: cardiovascular
+    outcome_construct: carotid_intima_media_thickness_per_hour_sleep_MEN
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "per 1 additional hour of WRIST-ACTIGRAPHY-measured sleep, men only"}
+    scale: per_hour_beta
+    unit: "mm of carotid intima-media thickness per additional hour of sleep"
+    value: -0.026
+    se: 0.01071
+    ci: [-0.047, -0.005]
+    conversion_formula: "se = (-0.005 - (-0.047))/3.92 = 0.042/3.92 = 0.01071"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      NEGATIVE = each extra hour of objectively measured sleep is associated with 0.026 mm THINNER
+      carotid intima-media, so each hour LOST is associated with 0.026 mm THICKER cIMT (harm) in men.
+      Best objective-exposure vascular-marker estimate available.
+    covariates: ["multivariable-adjusted linear regression (covariate list not enumerated in the abstract)"]
+    followup_years: null
+    cohort_family: "CARDIA"
+    quote: "After adjusting for covariates, 1 hour of longer sleep duration was associated with 0.026 mm less CIMT among men (P=0.02; 95% CI, -0.047 to -0.005) and 0.001 mm less CIMT among women (P=0.91; 95% CI, -0.020 to 0.022)."
+  - outcome_domain: cardiovascular
+    outcome_construct: carotid_intima_media_thickness_per_hour_sleep_WOMEN
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "per 1 additional hour of actigraphy-measured sleep, women only"}
+    scale: per_hour_beta
+    unit: "mm of carotid intima-media thickness per additional hour of sleep"
+    value: -0.001
+    se: 0.01071
+    ci: [-0.020, 0.022]
+    conversion_formula: "se = (0.022 - (-0.020))/3.92 = 0.042/3.92 = 0.01071"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      Essentially ZERO in women (-0.001 mm, P=0.91). Recorded because the sex pattern is the MIRROR
+      IMAGE of covassin2021, where the blood-pressure effect appeared only in WOMEN and was absent in
+      men. The two best sex-stratified records in this shard disagree about which sex is vulnerable,
+      which is strong evidence that at least one of the sex splits is noise.
+    covariates: ["multivariable-adjusted linear regression"]
+    followup_years: null
+    cohort_family: "CARDIA"
+    quote: "and 0.001 mm less CIMT among women (P=0.91; 95% CI, -0.020 to 0.022)"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: >
+    Genuine strength: WRIST ACTIGRAPHY rather than self-report, which is rare in this literature and is
+    why the record is retained despite its design. Weaknesses: cross-sectional (tier TX), n=617 with
+    the reported effect resting on ~259 men, the covariate set is not enumerated in the abstract so
+    adequacy of adjustment cannot be judged from what I retrieved, the sex-stratified contrast is not
+    accompanied by a reported interaction test, and the authors note the association was driven by one
+    carotid segment (the bulb) - a segment-specific finding that is more consistent with measurement
+    noise than with diffuse atherosclerosis.
+funding: null
+notes: >
+  Target extraction #6, vascular-marker component. IMPORTANT AGE CORRECTION - this record is commonly
+  mis-cited as young-adult evidence because CARDIA stands for "Coronary Artery Risk Development in
+  YOUNG ADULTS", but that refers to the cohort's enrolment age in 1985-86. At the time the actigraphy
+  and carotid ultrasound were performed the participants were 37-52 years old. This is a MIDLIFE
+  sample and adolescent_match is therefore poor_midlife, not good_young_adult.
+  MAGNITUDE IN CONTEXT: 0.026 mm per hour. For the subject, ~1.5-2 h below optimum, the implied
+  association is ~0.04-0.05 mm of extra cIMT. Typical adult cIMT is roughly 0.6-0.9 mm and progresses
+  by about 0.01 mm/year, so this is on the order of 4-5 years of vascular ageing - IF the association
+  were causal, IF it were transportable from midlife men to a 19-year-old, and IF cross-sectional
+  cIMT differences translate into event risk. All three conditionals are unverified, and the effect
+  was absent in women in the same sample.
+  This is the closest thing the literature offers to "early vascular markers in young adults" and it is
+  thin: one cross-sectional analysis, one sex, one carotid segment. I searched specifically for
+  arterial-stiffness and pulse-wave-velocity studies in adolescents and young adults and found only
+  scattered small cross-sectional reports (logged in screening_log.md), none prospective, none in
+  16-19 year olds.
+shard: "s08_cardiovascular"

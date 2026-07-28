@@ -1,0 +1,95 @@
+study_id: li2019_htn_dr
+citation: "Li H, Ren Y, Wu Y, Zhao X. Correlation between sleep duration and hypertension: a dose-response meta-analysis. J Hum Hypertens. 2019 Mar;33(3):218-228."
+doi: "10.1038/s41371-018-0135-1"
+pmid: "30451942"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Correlation between sleep duration and hypertension: a dose-response meta-analysis"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: dose_response_meta_analysis
+tier: T5
+n: 48525
+n_studies_pooled: 9
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: cardiovascular
+    outcome_construct: hypertension_risk_per_hour_more_sleep
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: 7, duration_days: null,
+               contrast_label: "per 1 h increment of sleep duration, dose-response model"}
+    scale: pct_change
+    unit: "percent change in hypertension risk per +1 h sleep"
+    value: -0.3207
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported directly as a percentage in the abstract; no CI or SE is given, so se is null. Sign
+      flipped to negative to encode "risk REDUCED by 0.3207% per additional hour", matching the
+      shard convention that positive = harm.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      negative = each extra hour of sleep lowers hypertension risk by 0.32 PERCENT (relative), i.e.
+      a multiplicative factor of about 0.9968 per hour. This is a startlingly small slope - three
+      orders of magnitude smaller than the categorical RRs of 1.2-1.3 reported by the same
+      literature - and I flag it as probably a reporting or unit error in the source rather than a
+      credible per-hour effect. It should NOT be pooled without resolution against the full text.
+    covariates: ["per-study adjustment sets; NOS-assessed high quality"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_9_studies"
+    quote: "Dose-response meta-analysis showed that the hypertension risk reduced for 0.3207% when the sleep duration increased by 1 h."
+  - outcome_domain: cardiovascular
+    outcome_construct: hypertension_categorical_5h_and_6h_vs_7h_significant
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 7, duration_days: null,
+               contrast_label: "<=5 h vs 7 h AND 6 h vs 7 h, both reported significant; dose_h 5.5 is the midpoint placeholder"}
+    scale: log_rr
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      The abstract states that the <=5 h vs 7 h and 6 h vs 7 h contrasts were statistically
+      significant but gives NO point estimates or CIs. Recorded as a directional vote with value 0
+      and se null; must not receive inverse-variance weight. Not fabricating numbers.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Direction of the reported significance is toward HIGHER hypertension risk at both 5 h and 6 h
+      relative to 7 h. Magnitude unavailable from the abstract.
+    covariates: ["per-study adjustment sets"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_9_studies"
+    quote: "The differences in <=5 h vs. 7 h, 6 h vs. 7 h, and 9 h vs. 7 h groups had statistical significances, suggesting that hypertension risk was higher for shorter sleep duration (P < 0.05)."
+rob:
+  tool: AMSTAR-2
+  judgement: critical
+  notes: >
+    FAILS its own sensitivity analysis. The authors report verbatim: "However, the pooled results were
+    reversed after ignoring each included study per time." A leave-one-out analysis that reverses the
+    pooled result means no contributing study can be removed without flipping the conclusion, which
+    is close to a definition of a non-robust meta-analysis. Combined with only 9 studies / 48 525
+    subjects, an implausibly small reported per-hour slope (0.32%), and no CI on that slope, this
+    record cannot carry weight. It is retained for completeness of the hypertension dose-response
+    search and as a negative comment on the state of that literature.
+funding: null
+notes: >
+  Retained but DOWN-WEIGHTED TO ZERO for pooling. This is the only dose-response meta-analysis of
+  sleep duration and hypertension I could locate, which is itself the finding: the hypertension
+  dose-response evidence base is one small, self-admittedly non-robust analysis.
+  Two internal inconsistencies the downstream model should know about: (a) the categorical contrasts
+  at 5 h and 6 h are reported as significant while the continuous slope is 0.32% per hour, which
+  cannot both be true on any ordinary scale; (b) the leave-one-out reversal contradicts the
+  simultaneous claim that "our results were highly credible" on the basis of an Egger test.
+  A PubMed-indexed Comment on this paper exists (J Hum Hypertens. 2019 Mar;33(3):174-176,
+  doi 10.1038/s41371-019-0177-z), consistent with the analysis being contested. I did not retrieve it.
+  Note also that a 2024 methodological review (Syst Rev. 2024 Aug 6, PMID 39107813) specifically
+  assessed the reporting quality of sleep-duration/hypertension meta-analyses - screened and logged
+  in screening_log.md - indicating recognised quality problems across this specific literature.
+shard: "s08_cardiovascular"

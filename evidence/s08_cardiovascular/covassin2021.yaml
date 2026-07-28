@@ -1,0 +1,230 @@
+study_id: covassin2021
+citation: "Covassin N, Bukartyk J, Singh P, Calvin AD, St Louis EK, Somers VK. Effects of Experimental Sleep Restriction on Ambulatory and Sleep Blood Pressure in Healthy Young Adults: A Randomized Crossover Study. Hypertension. 2021 Sep;78(3):859-870."
+doi: "10.1161/HYPERTENSIONAHA.121.17622"
+pmid: "34247512"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Effects of Experimental Sleep Restriction on Ambulatory and Sleep Blood Pressure in Healthy Young Adults"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 20
+n_studies_pooled: null
+population:
+  age_mean: 23.4
+  age_range: null
+  pct_female: 45.0
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: cardiovascular
+    outcome_construct: ambulatory_24h_mean_arterial_pressure
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 9, duration_days: 9,
+               contrast_label: "4 h TIB vs 9 h TIB, 9 nights, inpatient, weight-maintenance diet; day 12"}
+    scale: raw_units
+    unit: "mmHg"
+    value: 2.1
+    se: 0.7653
+    ci: [0.6, 3.6]
+    conversion_formula: "se = (3.6 - 0.6)/3.92 = 3.0/3.92 = 0.7653"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = HIGHER 24-h mean arterial pressure under restriction (harm). Primary prespecified outcome of the trial."
+    covariates: ["adjusted mean difference vs control condition, within-subject crossover; corrected for multiple comparisons"]
+    followup_years: null
+    cohort_family: null
+    quote: "24-hour MAP at Day 12 was significantly increased during experimental sleep restriction relative to control sleep (adjusted mean difference at Day 12: 2.1 mmHg [95% CI 0.6, 3.6], corrected p=0.016; Table 2 )."
+  - outcome_domain: cardiovascular
+    outcome_construct: ambulatory_24h_systolic_bp
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 9, duration_days: 9,
+               contrast_label: "4 h vs 9 h TIB, 9 nights; day 12"}
+    scale: raw_units
+    unit: "mmHg"
+    value: 3.1
+    se: 1.1224
+    ci: [0.9, 5.3]
+    conversion_formula: "se = (5.3 - 0.9)/3.92 = 4.4/3.92 = 1.1224"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = HIGHER 24-h systolic BP under restriction (harm)"
+    covariates: ["adjusted mean difference vs control, within-subject"]
+    followup_years: null
+    cohort_family: null
+    quote: "Similar trajectories were seen for 24-hour SBP (overall condition effect: p=0.001; Day 12: 3.1 mmHg [0.9, 5.3], corrected p=0.012; Figure 2 ) and 24-hour DBP (overall condition effect: p<0.001; Day 12: 2.2 mmHg [0.7, 3.7], corrected p=0.010; Table 2 )"
+  - outcome_domain: cardiovascular
+    outcome_construct: ambulatory_24h_diastolic_bp
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 9, duration_days: 9,
+               contrast_label: "4 h vs 9 h TIB, 9 nights; day 12"}
+    scale: raw_units
+    unit: "mmHg"
+    value: 2.2
+    se: 0.7653
+    ci: [0.7, 3.7]
+    conversion_formula: "se = (3.7 - 0.7)/3.92 = 3.0/3.92 = 0.7653"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = HIGHER 24-h diastolic BP under restriction (harm)"
+    covariates: ["adjusted mean difference vs control, within-subject"]
+    followup_years: null
+    cohort_family: null
+    quote: "24-hour DBP (overall condition effect: p<0.001; Day 12: 2.2 mmHg [0.7, 3.7], corrected p=0.010; Table 2 )"
+  - outcome_domain: cardiovascular
+    outcome_construct: ambulatory_24h_heart_rate
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 9, duration_days: 9,
+               contrast_label: "4 h vs 9 h TIB, 9 nights"}
+    scale: raw_units
+    unit: "bpm"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      No point estimate is reported because the effect was null; the paper states only that 24-hour
+      heart rate did not vary between conditions. Recorded as a directional null with se null.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "zero = NO effect of 9 nights of 4 h sleep on 24-h heart rate. Answers the heart-rate component of target #4 in the negative for this trial."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Conversely, 24-hour heart rate did not vary between conditions."
+  - outcome_domain: cardiovascular
+    outcome_construct: ambulatory_24h_systolic_bp_MEN_ONLY
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 9, duration_days: 9,
+               contrast_label: "4 h vs 9 h TIB, 9 nights; MALE participants only (n=11), post-hoc"}
+    scale: raw_units
+    unit: "mmHg"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      No point estimate reported for the male stratum's 24-h BP because no condition effect was
+      found. Recorded as a directional null with se null. For contrast, the paper DOES report that
+      in men, daytime MAP was 3.8 mmHg LOWER (95% CI -6.4 to -1.2) and daytime DBP 3.7 mmHg lower
+      (-6.1 to -1.4) under restriction at day 12.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      zero = NO 24-h blood pressure effect of sleep restriction IN MEN. THE MOST IMPORTANT SINGLE
+      RESULT IN THIS SHARD FOR THIS SUBJECT, who is an 18-19 year old male. The headline +2.1 mmHg
+      was generated entirely by the 9 female participants (24-h SBP +8.0 mmHg, sleep SBP +11.3 mmHg).
+      In men, daytime pressures went DOWN, which the authors read as homeostatic adaptation.
+    covariates: ["post-hoc sex-stratified analysis, not prespecified"]
+    followup_years: null
+    cohort_family: null
+    quote: "Conversely, in men no main effects of condition were evident in any 24-hour BP outcomes ( Figure 4 and Table S12 ). Notably, during comparable wakefulness MAP (p=0.044) and DBP (p=0.040) were overall lower during sleep restriction than during control sleep in men, with these effects more pronounced towards the end of the experimental phase (MAP, Day 12: -3.8 mmHg [-6.4, -1.2], corrected p=0.023; DBP, Day 12: -3.7 mmHg [-6.1, -1.4], corrected p=0.013)."
+  - outcome_domain: cardiovascular
+    outcome_construct: ambulatory_24h_systolic_bp_WOMEN_ONLY
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 9, duration_days: 9,
+               contrast_label: "4 h vs 9 h TIB, 9 nights; FEMALE participants only (n=9), post-hoc; day 12"}
+    scale: raw_units
+    unit: "mmHg"
+    value: 8.0
+    se: 1.4541
+    ci: [5.1, 10.8]
+    conversion_formula: "se = (10.8 - 5.1)/3.92 = 5.7/3.92 = 1.4541"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = HIGHER 24-h SBP in women under restriction (+8.0 mmHg). Recorded to document that the
+      trial's average effect is a sex-mixture artefact. NOT transportable to a male subject.
+    covariates: ["post-hoc sex-stratified analysis, not prespecified"]
+    followup_years: null
+    cohort_family: null
+    quote: "Increases were more pronounced during initial experimental phase and were maintained throughout the 9 days of exposure (Day 12, 24-hour MAP: 5.2 mmHg [2.8, 7.6], corrected p<0.001; 24-hour SBP: 8.0 mmHg [5.1, 10.8], corrected p<0.001; 24-hour DBP: 5.0 mmHg [2.4, 7.5], corrected p<0.001)."
+  - outcome_domain: cardiovascular
+    outcome_construct: sleep_time_systolic_bp_persisting_into_recovery
+    exposure: {type: recovery_sleep, dose_h: 9, referent_h: 9, duration_days: 3,
+               contrast_label: "day 15 = after 2 recovery nights of 9 h TIB following 9 nights of 4 h; whole sample"}
+    scale: raw_units
+    unit: "mmHg"
+    value: 3.3
+    se: 1.5306
+    ci: [0.3, 6.3]
+    conversion_formula: "se = (6.3 - 0.3)/3.92 = 6.0/3.92 = 1.5306"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = sleep-time SBP STILL elevated during recovery. Answers the reversibility component of
+      target #4: 24-h BP returned to baseline, but sleep-time BP and endothelial function did NOT
+      within 3 recovery nights. INCOMPLETE REVERSAL over a weekend-length recovery.
+    covariates: ["adjusted mean difference vs control, within-subject"]
+    followup_years: null
+    cohort_family: null
+    quote: "Differences in sleep time SBP became evident during early exposure, persisted throughout the entire experimental sleep curtailment phase (Day 12, 3.9 mmHg [0.8, 6.9], corrected p=0.043), and continued into recovery (Day 15, 3.3 mmHg [0.3, 6.3], corrected p=0.043; Figure 2 and Table S2 )."
+  - outcome_domain: cardiovascular
+    outcome_construct: flow_mediated_dilation_endothelial_function
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 9, duration_days: 9,
+               contrast_label: "4 h vs 9 h TIB; day 13 (end of restriction)"}
+    scale: raw_units
+    unit: "percent FMD (absolute percentage points)"
+    value: -2.2
+    se: 0.8163
+    ci: [-3.8, -0.6]
+    conversion_formula: "se = (-0.6 - (-3.8))/3.92 = 3.2/3.92 = 0.8163"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      NEGATIVE = WORSE endothelial function (blunted flow-mediated dilation) under restriction, i.e.
+      harm. Still impaired at day 16 after 3 recovery nights: -1.8% (-3.5, -0.1).
+    covariates: ["adjusted mean difference vs control, within-subject"]
+    followup_years: null
+    cohort_family: null
+    quote: "FMD was blunted in response to sleep restriction compared to control sleep (overall p <0.001; Figure 3 and Table 2 ), with consistent decreases from early exposure throughout the experimental phase (Day 13, -2.2% [-3.8, -0.6], corrected p=0.034). Impaired FMD also persisted into recovery (Day 16, -1.8% [-3.5, -0.1], corrected p=0.046)."
+  - outcome_domain: cardiovascular
+    outcome_construct: plasma_norepinephrine_sympathetic_activity
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 9, duration_days: 9,
+               contrast_label: "4 h vs 9 h TIB; day 7 (early restriction)"}
+    scale: raw_units
+    unit: "pg/mL plasma norepinephrine"
+    value: 55.5
+    se: 18.1122
+    ci: [20.0, 91.0]
+    conversion_formula: "se = (91.0 - 20.0)/3.92 = 71.0/3.92 = 18.1122"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = HIGHER circulating norepinephrine under restriction, i.e. increased sympathetic
+      activity (harm). Answers the sympathetic-activity component of target #4. Attenuated but still
+      elevated by day 13: +43.9 pg/mL (8.4, 79.4). Endothelin-1 and vasopressin unchanged.
+    covariates: ["adjusted mean difference vs control, within-subject"]
+    followup_years: null
+    cohort_family: null
+    quote: "Plasma norepinephrine increased during sleep restriction relative to control sleep (overall p=0.011; Figure 3 and Table 2 ), with significant elevation on Day 7 (55.5 pg/mL [20.0, 91.0], corrected p=0.011) and Day 13 (43.9 pg/mL [8.4, 79.4], corrected p=0.049). No changes were found in endothelin-1 or vasopressin ( Table S3 )."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: >
+    Design strengths are unusual for this literature: randomised crossover with a 3-12 month washout,
+    16-day inpatient stay, continuous polysomnography confirming the manipulation, controlled
+    weight-maintenance diet (so the BP effect cannot be attributed to diet or weight change), 24-h
+    ambulatory BP as the prespecified primary outcome rather than office snapshots, and an explicit
+    recovery phase. Concerns: n=20 total, so the sex-stratified analyses rest on 11 men and 9 women;
+    the sex split was post-hoc and the authors label it exploratory; blinding is impossible; 4 h TIB
+    for 9 consecutive nights is more severe than the subject's habitual 5-6 h with weekend recovery.
+funding: null
+notes: >
+  Target extraction #4, primary source. Best-matched experimental record in the shard: mean age 23.4
+  years, healthy, and the exposure is multi-night rather than one night of total deprivation.
+  All SEs derived as (CI_upper - CI_lower)/3.92 on the mmHg / percent / pg-per-mL scale directly,
+  since these are mean differences rather than ratios.
+  DECISION-RELEVANT SUMMARY FOR AN 18-19 YEAR OLD MALE:
+  - Whole-sample effect on 24-h BP is small but real: MAP +2.1, SBP +3.1, DBP +2.2 mmHg.
+  - In MEN specifically there was NO 24-h BP effect at all, and daytime MAP/DBP were LOWER by
+    ~3.7-3.8 mmHg. The whole-sample signal is carried by women (24-h SBP +8.0 mmHg).
+  - Heart rate did not change.
+  - Sympathetic activation (norepinephrine +55.5 pg/mL) and endothelial dysfunction (FMD -2.2%) DID
+    occur in the whole sample.
+  - Reversal is PARTIAL: 24-h BP normalised within 3 recovery nights, but sleep-time SBP (+3.3 mmHg)
+    and FMD (-1.8%) had not.
+  The authors also note that the prior experimental literature is largely null: "Previous studies that
+  applied sleep restriction models to simulate real-life conditions of protracted partial sleep
+  curtailment yielded largely null results in terms of any BP effects, despite applying various
+  degrees and duration of sleep truncation" - consistent with the null meta-analysis of RCTs
+  (hu2020_bp_rct_ma) in this shard.
+  Directly relevant to the subject's weekend-catchup pattern, the authors state: "experimental data
+  from our and prior studies suggest that short periods of extended sleep opportunity may be
+  insufficient to mitigate the negative effects caused by short sleep during weekdays."
+shard: "s08_cardiovascular"

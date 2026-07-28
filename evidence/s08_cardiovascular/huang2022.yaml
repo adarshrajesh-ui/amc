@@ -1,0 +1,106 @@
+study_id: huang2022
+citation: "Huang YM, Xia W, Ge YJ, Hou JH, Tan L, Xu W, Tan CC. Sleep duration and risk of cardio-cerebrovascular disease: A dose-response meta-analysis of cohort studies comprising 3.8 million participants. Front Cardiovasc Med. 2022 Sep 27;9:907990."
+doi: "10.3389/fcvm.2022.907990"
+pmid: "36237900"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep duration and risk of cardio-cerebrovascular disease: A dose-response meta-analysis of cohort studies comprising 3.8 million participants"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: dose_response_meta_analysis
+tier: T5
+n: 3800000
+n_studies_pooled: 71
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: cardiovascular
+    outcome_construct: cvd_lower_risk_range_lower_bound_h
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: 7.5, duration_days: null,
+               contrast_label: "shortest nighttime sleep duration still inside the non-elevated-risk band for CVD"}
+    scale: hours
+    unit: "hours per night"
+    value: 4.3
+    se: null
+    ci: null
+    conversion_formula: "read directly from the reported REMR spline boundary; no CI given for the boundary itself"
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: >
+      This is a THRESHOLD, not a risk ratio. Nighttime sleep anywhere between 4.3 h and 10.3 h was
+      NOT associated with elevated CVD risk. The subject's 5-6 h weekday sleep therefore falls inside
+      the non-elevated band in the largest dose-response synthesis available. Lower value = harm
+      begins at a shorter duration = weaker evidence of harm at 5-6 h.
+    covariates: ["multivariate-adjusted risk estimates only (REMR model on adjusted estimates)"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_71_cohorts"
+    quote: "Specifically, we found the nighttime sleep duration associated with lower risk was roughly situated between 4.3 and 10.3 h/night ( Figure 2A ) with the lowest risk corresponding to roughly 7.5 h/night."
+  - outcome_domain: cardiovascular
+    outcome_construct: cerebrovascular_lower_risk_range_lower_bound_h
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: 7.5, duration_days: null,
+               contrast_label: "shortest nighttime sleep duration still inside the non-elevated-risk band for cerebrovascular disease"}
+    scale: hours
+    unit: "hours per night"
+    value: 5.0
+    se: null
+    ci: null
+    conversion_formula: "read directly from the reported REMR spline boundary; no CI given"
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: >
+      Threshold, not a ratio. Cerebrovascular risk was not elevated between 5.0 and 9.7 h/night;
+      p for non-linearity only 0.05. The subject's 5-6 h weekday sleep sits at or just inside this
+      lower boundary, so stroke risk elevation at his exposure is at most marginal.
+    covariates: ["multivariate-adjusted risk estimates only"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_29_cohorts"
+    quote: "Sleep duration associated with a lower risk of cerebrovascular diseases ranges from 5 to 9.7 h per night, with the inflection at 7.5 h per night (p non-linearity = 0.05)."
+  - outcome_domain: cardiovascular
+    outcome_construct: optimal_sleep_duration_nadir_h
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "sleep duration at the minimum of the fitted risk curve"}
+    scale: hours
+    unit: "hours per night"
+    value: 7.5
+    se: null
+    ci: null
+    conversion_formula: "reported nadir of the REMR spline for both CVD and cerebrovascular disease"
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "the risk-minimising duration; used as the comparator anchor. 7.5 h is a plausible referent for a 19-year-old's need, though adolescent guidelines specify 8-10 h."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_71_cohorts"
+    quote: "Rational sleep duration (7.5 h/night) is associated with a reduced risk of cardio-cerebrovascular disease for adults."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    Largest synthesis in the domain by participant count (71 cohorts, 3.8 M). Uses a robust-error
+    meta-regression (REMR) model on multivariate-adjusted estimates, which is a defensible
+    dose-response method. Weaknesses: reports the shape of the curve and its boundaries rather than
+    tabulated RRs with CIs at each hour, so it cannot supply a point estimate at 5 h or 6 h the way
+    Yin 2017 can; exposure is self-report throughout; the cerebrovascular non-linearity p-value is
+    only 0.05, so the U-shape for stroke is weakly established.
+funding: "The authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest."
+notes: >
+  The "newer dose-response synthesis" requested by target #2. Its headline contribution is
+  a boundary rather than a slope, and that boundary is strikingly permissive: for CVD, risk is
+  not elevated down to 4.3 h/night. Taken at face value this implies essentially ZERO excess CVD
+  risk at the subject's 5-6 h weekday exposure - a weaker inference of harm than Yin 2017's
+  RR 1.02-1.05 and much weaker than Cappuccio 2011's RR 1.48 for CHD.
+  I could not obtain per-hour RRs with CIs from this paper: the results are presented as spline
+  boundaries and figures, and the PMC copy would not render; the numbers above were taken from
+  the publisher's full text at frontiersin.org and cross-checked against the verified PubMed
+  abstract, which states the same boundaries.
+  Cohort ages are not summarised in the paper's abstract; the study-characteristics table lists
+  constituent cohorts with age ranges such as 35+, 40-80, 65-85, 18-90 - i.e. adult and older
+  adult. No adolescent cohorts. Absolute event rates are not reported at the pooled level, which
+  is a real limitation for this shard's absolute-risk requirement.
+shard: "s08_cardiovascular"

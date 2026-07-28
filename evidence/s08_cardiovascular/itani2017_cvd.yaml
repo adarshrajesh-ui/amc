@@ -1,0 +1,126 @@
+study_id: itani2017_cvd
+citation: "Itani O, Jike M, Watanabe N, Kaneita Y. Short sleep duration and health outcomes: a systematic review, meta-analysis, and meta-regression. Sleep Med. 2017 Apr;32:246-256."
+doi: "10.1016/j.sleep.2016.08.006"
+pmid: "27743803"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Short sleep duration and health outcomes: a systematic review, meta-analysis, and meta-regression"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 5172710
+n_studies_pooled: 153
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: cardiovascular
+    outcome_construct: total_cvd_incidence
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "short sleepers vs normal sleepers at baseline (study-specific cutpoints)"}
+    scale: log_rr
+    unit: null
+    value: 0.14842
+    se: 0.02850
+    ci: [0.09531, 0.20701]
+    conversion_formula: "log_rr = ln(1.16) = 0.14842; se = (ln(1.23) - ln(1.10))/3.92 = 0.02850"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = elevated incident CVD risk with short sleep (RR 1.16)"
+    covariates: ["adjusted data from individual studies (per-study adjustment sets, not harmonised)"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_153_studies"
+    quote: "Similar significant results were observed in diabetes mellitus (1.37, 1.22-1.53), hypertension (1.17, 1.09-1.26), cardiovascular diseases (1.16, 1.10-1.23), coronary heart diseases (1.26, 1.15-1.38), and obesity (1.38, 1.25-1.53)."
+  - outcome_domain: cardiovascular
+    outcome_construct: chd_incidence
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "short sleepers vs normal sleepers at baseline"}
+    scale: log_rr
+    unit: null
+    value: 0.23111
+    se: 0.04651
+    ci: [0.13976, 0.32208]
+    conversion_formula: "log_rr = ln(1.26) = 0.23111; se = (ln(1.38) - ln(1.15))/3.92 = 0.04651"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = elevated incident CHD risk with short sleep (RR 1.26). Sits between Cappuccio 2011 (1.48) and Yin 2017's 5 h estimate (1.11)."
+    covariates: ["adjusted data from individual studies"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_153_studies"
+    quote: "Similar significant results were observed in diabetes mellitus (1.37, 1.22-1.53), hypertension (1.17, 1.09-1.26), cardiovascular diseases (1.16, 1.10-1.23), coronary heart diseases (1.26, 1.15-1.38), and obesity (1.38, 1.25-1.53)."
+  - outcome_domain: cardiovascular
+    outcome_construct: incident_hypertension
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "short sleepers vs normal sleepers at baseline"}
+    scale: log_rr
+    unit: null
+    value: 0.15700
+    se: 0.03697
+    ci: [0.08618, 0.23111]
+    conversion_formula: "log_rr = ln(1.17) = 0.15700; se = (ln(1.26) - ln(1.09))/3.92 = 0.03697"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = elevated incident hypertension risk with short sleep (RR 1.17). Prospective-only, so cleaner than Guo 2013's cross-sectional pool."
+    covariates: ["adjusted data from individual studies"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_153_studies"
+    quote: "Similar significant results were observed in diabetes mellitus (1.37, 1.22-1.53), hypertension (1.17, 1.09-1.26), cardiovascular diseases (1.16, 1.10-1.23), coronary heart diseases (1.26, 1.15-1.38), and obesity (1.38, 1.25-1.53)."
+  - outcome_domain: cardiovascular
+    outcome_construct: dose_response_absent_for_cvd_chd_hypertension
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "meta-regression of effect size on short-sleep cutpoint duration"}
+    scale: per_hour_beta
+    unit: "log-RR per hour of short-sleep cutpoint"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      No slope is reported. The paper states that a dose-response was detected for mortality below
+      6 h but explicitly NOT for the other outcomes. Recorded as a null slope with se null; must not
+      receive inverse-variance weight downstream.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Zero = no monotone worsening with shorter sleep for CVD, CHD or hypertension. This matters for
+      the subject: it means the elevated pooled RRs above cannot be scaled down to his specific
+      5-6 h exposure by assuming a gradient, and it conflicts with Yin 2017's per-hour slopes.
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_153_studies"
+    quote: "Meta-regression analyses found a linear association between a statistically significant increase in mortality and sleep duration at less than six hours. No dose-response was identified in the other outcomes."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    Very large (153 studies, 5.17 M participants) and restricted to prospective cohorts with >=1 y
+    follow-up, which is a strength. Principal weakness for this shard: the exposure is a
+    dichotomy ("short" vs "normal") whose cutpoint varies across contributing studies, so the pooled
+    RR has no defined dose. The authors' own meta-regression found no dose-response for the
+    cardiovascular outcomes, which undercuts using these RRs as if they applied at any particular
+    hour. No objective exposure measurement.
+funding: null
+notes: >
+  Included as the largest dichotomous-contrast synthesis, and as an internal consistency check on the
+  dose-response papers. Per the extraction instructions I prefer dose-response over dichotomous
+  contrasts, so Yin 2017 and Huang 2022 outrank this record; it is retained because (a) it supplies
+  a hypertension estimate from prospective data only, and (b) its null meta-regression is itself a
+  substantive finding about the shape of the exposure-response relationship.
+  Note the tension across records: Itani reports CVD 1.16 / CHD 1.26 for an undefined "short"
+  contrast, while Yin's spline puts CVD at 1.02 and CHD at 1.05 at 6 h. Both cannot be simultaneously
+  applied to a 6 h sleeper; the dichotomous estimates are dominated by the most extreme sleepers in
+  each cohort and overstate risk at 6 h.
+  DE-DUPLICATION WARNING FOR THE POOLER: this is the SAME PUBLICATION as the record filed by shard
+  s09_obesity_bmi under study_id "itani2017" (identical DOI 10.1016/j.sleep.2016.08.006 and PMID
+  27743803). I have deliberately given mine the distinct study_id "itani2017_cvd" so that neither
+  record silently overwrites the other if records are keyed by study_id. The two records extract
+  DIFFERENT outcomes from the same meta-analysis - cardiovascular/CHD/hypertension here, obesity and
+  anthropometric outcomes there - so they are not redundant for a per-outcome pool, but they are NOT
+  independent studies and must not be treated as two sources of evidence about the same outcome. Key
+  on doi/pmid, not on study_id, when checking independence.
+shard: "s08_cardiovascular"

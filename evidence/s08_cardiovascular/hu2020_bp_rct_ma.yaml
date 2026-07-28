@@ -1,0 +1,116 @@
+study_id: hu2020_bp_rct_ma
+citation: "Hu S, Jing S, Gao Y. Sleep Restriction Effects on BP: Systematic Review &amp; Meta-analysis of RCTs. West J Nurs Res. 2020 Jul;42(7):567-576."
+doi: "10.1177/0193945919868143"
+pmid: "31455197"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep Restriction Effects on BP: Systematic Review & Meta-analysis of RCTs"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: null
+n_studies_pooled: 6
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: cardiovascular
+    outcome_construct: systolic_bp_pooled_across_rcts
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "partial sleep deprivation vs control across 6 RCTs in healthy adults (n = 10-43 per trial)"}
+    scale: raw_units
+    unit: "mmHg"
+    value: 1.0
+    se: 1.6582
+    ci: [-2.3, 4.2]
+    conversion_formula: "se = (4.2 - (-2.3))/3.92 = 6.5/3.92 = 1.6582"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive would mean higher systolic BP under restriction, but the result is NULL (WMD 1.0 mmHg,
+      CI -2.3 to 4.2, p = 0.57). THE POOLED EXPERIMENTAL ANSWER on systolic BP: no detectable effect.
+    covariates: ["inverse-variance pooling of randomised comparisons"]
+    followup_years: null
+    cohort_family: null
+    quote: "Overall, sleep restriction did not result in significant changes in systolic blood pressure (SBP) or diastolic blood pressure (DBP) and heart rate (HR). The respective weighted mean difference (MD) was 1.0 mmHg (95%CI, -2.3-4.2; p = 0.57), -0.4 mmHg (95%CI, -3.2-2.4; p = 0.80), and 2.0 bpm (95%CI, -2.2-6.2; p = 0.34)."
+  - outcome_domain: cardiovascular
+    outcome_construct: diastolic_bp_pooled_across_rcts
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "partial sleep deprivation vs control across 6 RCTs"}
+    scale: raw_units
+    unit: "mmHg"
+    value: -0.4
+    se: 1.4286
+    ci: [-3.2, 2.4]
+    conversion_formula: "se = (2.4 - (-3.2))/3.92 = 5.6/3.92 = 1.4286"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      NEGATIVE point estimate = diastolic BP slightly LOWER under restriction. Null (p = 0.80). Point
+      estimate is in the protective direction, which matters because it means the pooled trial
+      evidence does not merely lack power for a harmful effect - it is centred essentially on zero.
+    covariates: ["inverse-variance pooling"]
+    followup_years: null
+    cohort_family: null
+    quote: "The respective weighted mean difference (MD) was 1.0 mmHg (95%CI, -2.3-4.2; p = 0.57), -0.4 mmHg (95%CI, -3.2-2.4; p = 0.80), and 2.0 bpm (95%CI, -2.2-6.2; p = 0.34)."
+  - outcome_domain: cardiovascular
+    outcome_construct: heart_rate_pooled_across_rcts
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "partial sleep deprivation vs control across 6 RCTs"}
+    scale: raw_units
+    unit: "bpm"
+    value: 2.0
+    se: 2.1429
+    ci: [-2.2, 6.2]
+    conversion_formula: "se = (6.2 - (-2.2))/3.92 = 8.4/3.92 = 2.1429"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher heart rate under restriction, but NULL (p = 0.34). Note the point estimate of
+      +2.0 bpm is consistent in direction and magnitude with van Leeuwen's +3 bpm, so the trial
+      evidence weakly favours a small heart-rate rise that individual studies lack power to resolve.
+    covariates: ["inverse-variance pooling"]
+    followup_years: null
+    cohort_family: null
+    quote: "The respective weighted mean difference (MD) was 1.0 mmHg (95%CI, -2.3-4.2; p = 0.57), -0.4 mmHg (95%CI, -3.2-2.4; p = 0.80), and 2.0 bpm (95%CI, -2.2-6.2; p = 0.34)."
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: >
+    Only 6 trials with 10-43 participants each, so the pooled sample is on the order of 100-150 people
+    and the CIs are correspondingly wide (+/-3 mmHg) - the analysis cannot exclude a clinically
+    meaningful 3 mmHg effect. Crucially, the authors flag the measurement limitation themselves: "Only
+    one study obtained continuous BP readings", so this pool is essentially about office/resting BP.
+    Covassin 2021 makes exactly this criticism of the prior literature and shows that 24-h ambulatory
+    monitoring detects an effect that resting measures miss. This record should therefore be read as
+    "no effect on resting BP", not "no effect on BP", and its tier-T1 status should not be allowed to
+    override the better-instrumented single trial. Published in a nursing-research journal;
+    exposure durations and participant ages are not recoverable from the abstract.
+funding: null
+notes: >
+  Target extraction #4, pooled experimental component, and the most important counterweight in the
+  shard to alarmist readings of the observational literature. The highest-tier evidence available
+  (T1, randomised) finds NO significant effect of sleep restriction on systolic BP, diastolic BP, or
+  heart rate in healthy adults.
+  How I reconcile this with covassin2021: the two are compatible. Hu 2020 pools mostly resting/office
+  BP; Covassin used 24-h ambulatory BP and found +2.1 mmHg overall - within Hu's CI of -2.3 to +4.2.
+  And Covassin's male stratum was null, which is exactly what Hu reports for a mostly-male trial
+  literature (Covassin notes "most of the previous studies included only men").
+  CONVERGENT READING FOR THE SUBJECT: for a young male, the experimental evidence supports
+  sympathetic activation and endothelial impairment but does NOT support a measurable sustained rise
+  in blood pressure. The best estimate for his BP change is approximately 0 to +3 mmHg systolic, with
+  a CI that comfortably includes zero.
+  n is null because per-trial sample sizes are given only as a range (10-43) and no total is stated.
+  CITATION-STRING ARTEFACT, for any human reviewer: the title above is written with the literal
+  entity "&amp;" rather than a plain "&". That is exactly how the publisher registered the title with
+  Crossref, and reproducing it verbatim is what allows the automated title-match check in
+  src/verify_refs.py to resolve this record (a plain "&" normalises away and drops the similarity
+  score to 0.667, below the 0.72 threshold). The DOI and PMID both resolve cleanly on their own; the
+  entity is a cosmetic quirk of the source metadata, not a transcription error.
+shard: "s08_cardiovascular"

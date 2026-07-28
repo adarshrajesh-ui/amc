@@ -1,0 +1,88 @@
+study_id: kwok2018
+citation: "Kwok CS, Kontopantelis E, Kuligowski G, Gray M, Muhyaldeen A, Gale CP, Peat GM, Cleator J, Chew-Graham C, Loke YK, Mamas MA. Self-Reported Sleep Duration and Quality and Cardiovascular Disease and Mortality: A Dose-Response Meta-Analysis. J Am Heart Assoc. 2018 Aug 7;7(15):e008552."
+doi: "10.1161/JAHA.118.008552"
+pmid: "30371228"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Self‐Reported Sleep Duration and Quality and Cardiovascular Disease and Mortality: A Dose‐Response Meta‐Analysis"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: dose_response_meta_analysis
+tier: T5
+n: 3340684
+n_studies_pooled: 74
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_below_7h_null
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7, duration_days: null,
+               contrast_label: "self-reported sleep <7 h vs 7-8 h referent, linear spline dose-response"}
+    scale: log_rr
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      No point estimate or CI is reported for the <7 h arm; the paper states only that no significant
+      difference was identified. Recorded as a null (log_rr = 0) with se null rather than fabricating
+      a value. The downstream pooler should treat this as a DIRECTIONAL NULL VOTE, not as a precise
+      zero, and must not assign it inverse-variance weight.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Zero = no detected excess risk below 7 h. This is the key DISCONFIRMING record for the short-sleep
+      hypothesis: the second-largest dose-response meta-analysis in the field found nothing below 7 h
+      while reproducing a clear graded effect above 8 h in the same dataset with the same methods.
+    covariates: ["maximally adjusted per-study estimates"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_74_studies"
+    quote: "Self-reported duration of sleep >8 hours was associated with a moderate increased risk of all-cause mortality, with risk ratio , 1.14 (1.05-1.25) for 9 hours, risk ratio, 1.30 (1.19-1.42) for 10 hours, and risk ratio, 1.47 (1.33-1.64) for 11 hours. No significant difference was identified for periods of self-reported sleep <7 hours, whereas similar patterns were observed for stroke and cardiovascular disease mortality."
+  - outcome_domain: cardiovascular
+    outcome_construct: chd_poor_sleep_quality
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "subjective poor sleep quality vs good sleep quality (NOT a duration contrast)"}
+    scale: log_rr
+    unit: null
+    value: 0.36464
+    se: 0.14161
+    ci: [0.08618, 0.64185]
+    conversion_formula: "log_rr = ln(1.44) = 0.36464; se = (ln(1.90) - ln(1.09))/3.92 = 0.14161"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = elevated CHD risk with poor subjective sleep QUALITY. Recorded because it exceeds
+      every duration-based estimate in this shard: quality (RR 1.44) outperforms short duration
+      (null) within the same meta-analysis. Relevant to the subject only insofar as his restriction
+      is volitional and not accompanied by insomnia, which is the more predictive exposure.
+    covariates: ["maximally adjusted per-study estimates"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_74_studies"
+    quote: "Subjective poor sleep quality was associated with coronary heart disease (risk ratio , 1.44; 95% confidence interval, 1.09-1.90), but no difference in mortality and other outcomes."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    Large (74 studies, 3.34 M participants, 242 240 deaths among 2 564 029 with death events), used
+    both linear and nonlinear dose-response models and reported them as concordant in the 30 studies
+    with >1 000 000 participants. The failure to report a point estimate and CI for the <7 h arm is
+    a reporting weakness that prevents this study from entering an inverse-variance pool, but the
+    stated null is itself informative given the sample size and the fact that the long-sleep arm
+    was detected cleanly in the same analysis.
+funding: null
+notes: >
+  DISCONFIRMING EVIDENCE, deliberately retained. This is the strongest single piece of evidence
+  against the premise that the subject's 5-6 h weekday sleep carries measurable cardiovascular
+  harm, and it comes from the same journal and the same year-range as Yin 2017 with a comparable
+  sample. Its conclusion - "Longer duration of sleep may be more associated with adverse outcomes
+  compared with shorter sleep durations" - directly opposes the framing of Cappuccio 2011.
+  Where Yin 2017 found RR 1.05-1.06 per hour below 7 h, Kwok 2018 found nothing. Any pooled
+  estimate this shard feeds downstream must carry heterogeneity wide enough to contain both.
+  Exposure is self-reported throughout (stated in the title), and cohort ages are midlife/older.
+shard: "s08_cardiovascular"
