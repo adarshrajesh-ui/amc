@@ -1,0 +1,123 @@
+study_id: spaeth2013
+citation: Spaeth AM, Dinges DF, Goel N. Effects of experimental sleep restriction on weight gain, caloric intake, and meal timing in healthy adults. Sleep. 2013;36(7):981-990.
+doi: 10.5665/sleep.2792
+pmid: '23814334'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Effects of Experimental Sleep Restriction on Weight Gain, Caloric Intake, and Meal Timing in Healthy Adults.
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 225
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 22
+  - 50
+  pct_female: null
+  country: US
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: body_weight_change_kg
+  exposure:
+    type: chronic_restriction
+    dose_h: 4.0
+    referent_h: 10.0
+    duration_days: 5
+    contrast_label: 5 nights 4 h TIB (04:00-08:00) vs 10 h TIB control; weight at admittance vs discharge
+  scale: raw_units
+  unit: kg
+  value: 0.86
+  se: 0.3789
+  ci:
+  - 0.117
+  - 1.603
+  conversion_formula: between-group difference = 0.97 - 0.11 = 0.86 kg. se = sqrt(1.4^2/198 + 1.9^2/27) = sqrt(0.00990 + 0.13370) = 0.3789. ci = 0.86 +/- 1.96*0.3789.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = sleep restriction caused MORE weight gain than control (harm)
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Sleep-restricted subjects gained more weight (0.97 +/- 1.4 kg) than control subjects (0.11 +/- 1.9 kg; d = 0.51, P = 0.007).
+- outcome_domain: anthropometric
+  outcome_construct: body_weight_change_smd
+  exposure:
+    type: chronic_restriction
+    dose_h: 4.0
+    referent_h: 10.0
+    duration_days: 5
+    contrast_label: 5 nights 4 h TIB vs 10 h TIB, standardised weight gain
+  scale: cohens_d
+  unit: null
+  value: 0.51
+  se: 0.2
+  ci: null
+  conversion_formula: d as reported by authors. se approximated as sqrt(1/198 + 1/27 + d^2/(2*225)) = sqrt(0.00505 + 0.03704 + 0.00058) = 0.207 -> rounded 0.20.
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: positive = harm
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Sleep-restricted subjects gained more weight (0.97 +/- 1.4 kg) than control subjects (0.11 +/- 1.9 kg; d = 0.51, P = 0.007).
+- outcome_domain: metabolic
+  outcome_construct: late_night_extra_calories_2200_0359
+  exposure:
+    type: chronic_restriction
+    dose_h: 4.0
+    referent_h: 10.0
+    duration_days: 5
+    contrast_label: calories consumed 22:00-03:59 during 4 h TIB nights, sleep-restricted subjects
+  scale: raw_units
+  unit: kcal/day
+  value: 552.9
+  se: 47.739
+  ci:
+  - 459.3
+  - 646.5
+  conversion_formula: se = SD/sqrt(n) = 265.8/sqrt(31) = 47.74 (n = 31 sleep-restricted subjects with caloric intake data). ci = 552.9 +/- 1.96*47.74.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = extra calories eaten in the extended late-night wake window (harm). Mechanistic, not a total-intake contrast.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: In sleep-restricted subjects, increased daily caloric intake was due to more meals and the consumption of 552.9 +/- 265.8 additional calories between 22:00-03:59.
+- outcome_domain: metabolic
+  outcome_construct: daily_caloric_intake_pct_of_requirement
+  exposure:
+    type: chronic_restriction
+    dose_h: 4.0
+    referent_h: 10.0
+    duration_days: 5
+    contrast_label: daily intake as % of daily caloric requirement, restricted vs control
+  scale: pct_change
+  unit: percentage points of daily caloric requirement
+  value: 29.4
+  se: 13.95
+  ci:
+  - 2.06
+  - 56.74
+  conversion_formula: '130.0% - 100.6% = 29.4 percentage points. SD_pooled back-derived from the reported d: SD_pooled = 29.4/0.94 = 31.28. se = SD_pooled*sqrt(1/31 + 1/6) = 31.28*0.4460 = 13.95. ci = 29.4 +/- 1.96*13.95.'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: positive = sleep-restricted subjects ate ~29% MORE than their requirement while controls ate at requirement (harm)
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Sleep-restricted subjects consumed extra calories (130.0 +/- 43.0% of daily caloric requirement) during days with a delayed bedtime (04:00) compared with control subjects who did not consume extra calories (100.6 +/- 11.4%; d = 0.94, P = 0.003) during corresponding days.
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: Largest laboratory sample to date (n=225) but ~8:1 allocation to restriction, only 37 subjects had caloric intake data (31 restricted, 6 control), and the restriction condition confounds short sleep with a 04:00 bedtime (circadian misalignment). Only 5 nights, so no information on durable weight change.
+funding: NIH (not specified in abstract)
+notes: The 29.4-percentage-point intake effect has an unreliable derived se (see conversion_formula) - the downstream pooler should prefer the +385 kcal/day pooled estimate from alkhatib2017 and treat this record's intake effect as corroborative only. Weight-gain effect (0.86 kg over 5 nights) is the cleanest number here.
+shard: s09_obesity_bmi

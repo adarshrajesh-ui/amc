@@ -1,0 +1,102 @@
+study_id: deng2021
+citation: 'Deng X, He M, He D, Zhu Y, Zhang Z, Niu W. Sleep duration and obesity in children and adolescents: evidence from an updated and dose-response meta-analysis. Sleep Medicine. 2021;78:169-181.'
+doi: 10.1016/j.sleep.2020.12.027
+pmid: '33450724'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Sleep duration and obesity in children and adolescents: evidence from an updated and dose-response meta-analysis.'
+access_tier: abstract_only
+secondhand_via: null
+design: dose_response_meta_analysis
+tier: T5
+n: 57848
+n_studies_pooled: 33
+population:
+  age_mean: null
+  age_range:
+  - 1
+  - 18
+  pct_female: null
+  country: multinational
+  adolescent_match: mixed
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: incident_obesity_short_sleep
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: short vs reference sleep duration, prospective cohorts of children/adolescents
+  scale: log_rr
+  unit: null
+  value: 0.4511
+  se: 0.0729
+  ci:
+  - 0.3075
+  - 0.5933
+  conversion_formula: log_rr = ln(1.57); se = (ln(1.81) - ln(1.36))/3.92 = 0.0729
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = short sleep predicts HIGHER obesity risk (harm)
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_33_paediatric_cohorts
+  quote: 'Overall analyses revealed statistically significant associations of short (adjusted RR = 1.57, 95% CI: 1.36 to 1.81, P < 0.001) and long sleep duration (0.83, 0.75 to 0.93, 0.001) with obesity.'
+- outcome_domain: anthropometric
+  outcome_construct: bmi_z_short_sleep
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: short vs reference sleep duration, BMI z-score mean difference
+  scale: raw_units
+  unit: BMI z-score units
+  value: -0.06
+  se: 0.0128
+  ci:
+  - -0.09
+  - -0.04
+  conversion_formula: se = (-0.04 - (-0.09))/3.92 = 0.01276
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'NOTE SIGN CONVENTION: the paper reports the mean difference as negative for short sleep because the model is oriented on increasing sleep; interpret as short sleep -> +0.06 BMI z-score (harm). Direction is ambiguous in the abstract and should be treated with caution.'
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_33_paediatric_cohorts
+  quote: 'Short sleep duration was also associated with significant changes in body mass index z-score (mean difference = -0.06; 95% CI: -0.09 to -0.04; P < 0.001).'
+- outcome_domain: anthropometric
+  outcome_construct: incident_obesity_school_aged_6_13y
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: short sleep, school-aged children 6-13 y (dose-response stratum)
+  scale: log_rr
+  unit: null
+  value: 0.5988
+  se: 0.0972
+  ci:
+  - 0.4121
+  - 0.793
+  conversion_formula: log_rr = ln(1.82) = 0.5988; se = (ln(2.21) - ln(1.51))/3.92 = (0.7930 - 0.4121)/3.92 = 0.0972
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = harm. Oldest stratum reported; the authors did NOT find a significant dose-response association above age 13.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_33_paediatric_cohorts
+  quote: 'In dose-response analyses, short sleep duration was significantly associated with obesity in toddlers (1-2 years) (adjusted RR = 1.20, 95% CI: 1.07 to 1.34, P = 0.001), preschool-aged (3-5 years) children (1.58, 1.36 to 1.83, <0.001), and school-aged (6-13 years) children (1.82, 1.51 to 2.21, <0.001).'
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: Prospective cohorts only. Crucially, the dose-response signal was confined to ages 1-13; no significant dose-response stratum was reported for adolescents >13 y, which directly limits transportability to a 16-19 year old.
+funding: not stated in abstract
+notes: 'IMPORTANT LIMITATION for this shard: authors conclude the effect is concentrated ''especially within 3-13 years of age''. No >13 y dose-response stratum was significant, i.e. the strongest paediatric dose-response evidence does NOT cover our subject''s age band.'
+shard: s09_obesity_bmi

@@ -1,0 +1,79 @@
+study_id: suglia2014
+citation: 'Suglia SF, Kara S, Robinson WR. Sleep duration and obesity among adolescents transitioning to adulthood: do results differ by sex? Journal of Pediatrics. 2014;165(4):750-754.'
+doi: 10.1016/j.jpeds.2014.06.052
+pmid: '25066064'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Sleep duration and obesity among adolescents transitioning to adulthood: do results differ by sex?'
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 10076
+n_studies_pooled: null
+population:
+  age_mean: 16.0
+  age_range: null
+  pct_female: null
+  country: US
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: incident_obesity_young_adulthood
+  exposure:
+    type: habitual_short_sleep
+    dose_h: 5.5
+    referent_h: 7.0
+    duration_days: null
+    contrast_label: <6 h vs 6-8 h self-reported sleep at mean age 16 y -> incident obesity (BMI >= 30) at mean age 21 y
+  scale: log_rr
+  unit: null
+  value: 0.1823
+  se: 0.1199
+  ci:
+  - 0.0
+  - 0.47
+  conversion_formula: log_rr = ln(1.2) = 0.1823; se = (ln(1.6) - ln(1.0))/3.92 = 0.1199. CI lower bound is exactly the null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = short sleep at 16 y predicts higher incident obesity at 21 y (harm), but the 95% CI touches 1.0 - this is a BORDERLINE result, not a firm one.
+  covariates:
+  - sex
+  - confounders per paper
+  followup_years: 5.0
+  cohort_family: Add_Health
+  quote: In longitudinal analyses, short sleep duration in adolescence was associated with incident obesity in both males and females (risk ratio 1.2 [95% CI, 1.0-1.6]) in young adulthood.
+- outcome_domain: anthropometric
+  outcome_construct: obesity_prevalence_cross_sectional_males_age16
+  exposure:
+    type: habitual_short_sleep
+    dose_h: 5.5
+    referent_h: 7.0
+    duration_days: null
+    contrast_label: 'cross-sectional: <6 h vs 6-8 h sleep and obesity prevalence in adolescent MALES'
+  scale: log_rr
+  unit: null
+  value: 0.5878
+  se: 0.1562
+  ci:
+  - 0.2624
+  - 0.8755
+  conversion_formula: prevalence ratio 1.8; log = ln(1.8) = 0.5878; se = (ln(2.4) - ln(1.3))/3.92 = 0.1562
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = harm. Cross-sectional and MALE-SPECIFIC (females PR 1.0, 95% CI 0.7-1.4). Included to show that the cross-sectional male estimate (1.8) is much larger than the same cohort's longitudinal estimate (1.2), i.e. the cross-sectional excess is largely reverse causation or confounding.
+  covariates: []
+  followup_years: null
+  cohort_family: Add_Health
+  quote: Cross-sectionally, short sleep duration was associated with obesity in adolescent males (prevalence ratio 1.8 [95% CI, 1.3-2.4]) but not in females (prevalence ratio 1.0 [95% CI, 0.7-1.4]).
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Large nationally representative cohort with MEASURED height and weight (a real strength) and the exact age window of interest (16 -> 21 y). Exposure is self-reported sleep in coarse categories (<6, 6-8, >8 h), single time point, and residual confounding by socioeconomic status, screen time and depression is likely.
+funding: not stated in abstract
+notes: 'BEST AGE MATCH of any observational record in this shard (mean age 16 -> 21 y, US, both sexes, measured anthropometry). The 1.2 (1.0-1.6) longitudinal RR is the single most transportable obesity-incidence estimate for our subject. Contrast with the same cohort''s cross-sectional male PR of 1.8: prospective attenuation is ~50% on the log scale.'
+shard: s09_obesity_bmi

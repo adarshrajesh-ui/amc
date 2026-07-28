@@ -1,0 +1,123 @@
+study_id: wang2019
+citation: 'Wang J, Li AM, Lam HSHS, Leung GM, Schooling CM. Sleep Duration and Adiposity in Children and Adults: Observational and Mendelian Randomization Studies. Obesity (Silver Spring). 2019;27(6):1013-1022.'
+doi: 10.1002/oby.22469
+pmid: '31067017'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Sleep Duration and Adiposity in Children and Adults: Observational and Mendelian Randomization Studies.'
+access_tier: abstract_only
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 35668
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 11
+  - 16
+  pct_female: null
+  country: Hong Kong / international GWAS consortia
+  adolescent_match: mixed
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: childhood_bmi_per_hour_genetically_predicted_sleep_mr
+  exposure:
+    type: per_hour_less_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: genetically predicted sleep duration (54 SNPs) -> childhood BMI (n = 35,668)
+  scale: per_hour_beta
+  unit: SD of childhood BMI per hour of sleep
+  value: -0.29
+  se: 0.1276
+  ci:
+  - -0.54
+  - -0.04
+  conversion_formula: se = (-0.04 - (-0.54))/3.92 = 0.1276
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = genetically longer sleep -> lower childhood BMI (protective). CI only just excludes zero (upper bound -0.04). THE ONLY MR ESTIMATE IN THIS SHARD THAT SUPPORTS A CAUSAL EFFECT, and it is confined to CHILDREN, not adults.
+  covariates: []
+  followup_years: null
+  cohort_family: EGG_childhood_BMI
+  quote: 'Using MR, sleep duration was inversely associated with BMI in children (-0.29 SD per hour, 95% CI: -0.54 to -0.04), but was not clearly associated with BMI in adults, particularly for women.'
+- outcome_domain: anthropometric
+  outcome_construct: adult_bmi_mr_null
+  exposure:
+    type: per_hour_less_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: genetically predicted sleep duration -> adult BMI (men n = 152,893; women n = 171,977)
+  scale: per_hour_beta
+  unit: SD of adult BMI per hour of sleep
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: No point estimate given in the abstract for adults; authors report 'not clearly associated'. Value encoded as 0 to represent the reported null; se null because not derivable from the abstract.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NULL in adults. Consistent with hayes2023 and chen2024. The MR signal, such as it is, exists only in childhood.
+  covariates: []
+  followup_years: null
+  cohort_family: GIANT
+  quote: 'Using MR, sleep duration was inversely associated with BMI in children (-0.29 SD per hour, 95% CI: -0.54 to -0.04), but was not clearly associated with BMI in adults, particularly for women.'
+- outcome_domain: anthropometric
+  outcome_construct: bmi_z_observational_cross_sectional_age11
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: 'observational: sleep duration category -> BMI z-score at ~11 y, Hong Kong ''Children of 1997'' birth cohort'
+  scale: raw_units
+  unit: BMI z-score per sleep-duration category
+  value: -0.13
+  se: 0.0459
+  ci:
+  - -0.22
+  - -0.04
+  conversion_formula: se = (-0.04 - (-0.22))/3.92 = 0.0459
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = longer sleep associated with lower BMI z-score, cross-sectionally at age 11 (observational comparator for the MR estimate)
+  covariates: []
+  followup_years: null
+  cohort_family: Children_of_1997_HK
+  quote: 'Longer sleep was cross-sectionally associated with lower BMI z score at ~11 years of age (-0.13 per category, 95% CI: -0.22 to -0.04) and at about 11 to 16 years of age longitudinally in girls (-0.39, 95% CI: -0.66 to -0.13).'
+- outcome_domain: anthropometric
+  outcome_construct: bmi_z_longitudinal_girls_11_to_16
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: 'observational longitudinal: sleep duration at ~11 y -> annual BMI z-score at 11-16 y, GIRLS ONLY'
+  scale: raw_units
+  unit: BMI z-score
+  value: -0.39
+  se: 0.1352
+  ci:
+  - -0.66
+  - -0.13
+  conversion_formula: se = (-0.13 - (-0.66))/3.92 = 0.1352
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = longer sleep at 11 y predicted lower BMI z through 16 y in GIRLS. NOT observed in boys - relevant because our subject is male.
+  covariates: []
+  followup_years: 5.0
+  cohort_family: Children_of_1997_HK
+  quote: 'Longer sleep was cross-sectionally associated with lower BMI z score at ~11 years of age (-0.13 per category, 95% CI: -0.22 to -0.04) and at about 11 to 16 years of age longitudinally in girls (-0.39, 95% CI: -0.66 to -0.13).'
+rob:
+  tool: MR-STROBE
+  judgement: moderate
+  notes: Well-designed triangulation (observational cohort + MR in the same paper). 54-SNP instrument for sleep duration is weak. The sex-specific longitudinal finding (girls only) is likely a subgroup finding and should not be over-interpreted.
+funding: not stated in abstract
+notes: 'Authors'' own hedged conclusion: ''A small beneficial effect of sleep on BMI in children cannot be ruled out.'' That is the honest ceiling of the MR evidence for young people. The MR estimate for children (-0.29 SD/h) is ~3x smaller than hayes2023''s unstable -0.93 SD/h, which supports treating the latter as inflated.'
+shard: s09_obesity_bmi

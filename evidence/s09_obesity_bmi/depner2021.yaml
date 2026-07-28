@@ -1,0 +1,77 @@
+study_id: depner2021
+citation: Depner CM, Melanson EL, Eckel RH, Higgins JA, Bergman BC, Perreault L, Knauer OA, Birks BR, Wright KP Jr. Effects of ad libitum food intake, insufficient sleep and weekend recovery sleep on energy balance. Sleep. 2021;44(11):zsab136.
+doi: 10.1093/sleep/zsab136
+pmid: '34059916'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Effects of ad libitum food intake, insufficient sleep and weekend recovery sleep on energy balance.
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 36
+n_studies_pooled: null
+population:
+  age_mean: 25.0
+  age_range: null
+  pct_female: null
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: metabolic
+  outcome_construct: energy_balance_change_kcal_per_day_all_groups
+  exposure:
+    type: chronic_restriction
+    dose_h: 5.0
+    referent_h: 9.0
+    duration_days: 10
+    contrast_label: 24-h energy balance during the 10-day experimental protocol vs baseline, MAIN EFFECT across control/SR/SR+WR
+  scale: raw_units
+  unit: kcal/day
+  value: 797.7
+  se: 96.7
+  ci:
+  - 608.2
+  - 987.2
+  conversion_formula: se = 96.7 as reported (+/-SEM). ci = 797.7 +/- 1.96*96.7.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = large positive energy balance - BUT with NO significant difference between adequate sleep, sleep restriction, and sleep restriction plus weekend recovery. The surplus is attributable to ad libitum laboratory feeding, not to sleep loss.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Twenty-four hour EB increased (p < 0.001; main effect) by an average of 797.7 +/- 96.7 (+/-SEM) kcal during the 10-day experimental protocol versus baseline with no significant differences between groups.
+- outcome_domain: metabolic
+  outcome_construct: energy_expenditure_pct_change_day2
+  exposure:
+    type: chronic_restriction
+    dose_h: 5.0
+    referent_h: 9.0
+    duration_days: 2
+    contrast_label: percent change from baseline in 24-h energy expenditure, day 2 of insufficient sleep vs control group
+  scale: pct_change
+  unit: percent of baseline 24-h EE
+  value: 6.0
+  se: 3.162
+  ci:
+  - -0.2
+  - 12.2
+  conversion_formula: difference = 10% (SR and SR+WR) - 4% (control) = 6 percentage points. se = sqrt(1^2 + 3^2) = 3.162 using the reported +/-values. ci = 6.0 +/- 1.96*3.162.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = insufficient sleep RAISED energy expenditure ~6 percentage points more than adequate sleep, replicating Markwald 2013's offset direction.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Percent change from baseline in 24 h-EE was higher (p < 0.05) on day 2 of insufficient sleep (SR and SR + WR groups; 10 +/- 1%) versus adequate sleep (control group; 4 +/- 3%).
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: Same cohort/protocol as depner2019 - DO NOT POOL AS INDEPENDENT. Between-group design with small unequal groups; the authors themselves flag that within-subject crossover and free-living designs are needed.
+funding: NIH (see paper)
+notes: 'SAME PARTICIPANTS as depner2019 (cohort_family should be treated as identical). This is the strongest single piece of laboratory evidence AGAINST a large sleep-specific energy-balance effect: ''In this between-group study, the effects of adequate sleep and insufficient sleep, with or without or weekend recovery sleep, on 24 h-EB were similar.'''
+shard: s09_obesity_bmi

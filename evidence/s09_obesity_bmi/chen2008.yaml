@@ -1,0 +1,79 @@
+study_id: chen2008
+citation: Chen X, Beydoun MA, Wang Y. Is sleep duration associated with childhood obesity? A systematic review and meta-analysis. Obesity (Silver Spring). 2008;16(2):265-274.
+doi: 10.1038/oby.2007.63
+pmid: '18239632'
+url: https://onlinelibrary.wiley.com/doi/full/10.1038/oby.2007.63
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Is sleep duration associated with childhood obesity? A systematic review and meta-analysis.
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: null
+n_studies_pooled: 11
+population:
+  age_mean: null
+  age_range:
+  - 2
+  - 20
+  pct_female: null
+  country: multinational
+  adolescent_match: mixed
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: overweight_or_obesity_short_vs_longest_sleep
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: each study's own short sleep category vs longest category, general pediatric population
+  scale: log_or
+  unit: null
+  value: 0.4574
+  se: 0.1153
+  ci:
+  - 0.2311
+  - 0.6831
+  conversion_formula: log_or = ln(1.58); se = (ln(1.98) - ln(1.26))/3.92 = 0.1153
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = shorter sleep associated with HIGHER odds of overweight/obesity (harm)
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_2_cohort_9_cross_sectional
+  quote: First, we found that children with shorter sleep duration had a 58% (pooled OR = 1.58 (1.26, 1.98)) higher risk for overweight or obesity, and children with shortest sleep duration had an even higher risk (92%) when compared with children having longer sleep duration.
+- outcome_domain: anthropometric
+  outcome_construct: overweight_or_obesity_per_hour_more_sleep
+  exposure:
+    type: per_hour_less_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: per 1 h INCREASE in sleep duration, pediatric
+  scale: log_or
+  unit: null
+  value: -0.0943
+  se: 0.0445
+  ci:
+  - -0.1744
+  - 0.0
+  conversion_formula: 'log_or = ln(0.91); se = (ln(1.00) - ln(0.84))/3.92 = 0.0445. Inverted for 1 h LESS sleep: OR 1.099 (1.00-1.19).'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = each ADDITIONAL hour of sleep lowers odds of overweight/obesity by 9%; equivalently each hour LESS sleep raises odds ~10% (harm). CI touches 1.00.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_2_cohort_9_cross_sectional
+  quote: 'For each hour increase in sleep, the risk of overweight/obesity was reduced on average by 9% (pooled OR = 0.91; 95% CI: 0.84, 1.00).'
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: Only 2 of the 11 pooled studies were cohorts; 9 were cross-sectional, so this is a TX (context) estimate for causal purposes. Per-hour OR CI includes the null (upper bound 1.00).
+funding: not stated in retrieved text
+notes: 'No PubMed abstract exists for this record (PubMed returns title only); numbers were taken from the retrieved publisher full text at Wiley Online Library. Verbatim methods sentence: ''17 studies that met our inclusion criteria and were included in our systematic review; of which 11 (2 cohort studies and 9 cross-sectional studies) reported odds ratios''. Total n across pooled studies not reported in a single figure, so n is null.'
+shard: s09_obesity_bmi

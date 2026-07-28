@@ -1,0 +1,75 @@
+study_id: shechter2014
+citation: Shechter A, Rising R, Wolfe S, Albu JB, St-Onge MP. Postprandial thermogenesis and substrate oxidation are unaffected by sleep restriction. International Journal of Obesity. 2014;38(9):1153-1158.
+doi: 10.1038/ijo.2013.239
+pmid: '24352294'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Postprandial thermogenesis and substrate oxidation are unaffected by sleep restriction.
+access_tier: abstract_only
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 10
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 22
+  - 43
+  pct_female: 100.0
+  country: US
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: metabolic
+  outcome_construct: resting_metabolic_rate_change
+  exposure:
+    type: chronic_restriction
+    dose_h: 4.0
+    referent_h: 8.0
+    duration_days: 3
+    contrast_label: 3 nights of 4 h vs 8 h per night; fasting resting metabolic rate by whole-room indirect calorimetry
+  scale: raw_units
+  unit: kcal/day
+  value: 57.6
+  se: null
+  ci: null
+  conversion_formula: 0.04 kcal/min difference (1.01 - 0.97) x 1440 min/day = 57.6 kcal/day, P = 0.23 (not significant). se not derivable from the reported non-significant p; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive but NON-SIGNIFICANT rise in resting metabolic rate under restriction. Directionally consistent with Markwald 2013's +111 kcal/d total expenditure offset, but underpowered at n=10.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Short versus habitual sleep did not affect RMR (1.01+/-0.05 and 0.97+/-0.04 kcal min(-1); P=0.23).
+- outcome_domain: metabolic
+  outcome_construct: thermic_effect_of_food_change
+  exposure:
+    type: chronic_restriction
+    dose_h: 4.0
+    referent_h: 8.0
+    duration_days: 3
+    contrast_label: thermic effect of a high-fat meal over 6 h, 4 h vs 8 h sleep
+  scale: raw_units
+  unit: kcal/min
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: Identical values reported in both conditions (0.24 +/- 0.02 kcal/min), P = 0.98. Value encoded as the reported 0 difference; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: EXACT NULL. The thermic effect of food is NOT a route by which short sleep alters energy balance. Rules out one candidate offset mechanism.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: TEF was similar between conditions (0.24+/-0.02 kcal min(-1) in both; P=0.98), as was the ~6-h incremental area under the curve (1.16+/-0.10 and 1.17+/-0.09 kcal min(-1) x 356 min after short and habitual sleep, respectively; P=0.92).
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: Randomised crossover with whole-room indirect calorimetry (gold-standard measurement) but n=10 NON-OBESE PREMENOPAUSAL WOMEN ONLY, 3 nights per condition. Severely underpowered and not transportable to an 18-year-old male.
+funding: not stated in abstract
+notes: 'Narrows down WHERE the expenditure story can live. Authors'' own redirection is the useful conclusion: ''In exploring a role of sleep duration on EE, research should focus on potential alterations in physical activity to explain the increased obesity risk in short sleepers.'' i.e. if short sleep alters expenditure it is probably through activity, not thermogenesis - and reduced daytime activity would work AGAINST the Markwald offset.'
+shard: s09_obesity_bmi

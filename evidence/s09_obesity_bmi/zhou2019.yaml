@@ -1,0 +1,77 @@
+study_id: zhou2019
+citation: 'Zhou Q, Zhang M, Hu D. Dose-response association between sleep duration and obesity risk: a systematic review and meta-analysis of prospective cohort studies. Sleep and Breathing. 2019;23(4):1035-1045.'
+doi: 10.1007/s11325-019-01824-4
+pmid: '30941582'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Dose-response association between sleep duration and obesity risk: a systematic review and meta-analysis of prospective cohort studies.'
+access_tier: abstract_only
+secondhand_via: null
+design: dose_response_meta_analysis
+tier: T5
+n: null
+n_studies_pooled: 12
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: multinational
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: incident_obesity_per_hour_less_sleep
+  exposure:
+    type: per_hour_less_sleep
+    dose_h: 6.0
+    referent_h: 7.0
+    duration_days: null
+    contrast_label: each 1 h DECREMENT of sleep among people sleeping <7 h/day, vs 7 h referent
+  scale: log_rr
+  unit: null
+  value: 0.0862
+  se: 0.021
+  ci:
+  - 0.0488
+  - 0.131
+  conversion_formula: log_rr = ln(1.09); se = (ln(1.14) - ln(1.05))/3.92 = 0.0210
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = each hour LESS sleep below 7 h raises incident-obesity risk by 9% (harm). THIS IS THE PRIMARY ADULT PER-HOUR DOSE-RESPONSE ESTIMATE.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_12_adult_cohorts
+  quote: Compared with 7-h sleep duration per day, the pooled relative risks for obesity were 1.09 (95% CI 1.05-1.14) for each 1-h decrement among individuals who slept < 7 h per day and 1.02 (95% CI 0.99-1.05) for each 1-h increment of sleep duration among individuals with longer sleep duration.
+- outcome_domain: anthropometric
+  outcome_construct: incident_obesity_per_hour_more_sleep_above_referent
+  exposure:
+    type: per_hour_less_sleep
+    dose_h: 9.0
+    referent_h: 8.0
+    duration_days: null
+    contrast_label: each 1 h INCREMENT above the 7-8 h nadir
+  scale: log_rr
+  unit: null
+  value: 0.0198
+  se: 0.0075
+  ci:
+  - -0.01
+  - 0.0488
+  conversion_formula: log_rr = ln(1.02); se = (ln(1.05) - ln(0.99))/3.92 = 0.00751
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = long sleep also weakly associated with obesity, but CI includes the null. Recorded to document the reverse-J shape (nadir at 7-8 h), which matters because our subject's weekend/holiday sleep is 7-8 h and occasionally 10-11 h.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_12_adult_cohorts
+  quote: We found a reverse J-shaped relation between sleep duration and obesity, with the lowest risk at 7-8-h sleep per day.
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: Prospective cohorts, restricted cubic spline dose-response. Self-reported sleep. Total participant count not given in the abstract, so n is null.
+funding: not stated in abstract
+notes: 'THE requested dose-response per-hour coefficient for adults: RR 1.09 (1.05-1.14) per hour below 7 h. Applied to our subject''s ~2 h weekday deficit (5-6 h vs 7-8 h) this implies an obesity RR on the order of 1.09^2 = 1.19 if the weekday exposure were his whole-week exposure - it is not, because he sleeps 7-8 h on weekends/holidays, so the effective annualised deficit is smaller.'
+shard: s09_obesity_bmi

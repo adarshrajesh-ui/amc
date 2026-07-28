@@ -1,0 +1,56 @@
+study_id: yoong2016
+citation: Yoong SL, Chai LK, Williams CM, Wiggers J, Finch M, Wolfenden L. Systematic review and meta-analysis of interventions targeting sleep and their impact on child body mass index, diet, and physical activity. Obesity (Silver Spring). 2016;24(5):1140-1147.
+doi: 10.1002/oby.21459
+pmid: '27112069'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Systematic review and meta-analysis of interventions targeting sleep and their impact on child body mass index, diet, and physical activity.
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: 360
+n_studies_pooled: 3
+population:
+  age_mean: null
+  age_range:
+  - 0
+  - 18
+  pct_female: null
+  country: multinational
+  adolescent_match: mixed
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: bmi_change_sleep_component_interventions
+  exposure:
+    type: sleep_extension
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: multicomponent behavioural interventions INCLUDING a sleep component vs control; pooled change in child BMI (3 RCTs, n = 360)
+  scale: raw_units
+  unit: kg/m2
+  value: -0.04
+  se: 0.074
+  ci:
+  - -0.18
+  - 0.11
+  conversion_formula: se = (0.11 - (-0.18))/3.92 = 0.0740
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'NULL: pooled randomised evidence shows NO BMI benefit from interventions that include a sleep component (I2 = 0%). CI excludes any benefit larger than 0.18 kg/m2.'
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Meta-analysis of three studies found that multicomponent behavioural interventions involving a sleep component were not significantly effective in changing child BMI (n = 360,-0.04 kg/m(2) [-0.18, 0.11], I(2)  = 0%); however, only one study included in the meta-analysis successfully changed sleep duration in children.
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: 'RCTs only, but the pooled null is UNINFORMATIVE about biology because the interventions largely FAILED TO CHANGE SLEEP: ''only one study included in the meta-analysis successfully changed sleep duration in children.'' This is a failure of intervention delivery, not necessarily evidence that sleep does not matter.'
+funding: not stated in abstract
+notes: 'Authors'' hedge cuts the other way and should be reported alongside the null: ''Findings from the included studies suggest that where improvements in child sleep duration were achieved, a positive impact on child BMI, nutrition, and physical activity was also observed.'''
+shard: s09_obesity_bmi

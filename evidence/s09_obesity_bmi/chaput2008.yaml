@@ -1,0 +1,82 @@
+study_id: chaput2008
+citation: 'Chaput JP, Despres JP, Bouchard C, Tremblay A. The association between sleep duration and weight gain in adults: a 6-year prospective study from the Quebec Family Study. Sleep. 2008;31(4):517-523.'
+doi: 10.1093/sleep/31.4.517
+pmid: '18457239'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'The association between sleep duration and weight gain in adults: a 6-year prospective study from the Quebec Family Study.'
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 276
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 21
+  - 64
+  pct_female: null
+  country: Canada
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: excess_weight_gain_6y_short_vs_average_sleepers
+  exposure:
+    type: habitual_short_sleep
+    dose_h: 5.5
+    referent_h: 7.5
+    duration_days: null
+    contrast_label: self-reported 5-6 h vs 7-8 h sleepers; excess body-weight gain over 6 years
+  scale: raw_units
+  unit: kg gained over 6 years
+  value: 1.98
+  se: 0.4235
+  ci:
+  - 1.16
+  - 2.82
+  conversion_formula: se = (2.82 - 1.16)/3.92 = 0.4235
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = short sleepers gained ~2 kg MORE than average-duration sleepers over 6 years (harm). Equivalent to ~0.33 kg/year, or ~0.17 kg/year per hour of deficit assuming a 2 h deficit.
+  covariates:
+  - age
+  - sex
+  - baseline BMI
+  - energy intake
+  - physical activity
+  followup_years: 6.0
+  cohort_family: Quebec_Family_Study
+  quote: 'After adjustment for age, sex, and baseline body mass index, short-duration sleepers gained 1.98 kg (95% confidence interval: 1.16-2.82) more and long-duration sleepers gained 1.58 kg (95% CI: 1.02-2.56) more than did average-duration sleepers over 6 years.'
+- outcome_domain: anthropometric
+  outcome_construct: incident_obesity_risk_increase_short_sleepers
+  exposure:
+    type: habitual_short_sleep
+    dose_h: 5.5
+    referent_h: 7.5
+    duration_days: null
+    contrast_label: risk of developing obesity over 6 y, short vs average sleepers
+  scale: log_rr
+  unit: null
+  value: 0.239
+  se: null
+  ci: null
+  conversion_formula: Reported as a '27% increase in risk'; log_rr = ln(1.27) = 0.2390. No CI reported for this figure in the abstract, so se is null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = harm
+  covariates: []
+  followup_years: 6.0
+  cohort_family: Quebec_Family_Study
+  quote: The risk of developing obesity was elevated for short- and long-duration sleepers as compared with average-duration sleepers, with 27% and 21% increases in risk, respectively.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: 'Objective body-composition measurement and adjustment for energy intake and physical activity are strengths. MAJOR SELECTION ISSUE stated by the authors: ''More than half of the sample is drawn from families with at least 1 parent and 1 offspring with a body mass index of 32 kg/m2 or higher'', i.e. an obesity-enriched family cohort. Also a U-shaped association (long sleepers gained 1.58 kg more), which argues against a simple monotonic sleep-deficit mechanism.'
+funding: not stated in abstract
+notes: Provides the baseline (no-change) comparator for chaput2012's reversibility analysis, which uses the same cohort. cohort_family = Quebec_Family_Study for both - DO NOT POOL AS INDEPENDENT.
+shard: s09_obesity_bmi

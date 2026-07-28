@@ -1,0 +1,78 @@
+study_id: choi2023
+citation: 'Choi Y, Kim S, Lee M, Lee HI, Song K, Suh J, Chae HW, Kim HS, Kwon A. Effect of catch-up sleep on obesity in Korean adolescents: a nationwide cross-sectional study. Frontiers in Pediatrics. 2023;11:1213558.'
+doi: 10.3389/fped.2023.1213558
+pmid: '37565249'
+url: https://www.frontiersin.org/articles/10.3389/fped.2023.1213558/full
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Effect of catch-up sleep on obesity in Korean adolescents: a nationwide cross-sectional study.'
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 1306
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 12
+  - 18
+  pct_female: null
+  country: South Korea
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: overweight_obesity_risk_short_weekday_sleep_with_insufficient_catchup
+  exposure:
+    type: weekend_catchup
+    dose_h: 6.0
+    referent_h: 6.0
+    duration_days: null
+    contrast_label: adolescents with weekday total sleep <6 h AND weekend sleep extension <3 h vs those with >=3 h weekend extension (KNHANES VII)
+  scale: log_rr
+  unit: null
+  value: 0.6575
+  se: 0.3009
+  ci:
+  - 0.0677
+  - 1.247
+  conversion_formula: log = ln(1.93) = 0.6575; se = (ln(3.48) - ln(1.07))/3.92 = 0.3009
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = among short weekday sleepers, getting LESS than 3 h of weekend catch-up sleep nearly DOUBLED overweight/obesity risk vs getting more. Implies weekend catch-up may partially buffer weekday restriction - the OPPOSITE of Depner 2019's laboratory finding. Cross-sectional, so causal weight is low.
+  covariates:
+  - covariates per paper
+  followup_years: null
+  cohort_family: KNHANES_VII
+  quote: Furthermore, when the WK-E was less than 3 h, the overweight/obesity relative risk increased by 1.93 times (95% CI, 1.07-3.48) in participants whose TSD on weekdays was less than 6 h.
+- outcome_domain: anthropometric
+  outcome_construct: overweight_obesity_per_30min_weekend_sleep_extension
+  exposure:
+    type: weekend_catchup
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: each 30-minute increment of weekend sleep extension (WK-E) -> relative risk of overweight/obesity, adjusted
+  scale: log_rr
+  unit: null
+  value: -0.0726
+  se: null
+  ci: null
+  conversion_formula: Reported as 'the risk of overweight/obesity decreased by a factor of 0.93' per 30-min increment of weekend sleep extension; log = ln(0.93) = -0.0726. No CI reported for this figure, so se is null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = each extra 30 min of weekend catch-up sleep associated with 7% lower overweight/obesity risk. NOTE the abstract also reports a 'factor of 0.39' for each 30-min increment in total weekend sleep duration, which is not interpretable as a per-30-min multiplicative risk and is likely a reporting error - do not use that figure.
+  covariates: []
+  followup_years: null
+  cohort_family: KNHANES_VII
+  quote: In addition, as the WK-E increased by 30 min, the risk of overweight/obesity decreased by a factor of 0.93, following adjustment of the covariates.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: CROSS-SECTIONAL nationally representative survey; self-reported sleep; the paper contains at least one internally inconsistent risk figure (the 'factor of 0.39' per 30 min). The authors themselves demand prospective confirmation.
+funding: authors declare no commercial or financial relationships
+notes: 'Included ONLY because it is the closest published match to our subject''s actual exposure PATTERN (short weekdays plus weekend catch-up) in the correct age band. Authors'' own caveat, verbatim: ''However, further prospective studies are needed to establish the causality between extended weekend sleep and obesity.'' The direction here (catch-up helps) CONFLICTS with depner2019 (catch-up did not prevent weight gain in the laboratory); the conflict is unresolved.'
+shard: s09_obesity_bmi

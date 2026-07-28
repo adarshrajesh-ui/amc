@@ -1,0 +1,77 @@
+study_id: yu2022
+citation: 'Yu Y, Chen Y, Zhang H, Ai S, Zhang J, Benedict C, Wang N, Lu Y, Tan X. Sleep Duration and Visceral Adipose Tissue: Linear and Nonlinear Mendelian Randomization Analyses. Journal of Clinical Endocrinology and Metabolism. 2022;107(11):2992-2999.'
+doi: 10.1210/clinem/dgac551
+pmid: '36134520'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Sleep Duration and Visceral Adipose Tissue: Linear and Nonlinear Mendelian Randomization Analyses.'
+access_tier: abstract_only
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 396858
+n_studies_pooled: null
+population:
+  age_mean: 57.0
+  age_range: null
+  pct_female: 54.1
+  country: UK
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: visceral_adipose_tissue_per_hour_genetically_predicted_sleep
+  exposure:
+    type: per_hour_less_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: each 1 h increase in genetically predicted sleep duration -> predicted VAT mass, UK Biobank one-sample MR
+  scale: per_hour_beta
+  unit: kg of visceral adipose tissue per hour of sleep
+  value: -0.11
+  se: 0.01368
+  ci:
+  - -0.1368
+  - -0.0832
+  conversion_formula: 'se derived from the reported P: p = 8.18e-16 -> |z| = 8.0414, so se = 0.11/8.0414 = 0.01368. ci = -0.11 +/- 1.96*0.01368.'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: negative = each additional hour of genetically predicted sleep -> 0.11 kg LESS visceral fat; equivalently each hour less sleep -> +0.11 kg VAT (harm). Baseline mean VAT in this sample was 1.25 +/- 0.88 kg, so 0.11 kg is ~9% of the mean.
+  covariates: []
+  followup_years: null
+  cohort_family: UK_Biobank
+  quote: For each 1-hour increase in genetically predicted sleep duration, the reduction in predicted VAT mass was 0.11 kg (P = 8.18E-16) in total, 0.17 kg (P = 3.30E-11) in men and 0.07 kg (P = 1.94E-06) in women.
+- outcome_domain: anthropometric
+  outcome_construct: visceral_adipose_tissue_per_hour_men
+  exposure:
+    type: per_hour_less_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: 'men only: each 1 h increase in genetically predicted sleep duration -> predicted VAT mass'
+  scale: per_hour_beta
+  unit: kg of visceral adipose tissue per hour of sleep
+  value: -0.17
+  se: 0.02602
+  ci:
+  - -0.221
+  - -0.119
+  conversion_formula: 'se derived from the reported P: p = 3.30e-11 -> |z| = 6.5334, so se = 0.17/6.5334 = 0.02602. ci = -0.17 +/- 1.96*0.02602.'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: negative = harm from less sleep; the effect is ~2.4x LARGER IN MEN than women, which matters because our subject is male.
+  covariates: []
+  followup_years: null
+  cohort_family: UK_Biobank
+  quote: For each 1-hour increase in genetically predicted sleep duration, the reduction in predicted VAT mass was 0.11 kg (P = 8.18E-16) in total, 0.17 kg (P = 3.30E-11) in men and 0.07 kg (P = 1.94E-06) in women.
+rob:
+  tool: MR-STROBE
+  judgement: moderate
+  notes: 'Large one-sample MR with linear and nonlinear (stratified) analyses. TWO MAJOR CAVEATS: (1) the outcome is PREDICTED, not measured, VAT (a model-imputed phenotype), which can inflate precision; (2) one-sample MR in UK Biobank is vulnerable to weak-instrument bias toward the observational estimate. Mean age 57 y - poor transport to 18 y.'
+funding: not stated in abstract
+notes: 'The one MR result in this shard with a clearly non-null adiposity effect, and it is for VISCERAL FAT rather than BMI, with an L-shaped dose-response: ''The causal association of sleep duration with VAT was L-type. Our findings support that short sleep duration is a risk factor for increasing VAT.'' Note the discordance: MR finds an effect on visceral fat depot but not on BMI (hayes2023), which is compatible with body-composition redistribution without a BMI change.'
+shard: s09_obesity_bmi

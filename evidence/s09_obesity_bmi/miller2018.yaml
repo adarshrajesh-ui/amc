@@ -1,0 +1,125 @@
+study_id: miller2018
+citation: 'Miller MA, Kruisbrink M, Wallace J, Ji C, Cappuccio FP. Sleep duration and incidence of obesity in infants, children, and adolescents: a systematic review and meta-analysis of prospective studies. Sleep. 2018;41(4):zsy018.'
+doi: 10.1093/sleep/zsy018
+pmid: '29401314'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Sleep duration and incidence of obesity in infants, children, and adolescents: a systematic review and meta-analysis of prospective studies.'
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 31665
+n_studies_pooled: 42
+population:
+  age_mean: null
+  age_range:
+  - 0
+  - 18
+  pct_female: null
+  country: multinational
+  adolescent_match: mixed
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: incident_overweight_or_obesity_adolescence
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: short vs adequate sleep, ADOLESCENT stratum (3 studies, 26,652 participants)
+  scale: log_rr
+  unit: null
+  value: 0.2624
+  se: 0.0819
+  ci:
+  - 0.1044
+  - 0.4253
+  conversion_formula: log_rr = ln(1.30); se = (ln(1.53) - ln(1.11))/3.92 = 0.0819
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = short sleep predicts HIGHER risk of developing overweight/obesity (harm)
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_3_adolescent_cohorts
+  quote: 'Short sleep was associated with a greater risk of developing overweight or obesity in infancy (seven studies, 14738 participants, risk ratio [RR]: 1.40; 95% CI 1.19 to 1.65; p < .001), early childhood (eight studies, 31104 participants, RR: 1.57; 1.40 to 1.76; p < .001), middle childhood (three studies, 3005 participants, RR: 2.23; 2.18 to 2.27; p < .001), and adolescence (three studies, 26652 participants, RR: 1.30; 1.11 to 1.53; p < .002).'
+- outcome_domain: anthropometric
+  outcome_construct: incident_overweight_or_obesity_early_childhood
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: short vs adequate sleep, EARLY CHILDHOOD stratum (8 studies, 31,104 participants)
+  scale: log_rr
+  unit: null
+  value: 0.4511
+  se: 0.0584
+  ci:
+  - 0.3365
+  - 0.5653
+  conversion_formula: log_rr = ln(1.57); se = (ln(1.76) - ln(1.40))/3.92 = 0.0584
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = harm. Included because the task asked for the early-childhood estimate; NOT transportable to a 16-19 year old.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_8_early_childhood_cohorts
+  quote: 'early childhood (eight studies, 31104 participants, RR: 1.57; 1.40 to 1.76; p < .001)'
+- outcome_domain: anthropometric
+  outcome_construct: bmi_z_per_hour_sleep
+  exposure:
+    type: per_hour_less_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: per 1 h more sleep, pooled paediatric (14 studies, 18 cohorts)
+  scale: per_hour_beta
+  unit: BMI z-score units per hour of sleep
+  value: -0.03
+  se: 0.0077
+  ci:
+  - -0.04
+  - -0.01
+  conversion_formula: se = (-0.01 - (-0.04))/3.92 = 0.00765
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = each additional hour of sleep gives 0.03 LOWER BMI z-score; each hour LESS sleep gives +0.03 BMI-z (harm)
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_18_paediatric_cohorts
+  quote: Sleep duration was also associated with a significant change in BMI z-score (14 studies, 18 cohorts, 31665 participants; mean difference -0.03; -0.04 to -0.01 per hour sleep; p = .001)
+- outcome_domain: anthropometric
+  outcome_construct: bmi_per_hour_sleep
+  exposure:
+    type: per_hour_less_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: per 1 h more sleep, pooled paediatric (16 studies, 24 cohorts, 24,894 participants)
+  scale: per_hour_beta
+  unit: kg/m2 per hour of sleep
+  value: -0.03
+  se: 0.0077
+  ci:
+  - -0.04
+  - -0.01
+  conversion_formula: se = (-0.01 - (-0.04))/3.92 = 0.00765
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = each additional hour of sleep gives 0.03 kg/m2 LOWER BMI; each hour LESS sleep gives +0.03 kg/m2 (harm). THIS IS THE BEST PROSPECTIVE PER-HOUR BMI ESTIMATE and is ~12x smaller than Cappuccio's cross-sectional -0.35.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_24_paediatric_cohorts
+  quote: and in BMI (16 studies, 24 cohorts, 24894 participants; mean difference -0.03 kg/m2; -0.04 to -0.01 for every hour of increase in sleep; p = .001).
+rob:
+  tool: AMSTAR-2
+  judgement: low
+  notes: Prospective studies only, follow-up >=1 year, age-stratified because of high heterogeneity. Exposure is mostly self-/parent-reported. The middle-childhood RR of 2.23 (2.18-2.27) has an implausibly narrow CI for 3 studies and should be discounted.
+funding: not stated in abstract
+notes: KEY RECORD for the per-hour BMI question. The prospective per-hour BMI coefficient (-0.03 kg/m2/h) and the per-hour BMI-z coefficient (-0.03/h) are an order of magnitude smaller than Cappuccio 2008's cross-sectional adult coefficient (-0.35 kg/m2/h). n field = 31,665 (the BMI-z analysis); the adolescent RR stratum had 26,652 participants.
+shard: s09_obesity_bmi

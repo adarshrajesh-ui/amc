@@ -1,0 +1,96 @@
+study_id: nedeltcheva2009
+citation: Nedeltcheva AV, Kilkus JM, Imperial J, Kasza K, Schoeller DA, Penev PD. Sleep curtailment is accompanied by increased intake of calories from snacks. American Journal of Clinical Nutrition. 2009;89(1):126-133.
+doi: 10.3945/ajcn.2008.26574
+pmid: '19056602'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Sleep curtailment is accompanied by increased intake of calories from snacks.
+access_tier: abstract_only
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 11
+n_studies_pooled: null
+population:
+  age_mean: 39.0
+  age_range: null
+  pct_female: 45.5
+  country: US
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: metabolic
+  outcome_construct: snack_energy_intake_kcal_per_day
+  exposure:
+    type: chronic_restriction
+    dose_h: 5.5
+    referent_h: 8.5
+    duration_days: 14
+    contrast_label: 5.5 h vs 8.5 h bedtime, two 14-day laboratory stays, ad libitum palatable food
+  scale: raw_units
+  unit: kcal/day from snacks
+  value: 221.0
+  se: 84.645
+  ci:
+  - 55.1
+  - 386.9
+  conversion_formula: 'difference = 1087 - 866 = 221 kcal/d. se backed out from reported P: two-sided p = 0.026, df = 10 -> t = 2.6109, so se = 221/2.6109 = 84.64. ci = 221 +/- 1.96*84.64.'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: positive = sleep curtailment increased SNACK calories by ~221 kcal/day (harm). Note MEAL intake was unchanged (P = 0.51), so the total-intake effect here is smaller than the pooled 385 kcal/day.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Although meal intake remained similar (P = 0.51), sleep restriction was accompanied by increased consumption of calories from snacks (1087 +/- 541 compared with 866 +/- 365 kcal/d; P = 0.026), with higher carbohydrate content (65% compared with 61%; P = 0.04), particularly during the period from 1900 to 0700.
+- outcome_domain: metabolic
+  outcome_construct: total_energy_expenditure_kcal_per_day
+  exposure:
+    type: chronic_restriction
+    dose_h: 5.5
+    referent_h: 8.5
+    duration_days: 14
+    contrast_label: total energy expenditure, 5.5 h vs 8.5 h bedtime
+  scale: raw_units
+  unit: kcal/day
+  value: 136.0
+  se: null
+  ci: null
+  conversion_formula: difference = 2526 - 2390 = 136 kcal/d, P = 0.58 (not significant). se not derivable; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive but NON-SIGNIFICANT rise in expenditure. Directionally consistent with Markwald's offset (+111 kcal/d) but statistically indistinguishable from zero at n=11.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: These changes were not associated with a significant increase in energy expenditure (2526 +/- 537 and 2390 +/- 369 kcal/d during the 5.5-h and 8.5-h bedtime periods, respectively; P = 0.58), and we found no significant differences in serum leptin and ghrelin between the 2 sleep conditions.
+- outcome_domain: endocrine
+  outcome_construct: leptin_and_ghrelin_null
+  exposure:
+    type: chronic_restriction
+    dose_h: 5.5
+    referent_h: 8.5
+    duration_days: 14
+    contrast_label: 24-h serum leptin and ghrelin profiles, 5.5 h vs 8.5 h bedtime
+  scale: pct_change
+  unit: percent
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: No point estimates reported; authors report NO significant difference. Value encoded as 0 to represent the reported null; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: ZERO = NO leptin or ghrelin change detected. This is a direct FAILURE TO REPLICATE Spiegel 2004 and Taheri 2004 in a longer (14-day) protocol with a milder restriction dose, and is the main reason the hormone story should be down-weighted.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: and we found no significant differences in serum leptin and ghrelin between the 2 sleep conditions.
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: Randomised-order crossover, 14 days per condition (longest of the classic protocols), objective TEE. But n=11, mean age 39 y, mean BMI 26.5, and sleep was reduced by only 122 min/night - a milder dose than Spiegel's 4 h.
+funding: not stated in abstract
+notes: 'CRITICAL COUNTERWEIGHT to the leptin/ghrelin narrative: with a 2-week protocol and objectively measured 122 min/night sleep loss, NO leptin or ghrelin change was found, and the intake effect was confined to snacks (meals unchanged).'
+shard: s09_obesity_bmi

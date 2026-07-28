@@ -1,0 +1,56 @@
+study_id: lemayrussell2021
+citation: LeMay-Russell S, Schvey NA, Kelly NR, Parker MN, Ramirez E, Shank LM, et al. Longitudinal associations between facets of sleep and adiposity in youth. Obesity (Silver Spring). 2021;29(11):1760-1769.
+doi: 10.1002/oby.23281
+pmid: '34734495'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Longitudinal associations between facets of sleep and adiposity in youth.
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 137
+n_studies_pooled: null
+population:
+  age_mean: 12.5
+  age_range:
+  - 8
+  - 17
+  pct_female: 54.0
+  country: US
+  adolescent_match: mixed
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: fat_mass_gain_1y_by_sleep_duration_null
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: ACTIGRAPHY-measured average weekly sleep duration at baseline (14 days of wear) -> fat mass 1 year later, adjusted for baseline fat mass and height
+  scale: raw_units
+  unit: kg of fat mass per hour of sleep
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: Authors report sleep duration was NOT significantly associated with 1-year fat mass (p > 0.09 for all non-significant facets) and give no coefficient. Value encoded as 0 to represent the reported null; se null because it is not derivable.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NULL. THIS IS THE ONLY PROSPECTIVE PAEDIATRIC RECORD IN THIS SHARD WITH OBJECTIVE (ACTIGRAPHIC) EXPOSURE AND OBJECTIVE FAT-MASS OUTCOME, and sleep DURATION showed no association with fat-mass gain. Weekend catch-up sleep, duration variability and social jet lag were also null.
+  covariates:
+  - baseline fat mass
+  - height
+  followup_years: 1.0
+  cohort_family: NICHD_growth_and_obesity
+  quote: Wake time (p = 0.03) and sleep midpoint (p = 0.02) were inversely associated with 1-year fat mass, such that earlier wake time and midpoint were associated with higher 1-year fat mass. No other facet of sleep was significantly associated with 1-year fat mass (p > 0.09).
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: 'Objective actigraphy over 14 days and objectively measured fat mass - the best exposure and outcome measurement of any observational record here. But it is a CONVENIENCE SAMPLE of only 137 youths with 1-year follow-up, so it is underpowered to detect the small effects that the prospective meta-analyses estimate (Miller 2018: -0.03 kg/m2 per hour). Treat as ''no signal detected at this power'', not ''effect ruled out''. Age 8-17 (mean 12.5) is younger than our subject.'
+funding: NIH intramural (NICHD, NIDDK); US Government employees
+notes: IMPORTANT because it is T4 (objective exposure). The self-report literature finds duration effects; the one objectively-measured prospective paediatric study here does not, and the significant findings run in the COUNTERINTUITIVE direction (earlier wake time predicted MORE fat gain). Note the direction of the timing finding is opposite to asarnow2015's late-bedtime finding; together they indicate the timing literature is not yet coherent.
+shard: s09_obesity_bmi

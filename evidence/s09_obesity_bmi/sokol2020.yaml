@@ -1,0 +1,81 @@
+study_id: sokol2020
+citation: 'Sokol RL, Grummon AH, Lytle LA. Sleep duration and body mass: direction of the associations from adolescence to young adulthood. International Journal of Obesity. 2020;44(4):852-856.'
+doi: 10.1038/s41366-019-0462-5
+pmid: '31582778'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Sleep duration and body mass: direction of the associations from adolescence to young adulthood.'
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 12
+  - 32
+  pct_female: null
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: sleep_need
+  outcome_construct: sleep_duration_predicted_by_prior_bmi
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: 'REVERSE DIRECTION: BMI at an earlier developmental stage -> sleep duration at the next stage, autoregressive cross-lag model, Add Health'
+  scale: raw_units
+  unit: hours of sleep per unit BMI (standardised model coefficient B)
+  value: -0.02
+  se: 0.01
+  ci:
+  - -0.0396
+  - -0.0004
+  conversion_formula: B = -0.02 with SE = 0.01 as reported by the authors; ci = -0.02 +/- 1.96*0.01.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = HIGHER BMI CAUSES/PRECEDES SHORTER SLEEP, not the reverse. This is the direction the data actually support in this cohort, for both sexes, p < 0.01.
+  covariates:
+  - sex-stratified
+  - key confounders per paper
+  followup_years: 12.0
+  cohort_family: Add_Health
+  quote: For both males and females, higher BMI during an earlier developmental stage was associated with shorter sleep duration in the subsequent stage (both Bs = -0.02, ps < 0.01). However, sleep duration at an earlier developmental stage was not associated with BMI at the subsequent stage.
+- outcome_domain: anthropometric
+  outcome_construct: bmi_predicted_by_prior_sleep_duration_null
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: 'FORWARD DIRECTION: sleep duration at an earlier developmental stage -> BMI at the next stage (adolescence 12-18 -> emerging adulthood 18-24 -> young adulthood 24-32)'
+  scale: raw_units
+  unit: kg/m2 per hour of sleep
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: Authors report the forward path as non-significant and do NOT give a coefficient in the abstract or the retrieved text. Value encoded as 0 to represent the reported null; se null because it is not derivable.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NULL. In the SAME COHORT and the SAME AGE WINDOW as suglia2014, a cross-lag model that simultaneously allows both directions finds NO forward effect of sleep duration on subsequent BMI. This is the strongest single piece of evidence against the naive story for our subject's exact question.
+  covariates:
+  - sex-stratified
+  - key confounders per paper
+  followup_years: 12.0
+  cohort_family: Add_Health
+  quote: However, sleep duration at an earlier developmental stage was not associated with BMI at the subsequent stage.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Cross-lag modelling is the right tool for the directionality question and the age window is ideal (12-18 -> 18-24 -> 24-32). Self-reported sleep. Sample size not stated in the abstract (Add Health waves I-IV; the retrieved secondary description says 'over 20,000 individuals'), so n is left null rather than guessed.
+funding: Carolina Population Center (P2C HD050924, T32 HD007168); Carolina Consortium for Human Development (T32 HD07376)
+notes: 'THE MOST DIRECTLY DECISION-RELEVANT LONGITUDINAL RECORD. Same cohort as suglia2014 and krueger2015 (Add_Health) - DO NOT POOL AS INDEPENDENT. Authors'' warning is worth quoting in full to the downstream model: ''Findings suggest that researchers should be cautious when interpreting cross-sectional relationships between sleep and BMI, as higher BMI may precede shorter sleep during adolescence to young adulthood.'''
+shard: s09_obesity_bmi

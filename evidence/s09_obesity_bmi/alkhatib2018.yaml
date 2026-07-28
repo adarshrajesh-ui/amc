@@ -1,0 +1,100 @@
+study_id: alkhatib2018
+citation: 'Al Khatib HK, Hall WL, Creedon A, Ooi E, Masri T, McGowan L, Harding SV, Darzi J, Pot GK. Sleep extension is a feasible lifestyle intervention in free-living adults who are habitually short sleepers: a potential strategy for decreasing intake of free sugars? A randomized controlled pilot study. American Journal of Clinical Nutrition. 2018;107(1):43-53.'
+doi: 10.1093/ajcn/nqx030
+pmid: '29381788'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Sleep extension is a feasible lifestyle intervention in free-living adults who are habitually short sleepers: a potential strategy for decreasing intake of free sugars? A randomized controlled pilot study.'
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 42
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 18
+  - 64
+  pct_female: null
+  country: UK
+  adolescent_match: mixed
+effects:
+- outcome_domain: metabolic
+  outcome_construct: free_sugar_intake_change_sleep_extension
+  exposure:
+    type: sleep_extension
+    dose_h: null
+    referent_h: null
+    duration_days: 28
+    contrast_label: behavioural sleep-extension consultation vs maintained habitual short sleep (5 to <7 h), 4 weeks free-living; free-sugar intake by 7-d food diaries
+  scale: raw_units
+  unit: grams of free sugars per day
+  value: -9.6
+  se: 3.2908
+  ci:
+  - -16.0
+  - -3.1
+  conversion_formula: se = (-3.1 - (-16.0))/3.92 = 3.291
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = extending sleep reduced free-sugar intake by ~9.6 g/day in the intervention arm (control arm change was +0.7 g/day, 95% CI -5.7 to 7.2; between-arm P = 0.042). Diet-quality benefit, ~38 kcal/day of sugar - far smaller than Tasali's -270 kcal/day total intake effect.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: 'Sleep extension led to reduced intake of free sugars (-9.6 g; 95% CI: -16.0, -3.1 g) compared with control (0.7 g; 95% CI: -5.7, 7.2 g) (P = 0.042).'
+- outcome_domain: metabolic
+  outcome_construct: energy_balance_markers_null
+  exposure:
+    type: sleep_extension
+    dose_h: null
+    referent_h: null
+    duration_days: 28
+    contrast_label: between-group differences in markers of energy balance (resting and total energy expenditure, physical activity) and cardiometabolic health
+  scale: raw_units
+  unit: kcal/day
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: Authors report NO significant between-group differences and give no point estimates; value encoded as 0 to represent the reported null, se null because not derivable.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NULL = in a 4-week free-living sleep-extension trial with a smaller achieved sleep increase (+0:21 h sleep duration, 95% CI 0:06 to 0:36), NO energy-balance or cardiometabolic benefit was detectable. Direct counterweight to tasali2022.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: There were no significant differences between groups in markers of energy balance or cardiometabolic health.
+- outcome_domain: metabolic
+  outcome_construct: sleep_duration_achieved_increase
+  exposure:
+    type: sleep_extension
+    dose_h: null
+    referent_h: null
+    duration_days: 28
+    contrast_label: actigraphy-measured increase in SLEEP DURATION (as distinct from time in bed) achieved by the intervention
+  scale: hours
+  unit: hours per night
+  value: 0.35
+  se: 0.1276
+  ci:
+  - 0.1
+  - 0.6
+  conversion_formula: Reported as 0:21 h:mm (95% CI 0:06, 0:36) = 0.35 h (0.10, 0.60). se = (0.60 - 0.10)/3.92 = 0.1276.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'positive but SMALL: time in bed rose 0:55 h but actual sleep duration rose only 0:21 h. Only ~38% of added time in bed converted to sleep. Directly relevant to how much benefit our subject should expect from ''trying to sleep more''.'
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: 'The sleep extension group significantly increased time in bed [0:55 hours:minutes (h:mm); 95% CI: 0:37, 1:12 h:mm], sleep period (0:47 h:mm; 95% CI: 0:29, 1:05 h:mm), and sleep duration (0:21 h:mm; 95% CI: 0:06, 0:36 h:mm) compared with the control group.'
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: Randomised, free-living, actigraphy-verified, 100% participation with 6.5% attrition - good conduct. But explicitly a FEASIBILITY PILOT (n=42, normal-weight participants), dietary intake by self-reported food diaries, only 4 weeks, and underpowered for energy-balance endpoints. The significant free-sugar finding survived only in a plausible-reporters sensitivity analysis for several nutrients.
+funding: not stated in abstract; ClinicalTrials.gov NCT02787577
+notes: 'Included as the honest counterweight to tasali2022: a second randomised sleep-extension trial in habitual short sleepers found NO energy-balance effect. The key mechanistic detail is the leaky conversion of time in bed to sleep (+0:55 h in bed -> only +0:21 h sleep), which caps the achievable dose of any real-world sleep-normalisation attempt.'
+shard: s09_obesity_bmi
