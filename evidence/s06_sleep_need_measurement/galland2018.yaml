@@ -1,0 +1,112 @@
+study_id: galland2018
+citation: "Galland BC, Short MA, Terrill P, Rigney G, Haszard JJ, Coussens S, Foster-Owens M, Biggs SN. Establishing normal values for pediatric nighttime sleep measured by actigraphy: a systematic review and meta-analysis. Sleep. 2018;41(4):zsy017."
+doi: "10.1093/sleep/zsy017"
+pmid: "29590464"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Establishing normal values for pediatric nighttime sleep measured by actigraphy: a systematic review and meta-analysis"
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: null
+n_studies_pooled: 79
+population:
+  age_mean: null
+  age_range: [3, 18]
+  pct_female: null
+  country: "multinational"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: actigraphy_overnight_sleep_duration_age_15_18
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "pooled mean actigraphy-measured overnight sleep duration, 15-18 y age band"}
+    scale: hours
+    unit: "hours"
+    value: 7.4
+    se: null
+    ci: null
+    conversion_formula: "Abstract reports the pooled mean estimate for the 15-18 y band as 7.4 h. No SD or CI is given in the abstract and I could not access the full text, so se and ci are null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive: what 15-18 year olds ACTUALLY sleep by actigraphy, pooled across 79 studies. THE COMPARISON THAT MATTERS: this is 1.6-1.95 h BELOW the laboratory sleep-need estimates for the same age band (short2018sleepneed: 9.0 h satiated, 9.35 h for optimal attention). The average adolescent is already substantially short, so our subject's deficit must be scored against a REQUIREMENT, not against this population norm."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Pooled mean estimates for overnight sleep duration declined from 9.68 hours (3-5 years age band) to 8.98, 8.85, 8.05, and 7.4 for age bands 6-8, 9-11, 12-14, and 15-18 years, respectively."
+  - outcome_domain: exposure_measurement
+    outcome_construct: actigraphy_sleep_onset_latency_pooled
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "pooled actigraphy sleep-onset latency across the pediatric age range"}
+    scale: hours
+    unit: "hours (converted from 19.4 minutes)"
+    value: 0.3233
+    se: null
+    ci: null
+    conversion_formula: "Abstract: 'Sleep latency was stable at 19.4 min per night.' value = 19.4/60 = 0.3233 h. No dispersion reported in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = time in bed that is spent awake trying to fall asleep. This is one of the two components of the TIB-minus-TST gap (the other is wake after sleep onset). Directly needed for the scenario where our subject reported TIME IN BED. 'Stable' means it does not vary with age across 3-18 y, so it transfers to a 16-19 year old without adjustment."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "There was a significant curvilinear association between both sleep onset and offset with age (p < .001). Sleep latency was stable at 19.4 min per night."
+  - outcome_domain: recovery
+    outcome_construct: weekend_minus_weekday_sleep_duration_age_15_18
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: null, contrast_label: "weekend/nonschool-day minus weekday total sleep time, 15-18 y"}
+    scale: hours
+    unit: "hours of extra sleep on nonschool days"
+    value: 0.9333
+    se: null
+    ci: null
+    conversion_formula: "Abstract: 'Total sleep time in 15-18 years old was 56 min longer, and sleep onset and offset almost 1 and 2 hours later, respectively, on weekend or nonschool days.' value = 56/60 = 0.9333 h. Based on 18 studies per the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more sleep on nonschool days. INDEPENDENT CORROBORATION OF THE SUBJECT'S OWN ACCOUNT: he reports ~5-6 h weekdays and ~7-8 h weekends, a gap of about 2 h, which is roughly TWICE the population-average weekend catch-up of 0.93 h. His weekday-weekend swing is therefore in the upper tail, which is itself weak evidence that his weekday restriction is real rather than a reporting artefact."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "There were significant differences among the older age groups between weekday and weekend/nonschool days (18 studies). Total sleep time in 15-18 years old was 56 min longer, and sleep onset and offset almost 1 and 2 hours later, respectively, on weekend or nonschool days."
+  - outcome_domain: sleep_need
+    outcome_construct: actigraphy_sleep_duration_age_equation
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "continuous age equation for actigraphy sleep duration, ages 0-18 y"}
+    scale: hours
+    unit: "hours predicted at age 17"
+    value: 6.878
+    se: null
+    ci: null
+    conversion_formula: "Abstract gives 'hours = 9.02 - 1.04 x [(age/10)^2 - 0.83]' with R2 = 0.74 over 0-18 y. I evaluated it at our subject's ages: age 16 -> 9.02 - 1.04*(2.56-0.83) = 7.22 h; age 17 -> 9.02 - 1.04*(2.89-0.83) = 6.88 h; age 18 -> 9.02 - 1.04*(3.24-0.83) = 6.51 h. value = the age-17 prediction, 6.878 h."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive. FLAGGED DISAGREEMENT WITH THE BAND ESTIMATE ABOVE: the continuous equation predicts 6.5-7.2 h at ages 16-18 whereas the pooled 15-18 y band estimate is 7.4 h. The quadratic is fitted over the whole 0-18 range and steepens at the top, so it extrapolates low at the boundary. PREFER THE BAND ESTIMATE (7.4 h) for a 16-18 year old and treat 6.5-7.4 h as the plausible range of the population norm."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "For continuous data, the best-fit (R2 = 0.74) equation for hours over the 0-18 years age range was 9.02 - 1.04 x [(age/10)^2 - 0.83]."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Systematic search of eight databases, 79 studies meta-analysed with random-effects models and age as a meta-regression covariate. Weaknesses: pooled across heterogeneous actigraphs, wear sites and scoring algorithms, which meredithjones2024 shows can move sleep-duration estimates by tens of minutes and sleep efficiency by up to 18 points; no SDs in the abstract; actigraphy over-counts sleep relative to PSG (specificity 63.8% in meredithjones2024), so the 7.4 h figure for 15-18 year olds is if anything an OVERESTIMATE of true total sleep time; I had abstract-only access."
+funding: "Not stated in the abstract"
+notes: |
+  ACCESS: abstract only, despite the article being open access. Unpaywall reports is_oa = true with an OUP PDF location, but
+  academic.oup.com returns a Cloudflare interstitial to a scripted download and the figshare mirror record
+  (13450679) exposes no downloadable files through the figshare API. There is no PMC deposit. All numbers above are verbatim
+  from the PubMed abstract.
+  WHY THIS RECORD MATTERS: it is the age-matched POPULATION NORM for shard task 3. Placing the three quantities side by side
+  for our subject's age band is the whole point:
+    what 15-18 year olds need (laboratory, short2018sleepneed) : 9.0 h satiated, 9.35 h for optimal sustained attention
+    what 15-18 year olds get  (actigraphy, this paper)         : 7.4 h
+    what our subject reports getting on weekdays               : 5-6 h
+  So the average adolescent already runs a deficit of roughly 1.6 h, and our subject reports being a further 1.4-2.4 h below
+  the average. The modeller must not benchmark him against the population norm, or the deficit will be understated by ~1.6 h.
+  SECOND USE: the 19.4 min sleep-onset latency is one of only two age-appropriate SOL estimates I retrieved (the other is the
+  36 min TIB-minus-sleep-period gap derivable from meredithjones2024, which also contains time awake in bed before rising and
+  so should be larger). Both feed exposure_priors.md section (iii).
+  NOTE ON THE AUTHOR OVERLAP: the first author here (Galland) is also an author on meredithjones2024, and the second author
+  (Short MA) is the first author of short2012diary and short2018sleepneed. These are separate studies with separate data, so
+  they are not double-counting, but the pooler should be aware that the adolescent actigraphy literature is written by a small
+  number of overlapping groups and the effective number of independent research teams is smaller than the study count.
+shard: "s06_sleep_need_measurement"

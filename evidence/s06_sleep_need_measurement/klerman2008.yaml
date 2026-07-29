@@ -1,0 +1,117 @@
+study_id: klerman2008
+citation: "Klerman EB, Dijk DJ. Age-related reduction in the maximal capacity for sleep - implications for insomnia. Current Biology. 2008;18(15):1118-1123."
+doi: "10.1016/j.cub.2008.06.047"
+pmid: "18656358"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2582347/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Age-Related Reduction in the Maximal Capacity for Sleep-Implications for Insomnia"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 35
+n_studies_pooled: null
+population:
+  age_mean: 21.9
+  age_range: [18, 32]
+  pct_female: 51.4
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: asymptotic_sleep_duration_young_adults
+    exposure: {type: sleep_extension, dose_h: 16, referent_h: null, duration_days: 7, contrast_label: "asymptotic total daily sleep under 16-h sleep opportunity (12 h night + 4 h afternoon), 3-7 days, ages 18-32"}
+    scale: hours
+    unit: "hours of total daily sleep time (maximal capacity / satiated sleep)"
+    value: 8.9
+    se: 0.4
+    ci: [8.1, 9.7]
+    conversion_formula: "value, se and ci all quoted directly: 'asymptotic values that were 1.5 hour shorter in older (7.4 +/- 0.4 s.e.m., hour) than younger subjects (8.9 +/- 0.4)' and 'The asymptotic value for TST for younger subjects was 8.9 hours (C.I. 8.1-9.7 hours)'. The CI is a CI on the group MEAN asymptote from a mixed-model exponential regression, NOT a between-person interval."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "requirement (upper-bound flavour: 'maximal capacity for sleep'). 8.9 h in 18-32 year olds, far above the 7 h AASM/SRS adult floor and above the 8.0 h midpoint of the NSF 18-25 band."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      Total daily sleep duration, which was initially longer than habitual sleep duration, declined during the
+      experiment to asymptotic values that were 1.5 hour shorter in older (7.4 +/- 0.4 s.e.m., hour) than younger
+      subjects (8.9 +/- 0.4). The asymptotic value for TST for younger subjects was 8.9 hours (C.I. 8.1-9.7 hours)
+      (p=0.009 vs. older) and was not achieved until approximately the fifth 24-hour of extended sleep
+      opportunity.
+  - outcome_domain: sleep_need
+    outcome_construct: asymptotic_sleep_young_adults_matched_habitual_range
+    exposure: {type: sleep_extension, dose_h: 16, referent_h: null, duration_days: 7, contrast_label: "asymptotic TST in the young-adult subset whose habitual sleep duration matched the older group's 7-9 h range"}
+    scale: hours
+    unit: "hours of total daily sleep time"
+    value: 9.2
+    se: 0.459
+    ci: [8.3, 10.1]
+    conversion_formula: "quoted: 'For younger subjects with HSD of the same ranges as the older subjects, the asymptote was 9.2 hours (C.I. 8.3-10.1 hours) (p=0.005 vs. older)'. se = (10.1-8.3)/3.92 = 0.459"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "requirement. This is the cleanest comparison because it removes habitual-duration confounding: young adults who habitually slept the SAME 7-9 h as the older group still had a 9.2 h asymptote. The high young-adult figure is not an artefact of long habitual sleepers in the sample."
+    covariates: ["habitual sleep duration restricted to 7-9 h"]
+    followup_years: null
+    cohort_family: null
+    quote: |
+      For younger subjects with HSD of the same ranges as the older subjects, the asymptote was 9.2 hours (C.I.
+      8.3-10.1 hours) (p=0.005 vs. older).
+  - outcome_domain: sleep_need
+    outcome_construct: habitual_sleep_duration_young_adults_mean_sd
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "habitual sleep duration at home (self-report verified by actigraphy), ages 18-32"}
+    scale: hours
+    unit: "hours"
+    value: 8.5
+    se: 0.169
+    ci: [6.1, 10.3]
+    conversion_formula: "quoted: 'There was no significant difference in mean HSD between the groups: 8.1 +/- 0.6 hours for older subjects and 8.5 +/- 1.0 hours for younger subjects' and 'the observed range was 7.0-9.0 hours in older subjects and 6.1-10.3 hours in the younger'. Here the +/- 1.0 is an SD (the paper uses 'mean +/- s.d.' for subject characteristics). se = 1.0/sqrt(35) = 0.169. ci field holds the observed RANGE (6.1-10.3 h), not a confidence interval."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive. THE CONTRAST THAT MATTERS: the between-person SD of HABITUAL duration here is 1.0 h and the range is 4.2 h, while the between-person SD of NEED (kitamura2016) is ~0.7 h with a range of 2.0 h. Observed duration is more variable than requirement. Also note 8.5 h mean habitual sleep is high, indicating a volunteer sample not representative of sleep-restricted students."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      Habitual Sleep Duration (HSD) (derived from self-report and verified using actigraphy) varied considerably
+      among individuals: the observed range was 7.0-9.0 hours in older subjects and 6.1-10.3 hours in the younger
+      (4 with HSD < 7.0 hrs; 18 with 7.0 hrs <= HSD <= 9.0 hrs (the same range as the older subjects); 13 with HSD
+      > 9.0 hrs) There was no significant difference in mean HSD between the groups: 8.1 +/- 0.6 hours for older
+      subjects and 8.5 +/- 1.0 hours for younger subjects.
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "T1 inpatient protocol with 16-h daily sleep opportunity and mixed-model exponential asymptote fitting; strong design for the sleep-capacity construct. Concerns: healthy volunteers with unusually long habitual sleep (8.5 h) so the sample is not representative of restricted students; asymptote is a MODEL extrapolation, and the younger group's asymptote 'was not achieved until approximately the fifth 24-hour of extended sleep opportunity' while some subjects only had 3 days; 'maximal capacity for sleep' is arguably an upper bound on need rather than need itself."
+funding: "NIH; paper is an NIHPA author manuscript"
+notes: |
+  Verbatim support, all from the PMC full text.
+  SAMPLE: "we studied 18 older subjects (12 males, 6 females; age range 60-76 years; mean +/- s.d.: 67.8 +/- 4.3 years) and 35
+  younger subjects (17 males, 18 females; 18-32 years; 21.9 +/- 3.3 years). The subjects were healthy and had no sleep
+  complaints or clinically significant sleep disorders as assessed by a physical exam, medical history, hematology,
+  biochemistry and a clinical polysomnogram."
+  PROTOCOL: "an inpatient protocol that included extended sleep opportunities covering 2/3 of the circadian cycle (12 hours at
+  night and 4 hours in the afternoon) for 3-7 days in 18 older and 35 younger healthy men and women."
+  MAIN RESULT: "Total daily sleep duration, which was initially longer than habitual sleep duration, declined during the
+  experiment to asymptotic values that were 1.5 hour shorter in older (7.4 +/- 0.4 s.e.m., hour) than younger subjects
+  (8.9 +/- 0.4)."
+  "The asymptotic level for TST for older subjects was 7.4 hours (95% C.I. 6.6-8.3 hours) and was achieved during the second 24
+  hours of extended sleep opportunity. The asymptotic value for TST for younger subjects was 8.9 hours (C.I. 8.1-9.7 hours)
+  (p=0.009 vs. older) and was not achieved until approximately the fifth 24-hour of extended sleep opportunity. For younger
+  subjects with HSD of the same ranges as the older subjects, the asymptote was 9.2 hours (C.I. 8.3-10.1 hours) (p=0.005 vs.
+  older)."
+  HABITUAL DURATION VARIATION: "Habitual Sleep Duration (HSD) (derived from self-report and verified using actigraphy) varied
+  considerably among individuals: the observed range was 7.0-9.0 hours in older subjects and 6.1-10.3 hours in the younger
+  (4 with HSD < 7.0 hrs; 18 with 7.0 hrs <= HSD <= 9.0 hrs (the same range as the older subjects); 13 with HSD > 9.0 hrs)
+  There was no significant difference in mean HSD between the groups: 8.1 +/- 0.6 hours for older subjects and 8.5 +/- 1.0
+  hours for younger subjects."
+  ON WHETHER HABITUAL SLEEP IS ADEQUATE (verbatim): "These data are consistent with the view that self-selected HSD is less than
+  optimal for daytime alertness and functioning."
+  RECRUITMENT NOTE (matters for selection bias): "None were recruited by reported HSD."
+  TIME-COURSE POINT WORTH CARRYING DOWNSTREAM: it took the young adults about FIVE days of 16-h sleep opportunity to reach
+  asymptote, versus two days for the older group. A single long weekend cannot discharge accumulated debt in a young adult. That
+  is consistent with kitamura2016's "1 h of PSD takes four days to recover" and is directly relevant to whether our subject's
+  7-8 h weekends and 10-11 h occasional nights constitute meaningful recovery.
+shard: "s06_sleep_need_measurement"

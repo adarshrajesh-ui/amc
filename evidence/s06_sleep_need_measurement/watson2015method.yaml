@@ -1,0 +1,109 @@
+study_id: watson2015method
+citation: "Watson NF, Badr MS, Belenky G, Bliwise DL, Buxton OM, Buysse D, Dinges DF, Gangwisch J, Grandner MA, Kushida C, Malhotra RK, Martin JL, Patel SR, Quan SF, Tasali E. Joint Consensus Statement of the American Academy of Sleep Medicine and Sleep Research Society on the Recommended Amount of Sleep for a Healthy Adult: Methodology and Discussion. Journal of Clinical Sleep Medicine. 2015;11(8):931-952."
+doi: "10.5664/jcsm.4950"
+pmid: "26235159"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4513271/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Joint Consensus Statement of the American Academy of Sleep Medicine and Sleep Research Society on the Recommended Amount of Sleep for a Healthy Adult: Methodology and Discussion"
+access_tier: full_text
+secondhand_via: null
+design: guideline_consensus
+tier: TX
+n: null
+n_studies_pooled: 5314
+population:
+  age_mean: null
+  age_range: [18, 60]
+  pct_female: null
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: twin_heritability_range_cited_by_panel
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "heritability of sleep duration as cited by the consensus panel"}
+    scale: probability
+    unit: "proportion of variance in sleep duration attributed to genes (midpoint of the 31-55% range)"
+    value: 0.43
+    se: null
+    ci: [0.31, 0.55]
+    conversion_formula: "value = midpoint of the verbatim range 'between 31% and 55%'; ci holds the range itself. This is the panel's own summary of the twin literature; see kocevska2021herit.yaml for the formal meta-analytic estimate (46%)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "heritability of DURATION, not of NEED. The panel itself frames it as evidence of genetic influence on need, but observed duration is need plus volitional restriction, so this is an upper bound on the genetic component of need."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      Sleep duration shows substantial intra- and inter-individual variation. Twin studies show sleep duration
+      heritability between 31% and 55%, suggesting substantial genetic influences on sleep need.
+  - outcome_domain: exposure_measurement
+    outcome_construct: panel_judgement_on_selfreport_validity
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "panel's stated position on measurement heterogeneity as the principal limitation"}
+    scale: probability
+    unit: "flag: 1 = the panel identified sleep-duration measurement heterogeneity as its single biggest problem"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "no arithmetic; encodes a verbatim qualitative judgement so the downstream model can cite the guideline authors themselves as the source of the units-mismatch warning."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "the authors of the adult sleep guideline state that the evidence behind it rests on self-report which may have captured time in bed rather than time asleep. This is the guideline's own limitation, not an external criticism."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      Perhaps the biggest issue was the heterogeneity of sleep duration measurement. Retrospective self-report,
+      the most common method in epidemiologic studies and in clinical practice, is easy and has good face
+      validity. However, sleep duration can vary substantially over time, and there is little information on how
+      individuals account for such variation in their reports. Also, self-report questions may have captured time
+      in bed rather than time asleep. ... Self-reported sleep duration often differs considerably from objective
+      measures of sleep duration, and may underestimate or overestimate sleep duration compared to these other
+      methods.
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: "methodology/discussion companion to a consensus statement. Included solely for its explicit statements about the strength and nature of the evidence base, which the one-page consensus statement omits."
+funding: "American Academy of Sleep Medicine and Sleep Research Society; CDC cooperative agreement 1U50DP004930-01"
+notes: |
+  Included because the task asked specifically for "the strength of the evidence base the panels cited". This paper is where
+  the AASM/SRS panel says it out loud. All quotations verbatim from the PMC full text.
+  ON INTER-INDIVIDUAL VARIATION AND SLEEP NEED:
+  "These observations raise a critical question: How much sleep is needed for optimal health? Sleep duration shows
+  substantial intra- and inter-individual variation. Twin studies show sleep duration heritability between 31% and 55%,
+  suggesting substantial genetic influences on sleep need. Environmental factors, such as occupational duties and commute
+  time, family responsibilities, and social and recreational opportunities, can lead to substantial discrepancies between the
+  amount of sleep needed and the amount of sleep obtained."
+  "Sleep is a biological imperative. Meeting our need for sleep duration, timing, regularity, and quality requires volitional
+  behaviors partially dictated by genetic and physiologic factors. However, a large proportion of inter-individual variability
+  in sleep is likely explained by psychological, behavioral, social, cultural, and environmental factors."
+  "We need to better understand the genetic factors related to individual sleep need, resilience to sleep loss, and perception
+  of sleep."
+  "Identify biomarker(s) of sleep need or sleep deprivation." (listed as a FUTURE research priority, i.e. no such biomarker
+  exists)
+  ON THE MEASUREMENT PROBLEM (this is the evidence-strength admission that matters most to this shard):
+  "The panel faced many challenges in the process of generating the consensus recommendation. Perhaps the biggest issue was
+  the heterogeneity of sleep duration measurement. Retrospective self-report, the most common method in epidemiologic studies
+  and in clinical practice, is easy and has good face validity. However, sleep duration can vary substantially over time, and
+  there is little information on how individuals account for such variation in their reports. Also, self-report questions may
+  have captured time in bed rather than time asleep. This distinction is particularly important among individuals with chronic
+  illness who spend long periods of time in bed. It is also uncertain, in some studies, whether individuals include nap time
+  in their reports of total sleep time. Self-reported sleep duration often differs considerably from objective measures of
+  sleep duration, and may underestimate or overestimate sleep duration compared to these other methods."
+  "Polysomnography (PSG) and actigraphy were utilized as objective measures in some studies. Actigraphy has better sensitivity
+  (detecting sleep) than specificity (detecting wake). As a result it often overestimates sleep duration relative to
+  self-reports and to a lesser extent polysomnography, particularly in poor sleepers."
+  "while the focus on objective, physiological sleep is a strength of laboratory studies, these objective measures correlate
+  weakly with self-reported sleep duration, which is the method most relevant to clinical, public health, and policy
+  recommendations. Standard methods to model such discrepancies must be sought until accurate, scalable, objective measures of
+  sleep duration are developed for utilization in large epidemiological studies."
+  ON THE FINAL VOTE: "...was appropriate to support optimal health in adults: 7 hours."
+  BOTTOM LINE FOR THE POOLER: the 7 h adult floor is derived from a literature the panel itself describes as (a) mostly
+  retrospective self-report, (b) possibly measuring time in bed rather than sleep, (c) weakly correlated with objective sleep,
+  and (d) lacking any biomarker of sleep need. Any downstream "sleep debt = reported sleep minus 7 h" calculation inherits all
+  four problems. There is also a note of caution in the panel's own words that they are aware "there is little information on
+  how individuals account for such variation in their reports" - which is directly the recall-rounding question in
+  exposure_priors.md section (v), and the answer is that essentially nobody has studied it.
+shard: "s06_sleep_need_measurement"

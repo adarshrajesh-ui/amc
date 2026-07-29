@@ -1,0 +1,109 @@
+study_id: inderkum2018twin
+citation: "Inderkum AP, Tarokh L. High heritability of adolescent sleep-wake behavior on free, but not school days: a long-term twin study. Sleep. 2018;41(3):zsy004."
+doi: "10.1093/sleep/zsy004"
+pmid: "29329461"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "High heritability of adolescent sleep-wake behavior on free, but not school days: a long-term twin study"
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 52
+n_studies_pooled: null
+population:
+  age_mean: 12.8
+  age_range: [11, 15]
+  pct_female: 48.1
+  country: "Switzerland"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: heritability_sleep_duration_free_days
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 180, contrast_label: "additive genetic proportion of variance in actigraphy sleep duration, FREE days"}
+    scale: probability
+    unit: "proportion of variance attributable to additive genetic effects (h2)"
+    value: 0.68
+    se: null
+    ci: null
+    conversion_formula: "Abstract reports free-day sleep-duration heritability of 68%. value = 0.68. No CI is given in the abstract and with only 26 twin pairs the interval would be very wide; se left null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "higher = more trait-like. USE: when the schedule constraint is REMOVED, sleep duration becomes strongly heritable, i.e. unconstrained duration behaves like a stable individual trait. This is the genetic corroboration that individual sleep need is real and substantial, and it supports modelling need as a person-level latent variable rather than as noise."
+    covariates: []
+    followup_years: null
+    cohort_family: "Bern_twin"
+    quote: |
+      We found significantly more genetic influence on sleep timing (sleep midpoint; school: 14%, free: 90%) and
+      duration (school: 15%; free: 68%) on free compared with school days.
+  - outcome_domain: sleep_need
+    outcome_construct: heritability_sleep_duration_school_days
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 180, contrast_label: "additive genetic proportion of variance in actigraphy sleep duration, SCHOOL days"}
+    scale: probability
+    unit: "proportion of variance attributable to additive genetic effects (h2)"
+    value: 0.15
+    se: null
+    ci: null
+    conversion_formula: "Abstract reports school-day sleep-duration heritability of 15%. value = 0.15. No CI reported."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "THE CONTRAST WITH THE PREVIOUS EFFECT IS THE POINT: 15% on school days versus 68% on free days, in the SAME twins measured over the SAME six months. School-night sleep duration is overwhelmingly environmentally determined. Therefore school-night duration is NOT a proxy for individual sleep need, and our subject's 5-6 h weekday figure carries almost no information about his personal requirement - it is information about his schedule."
+    covariates: []
+    followup_years: null
+    cohort_family: "Bern_twin"
+    quote: |
+      We found significantly more genetic influence on sleep timing (sleep midpoint; school: 14%, free: 90%) and
+      duration (school: 15%; free: 68%) on free compared with school days.
+  - outcome_domain: exposure_measurement
+    outcome_construct: heritability_sleep_efficiency_both_day_types
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 180, contrast_label: "additive genetic proportion of variance in actigraphy sleep efficiency and sleep-onset latency, both day types"}
+    scale: probability
+    unit: "proportion of variance attributable to additive genetic effects (h2)"
+    value: 0.60
+    se: null
+    ci: null
+    conversion_formula: "Abstract: genetic influence on sleep quality measures (sleep efficiency and sleep onset latency) was 'high (>60%) and less dependent on the day of measurement'. value = 0.60 recorded as the stated LOWER BOUND, not a point estimate. No CI reported."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "higher = more trait-like. USE FOR SECTION (iii) OF THE PRIORS: sleep efficiency is a stable person-level trait that does not depend on whether it is a school night. That means a single sleep-efficiency value can be applied to our subject across both weekday and weekend nights, and that the between-person SD of habitual efficiency is smaller than a single-night SD would suggest (because most of the single-night variance is trait, not night-to-night noise)."
+    covariates: []
+    followup_years: null
+    cohort_family: "Bern_twin"
+    quote: |
+      On the other hand, the genetic influence on measures of sleep quality (sleep efficiency and sleep onset
+      latency) was high (>60%) and less dependent on the day of measurement.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "VERY SMALL for a twin design: 16 monozygotic pairs (n=32) and 10 dizygotic pairs (n=20), 26 pairs total. Structural equation model heritability estimates from 26 pairs are extremely imprecise and the abstract reports no confidence intervals, so the point estimates (15% vs 68%) should be read as a DIRECTION and a rough magnitude, not as precise variance components. Strengths: unusually long actigraphy window (6 months) which substantially reduces night-to-night noise and is exactly what a trait estimate needs, and prespecified school/free-day contrast. Mean age 12.8 y, younger than our subject. Single site, Switzerland. Abstract-only access."
+funding: "Not stated in the abstract"
+notes: |
+  ACCESS: abstract only. No PMC deposit (elink with linkname=pubmed_pmc returns nothing) and Sleep 2018 content is behind
+  the OUP paywall for scripted access. Every number above is verbatim from the PubMed abstract.
+  WHY I ADDED THIS RECORD LATE. My original sleep-need-variance evidence rested on a single n=15 laboratory study
+  (kitamura2016) plus a heritability meta-analysis (kocevska2021herit) that I had explicitly declined to convert into an SD.
+  This study is a genuinely independent line of evidence on the same question and it points the same way, so it materially
+  strengthens the section (iv) prior even though it cannot by itself pin a number.
+  THE CONVERGENCE THAT MATTERS. Three completely different designs now agree that the observed spread in adolescent sleep
+  duration is mostly schedule, not requirement:
+    ohayon2004      (meta-analysis, PSG/actigraphy) : duration falls with age across adolescence on SCHOOL days
+                                                      (d = -0.57) but NOT on nonschool days (d = -0.04)
+    inderkum2018twin (twin SEM, 6 mo actigraphy)    : duration heritability 15% on SCHOOL days, 68% on FREE days
+    klerman2005      (T1 sleep extension)           : short habitual sleepers were objectively sleepier at baseline and
+                                                      still slept MORE on day 3 of extended opportunity, i.e. their short
+                                                      duration was debt, not a low requirement
+  Any one of these could be dismissed; all three together make the "our subject may simply need less sleep" explanation
+  hard to sustain.
+  CAN I GET AN SD OF SLEEP NEED OUT OF THIS? Only a loose bracket, and I want to be explicit about why not more.
+  If free-day duration has between-person SD sigma_free and heritability 0.68, the additive-genetic SD of free-day duration
+  is sqrt(0.68) * sigma_free = 0.82 * sigma_free. Taking sigma_free of roughly 1.0-1.2 h (the between-person SD of
+  adolescent actigraphy sleep duration; white2026ffcws reports 1.19 h on weekdays) gives a trait SD of about 0.82-0.98 h.
+  That is an UPPER bound on the SD of sleep need, not an estimate of it, because free-day duration also contains
+  heritable chronotype and heritable weekend catch-up behaviour, neither of which is sleep need - and note this same paper
+  finds sleep MIDPOINT is 90% heritable on free days, which is precisely the chronotype contamination. Kitamura's directly
+  measured 0.70 h sits just below this bracket, which is the pattern one would expect if the bracket is an upper bound.
+  Recorded that way in exposure_priors.md section (iv): central SD 0.70 h, plausible range 0.4-1.0 h.
+shard: "s06_sleep_need_measurement"

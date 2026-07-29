@@ -1,0 +1,158 @@
+study_id: white2026ffcws
+citation: "White KM, Ward L, Saelee R, Buxton OM, Hale L, Chang AM, Johnson DA. Measurement bias in adolescent sleep duration: Comparison of self-reported and actigraphy-assessed sleep duration among adolescents in the Future of Families and Child Wellbeing Study. Sleep Health. 2026;12(1):147-157."
+doi: "10.1016/j.sleh.2025.10.003"
+pmid: "41198487"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12687942/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Measurement bias in adolescent sleep duration: Comparison of self-reported and actigraphy-assessed sleep duration among adolescents in the Future of Families and Child Wellbeing Study"
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 634
+n_studies_pooled: null
+population:
+  age_mean: 15.4
+  age_range: [14, 17]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: selfreport_minus_actigraphy_mean_bias_weekday
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "weekday self-reported minus actigraphy sleep duration, unadjusted mean difference"}
+    scale: hours
+    unit: "hours (positive = self-report longer)"
+    value: 0.458
+    se: 0.0614
+    ci: [0.338, 0.578]
+    conversion_formula: "Table 2 weekday: 27.5 +/- 92.7 min. value = 27.5/60 = 0.458 h. se = (92.7/sqrt(634))/60 = 0.0614 h. ci = value +/- 1.96*se"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = adolescents' self-report OVERSTATES actigraphy sleep; using self-report understates the true deficit"
+    covariates: []
+    followup_years: null
+    cohort_family: "FFCWS"
+    quote: |
+      The mean difference was larger on weekends (74.3 +/- 144.7 minutes) than weekdays (27.5 +/- 92.7 minutes).
+  - outcome_domain: exposure_measurement
+    outcome_construct: selfreport_minus_actigraphy_between_person_sd_weekday
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "between-person SD of weekday (self-report - actigraphy) difference"}
+    scale: hours
+    unit: "hours"
+    value: 1.545
+    se: null
+    ci: [-2.570, 3.485]
+    conversion_formula: "Table 2 weekday SD = 92.7 min = 1.545 h (reported directly, not derived). ci field holds the derived 95% limits of agreement = 0.458 +/- 1.96*1.545 = (-2.570, +3.485) h"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "spread only. THE SINGLE MOST IMPORTANT NUMBER IN THIS SHARD for exposure uncertainty: in age-matched adolescents the individual-level discrepancy has SD ~1.5 h."
+    covariates: []
+    followup_years: null
+    cohort_family: "FFCWS"
+    quote: |
+      Table 2 Total Sample: Weekdays | 481.4 +/- 73.4 | 453.9 +/- 71.6 | 27.5 +/- 92.7 | 0.18 | 0.11, 0.26
+  - outcome_domain: exposure_measurement
+    outcome_construct: reverse_calibration_slope_truth_on_report
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "d(actigraphy h) / d(self-reported h), adjusted, 8-h centred"}
+    scale: per_hour_beta
+    unit: "hours of actigraphic sleep per hour of self-reported sleep"
+    value: 0.19
+    se: 0.0332
+    ci: [0.13, 0.26]
+    conversion_formula: "Table 3 adjusted overall beta = 0.19 (0.13, 0.26); se = (0.26-0.13)/3.92 = 0.0332. This is the REVERSE regression (truth on report) the exposure model needs."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "slope of 0.19 (not 1.0) means an adolescent's self-report is only weakly informative about true sleep; E[true | report] shrinks hard toward the population mean"
+    covariates: ["sex", "caregiver education", "income", "race and ethnicity"]
+    followup_years: null
+    cohort_family: "FFCWS"
+    quote: |
+      The estimate for calibration, the change in self-reported duration relative to the change in
+      actigraphy-assessed duration, was beta = 0.19 (95% CI: 0.13, 0.26) after adjustment for sex, caregiver
+      education, income, race and ethnicity (Table 3).
+  - outcome_domain: exposure_measurement
+    outcome_construct: adjusted_bias_at_8h_guideline_threshold
+    exposure: {type: descriptive, dose_h: 8, referent_h: null, duration_days: 7, contrast_label: "adjusted 8-h-centred concordance intercept, overall"}
+    scale: hours
+    unit: "hours of over-reporting at 8 h"
+    value: 0.4645
+    se: 0.0603
+    ci: [0.3463, 0.5827]
+    conversion_formula: "Table 3 adjusted overall intercept = -27.87 min (95% CI -34.96, -20.78), where negative = self-report overestimates. Sign flipped to the shard convention (positive = over-report) and converted: 27.87/60 = 0.4645 h; se = ((34.96-20.78)/3.92)/60 = 0.0603 h"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = self-report overstates actigraphy at the 8-h recommendation threshold"
+    covariates: ["sex", "caregiver education", "income", "race and ethnicity"]
+    followup_years: null
+    cohort_family: "FFCWS"
+    quote: |
+      Self-reported sleep duration overestimated actigraphy-assessed duration by 27.87 minutes (95% CI: 34.96,
+      20.78) after adjustment.
+  - outcome_domain: exposure_measurement
+    outcome_construct: correlation_selfreport_actigraphy_weekday
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "Pearson rho, weekday"}
+    scale: raw_units
+    unit: "correlation coefficient"
+    value: 0.18
+    se: null
+    ci: [0.11, 0.26]
+    conversion_formula: "reported directly"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "far below the 0.45 seen in midlife adults (lauderdale2008); adolescent self-report is markedly worse"
+    covariates: []
+    followup_years: null
+    cohort_family: "FFCWS"
+    quote: |
+      Table 2 Total Sample: Weekdays | 481.4 +/- 73.4 | 453.9 +/- 71.6 | 27.5 +/- 92.7 | 0.18 | 0.11, 0.26
+  - outcome_domain: sleep_need
+    outcome_construct: actigraphy_weekday_total_sleep_adolescents
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "weekday actigraphy-assessed sleep duration, mean (SD)"}
+    scale: hours
+    unit: "hours"
+    value: 7.565
+    se: 0.0474
+    ci: [7.472, 7.658]
+    conversion_formula: "Table 2 weekday actigraphy 453.9 +/- 71.6 min -> 7.565 h, SD 1.193 h; se = 1.193/sqrt(634) = 0.0474"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive normative anchor for US 15-year-olds on school nights"
+    covariates: []
+    followup_years: null
+    cohort_family: "FFCWS"
+    quote: |
+      Table 2 Total Sample: Weekdays | 481.4 +/- 73.4 | 453.9 +/- 71.6 | 27.5 +/- 92.7 | 0.18 | 0.11, 0.26
+      Actigraphy-assessed sleep duration was defined as the period between the first and last scored sleep epochs,
+      encompassing sleep onset latency (SOL) and wake after sleep onset (WASO).
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "population-based birth cohort, one week of wrist actigraphy (Actiwatch Spectrum), double-scored; but the actigraphy 'duration' variable is a SLEEP-PERIOD measure (see notes) so the reported bias against true TST is an UNDERESTIMATE; self-report derived from usual bed/wake times, so it is closer to time in bed than to total sleep time; single wave, cross-sectional."
+funding: "NIH (NIHMS2121673 author manuscript; FFCWS supported by NICHD)"
+notes: |
+  BEST AGE MATCH in the shard (mean age 15.4 y, US, 51% Black). Verbatim support:
+  (1) Abstract: "Self-reported sleep duration overestimated actigraphy-assessed duration by 27.87 minutes (95% CI: 34.96,
+      20.78) after adjustment. Agreement between duration categories was 73% (kw = 0.12, 95% CI: 0.07, 0.18). The mean
+      difference was larger on weekends (74.3 +/- 144.7 minutes) than weekdays (27.5 +/- 92.7 minutes)."
+  (2) Table 2 Total Sample: "Overall | 506.6 +/- 69.4 | 465.8 +/- 62.5 | 40.8 +/- 82.9 | 0.21 | 0.14, 0.29";
+      "Weekdays | 481.4 +/- 73.4 | 453.9 +/- 71.6 | 27.5 +/- 92.7 | 0.18 | 0.11, 0.26";
+      "Weekend | 569.7 +/- 115.6 | 495.4 +/- 102.8 | 74.3 +/- 144.7 | 0.13 | 0.05, 0.20"
+  (3) Table 3 Adjusted Stratified Models: "Overall | -27.87 | -34.96, -20.78 | 0.19 | 0.13, 0.26";
+      "Weekday (N=634) | -32.84 | -40.77, -24.91 | 0.19 | 0.11, 0.26"
+  (4) "The estimate for calibration, the change in self-reported duration relative to the change in actigraphy-assessed
+      duration, was beta = 0.19 (95% CI: 0.13, 0.26) after adjustment for sex, caregiver education, income, race and
+      ethnicity (Table 3)."
+  (5) IMPORTANT MEASUREMENT CAVEAT (verbatim): "Actigraphy-assessed sleep duration was defined as the period between the
+      first and last scored sleep epochs, encompassing sleep onset latency (SOL) and wake after sleep onset (WASO)."
+      That is a sleep-PERIOD measure, not total sleep time. Because SOL+WASO in adolescents is roughly 1.5 h by
+      actigraphy (see short2012diary.yaml: WASO 74 min, and galland2018.yaml: SOL 19.4 min), the self-report minus true
+      TST bias in this cohort is plausibly ~1.5 h larger than the 0.46 h weekday figure reported here. Do not treat
+      0.46 h as the self-report-minus-TST bias.
+  (6) "adolescents are generally less knowledgeable about the amount of sleep they need and are subsequently less likely
+      to use clinical guidelines to anchor their responses when reporting their bed and wake times."
+  DERIVED numbers, arithmetic shown in each conversion_formula field. Weekday LoA = -2.57 to +3.49 h.
+shard: "s06_sleep_need_measurement"

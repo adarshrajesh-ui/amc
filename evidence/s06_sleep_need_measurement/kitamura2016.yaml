@@ -1,0 +1,131 @@
+study_id: kitamura2016
+citation: "Kitamura S, Katayose Y, Nakazaki K, Motomura Y, Oba K, Katsunuma R, Terasawa Y, Enomoto M, Moriguchi Y, Hida A, Mishima K. Estimating individual optimal sleep duration and potential sleep debt. Scientific Reports. 2016;6:35812."
+doi: "10.1038/srep35812"
+pmid: "27775095"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5075948/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Estimating individual optimal sleep duration and potential sleep debt"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 15
+n_studies_pooled: null
+population:
+  age_mean: 23.1
+  age_range: [20, 26]
+  pct_female: 0.0
+  country: "Japan"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: optimal_sleep_duration_mean
+    exposure: {type: sleep_extension, dose_h: 12, referent_h: null, duration_days: 9, contrast_label: "asymptote of total sleep time across 9 consecutive nights of 12-h time-in-bed opportunity"}
+    scale: hours
+    unit: "hours of total sleep time (individual optimal sleep duration, PSG)"
+    value: 8.41
+    se: 0.18
+    ci: [8.057, 8.763]
+    conversion_formula: "value and se quoted directly: 'The mean estimated OSD was 8.41 +/- 0.18 h'. The paper states 'All results are expressed as means +/- SEM', so 0.18 is the SEM. ci = 8.41 +/- 1.96*0.18."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "requirement. Sleep-satiation estimate in healthy young MEN aged 20-26, i.e. the best sex- and age-matched sleep-need estimate available for our subject at 18-19."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      The mean estimated OSD was 8.41 +/- 0.18 h (range, 7.29-9.26 h).
+  - outcome_domain: sleep_need
+    outcome_construct: between_person_sd_of_individual_sleep_need
+    exposure: {type: sleep_extension, dose_h: 12, referent_h: null, duration_days: 9, contrast_label: "between-person SD of individual optimal sleep duration"}
+    scale: hours
+    unit: "hours (between-person SD of sleep need)"
+    value: 0.697
+    se: null
+    ci: [0.510, 1.099]
+    conversion_formula: "DERIVED. SD = SEM * sqrt(n) = 0.18 * sqrt(15) = 0.697 h. ci = chi-square CI for a standard deviation with df=14: lower = 0.697*sqrt(14/26.119) = 0.510; upper = 0.697*sqrt(14/5.629) = 1.099. CONSISTENCY CHECK: the reported OSD range 7.29-9.26 h spans 1.97 h; for n=15 draws from a normal the expected range is about 3.47*SD, implying SD ~0.57 h, which brackets the 0.697 h figure from below. Both routes agree on SD ~0.6-0.7 h."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "THE ONLY DIRECT QUANTIFICATION OF THE BETWEEN-PERSON SD OF SLEEP NEED THAT I COULD FIND ANYWHERE. Everything in exposure_priors.md section (iv) about the spread of the requirement rests on this single n=15 study. Treat the SD's own uncertainty (0.51-1.10 h) as real."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      The mean estimated OSD was 8.41 +/- 0.18 h (range, 7.29-9.26 h). The range of OSD was smaller than the range
+      of HSD (Fig. 2a). ... All results are expressed as means +/- SEM.
+  - outcome_domain: sleep_need
+    outcome_construct: potential_sleep_debt_habitual_minus_optimal
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 14, contrast_label: "optimal sleep duration minus actigraphic habitual sleep duration at home"}
+    scale: hours
+    unit: "hours of pre-existing sleep debt in a healthy, non-complaining young adult"
+    value: 1.04
+    se: 0.24
+    ci: [0.57, 1.58]
+    conversion_formula: "quoted directly: 'mean PSD ... was 1.04 +/- 0.24 h (range, -0.58 to 2.73 h; 95% confidence interval: 0.57-1.58 h)'. 0.24 is SEM (paper: 'All results are expressed as means +/- SEM'). Derived between-person SD of PSD = 0.24*sqrt(15) = 0.930 h."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = habitual sleep falls SHORT of optimal. BASELINE-RATE WARNING: healthy 20-26 year old men with no sleep complaint already carry ~1 h of sleep debt. Our subject's debt must be scored against this non-zero population baseline, not against zero, or the comparator is wrong."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      the result of the trial calculation of mean PSD (i.e., the difference between OSD and HSD) for the 15
+      participants was 1.04 +/- 0.24 h (range, -0.58 to 2.73 h; 95% confidence interval: 0.57-1.58 h; Fig. 2b).
+  - outcome_domain: recovery
+    outcome_construct: days_to_recover_one_hour_of_sleep_debt
+    exposure: {type: recovery_sleep, dose_h: 12, referent_h: null, duration_days: 9, contrast_label: "nights of 12-h sleep opportunity needed to discharge 1 h of potential sleep debt"}
+    scale: years
+    unit: "days (scale enum has no 'days'; value is in DAYS, not years)"
+    value: 4.0
+    se: null
+    ci: null
+    conversion_formula: "verbatim: 'only 1 h of PSD takes four days to recover to their optimal level'. NOTE: the schema's scale enum has no 'days' option; I used 'years' as the container and flagged the true unit in the unit field. Do not read this as 4 years."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "recovery is SLOW relative to accrual: 4 nights of 12-h opportunity per 1 h of debt. Relevant to whether our subject's 7-8 h weekends can discharge a weekday deficit accumulated over 3 years."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      The mean PSD was approximately 1 h but with a range of 3 h among the 15 participants. PSD did not correlate
+      with OSD but showed a high correlation with HSD (r = 0.76). This suggests that short sleep times in daily
+      life, more than individual differences in sleep need, contribute to the [sleep debt].
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "T1 design (9 consecutive nights of 12-h PSG-monitored sleep opportunity with exponential-decay curve fitting to an individual asymptote) and the best available construct for 'sleep need'; but n=15, men only, Japanese, and curve fitting failed to converge for 2 of the 15 (handled by substituting their mean extended-session TST). All dispersion reported as SEM, so the SDs used downstream are my arithmetic, not the authors'."
+funding: "not stated in retrieved text"
+notes: |
+  THE PIVOTAL STUDY FOR THE SD OF INDIVIDUAL SLEEP NEED. All quotations verbatim from the PMC full text.
+  SAMPLE: "To estimate OSD and PSD, we recruited 15 healthy young men (mean age, 23.1 +/- 2.1 years; range, 20-26 years). They
+  recorded their daily HSD at home using an actigraph and sleep diary for approximately 2 weeks."
+  DISPERSION CONVENTION: "All results are expressed as means +/- SEM." (This is why the +/- 0.18 is converted to an SD below.)
+  MAIN RESULT: "From the exponential decay curve fitting for the decrease in TST over the 9 days of extended sleep sessions, we
+  were able to obtain an asymptote (the estimation of OSD) from individual TSTs (R2 = 0.244-0.946) for 13 participants. TSTs for
+  2 of the participants (S05 and S11) did not converge for curve fitting. These results indicate that sleep debt did not exist
+  for these 2 participants, and therefore instead of an asymptote, we treated the mean TST value over the extended sleep
+  sessions as the estimate of OSD. The mean estimated OSD was 8.41 +/- 0.18 h (range, 7.29-9.26 h). The range of OSD was smaller
+  than the range of HSD (Fig. 2a). There was a significant correlation between estimated OSD and HSD (r = 0.514, p = 0.050),
+  suggesting that OSD is a determinant of sleep habits, even in actual daily life where society's schedule plays a role.
+  However, HSD was significantly shorter than OSD (t(14) = 4.547, p < 0.001; Fig. 2a), and the result of the trial calculation
+  of mean PSD (i.e., the difference between OSD and HSD) for the 15 participants was 1.04 +/- 0.24 h (range, -0.58 to 2.73 h;
+  95% confidence interval: 0.57-1.58 h; Fig. 2b)."
+  THE SENTENCE THAT SETTLES THE 'IS VARIATION IN DURATION VARIATION IN NEED?' QUESTION (verbatim):
+  "In this study, OSD and HSD exhibit a trend where sleep habits followed the sleep need of each individual, but most
+  participants (13/15) had HSD lower than OSD. The mean PSD was approximately 1 h but with a range of 3 h among the 15
+  participants. PSD did not correlate with OSD but showed a high correlation with HSD (r = 0.76). This suggests that short sleep
+  times in daily life, more than individual differences in sleep need, contribute to the [sleep debt]."
+  => "The range of OSD was smaller than the range of HSD" is the key structural finding: the requirement varies LESS between
+  people than observed sleep does. Concretely, OSD ranged 7.29-9.26 h (1.97 h) whereas the HSD distribution is wider. So the
+  modeller must NOT use the population SD of habitual sleep duration (~1.0-1.2 h) as a proxy for the SD of sleep need
+  (~0.6-0.7 h); doing so roughly doubles the variance of the requirement and washes out the debt signal.
+  ALSO CITED IN THIS PAPER (secondhand, useful for triangulation): "a sleep need of 8.16 h for preventing cumulative
+  neurobehavioral deficits" (their citation 18, i.e. Van Dongen 2003), and "When Klerman and Dijk gave young and elderly
+  subjects the opportunity to sleep 16 h/day, sleep time showed exponential decay in both groups and asymptotic values were
+  obtained at 8.9 h and 7.4 h, respectively" (their citation 19; I retrieved that paper independently, see klerman2008.yaml).
+  Three independent laboratory estimates of young-adult sleep need therefore cluster at 8.16 / 8.41 / 8.9 h.
+  DERIVED SDs (arithmetic in the conversion_formula fields): SD of OSD = 0.697 h; SD of PSD = 0.930 h.
+shard: "s06_sleep_need_measurement"

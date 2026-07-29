@@ -1,0 +1,115 @@
+study_id: watson2015consensus
+citation: "Watson NF, Badr MS, Belenky G, Bliwise DL, Buxton OM, Buysse D, Dinges DF, Gangwisch J, Grandner MA, Kushida C, Malhotra RK, Martin JL, Patel SR, Quan SF, Tasali E. Recommended Amount of Sleep for a Healthy Adult: A Joint Consensus Statement of the American Academy of Sleep Medicine and Sleep Research Society. Sleep. 2015;38(6):843-844."
+doi: "10.5665/sleep.4716"
+pmid: "26039963"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4434546/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Recommended Amount of Sleep for a Healthy Adult: A Joint Consensus Statement of the American Academy of Sleep Medicine and Sleep Research Society"
+access_tier: full_text
+secondhand_via: null
+design: guideline_consensus
+tier: TX
+n: null
+n_studies_pooled: 5314
+population:
+  age_mean: null
+  age_range: [18, 60]
+  pct_female: null
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: aasm_srs_adult_recommended_minimum
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "AASM/SRS adult recommendation, ages 18-60: '7 or more hours per night on a regular basis'"}
+    scale: hours
+    unit: "hours per night (recommended minimum)"
+    value: 7.0
+    se: null
+    ci: null
+    conversion_formula: "no arithmetic. The recommendation is a one-sided THRESHOLD ('7 or more hours'), not a range and not a point estimate of need. value = 7.0 h is the floor, not the central estimate of requirement; do not read it as E[need]."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "requirement floor. Applies to our subject at ages 18-19. The panel deliberately declined to name an upper bound or a central value."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      Adults should sleep 7 or more hours per night on a regular basis to promote optimal health.
+  - outcome_domain: sleep_need
+    outcome_construct: aasm_srs_young_adults_above_9h_may_be_appropriate
+    exposure: {type: descriptive, dose_h: 9, referent_h: 7, duration_days: null, contrast_label: "'Sleeping more than 9 hours per night on a regular basis may be appropriate for young adults'"}
+    scale: hours
+    unit: "hours per night that may be appropriate for young adults specifically"
+    value: 9.0
+    se: null
+    ci: null
+    conversion_formula: "no arithmetic; encodes the verbatim carve-out. value = 9.0 h is the threshold above which the panel says long sleep 'may be appropriate' FOR YOUNG ADULTS and for people recovering from sleep debt."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "DIRECTLY ON POINT for our subject, who is both a young adult AND (by hypothesis) recovering from sleep debt: the panel names exactly these two groups as ones for whom >9 h may be appropriate. Supports an upper-shifted sleep-need prior at 18-19 relative to the flat 7-9 h NSF band."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      Sleeping more than 9 hours per night on a regular basis may be appropriate for young adults, individuals
+      recovering from sleep debt, and individuals with illnesses. For others, it is uncertain whether sleeping
+      more than 9 hours per night is associated with health risk.
+  - outcome_domain: sleep_need
+    outcome_construct: aasm_srs_evidence_base_size
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "number of articles the initial search produced"}
+    scale: raw_units
+    unit: "articles"
+    value: 5314
+    se: null
+    ci: null
+    conversion_formula: "verbatim: 'which resulted in a total of 5,314 scientific articles' (consensus statement) / 'The initial search produced 5,314 publications' (methodology paper)"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "STRENGTH-OF-EVIDENCE marker: 15 panellists, 5,314 articles screened, 9 health categories, Oxford grading system, 3 voting rounds. Substantially larger evidence base than the pediatric consensus (864 articles)."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      A panel of 15 experts in sleep medicine and research used a modified RAND Appropriateness Method to develop
+      a recommendation regarding the sleep duration, or sleep duration range, that promotes optimal health in
+      adults aged 18 to 60 years. ... which resulted in a total of 5,314 scientific articles.
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: "modified RAND Appropriateness Method; the recommendation is a one-sided threshold derived from voting, and the panel's own methodology paper concedes the underlying literature is dominated by retrospective self-report and that objective measures 'correlate weakly' with it. Context only, never a primary effect."
+funding: "American Academy of Sleep Medicine and Sleep Research Society; CDC cooperative agreement 1U50DP004930-01"
+notes: |
+  FULL VERBATIM CONSENSUS STATEMENT (retrieved from the JCSM dual publication PDF, J Clin Sleep Med 2015;11(6):591-592,
+  DOI 10.5664/jcsm.4758, which Crossref confirms carries the identical title; the SLEEP version 38(6):843-844 with
+  DOI 10.5665/sleep.4716 / PMID 26039963 is the record cited above and both were verified):
+    "- Adults should sleep 7 or more hours per night on a regular basis to promote optimal health.
+     - Sleeping less than 7 hours per night on a regular basis is associated with adverse health outcomes, including weight
+       gain and obesity, diabetes, hypertension, heart disease and stroke, depression, and increased risk of death. Sleeping
+       less than 7 hours per night is also associated with impaired immune function, increased pain, impaired performance,
+       increased errors, and greater risk of accidents.
+     - Sleeping more than 9 hours per night on a regular basis may be appropriate for young adults, individuals recovering
+       from sleep debt, and individuals with illnesses. For others, it is uncertain whether sleeping more than 9 hours per
+       night is associated with health risk.
+     - People concerned they are sleeping too little or too much should consult their healthcare provider."
+  VERBATIM methodology/evidence strength: "A panel of 15 experts in sleep medicine and research used a modified RAND
+  Appropriateness Method to develop a recommendation regarding the sleep duration, or sleep duration range, that promotes
+  optimal health in adults aged 18 to 60 years. The expert panel reviewed published scientific evidence addressing the
+  relationship between sleep duration and health, using a broad set of National Library of Medicine Medical Subject Headings
+  (MeSH) terms and no date restrictions, which resulted in a total of 5,314 scientific articles. The process was further
+  guided by the Oxford grading system. The panel focused on nine health categories with the best available evidence in
+  relation to sleep duration: general health, cardiovascular health, metabolic health, mental health, immunologic function,
+  human performance, cancer, pain, and mortality. Consistent with the RAND Appropriateness Method, multiple rounds of
+  evidence review, discussion, and voting were conducted to arrive at the final recommendation."
+  VERBATIM on individual variation: "Current evidence supports the general recommendation for obtaining 7 or more hours of
+  sleep per night on a regular basis to promote optimal health among adults aged 18 to 60 years. Individual variability in
+  sleep need is influenced by genetic, behavioral, medical, and environmental factors. A clearer understanding of the
+  precise biological mechanisms underlying sleep need continues to require further scientific investigation."
+  KEY INTERPRETIVE POINT: "7 or more hours" is a FLOOR, not a requirement estimate. Using 7 h as the sleep-need central
+  value for an 18-19 year old (as a naive reading of this guideline invites) understates need by 1.4-1.9 h relative to the
+  laboratory sleep-satiation estimates in klerman2008 (8.9 h) and kitamura2016 (8.41 h), and contradicts this same
+  statement's own carve-out that >9 h may be appropriate for young adults. The guideline floor and the lab asymptote answer
+  different questions; exposure_priors.md section (iv) keeps them separate.
+shard: "s06_sleep_need_measurement"

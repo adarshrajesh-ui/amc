@@ -1,0 +1,121 @@
+study_id: short2012diary
+citation: "Short MA, Gradisar M, Lack LC, Wright H, Carskadon MA. The discrepancy between actigraphic and sleep diary measures of sleep in adolescents. Sleep Medicine. 2012;13(4):378-384."
+doi: "10.1016/j.sleep.2011.11.005"
+pmid: "22437142"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "The discrepancy between actigraphic and sleep diary measures of sleep in adolescents"
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 385
+n_studies_pooled: null
+population:
+  age_mean: 15.6
+  age_range: [13, 18]
+  pct_female: 40.0
+  country: "Australia"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: sleepdiary_minus_actigraphy_mean_bias
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 8, contrast_label: "8-day sleep-diary TST minus wrist-actigraphy TST"}
+    scale: hours
+    unit: "hours (positive = diary longer)"
+    value: 1.417
+    se: null
+    ci: null
+    conversion_formula: "abstract: 6 h 51 min actigraphy vs 8 h 16 min sleep diary -> 496 - 411 = 85 min = 1.417 h. Paper reports no SD of the difference in the abstract and full text was inaccessible, so se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = diary OVERSTATES actigraphic sleep by ~1.4 h in age-matched adolescents. Prospective diaries are usually MORE accurate than retrospective 'usual sleep' questions, so retrospective self-report vs actigraphic TST in this age band is likely >=1.4 h."
+    covariates: []
+    followup_years: null
+    cohort_family: "MASSES_no"
+    quote: |
+      actigraphic estimates of total sleep time were substantially less than sleep diary and parent report (6h
+      51min actigraphy vs. 8h 16min sleep diary vs. 8h 51 parent report).
+  - outcome_domain: exposure_measurement
+    outcome_construct: parentreport_minus_actigraphy_mean_bias
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 8, contrast_label: "parent-reported TST minus wrist-actigraphy TST"}
+    scale: hours
+    unit: "hours (positive = parent report longer)"
+    value: 2.0
+    se: null
+    ci: null
+    conversion_formula: "abstract: 6 h 51 min actigraphy vs '8 h 51' parent report -> 531 - 411 = 120 min = 2.0 h"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = parent report OVERSTATES actigraphic sleep by ~2 h; parent report is the worst of the three instruments"
+    covariates: []
+    followup_years: null
+    cohort_family: "MASSES_no"
+    quote: |
+      actigraphic estimates of total sleep time were substantially less than sleep diary and parent report (6h
+      51min actigraphy vs. 8h 16min sleep diary vs. 8h 51 parent report).
+  - outcome_domain: exposure_measurement
+    outcome_construct: actigraphy_waso_vs_diary_waso
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 8, contrast_label: "wake after sleep onset, actigraphy vs diary"}
+    scale: hours
+    unit: "hours of WASO"
+    value: 1.233
+    se: null
+    ci: null
+    conversion_formula: "abstract: 74 min actigraphy WASO vs 7 min diary WASO -> value = 74/60 = 1.233 h (the actigraphic figure). Difference = 67 min."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "load-bearing for the TIB->TST conversion: actigraphy scores 74 min of WASO in adolescents where they perceive 7 min. Authors argue this is partly an actigraphy ARTEFACT (adolescent motor activity during sleep scored as wake), especially in boys."
+    covariates: []
+    followup_years: null
+    cohort_family: "MASSES_no"
+    quote: |
+      Actigraphic estimates of wake after sleep onset (WASO) were substantially greater than sleep diary estimates
+      (74min actigraphy vs. 7min sleep diary).
+  - outcome_domain: sleep_need
+    outcome_construct: actigraphy_total_sleep_adolescents
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 8, contrast_label: "actigraphic TST, mean across 8 days"}
+    scale: hours
+    unit: "hours"
+    value: 6.85
+    se: null
+    ci: null
+    conversion_formula: "abstract: '6h 51min actigraphy' -> 411/60 = 6.85 h. No SD reported in abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive normative anchor for Australian 13-18 year olds"
+    covariates: []
+    followup_years: null
+    cohort_family: "MASSES_no"
+    quote: |
+      Participants were 385 adolescents aged 13-18years (X=15.6, standard deviation [SD]=0.95; 60% male) from
+      eight high schools in South Australia. actigraphic estimates of total sleep time were substantially less
+      than sleep diary and parent report (6h 51min actigraphy vs. 8h 16min sleep diary vs. 8h 51 parent report).
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "large school-based adolescent sample with concurrent diary + actigraphy, excellent age match; but the comparator is a prospective diary, not the retrospective single-item 'usual sleep' question that epidemiology (and our subject) actually uses; abstract-only access so no SDs or limits of agreement; authors themselves flag possible actigraphic mis-scoring in pubertally mature boys, which is exactly our subject's demographic."
+funding: null
+notes: |
+  Verbatim (abstract): "Participants were 385 adolescents aged 13-18years (X=15.6, standard deviation [SD]=0.95; 60% male)
+  from eight high schools in South Australia... Actigraphic estimates of wake after sleep onset (WASO) were substantially
+  greater than sleep diary estimates (74min actigraphy vs. 7min sleep diary) and actigraphic estimates of total sleep time
+  were substantially less than sleep diary and parent report (6h 51min actigraphy vs. 8h 16min sleep diary vs. 8h 51
+  parent report). Actigraphy displayed no significant relationship with daytime functioning and weak relationships with
+  concomitantly recorded sleep diary variables. Sex and puberty-related differences in actigraphic scoring were found, with
+  more WASO and less sleep scored in boys compared to girls and more WASO scored amongst pubertally-mature boys than boys
+  of less advanced pubertal development."
+  Conclusion (verbatim): "There may be differences in the sleep of adolescents that result in less actigraphic total sleep
+  scored than perceived, particularly in boys, possibly because of increased sleep motor activity in adolescents that
+  actigraphic algorithms score as wake. This is a significant concern that requires further examination with polysomnography."
+  DIRECTION-OF-BIAS WARNING for the modeller: this paper argues the adolescent self-report-vs-actigraphy gap is inflated by
+  actigraphy UNDER-counting sleep in adolescent boys, not solely by over-reporting. If true, the correct calibration
+  target (PSG) sits between the self-report and the actigraphy value, so the modeller should not apply the full
+  self-report-minus-actigraphy bias as if actigraphy were the gold standard. This is the main reason my recommended bias
+  prior (exposure_priors.md) is centred BELOW the raw adolescent actigraphy discrepancies.
+  cohort_family recorded as MASSES_no to make explicit that this is NOT the Arora/MASSES sample - it is an independent
+  South Australian school cohort. Do not de-duplicate against arora2013.
+shard: "s06_sleep_need_measurement"

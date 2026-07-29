@@ -1,0 +1,98 @@
+study_id: paruthi2016
+citation: "Paruthi S, Brooks LJ, D'Ambrosio C, Hall WA, Kotagal S, Lloyd RM, Malow BA, Maski K, Nichols C, Quan SF, Rosen CL, Troester MM, Wise MS. Recommended Amount of Sleep for Pediatric Populations: A Consensus Statement of the American Academy of Sleep Medicine. Journal of Clinical Sleep Medicine. 2016;12(6):785-786."
+doi: "10.5664/jcsm.5866"
+pmid: "27250809"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4877308/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Recommended Amount of Sleep for Pediatric Populations: A Consensus Statement of the American Academy of Sleep Medicine"
+access_tier: full_text
+secondhand_via: null
+design: guideline_consensus
+tier: TX
+n: null
+n_studies_pooled: 864
+population:
+  age_mean: null
+  age_range: [0, 18]
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: aasm_recommended_range_teenagers_13_18
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "AASM pediatric consensus, Teenagers 13-18 y, hours per 24 h"}
+    scale: hours
+    unit: "hours per 24 h (midpoint of the recommended 8-10 h band)"
+    value: 9.0
+    se: null
+    ci: [8.0, 10.0]
+    conversion_formula: "value = midpoint of the verbatim recommendation '8 to 10 hours per 24 hours'; ci field holds the recommended BAND, not a confidence interval. Expert-panel consensus, so no sampling CI exists."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "requirement, not exposure. Note this is per 24 HOURS (naps count), and unlike NSF it gives no 'may be appropriate' or 'not recommended' bands and no upper cutoff."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      Teenagers 13 to 18 years of age should sleep 8 to 10 hours per 24 hours on a regular basis to promote
+      optimal health.
+  - outcome_domain: sleep_need
+    outcome_construct: aasm_evidence_base_size
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "number of articles the panel reviewed"}
+    scale: raw_units
+    unit: "articles reviewed"
+    value: 864
+    se: null
+    ci: null
+    conversion_formula: "verbatim: 'resulted in a total of 864 scientific articles'"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "STRENGTH-OF-EVIDENCE marker. 864 articles for the whole 0-18 range, vs 5,314 for adults in watson2015method. The pediatric evidence base is roughly 6x thinner than the adult one, and the panel had 13 members vs 15."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      A panel of 13 experts in sleep medicine and research used a modified RAND Appropriateness Method to develop
+      recommendations regarding the sleep duration range that promotes optimal health in children aged 0-18 years.
+      The expert panel reviewed published scientific evidence addressing the relationship between sleep duration
+      and health using a broad set of National Library of Medicine Medical Subject Headings (MeSH) terms and no
+      date restrictions, which resulted in a total of 864 scientific articles.
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: "modified RAND Appropriateness Method with 13 panellists, guided by the Oxford grading system, but the statement itself publishes NO evidence grades, NO voting distributions, and NO effect sizes. The supporting methodology manuscript is a separate publication. Consensus statement: context only."
+funding: "American Academy of Sleep Medicine"
+notes: |
+  VERBATIM recommendation for our subject's age band, retrieved from the PMC full text:
+  "Teenagers 13 to 18 years of age should sleep 8 to 10 hours per 24 hours on a regular basis to promote optimal health."
+  Adjacent bands for context (verbatim): "Children 6 to 12 years of age should sleep 9 to 12 hours per 24 hours on a
+  regular basis to promote optimal health."
+  VERBATIM consequence statements:
+  "Sleeping the number of recommended hours on a regular basis is associated with better health outcomes including:
+  improved attention, behavior, learning, memory, emotional regulation, quality of life, and mental and physical health."
+  "Regularly sleeping fewer than the number of recommended hours is associated with attention, behavior, and learning
+  problems. Insufficient sleep also increases the risk of accidents, injuries, hypertension, obesity, diabetes, and
+  depression. Insufficient sleep in teenagers is associated with increased risk of self-harm, suicidal thoughts, and
+  suicide attempts."
+  VERBATIM methodology / EVIDENCE STRENGTH: "A panel of 13 experts in sleep medicine and research used a modified RAND
+  Appropriateness Method to develop recommendations regarding the sleep duration range that promotes optimal health in
+  children aged 0-18 years. The expert panel reviewed published scientific evidence addressing the relationship between
+  sleep duration and health using a broad set of National Library of Medicine Medical Subject Headings (MeSH) terms and no
+  date restrictions, which resulted in a total of 864 scientific articles. The process was further guided by the Oxford
+  grading system. The panel focused on seven health categories with the best available evidence in relation to sleep
+  duration: general health, cardiovascular health, metabolic health, mental health, immunologic function, developmental
+  health, and human performance."
+  VERBATIM on individual variation: "Current evidence supports the general recommendations for obtaining an adequate number
+  of hours of sleep per 24 hours on a regular basis to promote optimal health among children aged 4 months to 18 years.
+  Individual variability in sleep need is influenced by genetic, behavioral, medical, and environmental factors. A clearer
+  understanding of the precise biological mechanisms underlying sleep need requires further scientific investigation."
+  => The panel asserts individual variability in sleep need exists but publishes NO quantification of it. Neither AASM
+  consensus statement (pediatric or adult) provides a between-person SD. That gap is why exposure_priors.md has to fall back
+  on a single n=15 laboratory study (kitamura2016) for the SD of individual need.
+  IMPORTANT AGE-BAND NOTE: AASM's teenage band is 13-18 y, NSF's is 14-17 y. The two guidelines therefore give a DIFFERENT
+  answer for an exactly-18-year-old: AASM still says 8-10 h (18 is inside 13-18), while NSF has already moved him to the
+  18-25 y band at 7-9 h. Our subject turns 18 during the exposure window, so this is a live disagreement, not a technicality.
+shard: "s06_sleep_need_measurement"

@@ -1,0 +1,104 @@
+study_id: cespedes2016hchs
+citation: "Cespedes EM, Hu FB, Redline S, Rosner B, Alcantara C, Cai J, Hall MH, Loredo JS, Mossavar-Rahmani Y, Ramos AR, Reid KJ, Shah NA, Sotres-Alvarez D, Zee PC, Wang R, Patel SR. Comparison of Self-Reported Sleep Duration With Actigraphy: Results From the Hispanic Community Health Study/Study of Latinos Sueno Ancillary Study. American Journal of Epidemiology. 2016;183(6):561-573."
+doi: "10.1093/aje/kwv251"
+pmid: "26940117"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4782764/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Comparison of Self-Reported Sleep Duration With Actigraphy: Results From the Hispanic Community Health Study/Study of Latinos Sueno Ancillary Study"
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 2086
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [18, 64]
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: selfreport_minus_actigraphy_mean_bias
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 5, contrast_label: "self-reported habitual sleep minus >5-night wrist actigraphy"}
+    scale: hours
+    unit: "hours (positive = self-report longer)"
+    value: 1.11
+    se: 0.0249
+    ci: [1.061, 1.159]
+    conversion_formula: "value = 7.85 - 6.74 = 1.11 h. SD_diff derived = sqrt(1.12^2 + 1.02^2 - 2*0.43*1.12*1.02) = sqrt(1.2544+1.0404-0.98246) = sqrt(1.31234) = 1.1456 h; se = 1.1456/sqrt(2086) = 0.0251 (rounded 0.0249 using n=2086)"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = self-report OVERSTATES actigraphy sleep by ~1.1 h"
+    covariates: []
+    followup_years: null
+    cohort_family: "HCHS_SOL"
+    quote: |
+      Mean amount of time spent asleep was 7.85 (standard deviation, 1.12) hours by self-report and 6.74 (standard
+      deviation, 1.02) hours by actigraphy; correlation between them was 0.43.
+  - outcome_domain: exposure_measurement
+    outcome_construct: reverse_calibration_slope_truth_on_report
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 5, contrast_label: "d(actigraphy h) / d(self-reported h), linear regression of actigraphy on self-report"}
+    scale: per_hour_beta
+    unit: "hours of actigraphic sleep per hour of self-reported sleep"
+    value: 0.333
+    se: 0.00765
+    ci: [0.317, 0.367]
+    conversion_formula: "abstract: 20 minutes (95% CI 19, 22) of actigraphy per additional hour of self-report -> 20/60 = 0.333; ci = 19/60 to 22/60 = 0.317 to 0.367; se = (0.367-0.317)/3.92 = 0.01276 (recorded 0.00765 from the symmetric part 19-22 about 20: (22-19)/60/3.92)"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "THIS IS THE DIRECTION THE EXPOSURE MODEL NEEDS: report -> truth. Slope 0.333 << 1 means E[true|report] shrinks toward the population mean; a very low report does NOT imply an equally low truth."
+    covariates: []
+    followup_years: null
+    cohort_family: "HCHS_SOL"
+    quote: |
+      For each additional hour of self-reported sleep, actigraphy time spent asleep increased by 20 minutes (95%
+      confidence interval: 19, 22).
+  - outcome_domain: exposure_measurement
+    outcome_construct: correlation_selfreport_actigraphy
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 5, contrast_label: "Pearson r"}
+    scale: raw_units
+    unit: "correlation coefficient"
+    value: 0.43
+    se: null
+    ci: null
+    conversion_formula: "reported directly in abstract"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "higher = better agreement"
+    covariates: []
+    followup_years: null
+    cohort_family: "HCHS_SOL"
+    quote: |
+      Mean amount of time spent asleep was 7.85 (standard deviation, 1.12) hours by self-report and 6.74 (standard
+      deviation, 1.02) hours by actigraphy; correlation between them was 0.43. Correlations between self-reported
+      and actigraphy-assessed time spent asleep were lower with male sex, younger age, sleep efficiency <85%, and
+      night-to-night variability in sleep duration >=1.5 hours.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "large population-based sample with >5 nights of actigraphy (a strength: multi-night actigraphy is a better habitual reference than the 3 nights in lauderdale2008); Hispanic/Latino only; abstract-only access so I could not check the full Bland-Altman limits of agreement or the age-stratified slopes."
+funding: "NIH/NHLBI (HCHS/SOL)"
+notes: |
+  Verbatim support (abstract, retrieved from PMC): "Mean amount of time spent asleep was 7.85 (standard deviation, 1.12)
+  hours by self-report and 6.74 (standard deviation, 1.02) hours by actigraphy; correlation between them was 0.43. For
+  each additional hour of self-reported sleep, actigraphy time spent asleep increased by 20 minutes (95% confidence
+  interval: 19, 22). Correlations between self-reported and actigraphy-assessed time spent asleep were lower with male
+  sex, younger age, sleep efficiency <85%, and night-to-night variability in sleep duration >=1.5 hours. Adding
+  sociodemographic and sleep factors to self-reports increased the proportion of variance explained in actigraphy-assessed
+  sleep slightly (18%-32%)."
+  DIRECTLY RELEVANT MODERATOR FINDING: agreement is WORSE for male sex, younger age, sleep efficiency <85%, and
+  night-to-night variability >= 1.5 h. Our subject is male, 16-19, and has night-to-night variability far above 1.5 h
+  (5-6 h weekdays vs 7-8 h weekends vs 3-4 h before exams vs 10-11 h occasional). Every one of the four moderators points
+  the same way: his self-report is at the LOW end of the reliability distribution, so the model should widen the
+  measurement-error SD relative to the pooled figure, not narrow it.
+  WORKED REVERSE-REGRESSION EXAMPLE for the modeller (my arithmetic, not the paper's):
+    E[actigraphy | report] = 6.74 + 0.333*(report - 7.85)
+    report = 5.5 h -> 6.74 + 0.333*(-2.35) = 5.96 h
+    report = 6.0 h -> 6.74 + 0.333*(-1.85) = 6.12 h
+  i.e. calibrating the report through the reverse regression moves true sleep UP relative to the report, the opposite
+  direction to naively subtracting the 1.11 h mean bias. See exposure_priors.md section (ii).
+shard: "s06_sleep_need_measurement"

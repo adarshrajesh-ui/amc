@@ -1,0 +1,122 @@
+study_id: meredithjones2024
+citation: "Meredith-Jones KA, Haszard JJ, Graham-DeMello A, Campbell A, Stewart T, Galland BC, Cox A, Kennedy G, Duncan S, Taylor RW. Validation of actigraphy sleep metrics in children aged 8 to 16 years: considerations for device type, placement and algorithms. Int J Behav Nutr Phys Act. 2024;21(1):40."
+doi: "10.1186/s12966-024-01590-x"
+pmid: "38627708"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11020269/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Validation of actigraphy sleep metrics in children aged 8 to 16 years: considerations for device type, placement and algorithms"
+access_tier: full_text
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: 137
+n_studies_pooled: null
+population:
+  age_mean: 11.6
+  age_range: [8, 16]
+  pct_female: null
+  country: "New Zealand"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: psg_sleep_efficiency_tst_over_tib
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 1, contrast_label: "home PSG sleep efficiency defined as TST / time in bed, children and adolescents 8-16 y"}
+    scale: probability
+    unit: "proportion of time in bed spent asleep"
+    value: 0.891
+    se: 0.0117
+    ci: [0.868, 0.914]
+    conversion_formula: "Table (PSG reference row): 'Sleep efficiency TIB (%) | PSG | n = 114 | 89.1 (12.5)'. value = 89.1/100 = 0.891; reported SD = 12.5 points = 0.125; se = 0.125/sqrt(114) = 0.0117; ci = value +/- 1.96*se. THE SD (0.125), NOT THE SE, IS WHAT THE EXPOSURE MODEL NEEDS."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "higher = more of time in bed is actually asleep. This is the TIB -> TST multiplier. The SD of 0.125 is a SINGLE-NIGHT SD and therefore mixes between-person variation with night-to-night variation; for a habitual 3-year average the relevant between-person SD is smaller."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "ROW: | Sleep efficiency TIB (%) | PSG | n = 114 | | 89.1 (12.5) | Reference"
+  - outcome_domain: exposure_measurement
+    outcome_construct: psg_sleep_efficiency_tst_over_sleep_period_time
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 1, contrast_label: "home PSG sleep efficiency defined as TST / sleep period time (onset to offset), 8-16 y"}
+    scale: probability
+    unit: "proportion of the sleep period spent asleep"
+    value: 0.950
+    se: 0.0038
+    ci: [0.943, 0.957]
+    conversion_formula: "Table (PSG reference row): 'Sleep efficiency SPT (%) | PSG | n = 114 | 95.0 (4.1)'. value = 0.950; SD = 0.041; se = 0.041/sqrt(114) = 0.0038."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "higher = less fragmented. CRITICAL CONTRAST WITH THE ROW ABOVE: the SAME children, the SAME night, two definitions of 'sleep efficiency' - 0.950 (SD 0.041) versus 0.891 (SD 0.125). The definition alone moves the mean by 5.9 points and TRIPLES the SD. Any prior on 'sleep efficiency' that does not state which denominator it uses is unusable."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "ROW: | Sleep efficiency SPT (%) | PSG | n = 114 | | 95.0 (4.1) | Reference"
+  - outcome_domain: exposure_measurement
+    outcome_construct: psg_time_in_bed_minus_total_sleep_time_gap
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 1, contrast_label: "derived TIB minus TST gap in hours, 8-16 y home PSG"}
+    scale: hours
+    unit: "hours of time in bed that is not sleep"
+    value: 1.055
+    se: null
+    ci: null
+    conversion_formula: "DERIVED by me from the PSG reference rows. TST = 518 min; sleep efficiency TIB = 89.1%, so TIB = 518/0.891 = 581.4 min. Gap = 581.4 - 518 = 63.4 min = 1.055 h. Decomposition: sleep period time = 545 min, so TIB - SPT = 36.4 min (sleep-onset latency plus time awake in bed before rising) and SPT - TST = 27 min (wake after sleep onset, consistent with sleep efficiency SPT of 95.0%)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = time in bed exceeds sleep. This is the number to SUBTRACT if our subject's self-report is a time-in-bed figure rather than a total-sleep-time figure. ~1.06 h."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "ROW: | Sleep period time (min) | PSG | n = 114 | | 545 (92) | Reference ... ROW: | Total sleep time (min) | PSG | n = 114 | | 518 (89) | Reference ... ROW: | Sleep efficiency TIB (%) | PSG | n = 114 | | 89.1 (12.5) | Reference"
+  - outcome_domain: exposure_measurement
+    outcome_construct: actigraphy_overestimates_sleep_relative_to_psg
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 1, contrast_label: "wrist actigraphy sensitivity vs specificity against concurrent PSG, 8-16 y"}
+    scale: probability
+    unit: "proportion (epoch-by-epoch specificity for detecting wake)"
+    value: 0.638
+    se: null
+    ci: null
+    conversion_formula: "Abstract: 'sensitivities were high (mean +/- SD: 91.8%, +/- 5.6%) and specificities moderate (63.8% +/- 13.8%)'. value = 0.638 (specificity); SD = 0.138. se left null because this is a descriptive accuracy statistic, not an effect estimate."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "LOW SPECIFICITY MEANS ACTIGRAPHY MISCLASSIFIES WAKE AS SLEEP. Actigraphy therefore OVERSTATES sleep relative to PSG, so any self-report-minus-actigraphy bias (lauderdale2008, white2026ffcws, jackson2018mesa) is SMALLER than the self-report-minus-PSG bias would be. This is the direction that matters: it means treating actigraphy as truth UNDERSTATES how much our subject over-reports."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Overall, sensitivities were high (mean +/- SD: 91.8%, +/- 5.6%) and specificities moderate (63.8% +/- 13.8%), with the HDCZA algorithm performing the best overall in terms of specificity (87.5% +/- 1.3%) and accuracy (86.4% +/- 0.9%)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: low
+  notes: "Strong for its purpose: home-based (not laboratory) PSG scored to AASM criteria by a trained technician, concurrent multi-device actigraphy, PSG and actigraphy scored independently by different researchers, n=137. Main limitation for THIS shard is age: 8-16 y with mean 11.6 y, so most of the sample is younger than our 16-19 year old subject; only the top of the range overlaps. Single night of PSG, so the reported SDs contain night-to-night as well as between-person variance."
+funding: "Not extracted; article is open access under CC BY 4.0 in Int J Behav Nutr Phys Act"
+notes: |
+  RETRIEVED AS FULL TEXT from PMC11020269. Used for two distinct purposes.
+  (1) SLEEP EFFICIENCY NORMS (shard task 8). This is the cleanest available source because it reports BOTH definitions in
+      the same children on the same nights, which exposes how much the definition matters:
+        sleep efficiency TST/TIB = 89.1% (SD 12.5)
+        sleep efficiency TST/SPT = 95.0% (SD  4.1)
+      Replicated in the paper's second device sample: TST/TIB 88.8 (9.6) at n=116 and TST/SPT 94.8 (4.3) at n=116.
+      The model wants the TST/TIB figure, ~0.89, because the question it answers is "if the subject told us his time in bed,
+      how much did he actually sleep".
+      Verbatim definition (why the two differ): "sleep efficiency (SE) was defined as follows: 1) Sleep efficiency TIB, a
+      commonly referenced metric, calculated as the ratio of total sleep time (TST) to time spent in bed (TIB); and 2) Sleep
+      efficiency SPT, determined by expressing total sleep time (from sleep onset to offset, minus any WASO) as a percentage
+      of sleep period time (from sleep onset to offset, inclusive of any WASO)." And on why TIB is the noisier one: "the
+      definition of SE that uses TIB, by definition, includes non-sleep related activity (eg reading, texting, mobile phone
+      use) both prior to initiating sleep and after the final awakening".
+      THAT CAVEAT IS DIRECTLY ON POINT FOR OUR SUBJECT: a college student's time in bed contains phone use, so his TIB-based
+      efficiency is plausibly at or below the 0.891 mean rather than above it.
+  (2) DIRECTION OF THE ACTIGRAPHY REFERENCE-STANDARD ERROR. Sensitivity 91.8% (SD 5.6) but specificity only 63.8% (SD 13.8),
+      i.e. actigraphy reliably calls sleep "sleep" but calls a third of true wake "sleep" too. Verbatim: "Knowing that an
+      algorithm, regardless of site placement or device type, always identifies sleep onset before PSG means that actigraphy
+      identifies earlier sleep onset and thus overestimates total sleep time, and in turn, sleep efficiency." This is the
+      quantitative basis for the warning in short2012diary.yaml and it cuts the OPPOSITE way to that paper's argument:
+      Short et al. suggested actigraphy UNDER-counts adolescent sleep, whereas this direct PSG validation finds actigraphy
+      OVER-counts it. See station_report.md - this is an unresolved conflict and I have widened the bias prior for it.
+  INTERNAL INCONSISTENCY I AM FLAGGING RATHER THAN HIDING: the PSG reference rows give WASO = 74 min (SD 126) yet
+  sleep period time 545 min minus total sleep time 518 min = 27 min, and sleep efficiency SPT of 95.0% independently implies
+  WASO/SPT = 5% = 27 min. The tabulated WASO mean of 74 min cannot be reconciled with the other three numbers; it is likely
+  driven by a few extreme values (note the SD of 126 min exceeds the mean). I therefore used the SLEEP EFFICIENCY figures
+  directly and did NOT derive anything from the tabulated WASO. Do not use the 74 min WASO value.
+shard: "s06_sleep_need_measurement"

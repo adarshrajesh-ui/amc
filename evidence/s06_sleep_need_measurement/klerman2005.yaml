@@ -1,0 +1,116 @@
+study_id: klerman2005
+citation: "Klerman EB, Dijk DJ. Interindividual variation in sleep duration and its association with sleep debt in young adults. Sleep. 2005;28(10):1253-1259."
+doi: "10.1093/sleep/28.10.1253"
+pmid: "16295210"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC1351048/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Interindividual Variation in Sleep Duration and Its Association With Sleep Debt in Young Adults"
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 17
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [18, 32]
+  pct_female: 58.8
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: habitual_bedrest_duration_range_young_adults
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 14, contrast_label: "range of habitual bedrest duration across individuals, 2-week outpatient assessment"}
+    scale: hours
+    unit: "hours (observed between-person range)"
+    value: 8.2
+    se: null
+    ci: [6.1, 10.3]
+    conversion_formula: "verbatim: 'The habitual bedrest duration varied from 6.1 to 10.3 hours.' value = midpoint of that range = (6.1+10.3)/2 = 8.2 h; ci field holds the observed RANGE, not a confidence interval. Abstract reports no mean or SD, so se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive: a 4.2 h spread in habitual bedrest among 17 healthy 18-32 year olds. The paper's whole point is that this spread is NOT a spread in sleep need."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      PARTICIPANTS: Seventeen healthy volunteers (10 women) aged 18-32 years without clinical sleep disorders.
+      MEASUREMENTS AND RESULTS: The habitual bedrest duration varied from 6.1 to 10.3 hours.
+  - outcome_domain: sleep_need
+    outcome_construct: sleep_rebound_on_first_extended_night
+    exposure: {type: sleep_extension, dose_h: 16, referent_h: null, duration_days: 3, contrast_label: "increase in total sleep time on day 1 of 16-h sleep opportunity (12 h night + 4 h midday) relative to habitual bedrest duration"}
+    scale: hours
+    unit: "hours of additional sleep obtained"
+    value: 4.9
+    se: null
+    ci: null
+    conversion_formula: "verbatim: 'On the first day of extended sleep opportunity, the total sleep time of all individuals was greater than their habitual bedrest duration; the average increase in total sleep time was 4.9 hours (P = 0.001).' No SD in the abstract; full text unavailable (PMC record and Europe PMC both return metadata only), so se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "ALL 17 subjects slept more than their habitual bedrest when given the chance, averaging +4.9 h. Nobody in this sample was sleeping to satiety at home. This is the strongest available evidence that habitual short sleep in young adults is restriction, not a low requirement."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      On the first day of extended sleep opportunity, the total sleep time of all individuals was greater than
+      their habitual bedrest duration; the average increase in total sleep time was 4.9 hours (P = 0.001).
+  - outcome_domain: sleep_need
+    outcome_construct: negative_association_day3_sleep_with_habitual_duration
+    exposure: {type: sleep_extension, dose_h: 16, referent_h: null, duration_days: 3, contrast_label: "association between day-3 total sleep time under extended opportunity and habitual bedrest duration"}
+    scale: probability
+    unit: "flag: 1 = day-3 TST was significantly NEGATIVELY associated with habitual bedrest duration"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "no arithmetic; encodes the direction of a p<0.01 finding as a flag because the abstract gives no coefficient. Verbatim: 'During the third day of increased sleep opportunity, the total sleep time was negatively associated with habitual bedrest duration (P = 0.005); individuals with shorter habitual bedrest duration continued to sleep more than those with longer habitual bedrest duration.'"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "the SIGN is the finding. If short habitual sleepers simply needed less sleep, they would have satiated FIRST and slept LESS by day 3. They slept MORE. This inverts the naive interpretation of the habitual-duration distribution."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      During the third day of increased sleep opportunity, the total sleep time was negatively associated with
+      habitual bedrest duration (P = 0.005); individuals with shorter habitual bedrest duration continued to sleep
+      more than those with longer habitual bedrest duration. CONCLUSION: Those individuals with shorter habitual
+      sleep durations carry a higher sleep debt than do those with longer habitual sleep duration. Interindividual
+      variation in sleep duration may primarily reflect variation in self-selected sleep restriction or wake
+      extension.
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "T1 design with 2-week outpatient habitual assessment followed by inpatient MSLT and a 3-day 16-h bedrest-extension protocol; but n=17, healthy volunteers, and abstract-only access means no effect sizes, no SDs, and no coefficient for the key negative association are available to me. The construct is 'bedrest duration' (time in bed), not total sleep time, for the habitual measure."
+funding: "NIH (paper is in PMC via NIH public access)"
+notes: |
+  This is the paper that most directly answers the question "is the between-person spread in sleep duration a spread in sleep
+  NEED?" and its answer is essentially NO. Verbatim (abstract, retrieved from PubMed):
+  "STUDY OBJECTIVE: To determine whether variation in sleep duration reflects variation in sleep need or self-imposed sleep
+  restriction.
+  DESIGN: After habitual bedrest duration of participants was assessed during a 2-week outpatient protocol, volunteers were
+  scheduled to sleep according to this schedule for 1 week prior to and the first night after admission to a general clinical
+  research center. The inpatient protocol included multiple sleep latency testing on the second day and sleep recordings during
+  a bedrest extension protocol that included 16 hours of sleep opportunity (12 hours at night and 4 hours at midday) for 3
+  consecutive days.
+  PARTICIPANTS: Seventeen healthy volunteers (10 women) aged 18-32 years without clinical sleep disorders.
+  MEASUREMENTS AND RESULTS: The habitual bedrest duration varied from 6.1 to 10.3 hours. Individuals with shorter habitual
+  bedrest duration fell asleep more quickly and frequently during the multiple sleep latency test than did those with longer
+  habitual bedrest duration. On the first day of extended sleep opportunity, the total sleep time of all individuals was greater
+  than their habitual bedrest duration; the average increase in total sleep time was 4.9 hours (P = 0.001). The increase in
+  total sleep time declined across the 3 day bedrest-extension protocol (P = 0.003 for trend). During the third day of
+  increased sleep opportunity, the total sleep time was negatively associated with habitual bedrest duration (P = 0.005);
+  individuals with shorter habitual bedrest duration continued to sleep more than those with longer habitual bedrest duration.
+  CONCLUSION: Those individuals with shorter habitual sleep durations carry a higher sleep debt than do those with longer
+  habitual sleep duration. Interindividual variation in sleep duration may primarily reflect variation in self-selected sleep
+  restriction or wake extension."
+  WHY THIS IS DECISION-RELEVANT: it licenses the model to treat our subject's short habitual sleep as DEBT rather than as
+  evidence of a low personal requirement. Two independent signals in this study point that way: short habitual sleepers had
+  SHORTER MSLT latencies (objectively sleepier at baseline) and they were still sleeping MORE than long habitual sleepers on
+  day 3 of extended opportunity. Both are the opposite of what a low-requirement phenotype would produce.
+  IMPLICATION FOR THE SD OF NEED: because the observed spread in duration (6.1-10.3 h) is mostly restriction, the SD of NEED
+  must be substantially SMALLER than the SD of observed duration. Combined with kitamura2016's direct estimate (SD ~0.70 h vs an
+  HSD SD of ~1.0 h in klerman2008), this is the basis for recommending a sleep-need SD near 0.7 h rather than 1.0-1.2 h. See
+  exposure_priors.md section (iv).
+shard: "s06_sleep_need_measurement"

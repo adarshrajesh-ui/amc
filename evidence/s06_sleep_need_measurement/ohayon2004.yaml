@@ -1,0 +1,139 @@
+study_id: ohayon2004
+citation: "Ohayon MM, Carskadon MA, Guilleminault C, Vitiello MV. Meta-analysis of quantitative sleep parameters from childhood to old age in healthy individuals: developing normative sleep values across the human lifespan. Sleep. 2004;27(7):1255-1273."
+doi: "10.1093/sleep/27.7.1255"
+pmid: "15586779"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Meta-Analysis of Quantitative Sleep Parameters From Childhood to Old Age in Healthy Individuals: Developing Normative Sleep Values Across the Human Lifespan"
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 3577
+n_studies_pooled: 65
+population:
+  age_mean: null
+  age_range: [5, 102]
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: sleep_efficiency_age_effect_children_and_adolescents
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "standardized age-related effect size for sleep efficiency, children and adolescent samples (5-18 y)"}
+    scale: smd
+    unit: "Cohen-type effect size for the age association"
+    value: 0.01
+    se: 0.0714
+    ci: [-0.13, 0.15]
+    conversion_formula: "Table 5 (Children and Adolescent Samples), Sleep efficiency row: '21 | 9 | 653 | 0.01 (-0.13, 0.15) | 32.74 (20 df)'. 21 effect sizes from 9 studies, 653 subjects. se = (0.15-(-0.13))/3.92 = 0.0714. Effect sizes in this paper are interpreted on Cohen's scale (the Methods state 'effect sizes at .2 are considered small, at .5...')."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL RESULT, AND THE NULL IS THE USEFUL PART: sleep efficiency does NOT change from childhood through the end of adolescence (CI straddles zero and excludes even a small effect). THIS IS THE LICENCE for using the 8-16 y sleep-efficiency norm from meredithjones2024 (0.891) and the <= 30 y norm from mitterling2015 (0.870) for a 16-19 year old. Without this result, borrowing across those age gaps would be unjustified."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Sleep efficiency 21 9 653 0.01 (-0.13, 0.15) 32.74 (20 dif)"
+  - outcome_domain: sleep_need
+    outcome_construct: total_sleep_time_age_effect_adolescents_school_days
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "standardized age-related effect size for total sleep time, children/adolescent studies conducted on SCHOOL days"}
+    scale: smd
+    unit: "Cohen-type effect size for the age association"
+    value: -0.57
+    se: 0.0740
+    ci: [-0.72, -0.43]
+    conversion_formula: "Table 5, Total sleep time / School days row: '18 | 7 | 843 | -0.57 (-0.72, -0.43) | 60.17 (17 df)'. se = (-0.43-(-0.72))/3.92 = 0.0740."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = less sleep at older ages. Medium-sized and highly significant ON SCHOOL DAYS. Compare directly with the nonschool-day effect in the next record."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "School days 18 7 843 -0.57 (-0.72, -0.43)* 60.17 (17 df)*"
+  - outcome_domain: sleep_need
+    outcome_construct: total_sleep_time_age_effect_adolescents_nonschool_days
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "standardized age-related effect size for total sleep time, children/adolescent studies conducted on NONSCHOOL days"}
+    scale: smd
+    unit: "Cohen-type effect size for the age association"
+    value: -0.04
+    se: 0.0969
+    ci: [-0.23, 0.15]
+    conversion_formula: "Table 5, Total sleep time / Nonschool days row: '10 | 5 | 607 | -0.04 (-0.23, 0.15) | 11.75 (9 df)' - note the Q statistic is NOT starred, i.e. these studies are homogeneous. se = (0.15-(-0.23))/3.92 = 0.0969."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL. THIS IS THE MOST IMPORTANT EFFECT IN THIS RECORD FOR THE WHOLE PIPELINE. Sleep duration falls across adolescence ONLY when the recording is made on a school day (-0.57); on nonschool days there is NO decline (-0.04, CI straddling zero). The adolescent sleep decline is therefore SCHEDULE-IMPOSED OPPORTUNITY LOSS, not a developmental fall in sleep need. Any model that reads the age-related decline in observed adolescent sleep as evidence that older adolescents NEED less sleep has the causality backwards, and would wrongly shrink the requirement for our 16-19 year old exactly where the guidelines already step down by an hour (see hirshkowitz2015nsf)."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The results showed that TST decreased with age only when recordings took place on school days. On nonschool days, TST remained the same from childhood to the end of adolescence."
+  - outcome_domain: exposure_measurement
+    outcome_construct: sleep_efficiency_age_effect_adults
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "standardized age-related effect size for sleep efficiency, adult samples"}
+    scale: smd
+    unit: "Cohen-type effect size for the age association"
+    value: -0.71
+    se: 0.0510
+    ci: [-0.81, -0.61]
+    conversion_formula: "Table 6 (Adult Samples), Sleep efficiency row: '54 | 32 | 1738 | -0.71 (-0.81, -0.61) | 372.28 (54 df)'. se = (-0.61-(-0.81))/3.92 = 0.0510."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = sleep efficiency declines with age in adults, medium-to-large. CONTRAST WITH THE FIRST EFFECT IN THIS RECORD (0.01 in children/adolescents): efficiency is flat through adolescence then falls through adult life. Our subject sits at the plateau, i.e. at the HIGH-efficiency end of the lifespan, so any efficiency prior imported from a midlife or elderly cohort would be too low for him."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Sleep efficiency 54 32 1738 -0.71 (-0.81, -0.61)* 372.28 (54 df)*"
+  - outcome_domain: exposure_measurement
+    outcome_construct: sleep_efficiency_age_equation_inlab_recordings
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "fitted exponential age coefficient for sleep efficiency, in-laboratory EEG recordings"}
+    scale: per_hour_beta
+    unit: "exponential-equation coefficient b, per year of age"
+    value: -0.003
+    se: null
+    ci: null
+    conversion_formula: "Table 4 ('Equations Relating Sleep Variables to Age in Studies Using In-laboratory Recordings'), row 'SE %': N = 2843, b = -0.003, proportion of variance explained = 63. No CI is reported for b. IMPLIED DECADE SLOPE: 1 - exp(-0.003*10) = 2.96% relative decline per decade, i.e. about 2.6 percentage points from a base of 87%, which cross-checks the 2.1 points per decade found independently by boulos2019."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = efficiency falls with age. se is null because the paper reports no uncertainty on b; do not invent one."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Variables N b PVE ... SE % 2843 -0.003 63"
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Landmark meta-analysis, extensive moderator analyses (mental illness, physical illness, drugs/alcohol, sleep apnea, other sleep disorders, sex, fixed vs habitual schedule, and for children school vs nonschool day). Weaknesses: literature to 2003, so pre-AASM-2007 scoring (all but 5 PSG studies used Rechtschaffen and Kales criteria); every homogeneity Q statistic in the main tables is significant, so substantial unexplained heterogeneity; reports standardized AGE-ASSOCIATION effect sizes rather than age-band means and SDs, which limits its use for absolute normative values; the paper itself notes that data in adolescents are scarce ('The number of studies that examined the evolution of sleep parameters with age are scant among school-aged children, adolescents, and middle-aged adults')."
+funding: "Not extracted"
+notes: |
+  RETRIEVED AS FULL TEXT (PDF, 19 pages, text extracted with pdfplumber).
+  SAMPLE (verbatim): "Overall, 65 studies met all inclusion criteria. These studies represented 3,577 subjects aged 5 years
+  to 102 years. The research reports devoted to children and adolescents totaled 1,186 subjects aged between 5 years and 19
+  years." The effect-size metric is the bias-corrected standardized mean difference (verbatim: "The formula given by Hedges
+  and Olkin was used: unbiased estimate of d = d x (1 - [3/{4(M1 + M2)-9}]). Values of d are interpreted according to Cohen
+  guidelines: effect sizes at .2 are considered small, at .5 ..."), which is why scale is recorded as smd throughout.
+  WHAT THIS PAPER DOES AND DOES NOT GIVE. The seed task asked for "means and SDs by age band" from this meta-analysis. It does
+  not report those. What it reports is (a) standardized effect sizes for the ASSOCIATION of each sleep parameter with age,
+  (b) fitted exponential age equations with the coefficient b and the proportion of variance explained, and (c) extensive
+  moderator analyses. I extracted the effect sizes and the equation coefficient and did NOT manufacture age-band means from
+  the figures. Absolute normative values in this shard come from galland2018, mitterling2015, meredithjones2024 and
+  white2026ffcws instead.
+  OVERALL LIFESPAN CORRELATIONS (verbatim, for context): "As can be observed, TST (r = -.76, P < .0001), sleep efficiency
+  (r = -.82, P < .0001), percentage of SWS (r = -.56, P < .0001), and percentage of REM sleep (r = -.34, P < .0001) each
+  showed a significant decrease with age. On the other hand, sleep latency (r = .16, P < .0001), percentage of stage 1 sleep
+  (r = .16, P < .0001), percentage of stage 2 sleep (r = .34, P < .0001), and WASO (r = .75, P < .0001) each increased with
+  age." These are cross-study correlations of study-level means against study-level mean age across the WHOLE 5-102 y range,
+  so they are ecological and much larger than any within-age-band association; do not use them as individual-level slopes.
+  ADOLESCENT SUMMARY (verbatim): "Sleep latency, sleep efficiency, and percentage of stage 1 had nonsignificant effect sizes."
+  And from Table 11's summary of direction across life stages, with C = children 5-12 y and A = adolescents 13-18 y, the
+  children-to-adolescents column shows total sleep time UNCHANGED and sleep efficiency UNCHANGED, while slow-wave sleep
+  decreases and stage 2 increases. So across adolescence the ARCHITECTURE changes substantially but the DURATION and the
+  EFFICIENCY do not.
+  THE SCHOOL-DAY / NONSCHOOL-DAY DISSOCIATION IS THE HEADLINE FOR THIS SHARD. Verbatim from the abstract: "In children and
+  adolescents, total sleep time decreased with age only in studies performed on school days." Effect size -0.57 (school) vs
+  -0.04 (nonschool). Two readings of the same raw fact - "adolescents sleep less as they get older" - are being separated
+  here, and only one of them survives: opportunity shrinks, need does not. This is independent corroboration of the
+  laboratory finding in short2018sleepneed that 15-17 year olds still need about 9 h, and it is the empirical answer to the
+  awkward one-hour step down in the NSF guideline at the 18th birthday.
+shard: "s06_sleep_need_measurement"
