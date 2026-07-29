@@ -123,9 +123,21 @@ def _score_one(title: str, citation: str) -> float:
     return max(contiguous, containment, ratio * 0.9)
 
 
+# Government statistical agencies. A record with no DOI on one of these domains is an official
+# statistical product, not a fabrication.
 OFFICIAL_DOMAINS = (
     "cdc.gov", "who.int", "ssa.gov", "samhsa.gov", "nih.gov", "census.gov",
     "nhlbi.nih.gov", "bls.gov", "data.gov", "europa.eu", "oecd.org", "aasm.org",
+    "nhtsa.gov",
+)
+
+# Recognised research institutes and safety organisations that publish non-peer-reviewed
+# technical reports. These are tracked SEPARATELY from official statistics rather than folded
+# into the list above, so that the report can state how many numbers rest on grey literature
+# instead of peer review. Widening OFFICIAL_DOMAINS to cover them would have made the gate pass
+# while hiding that distinction.
+GREY_LITERATURE_DOMAINS = (
+    "aaafoundation.org", "iihs.org", "ghsa.org", "rand.org", "ntsb.gov",
 )
 
 
@@ -133,7 +145,7 @@ def official_url_ok(url: str, cache: dict, offline: bool) -> bool | None:
     """Records without a DOI/PMID (official statistics) are verified by resolving their URL."""
     if not url:
         return None
-    if not any(d in url for d in OFFICIAL_DOMAINS):
+    if not any(d in url for d in OFFICIAL_DOMAINS + GREY_LITERATURE_DOMAINS):
         return False
     key = "HEAD:" + url
     if key in cache:
@@ -216,9 +228,13 @@ def verify(offline: bool = False) -> dict:
             # specified citation is the strongest available check; some agencies block
             # automated requests, so unreachability is recorded but does not fail the gate.
             official_domain = any(d in url for d in OFFICIAL_DOMAINS)
-            status = "OFFICIAL_SOURCE" if official_domain else "UNVERIFIED"
-            if official_domain and not url_ok:
-                status = "OFFICIAL_SOURCE_UNREACHED"
+            grey_domain = any(d in url for d in GREY_LITERATURE_DOMAINS)
+            if official_domain:
+                status = "OFFICIAL_SOURCE" if url_ok else "OFFICIAL_SOURCE_UNREACHED"
+            elif grey_domain:
+                status = "GREY_LITERATURE" if url_ok else "GREY_LITERATURE_UNREACHED"
+            else:
+                status = "UNVERIFIED"
         else:
             status = "UNVERIFIED"
         dup = seen_ids.get(sid)
@@ -237,6 +253,7 @@ def verify(offline: bool = False) -> dict:
         "n_records": len(recs),
         "n_verified": sum(r.get("status") == "VERIFIED" for r in recs),
         "n_official_source": sum(str(r.get("status")).startswith("OFFICIAL_SOURCE") for r in recs),
+        "n_grey_literature": sum(str(r.get("status")).startswith("GREY_LITERATURE") for r in recs),
         "n_unverified": sum(r.get("status") == "UNVERIFIED" for r in recs),
         "n_yaml_errors": sum(r.get("status") == "YAML_ERROR" for r in recs),
         "n_duplicate_ids": sum(bool(r.get("duplicate_of")) for r in recs),

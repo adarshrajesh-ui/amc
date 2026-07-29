@@ -5,7 +5,7 @@
    "station": "S0",
    "gate": "All evidence records validate against effect.schema.json",
    "threshold": "100%",
-   "observed": "597 records, 0 problems",
+   "observed": "621 records, 0 problems",
    "pass": true,
    "status": "PASS",
    "note": ""
@@ -15,7 +15,7 @@
    "station": "S1",
    "gate": "Records screened per shard",
    "threshold": ">= 25",
-   "observed": "min included per shard = 15 across 20 shards",
+   "observed": "min included per shard = 15 across 21 shards",
    "pass": true,
    "status": "PASS",
    "note": "Screening counts per shard were 40-313; the figure shown is INCLUDED records, which is lower than screened by design."
@@ -25,10 +25,10 @@
    "station": "S2",
    "gate": "Citation verification against Crossref and/or PubMed",
    "threshold": "100% verified",
-   "observed": "593 verified + 4 official-source, 0 unverified of 597",
+   "observed": "611 verified + 5 official + 5 grey literature, 0 unverified of 621",
    "pass": true,
    "status": "PASS",
-   "note": "593 of 597 identifiers resolve and title-match; the remaining 4 are official statistical products with no DOI, verified by domain. No fabricated citation was found."
+   "note": "611 of 621 identifiers resolve against Crossref or PubMed AND have their resolved title matched against the recorded citation. 5 are government statistical products with no DOI, verified by domain. 5 are technical reports from recognised safety research organisations (AAA Foundation, IIHS, GHSA) which are NOT peer reviewed and are tracked separately for that reason. No fabricated citation was detected anywhere in the corpus."
   },
   {
    "id": "G3",
@@ -65,7 +65,7 @@
    "station": "S5",
    "gate": "Cohort-family de-duplication applied",
    "threshold": "enforced",
-   "observed": "40 multi-study cohort families detected and collapsed in pooling",
+   "observed": "42 multi-study cohort families detected and collapsed in pooling",
    "pass": true,
    "status": "PASS",
    "note": "dedupe_by_cohort collapses families by inverse variance and floors the SE at the best single SE. Reviewer note carried as a limitation: the grouping key is nullable, so families that no shard labelled cannot be detected."

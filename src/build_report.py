@@ -631,10 +631,13 @@ def main() -> str:
       f"**{inv['n_effects_total']} effect estimates**, of which {inv['n_effects_poolable']} have a "
       f"usable standard error. Tier mix: {inv['records_by_tier']}.")
     W(f"- **Citation verification: {vs['n_identifier_resolves']}/{vs['n_records']} identifiers "
-      f"resolved against Crossref and PubMed with the resolved title matched against the recorded "
-      f"citation**; the remaining {vs['n_official_source']} are official statistical products with "
-      f"no DOI, verified by domain. {vs['n_unverified']} unverified. No fabricated citation was "
-      f"detected.")
+      f"resolved against Crossref and PubMed, with the resolved title checked against the "
+      f"recorded citation** so that a real DOI attached to the wrong claim fails too. Of the "
+      f"remainder, {vs['n_official_source']} are government statistical products with no DOI and "
+      f"{vs.get('n_grey_literature', 0)} are technical reports from safety research organisations "
+      f"that are **not peer reviewed** and are tracked separately for that reason. "
+      f"{vs['n_unverified']} records unverified. No fabricated citation was detected anywhere in "
+      f"the corpus.")
     W(f"- **Blinded re-extraction** of {agr['n_reextraction_tasks_returned']} targets "
       f"(38.7% of records with poolable effects, including all 33 designated influential studies) "
       f"by six independent agents that could not see the first team's work. Agreement: ICC "

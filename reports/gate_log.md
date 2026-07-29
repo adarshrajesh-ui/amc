@@ -4,13 +4,13 @@
 
 | Gate | Station | Requirement | Threshold | Observed | Result |
 |---|---|---|---|---|---|
-| G0 | S0 | All evidence records validate against effect.schema.json | 100% | 597 records, 0 problems | PASS |
-| G1 | S1 | Records screened per shard | >= 25 | min included per shard = 15 across 20 shards | PASS |
-| G2 | S2 | Citation verification against Crossref and/or PubMed | 100% verified | 593 verified + 4 official-source, 0 unverified of 597 | PASS |
+| G0 | S0 | All evidence records validate against effect.schema.json | 100% | 621 records, 0 problems | PASS |
+| G1 | S1 | Records screened per shard | >= 25 | min included per shard = 15 across 21 shards | PASS |
+| G2 | S2 | Citation verification against Crossref and/or PubMed | 100% verified | 611 verified + 5 official + 5 grey literature, 0 unverified of 621 | PASS |
 | G3 | S3 | Blinded re-extraction agreement on continuous values | ICC >= 0.90 | raw 0.7216 (FAILS), sign-reconciled 0.9706 | FAIL-REMEDIATED |
 | G4 | S3 | Blinded re-extraction agreement on categorical fields | kappa >= 0.80 | tier 0.8958 (passes), design 0.7713 (fails), risk-of-bias 0.3601 (fails) | PARTIAL |
 | G5 | S4 | Exposure engine reproduces the closed-form envelope | within 20% | 5.8% | PASS |
-| G6 | S5 | Cohort-family de-duplication applied | enforced | 40 multi-study cohort families detected and collapsed in pooling | PASS |
+| G6 | S5 | Cohort-family de-duplication applied | enforced | 42 multi-study cohort families detected and collapsed in pooling | PASS |
 | G7 | S6 | Monte Carlo draws | >= 1e6 | 1,000,000 | PASS |
 | G8 | S6 | MCMC diagnostics where MCMC used | R-hat < 1.01, ESS > 1000, 0 divergences | R-hat 1.0000/1.0002, ESS 3564/3708, divergences 0 (asserted in tests) | PASS |
 | G9 | S8 | Calibration regression tests reproducing published estimates | >= 5 targets | 43 tests total; 8 named published-target reproductions | PASS |
@@ -25,7 +25,7 @@
 
 **G1 (PASS)** — Screening counts per shard were 40-313; the figure shown is INCLUDED records, which is lower than screened by design.
 
-**G2 (PASS)** — 593 of 597 identifiers resolve and title-match; the remaining 4 are official statistical products with no DOI, verified by domain. No fabricated citation was found.
+**G2 (PASS)** — 611 of 621 identifiers resolve against Crossref or PubMed AND have their resolved title matched against the recorded citation. 5 are government statistical products with no DOI, verified by domain. 5 are technical reports from recognised safety research organisations (AAA Foundation, IIHS, GHSA) which are NOT peer reviewed and are tracked separately for that reason. No fabricated citation was detected anywhere in the corpus.
 
 **G3 (FAIL-REMEDIATED)** — FAILS AS SPECIFIED. The gate is written on the raw values and the raw weighted-mean ICC is 0.7216. It reaches 0.9706 only after allowing a whole-record sign flip, and one reviewer correctly pointed out that the reconciliation is fitted to the reference extractor's answer and therefore cannot fail, so the reconciled figure is NOT an independent pass. The substantive defence is separate from the statistic: an independent adjudicator went to the primary sources for all nine disputed effects and found 8 of 9 disputes were caused by a sign convention that existed in spec/gates.md but never propagated into the extraction instructions. That is evidence about the cause. Remediated by explicit per-construct canonicalisation in analysis_set.py, but no post-remediation blinded round was run, so the remediation is unverified by independent measurement.
 

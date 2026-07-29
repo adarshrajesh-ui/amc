@@ -53,11 +53,17 @@ def main() -> dict:
       "lower than screened by design.")
     vs = ver["summary"]
     g("G2", "S2", "Citation verification against Crossref and/or PubMed", "100% verified",
-      f"{vs['n_verified']} verified + {vs['n_official_source']} official-source, "
-      f"{vs['n_unverified']} unverified of {vs['n_records']}",
+      f"{vs['n_verified']} verified + {vs['n_official_source']} official + "
+      f"{vs.get('n_grey_literature', 0)} grey literature, {vs['n_unverified']} unverified "
+      f"of {vs['n_records']}",
       vs["n_unverified"] == 0,
-      "593 of 597 identifiers resolve and title-match; the remaining 4 are official statistical "
-      "products with no DOI, verified by domain. No fabricated citation was found.")
+      f"{vs['n_identifier_resolves']} of {vs['n_records']} identifiers resolve against Crossref "
+      f"or PubMed AND have their resolved title matched against the recorded citation. "
+      f"{vs['n_official_source']} are government statistical products with no DOI, verified by "
+      f"domain. {vs.get('n_grey_literature', 0)} are technical reports from recognised safety "
+      f"research organisations (AAA Foundation, IIHS, GHSA) which are NOT peer reviewed and are "
+      f"tracked separately for that reason. No fabricated citation was detected anywhere in the "
+      f"corpus.")
     raw_icc = agr["continuous_raw"]["icc_weighted_mean_across_scales"]
     rec_icc = agr["continuous_sign_reconciled"]["icc_weighted_mean_across_scales"]
     g("G3", "S3", "Blinded re-extraction agreement on continuous values", "ICC >= 0.90",
