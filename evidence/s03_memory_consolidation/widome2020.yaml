@@ -1,0 +1,103 @@
+study_id: widome2020
+citation: "Widome R, Berger AT, Iber C, Wahlstrom K, Laska MN, Kilian G, Redline S, Erickson DJ. Association of Delaying School Start Time With Sleep Duration, Timing, and Quality Among Adolescents. JAMA Pediatrics. 2020;174(7):697-704."
+doi: "10.1001/jamapediatrics.2020.0344"
+pmid: "32338727"
+url: "https://doi.org/10.1001/jamapediatrics.2020.0344"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Association of Delaying School Start Time With Sleep Duration, Timing, and Quality Among Adolescents."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: quasi_experiment
+tier: T2
+n: 455
+n_studies_pooled: null
+population:
+  age_mean: 15.2
+  age_range: [14, 18]
+  pct_female: 49.5
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: school_night_sleep_duration_gain_year1
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 365, contrast_label: "difference-in-differences, 50-65 min school start time delay vs 3 comparison schools that stayed at 07:30; grade 9 baseline to grade 10"}
+    scale: raw_units
+    unit: "minutes_of_night_sleep"
+    value: 41.0
+    se: 8.16
+    ci: [25.0, 57.0]
+    conversion_formula: "Reported directly with 95% CI. SE = (57 - 25)/3.92 = 8.16 min = 0.136 h."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = more objectively measured (wrist actigraphy) school-night sleep in the delayed-start schools"
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "START_LEARN_Minnesota"
+    quote: "Relative to the change observed in the comparison schools, students who attended delayed-start schools had an additional mean 41 (95% CI, 25-57) objectively measured minutes of night sleep at follow-up 1 and 43 (95% CI, 25-61) at follow-up 2."
+  - outcome_domain: exposure_measurement
+    outcome_construct: school_night_sleep_duration_gain_year2
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 730, contrast_label: "same DiD contrast, grade 9 baseline to grade 11 (2 years after the change)"}
+    scale: raw_units
+    unit: "minutes_of_night_sleep"
+    value: 43.0
+    se: 9.18
+    ci: [25.0, 61.0]
+    conversion_formula: "Reported directly with 95% CI. SE = (61 - 25)/3.92 = 9.18 min = 0.153 h."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = more objectively measured school-night sleep. This is the denominator used for the Wald per-hour rescaling of the GPA effect in james2023."
+    covariates: []
+    followup_years: 2.0
+    cohort_family: "START_LEARN_Minnesota"
+    quote: "Relative to the change observed in the comparison schools, students who attended delayed-start schools had an additional mean 41 (95% CI, 25-57) objectively measured minutes of night sleep at follow-up 1 and 43 (95% CI, 25-61) at follow-up 2."
+  - outcome_domain: recovery
+    outcome_construct: weekend_catchup_sleep_reduction
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: 730, contrast_label: "DiD change in WEEKEND night sleep, baseline to follow-up 2, delayed-start vs comparison schools"}
+    scale: raw_units
+    unit: "minutes_of_night_sleep"
+    value: -34.0
+    se: 15.82
+    ci: [-65.0, -3.0]
+    conversion_formula: "Reported directly with 95% CI. SE = (-3 - (-65))/3.92 = 15.82 min. The follow-up 1 estimate was -24 (95% CI, -51 to 2), i.e. null."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = LESS weekend sleep once weekday sleep increased. Interpreted by the authors as a reduced need for catch-up sleep, not as harm."
+    covariates: []
+    followup_years: 2.0
+    cohort_family: "START_LEARN_Minnesota"
+    quote: "students attending these schools had a mean difference-in-differences change in weekend night sleep of -24 (95% CI, -51 to 2) minutes from baseline to follow-up 1 and -34 (95% CI, -65 to -3) minutes from baseline to follow-up 2, relative to comparison school participants."
+rob:
+  tool: ROBINS-I
+  judgement: moderate
+  notes: "Objective wrist-actigraphy exposure measurement with a difference-in-differences design and three concurrent comparison schools is close to the ceiling of what is achievable for a population sleep-duration question. Concerns: schools were not randomised to the policy; 455 of the ~2500 START/LEARN cohort contributed actigraphy, so the sleep sub-sample may not represent the GPA sample in james2023; attrition across three annual waves is not recoverable from the abstract."
+funding: "not stated in retrieved abstract"
+notes: |
+  ROLE OF THIS RECORD: it is not itself a memory or learning outcome. I extracted it because it is the
+  first-stage exposure measurement for james2023 - the same cohort, the same policy change, the same
+  follow-up timing - and without it the year-2 GPA difference-in-differences cannot be put on a per-hour
+  scale. It also independently answers a question the modeller will ask about our subject: how much sleep
+  does an adolescent actually gain when the schedule constraint is relaxed?
+
+  THE ANSWER IS "LESS THAN THE CONSTRAINT RELAXED BY": a 50-65 min later start bought 41-43 min of extra
+  sleep, and this held at both one and two years. Bedtimes did not drift later ("Delayed start times were
+  not associated with falling asleep later on school nights at follow-ups"), which is why the gain
+  persisted. Compare dunster2018, where a 55-min delay bought 34 min. Two independent cohorts therefore
+  converge on roughly 0.6-0.8 h of recoverable sleep per hour of schedule relief in this age group.
+
+  RELEVANT TO THE WEEKEND-CATCHUP QUESTION IN OUR SUBJECT'S HISTORY: weekend sleep FELL by 34 min once
+  weekday sleep rose, and this is the cleanest natural-experiment evidence I encountered that weekend
+  oversleep is a compensatory response to weekday debt rather than an independent behaviour. Our subject's
+  7-8 h weekends and occasional 10-11 h nights should be read as partial compensation, and the modeller
+  should not treat weekday and weekend sleep as independent exposures.
+
+  ACCESS: abstract only (JAMA Pediatrics paywall; no PMC deposit found). All three effects above are
+  quoted verbatim from the structured abstract, which reports the point estimates and 95% CIs in full, so
+  no numbers were lost to the paywall for the effects I extracted. I could not retrieve the sleep-stage
+  or sleep-architecture breakdown, and actigraphy would not provide it anyway.
+
+  COHORT OVERLAP WARNING: cohort_family = START_LEARN_Minnesota, shared with james2023. These are the
+  exposure and outcome halves of one natural experiment and must not be pooled as independent studies.
+shard: "s03_memory_consolidation"

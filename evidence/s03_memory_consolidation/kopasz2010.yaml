@@ -1,0 +1,123 @@
+study_id: kopasz2010
+citation: "Kopasz M, Loessl B, Valerius G, Koenig E, Matthaeas N, Hornyak M, Kloepfer C, Nissen C, Riemann D, Voderholzer U. No persisting effect of partial sleep curtailment on cognitive performance and declarative memory recall in adolescents. Journal of Sleep Research. 2010;19(1 Pt 1):71-79."
+doi: "10.1111/j.1365-2869.2009.00742.x"
+pmid: "19656277"
+url: "https://doi.org/10.1111/j.1365-2869.2009.00742.x"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "No persisting effect of partial sleep curtailment on cognitive performance and declarative memory recall in adolescents."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 22
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [14, 16]
+  pct_female: null
+  country: "DE"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: slow_wave_sleep_curtailment_at_4h_tib
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 9, duration_days: 1, contrast_label: "one 4 h TIB night vs a 9 h control night, PSG, adolescents"}
+    scale: pct_change
+    unit: "percent reduction in SWS minutes vs control night"
+    value: -5.0
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = SWS reduced. Only 5% of SWS is lost when TIB is cut by more than half. THE key architecture datum for this shard."
+    covariates: []
+    followup_years: null
+    cohort_family: "Freiburg_adolescent_restriction"
+    quote: "During the 4-h night, we observed a curtailment of 50% of non-rapid eye movement (non-REM), 5% of slow wave sleep (SWS) and 70% of REM sleep compared with the control night."
+  - outcome_domain: sleep_need
+    outcome_construct: rem_sleep_curtailment_at_4h_tib
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 9, duration_days: 1, contrast_label: "one 4 h TIB night vs a 9 h control night, PSG, adolescents"}
+    scale: pct_change
+    unit: "percent reduction in REM minutes vs control night"
+    value: -70.0
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = REM reduced. REM absorbs 70% loss while SWS absorbs 5%: restriction is overwhelmingly a REM (and N2) deletion, not an SWS deletion."
+    covariates: []
+    followup_years: null
+    cohort_family: "Freiburg_adolescent_restriction"
+    quote: "During the 4-h night, we observed a curtailment of 50% of non-rapid eye movement (non-REM), 5% of slow wave sleep (SWS) and 70% of REM sleep compared with the control night."
+  - outcome_domain: sleep_need
+    outcome_construct: nonrem_sleep_curtailment_at_4h_tib
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 9, duration_days: 1, contrast_label: "one 4 h TIB night vs a 9 h control night, PSG, adolescents"}
+    scale: pct_change
+    unit: "percent reduction in non-REM minutes vs control night"
+    value: -50.0
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = non-REM reduced. Since SWS fell only 5%, essentially all of this 50% non-REM loss is stage N1/N2 - which is where sleep spindles live (see campbell2021)."
+    covariates: []
+    followup_years: null
+    cohort_family: "Freiburg_adolescent_restriction"
+    quote: "During the 4-h night, we observed a curtailment of 50% of non-rapid eye movement (non-REM), 5% of slow wave sleep (SWS) and 70% of REM sleep compared with the control night."
+  - outcome_domain: cognition
+    outcome_construct: declarative_memory_recall_after_one_curtailed_night
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 9, duration_days: 1, contrast_label: "encoding before a single 4 h TIB night, recall tested the morning after a subsequent 9 h recovery night, vs all-9 h control condition"}
+    scale: hedges_g
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No effect size computable: the paper reports a null with no means/SDs in the retrievable abstract. 0.0 encodes the reported null; SE left null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no detectable effect of one curtailed night on declarative recall once a recovery night intervened. Supports RECOVERABILITY after a single bad night."
+    covariates: ["executive function", "attention", "concentration measured as tiredness controls"]
+    followup_years: null
+    cohort_family: "Freiburg_adolescent_restriction"
+    quote: "Partial sleep curtailment of one night did not influence declarative memory retrieval significantly. Recall in the paired-associate word list task was correlated positively with percentage of non-REM sleep in the recovery night."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomised cross-over with >=3 weeks washout, laboratory PSG, tiredness controls included - a good design for the architecture measurements, which are objective. Downgraded for the memory outcome: n = 22 with a single curtailed night is underpowered, and one night is far milder than the subject's three-year exposure."
+funding: "not stated in retrieved abstract"
+notes: |
+  DUAL-PURPOSE RECORD. Its architecture numbers are the most quotable in the whole literature; its
+  memory result is a null and is reported as such.
+
+  ARCHITECTURE: the single sentence "a curtailment of 50% of non-REM, 5% of SWS and 70% of REM sleep"
+  is, as far as I can find, the cleanest published stage-by-stage decomposition of a short night in
+  adolescents. Arithmetic implication the modeller should note: because non-REM as a whole fell 50%
+  while SWS within it fell only 5%, virtually the entire non-REM loss is stage N1/N2. Campbell 2021
+  shows sleep-spindle (sigma) activity, which is concentrated in N2, falls ~28-40% at a much milder
+  7 h dose. So the "SWS is preserved" headline conceals a large loss of spindle-bearing N2.
+
+  RECOVERABILITY: this record is evidence on the OPTIMISTIC side. One curtailed night, followed by one
+  9 h recovery night, left declarative recall intact. Note also the correlational hint that the recovery
+  night did work: "Recall in the paired-associate word list task was correlated positively with
+  percentage of non-REM sleep in the recovery night." Contrast with stickgold2000nn, where two full
+  recovery nights did NOT restore a perceptual skill, and with cousins2018, where three recovery nights
+  did NOT restore encoding capacity after five restricted nights. The reconciliation that fits all three
+  is dose-dependent: one bad night appears recoverable; a week of restriction before encoding does not
+  appear to be. The subject's exposure is ~3 years, i.e. far past the recoverable end of that range,
+  but no study tests that duration.
+
+  Authors' interpretation, verbatim: "Declarative memory consolidation does not appear to be influenced
+  by short-term sleep curtailment in adolescents. This may be explained by the high ability of
+  adolescents to compensate for acute sleep loss."
+
+  ACCESS LIMITATION: abstract only; paywalled at Wiley, no PMC record. The percentages above are quoted
+  verbatim from the abstract, which is why they are usable; the underlying stage minutes are not.
+
+  Same research group and overlapping protocol lineage as voderholzer2011; cohort_family set to
+  Freiburg_adolescent_restriction on both so the pooler does not treat them as independent.
+shard: "s03_memory_consolidation"

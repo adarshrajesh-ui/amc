@@ -1,0 +1,120 @@
+study_id: huang2016
+citation: "Huang S, Deshpande A, Yeo SC, Lo JC, Chee MW, Gooley JJ. Sleep Restriction Impairs Vocabulary Learning when Adolescents Cram for Exams: The Need for Sleep Study. Sleep. 2016;39(9):1681-1690."
+doi: "10.5665/sleep.6092"
+pmid: "27253768"
+url: "https://doi.org/10.5665/sleep.6092"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep Restriction Impairs Vocabulary Learning when Adolescents Cram for Exams: The Need for Sleep Study."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 55
+n_studies_pooled: null
+population:
+  age_mean: 16.8
+  age_range: [15, 19]
+  pct_female: null
+  country: "SG"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: academic
+    outcome_construct: cued_recall_gre_vocabulary_massed_items
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "5 h TIB vs 9 h TIB for 7 nights spanning 4 daily study sessions; cued recall of MASSED (crammed) word pairs at 0/24/120 h"}
+    scale: hedges_g
+    unit: null
+    value: -0.93
+    se: 0.28
+    ci: [-1.49, -0.37]
+    conversion_formula: "Back-computed from the reported Tukey P and group sizes. The paper reports P < 0.001; using two-tailed P = 0.001 at df = 53 gives t = 3.484; d = t*sqrt(1/26+1/29) = 0.9409; Hedges' J = 1-3/(4*53-1) = 0.9858; g = 0.9275; SE = sqrt(1/26+1/29+g^2/(2*53)) = 0.2847. Because the reported P is an upper bound (P < 0.001), |g| = 0.93 is a LOWER BOUND on the magnitude. Sign set negative to denote harm."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = worse recall of crammed vocabulary under 5 h TIB. LOWER BOUND on magnitude (P reported as < 0.001, not =)."
+    covariates: ["study spacing", "order of spacing", "test session"]
+    followup_years: null
+    cohort_family: "NeedForSleep_Singapore"
+    quote: "There was a significant interaction between study spacing and TIB for sleep (Table 2), such that test performance on massed items was poorer in individuals who underwent sleep restriction (Tukey test, P < 0.001), while test performance on spaced items was similar between sleep groups (Tukey test, P = 0.80; Figure 2B)."
+  - outcome_domain: academic
+    outcome_construct: cued_recall_gre_vocabulary_spaced_items
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "5 h TIB vs 9 h TIB for 7 nights; cued recall of SPACED word pairs (studied across 4 consecutive days) at 0/24/120 h"}
+    scale: hedges_g
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No effect size is computable: the paper reports only the non-significant Tukey P = 0.80 for this contrast and provides no means/SDs in the retrievable text. 0.0 encodes the reported null. SE left null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no detectable difference between 5 h and 9 h TIB for material that was studied in spaced sessions. This is a PROTECTIVE-FACTOR record, not a harm record."
+    covariates: ["study spacing", "order of spacing", "test session"]
+    followup_years: null
+    cohort_family: "NeedForSleep_Singapore"
+    quote: "In contrast to our results for massed items that were studied this way, we found that sleep restriction had no measurable effect on cued recall performance for items that were spaced across 4 consecutive days, despite a 28-h reduction in the opportunity for sleep in the 5-h TIB condition from the first day of studying to the final day of testing."
+  - outcome_domain: academic
+    outcome_construct: spacing_effect_magnitude_ratio_under_restriction
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "magnitude of the spacing effect (spaced minus massed test score) under 5 h vs 9 h TIB"}
+    scale: raw_units
+    unit: "ratio of spacing-effect magnitude, 5 h TIB relative to 9 h TIB"
+    value: 2.0
+    se: null
+    ci: null
+    conversion_formula: "Authors' own descriptive statement ('about 2-fold greater'). No dispersion reported for this derived quantity."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "greater than 1 = study spacing buys MORE under sleep restriction than under adequate sleep, i.e. the harm of short sleep is concentrated on poorly-spaced study"
+    covariates: []
+    followup_years: null
+    cohort_family: "NeedForSleep_Singapore"
+    quote: "The magnitude of the spacing effect, defined as the difference in test scores for each participant on spaced items versus massed items, was about 2-fold greater in individuals exposed to sleep restriction (Figure 3B)."
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "Randomised parallel-group allocation made before the protocol began and concealed from participants until day 1; residential boarding-school control of the sleep schedule with actigraphy verification; groups equivalent at screening on demographics, sleep behaviour, anxiety/depression and non-verbal IQ. No blinding possible. Effect sizes must be back-computed because the paper reports mixed-model chi-square and Tukey P values rather than group means with SDs."
+funding: "not stated in retrieved text"
+notes: |
+  n = 55 analysed (9-h TIB group n = 26, 11 males, 16.8 +/- 1.2 y; 5-h TIB group n = 29). 56 randomised
+  per the abstract; the discrepancy is accounted for in the paper: of 30 originally assigned to the 9 h
+  arm, 2 withdrew before the study, 1 withdrew on baseline day 2, and 1 was excluded post hoc for
+  non-compliance.
+
+  WHY THIS RECORD IS UNUSUALLY WELL MATCHED TO THE SUBJECT. The protocol is almost a literal model of
+  the subject's described behaviour: adolescents at a boarding school, 5 h TIB on school nights, studying
+  GRE-type vocabulary either crammed into single sessions or spaced across days, tested at 24 h and 120 h.
+  The subject is described as taking "occasional 3-4 h nights before exams" - i.e. cramming under sleep
+  loss - which is exactly the massed condition. Verbatim from the paper's significance statement: "Many
+  adolescents are exposed to sleep restriction during school days. This behavior could have negative
+  consequences for learning of skills and facts, hence eroding the value of formal education."
+
+  THE MOST IMPORTANT NUANCE, AND IT CUTS AGAINST A LARGE UNIFORM LEARNING LOSS.
+  The harm was entirely confined to crammed material. Spaced material was unaffected despite a
+  cumulative 28-h sleep deficit. Verbatim conclusion: "Spaced learning conferred strong protection
+  against the effects of sleep restriction on recall performance, whereas students who had insufficient
+  sleep were more likely to forget items studied over short time intervals." The downstream model should
+  therefore NOT apply a flat learning-loss multiplier to three years of schooling. The defensible claim
+  is a loss concentrated on material the subject crammed, with spaced/repeatedly-revisited material
+  largely protected. Since ordinary schooling involves substantial spaced repetition of core content,
+  this argues for a materially SMALLER channel-(c) estimate than a naive reading of Yoo 2007 implies.
+
+  A further attenuating result: after a single review session, massed-item performance recovered to the
+  level of spaced items ("recall performance on massed items improved after the review session, reaching
+  a similar level as for spaced items (Tukey test, P = 0.51)"). So at least some of the deficit was
+  repairable by re-study - relevant to the recoverability question, and distinct from the Yoo/Stickgold
+  "closed window" picture.
+
+  AUTHORS' OWN CAVEAT on mechanism, quoted because it bears on how the modeller should label this effect:
+  "The present study was not designed to tease apart the differential effects of sleep restriction on
+  encoding versus memory consolidation. ... our subjects were exposed to partial sleep deprivation both
+  before and after encoding of vocabulary items. ... we cannot determine with certainty which specific
+  memory processes were affected by exposure to sleep restriction."
+
+  Other statistics available for cross-checks: the spacing x TIB interaction was LR chi2 = 8.40, P < 0.01
+  during the retention phase; the Set x TIB interaction across massed sets was LR chi2 = 10.71, P = 0.013
+  (and LR chi2 = 8.48, P = 0.037, eta2 = 0.017 in the overnight-forgetting analysis). Neither sleep group
+  showed net forgetting across the 0-120 h retention intervals.
+
+  Full text via PMC4989257. Identifiers verified via Crossref and PubMed.
+  COHORT OVERLAP: Need for Sleep Study programme; see cousins2018 notes.
+shard: "s03_memory_consolidation"

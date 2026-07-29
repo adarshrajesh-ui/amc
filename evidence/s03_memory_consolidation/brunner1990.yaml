@@ -1,0 +1,134 @@
+study_id: brunner1990
+citation: "Brunner DP, Dijk DJ, Tobler I, Borbely AA. Effect of partial sleep deprivation on sleep stages and EEG power spectra: evidence for non-REM and REM sleep homeostasis. Electroencephalography and Clinical Neurophysiology. 1990;75(6):492-499."
+doi: "10.1016/0013-4694(90)90136-8"
+pmid: "1693894"
+url: "https://doi.org/10.1016/0013-4694(90)90136-8"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Effect of partial sleep deprivation on sleep stages and EEG power spectra: evidence for non-REM and REM sleep homeostasis."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "CH"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: sws_minutes_preserved_at_4h_tib
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 7.5, duration_days: 2, contrast_label: "2 nights restricted to the FIRST 4 h of the habitual bedtime period vs 7.5 h baseline nights; PSG"}
+    scale: raw_units
+    unit: "qualitative_stage_change"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No minutes or test statistics are given in the retrievable abstract; the finding is reported as a qualitative null ('not significantly affected'). value = 0.0 encodes 'no change' and is a PLACEHOLDER, not a measured quantity. se is null accordingly."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "zero = no significant change in SWS minutes when time in bed was cut from 7.5 h to 4 h. Stages 1 and 2 and REM were reduced over the same nights. This is the adult replication of the adolescent pattern in campbell2021/ong2016/lo2016/kopasz2010/skorucak2021."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "After 2 baseline nights (B1, B2) of 7.5 h, sleep was restricted for 2 nights (D1, D2) to the first 4 h of the habitual bedtime period. Two recovery nights (R1, R2) with 7.5 h sleep followed. During the deprivation nights, stages 1 and 2 and REM sleep were reduced, while slow wave sleep (SWS; stages 3 and 4) was not significantly affected."
+  - outcome_domain: sleep_need
+    outcome_construct: slow_wave_energy_reduced_despite_preserved_sws_minutes
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 7.5, duration_days: 2, contrast_label: "time integral of EEG power density 0.75-4.5 Hz (slow wave energy) across the night, 4 h vs 7.5 h TIB"}
+    scale: raw_units
+    unit: "qualitative_direction"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Reported as a qualitative reduction with no magnitude in the retrievable abstract. value = -1.0 encodes 'reduced' and is a PLACEHOLDER, not a measured quantity."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = less all-night slow wave energy under restriction, EVEN THOUGH SWS minutes did not change. This is the 1990 antecedent of campbell2021's sigma-energy finding and the same lesson: a stage-minutes ledger and an EEG-energy ledger give different answers."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "During the deprivation nights, stages 1 and 2 and REM sleep were reduced, while slow wave sleep (SWS; stages 3 and 4) was not significantly affected. However, the time integral of EEG power density in the range of 0.75-4.5 Hz (slow wave energy) was reduced."
+  - outcome_domain: recovery
+    outcome_construct: rem_rebound_vs_sws_rebound_asymmetry
+    exposure: {type: recovery_sleep, dose_h: 7.5, referent_h: 7.5, duration_days: 2, contrast_label: "2 recovery nights of 7.5 h TIB following 2 nights of 4 h TIB"}
+    scale: raw_units
+    unit: "qualitative_direction"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Reported qualitatively; no magnitudes in the retrievable abstract. value = 1.0 encodes 'rebound present' and is a PLACEHOLDER."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = a rebound occurred. The asymmetry is the finding: SWS rebounded only on the first recovery night while REM rebounded on BOTH, and the authors emphasise that the slow-wave-energy debt produced only 'a minor enhancement' during recovery."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "In the recovery period, SWS showed an enhancement in R1, and REM sleep showed a rebound in R1 and R2. ... The results show (1) that the moderate reduction of slow wave energy in the deprivation nights induces only a minor enhancement of slow wave activity during recovery sleep; and (2) that a REM sleep deficit gives rise to an immediate rebound when 'slow wave pressure' is low."
+  - outcome_domain: sleep_need
+    outcome_construct: sigma_band_13_16hz_reduced_during_recovery
+    exposure: {type: recovery_sleep, dose_h: 7.5, referent_h: 7.5, duration_days: 2, contrast_label: "EEG power density 13-16 Hz (the spindle/sigma band) during the recovery nights after 2 nights of 4 h TIB"}
+    scale: raw_units
+    unit: "qualitative_direction"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Reported qualitatively; no magnitudes in the retrievable abstract. value = -1.0 encodes 'reduced' and is a PLACEHOLDER."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = LESS sigma-band power. Note the timing: this reduction is reported for the RECOVERY nights (R1, R2), i.e. spindle activity was still suppressed after restriction ended, at a point when total sleep time had already been restored."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Power density in the frequency range of 13-16 Hz was reduced in non-REM sleep (R1), SWS (R2) and stage 2 (R1)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Within-subject baseline/restriction/recovery design with PSG and quantitative EEG - appropriate for the question and still the canonical reference. Concerns: sample size is not stated in the retrievable abstract ('young subjects'), so n is null and every effect is unweightable; only 2 restriction nights; 1990-era visual stage scoring; no memory or cognitive outcome at all; and no numeric magnitudes or test statistics recoverable without the full text, which is paywalled at Elsevier with no PMC deposit."
+funding: "not stated in retrieved abstract"
+notes: |
+  ROLE: this is the ADULT, non-adolescent replication of the central architecture finding, and the oldest.
+  Every other architecture record in this shard is in 9-19 year olds (campbell2021, ong2016, lo2016,
+  kopasz2010, skorucak2021, reynolds2018, voderholzer2011). If SWS preservation under restriction were an
+  adolescent peculiarity, the whole architecture argument would not transport to our 18-year-old as he
+  ages. It is not: the same dissociation appears in young adults in Zurich in 1990.
+
+  THE DESIGN DETAIL THAT MATTERS MOST, and the reason I promoted this from the exclusion list: sleep was
+  "restricted ... to the first 4 h of the habitual bedtime period." That is restriction by cutting the
+  END of the night, which is exactly how our subject's 5-6 h weeknights were produced (fixed school wake
+  time, bedtime not correspondingly advanced). Most restriction protocols do the same, but few state it
+  so explicitly. It matters because of the Stickgold late-REM argument in
+  architecture_under_restriction.md section 4c: cutting the last hours removes late REM specifically. This
+  study confirms that under exactly that manipulation REM falls while SWS minutes do not.
+
+  THREE FINDINGS THAT PRE-DATE AND CORROBORATE THE MODERN RECORDS:
+  (1) SWS minutes preserved, stages 1-2 and REM reduced - the same dissociation as every adolescent study
+      in this shard, at the same 4 h dose as kopasz2010.
+  (2) Slow wave ENERGY was nonetheless reduced while SWS minutes were not. This is campbell2021's
+      sigma-energy lesson thirty years earlier and in a different frequency band: minutes and spectral
+      energy dissociate, and the minutes ledger is the less sensitive one.
+  (3) Sigma-band (13-16 Hz) power was REDUCED DURING THE RECOVERY NIGHTS. This is directly relevant to
+      requirement 5. If the spindle band is still suppressed on recovery nights after total sleep time has
+      been restored, then a weekend of catch-up sleep does not immediately restore spindle-mediated
+      consolidation capacity - which is a mechanism by which our subject's 7-8 h weekends would fail to
+      fully repair five preceding restricted nights. I flag this as suggestive only: it is one 1990 study,
+      n unknown, no memory outcome, and the finding is scattered across different stages on different
+      recovery nights rather than being a single clean effect.
+
+  ALL FOUR EFFECT VALUES ARE PLACEHOLDERS ENCODING DIRECTION, NOT MEASURED QUANTITIES. The abstract
+  reports every result qualitatively ("reduced", "not significantly affected", "showed a rebound") with no
+  minutes, no test statistics and no dispersion. I have set se: null throughout and used 0.0/+1.0/-1.0
+  purely to carry sign, because the schema requires a numeric value. The pooler MUST NOT treat these as
+  effect sizes. This record's function is directional corroboration and design detail; every quantitative
+  architecture number in this shard comes from campbell2021, ong2016, lo2016 or kopasz2010 instead.
+
+  RELATED RECORD NOT EXTRACTED: Brunner DP, Dijk DJ, Borbely AA. "Repeated partial sleep deprivation
+  progressively changes in EEG during sleep and wakefulness." Sleep 1993;16(2):100-113,
+  DOI 10.1093/sleep/16.2.100, PMID 8446828 (identifier verified). It extends the same protocol to 4 nights
+  of 4 h TIB. I screened it and did not extract it because it duplicates this record's architecture content
+  without adding a memory outcome or recoverable magnitudes; see screening_log.md.
+shard: "s03_memory_consolidation"

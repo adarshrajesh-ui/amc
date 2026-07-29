@@ -1,0 +1,79 @@
+study_id: reynolds2018
+citation: "Reynolds CM, Gradisar M, Coussens S, Short MA. Sleep spindles in adolescence: a comparison across sleep restriction and sleep extension. Sleep Medicine. 2018;50:166-174."
+doi: "10.1016/j.sleep.2018.05.019"
+pmid: "30056287"
+url: "https://doi.org/10.1016/j.sleep.2018.05.019"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep spindles in adolescence: a comparison across sleep restriction and sleep extension."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 34
+n_studies_pooled: null
+population:
+  age_mean: 15.91
+  age_range: [15, 17]
+  pct_female: 41.2
+  country: "AU"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: fast_sleep_spindle_amplitude_under_severe_restriction
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 10, duration_days: 5, contrast_label: "5 h TIB x 5 nights vs 7.5 h and 10 h TIB, fast sleep-spindle amplitude"}
+    scale: raw_units
+    unit: "qualitative direction: fast-spindle amplitude reduced"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "-1 denotes 'reduced'. No magnitudes, SDs or CIs are given in the retrievable abstract; the paper is paywalled with no PMC record."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >-
+      negative = lower fast-spindle amplitude under severe restriction. Confirms in an independent
+      laboratory, at the subject's own 5 h dose, the spindle-loss mechanism that campbell2021 quantifies
+      spectrally at 7 h. Spindle DURATION went the other way (longer), so the net consolidation
+      implication is not a simple monotone loss.
+    covariates: ["sex"]
+    followup_years: null
+    cohort_family: "Adelaide_adolescent_sleep_dose"
+    quote: "Both within- and between-subjects effects were observed for fast sleep spindle characteristics of density, duration and amplitude. Overall, when experiencing severe sleep restriction, fast spindles in adolescents were lower in amplitude and longer in duration. Sex differences were also seen for fast spindle amplitude."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Same well-controlled 34-participant laboratory protocol as skorucak2021 (5 / 7.5 / 10 h TIB for five nights, adolescents blinded to dose). Per-arm n ~ 11-12 is small for spectral outcomes. Recorded as some_concerns; the outcome is objective EEG."
+funding: "not stated in retrieved abstract"
+notes: |
+  INCLUDED AS THE SPINDLE-MECHANISM CORROBORATION AT THE SUBJECT'S DOSE. campbell2021 shows a large sigma
+  loss at 7 h TIB in 10-16 year-olds; this record shows a fast-spindle amplitude reduction at 5 h TIB in
+  15-17 year-olds. Together they support treating spindle activity, rather than SWS minutes, as the
+  architecture variable that actually moves at 5-6 h.
+
+  IMPORTANT DISAGREEMENT, reported rather than smoothed over. Campbell et al. explicitly flag that this
+  study did NOT find a spindle effect at the milder dose: "Contrary to the large sigma activity reduction
+  found with the 7 h TIB condition in our study, Reynolds et al. did not find a spindle difference between
+  participants keeping 7.5 and 10 h TIB schedules. The contradiction may be related to the older age,
+  15-17 years, of their participants." Two readings, and I cannot adjudicate between them:
+    (a) the spindle effect requires a dose more severe than 7.5 h, appearing only at 5 h - in which case
+        the subject's 5-6 h weekdays are inside the affected range but his 7-8 h weekends are not; or
+    (b) older adolescents are less spindle-susceptible than 10-16 year-olds, in which case campbell2021's
+        -40% sigma figure overstates what an 18-year-old would experience.
+  Reading (b) would attenuate the whole spindle mechanism for this specific subject. This is a real
+  unresolved threat to the mechanism I recommend in architecture_under_restriction.md, and the downstream
+  model should widen uncertainty accordingly rather than adopt -40% as a point estimate.
+
+  ALSO NOTE the direction is not uniformly bad: amplitude fell but duration ROSE. Whether the net effect on
+  consolidation throughput is negative is not established by this study, which measured no memory outcome.
+
+  ACCESS LIMITATION: abstract only (paywalled at Elsevier; no PMC record). This is why the single effect is
+  recorded as a direction with se: null. Population fields are taken from the shared protocol reported in
+  skorucak2021 (34 adolescents, 20 male, 15-17 y, mean 15.91 SD 0.86), since the two papers analyse the
+  same participants; flagged here because strictly speaking the age/sex breakdown is imported from the
+  companion paper rather than read from this abstract.
+
+  cohort_family = Adelaide_adolescent_sleep_dose, shared with skorucak2021 and with Short et al. 2018
+  (PMID 29325109). DO NOT treat as independent of skorucak2021 - it is the same 34 participants.
+shard: "s03_memory_consolidation"

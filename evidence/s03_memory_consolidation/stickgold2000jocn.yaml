@@ -1,0 +1,100 @@
+study_id: stickgold2000jocn
+citation: "Stickgold R, Whidbee D, Schirmer B, Patel V, Hobson JA. Visual discrimination task improvement: A multi-step process occurring during sleep. Journal of Cognitive Neuroscience. 2000;12(2):246-254."
+doi: "10.1162/089892900562075"
+pmid: "10771409"
+url: "https://doi.org/10.1162/089892900562075"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Visual discrimination task improvement: A multi-step process occurring during sleep."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: minimum_sleep_threshold_for_overnight_skill_gain
+    exposure: {type: chronic_restriction, dose_h: 6, referent_h: 8, duration_days: 1, contrast_label: "post-training sleep duration required for any overnight improvement to appear"}
+    scale: hours
+    unit: "hours of post-training sleep below which no improvement occurs"
+    value: 6.0
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >-
+      A THRESHOLD, not a slope: below ~6 h of post-training sleep there was NO improvement at all, and
+      above it improvement scaled with the excess over 6 h. If this transfers, the subject's 5-6 h weekday
+      nights sit at or below the threshold, i.e. in the regime where consolidation gain is zero rather
+      than merely reduced. This is the single most damaging finding for the subject in this shard.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "When tested within 24 hr of training, improvement was not observed unless subjects obtained at least 6 hr of posttraining sleep prior to retesting, in which case improvement was proportional to the amount of sleep in excess of 6 hr."
+  - outcome_domain: sleep_need
+    outcome_construct: early_sws_times_late_rem_predicts_consolidation
+    exposure: {type: descriptive, dose_h: 8, referent_h: null, duration_days: 1, contrast_label: "product of SWS minutes in the first quarter of the night and REM minutes in the last quarter, predicting overnight skill gain"}
+    scale: raw_units
+    unit: "proportion of between-subject variance in overnight improvement explained"
+    value: 0.80
+    se: null
+    ci: null
+    conversion_formula: "Authors' figure ('accounts for 80 percent of intersubject variance') for a two-step multiplicative model: throughput = (early SWS) x (late REM)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >-
+      Higher = better model fit. CRITICAL STRUCTURAL IMPLICATION: because the model is MULTIPLICATIVE,
+      preserving early SWS is worthless if late REM goes to zero. Restriction implemented by shortening
+      the back end of the night deletes precisely the last quarter, where the required late REM lives.
+      This is the mechanism by which 5-6 h nights could destroy consolidation even though SWS minutes
+      are fully preserved.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "For subjects averaging 8 hr of sleep, overnight improvement was proportional to the amount of slow wave sleep (SWS) in the first quarter of the night, as well as the amount of rapid eye movement sleep (REM) in the last quarter. REM during the intervening 4 hr did not appear to contribute to improvement. A two-step process, modeling throughput as the product of the amount of early SWS and late REM, accounts for 80 percent of intersubject variance."
+rob:
+  tool: RoB2
+  judgement: high
+  notes: "Small single-laboratory study; the 6 h threshold and the two-step model are derived from post-hoc regression on within-night stage distributions rather than from an experimental manipulation of stage timing; 80% of variance explained by a two-parameter model in a small sample is very likely optimistic (overfitting). n not stated in the retrievable abstract. Rated high risk of bias for the specific quantitative claims, while noting the qualitative structure is theoretically important."
+funding: "NIMH MH-13923; NIMH MH-48832"
+notes: |
+  THIS RECORD IS THE PRINCIPAL COUNTERWEIGHT TO THE 'SWS IS PRESERVED SO NOTHING IS LOST' READING that
+  the architecture data in campbell2021 / ong2016 / kopasz2010 / skorucak2021 otherwise support. It is
+  the ONLY quantitative model I found of stage TIMING rather than stage TOTALS, and it points the
+  opposite way.
+
+  The logic, spelled out for the modeller: restriction to 5-6 h removes the final hours of the night.
+  Slow-wave sleep is front-loaded, so it survives (this is exactly why campbell2021 sees zero N3 loss).
+  REM is back-loaded, so the last quarter's REM is destroyed. If consolidation throughput really is the
+  PRODUCT of early SWS and late REM, then a 5-6 h night yields (preserved early SWS) x (near-zero late
+  REM) = near-zero throughput. Under this model a 5-6 h night is not 70% as good as an 8 h night; it is
+  qualitatively different.
+
+  I flag this strongly BUT rate it high risk of bias, because:
+  1. It is a small post-hoc regression, and 80% explained variance from two predictors in a small sample
+     is the classic signature of overfitting.
+  2. The task is perceptual, not declarative.
+  3. It is in direct tension with berres2021, which across 427 effect sizes finds neither SWS duration
+     (beta = 0.05, 95% CI [-0.13, 0.23]) nor REM duration (beta = -0.016, 95% CI [-0.28, 0.25]) predicts
+     the sleep benefit. Those two findings are reconcilable if PLACEMENT matters and TOTALS do not - which
+     is itself an argument that a minutes-based ledger is mis-specified in both directions - but the
+     reconciliation is a hypothesis, not an established result.
+  4. It has not, to my knowledge, been replicated at this precision in the 25 years since.
+
+  Recommended use: let this record widen the upper tail of the learning-loss prior rather than set its
+  central estimate. Do not pool its 0.80 variance-explained figure with anything.
+
+  ACCESS LIMITATION: abstract only (paywalled at MIT Press; no PMC record). n is not stated in the
+  abstract and I have left it null rather than guess. The companion paper stickgold2000nn shares the
+  same task and laboratory but is a separate experiment.
+shard: "s03_memory_consolidation"

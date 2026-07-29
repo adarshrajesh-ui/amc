@@ -1,0 +1,182 @@
+study_id: campbell2021
+citation: "Campbell IG, Cruz-Basilio A, Darchia N, Zhang ZY, Feinberg I. Effects of sleep restriction on the sleep electroencephalogram of adolescents. Sleep. 2021;44(6):zsaa280."
+doi: "10.1093/sleep/zsaa280"
+pmid: "33507305"
+url: "https://doi.org/10.1093/sleep/zsaa280"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Effects of sleep restriction on the sleep electroencephalogram of adolescents."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 77
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [9.9, 16.2]
+  pct_female: 46.8
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: total_sleep_time_by_tib_dose
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 10, duration_days: 4, contrast_label: "7 h vs 10 h TIB, 4th consecutive night, PSG"}
+    scale: raw_units
+    unit: "minutes of total sleep time"
+    value: -124.0
+    se: 2.24
+    ci: [-128.4, -119.6]
+    conversion_formula: "406 - 530 = -124 min. SE of the difference = sqrt(1^2 + 2^2) = 2.236 from the reported SEMs of 1 and 2 min; CI = -124 +/- 1.96*2.236."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = less sleep obtained at 7 h TIB. Reference point for apportioning the loss across stages below."
+    covariates: ["age"]
+    followup_years: null
+    cohort_family: "Davis_adolescent_TIB"
+    quote: "Total sleep time (min) | 406 +/- 1 | 472 +/- 2 | 530 +/- 2"
+  - outcome_domain: sleep_need
+    outcome_construct: slow_wave_sleep_n3_minutes_by_tib_dose
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 10, duration_days: 4, contrast_label: "7 h vs 10 h TIB, 4th consecutive night, stage N3 minutes"}
+    scale: raw_units
+    unit: "minutes of stage N3 (slow-wave sleep)"
+    value: 3.0
+    se: 2.83
+    ci: [-2.5, 8.5]
+    conversion_formula: "114 - 111 = +3 min. SE of the difference = sqrt(2^2 + 2^2) = 2.828 from the reported SEMs; CI = 3 +/- 1.96*2.828."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = slightly MORE slow-wave sleep at the restricted dose. Cutting TIB by 3 h costs zero SWS; if anything SWS trends up. CI includes zero."
+    covariates: ["age"]
+    followup_years: null
+    cohort_family: "Davis_adolescent_TIB"
+    quote: "N3 (min) | 114 +/- 2 | 111 +/- 2 | 111 +/- 2 ... Stage N3 duration showed a trend (F2,149 = 2.53, p = 0.084) to increase with TIB reduction."
+  - outcome_domain: sleep_need
+    outcome_construct: rem_sleep_minutes_by_tib_dose
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 10, duration_days: 4, contrast_label: "7 h vs 10 h TIB, 4th consecutive night, REM minutes"}
+    scale: raw_units
+    unit: "minutes of REM sleep"
+    value: -39.0
+    se: 2.24
+    ci: [-43.4, -34.6]
+    conversion_formula: "89 - 128 = -39 min (-30.5%). SE of the difference = sqrt(1^2 + 2^2) = 2.236; CI = -39 +/- 1.96*2.236. REM absorbs 31.5% of the 124-min TST loss."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = less REM at the restricted dose. REM is cut ~30% while SWS is not cut at all."
+    covariates: ["age"]
+    followup_years: null
+    cohort_family: "Davis_adolescent_TIB"
+    quote: "REM (min) | 89 +/- 1 | 112 +/- 1 | 128 +/- 2 ... Reducing TIB significantly decreased both NREM (F2,149 = 795, p < 0.0001) and REM durations (F2,149 = 225, p < 0.0001)."
+  - outcome_domain: sleep_need
+    outcome_construct: stage_n2_minutes_by_tib_dose
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 10, duration_days: 4, contrast_label: "7 h vs 10 h TIB, 4th consecutive night, stage N2 minutes"}
+    scale: raw_units
+    unit: "minutes of stage N2"
+    value: -88.0
+    se: 3.61
+    ci: [-95.1, -80.9]
+    conversion_formula: "203 - 291 = -88 min (-30.2%). SE of the difference = sqrt(2^2 + 3^2) = 3.606; CI = -88 +/- 1.96*3.606. N2 absorbs 71.0% of the 124-min TST loss - the largest absolute share."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = less N2. N2 is where sleep spindles occur, so this is the stage loss with the clearest consolidation relevance."
+    covariates: ["age"]
+    followup_years: null
+    cohort_family: "Davis_adolescent_TIB"
+    quote: "N2 (min) | 203 +/- 2 | 250 +/- 2 | 291 +/- 3 ... The effect of TIB reduction on NREM duration resulted from a significant (F2,149 = 545, p < 0.0001) stage N2 decrease."
+  - outcome_domain: sleep_need
+    outcome_construct: sleep_spindle_sigma_energy_all_night
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 10, duration_days: 4, contrast_label: "7 h vs 10 h TIB, all-night NREM sigma (11-15 Hz) energy"}
+    scale: pct_change
+    unit: "percent reduction in all-night sigma energy (authors' denominator = 7 h value)"
+    value: -39.6
+    se: null
+    ci: null
+    conversion_formula: "Authors' figure: sigma energy 0.504 -> 0.361 mV2 s. 0.143/0.361 = 39.6% (their denominator is the 7 h value). Relative to the 10 h referent the reduction is 0.143/0.504 = 28.4%. USE -28.4 if 10 h is the referent."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = large loss of sleep-spindle activity. THE MOST IMPORTANT NUMBER IN THIS RECORD: a 23% TST cut that costs no SWS nevertheless costs ~28-40% of all-night spindle activity."
+    covariates: ["age"]
+    followup_years: null
+    cohort_family: "Davis_adolescent_TIB"
+    quote: "From 10 h TIB to 7 h TIB, sigma energy decreased from 0.504 to 0.361 mV2 s, a 39.6% decrease. ... the 23% reduction in TST with TIB restriction from 10 to 7 h was associated with not only a 40% loss of all-night accumulated sigma activity but also with a significant decrease in the rate of sigma production."
+  - outcome_domain: sleep_need
+    outcome_construct: sleep_spindle_sigma_power_first_5h_nrem
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 10, duration_days: 4, contrast_label: "7 h vs 10 h TIB, sigma power in the first 5 h of NREM (duration common to all doses)"}
+    scale: pct_change
+    unit: "percent reduction in sigma power"
+    value: -12.2
+    se: null
+    ci: null
+    conversion_formula: "Authors' figure: 21.8 -> 19.4 uV2. Note this contrast holds NREM duration constant, so it isolates the RATE of spindle production from the loss of NREM time."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = lower rate of spindle production per unit NREM, over and above the loss of NREM time itself"
+    covariates: ["age"]
+    followup_years: null
+    cohort_family: "Davis_adolescent_TIB"
+    quote: "From 10 h TIB to 7 h TIB, sigma power decreased from 21.8 to 19.4 uV2, a 12.2% decrease."
+  - outcome_domain: sleep_need
+    outcome_construct: all_night_nrem_delta_energy
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 10, duration_days: 4, contrast_label: "7 h vs 10 h TIB, all-night NREM delta (1-4 Hz) energy"}
+    scale: pct_change
+    unit: "percent change in all-night delta energy"
+    value: -5.5
+    se: null
+    ci: null
+    conversion_formula: "Authors' figure; explicitly non-significant."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = slightly less total slow-wave EEG activity, but NOT statistically significant. Confirms at the spectral level what the N3 minutes show: 3 h of lost TIB barely touches slow-wave activity."
+    covariates: ["age"]
+    followup_years: null
+    cohort_family: "Davis_adolescent_TIB"
+    quote: "Although delta energy was slightly (5.5%) smaller for the 7 h than the 10 h TIB condition, this effect did not reach statistical significance. In other words, the total amount of slow-wave EEG, delta, activity accumulated in a night of sleep was not significantly affected by reducing TIB by 3 h."
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "Within-subject design in which every participant kept all three TIB schedules, repeated annually over 3 years; PSG on the 4th night of each schedule; age carried as a covariate throughout. Sleep-stage and spectral outcomes are objective and scorer-blind to hypothesis. Main limitation for our purposes is the dose range (shortest = 7 h TIB) and the age range (younger than the subject), not internal validity."
+funding: "National Heart Lung Blood Institute HL116490; National Institutes of Health"
+notes: |
+  PRIMARY ARCHITECTURE ANCHOR FOR THIS SHARD. See architecture_under_restriction.md for the full
+  dose-response table and the arithmetic decomposition.
+
+  pct_female recorded as 46.8 = (77 - 41 male)/77.
+
+  MECHANISTIC EXPLANATION, quoted because it is why the SWS-preservation result generalises rather than
+  being an artefact of this protocol: "Slow-wave EEG activity is normally concentrated in the first part
+  of the night. The last 3 h in bed includes very little stage N3 sleep; therefore, eliminating these 3 h
+  had little effect on the total delta activity of the night." Any restriction implemented by shortening
+  the back end of the night will show the same pattern.
+
+  THE CENTRAL INTERPRETIVE POINT FOR THE MODELLER. This paper simultaneously supplies the strongest
+  evidence that SWS is preserved under restriction AND the strongest evidence that this preservation is
+  misleading. The authors themselves draw the second conclusion: "The larger size of the effect and the
+  altered pattern of sigma power across the night would argue that the TIB reduction of sigma power is
+  likely to be of greater biological significance than the small delta increase." And: "The decrease in
+  sigma activity presumably reflects depressed sleep spindle activity and suggests a manner by which
+  sleep restriction reduces waking cognitive function in adolescents."
+
+  The authors are explicit that the memory consequence is untested, and this honesty should propagate into
+  the model's uncertainty: "Sleep spindles have been proposed as markers of sleep-dependent memory
+  processes, and/or general mental ability. Does reducing spindle activity via sleep restriction impair
+  putative memory processing during sleep? Does it impair cognitive function during waking? If the answers
+  are 'yes,' the large reduction in sigma energy with 3 h of TIB reduction may explain how sleep loss
+  impairs daytime performance." They also note "the evidence for a relation between spindles and memory is
+  not strong in children."
+
+  NO ACCUMULATION ACROSS NIGHTS DETECTED: "A post-hoc analysis of differences in night 2 and night 4 sigma
+  activity was used to determine if the sigma effect increased across the period of TIB restriction.
+  Neither all night energy (F1,76 = 0.02, p = 0.87) nor power (F1,76 = 0.00, p = 0.99) in the first 5 h or
+  NREM differed between nights". So the spindle deficit appears to be a stable per-night tax rather than a
+  cumulative debt - relevant to how the modeller aggregates over ~3 years of school nights, and it argues
+  for a per-night multiplicative rather than cumulative treatment.
+
+  TRANSPORTABILITY CAVEATS (adolescent_match = mixed, not exact_16_19): the cohort spans 9.9-16.2 y, i.e.
+  mostly younger than the 18-year-old subject, and slow-wave activity declines steeply across exactly this
+  age range. The shortest dose is 7 h TIB, milder than the subject's 5-6 h. Extrapolation to 5 h relies on
+  ong2016, skorucak2021 and kopasz2010.
+
+  Full text via PMC8343600 (Table 1 read directly). Identifiers verified via Crossref and PubMed.
+shard: "s03_memory_consolidation"

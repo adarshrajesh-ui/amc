@@ -1,0 +1,103 @@
+study_id: schimke2021
+citation: "Schimke EAE, Angwin AJ, Cheng BBY, Copland DA. The effect of sleep on novel word learning in healthy adults: A systematic review and meta-analysis. Psychonomic Bulletin & Review. 2021;28(6):1811-1838."
+doi: "10.3758/s13423-021-01980-3"
+pmid: "34549375"
+url: "https://doi.org/10.3758/s13423-021-01980-3"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "The effect of sleep on novel word learning in healthy adults: A systematic review and meta-analysis."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: 1396
+n_studies_pooled: 25
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: null
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: novel_word_learning_sleep_vs_wake_omnibus
+    exposure: {type: total_deprivation, dose_h: null, referent_h: null, duration_days: 1, contrast_label: "sleep vs equivalent period of wakefulness between learning novel words and test; 29 between-group comparisons, n = 1396"}
+    scale: hedges_g
+    unit: null
+    value: 0.50
+    se: null
+    ci: null
+    conversion_formula: "Reported directly in the abstract as g = 0.50 for the omnibus meta-analysis. No CI or SE is given in the retrievable abstract and the full text is paywalled, so se is null per the instructions' rule against inventing SEs."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = sleep after learning produced better retention of novel words than staying awake. This is a sleep-vs-wake benefit, NOT a restriction dose-response - see notes for why that matters."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The results from the omnibus meta-analysis indicated that sleep was beneficial for novel word learning compared with wakefulness (g = 0.50)."
+  - outcome_domain: cognition
+    outcome_construct: novel_word_learning_recall
+    exposure: {type: total_deprivation, dose_h: null, referent_h: null, duration_days: 1, contrast_label: "sleep vs wake, recall-based retrieval measures only"}
+    scale: hedges_g
+    unit: null
+    value: 0.57
+    se: null
+    ci: null
+    conversion_formula: "Reported directly in the abstract as g = 0.57 for the recall domain. Recognition memory g = 0.52; lexical integration g = 0.39. No CIs given."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = sleep benefit. Recall is the retrieval mode closest to how school knowledge is examined, and it shows the largest of the three domain-specific effects."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Effect sizes differed across the separate domain-specific meta-analyses, with moderate effects for recall (g = 0.57) and recognition memory (g = 0.52), and a small effect for tasks which measured lexical integration (g = 0.39)."
+  - outcome_domain: cognition
+    outcome_construct: novel_word_lexical_integration
+    exposure: {type: total_deprivation, dose_h: null, referent_h: null, duration_days: 1, contrast_label: "sleep vs wake, tests of lexical integration (whether the new word has been absorbed into the existing lexicon)"}
+    scale: hedges_g
+    unit: null
+    value: 0.39
+    se: null
+    ci: null
+    conversion_formula: "Reported directly in the abstract as g = 0.39. No CI given."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = sleep benefit, but the smallest of the three. Lexical integration is the closest analogue in this literature to durable knowledge that has been assimilated rather than merely memorised - which is the construct our channel (c) actually cares about - and it is where the sleep benefit is weakest."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Effect sizes differed across the separate domain-specific meta-analyses, with moderate effects for recall (g = 0.57) and recognition memory (g = 0.52), and a small effect for tasks which measured lexical integration (g = 0.39)."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Systematic review with prespecified inclusion criteria, 25 unique studies, 42 outcome measures synthesised into 29 between-group comparisons. Cannot assess further from the abstract alone: the retrievable abstract does not report confidence intervals, heterogeneity (I^2 or tau^2), or any publication-bias assessment for any of the four pooled estimates. Given that every other meta-analysis in this shard that DID test for publication bias found it (berres2021, kumral2023, panrickard2015, rickard2022), the absence of a reported bias assessment here should be treated as a material gap rather than as reassurance. The design is also sleep-vs-wake rather than dose-response."
+funding: "not stated in retrieved abstract"
+notes: |
+  WHY IT IS HERE: vocabulary acquisition is the closest laboratory analogue to what a student actually
+  does at school, and this is the only meta-analysis restricted to that domain. It corroborates
+  berres2021's episodic-memory estimate (g = 0.44 uncorrected) with an independent literature and a
+  similar magnitude (g = 0.50), which is useful convergent evidence on the size of the sleep benefit for
+  verbal declarative material.
+
+  WHY IT CANNOT BE USED DIRECTLY FOR OUR SUBJECT, and this applies to berres2021 too. The contrast is
+  SLEEP VERSUS TOTAL WAKEFULNESS - typically a night of sleep against a matched day awake. Our subject
+  slept 5-6 h every weeknight; he did not stay awake. A g of 0.50 for "some sleep vs no sleep" says
+  almost nothing about the marginal value of the third-to-eighth hour, which is the quantity the model
+  needs. Treat this as an upper bound on what ALL of a night's sleep contributes to verbal learning, and
+  note that the architecture evidence (architecture_under_restriction.md) says a 5-6 h night retains the
+  large majority of SWS and therefore most of whatever mechanism generates this benefit. Reading g = 0.50
+  as the per-night learning loss from restriction would overstate the harm by a wide margin.
+
+  THE INTERNAL GRADIENT IS THE INTERESTING PART: g = 0.57 for recall, 0.52 for recognition, 0.39 for
+  lexical integration. The sleep benefit is largest for retrieving the item and smallest for having
+  genuinely integrated it into the lexicon. Channel (c) is about knowledge that was never properly
+  assimilated, so the 0.39 figure is the more appropriate anchor of the three, and it is the smallest.
+
+  ACCESS: abstract only. Paywalled at Springer with no PMC deposit (checked Europe PMC: isOA = N,
+  inEPMC = N, no PMCID). All four point estimates are quoted verbatim from the structured abstract, but
+  no CIs, SEs or heterogeneity statistics are recoverable, so all three effects carry se: null. Retrieving
+  the full text to recover CIs and any funnel-plot analysis is a worthwhile follow-up but lower priority
+  than the cousins2018 full text.
+shard: "s03_memory_consolidation"

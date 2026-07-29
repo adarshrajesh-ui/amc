@@ -1,0 +1,164 @@
+study_id: berres2021
+citation: "Berres S, Erdfelder E. The sleep benefit in episodic memory: An integrative review and a meta-analysis. Psychological Bulletin. 2021;147(12):1309-1353."
+doi: "10.1037/bul0000350"
+pmid: "35404637"
+url: "https://doi.org/10.1037/bul0000350"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "The sleep benefit in episodic memory: An integrative review and a meta-analysis."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: null
+n_studies_pooled: 177
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: cognition
+    outcome_construct: episodic_memory_sleep_benefit_overall
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep vs equal-length wake retention interval (pooled over all designs)"}
+    scale: hedges_g
+    unit: null
+    value: 0.44
+    se: 0.03
+    ci: [0.39, 0.50]
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = sleep improves episodic memory relative to wake; a LOST night therefore costs about this much retention"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "We observed a moderate sleep benefit in episodic memory for the complete data set, g = 0.44, SE = 0.03, 95% CI [0.39, 0.50], t(252.26) = 16.94, p < .001, k = 823, m = 271."
+  - outcome_domain: cognition
+    outcome_construct: episodic_memory_sleep_benefit_bias_corrected
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep vs wake, corrected for funnel-plot asymmetry (modified Egger regression)"}
+    scale: hedges_g
+    unit: null
+    value: 0.28
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = sleep improves episodic memory; USE THIS, not 0.44, if the pooler wants a selective-reporting-corrected input"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "When accounting for selective reporting bias, the overall effect of sleep on episodic memory is reduced but still significant (g = 0.28)."
+  - outcome_domain: cognition
+    outcome_construct: episodic_memory_sleep_benefit_children_adolescents
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep vs wake, participants under 18 years"}
+    scale: hedges_g
+    unit: null
+    value: 0.41
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = sleep improves episodic memory; the age-matched subgroup for our 16-19y subject"
+    covariates: ["moderator-adjusted marginal average"]
+    followup_years: null
+    cohort_family: null
+    quote: "children and adolescents: g = 0.41, t(24.96) = 3.69, p = .001; adults: g = 0.43, t(145.96) = 16.16, p < .001; older adults: g = 0.26, t(8.98) = 1.70, p = .124"
+  - outcome_domain: recovery
+    outcome_construct: sleep_benefit_after_intervening_recovery_night
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1, contrast_label: "total sleep deprivation WITH a recovery night before memory testing"}
+    scale: hedges_g
+    unit: null
+    value: 0.14
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = sleep advantage still detectable. This design is the ONLY one of seven with a non-significant benefit, i.e. an intervening recovery night largely erases the measured deficit -> evidence FOR partial recoverability. Compare 0.30 for the same design without a recovery night."
+    covariates: ["moderator-adjusted marginal average"]
+    followup_years: null
+    cohort_family: null
+    quote: "With the exception of total sleep deprivation with recovery night, g = 0.14, t(11.35) = 1.14, p = .278, all sleep study designs showed a significant sleep benefit in episodic memory. ... and finally total sleep deprivation without recovery night, g = 0.30, t(15.00) = 3.25, p = .005"
+  - outcome_domain: sleep_need
+    outcome_construct: moderator_total_sleep_time_on_sleep_benefit
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "TST as a continuous moderator of the sleep benefit, k=641 effect sizes"}
+    scale: per_hour_beta
+    unit: "hedges_g per hour of TST"
+    value: -0.003
+    se: 0.03
+    ci: [-0.07, 0.07]
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive would mean more total sleep produces a larger consolidation benefit. Estimate is null and centred on zero: NO dose-response from TST to the sleep benefit."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "the results from the TST subgroup analysis showed no statistically significant effect of TST on the sleep benefit, beta = -0.003, SE = 0.03, 95% CI [-0.07, 0.07], t(14.68) = 0.09, p = .931, k = 641, m = 207 ... Across all analyses, TST never significantly predicted the sleep benefit in episodic memory."
+  - outcome_domain: sleep_need
+    outcome_construct: moderator_slow_wave_sleep_on_sleep_benefit
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "SWS duration as a continuous moderator of the sleep benefit, k=427 effect sizes"}
+    scale: per_hour_beta
+    unit: "hedges_g per unit SWS (paper's coding)"
+    value: 0.05
+    se: 0.08
+    ci: [-0.13, 0.23]
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more SWS produces a larger consolidation benefit. Null. CRITICAL for this shard: forbids scaling the learning-loss channel linearly to lost SWS minutes."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "We also investigated whether more time spent in SWS increases the sleep benefit in episodic memory as predicted by both consolidation and interference theories. This effect was not significant although descriptively in line with the expectation, beta = 0.05, SE = 0.08, 95% CI [-0.13, 0.23], t(14.52) = 0.60, p = .558, k = 427, m = 123 ... Across all analyses performed, SWS never significantly predicted the sleep benefit in episodic memory."
+  - outcome_domain: sleep_need
+    outcome_construct: moderator_rem_sleep_on_sleep_benefit
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "REM duration as a continuous moderator of the sleep benefit, k=427 effect sizes"}
+    scale: per_hour_beta
+    unit: "hedges_g per unit REM (paper's coding)"
+    value: -0.016
+    se: 0.12
+    ci: [-0.28, 0.25]
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more REM produces a larger benefit. Null AND wrong-signed. Forbids scaling the learning-loss channel to lost REM minutes either."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Again, however, the REM sleep effect was not statistically significant and was even opposite in direction, beta = -0.016, SE = 0.12, 95% CI [-0.28, 0.25], t(15.63) = 0.13, p = .901, k = 427, m = 123."
+rob:
+  tool: AMSTAR-2
+  judgement: low
+  notes: "Pre-registered-quality methods: 823 effect sizes / 271 independent samples / 177 articles 1967-2019; three-level model with robust variance estimation; sensitivity analyses over rho .10-.90; two independent selective-reporting corrections (modified Egger, 3PSM). Main residual concerns: (a) heterogeneity is substantial, (b) the authors themselves warn RVE heterogeneity statistics are unreliable, (c) median n per condition is only ~16 in the primary literature."
+funding: "not stated in retrieved text"
+notes: |
+  TASK-SEED CORRECTION: the shard brief asked for a 'Psychological Bulletin meta-analysis by Berres
+  and Erdfelder (approx 2021) on the sleep benefit for DECLARATIVE memory'. The paper exists and the
+  year is right, but its actual construct is EPISODIC memory, not declarative memory broadly. Recorded
+  as published.
+
+  Heterogeneity (verbatim from the Table 2 note): "Heterogeneity statistics of the intercept-only
+  three-level model without RVE: Q(822) = 1878.56, p < .001; tau^2 = 0.15; sigma_b^2 = 0.12;
+  sigma_w^2 = 0.02; It^2 = 60.00%; Ib^2 = 50.30%; Iw^2 = 9.70%; ICC = .84." Across the 20 independent
+  subsets analysed with the three-parameter selection model the median tau^2 was 0.11 (range
+  0.02-0.47) and the median corrected effect was beta = 0.41 (range 0.05-0.79).
+
+  IMPORTANT SCOPE LIMIT for the downstream model: this meta-analysis quantifies the benefit of
+  sleeping versus staying awake across a retention interval. It does NOT quantify the effect of
+  sleeping 5-6 h instead of 8-9 h. Its three sleep-parameter moderator analyses (TST, SWS, REM,
+  recorded above) are the closest available evidence on graded dose, and all three are null. Treat
+  g = 0.44 as an upper anchor for the total size of the consolidation channel (full night vs no
+  night), not as the effect of the subject's partial restriction.
+
+  Full text obtained via the authors' accepted preprint of the same paper (Shakoor/Berres & Erdfelder,
+  DOI 10.31234/osf.io/r2an6), which carries an identical abstract and identical reported statistics;
+  all quoted statistics above were read from that document and the published record was verified via
+  Crossref and PubMed.
+shard: "s03_memory_consolidation"

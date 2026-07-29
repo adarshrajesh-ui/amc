@@ -1,0 +1,117 @@
+study_id: dewald2010
+citation: "Dewald JF, Meijer AM, Oort FJ, Kerkhof GA, Bogels SM. The influence of sleep quality, sleep duration and sleepiness on school performance in children and adolescents: A meta-analytic review. Sleep Medicine Reviews. 2010;14(3):179-189."
+doi: "10.1016/j.smrv.2009.10.004"
+pmid: "20093054"
+url: "https://doi.org/10.1016/j.smrv.2009.10.004"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "The influence of sleep quality, sleep duration and sleepiness on school performance in children and adolescents: A meta-analytic review."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 15199
+n_studies_pooled: 17
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: academic
+    outcome_construct: sleep_duration_vs_school_performance
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "self-reported habitual sleep duration vs school performance, k = 17 studies, N = 15,199"}
+    scale: raw_units
+    unit: "Pearson r"
+    value: 0.069
+    se: 0.0081
+    ci: [0.053, 0.085]
+    conversion_formula: "SE approximated for a pooled correlation at N = 15,199 as (1-r^2)/sqrt(N-1) = (1-0.00476)/123.28 = 0.00807; CI = r +/- 1.96*SE. This ignores between-study heterogeneity, which the abstract does not quantify, so the true interval is WIDER than shown. Flagged in notes."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >-
+      positive = longer habitual sleep is associated with better school performance. NOTE HOW SMALL THIS
+      IS: r = 0.069 is about 0.5% of variance. It is the most directly on-target observational estimate for
+      the subject's outcome (school performance across the school-age population) and it is nearly
+      negligible.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "All three sleep variables were significantly but modestly related to school performance. Sleepiness showed the strongest relation to school performance (r=-0.133), followed by sleep quality (r=0.096) and sleep duration (r=0.069)."
+  - outcome_domain: academic
+    outcome_construct: sleepiness_vs_school_performance
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "self-reported daytime sleepiness vs school performance, k = 17 studies, N = 19,530"}
+    scale: raw_units
+    unit: "Pearson r"
+    value: -0.133
+    se: 0.00707
+    ci: [-0.147, -0.119]
+    conversion_formula: "SE approximated as (1-r^2)/sqrt(N-1) with N = 19,530: (1-0.01769)/139.75 = 0.00703; CI = r +/- 1.96*SE. Between-study heterogeneity not incorporated; true interval wider."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >-
+      negative = more daytime sleepiness, worse school performance. Sleepiness (a channel-(a) state
+      variable) out-predicts sleep duration (the channel-(c) exposure) by roughly 2:1 in this
+      meta-analysis. The downstream model should note that in observational school data the state deficit
+      dominates the measured association, which is the opposite of what okano2019 found with objective
+      exposure.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Sleepiness showed the strongest relation to school performance (r=-0.133), followed by sleep quality (r=0.096) and sleep duration (r=0.069)."
+  - outcome_domain: academic
+    outcome_construct: sleep_quality_vs_school_performance
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "self-reported sleep quality vs school performance, k = 16 studies, N = 13,631"}
+    scale: raw_units
+    unit: "Pearson r"
+    value: 0.096
+    se: 0.00848
+    ci: [0.079, 0.113]
+    conversion_formula: "SE approximated as (1-r^2)/sqrt(N-1) with N = 13,631: (1-0.00922)/116.75 = 0.00848; CI = r +/- 1.96*SE. Heterogeneity not incorporated."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = better sleep quality, better school performance"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The associations between sleep quality (k=16 studies, N=13,631), sleep duration (k=17 studies, N=15,199), sleepiness (k=17, N=19,530) and school performance were examined in three separate meta-analyses"
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Large pooled samples and pre-specified moderators, but the underlying studies are cross-sectional with self-reported exposure, so confounding by socioeconomic status, conscientiousness, mental health and workload is essentially uncontrolled. Tier set to T5 accordingly. The authors themselves call for longitudinal and experimental work. The abstract does not report I2, tau2 or CIs, so my CIs are large-N approximations only."
+funding: "not stated in retrieved abstract"
+notes: |
+  THIS RECORD IS A DOWNWARD ANCHOR AND SHOULD BE USED TO DISCIPLINE THE OTHERS.
+  The laboratory studies in this shard report standardised effects around g = 0.9 for 5 h TIB on memory
+  outcomes (cousins2018, huang2016). This meta-analysis of 15,199 school-age children finds that habitual
+  sleep duration correlates with actual school performance at r = 0.069 - roughly d = 0.14, i.e. about a
+  sixth of the laboratory effect. Any estimate of channel (c) that implies a large real-world academic
+  deficit has to explain why the population-level association is this weak.
+
+  Candidate reconciliations the downstream model may want to consider, none of which I can adjudicate:
+  (i) self-reported sleep duration is a noisy exposure measure and attenuates the true association -
+      note that okano2019, using objective actigraphy, found r = 0.38 for the same construct, a five-fold
+      larger correlation;
+  (ii) school grades are a coarse, ceiling-prone outcome relative to laboratory recall tests;
+  (iii) laboratory doses (5 h TIB imposed) are more extreme than typical population variation;
+  (iv) compensatory behaviour (re-study, spacing) offsets the encoding deficit in real settings, which is
+      exactly what huang2016 demonstrated experimentally.
+
+  Reconciliation (i) is well supported by the direct contrast with okano2019 and is my preferred reading:
+  the observational literature on self-reported sleep almost certainly understates the effect. But the gap
+  between r = 0.069 and r = 0.38 is itself a measure of how uncertain this whole channel is.
+
+  Moderator finding worth carrying: "Effect sizes were larger for studies including younger participants
+  which can be explained by dramatic prefrontal cortex changes during (early) adolescence. Concerning the
+  relationship between sleep duration and school performance age effects were even larger in studies that
+  included more boys than in studies that included more girls, demonstrating the importance of differential
+  pubertal development of boys and girls." The subject is male, which per this moderator is the
+  higher-susceptibility group; but he is at the older end of adolescence, where effects were smaller.
+
+  ACCESS LIMITATION: abstract only (paywalled at Elsevier, no PMC record). All three pooled r values are
+  quoted verbatim from the abstract; the CIs are my own large-N approximations and are marked
+  inferred_from_ci: true. The abstract reports no heterogeneity statistics.
+shard: "s03_memory_consolidation"

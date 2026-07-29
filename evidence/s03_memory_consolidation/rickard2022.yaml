@@ -1,0 +1,66 @@
+study_id: rickard2022
+citation: "Rickard TC, Pan SC, Gupta MW. Severe publication bias contributes to illusory sleep consolidation in the motor sequence learning literature. Journal of Experimental Psychology: Learning, Memory, and Cognition. 2022;48(12):1787-1796."
+doi: "10.1037/xlm0001090"
+pmid: "35084925"
+url: "https://doi.org/10.1037/xlm0001090"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Severe publication bias contributes to illusory sleep consolidation in the motor sequence learning literature."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: 1296
+n_studies_pooled: 34
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: cognition
+    outcome_construct: motor_sequence_postsleep_gain_publication_bias_corrected
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "post-sleep motor-sequence gain after PET/PEESE publication-bias correction, vs post-wake gain"}
+    scale: cohens_d
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >-
+      READ THE NOTES BEFORE USING THIS NUMBER. 0.0 is NOT a point estimate reported by the paper. It
+      encodes the paper's own stated inferential conclusion, namely that the bias-corrected post-sleep
+      gain was negative and statistically indistinguishable from the post-wake gain. The authors give no
+      retrievable numeric point estimate in the abstract, and I could not obtain the full text, so no
+      value and no SE may be attributed to them. Treat this record as a sign/direction constraint
+      (corrected effect <= 0) rather than as a magnitude.
+    covariates: ["standard error (PET)", "squared standard error (PEESE)", "previously identified sleep-gain moderators"]
+    followup_years: null
+    cohort_family: null
+    quote: "The estimated postsleep gain was negative, suggesting forgetting rather than facilitation, and it was statistically indistinguishable from the estimated postwake gain. ... We conclude that there is substantial publication bias, that there is no consolidation-based, absolute performance gain following sleep, and that strong conclusions regarding the hypothesis of less forgetting after sleep than after wakefulness should await further research."
+rob:
+  tool: AMSTAR-2
+  judgement: low
+  notes: "PET and PEESE weighted-regression reanalysis of the 88 effect sizes assembled by Pan & Rickard (2015), with and without established moderators. Methodologically appropriate for the question asked. Not an independent literature: it reanalyses the panrickard2015 dataset, so it must NOT be pooled alongside panrickard2015 as if independent."
+funding: "not stated in retrieved text"
+notes: |
+  DO NOT DOUBLE-COUNT: this is a reanalysis of the same 88 effect sizes as panrickard2015. Use one or
+  the other, or treat the pair as a single deflationary line of evidence. Both share cohort_family
+  in the sense of sharing primary studies with schmid2020 as well.
+
+  Included in this shard specifically so the downstream model does not over-credit the procedural/motor
+  arm of the learning-loss channel. Verbatim: "Basic PET analysis indicated pronounced publication bias;
+  that is, the effect sizes were strongly predicted by their standard error. When variables that have
+  previously been shown to both moderate the sleep gain effect and substantially reduce unaccounted for
+  effect size heterogeneity were included in that analysis, evidence for publication bias remained
+  strong."
+
+  ACCESS LIMITATION: abstract only (paywalled; no PMC record, not in Europe PMC full text). The numeric
+  PET/PEESE intercepts are in the full text and I could not retrieve them. This is a real gap: it means
+  the strongest deflationary estimate in my domain is the one I can quantify least well.
+shard: "s03_memory_consolidation"

@@ -1,0 +1,94 @@
+study_id: schmid2020
+citation: "Schmid D, Erlacher D, Klostermann A, Kredel R, Hossner EJ. Sleep-dependent motor memory consolidation in healthy adults: A meta-analysis. Neuroscience and Biobehavioral Reviews. 2020;118:270-281."
+doi: "10.1016/j.neubiorev.2020.07.028"
+pmid: "32730847"
+url: "https://doi.org/10.1016/j.neubiorev.2020.07.028"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep-dependent motor memory consolidation in healthy adults: A meta-analysis."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: 1654
+n_studies_pooled: 48
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: motor_memory_relative_sleep_gain_overall
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep vs wake relative sleep gain, all motor tasks pooled (53 sleep groups n=829 vs 53 wake groups n=825)"}
+    scale: hedges_g
+    unit: null
+    value: 0.43
+    se: 0.0612
+    ci: [0.31, 0.55]
+    conversion_formula: "se = (0.55 - 0.31)/3.92 = 0.0612"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = better motor performance after sleep than after an equal wake interval; a lost night therefore costs about this much motor consolidation"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The analysis resulted in a significant, but small effect size for the RSG in all motor learning tasks (g = 0.43, 95 % CI = [0.31, 0.55], t = 7.11, p < .0001). Heterogeneity between studies was confirmed with a Q test (Q = 103.62; p < .0001). Between study variability was shown to be moderate (I2 = 50.40 %)."
+  - outcome_domain: cognition
+    outcome_construct: motor_memory_relative_sleep_gain_deprivation_designs
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1, contrast_label: "sleep vs wake relative sleep gain, DEPRIVATION-design subgroup only"}
+    scale: hedges_g
+    unit: null
+    value: -0.11
+    se: 0.278
+    ci: [-0.66, 0.43]
+    conversion_formula: "se = (0.43 - (-0.66))/3.92 = 0.2781"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive would mean sleep helps. This subgroup is NULL and wrong-signed. It is the subgroup that actually manipulates sleep loss experimentally, i.e. the design closest to our subject's exposure, and it shows no motor consolidation benefit."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Subgroup analysis for experimental designs - independent of the task used - revealed small effects for the varied time design (g = 0.45, 95 % CI = [0.31, 0.60]) and the nap design (g = 0.39, 95 % CI = [0.10, 0.68]) as well as a medium effect for the dimension transfer design (g = 0.57, 95 % CI = [-0.11, 1.25]). No positive effect of sleep in the deprivation design was found (g = -0.11, 95 % CI = [-0.66, 0.43])."
+  - outcome_domain: cognition
+    outcome_construct: motor_memory_sleep_gain_finger_tapping
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep vs wake, finger-tapping task subgroup"}
+    scale: hedges_g
+    unit: null
+    value: 0.47
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = sleep benefit; task-specific subgroup (mirror tracing was g = 0.62)"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "While no subgroup differences were identified for differing designs, a small effect for the finger tapping task (g = 0.47) and a medium effect for the mirror tracing task (g = 0.62) were found."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "48 studies, random-effects with Hartung-Knapp adjustment and inverse-variance weighting, Q and I2 reported, Egger test and funnel plots examined. Downgraded to moderate because the finger-tapping literature it pools is the same literature that Pan & Rickard (2015) and Rickard et al. (2022) show to be affected by gain-score averaging artefacts and severe publication bias; Schmid et al. do not apply those specific moderator corrections."
+funding: "not stated in retrieved text"
+notes: |
+  n recorded as 1654 = 829 sleep-group participants + 825 wake-group participants (53 groups each).
+
+  DIRECT CONFLICT WITH panrickard2015 AND rickard2022, on partly overlapping primary literature.
+  Schmid et al. conclude "the meta-analysis substantiates that sleep generally benefits the
+  consolidation of motor memories" (g = 0.43); Pan & Rickard conclude "sleep does not enhance motor
+  learning"; Rickard et al. (2022) find the bias-corrected post-sleep gain is negative. The downstream
+  model must not silently pick one. My recommendation: treat the procedural/motor consolidation channel
+  as having a wide prior centred near g ~ 0.2 with substantial mass at zero, rather than at 0.43.
+
+  Most decision-relevant single number in this record for our subject is NOT the headline: it is the
+  deprivation-design subgroup, g = -0.11, 95% CI [-0.66, 0.43]. When sleep is experimentally taken away
+  (rather than sleep-vs-wake timing being contrasted), the motor consolidation benefit vanishes in this
+  same dataset.
+
+  Statistics read from the publisher full text (ScienceDirect S0149763420304978). Identifiers verified
+  via Crossref and PubMed.
+shard: "s03_memory_consolidation"

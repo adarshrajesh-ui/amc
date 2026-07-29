@@ -1,0 +1,129 @@
+study_id: skorucak2021
+citation: "Skorucak J, Weber N, Carskadon MA, Reynolds C, Coussens S, Achermann P, Short MA. Homeostatic response to sleep restriction in adolescents. Sleep. 2021;44(9):zsab106."
+doi: "10.1093/sleep/zsab106"
+pmid: "33893807"
+url: "https://doi.org/10.1093/sleep/zsab106"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Homeostatic response to sleep restriction in adolescents."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 34
+n_studies_pooled: null
+population:
+  age_mean: 15.91
+  age_range: [15, 17]
+  pct_female: 41.2
+  country: "AU"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: slow_wave_sleep_at_5h_tib_vs_baseline
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 10, duration_days: 5, contrast_label: "5 h TIB x 5 nights vs 10 h baseline, time spent in SWS, PSG"}
+    scale: raw_units
+    unit: "qualitative: no change from baseline (Bayesian ROPE +/- 0.25 h)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "0.0 encodes the reported null. Analysis was Bayesian with a region of practical equivalence of +/- 0.25 h for sleep-duration measures, so 'no difference' means the 95% HDI fell inside +/- 15 min. No point estimate is given in the retrievable text."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = SWS minutes unchanged by restriction to 5 h TIB for 5 consecutive nights. Independent replication of ong2016 at the same dose in a different country and laboratory."
+    covariates: []
+    followup_years: null
+    cohort_family: "Adelaide_adolescent_sleep_dose"
+    quote: "During the experimental nights, although time spent in SWS did not differ from the baseline levels, participants in the 5-h condition spent less time in REM sleep, when compared to 7.5-h and 10-h conditions (Figure 1 and S2)."
+  - outcome_domain: sleep_need
+    outcome_construct: rem_sleep_at_5h_tib_vs_baseline
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 10, duration_days: 5, contrast_label: "5 h TIB x 5 nights vs 10 h baseline, REM sleep minutes, PSG"}
+    scale: raw_units
+    unit: "qualitative: reduced below baseline on every experimental night"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "-1 denotes 'reduced on all five nights'. Per-night minutes appear only in Supplementary Figure S2, which I did not digitise."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = REM reduced. At 5 h TIB REM fell below baseline on all 5 nights; at 7.5 h TIB on 3 of 5 nights. Confirms the SWS-spared / REM-cut pattern at the subject's dose."
+    covariates: []
+    followup_years: null
+    cohort_family: "Adelaide_adolescent_sleep_dose"
+    quote: "Total duration of REM sleep in minutes was lower than baseline for all experimental nights in the 5-h condition, and for N1, N3 and N5 in the 7.5-h condition (Figure S2)."
+  - outcome_domain: sleep_need
+    outcome_construct: sws_proportion_of_tst_increases_under_restriction
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 10, duration_days: 5, contrast_label: "5 h and 7.5 h TIB vs 10 h, SWS as % of total sleep time"}
+    scale: raw_units
+    unit: "qualitative direction: SWS %TST increased"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Direction only; percentages appear in Table 1, which did not render in the retrieved full text."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = SWS occupies a LARGER share of a short night. The homeostat actively prioritises SWS when sleep is curtailed."
+    covariates: []
+    followup_years: null
+    cohort_family: "Adelaide_adolescent_sleep_dose"
+    quote: "The proportion of total sleep spent in SWS (%TST) was increased in 5-h and 7.5-h sleep restriction conditions for all experimental nights, reflecting an increased sleep drive in those participants. This is in agreement with Voderholzer et al. who also investigated the effects sleep restriction in adolescents."
+  - outcome_domain: sleep_need
+    outcome_construct: cumulative_sleep_debt_over_five_nights
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 10, duration_days: 5, contrast_label: "cumulative hours of sleep lost vs 10 h baseline over 5 nights at 5 h TIB"}
+    scale: hours
+    unit: "cumulative hours of total sleep time lost"
+    value: -20.0
+    se: null
+    ci: null
+    conversion_formula: "Authors' figure ('approximately 20 h'), read from Figure 1. Corresponding figure for the 7.5 h arm is approximately 8 h."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "negative = sleep lost. Scale reference for the subject: ~20 h lost per 5-night school week at 5 h TIB against a 10 h adolescent optimum; ~8 h per week at 7.5 h TIB."
+    covariates: []
+    followup_years: null
+    cohort_family: "Adelaide_adolescent_sleep_dose"
+    quote: "The cumulative loss of time spent asleep after five days of sleep restriction was approximately 20 h for 5-h, and approximately 8 h for 7.5-h condition (Figure 1)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Allocated in blocks of four to 5 / 7.5 / 10 h arms, so n ~ 11-12 per arm - small. Participants blinded to their nightly sleep opportunity until study end, which is a real strength. Nine consecutive nights of laboratory PSG in a sound-attenuated, time-free, light-controlled facility. Bayesian analysis with pre-specified ROPEs. Downgraded only for per-arm n; outcomes are objective."
+funding: "not stated in retrieved text"
+notes: |
+  INDEPENDENT REPLICATION of the SWS-preserved / REM-cut pattern at the subject's 5 h dose, from a
+  different continent and laboratory than ong2016 (Adelaide/Flinders + Brown vs Duke-NUS Singapore).
+  This matters because the two Need for Sleep records and the two Freiburg records are each internally
+  correlated; skorucak2021 and campbell2021 are the genuinely independent confirmations.
+
+  pct_female recorded as 41.2 = (34-20 male)/34. Note: same 34-participant protocol as reynolds2018 (sleep
+  spindles) and as Short et al. 2018 "Estimating adolescent sleep need using dose-response modeling"
+  (PMID 29325109, DOI 10.1093/sleep/zsy011), which reports the cognitive/sleepiness outcomes and estimates
+  adolescent sleep need at ~9 h (and 9.35 h to keep PVT lapses optimal). cohort_family set to
+  Adelaide_adolescent_sleep_dose across these; do not double-count.
+
+  Sample was healthy good sleepers with habitual sleep >= 8 h and weekday-weekend bedtime discrepancy
+  < 2 h. This is a POORER match to the subject's habitual pattern than ong2016, whose participants
+  habitually slept ~6 h on school nights. The subject resembles the Ong sample, not this one, so if
+  chronic prior restriction alters the homeostatic response then this study would understate it.
+  The authors address exactly that possibility and find no adaptation.
+
+  Cross-study corroboration the authors provide, useful for the architecture file: "Our findings are in
+  agreement with Ong et al., who investigated effects of chronic sleep restriction in adolescents ... in
+  the 3 recorded nights there was a significant increase of mean SWA in the restriction group compared to
+  both the 9-h control group, and to baseline (around 25 %). They also observed a decrease in SWE (termed
+  total SWA) in the restriction group compared to the control group and compared to baseline (around
+  15-20%), which is in accordance with our results." And: "Campbell et al. did not observe any differences
+  in SWA and SWE between 7, 8.5 and 10 h of TIB on the final night of a 4-night protocol."
+
+  IMPORTANT ASYMMETRY BETWEEN SWS MINUTES AND SLOW-WAVE ENERGY. SWS *duration* was preserved, but
+  slow-wave *energy* (SWE, the integral of SWA across the night) fell below baseline at 5 h TIB:
+  "SWE during experimental nights was below baseline, as expected, for the 5-h condition, indicating
+  insufficient dissipation of sleep pressure during a shortened sleep opportunity". So even the
+  slow-wave system is not fully compensated at 5 h - only its staged duration is. This is a second
+  reason (alongside the spindle loss in campbell2021) not to read stage minutes as sufficient.
+
+  Full text retrieved from the publisher; Table 1 and Supplementary Figure S2 did not render, so three of
+  the four effects above are recorded as directions rather than magnitudes, with se: null. No dispersion
+  was invented.
+shard: "s03_memory_consolidation"
