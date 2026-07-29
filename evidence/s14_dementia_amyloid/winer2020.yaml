@@ -1,0 +1,135 @@
+study_id: winer2020
+citation: "Winer JR, Mander BA, Kumar S, Reed M, Baker SL, Jagust WJ, Walker MP. Sleep Disturbance Forecasts beta-Amyloid Accumulation across Subsequent Years. Current Biology. 2020 Nov 2;30(21):4291-4298.e3."
+doi: "10.1016/j.cub.2020.08.017"
+pmid: "32888482"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7642104/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Sleep Disturbance Forecasts β-Amyloid Accumulation across Subsequent Years."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 32
+n_studies_pooled: null
+population:
+  age_mean: 75.5
+  age_range: null
+  pct_female: 71.9
+  country: "US"
+  adolescent_match: poor_elderly
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: rate_of_cortical_ab_accumulation_predicted_by_baseline_proportion_of_NREM_SWA_below_1Hz
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 1,
+               contrast_label: "baseline polysomnographic proportion of frontal NREM slow-wave activity below 1 Hz, predicting slope of [11C]PiB DVR change over a mean 3.7 years"}
+    scale: raw_units
+    unit: "Pearson r between baseline prop. <1 Hz SWA and subsequent rate of Ab accumulation"
+    value: -0.52
+    se: 0.15595
+    ci: null
+    conversion_formula: >
+      Reported as "individuals with lower prop. <1 Hz SWA at initial baseline went on to experience a
+      significantly greater subsequent rate of cortical Aβ accumulation, relative to those with higher
+      initial prop. <1 Hz SWA ( Figure 2A ; r = −0.52, p = 0.002)". Recorded as the raw Pearson r.
+      SE_r approximated by sqrt((1 - r^2)/(n - 2)) = sqrt((1 - 0.2704)/30) = sqrt(0.024320) = 0.15595. Inferred, not published. A mixed-effects model controlling for age, sex and apnea-hypopnea index gave the same
+      association (p < 0.001) but its coefficient is not printed.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      NEGATIVE = LESS low-frequency slow-wave activity at baseline predicts FASTER subsequent amyloid
+      accumulation, i.e. harm. THIS IS THE ONLY GENUINELY PROSPECTIVE SLEEP-TO-AMYLOID-ACCUMULATION STUDY
+      LOCATED, and its exposure is NOT sleep duration - it is a specific slow-wave EEG frequency band. A
+      traditional broadband SWA measure did NOT predict accumulation (r = -0.24, p = 0.18), and no REM
+      frequency bin did. The signal is narrow.
+    covariates: ["age", "sex", "apnea-hypopnea index", "random intercept per subject", "number of PET scans"]
+    followup_years: 3.7
+    cohort_family: "BACS_Berkeley"
+    quote: "Supportive of the hypothesis, individuals with lower prop. <1 Hz SWA at initial baseline went on to experience a significantly greater subsequent rate of cortical Aβ accumulation, relative to those with higher initial prop. <1 Hz SWA ( Figure 2A ; r = −0.52, p = 0.002)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: rate_of_cortical_ab_accumulation_predicted_by_baseline_total_sleep_time
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: 1,
+               contrast_label: "baseline polysomnographic TOTAL SLEEP TIME predicting slope of [11C]PiB DVR change over a mean 3.7 years - post hoc analysis"}
+    scale: raw_units
+    unit: "Pearson r between baseline total sleep time and subsequent rate of Ab accumulation"
+    value: -0.36
+    se: 0.17033
+    ci: null
+    conversion_formula: >
+      Reported as "Baseline total sleep time was negatively correlated with Aβ change (r = −0.36, p = 0.04),
+      and wake after sleep onset trended toward a positive correlation (r = 0.31, p = 0.08) ... However,
+      neither of these associations survived correction for multiple tests."
+      SE_r = sqrt((1 - 0.1296)/30) = sqrt(0.029013) = 0.17033. Inferred, not published.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      NEGATIVE = shorter objectively measured sleep predicts faster amyloid accumulation, i.e. harm. BUT
+      THIS IS THE CRITICAL CAVEAT AND IT IS THE AUTHORS' OWN: the association DID NOT SURVIVE CORRECTION FOR
+      MULTIPLE COMPARISONS. This is the closest thing in the paper to a sleep-DURATION effect on amyloid
+      accumulation and it is formally null after correction. Anyone citing Winer 2020 as showing "short sleep
+      predicts amyloid buildup" is citing the uncorrected post hoc result, not the paper's finding.
+    covariates: ["post hoc bivariate correlation only; no covariate adjustment reported for this analysis"]
+    followup_years: 3.7
+    cohort_family: "BACS_Berkeley"
+    quote: "Baseline total sleep time was negatively correlated with Aβ change (r = −0.36, p = 0.04), and wake after sleep onset trended toward a positive correlation (r = 0.31, p = 0.08), such that shorter sleep duration and greater nighttime wakefulness were associated with a greater rate of Aβ accumulation. However, neither of these associations survived correction for multiple tests."
+  - outcome_domain: cognition
+    outcome_construct: change_in_memory_working_memory_and_executive_function_predicted_by_baseline_sleep
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 1,
+               contrast_label: "baseline prop. <1 Hz SWA and sleep efficiency predicting slopes of change in three cognitive domains over a mean 4.2 years"}
+    scale: raw_units
+    unit: "Pearson r between baseline sleep measures and subsequent cognitive change (all null)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      A DELIBERATE NULL summarising six reported correlations, none significant: prop. <1 Hz SWA with memory
+      r = -0.11 (p = 0.56), working memory r = 0.10 (p = 0.61), executive function r = -0.26 (p = 0.16);
+      sleep efficiency with memory r = 0.22 (p = 0.24), working memory r = 0.03 (p = 0.86), executive function
+      r = -0.20 (p = 0.28). Coded as 0 with se null because it is a summary of multiple nulls, not a single
+      pooled estimate. Individual values are in the quote.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      ZERO = the sleep measures that DID forecast amyloid accumulation did NOT forecast cognitive decline in
+      the same people over the same period. THIS BREAKS THE LAST LINK OF THE CHAIN in the one dataset where
+      it could be tested prospectively. Even the amyloid-to-cognition link was non-significant here (memory
+      r = -0.25, p = 0.17; working memory r = -0.33, p = 0.07; executive function r = -0.12, p = 0.52).
+    covariates: []
+    followup_years: 4.2
+    cohort_family: "BACS_Berkeley"
+    quote: "Baseline prop. <1 Hz SWA was not significantly associated with change in any of the three cognitive domains (memory, r = −0.11, p = 0.56; working memory, r = 0.10, p = 0.61; executive function, r = −0.26, p = 0.16). This was also true for the macroarchitecture measure of sleep efficiency with memory (r = 0.22, p = 0.24), working memory (r = 0.03, p = 0.86), and executive function (r = −0.20, p = 0.28). Longitudinal change in Aβ was negatively correlated with change in the three cognitive domains, although none were statistically significant (memory, r = −0.25, p = 0.17; working memory, r = −0.33, p = 0.07; executive function, r = −0.12, p = 0.52)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: >
+    Prospective and objective, which is why it is tier T4, but the study is small and selected. Concerns:
+    (1) n = 32, mean age 75.5 y; (2) the cohort was DELIBERATELY ENRICHED for amyloid positivity - "BACS
+    participants who were PiB+ at their baseline PiB scan were over-recruited for longitudinal PET imaging
+    studies, resulting in a longitudinal imaging sample with a higher prevalence of Aβ positivity than the
+    general population" - so the sample is not representative and baseline amyloid strongly predicts
+    subsequent accumulation (r = 0.80, p < 0.001), raising the possibility that the sleep-EEG measure is a
+    downstream marker of existing pathology rather than an upstream cause; (3) 22 % had clinically
+    significant obstructive sleep apnoea; (4) participants overlap substantially with two prior publications
+    from the same group (17 and 20 of 32 respectively, 5 in all three); (5) many frequency bins and sleep
+    metrics were tested and only some survived correction; (6) exposure is a single night of laboratory PSG.
+funding: "NIH; see paper. Note declared conflicts: M.P.W. has equity in Bryte, Oura Health Oy, Shuni and StimScience; W.W.J. consults for Genentech, Biogen, Bioclinica, CuraSen and Grifols; B.A.M. has consulted for Eisai."
+notes: >
+  THE ONLY PROSPECTIVE SLEEP-TO-AMYLOID-ACCUMULATION STUDY FOUND, and the record that most cleanly separates
+  what this literature does and does not show.
+  What it shows: a specific slow-wave EEG feature (proportion of NREM SWA below 1 Hz) and sleep efficiency
+  measured in older adults statistically forecast the RATE of subsequent amyloid accumulation over ~3.7 years.
+  What it does NOT show: (a) that sleep DURATION does this - that association did not survive multiple-
+  comparison correction; (b) that any of it translates into cognitive decline - all six sleep-to-cognition
+  correlations were null; (c) anything about midlife or adolescence.
+  The authors themselves name the gap this shard cares about, verbatim: "In this regard, further work will
+  need to focus on middle-aged populations prior to substantive Aβ plaque pathology, thereby determining
+  whether deficits in sleep are detectable prior to Aβ deposition." Written in 2020 about MIDDLE AGE. The
+  subject is 19. The relevant studies do not exist even for midlife.
+  The authors are also careful that the claim is forecasting, not causation - the title verb is "forecasts"
+  and the framing throughout is of sleep as a BIOMARKER of amyloid progression: "Our data support the
+  proposal that objective sleep markers could be part of a set of biomarkers that statistically forecast the
+  longitudinal trajectory of cortical Aβ deposition in the human brain."
+shard: "s14_dementia_amyloid"

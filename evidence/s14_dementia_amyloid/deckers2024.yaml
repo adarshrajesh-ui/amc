@@ -1,0 +1,139 @@
+study_id: deckers2024
+citation: "Deckers K, Zulke AE, Riedel-Heller SG, Ibanez A, Increasing Value in Dementia Prevention (INVITE) group, Kohler S. Umbrella review and Delphi study on modifiable factors for dementia risk reduction. Alzheimer's & Dementia. 2024 Feb;20(2):1223-1239."
+doi: "10.1002/alz.13577"
+pmid: "38159267"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10917032/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Umbrella review and Delphi study on modifiable factors for dementia risk reduction."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: null
+n_studies_pooled: 148
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "international"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: replication_consistency_of_short_sleep_duration_across_systematic_reviews
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "proportion of systematic reviews / meta-analyses on SHORT sleep duration that reported higher dementia risk or faster cognitive decline: 5 of 16"}
+    scale: probability
+    unit: "fraction of reviews reporting a positive association"
+    value: 0.31
+    se: null
+    ci: null
+    conversion_formula: >
+      Table row "Short sleep duration | 16 | 5 | 11 | 0 | 31%": of 16 reviews, 5 reported higher
+      risk/decline, 11 reported no association, 0 reported lower risk. The paper prints the consistency as
+      31%; 5/16 = 0.3125, consistent with the printed figure. value carries the paper's printed 31% as 0.31.
+      se is null - a vote-count proportion across overlapping reviews has no meaningful standard error and
+      inventing one would misrepresent it.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NOT A HARM MAGNITUDE - a REPLICATION RATE. 0.31 means MOST syntheses of short sleep and dementia find
+      NOTHING: 11 of 16 reported no association. For calibration, in the same table the same method gives
+      olfactory impairment 100% (9/9), atrial fibrillation 79%, hearing impairment 78%, anxiety 71%. Short
+      sleep at 31% is near the bottom of a 30-factor list. This is the correct prior for how much of the
+      short-sleep dementia literature actually replicates, and it is low.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Long sleep duration | 16 | 7 | 9 | 0 | 44% | Short sleep duration | 16 | 5 | 11 | 0 | 31%"
+  - outcome_domain: neurodegeneration
+    outcome_construct: replication_consistency_of_long_sleep_duration_across_systematic_reviews
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "proportion of systematic reviews / meta-analyses on LONG sleep duration that reported higher dementia risk or faster cognitive decline: 7 of 16"}
+    scale: probability
+    unit: "fraction of reviews reporting a positive association"
+    value: 0.44
+    se: null
+    ci: null
+    conversion_formula: >
+      Table row "Long sleep duration | 16 | 7 | 9 | 0 | 44%": 7 of 16 reviews reported higher risk/decline,
+      9 no association, 0 lower risk. 7/16 = 0.4375, consistent with the printed 44%. se null for the same
+      reason as above.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NOT A HARM MAGNITUDE - a REPLICATION RATE. Carried as the comparator: long sleep replicates BETTER than
+      short sleep (44% vs 31%) across the same 16 reviews. Same asymmetry as in xu2020.yaml, and the same
+      problem for the glymphatic story, since long sleep has no clearance rationale.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Long sleep duration | 16 | 7 | 9 | 0 | 44%"
+  - outcome_domain: neurodegeneration
+    outcome_construct: expert_delphi_ranking_of_sleep_as_candidate_dementia_risk_factor
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "final rank of 'Sleep' among emerging modifiable dementia risk factors in a two-round Delphi of 18 experts: rank 5 of 11"}
+    scale: raw_units
+    unit: "Delphi rank (1 = highest priority)"
+    value: 5.0
+    se: null
+    ci: null
+    conversion_formula: >
+      Table row "Sleep | 8 | 1,1,1,2,2,4,5,6 | 572 | 5": nominated by 8 of 18 experts, rank score 572,
+      final rank 5. value = the printed final rank. Not an effect size; se null.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      LOWER = higher expert priority. Sleep ranks 5th, behind hearing impairment, social isolation/loneliness,
+      traumatic brain injury and education. This is the counterweight to the two consistency numbers above:
+      despite replicating in only 31% of reviews, sleep was still voted one of the three factors most suitable
+      for addition to the LIBRA risk score. So the expert judgement is "promising and worth adding to a risk
+      score", NOT "quantified". Note also that when asked which sleep construct to target, the experts chose
+      SLEEP-DISORDERED BREATHING, not short duration.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Sleep | 8 | 1,1,1,2,2,4,5,6 | 572 | 5"
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    An umbrella review of 148 systematic reviews and meta-analyses covering 608 unique primary studies,
+    combined with a preregistered two-round Delphi of 18 dementia experts - the right design for asking "how
+    consistent is this literature". Concerns: (1) the consistency metric is a VOTE COUNT across reviews that
+    overlap heavily in their primary studies, so the 16 short-sleep reviews are not 16 independent tests and
+    the 31% figure should be read as descriptive, not inferential; (2) vote counting ignores effect magnitude
+    and precision entirely; (3) the Delphi is expert opinion with a small panel (18, then 17); (4) the
+    "no association" bin conflates true nulls with underpowered studies. Direction of bias for this shard's
+    purposes is if anything conservative: vote counting tends to over-credit weak literatures because any
+    nominally significant review counts as a hit, and short sleep still only reached 31%.
+funding: "see paper (Alzheimer Nederland; INVITE group support)"
+notes: >
+  THIS IS THE RECORD THAT CALIBRATES HOW MUCH OF THE SHORT-SLEEP DEMENTIA LITERATURE REPLICATES, expressed in
+  the one currency a downstream Bayesian model can use directly as a prior: 5 of 16 reviews positive, 11 null.
+  WHAT THE STUDY SET OUT TO DO, VERBATIM: "To identify modifiable risk and protective factors suitable for
+  dementia risk reduction, we combined an umbrella review of systematic reviews and meta-analyses with a
+  two-round Delphi consensus study. The review of 608 unique primary studies and opinions of 18 experts
+  prioritized six modifiable factors: hearing impairment, social contact, sleep, life course inequalities,
+  atrial fibrillation, and psychological stress. Based on expert ranking, hearing impairment, social contact,
+  and sleep were considered the most suitable candidates for inclusion in updated dementia risk scores."
+  HOW TO HOLD THE TWO HALVES TOGETHER. This paper is simultaneously the strongest expert endorsement of sleep
+  as a target (top-3 for inclusion in LIBRA) and the source of the weakest replication statistic for short
+  sleep specifically (31%). Those are not in conflict once you notice the granularity: "sleep" as a domain is
+  promising, driven by sleep-disordered breathing, insomnia and daytime sleepiness; "short sleep duration" as
+  a specific exposure is the weakest-replicating member of that family. Related rows from the same table for
+  context: Poor sleep quality 10 reviews / 50%, Insomnia 9 / 44%, Daytime sleepiness 5 / 100%,
+  Sleep-disordered breathing 5 / 40%. DAYTIME SLEEPINESS IS THE ONLY SLEEP CONSTRUCT AT 100% CONSISTENCY,
+  which lines up with spira2018.yaml, and daytime sleepiness is also the sleep construct most obviously
+  produced by incipient neurodegeneration.
+  ON THE OPERATIONALISATION CHOICE, VERBATIM: "For the factors social contact and sleep, the experts were
+  additionally asked to indicate which operationalization encountered in the literature would be the most
+  suitable for modification. Social engagement ... and sleep-disordered breathing were indicated as the most
+  suitable operationalizations. However, the difference among the most suitable operationalizations for sleep
+  were minimal."
+  NOTHING IN THIS UMBRELLA REVIEW CONCERNS ADOLESCENT SLEEP. "Life course inequalities" is the only
+  early-life factor prioritised, and it is socioeconomic, not sleep.
+shard: "s14_dementia_amyloid"

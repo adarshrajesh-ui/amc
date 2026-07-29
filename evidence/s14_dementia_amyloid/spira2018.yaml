@@ -1,0 +1,103 @@
+study_id: spira2018
+citation: "Spira AP, An Y, Wu MN, Owusu JT, Simonsick EM, Bilgel M, Ferrucci L, Wong DF, Resnick SM. Excessive daytime sleepiness and napping in cognitively normal adults: associations with subsequent amyloid deposition measured by PiB PET. Sleep. 2018 Oct 1;41(10):zsy152. (Erratum: Sleep. 2018 Dec 1;41(12), doi 10.1093/sleep/zsy184.)"
+doi: "10.1093/sleep/zsy152"
+pmid: "30192978"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6187104/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Excessive daytime sleepiness and napping in cognitively normal adults: associations with subsequent amyloid deposition measured by PiB PET."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 124
+n_studies_pooled: null
+population:
+  age_mean: 60.1
+  age_range: [36.2, 82.7]
+  pct_female: null
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: amyloid_positive_pib_pet_status_15_years_after_baseline_excessive_daytime_sleepiness
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "self-reported excessive daytime sleepiness at baseline (mean age 60.1 y) vs none, predicting Ab-positive PiB PET status a mean of 15.7 years later; fully adjusted"}
+    scale: log_or
+    unit: null
+    value: 1.01160
+    se: 0.47259
+    ci: [0.08618, 1.93874]
+    conversion_formula: >
+      OR = 2.75, 95% CI 1.09-6.95 (adjusted for age, age^2, sex, education and BMI).
+      log_or = ln(2.75) = 1.01160; se = (ln(6.95) - ln(1.09))/3.92 = (1.93874 - 0.08618)/3.92 = 0.47259.
+      The unadjusted estimate was OR = 3.37 (1.44-7.90), log_or = 1.21491, se = 0.43424.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = excessive daytime sleepiness at baseline predicts amyloid positivity ~16 years later, i.e.
+      harm. EXPOSURE IS NOT SLEEP DURATION - it is excessive daytime sleepiness, a SYMPTOM whose commonest
+      causes are sleep-disordered breathing and insufficient sleep. The authors are explicit that the
+      interpretation depends on that: they write "If common EDS causes (e.g., sleep-disordered breathing,
+      insufficient sleep) are associated with temporally distal AD biomarkers, this could have important
+      implications for AD prevention" - a conditional, not a finding. The confidence interval is very wide
+      (1.09-6.95) and the lower bound is only just above 1.
+    covariates: ["age", "age squared", "sex", "education", "body mass index"]
+    followup_years: 15.7
+    cohort_family: "BLSA"
+    quote: "In unadjusted analyses, compared with participants without EDS, those with EDS had more than 3 times the odds of being Aβ+ at follow-up (odds ratio [OR] = 3.37, 95% confidence interval [CI]: 1.44, 7.90, p = 0.005), and 2.75 times the odds after adjustment for age, age2, sex, education, and body mass index (OR = 2.75, 95% CI: 1.09, 6.95, p = 0.033)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: amyloid_positive_pib_pet_status_15_years_after_baseline_napping
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "self-reported napping at baseline vs none, predicting Ab-positive PET status a mean of 15.7 years later; fully adjusted"}
+    scale: log_or
+    unit: null
+    value: 0.62058
+    se: 0.47777
+    ci: [-0.31471, 1.55814]
+    conversion_formula: >
+      OR = 1.86, 95% CI 0.73-4.75 (adjusted). log_or = ln(1.86) = 0.62058;
+      se = (ln(4.75) - ln(0.73))/3.92 = (1.55814 - (-0.31471))/3.92 = 0.47777.
+      Unadjusted was OR = 2.01 (0.90-4.50), p = 0.091, also non-significant.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE point estimate, CI CROSSES THE NULL both before and after adjustment (p = 0.091 unadjusted,
+      p = 0.194 adjusted). NULL. Recorded because it shows the EDS finding is not a generic
+      "any-sleep-complaint" effect and because it is the reciprocal of Anderson 2021's MR finding that
+      napping looks PROTECTIVE.
+    covariates: ["age", "age squared", "sex", "education", "body mass index"]
+    followup_years: 15.7
+    cohort_family: "BLSA"
+    quote: "There was a trend-level unadjusted association between napping and Aβ status (OR = 2.01, 95% CI: 0.90, 4.50, p = 0.091) that became nonsignificant after adjustment (OR = 1.86, 95% CI: 0.73, 4.75, p = 0.194)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Uniquely long exposure-to-outcome interval for a sleep-amyloid study (mean 15.7 +/- 3.4 years, range 6.9
+    to 24.6), which is its distinctive strength and the reason it is included despite the exposure mismatch.
+    Concerns: (1) exposure is two single self-report items, not measured sleep; (2) n = 124 with a binary
+    amyloid-positive outcome, giving very wide intervals; (3) baseline age 60.1 +/- 9.8 y with range to 82.7,
+    so many participants were already in the preclinical Alzheimer's window even at baseline despite the long
+    lag; (4) survivor bias is severe by construction - participants had to live and remain in the study long
+    enough to be scanned 16 years later; (5) an erratum was published (Sleep 2018;41(12), doi
+    10.1093/sleep/zsy184) whose content this shard did not retrieve; (6) same BLSA cohort as spira2013.yaml,
+    so the two records are correlated and must not be double-counted.
+funding: "NIH / National Institute on Aging Intramural Research Program; see paper"
+notes: >
+  THE LONGEST-LAG SLEEP-TO-AMYLOID STUDY IN THE LITERATURE, and therefore the single best available answer to
+  the task's question "does sleep in midlife predict later amyloid burden?". The honest answer it gives:
+  EXCESSIVE DAYTIME SLEEPINESS at around age 60 predicts amyloid positivity around age 76, with an adjusted
+  odds ratio of 2.75 and a confidence interval from 1.09 to 6.95. SLEEP DURATION WAS NOT THE EXPOSURE and
+  napping was null.
+  Even taken at maximum face value this does not reach the subject. The youngest baseline participant was
+  36.2 years old; the mean was 60.1. There is NO cohort anywhere in this literature with sleep measured in the
+  teens or twenties and amyloid or dementia measured decades later.
+  Note the direction of the confound: excessive daytime sleepiness in a 60-year-old is a marker of
+  sleep-disordered breathing and of poor health generally. Reading this study as evidence that voluntarily
+  short sleep in a healthy 19-year-old causes amyloid deposition requires two substitutions the data do not
+  support - swapping a symptom for a behaviour, and swapping age 60 for age 19.
+shard: "s14_dementia_amyloid"

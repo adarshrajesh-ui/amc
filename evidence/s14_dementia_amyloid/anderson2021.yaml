@@ -1,0 +1,138 @@
+study_id: anderson2021
+citation: "Anderson EL, Richmond RC, Jones SE, Hemani G, Wade KH, Dashti HS, Lane JM, Wang H, Saxena R, Brumpton B, Korologou-Linden R, Nielsen JB, Asvold BO, Abdellaoui A, Davies NM, van Beijsterveldt TCEM, Boomsma DI, Weedon MN, Rutter MK, Lawlor DA. Is disrupted sleep a risk factor for Alzheimer's disease? Evidence from a two-sample Mendelian randomization analysis. International Journal of Epidemiology. 2021 Jul 9;50(3):817-828."
+doi: "10.1093/ije/dyaa183"
+pmid: "33150399"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8271198/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Is disrupted sleep a risk factor for Alzheimer's disease? Evidence from a two-sample Mendelian randomization analysis."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 54162
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "Europe / US (UK Biobank exposure GWAS; IGAP outcome GWAS)"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: alzheimers_disease_risk_from_genetically_instrumented_sleep_duration
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "genetically instrumented self-reported sleep duration (and separately short and long sleep) on Alzheimer's disease, two-sample IVW MR"}
+    scale: log_or
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      A DELIBERATE NULL. The paper states that "Point estimates for self-reported chronotype, insomnia and
+      sleep duration were very close to or on the null" and that overall "there was little evidence to
+      support a causal effect of sleep traits on AD risk". The numeric ORs for sleep duration are presented
+      in Figure 2 and Supplementary Table D, neither of which is machine-readable from the retrieved PMC
+      HTML, and no sleep-duration OR is printed in the running text. Point estimate is therefore coded as 0
+      on the log-odds scale (the authors' description of "on the null") and se is null, because no numeric
+      SE is quotable. Do not fabricate an interval for this record.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      ZERO = NO evidence of a causal effect of sleep duration on Alzheimer's disease risk. THIS IS THE
+      TIER-3 (highest available causal-design) ANSWER TO THE SHARD'S CENTRAL QUESTION, and it is null.
+      The authors note that both shorter and longer sleep gave positive but imprecise point estimates:
+      "Both shorter and longer self-reported sleep duration and accelerometer-measured sleep fragmentation
+      yielded positive estimates with AD risk, but were imprecisely estimated."
+    covariates: ["MR assumptions tested: MR-Egger intercepts, weighted median, radial MR outlier removal, Steiger filtering, leave-one-out, replication-dataset SNP-exposure estimates"]
+    followup_years: null
+    cohort_family: "UK_Biobank_exposure_IGAP_outcome"
+    quote: "Overall, there was little evidence to support a causal effect of sleep traits on AD risk. There was some suggestive evidence that self-reported daytime napping was associated with lower AD risk [odds ratio (OR): 0.70, 95% confidence interval (CI): 0.50–0.99). Some other sleep traits (accelerometer-measured ‘eveningness’ and sleep duration, and self-reported daytime sleepiness) had ORs of a similar magnitude to daytime napping, but were less precisely estimated."
+  - outcome_domain: neurodegeneration
+    outcome_construct: alzheimers_disease_risk_from_genetically_instrumented_daytime_napping
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "genetically instrumented self-reported daytime napping, per category increase from never to sometimes to usually, on Alzheimer's disease"}
+    scale: log_or
+    unit: null
+    value: -0.35667
+    se: 0.17426
+    ci: [-0.69315, -0.01005]
+    conversion_formula: >
+      OR = 0.70, 95% CI 0.50-0.99. log_or = ln(0.70) = -0.35667;
+      se = (ln(0.99) - ln(0.50))/3.92 = (-0.01005 - (-0.69315))/3.92 = 0.17426.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      NEGATIVE = LOWER Alzheimer's odds with more genetically predicted daytime napping, i.e. apparently
+      PROTECTIVE. This is the ONLY sleep trait in the whole analysis with a confidence interval excluding
+      the null, and it points the opposite way to the risk narrative. The authors label it "tentative" and
+      "imprecisely estimated" (upper bound 0.99). Included so the report can state that the single
+      nominally significant MR finding on sleep and Alzheimer's is a protective effect of napping, not a
+      harmful effect of short sleep.
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: "UK_Biobank_exposure_IGAP_outcome"
+    quote: "There was some tentative evidence of a protective effect of self-reported daytime napping on AD risk, with odds of AD being 33% lower (95% CI: 55% lower to 2% higher) per category increase from ‘never’, ‘sometimes’ to ‘usually’ napping. However, this was again imprecisely estimated."
+  - outcome_domain: sleep_need
+    outcome_construct: sleep_duration_change_caused_by_genetic_liability_to_alzheimers_REVERSE_direction_MR
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "REVERSE DIRECTION: per doubling of genetic liability to Alzheimer's disease, effect on sleep duration"}
+    scale: raw_units
+    unit: "minutes of sleep per night"
+    value: -0.3
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported in the running text as "a doubling of genetic liability for AD was associated with, on
+      average, 0.3 min lower sleep duration". Numeric CIs are in Supplementary Table K, which was not
+      retrievable; se is null.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NEGATIVE = genetic liability to Alzheimer's causes SHORTER sleep, i.e. reverse causation IS present
+      in direction - but the magnitude is 0.3 MINUTES per doubling of genetic liability, which is
+      negligible. This is a genuinely useful quantitative bound: the reverse-causation pathway from
+      Alzheimer's GENETIC liability to sleep duration is real in sign but far too small to generate the
+      observational HRs of 1.2-1.6 on its own. Note that genetic liability is not the same as the disease
+      process itself; prodromal pathology in an affected individual can plausibly shift sleep far more than
+      lifetime genetic liability does, so this does NOT exonerate the observational literature.
+    covariates: ["sensitivity analyses excluding APOE; HUNT replication for insomnia"]
+    followup_years: null
+    cohort_family: "UK_Biobank_exposure_IGAP_outcome"
+    quote: "There was little evidence that genetic liability for AD was associated with short sleep duration (<6 h vs 7–8 h per 24 h) or daytime sleepiness. Increased genetic liability for AD was associated with less frequent insomnia, reduced daytime napping and reduced sleep fragmentation. The effects were very small in magnitude (e.g. a doubling of genetic liability for AD was associated with, on average, a 0.4% lower risk of frequent insomnia). Point estimates for associations of genetic liability for AD with all other sleep traits were also very close to or on the null (e.g. a doubling of genetic liability for AD was associated with, on average, 0.3 min lower sleep duration)."
+rob:
+  tool: MR-STROBE
+  judgement: some_concerns
+  notes: >
+    Thorough by MR standards: 10 sleep traits, both self-report and accelerometer, IVW plus MR-Egger plus
+    weighted median, radial-MR outlier removal, Steiger filtering, leave-one-out, palindromic-SNP
+    exclusion, replication SNP-exposure datasets to address winner's curse, and a HUNT replication sample
+    with a >60 % response rate to probe UK Biobank selection bias. All instruments had F > 10.
+    Concerns: (1) the outcome GWAS (IGAP, 17,008 cases / 37,154 controls) is comparatively small, so power
+    to detect modest causal effects is limited and this null is not a tight null; (2) sleep GWAS exposures
+    are lifetime average genetic propensities in mostly middle-aged and older adults, NOT adolescent
+    behavioural sleep restriction, so the estimand is a lifelong small shift in sleep propensity rather
+    than three years of curtailed sleep at 16-19; (3) UK Biobank selection (<5 % response) affects the
+    exposure GWAS; (4) 10 traits tested, so some multiplicity.
+funding: "UK MRC Integrative Epidemiology Unit, Alzheimer's Society and others; see paper"
+notes: >
+  THE PRINCIPAL TIER-3 RECORD. Verbatim conclusion: "Overall, we found very limited evidence to support a
+  causal effect of sleep traits on AD risk. Our findings provide tentative evidence that daytime napping
+  may reduce AD risk. Given that this is the first MR study of multiple self-report and objective sleep
+  traits on AD risk, findings should be replicated using independent samples when such data become
+  available."
+  The authors' framing of WHY MR was needed is the clearest statement of the reverse-causation problem in
+  the literature, and is worth quoting in the report: "AD has a long prodromal phase of up to 20 years. 8
+  Thus, even in apparently healthy populations, measuring sleep in later life makes it difficult to rule
+  out that those participants with sleep disruption are those with prodromal AD."
+  n recorded as 54,162 = the IGAP outcome GWAS (17,008 AD cases + 37,154 controls); the exposure GWAS were
+  much larger (up to 446,118 for self-reported sleep duration, 85,670 for accelerometer traits).
+  CRITICAL LIMIT ON WHAT MR CAN SETTLE HERE: MR estimates the effect of a lifelong genetically-shifted
+  sleep propensity, typically a shift of minutes. It is NOT a test of "does sleeping 5-6 h for three years
+  at age 16-19 cause dementia at 75". A null MR is therefore evidence against a large lifetime-average
+  duration effect; it is not proof that a discrete period of severe restriction is harmless. Both caveats
+  must appear in the report.
+shard: "s14_dementia_amyloid"

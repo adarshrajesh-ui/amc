@@ -1,0 +1,123 @@
+study_id: kang2009
+citation: "Kang JE, Lim MM, Bateman RJ, Lee JJ, Smyth LP, Cirrito JR, Fujiki N, Nishino S, Holtzman DM. Amyloid-beta dynamics are regulated by orexin and the sleep-wake cycle. Science. 2009 Nov 13;326(5955):1005-1007."
+doi: "10.1126/science.1180962"
+pmid: "19779148"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2789838/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 0.97
+  resolved_title: "Amyloid-beta dynamics are regulated by orexin and the sleep-wake cycle."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: TX
+n: 8
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US (laboratory)"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: interstitial_fluid_ab_during_acute_6h_sleep_deprivation_MOUSE
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 0.25,
+               contrast_label: "6 h of enforced wakefulness at the start of the light period vs the same light period 24 h earlier, Tg2576 APP transgenic mice, in vivo microdialysis"}
+    scale: pct_change
+    unit: "percent higher mean hippocampal ISF Ab during sleep deprivation vs 24 h earlier"
+    value: 16.8
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported as "Mean ISF Aβ levels during SD were 16.8% higher compared to those during the light period
+      24 hours earlier (black dashed line, P = 0.05, n = 8)". Data are plotted as mean +/- SEM in Fig 2B
+      with no numeric SEM in text; se is null. Note P = 0.05 exactly.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = higher interstitial Ab during enforced wakefulness in MICE. This is the original
+      observation the whole field is built on, and it is a mouse result with n = 8 at P = 0.05.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "(B) Mean ISF Aβ levels during SD were 16.8% higher compared to those during the light period 24 hours earlier (black dashed line, P = 0.05, n = 8). (C) Animals spent 126 more minutes awake during SD (*** P < 0.0001, n = 5)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: rapid_reversal_of_ab_elevation_after_sleep_deprivation_MOUSE
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "recovery sleep immediately following 6 h of enforced wakefulness, same mice"}
+    scale: raw_units
+    unit: "direction of change in ISF Ab during recovery sleep (negative = falls)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: >
+      Coded as a sign indicator because the paper reports only that there was "an immediate reduction in ISF
+      Aβ levels" following sleep deprivation, with the time course shown in Fig 2A. No magnitude or SE is
+      printed; se is null.
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: >
+      NEGATIVE = the elevation REVERSED as soon as the animals were allowed to sleep. THIS IS THE ONLY
+      DIRECT EXPERIMENTAL OBSERVATION IN THE ENTIRE SHARD BEARING ON THE REVERSAL QUESTION, and it is in
+      mice, over hours, on interstitial fluid rather than plaque. It says the acute soluble-Ab excursion is
+      a reversible oscillation, not a step change. The authors' framing - "the state of wakefulness, and not
+      time of day, is associated with increased ISF Aβ levels" - is a statement about a dynamic equilibrium.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Mice were forced into wakefulness for 6 hours at the beginning of the second 12 hour light period when they would naturally be asleep. During sleep deprivation (SD), ISF Aβ levels were significantly higher compared to ISF Aβ levels during the normal light period 24 hours previously ( Fig. 2, A–C ). Following SD, mice spent more time sleeping and had an immediate reduction in ISF Aβ levels. Thus, the state of wakefulness, and not time of day, is associated with increased ISF Aβ levels."
+  - outcome_domain: neurodegeneration
+    outcome_construct: ab_plaque_deposition_after_21_days_of_chronic_sleep_restriction_MOUSE
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: null, duration_days: 21,
+               contrast_label: "chronic sleep restriction 20 h per day for 21 days vs age-matched littermate controls, APPswe/PS1dE9 transgenic mice"}
+    scale: raw_units
+    unit: "direction of difference in Ab plaque deposition (positive = more plaque under restriction)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: >
+      The result is reported qualitatively ("markedly greater Aβ plaque deposition") with quantification in
+      Fig 4A-G; no numeric group means, fold-changes, SEs or p-values for the plaque comparison appear in the
+      retrievable text. Coded as a sign indicator; se null. Do not pool.
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = MORE plaque under chronic restriction. THIS IS THE ONLY EVIDENCE IN THE WHOLE LITERATURE
+      THAT CHRONIC SLEEP RESTRICTION INCREASES ACTUAL AMYLOID PLAQUE, and it is in AMYLOID-OVEREXPRESSING
+      TRANSGENIC MICE restricted to 4 h of sleep per 24 h for 21 days. Scope limits that must be stated
+      whenever this is cited: (1) the animals carry human APP and PS1 mutations and would develop plaques
+      anyway, so the model measures acceleration of a genetically programmed process, not initiation;
+      (2) 20 h of enforced wakefulness daily is not comparable to a human sleeping 5-6 h; (3) 21 days in a
+      mouse is a substantial fraction of the plaque-formation window, not a life-course exposure;
+      (4) no cognitive outcome; (5) no human replication exists.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Because sleep-wake behavior modulates ISF Aβ levels, we asked whether chronic sleep deprivation could ultimately affect Aβ plaque deposition in the brain. APP transgenic mice of the APPswe/PS1dE9 genotype were subjected to chronic sleep restriction for 20 hours daily for 21 days. Sleep-restricted animals showed markedly greater Aβ plaque deposition compared to their age-matched littermate controls ( Fig. 4A–G )."
+rob:
+  tool: none
+  judgement: na
+  notes: >
+    Not a clinical study; tier TX. Elegant mechanistic work but every limitation of a transgenic mouse model
+    applies: amyloid overexpression, small n (5-8 per experiment), severe non-physiological exposures
+    (20 h/day enforced wakefulness), and outcomes measured in interstitial fluid or histology rather than in
+    cognition. The 16.8% acute figure sits at P = 0.05 with n = 8.
+funding: "NIH and others; see paper"
+notes: >
+  MECHANISM LINK 0 - the paper that started the field, four years before Xie 2013. It matters for this shard
+  for three reasons.
+  (1) It contains the ONLY direct experimental evidence on REVERSAL: the acute Ab rise fell immediately once
+  the animals slept.
+  (2) It supplies the ONLY plaque-level chronic-restriction finding, in transgenic mice.
+  (3) Its proposed mechanism is neuronal-activity-dependent Ab RELEASE modulated by orexin, not glymphatic
+  clearance - and that production-side mechanism is the one later confirmed in humans by Lucey 2018. The
+  orexin arm is striking: a dual orexin receptor antagonist abolished the diurnal Ab rhythm and reduced
+  plaque formation. Verbatim: "Icv administration of almorexant for 24 hours suppressed ISF Aβ levels and
+  abolished the natural diurnal variation of Aβ ( Fig. 3, D–E )." Note that orexin is also the one biomarker
+  that DID change in the human partial-restriction experiment (olsson2018.yaml, +27 % CSF orexin with no
+  amyloid change), so the human data engage the orexin arm of this mechanism without engaging the amyloid
+  consequence.
+shard: "s14_dementia_amyloid"

@@ -1,0 +1,128 @@
+study_id: huang2020
+citation: "Huang J, Zuber V, Matthews PM, Elliott P, Tzoulaki J, Dehghan A. Sleep, major depressive disorder, and Alzheimer disease: A Mendelian randomization study. Neurology. 2020 Oct 6;95(14):e1963-e1970."
+doi: "10.1212/WNL.0000000000010463"
+pmid: "32817390"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7682832/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 0.768
+  resolved_title: "Sleep, major depressive disorder, and Alzheimer disease: A Mendelian randomization study."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 446118
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "UK / Europe (UK Biobank exposure GWAS; AD GWAS outcome)"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: self_reported_sleep_duration_caused_by_genetic_liability_to_alzheimers_REVERSE_MR
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "REVERSE DIRECTION MR: genetically predicted Alzheimer disease risk -> self-reported sleep duration"}
+    scale: per_hour_beta
+    unit: "beta on the GWAS scale of self-reported sleep duration, per unit of genetically predicted log-odds of AD"
+    value: -0.006
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported as "shorter sleep duration (self-reported: β = −0.006, p = 1.9 × 10 −4 ...)". No SE or CI is
+      printed in the running text (they are in Table 1, not machine-readable from the retrieved PMC HTML),
+      so se is null. An SE could in principle be back-derived from the p-value as
+      se = |beta| / z with z = 3.73 for p = 1.9e-4, giving se ~ 0.0016, but the exact two-sided z depends on
+      the reported precision of the p-value and the paper does not state the test, so this is left
+      unrecorded rather than guessed.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NEGATIVE = genetic liability to Alzheimer disease CAUSES SHORTER SLEEP. This is the reverse-direction
+      finding the task asked for and it is the strongest genetic evidence that the sleep-dementia
+      association runs at least partly backwards. Magnitude is very small on the GWAS scale.
+    covariates: ["IVW, weighted median and MR-Egger all concordant; sensitivity analysis excluding APOE SNPs rs7412 and rs429358"]
+    followup_years: null
+    cohort_family: "UK_Biobank_exposure"
+    quote: "We found that higher risk of AD was significantly associated with being a “morning person” (odds ratio [OR] 1.01, p = 0.001), shorter sleep duration (self-reported: β = −0.006, p = 1.9 × 10 −4 ; accelerometer based: β = −0.015, p = 6.9 × 10 −5 ), less likely to report long sleep (β = −0.003, p = 7.3 × 10 −7 ), earlier timing of the least active 5 hours (β = −0.024, p = 1.7 × 10 −13 ), and a smaller number of sleep episodes (β = −0.025, p = 5.7 × 10 −14 ) after adjustment for multiple comparisons."
+  - outcome_domain: sleep_need
+    outcome_construct: accelerometer_measured_sleep_duration_caused_by_genetic_liability_to_alzheimers_REVERSE_MR
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "REVERSE DIRECTION MR: genetically predicted AD risk -> accelerometer-measured sleep duration (n = 85,670 accelerometer GWAS)"}
+    scale: per_hour_beta
+    unit: "beta on the GWAS scale of accelerometer-derived sleep duration, per unit of genetically predicted log-odds of AD"
+    value: -0.015
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported as "accelerometer based: β = −0.015, p = 6.9 × 10 −5". No SE or CI in the running text; se
+      null (see the sibling effect for why an SE was not back-derived).
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NEGATIVE = genetic liability to AD causes shorter OBJECTIVELY MEASURED sleep, and the effect is about
+      2.5x larger than for self-report. Reverse causation is therefore not a self-report artefact.
+      IMPORTANT CAVEAT the authors themselves raise: this particular association did NOT survive removal of
+      the APOE variants.
+    covariates: ["as above; APOE-excluded sensitivity analysis reported separately"]
+    followup_years: null
+    cohort_family: "UK_Biobank_exposure"
+    quote: "Because of the larger independent contribution of APOE ε4, a gene with pleiotropic effects influencing multiple disease processes that might contribute to AD risk, 26 we performed a sensitivity analysis excluding APOE SNPs (rs7412 and rs429358). Without APOE ε4, the causal associations of AD with self-reported and accelerometer-based sleep duration were not significant (supplementary figures e-21–e-29, available from Dryad, doi.org/10.5061/dryad.ffbg79cqt ). However, all other causal associations of AD on sleep phenotypes explored here were supported."
+  - outcome_domain: neurodegeneration
+    outcome_construct: alzheimers_disease_risk_from_genetically_instrumented_sleep_phenotypes_FORWARD_MR
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "FORWARD DIRECTION MR: genetically instrumented sleep phenotypes (chronotype, insomnia, self-reported and accelerometer sleep duration, sleep episodes, L5 timing, efficiency) -> Alzheimer disease"}
+    scale: log_or
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      A DELIBERATE NULL. "None of the MR analyses supported a causal effect of sleep-related phenotypes on
+      AD risk". Numeric forward-direction estimates are in supplementary figures e-30 to e-38, hosted on
+      Dryad and not retrieved. Point estimate coded 0 on the log-odds scale; se null.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      ZERO = no evidence that any sleep phenotype causally raises Alzheimer risk. Combined with the two
+      effects above, this study's structure is the cleanest statement of the asymmetry: genetics say
+      Alzheimer's changes sleep, and say nothing supporting sleep changing Alzheimer's.
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: "UK_Biobank_exposure"
+    quote: "Genetically higher risks of AD were associated with being a morning person, a lower risk of insomnia, a shorter self-reported and accelerometer-based sleep duration, being less likely to report long sleep, an earlier L5 timing, and a smaller number of sleep episodes after adjustment for multiple comparisons ( table 1 and figure 1 and supplementary figures e-21–e-29 ...). MR findings using IVW, weighted median, and MR-Egger were consistent. ... None of the MR analyses supported a causal effect of sleep-related phenotypes on AD risk (supplementary figures e-30–e-38, available from Dryad)."
+rob:
+  tool: MR-STROBE
+  judgement: some_concerns
+  notes: >
+    Bidirectional design with three estimators (IVW, weighted median, MR-Egger) that agreed, F > 10 for all
+    instruments, and an explicit APOE-exclusion sensitivity analysis - which is exactly the right check,
+    because APOE is pleiotropic and violates the exclusion-restriction assumption when used to instrument
+    AD. Concerns: (1) the reverse-direction sleep-duration findings did NOT survive APOE exclusion, so the
+    specific claim "AD genetic risk shortens sleep" rests substantially on APOE and the authors say so;
+    (2) the authors note that "P -values were small, likely due to the strength of APOE as an instrument"
+    (a point Anderson 2021 makes about its own analysis too), so statistical significance here overstates
+    the evidential weight; (3) effect magnitudes on the GWAS scale are tiny and hard to interpret
+    clinically; (4) genetic liability is not equivalent to prodromal disease, so this does not measure the
+    size of the reverse-causation bias operating in cohort studies.
+funding: "See paper"
+notes: >
+  THE REVERSE-DIRECTION MR THE TASK ASKED FOR, and its notable finding is exactly the counterintuitive one:
+  genetic liability to Alzheimer's is associated with being a MORNING person, LOWER insomnia risk, and
+  SHORTER sleep - not with the insomnia-and-fragmentation picture seen in clinically manifest AD. The
+  authors flag this discordance themselves and hypothesise a stage-dependent effect: "These results from
+  the study of people at high genetic risk of AD are not consistent with the observational findings of
+  sleep disturbances in people who express AD clinically ... While the evidence is not strong, on the basis
+  of these data and our observations, we hypothesize that preclinical stages of AD and more severe,
+  clinically expressed AD may have different effects on sleep phenotypes."
+  Verbatim overall conclusion: "In this study, we found evidence supporting a potential causal influence of
+  AD on sleep disturbances. However, we did not find evidence supporting a causal role of disturbed sleep
+  patterns on AD, suggesting that observed associations between sleep disorders and AD may be due to
+  reverse causation."
+  Note on verification: the Crossref record for this DOI stores the title without its subtitle, so raw
+  title similarity to PubMed was 0.768. The Crossref title is an exact prefix of the PubMed title and the
+  DOI registered in PubMed matches, so the record is treated as VERIFIED (see verify.py prefix rule).
+shard: "s14_dementia_amyloid"

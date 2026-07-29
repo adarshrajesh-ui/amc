@@ -1,0 +1,117 @@
+study_id: sun2026
+citation: "Sun H, Milton S, Fang Y, Taha HB, Shiju S, Thomas RJ, Ganglberger W, Pase MP, Hughes T, Purcell S, Redline S, Stone KL, Yaffe K, Westover MB, Leng Y. Machine Learning-Based Sleep Electroencephalographic Brain Age Index and Dementia Risk: An Individual Participant Data Meta-Analysis. JAMA Network Open. 2026 Mar 2;9(3):e261521."
+doi: "10.1001/jamanetworkopen.2026.1521"
+pmid: "41854616"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13003368/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 0.794
+  resolved_title: "Machine Learning-Based Sleep Electroencephalographic Brain Age Index and Dementia Risk: An Individual Participant Data Meta-Analysis."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 7105
+n_studies_pooled: 5
+population:
+  age_mean: 69.3
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: poor_elderly
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_dementia_per_10_year_increase_in_sleep_eeg_brain_age_index
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "each 10-year increase in polysomnography-derived sleep EEG brain age index (BAI = EEG-predicted brain age minus chronological age); 5 pooled cohorts, 7,105 participants, 1,088 incident dementia cases"}
+    scale: log_hr
+    unit: null
+    value: 0.329304
+    se: 0.069672
+    ci: [0.190620, 0.463734]
+    conversion_formula: >
+      HR = 1.39, 95% CI 1.21-1.59. log_hr = ln(1.39) = 0.329304;
+      se = (ln(1.59) - ln(1.21))/3.92 = (0.463734 - 0.190620)/3.92 = 0.069672.
+      Fine-Gray competing-risk models within cohort, pooled by random-effects meta-analysis.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = higher dementia hazard when the sleep EEG looks older than the person is. NOT A SLEEP
+      DURATION EFFECT AND NOT A SLEEP RESTRICTION EFFECT. The exposure is a machine-learning summary of sleep
+      EEG microstructure; it is a MARKER of brain state, not an exposure anyone chooses. It is included as the
+      benchmark for what a genuinely informative objective sleep measurement looks like in this literature -
+      HR 1.39 per decade of apparent brain ageing, with 1,088 events - against which self-reported sleep
+      duration's HR of roughly 1.2 with intervals touching the null should be judged.
+    covariates: ["age", "sex", "cohort", "death as competing risk", "further models added comorbidities and apnea-hypopnea index, and APOE e4"]
+    followup_years: null
+    cohort_family: "MESA_ARIC_FHS-OS_MrOS_SOF pooled IPD"
+    quote: "Across the cohorts, each 10-year increase in BAI was associated with a 39% higher risk of incident dementia (hazard ratio [HR], 1.39 [95% CI, 1.21-1.59]; P < .001) after adjustment for covariates."
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_dementia_per_10_year_bai_adjusted_for_apoe_e4
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "each 10-year increase in sleep EEG brain age index, additionally adjusted for APOE e4"}
+    scale: log_hr
+    unit: null
+    value: 0.198851
+    se: 0.089735
+    ci: [0.019803, 0.371564]
+    conversion_formula: >
+      HR = 1.22, 95% CI 1.02-1.45. log_hr = ln(1.22) = 0.198851;
+      se = (ln(1.45) - ln(1.02))/3.92 = (0.371564 - 0.019803)/3.92 = 0.089735.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = harm, but note the ATTENUATION SEQUENCE: 1.39 base -> 1.31 after comorbidities and
+      apnea-hypopnea index -> 1.22 after APOE e4, with the lower bound falling to 1.02. Even the best
+      objective sleep-EEG marker in the field loses roughly half its effect on the log scale once
+      comorbidity, sleep apnoea and genetic risk are accounted for. That attenuation profile is the norm in
+      this literature and is a reason to expect the true causal component of any sleep-dementia association to
+      be smaller than the crude one.
+    covariates: ["age", "sex", "cohort", "comorbidities", "apnea-hypopnea index", "APOE e4", "death as competing risk"]
+    followup_years: null
+    cohort_family: "MESA_ARIC_FHS-OS_MrOS_SOF pooled IPD"
+    quote: "These associations remained after additional adjustment for comorbidities and apnea-hypopnea index scores (HR, 1.31 [95% CI, 1.14-1.50]; P < .001) and apolipoprotein E e4 (HR, 1.22 [95% CI, 1.02-1.45]; P = .03), and they were consistent across sex and age groups."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: low
+  notes: >
+    The methodologically strongest observational record in this shard: individual participant data from five
+    established community cohorts, home polysomnography rather than self-report, Fine-Gray models accounting
+    for death as a competing risk, random-effects pooling, and 1,088 incident dementia cases with follow-up
+    reaching a median of 16.9 years in ARIC. Concerns for THIS shard's question rather than for the study
+    itself: (1) the exposure is a derived machine-learning index, not a manipulable behaviour, so it cannot
+    support any intervention inference; (2) mean ages run 59.5 to 82.7 years across cohorts, i.e. entirely
+    outside the subject's age; (3) BAI is measured once, so this is a marker-at-baseline design and a high BAI
+    could itself be an early consequence of the neurodegeneration it predicts; (4) the shard has the abstract
+    only, so the BAI feature set and its relationship (if any) to habitual sleep duration are unverified.
+funding: "US National Institutes of Health (see paper)"
+notes: >
+  INCLUDED AS THE POSITIVE CONTROL FOR THE WHOLE SHARD - the demonstration that sleep physiology genuinely
+  does carry dementia-relevant information when it is measured objectively, so that the weakness of the
+  sleep-DURATION evidence cannot be dismissed as mere measurement failure across the board.
+  SCALE AND FOLLOW-UP, VERBATIM: "This meta-analysis included 7105 participants from the MESA (n = 1802; mean
+  [SD] age, 69.3 [9.0] years; 956 females [53.1%]), ARIC (n = 1796; 62.5 [5.7] years; 918 females [51.1%]),
+  FHS-OS (n = 617; 59.5 [8.9] years; 318 females [51.5%]), MrOS (n = 2639 males [100%]; 76.0 [5.3] years), and
+  SOF (n = 251 females [100%]; 82.7 [2.9] years) cohorts. The median (IQR) time to dementia was 4.8 (4.2-5.6)
+  years in the MESA cohort (n = 119 [6.6%]), 16.9 (14.9-19.8) years in the ARIC cohort (n = 354 [19.7%]), 13.1
+  (8.5-16.2) years in the FHS-OS cohort (n = 59 [9.6%]), 3.6 (1.3-7.1) years in the MrOS cohort (n = 470
+  [17.8%]), and 4.6 (4.2-5.2) years in the SOF cohort (n = 86 [34.3%])." Case count 119 + 354 + 59 + 470 + 86
+  = 1,088, which is the shard's arithmetic from the printed per-cohort counts, not a figure the paper prints.
+  WHAT IT DOES AND DOES NOT LICENCE. It licenses the statement that sleep EEG microstructure predicts dementia
+  independently of APOE e4 and sleep apnoea. It does NOT license any statement about sleep duration, about
+  restriction, about adolescents, or about intervention, and the authors' own conclusion is explicitly about
+  DETECTION rather than prevention, verbatim: "These findings highlight the need to evaluate the predictive
+  value of the BAI as a noninvasive digital marker for early detection of dementia in community settings."
+  THE CONTRAST THAT MATTERS FOR THE FACTORY. The best objective sleep marker in the field, in 7,105 people
+  with over a thousand events, yields HR 1.22-1.39 for a ten-year shift in apparent brain age. The subject's
+  channel of interest - habitual short sleep duration - yields, at its strongest, HR 1.22-1.30 with intervals
+  that touch 1.00 (sabia2021.yaml), null MR (xiang2024.yaml and four others), 31% replication across reviews
+  (deckers2024.yaml), and a dose-response nadir at 5.6-6 h (xu2020.yaml). The marker literature is in better
+  shape than the exposure literature, and only the exposure literature is relevant to a 19-year-old's choices.
+  AGE FIELDS: age_range is null because the schema requires numeric bounds and this study's
+  eligibility was open-ended - verbatim: "Adults (aged >=18 years) without dementia at the time of
+  polysomnography were included." In practice the pooled cohort means run 59.5 to 82.7 years;
+  age_mean carries MESA's 69.3 y as the largest single contributing cohort's mean.
+shard: "s14_dementia_amyloid"

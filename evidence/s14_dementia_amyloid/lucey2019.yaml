@@ -1,0 +1,134 @@
+study_id: lucey2019
+citation: "Lucey BP, McCullough A, Landsness EC, Toedebusch CD, McLeland JS, Zaza AM, Fagan AM, McCue L, Xiong C, Morris JC, Benzinger TLS, Holtzman DM. Reduced non-rapid eye movement sleep is associated with tau pathology in early Alzheimer's disease. Science Translational Medicine. 2019 Jan 9;11(474):eaau6550."
+doi: "10.1126/scitranslmed.aau6550"
+pmid: "30626715"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6342564/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Reduced non-rapid eye movement sleep is associated with tau pathology in early Alzheimer's disease."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 119
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [60, 99]
+  pct_female: null
+  country: "US"
+  adolescent_match: poor_elderly
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: nrem_slow_wave_activity_1_to_2Hz_vs_av1451_tau_pet_burden
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 6,
+               contrast_label: "all-night NREM slow-wave activity in the 1-2 Hz band, measured by single-channel forehead EEG over up to 6 nights, vs AV-1451 flortaucipir tau PET composite; n = 38 with PET"}
+    scale: raw_units
+    unit: "direction of association between NREM 1-2 Hz SWA and tau PET burden"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: >
+      Coded as a sign indicator. The paper reports the direction and that the relationship was "maximal in
+      the 1-2 Hz range", with the model coefficients, standard errors and p-values presented in Table 2,
+      which renders as unlabelled numeric cells in the retrieved PMC HTML and could not be attributed to
+      rows with confidence. Rather than risk misassigning a coefficient, no magnitude is claimed and se is
+      null. Do not pool.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NEGATIVE = LESS 1-2 Hz NREM slow-wave activity associated with MORE tau pathology. Cross-sectional, so
+      direction of causality is undetermined, and in this literature the more likely reading is the reverse
+      of the popular one: tau pathology in the medial temporal lobe degrades the neural machinery that
+      generates slow waves. The regional map supports that reading - the strongest associations were in
+      entorhinal and parahippocampal cortex, i.e. exactly where tau starts.
+    covariates: ["age", "sex", "race", "CDR", "ApoE4 status", "apnea-hypopnea index", "periodic limb movement index", "sleep medications", "time (night)"]
+    followup_years: null
+    cohort_family: "Knight_ADRC"
+    quote: "As AV-1451 tau SUVR increased, all-night 1–4.5 Hz SWA was decreased ( Table 2 ). Since previous work found an inverse relationship between the slowest frequencies and amyloid deposition in the mPFC ( 38 ), we tested different frequency ranges (1–2 Hz, 2–3 Hz, and 3–4 Hz) in this model and found that this inverse relationship between NREM SWA and tau was maximal in the 1–2 Hz range ( Table 2 ). ... CDR showed negative association with 1–2 Hz NREM SWA, indicating that 1–2 Hz NREM SWA decreased with worsening tau pathology and cognitive impairment."
+  - outcome_domain: neurodegeneration
+    outcome_construct: nrem_slow_wave_activity_vs_av45_amyloid_pet_burden_after_multiple_comparison_correction
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 6,
+               contrast_label: "NREM slow-wave activity vs AV-45 florbetapir AMYLOID PET, regional analysis after correction for multiple comparisons; n = 38"}
+    scale: raw_units
+    unit: "number of brain regions where amyloid PET was associated with NREM SWA after multiple-comparison correction"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      A DELIBERATE NULL, quoted verbatim: "After correcting for multiple comparisons, there were no regions
+      on AV-45 amyloid PET associated with NREM SWA ( Table S4 )." Whole-composite association was p = 0.043
+      for 1-2 Hz only, i.e. barely significant and not surviving regional correction. se null.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      ZERO = NO amyloid regions survived correction. This is a KEY DISSOCIATION. In this study the sleep-EEG
+      signal tracks TAU, not amyloid. The broadband measure showed no amyloid association at all
+      ("All night 1-4.5 Hz SWA was not associated with AV-45 amyloid PET"). That matters because the entire
+      popular mechanism is an AMYLOID CLEARANCE story, and the largest and best-covariate-adjusted
+      sleep-EEG-pathology study finds the amyloid link is the weaker one.
+    covariates: ["age", "sex", "race", "CDR", "ApoE4 status", "AHI", "PLMI", "sleep medications", "time"]
+    followup_years: null
+    cohort_family: "Knight_ADRC"
+    quote: "Using the same model as for AV-1451 tau PET, we assessed the relationship between NREM SWA and AV-45 amyloid PET. The mean cortical AV-45 amyloid composite was calculated as the average SUVR for the frontal, temporal, and parietal lobes. All night 1–4.5 Hz SWA was not associated with AV-45 amyloid PET ( Table 3 ). Then, we tested NREM SWA in frequency ranges of 1–2 Hz, 2–3 Hz, and 3–4 Hz. There was an inverse relationship between 1–2 Hz NREM SWA and the mean cortical AV-45 amyloid composite (p=0.043, Table 3 ). ... After correcting for multiple comparisons, there were no regions on AV-45 amyloid PET associated with NREM SWA ( Table S4 )."
+  - outcome_domain: neurodegeneration
+    outcome_construct: gross_sleep_parameters_compared_between_biomarker_positive_and_negative_groups
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 6,
+               contrast_label: "average sleep parameters (duration, efficiency, WASO, latency) in amyloid-positive vs negative, tau-positive vs negative, and CDR 0 vs 0.5 groups"}
+    scale: raw_units
+    unit: "difference in gross sleep parameters between biomarker groups (essentially none)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      A DELIBERATE NULL: "Average sleep parameters for participants with PET imaging and CSF biomarkers were
+      not substantially different between amyloid-negative vs. amyloid-positive, tau-negative vs.
+      tau-positive, and CDR 0 vs. CDR 0.5 groups regardless of modality used to measure sleep-wake activity."
+      se null.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      ZERO = gross sleep measures, including duration, did NOT differ by amyloid or tau status. Only fine
+      EEG microarchitecture did. And where self-reported total sleep time did differ by cognitive status, it
+      went in the counterintuitive direction: "CDR 0.5 individuals were found to have ... longer
+      self-reported total sleep time (TST) (t(104)=−2.27, p=0.025)" - i.e. the cognitively worse group
+      reported sleeping MORE, not less.
+    covariates: []
+    followup_years: null
+    cohort_family: "Knight_ADRC"
+    quote: "Average sleep parameters for participants with PET imaging and CSF biomarkers were not substantially different between amyloid-negative vs. amyloid-positive, tau-negative vs. tau-positive, and CDR 0 vs. CDR 0.5 groups regardless of modality used to measure sleep-wake activity ( Tables S1 and S2 ). ... For participants with CSF, CDR 0.5 individuals were found to have longer REM latency measured by EEG (t(104)=−2.91, p=0.0044) and longer self-reported total sleep time (TST) (t(104)=−2.27, p=0.025)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: >
+    CROSS-SECTIONAL, hence tier TX. Well covariate-adjusted (age, sex, race, CDR, ApoE4, apnoea-hypopnoea
+    index, periodic limb movement index, sleep medications) and uses multi-night home EEG rather than a single
+    laboratory night, which is a real strength. Concerns: the tau PET sub-sample is only 38, and only 8 of
+    those were positive for both amyloid and tau; participants are all >60 y and drawn from Alzheimer's
+    research cohorts; many frequency bands and many regions tested with corrections applied inconsistently
+    across analyses (some results explicitly reported uncorrected); and the analysis direction treats sleep
+    EEG as the DEPENDENT variable with pathology as predictor, which is the reverse of the causal framing
+    usually applied to this paper.
+funding: "NIH and others; see paper"
+notes: >
+  THE LUCEY BIOMARKER RECORD THE TASK ASKED FOR, and it answers the question in the opposite direction from
+  what the framing implies. The authors themselves state the argument as a discriminative-biomarker claim,
+  not a causal one, verbatim: "this suggested that changes in NREM SWA, especially at 1–2 Hz, might be able
+  to discriminate tau pathology and cognitive impairment either before or at the earliest stages of
+  symptomatic AD."
+  THREE POINTS FOR THE REPORT.
+  (1) The signal is in TAU, not amyloid; no amyloid region survived multiple-comparison correction.
+  (2) The signal is in fine EEG microarchitecture, NOT in sleep duration; gross sleep parameters did not
+      differ by biomarker status at all.
+  (3) The regional distribution of the tau association (entorhinal, parahippocampal, orbitofrontal,
+      precuneus, inferior parietal, inferior temporal) matches the canonical spread of tau pathology, which
+      is at least as consistent with pathology degrading slow-wave generation as with poor sleep causing
+      pathology. The authors note this pattern resembles other AD-related changes such as cortical
+      thickness.
+  Note also that the same group's SILK work (lucey2018.yaml) found the human amyloid response to sleep loss
+  is production-driven, not clearance-driven. Taken together, the Lucey programme is substantially LESS
+  supportive of the glymphatic-clearance narrative than secondary sources imply.
+shard: "s14_dementia_amyloid"

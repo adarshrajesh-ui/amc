@@ -1,0 +1,156 @@
+study_id: yuan2022
+citation: "Yuan S, Ma W, Yang R, Xu F, Han D, Huang T, Peng M, Xu A, Lyu J. Sleep duration, genetic susceptibility, and Alzheimer's disease: a longitudinal UK Biobank-based study. BMC Geriatrics. 2022 Aug 2;22(1):638."
+doi: "10.1186/s12877-022-03298-8"
+pmid: "35918656"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9344659/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Sleep duration, genetic susceptibility, and Alzheimer's disease: a longitudinal UK Biobank-based study."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 483507
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [40, 69]
+  pct_female: null
+  country: "UK"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_alzheimers_high_genetic_risk_plus_normal_sleep_vs_low_risk_normal_sleep
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "HIGH Alzheimer's genetic risk score with NORMAL sleep (6-9 h) vs LOW genetic risk with normal sleep - the pure-genotype contrast, sleep held constant"}
+    scale: log_hr
+    unit: null
+    value: 0.656068
+    se: 0.115696
+    ci: [0.429247, 0.882775]
+    conversion_formula: >
+      HR = 1.9272, 95% CI 1.5361-2.4176. log_hr = ln(1.9272) = 0.656068;
+      se = (ln(2.4176) - ln(1.5361))/3.92 = (0.882775 - 0.429247)/3.92 = 0.115696.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = higher AD hazard. NOT A SLEEP EFFECT - this is the effect of GENOTYPE with sleep held in the
+      normal range, and it is included as the scale reference the whole shard needs. Being in the high
+      AD-genetic-risk group while sleeping normally carries HR 1.93. For comparison, the strongest short-sleep
+      point estimate in the best cohort study available (sabia2021.yaml, persistent short sleep across ages 50,
+      60 and 70) is HR 1.30 with a lower bound of exactly 1.00. Genotype, which is not modifiable, moves
+      dementia risk substantially more than two decades of documented short sleep, which is.
+    covariates: ["Cox proportional hazards; covariate list not recoverable from the abstract"]
+    followup_years: 11.3
+    cohort_family: "UK_Biobank"
+    quote: "Compared with the participants who had a low AD-GRS and normal sleep duration, there was associated with a higher risk of AD in participants with a low AD-GRS and long sleep duration (HR = 3.4806; 95% CI 2.0011-6.054, p < 0.001), participants with an intermediate AD-GRS and long sleep duration (HR = 2.0485; 95% CI 1.3491-3.1105, p < 0.001), participants with a high AD-GRS and normal sleep duration (HR = 1.9272; 95% CI 1.5361-2.4176, p < 0.001), and participants with a high AD-GRS and long sleep duration (HR = 5.4548; 95% CI 3.1367-9.4863, p < 0.001)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_alzheimers_low_genetic_risk_plus_long_sleep_over_9h
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "LOW Alzheimer's genetic risk with LONG sleep (>9 h) vs low genetic risk with normal sleep (6-9 h)"}
+    scale: log_hr
+    unit: null
+    value: 1.247205
+    se: 0.282404
+    ci: [0.693697, 1.800719]
+    conversion_formula: >
+      HR = 3.4806, 95% CI 2.0011-6.054. log_hr = ln(3.4806) = 1.247205;
+      se = (ln(6.054) - ln(2.0011))/3.92 = (1.800719 - 0.693697)/3.92 = 0.282404.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = harm with LONG sleep. This is the largest single sleep-associated hazard ratio in the entire
+      shard - HR 3.48 - and it belongs to LONG sleep in people at LOW genetic risk, over only 11.3 years of
+      follow-up in a cohort recruited at ages 40-69. Nobody proposes a mechanism by which sleeping more than
+      nine hours triples Alzheimer's risk. It is a textbook prodromal / reverse-causation signal, and it
+      calibrates how large a spurious sleep-dementia hazard ratio can be in a half-million-person cohort.
+      A model willing to believe HR 1.2-1.3 for short sleep on the strength of this literature should ask why
+      it does not also believe HR 3.5 for long sleep from the same literature.
+    covariates: ["Cox proportional hazards; covariate list not recoverable from the abstract"]
+    followup_years: 11.3
+    cohort_family: "UK_Biobank"
+    quote: "there was associated with a higher risk of AD in participants with a low AD-GRS and long sleep duration (HR = 3.4806; 95% CI 2.0011-6.054, p < 0.001)"
+  - outcome_domain: neurodegeneration
+    outcome_construct: mr_no_causal_association_between_sleep_duration_and_alzheimers
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "two-sample Mendelian randomization for sleep duration -> Alzheimer's disease, run within the same paper"}
+    scale: log_or
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      The authors report only that there was "no causal association between AD and sleep duration using Two
+      Sample Mendelian randomization (MR)" and print no estimate in the retrieved abstract. value = 0.0 encodes
+      a REPORTED NULL of unreported magnitude; se is null. NOT POOLABLE AS A PRECISE ZERO.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NULL. The within-paper contrast is what matters: in one manuscript, observational hazard ratios up to
+      5.45 for sleep-duration categories, and zero causal signal from genetics. The authors accordingly
+      downgrade their own finding to a predictive marker rather than a cause.
+    covariates: []
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "In addition, there was no causal association between AD and sleep duration using Two Sample Mendelian randomization (MR)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: absence_of_gene_by_sleep_duration_interaction_on_alzheimers_risk
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "test for statistical interaction between sleep duration and Alzheimer's genetic risk score on AD incidence"}
+    scale: probability
+    unit: "p-value for interaction"
+    value: 0.45
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported directly as "P for interaction = 0.45". value carries the p-value itself; this is a
+      significance-test result, not an effect size, hence se and ci null.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NO INTERACTION (p = 0.45). Recorded because a popular corollary of the glymphatic story is that people
+      at genetic risk are especially vulnerable to sleep loss. In 483,507 people, sleep duration and AD genetic
+      risk did not interact. The two act additively at most, and the sleep component is the one with no
+      supporting causal evidence.
+    covariates: ["Cox proportional risk model"]
+    followup_years: 11.3
+    cohort_family: "UK_Biobank"
+    quote: "No statistically significant interaction was identified between sleep duration and the AD-GRS (Alzheimer's disease genetic risk score, P for interaction = 0.45) using Cox proportional risk model."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Very large (483,507 UK Biobank participants, mean 11.3 y follow-up) with restricted cubic splines,
+    a genetic risk score, and a within-paper MR - a good design. Concerns: (1) ABSTRACT ONLY, so covariates,
+    case counts and the short-sleep-specific hazard ratios are unavailable, and NOTE THAT THE ABSTRACT NEVER
+    REPORTS A HAZARD RATIO FOR SHORT SLEEP (<6 h) ALONE - every printed joint category that reached
+    significance involves either long sleep or high genetic risk, which is itself informative; (2) UK Biobank
+    healthy-volunteer selection; (3) 11.3 years of follow-up from ages 40-69 with AD as the outcome means the
+    great majority of cases were already in their prodrome at baseline; (4) single-item self-reported sleep
+    duration; (5) the reporting is imprecise in places ("there was associated with a higher risk of AD"), and
+    hazard ratios are given to four decimal places, which conveys a precision the design does not have.
+funding: "The authors have no funding and conflicts of interest to disclose."
+notes: >
+  INCLUDED FOR THREE NEGATIVE FINDINGS AND ONE SCALE ANCHOR, none of which supports the channel.
+  (1) NO GENE-BY-SLEEP INTERACTION in 483,507 people (p = 0.45). (2) NO MR SUPPORT for sleep duration causing
+  AD, in the same paper that reports large observational hazard ratios. (3) NO SHORT-SLEEP HAZARD RATIO IS
+  REPORTED IN THE ABSTRACT AT ALL - the significant joint categories the authors chose to print are the
+  long-sleep and high-genetic-risk ones. (4) THE SCALE ANCHOR: high AD genetic risk with normal sleep gives
+  HR 1.93, versus HR 1.30 for two decades of persistent short sleep in Whitehall II.
+  THE PAPER'S OWN CONCLUSION IS EXPLICITLY NON-CAUSAL AND EXPLICITLY ABOUT LONG SLEEP, verbatim: "In the UKB
+  population, though there was no causal association between AD and sleep duration analyzed using Two Sample
+  MR, long sleep duration (> 9 h/night) was significantly associated with a higher risk of AD, regardless of
+  high, intermediate or low AD-GRS. Prolonged sleep duration may be one of the clinical predictors of a higher
+  risk of AD." Note "clinical predictors", not risk factors.
+  CATEGORY DEFINITIONS, VERBATIM: "Sleep duration was categorized into short sleep duration (< 6 h/night),
+  normal sleep duration (6-9 h/night), and long sleep duration (> 9 h/night)." The subject's weekday 5-6 h
+  straddles this study's short/normal boundary and his weekend 7-8 h is squarely NORMAL, while his occasional
+  10-11 h weekend nights would fall in the LONG category that is the only one this study found harmful -
+  which is a good illustration of why category-based epidemiology cannot be applied to a real weekly sleep
+  pattern without doing violence to it.
+  NON-LINEARITY CONFIRMED, VERBATIM: "there was a non-linear relationship between AD incidence and sleep
+  duration (P for non-linear < 0.001) by restricted cubic splines (RCS)."
+shard: "s14_dementia_amyloid"

@@ -1,0 +1,141 @@
+study_id: tao2026
+citation: "Tao X, Wang S, He L, Liu Y, Pang L, Sun Y, Ji Y, Ren Y. Nonlinear Associations Between Sleep Duration and Dementia: Evidence from the CHARLS and Mendelian Randomization Analysis. Neuroscience Research. 2026 Jul 24:105095. Online ahead of print."
+doi: "10.1016/j.neures.2026.105095"
+pmid: "42498182"
+url: "https://pubmed.ncbi.nlm.nih.gov/42498182/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Nonlinear Associations Between Sleep Duration and Dementia: Evidence from the CHARLS and Mendelian Randomization Analysis."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 9030
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "China"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_dementia_extreme_sleep_duration_under_5h_or_over_10h_longitudinal
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "self-reported extreme sleep duration (<5 h or >10 h, POOLED INTO ONE CATEGORY) vs non-extreme; 4-year follow-up, n = 9,030"}
+    scale: log_hr
+    unit: null
+    value: 0.438255
+    se: 0.108153
+    ci: [0.223144, 0.647103]
+    conversion_formula: >
+      HR = 1.55, 95% CI 1.25-1.91. log_hr = ln(1.55) = 0.438255;
+      se = (ln(1.91) - ln(1.25))/3.92 = (0.647103 - 0.223144)/3.92 = 0.108153.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = harm, BUT THE EXPOSURE IS A COLLAPSED TWO-TAILED CATEGORY AND THEREFORE CANNOT BE USED FOR
+      THIS SUBJECT. "<5h or >10h" merges the short and long tails into a single indicator, so the HR of 1.55
+      is an average of two groups that the rest of this literature shows behave differently, and it is
+      impossible to recover the short-sleep-only estimate from it. Given that long sleep produces the larger
+      and more consistent association in every study that separates the tails (xu2020.yaml, fan2019.yaml,
+      xiong2024.yaml, deckers2024.yaml), a pooled two-tailed estimate is most likely long-sleep-dominated.
+      THE POOLER SHOULD NOT ATTRIBUTE THIS HR TO SHORT SLEEP. Note also the threshold: <5 h, which is BELOW
+      the subject's weekday 5-6 h.
+    covariates: ["not recoverable from the abstract"]
+    followup_years: 4.0
+    cohort_family: "CHARLS"
+    quote: "We observed the strongest dementia risk among individuals reporting extreme sleep durations (<5h or >10h), both cross-sectional (OR=2.99, 95% CI: 2.47-3.62, P<0.001) and longitudinally (HR=1.55, 95% CI: 1.25-1.91, P<0.001)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: cross_sectional_dementia_extreme_sleep_duration_under_5h_or_over_10h
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "CROSS-SECTIONAL association of extreme sleep duration (<5 h or >10 h) with dementia; n = 12,187"}
+    scale: log_or
+    unit: null
+    value: 1.095273
+    se: 0.097514
+    ci: [0.904218, 1.286474]
+    conversion_formula: >
+      OR = 2.99, 95% CI 2.47-3.62. log_or = ln(2.99) = 1.095273;
+      se = (ln(3.62) - ln(2.47))/3.92 = (1.286474 - 0.904218)/3.92 = 0.097514.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = harm, and CARRIED SPECIFICALLY AS A MEASURE OF HOW MUCH REVERSE CAUSATION AND CONFOUNDING
+      INFLATE CROSS-SECTIONAL ESTIMATES IN THIS FIELD. Same exposure definition, same cohort, same authors:
+      cross-sectional OR 2.99, longitudinal HR 1.55. The cross-sectional estimate is roughly 2.5x larger on
+      the log scale (1.095 vs 0.438). When people with dementia and people who will get dementia are compared
+      on their current sleep, the association is enormous; when sleep is measured first and dementia counted
+      later, it more than halves. Almost every alarming sleep-and-dementia figure in popular writing traces to
+      a design closer to the first than the second. This pair of numbers is the cleanest within-study
+      quantification of that inflation available to the shard.
+    covariates: ["not recoverable from the abstract"]
+    followup_years: 0.0
+    cohort_family: "CHARLS"
+    quote: "We observed the strongest dementia risk among individuals reporting extreme sleep durations (<5h or >10h), both cross-sectional (OR=2.99, 95% CI: 2.47-3.62, P<0.001) and longitudinally (HR=1.55, 95% CI: 1.25-1.91, P<0.001)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: mr_insomnia_on_dementia_positive_while_sleep_duration_untested_or_null
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "two-sample Mendelian randomization, genetically predicted INSOMNIA -> dementia"}
+    scale: log_or
+    unit: null
+    value: 0.058269
+    se: 0.028640
+    ci: [0.009950, 0.122218]
+    conversion_formula: >
+      OR = 1.06, 95% CI 1.01-1.13. log_or = ln(1.06) = 0.058269;
+      se = (ln(1.13) - ln(1.01))/3.92 = (0.122218 - 0.009950)/3.92 = 0.028640.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = higher dementia odds with genetic liability to INSOMNIA. THE EXPOSURE IS INSOMNIA, NOT SHORT
+      SLEEP DURATION, and the distinction is the whole point. This paper ran MR and obtained a positive result
+      for insomnia (a disorder of sleep initiation/maintenance with hyperarousal physiology) while its
+      dose-response analysis of DURATION was U-shaped, i.e. the genetic signal attaches to the sleep-quality
+      construct rather than to hours slept. The authors themselves label it "suggestive". A voluntarily
+      short-sleeping 19-year-old who falls asleep quickly and sleeps well when allowed to is not the insomnia
+      phenotype, so this estimate does not transfer to him.
+    covariates: ["sensitivity analyses reported as confirming robustness; specifics not recoverable from the abstract"]
+    followup_years: null
+    cohort_family: null
+    quote: "MR findings provided suggestive evidence for a potential causal effect of insomnia on dementia risk (OR=1.06, 95% CI: 1.01-1.13, P=0.029)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: >
+    Weakest observational record in the shard on design grounds. Concerns: (1) ABSTRACT ONLY, online ahead of
+    print, no covariate list, no case counts; (2) only 4 years of follow-up in a cohort aged 45+, which is far
+    inside the dementia prodrome, so the longitudinal estimate is not meaningfully protected against reverse
+    causation either; (3) dementia in CHARLS is not clinically adjudicated in the way it is in Whitehall II or
+    ARIC and typically relies on cognitive-test cutoffs and informant report, which inflates outcome
+    misclassification; (4) the exposure collapses both tails of the distribution, making the headline HR
+    uninterpretable for a one-tailed question; (5) the MR exposure (insomnia) is not the observational exposure
+    (duration), so the paper's triangulation claim does not actually triangulate.
+funding: "not stated in the retrieved abstract"
+notes: >
+  RETAINED FOR ONE HIGH-VALUE INTERNAL COMPARISON, not for its effect sizes: the same authors, same cohort and
+  same exposure definition give cross-sectional OR 2.99 and longitudinal HR 1.55. That is a direct,
+  within-study measurement of design-induced inflation in this literature, and it is the number to reach for
+  when a popular source quotes a large sleep-dementia figure without saying whether sleep was measured before
+  or after the outcome.
+  U-SHAPE CONFIRMED AGAIN, VERBATIM: "Restricted cubic spline analyses demonstrated a significant U-shaped
+  dose-response association (P for nonlinearity <0.001)." That is now five independent U-shape or
+  inverted-U findings in this shard (wu2018.yaml, liang2019.yaml, xu2020.yaml, yuan2022.yaml, this record).
+  The U-shape is the single most reproducible feature of the sleep-duration-dementia literature, and a U-shape
+  is intrinsically hard to reconcile with a monotone clearance mechanism: no amount of glymphatic reasoning
+  predicts that ten hours of sleep is as bad as five.
+  THE AUTHORS' CONCLUSION OVERREACHES ITS OWN DATA, verbatim: "Optimizing sleep duration and managing insomnia
+  may help reduce dementia risk in Chinese middle-aged and older adults." Their MR tested insomnia, not
+  duration; their duration analysis was observational with 4-year follow-up. "Optimizing sleep duration ...
+  may help reduce dementia risk" is not supported by anything they report. This is a good example of the
+  authorial move that this shard was created to detect.
+  THRESHOLD NOTE FOR THE SUBJECT: the harmful short category here is <5 h. The subject sleeps 5-6 h on
+  weekdays and 7-8 h at weekends and on holidays, so he does not fall in the exposed category of this study
+  even taking it at face value.
+  AGE FIELDS: age_range is null because CHARLS enrols adults aged 45 and older with no printed upper
+  bound and the schema requires numeric bounds. The authors describe the sample as "Chinese
+  middle-aged and older adults".
+shard: "s14_dementia_amyloid"

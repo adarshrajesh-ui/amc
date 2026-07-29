@@ -1,0 +1,123 @@
+study_id: bubu2017
+citation: "Bubu OM, Brannick M, Mortimer J, Umasabor-Bubu O, Sebastiao YV, Wen Y, Schwartz S, Borenstein AR, Wu Y, Morgan D, Anderson WM. Sleep, Cognitive impairment, and Alzheimer's disease: A Systematic Review and Meta-Analysis. Sleep. 2017 Jan 1;40(1):zsw032."
+doi: "10.1093/sleep/zsw032"
+pmid: "28364458"
+url: "https://pubmed.ncbi.nlm.nih.gov/28364458/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Sleep, Cognitive impairment, and Alzheimer's disease: A Systematic Review and Meta-Analysis."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 69216
+n_studies_pooled: 27
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multiple"
+  adolescent_match: poor_elderly
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_alzheimers_disease_any_sleep_problem
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "individuals with any sleep problem or sleep disorder vs individuals without - NOT specifically short sleep duration"}
+    scale: log_rr
+    unit: null
+    value: 0.43825
+    se: 0.11081
+    ci: [0.22314, 0.65752]
+    conversion_formula: >
+      RR = 1.55, 95% CI 1.25-1.93. log_rr = ln(1.55) = 0.43825;
+      se = (ln(1.93) - ln(1.25))/3.92 = (0.65752 - 0.22314)/3.92 = 0.11081.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = harm. CRITICAL EXPOSURE MISMATCH: the exposure here is "sleep problems or disorders" as a
+      lumped category, which in this literature is dominated by INSOMNIA and SLEEP-DISORDERED BREATHING,
+      not by voluntary short sleep in a healthy person. Obstructive sleep apnoea has an independent
+      hypoxic mechanism with no bearing on a 19-year-old sleeping 5-6 h by choice. This estimate must NOT
+      be read as a sleep-duration effect.
+    covariates: ["as adjusted in the contributing primary studies (heterogeneous)"]
+    followup_years: null
+    cohort_family: null
+    quote: "RESULTS: Twenty-seven observational studies (n = 69216 participants) that provided 52 RR estimates were included in the meta-analysis. Individuals with sleep problems had a 1.55 (95% CI: 1.25-1.93), 1.65 (95% CI: 1.45-1.86), and 3.78 (95% CI: 2.27-6.30) times higher risk of AD, cognitive impairment, and preclinical AD than individuals without sleep problems, respectively."
+  - outcome_domain: neurodegeneration
+    outcome_construct: combined_cognitive_impairment_and_or_alzheimers_disease_any_sleep_problem
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "any sleep problem or disorder vs none, combined outcome of cognitive impairment and/or AD"}
+    scale: log_rr
+    unit: null
+    value: 0.51879
+    se: 0.05455
+    ci: [0.41211, 0.62594]
+    conversion_formula: >
+      RR = 1.68, 95% CI 1.51-1.87. log_rr = ln(1.68) = 0.51879;
+      se = (ln(1.87) - ln(1.51))/3.92 = (0.62594 - 0.41211)/3.92 = 0.05455.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = harm. This is the number behind the widely repeated "sleep problems raise dementia risk
+      by about 68 percent" and the "15 percent of Alzheimer's is attributable to sleep problems" claim.
+      Both rest on a lumped exposure that mixes insomnia, apnoea, fragmentation and duration, and on
+      studies that overwhelmingly measured sleep in older adults already inside the dementia prodrome.
+    covariates: ["as adjusted in the contributing primary studies (heterogeneous)"]
+    followup_years: null
+    cohort_family: null
+    quote: "The overall meta-analysis revealed that individuals with sleep problems had a 1.68 (95% CI: 1.51-1.87) times higher risk for the combined outcome of cognitive impairment and/or AD. Approximately 15% of AD in the population may be attributed to sleep problems."
+  - outcome_domain: neurodegeneration
+    outcome_construct: preclinical_alzheimers_disease_any_sleep_problem
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "any sleep problem or disorder vs none, outcome = PRECLINICAL AD (biomarker-defined)"}
+    scale: log_rr
+    unit: null
+    value: 1.32972
+    se: 0.26040
+    ci: [0.81978, 1.84055]
+    conversion_formula: >
+      RR = 3.78, 95% CI 2.27-6.30. log_rr = ln(3.78) = 1.32972;
+      se = (ln(6.30) - ln(2.27))/3.92 = (1.84055 - 0.81978)/3.92 = 0.26040.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = harm, and by far the largest estimate in the paper - which is itself the giveaway. An
+      RR of 3.78 for PRECLINICAL (biomarker-defined, asymptomatic) AD against 1.55 for clinical AD is the
+      signature of reverse causation and cross-sectional design: the sickest brains, defined by biomarker,
+      are the ones with disturbed sleep measured at the same time. Included here PRECISELY so the pooler
+      does not treat the largest number in the literature as the strongest evidence.
+    covariates: ["as adjusted in the contributing primary studies (heterogeneous)"]
+    followup_years: null
+    cohort_family: null
+    quote: "Individuals with sleep problems had a 1.55 (95% CI: 1.25-1.93), 1.65 (95% CI: 1.45-1.86), and 3.78 (95% CI: 2.27-6.30) times higher risk of AD, cognitive impairment, and preclinical AD than individuals without sleep problems, respectively."
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: >
+    Widely cited and heavily over-read. Concerns: (1) the exposure is a lumped "sleep problems or
+    disorders" construct spanning insomnia, sleep-disordered breathing, fragmentation, circadian
+    disruption and duration, so the pooled RR does not correspond to any single intervenable exposure and
+    certainly not to habitual short sleep; (2) 52 RR estimates were extracted from 27 studies, so the
+    estimates are statistically dependent within study; (3) no heterogeneity statistic (I2) is reported in
+    the abstract, and the full text is paywalled with no PMC deposit, so the heterogeneity of these pooled
+    estimates is UNKNOWN to this shard - a significant gap given that later meta-analyses of the same
+    literature report I2 of 65-94 %; (4) follow-up durations of contributing studies are not stated in the
+    abstract, so the exposure-to-diagnosis interval cannot be assessed; (5) the population attributable
+    risk of ~15 % is computed from associations that the more recent follow-up-stratified analysis
+    (howard2024.yaml) suggests are substantially prodromal, which would make the PAR an overestimate of
+    anything preventable.
+funding: "See paper"
+notes: >
+  Retrieved as ABSTRACT ONLY (Sleep 2017 40(1) is paywalled; no PMC deposit found). All numbers above are
+  verbatim from the structured abstract. Heterogeneity and follow-up durations, which the task
+  specifically asked for, ARE NOT REPORTED IN THE ABSTRACT and could not be obtained - recorded as an
+  explicit gap rather than guessed.
+  WHY THIS RECORD IS INCLUDED DESPITE ITS PROBLEMS: it is the single most-cited source for the popular
+  claim, so the report needs it on the record with its exposure definition stated plainly. It is NOT a
+  sleep-duration meta-analysis. For sleep duration specifically, use fan2019.yaml, wu2018.yaml,
+  liang2019.yaml and howard2024.yaml - and note that fan2019 found SHORT sleep duration NOT significantly
+  associated with dementia at all.
+shard: "s14_dementia_amyloid"

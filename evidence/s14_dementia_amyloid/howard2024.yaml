@@ -1,0 +1,156 @@
+study_id: howard2024
+citation: "Howard C, Mukadam N, Hui EK, Livingston G. The effects of sleep duration on the risk of dementia incidence in short and long follow-up studies: A systematic review and meta-analysis. Sleep Medicine. 2024 Dec;124:522-530. (Corrigendum: Sleep Medicine. 2025 May;129:131, doi 10.1016/j.sleep.2025.02.039, PMID 40022863.)"
+doi: "10.1016/j.sleep.2024.10.022"
+pmid: "39442346"
+url: "https://pubmed.ncbi.nlm.nih.gov/39442346/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "The effects of sleep duration on the risk of dementia incidence in short and long follow-up studies: A systematic review and meta-analysis."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: null
+n_studies_pooled: 31
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multiple"
+  adolescent_match: poor_elderly
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_dementia_brief_sleep_LONG_followup_over_10_years
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: null, duration_days: null,
+               contrast_label: "brief sleep duration <=6 h/night vs referent, pooled across 5 studies with follow-up >10 years"}
+    scale: log_rr
+    unit: null
+    value: 0.11333
+    se: 0.07804
+    ci: [-0.05129, 0.25464]
+    conversion_formula: >
+      RR = 1.12, 95% CI 0.95-1.29. log_rr = ln(1.12) = 0.11333;
+      se = (ln(1.29) - ln(0.95))/3.92 = (0.25464 - (-0.05129))/3.92 = 0.07804.
+      Heterogeneity I2 = 65.91%, 5 studies.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE point estimate, CI CROSSES THE NULL. THIS IS THE SINGLE MOST DECISION-RELEVANT NUMBER IN
+      THE ENTIRE SHARD. When you restrict the literature to studies with more than 10 years between
+      measuring sleep and diagnosing dementia - i.e. studies in which the exposure plausibly predates the
+      dementia prodrome - the association between short sleep and dementia is NOT statistically
+      significant. The authors' own conclusion is that brief sleep is a prodromal symptom, not a risk
+      factor.
+    covariates: ["as adjusted in the contributing primary studies (heterogeneous)"]
+    followup_years: 10.0
+    cohort_family: null
+    quote: "Studies with long follow-ups (>10 years) did not show a significantly increased risk (RR - 1·12; 0·95-1·29; I2 = 65·91 %; 5 studies)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_dementia_brief_sleep_SHORT_followup_under_10_years
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: null, duration_days: null,
+               contrast_label: "brief sleep duration <=6 h/night vs referent, pooled across 6 studies with follow-up <=10 years"}
+    scale: log_rr
+    unit: null
+    value: 0.37844
+    se: null
+    ci: null
+    conversion_formula: >
+      RR = 1.46 (log_rr = ln(1.46) = 0.37844). SE IS NOT DERIVABLE AND IS DELIBERATELY LEFT NULL. The
+      published abstract prints the interval as "95 % Confidence Intervals [CIs] 1·48-1·77", which is
+      internally impossible: the lower confidence bound (1.48) exceeds the point estimate (1.46). This is
+      a typographical or transcription error in the published article. A corrigendum exists
+      (Sleep Med 2025;129:131, doi 10.1016/j.sleep.2025.02.039, PMID 40022863, verified) but its content
+      is paywalled with no PMC deposit and could not be retrieved, so the corrected interval is UNKNOWN to
+      this shard. Per the hard rule against inventing an SE, se is null. Heterogeneity I2 = 88.92 %,
+      6 studies.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = harm. This is the estimate that matches the headline claim, and it comes ONLY from studies
+      with 10 years or less between exposure and diagnosis - the window in which the dementia prodrome can
+      itself have shortened sleep. Its heterogeneity is extreme (I2 = 88.92 %) and its published CI is
+      corrupt. Treat with maximum caution; do not use as a pooled input without the corrigendum.
+    covariates: ["as adjusted in the contributing primary studies (heterogeneous)"]
+    followup_years: 10.0
+    cohort_family: null
+    quote: "For brief sleep duration, a meta-analysis of short follow-up studies (≤10 years) found a 46 % increased risk of future dementia (relative risk [RR] - 1·46; 95 % Confidence Intervals [CIs] 1·48-1·77; I2 = 88·92 %, 6 studies)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_dementia_extended_sleep_LONG_followup_over_10_years
+    exposure: {type: other, dose_h: 9, referent_h: null, duration_days: null,
+               contrast_label: "extended sleep duration >=9 h/night vs referent, pooled across 4 studies with follow-up >10 years"}
+    scale: log_rr
+    unit: null
+    value: 0.55389
+    se: 0.13188
+    ci: [0.26236, 0.77932]
+    conversion_formula: >
+      RR = 1.74, 95% CI 1.30-2.18. log_rr = ln(1.74) = 0.55389;
+      se = (ln(2.18) - ln(1.30))/3.92 = (0.77932 - 0.26236)/3.92 = 0.13188. I2 = 86.56 %, 4 studies.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = harm from LONG sleep, not short sleep. This is the estimate that SURVIVES restriction to
+      long follow-up, and it points the opposite way from the popular narrative: the durable signal in this
+      literature is for sleeping NINE HOURS OR MORE, an exposure the subject does not have (his long
+      nights are occasional 10-11 h weekend catch-up, not habitual >=9 h). Long sleep is widely read as a
+      marker of poor underlying health rather than a cause.
+    covariates: ["as adjusted in the contributing primary studies (heterogeneous)"]
+    followup_years: 10.0
+    cohort_family: null
+    quote: "For extended sleep duration, a meta-analysis of short and long follow-up studies reported an increased risk of dementia (respectively RR - 2·20; 1·11-3·3; I2 = 94·17 %; 4 studies and RR - 1·74; 1·30-2·18; I2 = 86·56 %; 4 studies)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_dementia_extended_sleep_SHORT_followup_under_10_years
+    exposure: {type: other, dose_h: 9, referent_h: null, duration_days: null,
+               contrast_label: "extended sleep duration >=9 h/night vs referent, pooled across 4 studies with follow-up <=10 years"}
+    scale: log_rr
+    unit: null
+    value: 0.78846
+    se: 0.27795
+    ci: [0.10436, 1.19392]
+    conversion_formula: >
+      RR = 2.20, 95% CI 1.11-3.3. log_rr = ln(2.20) = 0.78846;
+      se = (ln(3.3) - ln(1.11))/3.92 = (1.19392 - 0.10436)/3.92 = 0.27795. I2 = 94.17 %, 4 studies.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = harm from long sleep. Note the attenuation from 2.20 (short follow-up) to 1.74 (long
+      follow-up), consistent with part but not all of the long-sleep signal being prodromal. I2 = 94.17 %
+      is near-total heterogeneity; the pooled point estimate is close to meaningless on its own.
+    covariates: ["as adjusted in the contributing primary studies (heterogeneous)"]
+    followup_years: 10.0
+    cohort_family: null
+    quote: "For extended sleep duration, a meta-analysis of short and long follow-up studies reported an increased risk of dementia (respectively RR - 2·20; 1·11-3·3; I2 = 94·17 %; 4 studies and RR - 1·74; 1·30-2·18; I2 = 86·56 %; 4 studies)."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    The design is exactly right for the causal question - stratifying by follow-up length is the standard
+    way to probe reverse causation in this literature - and quality of primary evidence was assessed with
+    the Newcastle-Ottawa scale. Serious limitations, several conceded by the authors: heterogeneity is
+    very high in every stratum (I2 65.9 % to 94.2 %), so the pooled estimates are not describing a common
+    effect; each stratum rests on only 4-6 studies; the >10 year threshold is a crude proxy for
+    "pre-prodromal" when the prodrome is estimated at 15-20 years; the published CI for the headline brief
+    sleep estimate is internally impossible and a corrigendum was issued that this shard could not
+    retrieve. Verbatim self-assessment: "However, our results had high heterogeneity limiting external
+    validity and generalisability."
+funding: "See paper; authors declare no competing interests"
+notes: >
+  THE PIVOTAL RECORD FOR CAUSAL INTERPRETATION. Retrieved as ABSTRACT ONLY (paywalled, no PMC deposit -
+  verified by querying NCBI for a PMC id, none exists). 31 studies met inclusion criteria; searches run
+  14 April 2023.
+  The authors' own bottom line, verbatim: "Our findings suggest that brief sleep duration might be a
+  prodromal symptom but not a risk factor of dementia. Extended sleep duration may be a risk factor."
+  CONTRADICTION TO FLAG FOR THE POOLER: van Wanrooij 2025 (vanwanrooij2025.yaml) performed the same
+  manoeuvre in a single cohort with lag times from 2.2 to 23.8 years and reached the OPPOSITE conclusion -
+  that the short-sleep association gets STRONGER at lag times >=15 years and that it is the LONG-sleep
+  association that is the reverse-causation artefact. These two papers cannot both be right. The honest
+  summary is that whether short sleep is prodrome or cause is UNRESOLVED, and that the two best attempts
+  to resolve it disagree in direction.
+  A CORRIGENDUM WAS ISSUED for this article. Its existence is verified (PMID 40022863, DOI
+  10.1016/j.sleep.2025.02.039, indexed as "Erratum for Sleep Med. 2024 Dec;124:522-530"), but the
+  corrigendum text is paywalled and its content is UNKNOWN to this shard. Any downstream use of the
+  RR 1.46 short-follow-up estimate must first obtain the corrigendum.
+shard: "s14_dementia_amyloid"

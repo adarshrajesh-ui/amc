@@ -1,0 +1,115 @@
+study_id: liang2019
+citation: "Liang Y, Qu LB, Liu H. Non-linear associations between sleep duration and the risks of mild cognitive impairment/dementia and cognitive decline: a dose-response meta-analysis of observational studies. Aging Clinical and Experimental Research. 2019 Mar;31(3):309-320."
+doi: "10.1007/s40520-018-1005-y"
+pmid: "30039452"
+url: "https://pubmed.ncbi.nlm.nih.gov/30039452/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Non-linear associations between sleep duration and the risks of mild cognitive impairment/dementia and cognitive decline: a dose-response meta-analysis of observational studies."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: dose_response_meta_analysis
+tier: T5
+n: 62937
+n_studies_pooled: 9
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multiple"
+  adolescent_match: poor_elderly
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: mci_or_dementia_risk_per_additional_hour_of_sleep_LINEAR_term
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "pooled RR per 1 hour INCREASE in habitual sleep duration, linear dose-response term, 4 estimates"}
+    scale: log_rr
+    unit: null
+    value: -0.02020
+    se: 0.00777
+    ci: [-0.03046, 0.0]
+    conversion_formula: >
+      RR = 0.98 per 1 h increase, 95% CI 0.97-1.00. log_rr = ln(0.98) = -0.02020;
+      se = (ln(1.00) - ln(0.97))/3.92 = (0 - (-0.03046))/3.92 = 0.00777. Heterogeneity I2 = 0%, P = 0.42,
+      n = 4 estimates. SIGN CONVENTION WARNING: this is per hour MORE sleep, so it is the reciprocal of a
+      per-hour-less exposure; to express per hour LESS sleep, negate: log_rr = +0.02020.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      NEGATIVE = each additional hour of sleep is associated with slightly LOWER MCI/dementia risk, i.e.
+      each hour LESS is associated with about 2 percent higher risk. The upper CI bound is exactly 1.00
+      and P = 0.42, so THE LINEAR TERM IS NULL. Magnitude matters enormously here: even taken at face
+      value, a 2 percent relative change per hour is a tiny effect, and the authors report I2 = 0%, so
+      this null is precise rather than merely underpowered.
+    covariates: ["as adjusted in the contributing primary studies"]
+    followup_years: null
+    cohort_family: null
+    quote: "RESULTS: Five prospective cohort studies and 4 cross-sectional studies were eligible for inclusion criteria, which involved 62937 individuals, and documented 2718 MCI/dementia cases and 5596 cognitive decline cases. The pooled RR per 1 h increases in sleep duration was 0.99 (95% CI 0.97-1.01, I2 = 62.40%, P = 0.02, n = 6) for cognitive decline risk, and 0.98 (95% CI 0.97-1.00, I2 = 0%, P = 0.42, n = 4) for MCI/dementia risk."
+  - outcome_domain: cognition
+    outcome_construct: cognitive_decline_risk_per_additional_hour_of_sleep_LINEAR_term
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "pooled RR per 1 hour INCREASE in habitual sleep duration, cognitive decline outcome, 6 estimates"}
+    scale: log_rr
+    unit: null
+    value: -0.01005
+    se: 0.01031
+    ci: [-0.03046, 0.00995]
+    conversion_formula: >
+      RR = 0.99 per 1 h increase, 95% CI 0.97-1.01. log_rr = ln(0.99) = -0.01005;
+      se = (ln(1.01) - ln(0.97))/3.92 = (0.00995 - (-0.03046))/3.92 = 0.01031. I2 = 62.40%, P = 0.02,
+      n = 6. Negate for a per-hour-less exposure.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      NEGATIVE and NULL (CI spans 1.00). One hour less habitual sleep is associated with roughly a
+      1 percent relative increase in cognitive decline risk, indistinguishable from zero.
+    covariates: ["as adjusted in the contributing primary studies"]
+    followup_years: null
+    cohort_family: null
+    quote: "The pooled RR per 1 h increases in sleep duration was 0.99 (95% CI 0.97-1.01, I2 = 62.40%, P = 0.02, n = 6) for cognitive decline risk, and 0.98 (95% CI 0.97-1.00, I2 = 0%, P = 0.42, n = 4) for MCI/dementia risk."
+  - outcome_domain: neurodegeneration
+    outcome_construct: sleep_duration_at_the_nadir_of_the_fitted_nonlinear_curve
+    exposure: {type: descriptive, dose_h: 7.0, referent_h: null, duration_days: null,
+               contrast_label: "peak (lowest-risk) sleep duration from the restricted cubic spline dose-response model"}
+    scale: hours
+    unit: "hours of sleep per night at minimum risk"
+    value: 7.0
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported as "Similar U-shaped non-linear relationship of sleep duration and the risks of MCI/dementia
+      and cognitive decline was revealed, respectively (all Pnon-linearity < 0.001), whose peaks are
+      approximately 7 h." Descriptive; no SE published.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Descriptive nadir, not an effect estimate. Corroborates wu2018's 7-8 h optimum."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Similar U-shaped non-linear relationship of sleep duration and the risks of MCI/dementia and cognitive decline was revealed, respectively (all Pnon-linearity < 0.001), whose peaks are approximately 7 h."
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: >
+    Four of the nine included studies are CROSS-SECTIONAL, which for a dose-response analysis of an
+    incident outcome is a serious design flaw and makes the pooled estimates partly uninterpretable as
+    risk. Heterogeneity is substantial for the cognitive decline outcome (I2 = 62.40 %). Only 4 estimates
+    contribute to the MCI/dementia linear term. Full text is paywalled with no PMC deposit, so contributing
+    study characteristics and follow-up durations are UNKNOWN to this shard. The authors themselves call
+    for randomized trials.
+funding: "See paper"
+notes: >
+  Retrieved as ABSTRACT ONLY (paywalled, no PMC deposit). Included primarily for the PER-HOUR estimates,
+  which are the most directly usable form of this literature for a dose-based model and which are both
+  NULL and TINY: roughly 1-2 percent relative risk change per hour of sleep, with confidence intervals
+  including no effect. This is a useful sanity check on the categorical estimates. A subject sleeping
+  about 1.5 h less than optimal on weekdays would, on the linear term alone, sit at roughly RR 1.03 -
+  a magnitude that is not distinguishable from zero and is dwarfed by the confounding structure of the
+  underlying cohorts. The categorical short-vs-normal estimates in the same literature (HR 1.2-1.5) are
+  much larger than the per-hour linear term implies, which is itself evidence that the categorical
+  contrasts are capturing something other than a smooth duration dose-response - most plausibly a
+  distinct subgroup with disordered rather than merely curtailed sleep.
+shard: "s14_dementia_amyloid"

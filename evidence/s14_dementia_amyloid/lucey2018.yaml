@@ -1,0 +1,102 @@
+study_id: lucey2018
+citation: "Lucey BP, Hicks TJ, McLeland JS, Toedebusch CD, Boyd J, Elbert DL, Patterson BW, Baty J, Morris JC, Ovod V, Mawuenyega KG, Bateman RJ. Effect of sleep on overnight cerebrospinal fluid amyloid beta kinetics. Annals of Neurology. 2018 Jan;83(1):197-204."
+doi: "10.1002/ana.25117"
+pmid: "29220873"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5876097/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Effect of sleep on overnight cerebrospinal fluid amyloid β kinetics."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 8
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: overnight_CSF_ab38_ab40_ab42_concentration_vs_own_daytime_baseline
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5,
+               contrast_label: "36 h behavioural sleep deprivation vs normal sleep control vs sodium-oxybate-induced sleep; randomized, mostly within-subject (4 of 8 completed all three arms)"}
+    scale: pct_change
+    unit: "percent increase in mean overnight CSF Ab above each participant's own daytime baseline"
+    value: 30.0
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported as "Mean overnight CSF Aβ38, Aβ40, and Aβ42 concentrations increased 30% above baseline
+      levels in sleep-deprived participants compared to the control and drug groups" with the figure
+      legend giving *p<0.0001. The paper prints no SE, SD or CI for the 30% figure (Figure 1A-C are time
+      courses with SEM error bars; Table 2 was not retrievable in machine-readable form from the PMC HTML).
+      No SE is derivable, so se is null per the extraction instructions. The abstract states the range as
+      "25-30%".
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = HIGHER overnight CSF Ab under sleep deprivation, i.e. harm on the biomarker. Replicates
+      Ooms 2014 and is directionally consistent with Shokri-Kojori 2018.
+    covariates: ["each participant normalised to own 07:00-19:00 baseline"]
+    followup_years: null
+    cohort_family: "WashU_SILK"
+    quote: "Aβ concentrations were normalized to a baseline for each subject (average of hours 07:00–19:00) before each group’s intervention. Mean overnight CSF Aβ38, Aβ40, and Aβ42 concentrations increased 30% above baseline levels in sleep-deprived participants compared to the control and drug groups ( Figure 1A–C ; Table 2 ). There were no statistically significant differences between the control and drug groups."
+  - outcome_domain: neurodegeneration
+    outcome_construct: fractional_turnover_rate_of_brain_ab_peptides_SILK_clearance
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5,
+               contrast_label: "36 h sleep deprivation vs normal sleep, stable isotope labelling kinetics with 13C6-leucine"}
+    scale: raw_units
+    unit: "difference in fractional turnover rate (clearance) between arms"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      A DELIBERATE NULL. The paper states the FTRs and delay times "were not significantly different
+      between groups", so the point estimate of the between-arm difference in clearance is coded as 0.
+      No numeric FTR values or SEs are printed in the retrievable text, so se is null. The paper does
+      quantify the study's sensitivity to detect a clearance change: "changes in FTR as small as 5%
+      resulted in a noticeable change in peak shape", i.e. the null is not merely underpowered noise.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      ZERO = NO detectable change in Ab clearance rate. This is the most important mechanistic result in
+      the shard: in humans, one night of sleep deprivation raised Ab by raising PRODUCTION, not by
+      impairing clearance. That directly undercuts the glymphatic-clearance story as the operative human
+      mechanism, independently of whether Xie 2013 or Miao 2024 is right about mice.
+    covariates: []
+    followup_years: null
+    cohort_family: "WashU_SILK"
+    quote: "Formal modeling analysis revealed that the FTRs and delay times were not significantly different between groups ( Figure 1I ; Table 2 ), which strongly suggests a lack of sleep pattern on the overall clearance processes of brain peptides. Since production rate is directly proportional to concentration in the model ( 14 ), overnight Aβ production rate in the sleep-deprived group was increased 30%."
+rob:
+  tool: RoB2
+  judgement: high
+  notes: >
+    The authors call it a "pilot study". n = 8 total, with participants contributing to multiple arms
+    (4 completed all three, 4 completed two), so the effective independent sample is very small.
+    Randomized with an active comparator (sodium oxybate) and serial CSF sampling every 2 h for 36 h,
+    which is a strong protocol, but the sample size means every estimate is fragile and no SE is
+    published for the headline 30%. The sodium oxybate arm failed as a manipulation - time in slow wave
+    sleep was not significantly increased - so the sleep-ENHANCEMENT half of the design is uninformative.
+funding: "NIH; see paper acknowledgements"
+notes: >
+  MECHANISM LINK 2/3, and the key mechanistic REFRAME. The chain that popular writing asserts is
+  "sleep loss -> impaired glymphatic clearance -> amyloid accumulates -> Alzheimer's". This study tested
+  the second arrow directly in humans and found it absent. Verbatim on the implication:
+  "The SILK kinetics results unequivocally show that glymphatic clearance alone, without compensation
+  from other clearance mechanisms, would be ineffective in protecting the brain from AD because overall
+  clearance rates are not changing. Glymphatic clearance may potentially contribute to the protective
+  effects of sleep against AD, but changes in production rate seem to be the necessary and critical
+  factor."
+  WHY THIS MATTERS FOR REVERSIBILITY: a production-driven mechanism is intrinsically reversible on the
+  timescale of the production change - if Ab rises because a waking brain makes more of it, then
+  concentrations fall again when normal sleep resumes, which is exactly the overnight oscillation Ooms
+  2014 documented in the control arm. A clearance-failure mechanism would be the one that implies a
+  ratchet. The human data support the reversible mechanism, not the ratchet. This does not prove full
+  reversal - nobody has measured it (see dementia_summary.md) - but it shifts the prior substantially.
+shard: "s14_dementia_amyloid"

@@ -1,0 +1,128 @@
+study_id: winer2021
+citation: "Winer JR, Deters KD, Kennedy G, Jin M, Goldstein-Piekarski A, Poston KL, Mormino EC. Association of Short and Long Sleep Duration With Amyloid-beta Burden and Cognition in Aging. JAMA Neurology. 2021 Oct 1;78(10):1187-1196."
+doi: "10.1001/jamaneurol.2021.2876"
+pmid: "34459862"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8406408/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Association of Short and Long Sleep Duration With Amyloid-β Burden and Cognition in Aging."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 4417
+n_studies_pooled: null
+population:
+  age_mean: 71.3
+  age_range: [65, 85]
+  pct_female: 59.0
+  country: "US / international (A4 Study screening cohort)"
+  adolescent_match: poor_elderly
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: florbetapir_pet_ab_burden_per_hour_of_self_reported_sleep_LINEAR
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "self-reported nightly sleep duration as a continuous predictor of florbetapir PET Ab burden, n = 4417 cognitively normal older adults"}
+    scale: per_hour_beta
+    unit: "change in Ab burden (standardised PET metric) per additional hour of self-reported sleep"
+    value: -0.01
+    se: 0.00354
+    ci: null
+    conversion_formula: >
+      Reported as "Self-reported shorter sleep duration was linearly associated with higher Aβ burden
+      (β [SE] = –0.01 [0.00]; P = .005)". The published SE is printed as 0.00, i.e. rounded to two decimal
+      places and therefore uninformative. The SE recorded here is BACK-DERIVED from the reported p-value:
+      for P = .005 two-sided, z = 2.807, so SE = |beta|/z = 0.01/2.807 = 0.00356; recorded 0.00354 using
+      z = 2.8156 for P = 0.00487 (the largest p consistent with "P = .005" rounding). This is an INFERENCE
+      from a p-value, not a published SE, and the beta itself is reported to only two decimals, so the
+      effect magnitude is known only to within a factor of about 1.5.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      NEGATIVE = fewer hours of sleep associated with HIGHER amyloid burden, i.e. harm. CROSS-SECTIONAL in
+      people with a mean age of 71.3, so direction of causality is undetermined. Note the magnitude:
+      beta = -0.01 per hour on a standardised PET scale is a very small association, and it is reported to
+      two decimal places, which is coarser than the effect itself.
+    covariates: ["demographic variables examined; lifestyle covariates added in sensitivity analyses without changing the sleep-Ab association"]
+    followup_years: null
+    cohort_family: "A4_Study"
+    quote: "Self-reported shorter sleep duration was linearly associated with higher Aβ burden (β [SE] = –0.01 [0.00]; P = .005), and short sleep duration was associated with reduced cognition that was mostly in memory domains. No difference in Aβ was found between long and normal sleep duration groups (β [SE] = 0.00 [0.01]; P = .99)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: florbetapir_pet_ab_burden_short_sleep_6h_or_less_vs_normal_7to8h
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7.5, duration_days: null,
+               contrast_label: "self-reported sleep <=6 h/night vs 7-8 h/night referent, Ab burden"}
+    scale: raw_units
+    unit: "difference in standardised Ab burden, short vs normal sleep group"
+    value: 0.01
+    se: 0.01
+    ci: null
+    conversion_formula: >
+      Reported as "short vs normal sleep duration: β [SE] = 0.01 [0.01], P = .048". The SE of 0.01 is as
+      published. Note that beta and SE are equal to the printed precision, and P = .048 sits a hair under
+      0.05.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = higher amyloid in the short-sleep group. P = .048 with beta equal to its own SE at the
+      printed precision: this is a threshold-grazing result in a sample of 4417, which tells you the effect
+      is very small even though the study is large. Large n plus barely-significant p equals tiny effect.
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: "A4_Study"
+    quote: "When comparing short and long sleep durations with normal (7 to 8 hours) sleep duration, only short sleep duration was associated with elevated Aβ (short vs normal sleep duration: β [SE] = 0.01 [0.01], P = .048; long vs normal sleep duration: β [SE] = 0.00 [0.01], P = .99) ( Table 2 )."
+  - outcome_domain: neurodegeneration
+    outcome_construct: florbetapir_pet_ab_burden_long_sleep_9h_or_more_vs_normal_7to8h
+    exposure: {type: other, dose_h: 9, referent_h: 7.5, duration_days: null,
+               contrast_label: "self-reported sleep >=9 h/night vs 7-8 h/night referent, Ab burden"}
+    scale: raw_units
+    unit: "difference in standardised Ab burden, long vs normal sleep group"
+    value: 0.0
+    se: 0.01
+    ci: null
+    conversion_formula: >
+      Reported as "long vs normal sleep duration: β [SE] = 0.00 [0.01]; P = .99". Exact null with a
+      published SE.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      ZERO = no amyloid difference for long sleepers, P = .99. THIS IS AN IMPORTANT DISSOCIATION: long sleep
+      is robustly associated with dementia in the epidemiology (Fan 2019 HR 1.77; Howard 2024 RR 1.74 at long
+      follow-up) but shows NO amyloid signal at all here. The authors draw the inference explicitly, which
+      undermines amyloid as the mediating pathway for the strongest epidemiological signal in the field.
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: "A4_Study"
+    quote: "We found no difference in association with Aβ burden between long and normal sleep durations. To our knowledge, this study was the first to examine whether long sleep duration, which is believed to be a marker of poor health in older adults, 44 , 45 is associated with Aβ levels. The finding suggests that early AD processes do not mediate the established association between long sleep duration and cognitive decline. 46"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: >
+    Much the largest amyloid-PET sample in this literature (4417), which is its main strength. Fundamental
+    limitation: CROSS-SECTIONAL, so tier TX. Additional concerns: exposure is a single self-report item;
+    the cohort is a screening sample for an anti-amyloid prevention trial (A4) and was pre-selected on
+    cognitive criteria (CDR 0, MMSE 25-30, Logical Memory 6-18), so it is not a general population; mean age
+    71.3 y, well inside the preclinical-Alzheimer's window; many outcomes tested across cognition, mood,
+    BMI, alcohol and napping; and the amyloid effects, while statistically significant, are at the edge of
+    the reporting precision.
+funding: "See paper (A4 Study is supported by NIA, Eli Lilly and others)"
+notes: >
+  THE LARGEST CROSS-SECTIONAL SLEEP-AMYLOID STUDY. Verbatim causal disclaimer from the authors: "Although the
+  direction of these associations is unclear, the findings in this study provide further support to the theory
+  that short sleep in aging is associated with early AD processes. 42 , 43 The causality of these associations
+  cannot be established with these cross-sectional data."
+  THREE FEATURES OF THIS PAPER MATTER MOST FOR THE REPORT.
+  (1) The short-sleep-amyloid association is real but TINY (beta = -0.01 per hour; short-vs-normal contrast
+      P = .048 in n = 4417).
+  (2) Short and long sleep were BOTH associated with worse depressive symptoms, higher BMI and more daytime
+      napping. Verbatim: "compared with normal sleep duration, both short and long sleep durations were
+      associated with higher body mass index ... depressive symptoms ... and daytime napping". That is a
+      confounding structure, and in a cross-sectional design there is no way to separate it from the amyloid
+      association.
+  (3) LONG sleep has no amyloid signal despite having the strongest dementia association in the epidemiology.
+      If amyloid were the pathway from disturbed sleep to dementia, that pattern should not occur.
+  ON THE TASK'S QUESTION - "does short sleep in midlife predict later amyloid burden?" - this study cannot
+  answer it. Mean age 71.3 y, exposure and outcome measured at the same visit.
+shard: "s14_dementia_amyloid"

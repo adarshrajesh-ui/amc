@@ -1,0 +1,163 @@
+study_id: xu2020
+citation: "Xu W, Tan CC, Zou JJ, Cao XP, Tan L. Sleep problems and risk of all-cause cognitive decline or dementia: an updated systematic review and meta-analysis. Journal of Neurology, Neurosurgery and Psychiatry. 2020 Mar;91(3):236-244."
+doi: "10.1136/jnnp-2019-321896"
+pmid: "31879285"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7035693/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Sleep problems and risk of all-cause cognitive decline or dementia: an updated systematic review and meta-analysis."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: dose_response_meta_analysis
+tier: T5
+n: 53014
+n_studies_pooled: 13
+population:
+  age_mean: null
+  age_range: [51, 83]
+  pct_female: null
+  country: "multinational (North America, Europe, East Asia)"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: dementia_or_cognitive_decline_shortest_nocturnal_sleep_vs_middle
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "LOWEST category of self-reported nocturnal sleep duration vs middle referent category; 13 cohorts, 53,014 participants, 6,892 cases"}
+    scale: log_rr
+    unit: null
+    value: 0.165514
+    se: 0.077771
+    ci: [0.009950, 0.314811]
+    conversion_formula: >
+      Table 2, row "Dementia or cognitive decline / Lowest vs ref / Nocturnal": 1.18 (1.01-1.37).
+      log_rr = ln(1.18) = 0.165514; se = (ln(1.37) - ln(1.01))/3.92 = (0.314811 - 0.009950)/3.92 = 0.077771.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = harm. Lower bound 1.01, so bare significance, with I-squared = 57%. Note the outcome is the
+      COMPOSITE "dementia or cognitive decline", which is broader and softer than incident dementia; the
+      pure-AD version of this same contrast is null (next effect).
+    covariates: ["multivariable-adjusted estimates as reported by each primary cohort (not harmonised)"]
+    followup_years: null
+    cohort_family: null
+    quote: "Dementia or cognitive decline | Highest vs ref | Nocturnal | 13 | 53,014 (6,892) | 1.41 (1.17-1.70) | 69% (<0.01) | 0.4394 | Lowest vs ref | 1.18 (1.01-1.37) | 57% (<0.01) | 0.1033"
+  - outcome_domain: neurodegeneration
+    outcome_construct: alzheimers_disease_shortest_nocturnal_sleep_vs_middle
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "LOWEST category of nocturnal sleep duration vs middle referent, outcome = Alzheimer's disease; 3 cohorts, 32,555 participants, 4,115 cases"}
+    scale: log_rr
+    unit: null
+    value: 0.019803
+    se: 0.148449
+    ci: [-0.274437, 0.307485]
+    conversion_formula: >
+      Table 2, row "AD / Lowest vs ref / Nocturnal": 1.02 (0.76-1.36).
+      log_rr = ln(1.02) = 0.019803; se = (ln(1.36) - ln(0.76))/3.92 = (0.307485 - (-0.274437))/3.92 = 0.148449.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NULL. RR 1.02 (0.76-1.36) - when the outcome is narrowed from "cognitive disorders" to Alzheimer's
+      disease specifically, the short-sleep association DISAPPEARS ENTIRELY (point estimate essentially 1.00),
+      while in the same table the LONG-sleep association for AD is the strongest effect in the whole
+      meta-analysis at 1.57 (1.33-1.85), I-squared = 0%. This asymmetry is the single most important internal
+      contradiction for the glymphatic story: the mechanism predicts short sleep should drive amyloid and
+      therefore AD, and this is the direction that fails.
+    covariates: ["multivariable-adjusted estimates as reported by each primary cohort (not harmonised)"]
+    followup_years: null
+    cohort_family: null
+    quote: "AD | Highest vs ref | Nocturnal | 3 | 32,555 (4,115) | 1.57 (1.33-1.85) | 0% (0.90) | NA | Lowest vs ref | 1.02 (0.76-1.36) | 54% (0.11) | NA"
+  - outcome_domain: neurodegeneration
+    outcome_construct: alzheimers_disease_longest_nocturnal_sleep_vs_middle
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "HIGHEST category of nocturnal sleep duration vs middle referent, outcome = Alzheimer's disease; 3 cohorts, 32,555 participants, 4,115 cases"}
+    scale: log_rr
+    unit: null
+    value: 0.451076
+    se: 0.084185
+    ci: [0.285179, 0.615186]
+    conversion_formula: >
+      Table 2, row "AD / Highest vs ref / Nocturnal": 1.57 (1.33-1.85).
+      log_rr = ln(1.57) = 0.451076; se = (ln(1.85) - ln(1.33))/3.92 = (0.615186 - 0.285179)/3.92 = 0.084185.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = higher AD risk with LONG sleep. Included deliberately as the comparator that breaks the
+      mechanistic story: this is a LONG-sleep effect, it is 20x larger on the log scale than the short-sleep
+      effect for the same outcome in the same three cohorts, and it has zero heterogeneity. Long sleep has no
+      glymphatic rationale and is widely accepted to be prodromal (see livingston2024.yaml). The exposure
+      whose epidemiology is strongest is the one whose mechanism is weakest.
+    covariates: ["multivariable-adjusted estimates as reported by each primary cohort (not harmonised)"]
+    followup_years: null
+    cohort_family: null
+    quote: "AD | Highest vs ref | Nocturnal | 3 | 32,555 (4,115) | 1.57 (1.33-1.85) | 0% (0.90) | NA"
+  - outcome_domain: sleep_need
+    outcome_construct: dose_response_nadir_optimal_nocturnal_sleep_duration_for_lowest_risk
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "restricted-cubic-spline dose-response across 17 cohorts: the sleep duration at which risk of cognitive disorders is MINIMISED"}
+    scale: hours
+    unit: "hours of nocturnal sleep at the risk minimum"
+    value: 5.8
+    se: null
+    ci: [5.6, 6.0]
+    conversion_formula: >
+      The paper prints the nadir as a RANGE, "roughly 5.6-6 hours". value = 5.8 is the midpoint of that
+      printed range and is the shard's arithmetic, not the paper's; ci carries the printed range itself
+      (5.6, 6.0), which is a REPORTED RANGE AND NOT A CONFIDENCE INTERVAL. se is null because a spline nadir
+      has no standard error in this paper.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NOT A HARM ESTIMATE. This is the location of the risk minimum. It is the most surprising number in this
+      shard and it points AGAINST the channel: in the largest dose-response synthesis of nocturnal sleep and
+      cognitive disorders, risk is LOWEST at roughly 5.6-6 h of self-reported nocturnal sleep, and rises
+      significantly only BELOW 4 h or ABOVE 10 h. The subject's weekday sleep of 5-6 h sits AT OR ADJACENT TO
+      THE NADIR of this curve, not on its ascending limb. Treat this cautiously - it is self-reported sleep in
+      cohorts aged 51-83, and a nadir below population mean sleep is itself a signature of confounding or of
+      over-reporting by the unwell - but it must not be omitted, because it is the direct dose-response
+      answer to the question the factory is asking and it does not support the alarming reading.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Specifically, as for the sleep duration at night, the optimal duration was found to be roughly 5.6-6 hours for lower risk of cognitive disorder ( figure 5A ) and 5.6-7 hours for lower risk of AD ( figure 5B ). The risk of cognitive disorder ( figure 5A ) or AD ( figure 5B ) will be significantly elevated when the nocturnal sleep duration is over 10 hours or less than 4 hours."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    Large, well-conducted update (11,155 records screened, 51 cohorts, prespecified evidence-credibility
+    grading, restricted-cubic-spline dose-response via robust-error meta-regression). Concerns that matter
+    here: (1) the primary outcome for the largest strata is the COMPOSITE "dementia or cognitive decline",
+    which mixes a hard endpoint with continuous test-score change; (2) heterogeneity for the short-sleep
+    stratum is substantial (I-squared = 57%) and for long sleep higher still (69%); (3) all sleep exposures
+    are self-reported; (4) the authors themselves rate follow-up inadequacy and poor generalisability as major
+    bias sources - verbatim: "Poor generalisability, follow-up inadequacy and attrition are major sources of
+    bias"; (5) no lag analysis excluding early cases is reported for sleep duration, so reverse causation is
+    unaddressed for these specific pooled estimates. The authors also state the causal caveat explicitly:
+    "the associations identified by the analyses based on observational cohort studies were not equal to
+    causal relationships."
+funding: "see paper (National Natural Science Foundation of China and related grants)"
+notes: >
+  THE MOST INFORMATIVE DOSE-RESPONSE META-ANALYSIS FOR THIS SHARD, and the one that most directly undercuts
+  the alarming reading of the channel.
+  POPULATION AND FOLLOW-UP, VERBATIM: "All studies are prospective cohort studies with populations from North
+  America (two in Canada and seven in America), Europe (one in Finland, one in Spain and two in Sweden) and
+  East Asia (one in China, one in South Korea and two in Japan). The mean age varied from 51 to 83 years old
+  and the mean follow-up varied from 1 to 22.6 years." The n and n_studies_pooled fields carry the
+  13-cohort/53,014-participant short-sleep stratum; 17 cohorts contributed to the dose-response splines and
+  21 reported sleep duration in total.
+  NONLINEARITY, VERBATIM: "The dose-response analyses revealed significant nonlinear associations between
+  sleep duration and risks of cognitive disorders (p=0.0003 for nocturnal and p=0.017 for total daily
+  duration) or AD (p=0.018 for nocturnal)."
+  WHAT THE PATTERN ACROSS THIS PAPER'S OWN TABLE 2 MEANS. For nocturnal sleep the long-sleep estimate exceeds
+  the short-sleep estimate for every outcome, and for AD specifically the short-sleep estimate is exactly
+  null while the long-sleep estimate is the strongest and most homogeneous result in the paper. For the
+  glymphatic hypothesis to explain this table, the mechanism would have to act through long sleep, which it
+  cannot. The parsimonious reading is that the dominant signal in this literature is prodromal disease
+  lengthening sleep, plus a weak and unstable short-sleep signal attached to a soft composite outcome.
+  ALSO NOTE what this paper found for CHANGE in sleep duration, verbatim: "Meta-analyses of change in sleep
+  duration found that increased duration rather than reduced duration could significantly elevate the risk of
+  cognitive disorders in non-demented elderly." Again: lengthening, not shortening.
+  EXPOSURE AGES 51-83. Nothing here bears on adolescence.
+shard: "s14_dementia_amyloid"

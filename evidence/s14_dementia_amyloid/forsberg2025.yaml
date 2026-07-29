@@ -1,0 +1,105 @@
+study_id: forsberg2025
+citation: "Forsberg A, Olsson M, Blennow K, Zetterberg H, Hedner J, et al. Sleep reduces CSF concentrations of beta-amyloid and tau: a randomized crossover study in healthy adults. Fluids and Barriers of the CNS. 2025;22:73."
+doi: "10.1186/s12987-025-00698-x"
+pmid: "40830882"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12366049/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Sleep reduces CSF concentrations of beta-amyloid and tau: a randomized crossover study in healthy adults."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 12
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [20, 40]
+  pct_female: null
+  country: "Sweden"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: csf_ab40_ab42_ptau_morning_after_sleep_vs_morning_after_total_deprivation
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1,
+               contrast_label: "morning CSF after one night of total sleep deprivation vs morning CSF after one night of sleep, randomized crossover with >4-week washout"}
+    scale: raw_units
+    unit: "direction of difference in CSF Ab40, Ab42 and p-tau (deprivation higher); magnitudes reported only as medians/IQRs in a supplementary table"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: >
+      The paper reports significance and direction but the medians and interquartile ranges are placed in
+      Supplementary Table 1 (a .docx supplement that could not be parsed from the PMC HTML), and Figs 1-2
+      are plotted. Statistical testing was by Friedman test with Dunn's correction, which yields no mean
+      difference or SE. Value is therefore coded as a sign indicator (+1 = higher after deprivation) and
+      se is null. Do not pool.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = HIGHER CSF Ab40, Ab42 and p-tau after total sleep deprivation than after sleep, i.e.
+      independent replication of Ooms 2014 and Lucey 2018 in a randomized crossover with a >4-week
+      washout. Ab38 and total tau did not reach significance. NfL and GFAP - the markers of actual
+      neuronal injury and astroglial activation - were UNCHANGED.
+    covariates: ["randomized crossover", "polysomnography and actigraphy verified", ">4 week washout between conditions"]
+    followup_years: null
+    cohort_family: "Gothenburg_PSD"
+    quote: "Aβ40, Aβ42 and p-tau concentrations were significantly lower in the morning samples collected after sleep than in the samples collected after total sleep deprivation. Differences in Aβ38 and t-tau did not reach statistical significance."
+  - outcome_domain: neurodegeneration
+    outcome_construct: csf_nfl_and_gfap_neuronal_injury_and_astroglial_markers
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1,
+               contrast_label: "one night of total sleep deprivation vs one night of sleep, randomized crossover"}
+    scale: raw_units
+    unit: "change in CSF neurofilament light and GFAP (null result)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      A DELIBERATE NULL. "NfL and GFAP remained stable (Fig. 2 G-H)" and "neurofilament light and GFAP
+      remained unchanged". No numeric values in the retrievable text; se null.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      ZERO = no change in the markers that actually index neuronal injury. This dissociation matters: the
+      solutes that moved (Ab, p-tau) are ones whose CSF concentration tracks synaptic activity and
+      secretion, while the markers of damage did not move at all. One night of total deprivation changes
+      protein traffic; it does not, on this evidence, injure neurons.
+    covariates: []
+    followup_years: null
+    cohort_family: "Gothenburg_PSD"
+    quote: "CSF levels of Aβ and tau tended to be consistently lower after sleep compared with both afternoon sampling and post-sleep deprivation. Concurrently, CSF albumin levels increased after sleep, while neurofilament light and GFAP remained unchanged. Orexin levels rose markedly during sleep deprivation but showed no circadian variation and did not track with biomarker levels."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: >
+    Strong design for the question: randomized crossover, three conditions, polysomnography plus
+    actigraphy verification, and a washout of more than four weeks between conditions, which is longer
+    than any other study in this shard. Concerns: n = 12; non-parametric analysis with no effect sizes or
+    CIs reported in the main text; the two afternoon-vs-morning Ab comparisons were non-significant
+    because "samples from two individuals exhibited the opposite pattern", i.e. individual heterogeneity
+    is large relative to the effect; and the authors themselves flag that lumbar CSF concentrations may
+    reflect sampling-driven redistribution from interstitial fluid rather than brain burden.
+funding: "See paper (Swedish sources; Gothenburg / UK DRI affiliations)"
+notes: >
+  MECHANISM LINK 2, most recent independent replication (2025), and the most useful study in the shard for
+  the REVERSAL question - by design rather than by intent. Each participant passed through all three
+  conditions with MORE THAN FOUR WEEKS of normal living between them, and biomarker levels in the
+  post-sleep condition were the LOWEST of the three regardless of whether that condition came before or
+  after the deprivation condition. That is not a direct test of recovery from a single bad night, but it
+  is strong indirect evidence that a night of total deprivation leaves no measurable CSF residue four
+  weeks later: if it did, the crossover would show carry-over and the post-sleep condition would be
+  contaminated. This is the closest thing to reversal evidence that exists, and it is INDIRECT.
+  The same group's partial-restriction study (olsson2018.yaml) found no amyloid biomarker change at all
+  after 5-8 nights of 4 h sleep, and this paper reiterates the SWS-preservation explanation. Verbatim:
+  "In a previous study, we reported that restricting sleep to less than four hours per night for five
+  consecutive nights did not significantly affect CSF biomarkers for amyloid accumulation or AD-type
+  neurodegeneration, even though the time spent in all sleep stages except slow-wave sleep (SWS) was
+  reduced [ 20 ]. These findings suggest that the preservation of SWS may be sufficient to maintain
+  short-term proteostatic balance despite overall sleep loss."
+  The paper also notes that the glymphatic premise is contested: "sleep and general anesthesia facilitate
+  directional advective fluid movement in the brain parenchyma, enhancing perivenous clearance of
+  neuroactive substances such as Aβ [ 16 ], although this concept is actively debated [ 17 – 19 ]."
+shard: "s14_dementia_amyloid"

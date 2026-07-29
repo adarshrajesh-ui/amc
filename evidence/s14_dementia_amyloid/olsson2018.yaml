@@ -1,0 +1,106 @@
+study_id: olsson2018
+citation: "Olsson M, Arlig J, Hedner J, Blennow K, Zetterberg H. Sleep deprivation and cerebrospinal fluid biomarkers for Alzheimer's disease. Sleep. 2018 May 1;41(5):zsy025."
+doi: "10.1093/sleep/zsy025"
+pmid: "29425372"
+url: "https://pubmed.ncbi.nlm.nih.gov/29425372/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Sleep deprivation and cerebrospinal fluid biomarkers for Alzheimer's disease."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 13
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [20, 40]
+  pct_female: null
+  country: "Sweden"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: csf_ab38_ab40_ab42_ttau_ptau_nfl_gfap_after_5_to_8_nights_of_4h_sleep
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5,
+               contrast_label: "five consecutive nights of maximum 4 h sleep vs five nights of 8 h time in bed, randomized crossover; 4 of 13 extended to eight nights of 4 h"}
+    scale: raw_units
+    unit: "change in CSF amyloid/neurodegeneration biomarkers (null result, no change observed)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      A DELIBERATE NULL. The abstract states "No PSD-related changes in CSF biomarkers for amyloid
+      build-up in the brain, Alzheimer's disease (AD)-type neurodegeneration, or astroglial activation
+      were observed", so the point estimate is coded as 0. No effect sizes, SEs or CIs for the null
+      biomarkers are given in the abstract and the full text is paywalled with no PMC deposit (checked),
+      so se is null and the precision of this null is UNKNOWN. This is a real limitation: with n = 13 the
+      confidence interval around "no change" is certainly wide, and absence of evidence here is weak
+      evidence of absence. It is nonetheless the only published experiment whose exposure matches the
+      subject's exposure type.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      ZERO = NO detectable change in amyloid or neurodegeneration biomarkers after 5-8 nights of severe
+      partial sleep restriction. Direction of harm would be positive. The authors attribute the null to
+      preservation of slow wave sleep under partial restriction.
+    covariates: ["randomized crossover", "polysomnography, actigraphy and observation verified sleep"]
+    followup_years: null
+    cohort_family: "Gothenburg_PSD"
+    quote: "RESULTS: PSD was associated with a 27 per cent increase in CSF orexin concentrations (p = 0.001). No PSD-related changes in CSF biomarkers for amyloid build-up in the brain, Alzheimer's disease (AD)-type neurodegeneration, or astroglial activation were observed. PSD led to a shortening of time spent in all sleep stages except slow-wave sleep (SWS)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: csf_orexin_concentration
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5,
+               contrast_label: "five consecutive nights of maximum 4 h sleep vs five nights of 8 h time in bed"}
+    scale: pct_change
+    unit: "percent increase in CSF orexin"
+    value: 27.0
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported as "a 27 per cent increase in CSF orexin concentrations (p = 0.001)". No SE or CI is given
+      in the abstract; the full text is paywalled. se is null.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = higher CSF orexin under partial restriction. Included as a POSITIVE CONTROL: the protocol
+      demonstrably perturbed a sleep-regulatory neuropeptide, which makes the simultaneous amyloid null
+      harder to dismiss as a failed manipulation. Orexin is separately hypothesised to link to AD, so
+      this is not itself a clean null for neurodegeneration - but it is not an amyloid or tau signal.
+    covariates: []
+    followup_years: null
+    cohort_family: "Gothenburg_PSD"
+    quote: "CONCLUSION: Five to eight consecutive nights of PSD, with preserved SWS, increased CSF orexin but had no effect on CSF biomarkers for amyloid deposition, neuronal injury, and astroglial activation."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: >
+    Randomized crossover in exactly the right age band (20-40 y), with sleep verified by observation,
+    actigraphy and continuous polysomnography - methodologically the best-matched experiment in this
+    shard. Principal concern is power: n = 13, with only 4 extended to eight nights, and no published
+    precision for the null. Also single-centre, and CSF was sampled by routine lumbar puncture after each
+    period rather than serially, so a transient within-night excursion could have been missed.
+funding: "See paper (Swedish Research Council / Sahlgrenska; full statement not in abstract)"
+notes: >
+  DISCONFIRMING EVIDENCE, AND THE CLOSEST EXPOSURE MATCH IN THE ENTIRE SHARD. Every other mechanistic
+  study uses ONE NIGHT OF TOTAL DEPRIVATION. The subject's exposure is repeated PARTIAL restriction to
+  5-6 h. This study restricted 13 healthy 20-40 year olds to a maximum of 4 h for five consecutive
+  nights - more severe than the subject's weekday sleep - and found NO change in CSF amyloid or
+  neurodegeneration biomarkers. Retrieved as ABSTRACT ONLY (paywalled; no PMC deposit).
+  The proposed explanation is mechanistically important and is corroborated by the same group's later
+  crossover study (forsberg2025.yaml), which describes this result as follows: "In a previous study, we
+  reported that restricting sleep to less than four hours per night for five consecutive nights did not
+  significantly affect CSF biomarkers for amyloid accumulation or AD-type neurodegeneration, even though
+  the time spent in all sleep stages except slow-wave sleep (SWS) was reduced [ 20 ]. These findings
+  suggest that the preservation of SWS may be sufficient to maintain short-term proteostatic balance
+  despite overall sleep loss."
+  IMPLICATION FOR THE SUBJECT: under partial restriction, slow wave sleep is defended first and is the
+  last thing lost. Since slow wave activity is the specific sleep feature that every version of the
+  amyloid-clearance hypothesis depends on, partial restriction of the kind the subject experiences is
+  the condition LEAST likely to engage the proposed mechanism. Total deprivation, which abolishes SWS,
+  is the condition most likely to - and that is the only condition in which the positive human findings
+  were obtained. The dose-response literature therefore does not extrapolate downward from total
+  deprivation to 5-6 h nights; if anything the one direct test points the other way.
+shard: "s14_dementia_amyloid"

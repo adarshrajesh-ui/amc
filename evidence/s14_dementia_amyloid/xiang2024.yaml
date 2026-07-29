@@ -1,0 +1,144 @@
+study_id: xiang2024
+citation: "Xiang W, Shen Y, Chen S, Tan H, Cao Q, Xu L. Causal relationship between sleep disorders and the risk of Alzheimer's disease: A Mendelian randomization study. Sleep Medicine. 2024 Aug;120:34-43."
+doi: "10.1016/j.sleep.2024.06.007"
+pmid: "38865787"
+url: "https://pubmed.ncbi.nlm.nih.gov/38865787/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Causal relationship between sleep disorders and the risk of Alzheimer's disease: A Mendelian randomization study."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "European-ancestry GWAS consortia"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: mr_ivw_genetically_predicted_sleep_duration_on_alzheimers_disease
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "two-sample inverse-variance-weighted MR, genetically predicted sleep duration -> Alzheimer's disease"}
+    scale: log_or
+    unit: null
+    value: 0.001998
+    se: 0.001018
+    ci: [0.0, 0.003992]
+    conversion_formula: >
+      OR = 1.002, 95% CI 1.000-1.004. log_or = ln(1.002) = 0.001998.
+      se = (ln(1.004) - ln(1.000))/3.92 = (0.003992 - 0.0)/3.92 = 0.001018.
+      CAVEAT ON THIS SE: the printed lower bound is 1.000, which is the null exactly and is almost certainly
+      a rounding of something marginally above or below 1. Deriving an SE from a rounded-to-the-null bound is
+      fragile, and the resulting SE should be treated as approximate. inferred_from_ci is set true for this
+      reason. Units of the exposure are not stated in the abstract and the shard could not retrieve the full
+      text, so this is most likely per SD or per hour of genetically predicted sleep duration but the shard
+      cannot confirm which - see notes.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = higher AD odds with LONGER genetically predicted sleep duration. READ THE DIRECTION
+      CAREFULLY: this is the ONLY MR result in this shard that reaches nominal significance for sleep duration
+      and it points the OPPOSITE WAY to the popular narrative - the authors' own conclusion is "long sleep
+      durations are a risk factor for AD". It provides NO genetic support for short sleep causing AD.
+      The magnitude is also negligible: an odds ratio of 1.002 per unit of exposure is, for practical
+      purposes, a null with a small p-value attached, and it would round to no change in absolute risk for any
+      individual.
+    covariates: ["MR-Egger and MR-PRESSO screening for horizontal pleiotropy (none detected)", "Cochran's Q for heterogeneity (none detected)"]
+    followup_years: null
+    cohort_family: null
+    quote: "A two-sample MR study revealed a positive causal association between sleep duration and the onset of AD (OR = 1.002, 95 % CI: 1.000-1.004), and the risk of AD increased with increasing sleep duration."
+  - outcome_domain: neurodegeneration
+    outcome_construct: mvmr_genetically_predicted_sleep_duration_on_alzheimers_disease_mutually_adjusted
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "multivariable MR, seven sleep characteristics mutually adjusted, sleep duration -> Alzheimer's disease"}
+    scale: log_or
+    unit: null
+    value: 0.003992
+    se: 0.001779
+    ci: [0.0, 0.006976]
+    conversion_formula: >
+      OR = 1.004, 95% CI 1.000-1.007. log_or = ln(1.004) = 0.003992;
+      se = (ln(1.007) - ln(1.000))/3.92 = 0.006976/3.92 = 0.001779. Same rounded-lower-bound caveat as above.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = higher AD odds with LONGER sleep, and the estimate roughly DOUBLES (1.002 -> 1.004) after
+      mutually adjusting the seven sleep traits, i.e. it survives adjustment. Still a magnitude that is
+      operationally indistinguishable from no effect. The pooler should treat this as "genetic evidence
+      identifies long, not short, sleep, and even then at an ignorable magnitude".
+    covariates: ["six other sleep characteristics mutually adjusted in multivariable MR"]
+    followup_years: null
+    cohort_family: null
+    quote: "In a multivariate MR study with seven sleep characteristics corrected for each other, we found that sleep duration remained causally associated with AD (OR = 1.004, 95 % CI: 1.000-1.007)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: mvmr_genetically_predicted_daytime_napping_on_alzheimers_disease
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "multivariable MR, genetically predicted daytime napping -> Alzheimer's disease"}
+    scale: log_or
+    unit: null
+    value: -0.005013
+    se: 0.002306
+    ci: [-0.009041, 0.0]
+    conversion_formula: >
+      OR = 0.995, 95% CI 0.991-1.000. log_or = ln(0.995) = -0.005013;
+      se = (ln(1.000) - ln(0.991))/3.92 = (0.0 - (-0.009041))/3.92 = 0.002306. Upper bound printed as the
+      null exactly, so the same rounding caveat applies.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      NEGATIVE = LOWER AD odds with more genetically predicted daytime napping, i.e. napping looks PROTECTIVE.
+      Carried because it independently reproduces the protective napping signal in anderson2021.yaml. Two MR
+      studies with different instruments both find napping protective while finding no short-sleep effect.
+      Whatever the truth of that, it is not the pattern a simple "less sleep = more amyloid = more dementia"
+      model predicts.
+    covariates: ["six other sleep characteristics mutually adjusted in multivariable MR"]
+    followup_years: null
+    cohort_family: null
+    quote: "Moreover, we found that after mutual correction, daytime napping had a causal relationship with the onset of AD, and daytime napping may reduce the risk of AD (OR = 0.995, 95 % CI: 0.991-1.000)."
+rob:
+  tool: MR-STROBE
+  judgement: moderate
+  notes: >
+    Standard two-sample plus multivariable MR with the expected sensitivity suite (IVW, weighted median,
+    weighted mode, MR-Egger, simple mode; MR-PRESSO and MR-Egger intercept for pleiotropy; Cochran's Q for
+    heterogeneity), and the authors report no pleiotropy and no heterogeneity. Substantial concerns:
+    (1) ABSTRACT ONLY - the shard could not retrieve the full text, so the GWAS sources, sample sizes,
+    instrument counts, F-statistics and the exposure units are all unverified; (2) the reported effect sizes
+    (OR 1.002-1.004) are so close to the null that they are highly sensitive to which AD GWAS was used and
+    whether it was a case-control or proxy-phenotype GWAS - proxy-phenotype AD GWAS are known to produce
+    attenuated, oddly scaled estimates; (3) an OR of 1.002 with a CI whose lower bound rounds to exactly
+    1.000 is a borderline result presented as a positive finding, and the abstract's conclusion
+    ("long sleep durations are a risk factor for AD") is stronger than the estimate supports;
+    (4) sleep-duration instruments derive from self-reported UK Biobank sleep and are weak and pleiotropic in
+    general; (5) genetic instruments index lifelong average liability, so MR cannot isolate an adolescent
+    exposure window even in principle.
+funding: "not stated in the retrieved abstract"
+notes: >
+  ONE OF FIVE MR STUDIES IN THIS SHARD, AND THE ONLY ONE WITH A NOMINALLY SIGNIFICANT SLEEP-DURATION RESULT -
+  which is why it is included rather than quietly dropped. The full MR picture for this shard:
+  henry2019.yaml (no association of genetically instrumented sleep duration with AD or all-cause dementia),
+  anderson2021.yaml (little evidence for causal effects of sleep traits on AD; napping protective),
+  huang2020.yaml (no forward effect; REVERSE effect of AD genetic liability on sleep duration),
+  guo2024.yaml (no MR support for any sleep characteristic on dementia), and this record. Four null, one
+  marginal and pointing at LONG sleep. Also see yuan2022.yaml, xiong2024.yaml and tao2026.yaml, each of which
+  ran its own MR alongside a cohort analysis and each of which reported no causal sleep-duration effect.
+  THE CONVERGENT MR VERDICT, stated plainly for the pooler: across every Mendelian randomization analysis this
+  shard could locate, there is NO genetic evidence that shorter sleep duration causes Alzheimer's disease or
+  all-cause dementia. The one marginal positive is in the long-sleep direction with an OR of 1.002. If a large
+  causal effect of habitual short sleep on dementia existed, MR with UK Biobank-scale instruments would be
+  among the better-powered ways to see it, and it is not seen.
+  A NOTE ON WHAT MR CAN AND CANNOT SETTLE HERE, because this cuts both ways and the report is required to be
+  blunt in both directions. MR estimates the effect of LIFELONG genetically predicted average sleep duration.
+  That is the right target for "does habitually shorter sleep cause dementia" and the answer is no. It is the
+  WRONG target for "does three years of behaviourally imposed restriction at ages 16-19 cause dementia at 70",
+  because no genetic instrument varies on that schedule. So the MR nulls strongly undercut the general causal
+  claim while leaving a narrow, untested, and entirely unevidenced window-specific hypothesis formally alive.
+  A hypothesis that is merely not excluded is not a basis for a numeric risk delta.
+shard: "s14_dementia_amyloid"

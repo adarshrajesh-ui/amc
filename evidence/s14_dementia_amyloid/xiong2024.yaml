@@ -1,0 +1,132 @@
+study_id: xiong2024
+citation: "Xiong Y, Tvedt J, Akerstedt T, Cadar D, Wang HX. Impact of sleep duration and sleep disturbances on the incidence of dementia and Alzheimer's disease: A 10-year follow-up study. Psychiatry Research. 2024 Mar;333:115760."
+doi: "10.1016/j.psychres.2024.115760"
+pmid: "38301285"
+url: "https://pubmed.ncbi.nlm.nih.gov/38301285/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Impact of sleep duration and sleep disturbances on the incidence of dementia and Alzheimer's disease: A 10-year follow-up study."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 7223
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "UK"
+  adolescent_match: poor_elderly
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_dementia_long_sleep_over_8h_vs_7_to_8h
+    exposure: {type: other, dose_h: null, referent_h: 7.5, duration_days: null,
+               contrast_label: "self-reported long sleep >8 h/night vs ideal 7-8 h/night, adults aged 65+, mean 8 (SD 2.9) y follow-up"}
+    scale: log_hr
+    unit: null
+    value: 0.494696
+    se: null
+    ci: null
+    conversion_formula: >
+      The abstract states long sleep was "associated with 64 % increased risk of incident dementia".
+      Read as HR = 1.64, log_hr = ln(1.64) = 0.494696. NO CONFIDENCE INTERVAL IS GIVEN ANYWHERE IN THE
+      RETRIEVED ABSTRACT and the shard could not obtain the full text, therefore se is NULL and no interval is
+      recorded. Do not impute one.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = higher dementia hazard with LONG sleep. Point estimate only; the pooler must either exclude
+      this effect for lack of variance or handle it with an explicitly assumed SE, flagged as such.
+    covariates: ["Cox regression, covariate set not recoverable from the abstract"]
+    followup_years: 8.0
+    cohort_family: "ELSA"
+    quote: "Long sleep duration (>8 h) was associated with 64 % increased risk of incident dementia and 2-fold high risk of AD compared to ideal sleep duration (7-8 h)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_dementia_short_sleep_under_7h_direction_reverses_by_age_stratum
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: 7.5, duration_days: null,
+               contrast_label: "self-reported short sleep <7 h/night vs 7-8 h, stratified by age: LOWER risk in older-older (>=70 y), HIGHER risk in younger-older adults"}
+    scale: log_hr
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      NO NUMBER IS EXTRACTABLE. The abstract reports only the DIRECTION of the short-sleep association within
+      each age stratum and prints no hazard ratio, no interval and no p-value for either stratum. value is set
+      to 0.0 as a required-field placeholder meaning "sign-discordant across strata, magnitude unreported",
+      and se is null. THIS EFFECT MUST NOT BE POOLED AS A ZERO. It is recorded because the sign reversal is
+      itself the finding.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      SIGN REVERSES WITH AGE, WHICH IS WHY THIS RECORD EXISTS. In the same cohort, with the same exposure
+      instrument and the same outcome, short sleep was associated with LOWER dementia risk among adults aged
+      70+ and HIGHER risk among younger-older adults. A genuine cumulative neurotoxic mechanism cannot flip
+      sign across a five-year age band. A survival-bias / prodromal / confounding account explains it easily.
+      Treat the value 0.0 as a placeholder, not an estimate.
+    covariates: ["Cox regression, covariate set not recoverable from the abstract"]
+    followup_years: 8.0
+    cohort_family: "ELSA"
+    quote: "Short sleep duration (<7 h) was associated with lower risk of incident dementia among older-older but higher risk among younger-older adults."
+  - outcome_domain: neurodegeneration
+    outcome_construct: mr_sleep_duration_on_dementia_null_within_same_paper
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "Mendelian randomization for sleep duration -> dementia, run by the same authors alongside their own cohort analysis"}
+    scale: log_or
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      The authors report only that the MR "did not reveal causal associations between sleep duration and
+      dementia" and print no estimate in the abstract. value = 0.0 encodes a REPORTED NULL with unreported
+      magnitude; se is null. Not poolable as a precise zero.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NULL. Recorded because it is a within-paper contrast: the same authors found observational associations
+      and then failed to find any genetic support for them. That internal discordance is the pattern seen
+      across guo2024.yaml, yuan2022.yaml and tao2026.yaml as well.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The MR study did not reveal causal associations between sleep duration and dementia."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Nationally representative English cohort (ELSA) with register/consensus dementia ascertainment and a
+    within-paper MR triangulation, which is good practice. Concerns: (1) ABSTRACT ONLY - no covariate list,
+    no intervals for the headline estimates, no case counts by stratum; (2) only 5.7% developed dementia
+    (about 412 cases) and 1.7% AD (about 123 cases), so age-stratified short-sleep subgroups are small and the
+    sign reversal could be noise - but a noisy sign reversal is still not evidence of harm; (3) baseline age
+    65+ with mean 8-year follow-up puts almost the entire exposure window inside the plausible dementia
+    prodrome; (4) self-reported single-item sleep duration.
+funding: "not stated in the retrieved abstract"
+notes: >
+  INCLUDED FOR THREE REASONS, none of which is its effect size.
+  FIRST, THE AGE-STRATUM SIGN REVERSAL. Short sleep predicted LOWER dementia risk in those aged 70+ and higher
+  risk in the younger-old, within one cohort. Alongside xu2020.yaml's dose-response nadir at 5.6-6 h and
+  sabia2021.yaml's non-significant age-70 estimate, this is the third independent indication that the
+  short-sleep signal is unstable in exactly the way confounded and prodromally contaminated associations are
+  unstable, rather than the way dose-dependent toxicities behave.
+  SECOND, THE LONG-SLEEP ASYMMETRY AGAIN: +64% for dementia and roughly 2-fold for AD with long sleep, versus
+  a direction-flipping short-sleep signal. Same asymmetry as xu2020.yaml, deckers2024.yaml, fan2019.yaml and
+  livingston2024.yaml. The exposure with no glymphatic rationale keeps producing the larger, more consistent
+  association.
+  THIRD, THE WITHIN-PAPER MR NULL, verbatim: "The MR study did not reveal causal associations between sleep
+  duration and dementia."
+  THE AUTHORS' OWN FRAMING IS BIOMARKER, NOT CAUSE, verbatim: "These findings suggest that self-reported short
+  sleep in younger-older and long sleep in older-older adults and those with frequent alcohol consumption are
+  associated with dementia. Early detection of these sleep patterns may help identify individuals at higher
+  dementia risk." "Early detection" and "identify individuals at higher risk" are screening language. The
+  authors are not claiming a modifiable causal pathway.
+  COHORT AGE 65+. This is the OLDEST exposure window of any record in the shard and therefore the least
+  transportable to a 19-year-old. adolescent_match is poor_elderly.
+  AGE FIELDS: age_range is null because eligibility was open-ended above 65 and the schema requires
+  numeric bounds - verbatim: "older adults (>= 65)".
+shard: "s14_dementia_amyloid"
