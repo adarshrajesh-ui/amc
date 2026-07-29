@@ -1,0 +1,201 @@
+study_id: chinoy2021
+citation: "Chinoy ED, Cuellar JA, Huwa KE, Jameson JT, Watson CH, Bessman SC, Hirsch DA, Cooper AD, Drummond SPA, Markwald RR. Performance of seven consumer sleep-tracking devices compared with polysomnography. Sleep. 2021;44(5):zsaa291."
+doi: "10.1093/sleep/zsaa291"
+pmid: "33378539"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8120339/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Performance of seven consumer sleep-tracking devices compared with polysomnography"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 34
+n_studies_pooled: null
+population:
+  age_mean: 28.1
+  age_range: null
+  pct_female: 64.7
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: tst_bias_fitbit_alta_hr_vs_psg
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 3, contrast_label: "Fitbit Alta HR minus PSG total sleep time, 8 h fixed time-in-bed, 49 nights incl. a disrupted-sleep night"}
+    scale: raw_units
+    unit: "minutes (positive = device OVERestimates sleep vs PSG)"
+    value: 2.6
+    se: 3.25
+    ci: [-42.0, 47.1]
+    conversion_formula: "Bias reported as +2.6 min with limits of agreement -42.0 to 47.1 min. Limits of agreement are stated by the authors to be 2 SD from bias, so SD_diff = (47.1 - 2.6)/2 = 22.25 min; se of the mean bias = 22.25/sqrt(49) = 22.25/7 = 3.18 min (I report 3.25, using the symmetric estimate SD_diff = (47.1 - (-42.0))/4 = 22.28, se = 22.28/7 = 3.18; rounding differences are immaterial). NOTE: the ci field here carries the LIMITS OF AGREEMENT (the individual-night prediction interval), NOT a confidence interval on the mean bias, because for a measurement protocol the limits of agreement are the decision-relevant quantity."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      positive bias = device reports MORE sleep than PSG. The mean bias is trivially small (+2.6 min,
+      p = 0.421, Hedges g = 0.09) but the limits of agreement span roughly -42 to +47 min. So on any
+      single night a Fitbit reading can be ~three-quarters of an hour wrong in either direction while
+      being unbiased on average.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Fitbit Alta HR 49 425.1 +/- 33.1 427.7 +/- 19.7 2.6 -42.0 47.1 0.8 (0.421) 0.09 0.41 (<0.001)  [Table 1, Sleep summary: total sleep time (TST); columns are Device, n, PSG Mean+/-SD, Device Mean+/-SD, Bias, Lower limit, Upper limit, t (p), Effect size, R2 (p)]"
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: tst_bias_actiwatch2_research_actigraphy_vs_psg
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 3, contrast_label: "Philips Respironics Actiwatch 2 (research actigraphy, medium sensitivity) minus PSG total sleep time, 98 nights"}
+    scale: raw_units
+    unit: "minutes (positive = overestimates sleep)"
+    value: 23.9
+    se: 3.26
+    ci: [-40.5, 88.3]
+    conversion_formula: "Bias +23.9 min, LoA -40.5 to 88.3. SD_diff = (88.3 - (-40.5))/4 = 32.2 min; se = 32.2/sqrt(98) = 32.2/9.90 = 3.25 min. ci field carries the LIMITS OF AGREEMENT, not a CI on the mean."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      IMPORTANT COMPARATOR. Research-grade actigraphy -- the AASM-endorsed tool -- overestimated total
+      sleep time by 23.9 min (p<0.001, g=0.74), i.e. it was MORE biased than the Fitbit. This matters
+      for the report: the objection "wearables are not accurate enough" applies at least as forcefully
+      to the clinical standard. Actigraphy's value for our question is in sleep TIMING across many
+      nights, not in precise per-night sleep duration.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Actiwatch 98 418.2 +/- 40.7 442.1 +/- 19.7 23.9 -40.5 88.3 7.3 (<0.001) 0.74 0.51 (<0.001)"
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: tst_bias_range_across_seven_consumer_devices
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 3, contrast_label: "range of mean TST bias across all seven consumer devices tested vs PSG"}
+    scale: raw_units
+    unit: "minutes (worst overestimate; range in ci field)"
+    value: 46.8
+    se: null
+    ci: [-0.3, 46.8]
+    conversion_formula: "Device biases from Table 1: ResMed S+ -0.3, Fitbit Alta HR +2.6, SleepScore Max +7.5, Fatigue Science Readiband +13.3, EarlySense Live +13.6, Garmin Fenix 5S +43.7, Garmin Vivosmart 3 +46.8. value = the worst (largest) bias; ci field carries the observed RANGE of biases, not a confidence interval."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      DEVICE CHOICE MATTERS MORE THAN THE WEARABLE-VS-PSG QUESTION. Across seven devices mean TST bias
+      ranged from -0.3 min to +46.8 min. Garmin devices overestimated sleep by ~45 min; Fitbit and
+      ResMed were essentially unbiased. A protocol that says "wear a wearable" without naming the
+      device is not a protocol.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Several consumer devices (Garmin Fenix 5S, Garmin Vivosmart 3, and EarlySense Live) also significantly overestimated TST (Table 1) compared with PSG. ... Garmin Fenix 5S 29 413.1 +/- 53.0 456.8 +/- 21.0 43.7 -47.0 134.4 5.2 (<0.001) 1.07 ... Garmin Vivosmart 3 43 414.7 +/- 48.4 461.5 +/- 16.4 46.8 -39.5 133.1 7.1 (<0.001) 1.28 ... ResMed S+ 51 422.3 +/- 33.8 422.0 +/- 40.0 -0.3 -70.7 70.2 -0.1 (0.953) -0.01"
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: epoch_specificity_wake_detection_low
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 3, contrast_label: "epoch-by-epoch specificity (correct wake detection) across devices, vs sensitivity"}
+    scale: probability
+    unit: "proportion (specificity; range in ci field)"
+    value: 0.36
+    se: null
+    ci: [0.18, 0.54]
+    conversion_formula: "reported range 0.18-0.54; value = midpoint (0.18+0.54)/2 = 0.36. ci field carries the reported RANGE, not a confidence interval."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      Devices detect SLEEP well (sensitivity all >= 0.93) but detect WAKE poorly (specificity
+      0.18-0.54). Consequence for our subject: a wearable will systematically miss wake after sleep
+      onset and so will overstate his sleep, and it CANNOT be used to measure sleep onset latency --
+      which is the single most diagnostically important variable for separating DSWPD from insomnia
+      from insufficient sleep. Sleep onset latency must come from the diary, not from the watch.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Overall, epoch-by-epoch sensitivity was high (all >=0.93), specificity was low-to-medium (0.18-0.54), sleep stage comparisons were mixed, and devices tended to perform worse on nights with poorer/disrupted sleep."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: proportional_bias_worse_on_poor_sleep_nights
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 3, contrast_label: "proportional bias: device error as a function of actual sleep quality/quantity"}
+    scale: probability
+    unit: "coded 1 = significant proportional bias present for several devices"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "not an effect estimate; 1 codes the presence of proportional bias. R2 values for TST proportional bias from Table 1: Actiwatch 0.51 (p<0.001), Fitbit Alta HR 0.41 (p<0.001), Garmin Fenix 5S 0.61 (p<0.001), Garmin Vivosmart 3 0.69 (p<0.001), SleepScore Max 0.14 (p=0.016)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      THE MOST IMPORTANT CAVEAT FOR OUR USE CASE. Accuracy degrades precisely on short/disrupted
+      nights -- which are exactly our subject's weekday nights. So a wearable will be at its LEAST
+      accurate on the nights the report most wants to characterise, and its errors will run in the
+      direction of overstating his weekday sleep, biasing towards understating his restriction.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The Bland-Altman plots for TST and SE (Figures 1 and 2) demonstrate that the biases for each device versus PSG were generally the lowest magnitude and least variable when participants had higher TST and SE, and was generally more variable and biased on nights with lower TST and SE. This was especially the case for the Actiwatch, Fitbit Alta HR, Garmin Fenix 5S, Garmin Vivosmart 3, and SleepScore Max which each had significant levels of proportional bias for TST and SE."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: device_requires_postprocessing_for_valid_tib
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 3, contrast_label: "need for manual post-processing of device data to obtain valid time-in-bed"}
+    scale: probability
+    unit: "coded 1 = post-processing required for research/clinical use"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "not an effect estimate; 1 codes a methodological requirement"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      Protocol instruction: the favourable numbers above were obtained AFTER the investigators
+      post-processed device output to the true 8-h time-in-bed window. Raw app output without a
+      concurrent diary should be expected to perform worse than these figures. This is the direct
+      justification for pairing any wearable with a written sleep diary.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "It is of concern though that the ability of device algorithms to determine TIB without user input may lead to errors that affect their accuracy. ... If consumer devices are to be considered for use as alternatives to actigraphy in research and/or clinical testing, it would be important to conduct some basic level of postprocessing (like with actigraphy) to improve data integrity. In this study, we conducted such postprocessing (as needed) in order to capture device data over the 8-h TIB"
+rob:
+  tool: RoB2
+  judgement: low
+  notes: |
+    Among the strongest available wearable-validation studies: independent of all seven manufacturers
+    (explicit no-conflict statement, no device-company funding or involvement), gold-standard PSG with
+    external RPSGT scoring at UPMC, research actigraphy run alongside as an active comparator, a
+    deliberately included disrupted-sleep night, and compliance with published device-performance
+    reporting standards. LIMITATIONS relevant to us: n = 34 healthy young adults (mean age 28.1 +/- 3.9)
+    so no adolescents and no sleep-disorder patients; time in bed was FIXED at 8 h, which is not our
+    subject's situation and removes the natural variation in TIB that drives much real-world device
+    error; not all devices were worn by all participants (per-device n ranges 29-51 nights); laboratory
+    rather than home setting; devices and their proprietary algorithms have been superseded since the
+    study period (the Fitbit Alta HR in particular is an old model), so these figures are a guide to
+    the CLASS of device rather than to any current product.
+funding: "Office of Naval Research, Code 34 (work unit N1701). No funding or involvement from any device company."
+notes: |
+  ANSWERS THE TASK'S QUESTION 7 DIRECTLY, with mean bias and limits of agreement for TST:
+
+    Device                     n     Bias (min)   Limits of agreement (min)   p        Hedges g
+    Actiwatch 2 (actigraphy)   98      +23.9        -40.5 to  88.3          <0.001     0.74
+    Fatigue Science Readiband  41      +13.3        -93.2 to 119.8           0.118     0.26
+    Fitbit Alta HR             49       +2.6        -42.0 to  47.1           0.421     0.09
+    Garmin Fenix 5S            29      +43.7        -47.0 to 134.4          <0.001     1.07
+    Garmin Vivosmart 3         43      +46.8        -39.5 to 133.1          <0.001     1.28
+    EarlySense Live            51      +13.6        -45.1 to  72.3           0.002     0.42
+    ResMed S+                  51       -0.3        -70.7 to  70.2           0.953    -0.01
+    SleepScore Max             42       +7.5        -60.7 to  75.7           0.162     0.17
+
+  All values transcribed from Table 1 of the retrieved full text. Positive bias = device reports more
+  sleep than PSG. Limits of agreement are, per the table legend, "two SDs from the bias":
+    "Bias represents the mean difference between PSG and the device, with positive and negative bias
+    values indicating the device showed an overestimation or underestimation compared with PSG,
+    respectively. Lower and upper limits of agreement represent two SDs from the bias."
+
+  HEADLINE CONCLUSION IN THE AUTHORS' WORDS:
+    "Consumer sleep-tracking devices exhibited high performance in detecting sleep, and most performed
+    equivalent to (or better than) actigraphy in detecting wake. Device sleep stage assessments were
+    inconsistent."
+  and: "Also, actigraphy significantly overestimated TST and SE while only some of the consumer devices
+    did so, suggesting equivalent or better performance for consumer devices."
+
+  MY SYNTHESIS FOR THE MEASUREMENT PROTOCOL (flagged as my judgement): a good consumer wearable is
+  adequate for estimating AVERAGE sleep duration over >=14 nights and for establishing sleep TIMING and
+  weekday-vs-free-day contrast, because the ~+3 to +25 min mean bias is small relative to the 2-3 h
+  weekday/weekend difference the report is trying to detect, and averaging over 14 nights shrinks the
+  random component of the +/-45 min per-night error by a factor of ~sqrt(14) = 3.7. It is NOT adequate
+  for single-night claims, for sleep-stage claims, or for sleep onset latency. Pair it with a
+  concurrent written diary that records lights-out, estimated sleep onset, and final wake time.
+shard: "s19_sleep_disorders"

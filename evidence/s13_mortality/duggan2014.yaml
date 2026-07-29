@@ -1,0 +1,141 @@
+study_id: duggan2014
+citation: "Duggan KA, Reynolds CA, Kern ML, Friedman HS. Childhood sleep duration and lifelong mortality risk. Health Psychol. 2014 Oct;33(10):1195-1203."
+doi: "10.1037/hea0000078"
+pmid: "24588628"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4468018/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Childhood sleep duration and lifelong mortality risk."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 1145
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [5, 19]
+  pct_female: null
+  country: "US (California; Terman Life Cycle Study, born 1904-1915)"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_lifelong_males
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "quadratic effect of age-adjusted CHILDHOOD sleep duration (deviation from age-predicted) on lifelong all-cause mortality, MALES"}
+    scale: log_hr
+    unit: "per unit of the squared age-adjusted childhood sleep deviation term (quadratic); NOT per hour"
+    value: 0.139762
+    se: 0.048527
+    ci: [0.048790, 0.239017]
+    conversion_formula: "log_hr = ln(1.15) = 0.139762; se = (ln(1.27) - ln(1.05))/3.92 = 0.048527"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher lifelong mortality for boys who slept EITHER less OR more than predicted for
+      their age (it is a QUADRATIC term, so the HR applies symmetrically to both tails and cannot be
+      attributed to short sleep alone). THE ONLY STUDY I COULD FIND ANYWHERE THAT MEASURES SLEEP IN
+      CHILDHOOD/ADOLESCENCE AND FOLLOWS PARTICIPANTS TO DEATH. Males only; effect absent in females.
+    covariates: ["baseline age", "analysed separately by sex"]
+    followup_years: 85.0
+    cohort_family: "Terman_Life_Cycle_Study"
+    quote: "For males, a quadratic relation emerged: Male children who underslept or overslept compared with peers were at increased risk of lifelong all-cause mortality (HR = 1.15, CIs [1.05, 1.27]). Effect sizes were smaller and nonsignificant in females (HR = 1.02, CIs [0.91, 1.14])."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_lifelong_females
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "quadratic effect of age-adjusted childhood sleep duration on lifelong mortality, FEMALES"}
+    scale: log_hr
+    unit: "per unit of the squared age-adjusted childhood sleep deviation term (quadratic)"
+    value: 0.019803
+    se: 0.057484
+    ci: [-0.094311, 0.131028]
+    conversion_formula: "log_hr = ln(1.02) = 0.019803; se = (ln(1.14) - ln(0.91))/3.92 = 0.057484"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive but null in females. Recorded to establish the sex difference. Note this is the OPPOSITE
+      sex pattern to liu2017, where the adult short-sleep mortality association was present in women and
+      absent in men. The two sex interactions cannot both be a stable biological feature, which is a
+      reason to treat both as chance findings.
+    covariates: ["baseline age", "analysed separately by sex"]
+    followup_years: 85.0
+    cohort_family: "Terman_Life_Cycle_Study"
+    quote: "Effect sizes were smaller and nonsignificant in females (HR = 1.02, CIs [0.91, 1.14])."
+  - outcome_domain: exposure_measurement
+    outcome_construct: childhood_sleep_exposure_ascertainment
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "how childhood sleep duration was measured in the Terman cohort"}
+    scale: probability
+    unit: "proportion of the analysed sample with confirmed deaths by 2009"
+    value: 0.90742
+    se: null
+    ci: null
+    conversion_formula: "1039 confirmed deaths / 1145 participants = 0.90742"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive. Sleep duration was NOT reported by the children: it was DERIVED as the arithmetic
+      difference between parent- or teacher-reported bedtime and waketime, collected once in 1917-1926.
+      That is time in bed, not total sleep time, and it carries no information about sleep quality,
+      latency or awakenings. Nearly the whole cohort (90.7%) is now dead, so this is a near-complete
+      lifetime follow-up - the one genuine strength of the design.
+    covariates: []
+    followup_years: 85.0
+    cohort_family: "Terman_Life_Cycle_Study"
+    quote: "Data from childhood were refined and mortality data collected for 1,145 participants from the Terman Life Cycle Study. Participants were born between 1904 and 1915, lived to at least 1940, and had complete age, bedtime, and waketime data at initial data collection (1917-1926). Homogeneity of the cohort sample (intelligent, mostly White) limits generality but provides natural control of common confounds. Through 2009, 1,039 participants had confirmed deaths. Sleep duration was calculated as the difference between each child's bed and wake times."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: >
+    This is the only age-appropriate exposure in the shard, and it is methodologically weak. (1) Exposure
+    is bedtime-minus-waketime reported by adults about children in 1917-1926 - time in bed, not sleep,
+    with no validation. (2) The mortality effect is modelled as a QUADRATIC deviation term, so the
+    reported HR of 1.15 conflates short and long sleep and cannot be decomposed into a short-sleep
+    effect; the task's question "what is the risk of adolescent short sleep" is therefore not answered
+    even by this study. (3) Left truncation: participants had to survive to 1940 to enter, removing
+    early deaths and any effect expressed in youth. (4) Highly selected sample (Terman recruited
+    high-IQ, mostly White Californian children); the authors concede "Homogeneity of the cohort sample
+    (intelligent, mostly White) limits generality". (5) n = 1145 with a sex-stratified analysis, so the
+    sex difference is underpowered. (6) Sleep was measured ONCE in childhood but almost certainly
+    correlated with lifelong sleep habits, so the design cannot separate "having been a short sleeper as
+    a child" from "having been a short sleeper for eighty years" - which is precisely the distinction our
+    subject's question turns on. (7) Birth cohort 1904-1915: mortality causes, medicine and sleep
+    ecology bear little resemblance to a 2020s college student's.
+funding: null
+notes: >
+  TARGET EXTRACTION #5 (sleep duration and mortality with exposure measured in adolescence or young
+  adulthood). VERDICT: **INSUFFICIENT EVIDENCE**.
+  .
+  I searched systematically for cohorts with adolescent or young-adult sleep exposure and mortality
+  follow-up: PubMed queries combining sleep duration with mortality and adolescents/young adulthood/
+  baseline age 18-30/conscripts/students, plus a Europe PMC title-and-abstract query
+  (TITLE:"sleep" AND TITLE:"mortality") AND (ABSTRACT:"adolescen*" OR ABSTRACT:"young adult*") which
+  returned exactly ONE hit, an unrelated paper on obstructive sleep apnoea in congenital heart disease.
+  This study - a 1917-1926 measurement of children's bedtimes in the Terman cohort - is the ONLY study
+  I found in which sleep was measured before adulthood and participants were followed to death.
+  .
+  AND IT DOES NOT ANSWER THE QUESTION. Three reasons, each independently disqualifying:
+    1. The effect is a QUADRATIC deviation term (HR 1.15 for sleeping either less OR more than
+       age-predicted). There is no short-sleep-specific estimate to extract.
+    2. Participants had to survive to 1940 to be included, so the design is left-truncated and blind to
+       any risk expressed in adolescence or early adulthood.
+    3. Sleep was measured once in childhood and never again. The paper's own interpretation is that
+       "sleep may be a core biobehavioral trait" - i.e. the authors read their finding as evidence that
+       childhood sleep INDEXES a lifelong trait, not that a bounded childhood exposure causes later
+       death. That reading is the opposite of what our subject needs: he had a bounded, externally
+       imposed episode which he can end.
+  .
+  So: for the specific question "what is the mortality cost of three years of sleep restriction at ages
+  16-19 followed by normalisation", the literature contains NO direct evidence. Not weak evidence -
+  none. Any number the downstream model produces for this quantity is an extrapolation from midlife and
+  elderly trait-exposure cohorts, and should be labelled as such.
+  .
+  Access is abstract_only: PMC4468018 is an author manuscript not released to the Europe PMC full-text
+  API (fullTextXML returned HTTP 404). The abstract contains both HRs verbatim.
+  .
+  adolescent_match is set to exact_16_19 on the EXPOSURE AGE only (childhood/adolescence, 1917-1926).
+  Everything else about this study - birth cohort, selection, measurement - is a poor match, and the
+  rob judgement of "high" risk of bias should dominate any use of it.
+shard: "s13_mortality"

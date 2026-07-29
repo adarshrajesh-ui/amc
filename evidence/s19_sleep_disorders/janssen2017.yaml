@@ -1,0 +1,117 @@
+study_id: janssen2017
+citation: "Janssen KC, Phillipson S, O'Connor J, Johns MW. Validation of the Epworth Sleepiness Scale for Children and Adolescents using Rasch analysis. Sleep Med. 2017;33:30-35."
+doi: "10.1016/j.sleep.2017.01.014"
+pmid: "28449902"
+url: "https://pubmed.ncbi.nlm.nih.gov/28449902/"
+verification:
+  crossref_ok: null
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Validation of the Epworth Sleepiness Scale for Children and Adolescents using Rasch analysis."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 297
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [12, 18]
+  pct_female: null
+  country: "Australia"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: ess_chad_internal_validity_established
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "ESS-CHAD internal validity / unidimensionality in adolescents 12-18 y (Rasch + EFA)"}
+    scale: probability
+    unit: "coded 1 = internal validity supported"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "not an effect estimate; 1 codes 'internal validity supported' so the finding survives the schema. No fit statistics, item thresholds or reliability coefficients are given in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Supports USING the ESS-CHAD wording in an adolescent, i.e. the item set measures one sleepiness construct in this age group. It says nothing about where to draw a threshold."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Exploratory factor analysis and Rasch analysis indicated that ESS-CHAD has internal validity and a unidimensional structure with good model fit. Rasch analysis of four subgroups based on gender and year-level were consistent with the overall results. The results were consistent with published ESS results, which strongly indicates that the changes to the scale do not affect the scale's capacity to measure daytime sleepiness."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: ess_chad_adolescent_cutoff_not_established
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "availability of a validated adolescent ESS cut-off score"}
+    scale: probability
+    unit: "coded 0 = no validated adolescent cut-off exists"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "not an effect estimate; 0 codes the ABSENCE of the quantity the task asked for"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      NEGATIVE FINDING, deliberately recorded. The task asked for "adolescent norms if available". The
+      developers of the adolescent instrument state in their own validation paper that accurate
+      adolescent cut-off points remain to be established. Therefore any ESS threshold applied to our
+      18-19 year old subject is borrowed from adults (Johns & Hocking 1997, ESS>10 in workers aged
+      22-59) and must be labelled as such.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "It is concluded that the ESS-CHAD is a reliable and internally valid measure of daytime sleepiness in adolescents 12-18 years old. Further studies are needed to establish the internal validity of the ESS-CHAD for children under 12 years, and to establish external validity and accurate cut-off points for children and adolescents."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: ess_adult_items_inappropriate_for_adolescents
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "rationale for a modified adolescent instrument: adult ESS items reference alcohol and driving"}
+    scale: probability
+    unit: "coded 1 = adult item content requires modification for adolescents"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "not an effect estimate; 1 codes the content-validity problem"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      Practical instruction for the measurement protocol: administer the ESS-CHAD wording rather than
+      the adult ESS to a 19-year-old, because two adult items ("sitting and talking to someone",
+      "in a car, while stopped for a few minutes in traffic", and the alcohol item) either do not
+      apply or invite non-response in this age group. The ESS-CHAD is described here as the official
+      modified version.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The Epworth Sleepiness Scale (ESS) is a widely used scale for daytime sleepiness in adults but contains references to alcohol and driving. The Epworth Sleepiness Scale for Children and Adolescents (ESS-CHAD) has been proposed as the official modified version of the ESS for children and adolescents."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: |
+    ABSTRACT-ONLY retrieval; no mean/SD by age or sex, no item thresholds, no reliability
+    coefficients, no external criterion. n = 297 from only TWO independent (i.e. private,
+    fee-paying) schools in Victoria, Australia -- a narrow and socioeconomically unrepresentative
+    sampling frame, so even if norms had been reported they would not be population norms. Purely
+    internal-structure validation: no external criterion (no MSLT, no PSG, no clinical diagnosis)
+    was used, which is exactly why no cut-off could be derived. Co-authored by the ESS's original
+    developer (M.W. Johns), a conflict of interest for judgements about the instrument.
+funding: "Not available (abstract-only retrieval)."
+notes: |
+  RECORDED PRIMARILY AS A DOCUMENTED ABSENCE. The task brief asked for adolescent ESS norms; the
+  honest answer from the adolescent-instrument validation literature is that the modified instrument
+  (ESS-CHAD) is internally valid in 12-18 year olds but has no established cut-off and no published
+  population norms in this paper. I searched PubMed for adolescent ESS normative/reference-value
+  studies (queries: "Epworth Sleepiness Scale adolescents normative values reference";
+  "Epworth Sleepiness Scale reliability validity adolescents") and the returned records were
+  non-English-language translations/validations of the ESS or ESS-CHAD (Slovenian, Malay, Spanish,
+  Bangla), a narcolepsy-with-cataplexy paediatric validation, and unrelated instruments -- none of
+  them a large representative adolescent normative sample with a derived cut-off.
+
+  CONSEQUENCE FOR THE REPORT: use the ESS-CHAD item wording, score it 0-24 as usual, and interpret it
+  against the ADULT thresholds while stating plainly that the thresholds are unvalidated in this age
+  group:
+      ESS 0-10   within the adult normal-sleeper range
+      ESS 11+    above the adult normal range ("excessive daytime sleepiness")
+      ESS 12-24  the range occupied by adult central-hypersomnolence patients
+  and treat the ESS as a severity/triage measure rather than as a diagnostic test. This limitation is
+  not fatal to the protocol -- for our differential the ESS is doing triage work (is he sleepy enough
+  to warrant objective testing?) rather than case-definition work.
+shard: "s19_sleep_disorders"

@@ -1,0 +1,75 @@
+study_id: danielsson2016
+citation: "Danielsson K, Markström A, Broman JE, von Knorring L, Jansson-Fröjmark M. Delayed sleep phase disorder in a Swedish cohort of adolescents and young adults: Prevalence and associated factors. Chronobiol Int. 2016;33(10):1331-1339."
+doi: "10.1080/07420528.2016.1217002"
+pmid: "27537980"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Delayed sleep phase disorder in a Swedish cohort of adolescents and young adults: Prevalence and associated factors."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 680
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [16, 26]
+  pct_female: null
+  country: "Sweden"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_dspd_dsm5
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "DSPD by DSM-5 criteria (delayed phase + insomnia or sleepiness + distress/dysfunction + >=3 months), ages 16-26"}
+    scale: probability
+    unit: "proportion of the cohort"
+    value: 0.040
+    se: 0.00751
+    ci: [0.0253, 0.0547]
+    conversion_formula: "'DSPD at a frequency of 4%' verbatim from abstract. n = 1000 invited x 0.68 response = 680. se = sqrt(0.040*0.960/680) = 0.00751; Wald 95% CI = [0.0253, 0.0547]. My construction; the paper reports no CI in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive prevalence. THE ONLY RETRIEVED ESTIMATE THAT APPLIES FULL DSM-5 CRITERIA INCLUDING THE DISTRESS/DYSFUNCTION AND 3-MONTH REQUIREMENTS, and it lands at 4.0% - almost exactly the 3.3-4.7% from the two Norwegian ICSD-based surveys. Cross-instrument, cross-country convergence on ~4% is the strongest thing this shard can say about the prior."
+    covariates: []
+    followup_years: null
+    cohort_family: "Uppsala_1000"
+    quote: "DSP occurred at a frequency of 4.6% and DSPD at a frequency of 4% in the investigated cohort."
+  - outcome_domain: circadian
+    outcome_construct: prevalence_delayed_sleep_phase_trait_no_disorder
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "DSP = late sleep onset + preferred late wake-up time, WITHOUT meeting DSM-5 disorder criteria, ages 16-26"}
+    scale: probability
+    unit: "proportion of the cohort"
+    value: 0.046
+    se: 0.00803
+    ci: [0.0303, 0.0617]
+    conversion_formula: "'DSP occurred at a frequency of 4.6%' verbatim. se = sqrt(0.046*0.954/680) = 0.00803; Wald 95% CI = [0.0303, 0.0617]. My construction."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive. THE TASK ASKED FOR TRAIT-VS-DISORDER SEPARATION AND THIS IS THE CLEANEST SOURCE FOR IT: this is the only study that explicitly refused to conflate them ('All previous studies have however not separated DSP from DSPD'). Trait 4.6% and disorder 4.0% are nearly EQUAL here, i.e. roughly half of the delayed-phase population in this age band carries disorder-level impairment. That is consistent with saxvig2012's 68% trait-to-impairment carry-over."
+    covariates: []
+    followup_years: null
+    cohort_family: "Uppsala_1000"
+    quote: "DSP occurred at a frequency of 4.6% and DSPD at a frequency of 4% in the investigated cohort. DSP was more common in males and was associated with not attending educational activity or work, having shift work, nicotine and alcohol use and less rumination. DSPD was equally common in males and females and was associated with not attending educational activity or work and with elevated levels of anxiety."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Random sample of 1,000 Uppsala residents aged 16-26 with a 68% response rate - a much better response rate than sivertsen2021's 30.8% - and the only retrieved study to apply full DSM-5 DSPD criteria and to separate the trait from the disorder by design. Weaknesses: n = 680 gives wide CIs; single Swedish city; all questionnaire-based with no actigraphy or DLMO; the DSP definition ('late sleep onset and a preferred late wake-up time') is not numerically specified in the abstract and I could not read the full text to audit it (Unpaywall reports no OA location for 10.1080/07420528.2016.1217002)."
+funding: "Not stated in the abstract"
+notes: |
+  ACCESS: abstract only.
+  DECISION-RELEVANT DISSOCIATION REPORTED BY THIS PAPER: DSP (trait) was more common in MALES and was associated
+  with "not attending educational activity or work", shift work, nicotine and alcohol use, and LESS rumination.
+  DSPD (disorder) was EQUALLY common in males and females and was associated with elevated ANXIETY. So the trait
+  tracks lifestyle/substance/schedule freedom, while the disorder tracks anxiety. For our subject - a male student
+  in full-time education, no reported substance use, no reported anxiety - the profile that fits is neither cleanly.
+  The absence of "not attending educational activity" (he is entering his second year of college) is a mild point
+  AGAINST both DSP and DSPD, since disengagement from a fixed schedule is the strongest correlate of both in this
+  cohort.
+  THE SEX FINDING CONTRADICTS sivertsen2021. Danielsson finds DSPD equally common in males and females;
+  sivertsen2021 finds males 4.7% vs females 2.7%; sivertsen2013 finds boys 2.7% vs girls 3.7%. I therefore do NOT
+  apply a male-sex likelihood ratio to the DSWPD prior in the recommended posterior, and I say so explicitly in
+  screening_priors.md.
+shard: "s19_sleep_disorders"

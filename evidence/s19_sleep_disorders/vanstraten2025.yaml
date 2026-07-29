@@ -1,0 +1,170 @@
+study_id: vanstraten2025
+citation: "van Straten A, Weinreich KJ, Fabian B, Reesen J, Grigori S, Luik AI, Harrer M, Lancee J. The Prevalence of Insomnia Disorder in the General Population: A Meta-Analysis. J Sleep Res. 2025;34(5):e70089."
+doi: "10.1111/jsr.70089"
+pmid: "40369835"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "The Prevalence of Insomnia Disorder in the General Population: A Meta-Analysis."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 47
+n_studies_pooled: 47
+population:
+  age_mean: null
+  age_range: [37, 85]
+  pct_female: null
+  country: "multinational (47 studies: 14 Asia, 11 Europe, 8 North America, 5 Oceania, 3 South America, 2 Africa, 3 Middle East, 1 multi-region)"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: insomnia_disorder_prevalence_dsm_diagnostic_interview
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "pooled general-population prevalence of insomnia DISORDER, studies using a diagnostic INTERVIEW to establish DSM criteria; three-level hierarchical random-effects model, true random samples only"}
+    scale: probability
+    unit: "proportion"
+    value: 0.124
+    se: 0.0199
+    ci: [0.090, 0.168]
+    conversion_formula: "Reported 12.4% (95% CI 9.0-16.8%). se on the proportion scale approximated as (0.168 - 0.090)/3.92 = 0.078/3.92 = 0.0199. NOTE the interval is asymmetric because pooling was done on a transformed scale, so this se is an approximation adequate for downstream weighting but not exact. The authors' own PREDICTION interval for this estimate is 3.5% to 35.5% - an order of magnitude wide - and that is the honest expression of uncertainty."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "This is the authors' preferred estimate: 'In our view the best estimate of the prevalence, based on DSM interviews, is 12.4%.' It is a GENERAL-POPULATION, predominantly MIDLIFE-AND-OLDER figure - see notes for why it must not be used directly as our subject's prior."
+    covariates: ["gender distribution", "mean sample age"]
+    followup_years: null
+    cohort_family: null
+    quote: "The pooled prevalence of all studies using an interview to establish the DSM criteria was 12.4% (95% CI: 9.0-16.8%), and of self- report questions assessing the DSM diagnosis 16.3% (95% CI: 11.3%-23.0%)."
+  - outcome_domain: baseline_risk
+    outcome_construct: insomnia_disorder_prevalence_dsm_selfreport
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "pooled prevalence, studies using SELF-REPORT questions to assess the DSM diagnosis"}
+    scale: probability
+    unit: "proportion"
+    value: 0.163
+    se: 0.0298
+    ci: [0.113, 0.230]
+    conversion_formula: "se approximated as (0.230 - 0.113)/3.92 = 0.117/3.92 = 0.0298"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "Self-report inflates prevalence relative to interview by roughly 4 percentage points (16.3% vs 12.4%), a ~1.3x ratio. This is the quantitative correction factor to apply when reading the questionnaire-based adolescent estimates in this shard (hysing2013, sivertsen2019, williams2020), all of which are self-report."
+    covariates: ["gender distribution", "mean sample age"]
+    followup_years: null
+    cohort_family: null
+    quote: "The prevalence rate of studies assessing the diagnoses through an interviewer or clinician was 12.4% (95% CI: 9.0%-16.8%) while the prevalence rate of studies assessing the diagnoses through self- report was 16.3% (95% CI: 11.3%-23.0%)."
+  - outcome_domain: exposure_measurement
+    outcome_construct: population_prevalence_at_isi_cutoff_10
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "pooled general-population prevalence when insomnia is defined as ISI >= 10 (the recommended cut-off)"}
+    scale: probability
+    unit: "proportion screening positive"
+    value: 0.125
+    se: 0.0548
+    ci: [0.053, 0.268]
+    conversion_formula: "Reported 12.5% (95% CI 5.3%-26.8%). se approximated as (0.268 - 0.053)/3.92 = 0.215/3.92 = 0.0548. Wide because few studies used this exact threshold."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "CRITERION-VALIDATION FINDING: the ISI >= 10 threshold recovers a population prevalence (12.5%) essentially identical to the DSM diagnostic-interview prevalence (12.4%). That is external, population-level corroboration of the cut-off I recommend from morin2011, obtained by a completely different route than Morin's ROC analysis."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "For the Insomnia Severity Index (ISI) the recommended cut- off of 10 yielded a prevalence rate of 12.5% (95% CI: 5.3%-26.8%). A lower cut- off (ISI 8, meaning less severe insomnia) increased the prevalence to 25.1% (95% CI: 17.8%-34.2%) while a higher cut- off (ISI 15) decreased the prevalence to 7.5% (95% CI: 4.8%-11.4%)."
+  - outcome_domain: exposure_measurement
+    outcome_construct: population_prevalence_at_isi_cutoff_15
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "pooled general-population prevalence at ISI >= 15 (moderate-severe insomnia threshold)"}
+    scale: probability
+    unit: "proportion screening positive"
+    value: 0.075
+    se: 0.0168
+    ci: [0.048, 0.114]
+    conversion_formula: "se approximated as (0.114 - 0.048)/3.92 = 0.066/3.92 = 0.0168"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "Supports the ISI >= 15 referral threshold in instruments.md: it selects roughly the most affected 7.5% of the population, a defensible referral yield. ISI >= 8 by contrast flags 25.1% and would over-refer."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "while a higher cut- off (ISI 15) decreased the prevalence to 7.5% (95% CI: 4.8%-11.4%)"
+  - outcome_domain: baseline_risk
+    outcome_construct: insomnia_prevalence_by_study_quality
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "pooled prevalence in HIGH-quality vs LOWER-quality studies"}
+    scale: probability
+    unit: "proportion (value = high-quality estimate; ci field carries the high vs low CONTRAST, not a confidence interval)"
+    value: 0.107
+    se: null
+    ci: [0.107, 0.171]
+    conversion_formula: "High-quality studies 10.7%, lower-quality studies 17.1%, difference significant at p = 0.02. No CIs were reported for these subgroup estimates, so se is null and the ci field carries the two contrasted point estimates."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Better studies find LESS insomnia - the standard direction. Combined with the interview-vs-self-report gap, this means the ~20% questionnaire-based adolescent figures in this shard are likely upper bounds."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "prevalence rate (p = 0.02). High quality studies reported lower prevalence rates (10.7%) than lower quality studies (17.1%)."
+  - outcome_domain: baseline_risk
+    outcome_construct: age_moderator_null_but_uninformative_for_adolescents
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "meta-regression of pooled insomnia prevalence on MEAN SAMPLE AGE across 16 estimates"}
+    scale: per_hour_beta
+    unit: "regression coefficient b per year of mean sample age (NOT per hour; the schema has no per-year scale, see conversion_formula)"
+    value: -0.122
+    se: null
+    ci: null
+    conversion_formula: "Reported b = -0.122, p = 0.98, n_est = 16 (Table 4). No SE or CI reported, so se is null. SCALE FIELD CAVEAT: I used per_hour_beta because the schema enum has no per-year-of-age option; the unit field states the true metric. Do not feed this into any per-hour sleep-dose pooling."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL result (p = 0.98), and it is UNINFORMATIVE FOR OUR SUBJECT rather than reassuring. The mean age of the contributing studies ranged only from 37.0 to 84.3 years, so the regression contains no data from anywhere near 18-19 y. The authors themselves flag the analysis as weak because 21 of 47 studies (44.6%) never reported a mean age. Read as: this meta-analysis cannot speak to adolescent or young-adult insomnia prevalence at all."
+    covariates: ["percentage male"]
+    followup_years: null
+    cohort_family: null
+    quote: "The mean age of the study samples was not associated with the prevalence rate (p = 0.98) nor was the percentage of males in the studies (p = 0.94; Table 4). However, quite a few studies did not report mean age of the sample but used age categories instead (n = 21; 44.6%)"
+rob:
+  tool: AMSTAR-2
+  judgement: low
+  notes: |
+    Methodologically the strongest prevalence meta-analysis in this shard. PROSPERO-registered
+    (CRD42023402745), PRISMA-adherent, 3 databases to April 2024, 6,732 titles/abstracts and 621
+    full texts screened in duplicate to 47 included studies. Crucially it applied restrictive
+    eligibility criteria that most prevalence reviews do not: general population only, TRUE RANDOM
+    sample required, and a diagnosis established either by interview, by DSM-based self-report
+    questions, or by a questionnaire with a DSM-anchored cut-off. Three-level hierarchical
+    random-effects model, stratified by diagnosis type, adjusted for gender and mean age, quality
+    assessed, and - to their credit - PREDICTION intervals reported alongside confidence intervals.
+    The single limitation that matters most for us is not a flaw in the review but a gap in the
+    underlying literature: mean sample ages span 37.0 to 84.3 years, so ADOLESCENTS AND YOUNG
+    ADULTS ARE ENTIRELY ABSENT. The authors also note the intervals are wide (prediction interval
+    3.5%-35.5% for the interview-based estimate) and that 87% of studies failed one quality item on
+    sample coverage.
+funding: "None. 'Funding: The authors received no specific funding for this work.'"
+notes: |
+  THIS IS THE "RECENT META-ANALYSIS" THE TASK ASKED FOR on insomnia prevalence, and it is the
+  best-conducted prevalence synthesis I found. It does three things for this shard, one of which is
+  a caution against using it naively.
+
+  1. IT ANCHORS THE MEASUREMENT-MODE CORRECTION. Interview 12.4% vs self-report 16.3% vs
+     high-quality 10.7% vs low-quality 17.1%. Every adolescent insomnia figure I extracted
+     (hysing2013 18.5%, sivertsen2019 22.2%, williams2020 22.1%) is questionnaire-based, and the
+     only interview-based adolescent figure I have (johnson2006, 10.7% lifetime DSM-IV) is the
+     lowest. The direction and rough magnitude of that gap is now quantified: expect
+     questionnaire-based prevalence to run ~1.3x the interview-based value. My adopted adolescent
+     prior of 18% is therefore more likely to be too HIGH than too low.
+
+  2. IT INDEPENDENTLY CORROBORATES THE ISI >= 10 CUT-OFF. Defining insomnia as ISI >= 10 produced
+     a population prevalence of 12.5%, against 12.4% from DSM diagnostic interviews. The authors
+     make this argument explicitly in their conclusion: "the two instruments we currently recommend
+     are the Sleep Condition Indictor ... or the Insomnia Severity Index with a cut- off of 10,
+     which although based on the DSM- IV resulted in a prevalence estimate close to that of the
+     clinical interviews." That is population-level criterion validation reached by a different
+     route from Morin's ROC analysis (morin2011.yaml, sensitivity 86.1%/specificity 87.7% at >= 10),
+     and it also supports ISI >= 15 as a referral threshold (7.5% of the population).
+
+  3. DO NOT USE 12.4% AS OUR SUBJECT'S PRIOR, AND DO NOT READ THE NULL AGE MODERATOR AS LICENSING
+     THAT. The mean age of contributing studies ranges from 37.0 to 84.3 years. There is no
+     adolescent or young-adult data in this synthesis, so the finding that "mean age was not
+     associated with prevalence (p = 0.98)" is a statement about the 37-84 y range only. Applying
+     it to an 18-19 year old would be extrapolating a null result outside its support. I have kept
+     my adolescent-specific prior (18%, range 10.7-22.2%) sourced from age-matched primaries, and
+     I now flag that it should probably be shaded downwards toward the interview-based end.
+
+  A NOTE ON WHAT "NEW INSOMNIA PREVALENCE META-ANALYSIS" DID NOT DELIVER: I was hoping for an
+  age-stratified estimate covering 16-25 y. It does not exist here. That absence is itself a
+  finding and I have recorded it in station_report.md as part of the biggest evidence gap.
+shard: "s19_sleep_disorders"

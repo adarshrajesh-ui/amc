@@ -1,0 +1,59 @@
+study_id: pallesen2011
+citation: "Pallesen S, Saxvig IW, Molde H, Sørensen E, Wilhelmsen-Langeland A, Bjorvatn B. Brief report: behaviorally induced insufficient sleep syndrome in older adolescents: prevalence and correlates. J Adolesc. 2011;34(2):391-395."
+doi: "10.1016/j.adolescence.2010.02.005"
+pmid: "20303581"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Brief report: behaviorally induced insufficient sleep syndrome in older adolescents: prevalence and correlates."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 1285
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [16, 19]
+  pct_female: null
+  country: "Norway"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_biiss_older_adolescents
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "BIISS = excessive daytime sleepiness + short habitual sleep duration + sleeping considerably longer than usual at weekends/vacations, ages 16-19"}
+    scale: probability
+    unit: "proportion of high school students"
+    value: 0.104
+    se: 0.00852
+    ci: [0.0873, 0.1207]
+    conversion_formula: "'The estimated prevalence of BIISS was 10.4%' verbatim from abstract. n = 1285. se = sqrt(0.104*0.896/1285) = 0.00852; Wald 95% CI = 0.104 +/- 1.96*se = [0.0873, 0.1207]. My construction; the paper reports no CI in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive prevalence. THE BEST-AGE-MATCHED BIISS PRIOR AVAILABLE (16-19 years, exactly our subject's exposure window) and it agrees with williams2020's 9.9% in US college students. BIISS is roughly 2.5x as common as DSWPD in this age band (10.4% vs 3.3-4.7%), which is the single most important fact for ordering the differential."
+    covariates: []
+    followup_years: null
+    cohort_family: "Hordaland_HS_2005"
+    quote: "The aim of the present study was to investigate the prevalence of \"behaviorally induced insufficient sleep syndrome (BIISS)\" which is a newly defined hypersomnia, among adolescents. BIISS is characterized by excessive daytime sleepiness, short habitual sleep duration and sleeping considerably longer than usual during weekend/vacations. ... In all, 1285 high school students (aged 16-19 years) participated by completing self-report questionnaires on a computer. The estimated prevalence of BIISS was 10.4%."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "Cluster-sampled Norwegian high-school survey with the ideal age range, but a brief report with everything self-reported by computer questionnaire, no response rate in the abstract, and a BIISS operationalization that the abstract describes only in prose ('excessive daytime sleepiness, short habitual sleep duration and sleeping considerably longer than usual during weekend/vacations') without stating the numerical thresholds. Because I could only obtain the abstract (Unpaywall reports no OA location for 10.1016/j.adolescence.2010.02.005), I cannot verify how 'short' and 'considerably longer' were quantified, which is exactly the specification that determines whether our subject would be counted. Same n=1285 sample as saxvig2012, so the two are not independent."
+funding: "Not stated in the abstract"
+notes: |
+  ACCESS: abstract only.
+  DIRECT RELEVANCE OF THE BIISS DEFINITION TO OUR SUBJECT: the three defining features named in the abstract are
+  (1) excessive daytime sleepiness, (2) short habitual sleep duration, (3) sleeping considerably longer than usual at
+  weekends or on vacation. Our subject's reported history satisfies (2) and (3) on its face and leaves (1) unmeasured.
+  His occasional 10-11 h weekend nights are a POSITIVE BIISS feature under this definition. They are NOT a positive
+  DSWPD feature - sivertsen2013 finds weekend sleep DURATION does not differ between DSPS and non-DSPS adolescents
+  (8:28 vs 8:38, P = .168).
+  SAME COHORT AS saxvig2012 (n = 1285, Hordaland high schools, Bergen group). cohort_family Hordaland_HS_2005 on both.
+  In that one sample: BIISS 10.4%, delayed sleep phase 8.4%, delayed sleep phase with impairment 5.7%. The papers do
+  not report the overlap, which is a real gap - we cannot tell from this cohort how often the two co-occur.
+  CORRELATES REPORTED BUT NOT CODED (no effect sizes in the abstract): alcohol use and urban residence positively
+  related to BIISS; high maternal education negatively related; BIISS associated with poor grades and with anxiety
+  and depression symptoms.
+shard: "s19_sleep_disorders"

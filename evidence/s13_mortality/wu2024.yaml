@@ -1,0 +1,155 @@
+study_id: wu2024
+citation: "Wu Y, Zhang CY, Liu X, Wang L, Li M, Li Y, Xiao X. Shared genetic architecture and causal relationship between sleep behaviors and lifespan. Transl Psychiatry. 2024 Feb 22;14(1):108."
+doi: "10.1038/s41398-024-02826-x"
+pmid: "38388528"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10883970/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Shared genetic architecture and causal relationship between sleep behaviors and lifespan."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 1012240
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "European ancestry (UK Biobank + 26 independent European-heritage cohorts for the lifespan GWAS)"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: mortality
+    outcome_construct: parental_lifespan_timmers_gwas_residual
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "genetically predicted SHORT sleep duration (binary GWAS trait, self-reported <7 h vs 7-8 h) on lifespan; univariable IVW, 22 instruments"}
+    scale: raw_units
+    unit: "lifespan-GWAS units per unit increase in the log-odds of being a genetically predicted short sleeper. NOT YEARS. The outcome is the Timmers et al. parental-survival Cox residual; the authors do not state the unit."
+    value: -0.60
+    se: 0.176
+    ci: [-0.95, -0.26]
+    conversion_formula: "Reported directly as IVW beta = -0.60 (95% CI -0.95 to -0.26), P = 5.78e-04. se = (-0.26 - (-0.95))/3.92 = 0.69/3.92 = 0.17602."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      negative = SHORTER LIFESPAN. Supports a causal effect of short sleep on lifespan. CRITICAL
+      CAVEAT: the unit is uninterpretable. The exposure is a BINARY liability (log-odds of short-sleep
+      case status), not hours, and the outcome is a transformed Cox residual from the Timmers parental-
+      survival GWAS, not years of life. This beta therefore CANNOT be converted into months of life
+      expectancy without assumptions the paper does not supply. Use it for the SIGN and for evidence of
+      causal direction only; do not use it for magnitude.
+    covariates: ["MR assumptions; MR-Egger intercept P = 0.44 indicating no detected horizontal pleiotropy"]
+    followup_years: null
+    cohort_family: "Timmers_parental_lifespan_GWAS_plus_UK_Biobank"
+    quote: "We found that genetically predicted short sleep duration was causally and negatively associated with lifespan in univariable and multivariable MR analyses, and this effect was partially mediated by coronary artery disease (CAD), type 2 diabetes (T2D) and depression. ... [Table: Short sleep duration on lifespan] IVW | 22 | 38 | -0.60 (-0.95 to -0.26) | 5.78E-04"
+  - outcome_domain: mortality
+    outcome_construct: parental_lifespan_timmers_gwas_residual
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "genetically predicted short sleep on lifespan, MULTIVARIABLE MR conditioning on chronotype and insomnia; 140 instruments"}
+    scale: raw_units
+    unit: "lifespan-GWAS units per unit log-odds of short sleep (NOT years)"
+    value: -0.59
+    se: 0.199
+    ci: [-0.98, -0.20]
+    conversion_formula: "Reported as MVMR IVW beta = -0.59 (95% CI -0.98 to -0.20), P = 0.003. se = (-0.20 - (-0.98))/3.92 = 0.78/3.92 = 0.19898."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      negative = shorter lifespan. Robust to conditioning on chronotype and insomnia (beta essentially
+      unchanged from -0.60 to -0.59), and MR-Egger agrees in direction and is larger (-0.79, -1.21 to
+      -0.21). Importantly, insomnia itself had NO causal effect on lifespan (-0.002, -0.08 to 0.08),
+      which is evidence that the short-sleep signal is not simply an insomnia signal.
+    covariates: ["sleep chronotype", "insomnia"]
+    followup_years: null
+    cohort_family: "Timmers_parental_lifespan_GWAS_plus_UK_Biobank"
+    quote: "After conditioning on chronotype and insomnia, short sleep duration still had a negative causal effect on lifespan (IVW: beta = -0.59, 95%CI = -0.98 to -0.20, P = 0.003; MR-Egger: beta = -0.79, 95%CI = -1.21 to -0.21, P = 0.006) (Table 2). ... No causal effect of sleep chronotype (IVW: beta = 0.04, 95%CI = -0.08 to 0.17, P = 0.50) or insomnia (IVW: beta = -0.002, 95%CI = -0.08 to 0.08, P = 0.96) on lifespan was observed when conditioning on other traits"
+  - outcome_domain: mortality
+    outcome_construct: continuous_sleep_duration_on_lifespan_null
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "genetically predicted CONTINUOUS sleep duration on lifespan; IVW, 5 instruments"}
+    scale: raw_units
+    unit: "lifespan-GWAS units per genetically predicted hour of sleep (NOT years)"
+    value: 0.24
+    se: 0.388
+    ci: [-0.52, 1.00]
+    conversion_formula: "Reported as IVW beta = 0.24 (95% CI -0.52 to 1.00), P = 0.54. se = (1.00 - (-0.52))/3.92 = 1.52/3.92 = 0.38776."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive would mean longer sleep -> longer life, but this is NULL (P = 0.54) and rests on only
+      5 instruments. IMPORTANT INTERNAL INCONSISTENCY: the BINARY short-sleep trait shows a strong
+      causal effect while the CONTINUOUS sleep-duration trait shows nothing. If short sleep causally
+      shortened life through a dose-dependent mechanism, the continuous instrument should also detect
+      it. This discordance is the single biggest reason to distrust the magnitude of the binary result -
+      it is consistent with the binary "short sleeper" trait capturing something categorical (a
+      disordered-sleep or psychiatric liability) rather than sleep duration per se.
+    covariates: ["MR assumptions"]
+    followup_years: null
+    cohort_family: "Timmers_parental_lifespan_GWAS_plus_UK_Biobank"
+    quote: "[Univariable MR table, sleep duration on lifespan] IVW | 5 | 39 | 0.24 (-0.52 to 1.00) | 0.54"
+  - outcome_domain: mortality
+    outcome_construct: mediation_short_sleep_to_cad
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "genetically predicted short sleep duration -> coronary artery disease (first stage of mediation)"}
+    scale: log_or
+    unit: null
+    value: 0.854415
+    se: 0.284
+    ci: [0.300105, 1.413423]
+    conversion_formula: "Reported as IVW OR = 2.35 (95% CI 1.35-4.11), P = 0.003. log_or = ln(2.35) = 0.854415; se = (ln(4.11) - ln(1.35))/3.92 = (1.413423 - 0.300105)/3.92 = 0.28401."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher CAD odds. The proposed causal pathway runs short sleep -> CAD/T2D/depression ->
+      shorter life. An OR of 2.35 for CAD from a binary short-sleep liability is implausibly large next
+      to the observational CHD RR of about 1.22-1.48, which is the usual signature of weak-instrument
+      bias in binary-exposure MR. Second-stage effects were CAD on lifespan beta -0.20 (-0.22, -0.18),
+      T2D -0.02 (-0.03, -0.009), depression -0.11 (-0.16, -0.05).
+    covariates: ["MR assumptions"]
+    followup_years: null
+    cohort_family: "Timmers_parental_lifespan_GWAS_plus_UK_Biobank"
+    quote: "We found that short sleep duration had a positive causal effect on CAD (IVW odds ratio (OR) = 2.35; 95% CI = 1.35 to 4.11; P = 0.003), T2D (IVW OR = 2.30; 95% CI = 1.16 to 4.58 ...) ... The results showed that both CAD (IVW beta = -0.20, 95%CI = -0.22 to -0.18, P = 1.26 x 10-80), T2D (IVW beta = -0.02, 95%CI = -0.03 to -0.009, P = 2.15 x 10-4) and depression (IVW beta = -0.11, 95%CI = -0.16 to -0.05, P = 1.67 x 10-4) had negative causal effects on lifespan"
+rob:
+  tool: MR-STROBE
+  judgement: moderate
+  notes: >
+    Reasonable MR practice: IVW plus MR-Egger, leave-one-out, MiXeR polygenic-overlap and conjFDR
+    analyses, multivariable MR conditioning on chronotype and insomnia, and two-step mediation.
+    Serious limitations: (1) the outcome is PARENTAL survival (Timmers et al., 1,012,240 parents, 60%
+    deceased), so the exposure is measured in offspring and the outcome in their parents - the
+    instrument acts on the parents' genotype only through transmission, which halves the effective
+    exposure and makes the units doubly opaque; (2) the exposure is a BINARY self-reported short-sleep
+    case definition, and binary-exposure MR with 22 instruments is prone to weak-instrument bias, which
+    inflates magnitudes (the CAD OR of 2.35 is the tell); (3) the continuous sleep-duration instrument
+    gives a null, contradicting the binary result; (4) heterogeneity across instruments was significant
+    in MVMR (Q = 212.18, df = 137, P < 1e-4); (5) sample overlap between the sleep GWAS (UK Biobank) and
+    the lifespan GWAS (which includes UK Biobank) violates the two-sample assumption and biases towards
+    the observational estimate; (6) no units are stated for the outcome, so the estimate cannot be
+    placed on a life-expectancy scale.
+funding: "National Natural Science Foundation of China; Yunnan Fundamental Research Projects; Health Commission of Hubei Province; Wuhan Municipal Health Commission; Spring City Plan (Kunming)"
+notes: >
+  TARGET EXTRACTION #3, Mendelian randomization component - the POSITIVE MR result. Directionally
+  supports a causal effect of short sleep on lifespan, with mediation through CAD, T2D and depression.
+  .
+  BUT THIS RECORD CANNOT CONTRIBUTE A MAGNITUDE. The beta of -0.60 is expressed in units of the
+  Timmers parental-survival Cox residual per unit log-odds of genetically predicted short-sleep case
+  status. The paper never states what one unit means. There is no defensible arithmetic that turns
+  -0.60 into months of life for a 19-year-old, and any attempt to do so would be fabrication.
+  Downstream, this record should be used ONLY as (a) evidence that the sign is plausibly causal and
+  (b) a prior on the existence of a mechanism, not as an effect size.
+  .
+  THE MR EVIDENCE IS ALSO INTERNALLY AND EXTERNALLY CONTRADICTED:
+    - internally, the continuous sleep-duration instrument is null (beta 0.24, -0.52 to 1.00, P = 0.54)
+      while the binary short-sleep instrument is strongly negative;
+    - externally, zhang2025 (PMID 39883542) ran MR on UK Biobank plus FinnGen and found NO causal
+      association of sleep duration, short sleep or long sleep with mortality, while the same paper's
+      observational analysis found HR 1.246 for short sleep. Two MR studies of the same question
+      disagree.
+  Net assessment: MR provides weak, contested support for a causal effect of the short-sleep
+  PHENOTYPE, and no usable estimate of its size. Genetic liability to being a short sleeper is also not
+  the same exposure as three years of externally imposed adolescent sleep restriction - a lifelong
+  genetic propensity is exactly the "trait" exposure, whereas our subject has a "state" exposure that
+  ends.
+shard: "s13_mortality"

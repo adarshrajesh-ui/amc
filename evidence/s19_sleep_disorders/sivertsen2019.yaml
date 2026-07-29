@@ -1,0 +1,95 @@
+study_id: sivertsen2019
+citation: "Sivertsen B, Vedaa Ø, Harvey AG, Glozier N, Pallesen S, Aarø LE, Lønning KJ, Hysing M. Sleep patterns and insomnia in young adults: A national survey of Norwegian university students. J Sleep Res. 2019;28(2):e12790."
+doi: "10.1111/jsr.12790"
+pmid: "30515935"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Sleep patterns and insomnia in young adults: A national survey of Norwegian university students."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 50054
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [18, 35]
+  pct_female: 69.1
+  country: "Norway"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_insomnia_dsm5_male_students
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "insomnia by DSM-5 criteria, MALE university students aged 18-35"}
+    scale: probability
+    unit: "proportion of male students"
+    value: 0.222
+    se: 0.00334
+    ci: [0.2155, 0.2285]
+    conversion_formula: "'The overall prevalence of insomnia was 34.2% in women and 22.2% in men' verbatim. n_male = 50054 x (1 - 0.691) = 15467. se = sqrt(0.222*0.778/15467) = 0.00334; Wald 95% CI = [0.2155, 0.2285]. My construction. As with sivertsen2021 the Wald interval reflects only sampling error and is far narrower than the true uncertainty given a 30.8% response rate."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive prevalence. THE MALE-SPECIFIC, STUDENT-SPECIFIC, DSM-5 INSOMNIA PRIOR - the closest available match to our subject on sex, age and setting. It is HIGH: roughly one in five male students meets DSM-5 insomnia criteria. Insomnia is the single most prevalent candidate condition in the differential, more than four times as common as DSWPD."
+    covariates: ["sex"]
+    followup_years: null
+    cohort_family: "SHoT_Norway"
+    quote: "The overall prevalence of insomnia was 34.2% in women and 22.2% in men."
+  - outcome_domain: exposure_measurement
+    outcome_construct: student_weekday_and_weekend_sleep_duration
+    exposure: {type: weekend_catchup, dose_h: 7.4, referent_h: 8.417, duration_days: null, contrast_label: "mean sleep duration on weekdays (7:24) versus weekends (8:25), unselected Norwegian university students"}
+    scale: hours
+    unit: "hours of weekend-minus-weekday sleep duration"
+    value: 1.017
+    se: null
+    ci: null
+    conversion_formula: "'Both male and female students obtained a mean sleep duration in the lower end of the normal range on weekdays (7:24 hr), but met their own sleep need and sleep recommendations at weekends (8:25 hr)' verbatim. 8:25 - 7:24 = 1:01 = 1.017 h. The abstract gives no SDs and no CI, so se is null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = students sleep longer at weekends. THE NORMATIVE STUDENT COMPARATOR OUR SUBJECT SHOULD BE SCORED AGAINST, AND HE IS AN OUTLIER ON BOTH LIMBS: unselected students average 7:24 on weekdays (he reports 5-6 h, i.e. ~1.5-2.4 h below) and 8:25 at weekends (he reports 7-8 h, i.e. ~0.4-1.4 h BELOW). The weekend shortfall is the more diagnostically interesting of the two: unlike the average student, our subject does NOT reach his sleep need even when free. That is an argument AGAINST DSWPD criterion 3 (which requires normal sleep duration for age on an ad libitum schedule) and an argument FOR restriction that persists across the whole week."
+    covariates: []
+    followup_years: null
+    cohort_family: "SHoT_Norway"
+    quote: "The results from 2018 showed large weekday-weekend differences across most sleep parameters. Both male and female students obtained a mean sleep duration in the lower end of the normal range on weekdays (7:24 hr), but met their own sleep need and sleep recommendations at weekends (8:25 hr)."
+  - outcome_domain: baseline_risk
+    outcome_construct: secular_trend_in_student_sleep_problems
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "single-item difficulties initiating and/or maintaining sleep, 2010 vs 2018 Norwegian student surveys"}
+    scale: probability
+    unit: "proportion of students, 2018 wave"
+    value: 0.305
+    se: 0.00206
+    ci: [0.3010, 0.3090]
+    conversion_formula: "'There was a substantial increase in sleep problems from 2010 (22.6%) to 2018 (30.5%), which was especially pronounced in women' verbatim. value = 0.305 (2018). se = sqrt(0.305*0.695/50054) = 0.00206. The 2010 comparator 0.226 is in the quote. This is a single item, not a diagnosis."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive trend, rising = worsening. Relevant to how the report chooses a prior VINTAGE: the 16-19 year old prevalence estimates the shard relies on for DSWPD (saxvig2012 data collected ~2005, sivertsen2013 collected 2012) are 13-20 years old, and self-reported sleep problems in this population rose by a third between 2010 and 2018. Contemporary priors are plausibly HIGHER than the ones I have, which widens the upper tail of every posterior interval in screening_priors.md."
+    covariates: []
+    followup_years: 8.0
+    cohort_family: "SHoT_Norway"
+    quote: "There was a substantial increase in sleep problems from 2010 (22.6%) to 2018 (30.5%), which was especially pronounced in women."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "Same survey and same limitations as sivertsen2021: a national census invitation to all 162,512 Norwegian full-time students, but a 30.8% response rate and a 69.1% female respondent pool against a roughly balanced student population, so the male estimates are the ones most exposed to non-response bias. Insomnia was defined by self-report questionnaire operationalizing DSM-5, without interview, actigraphy or diary. The 2010-vs-2018 trend rests on a single item and on three surveys with different response rates, so it is suggestive only. Abstract-only access (Unpaywall reports no OA location for 10.1111/jsr.12790)."
+funding: "Not stated in the abstract"
+notes: |
+  ACCESS: abstract only.
+  SAME SURVEY AS sivertsen2021 (SHoT 2018, n = 50,054, response rate 30.8%, 69.1% women). cohort_family SHoT_Norway
+  on both records. THIS MATTERS FOR THE POSTERIOR: the DSWPD prior (4.7% in males) and the insomnia prior (22.2% in
+  males) that I use for our subject come from the SAME 15,467 men, so they are not independent estimates and the
+  pooler must not treat them as such. It also means the two conditions' co-occurrence in that sample is knowable in
+  principle but is not reported in either abstract - a real gap.
+  THE MOST DECISION-RELEVANT LINE IS THE WEEKEND ONE. Unselected students reach 8:25 at weekends and thereby "met
+  their own sleep need and sleep recommendations". Our subject reports 7-8 h at weekends. So on the very night when
+  external constraint is removed, he is still below both the population mean and the age recommendation. Under ICSD-3
+  DSWPD criterion 3 the patient must show "improved sleep quality AND DURATION FOR AGE" on an ad libitum schedule;
+  under ICSD-3 ISS criterion D the patient "generally sleeps longer when such measures are not used". He satisfies
+  the ISS clause but does not clearly satisfy the DSWPD clause. That asymmetry is why the recommended posterior puts
+  substantially more weight on insufficient sleep than on circadian delay.
+  CAVEAT ON THE ABOVE: 7-8 h against a population mean of 8:25 is roughly 0.4-1.4 h low, and the abstract gives no SD
+  for weekend duration, so I cannot express it as a z-score. sivertsen2013 gives a weekend SD of 1:52 in unselected
+  Norwegian adolescents, which would put him ~0.2-0.8 SD low - suggestive, not decisive. Flagged as such in
+  screening_priors.md.
+shard: "s19_sleep_disorders"

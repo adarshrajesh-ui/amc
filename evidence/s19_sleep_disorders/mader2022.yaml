@@ -1,0 +1,95 @@
+study_id: mader2022
+citation: "Mader EC Jr, Mader ACL, Singh P. Insufficient Sleep Syndrome: A Blind Spot in Our Vision of Healthy Sleep. Cureus. 2022;14(10):e30928."
+doi: "10.7759/cureus.30928"
+pmid: "36337802"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9626376/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Insufficient Sleep Syndrome: A Blind Spot in Our Vision of Healthy Sleep."
+access_tier: full_text
+secondhand_via: null
+design: guideline_consensus
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US (review)"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: icsd3_insufficient_sleep_syndrome_criteria_verbatim
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 90, contrast_label: "ICSD-3 diagnostic criteria A-F for insufficient sleep syndrome (behaviourally induced insufficient sleep syndrome); all six must be fulfilled; criterion C requires >=3 months"}
+    scale: raw_units
+    unit: "count of mandatory ICSD-3 ISS criteria (all must be fulfilled)"
+    value: 6.0
+    se: null
+    ci: null
+    conversion_formula: "Not a statistical estimate. Coded as the count of mandatory criteria (6) for schema validity; the substance is the verbatim criterion text in the quote field. No arithmetic, no se."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Not an effect - this is the DIAGNOSTIC RULE for the most likely diagnosis in our subject. Applying it to the case as described: B satisfied (5-6 h vs 8-10 h recommended at 16-19 y); C satisfied (~3 years, i.e. >> 3 months, most days); D satisfied as reported (alarm-terminated weekday sleep, sleeps longer at weekends); A UNKNOWN (needs an Epworth Sleepiness Scale or an equivalent daytime-sleepiness measure); E UNTESTED (needs a time-in-bed extension trial); F UNTESTED (needs DSWPD, insomnia and sleep-disordered breathing to be excluded). VERDICT THE REPORT CAN STATE: the subject meets 3 of 6 ICSD-3 criteria on the available history, and the remaining 3 are all measurable with instruments in instruments.md."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Criteria A to F must be fulfilled. A. The patient has daily periods of irrepressible need to sleep or daytime lapses into sleep or, in the case of prepubertal children, there is a complaint of behavioral abnormalities attributable to sleepiness. B. The patient's sleep time, established by personal or collateral history, sleep logs, or actigraphy, is usually shorter than expected for age. C. The curtailed sleep pattern is present most days for at least three months. D. The patient curtails sleep time by such measures as an alarm clock or being awakened by another person and generally sleeps longer when such measures are not used, such as on weekends or vacations. E. Extension of total sleep time results in resolution of the symptoms of sleepiness. F. The symptoms are not better explained by another untreated sleep disorder, the effects of medications or drugs, or other medical, neurologic, or mental disorder."
+  - outcome_domain: comparator
+    outcome_construct: qualitative_discriminator_sleep_initiation_when_free
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "ability to initiate sleep at the desired time when the schedule permits: ISS vs DSWPD/insomnia"}
+    scale: raw_units
+    unit: "qualitative direction code (+1 = ISS falls asleep easily, DSWPD/insomnia do not)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "No quantitative estimate exists in this source. Coded +1 to denote direction for schema validity. The quantitative version of this discriminator is williams2020 (SOL 13.28 min in BIISS vs 43.86 min in insomnia, Cohen's d = 1.21) and sivertsen2013 (SOL 0:47 non-DSPS vs 1:21 DSPS, d = 0.62)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Qualitative, direction only. THE SINGLE QUESTION THAT SEPARATES THE TWO LEADING HYPOTHESES: on a night when he can go to bed whenever he wants and get up whenever he wants, does he fall asleep quickly (ISS) or does he lie awake until the small hours regardless (DSWPD/insomnia)? ICSD-3 makes this the operative distinction, and it is a free question. Note that a person with ISS is EXPECTED to sleep longer on weekends - so weekend catch-up is a POSITIVE ISS criterion (criterion D), not evidence for DSWPD."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "When given the opportunity to sleep (e.g., during the weekend), a person with delayed sleep-wake phase disorder or insomnia disorder will have difficulty initiating sleep at the desired time; however, a person with ISS will easily fall asleep."
+  - outcome_domain: exposure_measurement
+    outcome_construct: actigraphy_duration_required_when_history_doubted
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 14, contrast_label: "minimum actigraphy recording recommended by ICSD-3 when personal history or sleep logs are of doubtful accuracy"}
+    scale: raw_units
+    unit: "days of actigraphy"
+    value: 14.0
+    se: null
+    ci: null
+    conversion_formula: "ICSD-3 footnote 1 to the ISS criteria table, reproduced verbatim: 'If there is doubt about the accuracy of personal history or sleep logs, then actigraphy should be performed, preferably for at least two weeks.' value = 14 days. No se."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Not an effect - a measurement requirement. Converges with the DSWPD criterion 4 requirement (7 days minimum, 14 preferred, including work/school AND free days; see futenma2023) and with the AASM actigraphy coding descriptor (72 h minimum, 14 days maximum; see smith2018). CONSENSUS ACROSS ALL THREE SOURCES: 14 DAYS SPANNING BOTH SCHOOL DAYS AND FREE DAYS. Our subject's exposure is defined by the weekday/weekend contrast, so a recording that does not span both is uninterpretable for him."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "1 If there is doubt about the accuracy of personal history or sleep logs, then actigraphy should be performed, preferably for at least two weeks. 2 In the case of long sleepers, reported habitual sleep periods may be normal based on age. However, these sleep periods may be insufficient for these patients."
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: "Narrative review in Cureus (a journal with light peer review); no search strategy, no risk-of-bias appraisal, no quantitative synthesis. I use it for one purpose only: it reproduces the ICSD-3 insufficient sleep syndrome criteria A-F as a table, explicitly labelled 'Adapted with permission from American Academy of Sleep Medicine [12]', which makes it the most faithful retrievable rendering of criteria I could not otherwise obtain (the ICSD-3 is a paywalled book). Because the table is 'adapted', the wording may differ in detail from the manual and a reader should verify against ICSD-3 before publishing it as a quotation. No prevalence or effect estimate from this paper is used anywhere in the shard."
+funding: "Not stated in the retrieved full text"
+notes: |
+  HOW I FOUND THIS. Europe PMC full-text search for the ICSD-3 string "curtailed sleep pattern is present most days"
+  returned two open-access hits; this was the one that reproduces the full criteria table with AASM permission. I did
+  not write any criterion from memory.
+  ALSO EXTRACTED, NOT CODED AS EFFECTS:
+    ICSD-3 places ISS among the SECONDARY disorders of central hypersomnolence, alongside hypersomnia due to a
+    medical/psychiatric disorder and hypersomnia due to a drug or substance; the primary ones are narcolepsy types 1
+    and 2, idiopathic hypersomnia and Kleine-Levin syndrome. ICD-10-CM code F51.12; ICD-11 code 7A26.
+    "Even though ISS is 'voluntary' it is not necessarily 'intentional'." - directly relevant to how the report
+    should frame the subject's own workload attribution: self-attribution to workload is fully compatible with an
+    ISS diagnosis and is not evidence against a disorder.
+    ICSD-3 note 2, quoted above, matters for our subject specifically: a habitual sleep period that looks normal for
+    age can still be insufficient for an individual long sleeper. The subject's 7-8 h weekend sleep is BELOW the
+    8-10 h recommended for 16-19 year olds, so this caveat compounds rather than rescues.
+    The review lists the conditions that must be excluded before ISS is diagnosed, and names DSWPD explicitly:
+    "circadian sleep disorders, notably delayed sleep-wake phase disorder with short sleep duration."
+  DESIGN/TIER: guideline_consensus / TX. This record supplies a diagnostic rule and must never be pooled as an
+  effect estimate.
+shard: "s19_sleep_disorders"

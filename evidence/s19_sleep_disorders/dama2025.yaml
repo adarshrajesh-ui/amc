@@ -1,0 +1,152 @@
+study_id: dama2025
+citation: "Dama MH, Martin J, Tassone VK, Lin Q, Lou W, Bhat V. The Association Between Delayed Sleep-Wake Phase Disorder and Depression Among Young Individuals: A Systematic Review and Meta-Analysis. Can J Psychiatry. 2025;70(12):869-886."
+doi: "10.1177/07067437251328308"
+pmid: "40129277"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "The Association Between Delayed Sleep-Wake Phase Disorder and Depression Among Young Individuals: A Systematic Review and Meta-Analysis: Association entre le syndrome de retard de phase et la depression parmi les jeunes : revue systematique et meta-analyse"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 766
+n_studies_pooled: 16
+population:
+  age_mean: null
+  age_range: [10, 30]
+  pct_female: null
+  country: "multinational (16 studies)"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: depression_severity_dswpd_vs_no_dswpd_young_people
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "ICSD/DSM-diagnosed DSWPD vs no DSWPD, depression symptom severity, adolescents and young adults; common-effect model, 16 estimates"}
+    scale: cohens_d
+    unit: "SD units of depression symptom severity (positive = DSWPD group MORE depressed)"
+    value: 0.92
+    se: 0.0816
+    ci: [0.76, 1.08]
+    conversion_formula: "se = (upper - lower)/3.92 = (1.08 - 0.76)/3.92 = 0.32/3.92 = 0.0816. NOTE: authors used a COMMON-EFFECT (fixed-effect) model despite I^2 = 53%, so this CI is narrower than a random-effects CI would be; treat the interval as optimistic."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = young people meeting DSWPD criteria have GREATER depressive symptom severity"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The common-effect model demonstrated that DSWPD status had a significantly large effect on depression severity with moderate to substantial heterogeneity ( N : 16 estimates, 693 participants (DSWPD: 367 participants; non-DSWPD: 326 participants), Cohen's d  = 0.92, 95% CI [0.76-1.08], I 2  = 53%)"
+  - outcome_domain: psychiatric
+    outcome_construct: depression_severity_dswpd_controlling_psychiatric_comorbidity
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "DSWPD vs no DSWPD, restricted to the 12 estimates from studies that controlled for psychiatric disorders"}
+    scale: cohens_d
+    unit: "SD units of depression symptom severity"
+    value: 0.88
+    se: 0.0918
+    ci: [0.70, 1.06]
+    conversion_formula: "se = (1.06 - 0.70)/3.92 = 0.36/3.92 = 0.0918"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = DSWPD group more depressed; effect survives restriction to studies controlling for psychiatric comorbidity, so it is not purely confounded by pre-existing psychiatric illness"
+    covariates: ["psychiatric disorders (study-level restriction, not individual-level adjustment)"]
+    followup_years: null
+    cohort_family: null
+    quote: "DSWPD status also had a significantly large effect on depression severity in the common-effect model that only utilized data from studies that controlled for psychiatric disorders, but with moderate to substantial heterogeneity ( N : 12 estimates, 535 participants, Cohen's d  = 0.88, 95% CI [0.70-1.06], I 2  = 62%)"
+  - outcome_domain: psychiatric
+    outcome_construct: depression_severity_dswpd_sensitivity_excluding_range_restricted
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "DSWPD vs no DSWPD after removing the 2 studies that excluded participants using depression cut-offs (the heterogeneity source)"}
+    scale: cohens_d
+    unit: "SD units of depression symptom severity"
+    value: 1.02
+    se: 0.0867
+    ci: [0.85, 1.19]
+    conversion_formula: "se = (1.19 - 0.85)/3.92 = 0.34/3.92 = 0.0867"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = DSWPD group more depressed. This is the cleanest estimate in the paper: heterogeneity falls to I^2 = 0% and the funnel plot becomes symmetrical, so the fixed-effect CI is defensible here."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "DSWPD status continued to have a significantly large effect on depression severity but now without any heterogeneity in the model ( N : 14 estimates, 612 participants (DSWPD: 327 participants; non-DSWPD: 285 participants), Cohen's d  = 1.02, 95% CI [0.85-1.19], I 2  = 0%)"
+  - outcome_domain: baseline_risk
+    outcome_construct: dswpd_prevalence_range_young_individuals_narrative
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "range of survey-based DSWPD prevalence estimates in young individuals, as summarised by this 2025 systematic review"}
+    scale: probability
+    unit: "proportion (ci field carries the RANGE across cited surveys, not a confidence interval)"
+    value: 0.033
+    se: null
+    ci: [0.033, 0.179]
+    conversion_formula: "value set to the LOWER bound (3.3%) because that is the estimate closest to strict-criteria studies; ci carries the full cited range 3.3%-17.9%. This is a narrative range across 4 cited surveys (refs 5-8), NOT a pooled meta-analytic prevalence - the review did not meta-analyse prevalence."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "higher = more prevalent; the 17.9% upper bound comes from loose self-report operationalisations and should not be used as a prior for a clinical diagnosis"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Indeed, survey data suggests that DSWPD may affect 3.3 to 17.9% of young individuals, 5 - 8 which is far greater than the prevalence rate of 0.13 to 0.17% seen in the general population. 9 , 10"
+  - outcome_domain: baseline_risk
+    outcome_construct: dswpd_prevalence_general_population_all_ages_narrative
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "general-population (all-age) DSWPD prevalence as summarised by this review; primary source is Schrader 1993 (J Sleep Res 2:51-55)"}
+    scale: probability
+    unit: "proportion (ci field carries the RANGE across the 2 cited sources)"
+    value: 0.0015
+    se: null
+    ci: [0.0013, 0.0017]
+    conversion_formula: "value = midpoint of the cited 0.13%-0.17% range = 0.0015. ci carries the range. Not a pooled estimate."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is the ADULT/all-age base rate. The ~20-100x gap between this (0.13-0.17%) and the young-person estimates (3.3-17.9%) is the key quantitative point: age is by far the strongest single risk factor for DSWPD, which is why an 18-19 y male gets a much higher prior than a general-population figure would suggest."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "which is far greater than the prevalence rate of 0.13 to 0.17% seen in the general population. 9 , 10"
+  - outcome_domain: circadian
+    outcome_construct: dswpd_hallmark_feature_and_insomnia_masquerade
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "review's operational description of the DSWPD phenotype and why it is mistaken for sleep-onset insomnia"}
+    scale: raw_units
+    unit: "hours of sleep-wake delay (>2 h cited as the hallmark magnitude); value is the cited threshold"
+    value: 2.0
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is the mechanism that makes DSWPD misdiagnosable as insomnia: forced adherence to a socially-required schedule PRODUCES sleep-onset insomnia in a delayed person. Directly relevant to our subject, who reports a school/college-imposed wake time."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The hallmark feature of DSWPD is the persistence of a major delay in sleep-wake times (e.g., >2 h) with an inability to fall asleep and wake up at socially desired times. 11 , 12 If young individuals with DSWPD must adhere to a sleep-wake schedule that does not match their endogenous circadian rhythm, this can predispose them to sleep-onset insomnia 11 , 12 (i.e., difficulty falling asleep), poor sleep quality, 12 and excessive daytime sleepiness. 11 , 12"
+rob:
+  tool: AMSTAR-2
+  judgement: some_concerns
+  notes: "PROSPERO-registered (CRD42023458889), PRISMA 2020 + MOOSE, NIH observational quality tool applied (scores 5-9 of 11). Two important limitations for our use: (1) the authors fitted COMMON-EFFECT (fixed-effect) models even where I^2 = 53-62%, which understates the CI width - the sensitivity analysis with I^2 = 0% is the more trustworthy estimate; (2) all component studies are cross-sectional or case-control, so the DSWPD -> depression direction is NOT established and reverse causation (depression delaying sleep) is fully compatible with the data. The prevalence figures I extracted are NARRATIVE introduction statements, not meta-analysed outputs, and inherit the weaknesses of their sources."
+funding: "None. 'Funding: The authors received no financial support for the research, authorship, and/or publication of this article.'"
+notes: |
+  WHY THIS RECORD MATTERS FOR THIS SHARD: it is the most recent systematic review restricted to
+  exactly my target construct (DSWPD in adolescents and young adults) and it independently
+  confirms that the primaries I extracted are the right ones - its reference list contains
+  Sivertsen 2013 (PMID 24330358), Danielsson 2016 (PMID 27537980) and Sivertsen 2021
+  (PMID 33097403), all of which I have already extracted directly. That is a coverage check on
+  my search, not new evidence.
+
+  TWO USES DOWNSTREAM:
+  1. STAKES OF A MISSED DIAGNOSIS. If our subject does have DSWPD, the expected depressive
+     symptom burden is large (d ~ 0.9-1.0). This is the quantitative justification for treating
+     the DSWPD-vs-behavioural question as high-priority rather than academic. It is NOT evidence
+     that treating DSWPD would reduce depression - the design cannot support that.
+  2. THE AGE GRADIENT IN THE PRIOR. The review's own framing (0.13-0.17% general population vs
+     3.3-17.9% in young people) is the cleanest published statement of why an 18-19 y male must
+     not be given an adult base rate.
+
+  IMPORTANT CAUTION ON THE 3.3-17.9% RANGE: this is an introductory narrative range citing four
+  surveys, not a pooled estimate, and the review did not meta-analyse prevalence at all. The
+  upper bound (17.9%) comes from loose self-report operationalisations. My own prior in
+  screening_priors.md is anchored on the strict-criteria primaries (Danielsson 2016: 4.0% by
+  ICSD-3-like criteria; Sivertsen 2021: 3.3% in Norwegian students) rather than on this range.
+  Reporting the range here because the task asked for AASM/review-level prevalence statements.
+
+  DIRECTION-OF-CAUSATION WARNING for the report: because depression itself delays sleep timing
+  and impairs morning rising, a subject with both a delayed pattern and low mood cannot be
+  assigned to "DSWPD" on that basis. This is an additional differential the report must carry,
+  and it is why I recommend a mood screen alongside the circadian workup (see instruments.md).
+shard: "s19_sleep_disorders"

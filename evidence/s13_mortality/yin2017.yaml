@@ -1,0 +1,240 @@
+study_id: yin2017
+citation: "Yin J, Jin X, Shan Z, Li S, Huang H, Li P, Peng X, Peng Z, Yu K, Bao W, Yang W, Chen X, Liu L. Relationship of Sleep Duration With All-Cause Mortality and Cardiovascular Events: A Systematic Review and Dose-Response Meta-Analysis of Prospective Cohort Studies. J Am Heart Assoc. 2017 Sep 9;6(9):e005947."
+doi: "10.1161/JAHA.117.005947"
+pmid: "28889101"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5634263/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Relationship of Sleep Duration With All-Cause Mortality and Cardiovascular Events: A Systematic Review and Dose-Response Meta-Analysis of Prospective Cohort Studies."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: dose_response_meta_analysis
+tier: T5
+n: 3582016
+n_studies_pooled: 40
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational (generally healthy populations)"
+  adolescent_match: poor_midlife
+effects:
+  # ---- the spline curve, one effect per hour (Table 2) ----
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: null,
+               contrast_label: "5 h/day vs 7 h/day referent, restricted cubic spline dose-response"}
+    scale: log_rr
+    unit: null
+    value: 0.039221
+    se: 0.004906
+    ci: [0.029559, 0.048790]
+    conversion_formula: "log_rr = ln(1.04) = 0.039221; se = (ln(1.05) - ln(1.03))/3.92 = 0.004906"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher all-cause mortality. THE HEADLINE DOSE-SPECIFIC NUMBER: sleeping 5 h carries
+      a 4% relative excess versus 7 h, not the 12-13% suggested by categorical "short sleep"
+      contrasts. Note the CI is implausibly tight (1.03-1.05) because spline CIs from aggregated
+      dose-response data ignore between-study heterogeneity in the curve shape; treat this SE as an
+      underestimate of real uncertainty.
+    covariates: ["varies by constituent study; maximally adjusted estimates used"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_40_estimates"
+    quote: "Table 2 Association Between Sleep Duration and All-Cause Mortality ... From Non-Linear Dose-Response Analysis: 3 h | 1.12 (1.10-1.14) ; 4 h | 1.08 (1.06-1.09) ; 5 h | 1.04 (1.03-1.05) ; 6 h | 1.01 (1.00-1.01) ; 7 h | 1.00 ; 8 h | 1.04 (1.04-1.05) ; 9 h | 1.15 (1.14-1.16) ; 10 h | 1.32 (1.29-1.35) ; 11 h | 1.53 (1.47-1.59)"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7, duration_days: null,
+               contrast_label: "6 h/day vs 7 h/day referent, restricted cubic spline dose-response"}
+    scale: log_rr
+    unit: null
+    value: 0.009950
+    se: 0.002538
+    ci: [0.000000, 0.009950]
+    conversion_formula: "log_rr = ln(1.01) = 0.009950; se = (ln(1.01) - ln(1.00))/3.92 = 0.002538"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality, but the excess at 6 h is 1% and the lower CI bound touches 1.00.
+      For practical purposes the mortality penalty of 6 h habitual sleep in this synthesis is nil.
+    covariates: ["varies by constituent study; maximally adjusted estimates used"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_40_estimates"
+    quote: "Table 2: 6 h | 1.01 (1.00-1.01)"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 4, referent_h: 7, duration_days: null,
+               contrast_label: "4 h/day vs 7 h/day referent, spline"}
+    scale: log_rr
+    unit: null
+    value: 0.076961
+    se: 0.007120
+    ci: [0.058269, 0.086178]
+    conversion_formula: "log_rr = ln(1.08) = 0.076961; se = (ln(1.09) - ln(1.06))/3.92 = 0.007120"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher mortality. Relevant to the subject's occasional 3-4 h pre-exam nights, but only as a HABITUAL exposure - the curve says nothing about occasional acute nights."
+    covariates: ["varies by constituent study; maximally adjusted estimates used"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_40_estimates"
+    quote: "Table 2: 4 h | 1.08 (1.06-1.09)"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: other, dose_h: 9, referent_h: 7, duration_days: null,
+               contrast_label: "9 h/day vs 7 h/day referent, spline"}
+    scale: log_rr
+    unit: null
+    value: 0.139762
+    se: 0.004437
+    ci: [0.131028, 0.148420]
+    conversion_formula: "log_rr = ln(1.15) = 0.139762; se = (ln(1.16) - ln(1.14))/3.92 = 0.004437"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality with LONG sleep. The asymmetry is the key diagnostic: 9 h
+      (RR 1.15) is more harmful than 5 h (RR 1.04) and 10 h (RR 1.32) is 8x the excess of 5 h.
+      A biologically causal short-sleep toxicity story cannot explain this; reverse causation from
+      illness (which lengthens sleep) can.
+    covariates: ["varies by constituent study; maximally adjusted estimates used"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_40_estimates"
+    quote: "Table 2: 9 h | 1.15 (1.14-1.16) ; 10 h | 1.32 (1.29-1.35)"
+  # ---- per-hour slopes ----
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: 7, duration_days: null,
+               contrast_label: "per 1-hour REDUCTION in sleep below 7 h/day"}
+    scale: log_rr
+    unit: "per 1 h less sleep, below the 7 h nadir"
+    value: 0.058269
+    se: 0.007255
+    ci: [0.039221, 0.067659]
+    conversion_formula: "log_rr = ln(1.06) = 0.058269; se = (ln(1.07) - ln(1.04))/3.92 = 0.007255"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality per hour of sleep lost. THE PER-HOUR SLOPE BELOW THE NADIR
+      REQUESTED BY THE TASK: RR 1.06 per hour. Note this linear slope is steeper than the spline
+      implies near the nadir (spline gives only 1.01 at 6 h, i.e. ~1% for the first hour lost) because
+      the linear fit is dominated by the extreme-short categories. Use the spline values for a subject
+      at 5-6 h.
+    covariates: ["varies by constituent study; maximally adjusted estimates used"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_40_estimates"
+    quote: "For all-cause mortality, when sleep duration was <7 hours per day, the pooled relative risk (RR) was 1.06 (95% CI, 1.04-1.07) per 1-hour reduction; when sleep duration was >7 hours per day, the pooled RR was 1.13 (95% CI, 1.11-1.15) per 1-hour increment."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: other, dose_h: null, referent_h: 7, duration_days: null,
+               contrast_label: "per 1-hour INCREMENT in sleep above 7 h/day"}
+    scale: log_rr
+    unit: "per 1 h more sleep, above the 7 h nadir"
+    value: 0.122218
+    se: 0.009031
+    ci: [0.104360, 0.139762]
+    conversion_formula: "log_rr = ln(1.13) = 0.122218; se = (ln(1.15) - ln(1.11))/3.92 = 0.009031"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher mortality per extra hour above 7 h. 2.1x steeper than the downward slope on the log scale (0.1222 vs 0.0583)."
+    covariates: ["varies by constituent study; maximally adjusted estimates used"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_40_estimates"
+    quote: "when sleep duration was >7 hours per day, the pooled RR was 1.13 (95% CI, 1.11-1.15) per 1-hour increment."
+  # ---- location of nadir ----
+  - outcome_domain: mortality
+    outcome_construct: nadir_location_of_mortality_curve
+    exposure: {type: descriptive, dose_h: 7, referent_h: null, duration_days: null,
+               contrast_label: "sleep duration at which all-cause mortality risk is minimised"}
+    scale: hours
+    unit: "hours of self-reported sleep per day"
+    value: 7.0
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      The nadir. U-shaped, P < 0.01 for non-linearity, and the authors state it "varied little by sex".
+      No CI is given for the nadir location, so se is null. Compare: chaput2026 puts the nadir at
+      7.2 h (self-report) / 7.7 h (device sleep period time); akerstedt2017 puts it at 6 h in a
+      single Swedish cohort.
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_40_estimates"
+    quote: "U-shaped associations were indicated between sleep duration and risk of all outcomes, with the lowest risk observed for approximately 7-hour sleep duration per day, which was varied little by sex."
+  # ---- categorical contrast for comparison with Cappuccio ----
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "shortest category vs referent category (categorical, 57 risk estimates)"}
+    scale: log_rr
+    unit: null
+    value: 0.122218
+    se: 0.015738
+    ci: [0.095310, 0.157004]
+    conversion_formula: "log_rr = ln(1.13) = 0.122218; se = (ln(1.17) - ln(1.10))/3.92 = 0.015738"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality. Reproduces Cappuccio's 1.12 almost exactly (1.13 here) on a much
+      larger evidence base, which validates the categorical estimate but also shows how much larger
+      it is than the same synthesis's own dose-specific value at 5-6 h (1.01-1.04). The gap between
+      1.13 and 1.04 is the single clearest illustration of why the categorical number over-states the
+      risk faced by a 5-6 h sleeper.
+    covariates: ["varies by constituent study; maximally adjusted estimates used"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_40_estimates"
+    quote: "Table 1 Associations of Sleep Duration With All-Cause Mortality ... All-cause mortality | 57 | 1.13 (1.10-1.17) | 37.5 | <0.01 | 1.35 (1.29-1.41) | 76.2 | <0.01 |"
+  - outcome_domain: baseline_risk
+    outcome_construct: pooled_sample_size_and_death_count
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "whole pooled sample"}
+    scale: probability
+    unit: "all-cause deaths per participant across pooled cohorts"
+    value: 0.06731
+    se: null
+    ci: null
+    conversion_formula: "241107 all-cause deaths / 3582016 participants = 0.06731"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Absolute-scale anchor; midlife-to-elderly death rate, not transportable to age 19."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_40_estimates"
+    quote: "The sample sizes ranged from 724 to 1 116 936, with a total of 3 582 016 participants, including 241 107 cases of all-cause mortality, 58 919 cases of total CVD, 22 511 cases of CHD, and 15 476 cases of stroke."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    The best-executed dose-response synthesis for this question: restricted cubic splines, explicit
+    non-linearity test, Hamling conversion for studies with non-standard referents, publication-bias
+    testing with trim-and-fill. Weaknesses: (1) all constituent exposures are self-reported;
+    (2) spline CIs are far too narrow because they propagate within-study precision but not
+    heterogeneity in curve shape - the CI of 1.03-1.05 at 5 h should not be believed as stated;
+    (3) 40 aggregated cohort estimates, no individual-participant data, so no ability to adjust
+    uniformly for prevalent disease or exclude early deaths; (4) no age-stratified dose-response,
+    which is exactly what a 19-year-old subject requires; (5) the marked short/long asymmetry is
+    reported but not interrogated for reverse causation.
+funding: null
+notes: >
+  TARGET EXTRACTION #2 (dose-response). Everything the task asked for:
+    SHAPE: U-shaped, P < 0.01 for non-linearity.
+    NADIR: approximately 7 h/day; "varied little by sex".
+    PER-HOUR BELOW NADIR: RR 1.06 (1.04-1.07) per 1 h reduction.
+    PER-HOUR ABOVE NADIR: RR 1.13 (1.11-1.15) per 1 h increment.
+    RR AT 5 h: 1.04 (1.03-1.05).
+    RR AT 6 h: 1.01 (1.00-1.01).
+    EVIDENCE BASE: 40 cohort estimates in the dose-response analysis (57 for the categorical
+    contrast), 3,582,016 participants, 241,107 all-cause deaths.
+  .
+  The single most important quantitative fact this shard produces: the dose-specific mortality
+  excess at the subject's weekday sleep duration is 1-4%, not 12-13%. And the long-sleep arm is
+  much steeper than the short-sleep arm, which is a strong internal signal of reverse causation
+  contaminating both.
+  .
+  COHORT OVERLAP WARNING: heavily overlapping constituent cohorts with cappuccio2010, liu2017,
+  itani2017, jike2018 and ungvari2025 - these six records are five re-analyses of substantially the
+  same underlying primary literature. The pooler must select ONE dose-response synthesis as the
+  primary mortality input (recommend this one or liu2017) rather than averaging them.
+shard: "s13_mortality"

@@ -1,0 +1,93 @@
+study_id: kurina2013
+citation: "Kurina LM, McClintock MK, Chen JH, Waite LJ, Thisted RA, Lauderdale DS. Sleep duration and all-cause mortality: a critical review of measurement and associations. Ann Epidemiol. 2013 Jun;23(6):361-370."
+doi: "10.1016/j.annepidem.2013.03.015"
+pmid: "23622956"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3660511/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep duration and all-cause mortality: a critical review of measurement and associations."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: null
+n_studies_pooled: 42
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "worldwide (42 prospective studies, 35 distinct study populations)"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: mortality
+    outcome_construct: qualitative_assessment_of_association_consistency
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "critical re-review of the same 42 prospective studies pooled by the meta-analyses"}
+    scale: probability
+    unit: "qualitative verdict; no numeric effect. Value is a placeholder (0) and se is null by design."
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No effect estimate is produced by this review; it is a methodological critique. Value 0 and se null are placeholders required by the schema and must NOT be read as a measured null effect."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      The verdict, not a number: having re-reviewed the identical literature that Cappuccio et al.
+      pooled, this group concluded that it "does not support a consistent finding of an association
+      between self-reported sleep duration and mortality" and that it is "premature to conclude ... that
+      a robust, U-shaped association between sleep duration and mortality risk exists across
+      populations". Two competent teams read the same 42 studies and reached opposite conclusions. That
+      fact should itself widen the downstream uncertainty on the entire mortality pathway.
+    covariates: []
+    followup_years: null
+    cohort_family: "review_of_35_distinct_populations"
+    quote: "We identified 42 prospective studies of sleep duration and mortality drawing on 35 distinct study populations worldwide. Unlike previous reviews, we find that the published literature does not support a consistent finding of an association between self-reported sleep duration and mortality. Most studies have employed survey measures of sleep duration, which are not highly correlated with estimates based on physiologic measures."
+  - outcome_domain: exposure_measurement
+    outcome_construct: selfreport_versus_physiologic_measurement_agreement
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "correlation between survey-reported sleep duration and physiologically measured sleep duration"}
+    scale: probability
+    unit: "qualitative: 'not highly correlated'. No numeric correlation coefficient is given in the abstract, so value is a placeholder and se is null."
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "The abstract states the qualitative conclusion without a coefficient. I did not have full-text access and will not invent a correlation."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      The measurement critique that underwrites the whole causal problem: essentially every study in the
+      mortality literature measures sleep by asking people about it, and what people report is not what
+      instruments measure. This cuts both ways - it means the self-report estimates are diluted
+      (arguing the true association is larger) AND that self-reported short sleep is partly a report of
+      distress, insomnia and illness rather than of hours slept (arguing the association is confounded).
+      Kurina et al. lean towards the second.
+    covariates: []
+    followup_years: null
+    cohort_family: "review_of_35_distinct_populations"
+    quote: "Most studies have employed survey measures of sleep duration, which are not highly correlated with estimates based on physiologic measures. ... Careful attention must be paid to measurement, response bias, confounding, and reverse causation in the interpretation of associations between sleep duration and mortality."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    A narrative critical review rather than a quantitative synthesis: it performs no pooling, reports no
+    effect estimates, and its central conclusion is a judgement about consistency rather than a
+    measurement. It is included here as TX context only. Its authors are the group (Lauderdale) that
+    produced the key self-report-versus-actigraphy validation work, so the measurement critique is
+    well-founded. Abstract-only access.
+funding: null
+notes: >
+  TARGET EXTRACTION #3 (is the association causal or confounded?), qualitative anchor. This record
+  contributes NO effect size and must not enter the pooler as data. Its function is to document that the
+  mainstream "short sleep kills" reading of this literature is contested by a competent group working
+  from the same primary studies, and to name the four threats that the downstream model has to price in:
+  measurement error, response bias, confounding, and reverse causation.
+  .
+  Note the citation chain: Åkerstedt et al. (2017, 2019) - the authors of this shard's highest-priority
+  extraction - repeatedly invoke this review as the standing objection to their own field, and concede
+  in their own discussion that "precursors of major diseases (such as increased levels of lipids or blood
+  sugar) could also play a role, but this information was not available" and that "major diseases, not
+  yet diagnosed, may be an important contributor to unreliable results". The people producing the best
+  estimates in this field do not themselves claim the estimates are causal.
+shard: "s13_mortality"

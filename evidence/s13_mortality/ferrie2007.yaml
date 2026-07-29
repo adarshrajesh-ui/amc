@@ -1,0 +1,112 @@
+study_id: ferrie2007
+citation: "Ferrie JE, Shipley MJ, Cappuccio FP, Brunner E, Miller MA, Kumari M, Marmot MG. A prospective study of change in sleep duration: associations with mortality in the Whitehall II cohort. Sleep. 2007 Dec;30(12):1659-1666."
+doi: "10.1093/sleep/30.12.1659"
+pmid: "18246975"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2276139/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "A prospective study of change in sleep duration: associations with mortality in the Whitehall II cohort."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 9781
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [35, 55]
+  pct_female: null
+  country: "UK"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: mortality
+    outcome_construct: cvd_mortality_after_decrease_in_sleep
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 2190,
+               contrast_label: "DECREASE in self-reported sleep duration between Phase 1 (1985-88) and Phase 3 (1991-93) among those sleeping 6, 7 or 8 h at baseline, vs no change; outcome CARDIOVASCULAR mortality over 12 y"}
+    scale: log_hr
+    unit: null
+    value: 0.875469
+    se: 0.274111
+    ci: [0.336472, 1.410987]
+    conversion_formula: "HR 2.4 (1.4-4.1); value=ln(2.4)=0.87547; se=(ln4.1-ln1.4)/3.92=0.27411"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = higher CARDIOVASCULAR mortality (NOT all-cause) after a person's sleep duration fell
+      between two measurements about 6 years apart. This is the only estimate I found for the effect of
+      CHANGING sleep duration, which is the transition our subject is contemplating in reverse. It runs
+      in the direction of "becoming a shorter sleeper is bad", but it is cause-specific, it is a change
+      occurring in the late 30s to early 50s, and it cannot be read as "having been a short sleeper and
+      then stopping is bad" - if anything it is weak evidence for the opposite, that the hazard tracks
+      the CURRENT trajectory rather than the accumulated history.
+    covariates: ["socio-demographic factors", "existing morbidity", "health-related behaviours"]
+    followup_years: 12.0
+    cohort_family: "Whitehall_II"
+    quote: "A decrease in sleep duration among participants sleeping 6, 7, or 8 hours at baseline was associated with cardiovascular mortality, hazard ratio 2.4 (95% confidence intervals 1.4-4.1)."
+  - outcome_domain: mortality
+    outcome_construct: noncvd_mortality_after_increase_in_sleep
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 2190,
+               contrast_label: "INCREASE in self-reported sleep duration between Phase 1 and Phase 3 among those sleeping 7 or 8 h at baseline, vs no change; outcome NON-CARDIOVASCULAR mortality"}
+    scale: log_hr
+    unit: null
+    value: 0.741937
+    se: 0.219239
+    ci: [0.336472, 1.131402]
+    conversion_formula: "HR 2.1 (1.4-3.1); value=ln(2.1)=0.74194; se=(ln3.1-ln1.4)/3.92=0.21924"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = higher NON-CARDIOVASCULAR mortality after sleep duration INCREASED. This is the
+      reverse-causation control built into the same analysis: sleeping MORE than you used to also
+      doubled mortality, and it did so specifically through non-cardiovascular death (i.e. cancer and
+      other disease). Nobody proposes that sleeping longer causes cancer. Increasing sleep is a symptom
+      of developing illness. THE SYMMETRY IS THE POINT: if a change in sleep in either direction
+      doubles mortality, then a large part of what these coefficients measure is incipient disease
+      changing sleep, not sleep changing survival.
+    covariates: ["socio-demographic factors", "existing morbidity", "health-related behaviours"]
+    followup_years: 12.0
+    cohort_family: "Whitehall_II"
+    quote: "However, an increase in sleep duration among those sleeping 7 or 8 hours at baseline was associated with non-cardiovascular mortality, hazard ratio 2.1 (1.4-3.1). Adjustment for the socio-demographic factors, existing morbidity, and health-related behaviours measured left these associations largely unchanged."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Landmark design (two repeated exposure measurements 6 years apart, 17 and 12 years of mortality
+    follow-up, 9781 then 7729 participants) and it is the only study I found that estimates the mortality
+    consequence of a CHANGE in sleep duration in the direction we care about. Weaknesses: (1) both headline
+    estimates are CAUSE-SPECIFIC (cardiovascular and non-cardiovascular), so neither is an all-cause
+    estimate and they must not be entered into an all-cause pool; (2) abstract-only access, so I do not
+    have the all-cause change coefficients and did NOT guess them; (3) baseline age 35-55, white-collar
+    British civil servants, an occupationally selected and socially graded cohort; (4) exposure change is
+    measured over 6 years, i.e. slow drift, not a deliberate 3-year restriction followed by normalisation;
+    (5) no objective measurement; (6) 1985-1993 measurement era.
+funding: null
+notes: >
+  WHY I INCLUDED A CAUSE-SPECIFIC STUDY IN AN ALL-CAUSE SHARD: because it is the only direct evidence on
+  whether CHANGE in sleep duration matters, and the subject's entire question is about change.
+  .
+  THE SYMMETRY ARGUMENT, WHICH IS THE MOST INFORMATIVE THING IN THIS RECORD. In one analysis, in one
+  cohort, with one covariate set:
+    sleep duration WENT DOWN  ->  CVD mortality HR 2.4 (1.4-4.1)
+    sleep duration WENT UP    ->  non-CVD mortality HR 2.1 (1.4-3.1)
+  Both directions of change roughly doubled mortality, and adjustment for socio-demographics, existing
+  morbidity and health behaviours "left these associations largely unchanged" - i.e. measured confounders
+  did not explain them. A causal-sleep-loss model predicts the first result and cannot explain the second.
+  A model in which developing disease perturbs sleep in whichever direction the disease pushes it predicts
+  both. This is the reverse-causation signature appearing in the CHANGE domain, exactly as it appears in
+  the LEVEL domain (long sleep worse than short sleep in every meta-analysis).
+  .
+  WHAT IT DOES AND DOES NOT SAY ABOUT OUR SUBJECT. It does NOT say that his three years of restriction
+  leave a residue. It measures the hazard associated with being on a downward sleep trajectory, assessed
+  at the end of that trajectory in a 41-61 year old. Our subject is on an UPWARD trajectory from age 19,
+  and the only cell resembling that here is the "increase in sleep" cell, whose elevated hazard is
+  transparently disease-driven in a midlife cohort and has no plausible read-across to a healthy
+  19-year-old deliberately extending sleep. INSUFFICIENT EVIDENCE remains the correct verdict for the
+  actual counterfactual; this record narrows nothing quantitatively, but it does undercut any claim that
+  the change literature demonstrates lasting harm.
+  .
+  COHORT OVERLAP WARNING: cohort_family Whitehall_II. Cappuccio is an author here and Whitehall II is a
+  constituent study of cappuccio2010; do not treat as independent of that meta-analysis.
+shard: "s13_mortality"

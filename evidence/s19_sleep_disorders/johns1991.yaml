@@ -1,0 +1,66 @@
+study_id: johns1991
+citation: "Johns MW. A new method for measuring daytime sleepiness: the Epworth sleepiness scale. Sleep. 1991;14(6):540-545."
+doi: "10.1093/sleep/14.6.540"
+pmid: "1798888"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "A new method for measuring daytime sleepiness: the Epworth sleepiness scale."
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: 180
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "Australia"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: ess_construct_validity_against_msl_and_psg
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "original ESS validation: 8 items, 30 normal controls plus 150 patients with sleep disorders"}
+    scale: raw_units
+    unit: "qualitative direction code (+1 = ESS separates normals from hypersomnolent patients and correlates with objective sleep latency)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "The PubMed abstract of the 1991 paper reports the DIRECTION and significance of every validity finding but no correlation coefficients, no means and no SDs. I therefore coded +1 for direction rather than inventing an r or a mean. The numeric normative values used in instruments.md come from johnshocking1997 (normal sleepers 0-10, mean 4.6 +/- 2.8) and the reliability statistics from johns1992 (test-retest r = 0.82, Cronbach alpha = 0.88)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = higher ESS means more daytime sleepiness. THIS IS THE PROVENANCE RECORD FOR THE INSTRUMENT, NOT A SOURCE OF CUT-OFFS. What it establishes is that the ESS (a) discriminated normal subjects from patients with obstructive sleep apnoea, narcolepsy and idiopathic hypersomnia, (b) correlated with sleep latency on both the Multiple Sleep Latency Test and overnight polysomnography, and (c) did NOT distinguish simple snorers from controls - the last point matters for our subject, because it means a normal ESS does not exclude snoring and a raised ESS is not attributable to snoring alone."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "One hundred and eighty adults answered the ESS, including 30 normal men and women as controls and 150 patients with a range of sleep disorders. They rated the chances that they would doze off or fall asleep when in eight different situations commonly encountered in daily life. Total ESS scores significantly distinguished normal subjects from patients in various diagnostic groups including obstructive sleep apnea syndrome, narcolepsy and idiopathic hypersomnia. ESS scores were significantly correlated with sleep latency measured during the multiple sleep latency test and during overnight polysomnography. In patients with obstructive sleep apnea syndrome ESS scores were significantly correlated with the respiratory disturbance index and the minimum SaO2 recorded overnight. ESS scores of patients who simply snored did not differ from controls."
+rob:
+  tool: none
+  judgement: na
+  notes: "An instrument-development paper from 1991, appropriately judged as 'not applicable' for risk-of-bias tools designed for effect estimates. Its limitations as a source: only 30 controls, a clinic-based patient comparison group, no age range or sex breakdown in the abstract, no reported cut-off score, and no adolescent data whatsoever. It is cited here for provenance and construct validity only. Every threshold in instruments.md is drawn from johnshocking1997 or corroborated by peppard2013's operational use of ESS > 10, not from this paper."
+funding: "Not stated in the abstract"
+notes: |
+  ACCESS: abstract only (Sleep 1991 is not open access).
+  WHAT THE TASK ASKED FOR VERSUS WHAT THIS PAPER CONTAINS. The task asked for "the original validation (Johns, approx
+  1991), the normal range, and the cut-off indicating excessive daytime sleepiness". The 1991 paper is correctly
+  identified and verified (Sleep 1991;14(6):540-5, PMID 1798888, DOI 10.1093/sleep/14.6.540) but its abstract contains
+  NEITHER a normal range NOR a cut-off. The normal range and the > 10 cut-off come from Johns & Hocking, Sleep
+  1997;20(10):844-9 (PMID 9415943), which states them explicitly: "Normal sleepers, without any evidence of a sleep
+  disorder, had ESS scores between 0 and 10, with a mean of 4.6 +/- 2.8 (standard deviation) ... ESS scores > 10 were
+  taken to represent excessive daytime sleepiness". I have filed that as a separate record (johnshocking1997) rather
+  than attributing the cut-off to the 1991 paper, because attributing it here would be a citation error of exactly the
+  kind the extraction instructions forbid.
+  ADOLESCENT NORMS: I could not find a satisfactory published ESS normative sample for 16-19 year olds. Searches for
+  "Epworth Sleepiness Scale adolescents normative values", "...high school students mean scores normative sample" and
+  "...children adolescents validity" returned no usable normative study. This is recorded as an explicit gap in
+  station_report.md. instruments.md therefore applies the ADULT cut-off (> 10) to our subject and flags that adolescent
+  calibration is unverified - and notes that this is a conservative direction of error for screening purposes, since
+  adolescent ESS scores in restricted sleepers tend to run higher than adult scores, so an adult threshold will
+  over-refer rather than under-refer.
+  THE SNORER NULL IS WORTH CARRYING INTO THE REPORT: "ESS scores of patients who simply snored did not differ from
+  controls." So in our subject a normal ESS is compatible with snoring, and an elevated ESS should not be explained
+  away as "just snoring".
+shard: "s19_sleep_disorders"

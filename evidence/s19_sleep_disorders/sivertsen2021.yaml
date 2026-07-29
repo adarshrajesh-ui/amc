@@ -1,0 +1,75 @@
+study_id: sivertsen2021
+citation: "Sivertsen B, Harvey AG, Gradisar M, Pallesen S, Hysing M. Delayed sleep-wake phase disorder in young adults: prevalence and correlates from a national survey of Norwegian university students. Sleep Med. 2021;77:184-191."
+doi: "10.1016/j.sleep.2020.09.028"
+pmid: "33097403"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Delayed sleep-wake phase disorder in young adults: prevalence and correlates from a national survey of Norwegian university students."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 50054
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [18, 35]
+  pct_female: 69.1
+  country: "Norway"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_dswpd_icsd3_males
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "DSWPD by self-reported ICSD-3 criteria, male students aged 18-35"}
+    scale: probability
+    unit: "proportion of male students"
+    value: 0.047
+    se: 0.0017
+    ci: [0.0437, 0.0503]
+    conversion_formula: "Prevalence 4.7% in males read verbatim from the abstract. n_male = 50054 x (1 - 0.691) = 15467. Binomial se = sqrt(0.047*0.953/15467) = 0.00170; Wald 95% CI = 0.047 +/- 1.96*0.00170 = [0.0437, 0.0503]. The paper reports no CI; the CI here is my construction. NOTE the Wald CI reflects only sampling error and understates real uncertainty enormously, because the 30.8% response rate and the self-report operationalization of ICSD-3 dominate the error budget."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive prevalence. THE PRIMARY PRIOR FOR OUR SUBJECT: an 18-19 year old MALE university student. 4.7% is the highest male-specific DSWPD prevalence I could find in a population sample and it comes from the closest available population (Norwegian higher-education students, self-reported ICSD-3)."
+    covariates: []
+    followup_years: null
+    cohort_family: "SHoT_Norway"
+    quote: "The overall prevalence of DSWPD was 3.3%, and significantly higher in male (4.7%) than female (2.7%) students."
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_dswpd_icsd3_overall
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "DSWPD by self-reported ICSD-3 criteria, all students aged 18-35"}
+    scale: probability
+    unit: "proportion of all students"
+    value: 0.033
+    se: 0.0008
+    ci: [0.0314, 0.0346]
+    conversion_formula: "3.3% verbatim from abstract. se = sqrt(0.033*0.967/50054) = 0.000798; Wald 95% CI = [0.0314, 0.0346]. My construction, not the paper's."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive. The male/overall ratio 4.7/3.3 = 1.42 is the LR for male sex within this cohort. It should be applied with caution: sivertsen2013 (same research group, adolescents) found the OPPOSITE sex pattern (boys 2.7% < girls 3.7%) and danielsson2016 found no sex difference in DSPD. Sex is NOT a stable DSWPD risk factor across studies."
+    covariates: []
+    followup_years: null
+    cohort_family: "SHoT_Norway"
+    quote: "The overall prevalence of DSWPD was 3.3%, and significantly higher in male (4.7%) than female (2.7%) students."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "Enormous sample (50,054) drawn from a national census invitation of all 162,512 Norwegian full-time students, BUT the response rate was 30.8% and respondents were 69.1% women against a real student population that is roughly half male - so male non-response is severe and the male prevalence estimate is the one most exposed to selection bias. DSWPD was ascertained ENTIRELY by self-report questionnaire operationalizing ICSD-3; no actigraphy, no sleep diary, no DLMO, no clinician. ICSD-3 criterion C (normal sleep on an ad libitum schedule) and criterion E (not better explained by another disorder) cannot be verified by questionnaire, so this is a symptom-cluster prevalence, and the direction of the resulting bias is not determinable a priori. Abstract-only access on my side: Unpaywall reports is_oa = false and Europe PMC reports no PMC deposit for 10.1016/j.sleep.2020.09.028, so I could not read the operationalization, the CIs, or the male-subgroup table."
+funding: "Not stated in the abstract"
+notes: |
+  ACCESS: abstract only (Unpaywall is_oa = false; Europe PMC isOpenAccess = N, no PMCID). Every number above is
+  verbatim from the PubMed abstract. I did NOT extract the correlates (overweight, physical inactivity, self-harm,
+  suicidality) as effects because the abstract gives no effect sizes for them.
+  WHAT I WANTED FROM THIS PAPER AND COULD NOT GET: the exact self-report items used to operationalize ICSD-3, and
+  the male-specific CI. Both matter because 4.7% is the single number that most influences the DSWPD prior for our
+  subject, and I cannot audit it.
+  THE THREE-WAY DISAGREEMENT ON SEX. sivertsen2021 (18-35 y students): males 4.7% > females 2.7%. sivertsen2013
+  (16-18 y, same group, ICSD-R): boys 2.7% < girls 3.7%. danielsson2016 (16-26 y, DSM-5): DSPD "equally common in
+  males and females" but DSP (the trait, not the disorder) "more common in males". futenma2023 reviews this and
+  concludes the sex literature is inconsistent. The report should NOT claim male sex raises DSWPD risk; it should
+  claim that sex is uninformative and that the pooled prior across all four population estimates is 3-5%.
+  THIS RECORD AND sivertsen2019 SHARE THE SHoT SURVEY (2018 wave, n=50,054, same 30.8% response rate). Both carry
+  cohort_family SHoT_Norway so the pooler treats them as one family.
+shard: "s19_sleep_disorders"

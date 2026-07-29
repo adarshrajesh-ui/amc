@@ -1,0 +1,101 @@
+study_id: kripke2002
+citation: "Kripke DF, Garfinkel L, Wingard DL, Klauber MR, Marler MR. Mortality associated with sleep duration and insomnia. Arch Gen Psychiatry. 2002 Feb;59(2):131-136."
+doi: "10.1001/archpsyc.59.2.131"
+pmid: "11825133"
+url: "https://doi.org/10.1001/archpsyc.59.2.131"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Mortality associated with sleep duration and insomnia."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 1100000
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [30, 102]
+  pct_female: null
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_threshold_short_sleep
+    exposure: {type: habitual_short_sleep, dose_h: 4.0, referent_h: 7.0, duration_days: null,
+               contrast_label: "self-reported habitual sleep <3.5 h or <4.5 h vs 7 h (best-survival referent); the threshold at which excess hazard exceeded 15%"}
+    scale: log_rr
+    unit: null
+    value: 0.139762
+    se: null
+    ci: null
+    conversion_formula: "The paper reports a THRESHOLD, not a point estimate: 'The increased risk exceeded 15% for those reporting more than 8.5 hours sleep or less than 3.5 or 4.5 hours.' value=ln(1.15)=0.13976 is therefore a LOWER BOUND on the hazard at <=4.5 h, not an estimate of it. se is null and MUST remain null - no CI is quotable from the abstract, and I will not invent one for the largest cohort in this literature."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = higher all-cause mortality. Enter this as a THRESHOLD CONSTRAINT, not as an effect:
+      in 1.1 million people the excess hazard only crossed 15% below about 4.5 h (and above 8.5 h).
+      By implication the hazard at 5-6 h - the subject's weekday dose - was BELOW 15% in the largest
+      dataset ever assembled on this question.
+    covariates: ["demographics", "habits", "health factors", "use of various medications", "insomnia frequency"]
+    followup_years: 6.0
+    cohort_family: "CPS_II"
+    quote: "Participants were more than 1.1 million men and women from 30 to 102 years of age. The best survival was found among those who slept 7 hours per night. Participants who reported sleeping 8 hours or more experienced significantly increased mortality hazard, as did those who slept 6 hours or less. The increased risk exceeded 15% for those reporting more than 8.5 hours sleep or less than 3.5 or 4.5 hours."
+  - outcome_domain: mortality
+    outcome_construct: insomnia_null_control
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "self-reported frequency of 'insomnia' vs none, all-cause mortality, same model - NEGATIVE CONTROL"}
+    scale: log_hr
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No numbers given; the abstract states only that insomnia reports were 'not associated with excess mortality hazard'. Recorded as value 0 with se null. This is a QUALITATIVE null and must not be pooled as a measured zero."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      zero = no association. This matters as a dissociation test: if habitually curtailed sleep killed
+      people through sleep loss itself, complaining of insomnia (which also curtails sleep) should have
+      tracked mortality. It did not. The authors' own conclusion is that the short-sleep signal is not
+      distinct from comorbidity.
+    covariates: ["demographics", "habits", "health factors", "medications", "reported sleep duration"]
+    followup_years: 6.0
+    cohort_family: "CPS_II"
+    quote: "In contrast, reports of \"insomnia\" were not associated with excess mortality hazard. As previously described, prescription sleeping pill use was associated with significantly increased mortality after control for reported sleep durations and insomnia."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Enormous (1.1 million) and heavily adjusted, but: (1) exposure is a single self-report item in 1982;
+    (2) only 6 years of follow-up (1982-1988) so early deaths are a large share of events, the single
+    worst configuration for reverse causation; (3) volunteers recruited by American Cancer Society
+    volunteers, so not population-representative; (4) abstract-only access - I could not retrieve the
+    HR table, so I have deliberately recorded a threshold rather than fabricate cell values;
+    (5) age 30-102, mostly midlife and older; (6) 1982 sleep and health measurement.
+funding: null
+notes: >
+  INCLUDED FOR THREE REASONS, none of which is its effect size.
+  .
+  1. THE THRESHOLD. In the largest cohort ever analysed for this question, excess mortality exceeded 15%
+     only below ~4.5 h and above ~8.5 h. Combined with itani2017 ("mortality linearly increased below
+     six hours"), yin2017 (RR 1.01 at 6 h, 1.04 at 5 h) and zhao2023 (self-reported 5-6 h, HR 1.02),
+     four independent lines say the same thing: THE SUBJECT'S 5-6 H WEEKDAY DOSE SITS IN THE FLAT PART
+     OF THE CURVE. The published headline "short sleepers have 12% higher mortality" (cappuccio2010) is
+     driven by studies whose "short" category reaches down to <=4 h, not by people at 5-6 h.
+  2. THE INSOMNIA DISSOCIATION. Insomnia reports carried no excess mortality in the same model, while
+     sleeping-pill use did. That pattern is much easier to explain by comorbidity and treatment
+     indication than by sleep loss per se.
+  3. THE AUTHORS' OWN CONCLUSION, which is the most direct statement of the confounding thesis in the
+     literature and is written by the person who published the U-curve: "Patients can be reassured that
+     short sleep and insomnia seem associated with little risk distinct from comorbidities... Causality
+     is unproven."
+  .
+  TRANSPORTABILITY: poor_midlife, age 30-102 at baseline, 6-year follow-up, 1982 exposure measurement.
+  This tells us about being a short sleeper in middle age. It says nothing directly about a 16-19 year
+  old. Its value is in bounding the SHAPE of the curve, not in supplying a hazard for our subject.
+  .
+  COHORT OVERLAP WARNING: cohort_family CPS_II. cappuccio2010 and liu2017 both pool Kripke's CPS-II
+  estimate, so this record is NOT independent of those meta-analyses - it is one of their largest
+  constituent studies and dominates their weight. Do not add it to a pool that already contains them.
+shard: "s13_mortality"

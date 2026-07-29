@@ -1,0 +1,213 @@
+study_id: fischer2017
+citation: "Fischer D, Lombardi DA, Marucci-Wellman H, Roenneberg T. Chronotypes in the US - Influence of age and sex. PLoS One. 2017;12(6):e0178782."
+doi: "10.1371/journal.pone.0178782"
+pmid: "28636610"
+url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178782"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Chronotypes in the US - Influence of age and sex"
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 53689
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [15, 80]
+  pct_female: 56.3
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: circadian
+    outcome_construct: msfwe_males_age_19
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "mid-sleep on weekends (MSFWe), MALES aged exactly 19 y, nationally representative US time-use diaries"}
+    scale: hours
+    unit: "clock hours (decimal; 5.03 = 05:02)"
+    value: 5.03
+    se: 0.172
+    ci: [4.69, 5.37]
+    conversion_formula: "reported mean 5.03 h, SD 2.60 h, n = 229. se = SD/sqrt(n) = 2.60/sqrt(229) = 2.60/15.13 = 0.172 h. 95% CI = 5.03 +/- 1.96*0.172 = [4.69, 5.37]. The CI is MY computation from the paper's mean/SD/n; the paper reports mean and SD only."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "LATER clock time = LATER (more delayed) chronotype. This is the single most age- and sex-matched normative chronotype value available for our subject: 19-year-old US males mid-sleep on weekends at 05:02 on average."
+    covariates: []
+    followup_years: null
+    cohort_family: "ATUS"
+    quote: "Table 1 (Average mid-sleep times on weekends by age and sex), row age 19, Men: N = 229, MSFWe = 5.03, SD = 2.60. Footnote: 'Chronotype is assessed by MSFWe based on one-day diary data. Times are shown as decimal values, i.e., 4.50 equals 4:30 (average values).'"
+
+  - outcome_domain: circadian
+    outcome_construct: msfwe_males_age_18
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "mid-sleep on weekends (MSFWe), MALES aged exactly 18 y"}
+    scale: hours
+    unit: "clock hours (decimal; 4.62 = 04:37)"
+    value: 4.62
+    se: 0.123
+    ci: [4.38, 4.86]
+    conversion_formula: "reported mean 4.62 h, SD 2.14 h, n = 303. se = 2.14/sqrt(303) = 2.14/17.41 = 0.123 h. 95% CI = 4.62 +/- 1.96*0.123 = [4.38, 4.86]. CI is MY computation."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "later = more delayed. Our subject is 18-19, so this and the age-19 row bracket him."
+    covariates: []
+    followup_years: null
+    cohort_family: "ATUS"
+    quote: "Table 1, row age 18, Men: N = 303, MSFWe = 4.62, SD = 2.14."
+
+  - outcome_domain: circadian
+    outcome_construct: msfwe_males_age_16
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "mid-sleep on weekends (MSFWe), MALES aged exactly 16 y (start of our subject's exposure window)"}
+    scale: hours
+    unit: "clock hours (decimal; 4.34 = 04:20)"
+    value: 4.34
+    se: 0.081
+    ci: [4.18, 4.50]
+    conversion_formula: "reported mean 4.34 h, SD 1.79 h, n = 494. se = 1.79/sqrt(494) = 1.79/22.23 = 0.081 h. CI is MY computation."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "later = more delayed. Age-16 value, i.e. where our subject started; the 16->19 delay of ~0.7 h is visible in these rows (4.34 -> 5.03)."
+    covariates: []
+    followup_years: null
+    cohort_family: "ATUS"
+    quote: "Table 1, row age 16, Men: N = 494, MSFWe = 4.34, SD = 1.79."
+
+  - outcome_domain: circadian
+    outcome_construct: msfwe_males_age_17
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "mid-sleep on weekends (MSFWe), MALES aged exactly 17 y"}
+    scale: hours
+    unit: "clock hours (decimal; 4.58 = 04:35)"
+    value: 4.58
+    se: 0.104
+    ci: [4.38, 4.78]
+    conversion_formula: "reported mean 4.58 h, SD 2.23 h, n = 458. se = 2.23/sqrt(458) = 2.23/21.40 = 0.104 h. CI is MY computation."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "later = more delayed"
+    covariates: []
+    followup_years: null
+    cohort_family: "ATUS"
+    quote: "Table 1, row age 17, Men: N = 458, MSFWe = 4.58, SD = 2.23."
+
+  - outcome_domain: circadian
+    outcome_construct: peak_chronotype_lateness_age_males
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "age at which chronotype is maximally delayed, males, from 6th-order polynomial smoothing"}
+    scale: years
+    unit: "years of age"
+    value: 19.2
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "This is the peak-lateness age. Our subject is AT the population maximum of circadian delay. Read alongside the smoothed MSFWe at that age (04:40) and the raw maximum of averages (05:02)."
+    covariates: ["labor force status", "sleep duration", "diary day", "diary month"]
+    followup_years: null
+    cohort_family: "ATUS"
+    quote: "progressively later MSFWe are observed in both men and women during childhood and adolescence reaching a peak in 'lateness' at the age of 18.4 years (MSFWe = 4:27) in females and 19.2 years in males (MSFWe = 4:40) (based on smoothing functions; maxima of average values are much later: 4:52 and 5:02, respectively)"
+
+  - outcome_domain: circadian
+    outcome_construct: msfwe_males_15_19_pooled
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "MSFWe, males in the 15-19 y age band (pooled)"}
+    scale: hours
+    unit: "clock hours (4:31 = 4.52 decimal)"
+    value: 4.52
+    se: 0.047
+    ci: [4.43, 4.61]
+    conversion_formula: "paper reports MSFWe_males = 4:31 +/- 1.99 h for the 15-19 band, n = 1,809. 4:31 = 4 + 31/60 = 4.517 h, rounded 4.52. se = 1.99/sqrt(1809) = 1.99/42.53 = 0.047 h. CI is MY computation."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "later = more delayed. SD of 1.99 h is the key dispersion figure: a 2-hour SD means a subject 1 SD late already has MSFWe ~06:30."
+    covariates: []
+    followup_years: null
+    cohort_family: "ATUS"
+    quote: "While frequencies are higher for girls than boys (15-19y) among early chronotypes (i.e., MSFWe < 3:00), they are higher for boys among late types (i.e., MSFWe > 6:00), overall resulting in a slightly advanced chronotype for girls in this age group (MSFWefemales = 4:24 +/-1.97h vs. MSFWemales = 4:31 +/-1.99h, p = 0.051) (panel d)."
+
+  - outcome_domain: circadian
+    outcome_construct: chronotype_variability_sd_males_20_24
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "SD of mid-sleep times, males aged 20-24 (the maximum-variability age band)"}
+    scale: hours
+    unit: "hours (SD of the chronotype distribution)"
+    value: 2.65
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = wider spread of chronotypes. Late adolescence/early adulthood is where chronotype variance PEAKS, and it is higher in males than females -- so any single reported schedule from an 18-19 year old male is drawn from the widest distribution in the lifespan. This is a reason to widen, not narrow, the posterior interval."
+    covariates: []
+    followup_years: null
+    cohort_family: "ATUS"
+    quote: "the variability in chronotype (measured as standard deviation of mid-sleep times) is different according to age: increased during adolescence and largest in the age group 20-24 years (2.36h in women and 2.65h in men)"
+
+  - outcome_domain: circadian
+    outcome_construct: msfwe_population_quartiles_all_ages
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "MSFWe quartile cut-points, whole US sample (all ages)"}
+    scale: hours
+    unit: "clock hours (75th percentile = 4:15 = 4.25 decimal)"
+    value: 4.25
+    se: null
+    ci: [2.40, 4.25]
+    conversion_formula: "paper: 25th percentile = 2:24 (2.40 decimal), 75th percentile = 4:15 (4.25 decimal). Value field carries the 75th percentile; ci field carries the interquartile RANGE (not a confidence interval)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Reference anchor for how unusual a given MSFWe is against the whole adult population. Note that our subject's own age band (18-19 males, mean 04:37-05:02) sits ABOVE the whole-population 75th percentile -- late adolescence is normatively 'late' relative to adults, which is precisely why an age-matched norm must be used and not an adult norm."
+    covariates: []
+    followup_years: null
+    cohort_family: "ATUS"
+    quote: "Twenty-five percent show a chronotype earlier than 2:24, 50% fall between 2:24 and 4:15, and another 25% show a chronotype later than 4:15."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: |
+    STRENGTHS: nationally representative (American Time Use Survey, 12 pooled years 2003-2014,
+    n = 53,689), survey-weighted, age resolved to single years, sex stratified.
+    CRITICAL MEASUREMENT LIMITATION: chronotype here is MSFWe -- mid-sleep on WEEKENDS from a
+    ONE-DAY time-use diary. It is NOT MSFsc. Three consequences: (a) no sleep-debt correction is
+    applied, so these values are biased LATE relative to true MSFsc (Roenneberg 2019 states the
+    sleep correction "makes the distribution slightly earlier"); (b) a single diary day cannot
+    average across free days; (c) alarm-clock use on the diary day was not excluded, whereas the
+    MCTQ reference distribution excludes it. Therefore these numbers should be used as an
+    age/sex-matched WEEKEND MID-SLEEP norm, and must not be compared directly to an MSFsc cut-off.
+    Also cross-sectional: the apparent 16->19 delay could in principle be cohort rather than age,
+    though the authors argue against that ("Roenneberg et al. found a similar age-specific chronotype
+    profile when looking at yearly entries in their large database between 2003 and 2012, providing
+    some evidence for an age- vs. cohort- effect. We confirmed their finding in our study, observing
+    the same age- and sex-pattern for each year of survey (2003-2012).").
+funding: "Not extracted from the retrieved text."
+notes: |
+  WHY THIS IS THE MOST DECISION-RELEVANT NORMATIVE RECORD IN MY SET: it gives an age-exact,
+  sex-exact, population-representative chronotype norm for an 18-19 year old US male, which is what
+  the report needs in order to say whether our subject is normatively late or pathologically late.
+
+  THE AGE CURVE IN MALES (Table 1, Men column, verbatim numbers):
+    age 15: n=325, MSFWe 4.02 (04:01), SD 1.53
+    age 16: n=494, MSFWe 4.34 (04:20), SD 1.79
+    age 17: n=458, MSFWe 4.58 (04:35), SD 2.23
+    age 18: n=303, MSFWe 4.62 (04:37), SD 2.14
+    age 19: n=229, MSFWe 5.03 (05:02), SD 2.60
+    age 20: n=214, MSFWe 4.86 (04:52), SD 2.39
+    whole male sample: n=23,463, MSFWe 3.45 (03:27), SD 2.44
+    whole sample: n=53,689, MSFWe 3.43 (03:26), SD 2.31
+
+  IMPLICATION FOR THE REPORT (this inference is MINE): a US male's mid-sleep on weekends rises from
+  04:01 at 15 to 05:02 at 19 and then falls. If our subject's free-day mid-sleep is ~04:30-05:00 he
+  is at, not beyond, the age-and-sex norm -- that is a normal delayed adolescent chronotype, not
+  DSWPD. DSWPD requires impairment plus an inability to sleep at the desired time, not merely a
+  late phase. Conversely if his free-day mid-sleep is 07:00+ he is roughly +1 SD to +2 SD beyond
+  even the latest age band and the DSWPD hypothesis is substantially strengthened. This is the
+  quantitative fork the report should present.
+
+  ALSO USEFUL AS CONTEXT (verbatim, quantifies the schedule clash):
+    "According to the CDC, 82.3% of public schools in the US (with an estimated total enrollment of
+    4.2 million students) start school at 8:30 a.m. or earlier. Our study shows an average chronotype
+    of 4:30 a.m. in the group of 17- and 18-year olds, suggesting that senior high school students get
+    up and go to school in their biological night."
+    "...which is in line with another CDC report showing that 68.8% of US high school students sleep
+    less than 8h during an average school night"
+
+  Full text retrieved from PubMed Central / PLOS and parsed to plain text; Table 1 values read from
+  the parsed table stream and re-checked against the in-text 15-19 band figures (4:31 +/- 1.99 h for
+  males), which are consistent with the single-year rows.
+shard: "s19_sleep_disorders"

@@ -1,0 +1,214 @@
+study_id: li2026
+citation: "Li X, Zhang M, Li Z, Zhang S, Bertisch SM, Huang T, Rutter MK, Redline S. Acute sleep rebound following sleep restriction is associated with reduced mortality risk. Nat Commun. 2026 Apr 27;17(1):3820."
+doi: "10.1038/s41467-026-72461-1"
+pmid: "42045198"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13121452/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Acute sleep rebound following sleep restriction is associated with reduced mortality risk."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 85618
+n_studies_pooled: null
+population:
+  age_mean: 61.84
+  age_range: [40, 79]
+  pct_female: 56.5
+  country: "UK (replicated in US NHANES, n = 4586)"
+  adolescent_match: poor_elderly
+effects:
+  # ---- THE CATCH-UP / REBOUND CONTRAST, measured objectively ----
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "severe sleep restriction (>3.5 h cumulative loss vs own sleep need) WITHOUT rebound vs regular sleep"}
+    scale: log_hr
+    unit: null
+    value: 0.350657
+    se: 0.069762
+    ci: [0.215111, 0.488580]
+    conversion_formula: "log_hr = ln(1.42) = 0.350657; se = (ln(1.63) - ln(1.24))/3.92 = 0.069762"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher all-cause mortality. Severe restriction with NO recovery sleep. p = 6.98e-7. Model 3, fully adjusted including baseline sleep duration."
+    covariates: ["age", "sex", "ethnicity", "employment status", "education", "BMI", "smoking status", "alcohol frequency", "physical activity", "night shift work", "early chronotype", "baseline sleep duration"]
+    followup_years: 8.0
+    cohort_family: "UK_Biobank"
+    quote: "In the fully adjusted Model 3, both SR without rebound and severe SR without rebound were significantly associated with higher mortality compared to regular sleep in the overall sample (hazard ratio [HR] = 1.15, 95% confidence interval [CI] = 1.01-1.31; HR = 1.42, 95% CI = 1.24-1.63, respectively)."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "severe sleep restriction WITH rebound (extra sleep on the night after restriction) vs regular sleep"}
+    scale: log_hr
+    unit: null
+    value: 0.122218
+    se: 0.091525
+    ci: [-0.051293, 0.307485]
+    conversion_formula: "log_hr = ln(1.13) = 0.122218; se = (ln(1.36) - ln(0.95))/3.92 = 0.091525"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality but NULL (p = 0.169). THE KEY OBJECTIVE-MEASUREMENT REPLICATION OF
+      THE WEEKEND-CATCH-UP FINDING. Compared with the no-rebound counterpart (log 0.3507), rebound
+      leaves only 0.1222/0.3507 = 34.8% of the excess log-hazard, i.e. recovery sleep is associated
+      with removal of ~65% of the excess mortality hazard of severe sleep restriction.
+      The authors are careful that the point estimate remains above 1.0.
+    covariates: ["age", "sex", "ethnicity", "employment status", "education", "BMI", "smoking status", "alcohol frequency", "physical activity", "night shift work", "early chronotype", "baseline sleep duration"]
+    followup_years: 8.0
+    cohort_family: "UK_Biobank"
+    quote: "When sleep rebound occurred, neither SR nor severe SR showed significant associations with mortality, although the point estimates were above 1.0. The multivariable adjusted HRs for all-cause mortality were 1.12 (95% CI = 0.98-1.28) for participants experiencing SR with rebound and 1.13 (95% CI = 0.95-1.36) for those experiencing severe SR with rebound."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "moderate sleep restriction (2.5-3.5 h cumulative loss) WITHOUT rebound vs regular sleep"}
+    scale: log_hr
+    unit: null
+    value: 0.139762
+    se: 0.066346
+    ci: [0.009950, 0.270027]
+    conversion_formula: "log_hr = ln(1.15) = 0.139762; se = (ln(1.31) - ln(1.01))/3.92 = 0.066346"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher mortality, just significant (p = 0.030). Moderate restriction without recovery."
+    covariates: ["age", "sex", "ethnicity", "employment status", "education", "BMI", "smoking status", "alcohol frequency", "physical activity", "night shift work", "early chronotype", "baseline sleep duration"]
+    followup_years: 8.0
+    cohort_family: "UK_Biobank"
+    quote: "both SR without rebound and severe SR without rebound were significantly associated with higher mortality compared to regular sleep in the overall sample (hazard ratio [HR] = 1.15, 95% confidence interval [CI] = 1.01-1.31; HR = 1.42, 95% CI = 1.24-1.63, respectively)."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "moderate sleep restriction (2.5-3.5 h loss) WITH rebound vs regular sleep"}
+    scale: log_hr
+    unit: null
+    value: 0.113329
+    se: 0.068128
+    ci: [-0.020203, 0.246860]
+    conversion_formula: "log_hr = ln(1.12) = 0.113329; se = (ln(1.28) - ln(0.98))/3.92 = 0.068128"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality but null (p = 0.090). At MODERATE restriction, rebound buys much
+      less: 0.1133/0.1398 = 81% of the excess log-hazard remains, versus 35% at severe restriction.
+      So the "catch-up rescues you" effect is concentrated in the severe-restriction stratum, and is
+      weak where the restriction is mild. This is an honesty-critical nuance: the subject's weekday
+      pattern (5-6 h vs a ~9 h adolescent need) is closer to severe than moderate by this paper's
+      definitions, but he is also 40 years younger than anyone in the cohort.
+    covariates: ["age", "sex", "ethnicity", "employment status", "education", "BMI", "smoking status", "alcohol frequency", "physical activity", "night shift work", "early chronotype", "baseline sleep duration"]
+    followup_years: 8.0
+    cohort_family: "UK_Biobank"
+    quote: "The multivariable adjusted HRs for all-cause mortality were 1.12 (95% CI = 0.98-1.28) for participants experiencing SR with rebound and 1.13 (95% CI = 0.95-1.36) for those experiencing severe SR with rebound."
+  # ---- short-sleeper stratum: closest to the subject's baseline ----
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "severe SR without rebound vs regular sleep, among participants in the SHORT baseline sleep duration tertile"}
+    scale: log_hr
+    unit: null
+    value: 0.322083
+    se: 0.084586
+    ci: [0.157004, 0.488580]
+    conversion_formula: "log_hr = ln(1.38) = 0.322083; se = (ln(1.63) - ln(1.17))/3.92 = 0.084586"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality. Short habitual sleepers who further restrict and do NOT recover.
+      In this same short-sleeper stratum, both rebound patterns were null (p = 0.628 for SR with
+      rebound and p = 0.639 for severe SR with rebound), i.e. the protective association of rebound
+      holds specifically in the group most like the subject in exposure structure.
+    covariates: ["age", "sex", "ethnicity", "employment status", "education", "BMI", "smoking status", "alcohol frequency", "physical activity", "night shift work", "early chronotype"]
+    followup_years: 8.0
+    cohort_family: "UK_Biobank"
+    quote: "Among participants with short baseline sleep duration, both SR and severe SR without rebound were significantly associated with higher mortality risk compared to regular sleep (HR = 1.19, 95% CI = 1.01-1.40; HR = 1.38, 95% CI = 1.17-1.63, respectively). ... P values (vs. regular sleep) for SR without rebound, SR with rebound, severe SR without rebound, and severe SR with rebound, respectively: short (0.034, 0.628, 1.36x10-4, 0.639)"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "moderate SR without rebound vs regular sleep, age <=65 subgroup"}
+    scale: log_hr
+    unit: null
+    value: 0.357674
+    se: 0.117346
+    ci: [0.122218, 0.582216]
+    conversion_formula: "log_hr = ln(1.43) = 0.357674; se = (ln(1.79) - ln(1.13))/3.92 = 0.117346"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality. In the YOUNGER half of the cohort (<=65 y) the restriction-without-
+      recovery association is larger than in the whole sample (1.43 vs 1.15), echoing akerstedt2017's
+      age gradient - though the authors report NO statistically significant age interaction, so this
+      should not be over-read.
+    covariates: ["age", "sex", "ethnicity", "employment status", "education", "BMI", "smoking status", "alcohol frequency", "physical activity", "night shift work", "early chronotype"]
+    followup_years: 8.0
+    cohort_family: "UK_Biobank"
+    quote: "In participants 65 years or younger from the overall sample, both SR and severe SR without rebound were associated with higher mortality risk (HR = 1.43, 95% CI = 1.13-1.79; HR = 1.35, 95% CI = 1.03-1.77), while no significant associations were found for SR or severe SR with rebound. ... However, no statistically significant age interactions were observed in the overall sample or within short, medium, or long baseline sleep duration groups."
+  - outcome_domain: exposure_measurement
+    outcome_construct: prevalence_of_restriction_rebound_patterns
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "distribution of objectively measured sleep restriction-rebound patterns"}
+    scale: probability
+    unit: "proportion of 85,618 participants in each pattern"
+    value: 0.721
+    se: null
+    ci: null
+    conversion_formula: "regular sleep 61722/85618 = 0.721; SR without rebound 7734/85618 = 0.090; SR with rebound 7241/85618 = 0.085; severe SR without rebound 5110/85618 = 0.060; severe SR with rebound 3811/85618 = 0.044"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive. Value recorded is the proportion with REGULAR sleep (72.1%). Also important for
+      framing: restriction nights fell mostly on WEEKDAYS (60.9% weekdays only vs 19.7% weekends only)
+      and post-restriction recovery nights also mostly on weekdays (70.2%), peaking on Tuesday. So in
+      real accelerometer data the sleep-loss/recovery cycle is NOT a weekday-weekend cycle - which
+      means the Åkerstedt weekday/weekend framing and this paper's rebound framing are measuring
+      partly different things.
+    covariates: []
+    followup_years: 8.0
+    cohort_family: "UK_Biobank"
+    quote: "participants were categorized into five groups: regular sleep (no restriction or post-restriction periods; n = 61,722; 72.1%), SR without rebound (n = 7734; 9.0%), SR with rebound (n = 7241; 8.5%), severe SR without rebound (n = 5110; 6.0%), and severe SR with rebound (n = 3811; 4.4%). ... Restriction nights occurred most often on weekdays only (60.9%), with fewer instances on weekends only (19.7%) and across both weekdays and weekends (19.5%). Post-restriction nights occurred most frequently on weekdays only (70.2%), followed by weekends only (20.8%), and least frequently across both weekdays and weekends (9.1%)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Best-in-class for this specific question: objective 7-day accelerometry, 574,230 person-nights,
+    individualised sleep-need reference, three nested adjustment models, age/sex stratification,
+    proportional-hazards checks, and external replication in NHANES. Weaknesses that matter a lot for
+    our subject: (1) mean age 61.8 y with 8 y follow-up, so this is a cohort in which short sleep is
+    substantially disease-driven; (2) "sleep need" was estimated as the greater of the person's own
+    average sleep and their age-sex group average, which is a circular definition that partly bakes
+    habitual sleep into the exposure; (3) the rebound-vs-no-rebound contrast is observational and
+    between-person - people who rebound may simply be healthier or have more autonomy over their
+    schedules, and the paper cannot rule that out; (4) the difference between the rebound and
+    no-rebound HRs is not formally tested for interaction; (5) exposure is a single 7-day window,
+    generalised to an 8-year risk period.
+funding: "UK Biobank application ID 91486; funding sources not fully enumerated in the retrieved text"
+notes: >
+  TARGET EXTRACTION #4 (weekend/recovery sleep), objective-measurement counterpart to akerstedt2019.
+  This is the strongest evidence in the shard that catching up on sleep is associated with abolition of
+  the mortality signal, and it agrees with Åkerstedt on direction and roughly on magnitude:
+  .
+    RECOVERY-SLEEP RESCUE FRACTION (share of excess log-hazard eliminated by rebound):
+      severe restriction:   1 - ln(1.13)/ln(1.42) = 1 - 0.1222/0.3507 = 65%
+      moderate restriction: 1 - ln(1.12)/ln(1.15) = 1 - 0.1133/0.1398 = 19%
+      akerstedt2019 <65 y:  1 - ln(1.09)/ln(1.65) = 1 - 0.0862/0.5008 = 83%
+    Range across the two studies: 19-83%, central estimate around 65-80% for substantial restriction.
+  .
+  CAUTION ON CAUSAL READING. All three of these contrasts compare DIFFERENT PEOPLE, not the same
+  people with and without recovery sleep. Whether someone rebounds after a short night is itself
+  determined by health, autonomy at work, caregiving load and circadian type. The clean experiment
+  (impose restriction, randomise recovery, follow mortality) does not and cannot exist. Note also that
+  the lab literature on weekend recovery sleep is less encouraging than this epidemiology: this paper
+  itself cites Depner et al. 2019 (Curr Biol 29:957-967), in which ad libitum weekend recovery sleep
+  FAILED to prevent metabolic dysregulation. So "recovery sleep abolishes the mortality signal" and
+  "recovery sleep repairs the underlying physiology" are not the same claim, and only the first is
+  supported here.
+  .
+  A framing fact worth carrying forward: in real accelerometer data the restriction-recovery cycle is
+  mostly a WITHIN-WEEKDAY phenomenon (61% of restriction nights and 70% of recovery nights fall on
+  weekdays, with recovery peaking on Tuesdays). The tidy "sleep-deprived Monday to Friday, catch up
+  Saturday and Sunday" model that describes our subject is not how most of this cohort behaved.
+  .
+  COHORT OVERLAP WARNING: UK_Biobank accelerometer subsample; overlaps chaput2026, saintmaurice2024,
+  liang2023, windred2024. Do not pool as independent.
+shard: "s13_mortality"

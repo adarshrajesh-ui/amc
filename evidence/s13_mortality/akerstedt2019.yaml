@@ -1,0 +1,284 @@
+study_id: akerstedt2019
+citation: "Åkerstedt T, Ghilotti F, Grotta A, Zhao H, Adami HO, Trolle-Lagerros Y, Bellocco R. Sleep duration and mortality - Does weekend sleep matter? J Sleep Res. 2019 Feb;28(1):e12712."
+doi: "10.1111/jsr.12712"
+pmid: "29790200"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7003477/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep duration and mortality - Does weekend sleep matter?"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 38015
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [18, 100]
+  pct_female: 64.0
+  country: "Sweden"
+  adolescent_match: poor_midlife
+effects:
+  # ---- PRIMARY TARGET: weekday/weekend combination cells, age <65 (Figure 4, middle panel) ----
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 6.5, duration_days: null,
+               contrast_label: "SS: <=5 h weekdays AND <=5 h weekend vs MM: 6-7 h both (reference), age <65 at baseline"}
+    scale: log_hr
+    unit: null
+    value: 0.500775
+    se: 0.153865
+    ci: [0.198851, 0.802002]
+    conversion_formula: "log_hr = ln(1.65) = 0.500775; se = (ln(2.23) - ln(1.22))/3.92 = 0.153865"
+    from_figure: true
+    inferred_from_ci: true
+    direction_note: "positive = higher all-cause mortality. CONSISTENTLY short sleeper (short on weekdays AND weekends). 52 deaths in this cell."
+    covariates: ["sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "shift work", "Charlson comorbidity index"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "The weekday and weekend sleep duration analysis shows that for age <65 years group sleeping 5 hr or less, both during weekdays and weekend (SS), was associated with a 65% higher mortality rate (HR 1.65; 95% CI 1.22-2.23) compared with those consistently sleeping 6 or 7 hr per night (Figure 4). [Figure 4, Age <65 panel: Medium-Medium 258 cases HR 1.00 Ref; Short-Short 52 cases HR 1.65 1.22-2.23; Short-Medium/Long 37 cases HR 1.09 0.77-1.54; Medium-Long 305 cases HR 1.02 0.86-1.21; Long-Long 239 cases HR 1.25 1.05-1.50; Long-Short 20 cases HR 1.26 0.80-1.98]"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: weekend_catchup, dose_h: 5, referent_h: 6.5, duration_days: null,
+               contrast_label: "SML: <=5 h weekdays BUT >=6 h weekend (catch-up) vs MM: 6-7 h both (reference), age <65"}
+    scale: log_hr
+    unit: null
+    value: 0.086178
+    se: 0.176823
+    ci: [-0.261365, 0.431782]
+    conversion_formula: "log_hr = ln(1.09) = 0.086178; se = (ln(1.54) - ln(0.77))/3.92 = 0.176823"
+    from_figure: true
+    inferred_from_ci: true
+    direction_note: "positive = higher all-cause mortality. THIS IS THE SUBJECT'S EXPOSURE PATTERN (short weekdays, longer weekends). NULL: CI spans 1.0. Only 37 deaths -> wide CI; 'no association' here is imprecision as much as absence of effect. Excess log-HR is 0.086 vs 0.501 for the consistently-short (SS) cell, i.e. 17.2% of the SS excess survives."
+    covariates: ["sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "shift work", "Charlson comorbidity index"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "The mortality rate of individuals with short sleep during weekdays, but medium or long sleep over weekends (SML), did not differ from the reference group rate. [Figure 4, Age <65: Short-Medium/Long 37 cases HR 1.09 95% CI 0.77-1.54]"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 8.5, referent_h: 6.5, duration_days: null,
+               contrast_label: "LL: >=8 h weekdays AND >=8 h weekend vs MM 6-7 h both, age <65"}
+    scale: log_hr
+    unit: null
+    value: 0.223144
+    se: 0.090989
+    ci: [0.048790, 0.405465]
+    conversion_formula: "log_hr = ln(1.25) = 0.223144; se = (ln(1.50) - ln(1.05))/3.92 = 0.090989"
+    from_figure: true
+    inferred_from_ci: true
+    direction_note: "positive = higher mortality with consistently LONG sleep. Included because long sleep is the comparator arm that shows the U-shape; the subject's occasional 10-11 h weekend nights are NOT this exposure (this is habitual >=8 h every night)."
+    covariates: ["sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "shift work", "Charlson comorbidity index"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "A higher risk was also observed for individuals with consistently long sleep (LL; HR 1.25; 95% CI 1.05-1.50). [Figure 4, Age <65: Long-Long 239 cases HR 1.25 1.05-1.50]"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: weekend_catchup, dose_h: 6.5, referent_h: 6.5, duration_days: null,
+               contrast_label: "ML: 6-7 h weekdays AND >=8 h weekend vs MM 6-7 h both, age <65"}
+    scale: log_hr
+    unit: null
+    value: 0.019803
+    se: 0.087103
+    ci: [-0.150823, 0.190620]
+    conversion_formula: "log_hr = ln(1.02) = 0.019803; se = (ln(1.21) - ln(0.86))/3.92 = 0.087103"
+    from_figure: true
+    inferred_from_ci: true
+    direction_note: "positive = higher mortality. Exactly null. Moderate weekday sleep plus long weekend sleep carries no mortality penalty (305 deaths, so this is a precise null, not an underpowered one)."
+    covariates: ["sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "shift work", "Charlson comorbidity index"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "[Figure 4, Age <65 panel: Medium-Long 305 cases HR 1.02 95% CI 0.86-1.21]"
+  # ---- whole-cohort (all ages) versions of the same cells: attenuated to null ----
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 6.5, duration_days: null,
+               contrast_label: "SS vs MM, WHOLE cohort (all ages, mean age of SS cell 61.2 y)"}
+    scale: log_hr
+    unit: null
+    value: 0.095310
+    se: 0.080744
+    ci: [-0.061875, 0.254642]
+    conversion_formula: "log_hr = ln(1.10) = 0.095310; se = (ln(1.29) - ln(0.94))/3.92 = 0.080744"
+    from_figure: true
+    inferred_from_ci: true
+    direction_note: "positive = higher mortality. The SAME consistently-short exposure is NULL (HR 1.10, CI spans 1) when older ages are pooled in; the age<65 estimate of 1.65 is therefore not a whole-population effect."
+    covariates: ["sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "shift work", "Charlson comorbidity index"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "[Figure 4, Total panel: Medium-Medium 859 cases HR 1.00 Ref; Short-Short 194 cases HR 1.10 0.94-1.29; Short-Medium/Long 56 cases HR 1.04 0.79-1.37; Medium-Long 384 cases HR 0.94 0.83-1.08; Long-Long 623 cases HR 1.06 0.95-1.17; Long-Short 62 cases HR 1.10 0.85-1.43]"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: weekend_catchup, dose_h: 5, referent_h: 6.5, duration_days: null,
+               contrast_label: "SML vs MM, WHOLE cohort (all ages)"}
+    scale: log_hr
+    unit: null
+    value: 0.039221
+    se: 0.140442
+    ci: [-0.235722, 0.314811]
+    conversion_formula: "log_hr = ln(1.04) = 0.039221; se = (ln(1.37) - ln(0.79))/3.92 = 0.140442"
+    from_figure: true
+    inferred_from_ci: true
+    direction_note: "positive = higher mortality. Subject's pattern, whole cohort: null (56 deaths)."
+    covariates: ["sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "shift work", "Charlson comorbidity index"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "[Figure 4, Total panel: Short-Medium/Long 56 cases HR 1.04 95% CI 0.79-1.37]"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 6.5, duration_days: null,
+               contrast_label: "SS vs MM, age >=65 only"}
+    scale: log_hr
+    unit: null
+    value: -0.030459
+    se: 0.095978
+    ci: [-0.210721, 0.165514]
+    conversion_formula: "log_hr = ln(0.97) = -0.030459; se = (ln(1.18) - ln(0.81))/3.92 = 0.095978"
+    from_figure: true
+    inferred_from_ci: true
+    direction_note: "negative = LOWER mortality. In the elderly the consistently-short-sleep association reverses sign and is null (142 deaths). Strong evidence of age modification."
+    covariates: ["sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "shift work", "Charlson comorbidity index"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "[Figure 4, Age >=65 panel: Medium-Medium 601 cases HR 1.00 Ref; Short-Short 142 cases HR 0.97 0.81-1.18; Short-Medium/Long 19 cases HR 1.21 0.67-1.69; Medium-Long 79 cases HR 1.03 0.75-1.21; Long-Long 384 cases HR 0.99 0.84-1.09; Long-Short 42 cases HR 1.01 0.76-1.42]"
+  # ---- weekend sleep duration alone (Figure 2) ----
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: null,
+               contrast_label: "weekend sleep <=5 h vs 7 h weekend reference, age <65 (weekday sleep NOT adjusted)"}
+    scale: log_hr
+    unit: null
+    value: 0.418710
+    se: 0.143708
+    ci: [0.139762, 0.703098]
+    conversion_formula: "log_hr = ln(1.52) = 0.418710; se = (ln(2.02) - ln(1.15))/3.92 = 0.143708"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher mortality. Short sleep even on the free day (i.e. genuinely short sleep need/ability, not work-imposed restriction) is the harmful phenotype."
+    covariates: ["sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "shift work", "Charlson comorbidity index"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "Among individuals below the age of 65 years at enrolment (Figure 2), short weekend sleep was associated with a significant 52% higher mortality rate (HR 1.52; 95% CI 1.15-2.02) compared with the 7 hr group, while no association was found for long (>=9 hr) weekend sleep."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: null,
+               contrast_label: "weekend sleep <=5 h vs 7 h, age <65, ADDITIONALLY adjusted for weekday sleep duration"}
+    scale: log_hr
+    unit: null
+    value: 0.336472
+    se: 0.187132
+    ci: [-0.030459, 0.703098]
+    conversion_formula: "log_hr = ln(1.40) = 0.336472; se = (ln(2.02) - ln(0.97))/3.92 = 0.187132"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher mortality. Adjusting for weekday sleep removes 20% of the excess log-HR (0.4187 -> 0.3365) and destroys significance."
+    covariates: ["sex", "BMI", "smoking", "alcohol", "education", "physical activity", "shift work", "Charlson index", "weekday sleep duration"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "After adjusting for weekday sleep duration, the risk estimate for short sleep decreased, and lost statistical significance (HR 1.40; 95% CI 0.97-2.02)."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7, duration_days: null,
+               contrast_label: "weekend sleep 6 h vs 7 h, age <65"}
+    scale: log_hr
+    unit: null
+    value: -0.198451
+    se: 0.139208
+    ci: [-0.478036, 0.067659]
+    conversion_formula: "log_hr = ln(0.82) = -0.198451; se = (ln(1.07) - ln(0.62))/3.92 = 0.139208"
+    from_figure: true
+    inferred_from_ci: true
+    direction_note: "negative = LOWER mortality. 6 h weekend sleep is if anything protective vs 7 h in the under-65s. Directly relevant: the subject's weekday sleep is 5-6 h, and 6 h shows no harm signal anywhere in this cohort."
+    covariates: ["sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "shift work", "Charlson comorbidity index"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "[Figure 2, Age <65 panel: weekend sleep 6 h, 69 cases, HR 0.82 95% CI 0.62-1.07 (confounder-adjusted); 0.84 95% CI 0.63-1.12 (additionally adjusted for weekday sleep)]"
+  # ---- quantile regression: percentile differences in MONTHS of age at death (Table 2) ----
+  - outcome_domain: mortality
+    outcome_construct: percentile_difference_age_at_death_25th
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 6.5, duration_days: null,
+               contrast_label: "SS (<=5 h weekday and weekend) vs MM (6-7 h both), fully adjusted, whole cohort"}
+    scale: raw_units
+    unit: "months of age at death (25th percentile), difference vs reference"
+    value: -9.2
+    se: 4.5918
+    ci: [-18.2, -0.2]
+    conversion_formula: "reported directly in months; se = (upper - lower)/3.92 = (-0.2 - (-18.2))/3.92 = 18.0/3.92 = 4.5918"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = DIED EARLIER by this many months. Whole cohort, all ages; Model 2 fully adjusted. This is the single most directly usable life-expectancy-scaled estimate in the shard, BUT the exposure is lifelong-habitual short sleep measured in mostly middle-aged/older adults, not a 3-year adolescent episode."
+    covariates: ["age at baseline", "sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "shift work", "Charlson index"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "Table 2 Model 2b: Short-short | 194 | 12,565 | -9.2 | -18.2, -0.2 | -9.7 | -18.6, -0.8 | -7.5 | -16.5, 1.5 |  ... In the fully adjusted model, we observed a significant difference in survival only among short-short sleepers at the 25th and 50th percentiles of age at death."
+  - outcome_domain: mortality
+    outcome_construct: percentile_difference_age_at_death_25th
+    exposure: {type: weekend_catchup, dose_h: 5, referent_h: 6.5, duration_days: null,
+               contrast_label: "SML (short weekday, medium/long weekend) vs MM, fully adjusted, whole cohort"}
+    scale: raw_units
+    unit: "months of age at death (25th percentile), difference vs reference"
+    value: -6.1
+    se: 6.786
+    ci: [-19.4, 7.2]
+    conversion_formula: "reported directly in months; se = (7.2 - (-19.4))/3.92 = 26.6/3.92 = 6.7857"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = died earlier. Subject's pattern. Point estimate is two-thirds of the consistently-short estimate but the CI is 3x wider and spans zero (56 deaths). Honest reading: NOT evidence of no effect, just uninformative. Age-adjusted Model 1 value is -8.4 months (95% CI -21.3, 4.5), i.e. as large as SS, so the 'weekend sleep rescues you' conclusion is NOT supported by the survival-time analysis, only by the hazard-ratio analysis."
+    covariates: ["age at baseline", "sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "shift work", "Charlson index"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "Table 2 Model 1a: Short-medium/long | 85 | 18,356 | -8.4 | -21.3, 4.5 | -7.8 | -19.5, 4.0 | -4.5 | -17.1, 8.1 | ... Model 2b: Short-medium/long | 56 | 14,435 | -6.1 | -19.4, 7.2 | -3.4 | -20.1, 13.2 | -0.1 | -15.5, 15.3 |"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Strengths: national register linkage for mortality (essentially no outcome misclassification),
+    13 y follow-up, attained-age time scale, explicit adjustment for Charlson comorbidity, sensitivity
+    analysis excluding the first 2 years of follow-up, multiple imputation, and further adjustment for
+    sleep quality/snoring/hypnotics/subjective health that "did not change results appreciably".
+    Weaknesses: (1) exposure is a single baseline self-report on a 6-level ordinal scale (<5,5,6,7,8,>=9 h),
+    so misclassification and regression dilution are guaranteed; (2) the critical SML cell has only
+    37 deaths (<65 y) / 56 deaths (whole cohort), so the key "catch-up rescues you" finding rests on a
+    very small cell and its CI is compatible with HRs from 0.77 to 1.54; (3) the proportional-hazards
+    assumption was violated for the sleep exposures in the pooled-age analysis, which is itself the
+    age-modification finding but complicates the pooled estimates; (4) volunteer cohort recruited at a
+    charity fundraising march, so healthy-volunteer selection; (5) the six weekday/weekend groups were
+    formed post hoc by collapsing small cells, giving the exposure definition a data-dependent element.
+funding: "AFA Insurance; Italian Institute (Stockholm); Stockholm Stress Center"
+notes: >
+  HIGH-PRIORITY TARGET #4 for this shard, and the single closest analogue in the entire literature to
+  the subject's exposure pattern (short weekday sleep with longer weekend sleep). All cell values were
+  read from the printed HR/CI columns of the published forest plots (Figures 2 and 4 of the PMC version,
+  PMC7003477), which display the numeric HR and 95% CI as text next to each row - so these are
+  transcribed numbers, not measurements off an axis. from_figure is nevertheless set true for those
+  effects for full transparency.
+  .
+  DECISION-RELEVANT ARITHMETIC (age <65, reference = 6-7 h both weekday and weekend):
+    consistently short (SS)              HR 1.65  ln = 0.5008
+    short weekday + long weekend (SML)   HR 1.09  ln = 0.0862
+    fraction of SS excess log-hazard remaining in SML = 0.0862 / 0.5008 = 0.172, i.e. weekend
+    catch-up is associated with removal of ~83% of the excess mortality hazard of chronic short sleep.
+    Caveat: this is a between-person comparison of two small cells (52 vs 37 deaths), not a
+    within-person recovery experiment, and the difference between HR 1.65 and HR 1.09 is not itself
+    formally tested. The survival-time (Laplace/quantile) analysis does NOT reproduce the rescue:
+    SML loses 8.4 months at the 25th percentile (age-adjusted) versus 7.8 months for SS. The two
+    analyses disagree, and this disagreement should widen the downstream uncertainty.
+  .
+  IMPORTANT MISMATCH WITH THE TASK PROMPT: the prompt asks for "consistently 7 h sleepers" as the
+  referent. The paper's referent is NOT 7 h; it is "medium-medium" = 6 OR 7 h on both weekday and
+  weekend. The paper's companion (akerstedt2017, same cohort) further concludes that 6 h, not 7 h,
+  is the mortality nadir in this cohort. So the referent here is a 6-7 h band and the subject's
+  weekday 5-6 h sits partly inside the referent category.
+  .
+  Exposure categories for the weekday/weekend analysis: short <=5 h, medium 6-7 h, long >=8 h.
+  Groups: SS, MM (ref), LL, SML (short weekday + medium or long weekend), ML (medium weekday +
+  long weekend), LS (long weekday + short/medium weekend, or medium weekday + short weekend).
+  .
+  COHORT OVERLAP WARNING: same Swedish National March Cohort as akerstedt2017. The pooler must not
+  treat akerstedt2017 and akerstedt2019 as independent evidence.
+  .
+  TRANSPORTABILITY: poor_midlife. Mean age of the SS cell was 61.2 y and of the SML cell 46.1 y;
+  the cohort spans 18-100 y with 64% women. Exposure measured ONCE in adulthood and assumed constant
+  for 13 years. Nothing here speaks to a time-limited adolescent exposure that subsequently ends.
+shard: "s13_mortality"

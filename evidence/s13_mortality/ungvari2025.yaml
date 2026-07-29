@@ -1,0 +1,122 @@
+study_id: ungvari2025
+citation: "Ungvari Z, Fekete M, Varga P, Fekete JT, Lehoczki A, Buda A, Szappanos Á, Purebl G, Ungvari A, Győrffy B. Imbalanced sleep increases mortality risk by 14-34%: a meta-analysis. Geroscience. 2025 Jun;47(3):4545-4566."
+doi: "10.1007/s11357-025-01592-y"
+pmid: "40072785"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Imbalanced sleep increases mortality risk by 14-34%: a meta-analysis."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: null
+n_studies_pooled: 79
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7.5, duration_days: null,
+               contrast_label: "short sleep (<7 h/night) vs 7-8 h reference"}
+    scale: log_hr
+    unit: null
+    value: 0.131028
+    se: 0.017909
+    ci: [0.095310, 0.165514]
+    conversion_formula: "log_hr = ln(1.14) = 0.131028; se = (ln(1.18) - ln(1.10))/3.92 = 0.017909"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher all-cause mortality. THE MOST RECENT SYNTHESIS (search to October 2024,
+      79 cohorts). HR 1.14 for short sleep - materially unchanged from Cappuccio's 1.12 in 2010 despite
+      15 years and roughly five times the evidence. The field has not moved.
+    covariates: ["varies by constituent study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_79_studies"
+    quote: "A total of 79 cohort studies were included, with data stratified by sex and categorized into short and long sleep durations. Short sleep duration (< 7 h per night) was associated with a 14% increase in mortality risk compared to the reference of 7-8 h, with a pooled hazard ratio of 1.14 (95% CI 1.10 to 1.18)."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: other, dose_h: 9, referent_h: 7.5, duration_days: null,
+               contrast_label: "long sleep (>=9 h/night) vs 7-8 h reference"}
+    scale: log_hr
+    unit: null
+    value: 0.292670
+    se: 0.030496
+    ci: [0.231112, 0.350657]
+    conversion_formula: "log_hr = ln(1.34) = 0.292670; se = (ln(1.42) - ln(1.26))/3.92 = 0.030496"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality with long sleep. HR 1.34, i.e. 2.2x the excess log-risk of short sleep
+      (0.2927 vs 0.1310). The asymmetry persists in the newest and largest synthesis.
+    covariates: ["varies by constituent study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_79_studies"
+    quote: "Conversely, long sleep duration (>= 9 h per night) was associated with a 34% higher risk of mortality, with a hazard ratio of 1.34 (95% CI 1.26 to 1.42)."
+  - outcome_domain: mortality
+    outcome_construct: sex_specific_all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "sex-stratified pooling of short and long sleep vs mortality"}
+    scale: probability
+    unit: "qualitative sex-stratified verdict; no sex-specific HR is given in the abstract, so value is a placeholder (0) and se is null."
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "The abstract reports the sex-stratified conclusion in words only. I will not invent sex-specific HRs."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      CONTRADICTS liu2017's male null. This synthesis reports that "both short and long sleep durations
+      significantly elevated mortality risk in MEN AND WOMEN, although the effect was more pronounced
+      for long sleep duration in women". So the largest and most recent sex-stratified meta-analysis
+      finds a significant short-sleep effect in men, whereas liu2017's spline analysis found none
+      (males 5 h RR 1.02, 0.97-1.08). Since our subject is male, this disagreement is directly
+      load-bearing and must not be resolved in either direction by fiat.
+    covariates: ["varies by constituent study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_79_studies"
+    quote: "Sex-specific analyses indicated that both short and long sleep durations significantly elevated mortality risk in men and women, although the effect was more pronounced for long sleep duration in women. Both short and long sleep durations are associated with increased all-cause mortality, though the degree of risk varies by sex."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    Most recent evidence base (to October 2024), 79 cohorts, random-effects pooling, pre-planned sex
+    subgroups, and - unusually - a clean <7 h vs 7-8 h vs >=9 h categorisation rather than study-specific
+    cutpoints. Weaknesses: (1) explicitly includes RETROSPECTIVE as well as prospective cohorts
+    ("Retrospective and prospective cohort studies ... were included"), which is a real quality concession
+    for a mortality outcome; (2) follow-up as short as 1 year is permitted, which maximises reverse
+    causation; (3) self-reported exposure throughout; (4) no dose-response modelling, so it cannot
+    resolve 5 h from 6 h; (5) the abstract reports neither participant numbers nor death counts, so n is
+    null; (6) heavy overlap with the primary literature already pooled by the five earlier syntheses in
+    this shard; (7) abstract-only access.
+funding: null
+notes: >
+  TARGET EXTRACTION #2, "any newer synthesis" as requested. This IS the newest one I could find
+  (published June 2025, searches to October 2024). Its headline numbers:
+    SHORT (<7 h)  HR 1.14 (1.10-1.18)
+    LONG (>=9 h)  HR 1.34 (1.26-1.42)
+    79 cohorts, sex-stratified.
+  .
+  THE IMPORTANT NEGATIVE RESULT: fifteen years and roughly a fivefold increase in the evidence base have
+  moved the short-sleep estimate from 1.12 (Cappuccio 2010, 27 cohort samples) to 1.14 (79 cohorts). The
+  estimate is stable, but stability of a confounded estimate is not evidence of causality - it means the
+  same design flaw has been replicated 79 times. Every one of these cohorts measures self-reported sleep
+  once in adults and follows them for death; none randomises, none instruments, none measures adolescent
+  exposure. More of the same evidence cannot resolve the causal question, which is why the objective-
+  measurement, Mendelian-randomization and recovery-sleep records in this shard carry more weight per
+  study than this one does.
+  .
+  I also screened but excluded a 2022 umbrella review (Sleep Breath, PMID 34435311) and a 2020
+  older-people dose-response meta-analysis (BMC Public Health, PMID 32723316) as adding nothing beyond
+  these syntheses; see screening_log.md.
+  .
+  COHORT OVERLAP WARNING: same primary literature as cappuccio2010, liu2017, yin2017, itani2017,
+  jike2018.
+shard: "s13_mortality"

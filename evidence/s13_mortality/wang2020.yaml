@@ -1,0 +1,140 @@
+study_id: wang2020
+citation: "Wang YH, Wang J, Chen SH, Li JQ, Lu QD, Vitiello MV, Wang F, Tang XD, Shi J, Lu L, Wu SL, Bao YP. Association of Longitudinal Patterns of Habitual Sleep Duration With Risk of Cardiovascular Events and All-Cause Mortality. JAMA Netw Open. 2020 May 1;3(5):e205246."
+doi: "10.1001/jamanetworkopen.2020.5246"
+pmid: "32442289"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7244989/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Association of Longitudinal Patterns of Habitual Sleep Duration With Risk of Cardiovascular Events and All-Cause Mortality."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 52599
+n_studies_pooled: null
+population:
+  age_mean: 52.5
+  age_range: null
+  pct_female: 23.8
+  country: "China (Kailuan cohort)"
+  adolescent_match: poor_midlife
+effects:
+  # ---- THE TRAJECTORY DESIGN: the only study addressing exposures that CHANGE ----
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 4.5, referent_h: 7.45, duration_days: 1460,
+               contrast_label: "LOW-STABLE trajectory (4.2-4.9 h across 2006, 2008, 2010) vs NORMAL-STABLE (7.4-7.5 h), mortality 2010-2017"}
+    scale: log_hr
+    unit: null
+    value: 0.405465
+    se: 0.172010
+    ci: [0.067659, 0.741937]
+    conversion_formula: "log_hr = ln(1.50) = 0.405465; se = (ln(2.10) - ln(1.07))/3.92 = 0.172010"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher all-cause mortality. PERSISTENTLY short sleep over a 4-year measurement window,
+      then 7 years of mortality follow-up. HR 1.50 - larger than any single-measurement estimate in the
+      self-report literature, which is what you would expect if repeated measurement reduces
+      misclassification. Only 879 people in this group.
+    covariates: ["potential confounders (list not available in abstract)"]
+    followup_years: 6.7
+    cohort_family: "Kailuan"
+    quote: "Compared with the normal-stable pattern and adjusting for potential confounders, a low-increasing pattern was associated with increased risk of first CVEs (hazard ratio [HR], 1.22; 95% CI, 1.04-1.43), a normal-decreasing pattern was associated with increased risk of all-cause mortality (HR, 1.34; 95% CI, 1.15-1.57), and the low-stable pattern was associated with the highest risk of CVEs (HR, 1.47; 95% CI, 1.05-2.05) and death (HR, 1.50; 95% CI, 1.07-2.10)."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 7.45, duration_days: 1460,
+               contrast_label: "NORMAL-DECREASING trajectory (7.0 h falling to 5.5 h) vs NORMAL-STABLE (7.4-7.5 h)"}
+    scale: log_hr
+    unit: null
+    value: 0.292670
+    se: 0.079417
+    ci: [0.139762, 0.451076]
+    conversion_formula: "log_hr = ln(1.34) = 0.292670; se = (ln(1.57) - ln(1.15))/3.92 = 0.079417"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality. People whose sleep SHORTENED from normal to 5.5 h had HR 1.34.
+      n = 8074, so this is the best-powered of the abnormal trajectories. Note that a DECLINE in sleep
+      duration in midlife is itself a classic prodrome of chronic illness, so this is also the trajectory
+      most exposed to reverse causation.
+    covariates: ["potential confounders (list not available in abstract)"]
+    followup_years: 6.7
+    cohort_family: "Kailuan"
+    quote: "a normal-decreasing pattern was associated with increased risk of all-cause mortality (HR, 1.34; 95% CI, 1.15-1.57)"
+  # ---- THE KEY CELL: sleep that STARTS SHORT AND RECOVERS ----
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: recovery_sleep, dose_h: 6.9, referent_h: 7.45, duration_days: 1460,
+               contrast_label: "LOW-INCREASING trajectory (4.9 h rising to 6.9 h, i.e. a short sleeper who NORMALISED) vs NORMAL-STABLE"}
+    scale: log_hr
+    unit: null
+    value: 0.198851
+    se: null
+    ci: null
+    conversion_formula: >
+      NO NUMBER IS AVAILABLE for the all-cause mortality estimate in the low-increasing group. The
+      abstract reports this group's HR for cardiovascular EVENTS only (1.22; 1.04-1.43) and does not
+      report its mortality HR. value has been set to ln(1.22) = 0.198851 as a PLACEHOLDER carrying the
+      CVE estimate, and se is null. This effect must NOT be used as a mortality estimate.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      THIS IS THE MOST IMPORTANT MISSING NUMBER IN THE ENTIRE SHARD, and I could not obtain it. The
+      "low-increasing" trajectory - a short sleeper (4.9 h) who returns to near-normal sleep (6.9 h) -
+      is the closest population analogue to what our subject is about to do. Its cardiovascular-event
+      HR is 1.22 (1.04-1.43), i.e. intermediate between normal-stable (1.00) and low-stable (1.47),
+      which would suggest that normalising sleep recovers roughly half of the excess CVE risk
+      (1 - ln(1.22)/ln(1.47) = 1 - 0.1989/0.3853 = 48%). But the abstract does not report the
+      corresponding ALL-CAUSE MORTALITY hazard ratio for this group, and I will not extrapolate one.
+      Recorded so that the gap is visible rather than silently absent.
+    covariates: ["potential confounders (list not available in abstract)"]
+    followup_years: 6.7
+    cohort_family: "Kailuan"
+    quote: "Four distinct 4-year sleep duration trajectory patterns were identified: normal stable (range, 7.4 to 7.5 hours [n = 40 262]), normal decreasing (mean decrease from 7.0 to 5.5 hours [n = 8074]), low increasing (mean increase from 4.9 to 6.9 hours [n = 3384]), and low stable (range, 4.2 to 4.9 hours [n = 879]). ... a low-increasing pattern was associated with increased risk of first CVEs (hazard ratio [HR], 1.22; 95% CI, 1.04-1.43)"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Uniquely valuable design - three repeated sleep measurements over four years, then a separate
+    mortality follow-up window, with baseline exclusion of atrial fibrillation, myocardial infarction,
+    stroke and cancer. That exclusion of prevalent disease is a genuine strength against reverse
+    causation. Weaknesses: (1) 76.2% male industrial workforce in a single Chinese coal-mining company,
+    so generalisability is limited (though the male predominance happens to match our subject);
+    (2) latent-mixture trajectory classes are data-derived and the four-class solution is a modelling
+    choice; (3) self-reported nocturnal sleep duration; (4) only 2361 deaths, and the low-stable class
+    contains just 879 people, hence the wide CI (1.07-2.10); (5) mean age 52.5 y; (6) abstract-only
+    access, which is why the low-increasing mortality HR is unavailable.
+funding: null
+notes: >
+  This is the ONLY study I found that measures whether CHANGING sleep duration changes subsequent risk -
+  which is precisely the structure of our subject's question. It is therefore the single most
+  structurally relevant observational design in the shard, and it is frustratingly incomplete for our
+  purposes because the abstract reports the recovery group's cardiovascular but not its mortality
+  hazard ratio.
+  .
+  WHAT IT DOES ESTABLISH: risk tracks the CURRENT and RECENT trajectory, not a fixed historical
+  exposure. The gradient runs normal-stable 1.00 < low-increasing 1.22 (CVE) < normal-decreasing 1.34
+  (death) < low-stable 1.47 (CVE) / 1.50 (death). Someone who was sleeping 4.9 h and moved to 6.9 h
+  sits much closer to the normal-stable group than to the low-stable group. On the cardiovascular
+  outcome, normalising sleep is associated with recovering about half of the excess risk within a few
+  years.
+  .
+  THAT IS AN ENCOURAGING BUT WEAK BASIS for the subject's central question, for two reasons. First, the
+  outcome for which the number exists is cardiovascular events, not death. Second, and more
+  fundamentally, the low-increasing group had been short sleepers for an unknown period before 2006 and
+  were measured in midlife; a 19-year-old who stops after three years has a far shorter cumulative
+  exposure and 40 more years of healthy hazard ahead of him. If anything this study's structure suggests
+  the residual should be SMALLER for him than the ~50% it implies, but the study cannot support that
+  inference quantitatively.
+  .
+  See also liu2024 (JMIR Public Health Surveill, PMID 38324354), a Kailuan analysis of the same
+  trajectory framework for cancer mortality which found the decreasing-low-stable association was
+  present ONLY in participants aged under 45 (cancer-specific mortality HR 2.52, 1.22-5.19). Logged in
+  screening_log.md as INCLUDED-CONTEXT; it is cancer-specific rather than all-cause, and it draws on the
+  same Kailuan cohort, so it is not given its own record.
+  .
+  COHORT OVERLAP WARNING: cohort_family Kailuan; shares participants with liu2024 (PMID 38324354).
+shard: "s13_mortality"

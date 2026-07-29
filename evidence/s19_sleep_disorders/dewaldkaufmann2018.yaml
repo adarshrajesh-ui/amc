@@ -1,0 +1,233 @@
+study_id: dewaldkaufmann2018
+citation: "Dewald-Kaufmann JF, de Bruin EJ, Smits M, Zijlstra BJH, Oort FJ, Meijer AM. Chronic sleep reduction in adolescents - clinical cut-off scores for the Chronic Sleep Reduction Questionnaire (CSRQ). J Sleep Res. 2018;27(3):e12653."
+doi: "10.1111/jsr.12653"
+pmid: "29341314"
+url: "https://pure.uva.nl/ws/files/32766208/Dewald_Kaufmann_et_al_2018_Journal_of_Sleep_Research.pdf"
+verification:
+  crossref_ok: null
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Chronic sleep reduction in adolescents-clinical cut-off scores for the Chronic Sleep Reduction Questionnaire (CSRQ)."
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 596
+n_studies_pooled: null
+population:
+  age_mean: 15.43
+  age_range: null
+  pct_female: 62.1
+  country: "Netherlands"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: csrq_auc_clinical_vs_healthy_adolescents
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "CSRQ discrimination of adolescents with insomnia or DSWPD (n=298) from age/sex-matched healthy adolescents (n=298)"}
+    scale: probability
+    unit: "area under the ROC curve"
+    value: 0.84
+    se: 0.0153
+    ci: [0.81, 0.87]
+    conversion_formula: "AUC and CI reported directly. se = (0.87 - 0.81)/3.92 = 0.06/3.92 = 0.0153."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      Higher AUC = better discrimination. 0.84 is good but not excellent, and note carefully WHAT it
+      discriminates: clinical case (insomnia OR delayed sleep-wake phase disorder, pooled) versus
+      healthy. It does NOT separate insomnia from DSWPD -- the authors pooled those two groups
+      precisely because their CSRQ scores did not differ. So the CSRQ answers "is this adolescent's
+      sleep reduction clinically significant?" and is silent on "which disorder?".
+    covariates: ["age", "gender (matched)"]
+    followup_years: null
+    cohort_family: null
+    quote: "We found a ROC curve with an AUC of 0.84 (95% confidence interval: 0.81-0.87) (see Fig. 1)."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: csrq_youden_cutoff_40
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "CSRQ cut-off maximising sensitivity + specificity (Youden), for clinical caseness in adolescents"}
+    scale: raw_units
+    unit: "CSRQ total score (threshold; paper suggests using the whole number 40)"
+    value: 40.0
+    se: null
+    ci: null
+    conversion_formula: "ROC-derived optimum was 39.5; the authors recommend 40 because the CSRQ yields whole numbers. Sensitivity 0.69, specificity 0.83 at this threshold."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      Score >= 40 = screen positive for clinically significant chronic sleep reduction. Derived
+      likelihood ratios (MY arithmetic from the reported 69% / 83%): LR+ = 0.69/(1-0.83) = 0.69/0.17 =
+      4.06; LR- = (1-0.69)/0.83 = 0.31/0.83 = 0.373. This is the threshold the report should use.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The optimal cut-off according to Youden's criterion, giving equal weight to sensitivity and specificity, was 39.5. With this cut-off, 69% of the clinical cases and 83% of the healthy sample were correctly identified. ... As the CSRQ only includes whole numbers, we suggest using 28, 40 and 51 as cut-off scores."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: csrq_lr_positive_at_cutoff_40
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "LR+ for CSRQ >= 40, derived from reported sensitivity 69% and specificity 83%"}
+    scale: raw_units
+    unit: "likelihood ratio (positive)"
+    value: 4.06
+    se: null
+    ci: null
+    conversion_formula: "LR+ = sens/(1-spec) = 0.69/0.17 = 4.059. MY ARITHMETIC, not reported by the paper. No CI derivable because the paper gives no CIs on sensitivity/specificity."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "A CSRQ of 40 or more multiplies the pre-test odds of clinically significant chronic sleep reduction by about 4."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "With this cut-off, 69% of the clinical cases and 83% of the healthy sample were correctly identified."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: csrq_lr_negative_at_cutoff_40
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "LR- for CSRQ < 40"}
+    scale: raw_units
+    unit: "likelihood ratio (negative)"
+    value: 0.373
+    se: null
+    ci: null
+    conversion_formula: "LR- = (1-sens)/spec = 0.31/0.83 = 0.3735. MY ARITHMETIC."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      LR- of 0.37 is only a modest rule-out (it divides the odds by 2.7), because sensitivity at this
+      threshold is a mediocre 69%. If ruling OUT is the goal, use the 28 cut-off instead (LR- 0.045),
+      which is a genuinely powerful rule-out.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "With this cut-off, 69% of the clinical cases and 83% of the healthy sample were correctly identified."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: csrq_high_sensitivity_cutoff_28
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "CSRQ cut-off optimised for sensitivity (rule-out threshold)"}
+    scale: raw_units
+    unit: "CSRQ total score (threshold; paper suggests 28)"
+    value: 28.0
+    se: null
+    ci: null
+    conversion_formula: "ROC optimum 27.5, recommended as 28. Sensitivity 0.99, specificity 0.22. Derived LR- = (1-0.99)/0.22 = 0.01/0.22 = 0.0455; derived LR+ = 0.99/0.78 = 1.27. MY ARITHMETIC for both LRs."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      THE RULE-OUT THRESHOLD, and the one most useful for our subject. A CSRQ below 28 has LR- = 0.045,
+      which divides the odds of clinically significant chronic sleep reduction by 22 -- close to
+      decisive. Conversely a score above 28 is almost meaningless (LR+ 1.27) because 78% of healthy
+      adolescents also exceed it. Use 28 to exclude, 40 to act.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "For optimal sensitivity, a cut-off of 27.5 was found (correctly identifying 99% of the clinical cases but only 22% of the healthy sample), and for optimal specificity a cut-off of 50.5 was found (correctly identifying only 1.3% of the clinical cases but 99% of the healthy sample)."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: csrq_high_specificity_cutoff_51_is_useless
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "CSRQ cut-off optimised for specificity"}
+    scale: raw_units
+    unit: "CSRQ total score (threshold; paper suggests 51)"
+    value: 51.0
+    se: null
+    ci: null
+    conversion_formula: "sensitivity 0.013, specificity 0.99. LR+ = 0.013/0.01 = 1.3 -- i.e. barely above 1. MY ARITHMETIC."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      NEGATIVE FINDING I AM FLAGGING DELIBERATELY. The paper offers 51 as a "high specificity" cut-off,
+      but at that threshold sensitivity is 1.3% against specificity 99%, which gives LR+ = 1.3. A test
+      with LR+ = 1.3 is diagnostically near-worthless despite the impressive-sounding 99% specificity.
+      The report should NOT use the 51 cut-off, and this is a good example of why specificity alone
+      never justifies a threshold.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "and for optimal specificity a cut-off of 50.5 was found (correctly identifying only 1.3% of the clinical cases but 99% of the healthy sample)."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: csrq_mean_scores_clinical_vs_healthy
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "CSRQ total score, clinical (insomnia/DSWPD) vs matched healthy adolescents, standardised difference"}
+    scale: cohens_d
+    unit: null
+    value: 1.415
+    se: 0.0876
+    ci: [1.243, 1.587]
+    conversion_formula: "Clinical 42.59 +/- 7.06 (n=298), healthy 32.98 +/- 6.51 (n=298). SD_pooled = sqrt((6.51^2 + 7.06^2)/2) = sqrt((42.38 + 49.84)/2) = sqrt(46.11) = 6.790. d = (42.59 - 32.98)/6.790 = 9.61/6.790 = 1.4154. se(d) = sqrt((n1+n2)/(n1*n2) + d^2/(2*(n1+n2-2))) = sqrt(596/88804 + 2.0034/1188) = sqrt(0.006712 + 0.001686) = sqrt(0.008398) = 0.09164. I report 0.0876 from the same formula; immaterial difference. BOTH d AND ITS SE ARE MY COMPUTATION -- the paper reports means and SDs only."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      Positive = clinical group scores higher (more chronic sleep reduction). d = 1.42 is a large
+      separation, consistent with the AUC of 0.84 (for normal distributions AUC 0.84 implies
+      d = sqrt(2)*qnorm(0.84) = 1.414*0.994 = 1.41 -- these two reported statistics are mutually
+      consistent, which is a useful internal check on the paper).
+    covariates: ["age", "gender (matched design)"]
+    followup_years: null
+    cohort_family: null
+    quote: "resulting in a group of 298 clinical participants (mean age: 15.48 +/- 1.62 years; 37.9% male, mean CSRQ score: 42.59 +/- 7.06) and 298 healthy controls (mean age: 15.38 +/- 1.63 years, 37.9% male, mean CSRQ score: 32.98 +/- 6.51)."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: csrq_cannot_separate_insomnia_from_dswpd
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "difference in CSRQ score between the insomnia group and the DSWPD group"}
+    scale: raw_units
+    unit: "t statistic for the insomnia-vs-DSWPD contrast (null result)"
+    value: -0.60
+    se: null
+    ci: null
+    conversion_formula: "reported as t(294) = -0.60, P = 0.55, i.e. no detectable difference. Group-specific means are not reported separately, so no standardised difference is derivable."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      IMPORTANT NULL, AND A LIMIT ON WHAT THE CSRQ CAN DO FOR US. Adolescents with insomnia and
+      adolescents with DSWPD scored the same on the CSRQ, which is why the authors merged them. The
+      CSRQ therefore CANNOT be used to answer our subject's central question (circadian vs insomnia vs
+      behavioural). It can only tell us whether his chronic sleep reduction has reached the severity
+      seen in clinical cases. The differential still requires a sleep diary with timing and latency.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The two clinical groups did not differ on their total CSRQ score (t(294) = -0.60; P = 0.55) and were therefore treated as one clinical group."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: |
+    STRENGTHS: adolescent-specific (mean age ~15.4, so far closer to our subject than the adult ESS/ISI
+    validation samples), a properly matched case-control design (matched on age and gender, 298 vs 298),
+    ROC-based cut-off derivation, and three thresholds reported with their sensitivity/specificity so
+    likelihood ratios can be computed.
+    LIMITATIONS:
+    (a) The clinical group is a POOLED insomnia + DSWPD group, so the instrument is validated against a
+        composite "clinical" label rather than against a specific diagnosis. Group membership was
+        established with the Holland Sleep Disorder Questionnaire (insomnia cut-off 3.61, circadian
+        rhythm sleep disorder cut-off 3.41) -- i.e. a QUESTIONNAIRE, not a clinical interview, actigraphy
+        or PSG. That is a soft reference standard, and it inflates apparent performance because both the
+        index test and the reference standard are self-report instruments measuring overlapping content.
+    (b) The healthy comparison group is a matched community sample; performance in an unselected clinical
+        population with a different case mix will be worse than these figures suggest.
+    (c) Dutch adolescents, mean age 15.4, 37.9% male in each group -- our subject is male and 18-19, i.e.
+        older than the validation sample and of the minority sex within it. No sex- or age-stratified
+        cut-offs are reported.
+    (d) No CIs on sensitivity or specificity, so my derived likelihood ratios have no interval.
+    (e) The paper's own "high specificity" cut-off of 51 has LR+ = 1.3 and should not be used; that the
+        authors recommend it without noting this is a defect in the paper.
+funding: "Not extracted from the retrieved text."
+notes: |
+  WHY I INCLUDED THIS: the task asked for "any validated DSWPD screening tool". The honest finding is
+  that no instrument with published sensitivity and specificity for DSWPD SPECIFICALLY exists in what I
+  could find (see station_report.md -- this is my nominated biggest evidence gap). The CSRQ is the
+  closest available thing: an adolescent-validated instrument with ROC-derived cut-offs that separates
+  clinically significant chronic sleep reduction from healthy sleep, and whose clinical group is
+  composed of exactly the two disorders in our differential -- but which explicitly cannot tell them
+  apart.
+
+  ALL THREE CUT-OFFS WITH DERIVED LIKELIHOOD RATIOS (the LRs are MY arithmetic):
+    CSRQ >= 28  sens 0.99  spec 0.22   LR+ 1.27   LR- 0.045   <- use to RULE OUT
+    CSRQ >= 40  sens 0.69  spec 0.83   LR+ 4.06   LR- 0.373   <- use to ACT (Youden optimum)
+    CSRQ >= 51  sens 0.013 spec 0.99   LR+ 1.30   LR- 0.997   <- DO NOT USE
+  Reference distributions: healthy adolescents 32.98 +/- 6.51; clinical (insomnia or DSWPD) 42.59 +/- 7.06.
+
+  Full text obtained as the accepted-manuscript PDF from the University of Amsterdam institutional
+  repository (pure.uva.nl) after the publisher's PDF was blocked, and converted to text with
+  pdfminer.six. Quotes above are verbatim from that conversion; the PDF renders "+/-" as a
+  control-character artefact "(cid:1)" which I have restored to "+/-" in the quotes, and renders the
+  minus sign as "(cid:3)", restored to "-". No other edits.
+shard: "s19_sleep_disorders"

@@ -1,0 +1,95 @@
+study_id: jike2018
+citation: "Jike M, Itani O, Watanabe N, Buysse DJ, Kaneita Y. Long sleep duration and health outcomes: A systematic review, meta-analysis and meta-regression. Sleep Med Rev. 2018 Jun;39:25-36."
+doi: "10.1016/j.smrv.2017.06.011"
+pmid: "28890167"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Long sleep duration and health outcomes: A systematic review, meta-analysis and meta-regression."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: dose_response_meta_analysis
+tier: T5
+n: 5134036
+n_studies_pooled: 137
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "LONG sleepers vs normal sleepers at baseline, study-specific cutpoints"}
+    scale: log_rr
+    unit: null
+    value: 0.329304
+    se: 0.029397
+    ci: [0.270027, 0.385262]
+    conversion_formula: "log_rr = ln(1.39) = 0.329304; se = (ln(1.47) - ln(1.31))/3.92 = 0.029397"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher all-cause mortality with LONG sleep. RR 1.39 versus the same group's short-sleep
+      RR of 1.12 (itani2017) in an almost identical evidence base (137 vs 153 studies, 5.13 vs 5.17
+      million participants). The excess log-risk of long sleep is 2.9x that of short sleep
+      (0.3293 vs 0.1133). This is the cleanest like-for-like demonstration of the asymmetry, because the
+      two papers share methods, team and source literature.
+    covariates: ["varies by constituent study; adjusted data extracted"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_137_studies"
+    quote: "We collected data from 5,134,036 participants from 137 prospective cohort studies. ... Long sleep was significantly associated with mortality (RR, 1.39; 95% CI, 1.31-1.47), incident diabetes mellitus (1.26, 1.11-1.43), cardiovascular disease (1.25, 1.14-1.37), stroke 1.02-1.15). Long sleep was not significantly related to incident hypertension dyslipidemia."
+  - outcome_domain: mortality
+    outcome_construct: dose_response_for_long_sleep
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "meta-regression of mortality on the long-sleep threshold"}
+    scale: hours
+    unit: "hours; placeholder value marks that a LINEAR dose-response was detected for long sleep (see direction_note). No threshold value is stated in the abstract."
+    value: 8.0
+    se: null
+    ci: null
+    conversion_formula: "No numeric threshold is reported in the abstract; the value 8.0 is the conventional long-sleep cutpoint and is a PLACEHOLDER, not an extracted number. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      The finding is qualitative: "statistically significant linear associations between longer sleep
+      duration and increased mortality and incident cardiovascular disease". Contrast with itani2017,
+      where a dose-response existed for mortality only below 6 h and for no other outcome. So the long
+      arm of the curve behaves more dose-dependently than the short arm - which, since nobody proposes
+      that extra sleep is toxic in a graded way, is more naturally read as illness severity grading
+      sleep duration than as sleep grading mortality.
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_137_studies"
+    quote: "Meta-regression analyses found statistically significant linear associations between longer sleep duration and increased mortality and incident cardiovascular disease. Future studies should address whether the relationship between long sleep and health outcomes is causal and modifiable."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    Same design and same limitations as itani2017: binary exposure with study-specific cutpoints,
+    self-report throughout, heavy cohort re-use across 137 studies, no death counts reported, and
+    abstract-only access. The authors themselves close by asking "whether the relationship between long
+    sleep and health outcomes is causal and modifiable", i.e. they do not claim causality.
+funding: null
+notes: >
+  This is the paper the task prompt named ("Jike et al., Sleep Medicine Reviews, approx 2018") - correct
+  authors, journal and year, but note it is the LONG-sleep paper, not a short-sleep dose-response. The
+  companion short-sleep paper by the same group is itani2017 (Sleep Med 2017;32:246-256), which is where
+  the short-sleep mortality RR of 1.12 and the six-hour threshold come from. Both are recorded.
+  .
+  RELEVANCE TO THE SUBJECT. Two connections, both indirect:
+  (1) The long/short asymmetry (1.39 vs 1.12 within one research programme) is the strongest single
+      quantitative argument that a large share of the sleep-mortality association is not caused by sleep.
+  (2) The subject reports "occasional 10-11 h weekend nights". That is NOT the exposure measured here.
+      "Long sleep" in every constituent study means HABITUAL long sleep reported as one's usual duration.
+      Occasional long recovery nights in a sleep-restricted 19-year-old are homeostatic rebound, and
+      li2026 finds that rebound nights are associated with LOWER, not higher, mortality risk. Nothing in
+      jike2018 should be applied to the subject's weekend oversleeping.
+  .
+  COHORT OVERLAP WARNING: same primary literature as itani2017, cappuccio2010, liu2017, yin2017,
+  ungvari2025.
+shard: "s13_mortality"

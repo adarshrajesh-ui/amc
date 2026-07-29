@@ -1,0 +1,123 @@
+study_id: liang2023
+citation: "Liang YY, Ai S, Xue H, Chen Y, Zhou J, Shu X, Weng F, Zhou M, Ma H, Zhang J, Geng Q, Wing YK. Joint Associations of Device-Measured Sleep Duration and Efficiency With All-Cause and Cause-Specific Mortality: A Prospective Cohort Study of 90 398 UK Biobank Participants. J Gerontol A Biol Sci Med Sci. 2023 Aug 27;78(9):1717-1724."
+doi: "10.1093/gerona/glad108"
+pmid: "37186145"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Joint Associations of Device-Measured Sleep Duration and Efficiency With All-Cause and Cause-Specific Mortality: A Prospective Cohort Study of 90 398 UK Biobank Participants."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 90398
+n_studies_pooled: null
+population:
+  age_mean: 62.4
+  age_range: [40, 79]
+  pct_female: 56.5
+  country: "UK"
+  adolescent_match: poor_elderly
+effects:
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "accelerometer-measured SHORT sleep duration vs normal, categorical (cutpoints not stated in abstract)"}
+    scale: log_hr
+    unit: null
+    value: 0.239017
+    se: 0.068164
+    ci: [0.104360, 0.371564]
+    conversion_formula: "log_hr = ln(1.27) = 0.239017; se = (ln(1.45) - ln(1.11))/3.92 = 0.068164"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher all-cause mortality with objectively short sleep. HR 1.27 - a third independent
+      UK Biobank accelerometer analysis giving an estimate around 1.27-1.43, well above the self-report
+      meta-analytic 1.12-1.14. Consistent with chaput2026 and saintmaurice2024.
+    covariates: ["adjusted (covariate list not available in abstract)"]
+    followup_years: 6.4
+    cohort_family: "UK_Biobank"
+    quote: "Of the 90 398 participants (age, 62.4 [7.8] years, 43.5% male) who were included, 2 685 deaths were reported within a median follow-up duration of 6.4 years. Both accelerometer-measured short (adjusted hazard ratios, 1.27; 95% confidence interval [CI]: 1.11-1.45) and long sleep duration (adjusted hazard ratios, 1.16; 95% CI: 1.06-1.28) were positively associated with the risks of all-cause mortality."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "accelerometer-measured LONG sleep duration vs normal"}
+    scale: log_hr
+    unit: null
+    value: 0.148420
+    se: 0.048110
+    ci: [0.058269, 0.246860]
+    conversion_formula: "log_hr = ln(1.16) = 0.148420; se = (ln(1.28) - ln(1.06))/3.92 = 0.048110"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality with objectively long sleep. NOTE THE REVERSAL: with OBJECTIVE
+      measurement, short sleep (1.27) is MORE harmful than long sleep (1.16) - the opposite of every
+      self-report synthesis, where long sleep dominates. That reversal is real evidence that the
+      self-reported long-sleep excess is partly a reporting artefact of ill people over-reporting
+      time in bed, and that the short-sleep signal is the more robust of the two.
+    covariates: ["adjusted (covariate list not available in abstract)"]
+    followup_years: 6.4
+    cohort_family: "UK_Biobank"
+    quote: "Both accelerometer-measured short (adjusted hazard ratios, 1.27; 95% confidence interval [CI]: 1.11-1.45) and long sleep duration (adjusted hazard ratios, 1.16; 95% CI: 1.06-1.28) were positively associated with the risks of all-cause mortality."
+  - outcome_domain: mortality
+    outcome_construct: joint_long_sleep_low_efficiency_mortality
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "long sleep duration AND low sleep efficiency vs normal duration AND high efficiency"}
+    scale: log_hr
+    unit: null
+    value: 0.746688
+    se: 0.194778
+    ci: [0.364643, 1.128171]
+    conversion_formula: "log_hr = ln(2.11) = 0.746688; se = (ln(3.09) - ln(1.44))/3.92 = 0.194778"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality. THE PATHOLOGY SIGNATURE. Doubled mortality (HR 2.11) in people who
+      spend a long time in bed but sleep inefficiently while there - which is a clinical description of
+      illness, pain, apnoea and depression, not of a sleep-duration exposure. P for interaction = 0.001.
+      This is the single clearest demonstration in the shard that what accelerometer "sleep duration"
+      measures in a 62-year-old is substantially disease. It is also the reason objectively measured
+      short sleep in this age group should not be equated with behavioural sleep restriction in a
+      healthy 19-year-old.
+    covariates: ["adjusted (covariate list not available in abstract)"]
+    followup_years: 6.4
+    cohort_family: "UK_Biobank"
+    quote: "Significant interaction existed between accelerometer-measured sleep duration and efficiency for the risk of all-cause mortality (Pinteraction = .001), participants with long sleep duration and lower sleep efficiency had a double mortality risk compared with those with higher sleep efficiency and normal sleep duration (adjusted hazard ratios = 2.11; 95% CI: 1.44-3.09). ... Lower sleep efficiency was associated with an increased risk of all-cause and cause-specific mortality."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Objective exposure and a large sample, with the valuable addition of sleep efficiency as a joint
+    exposure. Weaknesses: (1) mean age 62.4 y and median follow-up only 6.4 years - the shortest
+    follow-up of the UK Biobank accelerometer analyses in this shard and therefore the most exposed to
+    reverse causation; (2) the short/long duration cutpoints are not stated in the abstract, so the
+    contrast has no dose interpretation and dose_h is null; (3) covariate list unavailable
+    (abstract-only access); (4) no early-death exclusion reported; (5) healthy-volunteer accelerometer
+    subsample.
+funding: null
+notes: >
+  TARGET EXTRACTION #3, objective-measurement component (third UK Biobank accelerometer analysis).
+  .
+  THE THREE ACCELEROMETER ESTIMATES OF OBJECTIVELY SHORT SLEEP AND MORTALITY, ALL IN UK BIOBANK:
+    chaput2026        5 h vs 7 h, sleep period time   HR 1.43 (1.27-1.64)
+    chaput2026        5 h vs 7 h, total sleep time    HR 1.20 (1.12-1.28)
+    saintmaurice2024  5 h vs 7 h                      HR 1.29 (1.09-1.52)
+    liang2023         short vs normal (categorical)   HR 1.27 (1.11-1.45)
+  Against self-report in the same or comparable populations: 1.12-1.16. So objective measurement gives
+  estimates roughly 1.5-2.5x larger on the log scale. The task's expectation that objective measurement
+  would WEAKEN the association is not what the data show.
+  .
+  BUT THIS RECORD ALSO SUPPLIES THE EXPLANATION. The HR 2.11 for long-duration-plus-low-efficiency
+  shows that accelerometer-derived sleep metrics in a 62-year-old population are dominated by
+  pathological sleep. Under that reading, larger objective HRs are larger confounding, not larger causal
+  effects, and none of the 1.27-1.43 range transports to a healthy 19-year-old whose short sleep is
+  imposed by a class timetable and a social life rather than by disease.
+  .
+  COHORT OVERLAP WARNING: UK_Biobank accelerometer subsample. Overlaps chaput2026 (76,811),
+  saintmaurice2024 (88,282), windred2024 (60,977), li2026 (85,618). These are the SAME roughly 90,000
+  people and the SAME ~2,700-3,500 deaths analysed five times.
+shard: "s13_mortality"

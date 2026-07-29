@@ -1,0 +1,99 @@
+study_id: futenma2023
+citation: "Futenma K, Takaesu Y, Komada Y, Shimura A, Okajima I, Matsui K, Tanioka K, Inoue Y. Delayed sleep-wake phase disorder and its related sleep behaviors in the young generation. Front Psychiatry. 2023;14:1174719."
+doi: "10.3389/fpsyt.2023.1174719"
+pmid: "37275982"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10235460/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Delayed sleep-wake phase disorder and its related sleep behaviors in the young generation."
+access_tier: full_text
+secondhand_via: null
+design: guideline_consensus
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [10, 35]
+  pct_female: null
+  country: "Japan (review of international literature)"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: circadian
+    outcome_construct: icsd3_dswpd_diagnostic_criteria_restated
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "ICSD-3 diagnostic criteria for DSWPD: number of criteria that must ALL be satisfied, in addition to the three general CRSWD criteria"}
+    scale: raw_units
+    unit: "count of mandatory DSWPD-specific ICSD-3 criteria"
+    value: 5.0
+    se: null
+    ci: null
+    conversion_formula: "Not a statistical estimate. Coded as the count of mandatory criteria (5) so the record is schema-valid; the substance is the verbatim criterion text in the quote field and in notes. No arithmetic performed, no se derivable."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Not an effect. THIS IS THE DIAGNOSTIC RULE THE REPORT MUST APPLY TO THE SUBJECT. The load-bearing criteria for our case are (a) criterion 1, which requires a CHRONIC COMPLAINT OF INABILITY TO FALL ASLEEP - our subject volunteers workload, not sleep-onset failure; (b) criterion 3, which requires improved sleep quality AND DURATION FOR AGE on an ad libitum schedule - our subject's 7-8 h typical weekend sleep is BELOW the 8-10 h recommended for his age, so criterion 3 is not clearly met; and (c) criterion 4, which requires 7 and preferably 14 days of sleep log plus, where possible, actigraphy covering BOTH school days and free days. Criterion 4 alone means DSWPD cannot be diagnosed or excluded from the history the report currently has."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "In addition to the above three common criteria items for CRSWD, the diagnostic criteria for DSWPD in ICSD-3 requires the fulfillment of the following five criteria. First, a significant delay in the phase of the major sleep episode in relation to the desired or required sleep time and wake-up time, as evidenced by a chronic or recurrent complaint by the patient or caregiver of the inability to fall asleep and difficulty awakening at a desired or required clock time. Second, symptoms are present for at least 3 months. Third, patients exhibit improved sleep quality and duration for their age and maintain a delayed phase of the 24-h sleep-wake pattern when they are allowed to choose their ad libitum schedule. Fourth, sleep log and, whenever possible, actigraphy monitoring for at least 7 days (preferably 14 days) demonstrates a delay in the timing of the habitual sleep period. Fifth, sleep disturbance is neither satisfactorily explained by another current sleep disorder nor by any medical, neurological, or mental disorder; medication use; or substance use disorder."
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_dswpd_general_population_range
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "DSWPD prevalence in the GENERAL (all-age) population, range across two cited surveys"}
+    scale: probability
+    unit: "proportion of the general population"
+    value: 0.0084
+    se: null
+    ci: [0.0017, 0.0151]
+    conversion_formula: "Verbatim: 'DSWPD has a prevalence of 0.17-1.51% in the general population (49, 50)'. value = midpoint of the stated range = (0.0017 + 0.0151)/2 = 0.0084. The 'ci' field carries the stated RANGE ACROSS TWO STUDIES, not a confidence interval - flagged here and in notes. se is null because a range across two heterogeneous surveys is not a sampling distribution."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive. THE AGE GRADIENT IS THE POINT: DSWPD is ~0.2-1.5% across all ages but 3.3% in Norwegian 16-18 year olds and 3.3% (males 4.7%) in Norwegian 18-35 year old students. Using an all-age prevalence as the prior for a 19-year-old would understate the prior by roughly a factor of 4. The report must use the age-specific prior."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "DSWPD has a prevalence of 0.17-1.51% in the general population (49, 50), which is reported lower than that of DSP (12). In comparison, a survey of 10,220 adolescents aged 16-18 years in Norway found a relatively higher rate of 3.3% (27), while a more recent Norwegian survey of 50,054 students aged 18-35 years also showed a prevalence of 3.3% (26)."
+  - outcome_domain: comparator
+    outcome_construct: psg_signature_of_dswpd_normal_sleep_long_sol
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "qualitative PSG signature that distinguishes DSWPD from insufficient sleep: long sleep onset latency with NORMAL or LONG total sleep time"}
+    scale: raw_units
+    unit: "qualitative direction code (+1 = long SOL with preserved/long TST)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "No quantitative estimate is given in the review. Coded as +1 to denote the direction of the qualitative signature so the record is schema-valid. The quantitative version of this same contrast is in saxvig2013 (PSG, 35 DSWPD vs 19 controls) and sivertsen2013 (self-report, SOL 0:47 vs 1:21)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Qualitative discriminator, direction only. LONG SLEEP ONSET LATENCY WITH PRESERVED TOTAL SLEEP TIME is the DSWPD signature; SHORT SLEEP ONSET LATENCY WITH CURTAILED TOTAL SLEEP TIME is the insufficient-sleep signature (see mader2022 and williams2020: SOL 13 min in BIISS vs 44 min in insomnia). This pair of signatures, not the weekday-weekend discrepancy, is what the measurement protocol must resolve."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "the polysomnographic findings of individuals with DSWPD tend to show prolonged latency for sleep onset and normal or relatively long total sleep time, which are consistent with their sleep logs or actigraphic findings (47, 48)."
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: "This is a narrative review, not a systematic review: no search strategy, no inclusion criteria, no risk-of-bias assessment of the included literature, no meta-analysis. I am using it for exactly two things it can legitimately supply: (1) a peer-reviewed, retrievable, open-access RESTATEMENT of the ICSD-3 DSWPD criteria, because the ICSD-3 manual itself is a paywalled book I could not obtain; and (2) the authors' summary of the general-population prevalence range. The criterion text is the review authors' close restatement of ICSD-3, NOT a photographic quotation of the manual - a reader should verify against ICSD-3 before publishing the criteria as a quotation. Every prevalence number I take from it is separately verified against the primary source (sivertsen2013, sivertsen2021) which I also hold."
+funding: "Not stated in the retrieved full text"
+notes: |
+  ROLE OF THIS RECORD: it is the ICSD-3 criteria anchor for DSWPD. The ICSD-3 (American Academy of Sleep Medicine,
+  2014) is a book, not an indexed article; it has no DOI or PMID I could verify, and I could not obtain the text. I
+  therefore did NOT write the criteria from memory. I located them via an Europe PMC full-text search for the string
+  "significant delay in the phase of the major sleep episode", which returned six papers, and I took the restatement
+  from the open-access one with the best age match. The equivalent anchor for insufficient sleep syndrome is
+  mader2022, which reproduces the ICSD-3 ISS criteria A-F "Adapted with permission from American Academy of Sleep
+  Medicine".
+  ALSO EXTRACTED, NOT CODED AS EFFECTS:
+    "DSWPD is the most common sleep-wake disorder, accounting for 83% of CRSWDs in clinical settings (19)."
+    "a Japanese survey estimated that 4.3% of the youth (15-30 years) is at risk for DSWPD (25)."  <- fourth
+      independent estimate landing in the 3-5% band, from a different country and instrument.
+    On sex: "The results of previous epidemiological studies demonstrated a higher prevalence in males (12, 26),
+      females (25, 27), or no sex differences (49, 50, 52)."  <- the explicit statement that the sex literature is
+      inconsistent, which is why the recommended posterior applies no sex likelihood ratio.
+    Symptom picture: "The sleep duration of patients with DSWPD is mostly well maintained during their free days,
+      although the sleep phases are apparently delayed."  <- i.e. DSWPD shifts sleep TIMING; it does not by itself
+      produce long weekend sleep DURATION. This matches sivertsen2013's null weekend-TST result exactly.
+    A warning directly relevant to a college student on vacation: "the removal of the constraints of attendance at
+      school or work, the most important social zeitgebers, may worsen the symptom severity of the disorder (28)."
+  WHY tier IS TX AND design IS guideline_consensus: it contributes diagnostic-criteria and context material, not an
+  effect estimate. It must never be pooled as evidence for an effect.
+shard: "s19_sleep_disorders"

@@ -1,0 +1,215 @@
+study_id: lee2025
+citation: "Lee YJ, Lee JY, Cho JH, Kang YJ, Choi JH. Performance of consumer wrist-worn sleep tracking devices compared to polysomnography: a meta-analysis. J Clin Sleep Med. 2025;21(3):573-582."
+doi: "10.5664/jcsm.11460"
+pmid: "39484805"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11874073/"
+verification:
+  crossref_ok: null
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Performance of consumer wrist-worn sleep tracking devices compared to polysomnography: a meta-analysis."
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 798
+n_studies_pooled: 24
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: pooled_tst_mean_difference_wearable_vs_psg
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "pooled mean difference in total sleep time, all consumer wrist-worn devices vs PSG, random effects, 22 studies contributing"}
+    scale: raw_units
+    unit: "minutes (negative = device reports LESS sleep than PSG)"
+    value: -16.854
+    se: 4.836
+    ci: [-26.332, -7.375]
+    conversion_formula: "se = (upper - lower)/3.92 = (-7.375 - -26.332)/3.92 = 18.957/3.92 = 4.836 min"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      NEGATIVE here means devices UNDERestimated total sleep time by ~17 min on average. Note this is
+      the OPPOSITE SIGN to Chinoy 2021, where most devices OVERestimated TST by +3 to +47 min. The two
+      are not reconcilable into a single number, and the report should say so: the honest summary is
+      that pooled wearable TST bias is within roughly +/-20-45 min of PSG with the sign depending on
+      device and population, not that wearables are biased in a known direction. (The sign convention
+      differs between the two papers as well; Chinoy states device-minus-PSG explicitly, whereas this
+      meta-analysis does not state its subtraction order in the text I retrieved, which is itself a
+      reason for caution.)
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "As a result of meta-analysis, which applied a random effects model in consideration of the high heterogeneity among studies included in the analysis, it was found that there was a significant difference in total sleep time between consumer wrist-worn-type sleep tracking devices and polysomnography (mean difference [MD], -16.854; 95% CI, [-26.332; -7.375]; P < .001) (Figure 1)."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: pooled_tst_heterogeneity
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "between-study heterogeneity for the pooled TST comparison"}
+    scale: pct_change
+    unit: "I-squared (%)"
+    value: 67.5
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      I2 = 67.5% is substantial-to-high heterogeneity, meaning the pooled -16.9 min figure is a summary
+      of genuinely different device/population behaviours rather than a single underlying bias. This is
+      the statistical reason the report should quote a RANGE for wearable TST accuracy rather than a
+      point estimate.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Statistical heterogeneity was found in 22 studies comparing total sleep time between consumer wrist-worn-type sleep tracking devices and polysomnography (I 2 = 67.5%, P < .001 by Q test)."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: pooled_sleep_latency_mean_difference
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "pooled mean difference in sleep onset latency, all devices vs PSG, 18 studies"}
+    scale: raw_units
+    unit: "minutes (positive = device reports LONGER latency than PSG)"
+    value: 2.574
+    se: 1.004
+    ci: [0.606, 4.542]
+    conversion_formula: "se = (4.542 - 0.606)/3.92 = 3.936/3.92 = 1.004 min"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      Statistically significant but clinically trivial in aggregate (~2.6 min). BUT the subgroup analysis
+      shows this masks a real split: Fitbit overestimated latency by 5.6 min (95% CI 2.1 to 9.1) while
+      other devices showed no difference (-0.12 min, 95% CI -1.49 to 1.25). Given that the DSWPD-vs-BIISS
+      distinction hinges on a sleep onset latency threshold around 30 min, a 5-minute device bias is not
+      negligible when a subject sits near the threshold.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "There were significant differences in total sleep time (mean difference, -16.854; 95% confidence interval, [-26.332; -7.375]), sleep efficiency (mean difference, -4.691; 95% confidence interval, [-7.079; -2.302]), sleep latency (mean difference, 2.574; 95% confidence interval, [0.606; 4.542]), and wake after sleep onset (mean difference, 13.255; 95% confidence interval, [4.522; 21.988]) between all consumer sleep tracking devices and polysomnography."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: pooled_waso_mean_difference
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "pooled mean difference in wake after sleep onset, all devices vs PSG"}
+    scale: raw_units
+    unit: "minutes (positive = device reports MORE wake after sleep onset)"
+    value: 13.255
+    se: 4.456
+    ci: [4.522, 21.988]
+    conversion_formula: "se = (21.988 - 4.522)/3.92 = 17.466/3.92 = 4.456 min"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = device reports more wake after sleep onset than PSG. Driven by non-Fitbit devices (+24.1 min, 95% CI 15.7 to 32.5); Fitbit showed no significant difference (+0.5 min, 95% CI -12.5 to 13.6)."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "For sleep latency and wake after sleep onset, there were significant differences between Fitbit (sleep latency MD, 5.602; 95% CI, [2.105; 9.098]; P = .002) and wake after sleep onset (MD, 0.533; 95% CI, [-12.517; 13.583]; P = .936) and other devices group (sleep latency MD, -0.122; 95% CI, [-1.493; 1.249]; P = .861) and wake after sleep onset (MD, 24.140; 95% CI, [15.735; 32.545]; P < .001)."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: tst_mean_difference_fitbit_subgroup
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "pooled TST mean difference, Fitbit devices only vs PSG"}
+    scale: raw_units
+    unit: "minutes"
+    value: -6.564
+    se: 6.289
+    ci: [-18.890, 5.763]
+    conversion_formula: "se = (5.763 - -18.890)/3.92 = 24.653/3.92 = 6.289 min"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      Fitbit devices showed NO statistically significant TST difference from PSG (-6.6 min, p = .297),
+      whereas non-Fitbit devices did (-26.7 min, p < .001). Combined with Chinoy 2021 (Fitbit Alta HR
+      bias +2.6 min, ns; Garmin +44 to +47 min, p<0.001), the two independent bodies of evidence agree
+      that DEVICE CHOICE dominates. This is the practically actionable finding for the protocol.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "As a result of the subgroup analysis between Fitbit and other devices, there was no significant difference in total sleep time between Fitbit (MD, -6.564; 95% CI, [-18.890; 5.763]; P = .297) and other devices (MD, -26.674; 95% CI, [-39.051; -14.297]; P < .001)."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: tst_mean_difference_recent_studies_post2021
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "pooled TST mean difference, studies published after 2021 vs before 2020"}
+    scale: raw_units
+    unit: "minutes"
+    value: -20.544
+    se: null
+    ci: null
+    conversion_formula: "The paper prints the CI for this subgroup as [-34.832; 6.255] alongside P = .005, which is internally inconsistent (a CI spanning zero cannot accompany p=.005; the upper bound is almost certainly a typographical error for -6.255). I have therefore recorded the point estimate and set both se and ci to NULL rather than propagate an erroneous interval. Flagged as a defect in the source."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      Newer devices are NOT clearly better on TST: the post-2021 subgroup point estimate (-20.5 min) is
+      numerically LARGER than the pre-2020 one (-13.2 min). The authors' own narrative summary of this
+      subgroup ("no significant difference in total sleep time or sleep latency") contradicts the
+      p-values they print, so I place low weight on this analysis.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "As a result of the subgroup analysis depending on published year, there was no significant difference in total sleep time between recent (MD, -20.544; 95% CI, [-34.832; 6.255]; P = .005) and previous studies (MD, -13.174; 95% CI, [-25.443; -0.905]; P = .035)."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: authors_conclusion_not_valid_substitute_for_psg
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "authors' overall verdict on validity of consumer wrist-worn trackers"}
+    scale: probability
+    unit: "coded 0 = not considered a valid substitute for PSG"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "not an effect estimate; 0 codes a negative verdict"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      The meta-analysts' verdict is more negative than Chinoy's. Both can be true: wearables are not
+      diagnostic instruments, and are still useful for tracking patterns over many nights. The report
+      should adopt exactly that split position rather than pick a side.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Overall, the metrics of these devices are not yet considered valid compared to polysomnography, which analyzes EEG, electrooculography, and electromyography. Physicians and consumers should use wrist-worn sleep trackers cautiously, acknowledging their accuracy limitations and interpreting results carefully. However, given the increasing popularity of these devices, their role in tracking general sleep trends is still valuable, though further research and algorithm improvements are needed to approach the accuracy of polysomnography."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: |
+    PRISMA-guided systematic review with random-effects pooling, Newcastle-Ottawa quality appraisal of
+    included studies (all rated good), formal publication-bias testing (Begg p=.214, Egger p=.280 for
+    TST -- no bias detected), and prespecified subgroup analyses (healthy vs unhealthy, Fitbit vs other,
+    pre-2020 vs post-2021).
+    SERIOUS LIMITATIONS FOR OUR USE:
+    (a) ADULTS ONLY -- an explicit exclusion criterion was "if the age of the target group in the study
+        was unclear", and the authors state "all studies used for this meta-analysis targeted adults as
+        study participants". No adolescent data at all, so transportability to a 19-year-old is assumed.
+    (b) Pools across heterogeneous populations (healthy volunteers, insomnia, OSA, periodic limb
+        movement disorder, hypersomnolence, depression) and across a decade of device generations;
+        I2 = 67.5% for TST and 84.1% for sleep efficiency.
+    (c) It pools MEAN DIFFERENCES only. It does NOT report limits of agreement, so this paper cannot
+        answer the task's "limits of agreement" question -- for that, Chinoy 2021 is the source.
+    (d) At least one printed confidence interval is internally inconsistent with its p-value (the
+        post-2021 TST subgroup, see that effect record), and the discussion's narrative summary of the
+        subgroup analyses contradicts the tabulated p-values in places. This lowers my confidence in
+        the reported subgroup arithmetic specifically.
+    (e) Sleep staging performance was explicitly not assessed.
+funding: "Not extracted from the retrieved text."
+notes: |
+  This is the most recent meta-analysis addressing the task's question 7. Together with Chinoy 2021 it
+  gives the report both halves of the answer:
+      pooled MEAN BIAS for total sleep time  -> this paper: -16.9 min (95% CI -26.3 to -7.4), 24 studies,
+                                                n = 798, I2 = 67.5%
+      LIMITS OF AGREEMENT for total sleep time -> Chinoy 2021: approx -42 to +47 min for Fitbit Alta HR,
+                                                and -40 to +88 min for research actigraphy
+  and they DISAGREE ON THE SIGN of the mean bias, which is the single most important thing to report
+  honestly. My recommended summary sentence for the report: current consumer wrist wearables estimate
+  average total sleep time to within roughly 20 minutes of polysomnography, with per-night 95% limits of
+  agreement of about +/-45 minutes, the direction of the bias depending on device and population; they
+  are adequate for characterising average sleep duration and sleep timing over two or more weeks and
+  inadequate for single-night estimates, sleep staging, or sleep onset latency.
+
+  Also worth carrying into the report as a reference standard for interpreting sleep quality (verbatim,
+  quoting the meta-analysis quoting its own source): "Sleep quality is generally considered good in all
+  age groups with 85% efficiency, 15-minute latency, and 20-minute wake after sleep onset, whereas poor
+  sleep quality is indicated by 74% efficiency."
+
+  Full text retrieved from PubMed Central and parsed to plain text; all quotes verbatim from that
+  retrieval.
+shard: "s19_sleep_disorders"

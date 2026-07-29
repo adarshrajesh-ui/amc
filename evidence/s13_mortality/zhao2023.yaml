@@ -1,0 +1,312 @@
+study_id: zhao2023
+citation: "Zhao B, Meng Y, Jin X, Xi W, Ma Q, Yang J, Ma X, Yan B. Association of Objective and Self-Reported Sleep Duration With All-Cause and Cardiovascular Disease Mortality: A Community-Based Study. J Am Heart Assoc. 2023 Mar 21;12(6):e027832."
+doi: "10.1161/JAHA.122.027832"
+pmid: "36892074"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10111539/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Association of Objective and Self-Reported Sleep Duration With All-Cause and Cardiovascular Disease Mortality: A Community-Based Study."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 5027
+n_studies_pooled: null
+population:
+  age_mean: 63.9
+  age_range: null
+  pct_female: 53.4
+  country: "US"
+  adolescent_match: poor_elderly
+effects:
+  # ---------- OBJECTIVE (in-home polysomnography TST), all-cause mortality, ref 7-8 h ----------
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_objective_psg
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 7.5, duration_days: 1,
+               contrast_label: "PSG total sleep time 5-6 h vs 7-8 h (single overnight in-home PSG), fully adjusted"}
+    scale: log_hr
+    unit: null
+    value: 0.314811
+    se: 0.112547
+    ci: [0.095310, 0.536493]
+    conversion_formula: "HR 1.37 (1.10-1.71); value=ln(1.37)=0.31481; se=(ln1.71-ln1.10)/3.92=0.11255"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = higher all-cause mortality. OBJECTIVE arm of the head-to-head comparison."
+    covariates: ["age", "sex", "race", "BMI", "smoking", "alcohol", "diabetes", "hypertension",
+                 "history of major CVD", "history of chronic respiratory disease", "lipid-lowering medication",
+                 "benzodiazepine use", "apnea-hypopnea index", "T90 oxygen desaturation"]
+    followup_years: 11.0
+    cohort_family: "SHHS"
+    quote: "Objective sleep duration, h ... 5-6 1396 349 (25.0) 14,905.9 23.4 1.92 (1.60-2.45) <0.001 1.48 (1.19-1.83) <0.001 1.37 (1.10-1.71) 0.005"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_objective_psg
+    exposure: {type: habitual_short_sleep, dose_h: 4.5, referent_h: 7.5, duration_days: 1,
+               contrast_label: "PSG total sleep time 4-5 h vs 7-8 h, fully adjusted"}
+    scale: log_hr
+    unit: null
+    value: 0.506818
+    se: 0.124758
+    ci: [0.262364, 0.751416]
+    conversion_formula: "HR 1.66 (1.30-2.12); value=ln(1.66); se=(ln2.12-ln1.30)/3.92"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = higher all-cause mortality"
+    covariates: ["fully adjusted, see first effect"]
+    followup_years: 11.0
+    cohort_family: "SHHS"
+    quote: "4-5 582 182 (31.3) 5876.4 31.0 2.65 (2.10-3.35) <0.001 1.76 (1.39-2.23) <0.001 1.66 (1.30-2.12) <0.001"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_objective_psg
+    exposure: {type: habitual_short_sleep, dose_h: 6.5, referent_h: 7.5, duration_days: 1,
+               contrast_label: "PSG total sleep time 6-7 h vs 7-8 h, fully adjusted - THE DIAGNOSTIC CELL"}
+    scale: log_hr
+    unit: null
+    value: 0.350657
+    se: 0.108559
+    ci: [0.139762, 0.565314]
+    conversion_formula: "HR 1.42 (1.15-1.76); value=ln(1.42); se=(ln1.76-ln1.15)/3.92"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = higher all-cause mortality. THIS CELL BREAKS THE DOSE-RESPONSE STORY: PSG 6-7 h
+      (HR 1.42) is associated with AT LEAST AS MUCH mortality as PSG 5-6 h (HR 1.37) and PSG 4-5 h is
+      1.66. A one-hour difference between 6-7 h and 5-6 h of measured sleep buys nothing. That is not
+      the signature of a graded physiological insult from lost sleep; it is the signature of a
+      threshold marker for "does not sleep well in a sleep lab", which in a 64-year-old tracks illness.
+    covariates: ["fully adjusted, see first effect"]
+    followup_years: 11.0
+    cohort_family: "SHHS"
+    quote: "6-7 1933 423 (21.9) 20,848.7 20.3 1.71 (1.39-2.10) <0.001 1.43 (1.17-1.77) 0.001 1.42 (1.15-1.76) 0.001"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_objective_psg
+    exposure: {type: habitual_short_sleep, dose_h: 4.0, referent_h: 7.5, duration_days: 1,
+               contrast_label: "PSG total sleep time <=4 h vs 7-8 h, fully adjusted"}
+    scale: log_hr
+    unit: null
+    value: 0.887891
+    se: 0.144149
+    ci: [0.604316, 1.169381]
+    conversion_formula: "HR 2.43 (1.83-3.22); value=ln(2.43); se=(ln3.22-ln1.83)/3.92"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = higher all-cause mortality"
+    covariates: ["fully adjusted, see first effect"]
+    followup_years: 11.0
+    cohort_family: "SHHS"
+    quote: "Objective sleep duration, h <=4 207 95 (45.9) 1934.2 49.1 4.29 (3.27-5.63) <0.001 2.82 (2.15-3.71) <0.001 2.43 (1.83-3.22) <0.001"
+  # ---------- SELF-REPORTED WEEKDAY, same people, same model, ref 7-8 h ----------
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_selfreport_weekday
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 7.5, duration_days: null,
+               contrast_label: "SELF-REPORTED WEEKDAY sleep 5-6 h vs 7-8 h, same cohort, same covariates - THE SUBJECT'S EXACT WEEKDAY DOSE"}
+    scale: log_hr
+    unit: null
+    value: 0.019803
+    se: 0.109582
+    ci: [-0.198451, 0.231112]
+    conversion_formula: "HR 1.02 (0.82-1.26); value=ln(1.02)=0.01980; se=(ln1.26-ln0.82)/3.92=0.10958"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = higher all-cause mortality. THIS IS NULL. Self-reported weekday sleep of 5-6 h - the
+      subject's exposure, asked the way epidemiology usually asks it - carries HR 1.02 (0.82-1.26) in
+      the same 5027 people in whom PSG 5-6 h carried HR 1.37. The two measurements of "5-6 hours"
+      disagree completely about mortality.
+    covariates: ["age", "race", "BMI", "smoking", "alcohol", "diabetes", "hypertension", "history of major CVD",
+                 "history of chronic respiratory disease", "lipid-lowering medication", "benzodiazepine use",
+                 "apnea-hypopnea index", "T90"]
+    followup_years: 11.0
+    cohort_family: "SHHS"
+    quote: "Self-reported weekday sleep duration, h ... 5-6 513 119 (23.2) 5465.3 21.8 1.11 (0.90-1.36) 0.322 1.08 (0.88-1.33) 0.471 1.02 (0.82-1.26) 0.866"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_selfreport_weekday
+    exposure: {type: habitual_short_sleep, dose_h: 4.5, referent_h: 7.5, duration_days: null,
+               contrast_label: "SELF-REPORTED WEEKDAY sleep 4-5 h vs 7-8 h, fully adjusted"}
+    scale: log_hr
+    unit: null
+    value: -0.385662
+    se: 0.234931
+    ci: [-0.843970, 0.076961]
+    conversion_formula: "HR 0.68 (0.43-1.08); value=ln(0.68); se=(ln1.08-ln0.43)/3.92"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = higher mortality, so this is NEGATIVE, i.e. numerically PROTECTIVE (HR 0.68), and it is
+      not a rounding artefact - the point estimate for self-reported 4-5 h weekday sleep sits below the
+      7-8 h referent. Nobody believes 4-5 h of sleep protects against death. This cell is the clearest
+      single demonstration in my whole evidence set that self-reported short-sleep categories in
+      elderly cohorts are dominated by measurement noise and selection, not by dose.
+    covariates: ["fully adjusted, see above"]
+    followup_years: 11.0
+    cohort_family: "SHHS"
+    quote: "4-5 108 21 (19.4) 1164.8 18.0 0.91 (0.59-1.42) 0.689 0.85 (0.55-1.31) 0.454 0.68 (0.43-1.08) 0.101"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_selfreport_weekday
+    exposure: {type: habitual_short_sleep, dose_h: 4.0, referent_h: 7.5, duration_days: null,
+               contrast_label: "SELF-REPORTED WEEKDAY sleep <=4 h vs 7-8 h, fully adjusted"}
+    scale: log_hr
+    unit: null
+    value: 0.488580
+    se: 0.227792
+    ci: [0.039221, 0.932164]
+    conversion_formula: "HR 1.63 (1.04-2.54); value=ln(1.63); se=(ln2.54-ln1.04)/3.92"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = higher all-cause mortality. The self-report curve is FLAT until you reach <=4 h. This
+      is the same threshold Kripke found in 1.1 million people (kripke2002) and the same threshold
+      Itani's meta-regression found (itani2017: linear increase only below 6 h). The subject's
+      occasional 3-4 h pre-exam nights fall here, but they are a handful of nights per term, not a
+      habitual category.
+    covariates: ["fully adjusted, see above"]
+    followup_years: 11.0
+    cohort_family: "SHHS"
+    quote: "Self-reported weekday sleep duration, h <=4 63 21 (33.3) 630.2 33.3 1.71 (1.10-2.66) 0.017 1.74 (1.12-2.70) 0.014 1.63 (1.04-2.54) 0.032"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_selfreport_weekday
+    exposure: {type: habitual_short_sleep, dose_h: 6.5, referent_h: 7.5, duration_days: null,
+               contrast_label: "SELF-REPORTED WEEKDAY sleep 6-7 h vs 7-8 h, fully adjusted"}
+    scale: log_hr
+    unit: null
+    value: -0.072571
+    se: 0.082117
+    ci: [-0.235722, 0.086178]
+    conversion_formula: "HR 0.93 (0.79-1.09); value=ln(0.93); se=(ln1.09-ln0.79)/3.92"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = higher mortality; 6-7 h self-reported is null-to-protective vs 7-8 h"
+    covariates: ["fully adjusted, see above"]
+    followup_years: 11.0
+    cohort_family: "SHHS"
+    quote: "6-7 1465 275 (18.8) 16,180.6 17.0 0.86 (0.74-1.00) 0.053 0.91 (0.78-1.06) 0.229 0.93 (0.79-1.09) 0.340"
+  # ---------- SELF-REPORTED WEEKEND, same people ----------
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_selfreport_weekend
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 7.5, duration_days: null,
+               contrast_label: "SELF-REPORTED WEEKEND sleep 5-6 h vs 7-8 h, fully adjusted"}
+    scale: log_hr
+    unit: null
+    value: 0.095310
+    se: 0.114775
+    ci: [-0.127833, 0.322083]
+    conversion_formula: "HR 1.10 (0.88-1.38); value=ln(1.10); se=(ln1.38-ln0.88)/3.92"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = higher all-cause mortality; null. Relevant to the weekend-catch-up question from the
+      other direction: it is short WEEKEND sleep that is not clearly harmful either, i.e. the weekend
+      column behaves like the weekday column.
+    covariates: ["fully adjusted, see above"]
+    followup_years: 11.0
+    cohort_family: "SHHS"
+    quote: "Self-reported weekend sleep duration, h ... 5-6 373 103 (27.6) 3916.2 26.3 1.32 (1.06-1.65) 0.012 1.17 (0.94-1.45) 0.169 1.10 (0.88-1.38) 0.421"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_selfreport_weekend_long
+    exposure: {type: recovery_sleep, dose_h: 8.5, referent_h: 7.5, duration_days: null,
+               contrast_label: "SELF-REPORTED WEEKEND sleep >8 h vs 7-8 h, fully adjusted"}
+    scale: log_hr
+    unit: null
+    value: 0.148420
+    se: 0.074019
+    ci: [0.009950, 0.300105]
+    conversion_formula: "HR 1.16 (1.01-1.35); value=ln(1.16); se=(ln1.35-ln1.01)/3.92"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = higher all-cause mortality. IMPORTANT AND UNCOMFORTABLE FOR THE SUBJECT'S PATTERN:
+      sleeping >8 h at the weekend was associated with 16% higher mortality (barely significant) in
+      this elderly cohort. Read at face value this argues against weekend catch-up. Read the way I
+      think it should be read, long weekend sleep in a 64-year-old is a marker of illness and this cell
+      is a reverse-causation artefact - the same artefact that makes long sleep look worse than short
+      sleep in every general-population meta-analysis (jike2018, ungvari2025). It cannot simultaneously
+      be true that long weekend sleep is intrinsically lethal AND that the 7-8 h referent is optimal
+      for a 19-year-old, whose age-appropriate need is 8-10 h (see s?? sleep-need shards).
+    covariates: ["fully adjusted, see above"]
+    followup_years: 11.0
+    cohort_family: "SHHS"
+    quote: ">8 1602 380 (23.7) 17,030.4 22.3 1.12 (0.97-1.29) 0.131 1.21 (1.05-1.39) 0.010 1.16 (1.01-1.35) 0.046"
+  # ---------- attenuation from crude to adjusted, objective arm ----------
+  - outcome_domain: mortality
+    outcome_construct: attenuation_crude_to_adjusted_objective_5to6h
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 7.5, duration_days: 1,
+               contrast_label: "PSG 5-6 h vs 7-8 h, UNIVARIATE (crude) model, for the attenuation calculation"}
+    scale: log_hr
+    unit: null
+    value: 0.652325
+    se: 0.108695
+    ci: [0.470004, 0.896088]
+    conversion_formula: "Crude HR 1.92 (1.60-2.45); value=ln(1.92)=0.65233. ATTENUATION ARITHMETIC: crude log HR 0.65233 -> age+sex-adjusted ln(1.48)=0.39204 -> fully adjusted ln(1.37)=0.31481. Surviving fraction of the crude log hazard = 0.31481/0.65233 = 0.483, i.e. 48% survives, 52% of the crude association is explained by measured confounders, and over half of THAT is age and sex alone."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = higher all-cause mortality. Recorded so the downstream model can see the attenuation
+      gradient rather than only the endpoint: 1.92 crude -> 1.48 age/sex -> 1.37 fully adjusted for the
+      SAME contrast. 52% of the crude log association is removed by measured covariates. Whatever
+      remains is bounded above by the residual-confounding budget, not by zero.
+    covariates: ["none - univariate"]
+    followup_years: 11.0
+    cohort_family: "SHHS"
+    quote: "5-6 1396 349 (25.0) 14,905.9 23.4 1.92 (1.60-2.45) <0.001 1.48 (1.19-1.83) <0.001 1.37 (1.10-1.71) 0.005"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    This is the best available design for the question I was asked (objective vs self-report in the SAME
+    people, same model, same outcome), and I upgraded my confidence in the objective-vs-subjective
+    contrast substantially because of it. Weaknesses: (1) objective exposure is ONE night of in-home
+    PSG, which measures that night's sleep, not habitual sleep, and a single night in a lab-instrumented
+    bed underestimates habitual TST - this is why PSG 6-7 h can look "short"; (2) mean age 63.9 y with
+    23.3% dying, so prevalent and incipient disease is everywhere; (3) SHHS was assembled for sleep
+    apnoea research and is enriched for sleep-disordered breathing, though AHI and T90 are adjusted for;
+    (4) the >8 h objective cell has only 54 people and 8 deaths, so nothing can be learned from it;
+    (5) self-report and PSG were only weakly correlated, which the authors state but do not quantify in
+    the abstract; (6) no adjustment for depression or socioeconomic position.
+funding: null
+notes: >
+  THIS IS THE PIVOTAL RECORD FOR REQUIRED EXTRACTION 3 AND I WOULD PUT MORE WEIGHT ON IT THAN ON ANY
+  SINGLE UK BIOBANK ANALYSIS, because it holds the population, the model, the follow-up and the outcome
+  fixed and varies ONLY the measurement instrument.
+  .
+  ALL-CAUSE MORTALITY, fully adjusted, referent 7-8 h, n=5027, 1172 deaths, mean 11 y follow-up:
+    measured by PSG            <=4 h 2.43 | 4-5 h 1.66 | 5-6 h 1.37 | 6-7 h 1.42 | >8 h 1.63 (n=54)
+    self-report, WEEKDAY       <=4 h 1.63 | 4-5 h 0.68 | 5-6 h 1.02 | 6-7 h 0.93 | >8 h 1.26
+    self-report, WEEKEND       <=4 h 1.89 | 4-5 h 0.96 | 5-6 h 1.10 | 6-7 h 0.94 | >8 h 1.16
+  .
+  WHAT THIS DOES TO THE TASK'S PRIOR. My instructions said "objective measurement usually WEAKENS the
+  short-sleep association, which is a crucial finding." In this head-to-head the opposite happened, and
+  the same thing happened in chaput2026, saintmaurice2024 and liang2023. I am reporting reality: for
+  moderate short sleep, OBJECTIVE MEASUREMENT STRENGTHENS THE ASSOCIATION. The task's premise is wrong
+  as stated. But the premise's CONCLUSION - that the mortality signal is not a clean read-out of
+  behavioural sleep restriction - survives, and this table shows why, more sharply than any attenuation
+  analysis:
+    (a) The objective curve is not graded. 6-7 h (1.42) is not better than 5-6 h (1.37). If lost sleep
+        were doing graded damage, that could not happen.
+    (b) The self-report curve at the subject's dose is dead flat: 5-6 h -> 1.02, 6-7 h -> 0.93, and
+        4-5 h -> 0.68, i.e. numerically protective. A monotone dose-response cannot produce 0.68 at
+        4-5 h and 1.02 at 5-6 h; measurement error and selection can.
+    (c) The two instruments were only WEAKLY CORRELATED with each other, so they are not two noisy
+        readings of one exposure. They are two different exposures wearing the same label. PSG-derived
+        short sleep in a 64-year-old is substantially "fragmented, pathological, medicated, apnoeic
+        sleep"; self-reported weekday short sleep in that same person is closer to "chose to be in bed
+        fewer hours". THE SUBJECT'S EXPOSURE IS THE SECOND ONE, AND THE SECOND ONE IS NULL AT 5-6 H.
+  .
+  ATTENUATION, PSG 5-6 h vs 7-8 h: crude 1.92 -> age+sex 1.48 -> fully adjusted 1.37. Surviving
+  fraction of the crude log hazard 0.31481/0.65233 = 48%. For PSG <=4 h: crude 4.29 -> 2.82 -> 2.43,
+  surviving fraction ln(2.43)/ln(4.29) = 0.8879/1.4563 = 61%. Note the direction of that difference:
+  the SMALLER the sleep deficit, the LARGER the share of the crude association that measured
+  confounders explain away, which is exactly what you expect if the moderate categories are mostly
+  confounding and only the extreme categories carry anything real.
+  .
+  TRANSPORTABILITY TO A 19-YEAR-OLD MALE: poor_elderly, and this record is the reason to say so
+  forcefully. The people generating the objective signal here are 64 on average, one in four of them
+  died within 11 years, and their short PSG sleep is a symptom. A 19-year-old with 5-6 h weekday sleep
+  is not a short PSG sleeper with fragmented, apnoeic, medicated sleep; he is a person who goes to bed
+  late. The cell of this table that corresponds to his exposure - self-reported 5-6 h - is HR 1.02.
+  .
+  COHORT OVERLAP WARNING: cohort_family SHHS. fernandezmendoza2019 uses Penn State Adult Cohort, not
+  SHHS, so the two PSG records are independent. No overlap with the UK Biobank accelerometer cluster
+  (chaput2026, chaput2024, saintmaurice2024, liang2023, li2026, windred2024).
+shard: "s13_mortality"

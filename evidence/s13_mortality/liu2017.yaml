@@ -1,0 +1,234 @@
+study_id: liu2017
+citation: "Liu TZ, Xu C, Rota M, Cai H, Zhang C, Shi MJ, Yuan RX, Weng H, Meng XY, Kwong JS, Sun X. Sleep duration and risk of all-cause mortality: A flexible, non-linear, meta-regression of 40 prospective cohort studies. Sleep Med Rev. 2017 Apr;32:28-36."
+doi: "10.1016/j.smrv.2016.02.005"
+pmid: "27067616"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep duration and risk of all-cause mortality: A flexible, non-linear, meta-regression of 40 prospective cohort studies."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: dose_response_meta_analysis
+tier: T5
+n: 2200425
+n_studies_pooled: 40
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: null,
+               contrast_label: "5 h vs 7 h (24-h sleep duration), restricted cubic spline meta-regression"}
+    scale: log_rr
+    unit: null
+    value: 0.058269
+    se: 0.014444
+    ci: [0.029559, 0.086178]
+    conversion_formula: "log_rr = ln(1.06) = 0.058269; se = (ln(1.09) - ln(1.03))/3.92 = 0.014444"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher all-cause mortality. RR AT 5 h AS REQUESTED. Both sexes combined."
+    covariates: ["varies by constituent study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_40_studies"
+    quote: "A J-shaped association between sleep duration and all-cause mortality was present: compared with 7 h of sleep (reference for 24-h sleep duration), both shortened and prolonged sleep durations were associated with increased risk of all-cause mortality (4 h: relative risk [RR] = 1.05; 95% confidence interval [CI] = 1.02-1.07; 5 h: RR = 1.06; 95% CI = 1.03-1.09; 6 h: RR = 1.04; 95% CI = 1.03-1.06; 8 h: RR = 1.03; 95% CI = 1.02-1.05; 9 h: RR = 1.13; 95% CI = 1.10-1.16; 10 h: RR = 1.25; 95% CI = 1.22-1.28; 11 h: RR = 1.38; 95% CI = 1.33-1.44; n = 29; P < 0.01 for non-linear test)."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7, duration_days: null,
+               contrast_label: "6 h vs 7 h (24-h sleep duration), spline"}
+    scale: log_rr
+    unit: null
+    value: 0.039221
+    se: 0.007324
+    ci: [0.029559, 0.058269]
+    conversion_formula: "log_rr = ln(1.04) = 0.039221; se = (ln(1.06) - ln(1.03))/3.92 = 0.007324"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher mortality. RR AT 6 h AS REQUESTED. 4% excess, both sexes combined."
+    covariates: ["varies by constituent study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_40_studies"
+    quote: "6 h: RR = 1.04; 95% CI = 1.03-1.06"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 4, referent_h: 7, duration_days: null,
+               contrast_label: "4 h vs 7 h, spline"}
+    scale: log_rr
+    unit: null
+    value: 0.048790
+    se: 0.012208
+    ci: [0.019803, 0.067659]
+    conversion_formula: "log_rr = ln(1.05) = 0.048790; se = (ln(1.07) - ln(1.02))/3.92 = 0.012208"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality. Note the NON-MONOTONICITY: 4 h (1.05) is estimated as slightly
+      LESS harmful than 5 h (1.06). A genuine dose-response would not do this. It is spline wiggle
+      plus sparse data at the extreme, and it is a warning that the short arm of this curve is
+      essentially flat noise.
+    covariates: ["varies by constituent study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_40_studies"
+    quote: "4 h: relative risk [RR] = 1.05; 95% confidence interval [CI] = 1.02-1.07"
+  # ---- THE SEX-SPECIFIC FINDING: our subject is male ----
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_males
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: null,
+               contrast_label: "5 h vs 7 h, MALES ONLY, spline subgroup analysis"}
+    scale: log_rr
+    unit: null
+    value: 0.019803
+    se: 0.027403
+    ci: [-0.030459, 0.076961]
+    conversion_formula: "log_rr = ln(1.02) = 0.019803; se = (ln(1.08) - ln(0.97))/3.92 = 0.027403"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality, BUT NULL IN MALES. THE SINGLE MOST SUBJECT-SPECIFIC FINDING IN
+      THIS SHARD: the subject is an 18-19 year old MALE, and in the only dose-response meta-analysis
+      that reports sex-stratified splines, short sleep is NOT associated with mortality in men at any
+      short duration (4 h 1.01, 5 h 1.02, 6 h 1.02, all CIs spanning 1) while it IS in women
+      (4 h 1.07, 5 h 1.08, 6 h 1.05, all significant). If this subgroup result is real, the
+      short-sleep mortality effect for this subject is approximately zero.
+    covariates: ["varies by constituent study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_40_studies"
+    quote: "Subgroup analysis showed females with short sleep duration a day (<7 h) were at high risk of all-cause mortality (4 h: RR = 1.07; 95% CI = 1.02-1.13; 5 h: RR = 1.08; 95% CI = 1.03-1.14; 6 h: RR = 1.05; 95% CI = 1.02-1.09), but males were not (4 h: RR = 1.01; 95% CI = 0.96-1.06; 5 h: RR = 1.02; 95% CI = 0.97-1.08; 6 h: RR = 1.02; 95% CI = 0.98-1.06)."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_males
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7, duration_days: null,
+               contrast_label: "6 h vs 7 h, MALES ONLY, spline subgroup analysis"}
+    scale: log_rr
+    unit: null
+    value: 0.019803
+    se: 0.020018
+    ci: [-0.020203, 0.058269]
+    conversion_formula: "log_rr = ln(1.02) = 0.019803; se = (ln(1.06) - ln(0.98))/3.92 = 0.020018"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive but null in males (CI 0.98-1.06). Directly the subject's weekday dose and sex."
+    covariates: ["varies by constituent study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_40_studies"
+    quote: "but males were not (4 h: RR = 1.01; 95% CI = 0.96-1.06; 5 h: RR = 1.02; 95% CI = 0.97-1.08; 6 h: RR = 1.02; 95% CI = 0.98-1.06)"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_females
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: null,
+               contrast_label: "5 h vs 7 h, FEMALES ONLY, spline subgroup analysis"}
+    scale: log_rr
+    unit: null
+    value: 0.076961
+    se: 0.025885
+    ci: [0.029559, 0.131028]
+    conversion_formula: "log_rr = ln(1.08) = 0.076961; se = (ln(1.14) - ln(1.03))/3.92 = 0.025885"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher mortality, significant in females. Recorded only as the contrast that establishes the sex difference; NOT applicable to this subject."
+    covariates: ["varies by constituent study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_40_studies"
+    quote: "females with short sleep duration a day (<7 h) were at high risk of all-cause mortality (4 h: RR = 1.07; 95% CI = 1.02-1.13; 5 h: RR = 1.08; 95% CI = 1.03-1.14; 6 h: RR = 1.05; 95% CI = 1.02-1.09)"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: other, dose_h: 10, referent_h: 7, duration_days: null,
+               contrast_label: "10 h vs 7 h, spline"}
+    scale: log_rr
+    unit: null
+    value: 0.223144
+    se: 0.012247
+    ci: [0.198851, 0.246860]
+    conversion_formula: "log_rr = ln(1.25) = 0.223144; se = (ln(1.28) - ln(1.22))/3.92 = 0.012247"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality with long sleep. 10 h carries 4x the excess log-risk of 5 h
+      (0.2231 vs 0.0583). Same asymmetry as yin2017. Also note that night-sleep-only analyses show
+      8 h is completely null (RR 1.01, 0.99-1.02), i.e. the harmful "long sleep" signal partly lives
+      in 24-h sleep (which includes daytime napping, a marker of illness) rather than night sleep.
+    covariates: ["varies by constituent study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_40_studies"
+    quote: "10 h: RR = 1.25; 95% CI = 1.22-1.28; 11 h: RR = 1.38; 95% CI = 1.33-1.44 ... With regard to the night-sleep duration, prolonged night-sleep duration was associated with increased all-cause mortality (8 h: RR = 1.01; 95% CI = 0.99-1.02; 9 h: RR = 1.08; 95% CI = 1.05-1.11; 10 h: RR = 1.24; 95% CI = 1.21-1.28; n = 13; P < 0.01 for non-linear test)."
+  - outcome_domain: mortality
+    outcome_construct: shape_of_dose_response_curve
+    exposure: {type: descriptive, dose_h: 7, referent_h: null, duration_days: null,
+               contrast_label: "shape and nadir of the sleep-duration mortality curve"}
+    scale: hours
+    unit: "hours of sleep per 24 h at the nadir"
+    value: 7.0
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      SHAPE = J-SHAPED (not U-shaped), i.e. the long-sleep arm rises much more steeply than the
+      short-sleep arm. 7 h was the reference and the nadir. Åkerstedt et al. explicitly note this
+      paper is the one meta-analysis that found a J rather than a U.
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_40_studies"
+    quote: "A J-shaped association between sleep duration and all-cause mortality was present: compared with 7 h of sleep (reference for 24-h sleep duration), both shortened and prolonged sleep durations were associated with increased risk of all-cause mortality"
+  - outcome_domain: baseline_risk
+    outcome_construct: pooled_sample_size_and_death_count
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "whole pooled sample"}
+    scale: probability
+    unit: "all-cause deaths per participant across pooled cohorts"
+    value: 0.12339
+    se: null
+    ci: null
+    conversion_formula: "271507 deaths / 2200425 participants = 0.12339"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Absolute-scale anchor: 12.3% died. A midlife-to-elderly death rate."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_40_studies"
+    quote: "We eventually included in our study 40 cohort studies enrolling 2,200,425 participants with 271,507 deaths."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    Strong methods (restricted cubic spline meta-regression, separate 24-h and night-only analyses,
+    non-linearity tests, sex subgroups). Weaknesses: (1) self-reported exposure throughout;
+    (2) narrow spline CIs for the same reason as yin2017; (3) the 4 h estimate being lower than the
+    5 h estimate reveals spline instability at the extremes; (4) the sex subgroup finding is a
+    subgroup analysis on aggregated data and could reflect differential confounding or differential
+    reporting accuracy between sexes rather than a true biological sex difference - it received two
+    published commentaries (Sleep Med Rev 2017;32:132-133 and 32:134). Treat the male null as
+    important but not established.
+funding: null
+notes: >
+  TARGET EXTRACTION #2 (dose-response), second synthesis. Answers requested:
+    SHAPE: J-shaped (long arm much steeper), P < 0.01 for non-linearity.
+    NADIR: 7 h (used as reference).
+    RR AT 5 h: 1.06 (1.03-1.09). RR AT 6 h: 1.04 (1.03-1.06). RR at 4 h: 1.05 (1.02-1.07).
+    NO SINGLE PER-HOUR SLOPE is reported; the model is a spline, so the implied slope from 7 to 6 h
+    is ln(1.04) = 0.039 per hour and from 6 to 5 h only ln(1.06/1.04) = 0.019 per hour, i.e. the
+    curve is essentially flat across 5-6 h.
+    EVIDENCE BASE: 40 cohorts, 2,200,425 participants, 271,507 deaths (29 cohorts in the 24-h spline,
+    13 in the night-sleep spline).
+  .
+  THE MALE NULL. This is the finding the downstream model most needs to see. Males: 4 h RR 1.01
+  (0.96-1.06), 5 h 1.02 (0.97-1.08), 6 h 1.02 (0.98-1.06) - all null. Females: 4 h 1.07 (1.02-1.13),
+  5 h 1.08 (1.03-1.14), 6 h 1.05 (1.02-1.09) - all significant. Our subject is male. Taken at face
+  value, the sex-specific dose-response evidence puts his habitual-short-sleep mortality RR at
+  1.02 (0.98-1.06), which converts to a life-expectancy effect indistinguishable from zero.
+  I did not find an independent replication of this sex interaction, so it should widen uncertainty
+  rather than be adopted as a point estimate. ungvari2025 reports both sexes significant, which
+  contradicts it.
+  .
+  Access is abstract_only: this journal is not open access and the full text was not retrievable, but
+  the abstract reports the complete numeric spline table verbatim, including all sex-stratified
+  values, so no number here is second-hand or reconstructed.
+  .
+  COHORT OVERLAP WARNING: substantially the same primary literature as cappuccio2010, yin2017,
+  itani2017, jike2018, ungvari2025. Do not pool these as independent.
+shard: "s13_mortality"

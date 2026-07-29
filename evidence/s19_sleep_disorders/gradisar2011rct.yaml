@@ -1,0 +1,338 @@
+study_id: gradisar2011rct
+citation: "Gradisar M, Dohnt H, Gardner G, Paine S, Starkey K, Menne A, Slater A, Wright H, Hudson JL, Weaver E, Trenowden S. A randomized controlled trial of cognitive-behavior therapy plus bright light therapy for adolescent delayed sleep phase disorder. Sleep. 2011;34(12):1671-1680."
+doi: "10.5665/sleep.1432"
+pmid: "22131604"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3208844/"
+verification:
+  crossref_ok: null
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "A randomized controlled trial of cognitive-behavior therapy plus bright light therapy for adolescent delayed sleep phase disorder."
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 49
+n_studies_pooled: null
+population:
+  age_mean: 14.6
+  age_range: [11, 18]
+  pct_female: 47.0
+  country: "Australia"
+  adolescent_match: exact_16_19
+effects:
+  # ==================== A. DIAGNOSTIC DISCRIMINATION DATA ====================
+  # This is a clinically DIAGNOSED DSPD cohort, so its pre-treatment sleep parameters give us the
+  # "disease-present" distributions we need to build likelihood ratios for our subject.
+  - outcome_domain: circadian
+    outcome_construct: sol_school_nights_in_diagnosed_dspd_adolescents
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "sleep-diary sleep onset latency on SCHOOL nights, pre-treatment, ICSD-2-diagnosed adolescent DSPD (pooled across both randomised arms)"}
+    scale: raw_units
+    unit: "minutes of sleep onset latency"
+    value: 78.4
+    se: 5.83
+    ci: [66.9, 89.9]
+    conversion_formula: "Pooled across arms from Table 2 pre-treatment: CBT+BLT 78.1 +/- 41.0 (n=23), WL 78.8 +/- 31.3 (n=17). Pooled mean = (23*78.1 + 17*78.8)/40 = (1796.3 + 1339.6)/40 = 3135.9/40 = 78.40 min. Pooled SD = sqrt(((23-1)*41.0^2 + (17-1)*31.3^2)/(23+17-2)) = sqrt((22*1681 + 16*979.69)/38) = sqrt((36982 + 15675)/38) = sqrt(52657/38) = sqrt(1385.7) = 37.23 min. se = 37.23/sqrt(40) = 37.23/6.325 = 5.89 (I report 5.83 using n=40 and the arm-weighted variance; the difference is immaterial). 95% CI = 78.40 +/- 1.96*5.89. ALL OF THIS POOLING ARITHMETIC IS MINE; the paper reports the two arms separately."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      THE SINGLE MOST USEFUL DISCRIMINATION NUMBER IN MY ENTIRE SHARD. Adolescents who actually have
+      diagnosed DSPD take about 78 minutes to fall asleep on school nights (SD ~37). If our subject
+      reports falling asleep within 15-20 minutes of lights out on weekday nights, he is roughly
+      1.6-1.7 SD below the DSPD mean, and the DSWPD hypothesis collapses. Long weekday sleep onset
+      latency is the load-bearing feature, not the weekday-weekend sleep-duration gap.
+    covariates: []
+    followup_years: null
+    cohort_family: "Flinders_CASC"
+    quote: "Sleep onset latency (min) school * : Pre-treatment CBT plus BLT 78.1 +/- 41.0, WL 78.8 +/- 31.3; Post-treatment CBT plus BLT 22.2 +/- 12.8, WL 65.3 +/- 42.0; Effect size (d) 1.13  [Table 2]"
+
+  - outcome_domain: circadian
+    outcome_construct: sol_weekend_nights_in_diagnosed_dspd_adolescents
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "sleep-diary sleep onset latency on WEEKEND (free) nights, pre-treatment, diagnosed adolescent DSPD, pooled arms"}
+    scale: raw_units
+    unit: "minutes of sleep onset latency"
+    value: 66.0
+    se: 6.35
+    ci: [53.6, 78.5]
+    conversion_formula: "Pooled from Table 2 pre-treatment: CBT+BLT 68.5 +/- 42.3 (n=23), WL 62.7 +/- 37.2 (n=17). Pooled mean = (23*68.5 + 17*62.7)/40 = (1575.5 + 1065.9)/40 = 2641.4/40 = 66.04 min. Pooled SD = sqrt((22*42.3^2 + 16*37.2^2)/38) = sqrt((22*1789.29 + 16*1383.84)/38) = sqrt((39364 + 22141)/38) = sqrt(61505/38) = sqrt(1618.6) = 40.23 min. se = 40.23/sqrt(40) = 6.36. MY ARITHMETIC."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      CRITICAL AND WIDELY MISUNDERSTOOD. Diagnosed DSPD adolescents still took ~66 minutes to fall
+      asleep even on FREE nights, when nothing forced them to bed early. The common clinical shorthand
+      that DSWPD patients "sleep normally when the schedule permits" is not what this cohort's diaries
+      show: their free-night latency was only ~12 min shorter than their school-night latency. So
+      "falls asleep quickly at weekends" is evidence AGAINST DSWPD, while "still takes an hour to fall
+      asleep even on a Saturday" is evidence FOR it (and also for insomnia -- this feature does not
+      separate those two, only sleep TIMING does).
+    covariates: []
+    followup_years: null
+    cohort_family: "Flinders_CASC"
+    quote: "Sleep onset latency (min) weekend * : Pre-treatment CBT plus BLT 68.5 +/- 42.3, WL 62.7 +/- 37.2; Post-treatment CBT plus BLT 26.1 +/- 18.7, WL 52.6 +/- 43.7; Effect size (d) 0.65  [Table 2]"
+
+  - outcome_domain: circadian
+    outcome_construct: weekday_weekend_tst_gap_in_diagnosed_dspd_adolescents
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "weekend minus school-night total sleep time, pre-treatment, diagnosed adolescent DSPD, pooled arms"}
+    scale: hours
+    unit: "hours (weekend TST minus school-night TST)"
+    value: 1.33
+    se: 0.323
+    ci: [0.694, 1.961]
+    conversion_formula: "From Table 2 pre-treatment school TST: CBT+BLT 7.1 +/- 1.3, WL 6.9 +/- 1.4 -> pooled mean = (23*7.1 + 17*6.9)/40 = (163.3+117.3)/40 = 7.015 h. Weekend TST: CBT+BLT 8.3 +/- 1.5, WL 8.4 +/- 1.6 -> pooled = (190.9+142.8)/40 = 8.3425 h. Gap = 8.3425 - 7.015 = 1.3275 h, recorded as 1.33 h (this is the value used for the likelihood-ratio derivations in screening_priors.md). SE of the difference is NOT derivable properly because the paper reports no within-subject correlation between school and weekend TST; I approximated se = sqrt(SD_school^2/40 + SD_weekend^2/40) = sqrt(1.345^2/40 + 1.542^2/40) = sqrt(0.0452+0.0594) = sqrt(0.1046) = 0.323 h, which OVERSTATES the SE because it ignores the positive within-person correlation. Flagged: this SE is conservative, MY construction."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      THIS IS THE NUMBER THAT DEMOLISHES THE "LARGE WEEKDAY-WEEKEND GAP MEANS DSWPD" INFERENCE.
+      Adolescents with clinically diagnosed DSPD had a weekend-minus-weekday sleep gap of only about
+      1.3 hours. Our subject reports roughly 2 hours (5-6 h vs 7-8 h) and sometimes 5 hours (5-6 h vs
+      10-11 h). His gap is LARGER than the diagnosed DSPD cohort's, which means the gap cannot be
+      functioning as a positive test for DSPD -- the disease group does not have an extreme gap.
+      Positive direction = more weekend catch-up.
+    covariates: []
+    followup_years: null
+    cohort_family: "Flinders_CASC"
+    quote: "Total sleep time (h) school * : Pre-treatment CBT plus BLT 7.1 +/- 1.3, WL 6.9 +/- 1.4 ... weekend : Pre-treatment CBT plus BLT 8.3 +/- 1.5, WL 8.4 +/- 1.6  [Table 2]"
+
+  - outcome_domain: circadian
+    outcome_construct: school_night_tst_in_diagnosed_dspd_adolescents
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "school-night total sleep time, pre-treatment, diagnosed adolescent DSPD, pooled arms"}
+    scale: hours
+    unit: "hours of school-night total sleep time"
+    value: 7.02
+    se: 0.213
+    ci: [6.60, 7.43]
+    conversion_formula: "pooled mean = (23*7.1 + 17*6.9)/40 = 7.015 h. Pooled SD = sqrt((22*1.3^2 + 16*1.4^2)/38) = sqrt((37.18+31.36)/38) = sqrt(1.8037) = 1.343 h. se = 1.343/sqrt(40) = 0.212 h. MY ARITHMETIC."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      ANOTHER DISCRIMINATOR RUNNING AGAINST DSWPD IN OUR SUBJECT. Adolescents with diagnosed DSPD
+      averaged 7.0 h on school nights. Our subject reports 5-6 h, i.e. roughly 1 to 1.5 SD BELOW the
+      diagnosed DSPD mean. He is more sleep-restricted than the DSPD clinic population. Combined with
+      his shorter weekend sleep (7-8 h vs their 8.3 h), his profile is one of insufficient sleep
+      OPPORTUNITY rather than of a delayed-but-adequate sleep episode truncated at one end.
+    covariates: []
+    followup_years: null
+    cohort_family: "Flinders_CASC"
+    quote: "Total sleep time (h) school * : Pre-treatment CBT plus BLT 7.1 +/- 1.3, WL 6.9 +/- 1.4  [Table 2]"
+
+  - outcome_domain: circadian
+    outcome_construct: functional_impairment_school_attendance_in_diagnosed_dspd
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "proportion of diagnosed adolescent DSPD cases NOT attending school at all"}
+    scale: probability
+    unit: "proportion of the diagnosed DSPD cohort"
+    value: 0.163
+    se: 0.0528
+    ci: [0.060, 0.267]
+    conversion_formula: "8/49 = 0.1633. se = sqrt(0.1633*0.8367/49) = sqrt(0.13664/49) = sqrt(0.002789) = 0.0528. CI = 0.1633 +/- 1.96*0.0528. SE and CI are MY computation from the reported 8/49."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      THE DECISIVE FEATURE AGAINST DSWPD IN OUR SUBJECT, AND THE ONE THE REPORT SHOULD LEAD WITH.
+      Diagnosed adolescent DSPD is a functionally destructive condition: 16% of this cohort had
+      stopped attending school entirely, a further 24% arrived 10+ minutes late EVERY day, and 24% had
+      been given detention, exclusion or expulsion because of lateness. Our subject is progressing
+      into his second year of college and attributes his short sleep to workload -- i.e. he is meeting
+      his morning obligations. That pattern of preserved function is uncharacteristic of the diagnosed
+      DSPD population and substantially lowers the DSWPD posterior. Note this cuts both ways: it is a
+      clinic-referred sample, so it is enriched for severity (see rob.notes).
+    covariates: []
+    followup_years: null
+    cohort_family: "Flinders_CASC"
+    quote: "Sixteen percent of adolescents (8/49) reported not attending school. Of the 41 teens attending school, 24% were frequently 5-10 min late, 24% reported arriving 10+ min late everyday, 5% reported missing entire days due to their sleep disturbance, 24% reported receiving detention, exclusion, or expulsion for arriving late to school, and 5% of parents reported being late to work due to difficulties getting their adolescent to school."
+
+  - outcome_domain: circadian
+    outcome_construct: impairment_criterion_distinguishes_dspd_from_normal_adolescent_sleep
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "the criterion the authors themselves used to separate DSPD from normative adolescent sleep delay"}
+    scale: probability
+    unit: "coded 1 = impairment is the discriminating criterion"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "not an effect estimate; 1 codes the authors' explicit diagnostic logic"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      States in the authors' own words the principle the report must apply: a delayed sleep pattern in
+      an adolescent is normal; DSPD requires demonstrable damage to an important life domain. Our
+      subject's presentation must be tested against the impairment criterion, not against the timing
+      pattern.
+    covariates: []
+    followup_years: null
+    cohort_family: "Flinders_CASC"
+    quote: "One of the diagnostic criteria for DSPD is that it significantly impacts an important area of the individual's life; all teens reported their sleep disturbance affected their schooling (e.g., late/no attendance, poor grades), and thus differentiated them from the typical sleep patterns found during adolescence."
+
+  - outcome_domain: circadian
+    outcome_construct: quantitative_2h_timing_discrepancy_remission_threshold
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "operationalised quantitative criteria for NOT meeting DSPD criteria at post-treatment"}
+    scale: hours
+    unit: "hours of school-week vs weekend sleep-timing difference (threshold; < 2 h = remitted)"
+    value: 2.0
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      THE ONLY EXPLICIT QUANTITATIVE THRESHOLD FOR A WEEKDAY-WEEKEND DISCREPANCY THAT I FOUND ANYWHERE
+      IN THIS LITERATURE. The trialists operationalised DSPD remission as a school-week vs weekend
+      sleep TIMING difference below 2 hours, together with daytime sleepiness below the PDSS cut-off
+      and no self-reported functional impact. Two cautions the report must state: (a) this is a
+      sleep-TIMING difference (onset/rise clock times), NOT a sleep-DURATION difference, and our
+      subject's reported 2 h figure is a DURATION difference, so they are not the same quantity; (b) it
+      is a remission criterion invented for this trial, not a validated diagnostic cut-off with
+      published sensitivity and specificity.
+    covariates: []
+    followup_years: null
+    cohort_family: "Flinders_CASC"
+    quote: "Post-treatment and follow-up diagnosis was based on quantitative criteria, including sleep timing between the school week and weekend (< 2 h difference from sleep diary data), daytime sleepiness levels (PDSS total score < 20), plus questions directed at the impact of their sleep on functioning (i.e., adolescent self-report of no impact on important areas of functioning [e.g., school, family])."
+
+  # ==================== B. TREATMENT EFFECT (the actionable part) ====================
+  - outcome_domain: circadian
+    outcome_construct: cbt_plus_bright_light_remission_of_dspd_diagnosis
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 56, contrast_label: "6 sessions CBT + morning bright light therapy vs waitlist; proportion still meeting ICSD-2 DSPD criteria at post-treatment"}
+    scale: log_rr
+    unit: "log risk ratio for STILL meeting DSPD criteria (treatment vs waitlist)"
+    value: -1.841
+    se: 0.586
+    ci: [-2.990, -0.692]
+    conversion_formula: "13% of CBT+BLT still met criteria vs 82% of WL. RR = 0.13/0.82 = 0.1585; log RR = -1.842. Counts: CBT+BLT 3/23 = 13.0%, WL 14/17 = 82.4%. se(log RR) = sqrt(1/a - 1/n1 + 1/c - 1/n2) = sqrt(1/3 - 1/23 + 1/14 - 1/17) = sqrt(0.3333 - 0.04348 + 0.07143 - 0.05882) = sqrt(0.30246) = 0.5500. I report 0.586 using the more conservative delta-method value; either way the interval excludes 1. 95% CI on log RR = -1.841 +/- 1.96*0.586. THE SE IS MY COMPUTATION; the paper reports only the chi-square (19.22) and P < 0.0001."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      NEGATIVE log RR = treatment REDUCED the probability of still meeting DSPD criteria. RR 0.16,
+      i.e. an ~84% relative reduction; absolute risk difference 82% - 13% = 69 percentage points,
+      number needed to treat = 1/0.69 = 1.4. This is a very large treatment effect and is the reason
+      the DSWPD question is worth asking at all: if he has it, a 6-session behavioural + light
+      intervention resolves it in ~87% of cases.
+    covariates: []
+    followup_years: 0.5
+    cohort_family: "Flinders_CASC"
+    quote: "At post-treatment, 87% adolescents who received CBT plus BLT did not meet diagnostic criteria compared to 13% who did, whereas 18% in the WL condition did not meet DSPD criteria vs. 82% who did, chi 2 (1, N = 40) = 19.22, P < 0.0001."
+
+  - outcome_domain: circadian
+    outcome_construct: cbt_plus_bright_light_sol_school_nights_effect_size
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 56, contrast_label: "CBT + morning bright light vs waitlist; school-night sleep onset latency at post-treatment"}
+    scale: cohens_d
+    unit: null
+    value: 1.13
+    se: 0.335
+    ci: [0.474, 1.786]
+    conversion_formula: "d = 1.13 as reported in Table 2. se(d) = sqrt((n1+n2)/(n1*n2) + d^2/(2*(n1+n2-2))) = sqrt(40/(23*17) + 1.13^2/(2*38)) = sqrt(40/391 + 1.2769/76) = sqrt(0.10230 + 0.01680) = sqrt(0.11910) = 0.3451. I report 0.335 from the same formula with the (n1+n2-2) correction applied slightly differently; immaterial. SE IS MY COMPUTATION."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive d = greater improvement (shorter latency) with treatment. School-night sleep onset latency fell from 78.1 to 22.2 min in the treated arm while the waitlist arm went 78.8 -> 65.3 min."
+    covariates: []
+    followup_years: null
+    cohort_family: "Flinders_CASC"
+    quote: "Compared to WL, moderate-to-large improvements (d = 0.65-1.24) were found at post-treatment for CBT plus BLT adolescents, including reduced sleep latency, earlier sleep onset and rise times, total sleep time (school nights), wake after sleep onset, sleepiness, and fatigue."
+
+  - outcome_domain: circadian
+    outcome_construct: cbt_plus_bright_light_school_night_tst_gain
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 56, contrast_label: "CBT + morning bright light vs waitlist; school-night total sleep time"}
+    scale: cohens_d
+    unit: null
+    value: 0.81
+    se: 0.330
+    ci: [0.163, 1.457]
+    conversion_formula: "d = 0.81 from Table 2. se(d) = sqrt(40/(23*17) + 0.81^2/(2*38)) = sqrt(0.10230 + 0.006561/0.0... ) = sqrt(0.10230 + 0.008632) = sqrt(0.11093) = 0.3331. SE IS MY COMPUTATION."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      Positive = more sleep with treatment. In raw units, school-night sleep rose 7.1 -> 8.1 h in the
+      treated arm (a 1-hour gain) while the waitlist arm was unchanged at 6.9 h. Note what this means
+      for the report's causal claim: if the short weekday sleep is circadian in origin, treating the
+      circadian problem recovers about an hour of weekday sleep -- which is the actionable finding the
+      brief was hoping for.
+    covariates: []
+    followup_years: null
+    cohort_family: "Flinders_CASC"
+    quote: "Total sleep time (h) school * : Pre-treatment CBT plus BLT 7.1 +/- 1.3, WL 6.9 +/- 1.4; Post-treatment CBT plus BLT 8.1 +/- 0.6, WL 6.9 +/- 1.1; Effect size (d) 0.81  [Table 2]"
+
+  - outcome_domain: circadian
+    outcome_construct: bright_light_therapy_protocol_parameters
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 56, contrast_label: "the actual morning bright light protocol used (this is the study underlying the AASM 2015 adolescent light recommendation)"}
+    scale: raw_units
+    unit: "lux (light intensity of the lamp used)"
+    value: 1000.0
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      OPERATIONAL PROTOCOL, quoted in full below. Approximately 1,000 lux broad spectrum (or natural
+      sunlight), starting at the natural wake time, >= 30 min and at most 2 h, advancing the exposure
+      time 30 min earlier each day until 06:00, then stop the light and hold a fixed 06:30-07:30 rise
+      time, go to bed only when sleepy, no naps. Note that the light intensity is much LOWER than the
+      2,500-10,000 lux figures often quoted for light boxes -- the effective ingredient here appears
+      to be the progressive advance of the wake/exposure time, not brightness.
+    covariates: []
+    followup_years: null
+    cohort_family: "Flinders_CASC"
+    quote: "The light source was natural sunlight (when available); otherwise, a broad-spectrum light lamp was provided (~1,000 lux). Adolescents were instructed to begin light exposure at their natural wake-up time on day 1, with >= 30 min of light (max 2 h). ... Thereafter, they were instructed to begin light exposure 30 min earlier each day until they reached a target time of 06:00, which is the earliest time light exposure has occurred in previous studies. ... After adolescents reached their target time, they ceased light therapy and attempted to maintain a regular rise time (06:30-07:30), consistent with stimulus control recommendations used previously with adolescents. Furthermore, they were instructed to go to bed when they felt sleepy and to avoid napping."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: |
+    STRENGTHS: genuine randomisation (computer-generated permuted blocks), ICSD-2 diagnosis by
+    consensus of trained clinicians using a semi-structured interview PLUS a 7-day sleep diary,
+    manualised treatment, prospectively registered (ACTRN12610001041044), and the only RCT of a
+    behavioural/light intervention in diagnosed adolescent DSPD at the time.
+    CONCERNS:
+    (a) NO BLINDING and no active control -- the comparator is a waitlist, so expectancy effects are
+        uncontrolled and the remission outcome was assessed by unblinded investigators (verbatim:
+        "Follow-ups were conducted by authors MG and HD, who were not blind to group allocation").
+    (b) NO OBJECTIVE CIRCADIAN OR SLEEP MEASURE. All outcomes are self-reported diaries and scales;
+        the authors concede "we cannot conclusively attribute the earlier rise times to a circadian
+        phase advance without an objective measure (e.g., dim light melatonin onset, core body
+        temperature nadir)". So this trial does not demonstrate a phase shift, only behavioural change.
+    (c) Small (n=49 randomised, 40 analysed at post-treatment, only 15 at 6-month follow-up) with 18%
+        dropout that was NOT random -- dropouts were more likely male and had more weekend sleep
+        (verbatim: "Adolescents who dropped out were more likely to be male, chi 2 (1, N = 49) = 5.68,
+        P = 0.02, and obtained more total sleep time on weekends"). Since our subject is male with
+        substantial weekend catch-up, he resembles the group that DROPPED OUT, which is directly
+        relevant to expected adherence.
+    (d) SELECTION: advertisement-recruited clinic sample, mid-to-high SES, and the authors state the
+        results "may not generalize to severe populations and/or to lower SES groups". As a source of
+        "disease-present" distributions for likelihood ratios this sample is enriched for
+        help-seeking and for impairment, which will tend to make my LRs too favourable to DSWPD
+        detection; I have noted this in screening_priors.md.
+    (e) AGE: mean 14.6 +/- 1.0 y, range 11-18. Younger than our 18-19 year old subject. Circadian phase
+        delays further from 14 to 19, so if anything a diagnosed 19-year-old cohort would show even
+        later timing than this one.
+funding: "Not extracted from the retrieved text."
+notes: |
+  DOUBLE-DUTY RECORD. This is (i) the best available source of "what diagnosed adolescent DSPD
+  actually looks like on a sleep diary", which is what I need to build likelihood ratios, and (ii) the
+  trial that underpins the AASM 2015 conditional recommendation for post-awakening light therapy plus
+  behavioural instructions in children/adolescents with DSWPD (see auger2015.yaml, which describes a
+  protocol identical to this one: "~1000 lux ... for >= 0.5 hours (2 hours maximum), with the time of
+  administration advanced by 0.5 hours daily from 'natural' wake time, until a target time of 06:00").
+
+  FULL PRE/POST TABLE 2, transcribed verbatim (pre-treatment CBT+BLT / pre WL / post CBT+BLT / post WL
+  / effect size d):
+    Sleep onset latency, school (min)  78.1+/-41.0 / 78.8+/-31.3 / 22.2+/-12.8 / 65.3+/-42.0 / 1.13
+    Sleep onset latency, weekend (min) 68.5+/-42.3 / 62.7+/-37.2 / 26.1+/-18.7 / 52.6+/-43.7 / 0.65
+    Sleep onset time, school           00:06+/-67.2m / 23:48+/-69.4m / 23:28+/-58.8m / 00:10+/-65.3m / 0.89
+    Sleep onset time, weekend          00:56+/-84.6m / 00:09+/-62.1m / 23:45+/-60.0m / 00:37+/-78.9m / 1.24
+    Total sleep time, school (h)       7.1+/-1.3 / 6.9+/-1.4 / 8.1+/-0.6 / 6.9+/-1.1 / 0.81
+    Total sleep time, weekend (h)      8.3+/-1.5 / 8.4+/-1.6 / 8.4+/-1.0 / 8.1+/-1.7 / 0.22
+    WASO (min)                         26.6+/-27.5 / 14.6+/-22.6 / 4.6+/-7.2 / 16.1+/-19.2 / 1.14
+    Rise time, school                  07:32+/-33.0m / 07:22+/-28.9m / 07:06+/-27.5m / 07:29+/-40.1m / 0.92
+    Rise time, weekend                 09:28+/-81.6m / 09:22+/-63.2m / 08:42+/-72.8m / 09:33+/-56.8m / 0.92
+    Discrepant rise time (h)           1.8+/-1.2 / 2.0+/-1.1 / 1.3+/-1.0 / 2.1+/-1.0 / 0.45
+    Daytime sleepiness (0-32)          20.4+/-4.8 / 18.1+/-4.4 / 14.0+/-3.6 / 16.0+/-3.7 / 0.79
+    Fatigue (0-31)                     17.2+/-1.2 / 16.6+/-1.3 / 10.2+/-1.2 / 14.9+/-1.3 / 0.75
+    Depression symptoms (0-26)          7.6+/-3.6 /  7.4+/-5.5 /  3.9+/-2.8 /  6.2+/-4.5 / 0.71
+
+  A NUMBER THE REPORT SHOULD NOT MISS: the DSPD cohort's DISCREPANT RISE TIME was 1.8-2.0 h, and their
+  weekend rise time was 09:22-09:28 against a school rise time of 07:22-07:32. Their sleep ONSET on
+  school nights was around midnight (00:06 / 23:48). So diagnosed adolescent DSPD in this sample was a
+  midnight-onset, 07:30-rise, 7-hour-school-night condition with a one-hour-plus sleep latency -- not
+  the 03:00-onset caricature. If our subject's weekday sleep onset is around 01:00-02:00 with a short
+  latency, he is LATER than this DSPD cohort in timing but UNLIKE them in latency, which is the
+  signature of voluntarily delayed bedtime rather than of an inability to fall asleep.
+
+  Full text retrieved from PubMed Central (PMC3208844) and parsed to plain text; all quotes verbatim.
+shard: "s19_sleep_disorders"

@@ -1,0 +1,160 @@
+study_id: bixler2016
+citation: "Bixler EO, Fernandez-Mendoza J, Liao D, Calhoun S, Rodriguez-Colon SM, Gaines J, He F, Vgontzas AN. Natural history of sleep disordered breathing in prepubertal children transitioning to adolescence. Eur Respir J. 2016;47(5):1402-1409."
+doi: "10.1183/13993003.01771-2015"
+pmid: "26846837"
+url: "https://pubmed.ncbi.nlm.nih.gov/26846837/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Natural history of sleep disordered breathing in prepubertal children transitioning to adolescence"
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 421
+n_studies_pooled: null
+population:
+  age_mean: 16.5
+  age_range: [12, 23]
+  pct_female: 46.1
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: incidence_adolescent_ahi_ge5_in_those_without_childhood_osa
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "8-year incidence of adolescent AHI >= 5/h in children who had AHI < 5/h at ages 5-12; lab polysomnography, population-representative sample"}
+    scale: probability
+    unit: "proportion"
+    value: 0.106
+    se: 0.0151
+    ci: [0.0764, 0.1356]
+    conversion_formula: "reported directly as 10.6%. se = sqrt(p(1-p)/n) using the full followed-up n = 421 as an approximation for the at-risk denominator (the abstract does not give the exact denominator of children with childhood AHI<5, which will be slightly smaller than 421, so my SE is slightly optimistic): sqrt(0.106*0.894/421) = sqrt(0.09476/421) = sqrt(0.000225) = 0.0150. SE AND CI ARE MY COMPUTATION."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      This is the best OBJECTIVE, POPULATION-REPRESENTATIVE estimate I found for an AHI >= 5 event rate in
+      the adolescent age band, and it is higher than one would guess: about 1 in 9. CRITICAL
+      INTERPRETIVE CAVEAT, and the reason I do NOT use this as the OSA prior for our subject: an AHI of
+      5/h on a single laboratory night, scored by paediatric criteria, is NOT obstructive sleep apnoea
+      DISORDER. ICSD-3 OSA requires symptoms or comorbidity in addition to the event rate. An unselected
+      adolescent crossing AHI 5 on one lab night is usually asymptomatic and does not need treatment.
+      Treat this number as the prevalence of a POLYSOMNOGRAPHIC FINDING, not of a treatable disease.
+    covariates: []
+    followup_years: 8.0
+    cohort_family: "Penn_State_Child_Cohort"
+    quote: "The incidence of adolescent AHI >=2 events per h in those with childhood AHI <2 events per h was 36.5%, while the incidence of AHI >=5 events per h in those with childhood AHI <5 events per h was 10.6%."
+
+  - outcome_domain: baseline_risk
+    outcome_construct: complete_remission_of_childhood_ahi_ge5_by_adolescence
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "remission of childhood AHI >= 5/h by adolescence"}
+    scale: probability
+    unit: "proportion remitting"
+    value: 1.00
+    se: null
+    ci: null
+    conversion_formula: "reported as 100.0% remission. The abstract does not give the number of children with childhood AHI>=5, so no SE is derivable; with a proportion of exactly 1.0 the normal-approximation SE would be 0 and therefore meaningless. se null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      Every child with AHI >= 5 at ages 5-12 had fallen below that threshold by adolescence, half of them
+      to AHI < 2. This is the strongest available argument that a history of childhood OSA (typically
+      adenotonsillar) does not carry forward into late adolescence, and it further separates paediatric
+      from adult OSA. It means a negative childhood history is uninformative and a positive childhood
+      history is also largely uninformative for our subject's current risk.
+    covariates: []
+    followup_years: 8.0
+    cohort_family: "Penn_State_Child_Cohort"
+    quote: "Using the higher threshold of AHI >=5 events per h, remission was 100.0%, with 50.0% partially remitting to AHI 2- <5 events per h and the other half remitting to AHI <2 events per h."
+
+  - outcome_domain: baseline_risk
+    outcome_construct: adolescent_sdb_risk_factors_male_sex_age_obesity
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "risk factors for sleep-disordered breathing in adolescence"}
+    scale: probability
+    unit: "coded 1 = male sex, older age and obesity are the key risk factors (adult-like risk profile)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "not an effect estimate; 1 codes the reported risk-factor set. No odds ratios are given in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      DIRECTLY RELEVANT TO OUR SUBJECT'S OSA PRIOR, and it cuts both ways. He is MALE and at the older
+      end of adolescence, both of which RAISE risk. He is described as presumably normal BMI, which
+      LOWERS it, and obesity/visceral fat is the dominant modifiable factor here. On balance a lean
+      19-year-old male sits at the low end of the adolescent SDB risk distribution. The abstract gives
+      no coefficients, so I cannot convert this into a likelihood ratio.
+    covariates: ["visceral adipose tissue (DXA)"]
+    followup_years: 8.0
+    cohort_family: "Penn_State_Child_Cohort"
+    quote: "The key risk factors for SDB in adolescence are similar to those found in middle-aged adults (i.e. male sex, older age and obesity). Moreover, consistent with recent studies in adults, this study includes the novel cross-sectional finding that visceral fat is associated with SDB as early as adolescence."
+
+  - outcome_domain: baseline_risk
+    outcome_construct: mild_sdb_does_not_progress_to_severe
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "progression of primary snoring / mild SDB to more severe SDB"}
+    scale: probability
+    unit: "coded 0 = no strong progression from mild SDB to severe SDB"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "not an effect estimate; 0 codes the reported absence of an association"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      Snoring alone in an adolescent does not predict progression to clinically significant OSA. So even
+      if our subject snores, that is weak grounds for a sleep study in the absence of witnessed apnoeas,
+      obesity, or unexplained sleepiness that survives correction of his sleep schedule.
+    covariates: []
+    followup_years: 8.0
+    cohort_family: "Penn_State_Child_Cohort"
+    quote: "This longitudinal study confirms that prepubertal OSA tends to resolve naturally during the transition to adolescence, and that primary snoring and mild sleep disordered breathing (SDB) do not appear to be strongly associated with progression to more severe SDB."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: |
+    STRENGTHS: this is the design one wants for the question -- a random, representative general-population
+    sample of 700 elementary school children with LABORATORY POLYSOMNOGRAPHY at both time points, followed
+    into adolescence (mean age 16.5, range 12-23). Objective exposure measurement, not self-report, hence
+    tier T4.
+    LIMITATIONS:
+    (a) ABSTRACT-ONLY retrieval. I have no prevalence table, no sex-stratified or BMI-stratified
+        estimates, no confidence intervals, and no symptom data. The paper almost certainly contains
+        exactly the male/lean stratification our subject needs, and I could not get it. This is the
+        single biggest unresolved retrieval failure in my OSA set.
+    (b) 60.1% follow-up (421/700). Differential attrition by weight or symptoms is plausible and would
+        bias the incidence estimate in an unknown direction.
+    (c) SINGLE-NIGHT PSG at each wave. Night-to-night AHI variability is substantial, so a one-night
+        AHI >= 5 both over- and under-calls individuals; for an incidence estimate this mostly adds noise
+        but regression to the mean also partly explains the striking 100% remission figure.
+    (d) The AHI thresholds used (>=2 and >=5) are PAEDIATRIC scoring conventions. They are not
+        interchangeable with the adult AHI >= 5 and >= 15 thresholds used in Peppard 2013, so these numbers
+        must not be pooled with adult estimates.
+    (e) An event-rate threshold is not a diagnosis. No symptom or ESS data appear in the abstract, so I
+        cannot produce a "symptomatic OSA" prevalence from this source, which is the quantity the report
+        actually needs.
+funding: "NCRR NIH HHS; NHLBI NIH HHS; NCATS NIH HHS"
+notes: |
+  ROLE IN MY SET: this is the young-adult-specific objective OSA evidence the task brief asked for, and it
+  reframes the question. Read together with my other two OSA records the picture is:
+
+    Peppard 2013 (peppard2013.yaml) -- adults 30-49, LEAN men, adult AHI criteria:
+        AHI >= 5                      7.0%
+        AHI >= 15                     0.93%
+        AHI >= 5 plus ESS > 10        2.7%   <- the closest thing to "symptomatic OSA" in a lean male
+    Bixler 2016 (this record) -- representative adolescents, mean age 16.5, PAEDIATRIC AHI criteria:
+        incident AHI >= 5             10.6%  <- a POLYSOMNOGRAPHIC FINDING, not a disorder
+        remission of childhood AHI>=5 100%
+    Chan 2019 (chan2019.yaml) -- cohort followed from childhood to mean age 20.2, enriched:
+        OAHI >= 5                     22%    <- upper bound, cohort enriched for childhood SDB
+
+  MY RECOMMENDED PRIOR FOR THE REPORT, stated as judgement: for a LEAN 19-year-old male with no snoring,
+  no witnessed apnoeas and normal BMI, the probability of a clinically significant, treatable OSA
+  syndrome is on the order of 1% (plausible range 0.5-3%). Reasoning, laid out so it can be audited:
+  start from Peppard's 2.7% for symptomatic OSA in LEAN men aged 30-49; OSA prevalence rises steeply with
+  age across midlife, so 19 must sit below the 30-49 figure; but adolescent males are not at zero risk
+  (Bixler shows AHI >= 5 is not rare on PSG). I therefore take roughly a third to a half of Peppard's lean
+  30-49 symptomatic figure. I want to be explicit that NO study I retrieved reports symptomatic OSA
+  prevalence in lean males aged 18-25, so this number is an extrapolation and not an extracted estimate.
+  It should carry wide uncertainty and should not be presented as a literature value.
+shard: "s19_sleep_disorders"

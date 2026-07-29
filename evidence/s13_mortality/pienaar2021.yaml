@@ -1,0 +1,121 @@
+study_id: pienaar2021
+citation: "Pienaar PR, Kolbe-Alexander TL, van Mechelen W, Boot CRL, Roden LC, Lambert EV, Rae DE. Associations Between Self-Reported Sleep Duration and Mortality in Employed Individuals: Systematic Review and Meta-Analysis. Am J Health Promot. 2021 Jul;35(6):853-865."
+doi: "10.1177/0890117121992288"
+pmid: "33567861"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Associations Between Self-Reported Sleep Duration and Mortality in Employed Individuals: Systematic Review and Meta-Analysis."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [18, 64]
+  pct_female: null
+  country: "multinational"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7.5, duration_days: null,
+               contrast_label: "<=6 h vs 7-8 h, restricted to DISEASE-FREE EMPLOYED adults aged 18-64 at baseline"}
+    scale: log_rr
+    unit: null
+    value: 0.148420
+    se: 0.024105
+    ci: [0.104360, 0.198851]
+    conversion_formula: "log_rr = ln(1.16) = 0.148420; se = (ln(1.22) - ln(1.11))/3.92 = 0.024105"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher all-cause mortality. THE BEST POPULATION MATCH AVAILABLE IN A META-ANALYSIS:
+      working-age (18-64) and DISEASE-FREE at baseline, which is the closest anyone gets to a healthy
+      young cohort. The estimate does NOT attenuate relative to the general-population meta-analyses
+      (1.16 here vs 1.12 in cappuccio2010 and 1.13-1.14 in yin2017/ungvari2025). Reported with "no
+      significant heterogeneity", unusually for this literature.
+    covariates: ["varies by constituent study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_employed_adults"
+    quote: "Shorter sleep duration (<=6 h) was associated with a higher risk for (ACM) (RR: 1.16, 95% CI: 1.11 -1.22) and CVDM (RR: 1.26, 95% CI: 1.12 -1.41) compared to 7-8 h of sleep, with no significant heterogeneity."
+  - outcome_domain: mortality
+    outcome_construct: cardiovascular_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7.5, duration_days: null,
+               contrast_label: "<=6 h vs 7-8 h, CVD mortality, disease-free employed adults 18-64"}
+    scale: log_rr
+    unit: null
+    value: 0.231112
+    se: 0.058740
+    ci: [0.113329, 0.343590]
+    conversion_formula: "log_rr = ln(1.26) = 0.231112; se = (ln(1.41) - ln(1.12))/3.92 = 0.058740"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher CVD mortality. Larger than the all-cause estimate, consistent with CVD being the main proposed causal pathway."
+    covariates: ["varies by constituent study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_employed_adults"
+    quote: "Shorter sleep duration (<=6 h) was associated with a higher risk for (ACM) (RR: 1.16, 95% CI: 1.11 -1.22) and CVDM (RR: 1.26, 95% CI: 1.12 -1.41) compared to 7-8 h of sleep"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: other, dose_h: 8, referent_h: 7.5, duration_days: null,
+               contrast_label: ">=8 h vs 7-8 h, all-cause mortality, disease-free employed adults 18-64"}
+    scale: log_rr
+    unit: null
+    value: 0.165514
+    se: 0.023899
+    ci: [0.113329, 0.207014]
+    conversion_formula: "log_rr = ln(1.18) = 0.165514; se = (ln(1.23) - ln(1.12))/3.92 = 0.023899"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality with long sleep. CRUCIAL COMPARISON: in a disease-free working-age
+      population the short and long estimates are NEARLY SYMMETRIC (1.16 vs 1.18), whereas in general
+      populations long sleep is 2-3x more harmful than short sleep (cappuccio2010 1.12 vs 1.30;
+      zhang2025 1.246 vs 1.735; yin2017 at 5 h 1.04 vs at 10 h 1.32). Restricting to the healthy and
+      the working-aged makes the asymmetry disappear. The authors nevertheless caution about I2 = 86.0%.
+    covariates: ["varies by constituent study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_employed_adults"
+    quote: "The association between longer sleep (>=8 h) and ACM (RR: 1.18, 95% CI:1.12 -1.23, P < 0.001) needs to be interpreted cautiously owing to high heterogeneity (I2 = 86.0%, P < 0.001)."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    PRISMA-based, Newcastle-Ottawa quality assessment, random-effects pooling, heterogeneity and
+    sensitivity analyses, and - most valuable - an inclusion criterion of DISEASE-FREE employed persons
+    aged 18-64, which is the only pre-specified attempt in this literature to remove the sick and the
+    elderly from the pooled estimate. Weaknesses: (1) self-reported baseline exposure throughout;
+    (2) the abstract does not report the number of studies, participants or deaths, so n and
+    n_studies_pooled are set to null rather than guessed; (3) "employed" and "disease-free at baseline"
+    are study-reported and inconsistently defined; (4) the 18-64 range is dominated by midlife, not by
+    18-25 year olds - a working-age cohort's mean age is typically 40-50, so this is fair_adult and not
+    good_young_adult; (5) high heterogeneity for the long-sleep contrast; (6) abstract-only access.
+funding: null
+notes: >
+  TARGET EXTRACTION #6 (does the association attenuate in healthier/younger cohorts?). ANSWER: NO, at
+  least not for short sleep.
+  .
+    General population (cappuccio2010):        short RR 1.12   long RR 1.30    ratio long/short = 2.31 on log scale
+    Disease-free employed 18-64 (this study):  short RR 1.16   long RR 1.18    ratio = 1.12 on log scale
+  .
+  Two conclusions follow, and they point in opposite directions for our purposes:
+  (a) BAD FOR THE SUBJECT: restricting to healthy working-age adults does not shrink the short-sleep
+      association. If anything it is marginally larger (log 0.1484 vs 0.1133). So the short-sleep signal
+      is not simply an artefact of pooling sick and elderly people.
+  (b) GOOD FOR THE SUBJECT'S INTERPRETATION: the LONG-sleep excess collapses from 1.30 to 1.18 and the
+      short/long asymmetry nearly vanishes. Since the asymmetry is the main quantitative fingerprint of
+      illness-driven sleep change, this is direct evidence that a large part of the long-sleep signal in
+      general populations IS reverse causation - and therefore that the same mechanism is at work in
+      those cohorts more broadly.
+  .
+  I flag one caveat strongly: <=6 h is the exposure here, which INCLUDES 6 h. The two cohort-level
+  analyses in this shard that resolve 6 h separately (akerstedt2017: HR 0.92 at 6 h vs 7 h and 0.84 vs
+  7-8 h; yin2017 spline: RR 1.01 at 6 h) both find no harm at 6 h. A "<=6 h" category therefore averages
+  a null 6 h stratum with a harmful <=5 h stratum, and the pooled 1.16 overstates the risk at exactly
+  the dose our subject sits at on his better weekday nights.
+shard: "s13_mortality"
