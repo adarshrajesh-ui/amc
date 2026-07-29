@@ -24,7 +24,7 @@ class Row:
     """One comparator: 3 years of exposure beginning at age 16."""
 
     def __init__(self, name, exposure, source, hr_window, pub_loss, pub_start_e,
-                 hr_sustained, reversibility, recommend, note):
+                 hr_sustained, reversibility, recommend, note, rev_grade, conversion):
         self.name = name
         self.exposure = exposure
         self.source = source
@@ -35,6 +35,8 @@ class Row:
         self.reversibility = reversibility
         self.recommend = recommend        # (low, central, high) in years
         self.note = note
+        self.rev_grade = rev_grade        # one-cell reversibility grade for the headline table
+        self.conversion = conversion      # one-cell statement of the conversion actually used
 
     @property
     def bound_L(self):
@@ -81,7 +83,14 @@ ROWS = [
         note="Model P (0.70 y, matching jackson2025's per-cigarette route exactly) and the "
              "cessation-calibrated estimate (~0.08 y, from pirie2013) disagree by ~9x. Pro-rata "
              "overstates the first 3 years because smoking hazard is super-linear in DURATION, and "
-             "it gives no credit for post-cessation repair. I recommend the low end."),
+             "it gives no credit for post-cessation repair. I recommend the low end.",
+        rev_grade="**HIGH but incomplete.** Quit at 25-34 leaves all-cause RR 1.05 (1.00-1.11); "
+                  "cessation before 40 removes ~90% of excess. Residual is CUMULATIVE in pack-years "
+                  "(lung-cancer RR still 1.84).",
+        conversion="Model P, then scaled **down ~9x** onto the pirie2013 cessation gradient, because "
+                   "smoking hazard is super-linear in duration and pro-rata gives no credit for "
+                   "post-cessation repair. Interval spans cessation-calibrated (low) to full "
+                   "un-discounted Model P (high)."),
     Row("Smoking, 10 cig/day",
         "10 cigarettes/day, ages 16-19, then permanent cessation",
         "jackson2025 / banks2015",
@@ -90,7 +99,10 @@ ROWS = [
         recommend=(0.03, 0.08, 0.37),
         note="banks2015 puts ~10 cig/day at RR ~2.0, i.e. roughly half the log-hazard of a pack "
              "a day. Model P here reproduces jackson2025's per-cigarette route (0.354 y at the "
-             "male 17 min/cigarette figure; 0.41 y at the sex-averaged 20 min)."),
+             "male 17 min/cigarette figure; 0.41 y at the sex-averaged 20 min).",
+        rev_grade="as 20 cig/day: **HIGH but incomplete**, residual cumulative in pack-years.",
+        conversion="as 20 cig/day. Dose enters through jackson2025's per-cigarette route, so this "
+                   "row is the 20/day row at half the log-hazard."),
     Row("Overweight, BMI 27.5 vs 22.5",
         "+5 kg/m2 above optimum for 3 years, ages 16-19, then return to 22.5",
         "peeters2003 / globalbmi2016 / psc2009",
@@ -102,14 +114,24 @@ ROWS = [
                       "the START of a trajectory rather than a closed window.",
         recommend=(0.03, 0.15, 0.25),
         note="globalbmi2016 finds the HR per 5 kg/m2 is LARGER for men (1.51) and when BMI is "
-             "measured younger (1.52 at 35-49), so 1.20 is conservative for our subject."),
+             "measured younger (1.52 at 35-49), so 1.20 is conservative for our subject.",
+        rev_grade="**PARTIAL, poor in practice.** Metabolic risk reverses on weight loss, but BMI at "
+                  "30-49 predicts mortality at 50-69 *after adjusting for* BMI at 50-69 "
+                  "(peeters2003), and adolescent adiposity tracks into midlife (twig2016, zheng2017).",
+        conversion="Model P at face value (published loss / e(40), x3). Not discounted for "
+                   "reversibility, because the tracking evidence says a 3-year adolescent exposure "
+                   "is usually the start of a trajectory, not a closed window."),
     Row("Obesity grade 1, BMI ~32",
         "BMI 30-35 for 3 years, ages 16-19, then return to 22.5",
         "psc2009 / globalbmi2016",
         hr_window=1.45, pub_loss=3.0, pub_start_e=E46, hr_sustained=1.45,
         reversibility="as above; worse, because grade-1 obesity at 18 very rarely resolves",
         recommend=(0.07, 0.20, 0.27),
-        note="psc2009 gives 2-4 y for sustained BMI 30-35 from ~46; midpoint 3 y used."),
+        note="psc2009 gives 2-4 y for sustained BMI 30-35 from ~46; midpoint 3 y used.",
+        rev_grade="As overweight, but **worse**: grade-1 obesity present at 18 very rarely resolves, "
+                  "so the closed-window assumption is least credible here.",
+        conversion="Model P at face value (psc2009 midpoint 3 y over e(46), x3), undiscounted. The "
+                   "interval's low end is Bound L."),
     Row("Physical inactivity",
         "0 MET-h/wk leisure activity for 3 years, ages 16-19, then meeting guidelines",
         "moore2012 / mok2019 / hogstrom2016",
@@ -123,7 +145,13 @@ ROWS = [
         recommend=(0.02, 0.07, 0.26),
         note="Because reversibility is high, I recommend a central estimate near the WINDOW bound. "
              "ekelund2019's device-measured HR 3.7 is an outlier driven by reverse causation in "
-             "62-year-olds and is not used."),
+             "62-year-olds and is not used.",
+        rev_grade="**HIGH** (best-evidenced after smoking). Becoming more active cuts mortality "
+                  "independent of baseline (HR 0.76 per 1 kJ/kg/day/y); rising trajectories beat "
+                  "consistent inactivity even from the lowest baseline. Fitness is a state variable.",
+        conversion="Model P **pulled down to just above Bound L**, because high reversibility means a "
+                   "closed 3-year window forfeits little. Interval's high end retains undiscounted "
+                   "Model P for a modeller who rejects that discount."),
     Row("Alcohol, ~200-350 g/wk",
         "14-25 US standard drinks/week for 3 years, ages 16-19, then moderation",
         "wood2018 + gbd2016alcohol",
@@ -137,7 +165,14 @@ ROWS = [
         note="THE ONE COMPARATOR WHERE THE WINDOW TERM DOMINATES. gbd2016alcohol: alcohol is the "
              "LEADING risk factor for male deaths at 15-49 (PAF 12.2%), via road injury and "
              "self-harm. Central = chronic pro-rata (0.117 y) PLUS an injury window term; the "
-             "window HR of 2.0 is an ASSUMPTION, not an extraction - see caveats."),
+             "window HR of 2.0 is an ASSUMPTION, not an extraction - see caveats.",
+        rev_grade="**SPLIT, and structurally unlike every other row.** Chronic channel (BP, liver, "
+                  "cardiac) largely reversible. Acute injury channel is not reversible but is "
+                  "*resolved inside the window*, so ex ante and ex post loss diverge here alone.",
+        conversion="**ADDITIVE, the only row not using a single model**: Bound L injury-window term "
+                   "(from the gbd2016alcohol PAF for males 15-49) PLUS the Model P chronic term. This "
+                   "is why the central estimate exceeds Model P. The window HR of 2.0 is an "
+                   "assumption, not an extraction."),
     Row("Typical Western diet",
         "typical Western vs longevity-optimal diet for 3 years, ages 16-19, then optimal",
         "fadnes2022 / fadnes2024",
@@ -149,7 +184,14 @@ ROWS = [
         note="Model P here uses fadnes2022's OWN delayed-cessation gradient (13.0 y at 20 minus "
              "8.8 y at 60 = 4.2 y over 40 exposure-years) rather than naive pro-rata over e(20), "
              "which would give 0.69 y. The 60->80 segment shows the marginal cost per bad-diet "
-             "year RISES with age, so even 0.32 y overstates ages 16-19."),
+             "year RISES with age, so even 0.32 y overstates ages 16-19.",
+        rev_grade="**HIGHEST of all comparators, and the source quantifies it itself.** Switching at "
+                  "60 still gains 8.8 y (6.8-10.0) of the 13.0 y available at 20 - 68% still on the "
+                  "table 40 years later; 3.4 y even at 80.",
+        conversion="Model P computed from fadnes2022's **own delayed-cessation gradient** (13.0 y at "
+                   "20 minus 8.8 y at 60 = 4.2 y spread over 40 exposure-years), not naive pro-rata "
+                   "over e(20), which would give 0.69 y. Their gradient shows marginal cost per "
+                   "bad-diet year RISES with age, so even the high end overstates ages 16-19."),
     Row("REFERENCE: insufficient sleep",
         "short habitual sleep for 3 years, ages 16-19 (this project's own exposure)",
         "cappuccio2010 / li2024sleep",
@@ -161,7 +203,14 @@ ROWS = [
         recommend=(0.02, 0.10, 0.30),
         note="Included so the modeller can see our own exposure on the identical scale. Low end = "
              "cappuccio2010 RR 1.12 over the window; high end = li2024sleep's 4.7 y for men "
-             "pro-rated over e(30)=%.1f. Both are for SUSTAINED midlife exposure." % E30),
+             "pro-rated over e(30)=%.1f. Both are for SUSTAINED midlife exposure." % E30,
+        rev_grade="**NOT ESTABLISHED** on the mortality scale by any record in this shard. No sleep "
+                  "study reports a cessation gradient analogous to pirie2013. This is the single "
+                  "biggest asymmetry between our exposure and its comparators.",
+        conversion="Model P over e(40), undiscounted **because no cessation evidence exists to "
+                   "discount it with**. Interval deliberately wide: Bound L (cappuccio2010 RR 1.12 "
+                   "across the window) to li2024sleep's 4.7 y pro-rated over e(30). Both published "
+                   "inputs are SUSTAINED midlife exposure."),
 ]
 
 
@@ -181,10 +230,19 @@ def main():
         p3 *= (1 - QX[a])
     print(f"P(death, ages 16-18, US male 2023) = {1-p3:.5f} = {(1-p3)*1e5:.0f} per 100,000")
     print()
-    hdr = ("| Comparator | **RECOMMENDED central (months)** | 80% interval (months) | "
-           "Bound L: window only | Model P: pro-rata | Model P as permanent HR from age 19 | "
-           "Bound U: full HR permanent |")
-    print(hdr)
+    print("=== TABLE 1A: the modeller table ===")
+    print("| Comparator | Exposure priced | **LE lost, central** | 80% interval | "
+          "Reversibility on cessation at 19 | Conversion assumption used |")
+    print("|---|---|---|---|---|---|")
+    for r in ROWS:
+        lo, ce, hi = r.recommend
+        print(f"| {r.name} | {r.exposure} | **{ce*12:.1f} mo** ({ce:.2f} y) | "
+              f"{lo*12:.1f}-{hi*12:.1f} mo | {r.rev_grade} | {r.conversion} |")
+    print()
+    print("=== TABLE 1B: how much of that is assumption ===")
+    print("| Comparator | **RECOMMENDED central (months)** | 80% interval (months) | "
+          "Bound L: window only | Model P: pro-rata | Model P as permanent HR from age 19 | "
+          "Bound U: full HR permanent |")
     print("|---|---|---|---|---|---|---|")
     for r in ROWS:
         lo, ce, hi = r.recommend

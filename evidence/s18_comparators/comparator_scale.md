@@ -39,8 +39,30 @@ artefact of that assumption.
 ## 1. THE TABLE
 
 Loss of life expectancy from **3 years of exposure beginning at age 16, in a male**, then
-cessation. Read the bold column; read the two bound columns to see how much of it is
-assumption.
+cessation.
+
+**Table 1A is the one to read.** It is self-contained: for every comparator it gives the
+defensible central estimate, an interval, the reversibility on cessation at 19, and the
+exact conversion assumption used to get there. Table 1B then shows how much of each central
+estimate is assumption rather than epidemiology, by exposing the two bounds.
+
+### Table 1A — the modeller table
+
+| Comparator | Exposure priced | **LE lost, central** | 80% interval | Reversibility on cessation at 19 | Conversion assumption used |
+|---|---|---|---|---|---|
+| Smoking, 20 cig/day | 20 cigarettes/day, ages 16-19, then permanent cessation | **1.8 mo** (0.15 y) | 0.6-9.0 mo | **HIGH but incomplete.** Quit at 25-34 leaves all-cause RR 1.05 (1.00-1.11); cessation before 40 removes ~90% of excess. Residual is CUMULATIVE in pack-years (lung-cancer RR still 1.84). | Model P, then scaled **down ~9x** onto the pirie2013 cessation gradient, because smoking hazard is super-linear in duration and pro-rata gives no credit for post-cessation repair. Interval spans cessation-calibrated (low) to full un-discounted Model P (high). |
+| Smoking, 10 cig/day | 10 cigarettes/day, ages 16-19, then permanent cessation | **1.0 mo** (0.08 y) | 0.4-4.4 mo | as 20 cig/day: **HIGH but incomplete**, residual cumulative in pack-years. | as 20 cig/day. Dose enters through jackson2025's per-cigarette route, so this row is the 20/day row at half the log-hazard. |
+| Overweight, BMI 27.5 vs 22.5 | +5 kg/m2 above optimum for 3 years, ages 16-19, then return to 22.5 | **1.8 mo** (0.15 y) | 0.4-3.0 mo | **PARTIAL, poor in practice.** Metabolic risk reverses on weight loss, but BMI at 30-49 predicts mortality at 50-69 *after adjusting for* BMI at 50-69 (peeters2003), and adolescent adiposity tracks into midlife (twig2016, zheng2017). | Model P at face value (published loss / e(40), x3). Not discounted for reversibility, because the tracking evidence says a 3-year adolescent exposure is usually the start of a trajectory, not a closed window. |
+| Obesity grade 1, BMI ~32 | BMI 30-35 for 3 years, ages 16-19, then return to 22.5 | **2.4 mo** (0.20 y) | 0.8-3.2 mo | As overweight, but **worse**: grade-1 obesity present at 18 very rarely resolves, so the closed-window assumption is least credible here. | Model P at face value (psc2009 midpoint 3 y over e(46), x3), undiscounted. The interval's low end is Bound L. |
+| Physical inactivity | 0 MET-h/wk leisure activity for 3 years, ages 16-19, then meeting guidelines | **0.8 mo** (0.07 y) | 0.2-3.1 mo | **HIGH** (best-evidenced after smoking). Becoming more active cuts mortality independent of baseline (HR 0.76 per 1 kJ/kg/day/y); rising trajectories beat consistent inactivity even from the lowest baseline. Fitness is a state variable. | Model P **pulled down to just above Bound L**, because high reversibility means a closed 3-year window forfeits little. Interval's high end retains undiscounted Model P for a modeller who rejects that discount. |
+| Alcohol, ~200-350 g/wk | 14-25 US standard drinks/week for 3 years, ages 16-19, then moderation | **3.0 mo** (0.25 y) | 1.4-4.2 mo | **SPLIT, and structurally unlike every other row.** Chronic channel (BP, liver, cardiac) largely reversible. Acute injury channel is not reversible but is *resolved inside the window*, so ex ante and ex post loss diverge here alone. | **ADDITIVE, the only row not using a single model**: Bound L injury-window term (from the gbd2016alcohol PAF for males 15-49) PLUS the Model P chronic term. This is why the central estimate exceeds Model P. The window HR of 2.0 is an assumption, not an extraction. |
+| Typical Western diet | typical Western vs longevity-optimal diet for 3 years, ages 16-19, then optimal | **1.8 mo** (0.15 y) | 0.1-3.8 mo | **HIGHEST of all comparators, and the source quantifies it itself.** Switching at 60 still gains 8.8 y (6.8-10.0) of the 13.0 y available at 20 - 68% still on the table 40 years later; 3.4 y even at 80. | Model P computed from fadnes2022's **own delayed-cessation gradient** (13.0 y at 20 minus 8.8 y at 60 = 4.2 y spread over 40 exposure-years), not naive pro-rata over e(20), which would give 0.69 y. Their gradient shows marginal cost per bad-diet year RISES with age, so even the high end overstates ages 16-19. |
+| REFERENCE: insufficient sleep | short habitual sleep for 3 years, ages 16-19 (this project's own exposure) | **1.2 mo** (0.10 y) | 0.2-3.6 mo | **NOT ESTABLISHED** on the mortality scale by any record in this shard. No sleep study reports a cessation gradient analogous to pirie2013. This is the single biggest asymmetry between our exposure and its comparators. | Model P over e(40), undiscounted **because no cessation evidence exists to discount it with**. Interval deliberately wide: Bound L (cappuccio2010 RR 1.12 across the window) to li2024sleep's 4.7 y pro-rated over e(30). Both published inputs are SUSTAINED midlife exposure. |
+
+### Table 1B — how much of that is assumption
+
+Same central estimates and intervals, now beside the bounds they were drawn from. Read the
+bold column; read the two bound columns to see how much of it is assumption.
 
 | Comparator | **RECOMMENDED central (months)** | 80% interval (months) | Bound L: window only | Model P: pro-rata | Model P as permanent HR from age 19 | Bound U: full HR permanent |
 |---|---|---|---|---|---|---|
