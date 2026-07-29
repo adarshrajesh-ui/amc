@@ -1,0 +1,165 @@
+{
+ "lo2016::1": {
+  "verdict": "CORRECT_VALUE",
+  "value": 0.484,
+  "scale": "cohens_d",
+  "reason": "Within-arm paired contrast; correct value is d_z = t/sqrt(n) = 2.47/sqrt(26) = 0.484. The paper's printed d = 0.99 is 2t/sqrt(df), the equal-n independent-groups conversion, while the SR-arm 0.26 in the same sentence is d_z; mixing the two inflates the published contrast ~2x. Team 1 right. NOTE: this task_id is not unique - three evidence records share study_id lo2016, and Team 2 was handed the Sleep 39(3):687-698 PVT record, so the reported 6-fold gap is a task_id collision, not a magnitude disagreement.",
+  "canonical_sign_applies": true,
+  "se": 0.208,
+  "scale_note": "cohens_d interpreted as within-subject d_z (paired), n = 26",
+  "applies_to_file": "evidence/s03_memory_consolidation/lo2016.yaml",
+  "doi": "10.1111/jsr.12424",
+  "pmid": "27291639",
+  "team_correct": "team1",
+  "cause": "specification",
+  "collision": true,
+  "collision_records": [
+   {
+    "file": "evidence/s01_cognition_dose_response/lo2016.yaml",
+    "effect_index": 1,
+    "construct": "pvt_lapses",
+    "doi": "10.5665/sleep.5552",
+    "pmid": "26612392",
+    "current_value": 2.399,
+    "recommended_value": -2.399,
+    "reason": "Different paper (Sleep 2016;39(3):687-698). Magnitude ~2.4 is corroborated by two approximate routes (figure-digitised SDs; f2 = 1.48) but the sign violates the canonical convention (more PVT lapses = worse) and the record carries no quote despite being figure-digitised. Do not apply the lo2016::1 verdict above to this record."
+   },
+   {
+    "file": "evidence/s02_cognition_meta/lo2016.yaml",
+    "effect_index": 1,
+    "construct": "verbal_1back_working_memory_a_prime",
+    "doi": "10.5665/sleep.5552",
+    "pmid": "26612392",
+    "reason": "Third record sharing study_id lo2016; not part of this dispute. Listed so the modeller can see the key is ambiguous."
+   }
+  ]
+ },
+ "huang2016::2": {
+  "verdict": "EXCLUDE",
+  "value": null,
+  "scale": "hedges_g",
+  "reason": "No defensible g exists. Paper reports only LR chi2 = 8.40 for the Spacing x TIB interaction plus Tukey p-values; no d/g, no cell means, no SDs, and Table 2 is image-only (not retrievable). Two routes from the same model disagree 2.7x: eta2 route g = 0.282 (Team 1), sqrt(chi2) route g = 0.766 (Team 2). Both invalid - the LR chi2 pools 3 sessions x 2 spacing levels so effective n >> 56, eta2 is a partial variance share, and the target is an interaction whose standardising SD is never reported. Neither team right. If a number is needed, re-scope to the massed-item simple effect and digitise Figure 2B under a new construct name.",
+  "canonical_sign_applies": true,
+  "se": null,
+  "applies_to_file": "evidence/s02_cognition_meta/huang2016.yaml",
+  "doi": "10.5665/sleep.6092",
+  "pmid": "27253768",
+  "team_correct": "neither",
+  "cause": "source"
+ },
+ "rabat2016::0": {
+  "verdict": "RECODE",
+  "value": -1.082,
+  "scale": "hedges_g",
+  "reason": "The construct as named ('KSS plateaus between day 4 and day 7') describes the shape of a time course, not an effect size. Recode to two records: (1) kss_sleepiness_day7_vs_baseline, hedges_g = -1.082 (d_av = 1.51/1.299 = 1.163, within-subject J = 1-3/(4*11-1) = 0.930), SE ~0.44, n = 12, negative because higher KSS = sleepier = worse - this is what both teams actually extracted; (2) kss_plateau_day4_to_day7, raw_units, +0.07 KSS points (4.73-4.66, g = 0.05), poolable = false. Team 2 right on sign and on the within-subject Hedges correction; Team 1 right that the plateau is the substantive finding but recorded it in a slot that cannot express it.",
+  "canonical_sign_applies": true,
+  "se": 0.44,
+  "applies_to_file": "evidence/s01_cognition_dose_response/rabat2016.yaml",
+  "doi": "10.3389/fnbeh.2016.00095",
+  "pmid": "27242464",
+  "team_correct": "team2",
+  "cause": "specification",
+  "recode_to": [
+   {
+    "outcome_construct": "kss_sleepiness_day7_vs_baseline",
+    "scale": "hedges_g",
+    "value": -1.082,
+    "se": 0.44,
+    "unit": null,
+    "poolable": true,
+    "direction_note": "negative = sleepier (worse) after 7 nights at 4 h TIB vs own 8 h baseline; SE is an independent-groups approximation and therefore conservative (no pre-post r reported)"
+   },
+   {
+    "outcome_construct": "kss_plateau_day4_to_day7",
+    "scale": "raw_units",
+    "value": 0.07,
+    "se": null,
+    "unit": "KSS points, SR7 minus SR4 (direction-neutral; near zero = no further deterioration)",
+    "poolable": false,
+    "direction_note": "kinetics descriptor, not a harm effect: daily KSS 4.66 -> 4.73, morning 5.38 -> 5.38, evening 4.17 -> 4.00"
+   }
+  ]
+ },
+ "dama2025::2": {
+  "verdict": "EXCLUDE",
+  "value": null,
+  "scale": "cohens_d",
+  "reason": "Contrast is a diagnostic group (DSWPD) versus controls pooled from cross-sectional/case-control studies, not a contrast between sleep conditions, and the subject is in neither arm by exposure. The canonical convention does not apply and no harm sign can be assigned, so the effect must be excluded from any pooled harm estimate. Source magnitude is 1.02 (95% CI 0.85-1.19) with DSWPD more depressed; keep as context only with unit 'SD units, DSWPD minus non-DSWPD, higher = more severe depression'. Both teams had the magnitude right and both were wrong to sign it; n should be 612 (sensitivity model), not 766 (screened into review).",
+  "canonical_sign_applies": false,
+  "se": 0.0867,
+  "source_value": 1.02,
+  "source_orientation": "positive = DSWPD group more depressed (worse)",
+  "corrected_n": 612,
+  "applies_to_file": "evidence/s19_sleep_disorders/dama2025.yaml",
+  "doi": "10.1177/07067437251328308",
+  "pmid": "40129277",
+  "team_correct": "neither",
+  "cause": "specification"
+ },
+ "koyama2022_diabetes_lifetime::1": {
+  "verdict": "CORRECT_VALUE",
+  "value": -6.2,
+  "scale": "years",
+  "reason": "Source: a person diagnosed with diabetes at age 20 loses on average 6.2 (6.1-6.4) years of potential life in 2015-2018. A loss of life-years means the subject is worse off, so the canonical signed value is -6.2. Team 1 right; Team 2's +6.2 followed the task's direction-laden unit string 'years of potential life lost'. This is an absolute baseline-risk / consequence-severity input with no sleep exposure and must not enter a pooled sleep-harm estimate. SE 0.077 derives from a Monte Carlo percentile interval, not an analytic CI.",
+  "canonical_sign_applies": true,
+  "se": 0.076531,
+  "unit_fix": "change in years of potential life (negative = years lost)",
+  "contrast_class": "baseline_risk",
+  "applies_to_file": "evidence/s17_baseline_risk/koyama2022_diabetes_lifetime.yaml",
+  "doi": "10.1371/journal.pone.0268805",
+  "pmid": "35609056",
+  "team_correct": "team1",
+  "cause": "specification"
+ },
+ "klingenberg2013::1": {
+  "verdict": "CORRECT_VALUE",
+  "value": -28.0,
+  "scale": "pct_change",
+  "reason": "Source: 'the Matsuda index was 28% lower (P = 0.007) in the SS condition compared to the LS condition'. A lower Matsuda index is lower whole-body insulin sensitivity, i.e. worse off, so -28. Team 1 right; Team 2's +28 read the unit string '% lower Matsuda index' literally. SE 9.32 percentage points (t = 3.0048 at df = 20 for two-sided p = 0.007). Companion fixes in the same file: ::0 HOMA-IR +65 must become -65 and ::2 fasting insulin +59 must become -59 - the same file currently uses both sign conventions.",
+  "canonical_sign_applies": true,
+  "se": 9.318,
+  "unit_fix": "% change in Matsuda index, 4 h vs 9 h TIB (negative = less insulin sensitive)",
+  "contrast_class": "sleep_dose",
+  "applies_to_file": "evidence/s07_metabolic/klingenberg2013.yaml",
+  "doi": "10.5665/sleep.2816",
+  "pmid": "23814346",
+  "team_correct": "team1",
+  "cause": "specification",
+  "companion_fixes": [
+   {"task_id": "klingenberg2013::0", "construct": "homa_ir", "current_value": 65.0, "recommended_value": -65.0},
+   {"task_id": "klingenberg2013::2", "construct": "fasting_insulin", "current_value": 59.0, "recommended_value": -59.0}
+  ]
+ },
+ "huang2023_cvdfree_life_expectancy::1": {
+  "verdict": "CORRECT_VALUE",
+  "value": -0.55,
+  "scale": "years",
+  "reason": "Source: 'intermediate sleepers lost 0.48 [0.41-0.55] and 0.55 [0.49-0.61] years' (females, males) of CVD-free life expectancy at age 40 versus healthy sleepers. This is a sleep-exposure contrast, so the canonical convention applies and years lost = worse off = -0.55. Team 1 right; Team 2's +0.55 followed the unit string 'CVD-free years lost'. Exposure caveat: the exposure is a 5-item composite sleep score (chronotype, duration, insomnia, snoring, sleepiness), so 'habitual_short_sleep' overstates the match, and the baseline age is 40, not adolescent.",
+  "canonical_sign_applies": true,
+  "se": 0.030612,
+  "unit_fix": "change in CVD-free life-years at age 40, intermediate vs healthy sleepers, males (negative = years lost)",
+  "contrast_class": "sleep_dose",
+  "applies_to_file": "evidence/s17_baseline_risk/huang2023_cvdfree_life_expectancy.yaml",
+  "doi": "10.1186/s12916-023-02732-x",
+  "pmid": "36859313",
+  "team_correct": "team1",
+  "cause": "specification"
+ },
+ "zitting2018::1": {
+  "verdict": "EXCLUDE",
+  "value": null,
+  "scale": "hedges_g",
+  "reason": "Contrast is young versus older adults, both exposed to the same 21-day 5.6 h/24 h chronic sleep deficiency plus forced-desynchrony protocol. There is no restricted arm and no rested referent, so the canonical convention has nothing to attach to and the sign is a category error in either direction; the effect must be excluded from any pooled harm estimate. Both teams computed the same magnitude by the same route (phi = sqrt(5.49/23) = 0.489; d = 1.120; J = 0.964; g = 1.079). If an age-vulnerability moderator is wanted, model it separately with an explicitly declared polarity. Outcome is a dichotomy in N = 23, so the magnitude is fragile; n is 23 (12 young, 11 older), not 24.",
+  "canonical_sign_applies": false,
+  "se": 0.4354,
+  "source_magnitude": 1.079,
+  "source_orientation": "young adults had more inadvertent sleep episodes than older adults",
+  "corrected_n": 23,
+  "contrast_class": "group_moderator",
+  "applies_to_file": "evidence/s05_recovery_kinetics/zitting2018.yaml",
+  "doi": "10.1038/s41598-018-29358-x",
+  "pmid": "30038272",
+  "team_correct": "neither",
+  "cause": "specification"
+ }
+}
