@@ -1,0 +1,73 @@
+study_id: zheng2017
+citation: Zheng Y, Manson JE, Yuan C, Liang MH, Grodstein F, Stampfer MJ, Willett WC, Hu FB. Associations
+  of weight gain from early to middle adulthood with major health outcomes later in life. JAMA. 2017;318(3):255-269.
+doi: 10.1001/jama.2017.7092
+pmid: '28719691'
+url: https://jamanetwork.com/journals/jama/fullarticle/2643761
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Associations of Weight Gain From Early to Middle Adulthood With Major Health Outcomes
+    Later in Life
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 118140
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 18
+  - 55
+  pct_female: 78.6
+  country: US
+  adolescent_match: mixed
+effects:
+- outcome_domain: comparator
+  outcome_construct: healthy_aging_odds_moderate_weight_gain_18_to_55_men
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: moderate weight gain (>=2.5 to <10 kg) from age 21 to 55 vs stable weight, men
+  scale: log_or
+  unit: log odds ratio for composite healthy aging
+  value: -0.127833
+  se: 0.052364
+  ci:
+  - -0.235722
+  - -0.030459
+  conversion_formula: OR 0.88 (95% CI 0.79-0.97) for the composite healthy-aging outcome in men. log_or
+    = ln(0.88) = -0.127833. se = (ln(0.97)-ln(0.79))/3.919928 = 0.052434.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = LOWER odds of healthy aging (harm) after moderate weight gain across adulthood.
+    Outcome is healthy aging, NOT mortality, so it is not on the life-expectancy scale.
+  covariates:
+  - age
+  - smoking
+  - physical activity
+  - diet
+  - alcohol
+  - and others per report
+  followup_years: null
+  cohort_family: NHS_HPFS
+  quote: The multivariable-adjusted odds ratio for the composite healthy aging outcome associated with
+    moderate weight gain was 0.78 (95% CI, 0.72 to 0.84) in women and 0.88 (95% CI, 0.79 to 0.97) in men.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Weight at age 18/21 is RECALLED, in some cases decades later, which is a major exposure misclassification
+    problem. 97% white health professionals. The exposure is weight CHANGE over 34-37 years, so it says
+    nothing about a 3-year window.
+funding: US National Institutes of Health (per report)
+notes: Screened in as the closest available evidence on whether adiposity acquired in late adolescence
+  persists and matters. It does establish that the weight-gain TRAJECTORY from 18 to 55 predicts worse
+  outcomes, which is the empirical reason to worry that a sleep-restriction-induced weight gain at 16-19
+  is not a 3-year exposure at all but the start of a trajectory. It does NOT provide a life-expectancy
+  figure and should carry little weight in the comparator table.
+shard: s18_comparators

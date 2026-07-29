@@ -1,0 +1,64 @@
+study_id: katzmarzyk2012
+citation: 'Katzmarzyk PT, Lee IM. Sedentary behaviour and life expectancy in the USA: a cause-deleted
+  life table analysis. BMJ Open. 2012;2(4):e000828.'
+doi: 10.1136/bmjopen-2012-000828
+pmid: '22777603'
+url: https://bmjopen.bmj.com/content/2/4/e000828
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Sedentary behaviour and life expectancy in the USA: a cause-deleted life table analysis'
+access_tier: abstract_only
+secondhand_via: null
+design: life_table
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: US
+  adolescent_match: mixed
+effects:
+- outcome_domain: comparator
+  outcome_construct: population_life_expectancy_gain_reducing_sitting_below_3h
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: hypothetically reducing US population sitting to <3 h/day
+  scale: years
+  unit: years of POPULATION life expectancy at birth gained
+  value: 2.0
+  se: null
+  ci:
+  - 1.39
+  - 2.69
+  conversion_formula: Reported gain 2.00 y, with a sensitivity span of 1.39-2.69 y obtained by simultaneously
+    varying the input RR across its 95% CI and the prevalence by +/-20%. That span is a SENSITIVITY ANALYSIS,
+    not a CI; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = POPULATION life expectancy at birth GAINED. Population counterfactual, NOT
+    an individual effect.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: The estimated gains in life expectancy in the US population were 2.00 years for reducing excessive
+    sitting to <3 h/day and a gain of 1.38 years from reducing excessive television viewing to <2 h/day.
+rob:
+  tool: none
+  judgement: high
+  notes: Cause-deleted life-table analysis that ASSUMES the sitting-mortality association is fully causal
+    and fully removable, applied to self-reported sitting prevalence from NHANES. Both assumptions are
+    strong. Cause-deletion also assumes independence between the deleted risk and competing risks, which
+    is false for sedentary behaviour.
+funding: None declared / not stated in abstract
+notes: Screened in to cover the sedentary-behaviour limb of the inactivity comparator, since screen time
+  is a plausible co-exposure for a sleep-restricted college student. Population-level, so like lee2012
+  it must not be read as an individual effect. Low weight.
+shard: s18_comparators

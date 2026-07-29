@@ -1,0 +1,66 @@
+study_id: shaw2000
+citation: Shaw M, Mitchell R, Dorling D. Time for a smoke? One cigarette reduces your life by 11 minutes.
+  BMJ. 2000;320(7226):53.
+doi: 10.1136/bmj.320.7226.53
+pmid: '10617536'
+url: https://www.bmj.com/content/320/7226/53
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Time for a smoke? One cigarette reduces your life by 11 minutes
+access_tier: secondhand
+secondhand_via: Title verified verbatim in PubMed (PMID 10617536) and Crossref (DOI 10.1136/bmj.320.7226.53);
+  the substantive assumptions and inputs are quoted from Jackson 2025 (DOI 10.1111/add.16757), which re-derives
+  this estimate. The BMJ letter body itself is paywalled and PMC holds no full text for it.
+design: life_table
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 17
+  - 71
+  pct_female: 0.0
+  country: UK
+  adolescent_match: mixed
+effects:
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_lost_per_cigarette
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: one cigarette smoked, UK male smoker, 15.8 cig/day from age 17 to 71
+  scale: years
+  unit: years of life expectancy lost per cigarette
+  value: -2.0914137957259108e-05
+  se: null
+  ci: null
+  conversion_formula: '11 minutes / (60 min/h * 24 h/d * 365.25 d/y) = 2.0913e-05 years per cigarette.
+    Original derivation (per Jackson 2025): 6.5 y of life expectancy lost divided by lifetime cigarette
+    consumption at 15.8/day from age 17 to 71. No CI published; se null.'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = life expectancy LOST per cigarette. Superseded by Jackson 2025 (17 min for
+    men); retained because it is the original and most-cited per-unit-exposure smoking figure.
+  covariates: []
+  followup_years: null
+  cohort_family: British_Doctors_Study
+  quote: Time for a smoke? One cigarette reduces your life by 11 minutes.
+rob:
+  tool: none
+  judgement: high
+  notes: A one-page BMJ letter, not a peer-reviewed analysis. The estimate is pure division of a life-expectancy
+    gap by a lifetime cigarette count; it therefore ASSUMES that harm is linear in cigarettes and that
+    every cigarette in a career carries equal weight. Its mortality input (6.5 y) is now known to be roughly
+    40% too small.
+funding: null
+notes: Included because the task asked for a citable minutes-per-cigarette estimate and this is its origin.
+  It is quoted here from its VERBATIM TITLE, which contains the number; the letter body was not retrievable,
+  so access_tier is secondhand and the analytic assumptions are cited from Jackson 2025 rather than from
+  Shaw directly. USE JACKSON 2025 INSTEAD for the modelled value.
+shard: s18_comparators

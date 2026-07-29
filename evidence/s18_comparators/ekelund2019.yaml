@@ -1,0 +1,104 @@
+study_id: ekelund2019
+citation: 'Ekelund U, Tarp J, Steene-Johannessen J, Hansen BH, Jefferis B, Fagerland MW, Whincup P, Diaz
+  KM, Hooker SP, Chernofsky A, Larson MG, Spartano N, Vasan RS, Dohrn IM, Hagstromer M, Edwardson C, Yates
+  T, Shiroma E, Anderssen SA, Lee IM. Dose-response associations between accelerometry measured physical
+  activity and sedentary time and all cause mortality: systematic review and harmonised meta-analysis.
+  BMJ. 2019;366:l4570.'
+doi: 10.1136/bmj.l4570
+pmid: '31434697'
+url: https://www.bmj.com/content/366/bmj.l4570
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Dose-response associations between accelerometry measured physical activity and sedentary
+    time and all cause mortality: systematic review and harmonised meta-analysis'
+access_tier: abstract_only
+secondhand_via: null
+design: dose_response_meta_analysis
+tier: T4
+n: 36383
+n_studies_pooled: 8
+population:
+  age_mean: 62.6
+  age_range: null
+  pct_female: 72.8
+  country: US, UK, Norway, Sweden
+  adolescent_match: poor_elderly
+effects:
+- outcome_domain: comparator
+  outcome_construct: all_cause_mortality_most_vs_least_active_quartile_total_pa
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: highest vs lowest quarter of ACCELEROMETER-measured total physical activity
+  scale: log_hr
+  unit: log hazard ratio
+  value: -1.309333
+  se: 0.084247
+  ci:
+  - -1.469676
+  - -1.139434
+  conversion_formula: HR 0.27 (95% CI 0.23-0.32). log_hr = ln(0.27) = -1.309333. se = (ln(0.32)-ln(0.23))/3.919928
+    = 0.084157. Inverted, the LEAST active quarter has HR 1/0.27 = 3.70 vs the most active.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = LOWER mortality in the most active quarter (benefit). The implied inactive-vs-active
+    hazard ratio of 3.7 is FAR larger than the self-report literature's ~1.35 and is almost certainly
+    inflated by reverse causation - see rob.
+  covariates:
+  - age
+  - sex
+  - and study-specific covariates per report
+  followup_years: 5.8
+  cohort_family: Accelerometer_Harmonised_Consortium
+  quote: Hazards ratios for mortality were 1.00 (referent) in the first quarter (least active), 0.48 (95%
+    confidence interval 0.43 to 0.54) in the second quarter, 0.34 (0.26 to 0.45) in the third quarter,
+    and 0.27 (0.23 to 0.32) in the fourth quarter (most active).
+- outcome_domain: comparator
+  outcome_construct: all_cause_mortality_most_vs_least_sedentary_quartile
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: highest vs lowest quarter of accelerometer-measured sedentary time
+  scale: log_hr
+  unit: log hazard ratio
+  value: 0.966984
+  se: 0.154868
+  ci:
+  - 0.662688
+  - 1.269761
+  conversion_formula: HR 2.63 (95% CI 1.94-3.56). log_hr = ln(2.63) = 0.966984. se = (ln(3.56)-ln(1.94))/3.919928
+    = 0.154783.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = ELEVATED mortality in the most sedentary quarter (harm).
+  covariates:
+  - age
+  - sex
+  - and study-specific covariates per report
+  followup_years: 5.8
+  cohort_family: Accelerometer_Harmonised_Consortium
+  quote: Hazards ratios for mortality were 1.00 (referent) in the first quarter (least active), 0.48 (95%
+    confidence interval 0.43 to 0.54) in the second quarter, 0.34 (0.26 to 0.45) in the third quarter,
+    and 0.27 (0.23 to 0.32) in the fourth quarter (most active).
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: Objective exposure measurement (device-based) is a genuine advance and is why this is T4, not
+    T5. But mean age 62.6 y, 73% women, and median follow-up of only 5.8 y. In an elderly cohort with
+    short follow-up, low measured activity is substantially a MARKER of subclinical disease, so the HR
+    of 0.27 is a mixture of the causal effect and reverse causation. The authors' own conclusion is restricted
+    to 'middle aged and older adults'. Transport to a healthy 18-year-old is very poor.
+funding: Research Council of Norway and others (per report)
+notes: 'Requested by the task. Retained as the best DEVICE-MEASURED dose-response, but flagged as an OUTLIER
+  on the high side: it implies an inactive-vs-active HR of 3.7 in the elderly, which converts (convert.py,
+  10.85*ln(HR)) to ~14 y of life expectancy - larger than smoking. That is not credible as a causal effect
+  of inactivity and I do NOT use it in the comparator table. It is useful only as an upper bound and as
+  a demonstration of how much reverse causation can inflate activity-mortality estimates in old cohorts.'
+shard: s18_comparators

@@ -1,0 +1,93 @@
+study_id: lee2012
+citation: 'Lee IM, Shiroma EJ, Lobelo F, Puska P, Blair SN, Katzmarzyk PT; Lancet Physical Activity Series
+  Working Group. Effect of physical inactivity on major non-communicable diseases worldwide: an analysis
+  of burden of disease and life expectancy. Lancet. 2012;380(9838):219-229.'
+doi: 10.1016/S0140-6736(12)61031-9
+pmid: '22818936'
+url: https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(12)61031-9/fulltext
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Effect of physical inactivity on major non-communicable diseases worldwide: an analysis
+    of burden of disease and life expectancy'
+access_tier: abstract_only
+secondhand_via: null
+design: life_table
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: global
+  adolescent_match: mixed
+effects:
+- outcome_domain: comparator
+  outcome_construct: population_life_expectancy_gain_from_eliminating_inactivity
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: hypothetical elimination of physical inactivity in the world population
+  scale: years
+  unit: years of POPULATION life expectancy gained
+  value: 0.68
+  se: null
+  ci:
+  - 0.41
+  - 0.95
+  conversion_formula: Reported as 0.68 (range 0.41-0.95) years. The published span is a SENSITIVITY RANGE
+    over the input relative risks, NOT a 95% CI, so no se is derived from it; se null. Recorded in ci
+    for the modeller with this caveat attached.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = POPULATION life expectancy GAINED. THIS IS NOT AN INDIVIDUAL EFFECT and is
+    very commonly misquoted as one. It is a population-average figure diluted by the (large) already-active
+    fraction of the world population, so it is roughly an order of magnitude smaller than the individual
+    contrast (see moore2012).
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: We estimated that elimination of physical inactivity would increase the life expectancy of the
+    world's population by 0.68 (range 0.41-0.95) years.
+- outcome_domain: comparator
+  outcome_construct: population_attributable_fraction_premature_mortality
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: physical inactivity, global population attributable fraction for premature mortality
+  scale: pct_change
+  unit: percent of premature deaths attributable
+  value: 9.0
+  se: null
+  ci:
+  - 5.1
+  - 12.5
+  conversion_formula: Reported as 9% (range 5.1-12.5). Sensitivity range, not a CI; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = share of premature deaths ATTRIBUTABLE to inactivity (harm).
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Inactivity causes 9% (range 5.1-12.5) of premature mortality, or more than 5.3 million of the
+    57 million deaths that occurred worldwide in 2008.
+rob:
+  tool: none
+  judgement: moderate
+  notes: Comparative-risk-assessment / life-table modelling with self-reported activity prevalence and
+    relative risks drawn from observational cohorts, so it inherits all of their confounding plus prevalence
+    measurement error. The authors state they used 'conservative assumptions'. Causal language ('inactivity
+    causes') is not licensed by the design.
+funding: None (per report)
+notes: 'Included because the task asked for it, but the modeller must NOT use the 0.68 y figure as a comparator:
+  it is a population-level counterfactual, not the life expectancy an individual inactive person loses.
+  Use moore2012 for the individual contrast. The main value here is the 9% PAF as a burden-of-disease
+  framing number.'
+shard: s18_comparators

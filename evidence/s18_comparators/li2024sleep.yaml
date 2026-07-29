@@ -1,0 +1,121 @@
+study_id: li2024sleep
+citation: 'Li H, Qian F, Han L, Feng W, Zheng D, Guo X, Zhang H. Association of healthy sleep patterns
+  with risk of mortality and life expectancy at age of 30 years: a population-based cohort study. QJM.
+  2024;117(3):177-186.'
+doi: 10.1093/qjmed/hcad237
+pmid: '37831896'
+url: https://academic.oup.com/qjmed/article/117/3/177/7317053
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Association of healthy sleep patterns with risk of mortality and life expectancy at
+    age of 30 years: a population-based cohort study'
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 172321
+n_studies_pooled: null
+population:
+  age_mean: 46.98
+  age_range: null
+  pct_female: 50.9
+  country: US
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_at_30_five_vs_0_1_low_risk_sleep_factors_men
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: 5 low-risk sleep factors vs 0-1, life expectancy at age 30, MEN
+  scale: years
+  unit: years of life expectancy at age 30 gained
+  value: 4.7
+  se: 1.020427
+  ci:
+  - 2.7
+  - 6.7
+  conversion_formula: 4.7 y (95% CI 2.7-6.7) for men. se on the YEARS scale = (6.7-2.7)/3.919928 = 1.020429.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = life expectancy GAINED by good sleep. Reversed sign, this is the 4.7 y a
+    MAN loses by having a poor sleep phenotype sustained from age 30. THE CLOSEST THING IN THE PUBLISHED
+    LITERATURE TO PUTTING SLEEP ON THE SAME SCALE AS THE OTHER COMPARATORS - but note the exposure is
+    a 5-item COMPOSITE (duration, difficulty falling asleep, difficulty staying asleep, medication use,
+    daytime sleepiness), not sleep duration alone.
+  covariates:
+  - age
+  - sex
+  - race
+  - education
+  - income
+  - BMI
+  - smoking
+  - alcohol
+  - physical activity
+  - and others per report
+  followup_years: 4.3
+  cohort_family: NHIS_US
+  quote: 'When compared to those with 0-1 low-risk sleep factors, life expectancy at the age of 30 years
+    for individuals with all five low-risk sleep factors was 4.7 (95% CI: 2.7-6.7) years greater for men
+    and 2.4 (95% CI: 0.4-4.4) years greater for women.'
+- outcome_domain: comparator
+  outcome_construct: all_cause_mortality_five_vs_0_1_low_risk_sleep_factors
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: 5 low-risk sleep factors vs 0-1 low-risk sleep factors, all-cause mortality
+  scale: log_hr
+  unit: log hazard ratio
+  value: -0.356675
+  se: 0.051192
+  ci:
+  - -0.462035
+  - -0.261365
+  conversion_formula: HR 0.70 (95% CI 0.63-0.77). log_hr = ln(0.70) = -0.356675. se = (ln(0.77)-ln(0.63))/3.919928
+    = 0.051216. Inverted, poor sleep vs good sleep is HR 1.43.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = LOWER mortality with a healthy sleep pattern (benefit). The HR of 1.43 for
+    the poor-sleep phenotype is much larger than cappuccio2010's 1.12 for short duration alone, because
+    the composite captures insomnia and daytime dysfunction as well as duration.
+  covariates:
+  - age
+  - sex
+  - race
+  - education
+  - income
+  - BMI
+  - smoking
+  - alcohol
+  - physical activity
+  - and others per report
+  followup_years: 4.3
+  cohort_family: NHIS_US
+  quote: The adjusted hazard ratios (95% confidence intervals [CI]) of participants with five vs. 0-1
+    low-risk sleep factors for all-cause, cardiovascular, and cancer mortality were 0.70 (0.63-0.77),
+    0.79 (0.67-0.93) and 0.81 (0.66-0.98), respectively.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: MEDIAN FOLLOW-UP IS ONLY 4.3 YEARS while the outcome is life expectancy at age 30, so the LE
+    figure is an extrapolation from a flexible parametric survival model far outside the observed data
+    - the 4.7 y point estimate is model-dependent and its CI (2.7-6.7) almost certainly understates the
+    true uncertainty. Exposure is self-reported at a single interview, mean age 47, and the composite
+    score mixes duration with insomnia symptoms and hypnotic use, so reverse causation from prevalent
+    illness is a serious threat.
+funding: Not stated in abstract
+notes: 'The one record that comes close to answering task item 6 with a life-expectancy number. Two cautions
+  before it is used as our subject''s comparator: (a) the exposure is a poor-sleep PHENOTYPE at mean age
+  47, not 3 years of adolescent restriction, and (b) the sex difference (4.7 y men vs 2.4 y women) is
+  not mechanistically explained and hints at residual confounding. It is nonetheless the right order-of-magnitude
+  reference point: a SUSTAINED poor sleep phenotype sits between overweight (3.1 y) and >350 g/wk alcohol
+  (4.5 y) on the same scale.'
+shard: s18_comparators

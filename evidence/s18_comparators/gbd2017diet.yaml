@@ -1,0 +1,91 @@
+study_id: gbd2017diet
+citation: 'GBD 2017 Diet Collaborators; Afshin A, Sur PJ, Fay KA, et al. Health effects of dietary risks
+  in 195 countries, 1990-2017: a systematic analysis for the Global Burden of Disease Study 2017. Lancet.
+  2019;393(10184):1958-1972.'
+doi: 10.1016/S0140-6736(19)30041-8
+pmid: '30954305'
+url: https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(19)30041-8/fulltext
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Health effects of dietary risks in 195 countries, 1990–2017: a systematic analysis
+    for the Global Burden of Disease Study 2017'
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: global (195 countries)
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: comparator
+  outcome_construct: global_deaths_attributable_to_dietary_risks
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: all dietary risk factors, adults aged >=25, global, 2017
+  scale: raw_units
+  unit: millions of deaths per year attributable to diet
+  value: 11.0
+  se: 0.510213
+  ci:
+  - 10.0
+  - 12.0
+  conversion_formula: 11 million deaths (95% UI 10-12 million). se on the MILLIONS scale = (12-10)/3.919928
+    = 0.510215.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = deaths ATTRIBUTABLE to suboptimal diet (harm). A global burden count, NOT
+    an individual life-expectancy effect - not usable in the comparator table.
+  covariates: []
+  followup_years: null
+  cohort_family: GBD
+  quote: In 2017, 11 million (95% uncertainty interval [UI] 10-12) deaths and 255 million (234-274) DALYs
+    were attributable to dietary risk factors.
+- outcome_domain: comparator
+  outcome_construct: global_dalys_attributable_to_dietary_risks
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: all dietary risk factors, adults aged >=25, global, 2017
+  scale: raw_units
+  unit: millions of DALYs per year attributable to diet
+  value: 255.0
+  se: 10.204269
+  ci:
+  - 234.0
+  - 274.0
+  conversion_formula: 255 million DALYs (95% UI 234-274). se on the MILLIONS scale = (274-234)/3.919928
+    = 10.204271. THE ONLY DALY/QALY-SCALE NUMBER available to this shard for any comparator; note it is
+    a global aggregate.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = DALYs LOST to suboptimal diet (harm). Aggregate, not individual.
+  covariates: []
+  followup_years: null
+  cohort_family: GBD
+  quote: In 2017, 11 million (95% uncertainty interval [UI] 10-12) deaths and 255 million (234-274) DALYs
+    were attributable to dietary risk factors.
+rob:
+  tool: none
+  judgement: moderate
+  notes: Comparative risk assessment. The authors themselves warn 'Dietary data were from mixed sources
+    and were not available for all countries, increasing the statistical uncertainty of our estimates.'
+    Attributable-burden estimates for individual foods rest on observational relative risks with substantial
+    residual confounding. Adults >=25 only.
+funding: Bill & Melinda Gates Foundation
+notes: Requested by the task. Provides the burden framing and the only DALY-denominated figures in the
+  shard, but it cannot be converted to 'years lost per 3 years of exposure at 16' and so does not enter
+  the comparator table. Use fadnes2022 for that.
+shard: s18_comparators

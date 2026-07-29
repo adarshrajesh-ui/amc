@@ -1,0 +1,168 @@
+study_id: pirie2013
+citation: 'Pirie K, Peto R, Reeves GK, Green J, Beral V; Million Women Study Collaborators. The 21st century
+  hazards of smoking and benefits of stopping: a prospective study of one million women in the UK. Lancet.
+  2013;381(9861):133-141.'
+doi: 10.1016/S0140-6736(12)61720-6
+pmid: '23107252'
+url: https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(12)61720-6/fulltext
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'The 21st century hazards of smoking and benefits of stopping: a prospective study of
+    one million women in the UK'
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 1180652
+n_studies_pooled: null
+population:
+  age_mean: 55.0
+  age_range: null
+  pct_female: 100.0
+  country: UK
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: comparator
+  outcome_construct: all_cause_mortality_current_smoker_vs_never
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: still smoking at 3-year resurvey vs never smoker
+  scale: log_hr
+  unit: log rate ratio
+  value: 1.088562
+  se: 0.016298
+  ci:
+  - 1.05779
+  - 1.121678
+  conversion_formula: RR 2.97 (95% CI 2.88-3.07). log_hr = ln(2.97) = 1.088562. se = (ln(3.07)-ln(2.88))/3.919928
+    = 0.016069.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = ELEVATED mortality (harm).
+  covariates:
+  - age
+  - region
+  - socioeconomic status
+  - alcohol
+  - BMI
+  - physical activity (per report)
+  followup_years: 12.0
+  cohort_family: Million_Women_Study
+  quote: Mortality was tripled, largely irrespective of age, in those still smoking at the 3-year resurvey
+    (rate ratio 2.97, 2.88-3.07).
+- outcome_domain: comparator
+  outcome_construct: residual_all_cause_mortality_after_cessation_at_25_34
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: permanently stopped smoking at ages 25-34 vs never smoker
+  scale: log_hr
+  unit: log rate ratio
+  value: 0.04879
+  se: 0.026623
+  ci:
+  - 0.0
+  - 0.10436
+  conversion_formula: RR 1.05 (95% CI 1.00-1.11). log_hr = ln(1.05) = 0.048790. se = (ln(1.11)-ln(1.00))/3.919928
+    = 0.026627.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = residual excess mortality still present after quitting young, but only 5%
+    excess versus 197% for continuing smokers. THE cleanest quantitative reversibility benchmark in this
+    shard for an exposure stopped in early adulthood.
+  covariates:
+  - age
+  - region
+  - socioeconomic status
+  - alcohol
+  - BMI
+  - physical activity (per report)
+  followup_years: 12.0
+  cohort_family: Million_Women_Study
+  quote: Among ex-smokers who had stopped permanently at ages 25-34 years or at ages 35-44 years, the
+    respective relative risks were 1.05 (95% CI 1.00-1.11) and 1.20 (1.14-1.26) for all-cause mortality
+    and 1.84 (1.45-2.34) and 3.34 (2.76-4.03) for lung cancer mortality. Thus, although some excess mortality
+    remains among these long-term ex-smokers, it is only 3% and 10% of the excess mortality among continuing
+    smokers.
+- outcome_domain: comparator
+  outcome_construct: pct_of_smoking_excess_mortality_avoided_by_cessation_before_30
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: stopping smoking before age 30 vs continuing
+  scale: pct_change
+  unit: percent of the excess death risk removed
+  value: -97.0
+  se: null
+  ci: null
+  conversion_formula: Reported as 'more than 97%'; recorded as -97 (a floor). No CI; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = RISK REMOVED (benefit). Implies a residual of <=3% of the 11-year lifespan
+    gap = <=0.33 y for a smoking career of roughly 12-13 years.
+  covariates:
+  - age
+  - region
+  - socioeconomic status
+  - alcohol
+  - BMI
+  - physical activity (per report)
+  followup_years: 12.0
+  cohort_family: Million_Women_Study
+  quote: Stopping before age 40 years (and preferably well before age 40 years) avoids more than 90% of
+    the excess mortality caused by continuing smoking; stopping before age 30 years avoids more than 97%
+    of it.
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_lost_current_smoker_women
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: continuing smoker vs never smoker, women, sustained exposure
+  scale: years
+  unit: years of life expectancy lost
+  value: -11.0
+  se: null
+  ci: null
+  conversion_formula: Reported as 'an 11-year lifespan difference' when tripled smoker mortality rates
+    are combined with 2010 UK national death rates. No CI; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = life expectancy LOST. Female counterpart to the ~10-year male figure; Jackson
+    2025 uses exactly this pair (10 y men / 11 y women).
+  covariates:
+  - age
+  - region
+  - socioeconomic status
+  - alcohol
+  - BMI
+  - physical activity (per report)
+  followup_years: 12.0
+  cohort_family: Million_Women_Study
+  quote: If combined with 2010 UK national death rates, tripled mortality rates among smokers indicate
+    53% of smokers and 22% of never-smokers dying before age 80 years, and an 11-year lifespan difference.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: low
+  notes: 'Very large cohort with repeat exposure measurement at 3 and 8 years, which removes most of the
+    exposure-misclassification and reverse-causation problem that plagues single-baseline smoking cohorts.
+    WOMEN ONLY: transport to a male subject requires the assumption that the cessation gradient is sex-invariant,
+    which Jha 2013 (both sexes) supports.'
+funding: Cancer Research UK, Medical Research Council
+notes: Included specifically for the reversibility question, where it is the strongest evidence available
+  for ANY of my comparators. The RR of 1.05 (1.00-1.11) for women who quit at 25-34 says that a young-adult
+  smoking career followed by permanent cessation leaves an all-cause excess of ~5%, i.e. ~0.3 y of the
+  11-year deficit (see convert.py). Population is women; recorded as poor_midlife and sex-mismatched so
+  the pooler can inflate uncertainty.
+shard: s18_comparators

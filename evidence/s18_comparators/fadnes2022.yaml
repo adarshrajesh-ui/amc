@@ -1,0 +1,131 @@
+study_id: fadnes2022
+citation: 'Fadnes LT, Okland JM, Haaland OA, Johansson KA. Estimating impact of food choices on life expectancy:
+  a modeling study. PLoS Med. 2022;19(2):e1003889.'
+doi: 10.1371/journal.pmed.1003889
+pmid: '35134067'
+url: https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1003889
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Estimating impact of food choices on life expectancy: A modeling study'
+access_tier: abstract_only
+secondhand_via: null
+design: life_table
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 20
+  - 80
+  pct_female: null
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_gain_optimal_diet_from_age_20_us_men
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: sustained change from typical Western diet to optimal diet from age 20, US men
+  scale: years
+  unit: years of life expectancy gained
+  value: 13.0
+  se: 1.250023
+  ci:
+  - 9.4
+  - 14.3
+  conversion_formula: Gain 13.0 y (95% UI 9.4-14.3) for US men changing at age 20. se on the YEARS scale
+    = (14.3-9.4)/3.919928 = 1.250023. NOTE the UI is strongly asymmetric about the point estimate (-3.6/+1.3),
+    so a symmetric normal is a poor approximation; the pooler should prefer the raw interval.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = life expectancy GAINED by eating well from 20. Reversed sign, this is the
+    13.0 y a US man LOSES by eating a typical Western diet from 20 for life. NEAREST-AGE diet estimate
+    available and the only one starting at 20.
+  covariates: []
+  followup_years: null
+  cohort_family: GBD_Food4HealthyLife
+  quote: A sustained change from a typical Western diet to the optimal diet from age 20 years would increase
+    LE by more than a decade for women from the United States (10.7 [95% UI 8.4 to 12.3] years) and men
+    (13.0 [95% UI 9.4 to 14.3] years).
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_gain_optimal_diet_from_age_60_us_men
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: sustained change from typical Western diet to optimal diet from age 60, US men
+  scale: years
+  unit: years of life expectancy gained
+  value: 8.8
+  se: 0.816342
+  ci:
+  - 6.8
+  - 10.0
+  conversion_formula: 'Gain 8.8 y (95% UI 6.8-10.0) for men changing at 60. se on the YEARS scale = (10.0-6.8)/3.919928
+    = 0.816341. PAIRED WITH THE AGE-20 FIGURE THIS GIVES A DELAYED-CESSATION CONVERSION: eating badly
+    from 20 to 60 (40 exposure-years) costs 13.0-8.8 = 4.2 y, i.e. 0.105 y per exposure-year, so 3 years
+    = 0.32 y. The 60-to-80 segment gives 0.27 y per exposure-year, so the marginal cost of a bad-diet
+    year RISES steeply with age and 0.105 OVERSTATES the cost at 16-19.'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'positive = life expectancy GAINED. The age gradient (13.0 at 20, 8.8 at 60, 3.4 at
+    80) is the single most useful reversibility datum for the diet comparator: 68% of the age-20 benefit
+    is STILL AVAILABLE at 60, so diet is largely reversible.'
+  covariates: []
+  followup_years: null
+  cohort_family: GBD_Food4HealthyLife
+  quote: 'Changing from a typical diet to the optimized diet at age 60 years would increase LE by 8.0
+    (95% UI 6.2 to 9.3) years for women and 8.8 (95% UI 6.8 to 10.0) years for men, and 80-year-olds would
+    gain 3.4 years (95% UI females: 2.6 to 3.8/males: 2.7 to 3.9).'
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_gain_feasibility_diet_from_age_20_us_men
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: typical Western diet to 'feasibility approach' diet (midpoint) from age 20, US men
+  scale: years
+  unit: years of life expectancy gained
+  value: 7.3
+  se: 1.224512
+  ci:
+  - 4.7
+  - 9.5
+  conversion_formula: Gain 7.3 y (95% UI 4.7-9.5). se on the YEARS scale = (9.5-4.7)/3.919928 = 1.224513.
+    This is the more realistic contrast for a real student, since the 'optimal' diet is an idealisation
+    nobody eats.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = life expectancy GAINED. Use this rather than the optimal-diet figure if the
+    comparator is meant to be an achievable dietary change.
+  covariates: []
+  followup_years: null
+  cohort_family: GBD_Food4HealthyLife
+  quote: Change from typical to feasibility approach diet would increase LE by 6.2 (95% UI 3.5 to 8.1)
+    years for 20-year-old women from the United States and 7.3 (95% UI 4.7 to 9.5) years for men.
+rob:
+  tool: none
+  judgement: moderate
+  notes: 'The authors are unusually candid about the limitations and I reproduce their own list: ''The
+    methodology provides population estimates under given assumptions and is not meant as individualized
+    forecasting, with study limitations that include uncertainty for time to achieve full effects, the
+    effect of eggs, white meat, and oils, individual variation in protective and risk factors, uncertainties
+    for future development of medical treatments; and changes in lifestyle.'' They graded their own evidence
+    base as MODERATE on NutriGrade. The model also sums food-group effects that are estimated from separate
+    meta-analyses, which risks double-counting shared causal pathways and probably overstates the total.'
+funding: Not stated in abstract
+notes: 'The requested Fadnes record and the diet comparator''s backbone. TWO conversion routes, which
+  disagree by 2x: naive pro-rata over e(20)=56.7 gives 0.69 y for 3 years, whereas the authors'' own age
+  gradient gives 0.32 y and implies the true figure at 16-19 is lower still. I recommend the age-gradient
+  route. The 13-year headline should be treated with suspicion for the double-counting reason in rob.notes;
+  it is by far the largest single-exposure life-expectancy claim in this shard.'
+shard: s18_comparators

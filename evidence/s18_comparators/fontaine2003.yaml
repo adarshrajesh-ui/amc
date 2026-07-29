@@ -1,0 +1,71 @@
+study_id: fontaine2003
+citation: Fontaine KR, Redden DT, Wang C, Westfall AO, Allison DB. Years of life lost due to obesity.
+  JAMA. 2003;289(2):187-193.
+doi: 10.1001/jama.289.2.187
+pmid: '12517229'
+url: https://jamanetwork.com/journals/jama/fullarticle/195748
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Years of Life Lost Due to Obesity
+access_tier: abstract_only
+secondhand_via: null
+design: life_table
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 18
+  - 85
+  pct_female: null
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: comparator
+  outcome_construct: years_of_life_lost_bmi_over_45_white_men_aged_20_30
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: BMI >45 vs BMI 24 referent, white men aged 20-30, sustained
+  scale: years
+  unit: years of life lost
+  value: -13.0
+  se: null
+  ci: null
+  conversion_formula: Reported directly as a maximum YLL of 13 for white men aged 20-30 with BMI >45,
+    against a BMI 24 referent. No CI published; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'negative = years of life LOST. THE MOST AGE-RELEVANT BMI RECORD IN THIS SHARD: it is
+    computed for 20-30 year olds. But it prices SEVERE obesity SUSTAINED from that age, not 3 years of
+    mild weight gain.'
+  covariates:
+  - age
+  - sex
+  - race
+  followup_years: null
+  cohort_family: NHANES
+  quote: For any given degree of overweight, younger adults generally had greater YLL than did older adults.
+    The maximum YLL for white men aged 20 to 30 years with a severe level of obesity (BMI >45) is 13 and
+    is 8 for white women. For men, this could represent a 22% reduction in expected remaining life span.
+rob:
+  tool: none
+  judgement: moderate
+  notes: A life-table modelling exercise, not a cohort. It stacks NHANES prevalence on NHANES follow-up
+    mortality and 1999 US life tables, and assumes BMI at baseline persists for life. The BMI >45 stratum
+    is small and the estimates are unstable (the black-male estimate of 20 y against a black-female estimate
+    of 5 y is implausibly divergent, signalling sparse data). No uncertainty intervals published for the
+    YLL figures.
+funding: US National Institutes of Health (per report)
+notes: Included specifically to answer 'YLL for a given BMI at a given age' in the age band nearest our
+  subject. The transportable finding is the DIRECTION of the age gradient - 'for any given degree of overweight,
+  younger adults generally had greater YLL' - which corroborates Global BMI 2016's stronger HR when BMI
+  is measured earlier. The BMI >45 point value is NOT usable as a comparator for a 3-year exposure; it
+  is a ceiling on the whole obesity channel.
+shard: s18_comparators

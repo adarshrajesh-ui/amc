@@ -1,0 +1,99 @@
+study_id: cappuccio2010
+citation: 'Cappuccio FP, D''Elia L, Strazzullo P, Miller MA. Sleep duration and all-cause mortality: a
+  systematic review and meta-analysis of prospective studies. Sleep. 2010;33(5):585-592.'
+doi: 10.1093/sleep/33.5.585
+pmid: '20469800'
+url: https://academic.oup.com/sleep/article/33/5/585/2454478
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Sleep Duration and All-Cause Mortality: A Systematic Review and Meta-Analysis of Prospective
+    Studies'
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 1382999
+n_studies_pooled: 16
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: multiple
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: comparator
+  outcome_construct: all_cause_mortality_short_sleep_vs_normal
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: short habitual sleep duration vs normal (study-specific definitions)
+  scale: log_hr
+  unit: log relative risk
+  value: 0.113329
+  se: 0.027359
+  ci:
+  - 0.058269
+  - 0.165514
+  conversion_formula: RR 1.12 (95% CI 1.06-1.18). log_rr = ln(1.12) = 0.113329. se = (ln(1.18)-ln(1.06))/3.919928
+    = 0.027352. Applied permanently from age 40 in the US male 2023 life table this is 1.23 y of life
+    expectancy (convert.py); the same figure applied for 3 years at ages 16-18 only is 0.018 y = 6.4 days.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = ELEVATED all-cause mortality with short sleep (harm). THE ANCHOR THAT PUTS
+    OUR OWN EXPOSURE ON THE COMPARATOR SCALE. Note it is far smaller than the composite-phenotype HR of
+    1.43 in li2024sleep.
+  covariates:
+  - study-specific; heterogeneous
+  followup_years: null
+  cohort_family: Cappuccio_2010_pool
+  quote: 'In the pooled analysis, short duration of sleep was associated with a greater risk of death
+    (RR: 1.12; 95% CI 1.06 to 1.18; P < 0.01) with no evidence of publication bias (P = 0.74) but heterogeneity
+    between studies (P = 0.02).'
+- outcome_domain: comparator
+  outcome_construct: all_cause_mortality_long_sleep_vs_normal
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: long habitual sleep duration vs normal (study-specific definitions)
+  scale: log_hr
+  unit: log relative risk
+  value: 0.262364
+  se: 0.031437
+  ci:
+  - 0.198851
+  - 0.322083
+  conversion_formula: RR 1.30 (95% CI 1.22-1.38). log_rr = ln(1.30) = 0.262364. se = (ln(1.38)-ln(1.22))/3.919928
+    = 0.031333.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'positive = ELEVATED mortality with LONG sleep. Recorded because it is the loudest warning
+    sign in the sleep-mortality literature: long sleep, which has no plausible causal mechanism of this
+    size, shows a LARGER risk than short sleep. That pattern is the signature of reverse causation and
+    confounding by illness, and it should discount the short-sleep estimate too.'
+  covariates:
+  - study-specific; heterogeneous
+  followup_years: null
+  cohort_family: Cappuccio_2010_pool
+  quote: Long duration of sleep was also associated with a greater risk of death (1.30; [1.22 to 1.38];
+    P < 0.0001) with no evidence of publication bias (P = 0.18) but significant heterogeneity between
+    studies (P < 0.0001).
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: Now 16 years old and superseded by larger dose-response meta-analyses. Self-reported sleep duration
+    with study-specific and inconsistent cut-points, significant heterogeneity, predominantly middle-aged
+    and older cohorts, and the long-sleep result strongly suggests uncontrolled confounding by prevalent
+    illness.
+funding: Not stated in abstract
+notes: Included so that the comparator table has a same-scale figure for OUR OWN exposure, and because
+  it is the source of the mortality RRs that RAND (hafner2016) used. cohort_family is set to Cappuccio_2010_pool
+  and hafner2016's borrowed RR is flagged, so the pooler must not count them twice. Shard s13_mortality
+  owns the definitive sleep-mortality synthesis; this record exists here only for commensurability.
+shard: s18_comparators

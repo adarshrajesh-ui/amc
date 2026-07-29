@@ -1,0 +1,145 @@
+study_id: moore2012
+citation: 'Moore SC, Patel AV, Matthews CE, Berrington de Gonzalez A, Park Y, Katki HA, Linet MS, Weiderpass
+  E, Visvanathan K, Helzlsouer KJ, Thun M, Gapstur SM, Hartge P, Lee IM. Leisure time physical activity
+  of moderate to vigorous intensity and mortality: a large pooled cohort analysis. PLoS Med. 2012;9(11):e1001335.'
+doi: 10.1371/journal.pmed.1001335
+pmid: '23139642'
+url: https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001335
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Leisure Time Physical Activity of Moderate to Vigorous Intensity and Mortality: A Large
+    Pooled Cohort Analysis'
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 654827
+n_studies_pooled: 6
+population:
+  age_mean: null
+  age_range:
+  - 21
+  - 90
+  pct_female: null
+  country: US and Sweden
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_gain_after_40_at_7_5_to_14_9_met_h_wk
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: 7.5-14.9 MET-h/wk (WHO guideline level) vs 0 MET-h/wk, from age 40
+  scale: years
+  unit: years of life expectancy gained after age 40
+  value: 3.4
+  se: 0.076532
+  ci:
+  - 3.2
+  - 3.5
+  conversion_formula: Gain 3.4 y (95% CI 3.2-3.5), bootstrap CI, for 7.5-14.9 MET-h/wk vs 0. se = (3.5-3.2)/3.919928
+    = 0.076532 on the YEARS scale (not log).
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = life expectancy GAINED by being active. Reversed sign, this is the 3.4 y
+    an inactive person LOSES by being inactive from 40 onward. This is my primary physical-inactivity
+    pro-rata input.
+  covariates:
+  - age
+  - sex
+  - smoking
+  - BMI
+  - alcohol
+  - education
+  - marital status (per report)
+  followup_years: 10.0
+  cohort_family: NCI_Cohort_Consortium
+  quote: Life expectancies and years of life gained/lost were calculated using direct adjusted survival
+    curves (for participants 40+ years of age), with 95% confidence intervals (CIs) derived by bootstrap.
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_gain_after_40_at_lowest_nonzero_activity
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: 0.1-3.74 MET-h/wk (brisk walking <=75 min/wk) vs 0 MET-h/wk, from age 40
+  scale: years
+  unit: years of life expectancy gained after age 40
+  value: 1.8
+  se: 0.102043
+  ci:
+  - 1.6
+  - 2.0
+  conversion_formula: Gain 1.8 y (95% CI 1.6-2.0). se = (2.0-1.6)/3.919928 = 0.102043 on the YEARS scale.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'positive = life expectancy GAINED. Shows the dose-response is steeply concave: half
+    the total benefit arrives at a trivial dose, so ''inactivity'' harm depends heavily on where the referent
+    is set.'
+  covariates:
+  - age
+  - sex
+  - smoking
+  - BMI
+  - alcohol
+  - education
+  - marital status (per report)
+  followup_years: 10.0
+  cohort_family: NCI_Cohort_Consortium
+  quote: 'A physical activity level of 0.1-3.74 MET-h/wk, equivalent to brisk walking for up to 75 min/wk,
+    was associated with a gain of 1.8 (95% CI: 1.6-2.0) y in life expectancy relative to no leisure time
+    activity (0 MET-h/wk). Higher levels of physical activity were associated with greater gains in life
+    expectancy, with a gain of 4.5 (95% CI: 4.3-4.7) y at the highest level (22.5+ MET-h/wk, equivalent
+    to brisk walking for 450+ min/wk).'
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_gain_after_40_at_highest_activity
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: 22.5+ MET-h/wk vs 0 MET-h/wk, from age 40
+  scale: years
+  unit: years of life expectancy gained after age 40
+  value: 4.5
+  se: 0.102043
+  ci:
+  - 4.3
+  - 4.7
+  conversion_formula: Gain 4.5 y (95% CI 4.3-4.7). se = (4.7-4.3)/3.919928 = 0.102043 on the YEARS scale.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = life expectancy GAINED. Ceiling of the individual physical-activity contrast.
+  covariates:
+  - age
+  - sex
+  - smoking
+  - BMI
+  - alcohol
+  - education
+  - marital status (per report)
+  followup_years: 10.0
+  cohort_family: NCI_Cohort_Consortium
+  quote: 'A physical activity level of 0.1-3.74 MET-h/wk, equivalent to brisk walking for up to 75 min/wk,
+    was associated with a gain of 1.8 (95% CI: 1.6-2.0) y in life expectancy relative to no leisure time
+    activity (0 MET-h/wk). Higher levels of physical activity were associated with greater gains in life
+    expectancy, with a gain of 4.5 (95% CI: 4.3-4.7) y at the highest level (22.5+ MET-h/wk, equivalent
+    to brisk walking for 450+ min/wk).'
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Self-reported leisure-time activity at a single baseline; occupational and incidental activity
+    ignored. Median follow-up only 10 y, so reverse causation (illness reducing activity) is a live threat
+    despite adjustment. The '0 MET-h/wk' referent group is small and unusual and is likely to be sick
+    and socially disadvantaged, which inflates the contrast.
+funding: US National Cancer Institute Intramural Research Program (per report)
+notes: 'The individual-level physical-activity life-expectancy anchor the task asked for. Pro-rata conversion:
+  3.4 y over e(40)=38.6 remaining years = 0.088 y per exposure-year, so 3 years of total inactivity =
+  0.26 y. Prefer this over lee2012''s 0.68 y, which is a population figure.'
+shard: s18_comparators

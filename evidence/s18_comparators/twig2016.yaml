@@ -1,0 +1,111 @@
+study_id: twig2016
+citation: Twig G, Yaniv G, Levine H, Leiba A, Goldberger N, Derazne E, Ben-Ami Shor D, Tzur D, Afek A,
+  Shamiss A, Haklai Z, Kark JD. Body-mass index in 2.3 million adolescents and cardiovascular death in
+  adulthood. N Engl J Med. 2016;374(25):2430-2440.
+doi: 10.1056/NEJMoa1503840
+pmid: '27074389'
+url: https://www.nejm.org/doi/10.1056/NEJMoa1503840
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Body-Mass Index in 2.3 Million Adolescents and Cardiovascular Death in Adulthood
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 2300000
+n_studies_pooled: null
+population:
+  age_mean: 17.3
+  age_range: null
+  pct_female: null
+  country: IL
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: comparator
+  outcome_construct: cardiovascular_death_adolescent_bmi_ge95th_pct
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: measured BMI >=95th percentile at mean age 17.3 vs 5th-24th percentile
+  scale: log_hr
+  unit: log hazard ratio
+  value: 1.252763
+  se: 0.088337
+  ci:
+  - 1.064711
+  - 1.410987
+  conversion_formula: HR 3.5 (95% CI 2.9-4.1) for total cardiovascular death. log_hr = ln(3.5) = 1.252763.
+    se = (ln(4.1)-ln(2.9))/3.919928 = 0.088177.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = ELEVATED cardiovascular death in adulthood. CAUSE-SPECIFIC (CV), not all-cause,
+    so it is NOT directly comparable to the all-cause HRs elsewhere in this shard.
+  covariates:
+  - sex
+  - age
+  - birth year
+  - sociodemographic characteristics
+  - height
+  followup_years: 18.4
+  cohort_family: Israeli_Adolescent_Conscripts
+  quote: Hazard ratios in the obese group (>=95th percentile for BMI), as compared with the reference
+    group in the 5th to 24th percentiles, were 4.9 (95% confidence interval [CI], 3.9 to 6.1) for death
+    from coronary heart disease, 2.6 (95% CI, 1.7 to 4.1) for death from stroke, 2.1 (95% CI, 1.5 to 2.9)
+    for sudden death, and 3.5 (95% CI, 2.9 to 4.1) for death from total cardiovascular causes, after adjustment
+    for sex, age, birth year, sociodemographic characteristics, and height.
+- outcome_domain: comparator
+  outcome_construct: cardiovascular_death_adolescent_bmi_ge95th_at_30_40y_followup
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: measured BMI >=95th pct at age ~17, deaths occurring 30-40 y later
+  scale: log_hr
+  unit: log hazard ratio
+  value: 1.410987
+  se: 0.141583
+  ci:
+  - 1.131402
+  - 1.686399
+  conversion_formula: HR 4.1 (95% CI 3.1-5.4) at 30-40 y of follow-up. log_hr = ln(4.1) = 1.410987. se
+    = (ln(5.4)-ln(3.1))/3.919928 = 0.141602.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'positive = ELEVATED CV death. The HR RISES with follow-up length (2.0 at 0-10 y to
+    4.1 at 30-40 y), which is what a CUMULATIVE-DAMAGE (not a transient) mechanism looks like. But see
+    rob/notes: adolescent BMI tracks strongly into midlife, so this cannot be read as the effect of a
+    3-year adolescent exposure.'
+  covariates:
+  - sex
+  - age
+  - birth year
+  - sociodemographic characteristics
+  - height
+  followup_years: 35.0
+  cohort_family: Israeli_Adolescent_Conscripts
+  quote: Hazard ratios for death from cardiovascular causes in the same percentile groups increased from
+    2.0 (95% CI, 1.1 to 3.9) during follow-up for 0 to 10 years to 4.1 (95% CI, 3.1 to 5.4) during follow-up
+    for 30 to 40 years; during both periods, hazard ratios were consistently high for death from coronary
+    heart disease.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: 'CRITICAL LIMITATION for this shard''s purpose: BMI was measured ONCE, at age ~17, and no adult
+    BMI was available. Adolescent BMI tracks strongly into adulthood, so these hazard ratios price a LIFELONG
+    adiposity TRAJECTORY that merely starts in adolescence - they are not the effect of a transient 3-year
+    exposure. Exposure measurement itself is excellent (measured, not self-reported, whole-population
+    conscription examination, n=2.3 million).'
+funding: Environment and Health Fund
+notes: 'Included because it is the only record in this shard whose EXPOSURE IS MEASURED AT EXACTLY OUR
+  SUBJECT''S AGE (mean 17.3 y, adolescent_match exact_16_19). It supplies the upper bound for the ''irreversible
+  adolescent insult'' story: HR 3.5 for CV death applied permanently from 19 would be ~16 y of life expectancy
+  (convert.py). That number is almost certainly an over-attribution and must NOT be used as a 3-year-exposure
+  effect. Also note the graded risk began WITHIN the normal BMI range (50th-74th percentile), which matters
+  for a subject whose weight gain is modest.'
+shard: s18_comparators

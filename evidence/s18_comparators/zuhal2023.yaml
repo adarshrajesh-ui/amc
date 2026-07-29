@@ -1,0 +1,107 @@
+study_id: zuhal2023
+citation: 'Zuhal SH, Eshak ES, Yamagishi K, Muraki I, Iso H, Tamakoshi A; JACC Study Group. Association
+  of the age at smoking initiation and cessation on all-cause and cause-specific mortality: the Japan
+  Collaborative Cohort Study. Nagoya J Med Sci. 2023;85(4):691-708.'
+doi: 10.18999/nagjms.85.4.691
+pmid: '38155620'
+url: https://doi.org/10.18999/nagjms.85.4.691
+verification:
+  crossref_ok: false
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Association of the age at smoking initiation and cessation on all-cause and cause-specific
+    mortality: The Japan Collaborative Cohort Study.'
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 41711
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 40
+  - 79
+  pct_female: 0.0
+  country: JP
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: comparator
+  outcome_construct: all_cause_mortality_initiated_under_20_quit_at_50_plus
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: started smoking before age 20 AND quit at >=50 vs never smoker
+  scale: log_hr
+  unit: log hazard ratio
+  value: 0.41211
+  se: 0.0807
+  ci:
+  - 0.254642
+  - 0.57098
+  conversion_formula: HR 1.51 (95% CI 1.29-1.77) all-cause. log_hr = ln(1.51) = 0.412110. se = (ln(1.77)-ln(1.29))/3.919928
+    = 0.080665.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'positive = ELEVATED mortality (harm). The WORST case: adolescent initiation with LATE
+    cessation still leaves a 51% all-cause excess after ~30 years of smoking. Contrast with the next effect,
+    where cessation before 50 removes it.'
+  covariates:
+  - age
+  - and multivariable covariates per report
+  followup_years: 20.0
+  cohort_family: JACC_Japan
+  quote: Among former smokers who quit smoking aged 50 years or more, the highest hazard ratios were detected
+    for those who started smoking at <20 years of age (all-cause, cancer, and cardiovascular disease mortality,
+    hazard ratio [95% confidence interval] 1.51 [1.29-1.77], 1.68 [1.27-2.23], and 1.48 [1.12-1.96], respectively).
+- outcome_domain: comparator
+  outcome_construct: all_cause_mortality_quit_before_50_any_initiation_age
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: quit smoking before age 50, ANY age at initiation (including <20), vs never smoker
+  scale: log_hr
+  unit: log hazard ratio
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: Reported qualitatively as 'negligible all-cause or cardiovascular disease mortality
+    regardless of the smoking-initiation age'; encoded as log_hr = 0. No point estimate or CI given in
+    the abstract for this stratum, so se null. This is a NEGLIGIBILITY statement, not a demonstration
+    of equivalence.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: zero = no meaningful residual all-cause excess. THE DIRECT ANSWER TO 'DOES STARTING
+    YOUNG LEAVE A PERMANENT MARK IF YOU STOP?' - on all-cause mortality, essentially no, provided cessation
+    happens before 50. Cancer mortality is the exception and does retain a residue.
+  covariates:
+  - age
+  - and multivariable covariates per report
+  followup_years: 20.0
+  cohort_family: JACC_Japan
+  quote: Former smokers who quit smoking at <50 years of age had negligible all-cause or cardiovascular
+    disease mortality regardless of the smoking-initiation age, whereas the cancer mortality risk remained
+    significantly high among those who quit smoking at 40-49 years of age.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Independent (Japanese) cohort, which is a genuine addition to a reversibility evidence base otherwise
+    entirely UK/US/Australian. But age at initiation and at cessation are both RECALLED at ages 40-79,
+    so exposure misclassification is substantial; the 'negligible' finding for quitters under 50 is reported
+    without a point estimate; and the cohort enrols at 40-79, so anyone who died before 40 is excluded
+    by design (survivor bias, which biases the cessation benefit upward).
+funding: Japanese Ministry of Education, Culture, Sports, Science and Technology / JACC Study (per report)
+notes: 'Added late in screening and worth it: it is the only record I found that crosses AGE AT INITIATION
+  with AGE AT CESSATION, which is exactly the two-dimensional question our subject poses (exposure begun
+  at 16, ended at 19). Its answer is that initiation before 20 is not independently damaging on the ALL-CAUSE
+  scale provided cessation is early; what drives the residual harm is total DURATION, i.e. how late you
+  stop. That supports treating our subject''s 3-year window as a small cumulative dose rather than a developmental
+  insult. CANCER mortality is the documented exception. DOI is registered with JaLC, not Crossref, so
+  the Crossref API returns 404; the DOI nonetheless resolves through doi.org with HTTP 200 to the Nagoya
+  University repository, and the PMID resolves in PubMed, so status is VERIFIED.'
+shard: s18_comparators

@@ -1,0 +1,126 @@
+study_id: peeters2003
+citation: 'Peeters A, Barendregt JJ, Willekens F, Mackenbach JP, Al Mamun A, Bonneux L; NEDCOM. Obesity
+  in adulthood and its consequences for life expectancy: a life-table analysis. Ann Intern Med. 2003;138(1):24-32.'
+doi: 10.7326/0003-4819-138-1-200301070-00008
+pmid: '12513041'
+url: https://www.acpjournals.org/doi/10.7326/0003-4819-138-1-200301070-00008
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Obesity in Adulthood and Its Consequences for Life Expectancy: A Life-Table Analysis'
+access_tier: abstract_only
+secondhand_via: null
+design: life_table
+tier: TX
+n: 3457
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 30
+  - 49
+  pct_female: null
+  country: US
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_lost_overweight_at_40_male_nonsmokers
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: overweight (BMI 25-30) vs normal weight at age 40, male nonsmokers, sustained
+  scale: years
+  unit: years of life expectancy lost
+  value: -3.1
+  se: null
+  ci: null
+  conversion_formula: Reported directly. Abstract publishes no CI for this figure; se null. This is the
+    cleanest 'sustained overweight, from a known starting age' anchor available and is the basis of the
+    BMI pro-rata conversion in comparator_scale.md.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = life expectancy LOST. Exposure is being overweight from age 40 onward (~38.6
+    remaining years in the US male 2023 life table), NOT 3 years.
+  covariates:
+  - age
+  - sex
+  - smoking status
+  followup_years: 42.0
+  cohort_family: Framingham
+  quote: Forty-year-old female nonsmokers lost 3.3 years and 40-year-old male nonsmokers lost 3.1 years
+    of life expectancy because of overweight. Forty-year-old female nonsmokers lost 7.1 years and 40-year-old
+    male nonsmokers lost 5.8 years because of obesity.
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_lost_obesity_at_40_male_nonsmokers
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: obesity (BMI >=30) vs normal weight at age 40, male nonsmokers, sustained
+  scale: years
+  unit: years of life expectancy lost
+  value: -5.8
+  se: null
+  ci: null
+  conversion_formula: Reported directly. No CI in the abstract; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = life expectancy LOST. Consistent with PSC 2009's 2-4 y for BMI 30-35 given
+    that this stratum includes higher BMIs.
+  covariates:
+  - age
+  - sex
+  - smoking status
+  followup_years: 42.0
+  cohort_family: Framingham
+  quote: Forty-year-old female nonsmokers lost 3.3 years and 40-year-old male nonsmokers lost 3.1 years
+    of life expectancy because of overweight. Forty-year-old female nonsmokers lost 7.1 years and 40-year-old
+    male nonsmokers lost 5.8 years because of obesity.
+- outcome_domain: comparator
+  outcome_construct: residual_effect_of_early_adult_bmi_after_adjusting_for_later_bmi
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: BMI at ages 30-49 predicting mortality at 50-69, adjusted for BMI at 50-69
+  scale: log_hr
+  unit: qualitative - direction only
+  value: 1.0
+  se: null
+  ci: null
+  conversion_formula: NO NUMERIC EFFECT SIZE IS PUBLISHED IN THE ABSTRACT for this adjusted association.
+    value is a placeholder sign flag (1 = positive association present) and MUST NOT be pooled as a magnitude.
+    Recorded because the DIRECTIONAL claim is the only direct evidence I could retrieve that EARLIER-LIFE
+    adiposity leaves a mortality signal that later-life adiposity does not explain away.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = earlier-life BMI carries an INDEPENDENT (partly irreversible) mortality signal.
+    DO NOT USE AS A MAGNITUDE - sign/direction only.
+  covariates:
+  - BMI at age 50-69
+  - age
+  - sex
+  - smoking status
+  followup_years: 42.0
+  cohort_family: Framingham
+  quote: Body mass index at ages 30 to 49 years predicted mortality after ages 50 to 69 years, even after
+    adjustment for body mass index at age 50 to 69 years.
+rob:
+  tool: none
+  judgement: moderate
+  notes: Life-table analysis on a single, small (n=3457), all-white, mid-20th-century New England cohort.
+    Baseline BMI is assumed to persist. The adjusted early-BMI finding is reported without a number in
+    the abstract and is vulnerable to regression dilution in the later-life BMI adjustment, which would
+    EXAGGERATE the apparent independent early effect.
+funding: Netherlands Organization for Scientific Research / NEDCOM (per report)
+notes: 'Two distinct roles. (1) The 3.1 y figure for male nonsmoker overweight at 40 is my primary BMI
+  pro-rata input: 3.1 y / e(40)=38.6 y = 0.080 y per exposure-year, so 3 years = 0.24 y. (2) The adjusted
+  early-BMI claim is the ONLY retrievable evidence bearing on BMI IRREVERSIBILITY, and it is qualitative.
+  That is a real gap - see station_report.md.'
+shard: s18_comparators

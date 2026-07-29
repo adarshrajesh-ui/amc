@@ -1,0 +1,126 @@
+study_id: psc2009
+citation: 'Prospective Studies Collaboration; Whitlock G, Lewington S, Sherliker P, Clarke R, Emberson
+  J, Halsey J, Qizilbash N, Collins R, Peto R. Body-mass index and cause-specific mortality in 900 000
+  adults: collaborative analyses of 57 prospective studies. Lancet. 2009;373(9669):1083-1096.'
+doi: 10.1016/S0140-6736(09)60318-4
+pmid: '19299006'
+url: https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(09)60318-4/fulltext
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Body-mass index and cause-specific mortality in 900 000 adults: collaborative analyses
+    of 57 prospective studies'
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 894576
+n_studies_pooled: 57
+population:
+  age_mean: 46.0
+  age_range: null
+  pct_female: 39.0
+  country: western Europe and North America (mostly)
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: comparator
+  outcome_construct: all_cause_mortality_per_5_kgm2_higher_bmi
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: +5 kg/m2 BMI above 22.5-25 kg/m2, sustained
+  scale: log_hr
+  unit: log hazard ratio per 5 kg/m2
+  value: 0.254642
+  se: 0.009851
+  ci:
+  - 0.239017
+  - 0.277632
+  conversion_formula: HR 1.29 (95% CI 1.27-1.32) per 5 kg/m2. log_hr = ln(1.29) = 0.254642. se = (ln(1.32)-ln(1.27))/3.919928
+    = 0.009843.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = ELEVATED mortality per 5 kg/m2 above the optimum (harm).
+  covariates:
+  - age
+  - sex
+  - smoking status
+  - study
+  followup_years: 8.0
+  cohort_family: Prospective_Studies_Collaboration
+  quote: In both sexes, mortality was lowest at about 22.5-25 kg/m(2). Above this range, positive associations
+    were recorded for several specific causes and inverse associations for none, the absolute excess risks
+    for higher BMI and smoking were roughly additive, and each 5 kg/m(2) higher BMI was on average associated
+    with about 30% higher overall mortality (hazard ratio per 5 kg/m(2) [HR] 1.29 [95% CI 1.27-1.32])
+- outcome_domain: comparator
+  outcome_construct: median_survival_reduction_bmi_30_35
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: BMI 30-35 kg/m2 vs the 22.5-25 optimum, sustained from ~age 46
+  scale: years
+  unit: years of median survival lost
+  value: -3.0
+  se: null
+  ci: null
+  conversion_formula: Reported as a range, '2-4 years'; midpoint 3.0 recorded. The 2-4 span is a ROUNDED
+    RANGE across the BMI band, NOT a confidence interval, so ci is left null and se null. Modellers wanting
+    an interval should use [-4, -2].
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = median survival LOST. Sustained lifelong exposure from midlife, NOT 3 years.
+  covariates:
+  - age
+  - sex
+  - smoking status
+  - study
+  followup_years: 8.0
+  cohort_family: Prospective_Studies_Collaboration
+  quote: At 30-35 kg/m(2), median survival is reduced by 2-4 years; at 40-45 kg/m(2), it is reduced by
+    8-10 years (which is comparable with the effects of smoking).
+- outcome_domain: comparator
+  outcome_construct: median_survival_reduction_bmi_40_45
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: BMI 40-45 kg/m2 vs the 22.5-25 optimum, sustained from ~age 46
+  scale: years
+  unit: years of median survival lost
+  value: -9.0
+  se: null
+  ci: null
+  conversion_formula: Reported as '8-10 years'; midpoint 9.0 recorded. Rounded range, not a CI; ci and
+    se null. Modellers wanting an interval should use [-10, -8].
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = median survival LOST. The paper itself notes this is 'comparable with the
+    effects of smoking' - i.e. grade-3 obesity, sustained, ~= lifelong smoking.
+  covariates:
+  - age
+  - sex
+  - smoking status
+  - study
+  followup_years: 8.0
+  cohort_family: Prospective_Studies_Collaboration
+  quote: At 30-35 kg/m(2), median survival is reduced by 2-4 years; at 40-45 kg/m(2), it is reduced by
+    8-10 years (which is comparable with the effects of smoking).
+rob:
+  tool: AMSTAR-2
+  judgement: low
+  notes: IPD collaboration, first 5 years of follow-up excluded to limit reverse causation, adjusted for
+    smoking. Single baseline BMI measurement means regression dilution (the paper corrects for it). Mean
+    recruitment age 46, so wholly extrapolated to a 16-19 year old.
+funding: UK Medical Research Council, British Heart Foundation, Cancer Research UK, EU BIOMED programme
+  (per report)
+notes: 'The per-5-kg/m2 HR asked for in the task. Note the important asymmetry the abstract flags: below
+  22.5 kg/m2 the association REVERSES, and that inverse limb is smoking-confounded. For our subject (lean
+  18-year-old) only the upper limb is relevant. Conversion to 3 years is in comparator_scale.md.'
+shard: s18_comparators

@@ -1,0 +1,200 @@
+study_id: banks2015
+citation: 'Banks E, Joshy G, Weber MF, Liu B, Grenfell R, Egger S, Paige E, Lopez AD, Sitas F, Beral V.
+  Tobacco smoking and all-cause mortality in a large Australian cohort study: findings from a mature epidemic
+  with current low smoking prevalence. BMC Med. 2015;13:38.'
+doi: 10.1186/s12916-015-0281-z
+pmid: '25857449'
+url: https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-015-0281-z
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Tobacco smoking and all-cause mortality in a large Australian cohort study: findings
+    from a mature epidemic with current low smoking prevalence'
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 204953
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: AU
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: comparator
+  outcome_construct: all_cause_mortality_current_smoker_vs_never
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: current smoker vs never smoker, adults aged >=45
+  scale: log_hr
+  unit: log hazard ratio
+  value: 1.085189
+  se: 0.048244
+  ci:
+  - 0.989541
+  - 1.178655
+  conversion_formula: RR 2.96 (95% CI 2.69-3.25). log_hr = ln(2.96) = 1.085189. se = (ln(3.25)-ln(2.69))/3.919928
+    = 0.048177.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = ELEVATED mortality in current smokers (harm).
+  covariates:
+  - age
+  - education
+  - income
+  - region of residence
+  - alcohol
+  - body mass index
+  followup_years: 4.26
+  cohort_family: 45_and_Up_NSW
+  quote: Compared to never-smokers, the adjusted RR (95% CI) of mortality was 2.96 (2.69-3.25) in current
+    smokers and was similar in men (2.82 (2.49-3.19)) and women (3.08 (2.63-3.60)) and according to birth
+    cohort. Mortality RRs increased with increasing smoking intensity, with around two- and four-fold
+    increases in mortality in current smokers of <=14 (mean 10/day) and >=25 cigarettes/day, respectively,
+    compared to never-smokers.
+- outcome_domain: comparator
+  outcome_construct: all_cause_mortality_light_smoker_le14_per_day
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: current smoker of <=14 cigarettes/day (mean 10/day) vs never smoker
+  scale: log_hr
+  unit: log hazard ratio
+  value: 0.693147
+  se: null
+  ci: null
+  conversion_formula: Abstract reports 'around two-fold'. log_hr = ln(2.0) = 0.693147. Rounded verbal
+    figure with no CI in the abstract, so se null; treat as approximate.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'positive = ELEVATED mortality. THE DOSE ANCHOR: ~10 cig/day still roughly doubles mortality.'
+  covariates:
+  - age
+  - education
+  - income
+  - region of residence
+  - alcohol
+  - body mass index
+  followup_years: 4.26
+  cohort_family: 45_and_Up_NSW
+  quote: Compared to never-smokers, the adjusted RR (95% CI) of mortality was 2.96 (2.69-3.25) in current
+    smokers and was similar in men (2.82 (2.49-3.19)) and women (3.08 (2.63-3.60)) and according to birth
+    cohort. Mortality RRs increased with increasing smoking intensity, with around two- and four-fold
+    increases in mortality in current smokers of <=14 (mean 10/day) and >=25 cigarettes/day, respectively,
+    compared to never-smokers.
+- outcome_domain: comparator
+  outcome_construct: all_cause_mortality_heavy_smoker_ge25_per_day
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: current smoker of >=25 cigarettes/day vs never smoker
+  scale: log_hr
+  unit: log hazard ratio
+  value: 1.386294
+  se: null
+  ci: null
+  conversion_formula: Abstract reports 'four-fold'. log_hr = ln(4.0) = 1.386294. Rounded verbal figure
+    with no CI in the abstract, so se null; treat as approximate.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'positive = ELEVATED mortality. Dose-response: 10/day ~ 2x, >=25/day ~ 4x, i.e. log-hazard
+    is roughly linear in cigarettes/day over this range.'
+  covariates:
+  - age
+  - education
+  - income
+  - region of residence
+  - alcohol
+  - body mass index
+  followup_years: 4.26
+  cohort_family: 45_and_Up_NSW
+  quote: Compared to never-smokers, the adjusted RR (95% CI) of mortality was 2.96 (2.69-3.25) in current
+    smokers and was similar in men (2.82 (2.49-3.19)) and women (3.08 (2.63-3.60)) and according to birth
+    cohort. Mortality RRs increased with increasing smoking intensity, with around two- and four-fold
+    increases in mortality in current smokers of <=14 (mean 10/day) and >=25 cigarettes/day, respectively,
+    compared to never-smokers.
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_lost_current_smoker
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: current smoker vs non-smoker, sustained exposure
+  scale: years
+  unit: years of life expectancy lost
+  value: -10.0
+  se: null
+  ci: null
+  conversion_formula: Reported directly as 'an average of 10 years earlier'. No CI; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = life expectancy LOST. Independent replication of Doll 2004 and Jha 2013 in
+    a contemporary, low-prevalence, non-UK/US setting.
+  covariates:
+  - age
+  - education
+  - income
+  - region of residence
+  - alcohol
+  - body mass index
+  followup_years: 4.26
+  cohort_family: 45_and_Up_NSW
+  quote: Among past smokers, mortality diminished gradually with increasing time since cessation and did
+    not differ significantly from never-smokers in those quitting prior to age 45. Current smokers are
+    estimated to die an average of 10 years earlier than non-smokers.
+- outcome_domain: comparator
+  outcome_construct: mortality_in_those_quitting_before_age_45
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: quit smoking before age 45 vs never smoker
+  scale: log_hr
+  unit: log hazard ratio
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: Abstract states mortality in those quitting before 45 'did not differ significantly
+    from never-smokers'; encoded as log_hr = 0 (null). No point estimate or CI given in the abstract,
+    so se null. This is a NON-SIGNIFICANCE statement, not a demonstration of equivalence.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'zero = no detectable excess mortality remaining. Reversibility evidence: quitting before
+    45 returns mortality to the never-smoker level within this cohort''s power.'
+  covariates:
+  - age
+  - education
+  - income
+  - region of residence
+  - alcohol
+  - body mass index
+  followup_years: 4.26
+  cohort_family: 45_and_Up_NSW
+  quote: Among past smokers, mortality diminished gradually with increasing time since cessation and did
+    not differ significantly from never-smokers in those quitting prior to age 45. Current smokers are
+    estimated to die an average of 10 years earlier than non-smokers.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Large linked-data cohort with BMI and alcohol adjustment. Volunteer cohort (~18% response), so
+    selection bias is likely, though relative risks are usually robust to it. Short follow-up (mean 4.26
+    y). Cessation categories are self-reported and recall-based; 'quit before 45' carries survivor bias.
+funding: Australian NHMRC; Cancer Council NSW (per report)
+notes: Supplies the DOSE gradient the task asked for (cigarettes/day) that Doll 2004's abstract does not,
+  plus a third independent 10-year life-expectancy figure and a cessation-before-45 reversibility datum.
+  The two-fold RR at a mean of 10 cigarettes/day is the figure to use if the modeller wants a 'moderate
+  smoker' rather than a pack-a-day comparator.
+shard: s18_comparators
