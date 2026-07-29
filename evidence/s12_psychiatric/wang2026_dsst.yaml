@@ -1,0 +1,86 @@
+study_id: wang2026_dsst
+citation: "Wang RC, Lee MI, Aroul GS, Silcox TE, Lipin DI. Delayed school start times to improve sleep duration and mitigate depression in adolescents: a systematic review and meta-analysis. J Clin Sleep Med. 2026 Jul 14;22(1):114."
+doi: "10.1007/s44470-026-00116-5"
+pmid: "42449039"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13369063/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Delayed school start times to improve sleep duration and mitigate depression in adolescents: a systematic review and meta-analysis."
+access_tier: abstract_only
+secondhand_via: null
+design: quasi_experiment
+tier: T2
+n: null
+n_studies_pooled: 6
+population:
+  age_mean: null
+  age_range: [11, 18]
+  pct_female: null
+  country: "mixed"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: depressive_symptoms_pooled_across_start_time_delays
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: null, contrast_label: "POOLED effect of delayed school start time (DSST) vs earlier start, on depressive symptoms; 5 studies; the accompanying sleep gain in the same review averaged +69 min/night"}
+    scale: hedges_g
+    unit: null
+    value: -0.20
+    se: null
+    ci: null
+    conversion_formula: "Reported directly as a pooled SMD (Hedges's g) of -0.20. NO CONFIDENCE INTERVAL, no I^2 value, no tau^2 and no per-study estimates are given anywhere in the abstract, and the PMC deposit is under embargo (pmc-exception-type EMBARGO, pmc-status-live no) so I could retrieve only the abstract. I did not invent an SE. se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NEGATIVE = FEWER depressive symptoms when start times are delayed and sleep is longer, i.e. supports a causal sleep -> depression arrow. The authors describe it as 'a smaller effect' and 'a small reduction' relative to the sleep-duration effect."
+    covariates: []
+    followup_years: null
+    cohort_family: "overlaps_START_and_other_DSST_cohorts"
+    quote: "In contrast, analysis of depressive symptoms, based on five studies, produced a pooled SMD of - 0.20, indicating a smaller effect. Both analyses demonstrated high inter-study heterogeneity."
+  - outcome_domain: exposure_measurement
+    outcome_construct: sleep_duration_gain_from_delayed_start_time
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: null, contrast_label: "POOLED effect of DSST on sleep duration; 6 studies"}
+    scale: hedges_g
+    unit: null
+    value: 0.63
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: SMD 0.63, corresponding to an average increase of 69 minutes. No CI given. se: null. This pairs the standardised and raw metrics, so it implies a within-study SD of roughly 69/0.63 = 110 min for sleep duration, which is large but not implausible for self-reported adolescent sleep."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more sleep obtained under delayed start times. This is the FIRST STAGE: the policy really does buy sleep, ~69 min on average."
+    covariates: []
+    followup_years: null
+    cohort_family: "overlaps_START_and_other_DSST_cohorts"
+    quote: "The pooled analysis indicated that DSST was associated with an average increase in sleep duration of 69 min, with an SMD of 0.63, suggesting a moderate effect size."
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: "I rate the risk of bias HIGH and I want to be explicit about why, because this record's headline number is attractive and should not be over-trusted. (1) The search covered 'Medline, Google Scholar, and Science Direct' only - no Embase, no PsycINFO, no CENTRAL, no trial registries, no grey literature, and Google Scholar is not a reproducible search interface. (2) Only six studies were found for sleep and five for depression, which is a smaller yield than the school-start-time literature actually contains, suggesting incomplete retrieval. (3) 'Both analyses demonstrated high inter-study heterogeneity' but no I^2 or tau^2 is reported in the abstract, and no CI is given for either pooled estimate, so the precision is unknown and a pooled point estimate under high heterogeneity is of limited interpretive value. (4) The constituent studies are uncontrolled or quasi-experimental pre-post policy comparisons, not RCTs, so the pooled SMD inherits their confounding; I have coded the design as quasi_experiment and tier T2 accordingly rather than meta_analysis_of_trials. (5) Author affiliations are entirely a single secondary school (St. Mark's School of Texas: four authors from the school, one from its library, one from its science department), with no epidemiology or biostatistics affiliation listed. That is not disqualifying, and the journal is the peer-reviewed AASM organ, but combined with the search-strategy and reporting gaps it lowers my confidence in the execution. (6) Substantial overlap with sadikova2024/berger2026_start is likely, since the START study is the largest DSST cohort with depression outcomes, so this record is NOT independent of them."
+funding: "not stated in the abstract"
+notes: |
+  WHAT THIS ADDS DESPITE ITS WEAKNESSES: it is the only POOLED quasi-experimental estimate I could find for
+  the exposure that actually matches the subject - externally imposed sleep opportunity, not insomnia, not
+  self-selected short sleep. Its two numbers line up into a usable dose statement:
+
+      +69 min/night of externally imposed extra sleep  ->  depressive symptoms Hedges' g = -0.20
+
+  Read as a per-hour figure that is g ~ -0.17 per hour, which sits between the two best individual
+  quasi-experimental anchors and is reassuringly close to both:
+      sadikova2024 (IV, START):        d = -0.156 for +30 min sustained 2 y
+      gangwisch2010 (parental bedtime): OR 1.24 for a 2 h difference in imposed bedtime, ~= d 0.12
+  Three different quasi-experimental designs converge on a SMALL effect, d roughly 0.1 to 0.3, for imposed
+  short sleep on depression scores in adolescents. That is much smaller than the observational literature
+  implies and it is the number I would carry forward for the subject.
+
+  THE CAVEAT THAT MUST TRAVEL WITH IT. This meta-analysis pools TOTAL depression scale scores. sadikova2024
+  showed, in what is probably the largest single contributor to this very pool, that the total-score effect
+  is carried entirely by fatigue and sleep items while the mood items do not move. A pooled total-score SMD
+  of -0.20 therefore cannot be interpreted as a -0.20 effect on depressed mood. It is an effect on a
+  composite that contains the exposure.
+
+  ACCESS. Abstract only. The PMC record exists (PMC13369063) but is embargoed: 'pmc-exception-type EMBARGO,
+  pmc-status-live no, pmc-prop-open-access no'. I therefore have no forest plot, no per-study estimates, no
+  CIs and no heterogeneity statistics, and I did not fabricate any. Every number in this record is verbatim
+  from the abstract.
+shard: "s12_psychiatric"

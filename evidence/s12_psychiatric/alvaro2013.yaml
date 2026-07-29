@@ -1,0 +1,117 @@
+study_id: alvaro2013
+citation: "Alvaro PK, Roberts RM, Harris JK. A systematic review assessing bidirectionality between sleep disturbances, anxiety, and depression. Sleep. 2013 Jul 1;36(7):1059-1068."
+doi: "10.5665/sleep.2810"
+pmid: "23814343"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "A Systematic Review Assessing Bidirectionality between Sleep Disturbances, Anxiety, and Depression."
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: null
+n_studies_pooled: 9
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: insomnia_bidirectional_with_anxiety_and_depression
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "INSOMNIA and sleep quality, tested in BOTH directions against anxiety and depression; 8 longitudinal + 1 retrospective study"}
+    scale: probability
+    unit: "direction verdict, not an effect size (1 = bidirectional relationship supported)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "NOT POOLABLE. This is a narrative systematic review with no pooled effect estimates; the abstract reports verdicts, not numbers, and gives no ORs, betas, CIs or p-values for any relationship. value 1.0 encodes 'bidirectionality supported for insomnia'; se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = insomnia runs in BOTH directions with both anxiety and depression. The review's headline conclusion, and the direct counterpoint to lovato2014's asymmetric verdict."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple_cohorts"
+    quote: "Syntheses of longitudinal studies suggested insomnia and sleep quality were bidirectionally related to anxiety and depression, and depression/anxiety, respectively. ... Nevertheless, best available evidence suggests insomnia is bidirectionally related to anxiety and depression."
+  - outcome_domain: psychiatric
+    outcome_construct: childhood_sleep_problems_forward_only_asymmetry
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "CHILDHOOD sleep problems -> later depression, tested against the reverse; a forward-only asymmetry within an otherwise bidirectional review"}
+    scale: probability
+    unit: "direction verdict (1 = forward arrow only)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "NOT POOLABLE; verdict only, no numbers reported. value 1.0 encodes 'forward arrow supported, reverse arrow not'."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = childhood sleep problems predicted later depression but depression did NOT predict later sleep problems. This is the one place the review finds a clean one-way arrow in the sleep -> mood direction, and it is in the youngest age group."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple_cohorts"
+    quote: "Childhood sleep problems significantly predicted higher levels of depression and a combined depression/anxiety variable, but not vice-versa."
+  - outcome_domain: psychiatric
+    outcome_construct: anxiety_to_daytime_sleepiness_one_way
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "excessive daytime sleepiness tested in both directions against anxiety and against depression"}
+    scale: probability
+    unit: "direction verdict (0 = reverse-only arrow, i.e. mood -> sleep symptom)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "NOT POOLABLE; verdict only. value 0.0 encodes 'the arrow runs from mood TO the sleep symptom, not the other way'."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = ANXIETY predicted later excessive daytime sleepiness, and daytime sleepiness did not predict depression. A clean example of the REVERSE arrow: a psychiatric state generating a sleep symptom."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple_cohorts"
+    quote: "A one-way relationship was found where anxiety predicted excessive daytime sleepiness, but excessive daytime sleepiness was not associated with depression."
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: "The authors' own conclusion is the honest risk-of-bias statement: 'Definitive conclusions regarding bidirectionality cannot be made for most sleep disturbances due to the small number and heterogeneity of cohort samples used across studies.' Only 9 studies total across all sleep disturbances and both directions, one of them retrospective. No pooled effect estimates at all, so nothing here is quantitatively usable. Search ended December 2011, making it the oldest evidence in my shard. Treatment studies and clinical/high-risk samples were excluded, which improves generalisability but shrinks the evidence base further."
+funding: null
+notes: |
+  THIS RECORD CONTRIBUTES NO NUMBERS, AND ITS VALUE IS ENTIRELY AS A DIRECTION-QUESTION COUNTERWEIGHT.
+
+  My task requires me to separate the two causal directions. Two systematic reviews in my shard set out to
+  do exactly that and reached OPPOSITE verdicts:
+    lovato2014 (adolescents 12-20, k=23): "Overall effect sizes from longitudinal and treatment studies
+      suggest sleep disturbance acts as a precursor to the development of depression... Little support was
+      found for a predictive role of depressive symptoms in the development of sleep disturbance."
+    alvaro2013 (this record, k=9): "best available evidence suggests insomnia is bidirectionally related to
+      anxiety and depression."
+  Same literature, same era, incompatible conclusions. I resolve this in favour of BIDIRECTIONALITY, for
+  three reasons that do not depend on either review:
+    (1) lovato2014's asymmetric verdict rests on 7 studies testing the forward arrow versus only 3 testing
+        the reverse. Its "little support" for the reverse arrow is an artefact of asymmetric attention.
+    (2) roberts2014 modelled BOTH arrows in the SAME adolescent sample, which eliminates literature-
+        selection asymmetry entirely, and found the reverse arrow for major depression to be the LARGER of
+        the two (reverse OR 4.28 vs forward OR 3.76, i.e. a reverse share of 52% of the total log-OR).
+    (3) sun2022_mr, using genetic instruments in both directions, found insomnia -> MDD OR 1.31 and
+        MDD -> insomnia OR 1.37 -- again essentially symmetric, with the reverse arrow marginally larger.
+  Three independent lines, all indicating that the relationship is genuinely two-way on the insomnia axis,
+  with something close to a 50/50 split. That is the basis for the reverse-causation fraction I report in
+  psychiatric_summary.md.
+
+  THE TWO ONE-WAY FINDINGS ARE MORE INTERESTING THAN THE HEADLINE, AND THEY POINT IN OPPOSITE DIRECTIONS.
+    FORWARD-ONLY: "Childhood sleep problems significantly predicted higher levels of depression... but not
+      vice-versa." In children, sleep appears to lead. If the causal arrow is genuinely stronger in the
+      forward direction earlier in development, that is mildly unfavourable for our subject, whose exposure
+      began at 16.
+    REVERSE-ONLY: "anxiety predicted excessive daytime sleepiness, but excessive daytime sleepiness was not
+      associated with depression." Here a psychiatric state generates a sleep symptom, with no return path.
+      This is a clean, isolated demonstration of the reverse mechanism, and it involves DAYTIME SLEEPINESS
+      -- which is precisely the symptom our subject would present with. Worth flagging: if he reports
+      daytime sleepiness, that symptom is not diagnostic of the direction of causation, because anxiety
+      produces it too.
+
+  EXPOSURE MISMATCH, AS EVERYWHERE IN THIS LITERATURE. The constructs reviewed are insomnia, sleep quality,
+  childhood sleep problems, and excessive daytime sleepiness. Not one of them is sleep DURATION or sleep
+  OPPORTUNITY. This review therefore tells us about the direction of the insomnia/mood relationship, which
+  is the relationship our subject does NOT have. Its relevance to him is indirect: it establishes that the
+  observational literature he would otherwise be compared against is contaminated in both directions.
+shard: "s12_psychiatric"

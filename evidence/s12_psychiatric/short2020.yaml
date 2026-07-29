@@ -1,0 +1,197 @@
+study_id: short2020
+citation: "Short MA, Booth SA, Omar O, Ostlundh L, Arora T. The relationship between sleep duration and mood in adolescents: A systematic review and meta-analysis. Sleep Med Rev. 2020 Aug;52:101311."
+doi: "10.1016/j.smrv.2020.101311"
+pmid: "32240932"
+url: "http://pure-oai.bham.ac.uk/ws/files/96044841/1_s2.0_S108707922030054X_main.pdf"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "The relationship between sleep duration and mood in adolescents: A systematic review and meta-analysis"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 361505
+n_studies_pooled: 73
+population:
+  age_mean: null
+  age_range: [10, 19]
+  pct_female: null
+  country: "multinational (29 North America, 17 Europe, 17 Asia, 11 Australia/NZ)"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: any_mood_deficit_pooled
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "shorter vs longer sleep duration, study-specific contrasts, all pooled to OR"}
+    scale: log_or
+    unit: null
+    value: 0.43825
+    se: 0.03780
+    ci: [0.36464, 0.51282]
+    conversion_formula: "log_or = ln(1.55) = 0.43825; se = (ln(1.67) - ln(1.44))/3.92 = 0.03780"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = shorter sleep raises odds of mood deficit (harm)"
+    covariates: ["mixed across studies; see covariate-subgroup effects below"]
+    followup_years: null
+    cohort_family: "pooled_73_adolescent_studies"
+    quote: "Overall, results indicated that shorter sleep durations were associated with a 55% increased risk of mood deficits, OR = 1.55, p < .001. Effects sizes were significantly heterogeneous between studies, I2 = 97.9, p < .001."
+  - outcome_domain: psychiatric
+    outcome_construct: depressed_mood
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "shorter vs longer sleep duration, depressed-mood outcomes only"}
+    scale: log_or
+    unit: null
+    value: 0.48243
+    se: 0.07477
+    ci: [0.32208, 0.61519]
+    conversion_formula: "log_or = ln(1.62) = 0.48243; se = (ln(1.85) - ln(1.38))/3.92 = 0.07477"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = shorter sleep raises odds of depressed mood (harm)"
+    covariates: ["mixed across studies"]
+    followup_years: null
+    cohort_family: "pooled_73_adolescent_studies"
+    quote: "Depressed Mood 43 1.62 1.38 1.85 <.001"
+  - outcome_domain: psychiatric
+    outcome_construct: anxiety
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "shorter vs longer sleep duration, anxiety outcomes only"}
+    scale: log_or
+    unit: null
+    value: 0.34359
+    se: 0.04519
+    ci: [0.25464, 0.43178]
+    conversion_formula: "log_or = ln(1.41) = 0.34359; se = (ln(1.54) - ln(1.29))/3.92 = 0.04519"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = shorter sleep raises odds of anxiety (harm)"
+    covariates: ["mixed across studies"]
+    followup_years: null
+    cohort_family: "pooled_73_adolescent_studies"
+    quote: "Anxiety 22 1.41 1.29 1.54 <.001"
+  - outcome_domain: psychiatric
+    outcome_construct: anger_irritability
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "shorter vs longer sleep duration, anger outcomes only"}
+    scale: log_or
+    unit: null
+    value: 0.60432
+    se: 0.09014
+    ci: [0.41211, 0.76547]
+    conversion_formula: "log_or = ln(1.83) = 0.60432; se = (ln(2.15) - ln(1.51))/3.92 = 0.09014"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = shorter sleep raises odds of anger/hostility (harm)"
+    covariates: ["mixed across studies"]
+    followup_years: null
+    cohort_family: "pooled_73_adolescent_studies"
+    quote: "Anger 9 1.83 1.51 2.15 <.001"
+  - outcome_domain: psychiatric
+    outcome_construct: positive_affect_loss
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "shorter vs longer sleep duration, positive-affect outcomes only"}
+    scale: log_or
+    unit: null
+    value: 0.70310
+    se: 0.10238
+    ci: [0.48243, 0.88377]
+    conversion_formula: "log_or = ln(2.02) = 0.70310; se = (ln(2.42) - ln(1.62))/3.92 = 0.10238"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = shorter sleep raises odds of reduced positive affect (harm); LARGEST of the five mood domains"
+    covariates: ["mixed across studies"]
+    followup_years: null
+    cohort_family: "pooled_73_adolescent_studies"
+    quote: "Positive Affect 9 2.02 1.62 2.42 <.001"
+  - outcome_domain: psychiatric
+    outcome_construct: mood_deficit_experimental_studies_subgroup
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "experimental-design studies only (k=13); restriction imposed by investigator"}
+    scale: log_or
+    unit: null
+    value: 0.54232
+    se: 0.07296
+    ci: [0.39204, 0.67803]
+    conversion_formula: "log_or = ln(1.72) = 0.54232; se = (ln(1.97) - ln(1.48))/3.92 = 0.07296"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = harm. KEY ANTI-REVERSE-CAUSATION EVIDENCE: in the experimental subgroup reverse causation is impossible by design, and the effect is LARGER (1.72) than in the cross-sectional subgroup (1.42)"
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_73_adolescent_studies"
+    quote: "Study design Experimental 13 1.72 1.48 1.97 <.001 Longitudinal 19 1.71 1.31 2.10 <.001 Cross-sectional 41 1.42 1.31 1.53 <.001"
+  - outcome_domain: psychiatric
+    outcome_construct: mood_deficit_cross_sectional_subgroup
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "cross-sectional studies only (k=41)"}
+    scale: log_or
+    unit: null
+    value: 0.35066
+    se: 0.03960
+    ci: [0.27003, 0.42527]
+    conversion_formula: "log_or = ln(1.42) = 0.35066; se = (ln(1.53) - ln(1.31))/3.92 = 0.03960"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = harm; comparator for the experimental subgroup above"
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_73_adolescent_studies"
+    quote: "Cross-sectional 41 1.42 1.31 1.53 <.001"
+  - outcome_domain: psychiatric
+    outcome_construct: mood_deficit_unadjusted_subgroup
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "studies adjusting for NO covariates (k=45)"}
+    scale: log_or
+    unit: null
+    value: 0.51282
+    se: 0.05692
+    ci: [0.39204, 0.61519]
+    conversion_formula: "log_or = ln(1.67) = 0.51282; se = (ln(1.85) - ln(1.48))/3.92 = 0.05692"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = harm; unadjusted anchor for the confounding-attenuation calculation"
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_73_adolescent_studies"
+    quote: "Covariates None 45 1.67 1.48 1.85 <.001 Demographics 12 1.44 1.27 1.60 <.001 Others 16 1.28 1.18 1.38 <.001"
+  - outcome_domain: psychiatric
+    outcome_construct: mood_deficit_maximally_adjusted_subgroup
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "studies adjusting for covariates beyond demographics (k=16)"}
+    scale: log_or
+    unit: null
+    value: 0.24686
+    se: 0.03994
+    ci: [0.16551, 0.32208]
+    conversion_formula: "log_or = ln(1.28) = 0.24686; se = (ln(1.38) - ln(1.18))/3.92 = 0.03994"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = harm. CONFOUNDING QUANTIFICATION: log-OR falls from 0.51282 (unadjusted) to 0.24686 (max adjusted), i.e. 51.9% of the raw log-OR is attributable to measured covariates. Note the authors report the between-covariate-level difference was NOT statistically significant, Q(2) = 5.58, p = .06"
+    covariates: ["demographics plus study-specific additional covariates"]
+    followup_years: null
+    cohort_family: "pooled_73_adolescent_studies"
+    quote: "Effect sizes were not significantly heterogenous according to the covariates included, Q (2) = 5.58, p = .06"
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Large, adolescent-specific, prespecified subgroups. But I2 = 97.9% (extreme heterogeneity); heterogeneous outcome scales all forced onto a common OR metric, which makes the pooled OR hard to interpret dimensionally; 41/73 studies cross-sectional; 45/73 adjusted for no covariates; funnel plot reported."
+funding: null
+notes: |
+  This is the single most transportable observational estimate in my domain: adolescents only (10-19),
+  sleep DURATION (not insomnia) as exposure, and it separates study design and covariate adjustment.
+  Three numbers matter downstream:
+  (1) the pooled OR 1.55 is the headline observational association;
+  (2) the experimental subgroup OR (1.72) EXCEEDS the cross-sectional subgroup OR (1.42), which
+      bounds reverse causation from above - reverse causation cannot inflate an experimental estimate;
+  (3) adjustment for covariates beyond demographics roughly halves the log-OR (0.513 -> 0.247).
+  Caution: the "experimental" subgroup ORs are conversions of standardized experimental contrasts
+  into an OR metric, so they are not directly commensurable with the epidemiological ORs; treat the
+  design comparison as ordinal evidence, not as a calibrated ratio.
+  Also relevant to the subject's 9 h optimum: the discussion cites Fuligni's daily-diary estimate that
+  "9-hours" is the sleep duration for lowest next-day depressed mood and anxiety.
+  Full text retrieved as the accepted-manuscript green-OA PDF from the University of Birmingham
+  repository (CC BY-NC-ND); table values above are from Table 2 of that PDF.
+shard: "s12_psychiatric"

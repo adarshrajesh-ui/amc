@@ -1,0 +1,177 @@
+study_id: baum2014
+citation: "Baum KT, Desai A, Field J, Miller LE, Rausch J, Beebe DW. Sleep restriction worsens mood and emotion regulation in adolescents. J Child Psychol Psychiatry. 2014;55(2):180-190."
+doi: "10.1111/jcpp.12125"
+pmid: "24889207"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep restriction worsens mood and emotion regulation in adolescents"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 50
+n_studies_pooled: null
+population:
+  age_mean: 15.5
+  age_range: [14, 17]
+  pct_female: null
+  country: "US (Cincinnati)"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: poms_tension_anxiety
+    exposure: {type: chronic_restriction, dose_h: 6.5, referent_h: 10, duration_days: 5,
+               contrast_label: "6.5 h TIB vs 10 h TIB, 5 consecutive nights, at-home actigraphy-verified"}
+    scale: cohens_d
+    unit: "within-subject d_z"
+    value: -0.4596
+    se: 0.1487
+    ci: [-0.7511, -0.1682]
+    conversion_formula: "Paper reports Wilcoxon signed-rank Z = -3.25 with n = 50 pairs. d_z = |Z|/sqrt(n) = 3.25/7.0711 = 0.4596 (the paired-t identity t = d_z*sqrt(n), with Z used in place of t; Wilcoxon Z is slightly conservative relative to t, so this is a mild underestimate). se(d_z) = sqrt(1/n + d_z^2/(2n)) = sqrt(1/50 + 0.4596^2/100) = 0.1487."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse (more tension/anxiety) under restriction"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Compared to HS, during SR adolescents rated themselves as having increased levels of Tension/Anxiety (Z = -3.25, p = .001), Anger/Hostility (Z = -3.10, p = .002), Fatigue/Inertia (Z = -4.78, p < .001), and Confusion/Bewilderment (Z = -3.37, p = .001), and significantly less vigor (Z = -3.02, p = .003)."
+  - outcome_domain: psychiatric
+    outcome_construct: poms_anger_hostility
+    exposure: {type: chronic_restriction, dose_h: 6.5, referent_h: 10, duration_days: 5,
+               contrast_label: "6.5 h TIB vs 10 h TIB, 5 nights"}
+    scale: cohens_d
+    unit: "within-subject d_z"
+    value: -0.4384
+    se: 0.1481
+    ci: [-0.7286, -0.1482]
+    conversion_formula: "d_z = 3.10/sqrt(50) = 0.4384; se = sqrt(1/50 + 0.4384^2/100) = 0.1481"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = more anger/hostility under restriction (harm)"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Anger/Hostility (Z = -3.10, p = .002)"
+  - outcome_domain: psychiatric
+    outcome_construct: poms_depression_dejection
+    exposure: {type: chronic_restriction, dose_h: 6.5, referent_h: 10, duration_days: 5,
+               contrast_label: "6.5 h TIB vs 10 h TIB, 5 nights"}
+    scale: cohens_d
+    unit: "within-subject d_z"
+    value: 0.0
+    se: 0.1449
+    ci: [-0.2840, 0.2840]
+    conversion_formula: "Reported as non-significant, p > .05, with no Z value given. Point set to 0 (no detectable difference). Upper bound: a two-sided p = .05 corresponds to |Z| = 1.96-2.01, so |d_z| < 2.01/sqrt(50) = 0.284; se taken as 0.284/1.96 = 0.1449 to encode that bound."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL RESULT. Five nights of 6.5 h TIB did NOT move depressed mood in adolescents, while it clearly moved anxiety, anger, fatigue, confusion and emotion regulation. Critical for the pipeline: the experimental literature supports a causal effect on irritability/anxiety/vigour but NOT on depressed mood at this dose and duration"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "There were no significant differences across conditions on the Depression/Dejection subscale, p > .05."
+  - outcome_domain: psychiatric
+    outcome_construct: emotion_regulation_problems_self_report
+    exposure: {type: chronic_restriction, dose_h: 6.5, referent_h: 10, duration_days: 5,
+               contrast_label: "6.5 h TIB vs 10 h TIB, 5 nights"}
+    scale: cohens_d
+    unit: "within-subject d_z"
+    value: -0.3833
+    se: 0.1465
+    ci: [-0.6704, -0.0961]
+    conversion_formula: "d_z = 2.71/sqrt(50) = 0.3833; se = sqrt(1/50 + 0.3833^2/100) = 0.1465"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse emotional regulation under restriction (harm)"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "As shown in Figure 4, adolescents also reported higher levels of Oppositionality/Irritability (Z = -2.47, p = .01) and Emotion Regulation problems (Z = -2.71, p = .007) during SR compared to HS."
+  - outcome_domain: psychiatric
+    outcome_construct: oppositionality_irritability_self_report
+    exposure: {type: chronic_restriction, dose_h: 6.5, referent_h: 10, duration_days: 5,
+               contrast_label: "6.5 h TIB vs 10 h TIB, 5 nights"}
+    scale: cohens_d
+    unit: "within-subject d_z"
+    value: -0.3493
+    se: 0.1457
+    ci: [-0.6348, -0.0638]
+    conversion_formula: "d_z = 2.47/sqrt(50) = 0.3493; se = sqrt(1/50 + 0.3493^2/100) = 0.1457"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = more oppositionality/irritability under restriction (harm)"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "adolescents also reported higher levels of Oppositionality/Irritability (Z = -2.47, p = .01)"
+  - outcome_domain: psychiatric
+    outcome_construct: emotion_regulation_parent_report
+    exposure: {type: chronic_restriction, dose_h: 6.5, referent_h: 10, duration_days: 5,
+               contrast_label: "6.5 h TIB vs 10 h TIB, 5 nights; PARENT-rated (not shared-method with teen self-report)"}
+    scale: cohens_d
+    unit: "within-subject d_z"
+    value: -0.3394
+    se: 0.1454
+    ci: [-0.6245, -0.0544]
+    conversion_formula: "d_z = 2.40/sqrt(50) = 0.3394; se = sqrt(1/50 + 0.3394^2/100) = 0.1454"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse parent-observed emotional control under restriction (harm). Independent observer corroboration, which rules out pure self-report demand effects"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Parent reports of their adolescent's mood and emotion regulation were similar. Scores on the Oppositionality/Irritability (Z = -2.22, p = .03) and Emotion Regulation (Z = -2.40, p = .02) subscales were all sign"
+  - outcome_domain: psychiatric
+    outcome_construct: hyperactivity_impulsivity_negative_control
+    exposure: {type: chronic_restriction, dose_h: 6.5, referent_h: 10, duration_days: 5,
+               contrast_label: "6.5 h TIB vs 10 h TIB, 5 nights; prespecified NEGATIVE CONTROL outcome"}
+    scale: cohens_d
+    unit: "within-subject d_z"
+    value: 0.0
+    se: 0.1449
+    ci: [-0.2840, 0.2840]
+    conversion_formula: "Reported non-significant, p > .05; encoded as 0 with the same p<.05 bound as the depression subscale (|d_z| < 0.284)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL by design. The authors prespecified hyperactivity/impulsivity as insensitive to sleep restriction to test for expectancy/demand effects; its null result strengthens the specificity of the mood findings"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "There were no cross-condition differences in depression or hyperactivity/impulsivity (p > .05)."
+  - outcome_domain: exposure_measurement
+    outcome_construct: achieved_sleep_difference_between_conditions
+    exposure: {type: chronic_restriction, dose_h: 6.5, referent_h: 10, duration_days: 5,
+               contrast_label: "actigraphy-measured sleep difference actually achieved between the two conditions"}
+    scale: hours
+    unit: "h/night additional sleep in the healthy-sleep condition"
+    value: 2.5
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "manipulation-check: a 3.5 h TIB contrast produced a 2.5 h achieved-sleep contrast, so the effect sizes above correspond to ~2.5 h/night of real sleep loss"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Participants averaged 2.5 more hours of sleep per night during HS relative to SR."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomized, counterbalanced crossover with actigraphy verification and a prespecified negative-control outcome - unusually strong for this literature. Concerns: no blinding is possible; outcomes are questionnaires; n = 50 with skewed distributions handled by nonparametric tests, so effect sizes had to be back-derived from Wilcoxon Z rather than read directly; conducted in summer, not on real school nights; the comparator is 10 h TIB, which is longer than any realistic counterfactual for the subject."
+funding: null
+notes: |
+  The best T1 adolescent evidence for requirement 3. All effect sizes are my conversions from the
+  reported Wilcoxon Z statistics (n = 50 pairs) using d_z = |Z|/sqrt(n); see conversion_formula on
+  each effect and convert.py in this directory for the arithmetic.
+  Effect-size ordering: Fatigue 0.68 > Confusion 0.48 > Tension/Anxiety 0.46 > Anger 0.44 >
+  Vigor loss 0.43 > Emotion-regulation problems 0.38 > Oppositionality 0.35 >
+  parent-rated emotion regulation 0.34 > Depression 0 (n.s.) = Hyperactivity 0 (n.s.).
+  THE HEADLINE PATTERN: 5 nights at 6.5 h TIB reliably degrades irritability, anxiety, vigour and
+  emotional regulation at d_z ~ 0.35-0.48, but does NOT produce depressed mood. This is directly
+  informative for the subject, whose exposure is close to this dose. Note also the exposure contrast
+  here is 6.5 h vs 10 h TIB - a larger contrast than the subject's weekday-vs-weekend swing.
+  Caveat on the null: with n = 50 the study can only exclude |d_z| > ~0.28 for depression, so a small
+  true effect on depressed mood is not ruled out.
+shard: "s12_psychiatric"

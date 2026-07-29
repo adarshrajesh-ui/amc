@@ -1,0 +1,149 @@
+study_id: lu2026_sjl
+citation: "Lu YA, Tsai PS. Associations of Social Jetlag With Depression and Anxiety in Adolescents and Young People: A Systematic Review and Meta-Analysis. Depress Anxiety. 2026 Jan 16;2026:5542425."
+doi: "10.1155/da/5542425"
+pmid: "41550113"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12811408/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Associations of Social Jetlag With Depression and Anxiety in Adolescents and Young People: A Systematic Review and Meta-Analysis."
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 164529
+n_studies_pooled: 14
+population:
+  age_mean: null
+  age_range: [12, 25]
+  pct_female: null
+  country: "multinational"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: depression_from_social_jetlag_over_2h
+    exposure: {type: social_jetlag, dose_h: 2.0, referent_h: 0.0, duration_days: null, contrast_label: "social jetlag GREATER THAN 2 h (weekday/weekend sleep-midpoint discrepancy) vs low/no social jetlag"}
+    scale: log_or
+    unit: null
+    value: 0.62594
+    se: 0.03932
+    ci: [0.54812, 0.70310]
+    conversion_formula: "OR 1.87 (1.73-2.02); log(1.87)=0.62594; se=(log(2.02)-log(1.73))/3.92=0.03932"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher odds of depression with >2 h social jetlag. This is the LARGEST sleep-related depression association in my entire shard for an exposure our subject plausibly has, exceeding even the insomnia MR estimates."
+    covariates: ["study-specific; heterogeneous"]
+    followup_years: null
+    cohort_family: "pooled_multiple_cohorts"
+    quote: "Social jetlag of 1-2 h and >2 h was significantly associated with increased odds of depression, with odds ratios of 1.12 (95% CI = 1.05-1.20) and 1.87 (95% CI = 1.73-2.02), respectively."
+  - outcome_domain: psychiatric
+    outcome_construct: depression_from_social_jetlag_1_to_2h
+    exposure: {type: social_jetlag, dose_h: 1.5, referent_h: 0.0, duration_days: null, contrast_label: "social jetlag of 1-2 h vs low/none -- the lower dose stratum, giving a dose-response contrast"}
+    scale: log_or
+    unit: null
+    value: 0.11333
+    se: 0.03424
+    ci: [0.04879, 0.18232]
+    conversion_formula: "OR 1.12 (1.05-1.20); log(1.12)=0.11333; se=(log(1.20)-log(1.05))/3.92=0.03424"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher odds of depression. STEEP dose-response: log-OR rises from 0.113 at 1-2 h to 0.626 at >2 h, a 5.5-fold increase on the log scale for roughly a doubling of exposure. Strongly supra-linear."
+    covariates: ["study-specific"]
+    followup_years: null
+    cohort_family: "pooled_multiple_cohorts"
+    quote: "with odds ratios of 1.12 (95% CI = 1.05-1.20) and 1.87 (95% CI = 1.73-2.02), respectively"
+  - outcome_domain: psychiatric
+    outcome_construct: depression_correlation_with_social_jetlag_continuous
+    exposure: {type: social_jetlag, dose_h: null, referent_h: null, duration_days: null, contrast_label: "continuous social jetlag vs depression, pooled as Fisher's z within a random-effects model"}
+    scale: raw_units
+    unit: "Fisher's z (approximately equal to r at this magnitude)"
+    value: 0.27
+    se: 0.05612
+    ci: [0.16, 0.38]
+    conversion_formula: "Fisher's z = 0.27 (95% CI 0.16-0.38); se = (0.38-0.16)/3.92 = 0.05612. Back-transforming to a correlation: r = tanh(0.27) = 0.264, i.e. about 7% of variance."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = more social jetlag, more depression. r ~ 0.26 is a small-to-moderate correlation."
+    covariates: ["study-specific"]
+    followup_years: null
+    cohort_family: "pooled_multiple_cohorts"
+    quote: "SJL was significantly and positively associated with depression (Fisher's z = 0.27, 95% confidence interval [CI] = 0.16-0.38) and anxiety (Fisher's z = 0.21, 95% CI = 0.12-0.29)."
+  - outcome_domain: psychiatric
+    outcome_construct: anxiety_correlation_with_social_jetlag_continuous
+    exposure: {type: social_jetlag, dose_h: null, referent_h: null, duration_days: null, contrast_label: "continuous social jetlag vs anxiety, pooled Fisher's z"}
+    scale: raw_units
+    unit: "Fisher's z"
+    value: 0.21
+    se: 0.04337
+    ci: [0.12, 0.29]
+    conversion_formula: "Fisher's z = 0.21 (0.12-0.29); se = (0.29-0.12)/3.92 = 0.04337. r = tanh(0.21) = 0.207."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = more social jetlag, more anxiety. Slightly smaller than the depression association."
+    covariates: ["study-specific"]
+    followup_years: null
+    cohort_family: "pooled_multiple_cohorts"
+    quote: "and anxiety (Fisher's z = 0.21, 95% CI = 0.12-0.29)"
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: "The authors' OWN certainty assessment is the decisive limitation and I am recording it prominently: 'as the certainty of evidence was rated as very low, the results should be interpreted with caution' (GRADE). Every included study is observational and, as far as the abstract indicates, cross-sectional or near-cross-sectional, so temporality is unestablished and reverse causation is wide open -- depressed young people keep irregular schedules. The implausibly tight CI on the >2 h stratum (1.73-2.02 around a point estimate of 1.87, from 14 heterogeneous studies) suggests the pooling is dominated by one or two very large samples rather than reflecting genuine consistency. I assigned tier TX rather than T5 because I cannot confirm any prospective component."
+funding: null
+notes: |
+  WHY I ADDED THIS RECORD, WHICH WAS NOT ON MY TASK LIST. Our subject's described pattern is weekday sleep
+  of 5-6 h with weekend and holiday sleep of 7-8 h and occasional 10-11 h weekend nights. That is not
+  simply "short sleep." It is a large, sustained WEEKDAY/WEEKEND DISCREPANCY -- the definition of social
+  jetlag. A weekday midpoint around 03:00 shifting to a weekend midpoint around 05:00-06:00 implies social
+  jetlag of roughly 2-3 h, placing him squarely in this meta-analysis's highest exposure stratum. No other
+  record in my shard measures that construct, and it turns out to carry the largest association I found.
+
+  THE NUMBERS, AND WHY THEY GIVE ME PAUSE.
+    social jetlag 1-2 h -> depression:  OR 1.12 (1.05-1.20)   log-OR 0.113
+    social jetlag >2 h  -> depression:  OR 1.87 (1.73-2.02)   log-OR 0.626
+    continuous SJL vs depression:       Fisher's z 0.27 (0.16-0.38), r ~ 0.26
+    continuous SJL vs anxiety:          Fisher's z 0.21 (0.12-0.29), r ~ 0.21
+  Set the >2 h figure against everything else in my shard on the log-OR scale:
+    social jetlag >2 h (this record)                        0.626
+    insomnia -> depression, prospective (hertenstein2019)    1.040
+    adolescent short sleep -> mood deficit (short2020)       0.438
+    disturbed sleep -> depression, baseline-adj (marino2021) 0.405
+    insomnia -> MDD, MR (sun2022_mr)                         0.270
+    short sleep -> MDD, MR (zhang2024_mr)                    0.165
+    late parental bedtime -> depression, quasi-exp (gangwisch2010) 0.215
+  Social jetlag >2 h ranks second only to clinical insomnia, and is roughly 3.8x the genetically
+  identified short-sleep effect. If taken at face value, this would mean the CIRCADIAN IRREGULARITY of
+  our subject's schedule matters considerably more than its total hours.
+
+  I DO NOT TAKE IT AT FACE VALUE, AND THE MODELLER SHOULD NOT EITHER. Three reasons:
+    (1) The authors graded their own evidence VERY LOW certainty and said so in the conclusion. That is
+        unusual candour and should be respected.
+    (2) The exposure is almost certainly cross-sectional and reverse causation is entirely unaddressed. A
+        depressed adolescent sleeps late at weekends, skips morning commitments, and has a chaotic
+        schedule. Social jetlag is arguably an even better marker of behavioural disorganisation from
+        depression than short duration is.
+    (3) The dose-response is suspiciously steep (log-OR 0.113 -> 0.626 for a doubling of exposure). Real
+        biological dose-responses rarely accelerate like that; category boundaries and confounding
+        gradients often do.
+
+  BUT IT CONVERGES WITH THE ONE HIGH-QUALITY CAUSAL ESTIMATE I HAVE ON THE TIMING AXIS, WHICH IS WHY I
+  KEEP IT. daghlas2021_mr, methodologically the strongest MR study in my shard (up to 340 loci, instrument
+  rescaled to accelerometer-measured sleep midpoint, Egger intercept null), found OR 0.77 (0.63-0.94) per
+  1 h EARLIER sleep midpoint, i.e. OR ~1.30 per hour LATER. Two completely different designs -- genetic
+  instrumentation of sleep timing in middle-aged adults, and observational social jetlag in adolescents --
+  both indicate that WHEN sleep happens carries independent risk, and both give larger effects than the
+  duration literature does. Applying daghlas2021's per-hour estimate to a 1.5-2 h midpoint displacement
+  gives OR 1.48-1.69, which brackets this record's 1.87 rather well.
+
+  ACTIONABLE IMPLICATION, WHICH IS THE MOST PRACTICALLY USEFUL THING IN MY SHARD. For a student whose total
+  hours are genuinely constrained by workload, REGULARISING TIMING costs no study time, whereas EXTENDING
+  DURATION costs an hour or two per night. If the timing/irregularity axis carries a meaningful share of
+  the risk -- and two independent designs suggest it does -- then stabilising his sleep-wake schedule across
+  weekdays and weekends is the intervention with the best ratio of benefit to opportunity cost, quite apart
+  from any attempt to sleep longer.
+
+  VERIFICATION NOTE. Both checks passed. Crossref resolves DOI 10.1155/da/5542425 to "Associations of Social
+  Jetlag With Depression and Anxiety in Adolescents and Young People: A Systematic Review and Meta-Analysis",
+  Depression and Anxiety, 2026, volume 2026, authors Lu Y and Tsai P -- matching PubMed exactly. Crossref
+  returns no page number for this article (it is an article-number-only publication, 5542425).
+shard: "s12_psychiatric"

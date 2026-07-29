@@ -1,0 +1,151 @@
+study_id: zhang2024_mr
+citation: "Qiu-Qiang Z, Wei-Wei Y, Shan-Shu H, Yi-Ran L. Mendelian randomization of individual sleep traits associated with major depressive disorder. J Affect Disord. 2024 Nov 15;365:105-111."
+doi: "10.1016/j.jad.2024.08.068"
+pmid: "39153551"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Mendelian randomization of individual sleep traits associated with major depressive disorder."
+access_tier: abstract_only
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "European ancestry (GWAS consortia)"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: mdd_from_short_sleep_duration_dichotomous
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "genetically predicted SHORT sleep duration (dichotomous trait) -> MDD, IVW"}
+    scale: log_or
+    unit: null
+    value: 0.16467
+    se: 0.03178
+    ci: [0.10256, 0.22714]
+    conversion_formula: "OR 1.179 (1.108-1.255); log(1.179)=0.16467; se=(log(1.255)-log(1.108))/3.92=0.03178"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = genetic liability to SHORT sleep raises MDD risk. This is the ONE MR estimate in my shard that supports a causal duration -> depression arrow, and it is the most directly relevant MR estimate to our subject's exposure."
+    covariates: ["MR assumptions; nine MR methods applied, IVW primary"]
+    followup_years: null
+    cohort_family: "GWAS_consortia_European"
+    quote: "Two-Sample MR, results showed that short sleep duration has a causal effect on the increased risk of MDD (odds ratio, ORivw: 1.179; 95 % CI: 1.108-1.255, P<0.001)."
+  - outcome_domain: psychiatric
+    outcome_construct: mdd_from_insomnia
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "genetically predicted INSOMNIA -> MDD, IVW"}
+    scale: log_or
+    unit: null
+    value: 0.20945
+    se: 0.00807
+    ci: [0.19392, 0.22554]
+    conversion_formula: "OR 1.233 (1.214-1.253); log(1.233)=0.20945; se=(log(1.253)-log(1.214))/3.92=0.00807"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = insomnia liability raises MDD. Larger than the short-duration estimate (log 0.209 vs 0.165) and far more precisely estimated."
+    covariates: ["MR assumptions"]
+    followup_years: null
+    cohort_family: "GWAS_consortia_European"
+    quote: "A significant causal relationship between insomnia and increased risk of MDD was observed (OR: 1.233; 95 % CI: 1.214-1.253, P<0.001)."
+  - outcome_domain: psychiatric
+    outcome_construct: mdd_from_continuous_sleep_duration
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "genetically predicted CONTINUOUS sleep duration -> MDD, IVW; same axis as the dichotomous estimate above"}
+    scale: log_or
+    unit: "per unit of the GWAS sleep-duration scale (unit not specified in abstract)"
+    value: -0.00200
+    se: 0.00077
+    ci: [-0.00401, -0.00100]
+    conversion_formula: "OR 0.998 (0.996-0.999); log(0.998) = -0.00200; se = (log(0.999)-log(0.996))/3.92 = 0.00077"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = more sleep, marginally less MDD. Statistically significant (P<0.001) but the magnitude is essentially nil: OR 0.998. This is a null-in-effect-size dressed as a significant result by very large GWAS n."
+    covariates: ["MR assumptions"]
+    followup_years: null
+    cohort_family: "GWAS_consortia_European"
+    quote: "The results obtained through the IVW method supported a causal relationship between sleep duration and decreased risk of MDD (odds ratio, ORivw: 0.998; 95 % CI: 0.996-0.999, P<0.001)."
+  - outcome_domain: psychiatric
+    outcome_construct: mdd_from_long_sleep_duration_null
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "genetically predicted LONG sleep duration -> MDD, IVW. NULL. Negative-control contrast against zhai2015's observational long-sleep RR of 1.42."}
+    scale: log_or
+    unit: null
+    value: -0.00904
+    se: 0.01772
+    ci: [-0.07904, 0.06017]
+    conversion_formula: "OR 0.991 (0.924-1.062); log(0.991) = -0.00904; se = (log(1.062)-log(0.924))/3.92 = 0.01772"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "Null. Genetically proxied LONG sleep has no effect on MDD, decisively contradicting the observational long-sleep RR of 1.42 in zhai2015. This confirms that the right-hand limb of the observational U-curve is confounding/reverse causation, not biology."
+    covariates: ["MR assumptions"]
+    followup_years: null
+    cohort_family: "GWAS_consortia_European"
+    quote: "However, there were no sufficient evidence supported that long sleep duration has a causal effect on the decreased risk of MDD (odds ratio, ORivw: 0.991; 95 % CI: 0.924-1.062, P = 0.793)."
+rob:
+  tool: MR-STROBE
+  judgement: some_concerns
+  notes: "Applies nine MR methods with IVW primary, which is good practice, and reports the negative controls (snoring OR 1.000; OSA OR 1.021 ns). But three concerns: (1) the abstract is visibly sloppy -- it lists 'short sleep duration, short sleep duration' twice and 'simple mode, simple mode' twice, and it reports IDENTICAL OR and CI (1.021, 0.972-1.072) for two different exposures (obstructive sleep apnoea and morning person), which is either a transcription error or a copy-paste error, and it undermines confidence in the reported figures; (2) no reverse-direction (MDD -> sleep) analysis is reported, so this study cannot speak to reverse causation at all; (3) the internally contradictory duration results (dichotomous short sleep OR 1.179 vs continuous duration OR 0.998) are not reconciled by the authors."
+funding: null
+notes: |
+  WHY THIS RECORD MATTERS DESPITE ITS FLAWS. It is the ONLY MR study I found that gives a
+  clearly positive, quantified causal estimate for the exposure that actually matches our subject:
+  SHORT SLEEP DURATION, not insomnia. OR 1.179 (1.108-1.255). If the downstream model needs a
+  genetically identified causal effect of short sleep on depression, this is the number, and it should
+  be used in preference to any observational figure.
+
+  THE INTERNAL CONTRADICTION IS THE MOST IMPORTANT THING TO UNDERSTAND HERE, AND IT IS NOT A TYPO.
+  Two estimates of the same axis in the same paper:
+    dichotomous "short sleep duration" -> MDD:  OR 1.179 (1.108-1.255), P < 0.001
+    continuous  "sleep duration"       -> MDD:  OR 0.998 (0.996-0.999), P < 0.001
+  The continuous estimate is essentially zero. The dichotomous estimate is a 17.9% risk increase.
+  These cannot both be describing a smooth linear duration effect. There are two readings:
+    (a) THRESHOLD EFFECT (favourable to a causal story): harm is concentrated at the short extreme, so
+        a dichotomous "short sleeper" instrument picks up a real threshold effect that a linear
+        instrument across the whole range dilutes to nothing. If true, this is GOOD news for the
+        validity of applying it to our subject, whose exposure is exactly at the short extreme.
+    (b) INSTRUMENT CONTAMINATION (unfavourable): the "short sleep duration" GWAS phenotype is
+        substantially contaminated by insomnia. In UK Biobank, self-reported habitual short sleep and
+        insomnia symptoms are strongly correlated and share genetic architecture. A "short sleep"
+        instrument may therefore be, in part, an insomnia instrument in disguise -- which would
+        explain why the dichotomous estimate (1.179) sits close to this paper's own insomnia estimate
+        (1.233) while the clean continuous duration measure gives nothing.
+  I cannot adjudicate between (a) and (b) from the abstract, and no multivariable MR conditioning
+  short sleep on insomnia is reported. This is the single biggest unresolved question for our
+  subject's risk estimate, and I name it as such in station_report.md.
+
+  THE LONG-SLEEP NULL IS A CLEAN AND VALUABLE NEGATIVE CONTROL. Observationally, zhai2015 found LONG
+  sleep -> depression RR 1.42 (1.04-1.92), numerically LARGER than its short-sleep RR of 1.31. Here,
+  genetically proxied long sleep gives OR 0.991 (0.924-1.062), a flat null. So the entire right-hand
+  limb of the observational U-curve is non-causal. Since the same confounding and reverse-causation
+  machinery (depression causing altered sleep, illness, unemployment, low SES) operates on both limbs,
+  this is strong evidence that a large fraction of the observational LEFT limb is also non-causal.
+  Quantitatively: the observational short-sleep log-RR is 0.270 (zhai2015); the genetically identified
+  short-sleep log-OR is 0.165 (this record); the ratio 0.165/0.270 = 0.61 implies roughly 39% of the
+  observational adult association is not causal duration effect. Using the more precisely estimated
+  continuous instrument instead, the non-causal share approaches 100%. I report the range rather than
+  a point estimate in psychiatric_summary.md.
+
+  NO REVERSE-DIRECTION ANALYSIS. Unlike sun2022_mr and cai2021_mr, this study is unidirectional, so it
+  contributes nothing to the reverse-causation fraction directly. Use sun2022_mr and cai2021_mr for that.
+
+  ARITHMETIC. short duration:      log(1.179) = +0.16467, se = (log1.255 - log1.108)/3.92 = 0.03178
+              insomnia:            log(1.233) = +0.20945, se = (log1.253 - log1.214)/3.92 = 0.00807
+              continuous duration: log(0.998) = -0.00200, se = (log0.999 - log0.996)/3.92 = 0.00077
+              long duration:       log(0.991) = -0.00904, se = (log1.062 - log0.924)/3.92 = 0.01772
+
+  AUTHOR-NAME CAVEAT. Both PubMed and Crossref index the authors as "Qiu-Qiang Z, Wei-Wei Y, Shan-Shu H,
+  Yi-Ran L", i.e. with the Chinese GIVEN names placed in the surname field by the journal. The true
+  family names are almost certainly Zhang, Yang, He and Li, but since I cannot verify that from either
+  database I have recorded the citation exactly as the databases return it rather than silently
+  reordering the names.
+
+  ACCESS. Abstract only (Elsevier paywall). Sample size is not stated in the abstract, so n: null
+  rather than a guess. Note also this paper's incidental finding that daytime napping raises MDD risk
+  (OR 1.519, 1.376-1.678) -- I have not extracted it as it is off-domain for this shard, but it is
+  another sign that self-reported sleep-behaviour instruments in GWAS carry a lot of
+  health-and-mood-related confounding.
+shard: "s12_psychiatric"

@@ -1,0 +1,128 @@
+study_id: vandyk2017
+citation: "Van Dyk TR, Zhang N, Catlin PA, Cornist K, McAlister S, Whitacre C, Beebe DW. Feasibility and Emotional Impact of Experimentally Extending Sleep in Short-Sleeping Adolescents. Sleep. 2017 Sep 1;40(9):zsx123."
+doi: "10.1093/sleep/zsx123"
+pmid: "28934531"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Feasibility and Emotional Impact of Experimentally Extending Sleep in Short-Sleeping Adolescents."
+access_tier: abstract_only
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 54
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [14, 18]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: achieved_sleep_extension_actigraphy
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 14, contrast_label: "sleep EXTENSION (+1.5 h time in bed) vs prescribed HABITUAL sleep, 2 weeks each, randomized counterbalanced crossover, at home, actigraphy-monitored, DURING THE SCHOOL TERM"}
+    scale: raw_units
+    unit: "minutes of additional actigraphic sleep per night"
+    value: 72.6
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: 'an additional 72.6 minutes/night of sleep (p < .001)'. No SD, SE or CI given in the abstract, so se: null. This is the ACHIEVED dose, i.e. a 1.5 h increase in time in bed yielded ~1.2 h of extra actual sleep (81% conversion efficiency)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more sleep obtained in the extension condition. Establishes that the manipulation worked and quantifies how much real sleep a 1.5 h opportunity increase buys in a habitually short-sleeping adolescent."
+    covariates: []
+    followup_years: null
+    cohort_family: "Cincinnati_sleep_extension"
+    quote: "Compared to HAB, during EXT, participants averaged an additional 72.6 minutes/night of sleep (p < .001) and had reduced symptoms of sleepiness, anger, vigor, fatigue, and confusion (p < .05)."
+  - outcome_domain: psychiatric
+    outcome_construct: anger_irritability
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 14, contrast_label: "sleep extension vs prescribed habitual sleep in habitually short-sleeping adolescents (5-7 h school-night sleepers)"}
+    scale: probability
+    unit: "direction only; magnitude not reported in abstract"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "NOT POOLABLE. The abstract reports only that anger 'reduced' at p < .05 without an effect size, SD or CI, and I could not retrieve the article text (Oxford University Press paywall; no OA copy located). value 1.0 encodes 'significant improvement in the expected direction'; se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = anger IMPROVED when these habitually short-sleeping adolescents were given more sleep. Direction is the causally informative part: extending sleep in the exact population of interest reduces irritability."
+    covariates: []
+    followup_years: null
+    cohort_family: "Cincinnati_sleep_extension"
+    quote: "had reduced symptoms of sleepiness, anger, vigor, fatigue, and confusion (p < .05)"
+  - outcome_domain: psychiatric
+    outcome_construct: depressed_mood_and_anxiety_not_among_improved_outcomes
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 14, contrast_label: "same crossover; DEPRESSION and ANXIETY are absent from the list of outcomes that improved significantly"}
+    scale: probability
+    unit: "outcome not reported as improved (0 = no significant benefit listed)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Inference from ABSENCE in the abstract's list of significant findings, not from a reported null. The improved outcomes listed are sleepiness, anger, vigor, fatigue and confusion -- the five POMS-type constructs that also moved in baum2014 -- while depression and anxiety are not named. I cannot confirm they were measured-and-null versus not-reported, because the article text was not retrievable. Weaker evidence than a stated null; se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no depression or anxiety benefit reported. Consistent with the shard-wide pattern that manipulating sleep moves arousal/irritability/energy constructs but not depressed mood."
+    covariates: []
+    followup_years: null
+    cohort_family: "Cincinnati_sleep_extension"
+    quote: "had reduced symptoms of sleepiness, anger, vigor, fatigue, and confusion (p < .05)"
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Design is excellent for the question: randomized, counterbalanced within-subject crossover, 2 weeks per condition, objective actigraphy, conducted on SCHOOL NIGHTS rather than in summer, and a HAB control condition that prescribes baseline sleep so that both arms are equally 'managed'. Concerns: n=54 retained from 76 enrolled (29% attrition) with no reported attrition analysis; all sleep obtained at home so adherence is imperfect; mood outcomes are self- and parent-report in an unblinded design (participants necessarily know which condition they are in); primary aim was FEASIBILITY, so mood analyses are secondary and the abstract reports no effect sizes at all."
+funding: null
+notes: |
+  THIS IS THE STUDY DESIGN THE ENTIRE LITERATURE IS MISSING, AND IT IS THE CLOSEST EXPERIMENTAL MATCH TO
+  OUR SUBJECT THAT EXISTS.
+
+  Every other intervention record in my shard treats people who CANNOT sleep (freeman2017, gee2019,
+  gebara2018, scott2021, blake2017, blake2016_sense are all insomnia/sleep-problem populations). This
+  study did the opposite and the correct thing: it took adolescents who "habitually slept 5-7 hours on
+  school nights" -- our subject's exact exposure band -- and randomly gave them MORE SLEEP OPPORTUNITY
+  during the school term, then measured mood. That is the counterfactual we actually need: what happens
+  to a behaviourally short-sleeping teenager when the constraint is lifted.
+
+  THE DOSE-CONVERSION NUMBER IS PRACTICALLY IMPORTANT AND I HAVE NOT SEEN IT ELSEWHERE. A prescribed
+  1.5 h increase in time in bed produced 72.6 extra minutes of actigraphic sleep per night, an 81%
+  conversion of opportunity into sleep. So in habitually short-sleeping adolescents, extra time in bed
+  is converted into real sleep efficiently -- they are sleep-deprived, not sleep-unable. Two consequences:
+    (1) It confirms the exposure construct. Our subject's short sleep is an OPPORTUNITY deficit. Given
+        opportunity, such adolescents sleep. This is the empirical basis for saying he does not have
+        insomnia and for discounting the insomnia-derived risk estimates (hertenstein2019 OR 2.83,
+        marino2021 OR 1.50, and the CBT-I trial literature).
+    (2) It sets the realistic dose of any intervention for him: roughly 1.2 h of recovered sleep per
+        1.5 h of reclaimed time. Compare blake2017, where adolescent CBT-based sleep interventions bought
+        only ~29 min/night. Giving a short sleeper time is about 2.5x more effective than teaching a short
+        sleeper sleep skills.
+
+  WHAT IMPROVED, AND WHAT DID NOT -- THE SAME DISSOCIATION YET AGAIN. Improved: sleepiness, ANGER,
+  vigor, fatigue, confusion. Not listed: depression, anxiety. This is the fourth independent design in
+  my shard showing the identical pattern:
+    baum2014 (restriction, adolescents):        tension/anxiety, anger, emotion regulation move;
+                                                POMS Depression/Dejection does NOT
+    motomura2013 (restriction, young men):      STAI anxiety and amygdala reactivity move;
+                                                POMS Depression does NOT (d_z 0.11)
+    blake2016_sense (RCT, active control):      anxiety improves; depression not reported
+    vandyk2017 (EXTENSION, short sleepers):     anger, vigor, fatigue, confusion, sleepiness improve;
+                                                depression and anxiety not reported
+  Manipulating sleep in either direction, in the right population, moves IRRITABILITY, ENERGY and
+  SLEEPINESS. Depressed mood is the construct that consistently fails to move. Note that vandyk2017
+  differs from baum2014 in also failing to show an anxiety effect -- but baum2014's anxiety effect was
+  from RESTRICTION below habitual levels, whereas this study EXTENDED from an already-restricted
+  baseline, and the constructs that respond may not be symmetric across those directions.
+
+  A NECESSARY CAUTION ABOUT READING THE ABSENCE. I inferred the depression/anxiety null from what is NOT
+  in the abstract's list of significant findings. I could not retrieve the article text, so I cannot rule
+  out that these outcomes were measured, non-significant, and simply not itemised, or that they were not
+  measured at all. That is weaker than a reported null and I have coded it as such (se: null,
+  conversion_formula states the inference explicitly). Obtaining the full results table from this paper
+  is one of the highest-value remaining actions for this shard, because it is the single best-matched
+  experiment available.
+
+  ALSO WORTH NOTING FOR FEASIBILITY. 98% of parents and 100% of adolescents would recommend the protocol.
+  Extending a short-sleeping teenager's sleep during term time is acceptable and achievable -- which
+  matters if the downstream use of this analysis includes recommending anything.
+shard: "s12_psychiatric"

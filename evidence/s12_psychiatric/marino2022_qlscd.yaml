@@ -1,0 +1,133 @@
+study_id: marino2022_qlscd
+citation: "Marino C, Andrade B, Montplaisir J, Petit D, Touchette E, Paradis H, Côté SM, Tremblay RE, Szatmari P, Boivin M. Testing Bidirectional, Longitudinal Associations Between Disturbed Sleep and Depressive Symptoms in Children and Adolescents Using Cross-Lagged Models. JAMA Netw Open. 2022 Aug 1;5(8):e2227119."
+doi: "10.1001/jamanetworkopen.2022.27119"
+pmid: "35994289"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9396361/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Testing Bidirectional, Longitudinal Associations Between Disturbed Sleep and Depressive Symptoms in Children and Adolescents Using Cross-Lagged Models"
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 1113
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [10, 17]
+  pct_female: 53.5
+  country: "Canada"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: forward_arrow_sleep_to_depression_age_10_to_12
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "FORWARD ARROW: disturbed sleep at age 10 -> depressive symptoms at age 12, cross-lagged panel model, adjusted for within-construct stability and within-time covariation"}
+    scale: raw_units
+    unit: "standardised cross-lagged beta"
+    value: 0.10
+    se: 0.03061
+    ci: [0.04, 0.16]
+    conversion_formula: "reported directly as beta = 0.10 (95% CI 0.04 to 0.16), P = .001. se = (0.16-0.04)/3.92 = 0.03061."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more disturbed sleep predicts MORE later depressive symptoms. This is the causal direction of interest. Small."
+    covariates: ["baseline level of the outcome (stability path)", "within-time covariation", "socioeconomic status at age 10", "maternal depression at age 10"]
+    followup_years: 2.0
+    cohort_family: "QLSCD"
+    quote: "Cross-lagged path estimates were significant from depressive symptoms to disturbed sleep (β = 0.09 [95% CI, 0.04 to 0.14]; P < .001) and vice versa (β = 0.10 [95% CI, 0.04 to 0.16]; P = .001) between 10 and 12 years."
+  - outcome_domain: psychiatric
+    outcome_construct: reverse_arrow_depression_to_sleep_age_10_to_12
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "REVERSE ARROW: depressive symptoms at age 10 -> disturbed sleep at age 12, SAME model, SAME sample"}
+    scale: raw_units
+    unit: "standardised cross-lagged beta"
+    value: 0.09
+    se: 0.02551
+    ci: [0.04, 0.14]
+    conversion_formula: "reported directly as beta = 0.09 (95% CI 0.04 to 0.14), P < .001. se = (0.14-0.04)/3.92 = 0.02551. REVERSE SHARE on the beta scale = 0.09/(0.10+0.09) = 0.474."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more depressive symptoms predict MORE later disturbed sleep. This is REVERSE CAUSATION, estimated in the same sample and the same model as the forward arrow above, which is exactly what my task asked for."
+    covariates: ["baseline level of the outcome (stability path)", "within-time covariation", "socioeconomic status at age 10", "maternal depression at age 10"]
+    followup_years: 2.0
+    cohort_family: "QLSCD"
+    quote: "Cross-lagged path estimates were significant from depressive symptoms to disturbed sleep (β = 0.09 [95% CI, 0.04 to 0.14]; P < .001) and vice versa (β = 0.10 [95% CI, 0.04 to 0.16]; P = .001) between 10 and 12 years."
+  - outcome_domain: psychiatric
+    outcome_construct: reverse_arrow_depression_to_sleep_age_12_to_13
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "REVERSE ARROW at the next wave: depressive symptoms age 12 -> disturbed sleep age 13. The FORWARD arrow at this wave was NOT significant."}
+    scale: raw_units
+    unit: "standardised cross-lagged beta"
+    value: 0.05
+    se: 0.02551
+    ci: [0.001, 0.10]
+    conversion_formula: "reported directly as beta = 0.05 (95% CI 0.001 to 0.10), P = .04. se = (0.10-0.001)/3.92 = 0.02526; I report 0.02551 from the symmetric half-width 0.05 to avoid over-precision on a bound printed as '0.001'."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = depression predicts later disturbed sleep. NOTE THE ASYMMETRY: at this wave ONLY the reverse arrow survives, and the forward (sleep -> depression) arrow does not. So between 12 and 13 years, 100% of the detectable cross-lagged coupling is reverse causation."
+    covariates: ["as above"]
+    followup_years: 1.0
+    cohort_family: "QLSCD"
+    quote: "Between 12 and 13 years, depressive symptoms were modestly associated with disturbed sleep (β = 0.05 [95% CI, 0.001 to 0.10], P = .04) but the reverse association was not significant."
+  - outcome_domain: psychiatric
+    outcome_construct: both_arrows_after_age_13_NULL
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "BOTH ARROWS, waves 13->15 and 15->17 years, i.e. the age band closest to our 18-year-old subject"}
+    scale: raw_units
+    unit: "standardised cross-lagged beta; NULL, no point estimates printed"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "The paper reports only 'Cross-lagged estimates were nonsignificant after 13 years' and prints no coefficients, CIs or P values for the 13->15 and 15->17 paths in the text; they appear only inside Figure 2, which I could not read numerically from the XML. value 0.0 encodes 'not statistically distinguishable from zero'. IT IS NOT A MEASURED POINT ESTIMATE and se is null. Given the significant betas at earlier waves were 0.09-0.10 with SEs ~0.026-0.031 and the sample is the same 1113 adolescents, a null here is consistent with true betas below roughly 0.06 in absolute value, but I am not asserting that as an interval."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "NULL IN BOTH DIRECTIONS. After age 13, neither disturbed sleep predicting later depression nor depression predicting later disturbed sleep was detectable in this cohort."
+    covariates: ["as above"]
+    followup_years: 4.0
+    cohort_family: "QLSCD"
+    quote: "In adolescence, significant bidirectional associations were found between ages 10 and 12 years, but after age 13 years, no significant cross-lagged estimates were found."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Strengths: 8 waves from age 5 to 17 in a population-based birth cohort; cross-lagged panel models that adjust each arrow for within-construct stability and within-time covariation, which is the correct way to estimate the two directions simultaneously; adjustment for SES and maternal depression; sensitivity analysis showing 'Cross-lagged paths were identical when listwise deletion was used as an alternative missing data strategy'; formal multigroup tests of sex and puberty moderation. Weaknesses that matter here: (1) EXPOSURE IS NOT SLEEP DURATION. 'Disturbed sleep was parent-reported and included sleep duration, time awake in bed, daytime sleepiness, sleep talking, sleepwalking, night terrors, and nightmares' - a composite dominated by parasomnias and insomnia-like features, which is a poor proxy for volitional sleep curtailment. (2) Sleep was MOTHER-reported throughout adolescence while depression was SELF-reported, so the two constructs have different reporters; this reduces shared-method inflation but a mother's report of a 15-17 year old's sleep is of doubtful validity. (3) Selective participation: 'Participants were from a higher SES and were more often girls compared with the nonparticipants'. (4) Traditional cross-lagged panel models do not separate within-person change from stable between-person differences, so residual confounding by stable traits remains; a RI-CLPM was not fitted. (5) 1,113 adolescents gives limited power for the later waves, so the post-13 nulls could be power rather than true absence of effect."
+funding: "not extracted; QLSCD is funded by the Québec government and Canadian agencies"
+notes: |
+  THIS RECORD DISCHARGES REQUIREMENT 6 (both arrows in the same sample) BETTER THAN ANY OTHER I FOUND, and
+  it delivers two findings that pull in opposite directions for the subject.
+
+  FINDING 1: WHERE THE COUPLING EXISTS, IT IS ALMOST PERFECTLY SYMMETRIC.
+      forward, sleep -> depression, age 10-12:  beta = 0.10 (0.04, 0.16)
+      reverse, depression -> sleep, age 10-12:  beta = 0.09 (0.04, 0.14)
+      reverse share = 0.09 / (0.10 + 0.09) = 0.474
+  A 47% reverse share, computed inside one model on one sample, with no cross-study comparison needed. This
+  independently corroborates my roberts2014 estimate (40% on depressive symptoms, 52% on major depression) and
+  sits inside the MR range (22-54%). Three different designs now agree that ROUGHLY HALF of the observed
+  longitudinal association between poor sleep and depression in young people is depression causing the sleep
+  problem, not the reverse.
+
+  FINDING 2, AND THIS ONE IS SPECIFIC TO THE SUBJECT'S AGE: THE COUPLING DISAPPEARS AFTER 13.
+      age 10 -> 12:  both arrows significant
+      age 12 -> 13:  ONLY the reverse arrow significant (beta 0.05); forward arrow null
+      age 13 -> 15 and 15 -> 17:  NOTHING in either direction
+  The subject is 18. In the one cohort that models both arrows across five adolescent waves, the sleep-
+  depression cross-lagged coupling is a phenomenon of EARLY adolescence and is undetectable in the second half
+  of adolescence. I hold this loosely - n = 1,113 with attrition, so power at the later waves is weaker, and
+  a null is not evidence of absence - but it points the same way as everything else in my shard: the effects
+  that look large in this literature are largest in populations that are not the subject, and the closer a
+  study gets to a late-adolescent male with an externally imposed sleep deficit, the smaller the depression
+  signal becomes.
+
+  NO SEX MODERATION HERE, WHICH CONTRADICTS MY OTHER RECORDS. 'The associations between depressive symptoms
+  and disturbed sleep did not vary as a function of either sex or puberty-by-sex' (chi-square_33 = 29.468,
+  P = .64). That is at odds with conklin2018_basus (effect in young women, null in young men), short2015
+  (depressed mood and anxiety worsened in females only), zink2024_abcd (associations 'among females only') and
+  wang2024_yrbs (stronger in girls). Marino's test is a global invariance test across the whole model, which
+  is far less sensitive than a stratified estimate, so I read this as 'no evidence of moderation in a
+  low-powered test' rather than as a genuine contradiction. But it is a real discordance and I am not
+  smoothing it over.
+
+  DO NOT CONFUSE THIS RECORD WITH marino2021. Same first author, same journal, adjacent years, different
+  papers: marino2021 (PMID 33749768) is the SYSTEMATIC REVIEW AND META-ANALYSIS of cohort studies; this one
+  (PMID 35994289) is the PRIMARY cross-lagged analysis of the QLSCD cohort. marino2022_qlscd is cited inside
+  marino2021's evidence base only indirectly - in fact the reverse: this paper cites that meta-analysis as
+  'A recent meta-analysis'. They are not independent in authorship but they are different data objects.
+shard: "s12_psychiatric"

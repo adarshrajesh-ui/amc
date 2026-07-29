@@ -1,0 +1,143 @@
+study_id: gangwisch2010
+citation: "Gangwisch JE, Babiss LA, Malaspina D, Turner JB, Zammit GK, Posner K. Earlier parental set bedtimes as a protective factor against depression and suicidal ideation. Sleep. 2010 Jan;33(1):97-106."
+doi: "10.1093/sleep/33.1.97"
+pmid: "20120626"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2802254/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Earlier parental set bedtimes as a protective factor against depression and suicidal ideation."
+access_tier: abstract_only
+secondhand_via: null
+design: quasi_experiment
+tier: T2
+n: 15659
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [12, 18]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: depression
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "PARENTAL SET BEDTIME of midnight or later vs 10:00 PM or earlier (quasi-experimental instrument for sleep opportunity); covariate-adjusted, sleep-duration mediators NOT yet included"}
+    scale: log_or
+    unit: null
+    value: 0.21511
+    se: 0.09172
+    ci: [0.03922, 0.39878]
+    conversion_formula: "OR 1.24 (1.04-1.49); log(1.24)=0.21511; se=(log(1.49)-log(1.04))/3.92=0.09172"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher odds of depression when the PARENT permits a late bedtime. The exposure is the parent's rule, not the adolescent's mood-driven choice, which is what makes this design informative about direction."
+    covariates: ["unspecified set of covariates ('after controlling for covariates'); full list not in abstract"]
+    followup_years: null
+    cohort_family: "Add_Health"
+    quote: "Adolescents with parental set bedtimes of midnight or later were 24% more likely to suffer from depression (OR = 1.24, 95% CI 1.04-1.49) and 20% more likely to have suicidal ideation (1.20, 1.01-1.41) than adolescents with parental set bedtimes of 10:00 PM or earlier, after controlling for covariates."
+  - outcome_domain: psychiatric
+    outcome_construct: suicidal_ideation
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "parental set bedtime midnight or later vs 10:00 PM or earlier; covariate-adjusted, mediators not included"}
+    scale: log_or
+    unit: null
+    value: 0.18232
+    se: 0.08511
+    ci: [0.00995, 0.34359]
+    conversion_formula: "OR 1.20 (1.01-1.41); log(1.20)=0.18232; se=(log(1.41)-log(1.01))/3.92=0.08511"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher odds of suicidal ideation with a late parental bedtime. Barely excludes 1.0 (lower bound 1.01)."
+    covariates: ["unspecified set of covariates"]
+    followup_years: null
+    cohort_family: "Add_Health"
+    quote: "and 20% more likely to have suicidal ideation (1.20, 1.01-1.41) than adolescents with parental set bedtimes of 10:00 PM or earlier, after controlling for covariates."
+  - outcome_domain: psychiatric
+    outcome_construct: depression_residual_after_sleep_mediators
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "SAME contrast, but now ADDING sleep duration and perception of getting enough sleep as mediators to the model"}
+    scale: log_or
+    unit: null
+    value: 0.06766
+    se: 0.09954
+    ci: [-0.12783, 0.26236]
+    conversion_formula: "OR 1.07 (0.88-1.30); log(1.07)=0.06766; se=(log(1.30)-log(0.88))/3.92=0.09954"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "The association COLLAPSES to null once sleep duration is included. Mediated fraction on the log-OR scale = (0.21511 - 0.06766)/0.21511 = 0.685, i.e. ~69% of the late-bedtime effect on depression runs THROUGH sleep duration."
+    covariates: ["covariates as above", "PLUS sleep duration", "PLUS perception of getting enough sleep"]
+    followup_years: null
+    cohort_family: "Add_Health"
+    quote: "Consistent with sleep duration and perception of getting enough sleep acting as mediators, the inclusion of these variables in the multivariate models appreciably attenuated the associations for depression (1.07, 0.88-1.30) and suicidal ideation (1.09, 0.92-1.29)."
+  - outcome_domain: psychiatric
+    outcome_construct: suicidal_ideation_residual_after_sleep_mediators
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "same contrast, with sleep duration and perceived sufficiency added as mediators"}
+    scale: log_or
+    unit: null
+    value: 0.08618
+    se: 0.08623
+    ci: [-0.08338, 0.25464]
+    conversion_formula: "OR 1.09 (0.92-1.29); log(1.09)=0.08618; se=(log(1.29)-log(0.92))/3.92=0.08623"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "Also collapses to null. Mediated fraction = (0.18232 - 0.08618)/0.18232 = 0.527, i.e. ~53% of the late-bedtime effect on suicidal ideation runs through sleep duration."
+    covariates: ["covariates as above", "PLUS sleep duration", "PLUS perception of getting enough sleep"]
+    followup_years: null
+    cohort_family: "Add_Health"
+    quote: "appreciably attenuated the associations for depression (1.07, 0.88-1.30) and suicidal ideation (1.09, 0.92-1.29)"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "The design idea is genuinely clever and the sample is excellent (Add Health, n=15,659, nationally representative, school-based probability sample). But three real problems. (1) The analysis is CROSS-SECTIONAL, stated as such: 'Multivariate cross-sectional analyses of the ADD Health using logistic regression.' Temporality is not established; I assigned T2 for the quasi-experimental exposure logic, not for a longitudinal design, and a strict reading would put this at TX. (2) The exogeneity assumption is only partly credible. Parents who set midnight bedtimes differ systematically from parents who set 10 PM bedtimes in parenting style, monitoring, household chaos, SES, and their own psychopathology -- all of which independently predict adolescent depression. (3) Reverse causation is attenuated but NOT eliminated: parents of a depressed, withdrawn, or oppositional adolescent may stop enforcing bedtimes, so the child's condition can still shape the parental rule. (4) Data are from 1994-96, predating smartphones, which are now a dominant driver of adolescent bedtime delay -- so the modern analogue of this exposure is confounded differently."
+funding: null
+notes: |
+  WHY THIS RECORD PUNCHES ABOVE ITS WEIGHT. It is the only quasi-experimental design in my shard, and
+  it was built specifically to attack this shard's central question. The authors' own framing, verbatim:
+  "To examine the relationships between parental set bedtimes, sleep duration, and depression as a
+  quasi-experiment to explore the potentially bidirectional relationship between short sleep duration
+  and depression. Short sleep duration has been shown to precede depression, but this could be
+  explained as a prodromal symptom of depression. Depression in an adolescent can affect his/her chosen
+  bedtime, but it is less likely to affect a parent's chosen set bedtime which can establish a
+  relatively stable upper limit that can directly affect sleep duration."
+
+  That is precisely the reverse-causation problem, and the instrument is precisely the right kind:
+  an EXTERNALLY IMPOSED CONSTRAINT ON SLEEP OPPORTUNITY. Which is what our subject has. His constraint
+  is workload rather than a parental rule, but structurally it is the same object: something outside his
+  mood that caps his time in bed. Of everything in my shard, this exposure is the closest conceptual
+  match to his situation, and that is why I weight it heavily despite its cross-sectional analysis.
+
+  THE MEDIATION ARITHMETIC IS THE PAYLOAD. Computed on the log-OR scale:
+    DEPRESSION:        total log-OR 0.21511 -> residual 0.06766 after adding sleep-duration mediators
+                       mediated fraction = (0.21511 - 0.06766)/0.21511 = 0.685  (~69%)
+    SUICIDAL IDEATION: total log-OR 0.18232 -> residual 0.08618
+                       mediated fraction = (0.18232 - 0.08618)/0.18232 = 0.527  (~53%)
+  So roughly two-thirds of the effect of a late imposed bedtime on depression, and half of its effect on
+  suicidal ideation, operates through actually obtaining less sleep. This is direct evidence that
+  restricted sleep OPPORTUNITY -- not insomnia, not depressive prodrome -- can move depression and
+  suicidality in adolescents.
+
+  MAGNITUDE IS THE OTHER HALF OF THE STORY, AND IT IS MODEST. The total effect of pushing bedtime from
+  10 PM to midnight or later, a 2+ hour shift in permitted sleep opportunity, is OR 1.24 for depression
+  and OR 1.20 for suicidal ideation. Both barely exclude 1.0 (lower bounds 1.04 and 1.01). For a
+  contrast of similar size to our subject's own deficit, this is a much smaller effect than the
+  cross-sectional literature implies (compare wang2024_yrbs crude RR ~2.0 for suicidality, or
+  winsler2015's per-hour ORs which imply enormous effects across a 2-hour contrast). A quasi-experiment
+  on externally imposed sleep opportunity yields roughly a 20-24% relative increase, not a doubling.
+  I regard OR 1.2-1.25 as the best available quasi-experimental anchor for the magnitude of the
+  behaviourally-imposed-short-sleep -> depression/suicidality effect in adolescents.
+
+  A CAUTION ON INTERPRETING THE MEDIATION IN THE AUTHORS' PREFERRED DIRECTION. The mediators added were
+  sleep duration AND "perception of getting enough sleep." The second is not a clean mediator: perceived
+  sleep insufficiency is itself mood-coloured, and a depressed adolescent reports feeling
+  under-slept regardless of hours. Including it inflates the apparent mediated fraction and imports some
+  reverse causation into the mediator. The 69% figure should therefore be read as an upper bound on the
+  duration-mediated share; the true duration-only share is lower and I cannot recover it from the
+  abstract.
+
+  ACCESS. What I retrieved from Europe PMC/PMC is the structured abstract plus front matter only
+  (PMC2802254 is marked pmc-prop-open-access: no), so I have coded access_tier: abstract_only. Every
+  number above is verbatim from that abstract. The full covariate list, the sex-stratified results, and
+  the sleep-duration distribution by bedtime category are all in the article body and I could not get
+  them; the sex-stratified result is the one I most want, given that both wang2024_yrbs and conklin2018_basus
+  find the sleep-suicidality/depression link concentrated in girls.
+shard: "s12_psychiatric"

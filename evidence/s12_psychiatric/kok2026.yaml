@@ -1,0 +1,145 @@
+study_id: kok2026
+citation: "Kok VJT, Chua S, Yabuki H, Rukmini AV, Sreenivasulu B, Gooley JJ. Going to bed later than intended is associated with shorter sleep and poorer next-day mood and sleepiness in residential college students. Sleep. 2026 May 12;49:zsaf414."
+doi: "10.1093/sleep/zsaf414"
+pmid: "41499144"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Going to bed later than intended is associated with shorter sleep and poorer next-day mood and sleepiness in residential college students."
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 104
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [18, 25]
+  pct_female: null
+  country: "Singapore"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: sleep_lost_per_night_of_delayed_bedtime_school_nights
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 14, contrast_label: "nights when the student went to bed LATER THAN INTENDED vs nights with no bedtime delay; within-person, actigraphy, SCHOOL nights"}
+    scale: hours
+    unit: "hours of sleep lost on that night"
+    value: -0.91
+    se: null
+    ci: null
+    conversion_formula: "Reported directly as 'shorter sleep by 0.91 h on school nights'. No SE or CI given in the abstract, so se: null. Article text not retrieved (OUP paywall)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = LESS sleep on nights when bedtime was delayed. Nearly a full hour lost per delayed night, and critically it is NOT recovered by sleeping in: 'because there was no compensatory delay in wake-up time'."
+    covariates: ["demographics", "chronotype", "school start time", "mixed-effects within-person model"]
+    followup_years: 0.04
+    cohort_family: "DukeNUS_residential_college"
+    quote: "Going to bed later than intended was associated with shorter sleep by 0.91 h on school nights and 0.86 h on nonschool nights because there was no compensatory delay in wake-up time."
+  - outcome_domain: sleep_need
+    outcome_construct: sleep_lost_per_night_of_delayed_bedtime_nonschool_nights
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 14, contrast_label: "same contrast on NONSCHOOL nights, when the student was free to wake later"}
+    scale: hours
+    unit: "hours of sleep lost on that night"
+    value: -0.86
+    se: null
+    ci: null
+    conversion_formula: "Reported as 'shorter sleep by ... 0.86 h on nonschool nights'. No SE/CI in abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = less sleep. Almost identical to school nights (0.86 vs 0.91 h), which was contrary to the authors' own hypothesis and is the study's most interesting finding -- see notes."
+    covariates: ["demographics", "chronotype", "school start time"]
+    followup_years: 0.04
+    cohort_family: "DukeNUS_residential_college"
+    quote: "shorter sleep by 0.91 h on school nights and 0.86 h on nonschool nights because there was no compensatory delay in wake-up time"
+  - outcome_domain: psychiatric
+    outcome_construct: next_morning_mood_after_delayed_bedtime
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 14, contrast_label: "next-morning mood and daytime sleepiness after a night of delayed bedtime vs a night without delay; within-person daily-diary contrast"}
+    scale: probability
+    unit: "direction only; magnitude not reported in abstract"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "NOT POOLABLE. The abstract states next-morning mood and sleepiness 'were worse compared with nights with no bedtime delay' without giving a coefficient, SE, CI or p. value 1.0 encodes 'significantly worse in the expected direction'; se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = worse next-morning mood and greater daytime sleepiness following a night of behaviourally delayed bedtime. Within-person, so each student serves as his own control."
+    covariates: ["demographics", "chronotype", "school start time"]
+    followup_years: 0.04
+    cohort_family: "DukeNUS_residential_college"
+    quote: "Next-morning mood and daytime sleepiness were worse compared with nights with no bedtime delay."
+  - outcome_domain: psychiatric
+    outcome_construct: between_person_depression_scores_by_delay_frequency
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 14, contrast_label: "BETWEEN-person: students who delayed bedtime more frequently vs less frequently, cross-sectional on depression score"}
+    scale: probability
+    unit: "direction only; magnitude not reported in abstract"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "NOT POOLABLE. Reported as a significant between-person association without a coefficient. value 1.0 encodes direction. NOTE this contrast is CROSS-SECTIONAL and therefore fully open to reverse causation, unlike the within-person night-level contrasts above."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = frequent bedtime-delayers had higher depression scores, poorer self-rated sleep, and higher presleep arousal. Direction only, and causally uninformative -- depressed students plausibly procrastinate bedtime more."
+    covariates: []
+    followup_years: null
+    cohort_family: "DukeNUS_residential_college"
+    quote: "Individuals who delayed their bedtime more frequently had poorer self-rated sleep, higher presleep arousal, and higher depression scores."
+  - outcome_domain: exposure_measurement
+    outcome_construct: frequency_of_going_to_bed_later_than_intended
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 14, contrast_label: "proportion of all monitored nights on which residential college students went to bed later than they intended"}
+    scale: probability
+    unit: "proportion of nights"
+    value: 0.54
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: 'Students went to bed later than intended on 54% of all nights.' No SE given."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Descriptive. Behaviourally delayed bedtime is the MAJORITY condition in residential college students, not a deviant minority behaviour."
+    covariates: []
+    followup_years: 0.04
+    cohort_family: "DukeNUS_residential_college"
+    quote: "Students went to bed later than intended on 54% of all nights."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Strong measurement design for the day-level question: 2 weeks of actigraphy in 104 students, daily diaries, mixed-effects models adjusting for demographics, chronotype and school start time, and -- most importantly -- WITHIN-PERSON night-level contrasts, so stable confounders (personality, baseline depression, SES, chronotype) are differenced out. Limitations: mood and bedtime intention are both self-reported in the same daily diary, so same-day shared-method variance persists; no effect sizes are reported in the abstract and I could not retrieve the text; the between-person depression association is cross-sectional and non-causal; single institution in Singapore; 2-week window says nothing about cumulative effects over years."
+funding: null
+notes: |
+  WHY I SOUGHT THIS RECORD OUT. My task's central instruction is that our subject's sleep restriction was
+  "behaviourally imposed by workload, not by insomnia," and that most of the epidemiological association
+  runs through insomnia or reverse causation. That means I needed evidence on the specific exposure of
+  VOLUNTARY OR CIRCUMSTANTIAL BEDTIME DELAY in exactly his population: residential college students. This
+  is the most recent and most directly on-point study I found, and it is a 2026 publication.
+
+  WHAT IT ESTABLISHES THAT MATTERS FOR HIM.
+    (1) THE BEHAVIOUR IS THE NORM. 54% of all nights. Our subject is not an outlier among college students.
+    (2) THE DOSE PER DELAYED NIGHT IS ABOUT AN HOUR. 0.91 h lost on school nights.
+    (3) THE LOSS IS NOT RECOVERED. The mechanism is explicit and important: "because there was no
+        compensatory delay in wake-up time." Wake time is anchored by obligations; bedtime is the only
+        flexible boundary, so every hour of delay is an hour of sleep permanently forgone that night.
+    (4) THERE IS A NEXT-DAY MOOD COST, MEASURED WITHIN-PERSON. This is the causally cleanest part of the
+        study. Comparing a student to himself on delayed versus non-delayed nights removes all stable
+        confounding, so the worse next-morning mood cannot be attributed to depressed students being
+        different people from non-depressed students. It is the closest thing to a natural experiment on
+        our subject's exact behaviour.
+
+  THE FINDING THAT CONTRADICTED THE AUTHORS' HYPOTHESIS IS THE MOST USEFUL ONE. They predicted the harm
+  would appear on school nights but not on nonschool nights, when students can sleep in. It appeared on
+  both, almost equally (0.91 h vs 0.86 h), because students did not actually compensate by waking later
+  even when free to. Applied to our subject: his weekend/holiday sleep of 7-8 h with occasional 10-11 h
+  nights may be doing less restorative work than the raw hours suggest, if his weekend pattern is itself
+  delayed rather than genuinely extended. It also means the "weekend catch-up" assumption embedded in his
+  exposure description deserves scrutiny -- see lu2026_sjl for the social-jetlag consequences of exactly
+  that weekday/weekend discrepancy.
+
+  THE LIMITS, STATED PLAINLY. This study measures NEXT-MORNING mood after ONE delayed night, over a
+  two-week window. Our subject has three years of accumulated restriction. There is no evidence here about
+  cumulative or clinical outcomes, and the between-person depression association (frequent delayers have
+  higher depression scores) is cross-sectional and fully reversible in direction. No effect size is
+  quotable for any mood outcome, so every psychiatric effect in this record has se: null and must not be
+  pooled numerically. Its contribution is qualitative but on-target: behaviourally imposed bedtime delay
+  in college students does causally degrade next-day mood, within person, at a dose of roughly one hour
+  per night.
+shard: "s12_psychiatric"

@@ -1,0 +1,59 @@
+study_id: pilcher1996
+citation: "Pilcher JJ, Huffcutt AI. Effects of sleep deprivation on performance: a meta-analysis. Sleep. 1996 May;19(4):318-326."
+doi: "10.1093/sleep/19.4.318"
+pmid: "8776790"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Effects of Sleep Deprivation on Performance: A Meta-Analysis"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: 1932
+n_studies_pooled: 19
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: comparator
+    outcome_construct: mood_vs_cognitive_vs_motor_ordering
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "sleep deprivation vs control; ORDINAL comparison of mood against cognitive and motor performance, and of partial vs total deprivation"}
+    scale: raw_units
+    unit: "ordinal rank indicator: 1 = mood effect exceeds both cognitive and motor performance effects"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "NO NUMERIC EFFECT SIZE IS EXTRACTABLE. The abstract states the ordering qualitatively; the article is closed access (publisher bronze-OA PDF returns HTTP 403 to automated retrieval and no repository copy exists). value = 1.0 is an ORDINAL PRESENCE INDICATOR encoding 'mood > cognitive and mood > motor', not a magnitude. Do not pool numerically."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Encodes two directional claims: (a) mood is degraded MORE than cognitive or motor performance by sleep loss; (b) PARTIAL sleep deprivation has a larger effect than either long-term or short-term total deprivation - which is the exposure type the subject actually has"
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_19_experimental_studies"
+    quote: "Results of our analysis of 143 study coefficients and a total sample size of 1.932 suggest that overall sleep deprivation strongly impairs human functioning. Moreover, we found that mood is more affected by sleep deprivation than either cognitive or motor performance and that partial sleep deprivation has a more profound effect on functioning than either long-term or short-term sleep deprivation."
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: "1996 meta-analysis, only 19 studies, pre-PRISMA methods, no risk-of-bias assessment, and I could retrieve the abstract only. Its value is as independent qualitative corroboration of the mood>cognition ordering that palmer2024 and lowe2017 support quantitatively; it should carry no weight of its own in the pooled model."
+funding: null
+notes: |
+  Retained deliberately as the ORIGINAL source of the mood>cognition claim in requirement 3, but with
+  no numeric payload. I attempted the publisher's bronze-OA PDF
+  (academic.oup.com/sleep/article-pdf/19/4/318/13660411/sleep-19-4-318.pdf) with both plain and
+  browser user-agents; both returned HTTP 403. Unpaywall lists the publisher link as the only OA
+  location, Semantic Scholar reports the same single BRONZE location, and no green-OA copy exists.
+  So the per-domain effect sizes (which I know exist in the paper's tables) are not recoverable to me,
+  and I have not guessed them.
+  The two claims I can quote verbatim are both directly load-bearing for this shard:
+   1. mood > cognitive and motor performance under sleep loss - corroborated quantitatively by
+      palmer2024 (mood SMD ~0.6) vs lowe2017 (cognition g ~0.38);
+   2. PARTIAL sleep deprivation hits functioning harder than total deprivation - which matters because
+      the subject's exposure is chronic partial restriction, and much of the classic literature that
+      gets cited at him is acute total deprivation.
+shard: "s12_psychiatric"

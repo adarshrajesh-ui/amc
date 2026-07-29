@@ -1,0 +1,94 @@
+study_id: gebara2018
+citation: "Gebara MA, Siripong N, DiNapoli EA, Maree RD, Germain A, Reynolds CF, Kasckow JW, Weiss PM, Karp JF. Effect of insomnia treatments on depression: A systematic review and meta-analysis. Depress Anxiety. 2018 Aug;35(8):717-731."
+doi: "10.1002/da.22776"
+pmid: "29782076"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Effect of insomnia treatments on depression: A systematic review and meta-analysis."
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: null
+n_studies_pooled: 23
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: depression_hamd
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "insomnia-specific treatment vs control in patients with BOTH insomnia and depression; clinician-rated HAM-D"}
+    scale: smd
+    unit: null
+    value: -1.29
+    se: 0.41837
+    ci: [-2.11, -0.47]
+    conversion_formula: "ES -1.29 (-2.11 to -0.47); se = (2.11-0.47)/3.92 = 1.64/3.92 = 0.41837"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = less depression after treating insomnia. Clinician-rated (HAM-D), so less vulnerable to self-report expectancy than the BDI estimate."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple_trials"
+    quote: "the meta-analysis indicates moderate to large effect size (ES) improvement in depression as measured with the Hamilton Depression Rating Scale (ES = -1.29, 95%CI [-2.11, -0.47]) and Beck Depression Inventory (ES = -0.68, 95%CI [-1.29, -0.06])."
+  - outcome_domain: psychiatric
+    outcome_construct: depression_bdi
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "insomnia-specific treatment vs control in comorbid insomnia+depression; self-rated BDI"}
+    scale: smd
+    unit: null
+    value: -0.68
+    se: 0.31378
+    ci: [-1.29, -0.06]
+    conversion_formula: "ES -0.68 (-1.29 to -0.06); se = (1.29-0.06)/3.92 = 1.23/3.92 = 0.31378"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = less depression. Barely excludes zero at the upper bound (-0.06)."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple_trials"
+    quote: "Beck Depression Inventory (ES = -0.68, 95%CI [-1.29, -0.06])"
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: "The authors' own key caveat is damning and must be carried forward: 'Although all of the studies suggested a positive clinical effect of insomnia treatment on depression outcomes, most of the results were not statistically significant.' A pooled ES of -1.29 arising from a set of individually non-significant trials, with a CI spanning -2.11 to -0.47, is a strong signature of small-study effects / publication bias. Authors also state 'the interventions and populations were highly variable.' Only 23 studies from 3815 screened. No bias-corrected estimate reported."
+funding: null
+notes: |
+  I INCLUDE THIS RECORD BUT RECOMMEND THE MODELLER DOWNWEIGHT IT HEAVILY. It is the weakest of the
+  three intervention meta-analyses and its point estimates are the largest, which is the classic
+  inverse relationship between methodological quality and effect size.
+
+  THE INTERNAL INCONSISTENCY IS THE MOST INFORMATIVE THING IN IT. HAM-D gives ES = -1.29 while BDI
+  gives ES = -0.68 in substantially overlapping trials. These instruments measure the same construct.
+  A 2-fold discrepancy on the standardized scale means at least one of the two is being driven by
+  something other than depression severity -- most likely the HAM-D's heavy loading on somatic and
+  SLEEP items. The HAM-D contains three insomnia items (initial, middle, late) out of 17. Treating
+  insomnia mechanically reduces the HAM-D score without necessarily changing mood. This is criterion
+  contamination, and it inflates every "treating insomnia improves depression" estimate measured with
+  the HAM-D. The BDI value (-0.68), and better still gee2019's -0.45 and scott2021's outlier-removed
+  -0.47, are the defensible figures.
+
+  POPULATION IS THE MOST RESTRICTIVE OF ANY RECORD IN MY SHARD. Inclusion required patients with BOTH
+  insomnia disorder AND depression. Our subject has neither. This record therefore describes the
+  therapeutic ceiling in a doubly affected clinical population and says essentially nothing about the
+  counterfactual risk faced by a healthy 18-year-old who is short of sleep opportunity. Population is
+  adult (Pittsburgh geriatric-psychiatry and VA-heavy author group; Reynolds and Karp work primarily
+  in late-life depression), so I have set adolescent_match: fair_adult; the abstract gives no age
+  distribution so age fields are null rather than guessed.
+
+  WHERE IT DOES CONTRIBUTE. It is a third independent replication of the SIGN and rough magnitude of
+  the randomized sleep -> depression arrow, in the most severely affected population. Taken with
+  gee2019 and scott2021 it establishes that the arrow exists across the full severity range. That is
+  all I would use it for.
+
+  ARITHMETIC. HAM-D: se = (2.11-0.47)/3.92 = 0.41837. BDI: se = (1.29-0.06)/3.92 = 0.31378.
+
+  ACCESS. Abstract only (Wiley paywall). n total is not stated in the abstract (only "23 studies met
+  inclusion criteria" out of "Three thousand eight hundred and fifteen studies were reviewed"), so I
+  set n: null rather than invent a participant count.
+shard: "s12_psychiatric"

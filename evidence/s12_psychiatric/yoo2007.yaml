@@ -1,0 +1,86 @@
+study_id: yoo2007
+citation: "Yoo SS, Gujar N, Hu P, Jolesz FA, Walker MP. The human emotional brain without sleep--a prefrontal amygdala disconnect. Curr Biol. 2007 Oct 23;17(20):R877-R878."
+doi: "10.1016/j.cub.2007.08.007"
+pmid: "17956744"
+url: "http://www.cell.com/article/S0960982207017836/pdf"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "The human emotional brain without sleep--a prefrontal amygdala disconnect."
+access_tier: secondhand
+secondhand_via: "Citation and title verified against Crossref and PubMed. NO numeric result could be retrieved: PubMed carries no abstract for this item (it is a Current Biology Magazine 'Correspondence'-format piece, pages R877-R878), there is no PMC or Europe PMC copy (pmcid=None, isOpenAccess=N, inEPMC=N), and although Unpaywall lists a bronze-OA publisher PDF, Cell Press returned HTTP 403 Forbidden to three separate download attempts. I did not find a secondary source quoting its effect sizes numerically."
+design: lab_restriction_within_subject
+tier: T1
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: amygdala_reactivity_and_prefrontal_connectivity_direction_only
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1, contrast_label: "one night of TOTAL sleep deprivation vs rested control; fMRI response to aversive picture stimuli"}
+    scale: probability
+    unit: "direction only; NO magnitude retrieved"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "NOT POOLABLE AND NOT A MEASURED QUANTITY. value 1.0 encodes only 'the reported direction is amplified amygdala reactivity with reduced medial-prefrontal coupling', which is established by the paper's TITLE ('a prefrontal amygdala disconnect') and by its description in motomura2013's introduction. No effect size, n, t-statistic, percentage change or CI was retrievable, so se: null. Any number attached to this study downstream would be fabricated."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Direction: sleep loss INCREASES amygdala reactivity to aversive stimuli and DECREASES its functional coupling with medial prefrontal cortex, i.e. loss of top-down regulatory control. Magnitude unknown to me."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "amygdala after overnight total sleep deprivation, suggesting a decline in functional connectivity between the amygdala and the medial prefrontal cortex (mPFC) which may reflect decreased inhibition by the frontal lobe [12] , [14] ."
+rob:
+  tool: none
+  judgement: na
+  notes: "Cannot assess risk of bias without the article. Known general limitations of this literature: very small fMRI samples (typically n = 12-30), one night of total deprivation rather than chronic restriction, and no correction for the multiple-comparison problems characteristic of 2007-era neuroimaging."
+funding: null
+notes: |
+  I AM RECORDING THIS STUDY WITHOUT NUMBERS, DELIBERATELY, AND THE ABSENCE IS THE POINT.
+
+  yoo2007 is the canonical citation for the amygdala/prefrontal mechanism and it was named in my task.
+  Its identifiers verify cleanly against both Crossref and PubMed. But I could not obtain a single
+  quantitative result from it, and under this factory's hard rule -- "If you cannot quote it, you may not
+  extract it" -- that means no effect size, no n, no t-statistic. The quote field above is not from
+  yoo2007 itself; it is motomura2013's characterisation of the finding, which is why access_tier is
+  secondhand. The record exists so the orchestrator can see that the requirement was pursued and why it
+  came back empty, rather than seeing a silent gap or, worse, a plausible-looking invented number.
+
+  RETRIEVAL ATTEMPTS MADE (all failed):
+    - PubMed efetch: returns citation only, no abstract (Current Biology Magazine format, pp. R877-R878)
+    - Europe PMC: pmcid=None, isOpenAccess=N, inEPMC=N
+    - Unpaywall: reports is_oa true with one bronze publisher location at cell.com
+    - cell.com PDF via pypdf and via curl with a browser user-agent: HTTP 403 Forbidden
+    - www.cell.com/current-biology/pdf/S0960-9822(07)01783-6.pdf: HTTP 403
+    - Walker lab reprint server: HTTP 404
+    - Semantic Scholar: abstract explicitly elided by publisher ("Notice: The following paper fields have
+      been elided by the publisher: {'abstract'}")
+    - PubMed searches for a neuroimaging meta-analysis of sleep loss and amygdala reactivity that might
+      quote it: no suitable pooled source found
+
+  THE MECHANISM REQUIREMENT IS NEVERTHELESS SATISFIED, BY A BETTER-MATCHED STUDY. See motomura2013,
+  where I extracted the amygdala effect quantitatively from the reported t-statistics:
+    left amygdala reactivity to fearful faces, 5 nights of 4 h TIB vs 8 h TIB in young men:
+      t(13) = 5.60 -> d_z = 1.50 (95% CI 0.73 to 2.26), FWE-corrected
+    right amygdala, same contrast: t(13) = 3.41 -> d_z = 0.91
+    plus a significant reduction in amygdala-ventral-anterior-cingulate functional connectivity
+  That study is superior to yoo2007 for our purposes on three counts: it used CHRONIC PARTIAL
+  RESTRICTION rather than one night of total deprivation, its sample was all young MALES, and it
+  verified the achieved sleep dose by actigraphy (4.60 h vs 8.09 h). Our subject's exposure is chronic
+  partial restriction, he is male, and total sleep deprivation is not what he has been doing. So for the
+  downstream model, motomura2013 should carry the mechanism weight and yoo2007 should carry none.
+
+  WHAT THE MECHANISM EVIDENCE ACTUALLY BUYS US, STATED CAUTIOUSLY. It establishes a plausible biological
+  route from sleep loss to emotional dysregulation: reduced prefrontal inhibition of a hyper-reactive
+  amygdala. That is genuinely useful for believing the ANXIETY/IRRITABILITY/EMOTION-REGULATION effects
+  that the experimental literature reliably shows (baum2014, motomura2013, blake2016_sense, palmer2024).
+  It does NOT establish a route to major depression, and it should not be used to argue for one; the same
+  experiments that show the neural effect show no depressed-mood effect within days.
+shard: "s12_psychiatric"

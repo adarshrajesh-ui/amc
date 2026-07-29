@@ -1,0 +1,117 @@
+study_id: gee2019
+citation: "Gee B, Orchard F, Clarke E, Joy A, Clarke T, Reynolds S. The effect of non-pharmacological sleep interventions on depression symptoms: A meta-analysis of randomised controlled trials. Sleep Med Rev. 2019 Feb;43:118-128."
+doi: "10.1016/j.smrv.2018.09.004"
+pmid: "30579141"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "The effect of non-pharmacological sleep interventions on depression symptoms: A meta-analysis of randomised controlled trials."
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: 5908
+n_studies_pooled: 49
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: depression_symptoms
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "non-pharmacological sleep intervention vs control, RCTs, post-treatment depression symptoms; k=49"}
+    scale: smd
+    unit: null
+    value: -0.45
+    se: 0.04847
+    ci: [-0.55, -0.36]
+    conversion_formula: "SMD -0.45 (-0.55 to -0.36); se = (-0.36 - (-0.55))/3.92 = 0.19/3.92 = 0.04847"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = FEWER depressive symptoms after a sleep intervention, i.e. treating sleep reduces depression. Randomized, so reverse causation cannot produce this."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple_trials"
+    quote: "Forty-nine trials (n = 5908) were included in a random effects meta-analysis. The pooled standardised mean difference for depression symptoms after treatment for sleep problems was -0.45 (95% CI: -0.55,-0.36)."
+  - outcome_domain: psychiatric
+    outcome_construct: depression_symptoms_in_mental_health_populations
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep intervention vs control, restricted to participants WITH mental health problems"}
+    scale: cohens_d
+    unit: null
+    value: -0.81
+    se: 0.16327
+    ci: [-1.13, -0.49]
+    conversion_formula: "d -0.81 (-1.13 to -0.49); se = (-0.49 - (-1.13))/3.92 = 0.64/3.92 = 0.16327"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = fewer depressive symptoms. Effect is ~1.8x larger in already-symptomatic populations than overall -- a severity gradient that argues AGAINST transporting this to a non-depressed subject."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple_trials"
+    quote: "In studies of participants with mental health problems, sleep interventions had a large effect on depression symptoms (d = -0.81, 95% CI: -1.13,-0.49)."
+  - outcome_domain: psychiatric
+    outcome_construct: dose_response_sleep_quality_improvement_moderates_mood_gain
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "meta-regression: effect on subjective sleep quality as moderator of effect on depression"}
+    scale: probability
+    unit: "moderation detected (1 = yes); no coefficient reported in abstract"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Qualitative encoding of a reported-but-unquantified moderation. NOT poolable as an effect size. The abstract states moderation exists but gives no beta or CI, and I could not retrieve the article text."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = the bigger the sleep improvement, the bigger the mood improvement. This is the dose-response consistency criterion for causality, satisfied here."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple_trials"
+    quote: "The size of the effect on depression symptoms was moderated by the size of the effect on subjective sleep quality."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "49 RCTs is a solid evidence base and randomization makes the direction unambiguous, but: no publication-bias-corrected estimate is reported in the abstract (contrast scott2021, whose trim-and-fill took g from -0.53 to -0.35, implying this figure is probably also inflated); depression measured by self-report in unblinded participants in most trials; interventions are heterogeneous (CBT-I, sleep hygiene, bright light, exercise-with-sleep-component); no age stratification reported so an adolescent-specific estimate cannot be extracted."
+funding: null
+notes: |
+  ROLE IN THIS SHARD. gee2019 is the second of three independent meta-analyses of the randomized
+  sleep -> depression arrow, and the three agree closely, which is reassuring:
+    gee2019   (k=49, n=5908):  SMD -0.45 (-0.55 to -0.36)
+    scott2021 (k=61 for depression, n=8608): g -0.63 (-0.83 to -0.43); -0.47 (-0.57 to -0.37) with outliers removed
+    gebara2018 (k=23, insomnia+depression comorbid): HAM-D -1.29; BDI -0.68
+  Converging on roughly SMD -0.45 to -0.50 for "treat sleep, depression improves." Because these are
+  RCTs, this is the cleanest available refutation of the strong reverse-causation-only hypothesis:
+  the sleep -> depression arrow is real and non-trivial. Any downstream model that sets the causal
+  sleep -> depression path to zero is contradicted by roughly 110 randomized trials.
+
+  THE SEVERITY GRADIENT IS THE KEY TRANSPORTABILITY FINDING, AND IT CUTS AGAINST OUR SUBJECT.
+  Overall d = -0.45; in participants with mental health problems d = -0.81. The benefit is
+  concentrated where there is symptom burden to remove. Our subject is not described as depressed. In
+  a non-symptomatic person there is a floor effect: you cannot subtract depressive symptoms that are
+  not there. The corresponding logic in the risk direction is that the counterfactual harm of his
+  short sleep is bounded well below the -0.81, and plausibly below the -0.45.
+
+  THE EXPOSURE MISMATCH AGAIN, AND IT IS THE SAME MISMATCH EVERY TIME. These are trials of
+  interventions "for sleep problems" -- the population is people who cannot sleep. Not one of the
+  three intervention meta-analyses is a trial of SLEEP EXTENSION in healthy short-sleeping young
+  people who are curtailing sleep for external reasons. That trial is the missing study for our
+  subject. The closest thing I found in the entire literature is vandyk2017 (experimental sleep
+  extension in short-sleeping adolescents), which is small and is the right design but underpowered.
+
+  THE MODERATION FINDING IS THE MOST USEFUL QUALITATIVE RESULT. "The size of the effect on depression
+  symptoms was moderated by the size of the effect on subjective sleep quality." This satisfies a
+  dose-response criterion within randomized data, and it licenses the rescaling logic I use in
+  freeman2017's record: mood benefit is proportional to sleep benefit achieved. It also implies the
+  converse for our subject: whatever sleep decrement he has sustained maps onto a proportional, not a
+  fixed, mood decrement. Unfortunately the abstract gives no regression coefficient, so I cannot
+  quantify the slope from this record and have set se: null for that effect.
+
+  ARITHMETIC. overall: se = (0.55-0.36)/3.92 = 0.04847.
+              mental-health subgroup: se = (1.13-0.49)/3.92 = 0.16327.
+
+  ACCESS. Abstract only (Elsevier paywall). Every number recorded is stated verbatim in the abstract.
+  Age is not reported in the abstract, hence adolescent_match: mixed with null age fields rather than
+  a guess; note the first author's group (Gee, Reynolds) works largely in child/adolescent mental
+  health, but I will not infer a population age from author affiliation.
+shard: "s12_psychiatric"

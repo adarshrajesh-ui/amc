@@ -1,0 +1,100 @@
+study_id: marino2021
+citation: "Marino C, Andrade B, Campisi SC, Wong M, Zhao H, Jing X, Aitken M, Bonato S, Haltigan J, Wang W, Szatmari P. Association Between Disturbed Sleep and Depression in Children and Youths: A Systematic Review and Meta-analysis of Cohort Studies. JAMA Netw Open. 2021 Mar 1;4(3):e212373."
+doi: "10.1001/jamanetworkopen.2021.2373"
+pmid: "33749768"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7985724/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Association Between Disturbed Sleep and Depression in Children and Youths: A Systematic Review and Meta-analysis of Cohort Studies."
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 28895
+n_studies_pooled: 22
+population:
+  age_mean: null
+  age_range: [5, 24]
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: incident_depression_dichotomous
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "disturbed sleep (sleep disturbances or insomnia) vs no disturbed sleep; prospective, all estimates adjusted for BASELINE DEPRESSION; k for this pooling n=13,006"}
+    scale: log_or
+    unit: null
+    value: 0.40547
+    se: 0.14565
+    ci: [0.12222, 0.69315]
+    conversion_formula: "OR 1.50 (1.13-2.00); log(1.50)=0.40547; se=(log(2.00)-log(1.13))/3.92=0.14565"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher odds of subsequent depression in children/youths with disturbed sleep, over and above baseline depression"
+    covariates: ["baseline depression (required for inclusion)", "age", "sex", "sociodemographic variables"]
+    followup_years: null
+    cohort_family: "pooled_multiple_cohorts"
+    quote: "the pooled odds ratio of depression in those with vs without disturbed sleep was 1.50 (95% CI, 1.13-2.00; P = .005; n = 13 006; I2 = 87.7%)"
+  - outcome_domain: psychiatric
+    outcome_construct: depressive_symptoms_continuous
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "disturbed sleep -> continuous depressive symptoms, standardised beta, adjusted for baseline depression; n=14,067"}
+    scale: smd
+    unit: "standardised beta coefficient"
+    value: 0.11
+    se: 0.02296
+    ci: [0.06, 0.15]
+    conversion_formula: "beta 0.11 (0.06-0.15); se = (0.15-0.06)/3.92 = 0.02296"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = more depressive symptoms at follow-up. Magnitude is SMALL: beta = 0.11 is roughly r = 0.11, about 1.2% of variance."
+    covariates: ["baseline depression", "age", "sex", "sociodemographic variables"]
+    followup_years: null
+    cohort_family: "pooled_multiple_cohorts"
+    quote: "The pooled β coefficient of the association between disturbed sleep and depression was 0.11 (95% CI, 0.06-0.15; P < .001; n = 14 067; I2 = 50.8%)"
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Methodologically the best-designed observational synthesis in this domain: youth-specific, prospective-only, and every included estimate had to be ADJUSTED FOR BASELINE DEPRESSION, which is the single most important control for reverse causation in this literature. Two serious weaknesses stated by the authors: I2 = 87.7% for the OR pooling, and 'Substantial publication bias was found.' Exposure is disturbed sleep / insomnia, not sleep duration."
+funding: "Cundill Centre for Child and Youth Depression (author support disclosed)"
+notes: |
+  THIS IS THE MOST DECISION-RELEVANT OBSERVATIONAL RECORD IN MY SHARD, FOR ONE DESIGN REASON.
+  Inclusion required that each estimate be "adjusted for baseline depression." That is the design
+  feature that partially closes the reverse-causation channel: an adolescent who is already depressed
+  at baseline cannot generate the association, because his baseline depression is conditioned out.
+  So this pooled OR is the closest thing the observational literature offers to a
+  reverse-causation-purged estimate in young people.
+
+  AND THE NUMBER COLLAPSES WHEN YOU DO THAT. Compare, on the log-OR scale:
+    disturbed sleep -> depression, baseline-depression-adjusted, youth:  OR 1.50, log = 0.405  [this record]
+    insomnia -> depression, prospective, mostly unadjusted for baseline: OR 2.83, log = 1.040  [hertenstein2019]
+    short sleep -> adolescent mood deficit, unadjusted:                  OR 1.67, log = 0.513  [short2020]
+    short sleep -> adolescent mood deficit, maximally adjusted:          OR 1.28, log = 0.247  [short2020]
+  Adjusting for baseline depression takes the log-OR from ~1.04 down to ~0.41, i.e. it removes about
+  61% of the log-scale association. That is a direct, empirical, literature-level estimate of the
+  reverse-causation-plus-baseline-severity share, and it is one of the two independent numbers I use
+  to bound the reverse-causation fraction in psychiatric_summary.md (the other being the symmetric
+  bidirectional coefficients in roberts2014).
+
+  BUT IT IS STILL THE WRONG EXPOSURE FOR OUR SUBJECT. "Disturbed sleep included sleep disturbances or
+  insomnia." Not duration. As with hertenstein2019 and lovato2014, the measured construct is
+  inability-to-sleep, and our subject's construct is opportunity-to-sleep. The continuous estimate
+  is also genuinely small in absolute terms: beta = 0.11, about 1% of variance in depressive symptoms.
+
+  ARITHMETIC. log(1.50) = +0.40547; se = (log 2.00 - log 1.13)/3.92 = 0.14565.
+              beta se = (0.15 - 0.06)/3.92 = 0.02296.
+
+  PUBLICATION BIAS WARNING. The authors report "Substantial publication bias was found" but the
+  abstract does not give a trim-and-fill or Egger-adjusted point estimate, so I cannot record a
+  bias-corrected value. Given the direction publication bias almost always takes, the true OR is
+  likely below 1.50. The modeller should treat 1.50 as an upper bound on the baseline-adjusted
+  youth association.
+
+  ACCESS. Abstract only. PMC7985724 exists (JAMA Network Open is open access) but I extracted from
+  the abstract, which states every number I use verbatim, including k, n per pooling, I2, and the
+  publication-bias verdict. Age range 5-24 spans children through young adults with no reported
+  stratification, hence adolescent_match: mixed; metaregression on "age at baseline" showed
+  "no evidence that pooled estimates differed across any covariate," so age-stratum-specific
+  inflation of the estimate is not supported.
+shard: "s12_psychiatric"

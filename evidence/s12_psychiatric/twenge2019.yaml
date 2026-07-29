@@ -1,0 +1,127 @@
+study_id: twenge2019
+citation: "Twenge JM, Cooper AB, Joiner TE, Duffy ME, Binau SG. Age, period, and cohort trends in mood disorder indicators and suicide-related outcomes in a nationally representative dataset, 2005-2017. J Abnorm Psychol. 2019 Apr;128(3):185-199."
+doi: "10.1037/abn0000410"
+pmid: "30869927"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Age, period, and cohort trends in mood disorder indicators and suicide-related outcomes in a nationally representative dataset, 2005-2017."
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: 611880
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [12, 90]
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: past_year_mde_young_adults_18_25_trend
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "US young adults 18-25, past-year major depressive episode, 2009 vs 2017 (NSDUH)"}
+    scale: probability
+    unit: "proportion with past-year MDE"
+    value: 0.132
+    se: null
+    ci: null
+    conversion_formula: "Reported as a rise 'from 8.1% to 13.2%' among 18-25 year olds between 2009 and 2017, a 63% relative increase. value records the 2017 endpoint (0.132). No SE given in the abstract, so se: null. Note goodwin2022 puts the same quantity at 17.2% by 2020, a further 30% rise in three years."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is the SECULAR BASELINE, not an exposure effect. Being an 18-25 year old in the late 2010s/2020s carries roughly 1.6x the depression risk of being one in 2009."
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "NSDUH"
+    quote: "Rates of major depressive episode in the last year increased 52% 2005-2017 (from 8.7% to 13.2%) among adolescents aged 12 to 17 and 63% 2009-2017 (from 8.1% to 13.2%) among young adults 18-25."
+  - outcome_domain: baseline_risk
+    outcome_construct: past_year_mde_adolescents_12_17_trend
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "US adolescents 12-17, past-year MDE, 2005 vs 2017"}
+    scale: probability
+    unit: "proportion with past-year MDE"
+    value: 0.132
+    se: null
+    ci: null
+    conversion_formula: "Reported as a rise 'from 8.7% to 13.2%' 2005-2017, a 52% relative increase. value records the 2017 endpoint."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Secular baseline for the age band covering our subject's early exposure years."
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "NSDUH"
+    quote: "increased 52% 2005-2017 (from 8.7% to 13.2%) among adolescents aged 12 to 17"
+  - outcome_domain: baseline_risk
+    outcome_construct: serious_psychological_distress_increase_young_adults
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "US young adults 18-25, past-month serious psychological distress, relative increase 2008-2017"}
+    scale: pct_change
+    unit: "percent relative increase"
+    value: 71.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly as 'a 71% increase in serious psychological distress' among young adults 18-25 from 2008-2017. Absolute prevalences for this measure are not given in the abstract, so only the relative change is recordable and se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = worsening. Relative increase only; I do not have the absolute baseline for this measure."
+    covariates: []
+    followup_years: null
+    cohort_family: "NSDUH"
+    quote: "Serious psychological distress in the last month and suicide-related outcomes (suicidal ideation, plans, attempts, and deaths by suicide) in the last year also increased among young adults 18-25 from 2008-2017 (with a 71% increase in serious psychological distress), with less consistent and weaker increases among adults ages 26 and over."
+  - outcome_domain: baseline_risk
+    outcome_construct: cohort_effect_rather_than_age_effect
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "hierarchical linear models decomposing age vs period vs birth-cohort contributions to the trend"}
+    scale: probability
+    unit: "verdict: 1 = trend attributed primarily to birth cohort"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Verdict only; no decomposition coefficients are reported in the abstract. value 1.0 encodes 'cohort effect dominant'. NOT poolable."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = the rise is a birth-cohort phenomenon (cohorts born early 1980s to late 1990s), not an ageing effect. Our subject, born around 2007-2008, belongs to a still-later cohort than any analysed here."
+    covariates: []
+    followup_years: null
+    cohort_family: "NSDUH"
+    quote: "Hierarchical linear modeling analyses separating the effects of age, period, and birth cohort suggest the trends among adults are primarily due to cohort, with a steady rise in mood disorder and suicide-related outcomes between cohorts born from the early 1980s (Millennials) to the late 1990s (iGen)."
+rob:
+  tool: none
+  judgement: na
+  notes: "Very large nationally representative repeated cross-sectional survey (N = 611,880) with consistent DSM-based MDE assessment across waves; appropriate for describing secular trends. Not an effect estimate, so RoB tools do not apply. Two interpretive cautions: NSDUH changed some collection procedures over the period, and rising measured prevalence partly reflects changing willingness to report and changing help-seeking rather than purely changing incidence. The authors' proposed causes (digital media, declining sleep) are HYPOTHESES generated from ecological correlation, not tested effects."
+funding: null
+notes: |
+  I INCLUDE THIS RECORD FOR CONTEXT AND FOR ONE SPECIFIC WARNING ABOUT DOUBLE-COUNTING.
+
+  THE CONTEXT. Our subject's absolute risk is dominated by his birth cohort and age band, not by his sleep.
+  Past-year MDE in 18-25 year olds went 8.1% (2009) -> 13.2% (2017) -> 17.2% (2020, from goodwin2022). The
+  base rate for his demographic has roughly doubled in a decade. Against that, the plausible causal
+  contribution of his sleep pattern (see psychiatric_summary.md: OR in the region of 1.0-1.25) is a modest
+  perturbation of a rapidly moving baseline.
+
+  THE WARNING, WHICH MATTERS FOR THIS FACTORY'S OUTPUT. The authors explicitly nominate declining sleep as
+  one candidate cause of the cohort trend: "Cultural trends contributing to an increase in mood disorders
+  and suicidal thoughts and behaviors since the mid-2000s, including the rise of electronic communication
+  and digital media and declines in sleep duration, may have had a larger impact on younger people,
+  creating a cohort effect."
+  That is an ECOLOGICAL hypothesis about population-level co-trending, and it must NOT be used as
+  individual-level evidence. Two reasons:
+    (1) It is uncontrolled co-trending. Over the same window, adolescent smartphone use, social media use,
+        academic pressure, and reporting of mental-health symptoms all rose together with short sleep. The
+        ecological correlation cannot separate them, and the authors do not claim it can.
+    (2) DOUBLE-COUNTING RISK. If the downstream model uses the 2020-era base rate for an 18-25 year old
+        male (which already embeds whatever contribution declining population sleep has made) AND THEN
+        multiplies by a relative risk for our subject's individual short sleep, part of the sleep effect is
+        counted twice. The individual-level relative risk should be applied to the base rate for
+        contemporaneous peers, which is what the 17.2% figure is. I flag this so the pooler applies the
+        relative estimate to the current base rate rather than to a historical one.
+
+  ONE GENUINELY RELEVANT DETAIL FOR OUR SUBJECT'S COHORT. The analysed cohorts run to those born in the late
+  1990s. Our subject, at 18 in the mid-2020s, was born around 2007-2008 -- a full decade later than the
+  latest cohort in this analysis, and the trend was still rising at the end of the observed window. So the
+  base rate applicable to him is likely at or above the 17.2% that goodwin2022 measured for 2020, and the
+  extrapolation is beyond the range of these data.
+
+  SEX. Not reported in the abstract. As with goodwin2022, the male-specific figures are lower than these
+  combined-sex ones, and I have not invented them.
+shard: "s12_psychiatric"

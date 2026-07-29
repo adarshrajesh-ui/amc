@@ -1,0 +1,90 @@
+study_id: lowe2017
+citation: "Lowe CJ, Safati A, Hall PA. The neurocognitive consequences of sleep restriction: A meta-analytic review. Neurosci Biobehav Rev. 2017 Sep;80:586-604."
+doi: "10.1016/j.neubiorev.2017.07.010"
+pmid: "28757454"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "The neurocognitive consequences of sleep restriction: A meta-analytic review"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: null
+n_studies_pooled: 61
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: comparator
+    outcome_construct: neurocognition_overall_comparator_for_mood_effects
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "experimental sleep restriction vs control, pooled across cognitive domains"}
+    scale: hedges_g
+    unit: null
+    value: -0.383
+    se: null
+    ci: null
+    conversion_formula: "Reported as g = -0.383, p < 0.001. No CI or SE is given in the abstract and the article is closed access, so se is left null rather than guessed."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse cognitive performance under restriction. RECORDED AS A COMPARATOR, not as a cognition estimate for the pipeline (s01/s02 own cognition). Its purpose here is to scale the MOOD effects in palmer2024 against cognition under the same exposure class"
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_61_experimental_studies"
+    quote: "Based on a sample of 61 studies, from 71 different populations, findings revealed a significant negative effect of sleep restriction on cognitive processing across cognitive domains (g=-0.383, p<0.001)."
+  - outcome_domain: comparator
+    outcome_construct: sustained_attention_comparator
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "experimental sleep restriction vs control, sustained attention domain"}
+    scale: hedges_g
+    unit: null
+    value: -0.409
+    se: null
+    ci: null
+    conversion_formula: "Reported as g = -0.409, p < 0.001; no CI available from the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse sustained attention; the largest single cognitive domain effect, and still smaller than the pooled anxiety effect of experimental sleep loss (SMD ~0.60, palmer2024)"
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_61_experimental_studies"
+    quote: "This effect held for executive functioning (g=-0.324, p<0.001), sustained attention (g=-0.409, p<0.001), and long-term memory (g=-0.192, p=0.002)."
+  - outcome_domain: comparator
+    outcome_construct: executive_function_comparator
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "experimental sleep restriction vs control, executive functioning domain"}
+    scale: hedges_g
+    unit: null
+    value: -0.324
+    se: null
+    ci: null
+    conversion_formula: "Reported as g = -0.324, p < 0.001; no CI available from the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse executive function; comparator only"
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_61_experimental_studies"
+    quote: "executive functioning (g=-0.324, p<0.001)"
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Large, domain-resolved, examines age as a moderator (age group was a significant moderator of the overall effect). Extracted from the abstract only because the article is closed access and no OA copy is retrievable, so no CIs, no risk-of-bias detail, and no per-domain k values are available to me."
+funding: null
+notes: |
+  Included ONLY as the cognition-side yardstick for the mood-vs-performance comparison demanded by
+  requirement 3. The pipeline's cognition estimates belong to shards s01/s02; this record should not
+  be pooled into a cognition outcome to avoid double counting.
+  The comparison it enables:
+    cognition under experimental restriction   g = -0.383 (overall), -0.409 (sustained attention)
+    mood/emotion under experimental sleep loss SMD = 0.57-0.63 (anxiety), -0.27 to -1.14 (positive affect)
+  i.e. affective outcomes move roughly 1.5-2x as much as cognitive outcomes for the same exposure class.
+  The abstract also notes that "Age group, time of day, cumulative days of restricted sleep, sleep
+  latency, subjective sleepiness, and biological sex were all significant moderators of the overall
+  effect", which supports treating age and cumulative dose as real moderators rather than nuisance.
+shard: "s12_psychiatric"

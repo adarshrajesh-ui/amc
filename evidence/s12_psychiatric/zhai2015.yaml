@@ -1,0 +1,90 @@
+study_id: zhai2015
+citation: "Zhai L, Zhang H, Zhang D. Sleep duration and depression among adults: a meta-analysis of prospective studies. Depress Anxiety. 2015 Sep;32(9):664-670."
+doi: "10.1002/da.22386"
+pmid: "26047492"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "SLEEP DURATION AND DEPRESSION AMONG ADULTS: A META-ANALYSIS OF PROSPECTIVE STUDIES."
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 25271
+n_studies_pooled: 7
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: incident_depression
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "short sleep duration vs normal sleep duration (study-specific cut-offs, typically <6 or <7 h)"}
+    scale: log_rr
+    unit: null
+    value: 0.27003
+    se: 0.11619
+    ci: [0.03922, 0.49470]
+    conversion_formula: "RR 1.31 (1.04-1.64); log(1.31)=0.27003; se=(log(1.64)-log(1.04))/3.92=0.11619"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = HIGHER risk of incident depression with short sleep"
+    covariates: ["study-specific; heterogeneous adjustment"]
+    followup_years: null
+    cohort_family: "pooled_multiple_cohorts"
+    quote: "Compared with the normal sleep duration, the pooled RR for depression was 1.31 (95% CI, 1.04-1.64; I(2) = 0%) for the short sleep duration overall."
+  - outcome_domain: psychiatric
+    outcome_construct: incident_depression_long_sleep
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "LONG sleep duration vs normal (negative-control-ish contrast; n=23,663 for this arm)"}
+    scale: log_rr
+    unit: null
+    value: 0.35066
+    se: 0.15640
+    ci: [0.03922, 0.65233]
+    conversion_formula: "RR 1.42 (1.04-1.92); log(1.42)=0.35066; se=(log(1.92)-log(1.04))/3.92=0.15640"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher risk of incident depression with LONG sleep. Numerically LARGER than the short-sleep RR, which is the key confounding tell -- see notes."
+    covariates: ["study-specific"]
+    followup_years: null
+    cohort_family: "pooled_multiple_cohorts"
+    quote: "For long sleep duration, the pooled RR was 1.42 (95% CI, 1.04-1.92; I(2) = 0%)."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Only 7 prospective studies; heterogeneous exposure cut-offs; adults only, no adolescent stratum; I2=0% is implausibly low for such heterogeneous cut-offs and suggests limited power rather than true homogeneity; no dose-response modelling."
+funding: null
+notes: |
+  RELEVANCE AND LIMITS. This is the meta-analysis named in my task, and it is real, but it is an
+  ADULT meta-analysis (the title literally says "AMONG ADULTS"), not adolescent, so its
+  transportability to an 18-year-old is poor. I have marked adolescent_match: poor_midlife rather
+  than mixed because no adolescent stratum is reported. Downstream, short2020 (adolescents) and
+  marino2021 (children/youth) should carry the observational weight for this shard, with zhai2015
+  used only as an adult sanity check.
+
+  THE MOST INFORMATIVE FEATURE OF THIS RECORD IS ITS SYMMETRY, NOT ITS POINT ESTIMATE.
+  Short sleep RR = 1.31 (1.04-1.64). Long sleep RR = 1.42 (1.04-1.92). Long sleep has the LARGER
+  point estimate. There is no mechanism by which sleeping 9-10 h causes depression at a higher rate
+  than sleeping 5 h; hypersomnia is a diagnostic symptom of depression, and long sleep also tracks
+  ill health, unemployment, and low socioeconomic position. The near-identical U-shaped elevation on
+  both arms is therefore prima facie evidence that a large share of the total observational
+  short-sleep/depression association is confounding-plus-reverse-causation rather than a causal
+  sleep-duration effect. A crude but defensible reading: if the long-sleep arm (RR 1.42) is entirely
+  non-causal, and if the same non-causal machinery inflates the short-sleep arm, then very little of
+  the RR 1.31 remains for causation. I do NOT claim that arithmetic is valid -- the two arms have
+  different confounding structures -- but the modeller should not treat RR 1.31 as a causal estimate.
+  Compare the MR estimates (zhang2024_mr: short sleep OR 1.179; continuous sleep duration OR 0.998
+  per unit, i.e. essentially null), which are far smaller than the observational figure.
+
+  ARITHMETIC PERFORMED. log-RR and SE via se = (log(upper) - log(lower))/3.92 as instructed:
+    short: log(1.31) = +0.27003; se = (log 1.64 - log 1.04)/3.92 = 0.11619
+    long:  log(1.42) = +0.35066; se = (log 1.92 - log 1.04)/3.92 = 0.15640
+
+  ACCESS. Abstract only (Wiley paywall; no OA copy found via Unpaywall). All numbers above are
+  quoted verbatim from the PubMed abstract, which reports the pooled RRs, CIs, I2, k, and n
+  explicitly, so no figure-reading or inference beyond the log transform was needed.
+shard: "s12_psychiatric"

@@ -1,0 +1,97 @@
+study_id: palmer2024
+citation: "Palmer CA, Bower JL, Cho KW, Clementi MA, Lau S, Oosterhoff B, Alfano CA. Sleep loss and emotion: A systematic review and meta-analysis of over 50 years of experimental research. Psychol Bull. 2024 Apr;150(4):440-463."
+doi: "10.1037/bul0000410"
+pmid: "38127505"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep loss and emotion: A systematic review and meta-analysis of over 50 years of experimental research."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: 5717
+n_studies_pooled: 154
+population:
+  age_mean: null
+  age_range: [7, 79]
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: anxiety_symptoms
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "experimental sleep loss (total deprivation, partial restriction, or fragmentation) vs control; reported as a range across the three types"}
+    scale: smd
+    unit: null
+    value: 0.60
+    se: null
+    ci: [0.57, 0.63]
+    conversion_formula: "The abstract reports a RANGE of SMDs across the three sleep-loss types: 'increased anxiety symptoms (SMD = 0.57-0.63)'. Because the range is narrow, I record its midpoint (0.57+0.63)/2 = 0.60 as the point estimate and the reported endpoints in the ci field. NOTE: [0.57, 0.63] is the range of three subgroup point estimates, NOT a 95% confidence interval. se is left null because no SE or CI is recoverable from the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = experimental sleep loss increases anxiety symptoms (harm)"
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_154_experimental_studies"
+    quote: "Random effects models were conducted, and all forms of sleep loss resulted in reduced positive affect (standardized mean difference [SMD] = -0.27 to -1.14), increased anxiety symptoms (SMD = 0.57-0.63), and blunted arousal in response to emotional stimuli (SMD = -0.20 to -0.53)."
+  - outcome_domain: psychiatric
+    outcome_construct: positive_affect
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "experimental sleep loss vs control; range across the three sleep-loss types"}
+    scale: smd
+    unit: null
+    value: -0.27
+    se: null
+    ci: [-1.14, -0.27]
+    conversion_formula: "The abstract reports SMD = -0.27 to -1.14 across the three sleep-loss types. The range is WIDE, so I do NOT take a midpoint; I record the SMALLEST (most conservative) reported magnitude, -0.27, as the point estimate and the full reported range in the ci field. [-1.14, -0.27] is a range of subgroup point estimates, NOT a confidence interval."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = experimental sleep loss reduces positive affect (harm). Positive affect is the most consistently and most strongly affected emotional outcome; the conservative endpoint is recorded here so the pooler is not over-fitted to the largest subgroup"
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_154_experimental_studies"
+    quote: "all forms of sleep loss resulted in reduced positive affect (standardized mean difference [SMD] = -0.27 to -1.14)"
+  - outcome_domain: psychiatric
+    outcome_construct: depressive_symptoms_and_negative_affect_mixed
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "experimental sleep loss vs control; depressive symptoms and negative affect"}
+    scale: smd
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No pooled value is reported in the abstract for these outcomes; the authors state findings were 'mixed and depended on the type of sleep loss'. Encoded as 0 with se null to signal 'no reliable pooled effect available', NOT as a demonstrated null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NO RELIABLE POOLED ESTIMATE. Depressive symptoms and negative affect did NOT show a consistent experimental effect across sleep-loss types, in contrast to positive affect and anxiety which did. Convergent with Baum 2014 and Motomura 2013, where depressed mood was the one subscale that did not move"
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_154_experimental_studies"
+    quote: "Findings for negative affect, reports of emotional valence in response to emotional stimuli, and depressive symptoms were mixed and depended on the type of sleep loss."
+rob:
+  tool: AMSTAR-2
+  judgement: low
+  notes: "Preregistered, 154 studies, 1,338 effect sizes, healthy populations only, random-effects models, nonlinear dose effects and sleep-stage moderators examined. The only reason this record is weak is my access: the article is closed (Unpaywall is_oa false; no PMC record; no repository copy retrievable), so I could extract only what the abstract states verbatim."
+funding: null
+notes: |
+  Requirement 3 asked for the experimental MOOD effect size. The best available synthesis gives, for
+  healthy participants:
+    positive affect  SMD -0.27 to -1.14
+    anxiety symptoms SMD  0.57 to 0.63
+    emotional arousal blunting SMD -0.20 to -0.53
+    negative affect and depressive symptoms: MIXED, no consistent pooled effect.
+  MOOD VS COGNITION (requirement 3, second part). I could not obtain within-study mood-vs-performance
+  contrasts from this paper, so the comparison is made across meta-analyses:
+    mood/emotion (this record):        |SMD| ~ 0.57-0.63 (anxiety), 0.27-1.14 (positive affect)
+    neurocognition (lowe2017, same exposure class): g = -0.383 overall, -0.409 sustained attention,
+                                                   -0.324 executive function, -0.192 long-term memory
+  So the affective effect of experimental sleep restriction is roughly 1.5-2x the neurocognitive
+  effect, consistent with Pilcher & Huffcutt's 1996 conclusion (see pilcher1996.yaml) that
+  "mood is more affected by sleep deprivation than either cognitive or motor performance".
+  IMPORTANT LIMITATION I want the modeller to see: the ci fields on the first two effects hold
+  RANGES OF SUBGROUP POINT ESTIMATES, not confidence intervals, and se is null. Do not feed these into
+  an inverse-variance pooler as if they were precision-weighted estimates.
+shard: "s12_psychiatric"

@@ -1,0 +1,164 @@
+study_id: conklin2018_basus
+citation: "Conklin AI, Yao CA, Richardson CG. Chronic sleep deprivation and gender-specific risk of depression in adolescents: a prospective population-based study. BMC Public Health. 2018 Jun 11;18(1):724."
+doi: "10.1186/s12889-018-5656-6"
+pmid: "29890964"
+url: "https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-018-5656-6"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Chronic sleep deprivation and gender-specific risk of depression in adolescents: a prospective population-based study."
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 3071
+n_studies_pooled: null
+population:
+  age_mean: 14.8
+  age_range: [14, 17]
+  pct_female: 53.0
+  country: "Canada (British Columbia)"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: depressive_symptoms_cesd_young_men_chronic_vs_none
+    exposure: {type: chronic_restriction, dose_h: 7.0, referent_h: 8.5, duration_days: 365, contrast_label: "YOUNG MEN: chronic sleep deprivation (<8 h weekday sleep at >=2 of 3 waves over 12 months) vs never deprived; fully adjusted Model E"}
+    scale: cohens_d
+    unit: "CESD points / SD"
+    value: 0.0855
+    se: 0.1298
+    ci: [-0.1690, 0.3399]
+    conversion_formula: "Model E adjusted means: chronic 15.32 (12.86-17.78), none 14.38 (13.05-15.72). se_chronic=(17.78-12.86)/3.92=1.2551; se_none=(15.72-13.05)/3.92=0.6811. raw diff = 15.32-14.38 = 0.94 CESD points; se_diff = sqrt(1.2551^2+0.6811^2) = 1.4277 (independence assumed -> conservative/wide, since both means come from the same regression and are positively correlated). d = 0.94/SD; SD(CESD) taken as 11.0, a standard value for adolescent CESD, since the paper reports CIs not SDs -> d = 0.0855, se_d = 1.4277/11.0 = 0.1298."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = MORE depressive symptoms with chronic sleep deprivation. NULL for young men: d = 0.09, CI spans zero. THE SINGLE MOST SUBJECT-SPECIFIC FINDING IN MY SHARD -- our subject is male."
+    covariates: ["baseline CESD", "baseline BMI", "ethnicity", "family income relative to peers"]
+    followup_years: 1.0
+    cohort_family: "BASUS"
+    quote: "By contrast, mean CESD scores in young men did not differ across levels of cumulative sleep deprivation (Table 2 )."
+  - outcome_domain: psychiatric
+    outcome_construct: depressive_symptoms_cesd_young_women_chronic_vs_none
+    exposure: {type: chronic_restriction, dose_h: 7.0, referent_h: 8.5, duration_days: 365, contrast_label: "YOUNG WOMEN: chronic sleep deprivation vs never deprived; fully adjusted Model E. Contrast case for the male null."}
+    scale: cohens_d
+    unit: "CESD points / SD"
+    value: 0.2864
+    se: 0.0975
+    ci: [0.0952, 0.4775]
+    conversion_formula: "Model E adjusted means: chronic 19.48 (17.59-21.38), none 16.33 (15.42-17.24). se_chronic=(21.38-17.59)/3.92=0.9668; se_none=(17.24-15.42)/3.92=0.4643. raw diff = 3.15 CESD points; se_diff = sqrt(0.9668^2+0.4643^2)=1.0725. d = 3.15/11.0 = 0.2864; se_d = 1.0725/11.0 = 0.0975. NOTE the authors themselves report Cohen's D = 0.20 unadjusted and 0.13 adjusted; my 0.29 differs because I used an assumed SD of 11.0 whereas they used the observed sample SD. THEIR figures (0.13 adjusted) should be preferred -- see notes."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = more depressive symptoms. SIGNIFICANT and monotonic in young women. Authors' own adjusted effect size is Cohen's D = 0.13."
+    covariates: ["baseline CESD", "baseline BMI", "ethnicity", "family income relative to peers"]
+    followup_years: 1.0
+    cohort_family: "BASUS"
+    quote: "After conditioning on known confounders, young women reporting chronic sleep deprivation still had significantly higher mean CESD scores (19.48 [17.59–21.38]) than those with no history of sleep deprivation (16.33 [15.42–17.24])."
+  - outcome_domain: psychiatric
+    outcome_construct: authors_reported_effect_size_young_women
+    exposure: {type: chronic_restriction, dose_h: 7.0, referent_h: 8.5, duration_days: 365, contrast_label: "young women, chronic vs none: the AUTHORS' OWN Cohen's D, unadjusted then adjusted"}
+    scale: cohens_d
+    unit: null
+    value: 0.13
+    se: null
+    ci: null
+    conversion_formula: "Reported directly by the authors. Unadjusted D = 0.20; adjusted for confounders D = 0.13. No CI or SE given for either, hence se: null. This is the figure the modeller should use for the female stratum, in preference to my own 0.2864, because it uses the true sample SD."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more depression. Note the attenuation from 0.20 to 0.13 (35% of the effect removed) simply by adjusting for baseline CESD, BMI, ethnicity and income -- a small confounding-control illustration within a single study."
+    covariates: ["baseline CESD", "BMI", "ethnicity", "family income"]
+    followup_years: 1.0
+    cohort_family: "BASUS"
+    quote: "The difference of nearly 5 points in the mean CESD scores between young women with chronic sleep deprivation and those without was a medium effect size (Cohen’s D = 0.20) that became small, though still significant, after considering potential confounders (Cohen’s D = 0.13)."
+  - outcome_domain: psychiatric
+    outcome_construct: dose_response_young_men_nonmonotonic
+    exposure: {type: chronic_restriction, dose_h: 7.0, referent_h: 8.5, duration_days: 365, contrast_label: "YOUNG MEN dose-response across three exposure levels, Model E: none 14.38, OCCASIONAL 15.40, CHRONIC 15.32"}
+    scale: raw_units
+    unit: "CESD points, chronic minus occasional"
+    value: -0.08
+    se: null
+    ci: null
+    conversion_formula: "15.32 (chronic) - 15.40 (occasional) = -0.08 CESD points. Recorded to document the NON-MONOTONICITY in males: the chronically deprived scored very slightly LOWER than the occasionally deprived. No SE derivable for this within-model difference from published CIs; se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NEGATIVE means chronic exposure looked marginally BETTER than occasional exposure in young men. There is no dose-response gradient in males at all -- the opposite of the clean monotonic gradient in females (16.33 -> 19.02 -> 19.48)."
+    covariates: ["baseline CESD", "BMI", "ethnicity", "family income"]
+    followup_years: 1.0
+    cohort_family: "BASUS"
+    quote: "Young men |  None | 13.26† | 11.91–14.61 | 14.36† | 13.00–15.73 | 14.36† | 12.98–15.73 | 14.33† | 12.97–15.69 | 14.38† | 13.05–15.72 |  Occasional | 15.25† | 12.63–17.87 | 15.37† | 13.39–17.34 | 15.36† | 13.38–17.35 | 15.38† | 13.37–17.38 | 15.40† | 13.39–17.41 |  Chronic | 15.20† | 12.55–17.85 | 15.23† | 12.70–17.76 | 15.22† | 12.70–17.75 | 15.26† | 12.70–17.82 | 15.32† | 12.86–17.78 |"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Genuine strengths for this question: prospective with three sleep measures preceding the depression endpoint; a CUMULATIVE (chronic) exposure definition rather than a single snapshot, which is the right construct for our subject; adjustment for BASELINE depression, which closes much of the reverse-causation channel; multiple imputation; and a pre-specified gender-interaction analysis (p-interaction < 0.01 at every exposure level). Limitations: self-reported sleep and wake times only, no actigraphy; 12-month follow-up is short relative to our subject's 3-year exposure; single Canadian province; and, importantly for the male null, the authors flag that 'the CESD measure is susceptible to differential item functioning (e.g., \"I had crying spells\") which results in higher overall scores for females than males', so part of the sex difference may be instrumentation rather than biology."
+funding: null
+notes: |
+  THIS IS THE RECORD I WOULD PUT IN FRONT OF THE MODELLER FIRST, BECAUSE IT MATCHES OUR SUBJECT ON
+  EXPOSURE, AGE, AND SEX SIMULTANEOUSLY -- AND IT IS NULL.
+
+  Exposure definition, verbatim: participants were classified "as being sleep deprived (< 8 h) or not
+  sleep deprived (≥ 8 h)" from self-reported weekday sleep and wake times at three waves, and
+  "chronic sleep deprivation (exposed at two or more time-points)". That is a CUMULATIVE, weekday,
+  behaviourally-defined short-sleep exposure in 14-17 year olds. It is not insomnia. It is not sleep
+  quality. It is the construct our subject actually has.
+
+  THE FULLY ADJUSTED RESULTS (Model E), side by side:
+                    YOUNG MEN                          YOUNG WOMEN
+    None        14.38 (13.05-15.72)                16.33 (15.42-17.24)
+    Occasional  15.40 (13.39-17.41)                19.02 (17.57-20.47)
+    Chronic     15.32 (12.86-17.78)                19.48 (17.59-21.38)
+  In women: monotonic, significant, +3.15 CESD points chronic vs none, authors' Cohen's D = 0.13 adjusted.
+  In men: flat and non-monotonic (chronic 15.32 is marginally BELOW occasional 15.40), +0.94 points
+  chronic vs none, confidence interval straddling zero. The authors state it plainly: "By contrast,
+  mean CESD scores in young men did not differ across levels of cumulative sleep deprivation."
+  And the interaction was significant at every exposure level (p-interaction < 0.01).
+
+  THE INDEPENDENT REPLICATION IN MALES, WHICH THE AUTHORS THEMSELVES POINT TO. From their discussion:
+  "Recently, a very small Australian prospective study, comprising mostly young men (n = 138, 64% male),
+  found that total weeknight sleep time at baseline was not associated with CESD depression scores one
+  year later, which concurs with our null finding for young men and highlights the importance of
+  incorporating a gender perspective in this area of research." So two prospective cohorts, both with
+  male-predominant or male-stratified samples, both null on weeknight sleep duration -> depression.
+
+  AND A THIRD, INDEPENDENT LINE OF SEX-SPECIFIC EVIDENCE: wang2024_yrbs found the sleep-suicidality
+  association strongest in FEMALES (ideation OR 1.46, plan OR 1.44 in the sex interaction) and found the
+  secular worsening among insufficient sleepers to be "non-significantly increasing among male
+  adolescents." Three datasets, same direction of sex moderation.
+
+  WHY THIS COULD STILL BE WRONG, AND I WANT THIS WEIGHED PROPERLY.
+    (1) POWER. Males were 47% of 3071, and only 13% of the whole sample was chronically deprived, so the
+        male-chronic cell is roughly 3071 x 0.47 x 0.13 = ~188 people. The male CIs are correspondingly
+        wide (chronic 12.86-17.78, a span of ~5 CESD points). A true male effect of the female
+        magnitude (+3.15 points) is NOT excluded by these data: the upper bound of the male chronic mean
+        (17.78) sits well above the male never-deprived mean (14.38). This is an underpowered null, not
+        a demonstrated absence. My computed d = 0.0855 with se = 0.1298 gives a 95% CI of
+        [-0.169, +0.340] -- which comfortably contains the female adjusted D of 0.13.
+    (2) INSTRUMENTATION. The authors flag CESD differential item functioning by sex. If the CESD is less
+        sensitive to male depression phenomenology (irritability, withdrawal, substance use, somatic
+        complaints rather than crying and sadness), a male null could be a measurement artefact. This is
+        a well-known problem in adolescent depression epidemiology and I regard it as the most serious
+        threat to the male-null interpretation.
+    (3) OUTCOME CHOICE. CESD measures depressive SYMPTOMS. My shard's experimental records
+        (baum2014, motomura2013, blake2016_sense, palmer2024) consistently show that sleep loss moves
+        ANXIETY, IRRITABILITY and ANGER rather than depressed mood. A male-specific effect on
+        irritability would be invisible to the CESD. So "no depression effect in boys" is compatible
+        with "a real emotional effect in boys that this instrument does not capture."
+    (4) AGE. Mean age 14.8 at baseline, and the mechanism the authors propose for the female excess is
+        pubertal (HPA-axis reactivity, differential testosterone effects). Our subject is 18. If the sex
+        difference is pubertal-transition-specific, it may not persist into late adolescence.
+
+  BOTTOM LINE FOR THE MODELLER. This is the best-matched observational estimate available for our
+  subject, and its point estimate is d ~ 0.09 (95% CI -0.17 to +0.34) for chronic weekday short sleep
+  -> depressive symptoms in adolescent males, adjusted for baseline depression. It should anchor the
+  central estimate low, while the width of that interval -- and reasons (1) through (4) above -- should
+  keep the uncertainty wide rather than collapsing to "no effect in males."
+
+  ARITHMETIC NOTE ON MY SD ASSUMPTION. The paper reports adjusted means with CIs, not SDs, so to get a
+  standardized effect I had to assume an SD for the CESD. I used 11.0 points, a conventional value for
+  adolescent samples on the 0-60 CESD. This is an ASSUMPTION and it is why my female d (0.2864) exceeds
+  the authors' own adjusted D (0.13): they used the observed sample SD, which must therefore be
+  substantially larger than 11.0 (back-solving from 3.15/0.13 implies their SD was ~24, which seems high
+  for the CESD and may reflect their use of the change score rather than the follow-up score). BECAUSE
+  MY SD ASSUMPTION IS EVIDENTLY WRONG, the male d of 0.0855 is likewise inflated; rescaling by the same
+  factor (0.13/0.2864 = 0.454) would give a male d of about 0.039 with a CI of roughly [-0.077, +0.154].
+  The qualitative conclusion is unchanged and if anything strengthened. The modeller should prefer the
+  RAW CESD-point differences (males +0.94, females +3.15) over any of my standardized values.
+shard: "s12_psychiatric"

@@ -1,0 +1,130 @@
+study_id: roberts2014
+citation: "Roberts RE, Duong HT. The prospective association between sleep deprivation and depression among adolescents. Sleep. 2014 Feb 1;37(2):239-244."
+doi: "10.5665/sleep.3388"
+pmid: "24497652"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "The Prospective Association between Sleep Deprivation and Depression among Adolescents"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 3134
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [11, 17]
+  pct_female: 50.77
+  country: "US (Houston metropolitan area, Teen Health 2000)"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: major_depression_dsm4_incident_forward_arrow
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: null, duration_days: null,
+               contrast_label: "<=6 h on weeknights at Wave 1 vs more, predicting DSM-IV major depression at Wave 2 (1 y)"}
+    scale: log_or
+    unit: null
+    value: 1.32442
+    se: 0.42058
+    ci: [0.50078, 2.14943]
+    conversion_formula: "log_or = ln(3.76) = 1.32442; se = (ln(8.58) - ln(1.65))/3.92 = 0.42058"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = short weeknight sleep raises 1-year risk of major depression (harm); adjusted for baseline depression, so this is the SLEEP-TO-DEPRESSION arrow"
+    covariates: ["age", "gender", "family income", "depression at Wave 1"]
+    followup_years: 1.0
+    cohort_family: "Teen_Health_2000"
+    quote: "Table 3-Odds ratios for the association between sleep deprivation at Wave 1 and depression at Wave 2 ... Adjusted* OR, 95% CI Major Depression 3.12 (1.55-6.27) 3.76 (1.65-8.58) ... *Adjusting for age, gender, family income, and depression (either major depression or symptoms at Wave 1."
+  - outcome_domain: psychiatric
+    outcome_construct: short_sleep_incident_reverse_arrow
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "DSM-IV major depression at Wave 1 predicting <=6 h weeknight sleep at Wave 2 (REVERSE direction)"}
+    scale: log_or
+    unit: null
+    value: 1.45395
+    se: 0.33818
+    ci: [0.79299, 2.11866]
+    conversion_formula: "log_or = ln(4.28) = 1.45395; se = (ln(8.32) - ln(2.21))/3.92 = 0.33818"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = baseline major depression raises 1-year risk of becoming short-sleeping. THIS IS THE REVERSE-CAUSATION ARROW, adjusted for baseline sleep deprivation. It is at least as large as the forward arrow (1.454 vs 1.324 on the log scale)"
+    covariates: ["age", "gender", "family income", "sleep deprivation at Wave 1"]
+    followup_years: 1.0
+    cohort_family: "Teen_Health_2000"
+    quote: "Table 4-Odds ratios for the association between depression at Wave 1 and sleep deprivation at Wave 2 ... Adjusted* OR, 95% CI Short Sleep WN/WE 1.95 (0.94-4.04) 1.14 (0.93-1.40) Short Sleep WN 4.28 (2.21-8.32) 1.24 (0.94-1.63) ... *Adjusting for age, gender, family income, and sleep deprivation at Wave 1."
+  - outcome_domain: psychiatric
+    outcome_construct: depressive_symptoms_forward_arrow
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: null, duration_days: null,
+               contrast_label: "<=6 h weeknights at Wave 1 predicting depressive symptoms at Wave 2"}
+    scale: log_or
+    unit: null
+    value: 0.32208
+    se: 0.15188
+    ci: [0.01980, 0.61519]
+    conversion_formula: "log_or = ln(1.38) = 0.32208; se = (ln(1.85) - ln(1.02))/3.92 = 0.15188"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = harm; sleep-to-symptoms arrow, adjusted for baseline depression"
+    covariates: ["age", "gender", "family income", "depression at Wave 1"]
+    followup_years: 1.0
+    cohort_family: "Teen_Health_2000"
+    quote: "Adjusted* OR, 95% CI ... Depression Symptoms 1.25 (1.01-1.54) 1.38 (1.02-1.85)"
+  - outcome_domain: psychiatric
+    outcome_construct: short_sleep_from_symptoms_reverse_arrow
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "depressive symptoms at Wave 1 predicting <=6 h weeknight sleep at Wave 2 (REVERSE)"}
+    scale: log_or
+    unit: null
+    value: 0.21511
+    se: 0.14042
+    ci: [-0.06188, 0.48858]
+    conversion_formula: "log_or = ln(1.24) = 0.21511; se = (ln(1.63) - ln(0.94))/3.92 = 0.14042"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = baseline depressive symptoms raise risk of subsequent short sleep; NOT statistically significant. Reverse share of total log-OR for the symptom outcome = 0.215/(0.322+0.215) = 40.0%"
+    covariates: ["age", "gender", "family income", "sleep deprivation at Wave 1"]
+    followup_years: 1.0
+    cohort_family: "Teen_Health_2000"
+    quote: "However, when we looked at reciprocal effects, depressive symptoms predicting sleep deprivation, we found no association."
+  - outcome_domain: exposure_measurement
+    outcome_construct: weeknight_sleep_distribution_adolescents
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "self-reported weeknight sleep duration, past month, Wave 1"}
+    scale: probability
+    unit: "proportion reporting <=6 h on weeknights"
+    value: 0.1983
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "base-rate context: ~20% of this adolescent cohort was in the subject's exposure category at baseline"
+    covariates: []
+    followup_years: null
+    cohort_family: "Teen_Health_2000"
+    quote: "Sleep Duration Weeknights, Past Month <= 6 hours 19.83 7-8 hours 52.51 >= 9 hours 27.66"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Two waves only, 1-year lag, self-reported sleep, 75% retention. Not an area-probability sample (post-stratified). Major-depression cell counts are small, so the wide CIs are real. Crucially, both arrows were modelled in the SAME sample with the same covariate set, which is exactly what is needed to bound reverse causation."
+funding: null
+notes: |
+  THE key study for requirement 6. Both arrows, same sample, symmetric adjustment.
+  Forward (short weeknight sleep -> major depression): OR 3.76, log 1.32442.
+  Reverse (major depression -> short weeknight sleep): OR 4.28, log 1.45395.
+  Reverse share of the summed log-OR = 1.45395/(1.32442+1.45395) = 52.3%.
+  For the milder outcome (depressive symptoms) the reverse share is 40.0% and the reverse arrow is
+  not significant.
+  Interpretation for the modeller: in adolescents, the sleep<->depression relation for CLINICAL
+  depression is roughly bidirectionally symmetric, so about half of a naive cross-sectional
+  association should be discounted as reverse causation; for subclinical symptoms the forward arrow
+  dominates and the discount is smaller (~40% or less).
+  Also note the authors' own summary of the forward symptom effect: "we found a 25% to 38% increased
+  risk", matching OR 1.25 (every night) to 1.38 (weeknights).
+  Full text: PMC record body is access-restricted; Tables 2-4 were read from a third-party mirror of
+  the publisher PDF, and the numbers I extracted are internally corroborated by the PMC-hosted
+  Discussion text, which independently states the 1.95 (n.s.) and 4.28 (P < 0.05) reverse-arrow
+  values and the "25% to 38%" forward-arrow range.
+shard: "s12_psychiatric"

@@ -1,0 +1,187 @@
+study_id: scott2021
+citation: "Scott AJ, Webb TL, Martyn-St James M, Rowse G, Weich S. Improving sleep quality leads to better mental health: A meta-analysis of randomised controlled trials. Sleep Med Rev. 2021 Dec;60:101556."
+doi: "10.1016/j.smrv.2021.101556"
+pmid: "34607184"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Improving sleep quality leads to better mental health: A meta-analysis of randomised controlled trials"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: 8608
+n_studies_pooled: 65
+population:
+  age_mean: null
+  age_range: [18, 90]
+  pct_female: null
+  country: "multinational"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: depression_symptoms
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "randomised intervention that SUCCESSFULLY improved sleep quality (mostly CBT-I) vs control; depression at the furthest available follow-up"}
+    scale: hedges_g
+    unit: null
+    value: -0.63
+    se: 0.1020
+    ci: [-0.83, -0.43]
+    conversion_formula: "Reported directly: g+ = -0.63, 95% CI -0.83 to -0.43, k = 61. se = (0.83 - 0.43)/3.92 = 0.1020."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = improving sleep REDUCES depression (benefit). This is the sleep-to-depression causal arrow tested by randomisation, so it is the strongest single estimate in my domain"
+    covariates: []
+    followup_years: 0.39
+    cohort_family: "pooled_65_rcts"
+    quote: "Interventions that successfully improved sleep quality had a statistically significant, medium-sized effect on depression across 61 comparisons, ( g + = -0.63, 95% CI = -0.83 to -0.43, p < 0.001); however, once again, there was substantial heterogeneity, ( I 2 = 81%, Q = 322.09, p < 0.001)."
+  - outcome_domain: psychiatric
+    outcome_construct: depression_symptoms_outliers_removed
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "same as above, with nine outlying effect sizes removed"}
+    scale: hedges_g
+    unit: null
+    value: -0.47
+    se: 0.0510
+    ci: [-0.57, -0.37]
+    conversion_formula: "Reported directly: g+ = -0.47, 95% CI -0.57 to -0.37. se = (0.57 - 0.37)/3.92 = 0.0510."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = benefit. PREFER THIS ESTIMATE for the pooled model: heterogeneity falls from I2 = 81% to 32% and the estimate is much more precise. Treat -0.63 as the heterogeneity-inflated version"
+    covariates: []
+    followup_years: 0.39
+    cohort_family: "pooled_65_rcts"
+    quote: "After re-running the analysis with nine outlying effect sizes removed, the effect of improving sleep on depression remained medium-sized, ( g + = -0.47, 95% CI = -0.57 to -0.37, p < 0.001), with moderate heterogeneity, ( I 2 = 32%, Q = 74.86, p = 0.0164)."
+  - outcome_domain: psychiatric
+    outcome_construct: anxiety_symptoms
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "sleep-improving intervention vs control; anxiety at furthest follow-up, k = 35"}
+    scale: hedges_g
+    unit: null
+    value: -0.50
+    se: 0.1327
+    ci: [-0.76, -0.24]
+    conversion_formula: "Results section reports g+ = -0.50, 95% CI -0.76 to -0.24, k = 35. se = (0.76 - 0.24)/3.92 = 0.1327. NOTE: the ABSTRACT of the same paper states g+ = -0.51; I use the Results-section value of -0.50, which is the one accompanied by a CI and k."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = improving sleep reduces anxiety (benefit)"
+    covariates: []
+    followup_years: 0.39
+    cohort_family: "pooled_65_rcts"
+    quote: "Interventions that successfully improved sleep quality had a statistically significant, small-to-medium sized effect on anxiety across 35 comparisons, ( g + = -0.50, 95% CI = -0.76 to -0.24), with substantial levels of heterogeneity, ( I 2 = 82%, Q = 187.02, p < 0.001)."
+  - outcome_domain: psychiatric
+    outcome_construct: composite_mental_health
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "sleep-improving intervention vs control; composite of all mental-health outcomes, 72 interventions"}
+    scale: hedges_g
+    unit: null
+    value: -0.53
+    se: 0.0765
+    ci: [-0.68, -0.38]
+    conversion_formula: "Reported directly: g+ = -0.53, 95% CI -0.68 to -0.38. se = (0.68 - 0.38)/3.92 = 0.0765."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = benefit"
+    covariates: []
+    followup_years: 0.39
+    cohort_family: "pooled_65_rcts"
+    quote: "On average, the 72 interventions that successfully improved sleep quality had a statistically significant, medium-sized effect on subsequent composite mental health outcomes, ( g + = -0.53, 95% CI = -0.68 to -0.38, p < 0.001)"
+  - outcome_domain: psychiatric
+    outcome_construct: composite_mental_health_publication_bias_adjusted
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "composite mental health after Duval & Tweedie trim-and-fill for funnel asymmetry"}
+    scale: hedges_g
+    unit: null
+    value: -0.35
+    se: 0.0995
+    ci: [-0.55, -0.16]
+    conversion_formula: "Reported directly: g+ = -0.35, 95% CI -0.55 to -0.16, after ten studies were imputed. se = (0.55 - 0.16)/3.92 = 0.0995."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = benefit. MOST CONSERVATIVE intervention estimate in this record; funnel asymmetry was statistically significant (Egger's regression -1.09, 95% CI -1.91 to -0.28, p < 0.05), so this is the value to use for a bias-adjusted causal estimate"
+    covariates: []
+    followup_years: 0.39
+    cohort_family: "pooled_65_rcts"
+    quote: "Ten studies were imputed resulting in a statistically significant, small-to-medium sized adjusted effect of improving sleep on composite mental health outcomes ( g + = -0.35, 95% CI = -0.55 to -0.16, p < 0.001)."
+  - outcome_domain: psychiatric
+    outcome_construct: suicidal_ideation
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "sleep-improving intervention vs control; suicidal ideation, k = 2"}
+    scale: hedges_g
+    unit: null
+    value: 0.10
+    se: 1.9592
+    ci: [-3.74, 3.94]
+    conversion_formula: "Reported directly: g+ = 0.10, 95% CI -3.74 to 3.94, k = 2. se = (3.94 - (-3.74))/3.92 = 1.9592."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE SIGN = ADVERSE (slightly more suicidal ideation), but hopelessly imprecise with only 2 comparisons. THE HONEST READING: randomised evidence that improving sleep reduces SUICIDALITY does not exist, even though it clearly exists for depression and anxiety. This is the single biggest asymmetry between the observational and randomised literatures in my domain"
+    covariates: []
+    followup_years: 0.39
+    cohort_family: "pooled_65_rcts"
+    quote: "Interventions that successfully improved sleep quality had a small, adverse effect on suicidal ideation ( g + = 0.10, 95% CI = -3.74 to 3.94, p = 0.804) across two comparisons."
+  - outcome_domain: psychiatric
+    outcome_construct: dose_response_sleep_improvement_to_mental_health
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "meta-regression slope of mental-health effect on sleep-quality effect"}
+    scale: per_hour_beta
+    unit: "change in mental-health g per unit change in sleep-quality g"
+    value: 0.77
+    se: 0.1276
+    ci: [0.52, 1.02]
+    conversion_formula: "Reported directly: B = 0.77, 95% CI 0.52 to 1.02, p < 0.001. se = (1.02 - 0.52)/3.92 = 0.1276."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = the more sleep improved, the more mental health improved. Slope near 1 means the mental-health benefit is roughly proportional to the sleep gain, which is the key dose-response evidence for causality"
+    covariates: []
+    followup_years: 0.39
+    cohort_family: "pooled_65_rcts"
+    quote: "meta-regression revealed a statistically significant dose-response effect for the association between the effect of interventions on sleep quality and the effect on subsequent mental health outcomes ( B = 0.77, 95% CI = 0.52 to 1.02, p < 0.001), suggesting that greater improvements in sleep led to greater improvements in mental health."
+  - outcome_domain: comparator
+    outcome_construct: negative_control_trials_that_failed_to_improve_sleep
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "interventions that did NOT significantly improve sleep quality; internal negative control"}
+    scale: hedges_g
+    unit: null
+    value: -0.12
+    se: 0.0638
+    ci: [-0.24, 0.01]
+    conversion_formula: "Reported directly: g = -0.12, 95% CI -0.24 to 0.01, p = 0.0522. se = (0.24 - (-0.01))/3.92 = 0.0638."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "near null. STRONG INTERNAL VALIDITY CHECK: trials whose intervention failed to change sleep produced essentially no mental-health benefit (-0.12) versus -0.53 in trials that did change sleep, difference Q = 17.59, p < 0.001. This makes it much harder to attribute the main effect to generic therapeutic attention"
+    covariates: []
+    followup_years: 0.39
+    cohort_family: "pooled_65_rcts"
+    quote: "Studies that found significant effects of the intervention on sleep quality reported larger effects on subsequent composite mental health, ( g = -0.53, 95% CI = -0.68 to -0.38, p < 0.001), than studies that did not find a significant effect of the intervention on sleep quality, ( g = -0.12, 95% CI = -0.24 to 0.01, p = 0.0522), a difference that was statistically significant, ( Q = 17.59, p < 0.001)."
+rob:
+  tool: AMSTAR-2
+  judgement: low
+  notes: "Best-designed synthesis in my domain: only trials that actually moved sleep are included; mental health measured at a LATER time point than sleep; interventions with mental-health-specific components excluded; internal negative control; trim-and-fill for the significant funnel asymmetry. Weaknesses inherited from the primary literature: 29/65 studies judged high risk of bias, 26/65 unclear, only 10/65 low; I2 = 76-82% before outlier removal."
+funding: null
+notes: |
+  THE central record for requirement 4. Effect of improving sleep on mood, from randomised trials:
+    depression   g = -0.63 (-0.83, -0.43), k = 61; outlier-trimmed -0.47 (-0.57, -0.37)
+    anxiety      g = -0.50 (-0.76, -0.24), k = 35
+    composite    g = -0.53 (-0.68, -0.38); trim-and-fill adjusted -0.35 (-0.55, -0.16)
+    suicidality  g = +0.10 (-3.74, 3.94), k = 2 -> NO randomised evidence either way
+  TRANSPORTABILITY WARNING that matters enormously for this subject. Two features of this evidence
+  base restrict its applicability to him:
+   1. The review EXPLICITLY EXCLUDED under-18s: "studies were excluded if they ... recruited children
+      and young people (i.e., <18 years of age)". So there is zero paediatric/adolescent content.
+      Age was tested as a continuous moderator and was flat (B = 0.00, 95% CI -0.01 to 0.02), which is
+      mild reassurance but is an extrapolation across a range that barely includes 18-19 year olds.
+   2. The interventions are overwhelmingly INSOMNIA treatments - 53 of 72 comparisons (74%) were
+      multi-component CBT-I - given to people with a sleep COMPLAINT, and 38/72 comparisons (53%)
+      had a comorbid physical or mental health problem. CBT-I works by removing conditioned arousal,
+      correcting dysfunctional sleep beliefs and consolidating sleep; it does not manufacture extra
+      time in bed for someone whose sleep is short because of workload. The subject does not have
+      insomnia, so this g of -0.47 to -0.63 is NOT the expected benefit of him sleeping more.
+      See the discussion in psychiatric_summary.md; vandyk2017 is the closest available analogue for
+      behaviourally-imposed short sleep, and its mood benefits are qualitative only.
+  Follow-up timing: mean 20.5 weeks post-intervention (median 12), which I have encoded as
+  followup_years = 0.39. The effect was larger at <6 months (g+ = -0.60) than at >=6 months
+  (g+ = -0.18, Q = 10.75, p < 0.01), i.e. the benefit decays.
+shard: "s12_psychiatric"

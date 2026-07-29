@@ -1,0 +1,103 @@
+study_id: hertenstein2019
+citation: "Hertenstein E, Feige B, Gmeiner T, Kienzler C, Spiegelhalder K, Johann A, Jansson-Fröjmark M, Palagini L, Rücker G, Riemann D, Baglioni C. Insomnia as a predictor of mental disorders: A systematic review and meta-analysis. Sleep Med Rev. 2019 Feb;43:96-105."
+doi: "10.1016/j.smrv.2018.10.006"
+pmid: "30537570"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Insomnia as a predictor of mental disorders: A systematic review and meta-analysis."
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: null
+n_studies_pooled: 13
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: incident_depression_after_insomnia
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "INSOMNIA at baseline (nighttime + daytime symptoms) vs no insomnia; >=12 mo follow-up; k=10"}
+    scale: log_or
+    unit: null
+    value: 1.04028
+    se: 0.30730
+    ci: [0.43825, 1.64287]
+    conversion_formula: "OR 2.83 (1.55-5.17); log(2.83)=1.04028; se=(log(5.17)-log(1.55))/3.92=0.30730"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = insomnia at baseline predicts ONSET of depression. NOTE: exposure is insomnia, NOT short sleep duration. This is the contrast that does NOT apply to our subject."
+    covariates: ["study-specific"]
+    followup_years: null
+    cohort_family: "pooled_multiple_cohorts"
+    quote: "The results suggest that insomnia is a significant predictor for the onset of depression (10 studies, OR 2.83, CI 1.55-5.17), anxiety (six studies, OR 3.23, CI 1.52-6.85), alcohol abuse (two studies, OR 1.35, CI 1.08-1.67, and psychosis (one study, OR 1.28, CI 1.03-1.59)."
+  - outcome_domain: psychiatric
+    outcome_construct: incident_anxiety_after_insomnia
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "insomnia at baseline vs none; >=12 mo follow-up; k=6"}
+    scale: log_or
+    unit: null
+    value: 1.17248
+    se: 0.38407
+    ci: [0.41871, 1.92425]
+    conversion_formula: "OR 3.23 (1.52-6.85); log(3.23)=1.17248; se=(log(6.85)-log(1.52))/3.92=0.38407"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = insomnia predicts onset of anxiety disorder"
+    covariates: ["study-specific"]
+    followup_years: null
+    cohort_family: "pooled_multiple_cohorts"
+    quote: "insomnia is a significant predictor for the onset of ... anxiety (six studies, OR 3.23, CI 1.52-6.85)"
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Authors' own verdict: 'The overall risk of bias in the primary studies was moderate.' Only 13 primary studies across all outcomes; k=10 for depression, k=6 for anxiety, k=1 for psychosis. Very wide CIs. Baseline insomnia assessment heterogeneous; residual confounding by subthreshold depression at baseline is the dominant threat, since insomnia is itself a prodromal symptom of depression and >=12 mo follow-up does not exclude a prodrome."
+funding: null
+notes: |
+  I EXTRACTED THIS RECORD SPECIFICALLY AS THE CONTRAST CASE FOR OUR SUBJECT, NOT AS EVIDENCE ABOUT HIM.
+
+  This is the single largest effect size in my whole shard for a prospective sleep -> depression
+  association: OR 2.83 for depression onset, OR 3.23 for anxiety onset. It dwarfs everything in the
+  sleep-DURATION literature (compare zhai2015 RR 1.31, short2020 OR 1.55 for adolescent mood,
+  zhang2024_mr OR 1.179 for genetically proxied short sleep). And the exposure is INSOMNIA.
+
+  That gap is the quantitative heart of this shard's central question. Set the two side by side:
+    insomnia -> incident depression:            OR 2.83 (1.55-5.17)   [hertenstein2019, k=10, prospective]
+    short sleep duration -> incident depression: RR 1.31 (1.04-1.64)  [zhai2015, k=7, prospective]
+    genetically proxied short sleep -> MDD:      OR 1.179 (1.108-1.255) [zhang2024_mr]
+    genetically proxied insomnia -> MDD:         OR 1.233 (1.214-1.253) [zhang2024_mr]
+    insomnia -> MDD (MR):                        OR 1.31 (1.25-1.37)   [sun2022_mr]
+  On the log scale the observational insomnia effect (log 2.83 = 1.04) is about 3.9x the observational
+  short-duration effect (log 1.31 = 0.27), and about 6.3x the genetically proxied short-duration
+  effect (log 1.179 = 0.165). Insomnia is where nearly all of the psychiatric signal lives.
+
+  WHY THIS MATTERS FOR AN 18-YEAR-OLD WITH WORKLOAD-IMPOSED SHORT SLEEP.
+  Insomnia is defined by an inability to sleep despite adequate opportunity, plus distress about it.
+  Our subject has the inverse: preserved ability, curtailed opportunity, and (as far as the case
+  describes) no distress about sleep onset. He would not meet insomnia criteria on any standard
+  instrument. Therefore the OR 2.83 pathway is essentially closed to him, and the correct
+  observational anchor for his exposure is the much weaker duration literature. Applying
+  insomnia-derived risk to him would overestimate his depression risk by something in the region of
+  a factor of 2-4 on the log-OR scale.
+
+  RESIDUAL CAUTION IN THE OTHER DIRECTION. Chronic sleep restriction can eventually generate
+  insomnia-like features (conditioned hyperarousal, dysregulated sleep timing, weekend rebound
+  producing Sunday-night sleep-onset difficulty). If three years of 5-6 h weeknights plus 10-11 h
+  weekend rebound has pushed the subject into a genuinely irregular, phase-delayed pattern, he could
+  drift toward the insomnia phenotype and pick up part of this larger risk. That transition -- not
+  short duration per se -- is the mechanism by which his risk would escalate materially, and it is
+  the thing worth monitoring. See lu2026_sjl for the social-jetlag evidence bearing on exactly this
+  weekday/weekend-discrepancy pattern.
+
+  ARITHMETIC. depression: log(2.83) = +1.04028, se = (log 5.17 - log 1.55)/3.92 = 0.30730.
+             anxiety:    log(3.23) = +1.17248, se = (log 6.85 - log 1.52)/3.92 = 0.38407.
+
+  ACCESS. Abstract only (Elsevier paywall); pooled ORs, CIs and k are all stated verbatim in the
+  abstract so nothing was inferred beyond the log transform. Age distribution is not given in the
+  abstract, hence adolescent_match: mixed and age fields null rather than guessed.
+shard: "s12_psychiatric"

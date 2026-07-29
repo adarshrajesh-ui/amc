@@ -1,0 +1,122 @@
+study_id: cai2021_mr
+citation: "Cai L, Bao Y, Fu X, Cao H, Baranova A, Zhang X, Sun J, Zhang F. Causal links between major depressive disorder and insomnia: A Mendelian randomisation study. Gene. 2021 Feb 5;768:145271."
+doi: "10.1016/j.gene.2020.145271"
+pmid: "33122081"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Causal links between major depressive disorder and insomnia: A Mendelian randomisation study."
+access_tier: abstract_only
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "European ancestry (GWAS consortia)"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: mdd_from_insomnia_forward
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "FORWARD: liability to INSOMNIA -> MDD, multi-SNP MR, bxy scale"}
+    scale: smd
+    unit: "bxy, MR causal effect on the liability/log-odds scale as reported by the authors"
+    value: 0.57
+    se: 0.07
+    ci: [0.43280, 0.70720]
+    conversion_formula: "Authors report 'bxy = 0.57 ± 0.07' i.e. estimate +/- SE. CI computed as 0.57 +/- 1.96*0.07 = (0.4328, 0.7072). No transformation applied; bxy is already on a log-odds-like scale but the authors do not state the exposure/outcome units, so it should NOT be exponentiated into an OR without checking the source scaling."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = insomnia liability causes MDD. Forward arrow."
+    covariates: ["MR assumptions; LD score regression genetic correlation reported separately"]
+    followup_years: null
+    cohort_family: "GWAS_consortia_European"
+    quote: "Mendelian randomization analysis indicated that liability to MDD confers a causal effect on insomnia (bxy = 0.16 ± 0.02, P = 1.11 × 10-18), while liability to insomnia confers a causal effect on MDD (bxy = 0.57 ± 0.07, P = 1.17 × 10-14)."
+  - outcome_domain: psychiatric
+    outcome_construct: insomnia_from_mdd_reverse
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "REVERSE: liability to MDD -> insomnia, multi-SNP MR, bxy scale"}
+    scale: smd
+    unit: "bxy, MR causal effect as reported by the authors"
+    value: 0.16
+    se: 0.02
+    ci: [0.12080, 0.19920]
+    conversion_formula: "Authors report 'bxy = 0.16 ± 0.02'. CI = 0.16 +/- 1.96*0.02 = (0.1208, 0.1992)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = MDD liability causes insomnia. Reverse arrow. SMALLER than the forward arrow here (0.16 vs 0.57), which is the OPPOSITE asymmetry from sun2022_mr -- see notes."
+    covariates: ["MR assumptions"]
+    followup_years: null
+    cohort_family: "GWAS_consortia_European"
+    quote: "liability to MDD confers a causal effect on insomnia (bxy = 0.16 ± 0.02, P = 1.11 × 10-18)"
+  - outcome_domain: psychiatric
+    outcome_construct: genetic_correlation_mdd_insomnia
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "LD score regression genetic correlation between MDD and insomnia (not a causal estimate)"}
+    scale: raw_units
+    unit: "rg, genetic correlation"
+    value: 0.40
+    se: 0.03
+    ci: [0.34120, 0.45880]
+    conversion_formula: "Authors report 'correlation ratio = 0.40 ± 0.03'. CI = 0.40 +/- 1.96*0.03. This is a CORRELATION, not a causal effect, and must not be pooled with causal estimates."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = shared genetic architecture. rg = 0.40 means MDD and insomnia share a large fraction of their genetic basis, which is itself a confounding mechanism for observational associations: common causes, not one causing the other."
+    covariates: []
+    followup_years: null
+    cohort_family: "GWAS_consortia_European"
+    quote: "Genetic correlation analyses indicated that MDD has a significant genetic correlation with insomnia (correlation ratio = 0.40 ± 0.03, P = 1.12 × 10-52)."
+rob:
+  tool: MR-STROBE
+  judgement: some_concerns
+  notes: "Reports a bidirectional design with tight SEs and extremely small p-values, and identifies a candidate mediating gene (TCF4). But the abstract does not report MR-Egger intercept tests, weighted-median sensitivity analyses, instrument counts, F-statistics, or sample sizes, so I cannot assess pleiotropy or weak-instrument bias. Published in Gene, a molecular-genetics journal rather than a psychiatric-epidemiology or MR-methods venue, and the reporting is correspondingly thin on MR diagnostics. The bxy scale is not defined in the abstract, which limits interpretability."
+funding: null
+notes: |
+  WHAT THIS RECORD CONTRIBUTES: THE BIDIRECTIONAL RATIO ON THE INSOMNIA AXIS, AND A DISAGREEMENT.
+
+  Forward (insomnia -> MDD): bxy = 0.57 +/- 0.07
+  Reverse (MDD -> insomnia): bxy = 0.16 +/- 0.02
+  Reverse share of the total = 0.16/(0.16+0.57) = 0.219, i.e. on this study's numbers about 22% of the
+  bidirectional insomnia/depression relationship runs backwards and 78% forwards.
+
+  THIS DIRECTLY CONTRADICTS sun2022_mr, AND I AM NOT GOING TO AVERAGE OVER THE DISAGREEMENT.
+    cai2021 (this):  forward 0.57, reverse 0.16  -> reverse share 22%, forward arrow dominant
+    sun2022_mr:      forward log 1.31 = 0.270, reverse log 1.37 = 0.315 -> reverse share 54%, arrows symmetric
+  Same axis, same trait pair, similar populations, opposite conclusions about which direction dominates.
+  Possible explanations: different GWAS vintages and sample sizes for the MDD instrument (sun2022 used
+  only 12 MDD SNPs); different insomnia phenotype definitions; different MR estimators (cai2021's bxy
+  comes from a GSMR-style multi-SNP framework, sun2022's from IVW); and non-comparable scales, since
+  bxy and log-OR are not the same quantity and I cannot verify cai2021's scaling from the abstract.
+  The honest summary for the modeller is that the reverse-causation share on the INSOMNIA axis is
+  poorly identified and plausibly anywhere between about 20% and 55%. I use that range, not a point
+  estimate, in psychiatric_summary.md.
+
+  NOTE CAREFULLY: THIS STUDY SAYS NOTHING ABOUT SLEEP DURATION. Both arrows here are insomnia arrows.
+  For our subject, whose exposure is curtailed opportunity rather than insomnia, this record is
+  background on the reverse-causation machinery, not an estimate of his risk. The relevant duration-axis
+  MR estimates are in zhang2024_mr (short duration -> MDD OR 1.179) and sun2022_mr (continuous
+  duration -> MDD null; MDD -> duration OR 0.92).
+
+  THE GENETIC CORRELATION IS THE UNDERAPPRECIATED NUMBER. rg = 0.40 (+/- 0.03) between MDD and insomnia
+  means these two traits share roughly 40% of their genetic correlation structure. That is a large
+  shared architecture, and it is a CONFOUNDING mechanism distinct from either causal arrow: genes that
+  predispose to both produce an observational association even in the complete absence of causation in
+  either direction. Any decomposition of the observational association into "forward + reverse" is
+  therefore incomplete; a third bucket, "shared liability," is doing real work. For our subject this is
+  actually reassuring in a specific way: if his family history is unremarkable, his short sleep is
+  externally imposed rather than a marker of shared depressive/insomnia liability, and the confounded
+  portion of the population-level association does not transfer to him.
+
+  ARITHMETIC. All three estimates were reported as "estimate ± SE", so I recorded value and se
+  directly and computed CIs as value +/- 1.96*se:
+    forward 0.57 +/- 1.96(0.07) = (0.4328, 0.7072)
+    reverse 0.16 +/- 1.96(0.02) = (0.1208, 0.1992)
+    rg      0.40 +/- 1.96(0.03) = (0.3412, 0.4588)
+  I did NOT exponentiate bxy into odds ratios, because the abstract does not define the scale and
+  doing so would risk a units error.
+
+  ACCESS. Abstract only (Elsevier paywall). Sample sizes are not stated in the abstract; n: null.
+shard: "s12_psychiatric"

@@ -1,0 +1,130 @@
+study_id: cdc_suicide_rates
+citation: "National Center for Health Statistics. Death rates for suicide, by sex, race, Hispanic origin, and age: United States. Health, United States data table. CDC open data resource 9j2v-jamp, data.cdc.gov. Values retrieved for data years 2016-2018."
+doi: null
+pmid: null
+url: "https://data.cdc.gov/resource/9j2v-jamp.json"
+verification:
+  crossref_ok: null
+  pubmed_ok: null
+  status: VERIFIED
+  resolved_title: "Death rates for suicide, by sex, race, Hispanic origin, and age: United States"
+access_tier: full_text
+secondhand_via: null
+design: life_table
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [15, 24]
+  pct_female: 0.0
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: suicide_mortality_rate_male_15_19
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "US MALES aged 15-19, suicide death rate, data year 2018 (most recent year in this table)"}
+    scale: probability
+    unit: "deaths per 100,000 per year"
+    value: 17.3
+    se: null
+    ci: null
+    conversion_formula: "Retrieved directly from the CDC open-data table as 'Male: 15-19 years', year 2018, estimate 17.3, unit 'Deaths per 100,000 resident population'. As an annual absolute probability: 17.3/100,000 = 0.0173% = 1.73 per 10,000 per year. No SE published in this table."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is the ABSOLUTE BASELINE against which any relative risk from short sleep must be multiplied. It is the population rate, not a rate for short sleepers."
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "NVSS"
+    quote: "Sex and age | Male: 15-19 years | 15-19 years | 2018 | 17.3"
+  - outcome_domain: baseline_risk
+    outcome_construct: suicide_mortality_rate_male_20_24
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "US MALES aged 20-24, suicide death rate, 2018 -- the band our subject enters next"}
+    scale: probability
+    unit: "deaths per 100,000 per year"
+    value: 27.9
+    se: null
+    ci: null
+    conversion_formula: "CDC table, 'Male: 20-24 years', 2018, estimate 27.9 per 100,000 = 0.0279% per year."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Rate rises 61% from the 15-19 band to the 20-24 band in males. Relevant because our 18-year-old is moving into the higher-risk band over the period of interest regardless of sleep."
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "NVSS"
+    quote: "Sex and age | Male: 20-24 years | 20-24 years | 2018 | 27.9"
+  - outcome_domain: baseline_risk
+    outcome_construct: suicide_mortality_rate_female_15_19_comparator
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "US FEMALES aged 15-19, suicide death rate, 2018; sex comparator"}
+    scale: probability
+    unit: "deaths per 100,000 per year"
+    value: 5.2
+    se: null
+    ci: null
+    conversion_formula: "CDC table, 'Female: 15-19 years', 2018, estimate 5.2 per 100,000. Male:female rate ratio at 15-19 = 17.3/5.2 = 3.33."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Males die by suicide at 3.3x the female rate at 15-19, while females report roughly 2x the ideation and attempt prevalence. This inversion is central to interpreting the sex-moderation findings in my shard -- see notes."
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "NVSS"
+    quote: "Female: 15-19 years | 2018 | 5.2"
+rob:
+  tool: none
+  judgement: na
+  notes: "National vital-statistics death certificate data; essentially complete ascertainment of deaths, though suicide is known to be undercounted relative to undetermined-intent and some overdose deaths. This is a descriptive denominator, not an effect estimate, so risk-of-bias tools do not apply. LIMITATION: this particular CDC table ends at data year 2018. US youth suicide rates changed after 2018 and through the pandemic period, so the 2018 figures may understate current rates. I did not retrieve a more recent year and have not extrapolated."
+funding: "US federal (NCHS)"
+notes: |
+  PURPOSE OF THIS RECORD. My task requires absolute risk numbers for an 18-19 year old male. The
+  suicidality literature in my shard reports odds ratios and self-reported prevalences, which cannot be
+  converted into absolute mortality risk without a population denominator. This record supplies it, from
+  vital statistics rather than from self-report.
+
+  THE NUMBERS (2018, deaths per 100,000 per year):
+    Male 15-19    17.3        Female 15-19    5.2       male:female ratio 3.33
+    Male 20-24    27.9
+    Male 15-24    22.7
+  For an 18-year-old male the applicable annual baseline is on the order of 17-28 per 100,000, i.e.
+  roughly 0.02% per year, or about 1 in 4,300 to 1 in 5,800 per year. Straddling the 15-19/20-24 boundary
+  as our subject does, ~20 per 100,000/year is a reasonable working figure.
+
+  HOW TO COMBINE THIS WITH THE RELATIVE RISKS IN MY SHARD, AND THE ARITHMETIC THAT RESULTS.
+  Take the most defensible relative estimate for behaviourally imposed short sleep. gangwisch2010, the
+  only quasi-experiment, gives OR 1.20 (1.01-1.41) for suicidal IDEATION from a 2+ hour reduction in
+  permitted sleep opportunity. Applying a relative increase of that order to a baseline of 20 per 100,000
+  gives roughly 24 per 100,000, an absolute increase of about 4 per 100,000 per year, i.e. 0.004
+  percentage points, or about 1 additional death per 25,000 exposed young men per year. Over the three
+  years of exposure the cumulative absolute excess is on the order of 1 in 8,000.
+  I want to be explicit that this arithmetic imports an ideation OR onto a mortality baseline, which is
+  not strictly valid -- the OR for completed suicide is not measured anywhere in my shard, and the
+  severity gradient in wang2024_yrbs (RR 2.01 ideation, 1.52 medically treated attempt) suggests the
+  relative effect SHRINKS as the endpoint becomes more severe, so 1.20 is probably an overestimate for
+  death. The purpose of the calculation is to establish the order of magnitude: the absolute suicide-
+  mortality consequence for this individual is small in absolute terms even though the relative
+  associations in the literature look alarming.
+
+  THE SEX INVERSION IS THE MOST IMPORTANT INTERPRETIVE POINT AND IT CUTS AGAINST MY OWN OTHER FINDINGS.
+  Three studies in my shard (short2015, conklin2018_basus, wang2024_yrbs) find the sleep-depression and
+  sleep-suicidality associations to be concentrated in FEMALES, which I have treated as a favourable
+  qualifier for our male subject. But this record shows that males die by suicide at 3.3 times the female
+  rate at 15-19 while reporting fewer ideation and attempt symptoms. So the outcomes on which females
+  show greater sleep sensitivity (self-reported ideation, attempts, CESD scores) are precisely the
+  outcomes on which females have higher rates but lower lethality. Male suicidality is characterised by
+  lower reported symptom burden and much higher case fatality.
+  Two consequences the modeller must hold together:
+    (1) The female-concentrated sleep effect may be an artefact of measuring the female-typical
+        presentation. Instruments that capture sadness, crying and reported ideation will find female
+        effects; the male-typical pathway (irritability, impulsivity, substance use, then a highly lethal
+        act) is barely measured in this literature. Notably, IRRITABILITY and ANGER are exactly what the
+        experimental sleep-restriction studies DO reliably move (baum2014 anger d_z 0.44, vandyk2017 anger
+        improves with extension).
+    (2) Therefore a small relative effect on impulsivity/irritability in a male carries more absolute
+        mortality consequence than a larger relative effect on reported sadness in a female. The
+        reassurance offered by the female-specificity findings should be discounted accordingly, and I do
+        not treat it as a clean risk reduction.
+
+  DATA VINTAGE CAVEAT. This table's most recent year is 2018. I checked and 2016-2018 male 15-19 rates
+  were 14.8, 17.9 and 17.3, so the series was rising then roughly flat at the end of the available window.
+  I have not extrapolated beyond 2018 and the modeller should treat 17.3 as a floor rather than a current
+  estimate.
+shard: "s12_psychiatric"

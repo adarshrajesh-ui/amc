@@ -1,0 +1,127 @@
+study_id: daghlas2021_mr
+citation: "Daghlas I, Lane JM, Saxena R, Vetter C. Genetically Proxied Diurnal Preference, Sleep Timing, and Risk of Major Depressive Disorder. JAMA Psychiatry. 2021 Aug 1;78(8):903-910."
+doi: "10.1001/jamapsychiatry.2021.0959"
+pmid: "34037671"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8156187/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Genetically Proxied Diurnal Preference, Sleep Timing, and Risk of Major Depressive Disorder."
+access_tier: abstract_only
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 697828
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [40, 69]
+  pct_female: null
+  country: "UK / US (UK Biobank, 23andMe, Psychiatric Genomics Consortium); all European ancestry"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: mdd_from_earlier_sleep_midpoint
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "genetically proxied morning diurnal preference, SCALED to a 1-hour EARLIER accelerometer-measured sleep midpoint -> MDD; IVW, up to 340 loci"}
+    scale: log_or
+    unit: "per 1 h earlier sleep midpoint"
+    value: -0.26136
+    se: 0.10208
+    ci: [-0.46204, -0.06188]
+    conversion_formula: "OR 0.77 (0.63-0.94) per 1 h earlier sleep midpoint; log(0.77) = -0.26136; se = (log(0.94)-log(0.63))/3.92 = 0.10208"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = shifting sleep 1 h EARLIER LOWERS MDD risk by 23%. Equivalently, sleeping 1 h LATER raises MDD odds by a factor of 1/0.77 = 1.30. This is a TIMING effect, independent of duration, and it is the MR estimate most likely to apply to our subject."
+    covariates: ["MR assumptions; Egger intercept 0.00 (SE 0.001), P = .66, i.e. no detectable pleiotropy; sensitivity analyses for reverse causality showed similar findings"]
+    followup_years: null
+    cohort_family: "UK_Biobank_plus_23andMe_plus_PGC"
+    quote: "Genetically proxied earlier diurnal preference was associated with a 23% lower risk of depression (odds ratio [OR] per 1-hour earlier sleep midpoint, 0.77 [95% CI, 0.63-0.94]; P = .01)."
+  - outcome_domain: psychiatric
+    outcome_construct: mdd_stringently_defined_from_earlier_sleep_midpoint
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "same exposure, outcome restricted to stringently defined PGC MDD cases (sensitivity analysis)"}
+    scale: log_or
+    unit: "per 1 h earlier sleep midpoint"
+    value: -0.31471
+    se: 0.15716
+    ci: [-0.61619, 0.0]
+    conversion_formula: "OR 0.73 (0.54-1.00); log(0.73) = -0.31471; se = (log(1.00)-log(0.54))/3.92 = 0.15716"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = protective. Point estimate is LARGER than the main analysis (0.73 vs 0.77) but CI now touches 1.00 exactly (P = .05), so it is borderline. Consistency of the point estimate under stricter case definition is reassuring."
+    covariates: ["MR assumptions"]
+    followup_years: null
+    cohort_family: "UK_Biobank_plus_23andMe_plus_PGC"
+    quote: "This association was similar when restricting analysis to individuals with MDD as stringently defined by the Psychiatric Genomics Consortium (OR, 0.73 [95% CI, 0.54-1.00]; P = .05)"
+  - outcome_domain: psychiatric
+    outcome_construct: mdd_hospital_coded_from_earlier_sleep_midpoint
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "same exposure, outcome = MDD defined by hospital billing codes in UK Biobank; NOT significant"}
+    scale: log_or
+    unit: "per 1 h earlier sleep midpoint"
+    value: -0.44629
+    se: 0.25493
+    ci: [-0.94161, 0.05827]
+    conversion_formula: "OR 0.64 (0.39-1.06); log(0.64) = -0.44629; se = (log(1.06)-log(0.39))/3.92 = 0.25493"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative point estimate but NOT statistically significant (P = .08). Largest point estimate of the three, widest CI -- consistent with a real effect measured with few severe cases, rather than with absence of effect."
+    covariates: ["MR assumptions"]
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "but not statistically significant when defined by hospital-based billing codes in the UK Biobank (OR, 0.64 [95% CI, 0.39-1.06]; P = .08)"
+rob:
+  tool: MR-STROBE
+  judgement: low
+  notes: "The strongest MR study in my shard on methodological grounds. Very large (697,828 for the exposure GWAS; 170,756 MDD cases and 329,443 controls), up to 340 genetic loci, and -- crucially -- the instrument was RESCALED using accelerometer-measured sleep midpoint in 85,502 UK Biobank participants, so the exposure is anchored to an OBJECTIVE sleep-timing measure rather than to self-report. Egger intercept 0.00 (SE 0.001), P = .66, so no detectable directional pleiotropy. Reverse-causality sensitivity analyses reported and concordant. Published in JAMA Psychiatry. Residual concerns: European ancestry only; chronotype instruments may act partly through light exposure, social behaviour, or substance use rather than timing per se; and the exposure is a lifelong genetic propensity, not an acute behavioural shift."
+funding: "Author disclosures include NIH, DOE, Colorado CTSI and University of Colorado Boulder grants to Dr Vetter; unpaid advisory roles at Circadian Light Therapy Inc and Chronsulting disclosed."
+notes: |
+  WHY THIS IS THE MOST TRANSPORTABLE MR ESTIMATE FOR OUR SUBJECT, DESPITE BEING ABOUT MIDDLE-AGED ADULTS.
+
+  Every other MR study in my shard instruments either INSOMNIA (which our subject does not have) or
+  SLEEP DURATION (where the causal signal is weak or null: sun2022_mr null for continuous duration,
+  zhang2024_mr OR 0.998 continuous / 1.179 dichotomous). This study instruments SLEEP TIMING, and sleep
+  timing is exactly what a workload-restricted 18-year-old college student has displaced. A student
+  sleeping 5-6 h on weeknights because of workload is almost always doing so by going to bed late, not
+  by rising early on an advanced schedule; and his 10-11 h weekend nights with late rises push his
+  weekend midpoint later still. Late sleep midpoint is his phenotype as much as short duration is.
+
+  THE ESTIMATE AND ITS APPLICATION. OR 0.77 (0.63-0.94) per 1 h EARLIER midpoint. Inverting:
+  OR 1.30 (1.06-1.59) per 1 h LATER midpoint. If our subject's habitual midpoint is displaced ~1.5 h
+  later than an age-matched peer with an 8-9 h schedule -- plausible for a late-working student -- the
+  implied MDD odds ratio is 1.30^1.5 = 1.48. That is a substantial number, and notably it is LARGER
+  than the duration-based MR estimate (zhang2024_mr OR 1.179 for genetically short sleep).
+
+  THE STRATEGIC IMPLICATION, WHICH IS THE MOST ACTIONABLE FINDING IN MY WHOLE SHARD.
+  For this subject, the psychiatric risk may be carried more by WHEN he sleeps than by HOW LONG. Two
+  reasons this matters practically: (a) timing is often more tractable than duration for a student whose
+  total hours are constrained by workload -- shifting the same 6 h earlier costs nothing in study time,
+  whereas adding 2 h costs 2 h; (b) it predicts that his large weekday/weekend discrepancy is itself
+  part of the exposure, which connects directly to the social-jetlag evidence (lu2026_sjl: social jetlag
+  >2 h associated with depression OR 1.87, 1.73-2.02).
+
+  FOUR REASONS NOT TO OVERWEIGHT IT, STATED HONESTLY.
+    (1) POPULATION. UK Biobank and 23andMe adults, ~40-69 y for the accelerometer subsample. Adolescents
+        and young adults are in a developmentally normal phase DELAY; late chronotype at 18 is
+        physiological, whereas in a 55-year-old it is deviant and may index something else entirely
+        (shift work, alcohol, depression prodrome). adolescent_match: poor_midlife is not a formality here.
+    (2) THE INSTRUMENT IS DIURNAL PREFERENCE, NOT BEHAVIOUR. It proxies genetic chronotype. Our subject's
+        late timing is behaviourally imposed by workload, and may be occurring AGAINST his genetic
+        chronotype. Whether the harm attaches to late timing per se, or to circadian MISALIGNMENT between
+        internal phase and imposed schedule, is not resolved by this design. If the latter, then a
+        genetically-late person sleeping late is a different exposure from a genetically-average person
+        forced to sleep late -- and the second could be worse, not better.
+    (3) SCALING IS INDIRECT. The chronotype instrument was rescaled to hours of sleep midpoint using a
+        separate accelerometer GWAS. That two-step scaling is elegant but adds an assumption, and errors
+        in the scaling factor propagate directly into the per-hour interpretation.
+    (4) THE SEVERE-CASE ESTIMATE IS NOT SIGNIFICANT. Hospital-coded MDD gave OR 0.64 (0.39-1.06), P = .08.
+        The signal is clearest for self-reported/broadly defined depression.
+
+  ARITHMETIC. main:            log(0.77) = -0.26136, se = (log0.94 - log0.63)/3.92 = 0.10208
+              PGC stringent:   log(0.73) = -0.31471, se = (log1.00 - log0.54)/3.92 = 0.15716
+              hospital codes:  log(0.64) = -0.44629, se = (log1.06 - log0.39)/3.92 = 0.25493
+  Inversion for the "later midpoint" direction: 1/0.77 = 1.299, i.e. log_or = +0.26136 per hour later.
+
+  ACCESS. Abstract only, but the JAMA Psychiatry abstract is structured and reports all three ORs, CIs,
+  P values, sample sizes, locus count and the Egger intercept verbatim, so nothing material was inferred.
+  PMC8156187 exists if the modeller needs the full instrument list.
+shard: "s12_psychiatric"

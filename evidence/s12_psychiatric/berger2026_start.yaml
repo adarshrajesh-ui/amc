@@ -1,0 +1,76 @@
+study_id: berger2026_start
+citation: "Berger AT, Erickson DJ, Wahlstrom K, Laska MN, Lammert S, Widome R. Consequences of Delaying School Start Time on Mental Health Among Adolescents: The START Study. Behav Med. 2026 Jun 30:1-11."
+doi: "10.1080/08964289.2026.2658525"
+pmid: "42381414"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Consequences of Delaying School Start Time on Mental Health Among Adolescents: The START Study."
+access_tier: abstract_only
+secondhand_via: null
+design: quasi_experiment
+tier: T2
+n: 2134
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [14, 17]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: depressed_mood_kandel_davies_direction_only
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 730, contrast_label: "difference-in-differences: two schools delayed start times by roughly one hour (from 7:30/7:45 am) between 9th and 10th grade, three comparison schools did not; outcome measured in 10th and 11th grade"}
+    scale: probability
+    unit: "DIRECTION ONLY; NO MAGNITUDE PUBLISHED IN THE ABSTRACT"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "NOT A MEASURED QUANTITY AND NOT POOLABLE. The abstract states the direction and the significance pattern but gives no point estimate, no CI, no SE and no test statistic for any outcome. The journal item is not open access (Unpaywall: is_oa false, zero OA locations) and there is no PMC deposit, so I could not reach the tables. value 1.0 encodes only 'depressed mood worsened in comparison schools relative to policy-change schools at both follow-ups, and the difference was driven by the fatigue items'. Any number attached to this record downstream would be fabricated."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Direction favours delayed start times, i.e. more sleep opportunity -> lower depressed-mood scores. CRITICALLY, the authors attribute the difference to the FATIGUE items of the scale, not the mood items."
+    covariates: ["multiple imputation by fully conditional specification for missing data"]
+    followup_years: 2.0
+    cohort_family: "START"
+    quote: "Depressed mood scores increased for students in comparison schools relative to policy-change schools at follow-up 1 and at follow-up 2. These differences were primarily driven by the items in the scale related to fatigue."
+rob:
+  tool: ROBINS-I
+  judgement: moderate
+  notes: "Same underlying natural experiment and cohort as sadikova2024, so the same structural strengths (baseline measured while all five schools still started early; policy-driven exposure change; n=2,134) and the same structural weaknesses (non-random assignment of the policy at the school level, only two treated and three comparison schools so school-level confounding cannot be separated from treatment, differential attrition, self-reported sleep). This analysis uses difference-in-differences with multiply imputed missing data rather than the TMLE/IV approach of sadikova2024. I cannot assess reporting quality in detail because I have only the abstract. Downgraded further for my purposes by the total absence of quantitative results in the retrievable text."
+funding: "not stated in the abstract"
+notes: |
+  I AM RECORDING THIS STUDY WITHOUT A MAGNITUDE, DELIBERATELY. It cannot contribute to the pooled estimate.
+  It is here for one reason: it is an INDEPENDENT ESTIMATOR APPLIED TO THE SAME DATA that reproduces the
+  single most important qualitative finding in my shard.
+
+  sadikova2024 analysed the START cohort with hierarchical TMLE and a structural nested mean model using the
+  policy as an instrument, and found that the depression-scale benefit of extra sleep was carried entirely by
+  the fatigue and sleep items (fatigue -0.91 points at 2 y, 95% CI -1.45 to -0.38) while the mood items did
+  not move (-0.03, 95% CI -0.09 to 0.02). This paper analysed the same cohort with difference-in-differences
+  and multiple imputation, and concluded: "These differences were primarily driven by the items in the scale
+  related to fatigue." Two estimators, same answer. That materially raises my confidence that the
+  fatigue-versus-mood decomposition is a real property of the data rather than an artefact of one modelling
+  choice.
+
+  THE AUTHORS THEN STATE THE IMPLICATION MORE BLUNTLY THAN I WOULD HAVE DARED TO, in their plain-language
+  summary: "Addressing sleep, at a population scale, through school start time policies that are aligned with
+  adolescent circadian biology, could reduce either the prevalence of depression OR THE PREVALENCE OF
+  CHILDREN WHOSE CHRONIC TIREDNESS LEADS TO MISDIAGNOSIS OF DEPRESSION." (emphasis mine). Their own formal
+  conclusion is hedged the same way: the policy "has the potential to reduce the prevalence of symptoms of
+  depression among cases where fatigue is a primary presenting symptom."
+
+  That is the investigators of the largest school-start-time cohort in the world saying, in print, that they
+  cannot distinguish between reducing depression and reducing the misclassification of tiredness as
+  depression. For a subject whose exposure is workload-imposed sleep restriction and whose risk we are being
+  asked to quantify, this is the central interpretive caution of my entire domain.
+
+  CO-COHORT WARNING FOR THE POOLER. cohort_family: START, identical sample to sadikova2024 (n=2,134,
+  Minneapolis metropolitan area, baseline spring 2016 in 9th grade). DO NOT COUNT BOTH. Since this record
+  carries no magnitude, the practical rule is simple: pool sadikova2024, and treat this record as a
+  qualitative corroboration of its item-level decomposition. Note also that both are probably inside the
+  wang2026_dsst pool, so that record is not independent of these two either.
+shard: "s12_psychiatric"
