@@ -1,0 +1,130 @@
+study_id: nedeltcheva2012
+citation: "Nedeltcheva AV, Imperial JG, Penev PD. Effects of sleep restriction on glucose control and insulin secretion during diet-induced weight loss. Obesity (Silver Spring). 2012;20(7):1379-1386."
+doi: "10.1038/oby.2012.97"
+pmid: "22513492"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3384766/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Effects of sleep restriction on glucose control and insulin secretion during diet-induced weight loss."
+access_tier: full_text
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 10
+n_studies_pooled: null
+population:
+  age_mean: 41.0
+  age_range: null
+  pct_female: 30.0
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: insulin_sensitivity_si_minimal_model_during_weight_loss
+    exposure: {type: chronic_restriction, dose_h: 5.5, referent_h: 8.5, duration_days: 14, contrast_label: "14 days at 5.5 h vs 8.5 h time in bed WHILE ON A HYPOCALORIC DIET with weight loss; randomised crossover, conditions ~7 months apart; achieved sleep reduction 131 +/- 30 min/day"}
+    scale: raw_units
+    unit: "(mU/L)^-1 x min^-1, absolute change in Minimal-model S_I"
+    value: -0.9
+    se: 0.38265
+    ci: [-1.65, -0.15]
+    conversion_formula: "Published as 'S_I by 26% (independent effect of short sleep -0.9 (mU/L)^-1.min^-1; 95%CI -0.1 to -1.6; P<0.03)', from a mixed model controlling for order of treatment and final body composition. Note the source prints the CI in descending order (-0.1 to -1.6); re-ordered here as -1.6 to -0.1. se = (upper - lower)/3.92 = (-0.1 - (-1.6))/3.92 = 1.5/3.92 = 0.38265. Back-check: -0.9 +/- 1.96*0.38265 = -1.650 to -0.150, reproducing the published CI. Percent-scale equivalent: -26%, with SE from the p bound = 10.10178 percentage points (df=9, t=2.5738)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = HARM (lower insulin sensitivity by IVGTT). BUT THE AUTHORS THEMSELVES DISTRUST THIS ESTIMATE - see quote and notes. It contradicts the oral and 24-h data in the same participants, and the authors attribute it to sleep-loss-induced changes in counter-regulatory hormones during the IVGTT corrupting the Minimal-model fit. Do NOT pool this as a clean -26% without carrying that caveat."
+    covariates: ["order of treatment", "final body composition"]
+    followup_years: null
+    cohort_family: "Chicago_Penev_5.5h_protocol"
+    quote: "When differences in order-of-treatment and final body composition were controlled for, DI at the end of the 5.5-h time-in-bed condition was reduced by 23% (independent effect of short sleep -523; 95%CI -36 to -1010; P<0.04) and S I by 26% (independent effect of short sleep -0.9 (mU/L) -1 .min -1 ; 95%CI -0.1 to -1.6; P<0.03)."
+  - outcome_domain: metabolic
+    outcome_construct: disposition_index_during_weight_loss
+    exposure: {type: chronic_restriction, dose_h: 5.5, referent_h: 8.5, duration_days: 14, contrast_label: "14 days at 5.5 h vs 8.5 h time in bed during hypocaloric diet; disposition index = AIR_G x S_I, i.e. beta-cell function adjusted for insulin resistance"}
+    scale: raw_units
+    unit: "disposition index units (AIR_G x S_I), absolute change"
+    value: -523.0
+    se: 248.46939
+    ci: [-1010.0, -36.0]
+    conversion_formula: "Published as a 23% reduction, independent effect -523, 95% CI -36 to -1010 (printed descending in the source; re-ordered here), P<0.04. se = (-36 - (-1010))/3.92 = 974/3.92 = 248.46939. Back-check: -523 +/- 1.96*248.46939 = -1010.0 to -36.0, reproducing the published CI exactly. Percent-scale equivalent: -23%, SE from the p bound = 9.58956 percentage points (df=9, t=2.3984)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = HARM (worse beta-cell compensation for the prevailing insulin resistance). Carries the same IVGTT-validity caveat as S_I above, since DI is the product of two Minimal-model quantities."
+    covariates: ["order of treatment", "final body composition"]
+    followup_years: null
+    cohort_family: "Chicago_Penev_5.5h_protocol"
+    quote: "DI at the end of the 5.5-h time-in-bed condition was reduced by 23% (independent effect of short sleep -523; 95%CI -36 to -1010; P<0.04)"
+  - outcome_domain: metabolic
+    outcome_construct: oral_glucose_tolerance_and_24h_glucose_null
+    exposure: {type: chronic_restriction, dose_h: 5.5, referent_h: 8.5, duration_days: 14, contrast_label: "14 days at 5.5 h vs 8.5 h time in bed during hypocaloric diet; 3-h 75 g OGTT and 24-h blood glucose profile"}
+    scale: pct_change
+    unit: "% change in oral glucose tolerance / 24-h glucose control; 0 registers an explicit null"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No impairment was detected, and the paper reports the null narratively rather than as a point estimate with dispersion, so value is set to 0 to register an explicit NULL and se is left null. Do NOT read 0 as a precise zero. The direction of the incidental fasting-glucose change was actually DOWNWARD (a 'modest decline in fasting blood glucose'), i.e. away from harm."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL / NO HARM on the oral and 24-h measures, in the same participants and the same conditions in which the IVGTT indicated a 26% fall in insulin sensitivity. This internal contradiction is the record's main scientific content."
+    covariates: ["order of treatment", "final body composition", "identical hypocaloric diet in both conditions", "comparable weight loss of 1.0 BMI unit in both conditions"]
+    followup_years: null
+    cohort_family: "Chicago_Penev_5.5h_protocol"
+    quote: "Opposite to predictions, oral glucose tolerance at the end of the short-sleep condition was not compromised and 24-hour glucose homeostasis was maintained with less insulin in the systemic circulation. This enhanced 24-hour insulin economy during the short-sleep condition was accompanied by a modest decline in fasting blood glucose, increased fasting FFA concentrations which suppressed normally after glucose ingestion, and lower total and LDL cholesterol."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomised crossover, tightly controlled diet, comparable weight loss across conditions (1.0 BMI unit each), 14-day conditions, dense 24-h sampling every 30 min, and both oral and intravenous glucose challenges - methodologically careful. Concerns: (1) n=10, very small; (2) the two conditions were separated by 7 +/- 3 MONTHS, an unusually long washout that admits secular drift in fitness, season, and body composition; (3) open-label; (4) MEASUREMENT VALIDITY IS THE DOMINANT ISSUE - the authors state explicitly that sleep-loss-related changes in counter-regulatory hormone secretion during the IVGTT 'limited the utility of the test in this study', so the headline S_I and DI estimates are suspect BY THE AUTHORS' OWN ASSESSMENT; (5) the exposure is bundled with an active hypocaloric diet, so this estimates the effect of short sleep DURING WEIGHT LOSS and cannot be generalised to weight-stable or weight-gaining conditions; (6) overweight middle-aged participants, 7 men and 3 women, no sex-stratified results; (7) p-values reported only as bounds."
+funding: "Not stated in the retrieved full text body (University of Chicago; NIH-supported NIHPA author manuscript, but no explicit grant statement was captured, so left unstated rather than guessed). Authors declared no conflict of interest."
+notes: |
+  READ THIS RECORD AS THE OTHER HALF OF THE PAIR WITH nedeltcheva2009. Same laboratory, same 14-day
+  5.5 h versus 8.5 h protocol, same Minimal-model methodology - the ONLY substantive difference is
+  energy balance, and the primary oral-glucose result flips:
+    nedeltcheva2009 - ad libitum food, sedentary, weight GAIN  -> 2-h OGTT glucose +9.1% (HARM)
+    nedeltcheva2012 - hypocaloric diet, weight LOSS            -> oral glucose tolerance NOT impaired
+  This is a genuine, informative effect modification and it should be reported as such rather than
+  averaged away.
+
+  THE INTERNAL CONTRADICTION IS THE POINT, AND IT IS A METHODOLOGICAL WARNING FOR THE WHOLE SHARD:
+  In the SAME 10 people, in the SAME conditions:
+    * IVGTT / Minimal model  -> S_I down 26%, disposition index down 23%. Looks like clear harm.
+    * OGTT + 24-h profiles   -> no deterioration in glucose tolerance; 24-h glucose held with LESS
+                                circulating insulin; fasting glucose modestly LOWER.
+  The authors come down on the side of the oral and 24-h data and explain the IVGTT discrepancy
+  mechanistically: sleep restriction altered cortisol, GH, and acylated-ghrelin secretion DURING the
+  test, and those hormonal excursions bias Minimal-model estimates toward apparent insulin
+  resistance. They even note that circulating insulin TENDED TO BE LOWER 60-180 min after meals under
+  restriction (P<0.06), and speculate that systemic insulin sensitivity may actually have been
+  somewhat HIGHER.
+  IMPLICATION THE MODELLER MUST CARRY: several headline "insulin sensitivity fell by X%" numbers in
+  this literature - including buxton2010's IVGTT-based -20% and nedeltcheva2009's -17.5% - rest on
+  IVGTT Minimal-model estimates obtained under exactly the hormonal conditions this paper identifies
+  as problematic. buxton2010 is partially protected because it ALSO ran a euglycemic clamp and found
+  -11% (a smaller effect than its own IVGTT figure of -20%, which is precisely the direction of bias
+  this paper predicts). sondrup2022's meta-analysis likewise found the clamp-measured whole-body
+  effect real but the PERIPHERAL component unaffected. The convergent conclusion across all of these:
+  IVGTT-derived reductions in insulin sensitivity after sleep restriction are probably OVERSTATED,
+  and clamp-based estimates around 10-11% are the more trustworthy magnitude.
+
+  DISTANCE FROM OUR SUBJECT'S EXPOSURE:
+  * Dose: 5.5 h TIB, 131 +/- 30 min/day of achieved sleep loss, moving participants from >7 h/day to
+    <6 h/day - the authors explicitly designed it "to approximate the short sleep times of many
+    adults". Close to the subject's weekday dose; far milder than the 4 h protocols.
+  * Duration: 14 days, continuous, no weekend recovery. Cannot address 3 years or weekday cycling.
+  * CONTEXT IS THE DISQUALIFYING MISMATCH: participants were on a hypocaloric diet and actively losing
+    weight. An 18-year-old college student is not in negative energy balance as a rule. So for our
+    subject the 2009 companion (ad libitum, weight gain) is the applicable arm, and THIS record's
+    reassuring null should be read as a boundary condition - "short sleep does not impair oral
+    glucose tolerance WHEN energy intake is restricted" - not as evidence that short sleep is
+    glycaemically harmless in general.
+  * Age: mean 41 +/- 5 y, BMI 27.4 +/- 2.0, overweight. Two decades older than the subject and
+    already overweight. Scored poor_midlife.
+
+  NET CONTRIBUTION TO THE SHARD: (1) it is one of only two experimental records (with dutil2024) in
+  which a realistic-dose restriction protocol failed to produce glycaemic harm, so it is essential
+  ballast against over-reading the 4 h studies; (2) it supplies the energy-balance effect modifier;
+  (3) it supplies the strongest internal evidence that IVGTT-based insulin-sensitivity estimates in
+  sleep-restriction studies are biased toward exaggerating harm.
+
+  n = 10 (3 female, 7 male) so pct_female = 30.0%. Mean age 41 [SD 5] y; no range published, so
+  age_range null rather than guessed. Weight loss 1.0 [0.3] BMI units in each condition.
+shard: "s07_metabolic"

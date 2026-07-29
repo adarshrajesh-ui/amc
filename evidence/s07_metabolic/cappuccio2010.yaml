@@ -1,0 +1,157 @@
+study_id: cappuccio2010
+citation: "Cappuccio FP, D'Elia L, Strazzullo P, Miller MA. Quantity and quality of sleep and incidence of type 2 diabetes: a systematic review and meta-analysis. Diabetes Care. 2010 Feb;33(2):414-20."
+doi: "10.2337/dc09-1124"
+pmid: "19910503"
+url: "https://europepmc.org/articles/PMC2809295"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 0.64
+  status: VERIFIED
+  resolved_title: "Quantity and quality of sleep and incidence of type 2 diabetes: a systematic review and meta-analysis."
+  # title_similarity 0.64 is an artefact: Crossref stores only 'Quantity and Quality of Sleep and
+  # Incidence of Type 2 Diabetes' and holds the subtitle in a separate field. The DOI registered
+  # against PMID 19910503 is 10.2337/dc09-1124, an exact match. Treated as VERIFIED.
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 107756
+n_studies_pooled: 10
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational (mostly Europe, US, Japan)"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: incident_type_2_diabetes_short_sleep_vs_referent
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: null, duration_days: null, contrast_label: "short sleep <=5-6 h/night vs each study's own referent category"}
+    scale: log_rr
+    unit: "log RR, short sleep vs referent"
+    value: 0.246860
+    se: 0.112358
+    ci: [0.026639, 0.467081]
+    conversion_formula: "Published RR 1.28 (95% CI 1.03-1.60). log_rr = ln(1.28) = 0.246860; se = (ln(1.60)-ln(1.03))/3.92 = (0.470004-0.029559)/3.92 = 0.112358. Back-check: exp(0.246860 +/- 1.96*0.112358) = 1.027-1.595, reproducing the published CI. dose_h recorded as 5.5 = midpoint of the '<=5-6 h' definition. ci field is on the LOG scale."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM (28% higher incidence of T2D in habitual short sleepers)"
+    covariates: ["multivariable-adjusted estimates from each contributing study pooled; age and BMI considered in the primary analyses"]
+    followup_years: null
+    cohort_family: "pooled_multiple"
+    quote: "For short duration of sleep (< or =5-6 h/night), the RR was 1.28 (95% CI 1.03-1.60, P = 0.024, heterogeneity P = 0.015)"
+  - outcome_domain: metabolic
+    outcome_construct: incident_type_2_diabetes_short_sleep_MEN_ONLY
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: null, duration_days: null, contrast_label: "short sleep <=5-6 h/night vs referent, MEN only"}
+    scale: log_rr
+    unit: "log RR, short sleep vs referent, men"
+    value: 0.727549
+    se: 0.297271
+    ci: [0.144898, 1.310200]
+    conversion_formula: "Published RR 2.07 (95% CI 1.16-3.72). log_rr = ln(2.07) = 0.727549; se = (ln(3.72)-ln(1.16))/3.92 = (1.313724-0.148420)/3.92 = 0.297271. Back-check: exp gives 1.156-3.707, reproducing the published CI. ci field is on the LOG scale."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. THE SEX-SPECIFIC ESTIMATE MOST RELEVANT TO OUR MALE SUBJECT, and it is roughly double the overall estimate - but with a very wide CI and formal heterogeneity vs women at P = 0.04."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple"
+    quote: "The effect in men (RR 2.07 [95% CI 1.16-3.72]) tended to be larger than that in women (1.07 [0.90-1.28], heterogeneity test P = 0.04)."
+  - outcome_domain: metabolic
+    outcome_construct: incident_type_2_diabetes_short_sleep_WOMEN_ONLY
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: null, duration_days: null, contrast_label: "short sleep <=5-6 h/night vs referent, WOMEN only"}
+    scale: log_rr
+    unit: "log RR, short sleep vs referent, women"
+    value: 0.067659
+    se: 0.089852
+    ci: [-0.108451, 0.243769]
+    conversion_formula: "Published RR 1.07 (95% CI 0.90-1.28). log_rr = ln(1.07) = 0.067659; se = (ln(1.28)-ln(0.90))/3.92 = 0.089852. Back-check: exp gives 0.897-1.276, reproducing the published CI."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL in women. Recorded so the pooler can see that the entire overall short-sleep signal in this meta-analysis is carried by men. Whether that is biology or artefact is unresolved."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple"
+    quote: "The effect in men (RR 2.07 [95% CI 1.16-3.72]) tended to be larger than that in women (1.07 [0.90-1.28], heterogeneity test P = 0.04)."
+  - outcome_domain: metabolic
+    outcome_construct: incident_type_2_diabetes_short_sleep_defined_as_5h_or_less
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: null, duration_days: null, contrast_label: "restricted to studies defining short sleep as <=5 h/night with questionnaire-ascertained incident cases (n=5 studies)"}
+    scale: log_rr
+    unit: "log RR, <=5 h vs referent"
+    value: 0.307485
+    se: 0.108032
+    ci: [0.095742, 0.519227]
+    conversion_formula: "Published RR 1.36 (95% CI 1.10-1.68). log_rr = ln(1.36) = 0.307485; se = (ln(1.68)-ln(1.10))/3.92 = 0.108032. Back-check: exp gives 1.100-1.681, reproducing the published CI. ci field is on the LOG scale."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. This is the closest DIRECTLY PUBLISHED estimate to a '5 h' contrast anywhere in this shard, and it is a useful sanity check on my derived shan2015 RR(5h) = 1.19 (1.07-1.31). The two are compatible."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple"
+    quote: "The effect was not affected by the restriction of the analysis to studies defining short sleep as <=5 h, in which incident cases were assessed by questionnaire ( n = 5; 1.36 [1.10-1.68, P = 0.004)."
+  - outcome_domain: metabolic
+    outcome_construct: incident_type_2_diabetes_long_sleep
+    exposure: {type: habitual_short_sleep, dose_h: 9, referent_h: null, duration_days: null, contrast_label: "long sleep >8-9 h/night vs referent"}
+    scale: log_rr
+    unit: "log RR, long sleep vs referent"
+    value: 0.392042
+    se: 0.140492
+    ci: [0.116677, 0.667406]
+    conversion_formula: "Published RR 1.48 (95% CI 1.13-1.96). log_rr = ln(1.48) = 0.392042; se = (ln(1.96)-ln(1.13))/3.92 = 0.140492. Back-check: exp gives 1.124-1.949, reproducing the published CI."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM at the long end, and LARGER than the short-sleep RR. Relevant to the subject's occasional 10-11 h weekend nights, though those are episodic rather than habitual."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple"
+    quote: "for long duration of sleep (>8-9 h/night), the RR was 1.48 (1.13-1.96, P = 0.005)"
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Careful, transparent meta-analysis: random-effects pooling, Downs and Black quality scoring (all but one study scored 15-18 of 19), Egger tests, trim-and-fill, leave-one-out sensitivity analyses, and no detected publication bias. But it is categorical rather than dose-response, exposure is self-reported in EVERY contributing study, statistical heterogeneity for short sleep was significant (P=0.015), and the authors themselves state a meta-analysis of observational data cannot control confounding. Superseded on precision by shan2015 (dose-response) and liu2025 (53 studies), so it should be used for the sex-specific and <=5 h subgroup estimates rather than as the primary anchor."
+funding: "Not stated in the retrieved full text (University of Warwick / Federico II University of Naples authorship; funder left unstated rather than guessed)."
+notes: |
+  ROLE IN THIS SHARD: the comparator meta-analysis requested by the task, and the source of two
+  numbers that shan2015 does not provide - a directly published <=5 h estimate and a sex-specific
+  estimate.
+
+  SCALE: 10 studies, 13 independent cohort samples, 107,756 participants, 3,586 incident T2D cases,
+  follow-up 4.2-32 years. Short-sleep analysis drew on 9 cohorts from 7 published studies.
+
+  *** DE-DUPLICATION WARNING FOR THE POOLER. *** cappuccio2010 (search to April 2009), shan2015
+  (search to March 2014) and liu2025 (search to October 2024) are NESTED literatures with heavily
+  overlapping primary studies. They are three views of largely the same cohorts, NOT three
+  independent bodies of evidence. Pooling all three as independent would badly overstate precision.
+  Recommended treatment: take shan2015 as the primary dose-response anchor, liu2025 as the
+  precision/recency update, and use cappuccio2010 only for the male-specific and <=5 h subgroup
+  estimates. cohort_family is set to pooled_multiple on every effect to flag this.
+
+  *** THE MALE-SPECIFIC ESTIMATE - IMPORTANT BUT FRAGILE. *** RR 2.07 (1.16-3.72) in men versus 1.07
+  (0.90-1.28) in women, heterogeneity P = 0.04. Our subject is male, so this is directly on point and
+  it is roughly twice the pooled estimate. Three cautions before the model leans on it: the CI spans
+  a 3-fold range; a subgroup difference at P = 0.04 in a 10-study meta-analysis is weak evidence; and
+  the much larger liu2025 did NOT reproduce this sex split (men OR 1.13 [1.04-1.24] vs women 1.10
+  [1.06-1.14], i.e. essentially no difference). The honest reading is that a male excess is possible
+  but is not supported by the larger and more recent synthesis, so cappuccio2010's 2.07 should be
+  treated as an outlier rather than as the best male estimate.
+
+  AGE: adult cohorts with follow-up of 4.2-32 years; no adolescent data, no age distribution in the
+  paper. Scored poor_midlife. Same transportability caveat as shan2015.
+
+  TWO OF THE AUTHORS' OWN CAVEATS ARE WORTH CARRYING FORWARD VERBATIM:
+  * On confounding: "residual confounding and bias remain a possibility. For instance, low levels of
+    physical activity or poor diet that are causally related to type 2 diabetes may have also
+    influenced sleep patterns."
+  * On single-timepoint exposure: "Quantity and quality of sleep were assessed at one point in all
+    studies. A single measure of exposure may not fully capture the sustained effects of sleep
+    disruption over time on long-term morbidity." This cuts BOTH ways for our subject - it means the
+    cohorts may understate the effect of truly sustained short sleep, but it also means they cannot
+    speak to a 3-year episode that then ends.
+  * Undiagnosed obstructive sleep apnoea was not excluded in all studies, which matters because bos2019
+    found that adjusting for sleep-apnoea risk abolished the cross-sectional insulin-resistance
+    association entirely.
+
+  ALSO: risk rose with length of follow-up (RR increment per year of follow-up estimated at 2% for
+  short sleep, 1.02 [0.93-1.12], not significant), which is weak evidence of cumulative rather than
+  transient harm.
+shard: "s07_metabolic"

@@ -1,0 +1,119 @@
+==================================================================================================== 
+== SHAN 2015 dose-response (per-hour RR 1.09, 95% CI 1.04-1.15, below 7 h)
+shan per 1 h shorter <7h                             log=+0.086178 se=0.025648  (check CI: 1.037-1.146)
+shan 6h vs 7h (k=1)                                  log=+0.086178 se=0.025648  RR=1.0900 CI 1.037-1.146
+shan 5h vs 7h (k=2, DERIVED extrapolation)           log=+0.172355 se=0.051297  RR=1.1881 CI 1.074-1.314
+shan per 1 h longer >8h                              log=+0.131028 se=0.051417  (check CI: 1.031-1.261)
+==================================================================================================== 
+== CAPPUCCIO 2010
+cappuccio short sleep <=5-6h                         log=+0.246860 se=0.112358  (check CI: 1.027-1.595)
+cappuccio short sleep, MEN only                      log=+0.727549 se=0.297271  (check CI: 1.156-3.707)
+cappuccio short sleep, WOMEN only                    log=+0.067659 se=0.089852  (check CI: 0.897-1.276)
+cappuccio <=5h subset (n=5)                          log=+0.307485 se=0.108032  (check CI: 1.100-1.681)
+cappuccio long sleep >8-9h                           log=+0.392042 se=0.140492  (check CI: 1.124-1.949)
+==================================================================================================== 
+== LIU 2025 (Ann Med, 53 studies)
+liu2025 short sleep <7h                              log=+0.165514 se=0.021632  (check CI: 1.131-1.231)
+liu2025 short sleep MEN                              log=+0.122218 se=0.044870  (check CI: 1.035-1.234)
+liu2025 long sleep >8h                               log=+0.122218 se=0.020239  (check CI: 1.086-1.176)
+==================================================================================================== 
+== MR ESTIMATES
+gao2020 MR short sleep (<7h vs 7-8h) -> T2D          log=+0.139762 se=0.092578  (check CI: 0.959-1.379)
+gao2020 MR insomnia -> T2D                           log=+0.131028 se=0.022392  (check CI: 1.091-1.191)
+gao2020 MR long sleep -> T2D                         log=+0.095310 se=0.165263  (check CI: 0.796-1.521)
+==================================================================================================== 
+== BUXTON 2010 (n=19 analysed; F(1,18) reported)
+SI (IVGTT) -20%                                      t=sqrt(F)=3.8962 se=5.1333 %
+M (clamp) -11%                                       t=sqrt(F)=2.1541 se=5.1066 %
+SI: SD 24% -> SE = 24/sqrt(19)                       = 5.5060 %
+==================================================================================================== 
+== BROUSSARD 2012 (n=7 crossover)
+paired mean diff 0.47 nM, SD_diff 0.33 -> SE = 0.12473 nM
+dz = 0.47/0.33 = 1.4242
+broussard dz (EC50 pAkt/tAkt)                        dz=1.4242 n=7 se=0.5364
+fold-change EC50 = 0.71/0.24 = 2.958  (paper: 'nearly 3-fold')
+==================================================================================================== 
+== KLINGENBERG 2013 (n=21 adolescent boys, crossover; SE from p)
+HOMA-IR +65%, p=0.002                                df=20 t=3.5518 -> se=18.3005 (pct units)
+Matsuda index -28%, p=0.007                          df=20 t=3.0048 -> se=9.3185 (pct units)
+fasting insulin +59%, p=0.001                        df=20 t=3.8495 -> se=15.3266 (pct units)
+fasting C-peptide +24%, p<0.001 (use p=0.001)        df=20 t=3.8495 -> se=6.2345 (pct units)
+==================================================================================================== 
+== NESS 2019 (n=15 men; dz from p)
+insulin sensitivity, restriction p=0.002             t=3.7874 dz=0.9779 se=0.3139
+disposition index AFTER 2 recovery nights p=0.01     t=2.9768 dz=0.7686 se=0.2939
+disposition index, restriction p<0.0001 (bound)      t=5.3634 dz=1.3848 se=0.3614
+==================================================================================================== 
+== CHEUNG 2026 (reported Cohen's dz; ~16/group of 48)
+stable 6h group 2-h glucose dz=0.39                  dz=0.3900 n=16 se=0.2593
+variable short sleep group dz=0.99 (bound)           dz=0.9900 n=16 se=0.3052
+==================================================================================================== 
+== JAVAHERI 2011 (quadratic model predicted HOMA)
+HOMA 5.0h/7.75h = 2.36/1.96 = 1.2041 -> +20.4%
+HOMA 10.5h/7.75h = 2.41/1.96 = 1.2296 -> +23.0%
+==================================================================================================== 
+== HARTESCU 2022 sleep-extension RCT (between-group HOMA-IR)
+HOMA-IR change: extension -0.51 (-0.98,-0.03); control +0.28 (-0.20,0.76)
+  ext: se=0.2423
+  ctl: se=0.2449
+  between-group diff = -0.790, se = 0.3445, CI -1.465 to -0.115
+
+====================================================================================================
+== KURODA 2025 (UK Biobank 385,135 / 75,094 accel; 16,699 incident T2D; median 13.6 y)
+MR two-sample IVW SHORT sleep -> T2D                 log=+0.113329 se=0.047758  back-check 1.020-1.230
+MR two-sample IVW LONG sleep -> T2D                  log=-0.223144 se=0.147573  back-check 0.599-1.068
+MR nonlinear questionnaire 9h vs 7h                  log=-0.261365 se=0.202472  back-check 0.518-1.145
+Cox questionnaire <=5h vs 7h                         log=+0.262364 se=0.031196  back-check 1.223-1.382
+Cox questionnaire >=10h vs 7h                        log=+0.378436 se=0.045550  back-check 1.335-1.596
+Cox ACCELEROMETER <6h vs 7-8h                        log=+0.418710 se=0.170904  back-check 1.087-2.125
+Cox ACCELEROMETER >=10h vs 7-8h                      log=+0.076961 se=0.082245  back-check 0.919-1.269
+surviving fraction on log scale, MR/Cox-questionnaire = 0.113329/0.262364 = 0.4320
+surviving fraction on log scale, MR/Cox-accelerometer = 0.113329/0.418710 = 0.2707
+accel median 8.40 h vs questionnaire median 7 h -> +1.40 h (accel LONGER)
+====================================================================================================
+== NEDELTCHEVA 2009 (n=11, 14 d, 5.5 vs 8.5 h TIB, AD LIBITUM food, sedentary)
+S_I 3.3 vs 4.0 (mU/L)^-1.min^-1 -> diff -0.7, pct -17.50%
+S_I raw diff -0.7, P<0.03 used as bound              df=10 t=2.5275 se=0.27696
+S_I pct -17.50%, P<0.03 used as bound                df=10 t=2.5275 se=6.92388
+2-h OGTT glucose 144 vs 132 mg/dL -> +12, pct +9.09%
+2h glucose pct +9.09%, P<0.01 used as bound          df=10 t=3.1693 se=2.86845
+glucose effectiveness 0.023 vs 0.020 min^-1 -> +15.0%% (OPPOSITE sign to Spiegel1999 -30%%)
+Sg raw diff +0.003 min^-1, P<0.04 bound              df=10 t=2.3593 se=0.00127
+====================================================================================================
+== NEDELTCHEVA 2012 (n=10, 14 d, 5.5 vs 8.5 h TIB, HYPOCALORIC diet, weight loss)
+DI -523 (95%CI -36 to -1010)                         se=248.46939 back-check -1010.000 to -36.000
+S_I -0.9 (95%CI -0.1 to -1.6)                        se=0.38265 back-check -1.650 to -0.150
+S_I pct -26%, P<0.03 bound                           df=9 t=2.5738 se=10.10178
+DI pct -23%, P<0.04 bound                            df=9 t=2.3984 se=9.58956
+BUT OGTT / 24-h glucose NOT impaired; authors distrust the IVGTT here
+====================================================================================================
+== ZURAIKAT 2024 (n=38 women, 6 WEEKS, -1.34 h/night, TST 6.2 h)
+HOMA-IR beta=+0.30, SEM=0.12 REPORTED DIRECTLY -> 95% CI 0.0648 to 0.5352
+fasting insulin beta=+6.8 pmol/L, SEM=2.8 -> 95% CI 1.312 to 12.288
+postmenopausal HOMA-IR beta=0.45 (SEM 0.25); premenopausal 0.27 (SEM 0.13); P interaction 0.042
+====================================================================================================
+== DUTIL 2024 (n=36 adolescents 13-18, crossover; HB 7h31, IN +1h02, DE -1h19)
+Matsuda IS +20%% after IN vs HB and vs DE; HB vs DE NOT significant. No SE/CI/p published in
+  the retrievable abstract or in the Sleep commentary -> se null, do not fabricate.
+DE week TST = 7h31 - 1h19 = 6h12 = 6.20 h
+IN week TST = 7h31 + 1h02 = 8.55 h
+
+====================================================================================================
+== WANG 2025 (NHANES 2017-2020, n=4036; outcome = HOMA-IR index SCALED TO 0-100)
+WSR >0 h vs <=0 h (adjusted model II)          beta=-1.1600 se=0.29592 back-check -1.7400 to -0.5800
+WSR 0-2 h vs <=0 h                             beta=-1.1400 se=0.30867 back-check -1.7450 to -0.5350
+WSR >2 h vs <=0 h                              beta=-1.2700 se=0.48214 back-check -2.2150 to -0.3250
+MALES only, WSR >0 h                           beta=-0.6800 se=0.28827 back-check -1.2450 to -0.1150
+weekday sleep <=7 h, WSR >0 h                  beta=-0.3900 se=0.16582 back-check -0.7150 to -0.0650
+NOTE asymmetry check on males: -0.68 is not centred in (-1.21,-0.08); midpoint = -0.6450
+  se from p=0.0132 (z=2.4783) = 0.27438 ; se from CI width = 0.28827  -> CI-based SE used, discrepancy noted
+threshold/inflection: 2 h WSR; breakpoint predicted HOMA-IR value 3.78 (clinical IR cutoff 2.5-2.8)
+====================================================================================================
+== BEALS 2026 (RCT parallel, n=29: ES n=14, HS n=15, ~6 weeks, CLAMP + tracers)
+TIB    ES +1.3 +/- 0.6 h/night ; HS +0.3 +/- 0.8 h/night
+sleep  ES +1.1 +/- 0.5 h/night ; HS  0.0 +/- 0.4 h/night
+between-group achieved sleep difference = 1.1 - 0.0 = +1.1 h/night
+  se of between-group sleep diff = sqrt(0.5^2/14 + 0.4^2/15) = 0.16889 h
+  95% CI = 0.7690 to 1.4310 h ; t approx 6.513
+OUTCOME: NO between-group difference in multiorgan insulin sensitivity or glycemic control.
+  No point estimates, SEs, or p-values published in the retrievable abstract -> se null.

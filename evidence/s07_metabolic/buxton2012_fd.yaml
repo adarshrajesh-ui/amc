@@ -1,0 +1,93 @@
+study_id: buxton2012_fd
+citation: "Buxton OM, Cain SW, O'Connor SP, Porter JH, Duffy JF, Wang W, Czeisler CA, Shea SA. Adverse metabolic consequences in humans of prolonged sleep restriction combined with circadian disruption. Sci Transl Med. 2012 Apr 11;4(129):129ra43."
+doi: "10.1126/scitranslmed.3003200"
+pmid: "22496545"
+url: "https://pubmed.ncbi.nlm.nih.gov/22496545/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Adverse metabolic consequences in humans of prolonged sleep restriction combined with circadian disruption."
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 21
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: postprandial_plasma_glucose_after_3wk_restriction_plus_circadian_disruption
+    exposure: {type: chronic_restriction, dose_h: 5.6, referent_h: null, duration_days: 21, contrast_label: "5.6 h sleep per 24 h for 3 weeks on recurring 28-h days (sleep restriction PLUS forced-desynchrony circadian disruption) vs own optimal-sleep baseline"}
+    scale: pct_change
+    unit: "direction only; magnitude not in abstract"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "PLACEHOLDER DIRECTION FLAG ONLY (value=+1 means 'increased'). The abstract reports the direction and mechanism but no magnitude; the full text is paywalled (PMC3678519 returns idIsNotOpenAccess; Europe PMC fullTextXML empty). The companion paper yuan2021 supplies the p-value (p<0.0001) for this same n=21 forced-desynchrony cohort. Do NOT pool as a magnitude."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM (higher postprandial glucose), and the abstract attributes it to INADEQUATE INSULIN SECRETION rather than to insulin resistance"
+    covariates: ["measurements taken at the same circadian phase"]
+    followup_years: null
+    cohort_family: null
+    quote: "Exposure to prolonged sleep restriction with concurrent circadian disruption, with measurements taken at the same circadian phase, decreased the participants' resting metabolic rate and increased plasma glucose concentrations after a meal, an effect resulting from inadequate pancreatic insulin secretion."
+  - outcome_domain: recovery
+    outcome_construct: full_normalisation_of_glucose_and_rmr_after_9_days_recovery
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: null, duration_days: 9, contrast_label: "9 days of recovery sleep with stable circadian re-entrainment, after 3 weeks of restriction + circadian disruption"}
+    scale: pct_change
+    unit: "% residual deviation from baseline after recovery (0 = fully normalised)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Explicit RECOVERY result, recorded as 0 to register full normalisation: 'These parameters normalized during the 9 days of recovery sleep and stable circadian re-entrainment.' No residual magnitude or CI is published."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "zero = FULLY RECOVERED. This is the UPPER BOUND on the recovery time constant: even after a 3-week insult, 9 days of adequate sleep with circadian re-entrainment fully normalised postprandial glucose and resting metabolic rate."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "These parameters normalized during the 9 days of recovery sleep and stable circadian re-entrainment."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Extremely well-controlled >5-week inpatient forced-desynchrony protocol with circadian phase held constant across measurements - the best circadian control of any study in this shard. But it is a fixed-order within-subject design with no parallel control arm, and the exposure DELIBERATELY CONFOUNDS sleep restriction with circadian disruption by design, so it cannot attribute the metabolic effect to short sleep alone. yuan2021 is the companion study that performs that separation and finds the sleep-restriction-only effect is null."
+funding: "Not retrievable from the abstract (Brigham and Women's Hospital Division of Sleep Medicine; funder left unstated rather than guessed)."
+notes: |
+  READ THIS RECORD TOGETHER WITH yuan2021. On its own it is easy to misread as 'chronic short sleep
+  wrecks glucose metabolism'. What it actually shows is that short sleep COMBINED WITH circadian
+  disruption does so. The n=9 companion protocol (yuan2021) that removed the circadian disruption
+  while keeping 3 weeks of chronic sleep restriction found NO adverse glycaemic effect. So the
+  causal weight in this pair of studies sits substantially on the circadian component.
+
+  DISTANCE FROM OUR SUBJECT'S EXPOSURE:
+  * Dose: 5.6 h per 24 h - very close to the subject's weekday 5-6 h. Good dose match.
+  * Duration: 3 weeks CONTINUOUS. Longer than any single stretch the subject experienced (max 5
+    weekday nights before a recovery opportunity), so this over-states consecutive accumulation.
+  * CIRCADIAN COMPONENT - the crucial mismatch, and it cuts BOTH ways:
+      - The protocol used recurring 28-h days, a far more violent circadian challenge than anything
+        the subject experienced. On that reading it badly over-states his exposure.
+      - BUT the subject's weekday/weekend pattern (late weekday bedtimes, 2-3 h later weekend sleep
+        midpoint, i.e. social jetlag) IS a recurring circadian misalignment, just a much milder one.
+        Given yuan2021, the circadian channel may be the one that actually matters for him. This
+        study is therefore best used as evidence that the SLEEP-PLUS-CIRCADIAN combination is the
+        harmful exposure, which is the combination the subject actually had - at perhaps a tenth of
+        the intensity.
+  * Age: "healthy adults", no age reported in the abstract -> nulls. Forced-desynchrony protocols in
+    this laboratory typically recruit across a wide adult range, so adolescent_match is set to
+    fair_adult rather than good_young_adult; treat the age match as UNVERIFIED.
+  * Mechanism: the deficit was in INSULIN SECRETION, not insulin sensitivity - the opposite of
+    buxton2010 from the same first author. The mechanistic picture across this literature is
+    genuinely inconsistent, and the downstream model should not commit to a single pathway.
+
+  REVERSIBILITY CONTRIBUTION: this is the best available UPPER BOUND. After a 3-week insult that was
+  more severe than anything the subject sustained, 9 days of adequate sleep plus circadian
+  re-entrainment produced full normalisation. Note the recovery required BOTH more sleep AND stable
+  circadian re-entrainment; the study cannot say which was necessary.
+shard: "s07_metabolic"

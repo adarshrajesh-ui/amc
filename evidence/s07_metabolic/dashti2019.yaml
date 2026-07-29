@@ -1,0 +1,92 @@
+study_id: dashti2019
+citation: "Dashti HS, Jones SE, Wood AR, Lane JM, van Hees VT, Wang H, et al. Genome-wide association study identifies genetic loci for self-reported habitual sleep duration supported by accelerometer-derived estimates. Nat Commun. 2019 Mar 7;10(1):1100."
+doi: "10.1038/s41467-019-08917-4"
+pmid: "30846698"
+url: "https://europepmc.org/articles/PMC6405943"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Genome-wide association study identifies genetic loci for self-reported habitual sleep duration supported by accelerometer-derived estimates."
+access_tier: full_text
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 446118
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "UK (UK Biobank), with CHARGE replication"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: mr_sleep_duration_to_type_2_diabetes
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "two-sample MR of genetically instrumented habitual sleep duration (78 loci) -> T2D; DIAGRAM outcome, 26,488 cases / 83,964 controls"}
+    scale: log_or
+    unit: "null result; no point estimate published in the main text"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Explicit NULL recorded as 0. The main text reports 'no evidence of causal effects of altered sleep duration with BMI and type 2 diabetes' and directs the reader to Supplementary Table 13 / Supplementary Figure 7 for the estimates; those supplementary files were not retrieved, so no point estimate or SE is available. Registers direction only."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "zero = NO CAUSAL EFFECT DETECTED on T2D. Independent of gao2020 in analysis but NOT in data - both use UK Biobank exposure and DIAGRAM outcome, so they are strongly correlated evidence and must not be pooled as independent."
+    covariates: ["leave-one-out sensitivity analyses; sensitivity analyses restricted to GWAS signals adjusted for BMI, insomnia and other lifestyle traits"]
+    followup_years: null
+    cohort_family: "UK_Biobank_DIAGRAM"
+    quote: "Furthermore, using two-sample MR with data from the GIANT consortium 39 ( n = 339,224) and DIAGRAM consortium 40 ( n = 26,488 cases and n = 83,964 controls), we found no evidence of causal effects of altered sleep duration with BMI and type 2 diabetes (Supplementary Table 13 , Supplementary Figure 7 )."
+  - outcome_domain: metabolic
+    outcome_construct: genetic_correlation_short_sleep_with_type_2_diabetes
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "LD-score-regression genome-wide genetic correlation of SHORT sleep with T2D (null) versus LONG sleep with T2D (positive)"}
+    scale: pct_change
+    unit: "null result for SHORT sleep; no rg value published in the main text"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Recorded as 0 to register the absence of a reported short-sleep/T2D genetic correlation. The paper lists the traits genetically correlated with SHORT sleep (insomnia, neuroticism, smoking, depressive symptoms, waist circumference, waist-to-hip ratio, years of schooling) and T2D is NOT among them, whereas T2D IS listed for LONG sleep. The rg point estimates live in Supplementary Data 18, not retrieved."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "zero = NO shared genetic architecture detected between SHORT sleep and T2D. Note the ASYMMETRY: long sleep IS genetically correlated with T2D and coronary artery disease; short sleep is not. Short sleep's genetic correlates are psychiatric/behavioural (insomnia, neuroticism, smoking) and anthropometric, NOT diabetic."
+    covariates: []
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "In addition, both short and long sleep showed positive genetic correlations with depressive symptoms, waist circumference, and waist-to-hip ratio, and negative correlations with years of schooling. For short sleep, genetic correlations were also observed with insomnia, neuroticism, and smoking, and for long sleep, positive correlations were evident with schizophrenia, body fat, type 2 diabetes, and coronary artery disease."
+rob:
+  tool: MR-STROBE
+  judgement: low
+  notes: "Very large, well-powered GWAS (n=446,118) with independent CHARGE replication (n=47,180) and, unusually, validation of the self-reported exposure against ACCELEROMETER-derived sleep measures in n=85,499 - which materially strengthens the instrument's construct validity relative to purely self-report-based MR. MR sensitivity analyses included leave-one-out and instruments restricted to BMI-, insomnia- and lifestyle-adjusted GWAS signals. Principal limitation for our purposes: the T2D MR is a secondary analysis reported in one sentence with estimates confined to unretrieved supplementary files, so its power cannot be assessed, and the paper is not designed as a T2D MR."
+funding: "Not extracted from the retrieved full text (large multi-centre consortium paper; funder left unstated rather than guessed)."
+notes: |
+  ROLE IN THIS SHARD: this is the GWAS that SUPPLIES the instruments used by gao2020 and much of the
+  downstream sleep-MR literature, and it independently reports a null MR for sleep duration -> T2D.
+  It is the source of the genetic instrument, so its own null carries weight.
+
+  *** IMPORTANT NON-INDEPENDENCE WARNING. *** dashti2019 and gao2020 share the UK Biobank exposure
+  GWAS (this very paper) and the DIAGRAM outcome GWAS. bos2019 uses MAGIC glycaemic traits, so it is
+  partially independent on the outcome side but overlaps on the exposure side. The three MR nulls are
+  therefore roughly ONE-AND-A-HALF independent pieces of evidence, not three. Do not treat the
+  triple-null as three-fold confirmation.
+
+  THE MOST INTERESTING FINDING HERE IS THE ASYMMETRY IN GENETIC CORRELATION. LD-score regression
+  found T2D genetically correlated with LONG sleep but NOT with SHORT sleep. Short sleep's genetic
+  correlates were insomnia, neuroticism, smoking, depressive symptoms, waist circumference and
+  waist-to-hip ratio, plus a negative correlation with years of schooling. Two readings, both
+  relevant:
+  1. It converges with gao2020 (insomnia causal, duration not) in locating the diabetes-relevant
+     causal signal away from short sleep duration per se.
+  2. It also shows precisely WHICH confounders would generate a spurious observational short-sleep/
+     T2D association: smoking, neuroticism/depression, adiposity distribution and education/
+     socioeconomic position are all genetically entangled with short sleep and all independently
+     predict T2D. That is a concrete, evidence-based mechanism for the confounding that cappuccio2010
+     flagged qualitatively, and it strengthens the case for discounting the observational RR.
+  Note the long-sleep/T2D genetic correlation is also consistent with reverse causation on that limb -
+  incipient metabolic disease causing longer sleep.
+
+  RELEVANCE TO OUR SUBJECT: indirect. UK Biobank participants were recruited at roughly 40-70 y, so
+  scored poor_midlife, and MR estimates lifelong genetic liability rather than a 3-year adolescent
+  behavioural episode. This record should be used to widen uncertainty on the long-run risk estimate
+  and to identify the confounding structure, NOT to produce a point estimate for the subject.
+shard: "s07_metabolic"

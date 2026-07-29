@@ -1,0 +1,132 @@
+study_id: bos2019
+citation: "Bos MM, van Heemst D, Donga E, de Mutsert R, Rosendaal FR, Blauw GJ, Rensen PCN, Biermasz NR, Noordam R. The association between habitual sleep duration and sleep quality with glycemic traits: assessment by cross-sectional and Mendelian randomization analyses. J Clin Med. 2019 May 14;8(5):682."
+doi: "10.3390/jcm8050682"
+pmid: "31096629"
+url: "https://europepmc.org/articles/PMC6572144"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "The Association between Habitual Sleep Duration and Sleep Quality with Glycemic Traits: Assessment by Cross-Sectional and Mendelian Randomization Analyses."
+access_tier: abstract_only
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 58074
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [45, 65]
+  pct_female: 52.0
+  country: "Netherlands (NEO cohort) + MAGIC consortium"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: mr_sleep_duration_to_glycemic_traits
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "genetically instrumented TOTAL, SHORT and LONG sleep duration -> glycaemic traits (fasting glucose, fasting insulin, HOMA-IR, HOMA-beta, HbA1c) in non-diabetic individuals; MAGIC n=58,074"}
+    scale: log_rr
+    unit: "null result; no point estimate published in the abstract"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Explicit NULL result recorded as 0. The abstract states only that MR 'did not indicate a causal association' without publishing the point estimates or CIs; the full text was not retrieved (record built from the PubMed abstract), so no magnitude or SE is available. Registers the direction of the finding only."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "zero = NO CAUSAL EFFECT DETECTED on any glycaemic trait, for total, short OR long sleep duration. Independent replication of gao2020's null for duration, on continuous glycaemic traits rather than on T2D diagnosis."
+    covariates: []
+    followup_years: null
+    cohort_family: "MAGIC"
+    quote: "MR analyses did not indicate a causal association between total, short or long sleep duration and glycemic traits. Therefore, our used measures of habitual sleep duration and sleep quality are unlikely to directly associate with insulin resistance."
+  - outcome_domain: metabolic
+    outcome_construct: cross_sectional_fasting_insulin_in_shortest_sleepers_5h
+    exposure: {type: habitual_short_sleep, dose_h: 5.0, referent_h: null, duration_days: null, contrast_label: "shortest sleepers (MEDIAN 5.0 h/night) vs referent sleepers, cross-sectional, NEO cohort n=4672, adjusted for potential confounders but NOT for BMI or apnoea risk"}
+    scale: pct_change
+    unit: "% higher fasting insulin"
+    value: 14.5
+    se: 6.786
+    ci: [2.0, 28.6]
+    conversion_formula: "Published as 14.5% (95% CI 2.0; 28.6%). SE approximated on the reported percentage scale as (28.6-2.0)/3.92 = 6.786 percentage points. NOTE the published interval is asymmetric about 14.5 (ratios 0.86 below, 0.97 above), indicating the analysis was on a log scale; the symmetric-scale SE is therefore approximate."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM (higher fasting insulin). IMPORTANT: this is the association BEFORE BMI/apnoea adjustment. See the next effect - it does not survive."
+    covariates: ["adjusted for potential confounders in multivariable linear regression; NOT BMI, NOT sleep-apnoea risk"]
+    followup_years: null
+    cohort_family: "NEO"
+    quote: "In cross-sectional analyses, shortest sleepers (median 5.0 h of sleep per night) had 14.5% (95% confidence interval (CI): 2.0; 28.6%) higher fasting insulin level and 16.3% (95% CI: 2.7; 31.7%) higher HOMA-beta."
+  - outcome_domain: metabolic
+    outcome_construct: cross_sectional_homa_ir_with_bad_sleep_quality
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "bad sleep QUALITY vs good, cross-sectional, NEO cohort, before BMI/apnoea adjustment"}
+    scale: pct_change
+    unit: "% higher HOMA-IR"
+    value: 14.3
+    se: 5.153
+    ci: [4.7, 24.9]
+    conversion_formula: "Published as 14.3% (95% CI 4.7; 24.9%). SE approximated as (24.9-4.7)/3.92 = 5.153 percentage points, same asymmetry caveat as above."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. Sleep QUALITY, like duration, showed a cross-sectional association - and it too was abolished by adjustment."
+    covariates: ["multivariable-adjusted; NOT BMI, NOT sleep-apnoea risk"]
+    followup_years: null
+    cohort_family: "NEO"
+    quote: "Bad sleep quality was associated with higher insulin resistance (e.g., 14.3% (95% CI: 4.7; 24.9%) higher HOMA-IR)."
+  - outcome_domain: metabolic
+    outcome_construct: cross_sectional_associations_after_bmi_and_apnoea_adjustment
+    exposure: {type: habitual_short_sleep, dose_h: 5.0, referent_h: null, duration_days: null, contrast_label: "same cross-sectional short-sleep and sleep-quality contrasts, AFTER adjustment for BMI and risk of sleep apnoea"}
+    scale: pct_change
+    unit: "% residual association after confounder adjustment (0 = fully attenuated)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Recorded as 0 to register full attenuation. The abstract states the associations 'disappeared' after adjustment for BMI and risk of sleep apnoea but publishes no residual point estimates, so no magnitude or SE is available."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "zero = ASSOCIATION FULLY ATTENUATED. This is the key confounding result: the entire cross-sectional short-sleep/insulin-resistance signal was explained by BMI and sleep-apnoea risk."
+    covariates: ["BMI", "risk of sleep apnoea"]
+    followup_years: null
+    cohort_family: "NEO"
+    quote: "All these associations disappeared after adjustment for BMI and the risk of sleep apnoea."
+rob:
+  tool: MR-STROBE
+  judgement: some_concerns
+  notes: "Useful because it runs the cross-sectional and MR analyses in the same paper on the same constructs, which makes the confounding attenuation directly interpretable. Concerns: the MR is null but the abstract publishes no point estimates or CIs, so its POWER cannot be assessed from the retrieved text - an uninformative null cannot be distinguished from an informative one. Cross-sectional design for the observational arm means reverse causation is unaddressed. Adjusting for BMI is itself contestable: if short sleep causes weight gain (which is this shard's sibling literature), BMI is a MEDIATOR and adjusting for it will attenuate a real causal effect, not just remove confounding. The 'disappeared after BMI adjustment' result must therefore not be read automatically as proof of confounding."
+funding: "Not retrievable from the abstract (Leiden University Medical Center authorship; funder left unstated rather than guessed)."
+notes: |
+  *** THIS RECORD ANSWERS PART (c) OF THE SUMMARY BRIEF: HOW MUCH OF THE LONG-RUN RISK SURVIVES
+  CONFOUNDING ADJUSTMENT AND MR? *** Its answer, on continuous glycaemic traits in midlife, is:
+  essentially none of it.
+
+  Two findings, and both cut against a simple causal reading of the epidemiology:
+  1. CONFOUNDING: shortest sleepers (median 5.0 h/night - almost exactly our subject's weekday dose)
+     had 14.5% higher fasting insulin and 16.3% higher HOMA-beta, and bad sleep quality carried 14.3%
+     higher HOMA-IR. Every one of these associations DISAPPEARED after adjusting for BMI and
+     sleep-apnoea risk.
+  2. MR: genetic instruments for total, short and long sleep duration showed no causal association
+     with any glycaemic trait in 58,074 non-diabetic individuals from MAGIC.
+
+  THE CRITICAL INTERPRETIVE CAVEAT, which the modeller must not skip: adjusting for BMI is NOT a
+  clean confounder adjustment in this causal structure. Short sleep is itself a well-documented
+  cause of weight gain, so BMI plausibly sits on the causal PATH from short sleep to insulin
+  resistance. Conditioning on a mediator removes real causal effect. So "the association disappeared
+  after BMI adjustment" is consistent with BOTH of these stories:
+    (a) the association was confounded by adiposity and is not causal; and
+    (b) the association is causal and operates THROUGH adiposity.
+  Nothing in this paper distinguishes them. The MR null is the stronger evidence of the two, because
+  it does not condition on a mediator - but it is a null whose precision I could not verify from the
+  abstract. Coordinate with the obesity/BMI shard (s09_obesity_bmi) before assigning weight here.
+
+  RELEVANCE TO OUR SUBJECT:
+  * The exposure contrast (median 5.0 h/night) is an excellent dose match to his weekday sleep - the
+    closest of any observational record in this shard.
+  * The outcome is CONTINUOUS glycaemic traits (fasting insulin, HOMA-IR, HOMA-beta, HbA1c) rather
+    than diagnosed diabetes, which is much closer to the "is my insulin sensitivity measurably worse
+    this week" question than the incident-T2D meta-analyses are.
+  * AGE IS BADLY MISMATCHED: NEO participants are 45-65 y and the MAGIC glycaemic GWAS is adult. An
+    18-year-old is 27+ years younger than the youngest participant. Scored poor_midlife.
+  * Sleep-apnoea risk is a much larger confounder at 45-65 y and BMI 26+ than in a lean 18-year-old.
+    So the specific attenuation demonstrated here may not transport: in a young lean male there is
+    less apnoea and less adiposity available to explain the association away. This is an argument for
+    NOT applying the full attenuation to our subject.
+  n recorded as 58,074 (the MAGIC glycaemic-traits sample used for MR); the cross-sectional arm is
+  n=4,672 from NEO.
+shard: "s07_metabolic"

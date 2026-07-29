@@ -1,0 +1,108 @@
+study_id: sondrup2022
+citation: "Sondrup N, Termannsen AD, Eriksen JN, Hjorth MF, Faerch K, Klingenberg L, Quist JS. Effects of sleep manipulation on markers of insulin sensitivity: a systematic review and meta-analysis of randomized controlled trials. Sleep Med Rev. 2022 Apr;62:101594."
+doi: "10.1016/j.smrv.2022.101594"
+pmid: "35189549"
+url: "https://pubmed.ncbi.nlm.nih.gov/35189549/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Effects of sleep manipulation on markers of insulin sensitivity: A systematic review and meta-analysis of randomized controlled trials."
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n_studies_pooled: 21
+n: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational (pooled RCTs)"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: pooled_insulin_sensitivity_ogtt_ivgtt_homa_ir_after_sleep_restriction
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null, contrast_label: "pooled sleep-restriction arms of 21 randomised controlled trials vs control sleep"}
+    scale: smd
+    unit: "direction only; the pooled SMD is not reported in the abstract"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "PLACEHOLDER DIRECTION FLAG ONLY (value=-1 denotes 'reduced'). The abstract states the direction and the measurement modalities but publishes NO pooled effect size, CI or heterogeneity statistic, and the full text is paywalled (Sleep Med Rev; unpaywall lists only a KU institutional landing page, no retrievable PDF). Do NOT pool this as a magnitude - it contributes the TIER-1 SYNTHESIS DIRECTION and the modality-specific pattern only."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = HARM (pooled reduction in insulin sensitivity across randomised sleep-restriction trials). Magnitude UNKNOWN from the retrievable text."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The meta-analysis included 21 sleep restriction studies. Sleep restriction reduced insulin sensitivity assessed by oral or intravenous glucose tolerance test and homeostatic model assessment of insulin resistance."
+  - outcome_domain: metabolic
+    outcome_construct: peripheral_insulin_sensitivity_clamp_null_vs_whole_body_reduced
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null, contrast_label: "PERIPHERAL insulin sensitivity by hyperinsulinaemic-euglycaemic clamp after sleep restriction (null), contrasted with WHOLE-BODY insulin sensitivity by clamp (reduced)"}
+    scale: smd
+    unit: "null result for the peripheral component"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Explicit NULL for the peripheral component, recorded as 0: 'Whole-body insulin sensitivity was also reduced after short sleep when measured by the hyperinsulinemic euglycemic clamp, but peripheral insulin sensitivity was not affected.' No magnitudes published."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "zero = NO effect detected on PERIPHERAL (largely skeletal-muscle) insulin sensitivity, even though WHOLE-BODY insulin sensitivity was reduced. This localises the deficit away from muscle and toward hepatic and/or adipose tissue."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Whole-body insulin sensitivity was also reduced after short sleep when measured by the hyperinsulinemic euglycemic clamp, but peripheral insulin sensitivity was not affected."
+  - outcome_domain: circadian
+    outcome_construct: circadian_misalignment_and_slow_wave_sleep_suppression_effects
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "circadian misalignment (5 trials) and slow-wave-sleep suppression (2 trials) vs REM disturbance (2 trials) and sleep fragmentation (2 trials)"}
+    scale: smd
+    unit: "direction only; magnitudes not reported in the abstract"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "PLACEHOLDER DIRECTION FLAG ONLY (value=-1 denotes 'negatively affected'). Registers WHICH sleep manipulations harmed insulin sensitivity and which did not. No magnitudes published."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = HARM, for circadian misalignment and slow-wave-sleep suppression. IMPORTANTLY, REM disturbance and sleep FRAGMENTATION had NO effect - so not every sleep insult is metabolically active, and the active ones are duration, deep-sleep loss and TIMING."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "In addition, circadian misalignment and slow wave sleep suppression negatively affected insulin sensitivity, while rapid eye movement sleep disturbance and sleep fragmentation had no effect. In summary, the studies indicated that duration, quality, and timing of sleep are essential for metabolic function and risk of type 2 diabetes."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "This is the highest-tier synthesis available for the acute/mechanistic side: a systematic review and meta-analysis restricted to RANDOMISED CONTROLLED TRIALS, 35 eligible articles with 21 pooled for sleep restriction, published in the leading sleep review journal, with the manipulations sensibly categorised. Downgraded to moderate for OUR purposes purely because no pooled effect size, CI or heterogeneity statistic is retrievable from the abstract and the full text is paywalled, so I cannot verify the pooling method, assess heterogeneity, or check for small-study bias. The underlying trials are also almost all short (days to ~2 weeks), small, and in adults."
+funding: "Not retrievable from the abstract (University of Copenhagen / Steno Diabetes Center Copenhagen authorship; funder left unstated rather than guessed)."
+notes: |
+  ROLE IN THIS SHARD: the TIER-1 UMBRELLA CHECK. It confirms that the individual lab studies I
+  extracted (spiegel1999, buxton2010, broussard2012, klingenberg2013, ness2019, depner2019,
+  cheung2026) are representative of a coherent randomised-trial literature of 21 pooled studies, and
+  not cherry-picked positives. That is its main value, since I could not retrieve its numbers.
+
+  *** NOTE THE AUTHORSHIP OVERLAP: L. Klingenberg is an author of BOTH this meta-analysis and
+  klingenberg2013, the adolescent trial. *** So sondrup2022 almost certainly INCLUDES klingenberg2013
+  among its 21 pooled restriction studies, and probably includes buxton2010, broussard2012 and
+  spiegel1999 as well. DO NOT POOL sondrup2022 WITH THE INDIVIDUAL T1 RECORDS IN THIS SHARD - they
+  are the same underlying data. Use it as a consistency check and as a source of qualitative
+  structure, then pool the primaries.
+
+  TWO QUALITATIVE FINDINGS THAT GENUINELY CHANGE THE MECHANISTIC PICTURE:
+  1. WHOLE-BODY insulin sensitivity fell on the clamp but PERIPHERAL insulin sensitivity did not.
+     Peripheral insulin sensitivity is dominated by skeletal-muscle glucose uptake, so the deficit is
+     being driven by hepatic and/or adipose tissue instead. This is consistent with broussard2012
+     (adipose insulin signalling impaired) and with depner2019 (which reported hepatic and muscle
+     components separately). Practically, it means the model should NOT assume the sleep-loss
+     metabolic phenotype is the same as the obesity/inactivity insulin-resistance phenotype, which is
+     muscle-dominant.
+  2. Sleep FRAGMENTATION and REM disturbance had NO effect, while DURATION, SLOW-WAVE-SLEEP
+     SUPPRESSION and CIRCADIAN MISALIGNMENT did. This is a specificity finding and it strengthens
+     causal inference: an artefactual or purely stress-mediated pathway would be expected to respond
+     to fragmentation too.
+
+  AGE: the pooled trials are predominantly in adults, with klingenberg2013 the notable adolescent
+  exception; no age breakdown is retrievable, so adolescent_match is scored 'mixed'. n is left null
+  because the total pooled participant count is not in the abstract; n_studies_pooled=21 refers to the
+  sleep-restriction meta-analysis (35 articles were eligible overall).
+shard: "s07_metabolic"

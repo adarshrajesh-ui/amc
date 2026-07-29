@@ -1,0 +1,109 @@
+study_id: matthews2012
+citation: "Matthews KA, Dahl RE, Owens JF, Lee L, Hall M. Sleep duration and insulin resistance in healthy black and white adolescents. Sleep. 2012 Oct 1;35(10):1353-8."
+doi: "10.5665/sleep.2112"
+pmid: "23024433"
+url: "https://pubmed.ncbi.nlm.nih.gov/23024433/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep duration and insulin resistance in healthy black and white adolescents."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 245
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 52.7
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: homa_ir_vs_actigraphy_sleep_duration
+    exposure: {type: habitual_short_sleep, dose_h: 6.4, referent_h: null, duration_days: null, contrast_label: "actigraphy-measured total sleep time across one school-year week (cohort mean 6.4 h) vs HOMA-IR; effect driven by WEEKDAY sleep duration"}
+    scale: per_hour_beta
+    unit: "direction only; the regression coefficient is not reported in the abstract"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "PLACEHOLDER DIRECTION FLAG ONLY (value=-1 denotes 'shorter sleep -> higher HOMA-IR'). The abstract states the direction and significance of the adjusted linear regression but publishes NO beta, SE or CI, and the full text is not open access (PMC3443761 returns idIsNotOpenAccess; Europe PMC fullTextXML empty). Do NOT pool this as a magnitude - it contributes direction and age-match only."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = HARM (shorter sleep associated with higher HOMA-IR, i.e. more insulin resistance). Magnitude UNKNOWN."
+    covariates: ["age", "race", "gender", "body mass index", "waist circumference"]
+    followup_years: null
+    cohort_family: "Pittsburgh_high_school_adolescent_sleep"
+    quote: "Linear regression analyses adjusted for age, race, gender, body mass index, and waist circumference showed that the shorter the sleep, the higher the HOMA-IR, primarily due to sleep duration during the week."
+  - outcome_domain: exposure_measurement
+    outcome_construct: actigraphy_vs_diary_sleep_duration_discrepancy_in_adolescents
+    exposure: {type: descriptive, dose_h: 6.4, referent_h: null, duration_days: null, contrast_label: "actigraphy-measured vs diary-reported total sleep time in the same adolescents during the school year"}
+    scale: hours
+    unit: "hours of actigraphy-measured total sleep time per night (vs 7.4 h by diary)"
+    value: 6.4
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: 'Total sleep time across the week averaged 7.4 h by diary and 6.4 h by actigraph'. No dispersion published. Discrepancy = 1.0 h, diary MINUS actigraphy."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive, and HIGHLY DECISION-RELEVANT AS A MEASUREMENT CORRECTION: adolescents over-reported their sleep by a full 1.0 h relative to actigraphy."
+    covariates: []
+    followup_years: null
+    cohort_family: "Pittsburgh_high_school_adolescent_sleep"
+    quote: "Total sleep time across the week averaged 7.4 h by diary and 6.4 h by actigraph; homeostatic model assessment of insulin resistance ([HOMA-IR] unadjusted) averaged 4.13."
+  - outcome_domain: metabolic
+    outcome_construct: long_sleep_and_homa_ir_null_in_adolescents
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "LONG actigraphy-measured sleep duration vs HOMA-IR (null)"}
+    scale: per_hour_beta
+    unit: "null result"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Explicit NULL recorded as 0: 'No evidence was found for long sleep being associated with elevated HOMA-IR.'"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "zero = NO long-sleep harm detected in adolescents. NOTE this CONTRADICTS the U-shape seen in adult cohorts and in javaheri2011 - relevant to how much weight to put on the subject's occasional 10-11 h weekend nights."
+    covariates: ["age", "race", "gender", "body mass index", "waist circumference"]
+    followup_years: null
+    cohort_family: "Pittsburgh_high_school_adolescent_sleep"
+    quote: "Reduced sleep duration is associated with HOMA-IR in adolescence. Long sleep duration is not associated."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "CROSS-SECTIONAL, so tier TX (context only, not primary) despite the excellent age match and the objective actigraphy exposure. Reverse causation is entirely unaddressed: insulin resistance and adiposity plausibly shorten and fragment sleep. Adjustment for BMI AND waist circumference is aggressive and, if short sleep causes adiposity, over-adjusts away part of a real effect. Single high school, low-to-middle socioeconomic range, so limited external validity. No effect magnitude published in the retrievable text, which is the binding limitation on its usefulness here."
+funding: "Not retrievable from the abstract (University of Pittsburgh authorship; funder left unstated rather than guessed)."
+notes: |
+  WHY THIS RECORD IS HERE DESPITE BEING CROSS-SECTIONAL: it is one of only two actigraphy-based
+  adolescent insulin-resistance studies in the target age band, and it is the study named in the task
+  brief (Matthews). It supplies age-matched DIRECTION plus a measurement calibration that materially
+  affects how the subject's self-reported exposure should be interpreted.
+
+  *** THE MOST USEFUL NUMBER IN THIS RECORD IS THE MEASUREMENT DISCREPANCY, NOT THE EFFECT. ***
+  These adolescents reported 7.4 h by diary but actually slept 6.4 h by actigraphy - a 1.0 h
+  over-report. Our subject's exposure is characterised by SELF-REPORT ("~5-6 h on weekdays"). If the
+  same 1 h optimism applies, his true weekday sleep may be closer to 4-5 h, which would move him
+  substantially further down the dose-response curve and closer to the doses used in the extreme lab
+  protocols (klingenberg2013's 4 h, broussard2012's 4.5 h). The downstream model should either apply
+  a self-report correction of this order or explicitly widen the exposure uncertainty. This single
+  fact may matter more for the final estimate than any of the effect sizes in this shard.
+
+  SECOND USEFUL FACT: the association was driven specifically by WEEKDAY sleep duration ("primarily
+  due to sleep duration during the week"). Our subject's deficit is exactly a weekday deficit. That
+  is a direct, if cross-sectional, age-matched argument for using his WEEKDAY value rather than his
+  weekly average as the operative exposure - and it cuts against the naive averaging calculation
+  noted in the shan2015 record.
+
+  THIRD: no long-sleep association was found in adolescents, unlike javaheri2011 (same age band,
+  also actigraphy) which DID find a U-shape with elevated HOMA at 10.5 h. The two age-matched
+  actigraphy studies disagree on the long limb, so the subject's occasional 10-11 h weekend nights
+  should be treated as of genuinely uncertain significance.
+
+  POPULATION: 245 high school students (137 African American, 116 male), so 52.7% female by
+  subtraction (245-116=129 female). Ages not given numerically in the abstract but the sample is
+  high-school students, so exact_16_19 is appropriate; age_mean and age_range left null rather than
+  guessed. Unadjusted HOMA-IR averaged 4.13, which is notably high for healthy adolescents and is
+  worth noting as a possible assay/population calibration issue when comparing to other cohorts.
+shard: "s07_metabolic"

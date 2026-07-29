@@ -1,0 +1,149 @@
+study_id: zuraikat2024
+citation: "Zuraikat FM, Laferrere B, Cheng B, Scaccia SE, Cui Z, Aggarwal B, Jelic S, St-Onge MP. Chronic insufficient sleep in women impairs insulin sensitivity independent of adiposity changes: results of a randomized trial. Diabetes Care. 2024;47(1):117-125."
+doi: "10.2337/dc23-1156"
+pmid: "37955852"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10733650/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Chronic Insufficient Sleep in Women Impairs Insulin Sensitivity Independent of Adiposity Changes: Results of a Randomized Trial."
+access_tier: abstract_only
+secondhand_via: "Full text XML is publisher-blocked at both Europe PMC (0 bytes returned) and NCBI PMC; only front matter plus the structured abstract are retrievable. All numbers below are first-hand from that abstract, which fortunately publishes betas WITH their standard errors, so no SE had to be derived. The OGTT-derived outcomes (total AUC for glucose and insulin, Matsuda index, disposition index) are listed as measured outcomes but their results are NOT reported in the abstract, so they are not extracted - see notes."
+design: rct_crossover
+tier: T1
+n: 38
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [20, 75]
+  pct_female: 100.0
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: homa_ir_after_6_weeks_mild_restriction
+    exposure: {type: chronic_restriction, dose_h: 6.2, referent_h: 7.54, duration_days: 42, contrast_label: "6 WEEKS of 1.5 h/night sleep restriction (achieved TST 6.2 h/night) vs 6 weeks of maintained adequate sleep; randomised crossover, actigraphy-verified, free-living"}
+    scale: raw_units
+    unit: "HOMA-IR units (absolute change, SR vs adequate sleep)"
+    value: 0.30
+    se: 0.12
+    ci: [0.0648, 0.5352]
+    conversion_formula: "Reported directly as beta = 0.30 +/- 0.12 (SEM), P = 0.016, from a linear model adjusted for baseline outcome values. SE is the published SEM, so no derivation was needed. ci computed as 0.30 +/- 1.96*0.12 = 0.0648 to 0.5352 (NOT published; flagged inferred_from_ci false because the SE, not the CI, was the published quantity). Consistency check: z = 0.30/0.12 = 2.50, two-sided P = 0.012, close to the published P = 0.016 (the small gap is expected because the paper used a t reference rather than z)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = HARM (higher HOMA-IR = greater insulin resistance). THIS IS THE SHARD'S BEST DOSE-AND-DURATION-MATCHED ESTIMATE OF THE GLYCAEMIC COST OF REALISTIC SHORT SLEEP: 6 weeks at 6.2 h/night costs about 0.30 HOMA-IR units."
+    covariates: ["baseline outcome value", "crossover order", "change in adiposity tested as mediator and as covariate - neither mediated nor altered the result"]
+    followup_years: null
+    cohort_family: "Columbia_StOnge_SR_trial"
+    quote: "Linear models adjusted for baseline outcome values demonstrated that TST was reduced by 1.34 +/- 0.04 h/night with SR versus AS (P < 0.0001). Fasting insulin (beta = 6.8 +/- 2.8 pmol/L; P = 0.016) and HOMA-IR (beta = 0.30 +/- 0.12; P = 0.016) values were increased with SR versus AS"
+  - outcome_domain: metabolic
+    outcome_construct: fasting_insulin_after_6_weeks_mild_restriction
+    exposure: {type: chronic_restriction, dose_h: 6.2, referent_h: 7.54, duration_days: 42, contrast_label: "6 WEEKS of 1.5 h/night sleep restriction (achieved TST 6.2 h/night) vs maintained adequate sleep"}
+    scale: raw_units
+    unit: "pmol/L fasting insulin (absolute change, SR vs adequate sleep)"
+    value: 6.8
+    se: 2.8
+    ci: [1.312, 12.288]
+    conversion_formula: "Published directly as beta = 6.8 +/- 2.8 pmol/L (SEM), P = 0.016. ci = 6.8 +/- 1.96*2.8 = 1.312 to 12.288 (computed, not published)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM (higher fasting insulin at unchanged glucose = compensated insulin resistance). Same compensatory pattern klingenberg2013 found in adolescent boys: insulin rises to defend normal glucose."
+    covariates: ["baseline outcome value", "crossover order", "adiposity change"]
+    followup_years: null
+    cohort_family: "Columbia_StOnge_SR_trial"
+    quote: "Fasting insulin (beta = 6.8 +/- 2.8 pmol/L; P = 0.016) and HOMA-IR (beta = 0.30 +/- 0.12; P = 0.016) values were increased with SR versus AS"
+  - outcome_domain: metabolic
+    outcome_construct: homa_ir_premenopausal_subgroup
+    exposure: {type: chronic_restriction, dose_h: 6.2, referent_h: 7.54, duration_days: 42, contrast_label: "6 weeks of 1.5 h/night restriction vs adequate sleep, PREMENOPAUSAL women only (n=27 of 38)"}
+    scale: raw_units
+    unit: "HOMA-IR units (absolute change), premenopausal subgroup"
+    value: 0.27
+    se: 0.13
+    ci: [0.0152, 0.5248]
+    conversion_formula: "Published as beta = 0.27 +/- 0.13 (SEM) for premenopausal women versus beta = 0.45 +/- 0.25 for postmenopausal women, P for interaction = 0.042. ci = 0.27 +/- 1.96*0.13 (computed). Premenopausal n inferred as 38 - 11 postmenopausal = 27."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. THIS IS THE SUBGROUP TO USE FOR OUR SUBJECT, not the full-sample estimate. The full-sample beta of 0.30 is inflated by the 11 postmenopausal women (beta 0.45), who are metabolically and hormonally furthest from an 18-year-old. The younger-women estimate of 0.27 is the more transportable number, and the significant age/menopause interaction (P=0.042) is direct evidence that this effect grows with age - which argues for attenuating, not amplifying, midlife estimates when applying them to an adolescent."
+    covariates: ["baseline outcome value", "crossover order", "menopausal status interaction term"]
+    followup_years: null
+    cohort_family: "Columbia_StOnge_SR_trial"
+    quote: "with effects on HOMA-IR more pronounced in postmenopausal women compared with premenopausal women (beta = 0.45 +/- 0.25 vs. beta = 0.27 +/- 0.13, respectively; P for interaction = 0.042)"
+  - outcome_domain: exposure_measurement
+    outcome_construct: achieved_tst_reduction_over_6_weeks
+    exposure: {type: descriptive, dose_h: 6.2, referent_h: 7.54, duration_days: 42, contrast_label: "actigraphic TST actually achieved across a 6-week free-living restriction phase targeting -1.5 h/night"}
+    scale: hours
+    unit: "hours/night of actigraphic TST lost, restriction vs adequate-sleep phase"
+    value: -1.34
+    se: 0.04
+    ci: [-1.4184, -1.2616]
+    conversion_formula: "Published directly as a reduction of 1.34 +/- 0.04 h/night (SEM), P < 0.0001; signed negative here for sleep lost. ci = -1.34 +/- 1.96*0.04 (computed). Adherence yield = 1.34/1.5 = 89% of the intended 1.5 h reduction, sustained over 6 weeks."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = sleep lost. Establishes that a 6-week free-living restriction of this size is achievable and verifiable, and that the referent phase held at about 7.5 h. Baseline eligibility required actigraphy-confirmed habitual TST of 7-9 h, so 7.54 h is the referent used in the exposure fields."
+    covariates: []
+    followup_years: null
+    cohort_family: "Columbia_StOnge_SR_trial"
+    quote: "TST was reduced by 1.34 +/- 0.04 h/night with SR versus AS (P < 0.0001)"
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "The strongest design in the shard's experimental set for external validity. Randomised crossover, actigraphy-verified exposure at both baseline (eligibility required 7-9 h habitual TST) and during intervention, 6-week phases, free-living, and - crucially - the authors tested whether adiposity change mediated the effect and showed it did not, which removes the usual objection that sleep-restriction metabolic findings are really weight-gain findings. Analyses adjusted for baseline outcome values. Concerns: (1) open-label, unavoidable; (2) women only, so nothing here speaks to a male subject directly, and sex differences in this literature are real (cappuccio2010 short-sleep RR 2.07 in men vs 1.07 in women; leproult2014 studied men); (3) wide age eligibility (20-75) with a menopausal-status interaction, so the full-sample estimate mixes heterogeneous physiology; (4) OGTT-derived outcomes were prespecified but are not reported in the retrievable abstract, raising a selective-reporting concern that I cannot resolve without the full text; (5) n=38 is modest for subgroup interaction testing, and the postmenopausal subgroup (n=11) beta of 0.45 +/- 0.25 is itself not significant in isolation."
+funding: "Not stated in the retrievable abstract or front matter (St-Onge's programme is NIH/NHLBI-funded, but I did not retrieve the funding statement for THIS paper, so it is left unstated rather than guessed). Authors reported no conflicts of interest."
+notes: |
+  *** THIS IS THE LONGEST EXPERIMENTAL SLEEP-RESTRICTION PROTOCOL IN THE SHARD (6 WEEKS) AND THE ONE
+  WHOSE ACHIEVED DOSE MOST CLOSELY MATCHES OUR SUBJECT'S WEEKDAY SLEEP (6.2 h/night). Together with
+  dutil2024 it anchors the realistic end of the experimental dose-response curve. ***
+
+  DISTANCE FROM OUR SUBJECT'S EXPOSURE - the closest match on dose and duration, the worst on sex:
+  * Dose: achieved TST 6.2 h/night, described by the authors as "reflecting the median sleep duration
+    of U.S. adults with short sleep". The subject slept ~5-6 h on weekdays by self-report. This is
+    the right neighbourhood - arguably still slightly milder than the subject's weekdays - and it is
+    dramatically closer than the 4 h TIB protocols (spiegel1999, klingenberg2013, broussard2012).
+  * Duration: 6 weeks (42 days) of continuous restriction. Every other restriction record in the
+    shard runs 1-21 days. The subject's exposure ran ~3 years, so 6 weeks is still short by two
+    orders of magnitude, but it is the only record that shows what happens beyond the 3-week horizon.
+  * Pattern: continuous restriction with NO weekend recovery. The subject cycled 5 restricted nights
+    with 2 longer ones. depner2019 and cheung2026 are the records that address the cycling pattern;
+    this one deliberately does not.
+  * Setting: free-living with actigraphy verification - so the appetite and activity pathways that
+    inpatient studies suppress are all live here. That makes it more ecologically valid, and the
+    adiposity-mediation analysis is what rescues the causal interpretation.
+  * SEX IS THE BIG MISMATCH: 100% women, aged 20-75, 11 of 38 postmenopausal. Our subject is an
+    18-year-old male. Use the PREMENOPAUSAL beta (0.27 +/- 0.13), not the full-sample 0.30, and note
+    that the significant menopause interaction (P=0.042) indicates the effect is SMALLER in younger
+    women. Extrapolating downward in age from this record therefore argues for a smaller effect than
+    0.27, not a larger one. Scored fair_adult on that basis.
+
+  WHAT THIS RECORD CONTRIBUTES THAT NOTHING ELSE DOES - the dose-and-duration calibration:
+    protocol                                    achieved sleep   duration   insulin-sensitivity effect
+    spiegel1999      4 h TIB vs 12 h TIB         ~4 h            6 nights   glucose tolerance -40%; SI NOT sig
+    klingenberg2013  4 h TIB, adolescent boys    ~4 h            3 nights   HOMA-IR +65%
+    broussard2012    4.5 h TIB                   ~4.5 h          4 nights   adipocyte EC50 ~3-fold worse
+    buxton2010       5 h TIB                     ~5 h            7 nights   SI -20% (IVGTT), M -11% (clamp)
+    nedeltcheva2009  5.5 h TIB, ad libitum food  ~5.7 h          14 days    SI -17.5%
+    zuraikat2024     -1.5 h/night, free-living   6.2 h           42 days    HOMA-IR +0.30 units
+    dutil2024        -1.5 h TIB, adolescents     6.2 h           7 days      NOT significant
+  Read down that table: as the dose becomes realistic, the effect shrinks from "enormous" to "modest
+  but real", and at the realistic dose it takes weeks rather than nights to appear. The modeller
+  should NOT transport the 40-65% figures from the 4 h protocols to the subject. A HOMA-IR shift of
+  roughly 0.3 units (or less, adjusting downward for youth) is the defensible order of magnitude for
+  a sustained 6 h/night exposure, against a typical healthy young-adult HOMA-IR of roughly 1-2.
+
+  IMPORTANT ABSENCE - DO NOT ASSUME THE OGTT RESULTS: the abstract lists total AUC for glucose and
+  insulin, the Matsuda index, and the disposition index among the outcomes, but reports results only
+  for fasting insulin and HOMA-IR. I could not retrieve the full text, so I do not know whether the
+  OGTT-derived measures were null, significant, or simply not highlighted. It would be WRONG to infer
+  either way. Flagged as a selective-reporting concern in rob.notes. If a later station obtains the
+  full text, these four outcomes should be back-filled.
+
+  THE ADIPOSITY-MEDIATION RESULT IS THE MOST IMPORTANT METHODOLOGICAL CONTRIBUTION: "Change in
+  adiposity did not mediate the effects of SR on glucose metabolism or change results in the full
+  sample when included as a covariate." This directly answers the objection raised by bos2019, where
+  the cross-sectional insulin-resistance association vanished after BMI adjustment. In a randomised
+  design where sleep is the manipulated variable, BMI is neither a confounder nor an obligatory
+  mediator - the glycaemic effect is present without it. That materially strengthens the case that
+  the observational BMI-adjustment attenuation reflects confounding in the observational designs
+  rather than the absence of a real sleep effect, and it should be cited in summary section (c).
+shard: "s07_metabolic"

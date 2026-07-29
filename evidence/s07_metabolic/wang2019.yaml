@@ -1,0 +1,134 @@
+study_id: wang2019
+citation: "Wang J, Kwok MK, Au Yeung SL, Li AM, Lam HS, Leung JYY, Hui LL, Leung GM, Schooling CM. Sleep duration and risk of diabetes: observational and Mendelian randomization studies. Prev Med. 2019 Feb;119:24-30."
+doi: "10.1016/j.ypmed.2018.11.019"
+pmid: "30508554"
+url: "https://pubmed.ncbi.nlm.nih.gov/30508554/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep duration and risk of diabetes: Observational and Mendelian randomization studies."
+access_tier: abstract_only
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 159208
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational GWAS consortia (DIAGRAM, MAGIC) + Hong Kong birth cohort"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: mr_sleep_duration_per_hour_to_diabetes
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "MR: per 1 h MORE genetically instrumented sleep duration (68 SNPs) -> diabetes; DIAGRAM 26,676 cases / 132,532 controls; IVW with multiplicative random effects"}
+    scale: log_or
+    unit: "log OR of diabetes per +1 h genetically predicted sleep duration"
+    value: -0.162519
+    se: 0.145027
+    ci: [-0.446771, 0.121733]
+    conversion_formula: "Published OR 0.85 per hour of sleep (95% CI 0.64 to 1.13). log_or = ln(0.85) = -0.162519; se = (ln(1.13)-ln(0.64))/3.92 = (0.122218-(-0.446287))/3.92 = 0.145027. Back-check: exp(-0.162519 +/- 1.96*0.145027) = 0.640-1.129, reproducing the published CI. SIGN: negative = more sleep, lower diabetes odds. INVERTED to a per-hour-LESS-sleep scale for comparability with shan2015: OR = 1/0.85 = 1.18, 95% CI 1/1.13 to 1/0.64 = 0.885 to 1.563. ci field is on the LOG scale as published (per hour MORE sleep)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = protective effect of MORE sleep, i.e. HARM from less sleep. NULL (CI crosses zero). But note the INVERTED point estimate, OR 1.18 per hour LESS sleep, is almost exactly the observational estimate from liu2025 (1.18) - so this null is a POWER failure, not a contradiction."
+    covariates: ["IVW with multiplicative random effects"]
+    followup_years: null
+    cohort_family: "DIAGRAM"
+    quote: "Using inverse variance weighting with multiplicative random effects, sleep duration was not associated with diabetes (odds ratio (OR) 0.85 per hour of sleep, 95% confidence interval (CI) 0.64 to 1.13), FG (-0.032 mmol/l per hour of sleep, 95% CI -0.126 to 0.063) or HbA1c (-0.022% per hour of sleep, 95% CI -0.069 to 0.024)."
+  - outcome_domain: metabolic
+    outcome_construct: mr_sleep_duration_per_hour_to_fasting_glucose
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "MR: per 1 h MORE genetically instrumented sleep duration (55 SNPs) -> fasting glucose; MAGIC n=122,743"}
+    scale: raw_units
+    unit: "mmol/L change in fasting glucose per +1 h genetically predicted sleep duration"
+    value: -0.032
+    se: 0.048214
+    ci: [-0.126, 0.063]
+    conversion_formula: "Published directly: -0.032 mmol/l per hour of sleep (95% CI -0.126 to 0.063). se = (0.063-(-0.126))/3.92 = 0.189/3.92 = 0.048214."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = more sleep, lower fasting glucose (i.e. HARM from less sleep). NULL. Magnitude is also biologically trivial: even the harmful CI bound implies about 0.13 mmol/L per hour, well inside normal variation."
+    covariates: []
+    followup_years: null
+    cohort_family: "MAGIC"
+    quote: "sleep duration was not associated with diabetes (odds ratio (OR) 0.85 per hour of sleep, 95% confidence interval (CI) 0.64 to 1.13), FG (-0.032 mmol/l per hour of sleep, 95% CI -0.126 to 0.063) or HbA1c (-0.022% per hour of sleep, 95% CI -0.069 to 0.024)."
+  - outcome_domain: metabolic
+    outcome_construct: mr_sleep_duration_per_hour_to_hba1c
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "MR: per 1 h MORE genetically instrumented sleep duration (55 SNPs) -> HbA1c; MAGIC n=123,665"}
+    scale: raw_units
+    unit: "percentage-point change in HbA1c per +1 h genetically predicted sleep duration"
+    value: -0.022
+    se: 0.023724
+    ci: [-0.069, 0.024]
+    conversion_formula: "Published directly: -0.022% per hour of sleep (95% CI -0.069 to 0.024). se = (0.024-(-0.069))/3.92 = 0.093/3.92 = 0.023724."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = more sleep, lower HbA1c (HARM from less sleep). NULL, and again the magnitude is clinically negligible - the worst-case CI bound is 0.069 HbA1c percentage points per hour, roughly the assay's own noise."
+    covariates: []
+    followup_years: null
+    cohort_family: "MAGIC"
+    quote: "HbA1c (-0.022% per hour of sleep, 95% CI -0.069 to 0.024)"
+  - outcome_domain: metabolic
+    outcome_construct: observational_sleep_duration_glycaemia_at_age_17_5_sex_interaction
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "OBSERVATIONAL arm: sleep duration at ~17.5 years vs fasting glucose and HbA1c, Hong Kong 'Children of 1997' population-representative birth cohort; test for sex interaction"}
+    scale: per_hour_beta
+    unit: "direction only; the age-17.5 point estimates are not published in the abstract"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "PLACEHOLDER DIRECTION FLAG ONLY (value=+1 denotes 'a sex-differential association was detected'). The abstract reports only that the association of sleep duration with FG differed by sex (p for interaction 0.05) and did not differ for HbA1c; NO point estimates, SEs or CIs for the age-17.5 associations are given, and the full text was not retrieved. Do NOT pool as a magnitude."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "direction/existence flag only. Records that a sex-differential sleep-glycaemia association was detected at EXACTLY our subject's age (~17.5 y), with p for interaction = 0.05 - borderline."
+    covariates: []
+    followup_years: null
+    cohort_family: "Children_of_1997_Hong_Kong"
+    quote: "In the population-representative Hong Kong Chinese 'Children of 1997' birth cohort we assessed whether associations of sleep duration at ~17.5 years with FG and HbA1c differed by sex. ... In 'Children of 1997', the associations of sleep duration with FG differed by sex (p for interaction 0.05) but not with HbA1c."
+rob:
+  tool: MR-STROBE
+  judgement: some_concerns
+  notes: "Well-specified two-sample MR on three outcomes (diabetes, fasting glucose, HbA1c) using large consortium data, with the useful addition of a genuinely adolescent observational arm. Principal concern is POWER on the diabetes outcome: the CI for the per-hour OR runs from 0.64 to 1.13, which is wide enough to contain the entire observational effect, so the null is uninformative for adjudicating the observational estimate. The continuous glycaemic-trait nulls (FG, HbA1c) are much tighter and therefore more informative. The observational arm reports no point estimates in the abstract, and the sex-interaction p of 0.05 is borderline and would not survive multiplicity correction across three outcomes."
+funding: "Not retrievable from the abstract (University of Hong Kong / CUNY authorship; funder left unstated rather than guessed)."
+notes: |
+  *** THIS IS THE MR STUDY GAO 2020 CITES AS 'Wang et al. (2019) ... found that they were not causally
+  related', and it is the third independent MR null on sleep duration and diabetes. *** It also
+  contains the ONLY glycaemic measurement at our subject's exact age anywhere in this shard.
+
+  THE MOST IMPORTANT ARITHMETIC IN THIS RECORD - IT REFRAMES THE WHOLE MR 'GAP':
+  Published as OR 0.85 (0.64-1.13) per hour MORE sleep. Inverted to the observational convention of
+  per hour LESS sleep, that is OR 1.18 (0.89-1.56). Now compare:
+      liu2025   observational, <7 h vs 7-8 h      OR 1.18 (1.13-1.23)
+      shan2015  observational, per 1 h below 7 h  RR 1.09 (1.04-1.15)
+      wang2019  MR, per 1 h less sleep            OR 1.18 (0.89-1.56)   <- SAME POINT ESTIMATE
+      gao2020   MR, short sleep binary            OR 1.15 (0.96-1.38)   <- NEARLY THE SAME
+  The two MR point estimates for short sleep are 1.18 and 1.15; the two observational estimates are
+  1.18 and 1.09. THE MR AND OBSERVATIONAL POINT ESTIMATES AGREE ALMOST EXACTLY. The MR studies are
+  reported as "null" purely because their confidence intervals are 3-5 times wider. This is the single
+  most important nuance in this shard's causal section, and it is routinely misreported: the correct
+  statement is NOT "MR refutes the observational association" but "MR neither confirms nor excludes it,
+  while reproducing its magnitude."
+
+  THE COUNTERVAILING EVIDENCE, WHICH MUST BE STATED ALONGSIDE: the continuous glycaemic-trait MR
+  estimates here ARE reasonably precise and they ARE null and biologically trivial (fasting glucose
+  -0.032 mmol/L per hour, CI -0.126 to 0.063; HbA1c -0.022 percentage points per hour, CI -0.069 to
+  0.024). Combined with bos2019's null MR on glycaemic traits and gao2020's precise continuous-duration
+  null (OR 1.00), the fair summary is:
+    - MR CANNOT exclude a ~1.1-1.2 per-hour effect on DIAGNOSED diabetes;
+    - MR DOES largely exclude a material lifelong causal effect of sleep duration on CONTINUOUS
+      glycaemia in the general population;
+    - and MR DOES support a causal effect of INSOMNIA (gao2020, OR 1.14, p~1e-8).
+
+  THE AGE-17.5 OBSERVATIONAL ARM: the 'Children of 1997' birth cohort measured sleep duration and
+  glycaemia at approximately 17.5 years - the only measurement at our subject's exact age in this
+  shard. Unfortunately the abstract publishes no point estimates, only that the FG association
+  differed by sex (p interaction 0.05) and the HbA1c association did not. So it establishes that
+  age-17-18 data EXIST but contributes no usable magnitude. Retrieving that cohort's sex-stratified
+  betas is the highest-value follow-up for closing this shard's age gap. adolescent_match is scored
+  'mixed' because the record combines adult GWAS consortia with an age-17.5 cohort.
+
+  NON-INDEPENDENCE: uses DIAGRAM (shared with gao2020 and dashti2019) and MAGIC (shared with bos2019).
+  The four MR records in this shard rest on substantially overlapping consortium data and must not be
+  pooled as four independent nulls. n recorded as 159,208 = DIAGRAM 26,676 cases + 132,532 controls.
+shard: "s07_metabolic"

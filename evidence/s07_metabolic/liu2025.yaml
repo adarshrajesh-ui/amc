@@ -1,0 +1,148 @@
+study_id: liu2025
+citation: "Liu H, Zhu H, Lu Q, Ye W, Huang T, Li Y, Li B, Wu Y, Wang P, Chen T, Xu J, Ji L. Sleep features and the risk of type 2 diabetes mellitus: a systematic review and meta-analysis. Ann Med. 2024 Dec;56(1):2447422."
+doi: "10.1080/07853890.2024.2447422"
+pmid: "39748566"
+url: "https://europepmc.org/articles/PMC11703535"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep features and the risk of type 2 diabetes mellitus: a systematic review and meta-analysis"
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 1478297
+n_studies_pooled: 53
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: incident_type_2_diabetes_short_sleep_below_7h
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: 7.5, duration_days: null, contrast_label: "nighttime sleep duration <7 h vs 7-8 h referent"}
+    scale: log_or
+    unit: "log OR, <7 h vs 7-8 h"
+    value: 0.165514
+    se: 0.021632
+    ci: [0.123115, 0.207913]
+    conversion_formula: "Published OR 1.18 (95% CI 1.13-1.23). log_or = ln(1.18) = 0.165514; se = (ln(1.23)-ln(1.13))/3.92 = (0.207014-0.122218)/3.92 = 0.021632. Back-check: exp(0.165514 +/- 1.96*0.021632) = 1.131-1.231, reproducing the published CI. The authors note 'Since the incidence of T2DM is sufficiently low, the ORs were equivalent to the RRs or HRs in this meta-analysis', so this is interchangeable with a log_rr. ci field is on the LOG scale."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM (18% higher T2D odds for habitual sleep below 7 h)"
+    covariates: ["multivariable-adjusted estimates from contributing studies pooled"]
+    followup_years: null
+    cohort_family: "pooled_multiple"
+    quote: "Our analysis revealed that a nighttime sleep duration of less than 7 h (odds ratio [ OR ] = 1.18; 95% CI = 1.13, 1.23) or more than 8 h ( OR = 1.13; 95% CI = 1.09, 1.18) significantly increased the risk of T2DM."
+  - outcome_domain: metabolic
+    outcome_construct: incident_type_2_diabetes_short_sleep_MEN_ONLY
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: 7.5, duration_days: null, contrast_label: "short sleep vs referent, MEN only"}
+    scale: log_or
+    unit: "log OR, short sleep vs referent, men"
+    value: 0.122218
+    se: 0.044870
+    ci: [0.034273, 0.210163]
+    conversion_formula: "Published OR 1.13 (95% CI 1.04-1.24). log_or = ln(1.13) = 0.122218; se = (ln(1.24)-ln(1.04))/3.92 = 0.044870. Back-check: exp gives 1.035-1.234, reproducing the published CI."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. THE BEST-POWERED MALE-SPECIFIC ESTIMATE AVAILABLE, and it is essentially the same as the overall estimate - i.e. it does NOT reproduce cappuccio2010's much larger male RR of 2.07."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple"
+    quote: "The increased risk of T2DM associated with short sleep duration was consistent across sexes (men: OR = 1.13; 95% CI = 1.04, 1.24; women: OR = 1.10; 95% CI = 1.06, 1.14; Figures S5, S6 )."
+  - outcome_domain: metabolic
+    outcome_construct: incident_type_2_diabetes_long_sleep_above_8h
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: 7.5, duration_days: null, contrast_label: "nighttime sleep duration >8 h vs 7-8 h referent"}
+    scale: log_or
+    unit: "log OR, >8 h vs 7-8 h"
+    value: 0.122218
+    se: 0.020239
+    ci: [0.082550, 0.161886]
+    conversion_formula: "Published OR 1.13 (95% CI 1.09-1.18). log_or = ln(1.13) = 0.122218; se = (ln(1.18)-ln(1.09))/3.92 = 0.020239. Back-check: exp gives 1.086-1.176, reproducing the published CI."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM at the long end, confirming the U-shape in the largest synthesis to date."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple"
+    quote: "a nighttime sleep duration of less than 7 h (odds ratio [ OR ] = 1.18; 95% CI = 1.13, 1.23) or more than 8 h ( OR = 1.13; 95% CI = 1.09, 1.18) significantly increased the risk of T2DM"
+  - outcome_domain: circadian
+    outcome_construct: incident_type_2_diabetes_evening_chronotype
+    exposure: {type: social_jetlag, dose_h: null, referent_h: null, duration_days: null, contrast_label: "evening chronotype (E-type) vs morning chronotype referent"}
+    scale: log_or
+    unit: "log OR, evening chronotype vs referent"
+    value: 0.463734
+    se: 0.150665
+    ci: [0.168430, 0.759038]
+    conversion_formula: "Published OR 1.59 (95% CI 1.18-2.13). log_or = ln(1.59) = 0.463734; se = (ln(2.13)-ln(1.18))/3.92 = (0.756122-0.165514)/3.92 = 0.150665. Back-check: exp(0.463734 +/- 1.96*0.150665) = 1.183-2.136, reproducing the published CI. ci field is on the LOG scale."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. Included because it is LARGER than the short-sleep effect and because chronotype/timing is the pathway yuan2021 implicates experimentally. Our subject's late weekday bedtimes and delayed weekend sleep midpoint place him toward the evening-type end."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple"
+    quote: "The risk of contracting T2DM was notably elevated in individuals characterized as I-type ( OR = 1.31; 95% CI = 1.02, 1.68) or E-type ( OR = 1.59; 95% CI = 1.18, 2.13). In contrast, the risk of developing T2DM was reduced by approximately 18% in individuals with the early M-type ( OR = 0.82; 95% CI = 0.80, 0.85)"
+  - outcome_domain: metabolic
+    outcome_construct: age_gradient_of_the_sleep_duration_effect
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "age stratum in which the sleep-duration/T2D association was strongest"}
+    scale: years
+    unit: "years of age at the stratum of maximal association"
+    value: 35.0
+    se: null
+    ci: [30, 39]
+    conversion_formula: "The paper reports the strongest association in the 30-39 y stratum, attenuating with increasing age thereafter. 35 recorded as the midpoint of that published stratum; the ci field holds the published stratum bounds [30,39], NOT a confidence interval. NOTE no stratum below 30 y was analysed."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive. CRITICAL FOR AGE TRANSPORTABILITY: the association is strongest in the YOUNGEST stratum studied and weakens with age, which argues against down-weighting the RR for an 18-year-old - but there is NO stratum below age 30, so extrapolation to 18 remains unsupported."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple"
+    quote: "After stratification by age, the most significant association between either the extremely long sleep duration or short sleep duration groups and T2DM risk was observed among individuals aged 30-39 years. Notably, the influence of sleep duration on T2DM risk diminished with increasing age in individuals older than 30-39 years old ( Figures S3-S4 )."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "By far the largest synthesis available (53 studies, 1.48 M participants), PROSPERO-registered (CRD42023457631), PRISMA-followed, with funnel plots, Egger tests, trim-and-fill and extensive subgroup analyses. Weaknesses: it pools ORs/RRs/HRs from studies of MIXED design - the inclusion criterion is 'observational studies', so cross-sectional studies contribute alongside prospective cohorts, which permits reverse causation and makes this LESS causally clean than shan2015 despite being far larger. Exposure remains self-reported. The reported short-sleep category boundary is stated inconsistently in the paper ('less than 7 h' in the results text vs 'short sleep (<=7 h)' in the methods), a real ambiguity in the source. Heavy overlap with shan2015 and cappuccio2010."
+funding: "Not stated in the retrieved text (Ningbo University authorship; funder left unstated rather than guessed)."
+notes: |
+  ROLE IN THIS SHARD: the recency-and-precision update on the long-run risk estimate, and the source
+  of the two most decision-relevant subgroup facts (male-specific OR, and the age gradient).
+
+  ITS SHORT-SLEEP ESTIMATE OF 1.18 (1.13-1.23) SITS BETWEEN the derived shan2015 values for 6 h
+  (1.09) and 5 h (1.19) - which is exactly where a '<7 h' category average should fall. The three
+  meta-analyses are therefore quantitatively coherent:
+    cappuccio2010  <=5-6 h : RR 1.28 (1.03-1.60)   [107,756 participants]
+    shan2015       per 1 h : RR 1.09 (1.04-1.15)   [482,502 participants]
+    liu2025        <7 h    : OR 1.18 (1.13-1.23)   [1,478,297 participants]
+  The consistent reading is that habitual short sleep carries a roughly 10-20% relative excess of
+  incident T2D per hour-ish of deficit, with the precision improving and the point estimate drifting
+  DOWN as the evidence base grows - the classic signature of early-literature inflation.
+
+  *** DE-DUPLICATION: DO NOT POOL WITH shan2015 OR cappuccio2010 AS INDEPENDENT. *** Search window
+  runs to October 2024 and therefore SUBSUMES both earlier reviews' primary studies.
+
+  *** THE AGE GRADIENT IS THE MOST IMPORTANT THING IN THIS RECORD FOR OUR SUBJECT. *** The
+  association was strongest at ages 30-39 and attenuated monotonically with age thereafter, becoming
+  minimal in men over 60. Two implications:
+  1. It undercuts any assumption that the RR should be shrunk toward null for a young person. If
+     anything the age trend points the other way.
+  2. But there is NO stratum below 30, and none of the 53 studies followed adolescents to incident
+     T2D. So the youngest measured point is still 12 years older than our subject. The extrapolation
+     to 18 is an assumption, and it is THE single largest transportability gap in this shard.
+  It also gives a directional hint that the men-aged-40-49 estimate (OR 1.31 [1.17-1.48] for
+  extremely short sleep) may be nearer the relevant magnitude for a young man than the pooled 1.13.
+
+  CHRONOTYPE SIGNAL: evening chronotype carried OR 1.59 (1.18-2.13), LARGER than short sleep itself,
+  and morning chronotype was protective (OR 0.82 [0.80-0.85]). Combined with yuan2021's experimental
+  finding that circadian disruption rather than sleep loss drove the glycaemic effect, this is
+  convergent observational and experimental evidence that TIMING is at least as important as
+  DURATION. The subject's exposure includes both.
+
+  INTERACTION SIGNAL: poor sleep quality plus short duration gave OR 1.69 (1.11-2.58), and poor
+  quality alone OR 1.50 (1.30, 1.72) - larger than duration effects. This shard has no information on
+  the subject's sleep QUALITY, only duration; if his sleep was fragmented as well as short the
+  relevant estimate would be higher.
+shard: "s07_metabolic"

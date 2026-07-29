@@ -1,0 +1,137 @@
+study_id: gao2020
+citation: "Gao X, Sun H, Zhang Y, Liu L, Wang J, Wang T. Investigating causal relations between sleep-related traits and risk of type 2 diabetes mellitus: a Mendelian randomization study. Front Genet. 2020;11:607865."
+doi: "10.3389/fgene.2020.607865"
+pmid: "33384720"
+url: "https://europepmc.org/articles/PMC7770175"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Investigating Causal Relations Between Sleep-Related Traits and Risk of Type 2 Diabetes Mellitus: A Mendelian Randomization Study."
+access_tier: full_text
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 446118
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 54.1
+  country: "UK / Finland (UK Biobank + 23andMe exposure GWAS; DIAGRAM and FinnGen outcome GWAS)"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: mr_genetically_predicted_short_sleep_to_incident_t2d
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: 7.5, duration_days: null, contrast_label: "genetically predicted SHORT sleep duration (binary, <7 h vs 7-8 h) -> T2D; 17 SNP instruments after QC; DIAGRAM outcome"}
+    scale: log_or
+    unit: "log OR of T2D per unit genetically predicted liability to short sleep"
+    value: 0.139762
+    se: 0.092578
+    ci: [-0.041691, 0.321215]
+    conversion_formula: "Published OR 1.15 (95% CI 0.96-1.38), P = 0.09. log_or = ln(1.15) = 0.139762; se = (ln(1.38)-ln(0.96))/3.92 = (0.322083-(-0.040822))/3.92 = 0.092578. Back-check: exp(0.139762 +/- 1.96*0.092578) = 0.959-1.379, reproducing the published CI. ci field is on the LOG scale."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive point estimate = HARM, but the CI CROSSES THE NULL (P=0.09). This is the single most important number in the shard's causal-inference section: the MR point estimate is CONSISTENT IN MAGNITUDE with the observational estimates (1.15 vs liu2025's 1.18) but is NOT statistically significant."
+    covariates: ["SNPs correlated with measured confounders removed; Cochran's Q outlier removal; MR-Egger intercept P=0.92 (no directional pleiotropy); global Q P=0.79 (no heterogeneity)"]
+    followup_years: null
+    cohort_family: "UK_Biobank_23andMe_DIAGRAM_FinnGen"
+    quote: "Similarly, we found no causal relationship of either short sleep duration (OR 1.15, 95% CI: 0.96-1.38, P = 0.09) or long sleep duration with T2DM in the primary analysis (OR 1.10, 95% CI: 0.79-1.51, P = 0.43), and the sensitivity analysis yielded a similar pattern of results ( Table 2 and Figure 1 )."
+  - outcome_domain: metabolic
+    outcome_construct: mr_genetically_predicted_continuous_sleep_duration_to_t2d
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "genetically predicted CONTINUOUS habitual sleep duration -> T2D; 56 SNP instruments after QC; modified IVW; DIAGRAM outcome"}
+    scale: log_or
+    unit: "log OR of T2D per unit genetically predicted sleep duration"
+    value: 0.0
+    se: null
+    ci: [0.0, 0.0]
+    conversion_formula: "Published as OR 1.00, 95% CI 1.00-1.00, P = 0.43 - the paper reports the estimate rounded to two decimals, so both the point estimate and the CI collapse to 1.00 and no usable SE can be recovered. Recorded as log_or 0 with se null to register a precise null. Do NOT interpret the zero-width CI as infinite precision; it is a rounding artefact of the source."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "zero = NO CAUSAL EFFECT DETECTED. This is the best-powered instrument in the paper (56 SNPs, continuous exposure) and it is flatly null."
+    covariates: ["global Q P=0.94; MR-Egger intercept P=0.51"]
+    followup_years: null
+    cohort_family: "UK_Biobank_23andMe_DIAGRAM_FinnGen"
+    quote: "Little evidence for a causal effect of sleep duration on T2DM was observed either with the modified IVW (OR 1.00, 95% CI: 1.00-1.00, P = 0.43), first-order IVW or the pleiotropy robust methods (simple median, weighted median, MR-Egger) applied."
+  - outcome_domain: metabolic
+    outcome_construct: mr_genetically_predicted_insomnia_to_incident_t2d
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "genetically predicted INSOMNIA -> T2D; DIAGRAM outcome"}
+    scale: log_or
+    unit: "log OR of T2D per unit genetically predicted liability to insomnia"
+    value: 0.131028
+    se: 0.022392
+    ci: [0.087139, 0.174917]
+    conversion_formula: "Published OR 1.14 (95% CI 1.09-1.19), P = 1.29E-08. log_or = ln(1.14) = 0.131028; se = (ln(1.19)-ln(1.09))/3.92 = 0.022392. Back-check: exp gives 1.091-1.191, reproducing the published CI."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM, and this one SURVIVES MR at Bonferroni significance. The causal signal in sleep-and-diabetes sits on insomnia (sleep QUALITY / continuity), not on sleep DURATION."
+    covariates: ["Bonferroni threshold P<0.005 applied; replicated in FinnGen; robust across sensitivity analyses"]
+    followup_years: null
+    cohort_family: "UK_Biobank_23andMe_DIAGRAM_FinnGen"
+    quote: "Two-sample MR supported findings for an adverse effect of genetically predicted insomnia on T2DM risk (odds ratio [OR] = 1.14, 95% confidence interval [CI]: 1.09-1.19, p = 1.29E-08) at the Bonferroni-adjusted level of significance (p < 0.005)."
+  - outcome_domain: metabolic
+    outcome_construct: mr_genetically_predicted_long_sleep_to_t2d
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: 7.5, duration_days: null, contrast_label: "genetically predicted LONG sleep duration (>8 h vs 7-8 h) -> T2D; 5 SNP instruments; DIAGRAM outcome"}
+    scale: log_or
+    unit: "log OR of T2D per unit genetically predicted liability to long sleep"
+    value: 0.095310
+    se: 0.165263
+    ci: [-0.228405, 0.419025]
+    conversion_formula: "Published OR 1.10 (95% CI 0.79-1.51), P = 0.43. log_or = ln(1.10) = 0.095310; se = (ln(1.51)-ln(0.79))/3.92 = 0.165263. Back-check: exp gives 0.796-1.521, reproducing the published CI. Only 5 instruments, so very weak."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive point estimate but null. The observational U-shape's long limb also fails to survive MR."
+    covariates: []
+    followup_years: null
+    cohort_family: "UK_Biobank_23andMe_DIAGRAM_FinnGen"
+    quote: "no causal relationship of either short sleep duration (OR 1.15, 95% CI: 0.96-1.38, P = 0.09) or long sleep duration with T2DM in the primary analysis (OR 1.10, 95% CI: 0.79-1.51, P = 0.43)"
+rob:
+  tool: MR-STROBE
+  judgement: low
+  notes: "Methodologically thorough two-sample MR: two independent outcome cohorts (DIAGRAM and FinnGen) for replication, instrument pruning for LD and for SNPs associated with measured confounders, Cochran's Q outlier removal, MR-Egger for directional pleiotropy (all intercepts null), and multiple pleiotropy-robust estimators as sensitivity analyses with a Bonferroni-corrected threshold. Judged low risk of bias for an MR design. The residual concerns are inherent to the method rather than to execution: the short-sleep instrument retains only 17 SNPs after QC (limited power, which is why the CI is wide), the exposure GWAS is based on SELF-REPORTED integer-hour sleep duration (the authors note people overestimate sleep by up to 1 h, biasing toward null), and summary-level data preclude any non-linear or U-shaped modelling - the authors state this limitation explicitly."
+funding: "Not stated in the retrieved text (Shanxi Medical University authorship; funder left unstated rather than guessed)."
+notes: |
+  *** THIS RECORD IS THE ANSWER TO TASK ITEM 6: DOES MR SUPPORT THE OBSERVATIONAL ASSOCIATION? ***
+  Answer: only partly, and NOT for sleep duration.
+
+  THE OBSERVATIONAL-VS-MR COMPARISON, SIDE BY SIDE:
+    Observational (liu2025, 1.48 M):  short sleep <7 h    OR 1.18 (1.13-1.23)  SIGNIFICANT
+    Observational (shan2015, 482 k):  per 1 h below 7 h   RR 1.09 (1.04-1.15)  SIGNIFICANT
+    MR (this study):                  short sleep (binary) OR 1.15 (0.96-1.38)  NULL, P=0.09
+    MR (this study):                  continuous duration  OR 1.00 (1.00-1.00)  NULL, P=0.43
+    MR (this study):                  INSOMNIA             OR 1.14 (1.09-1.19)  SIGNIFICANT, P=1.3e-8
+
+  HOW TO READ THE GAP HONESTLY - this is the crux, and it is easy to get wrong in both directions:
+  * The binary short-sleep MR point estimate (1.15) is almost identical to the observational estimate
+    (1.18). So MR does NOT contradict the observational magnitude; it simply cannot resolve it. The
+    17-SNP instrument is underpowered and the CI (0.96-1.38) comfortably contains the observational
+    value. It is WRONG to report this as "MR refutes the association."
+  * But the continuous-duration instrument, which is far better powered (56 SNPs), is flatly null at
+    OR 1.00. That is harder to dismiss and does argue against a substantial linear per-hour causal
+    effect of sleep duration on T2D.
+  * Meanwhile insomnia DOES survive, with a tight CI and p ~ 1e-8. So the causal signal in this
+    literature localises to sleep CONTINUITY/QUALITY rather than sleep DURATION.
+  * Convergent with bos2019, which found the cross-sectional insulin-resistance association vanished
+    after adjusting for BMI and sleep-apnoea risk and whose MR on glycaemic traits was also null.
+
+  NET: of the observational RR of roughly 1.09-1.18, the fraction that survives genetic-instrument
+  scrutiny for DURATION specifically is best described as "not demonstrated, point estimate
+  preserved, upper bound not excluded." A defensible modelling choice is to keep the observational
+  point estimate but inflate its variance substantially, and to add a non-trivial prior mass on the
+  true duration effect being near zero with the observed association arising from confounding
+  (BMI, physical activity, socioeconomic position, depression, undiagnosed apnoea) and from
+  correlated sleep traits (insomnia, chronotype) that ARE causal.
+
+  RELEVANCE TO OUR SUBJECT - three important caveats about applying MR here at all:
+  1. MR estimates the effect of LIFELONG genetic liability to short sleep, not of a 3-year
+     behaviourally imposed episode in adolescence. These are different exposures with different
+     time-courses, so a null MR does not license the conclusion that the subject's 3 years were
+     harmless, and a positive MR would not license the converse either.
+  2. The exposure GWAS population is UK Biobank (mean sleep 7.2 h, SD 1.1; 25.8% short sleepers),
+     recruited at ages roughly 40-70. Nothing here is measured in adolescents. Scored poor_midlife.
+  3. MR cannot model the U-shape (the authors state this), so it cannot speak to the subject's
+     occasional 10-11 h nights at all.
+
+  n recorded as 446,118 = the UK Biobank exposure GWAS sample. Outcome samples: DIAGRAM and FinnGen.
+shard: "s07_metabolic"

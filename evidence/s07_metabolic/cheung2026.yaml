@@ -1,0 +1,116 @@
+study_id: cheung2026
+citation: "Cheung YYY, Tan TYL, Koa TB, Khoo CM, Lo JC. Glucose homeostasis during recurrent periods of sleep restriction and recovery in healthy young adults. Sleep. 2026 Apr 16;49(4):zsaf339."
+doi: "10.1093/sleep/zsaf339"
+pmid: "41165770"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13089489/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Glucose homeostasis during recurrent periods of sleep restriction and recovery in healthy young adults."
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 48
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [21, 35]
+  pct_female: null
+  country: "Singapore"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: two_hour_post_glucose_load_plasma_glucose_stable_6h_schedule
+    exposure: {type: chronic_restriction, dose_h: 6, referent_h: 8, duration_days: 5, contrast_label: "stable short sleep group: 6 h TIB x 5 'weekday' nights x 2 cycles, each followed by 8 h 'weekend' recovery, vs own 8 h baseline"}
+    scale: cohens_d
+    unit: "dz (within-subject standardised change from baseline in 2-h post-load glucose)"
+    value: 0.39
+    se: 0.2593
+    ci: [-0.118, 0.898]
+    conversion_formula: "dz = 0.39 reported directly by the authors (Cohen's dz) with p = 0.02. SE(dz) = sqrt(1/n + dz^2/(2n)) with n=16 (48 analysed participants split across 3 randomised groups; the paper does not state per-group n in the retrieved text, so n=16 is an EQUAL-SPLIT ASSUMPTION - if groups were unbalanced this SE is approximate). CI = dz +/- 1.96*SE."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = HARM (higher 2-h glucose after recurrent 6 h weekday sleep, despite intervening 8 h weekend recovery)"
+    covariates: ["diet strictly controlled to zero net weight change; strenuous activity prohibited"]
+    followup_years: null
+    cohort_family: null
+    quote: "The stable short sleep group also showed increased insulin levels in the first week (p = .02), but their glucose levels still increased from baseline (p = .02; Cohen's dz = 0.39)."
+  - outcome_domain: metabolic
+    outcome_construct: two_hour_post_glucose_load_plasma_glucose_variable_schedule
+    exposure: {type: chronic_restriction, dose_h: 6, referent_h: 8, duration_days: 5, contrast_label: "variable short sleep group: 8, 4, 8, 4, 6 h TIB across 5 'weekday' nights (same 30 h total as the stable group) x 2 cycles, each followed by 8 h recovery, vs own 8 h baseline"}
+    scale: cohens_d
+    unit: "dz (within-subject standardised change from baseline in 2-h post-load glucose)"
+    value: 0.99
+    se: 0.3052
+    ci: [0.392, 1.588]
+    conversion_formula: "Authors report 'dz >= 0.99' with p < .01, so 0.99 is a LOWER BOUND on the true dz, not a point estimate. SE(dz) = sqrt(1/16 + 0.99^2/32) = 0.3052, same equal-split n=16 assumption as above."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = HARM, and roughly 2.5x the stable-schedule effect at IDENTICAL total sleep. Lower bound only."
+    covariates: ["diet strictly controlled; total TST verified not to differ between the two short-sleep groups (p = .23 and p = .71)"]
+    followup_years: null
+    cohort_family: null
+    quote: "Importantly, in both weeks of sleep restriction, the variable short sleep group failed to significantly elevate their insulin levels (p > .30); hence, their glucose levels increased from baseline (p < .01, dz >= 0.99) more prominently than the stable short sleep group."
+  - outcome_domain: exposure_measurement
+    outcome_construct: achieved_total_sleep_time_on_6h_tib_schedule
+    exposure: {type: chronic_restriction, dose_h: 6, referent_h: 8, duration_days: 5, contrast_label: "PSG-verified TST achieved on a 6 h TIB schedule vs 8 h baseline"}
+    scale: hours
+    unit: "hours of PSG-measured total sleep time per night on 6 h TIB"
+    value: 5.8
+    se: null
+    ci: [5.75, 5.86]
+    conversion_formula: "Reported as 'mean TST was significantly reduced to 345.1-351.4 min' for the stable short sleep group; 345.1/60 = 5.752 h and 351.4/60 = 5.857 h. Midpoint 5.80 h recorded; the ci field holds the published range across the two manipulation periods, NOT a confidence interval. Baseline TST 'just above 456 min' = 7.6 h."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive. Documents that a 6 h TIB schedule yields ~5.8 h of actual sleep - directly calibrating our subject's self-reported 5-6 h."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "For the stable short sleep group, mean TST was significantly reduced to 345.1-351.4 min during the two sleep manipulation periods relative to baseline ( p < .001)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomised 3-arm parallel design with PSG every night, strictly controlled isocaloric diet, and verified equal total sleep between the two short-sleep arms - an unusually strong protocol. Weaknesses: the primary group x day interaction was NOT significant (p > .15), so the between-group claims rest on within-group change scores, which is a weaker inferential basis than the abstract's emphasis suggests. The control group itself drifted toward insulin resistance from laboratory sedentariness, which contaminates the baseline comparison for all arms. Per-group n not stated in the retrieved text. Habitual short sleepers were EXCLUDED by design."
+funding: "Not stated in the retrieved text (National University of Singapore Centre for Sleep and Cognition; funder left unstated rather than guessed)."
+notes: |
+  *** THE CLOSEST PROTOCOL MATCH TO OUR SUBJECT'S WEEKLY CYCLE, AND THE NEWEST EVIDENCE. ***
+  Design: 8 h baseline, then TWO cycles of 5 restricted "weekday" nights followed by 8 h "weekend"
+  recovery. That is the subject's schedule, repeated twice, in young adults, with PSG verification.
+
+  DISTANCE FROM OUR SUBJECT'S EXPOSURE:
+  * Dose: the stable arm's 6 h TIB produced 5.75-5.86 h of ACTUAL sleep - an almost exact match to
+    the subject's reported weekday 5-6 h. Best dose match in the shard, and it is PSG-verified
+    rather than self-reported.
+  * Pattern: 5 weekday nights + weekend recovery, matching the subject exactly. Recovery dose 8 h,
+    matching the subject's reported weekend 7-8 h almost exactly. This is a closer recovery-dose
+    match than ness2019 (10 h) or killick2015 (10 h).
+  * The VARIABLE arm (8, 4, 8, 4, 6 h) is a good analogue of the subject's ragged real schedule with
+    occasional 3-4 h pre-exam nights, since it holds total sleep constant while varying night to
+    night.
+  * Duration: 2 cycles (16 days). The subject completed roughly 150 cycles over 3 years. Still the
+    longest multi-cycle experimental exposure available, but three orders of magnitude short of the
+    subject's, so the long-run extrapolation remains unsupported.
+  * Age: 21-35 y, so the youngest participants are 3 y above the subject and none are adolescents.
+    good_young_adult. Note the study EXCLUDED habitual short sleepers (self-reported TIB < 6 h),
+    which is precisely the group the subject belongs to - so any adaptation that habitual short
+    sleepers may have developed is by construction absent from this estimate.
+
+  TWO FINDINGS THAT MATTER MOST FOR THE MODEL:
+  1. VARIABILITY MATTERS MORE THAN MEAN DOSE. Both short-sleep arms slept the SAME total amount
+     (30 h per 5 nights, verified p = .23 / .71), yet the variable arm's glucose deterioration was
+     about 2.5x larger (dz >= 0.99 vs 0.39). Mechanistically the authors attribute this to failure of
+     compensatory insulin hypersecretion, i.e. possible beta-cell functional impairment, in the
+     variable arm. For our subject this means his IRREGULARITY - occasional 3-4 h nights and 10-11 h
+     weekend nights - may be a bigger metabolic exposure than his average sleep duration. Any model
+     that summarises his exposure as a single mean hours-per-night will understate the risk.
+  2. An 8 h weekend recovery did NOT prevent the deterioration across two cycles, converging with
+     depner2019. The authors' conclusion is that only sleeping within the age-appropriate range
+     EVERY night optimised glucose tolerance.
+
+  Effect sizes here are standardised within-subject changes in 2-h glucose, which are NOT comparable
+  units to the insulin-sensitivity percentages in buxton2010/klingenberg2013. Do not pool across
+  those scales without conversion.
+shard: "s07_metabolic"

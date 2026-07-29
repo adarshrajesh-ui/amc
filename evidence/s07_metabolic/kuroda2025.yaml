@@ -1,0 +1,202 @@
+study_id: kuroda2025
+citation: "Kuroda H, Yeung SLA, Fujii R, Iwagami M, Goto A. Investigating the non-linear association between sleep duration and type 2 diabetes: conventional and Mendelian randomization analyses from the UK Biobank. J Diabetes Investig. 2025;16(6):1126-1137."
+doi: "10.1111/jdi.70039"
+pmid: "40181521"
+url: "https://europepmc.org/articles/PMC12131940"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Investigating the non-linear association between sleep duration and type 2 diabetes: conventional and Mendelian randomization analyses from the UK Biobank."
+access_tier: full_text
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 385135
+n_studies_pooled: null
+population:
+  age_mean: 58.0
+  age_range: [50, 63]
+  pct_female: 55.0
+  country: "UK (UK Biobank, White British ancestry); outcome GWAS DIAGRAM + FinnGen"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: mr_genetically_predicted_short_sleep_to_t2d
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "two-sample MR, genetically predicted SHORT sleep duration (binary short-sleep SNPs, 23 of 25 retained after harmonisation) -> T2D; IVW; DIAGRAM + FinnGen outcomes meta-analysed"}
+    scale: log_or
+    unit: "log OR of T2D per unit genetically predicted liability to short sleep"
+    value: 0.113329
+    se: 0.047758
+    ci: [0.019724, 0.206934]
+    conversion_formula: "Published OR (IVW) 1.12 (95% CI 1.02-1.23). log_or = ln(1.12) = 0.113329; se = (ln(1.23)-ln(1.02))/3.92 = (0.207014-0.019803)/3.92 = 0.047758. Back-check: exp(0.113329 +/- 1.96*0.047758) = 1.020-1.230, reproducing the published CI exactly. ci field is on the LOG scale."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. THIS IS THE ONLY MR ESTIMATE IN THE SHARD IN WHICH SHORT SLEEP DURATION REACHES SIGNIFICANCE FOR T2D. It breaks the previously uniform MR-null picture (gao2020, bos2019, dashti2019, wang2019) and must not be omitted."
+    covariates: ["MR-Egger intercept test P=0.29 (no evidence of average directional pleiotropy)", "two independent outcome consortia (DIAGRAM, FinnGen) random-effects meta-analysed", "summary statistics excluding UK Biobank used to reduce sample-overlap bias"]
+    followup_years: null
+    cohort_family: "UK_Biobank_DIAGRAM_FinnGen"
+    quote: "Short sleep duration was associated with type 2 diabetes risk for most methods (OR of inverse variance weighting [IVW], 1.12; 95% CI, 1.02-1.23). Conversely, no strong effect of long sleep duration on type 2 diabetes risk were suggested (OR of IVW, 0.80; 95% CI, 0.60-1.07), although the MR Egger estimate was highly uncertain."
+  - outcome_domain: metabolic
+    outcome_construct: mr_genetically_predicted_long_sleep_to_t2d
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "two-sample MR, genetically predicted LONG sleep duration (7 SNPs, all retained) -> T2D; IVW"}
+    scale: log_or
+    unit: "log OR of T2D per unit genetically predicted liability to long sleep"
+    value: -0.223144
+    se: 0.147573
+    ci: [-0.512387, 0.066099]
+    conversion_formula: "Published OR (IVW) 0.80 (95% CI 0.60-1.07). log_or = ln(0.80) = -0.223144; se = (ln(1.07)-ln(0.60))/3.92 = (0.067659-(-0.510826))/3.92 = 0.147573. Back-check: exp gives 0.599-1.068, reproducing the published CI."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NEGATIVE point estimate = genetically predicted LONG sleep appears PROTECTIVE, though the CI crosses the null. Direction is opposite to the observational long-sleep limb (HR 1.46 in the same cohort's Cox model), which is strong evidence that the observational U-shape's long arm is reverse causation / confounding by illness, not a causal effect."
+    covariates: ["MR-Egger intercept test P=0.14", "only 7 instruments; MR-Egger estimate described by the authors as highly uncertain"]
+    followup_years: null
+    cohort_family: "UK_Biobank_DIAGRAM_FinnGen"
+    quote: "Conversely, no strong effect of long sleep duration on type 2 diabetes risk were suggested (OR of IVW, 0.80; 95% CI, 0.60-1.07), although the MR Egger estimate was highly uncertain."
+  - outcome_domain: metabolic
+    outcome_construct: mr_nonlinear_sleep_duration_9h_vs_7h_t2d
+    exposure: {type: habitual_short_sleep, dose_h: 9.0, referent_h: 7.0, duration_days: null, contrast_label: "NON-LINEAR MR (doubly-ranked stratification, 10 strata, 85 SNP GRS), questionnaire-based sleep duration, 9 h vs 7 h"}
+    scale: log_hr
+    unit: "log HR of incident T2D, 9 h vs 7 h genetically predicted sleep duration"
+    value: -0.261365
+    se: 0.202472
+    ci: [-0.658210, 0.135480]
+    conversion_formula: "Published HR 0.77 (95% CI 0.52-1.15). log_hr = ln(0.77) = -0.261365; se = (ln(1.15)-ln(0.52))/3.92 = (0.139762-(-0.653926))/3.92 = 0.202472. Back-check: exp gives 0.518-1.145, reproducing the published CI. GRS explained 0.67% of exposure variance, F-statistic 2589."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = no harm from long sleep. CRITICAL METHODOLOGICAL FINDING FOR THE MODELLER: the P-value for non-linearity was 0.94, i.e. the genetically instrumented dose-response is LINEAR, not U-shaped. The observational U-shape is not reproduced when confounding is removed."
+    covariates: ["adjusted for sex, age, assessment centre, genotyping batch, top 20 genetic PCs", "GR statistic 1.001 (<1.02), confirming 10 strata not excessive", "unchanged when excluding T2D diagnosed within 2 years of baseline", "unchanged when stratified by sex, age, or BMI, and when 8 h used as referent"]
+    followup_years: 13.6
+    cohort_family: "UK_Biobank"
+    quote: "Figure 2 provides the non-linear MR analysis of questionnaire-based sleep duration. The effect of sleep duration on type 2 diabetes risk was linear ( P -value for non-linearity = 0.94). Furthermore, no strong association between longer sleep duration and type 2 diabetes risk was observed (e.g., HR of 9 h compared with 7 h, 0.77; 95% CI, 0.52-1.15)."
+  - outcome_domain: metabolic
+    outcome_construct: observational_accelerometer_short_sleep_incident_t2d
+    exposure: {type: habitual_short_sleep, dose_h: 6.0, referent_h: 7.5, duration_days: null, contrast_label: "OBSERVATIONAL Cox arm of the same paper: ACCELEROMETER-derived sleep <6 h vs 7-8 h; n=75,094 with accelerometry, 2,258 incident T2D, median 13.6 y"}
+    scale: log_hr
+    unit: "log HR of incident T2D, accelerometer-derived <6 h vs 7-8 h"
+    value: 0.418710
+    se: 0.170904
+    ci: [0.083738, 0.753682]
+    conversion_formula: "Published HR 1.52 (95% CI 1.09-2.13). log_hr = ln(1.52) = 0.418710; se = (ln(2.13)-ln(1.09))/3.92 = (0.756122-0.086178)/3.92 = 0.170904. Back-check: exp gives 1.087-2.125, reproducing the published CI."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. This is a TIER-4 estimate (prospective cohort, OBJECTIVE accelerometer exposure) embedded in a T3-classified record - see notes. It is the largest short-sleep hazard ratio in the shard's epidemiological set and roughly 1.7x the questionnaire-based estimate in the identical cohort, indicating that self-report measurement error biases the conventional literature DOWNWARD, not upward."
+    covariates: ["age", "sex", "BMI", "parental history of diabetes", "Townsend deprivation index", "household income", "educational attainment", "employment status", "physical activity", "tobacco use", "alcohol consumption", "living with a partner", "living with children", "history of hypertension"]
+    followup_years: 13.6
+    cohort_family: "UK_Biobank"
+    quote: "By contrast, relative to 7-8 h accelerometer-derived sleep duration, shorter (<6 h) sleep duration corresponded to an increased type 2 diabetes risk (HR, 1.52; 95% CI, 1.09-2.13), whereas longer (>=10 h) sleep duration did not exhibit a strong association with type 2 diabetes risk (HR, 1.08; 95% CI, 0.92-1.27)."
+  - outcome_domain: metabolic
+    outcome_construct: observational_questionnaire_short_sleep_incident_t2d
+    exposure: {type: habitual_short_sleep, dose_h: 5.0, referent_h: 7.0, duration_days: null, contrast_label: "OBSERVATIONAL Cox arm: QUESTIONNAIRE sleep <=5 h vs 7 h; n=385,135, 16,699 incident T2D, median 13.6 y"}
+    scale: log_hr
+    unit: "log HR of incident T2D, self-reported <=5 h vs 7 h"
+    value: 0.262364
+    se: 0.031196
+    ci: [0.201220, 0.323508]
+    conversion_formula: "Published HR 1.30 (95% CI 1.23-1.39). log_hr = ln(1.30) = 0.262364; se = (ln(1.39)-ln(1.23))/3.92 = (0.329304-0.207014)/3.92 = 0.031196. Back-check: exp gives 1.223-1.382, reproducing the published CI."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. Single largest single-cohort self-report short-sleep estimate available, and it sits slightly ABOVE the pooled meta-analytic values (shan2015 derived 5 h RR 1.19; liu2025 <7 h OR 1.18)."
+    covariates: ["age", "sex", "BMI", "parental history of diabetes", "Townsend deprivation index", "household income", "educational attainment", "employment status", "physical activity", "tobacco use", "alcohol consumption", "living with a partner", "living with children", "history of hypertension"]
+    followup_years: 13.6
+    cohort_family: "UK_Biobank"
+    quote: "Relative to 7 h questionnaire-based sleep duration, both shorter (<=5 h) (hazard ratio [HR], 1.30; 95% confidence interval [CI], 1.23-1.39) and longer (>=10 h) (HR, 1.46; 95% CI, 1.33-1.59) sleep durations were associated with type 2 diabetes risk."
+  - outcome_domain: exposure_measurement
+    outcome_construct: accelerometer_minus_selfreport_sleep_duration_discrepancy
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "median accelerometer-derived sleep duration MINUS median questionnaire sleep duration, same 75,094 participants"}
+    scale: hours
+    unit: "hours (accelerometer-derived minus self-reported)"
+    value: 1.40
+    se: null
+    ci: null
+    conversion_formula: "Table 1: median (IQR) accelerometer-derived sleep duration 8.40 h (7.75, 9.09) versus median (IQR) questionnaire-based sleep duration 7 h (7, 8) in the same accelerometry subgroup. Difference = 8.40 - 7 = +1.40 h. No SE derivable from medians as reported; se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = the accelerometer algorithm returns LONGER sleep than self-report, by about 1.4 h. CAUTION: this is the OPPOSITE sign to matthews2012, where adolescents self-reported 1.0 h MORE than actigraphy showed. The two are not contradictory - the UK Biobank machine-learning estimate is a sleep-PERIOD measure rather than a TST measure - but it means the '<6 h accelerometer' category here is a far more extreme exposure than '<6 h actigraphic TST' in the adolescent studies, and the categories must NOT be equated across records."
+    covariates: []
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "Median (IQR) questionnaire-based sleep duration (h) 7 (7, 8) 7 (7, 8) Median (IQR) accelerometer-derived sleep duration (h) NA 8.40 (7.75, 9.09)"
+rob:
+  tool: MR-STROBE
+  judgement: low
+  notes: "Strong MR execution. Uses the doubly-ranked stratification method of Tian et al., which is specifically designed to avoid the collider bias that afflicts residual-based non-linear MR when the exposure is coarse (integer-hour self-report) - the authors explicitly criticise earlier UK Biobank non-linear MR papers on this point. Instrument strength is good (F=2589 for the 85-SNP questionnaire GRS; F=427 for the 20-SNP accelerometer GRS), GR statistic confirms the 10-strata choice, MR-Egger intercepts are null for both directions, outcome data come from two independent consortia with UK Biobank excluded to limit sample-overlap bias, and reverse causation is probed by excluding cases within 2 years of baseline. Author-stated limitations, all of which I accept: (1) outcomes ascertained from HOSPITAL INPATIENT data only, so incident T2D is under-ascertained (4.3% overall) and the case definition is skewed toward more severe disease; (2) exposure measured at a single time point, so time-varying sleep cannot be modelled; (3) White British only, limiting generalisability; (4) residual bias from assumption violations in non-linear MR cannot be excluded. Additional concern of mine: the accelerometry subgroup is a healthier subset (lower BMI, less hypertension, less smoking, 3.0% vs 4.3% T2D incidence), so the accelerometer HR of 1.52 comes from a selected sample."
+funding: "Japan Society for the Promotion of Science (JSPS) KAKENHI Grant Numbers 24K23752 and 24K02708, and the National Cancer Center Research and Development Fund. Authors declare no conflict of interest."
+notes: |
+  *** THIS RECORD MATERIALLY REVISES TASK ITEM 6. It is the newest and best-powered MR in the shard
+  and it is the ONLY one in which SHORT sleep duration reaches significance for T2D. Any summary
+  claiming "MR is uniformly null for sleep duration" is now wrong. ***
+
+  WHY THIS PAPER IS UNUSUALLY VALUABLE: it runs the observational analysis and the MR analysis in the
+  SAME cohort, with BOTH self-reported and accelerometer-derived exposure. That makes the
+  observational-vs-causal gap internally comparable rather than a cross-study comparison. All four
+  cells of the 2x2 (self-report/accelerometer x conventional/MR) are reported.
+
+  THE FOUR-WAY COMPARISON WITHIN ONE COHORT:
+    Conventional Cox, questionnaire  <=5 h vs 7 h    HR 1.30 (1.23-1.39)   SIGNIFICANT
+    Conventional Cox, accelerometer  <6 h  vs 7-8 h  HR 1.52 (1.09-2.13)   SIGNIFICANT
+    Two-sample MR,    short-sleep SNPs                OR 1.12 (1.02-1.23)   SIGNIFICANT
+    Non-linear MR,    9 h vs 7 h                      HR 0.77 (0.52-1.15)   null (long arm)
+
+  HOW MUCH OF THE OBSERVATIONAL SHORT-SLEEP RISK SURVIVES? Taking the questionnaire Cox estimate
+  (log 0.2624) as the observational anchor and the MR estimate (log 0.1133) as the causal anchor,
+  the surviving fraction on the log scale is 0.1133/0.2624 = 0.43. So roughly 40-45% of the
+  observationally estimated short-sleep excess risk survives genetic-instrument scrutiny in this
+  cohort; the rest is attributable to confounding and reverse causation. This is the single most
+  defensible quantitative answer the shard can give to summary section (c). Treat it as one
+  estimate, not a constant: the ratio depends on which observational anchor is used (against the
+  accelerometer HR of 1.52 the surviving fraction falls to 0.1133/0.4187 = 0.27), and the MR and
+  Cox contrasts are not on identical exposure scales.
+
+  RECONCILING WITH THE OTHER MR RECORDS - the disagreement is about POWER, not direction:
+    gao2020    short sleep OR 1.15 (0.96-1.38)  null   17 SNPs, DIAGRAM only
+    wang2019   per h less   OR 1.18 (inverted)  null   fewer SNPs, DIAGRAM/MAGIC
+    dashti2019 sleep duration -> T2D            null   genetic correlation with LONG sleep only
+    bos2019    glycaemic traits                 null   small (Netherlands Epidemiology of Obesity)
+    kuroda2025 short sleep OR 1.12 (1.02-1.23)  SIG    23 SNPs, DIAGRAM + FinnGen meta-analysed
+  Every point estimate in this list is positive and in the range 1.12-1.18. The earlier studies were
+  underpowered; kuroda2025 gains precision by meta-analysing two outcome consortia. The correct
+  reading is that the MR literature CONVERGES on a modest causal effect of short sleep of about
+  OR 1.12-1.15, which only becomes statistically detectable in the best-powered analysis. The
+  modeller should NOT treat MR as refuting the short-sleep association; it supports a real but
+  smaller-than-observational effect.
+
+  THE LONG-SLEEP LIMB COLLAPSES, AND THAT IS A CLEAN RESULT:
+  * Questionnaire Cox: >=10 h HR 1.46 (1.33-1.59), strongly positive, U-shaped, P non-linearity <0.001.
+  * Accelerometer Cox: >=10 h HR 1.08 (0.92-1.27), null; shape becomes J-shaped, P non-linearity 0.024.
+  * MR: OR 0.80 (0.60-1.07) and non-linear MR 9 h vs 7 h HR 0.77 (0.52-1.15) - point estimates go the
+    PROTECTIVE way, and P for non-linearity is 0.94, i.e. no U-shape at all once genetics instrument
+    the exposure.
+  DIRECTLY DECISION-RELEVANT FOR OUR SUBJECT, who has occasional 10-11 h weekend nights: the apparent
+  hazard of long sleep in the observational literature (shan2015 RR 1.14 per h above 8 h;
+  cappuccio2010 RR 1.48; javaheri2011 +23% HOMA at 10.5 h) does not survive either objective exposure
+  measurement or genetic instrumentation. His long nights should be modelled as recovery behaviour,
+  not as an independent metabolic risk exposure. This is the strongest evidence in the shard on that
+  question and it should downweight the long-sleep arm substantially.
+
+  TIER ASSIGNMENT WARNING FOR THE POOLER: the record is tiered T3 because MR is the paper's primary
+  design, but effects 4 and 5 are conventional prospective-cohort estimates, NOT MR outputs.
+  Effect 4 (accelerometer <6 h, HR 1.52) is properly a T4 estimate - prospective cohort with
+  objective exposure - and is one of the very few T4 short-sleep/T2D estimates in existence. Effect 5
+  (questionnaire <=5 h, HR 1.30) is properly T5. Do not pool effects 1-3 with effects 4-5 as if they
+  were independent, and do not pool effects 4-5 with shan2015, cappuccio2010, or liu2025 without
+  de-duplication: UK Biobank contributes to several of those syntheses. cohort_family is set to
+  UK_Biobank / UK_Biobank_DIAGRAM_FinnGen on every effect for exactly this reason.
+
+  TRANSPORTABILITY TO OUR SUBJECT - the central weakness, as everywhere in this shard's
+  epidemiological set. Median baseline age 58 (IQR 50-63), 55% female, White British, median
+  self-reported sleep 7 h. There are NO adolescents and NO young adults. Follow-up is 13.6 years in
+  midlife, so the estimate answers "what happens to a 58-year-old who habitually sleeps <6 h over
+  13 years", not "what happens to an 18-year-old after 3 years of weekday restriction". Two further
+  mismatches: (1) MR estimates the effect of LIFELONG genetic liability to short sleep, a
+  time-integrated exposure quite unlike a 3-year adolescent episode, and (2) the exposure is habitual
+  average duration with no representation of the subject's weekday/weekend alternation - the
+  circadian-misalignment component that leproult2014, cheung2026, chen2021, and yuan2021 identify as
+  the more damaging insult is entirely absent from this design. Scored poor_midlife.
+
+  n recorded as 385,135 (the analysed cohort after excluding 117,231 of 502,366 for prevalent
+  diabetes, extreme/missing sleep report, and ancestry); 75,094 of these had accelerometry;
+  16,699 incident T2D cases (4.3%) over median 13.6 years; 2,258 cases (3.0%) in the accelerometry
+  subgroup.
+shard: "s07_metabolic"

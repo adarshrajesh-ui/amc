@@ -1,0 +1,88 @@
+study_id: yuan2021
+citation: "Yuan RK, Zitting KM, Duffy JF, Vujovic N, Wang W, Quan SF, Klerman EB, Scheer FAJL, Buxton OM, Williams JS, Czeisler CA. Chronic sleep restriction while minimizing circadian disruption does not adversely affect glucose tolerance. Front Physiol. 2021;12:764737."
+doi: "10.3389/fphys.2021.764737"
+pmid: "34744800"
+url: "https://europepmc.org/articles/PMC8564292"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Chronic Sleep Restriction While Minimizing Circadian Disruption Does Not Adversely Affect Glucose Tolerance."
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 30
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: postprandial_glucose_after_3wk_restriction_WITHOUT_circadian_disruption
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 21, contrast_label: "3 weeks chronic sleep restriction with circadian disruption MINIMIZED (constant daily light exposure), n=9, vs own baseline"}
+    scale: pct_change
+    unit: "% change in postprandial plasma glucose (null result)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Explicit NULL result, recorded as 0: 'CSR with minimized circadian disruption had no adverse glycemic effects after 3 weeks of exposure (EXP)'. No magnitude or CI published for the null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "zero = NO HARM DETECTED. Three weeks of chronic sleep restriction, with circadian disruption minimised, did not worsen postprandial glucose. n=9, so the null is imprecise and cannot exclude a modest effect."
+    covariates: ["daily light exposure duration held constant"]
+    followup_years: null
+    cohort_family: null
+    quote: "CSR combined with RCD resulted in significantly elevated postprandial plasma glucose levels (p < 0.0001), while CSR with minimized circadian disruption had no adverse glycemic effects after 3 weeks of exposure (EXP)."
+  - outcome_domain: metabolic
+    outcome_construct: postprandial_glucose_restriction_PLUS_recurrent_circadian_disruption
+    exposure: {type: chronic_restriction, dose_h: 5.6, referent_h: null, duration_days: 21, contrast_label: "3 weeks chronic sleep restriction PLUS recurrent circadian disruption (forced desynchrony), n=21, vs own baseline"}
+    scale: pct_change
+    unit: "direction only; magnitude not published here"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "PLACEHOLDER DIRECTION FLAG ONLY (value=+1 means 'elevated'), with p<0.0001. This re-analyses the same n=21 forced-desynchrony cohort reported in buxton2012_fd, so it is NOT independent evidence - do not pool both. Recorded here only to preserve the within-paper contrast against the null arm."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. The contrast with the null arm above is the entire point of the paper."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "CSR combined with RCD resulted in significantly elevated postprandial plasma glucose levels (p < 0.0001)"
+rob:
+  tool: RoB2
+  judgement: moderate
+  notes: "The key comparison is BETWEEN TWO SEPARATE STUDIES run years apart (a new n=9 37-day inpatient protocol vs a previously published n=21 forced-desynchrony protocol), not a randomised within-study contrast. Different cohorts, different protocols, different eras of laboratory practice, and the null arm has only n=9. So the sleep-vs-circadian attribution is suggestive, not established. Judged moderate rather than some_concerns for this reason."
+funding: "Not retrievable from the abstract (Brigham and Women's Hospital; funder left unstated rather than guessed)."
+notes: |
+  *** THE MOST IMPORTANT COUNTERWEIGHT IN THIS SHARD. *** Every other experimental record here says
+  short sleep harms glucose metabolism. This one says that when you hold circadian disruption
+  constant, 3 weeks of chronic sleep restriction produced NO adverse glycaemic effect. If that is
+  right, a large share of the experimental literature's apparent 'short sleep' effect is actually a
+  circadian-disruption effect that rides along with short sleep in the lab (and in life, via late
+  bedtimes and artificial light).
+
+  WHY THIS MATTERS SPECIFICALLY FOR OUR SUBJECT: he did not merely sleep less; he slept less on
+  weekdays and shifted his sleep 2-3 h later at weekends. That is social jetlag - a recurring, if
+  mild, circadian misalignment. So the mechanism this paper implicates is one the subject DOES have.
+  The practical implication is that the downstream model should treat the subject's circadian
+  irregularity as at least as important as his sleep-duration deficit, and should not assume that
+  simply adding sleep hours while keeping an irregular schedule would neutralise the metabolic risk.
+
+  DISTANCE FROM OUR SUBJECT'S EXPOSURE:
+  * The null arm is the informative one, and it is a 3-week continuous restriction - LONGER than any
+    continuous stretch the subject sustained.
+  * Age: "healthy adults", no age given -> nulls; fair_adult, treat age match as UNVERIFIED.
+  * n recorded as 30 = 9 (CSR with minimised circadian disruption) + 21 (CSR + recurrent circadian
+    disruption). NOTE the 21 overlaps with buxton2012_fd - de-duplicate before pooling.
+
+  HOW TO USE IT: as a variance-inflating record. It should widen the posterior on the acute
+  metabolic effect substantially and should block any confident claim that sleep duration alone,
+  independent of timing, is the operative exposure. It should NOT be read as proof of no effect:
+  n=9, a single site, and an across-study comparison cannot support that.
+shard: "s07_metabolic"

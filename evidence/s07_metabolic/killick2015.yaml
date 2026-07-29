@@ -1,0 +1,135 @@
+study_id: killick2015
+citation: "Killick R, Hoyos CM, Melehan KL, Dungan GC 2nd, Poh J, Liu PY. Metabolic and hormonal effects of 'catch-up' sleep in men with chronic, repetitive, lifestyle-driven sleep restriction. Clin Endocrinol (Oxf). 2015 Oct;83(4):498-507."
+doi: "10.1111/cen.12747"
+pmid: "25683266"
+url: "https://europepmc.org/articles/PMC4858168"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Metabolic and hormonal effects of 'catch-up' sleep in men with chronic, repetitive, lifestyle-driven sleep restriction."
+access_tier: full_text
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 19
+n_studies_pooled: null
+population:
+  age_mean: 28.6
+  age_range: null
+  pct_female: 0.0
+  country: "Australia"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: insulin_sensitivity_isx_minimal_model_after_3_nights_catchup
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 6, duration_days: 3, contrast_label: "3 nights of 10 h TIB ('catch-up') vs 3 nights of continued 6 h TIB, in men with a mean 5.1 y history of weekday sleep restriction plus weekend catch-up"}
+    scale: raw_units
+    unit: "10^-4 /min/(uU/ml) difference in minimal-model insulin sensitivity (10 h minus 6 h)"
+    value: 8.57
+    se: 3.827
+    ci: [1.1, 16.1]
+    conversion_formula: "Reported directly with a 95% CI: 8.57 x 10^-4 /min/(uU/ml), (1.1, 16.1 x 10^-4), P=0.03. SE = (16.1 - 1.1)/3.92 = 3.827 x 10^-4. NOTE this specific pairwise comparison had n=8 (per Figure 3 legend: '10 h/6 h n = 8'), not the full 19, because each man completed only 2 of the 3 possible conditions."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = BENEFIT / RECOVERY (insulin sensitivity higher after catch-up sleep than after continued restriction)"
+    covariates: ["age factor tested in the mixed model; did not alter overall significance"]
+    followup_years: null
+    cohort_family: null
+    quote: "Insulin sensitivity (ISx) was significantly increased following three nights of 'catch-up' sleep (10 h) compared to continuing sleep restriction (6 h) (8.57 x 10-4/min/(uU/ml), (1.1, 16.1 x 10-4; P = 0.03) (Fig. 3 a)."
+  - outcome_domain: recovery
+    outcome_construct: insulin_sensitivity_pct_improvement_after_3_nights_catchup
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 6, duration_days: 3, contrast_label: "3 nights of 10 h TIB vs 3 nights of continued 6 h TIB"}
+    scale: pct_change
+    unit: "% improvement in minimal-model insulin sensitivity"
+    value: 45.0
+    se: null
+    ci: null
+    conversion_formula: "Stated as a percentage in the Discussion. No CI is given on the percentage form (the CI is given on the absolute form above), so se is left null; use the absolute-units effect above for pooling."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = BENEFIT / RECOVERY. This is the headline reversibility magnitude: 3 nights of catch-up sleep improved insulin sensitivity by 45%."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "We show that men who regularly adopt lifestyle-driven, chronic, repetitive sleep restriction with weekend 'catch-up' sleep significantly improved insulin sensitivity by 45% following three nights of a saturating sleep compared to ongoing sleep restriction, as measured by minimal model after an oral glucose challenge."
+  - outcome_domain: recovery
+    outcome_construct: glucose_auc_after_3_nights_catchup_YOUNGER_MEN_ONLY
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 6, duration_days: 3, contrast_label: "3 nights of 10 h TIB vs 6 h TIB, YOUNGER men only"}
+    scale: raw_units
+    unit: "mmol.min/L difference in OGTT glucose AUC (10 h minus 6 h)"
+    value: -69.2
+    se: 25.79
+    ci: [-119.7, -18.6]
+    conversion_formula: "Reported directly: -69.2 mmol min.L-1 (-119.7, -18.6); P = 0.02 in the younger men. SE = (-18.6 - (-119.7))/3.92 = 101.1/3.92 = 25.79."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = BENEFIT (lower glucose AUC after catch-up sleep). IMPORTANT AGE SIGNAL: significant in the YOUNGER men (P=0.02) but not in young and old combined (P=0.14), i.e. the recovery benefit was detectable specifically in the younger subgroup - the direction our 18-year-old subject sits in."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Glucose AUC was significantly lower in 10 h compared to 6 h in the younger men -69.2 mmol min.L-1 (-119.7, -18.6); P = 0.02), but not in the young and old men together ( P = 0.14) (Fig. 3 c)."
+  - outcome_domain: exposure_measurement
+    outcome_construct: habitual_weekday_sleep_and_weekend_extension_in_chronically_restricted_men
+    exposure: {type: descriptive, dose_h: 6.22, referent_h: null, duration_days: null, contrast_label: "observed habitual pattern of the enrolled men: weekday TST 373 +/- 6.6 min with weekend sleep extension of 37.4 +/- 2.3%, sustained 5.1 +/- 0.9 years"}
+    scale: hours
+    unit: "hours of habitual weekday sleep per night (373 min = 6.22 h)"
+    value: 6.22
+    se: 0.11
+    ci: null
+    conversion_formula: "373 min / 60 = 6.217 h. Reported dispersion is SEM 6.6 min = 0.11 h. Weekend extension 37.4% of 6.22 h implies weekend sleep of about 6.22 x 1.374 = 8.54 h."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive exposure characterisation, not a health effect. Included because it documents that this cohort's real-world pattern closely matches our subject's."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "19 men (mean +/- SEM age 28.6 +/- 2.0 years, BMI 26.0 +/- 0.8 kg/m(2) ) with at least 6 months' history (5.1 +/- 0.9 years) of lifestyle-driven, restricted sleep during the working week (373 +/- 6.6 min/night) with regular weekend 'catch-up' sleep (weekend sleep extension 37.4 +/- 2.3%) completed an in-laboratory, randomized, crossover study"
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomised in-laboratory crossover with period/carryover effects explicitly excluded using Friday baseline values - methodologically careful. Main weaknesses: an incomplete-block design in which each man did only 2 of 3 conditions, so the key 10h-vs-6h contrast rests on n=8; men only; the OGTT-minimal-model insulin sensitivity is less definitive than a clamp; and the 45% figure is a ratio on a small-n estimate so it is fragile even though the CI excludes null."
+funding: "Not stated in the retrieved text (Woolcock Institute of Medical Research / University of Sydney; funder left unstated rather than guessed)."
+notes: |
+  *** BEST EXPOSURE-HISTORY MATCH IN THE ENTIRE SHARD, AND THE KEY REVERSIBILITY ESTIMATE. ***
+  Unlike every other experimental record here, the participants were NOT normal sleepers put under
+  acute restriction. They were men who had ALREADY been living the subject's exact pattern -
+  lifestyle-driven weekday restriction with regular weekend catch-up - for a mean of 5.1 years. The
+  subject has been doing it for 3 years. This is as close to a matched population as this literature
+  offers, and it is the only study that asks the subject's actual question: given that I have already
+  been doing this for years, does catching up help?
+
+  ANSWER IT GIVES: yes, and quickly. Three nights of 10 h TIB improved insulin sensitivity by 45%
+  (absolute 8.57 x 10^-4 /min/(uU/ml), 95% CI 1.1-16.1, P=0.03) relative to continuing at 6 h, with
+  concordant improvements in HOMA-IR, QUICKI, fasting insulin and C-peptide across three separate
+  measures. So the insulin-resistance component of the subject's exposure is substantially and
+  rapidly reversible.
+
+  DISTANCE FROM OUR SUBJECT'S EXPOSURE:
+  * Habitual exposure: weekday 6.22 h/night for 5.1 years with weekend extension of 37.4%. The
+    subject: weekday 5-6 h for 3 years with weekend 7-8 h (an extension of roughly 20-45%). Very
+    close on both dose and pattern; the subject's weekday dose is slightly MORE severe and his
+    history slightly shorter.
+  * Recovery dose: 10 h TIB x 3 nights. The subject typically got 7-8 h x 2 nights, occasionally
+    10-11 h. So the subject's usual weekend is a WEAKER recovery dose than the one that produced the
+    45% improvement here. Do not assume he realised the full 45%.
+  * The comparator arm (continued 6 h) is the right comparator - continuing the habit - rather than
+    an artificial sleep-extension referent. This is a major advantage over spiegel1999/buxton2010.
+  * AGE: mean 28.6 y, about 10 y older than the subject, and the cohort deliberately included an
+    older subgroup. Hence fair_adult. BUT the glucose-AUC benefit was significant only in the
+    YOUNGER men, which if anything suggests the benefit transports to, or is larger in, an
+    18-year-old. Treat that as encouraging but underpowered (subgroup analysis, small n).
+  * BMI 26.0 kg/m2 on average, i.e. mildly overweight, whereas the subject's BMI is unknown to this
+    shard. If the subject is lean, insulin sensitivity is likely higher at baseline and the
+    absolute-units effect may not transport directly.
+
+  RECONCILIATION WITH ness2019 AND depner2019 - these are NOT contradictory:
+    - killick2015: 3 nights of 10 h in chronically restricted men -> insulin sensitivity improves 45%.
+    - ness2019: 2 nights of 10 h after acute 5-night restriction -> disposition index still suppressed.
+    - depner2019: 1 weekend of ad libitum recovery, then restriction RESUMES -> deficit persists.
+  Read together, they imply the recovery time constant is on the order of DAYS, that 2 nights is not
+  enough and 3 nights of a saturating dose achieves most of the benefit, and that the benefit is
+  erased if the restriction simply resumes. The determinant of the subject's forward risk is
+  therefore whether the exposure CONTINUES, not the accumulated 3 years.
+shard: "s07_metabolic"
