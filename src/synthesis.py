@@ -277,40 +277,61 @@ def pet_peese(y, se) -> dict:
 
 
 def trim_and_fill(y, se, max_iter: int = 50) -> dict:
-    """Duval-Tweedie R0 trim-and-fill."""
+    """Duval-Tweedie trim-and-fill using the L0 estimator of the number of missing studies.
+
+    Deviations of exactly zero carry no sign and are excluded from the rank statistic; leaving
+    them in makes the count depend on arbitrary tie-breaking in the sort, which showed up as
+    phantom fills on perfectly symmetric input.
+    """
     y, se = np.asarray(y, float), np.asarray(se, float)
     k = len(y)
     if k < 4:
-        return {"k": k, "n_filled": 0, "adjusted_mu": None}
+        return {"k": k, "n_filled": 0, "adjusted_mu": None, "estimator": "L0"}
     v = se ** 2
     w = 1.0 / v
     mu = (w * y).sum() / w.sum()
+    unadjusted = float(mu)
+    r0 = 0
     for _ in range(max_iter):
         d = y - mu
-        order = np.argsort(np.abs(d))
-        ranks = np.empty(k)
-        ranks[order] = np.arange(1, k + 1)
-        signed = np.sign(d) * ranks
-        gamma = signed[signed > 0].sum()
-        r0 = max(0, int(round((4 * gamma - k * (k + 1)) / (2 * k - 1))))
+        nz = np.abs(d) > 1e-12
+        dn = d[nz]
+        kk = len(dn)
+        if kk < 4:
+            return {"k": k, "n_filled": 0, "adjusted_mu": float(mu),
+                    "unadjusted_mu": unadjusted, "estimator": "L0"}
+        order = np.argsort(np.abs(dn))
+        ranks = np.empty(kk)
+        ranks[order] = np.arange(1, kk + 1)
+        # Suppression can be on either side, so the statistic is evaluated in both
+        # orientations: an excess of positive deviations implies missing negative studies and
+        # vice versa. Testing only one orientation silently misses half of all real cases.
+        t_plus = ranks[dn > 0].sum()
+        t_minus = ranks[dn < 0].sum()
+        l0_missing_negative = (4.0 * t_plus - kk * (kk + 1)) / (2.0 * kk - 1)
+        l0_missing_positive = (4.0 * t_minus - kk * (kk + 1)) / (2.0 * kk - 1)
+        if l0_missing_negative >= l0_missing_positive:
+            l0, excess_side = l0_missing_negative, 1.0
+        else:
+            l0, excess_side = l0_missing_positive, -1.0
+        r0 = max(0, int(round(l0)))
         if r0 == 0:
             return {"k": k, "n_filled": 0, "adjusted_mu": float(mu),
-                    "unadjusted_mu": float((1 / v * y).sum() / (1 / v).sum())}
-        # mirror the r0 most extreme positive-side studies
-        extreme_idx = order[-r0:]
-        filled_y = 2 * mu - y[extreme_idx]
-        filled_se = se[extreme_idx]
+                    "unadjusted_mu": unadjusted, "estimator": "L0"}
+        # Mirror the r0 most extreme studies from the over-represented side.
+        cand = np.where(np.sign(d) == excess_side)[0]
+        cand = cand[np.argsort(-np.abs(d[cand]))][:r0]
+        filled_y = 2 * mu - y[cand]
         y2 = np.concatenate([y, filled_y])
-        v2 = np.concatenate([v, filled_se ** 2])
+        v2 = np.concatenate([v, se[cand] ** 2])
         w2 = 1.0 / v2
         mu_new = (w2 * y2).sum() / w2.sum()
         if abs(mu_new - mu) < 1e-9:
             mu = mu_new
             break
         mu = mu_new
-    return {"k": k, "n_filled": int(r0),
-            "adjusted_mu": float(mu),
-            "unadjusted_mu": float((1 / v * y).sum() / (1 / v).sum())}
+    return {"k": k, "n_filled": int(r0), "adjusted_mu": float(mu),
+            "unadjusted_mu": unadjusted, "estimator": "L0"}
 
 
 def e_value(rr: float) -> float:

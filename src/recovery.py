@@ -37,11 +37,19 @@ TAU_DURATION_DAYS = (2.5, 5.0)      # kitamura2016 tau=2.52; klerman2008 ~5
 TAU_FUNCTION_LOGNORM = (np.log(16.0), 0.55)   # >7 d and never observed to complete
 
 
+# The banks2010 regression was fitted over 2-10 h in bed. Below about 2.2 h its intercept makes
+# it predict more sleep than time in bed, which is impossible, so the physical constraint
+# TST <= TIB is imposed and the extrapolation range is recorded.
+TIB_REGRESSION_VALID_RANGE_H = (2.0, 10.0)
+
+
 def tst_from_opportunity(tib_h: np.ndarray | float, nap_h: float = 0.0) -> np.ndarray:
     """Actual sleep obtained from a nightly opportunity, with the empirical ceilings applied."""
     tib = np.asarray(tib_h, dtype=float)
-    nocturnal = np.minimum(TST_FROM_TIB_INTERCEPT + TST_FROM_TIB_SLOPE * tib,
+    nocturnal = TST_FROM_TIB_INTERCEPT + TST_FROM_TIB_SLOPE * tib
+    nocturnal = np.minimum(nocturnal,
                            CEILING_NOCTURNAL_ONLY_H if nap_h > 0 else CEILING_SINGLE_NIGHT_H)
+    nocturnal = np.minimum(nocturnal, tib)          # cannot sleep longer than you are in bed
     return np.minimum(nocturnal + nap_h, CEILING_SINGLE_NIGHT_H + nap_h)
 
 
