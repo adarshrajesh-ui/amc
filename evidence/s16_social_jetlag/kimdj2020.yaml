@@ -1,0 +1,76 @@
+study_id: kimdj2020
+citation: Kim DJ, Mun SJ, Choi JS, Kim J, Lee GH, Kim HW, Park MG, Cho JW. Beneficial effects of weekend
+  catch-up sleep on metabolic syndrome in chronic short sleepers. Sleep Medicine. 2020;76:26-32.
+doi: 10.1016/j.sleep.2020.09.025
+pmid: '33069999'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Beneficial effects of weekend catch-up sleep on metabolic syndrome in chronic short
+    sleepers.
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 1812
+n_studies_pooled: null
+population:
+  age_mean: 46.94
+  age_range:
+  - 35
+  - 60
+  pct_female: 51.0
+  country: KR
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: metabolic
+  outcome_construct: metabolic_syndrome_prevalence
+  exposure:
+    type: weekend_catchup
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: weekend catch-up sleep vs none, among chronic short sleepers (<6 h weekdays)
+  scale: log_or
+  unit: null
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NEGATIVE direction = catch-up sleep was associated with LOWER metabolic syndrome prevalence
+    among chronic short sleepers, in both unadjusted and covariate-adjusted models. PROTECTIVE, and for
+    a METABOLIC outcome, which is the domain where depner2019 finds harm. No OR is given in the abstract,
+    so value=0.0/se=null; DO NOT POOL as a magnitude.
+  covariates:
+  - age
+  - sex
+  - education
+  - income
+  - occupation
+  - smoking
+  - alcohol_consumption
+  - physical_activity
+  followup_years: null
+  cohort_family: KNHANES_2016_2018
+  quote: WCUS was significantly associated with lower MetS prevalence in the unadjusted model and in the
+    model adjusted for socioeconomic and health behavior factors.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Nationally representative with measured metabolic-syndrome components and a pre-specified restriction
+    to chronic short sleepers, which is the right population for this question. Cross-sectional; midlife
+    only; the abstract reports significance without effect sizes.
+funding: null
+notes: 'THE MOST DIRECT OBSERVATIONAL COUNTERWEIGHT TO depner2019, because it addresses the SAME OUTCOME
+  DOMAIN (metabolic) in the SAME EXPOSURE GROUP (chronic short sleepers) and reaches the OPPOSITE conclusion.
+  Reconciliation: depner2019 measures acute insulin sensitivity after a single simulated weekend under
+  laboratory misalignment, whereas this measures prevalent metabolic syndrome in people habituated to
+  the pattern over years. Acute glycaemic disruption and long-run metabolic-syndrome prevalence need not
+  agree. se=null throughout because no ORs appear in the abstract; population is midlife, so transportability
+  to our subject is poor.'
+shard: s16_social_jetlag

@@ -1,0 +1,163 @@
+study_id: bouman2023
+citation: 'Bouman EJ, Beulens JWJ, Groeneveld L, de Kruijk RS, Schoonmade LJ, Remmelzwaal S, Elders PJM,
+  Rutters F. The association between social jetlag and parameters of metabolic syndrome and type 2 diabetes:
+  a systematic review and meta-analysis. Journal of Sleep Research. 2023;32(3):e13770.'
+doi: 10.1111/jsr.13770
+pmid: '36351658'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'The association between social jetlag and parameters of metabolic syndrome and type
+    2 diabetes: a systematic review and meta-analysis.'
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: null
+n_studies_pooled: 68
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: multi
+  adolescent_match: mixed
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: bmi
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: any social jetlag vs no social jetlag
+  scale: raw_units
+  unit: kg/m2
+  value: 0.49
+  se: 0.1429
+  ci:
+  - 0.21
+  - 0.77
+  conversion_formula: se = (0.77-0.21)/3.92 = 0.1429
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = SJL group has higher BMI. HARM. Pooled from 20 high-quality studies.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_68_studies
+  quote: High quality studies showed that having social jetlag compared to no social jetlag was significantly
+    associated with higher body mass index in 20 studies (0.49 kg/m2 , 95% confidence interval [CI] 0.21-0.77;
+    I2  = 100%)
+- outcome_domain: anthropometric
+  outcome_construct: waist_circumference
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: any social jetlag vs no social jetlag
+  scale: raw_units
+  unit: cm
+  value: 1.11
+  se: 0.352
+  ci:
+  - 0.42
+  - 1.8
+  conversion_formula: se = (1.80-0.42)/3.92 = 0.3520
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = SJL group has larger waist. HARM. Lowest heterogeneity of the set (I2=25%),
+    so the most trustworthy pooled estimate here.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_68_studies
+  quote: higher waist circumference in seven studies (1.11 cm, 95% CI 0.42-1.80; I2  = 25%)
+- outcome_domain: cardiovascular
+  outcome_construct: systolic_blood_pressure
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: any social jetlag vs no social jetlag
+  scale: raw_units
+  unit: mmHg
+  value: 0.37
+  se: 0.1888
+  ci:
+  - 0.0
+  - 0.74
+  conversion_formula: se = (0.74-0.00)/3.92 = 0.1888
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = SJL group has higher systolic BP. HARM but clinically negligible (0.37 mmHg)
+    and the CI touches zero.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_68_studies
+  quote: higher systolic blood pressure in 10 studies (0.37 mmHg, 95% CI 0.00-0.74; I2  = 94%)
+- outcome_domain: metabolic
+  outcome_construct: hba1c
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: any social jetlag vs no social jetlag
+  scale: raw_units
+  unit: percent HbA1c
+  value: 0.42
+  se: 0.1531
+  ci:
+  - 0.12
+  - 0.72
+  conversion_formula: se = (0.72-0.12)/3.92 = 0.1531
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = SJL group has higher HbA1c. HARM. I2=100%, so the pooled point estimate is
+    barely interpretable.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_68_studies
+  quote: higher glycated haemoglobin in 12 studies (0.42%, 95% CI 0.12- 0.72; I2  = 100%)
+- outcome_domain: metabolic
+  outcome_construct: metabolic_syndrome_and_t2d_prevalence_null
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: any social jetlag vs none -> prevalent MetS / T2D
+  scale: log_or
+  unit: null
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'NULL: no significant association with prevalent metabolic syndrome or type 2 diabetes,
+    nor with obesity, lipids, DBP, fasting glucose or HOMA-IR. value=0.0 encodes the authors'' stated
+    null, not a digitized estimate; se=null. This is the single most important brake on over-claiming
+    SJL harm.'
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_68_studies
+  quote: No statistically significant associations were found for obesity, abdominal obesity, high- and
+    low-density lipoprotein levels, cholesterol, triglycerides, diastolic blood pressure, hypertension,
+    fasting glucose, homeostatic model assessment for insulin resistance, metabolic syndrome or T2D.
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: 68 studies, quality-stratified, prospectively registered search. But I2 reaches 100% for BMI
+    and HbA1c and sensitivity analyses did not reduce it; authors rate the level of evidence as low and
+    mostly cross-sectional.
+funding: null
+notes: 'The most complete synthesis of SJL against metabolic-syndrome components. Its dissociation matters
+  for the model: SJL tracks CONTINUOUS intermediate markers (BMI, waist, HbA1c, SBP) but NOT the clinical
+  endpoints (metabolic syndrome, T2D, obesity as a category). Authors'' own summary: ''These findings
+  should be interpreted with caution as the level of evidence is low and mostly based on cross-sectional
+  data.'' n not extractable from the abstract.'
+shard: s16_social_jetlag

@@ -1,0 +1,230 @@
+study_id: parsons2015
+citation: 'Parsons MJ, Moffitt TE, Gregory AM, Goldman-Mellor S, Nolan PM, Poulton R, Caspi A. Social
+  jetlag, obesity and metabolic disorder: investigation in a cohort study. International Journal of Obesity.
+  2015;39(5):842-848.'
+doi: 10.1038/ijo.2014.201
+pmid: '25601363'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Social jetlag, obesity and metabolic disorder: investigation in a cohort study.'
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 815
+n_studies_pooled: null
+population:
+  age_mean: 38.0
+  age_range: null
+  pct_female: null
+  country: NZ
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: bmi
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: per unit SJL, adjusted for sleep duration and chronotype
+  scale: raw_units
+  unit: standardized beta
+  value: 0.1
+  se: 0.0398
+  ci:
+  - 0.022
+  - 0.178
+  conversion_formula: 'Table 2, model ''Controlling for sex, chronotype and sleep duration'': beta=0.10,
+    P=0.012. The printed ''(s.e.)'' column is 0.24, which cannot be the SE of this beta (0.10/0.24 would
+    be far from P=0.012); it appears to be the SE/SD in raw BMI units. I therefore backed the SE out of
+    the p-value: z=2.512, se=0.0398.'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: POSITIVE = more SJL, higher BMI. HARM. Adjusted for SLEEP DURATION and chronotype.
+  covariates:
+  - sex
+  - chronotype
+  - sleep_duration
+  followup_years: null
+  cohort_family: Dunedin_Longitudinal_Study
+  quote: BMI 0.10 (0.24) 0.012
+- outcome_domain: anthropometric
+  outcome_construct: fat_mass
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: per unit SJL, adjusted for sleep duration and chronotype
+  scale: raw_units
+  unit: standardized beta
+  value: 0.084
+  se: 0.0389
+  ci:
+  - 0.0077
+  - 0.1603
+  conversion_formula: 'Table 2: beta=0.084, P=0.031 -> z=2.157, se=0.0389. Printed ''(s.e.)''=0.48 is
+    not the SE of the standardized beta.'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: POSITIVE = HARM. Clinically measured fat mass, not self-report.
+  covariates:
+  - sex
+  - chronotype
+  - sleep_duration
+  followup_years: null
+  cohort_family: Dunedin_Longitudinal_Study
+  quote: Fat mass 0.084 (0.48) 0.031
+- outcome_domain: anthropometric
+  outcome_construct: obesity
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: per unit SJL -> obesity, adjusted for sleep duration and chronotype
+  scale: log_or
+  unit: null
+  value: 0.1823
+  se: 0.1034
+  ci:
+  - 0.0
+  - 0.4055
+  conversion_formula: OR 1.2 (95% CI 1.0-1.5); log_or = ln(1.2) = 0.1823; se = (ln(1.5)-ln(1.0))/3.92
+    = 0.1034
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = HARM. CI lower bound touches the null.
+  covariates:
+  - sex
+  - chronotype
+  - sleep_duration
+  followup_years: null
+  cohort_family: Dunedin_Longitudinal_Study
+  quote: Obesity 1.2 (1.0-1.5) 0.045
+- outcome_domain: metabolic
+  outcome_construct: metabolic_syndrome
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: per unit SJL -> metabolic syndrome, duration-adjusted
+  scale: log_or
+  unit: null
+  value: 0.2624
+  se: 0.1199
+  ci:
+  - 0.0
+  - 0.47
+  conversion_formula: OR 1.3 (95% CI 1.0-1.6); log_or = ln(1.3) = 0.2624; se = (ln(1.6)-ln(1.0))/3.92
+    = 0.1199
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = HARM. CI lower bound touches the null.
+  covariates:
+  - sex
+  - chronotype
+  - sleep_duration
+  followup_years: null
+  cohort_family: Dunedin_Longitudinal_Study
+  quote: Metabolic syndrome 1.3 (1.0-1.6) 0.031
+- outcome_domain: immune
+  outcome_construct: hscrp_inflammation
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: per unit SJL -> elevated hsCRP, duration-adjusted
+  scale: log_or
+  unit: null
+  value: 0.2624
+  se: 0.1199
+  ci:
+  - 0.0
+  - 0.47
+  conversion_formula: 'Table 3, sleep-duration-adjusted model: OR 1.3 (95% CI 1.0-1.6), P=0.046; log_or
+    = 0.2624; se = 0.1199'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'POSITIVE = more SJL, higher odds of elevated hsCRP. HARM. NOTE: significant in the
+    duration-adjusted model (P=0.046) but attenuates to P=0.102 once smoking is added.'
+  covariates:
+  - sex
+  - chronotype
+  - sleep_duration
+  followup_years: null
+  cohort_family: Dunedin_Longitudinal_Study
+  quote: High-sensitivity C-reactive protein levels (hsCRP) 1.3 (1.0-1.6) 0.046 1.2 (1.0-1.5) 0.102
+- outcome_domain: metabolic
+  outcome_construct: hba1c
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: per unit SJL -> elevated HbA1c, duration-adjusted
+  scale: log_or
+  unit: null
+  value: 0.2624
+  se: 0.1199
+  ci:
+  - 0.0
+  - 0.47
+  conversion_formula: 'Table 3, sleep-duration-adjusted model: OR 1.3 (95% CI 1.0-1.6), P=0.018; log_or
+    = 0.2624; se = 0.1199'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = HARM. Attenuates to P=0.053 with smoking adjustment and P=0.112 with smoking+SES.
+  covariates:
+  - sex
+  - chronotype
+  - sleep_duration
+  followup_years: null
+  cohort_family: Dunedin_Longitudinal_Study
+  quote: Glycated hemoglobin 1.3 (1.0-1.6) 0.018 1.2 (1.0-1.6) 0.053
+- outcome_domain: exposure_measurement
+  outcome_construct: sjl_distribution_and_independence_from_duration
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: observed SJL distribution; correlation with sleep duration
+  scale: hours
+  unit: h
+  value: 0.88
+  se: 0.0336
+  ci: null
+  conversion_formula: mean 0.88 h, SD 0.96, n=815; se of the mean = 0.96/sqrt(815) = 0.0336
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'NOT a harm estimate. Two uses: (a) a normative adult SJL distribution; (b) empirical
+    evidence that SJL and sleep duration are ORTHOGONAL here (r=-0.04, P=0.28), which is the cleanest
+    available demonstration that misalignment is a separate exposure from duration.'
+  covariates: []
+  followup_years: null
+  cohort_family: Dunedin_Longitudinal_Study
+  quote: Social jetlag was significantly correlated with chronotype ( r = 0.40, P < 0.01), but not with
+    sleep duration ( r = -0.04, P = 0.28). ... The mean social jetlag among participants in our cohort
+    was 0.88 h, with a standard deviation of 0.96 ( n = 815)
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Population-representative birth cohort with clinically ASSESSED outcomes (not self-report) and
+    shift workers excluded; but the SJL-outcome analysis is cross-sectional at age 38, and associations
+    are sensitive to smoking/SES adjustment.
+funding: US NIA/NICHD and UK MRC (NIHPA author manuscript)
+notes: STRONGEST 'ADJUSTED FOR DURATION' EVIDENCE ALONGSIDE wong2015, and with the added value that SJL
+  and sleep duration were UNCORRELATED in this cohort (r=-0.04), so the adjustment is not fighting collinearity.
+  All effects reported here are from the primary model 'Controlling for sex, chronotype and sleep duration'.
+  Age 38 assessment, so adolescent_match is poor_midlife. Mean SJL 0.88 h is roughly half of our subject's
+  estimated ~1.75 h, so applying these coefficients requires linear extrapolation to about twice the cohort
+  mean.
+shard: s16_social_jetlag

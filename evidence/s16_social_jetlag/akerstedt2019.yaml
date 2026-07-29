@@ -1,0 +1,185 @@
+study_id: akerstedt2019
+citation: Akerstedt T, Ghilotti F, Grotta A, Zhao H, Adami HO, Trolle-Lagerros Y, Bellocco R. Sleep duration
+  and mortality - Does weekend sleep matter? Journal of Sleep Research. 2019;28(1):e12712.
+doi: 10.1111/jsr.12712
+pmid: '29790200'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Sleep duration and mortality - Does weekend sleep matter?
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 43880
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: SE
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: mortality
+  outcome_construct: all_cause_mortality_consistently_short
+  exposure:
+    type: habitual_short_sleep
+    dose_h: 5.0
+    referent_h: 6.5
+    duration_days: null
+    contrast_label: <=5 h on BOTH weekdays and weekend (SS) vs 6-7 h consistently (MM), age <65 y
+  scale: log_hr
+  unit: null
+  value: 0.5008
+  se: 0.1539
+  ci:
+  - 0.1989
+  - 0.802
+  conversion_formula: HR 1.65 (95% CI 1.22-2.23); log_hr = ln(1.65) = 0.5008; se = (ln(2.23)-ln(1.22))/3.92
+    = 0.1539
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = 65% higher mortality rate for consistently short sleep. HARM. This is the
+    comparator our subject would face IF he did NOT catch up at weekends.
+  covariates:
+  - sex
+  - body_mass_index
+  - smoking_status
+  - alcohol_consumption
+  - educational_level
+  - physical_activity
+  - shift_work
+  - Charlson_index
+  followup_years: 13.0
+  cohort_family: Swedish_National_March_Cohort
+  quote: the weekday and weekend sleep duration analysis shows that for age <65 years group sleeping 5
+    hr or less, both during weekdays and weekend (SS), was associated with a 65% higher mortality rate
+    (HR 1.65; 95% CI 1.22-2.23) compared with those consistently sleeping 6 or 7 hr per night (Figure
+    4 ).
+- outcome_domain: mortality
+  outcome_construct: all_cause_mortality_short_weekday_long_weekend
+  exposure:
+    type: weekend_catchup
+    dose_h: 5.0
+    referent_h: 6.5
+    duration_days: null
+    contrast_label: SHORT weekday (<=5 h) plus MEDIUM/LONG weekend sleep (SML) vs 6-7 h consistently (MM),
+      age <65 y
+  scale: log_hr
+  unit: null
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'NULL: mortality in the short-weekday/long-weekend group did NOT differ from the consistently-adequate
+    reference. This is THE single most decision-relevant catch-up finding for our subject and it is PROTECTIVE
+    relative to consistently short sleep. value=0.0 encodes the authors'' stated null; se=null because
+    the point estimate and CI appear ONLY in Figure 4 (see notes).'
+  covariates:
+  - sex
+  - body_mass_index
+  - smoking_status
+  - alcohol_consumption
+  - educational_level
+  - physical_activity
+  - shift_work
+  - Charlson_index
+  followup_years: 13.0
+  cohort_family: Swedish_National_March_Cohort
+  quote: The mortality rate of individuals with short sleep during weekdays, but medium or long sleep
+    over weekends (SML), did not differ from the reference group rate.
+- outcome_domain: mortality
+  outcome_construct: all_cause_mortality_consistently_long
+  exposure:
+    type: habitual_short_sleep
+    dose_h: 8.0
+    referent_h: 6.5
+    duration_days: null
+    contrast_label: '>=8 h on both weekdays and weekend (LL) vs 6-7 h consistently (MM), age <65 y'
+  scale: log_hr
+  unit: null
+  value: 0.2231
+  se: 0.091
+  ci:
+  - 0.0488
+  - 0.4055
+  conversion_formula: HR 1.25 (95% CI 1.05-1.50); log_hr = ln(1.25) = 0.2231; se = (ln(1.50)-ln(1.05))/3.92
+    = 0.0910
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = 25% higher mortality for consistently LONG sleep. Establishes the upper arm
+    of the U, which matters because our subject's occasional 10-11 h weekends sit at that end.
+  covariates:
+  - sex
+  - body_mass_index
+  - smoking_status
+  - alcohol_consumption
+  - educational_level
+  - physical_activity
+  - shift_work
+  - Charlson_index
+  followup_years: 13.0
+  cohort_family: Swedish_National_March_Cohort
+  quote: A higher risk was also observed for individuals with consistently long sleep (LL; HR 1.25; 95%
+    CI 1.05-1.50).
+- outcome_domain: mortality
+  outcome_construct: long_weekend_sleep_alone_not_harmful
+  exposure:
+    type: weekend_catchup
+    dose_h: 9.0
+    referent_h: 7.0
+    duration_days: null
+    contrast_label: LONG weekend sleep (>=9 h) vs 7 h weekend reference, age <65 y
+  scale: log_hr
+  unit: null
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'NULL: long weekend sleep by itself carried no mortality excess at any age, while SHORT
+    weekend sleep did (HR 1.52, 95% CI 1.15-2.02). Directly rebuts the idea that sleeping long at weekends
+    is intrinsically dangerous. value=0.0 encodes the stated null; se=null.'
+  covariates:
+  - sex
+  - body_mass_index
+  - smoking_status
+  - alcohol_consumption
+  - educational_level
+  - physical_activity
+  - shift_work
+  - Charlson_index
+  followup_years: 13.0
+  cohort_family: Swedish_National_March_Cohort
+  quote: Among individuals <65 years old, short sleep (<=5 hr) during weekends at baseline was associated
+    with a 52% higher mortality rate (hazard ratios 1.52; 95% confidence intervals 1.15-2.02) compared
+    with the reference group (7 hr), while no association was observed for long (>=9 hr) weekend sleep.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: 'Large (43,880), 13-year record-linked follow-up, extensive confounder adjustment, and robust
+    to further adjustment for sleep quality, snoring, medication, napping, feeling rested, coffee, subjective
+    health and work demand. Key weaknesses: sleep measured ONCE at baseline by self-report, so no information
+    on whether the pattern persisted; and reverse causation from undiagnosed illness cannot be excluded.'
+funding: Stockholm Stress Center; AFA Insurance
+notes: 'THE ANCHOR OF THE ''CATCH-UP IS PROTECTIVE'' POSITION, and the only mortality evidence available
+  on this exposure pattern. The authors'' own reading: ''the results imply that short (weekday) sleep
+  is not a risk factor for mortality if it is combined with a medium or long weekend sleep.'' WHY I REFUSED
+  TO EMIT A NUMBER FOR THE KEY CELL: the SML point estimate and CI are presented only in Figure 4 (a forest
+  plot). I attempted the Wiley PDF, the PMC PDF, the Europe PMC PDF endpoint and the Europe PMC supplementary-files
+  archive (returned empty); all failed. Rather than digitise a figure or invent an SE I set value=0.0
+  with se=null to encode the stated null, and the modeller should treat this as ''no detectable excess,
+  precision unknown''. THREE CAVEATS THE MODELLER MUST CARRY. (1) Population is adults, largely midlife,
+  and results were NULL in those aged >=65, so age modifies this. Extrapolating to an 18-year-old is a
+  large leap and mortality over 13 years is nearly unmeasurable at that age. (2) The authors offer a deflationary
+  alternative explanation: ''we cannot be sure that longer weekend sleep is a true compensation, rather
+  than appetitive behaviour when the sleep opportunity is increased during the weekend.'' (3) In those
+  aged >=65 the SML pattern was actually associated with HIGHER mortality (HR 1.38, 95% CI 1.00-1.89),
+  so the protective reading is age-specific, not general.'
+shard: s16_social_jetlag

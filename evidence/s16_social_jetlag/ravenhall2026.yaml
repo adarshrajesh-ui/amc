@@ -1,0 +1,63 @@
+study_id: ravenhall2026
+citation: 'Ravenhall H, Bellato A, Chellappa SL, Garner M. "Out of sync and overlooked" - Relationship
+  between social jetlag and anxiety in adolescents: Systematic review and meta-analysis. Sleep Medicine
+  Reviews. 2026;89:102345.'
+doi: 10.1016/j.smrv.2026.102345
+pmid: '42480409'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: '"Out of sync and overlooked" - Relationship between social jetlag and anxiety in adolescents:
+    Systematic review and meta-analysis.'
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 235526
+n_studies_pooled: 12
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: multi
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: psychiatric
+  outcome_construct: anxiety_severity
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: continuous SJL -> anxiety severity, adolescents
+  scale: raw_units
+  unit: Fisher z
+  value: 0.0614
+  se: 0.0177
+  ci:
+  - 0.0268
+  - 0.0961
+  conversion_formula: Fisher z = 0.0614 (95% CI 0.0268-0.0961); se_z = (0.0961-0.0268)/3.92 = 0.0177.
+    Back-transformed r = tanh(0.0614) = 0.061 (95% CI 0.027-0.096).
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = more SJL, more severe anxiety. HARM, but very small (r ~ 0.06, <0.4% of variance).
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_12_studies
+  quote: A small association was found between increased SJL and more severe anxiety (Fisher's z = 0.0614,
+    95% CI [0.0268, 0.0961], p = 0.0011).
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: Large (n=235,526), PRISMA-compliant, age-matched, published in a top sleep review journal. Cross-sectional
+    constituents; anxiety measures heterogeneous.
+funding: No specific grant
+notes: PREFERRED ANXIETY ANCHOR over lu2026. Same population, larger n (235,526 vs 164,529), continuous
+  rather than dichotomised exposure, and an effect size (r=0.06) that is an order of magnitude more modest
+  than lu2026's OR of 1.87. Where the two conflict, the correlation-scale estimate from the larger review
+  is the more defensible.
+shard: s16_social_jetlag

@@ -1,0 +1,200 @@
+study_id: depner2019
+citation: Depner CM, Melanson EL, Eckel RH, Snell-Bergeon JK, Perreault L, Bergman BC, Higgins JA, Guerin
+  MK, Stothard ER, Morton SJ, Wright KP Jr. Ad libitum Weekend Recovery Sleep Fails to Prevent Metabolic
+  Dysregulation during a Repeating Pattern of Insufficient Sleep and Weekend Recovery Sleep. Current Biology.
+  2019;29(6):957-967.e4.
+doi: 10.1016/j.cub.2019.01.069
+pmid: '30827911'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Ad libitum Weekend Recovery Sleep Fails to Prevent Metabolic Dysregulation during a
+    Repeating Pattern of Insufficient Sleep and Weekend Recovery Sleep.
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 36
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 50.0
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: metabolic
+  outcome_construct: whole_body_insulin_sensitivity_restriction_only
+  exposure:
+    type: chronic_restriction
+    dose_h: 5.0
+    referent_h: 9.0
+    duration_days: 9
+    contrast_label: 'SR arm: 9 nights of 5 h sleep opportunity, NO weekend recovery (n=14), day 12 vs
+      baseline'
+  scale: pct_change
+  unit: percent
+  value: -13.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NEGATIVE = insulin sensitivity FELL 13% under continuous restriction. HARM. This is
+    the REFERENCE against which weekend recovery must be judged.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: In the SR group, whole-body insulin sensitivity was decreased (full model P < 0.05) ~13% on study
+    day 12 versus baseline ( Figure 5A ), including when controlling for plasma glucose concentrations
+    during the 40-mU/m2-min insulin infusion and energy intake ( P < 0.05), or body weight on study days
+    4 and 12 ( P < 0.05).
+- outcome_domain: metabolic
+  outcome_construct: whole_body_insulin_sensitivity_with_weekend_recovery
+  exposure:
+    type: weekend_catchup
+    dose_h: 5.0
+    referent_h: 9.0
+    duration_days: 9
+    contrast_label: 'WR arm: 5 days of 5 h, then 2 days ad libitum weekend recovery, then 2 nights of
+      5 h (n=14), day 12 vs baseline'
+  scale: pct_change
+  unit: percent
+  value: -27.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NEGATIVE = insulin sensitivity fell 27%, i.e. MORE THAN DOUBLE the 13% loss seen WITHOUT
+    weekend recovery. This is the central 'catch-up is harmful' finding. See notes for why it must not
+    be read as a tested contrast.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: In the WR group, whole-body insulin sensitivity was decreased (full model P < 0.05) ~27% on study
+    day 12 versus baseline ( Figure 5A ), including when controlling for plasma glucose concentrations
+    during the 40-mU/m2-min insulin infusion and energy intake ( P < 0.05), but not when controlling for
+    body weight on study days 4 and 12 ( P = 0.054).
+- outcome_domain: metabolic
+  outcome_construct: hepatic_insulin_sensitivity_with_weekend_recovery
+  exposure:
+    type: weekend_catchup
+    dose_h: 5.0
+    referent_h: 9.0
+    duration_days: 9
+    contrast_label: WR arm hepatic insulin sensitivity, day 12 vs baseline
+  scale: pct_change
+  unit: percent
+  value: -23.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'NEGATIVE = HARM specific to the weekend-recovery arm: hepatic insulin sensitivity fell
+    23% in WR, whereas it was UNCHANGED in both CON and SR. The clearest signal that the recovery pattern
+    itself, not the sleep debt, drove this.'
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: In the WR group, hepatic insulin sensitivity was non- significantly (full model P = 0.054) decreased
+    ~23% on study day 12 versus baseline ( Figure 5C ), but was significantly decreased when controlling
+    for only energy intake ( P < 0.05) or only body weight on study days 4 and 12 ( P < 0.05).
+- outcome_domain: circadian
+  outcome_construct: melatonin_phase_delay_from_weekend_recovery
+  exposure:
+    type: weekend_catchup
+    dose_h: null
+    referent_h: null
+    duration_days: 11
+    contrast_label: WR arm dim-light melatonin onset delay, day 11 vs baseline
+  scale: hours
+  unit: h
+  value: 1.7
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = weekend recovery sleep DELAYED circadian phase by ~1.7 h, versus only ~25
+    min of delay in the restriction-only arm. THIS IS THE MECHANISM by which catch-up sleep converts into
+    misalignment, and it is the strongest experimental support for treating weekend oversleep as an exposure
+    rather than a remedy.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: In the WR group, dim-light melatonin onset was delayed ( P < 0.05) ~1.2h and ~1.7h on study days
+    5 and 11, respectively, versus baseline
+- outcome_domain: recovery
+  outcome_construct: actual_recovery_sleep_obtained
+  exposure:
+    type: weekend_catchup
+    dose_h: null
+    referent_h: null
+    duration_days: 2
+    contrast_label: extra sleep actually obtained across 2 ad libitum weekend nights
+  scale: hours
+  unit: h cumulative
+  value: 1.1
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = participants recovered only 1.1 h of sleep IN TOTAL across both weekend nights,
+    against a deficit of ~4 h per weekday night. Quantifies how little a real weekend actually repays.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: During ad libitum weekend recovery sleep, participants cumulatively slept ~1.1 h more than baseline,
+    and after-dinner energy intake decreased versus insufficient sleep.
+- outcome_domain: metabolic
+  outcome_construct: control_arm_no_change
+  exposure:
+    type: descriptive
+    dose_h: 9.0
+    referent_h: null
+    duration_days: 9
+    contrast_label: 'CON arm: 9 h sleep opportunities throughout (n=8), day 12 vs baseline'
+  scale: pct_change
+  unit: percent
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'NULL by design: adequate sleep produced no change in insulin sensitivity (P=0.76),
+    confirming the protocol had no drift. value=0.0 encodes the stated null; se=null.'
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: In the CON group, whole-body insulin sensitivity was similar (full model P = 0.76) on study day
+    12 versus baseline ( Figure 5A )
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: 'CRITICAL DESIGN LIMITATION for the way this study is usually cited: the analysis is WITHIN-GROUP
+    ONLY. The stated method is ''Mixed-Effects ANOVAs with either study day ... as fixed factors, and
+    participant as a random factor were used to test for within group differences''. The 13%-vs-27% comparison
+    is therefore a comparison of two separately-estimated within-group changes across arms of n=14 each,
+    NOT a tested between-group contrast, and no CI or p-value for the WR-minus-SR difference exists. Also:
+    groups were small and unequal (8/14/14), diet was ad libitum so energy intake is a mediator not a
+    control, and the WR arm''s insulin-sensitivity loss lost significance when body weight was controlled
+    (P=0.054).'
+funding: NIH (K.P.W. reports multiple industry relationships; see COI statement)
+notes: 'THE ENTIRE ''WEEKEND CATCH-UP IS HARMFUL'' POSITION RESTS LARGELY ON THIS ONE STUDY, so its limits
+  decide how much weight the tension deserves. WHAT IT ESTABLISHES SOLIDLY: (a) 1.1 h is all the sleep
+  a real ad libitum weekend actually recovers; (b) weekend recovery DELAYED circadian phase by ~1.7 h
+  versus ~25 min without it, so catch-up sleep demonstrably manufactures misalignment; (c) hepatic insulin
+  sensitivity fell ONLY in the weekend-recovery arm; (d) benefits seen during the weekend itself did not
+  survive the return to short sleep. WHAT IT DOES NOT ESTABLISH: that weekend recovery is worse than no
+  recovery. The 27% vs 13% gap was never tested statistically, the arms are n=14, and with SDs unavailable
+  I cannot compute that contrast. I therefore record both within-arm changes separately with se=null and
+  explicitly refuse to emit a WR-vs-SR effect size. Population is healthy young adults, the closest lab
+  match to our subject in this shard.'
+shard: s16_social_jetlag

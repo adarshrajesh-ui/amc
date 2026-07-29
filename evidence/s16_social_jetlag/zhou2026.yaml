@@ -1,0 +1,116 @@
+study_id: zhou2026
+citation: 'Zhou J, Chen H, Deng W, Xiong J, Zhang J, Zhang H. Associations of weekday-to-weekend and day-to-day
+  sleep differences with adiposity-related measures in children and adolescents: A systematic review and
+  meta-analysis. Nutrition, Metabolism and Cardiovascular Diseases. 2026;36(3):104420.'
+doi: 10.1016/j.numecd.2025.104420
+pmid: '41241628'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Associations of weekday-to-weekend and day-to-day sleep differences with adiposity-related
+    measures in children and adolescents: A systematic review and meta-analysis.'
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 197873
+n_studies_pooled: 37
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: multi
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: bmi_z_score
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: highest vs lowest SJL group, children/adolescents
+  scale: raw_units
+  unit: BMI z-score
+  value: 0.06
+  se: 0.0051
+  ci:
+  - 0.05
+  - 0.07
+  conversion_formula: se = (0.07-0.05)/3.92 = 0.0051
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'POSITIVE = highest-SJL group has higher BMI z-score. HARM, but tiny (0.06 SD) and NOT
+    ROBUST: see quote below on quality adjustment.'
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_37_studies_paediatric
+  quote: 'individuals in the highest group of social jetlag, defined as the difference in sleep-wake timing
+    between weekdays and weekends, showed increased BMI (body mass index)-z score (β: 0.06, 95 % CI: 0.05,
+    0.07), percentage fat mass (β: 0.10, 95 % CI: 0.01, 0.39), and odds of overweight/obesity (odds ratio:
+    1.25, 95 % CI: 1.01, 1.53). However, after adjusting for study quality, these associations became
+    non-significant.'
+- outcome_domain: anthropometric
+  outcome_construct: overweight_obesity_odds
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: highest vs lowest SJL group, children/adolescents
+  scale: log_or
+  unit: null
+  value: 0.2231
+  se: 0.1059
+  ci:
+  - 0.01
+  - 0.4253
+  conversion_formula: log_or = ln(1.25) = 0.2231; se = (ln(1.53)-ln(1.01))/3.92 = 0.1059
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = highest-SJL group has higher odds of overweight/obesity. HARM. Became NON-SIGNIFICANT
+    after adjusting for study quality.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_37_studies_paediatric
+  quote: 'odds of overweight/obesity (odds ratio: 1.25, 95 % CI: 1.01, 1.53). However, after adjusting
+    for study quality, these associations became non-significant.'
+- outcome_domain: anthropometric
+  outcome_construct: bmi_z_per_weekend_weekday_bedtime_difference
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: weekday-to-weekend bedtime difference -> BMI z
+  scale: raw_units
+  unit: BMI z-score
+  value: 0.07
+  se: 0.023
+  ci:
+  - 0.01
+  - 0.1
+  conversion_formula: se = (0.10-0.01)/3.92 = 0.0230
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = larger weekend bedtime shift, higher BMI z. HARM. Survived where the composite
+    SJL measure did not.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_37_studies_paediatric
+  quote: 'weekday-to-weekend bedtime difference was significantly and positively associated with BMI-z
+    (β: 0.07, 95 % CI: 0.01, 0.10)'
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: Age-matched to our subject and large (n=197,873), but observational; the headline associations
+    do not survive quality adjustment, which the authors report transparently.
+funding: null
+notes: 'THE MOST AGE-APPROPRIATE ADIPOSITY SYNTHESIS FOR THIS SUBJECT (children and adolescents only).
+  Its central message is deflationary: the SJL-adiposity associations in young people are small and do
+  not survive adjustment for study quality. This should pull the modeller''s SJL-specific adiposity increment
+  toward zero for a 16-19 year old, in tension with the adult-dominated arab2024/bouman2023 estimates.'
+shard: s16_social_jetlag

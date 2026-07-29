@@ -1,0 +1,131 @@
+study_id: scheer2009
+citation: Scheer FA, Hilton MF, Mantzoros CS, Shea SA. Adverse metabolic and cardiovascular consequences
+  of circadian misalignment. Proceedings of the National Academy of Sciences USA. 2009;106(11):4453-4458.
+doi: 10.1073/pnas.0808180106
+pmid: '19255424'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Adverse metabolic and cardiovascular consequences of circadian misalignment.
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 10
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 50.0
+  country: US
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: metabolic
+  outcome_construct: postprandial_glucose
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: 10
+    contrast_label: 12 h circadian misalignment via forced desynchrony (28-h day), isocaloric meals
+  scale: pct_change
+  unit: percent
+  value: 6.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = misalignment RAISED glucose. HARM. Occurred DESPITE a 22% increase in insulin,
+    i.e. insulin resistance. Achieved under forced desynchrony with meals held isocaloric, so not attributable
+    to diet or to sleep loss.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Circadian misalignment, when subjects ate and slept approximately 12 h out of phase from their
+    habitual times, systematically decreased leptin (-17%, P < 0.001), increased glucose (+6%, P < 0.001)
+    despite increased insulin (+22%, P = 0.006), completely reversed the daily cortisol rhythm (P < 0.001),
+    increased mean arterial pressure (+3%, P = 0.001), and reduced sleep efficiency (-20%, P < 0.002).
+- outcome_domain: endocrine
+  outcome_construct: leptin
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: 10
+    contrast_label: 12 h circadian misalignment, forced desynchrony
+  scale: pct_change
+  unit: percent
+  value: -17.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NEGATIVE = misalignment LOWERED leptin by 17%. HARM (lower leptin promotes hunger and
+    weight gain).
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: systematically decreased leptin (-17%, P < 0.001)
+- outcome_domain: cardiovascular
+  outcome_construct: mean_arterial_pressure
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: 10
+    contrast_label: 12 h circadian misalignment, forced desynchrony
+  scale: pct_change
+  unit: percent
+  value: 3.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = misalignment RAISED mean arterial pressure by 3%. HARM.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: increased mean arterial pressure (+3%, P = 0.001)
+- outcome_domain: metabolic
+  outcome_construct: prediabetic_postprandial_response
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: 10
+    contrast_label: 12 h misalignment; count of subjects entering prediabetic range
+  scale: probability
+  unit: null
+  value: 0.375
+  se: null
+  ci: null
+  conversion_formula: 3 of 8 subjects with sufficient data = 0.375
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = fraction of healthy young-to-middle-aged adults pushed into a PREDIABETIC
+    postprandial glucose range by misalignment alone. HARM, and clinically vivid, but n=8 so the proportion
+    is very imprecise.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Notably, circadian misalignment caused 3 of 8 subjects (with sufficient available data) to exhibit
+    postprandial glucose responses in the range typical of a prediabetic state.
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: Within-subject forced-desynchrony design with excellent control of light, meals (isocaloric)
+    and circadian phase; the cleanest possible isolation of misalignment. But n=10, 10 days only, and
+    the 12 h misalignment is far more extreme than anything social jetlag produces.
+funding: null
+notes: 'MECHANISTIC PROOF OF PRINCIPLE that misalignment alone damages metabolism and blood pressure,
+  independent of sleep amount and of diet. All effects are within-subject percentage changes with P-values
+  but NO dispersion measures in the abstract, so every se=null; full text not retrieved. DOSE CAVEAT IS
+  SEVERE: 12 h of misalignment is ~7x our subject''s estimated ~1.75 h. Use this record to justify a NON-ZERO
+  independent misalignment pathway, not to size it.'
+shard: s16_social_jetlag

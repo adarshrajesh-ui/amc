@@ -1,0 +1,113 @@
+study_id: randler2019
+citation: Randler C, Vollmer C, Kalb N, Itzek-Greulich H. Breakpoints of time in bed, midpoint of sleep,
+  and social jetlag from infancy to early adulthood. Sleep Medicine. 2019;57:80-86.
+doi: 10.1016/j.sleep.2019.01.023
+pmid: '30921684'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Breakpoints of time in bed, midpoint of sleep, and social jetlag from infancy to early
+    adulthood.
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: 18323
+n_studies_pooled: null
+population:
+  age_mean: 12.36
+  age_range:
+  - 0
+  - 25
+  pct_female: 49.1
+  country: DE
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: circadian
+  outcome_construct: peak_mean_social_jetlag_at_age_16
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: population mean SJL at its age-16 maximum
+  scale: hours
+  unit: h
+  value: 3.3
+  se: null
+  ci: null
+  conversion_formula: 3:18 h reported as h:mm; 18/60 = 0.30 -> 3.30 h
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = larger misalignment. This is a NORMATIVE REFERENCE VALUE (the age-specific
+    population mean at peak), not a harm estimate. Use it to place an individual in the age distribution.
+  covariates:
+  - age
+  - sex
+  followup_years: null
+  cohort_family: Randler_SW_Germany_survey
+  quote: Social jetlag increased until 16 years to 3:18 h.
+- outcome_domain: circadian
+  outcome_construct: age_of_maximum_social_jetlag
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: breakpoint age at which SJL stops increasing
+  scale: years
+  unit: years
+  value: 16.5
+  se: null
+  ci: null
+  conversion_formula: reported as 'around 16-17 years'; midpoint 16.5 recorded, range 16-17
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Age at which the normative SJL trajectory peaks and reverses. Our subject (16-19) spans
+    this peak and its immediate post-peak decline.
+  covariates: []
+  followup_years: null
+  cohort_family: Randler_SW_Germany_survey
+  quote: The age around 16-17 years can be considered a remarkable breakpoint when sleep behavior significantly
+    changes back towards slightly longer sleep, less socially jetlagged behavior, and the increase in
+    eveningness is then stopped but not reversed.
+- outcome_domain: circadian
+  outcome_construct: weekday_time_in_bed_shortest_at_age_16
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: age at which weekday TIB reaches its minimum
+  scale: years
+  unit: years
+  value: 16.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Weekday sleep opportunity is at its lifetime minimum at exactly our subject's index
+    age.
+  covariates: []
+  followup_years: null
+  cohort_family: Randler_SW_Germany_survey
+  quote: Weekday rise times were progressively earlier until the age of 17 years, while weekend rise times
+    contrarily were later. As a consequence, TIB during the week was progressively shorter until the age
+    of 16 years.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Very large (n=18,323) but cross-sectional and self-report; single region of Germany (SW Germany),
+    so absolute values may not transport. Age-resolution and sample size make it the best available age-specific
+    SJL norm.
+funding: null
+notes: PRIMARY AGE-SPECIFIC NORMATIVE ANCHOR for this shard. No SD or CI for the age-16 peak is given
+  in the abstract and full text is paywalled (Unpaywall is_oa=False), so se=null for all three effects.
+  Gender differences in SJL were non-significant, so the value can be applied to a male subject. Note
+  this anchor (3.30 h) is substantially HIGHER than illingworth2025 (2.12 h peak); see jetlag_summary.md
+  for how I reconcile them.
+shard: s16_social_jetlag

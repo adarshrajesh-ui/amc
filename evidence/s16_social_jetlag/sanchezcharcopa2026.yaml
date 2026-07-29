@@ -1,0 +1,134 @@
+study_id: sanchezcharcopa2026
+citation: 'Sanchez-Charcopa LA, Mino C, Yanez-Sepulveda R, Montenegro-Espinosa JA, Cristi-Montero C, Yon
+  DK, Lopez-Gil JF. Social jetlag and academic performance in adolescents: insights from a region with
+  structural circadian misalignment. European Journal of Pediatrics. 2026.'
+doi: 10.1007/s00431-026-07250-5
+pmid: '42470595'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Social jetlag and academic performance in adolescents: insights from a region with
+    structural circadian misalignment.'
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 788
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 12
+  - 17
+  pct_female: 55.0
+  country: ES
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: academic
+  outcome_construct: grade_point_average
+  exposure:
+    type: social_jetlag
+    dose_h: 1.0
+    referent_h: null
+    duration_days: null
+    contrast_label: per +1 h social jetlag (weekend-weekday bedtime difference)
+  scale: log_or
+  unit: null
+  value: -0.2744
+  se: 0.0569
+  ci:
+  - -0.3857
+  - -0.1625
+  conversion_formula: OR 0.76 (95% CI 0.68-0.85) for achieving higher GPA; log_or = ln(0.76) = -0.2744;
+    se = (ln(0.85)-ln(0.68))/3.92 = 0.0569
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NEGATIVE = each extra hour of social jetlag LOWERS the odds of achieving higher grades.
+    HARM. Adjusted for OVERALL SLEEP DURATION, so this is a misalignment-specific academic effect.
+  covariates:
+  - age
+  - sex
+  - socioeconomic_status
+  - body_mass_index
+  - overall_sleep_duration
+  followup_years: null
+  cohort_family: EHDLA_Valle_de_Ricote
+  quote: Each 1-h increase in social jetlag was associated with lower odds of achieving higher GPA (odds
+    ratio [OR] = 0.76; 95% confidence intervals [CI] 0.68-0.85), language (OR = 0.80; 95% CI 0.71-0.90),
+    maths (OR = 0.81; 95% CI 0.72-0.91), foreign language (OR = 0.75; 95% CI 0.67-0.85), and PISA-type
+    composite (OR = 0.76; 95% CI 0.66-0.88) grades (all p < 0.01).
+- outcome_domain: academic
+  outcome_construct: maths_grade
+  exposure:
+    type: social_jetlag
+    dose_h: 1.0
+    referent_h: null
+    duration_days: null
+    contrast_label: per +1 h social jetlag
+  scale: log_or
+  unit: null
+  value: -0.2107
+  se: 0.0596
+  ci:
+  - -0.3285
+  - -0.0943
+  conversion_formula: OR 0.81 (95% CI 0.72-0.91); log_or = ln(0.81) = -0.2107; se = (ln(0.91)-ln(0.72))/3.92
+    = 0.0596
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NEGATIVE = HARM (lower odds of higher maths grades) per hour of SJL, duration-adjusted.
+  covariates:
+  - age
+  - sex
+  - socioeconomic_status
+  - body_mass_index
+  - overall_sleep_duration
+  followup_years: null
+  cohort_family: EHDLA_Valle_de_Ricote
+  quote: maths (OR = 0.81; 95% CI 0.72-0.91)
+- outcome_domain: academic
+  outcome_construct: threshold_only_severe_sjl_harms
+  exposure:
+    type: social_jetlag
+    dose_h: 2.0
+    referent_h: 0.5
+    duration_days: null
+    contrast_label: severe SJL >2 h vs no SJL <1 h (categorical)
+  scale: log_or
+  unit: null
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'THRESHOLD FINDING, not a point estimate: only SJL >2 h was consistently associated
+    with worse grades; SJL of 1-2 h showed NO effect. value=0.0/se=null encodes the categorical pattern;
+    the abstract gives no categorical ORs. Mirrors sun2025''s depression threshold at the same ~2 h cut.'
+  covariates:
+  - age
+  - sex
+  - socioeconomic_status
+  - body_mass_index
+  - overall_sleep_duration
+  followup_years: null
+  cohort_family: EHDLA_Valle_de_Ricote
+  quote: Severe social jetlag (> 2 h) was consistently associated with lower academic performance, while
+    mild jetlag (1-2 h) showed no effect, suggesting a threshold pattern.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: 'Strengths: OFFICIAL SCHOOL RECORDS for the outcome (not self-reported grades), age-matched,
+    and adjusted for overall sleep duration. Weaknesses: cross-sectional; single Spanish region; SJL proxied
+    by bedtime difference only, not full midsleep.'
+funding: null
+notes: 'BEST AVAILABLE PER-HOUR, DURATION-ADJUSTED ACADEMIC EFFECT for an adolescent population, and it
+  independently reproduces the ~2 h threshold seen for depression in sun2025. Exposure caveat: SJL here
+  is the absolute weekend-weekday BEDTIME difference, which is closer to Jankowski''s sleep-debt-corrected
+  SJLsc than to the standard midsleep SJL (roenneberg2019 notes SJLsc reduces to the sleep-onset difference).
+  It therefore isolates TIMING more cleanly than duration-contaminated midsleep SJL, which strengthens
+  its use as misalignment-specific evidence.'
+shard: s16_social_jetlag

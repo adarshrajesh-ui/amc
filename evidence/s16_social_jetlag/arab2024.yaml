@@ -1,0 +1,135 @@
+study_id: arab2024
+citation: 'Arab A, Karimi E, Garaulet M, Scheer FAJL. Social jetlag and obesity: A systematic review and
+  meta-analysis. Obesity Reviews. 2024;25(3):e13664.'
+doi: 10.1111/obr.13664
+pmid: '38072635'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Social jetlag and obesity: A systematic review and meta-analysis.'
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 231648
+n_studies_pooled: 43
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: multi
+  adolescent_match: mixed
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: bmi_correlation
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: pooled correlation of SJL with BMI
+  scale: raw_units
+  unit: Pearson r
+  value: 0.12
+  se: 0.0255
+  ci:
+  - 0.07
+  - 0.17
+  conversion_formula: se_r = (0.17-0.07)/3.92 = 0.0255
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = more SJL, higher BMI. HARM. Magnitude is small (r=0.12, ~1.4% of variance).
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_43_studies
+  quote: 'There was a positive association between social jetlag and body mass index (correlation coefficient
+    [r]: 0.12; 95%CI, 0.07, 0.17; P < 0.001; I2 = 94.99%)'
+- outcome_domain: anthropometric
+  outcome_construct: percent_body_fat_correlation
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: pooled correlation of SJL with percent body fat
+  scale: raw_units
+  unit: Pearson r
+  value: 0.37
+  se: 0.0204
+  ci:
+  - 0.33
+  - 0.41
+  conversion_formula: se_r = (0.41-0.33)/3.92 = 0.0204
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = more SJL, higher body fat percentage. HARM. Much larger than the BMI correlation;
+    I2=96% so treat with caution.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_43_studies
+  quote: 'percent of body fat (r: 0.37; 95%CI, 0.33, 0.41; P < 0.001; I2  = 96.17%)'
+- outcome_domain: anthropometric
+  outcome_construct: fat_mass_index
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: pooled beta, fat mass index
+  scale: raw_units
+  unit: kg/m2
+  value: 0.14
+  se: 0.0459
+  ci:
+  - 0.05
+  - 0.23
+  conversion_formula: se = (0.23-0.05)/3.92 = 0.0459
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = more SJL, higher fat mass index. HARM.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_43_studies
+  quote: 'fat mass index (fat mass divided by height in meter squared, β: 0.14 kg/m2 ; 95%CI, 0.05, 0.23;
+    P < 0.001; I2  = 56.50%)'
+- outcome_domain: anthropometric
+  outcome_construct: overweight_or_obesity_odds
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: pooled OR of overweight/obesity
+  scale: log_or
+  unit: null
+  value: 0.1823
+  se: null
+  ci: null
+  conversion_formula: 'log_or = ln(1.20) = 0.1823. SE DELIBERATELY NOT DERIVED: the published CI is internally
+    impossible (see notes).'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = more SJL, higher odds of overweight/obesity. HARM. se=null on purpose.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_43_studies
+  quote: 'the risk of having overweight/obesity (odds ratio: 1.20; 95%CI, 1.02, 1.140; P = 0.039; I2  =
+    98.25%)'
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: Large, well-conducted meta-analysis of OBSERVATIONAL studies only; extreme heterogeneity (I2
+    up to 98%); cannot support causal reading; authors say so explicitly.
+funding: null
+notes: 'LARGEST AVAILABLE SYNTHESIS FOR SJL-ADIPOSITY (43 studies, n=231,648) and the preferred anchor
+  over roenneberg2012 per the shard''s evidence hierarchy. PUBLISHED-DATA DEFECT I am flagging rather
+  than silently repairing: the abstract prints ''odds ratio: 1.20; 95%CI, 1.02, 1.140'', in which the
+  point estimate (1.20) lies ABOVE its own upper confidence bound (1.140). This is arithmetically impossible.
+  The upper bound is most plausibly a typo for 1.40, but I will not assume that, so I set se=null for
+  that effect and leave the correlation-scale effects (which are internally consistent) as the usable
+  ones. Also note these are unadjusted-to-partially-adjusted correlations, NOT sleep-duration-adjusted;
+  use parsons2015 / wong2015 / sanchezcharcopa2026 for that.'
+shard: s16_social_jetlag

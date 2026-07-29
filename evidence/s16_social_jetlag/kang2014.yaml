@@ -1,0 +1,96 @@
+study_id: kang2014
+citation: Kang SG, Lee YJ, Kim SJ, Lim W, Lee HJ, Park YM, Cho IH, Cho SJ, Hong JP. Weekend catch-up sleep
+  is independently associated with suicide attempts and self-injury in Korean adolescents. Comprehensive
+  Psychiatry. 2014;55(2):319-325.
+doi: 10.1016/j.comppsych.2013.08.023
+pmid: '24267542'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Weekend catch-up sleep is independently associated with suicide attempts and self-injury
+    in Korean adolescents.
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 4145
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 12
+  - 17
+  pct_female: null
+  country: KR
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: psychiatric
+  outcome_construct: suicidal_ideation_score
+  exposure:
+    type: weekend_catchup
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: longer weekend catch-up sleep -> Suicidal Ideation Questionnaire score
+  scale: raw_units
+  unit: SIQ score
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'Direction is HARM: longer weekend catch-up was independently associated with higher
+    suicidal ideation scores (P=0.009) alongside higher BDI score and more time in private tutoring. No
+    coefficient in the abstract, so value=0.0/se=null; DO NOT POOL as a magnitude.'
+  covariates:
+  - BDI_score
+  - time_in_private_educational_institute
+  followup_years: null
+  cohort_family: Korean_school_survey
+  quote: model showed that higher SIQ scores were associated with longer weekend catch-up sleep duration
+    (p=0.009), higher BDI score (p<0.001), and longer time spent in a private educational institute (p=0.025).
+- outcome_domain: psychiatric
+  outcome_construct: suicide_attempt_or_self_injury
+  exposure:
+    type: weekend_catchup
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: longer weekend catch-up sleep -> past-year suicide attempt or self-injury
+  scale: log_or
+  unit: null
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'Direction is HARM: longer weekend catch-up independently predicted past-year suicide
+    attempt and self-injury (P=0.011). value=0.0/se=null: the abstract sentence is truncated in the PubMed
+    record and gives no OR; DO NOT POOL as a magnitude.'
+  covariates:
+  - BDI_score
+  - time_in_private_educational_institute
+  followup_years: null
+  cohort_family: Korean_school_survey
+  quote: The multiple logistic regression analysis revealed that longer weekend catch-up sleep duration
+    (p=0.011), higher BDI score (p<0.001), longer time spent in a private educational institute attempt
+    and self-injury during the past year.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: Cross-sectional with a severe outcome that is highly susceptible to reverse causation and to
+    residual confounding by depression, and the abstract text in PubMed is truncated so covariates cannot
+    be fully verified. Authors themselves interpret catch-up as a marker of weekday insufficiency.
+funding: null
+notes: 'HARMFUL-COLUMN PSYCHIATRIC EVIDENCE, and it CONFLICTS with carbone2026 (catch-up PROTECTIVE for
+  depression in 16-24 y/o) and kimcasement2026 (catch-up PROTECTIVE for anxiety at <=2 h). The reconciliation
+  I adopt: this study treats catch-up as continuous and unbounded, so its signal is dominated by the high-catch-up
+  tail, which is exactly the harmful arm of kimcasement2026''s U. The authors say so: ''weekend catch-up
+  sleep duration--which is an indicator of insufficient weekday sleep--might be associated with suicide
+  attempts and self-injury''.'
+shard: s16_social_jetlag

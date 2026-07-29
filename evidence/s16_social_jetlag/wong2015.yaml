@@ -1,0 +1,223 @@
+study_id: wong2015
+citation: Wong PM, Hasler BP, Kamarck TW, Muldoon MF, Manuck SB. Social Jetlag, Chronotype, and Cardiometabolic
+  Risk. The Journal of Clinical Endocrinology and Metabolism. 2015;100(12):4612-4620.
+doi: 10.1210/jc.2015-2923
+pmid: '26580236'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Social Jetlag, Chronotype, and Cardiometabolic Risk.
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 447
+n_studies_pooled: null
+population:
+  age_mean: 42.7
+  age_range:
+  - 30
+  - 54
+  pct_female: 53.0
+  country: US
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: bmi
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: per 1 SD actigraphic SJL (1 SD = 32 min)
+  scale: raw_units
+  unit: standardized beta (SD BMI per SD SJL)
+  value: 0.17
+  se: 0.0517
+  ci:
+  - 0.0687
+  - 0.2713
+  conversion_formula: 'Table: beta=.17, P=.001. SE backed out from the two-sided p: z=3.291, se=|beta|/z=0.0517.
+    Cross-check: 1/sqrt(447)=0.0473, same order.'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: POSITIVE = more SJL, higher BMI. HARM. Survives adjustment for actigraphic SLEEP DURATION
+    and SLEEP DEBT.
+  covariates:
+  - age
+  - sex
+  - race
+  - education
+  - income
+  - work_status
+  - sleep_duration
+  - sleep_debt
+  - sleep_efficiency
+  - sleep_quality
+  - depression
+  - alcohol
+  - physical_activity
+  - calories_consumed
+  - smoking_status
+  followup_years: null
+  cohort_family: Adult_Health_and_Behavior_Pittsburgh
+  quote: Step 3 SJL .11 * -0.09 * .11 * .11 * .15 ** .17 **
+- outcome_domain: anthropometric
+  outcome_construct: waist_circumference
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: per 1 SD actigraphic SJL (1 SD = 32 min)
+  scale: raw_units
+  unit: standardized beta
+  value: 0.15
+  se: 0.0485
+  ci:
+  - 0.0549
+  - 0.2451
+  conversion_formula: 'Table: beta=.15, P=.002 -> z=3.090, se=0.0485'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: POSITIVE = HARM. Fully adjusted (model 2).
+  covariates:
+  - sleep_duration
+  - sleep_debt
+  - sleep_efficiency
+  - sleep_quality
+  - depression
+  - physical_activity
+  - smoking_status
+  - alcohol
+  - calories_consumed
+  - age
+  - sex
+  - race
+  - education
+  - income
+  - work_status
+  followup_years: null
+  cohort_family: Adult_Health_and_Behavior_Pittsburgh
+  quote: Waist circumference, cm .16 .001 .15 .002
+- outcome_domain: metabolic
+  outcome_construct: homa_ir_insulin_resistance
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: per 1 SD actigraphic SJL (1 SD = 32 min)
+  scale: raw_units
+  unit: standardized beta
+  value: 0.11
+  se: 0.051
+  ci:
+  - 0.01
+  - 0.21
+  conversion_formula: 'Table: beta=.11, P=.031 -> z=2.157, se=0.0510'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: 'POSITIVE = more SJL, more insulin resistance. HARM. Independent of sleep duration and
+    sleep debt: this is the observational analogue of leproult2014.'
+  covariates:
+  - sleep_duration
+  - sleep_debt
+  - sleep_efficiency
+  - sleep_quality
+  - depression
+  - physical_activity
+  - smoking_status
+  - alcohol
+  - calories_consumed
+  - age
+  - sex
+  - race
+  - education
+  - income
+  - work_status
+  followup_years: null
+  cohort_family: Adult_Health_and_Behavior_Pittsburgh
+  quote: HOMA-IR .12 .019 .11 .031
+- outcome_domain: cardiovascular
+  outcome_construct: hdl_cholesterol
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: per 1 SD actigraphic SJL (1 SD = 32 min)
+  scale: raw_units
+  unit: standardized beta
+  value: -0.09
+  se: 0.0429
+  ci:
+  - -0.1741
+  - -0.0059
+  conversion_formula: 'Table: beta=-0.09, P=.036 -> z=2.097, se=0.0429'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: NEGATIVE = more SJL, LOWER HDL cholesterol, i.e. HARM (low HDL is adverse).
+  covariates:
+  - sleep_duration
+  - sleep_debt
+  - sleep_efficiency
+  - sleep_quality
+  - depression
+  - physical_activity
+  - smoking_status
+  - alcohol
+  - calories_consumed
+  - age
+  - sex
+  - race
+  - education
+  - income
+  - work_status
+  followup_years: null
+  cohort_family: Adult_Health_and_Behavior_Pittsburgh
+  quote: HDL, mg/dL -0.08 .069 -0.09 .036
+- outcome_domain: exposure_measurement
+  outcome_construct: sjl_distribution_in_this_sample
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: observed actigraphic SJL distribution
+  scale: hours
+  unit: h
+  value: 0.733
+  se: null
+  ci: null
+  conversion_formula: 44 min = 0.733 h; SD 32 min = 0.533 h
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NOT a harm estimate. Records the narrow exposure range that limits extrapolation to
+    our subject.
+  covariates: []
+  followup_years: null
+  cohort_family: Adult_Health_and_Behavior_Pittsburgh
+  quote: it is not surprising that the mean SJL was only 44 minutes (SD, 32 min) in the current sample.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: 'Strengths: ACTIGRAPHIC (not self-reported) SJL; clinically measured outcomes; adjustment for
+    sleep duration, sleep debt, sleep efficiency, depression and health behaviours. Weaknesses: cross-sectional;
+    midlife day-shift workers only; SJL range very narrow.'
+funding: null
+notes: 'BEST-ADJUSTED OBSERVATIONAL EVIDENCE THAT MISALIGNMENT ACTS INDEPENDENTLY OF DURATION: sleep duration
+  AND sleep debt are covariates in every model, and the SJL coefficients survive. CRITICAL SCALING CAVEAT
+  FOR THE MODELLER: these are betas PER SD OF SJL, and 1 SD is only 32 min. Naively rescaling to per-hour
+  (0.17/0.533 = 0.32 SD of BMI per hour) extrapolates ~2 SD beyond the observed exposure range and is
+  not supported. The authors agree the effect is likely understated for high-SJL people: ''It is therefore
+  possible that the associations of SJL with metabolic risk factors seen here may underestimate those
+  in the general population, warranting replication across a wider range of SJL.'' INTERNAL INCONSISTENCY
+  IN THE PUBLISHED PAPER, flagged not resolved: the Discussion says ''only 6% (n = 28) of the current
+  sample experienced SJL of 1 hour or more'', but Table 4 splits the sample at 60 min into n=326 (<=60
+  min) and n=111 (>60 min), i.e. ~25%. Given mean 44 min and SD 32 min, ~25% above 60 min is the distributionally
+  coherent figure, so the ''6%'' sentence appears to be the error. I did not use either number as an effect.'
+shard: s16_social_jetlag

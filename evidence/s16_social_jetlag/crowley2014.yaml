@@ -1,0 +1,150 @@
+study_id: crowley2014
+citation: Crowley SJ, Van Reen E, LeBourgeois MK, Acebo C, Tarokh L, Seifer R, Barker DH, Carskadon MA.
+  A longitudinal assessment of sleep timing, circadian phase, and phase angle of entrainment across human
+  adolescence. PLoS One. 2014;9(11):e112199.
+doi: 10.1371/journal.pone.0112199
+pmid: '25380248'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: A longitudinal assessment of sleep timing, circadian phase, and phase angle of entrainment
+    across human adolescence.
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 94
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 9
+  - 19
+  pct_female: null
+  country: US
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: circadian
+  outcome_construct: dlmo_phase_delay_ages_17_to_19
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: age-related delay of dim-light melatonin onset between ages 17 and 19
+  scale: hours
+  unit: h
+  value: 1.0
+  se: null
+  ci: null
+  conversion_formula: reported as '~1 h' shift; significant quadratic trend for DLMO phase in the older
+    cohort, F(1,112) = 3.99, p = .05, with the inflection at age 17
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'POSITIVE = circadian phase is DELAYED by about 1 h across ages 17 to 19. This is the
+    biological substrate of our subject''s late timing, and it is still ACTIVELY DELAYING at his exact
+    age rather than having plateaued. se=null: reported as an approximation.'
+  covariates: []
+  followup_years: 2.5
+  cohort_family: Carskadon_Brown_adolescent_cohort
+  quote: Overall, we also found an age-related delay of DLMO phase in both cohorts, with the largest (~1
+    h) shift occurring between ages 11 and 13 years in the younger cohort and between 17 and 19 years
+    in the older cohort.
+- outcome_domain: circadian
+  outcome_construct: tanner_stage_adds_nothing_beyond_age
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: pubertal (Tanner) stage as a predictor of circadian phase, over and above chronological
+      age
+  scale: hours
+  unit: h
+  value: 0.2
+  se: null
+  ci: null
+  conversion_formula: '''approximate 12-minute later sleep onset'' = 0.2 h, for Tanner stage >=3 in the
+    younger cohort only, F(1,100) = 5.11, p = .03'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE but NEGLIGIBLE, and this is a NULL result for the question I was asked. Tanner
+    stage added NO significant information beyond chronological age for any variable except weekday sleep
+    onset in the younger cohort, where the effect was only ~12 min. se=null.
+  covariates: []
+  followup_years: 2.5
+  cohort_family: Carskadon_Brown_adolescent_cohort
+  quote: Tanner stage added no statistically significant information above chronological age other than
+    for sleep onset on weekdays in the younger group, in which Tanner stage >= 3 was associated with an
+    approximate 12-minute later sleep onset on weekdays ( F (1,100) = 5.11, p = .03).
+- outcome_domain: circadian
+  outcome_construct: mean_dlmo_by_cohort
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: average DLMO clock time, younger vs older adolescent cohort
+  scale: hours
+  unit: clock hour
+  value: 20.9
+  se: null
+  ci: null
+  conversion_formula: older cohort average DLMO 20:54 = 20.90 h; younger cohort 20:42 = 20.70 h
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'Descriptive normative value: melatonin onset around 20:54 in older adolescents. Anchors
+    what ''normal'' phase looks like at our subject''s age. se=null.'
+  covariates: []
+  followup_years: 2.5
+  cohort_family: Carskadon_Brown_adolescent_cohort
+  quote: 'The upward facing arrow indicates the average DLMO phase for each age group (younger: 20:42;
+    older: 20:54), and the right-facing block arrow shows the interval between DLMO phase and sleep onset
+    (phase angle to sleep onset).'
+- outcome_domain: circadian
+  outcome_construct: weekday_wake_reverses_after_high_school
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: weekday sleep offset trajectory before vs after leaving high school
+  scale: hours
+  unit: h
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'STRUCTURAL FINDING, not a magnitude: weekday wake time advanced with age while still
+    in high school and then moved LATER after age 17, and the weekend-weekday sleep-offset discrepancy
+    DECREASED in the older cohort after 17. Implies social jetlag should be EASING for our subject as
+    he moves into college, not worsening. value=0.0/se=null encodes the direction of the trajectory.'
+  covariates: []
+  followup_years: 2.5
+  cohort_family: Carskadon_Brown_adolescent_cohort
+  quote: Weekday sleep offset shifted earlier with age in the younger cohort and later in the older cohort
+    after age 17. Weekend-weekday sleep offset differences increased with age in the younger cohort and
+    decreased in the older cohort after age 17.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: low
+  notes: 'Best-in-class design for this question: LONGITUDINAL (2.5 years, assessments every ~6 months),
+    OBJECTIVE exposure (actigraphy plus laboratory salivary DLMO), spanning ages 9-19 in two cohorts.
+    Limitations: n=94 total, US single-site, descriptive analysis with no formal effect sizes, and the
+    authors emphasise large individual variability in trajectories.'
+funding: NIH (see PLOS competing-interests statement)
+notes: 'THE AUTHORITATIVE SOURCE FOR ADOLESCENT PHASE DELAY, with melatonin-based rather than questionnaire-based
+  phase, and it lands squarely on our subject''s age band: the LARGEST circadian delay in the older cohort
+  occurred between ages 17 and 19. REPORTING REALITY AGAINST THE TASK BRIEF: I was asked for ''quantitative
+  phase-delay estimates BY PUBERTAL STAGE''. In the best available longitudinal data, pubertal stage adds
+  essentially NOTHING beyond chronological age (only a ~12 min effect, in the younger cohort only). The
+  pubertal-staging framing derives from carskadon1993, which used a morningness-eveningness questionnaire
+  rather than measured phase and found the association in GIRLS only. So a Tanner-stage-indexed phase-delay
+  estimate for an 18-year-old male is not supported; age-indexed estimates are. All effects have se=null
+  because the paper reports trends and approximations rather than coefficients with dispersion.'
+shard: s16_social_jetlag

@@ -1,0 +1,169 @@
+study_id: koopman2017
+citation: 'Koopman ADM, Rauh SP, van ''t Riet E, Groeneveld L, van der Heijden AA, Elders PJ, Dekker JM,
+  Nijpels G, Beulens JW, Rutters F. The Association between Social Jetlag, the Metabolic Syndrome, and
+  Type 2 Diabetes Mellitus in the General Population: The New Hoorn Study. Journal of Biological Rhythms.
+  2017;32(4):359-368.'
+doi: 10.1177/0748730417713572
+pmid: '28631524'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'The Association between Social Jetlag, the Metabolic Syndrome, and Type 2 Diabetes
+    Mellitus in the General Population: The New Hoorn Study.'
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 1585
+n_studies_pooled: null
+population:
+  age_mean: 60.8
+  age_range: null
+  pct_female: 53.0
+  country: NL
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: metabolic
+  outcome_construct: metabolic_syndrome
+  exposure:
+    type: social_jetlag
+    dose_h: 2.0
+    referent_h: 0.5
+    duration_days: null
+    contrast_label: SJL >2 h vs <1 h, participants aged <61 y
+  scale: log_or
+  unit: null
+  value: 0.7561
+  se: 0.2453
+  ci:
+  - 0.2624
+  - 1.2238
+  conversion_formula: prevalence ratio 2.13 (95% CI 1.3-3.4); log = ln(2.13) = 0.7561; se = (ln(3.4)-ln(1.3))/3.92
+    = 0.2453. Recorded on log_or scale because the schema has no log_pr; a prevalence ratio is NOT an
+    odds ratio and the pooler must treat it as a risk-ratio-type measure.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = more SJL, higher prevalence of metabolic syndrome. HARM. This is the age-stratified
+    (<61 y) estimate, which is the one relevant to a young subject.
+  covariates:
+  - sex
+  - employment_status
+  - education
+  - smoking
+  - physical_activity
+  - sleep_duration
+  - body_mass_index
+  followup_years: null
+  cohort_family: New_Hoorn_Study
+  quote: In the younger group (<61 years), the adjusted prevalence ratios were 1.29 (95% CI 0.9-1.9) and
+    2.13 (95% CI 1.3-3.4) for the metabolic syndrome and 1.39 (95% CI 1.1-1.9) and 1.75 (95% CI 1.2-2.5)
+    for diabetes/prediabetes, for participants with 1-2 h and >2 h social jetlag, compared with participants
+    with <1 h social jetlag.
+- outcome_domain: metabolic
+  outcome_construct: diabetes_or_prediabetes
+  exposure:
+    type: social_jetlag
+    dose_h: 2.0
+    referent_h: 0.5
+    duration_days: null
+    contrast_label: SJL >2 h vs <1 h, participants aged <61 y
+  scale: log_or
+  unit: null
+  value: 0.5596
+  se: 0.1872
+  ci:
+  - 0.1823
+  - 0.9163
+  conversion_formula: prevalence ratio 1.75 (95% CI 1.2-2.5); log = ln(1.75) = 0.5596; se = (ln(2.5)-ln(1.2))/3.92
+    = 0.1872
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = more SJL, higher prevalence of diabetes/prediabetes. HARM.
+  covariates:
+  - sex
+  - employment_status
+  - education
+  - smoking
+  - physical_activity
+  - sleep_duration
+  - body_mass_index
+  followup_years: null
+  cohort_family: New_Hoorn_Study
+  quote: the adjusted prevalence ratios were 1.29 (95% CI 0.9-1.9) and 2.13 (95% CI 1.3-3.4) for the metabolic
+    syndrome and 1.39 (95% CI 1.1-1.9) and 1.75 (95% CI 1.2-2.5) for diabetes/prediabetes, for participants
+    with 1-2 h and >2 h social jetlag, compared with participants with <1 h social jetlag.
+- outcome_domain: metabolic
+  outcome_construct: diabetes_or_prediabetes_intermediate_dose
+  exposure:
+    type: social_jetlag
+    dose_h: 1.5
+    referent_h: 0.5
+    duration_days: null
+    contrast_label: SJL 1-2 h vs <1 h, participants aged <61 y
+  scale: log_or
+  unit: null
+  value: 0.3293
+  se: 0.1394
+  ci:
+  - 0.0953
+  - 0.6419
+  conversion_formula: prevalence ratio 1.39 (95% CI 1.1-1.9); log = ln(1.39) = 0.3293; se = (ln(1.9)-ln(1.1))/3.92
+    = 0.1394
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = HARM. Provides the DOSE-RESPONSE step (1-2 h vs >2 h) that lets the modeller
+    interpolate our subject's ~1.75 h.
+  covariates:
+  - sex
+  - employment_status
+  - education
+  - smoking
+  - physical_activity
+  - sleep_duration
+  - body_mass_index
+  followup_years: null
+  cohort_family: New_Hoorn_Study
+  quote: the adjusted prevalence ratios were 1.29 (95% CI 0.9-1.9) and 2.13 (95% CI 1.3-3.4) for the metabolic
+    syndrome and 1.39 (95% CI 1.1-1.9) and 1.75 (95% CI 1.2-2.5) for diabetes/prediabetes, for participants
+    with 1-2 h and >2 h social jetlag, compared with participants with <1 h social jetlag.
+- outcome_domain: metabolic
+  outcome_construct: metabolic_syndrome_older_subgroup_null
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: SJL categories, participants aged >=61 y
+  scale: log_or
+  unit: null
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NULL in participants aged >=61. value=0.0 encodes the stated null; se=null. Establishes
+    age as an effect modifier, which is why I use the <61 y stratum.
+  covariates: []
+  followup_years: null
+  cohort_family: New_Hoorn_Study
+  quote: In older participants (>=61 years), no significant associations were observed between social
+    jetlag status, the metabolic syndrome, and diabetes or prediabetes.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Cross-sectional (despite being drawn from a cohort), so no temporality. Self-reported sleep timing.
+    Age-stratified analysis was pre-specified as an effect-modification test. Adjusted for sleep duration
+    AND BMI, which is what makes it useful here.
+funding: null
+notes: 'SATISFIES THE SHARD''S KEY REQUIREMENT: effects adjusted for SLEEP DURATION (and BMI), so the
+  misalignment signal is separated from the duration signal. TASK-DESCRIPTION CORRECTION: the task expected
+  this in JCEM or Diabetes Care; it is actually in Journal of Biological Rhythms 2017;32(4):359-368. TRANSPORTABILITY
+  IS THE MAIN WEAKNESS: mean age 60.8 y (SD 6). Even the ''younger'' stratum is <61 y, i.e. middle-aged,
+  not adolescent. The younger-vs-older contrast at least shows the effect is LARGER in the younger stratum,
+  which argues against attenuating it for an 18-year-old, but this is an extrapolation across four decades
+  of age.'
+shard: s16_social_jetlag

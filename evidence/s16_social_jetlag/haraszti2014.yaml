@@ -1,0 +1,138 @@
+study_id: haraszti2014
+citation: Haraszti RA, Ella K, Gyongyosi N, Roenneberg T, Kaldi K. Social jetlag negatively correlates
+  with academic performance in undergraduates. Chronobiology International. 2014;31(5):603-612.
+doi: 10.3109/07420528.2013.879164
+pmid: '24491157'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Social jetlag negatively correlates with academic performance in undergraduates.
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 247
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: HU
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: academic
+  outcome_construct: weekly_test_average_grade
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: SJL -> weekly average grade during term (scheduled obligations)
+  scale: raw_units
+  unit: grade points
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'Direction is HARM (negative effect of SJL on grades during term) but NO NUMERIC COEFFICIENT
+    is available: the abstract sentence reporting it is truncated in the PubMed record and the full text
+    is paywalled (Unpaywall is_oa=False). value=0.0/se=null is a placeholder; DO NOT POOL.'
+  covariates:
+  - multivariate model, covariates not specified in abstract
+  followup_years: null
+  cohort_family: Semmelweis_University
+  quote: Multivariate analysis showed negative effect of SJL on the weekly average grade schedules, while
+    this association disappeared in the exam period (p = 0.871, n = 247) when students had no scheduled
+    obligations (lower SJL).
+- outcome_domain: academic
+  outcome_construct: association_vanishes_without_scheduled_obligations
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: SJL -> grades during exam period, when SJL is low
+  scale: raw_units
+  unit: grade points
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: 'NULL during the exam period (p = 0.871). Mechanistically important: the academic penalty
+    appears only when a SCHEDULE imposes misalignment, and disappears when students self-select their
+    timing. Supports a causal role for imposed timing rather than for chronotype per se. value=0.0/se=null;
+    do not pool.'
+  covariates: []
+  followup_years: null
+  cohort_family: Semmelweis_University
+  quote: while this association disappeared in the exam period (p = 0.871, n = 247) when students had
+    no scheduled obligations (lower SJL).
+- outcome_domain: academic
+  outcome_construct: morning_test_penalty_for_late_sleepers
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: later free-day sleep timing -> worse performance on MORNING tests
+  scale: raw_units
+  unit: grade points
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: 'HARM in the morning (p = 0.017, n = 129) with an opposite tendency in the afternoon
+    (p = 0.10, n = 118). This is a TIME-OF-DAY SYNCHRONY effect: the penalty is a mismatch between test
+    time and internal phase, not a general ability deficit. value=0.0/se=null; do not pool.'
+  covariates: []
+  followup_years: null
+  cohort_family: Semmelweis_University
+  quote: We also analyzed the relationship between the time of the weekly tests and academic performance
+    and found that students with later sleep times on free days achieved worse in the morning (p = 0.017,
+    n = 129), while the inverse tendency was observed for the afternoon test-takers (p = 0.10, n = 118).
+- outcome_domain: academic
+  outcome_construct: sleep_duration_and_debt_null_for_academics
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: sleep duration and workday sleep debt -> academic performance
+  scale: raw_units
+  unit: grade points
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'NULL for DURATION while SJL was significant. This is the discriminant-validity result
+    my shard exists to find: in this sample the academic signal came from TIMING, not from how much students
+    slept. value=0.0/se=null; do not pool.'
+  covariates: []
+  followup_years: null
+  cohort_family: Semmelweis_University
+  quote: We did not find significant association between academic performance and sleep duration or sleep
+    debt on work days.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: Small (n=247), single medical school, cross-sectional, no numeric effect sizes retrievable. Valuable
+    for its within-study contrasts (term vs exam period; morning vs afternoon testing) rather than for
+    magnitude.
+funding: null
+notes: 'INCLUDED FOR DESIGN VALUE, NOT MAGNITUDE. Every effect here is a placeholder with se=null because
+  the paper is paywalled and the PubMed abstract text is truncated mid-sentence exactly where the coefficient
+  would be. What it contributes is the dissociation the modeller needs: SJL predicted grades but sleep
+  DURATION and sleep DEBT did not, the association vanished when the imposed schedule was removed, and
+  the penalty was specific to morning testing. Use sanchezcharcopa2026 for the actual per-hour magnitude.'
+shard: s16_social_jetlag
