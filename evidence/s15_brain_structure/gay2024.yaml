@@ -1,0 +1,75 @@
+study_id: gay2024
+citation: "Gay SM, Chartampila E, Lord JS, Grizzard S, Maisashvili T, Ye M, et al. Developing forebrain synapses are uniquely vulnerable to sleep loss. Proceedings of the National Academy of Sciences USA. 2024;121(44):e2407533121."
+doi: "10.1073/pnas.2407533121"
+pmid: "39441640"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11536182/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Developing forebrain synapses are uniquely vulnerable to sleep loss"
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 50.0
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: synaptic_proteome_vulnerability_by_developmental_stage
+    exposure: {type: total_deprivation, dose_h: null, referent_h: null, duration_days: 1,
+               contrast_label: "acute sleep deprivation in JUVENILE (P21-P28) vs ADOLESCENT (P42-P49) vs ADULT (P70-P100) mice of both sexes; subcellular fractionation with proteome and phosphoproteome analysis"}
+    scale: raw_units
+    unit: "direction and age-gating of synaptic vulnerability (qualitative; proteomic, no single magnitude)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded +1 = developing synapses significantly more affected than adult synapses. This is a multi-omic study with thousands of protein-level estimates; no single summary effect size exists and none is published in the abstract. se null - not invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive = greater vulnerability in the developing brain. CRITICAL DETAIL FOR THE SENSITIVE-PERIOD QUESTION: the vulnerable group was JUVENILES (P21-P28), not adolescents. Adolescents and adults showed comparative resilience on the behavioural endpoint, and the aberrant synaptic responses were specific to juveniles."
+    covariates: []
+    followup_years: null
+    cohort_family: "animal_mouse"
+    quote: "Compared to adults, juveniles lack robust adaptations to SD, precipitating cognitive deficits in the novel object recognition task. Subcellular fractionation, combined with proteome and phosphoproteome analysis revealed the developing synapse is profoundly vulnerable to SD, whereas adults exhibit comparative resilience. SD in juveniles, and not older mice, aberrantly drives induction of synapse potentiation, synaptogenesis, and expression of perineuronal nets."
+rob:
+  tool: none
+  judgement: na
+  notes: "ANIMAL STUDY - human RoB tools inapplicable. Strengths: systematic three-age comparison in both sexes, which is exactly the design needed to test a sensitive period, and unbiased proteomic readout rather than a single hypothesis-driven marker. Limitations: acute (single-episode) deprivation, not chronic restriction; group sizes not recoverable from the abstract; proteomic changes are molecular and have no established mapping to MRI-visible macrostructure; no recovery arm reported in the abstract, so persistence is untested."
+funding: "NIH (NIMH, NCI); Simons Foundation Autism Research Initiative (SFARI)"
+notes: |
+  THE BEST-DESIGNED TEST OF THE SENSITIVE-PERIOD QUESTION ANYWHERE IN THE SHARD, AND ITS ANSWER
+  CUTS AGAINST THE 16-19 WINDOW RATHER THAN FOR IT.
+
+  This study did the right experiment: it exposed three clearly separated developmental stages to
+  the same sleep loss and compared them directly. The result was a genuine age gradient in synaptic
+  vulnerability - and the vulnerable stage was the JUVENILE mouse (P21-P28), with ADOLESCENTS
+  (P42-P49) grouped with adults as showing "comparative resilience."
+
+  WHY THIS MATTERS FOR THE SUBJECT. The task asked whether ages 16-19 constitute a sensitive
+  period. The strongest available experimental evidence on developmental staging says the window of
+  maximal synaptic vulnerability closes BEFORE adolescence. Read together with tuan2019 - which
+  found adolescent-specific pruning effects at P35, an age intermediate between Gay's juvenile and
+  adolescent bins - the animal literature does not converge on late adolescence as the vulnerable
+  window. If anything it points earlier, toward childhood.
+
+  Note also the direction of the molecular findings: sleep deprivation in juveniles "aberrantly
+  drives induction of synapse potentiation, synaptogenesis, and expression of perineuronal nets."
+  These are additive/consolidating processes, not degenerative ones. As with tuan2019, the animal
+  mechanism predicts more synaptic material, not less.
+
+  EXPOSURE TRANSLATION PROBLEM (required statement): Mus musculus; acute experimental sleep
+  deprivation, not habitual partial restriction; rodent-to-human developmental stage mapping is
+  approximate and contested; and the readout is synaptic proteomics, which is several inferential
+  steps removed from anything measurable in a living human by MRI. The synaptic compartment's
+  total volume is small enough that even large proportional changes in it would be near-invisible
+  volumetrically - a point fjell2023 makes directly: "such as synaptic density, will have minute
+  effects on volumetric measures because their total volume is very small."
+shard: "s15_brain_structure"

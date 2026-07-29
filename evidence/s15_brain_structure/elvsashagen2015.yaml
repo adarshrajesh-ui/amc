@@ -1,0 +1,87 @@
+study_id: elvsashagen2015
+citation: "Elvsashagen T, Norbom LB, Pedersen PO, Quraishi SH, Bjornerud A, Malt UF, Groote IR, Westlye LT. Widespread changes in white matter microstructure after a day of waking and sleep deprivation. PLoS One. 2015;10(5):e0127351."
+doi: "10.1371/journal.pone.0127351"
+pmid: "26020651"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4447359/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Widespread Changes in White Matter Microstructure after a Day of Waking and Sleep Deprivation"
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 21
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: "Norway"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: whole_brain_fractional_anisotropy_after_14h_waking
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 1,
+               contrast_label: "14 h of ordinary waking (07:30 scan vs 21:30 scan), same day, no deprivation"}
+    scale: raw_units
+    unit: "direction of change in whole-brain FA (qualitative; TBSS voxelwise)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded +1 = widespread significant INCREASE in FA. Abstract gives direction and the driving diffusivity component but no numeric FA magnitude or CI. se null - not invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive = FA INCREASED across the white matter over 14 h of normal wakefulness, driven by radial diffusivity reductions."
+    covariates: ["hydration measures"]
+    followup_years: null
+    cohort_family: "Oslo_sleep_deprivation"
+    quote: "A day of waking was associated with widespread increases in white matter fractional anisotropy, which were mainly driven by radial diffusivity reductions"
+  - outcome_domain: brain_structure
+    outcome_construct: whole_brain_fractional_anisotropy_after_23h_deprivation
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1,
+               contrast_label: "a further 9 h of waking (total 23 h awake) vs the 14 h timepoint"}
+    scale: raw_units
+    unit: "direction of change in whole-brain FA (qualitative)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded -1 = widespread significant DECREASE in FA, driven by axial diffusivity reductions. No numeric magnitude published in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = FA DECREASED with continued sleep deprivation. Note that FA moved in OPPOSITE directions across the two intervals of a single 23-hour period, which by itself makes a single cross-sectional FA measurement uninterpretable as a trait."
+    covariates: ["hydration measures"]
+    followup_years: null
+    cohort_family: "Oslo_sleep_deprivation"
+    quote: "and sleep deprivation was associated with widespread fractional anisotropy decreases, which were mainly explained by reductions in axial diffusivity. In addition, larger decreases in axial diffusivity after sleep deprivation were associated with greater sleepiness. All DTI changes remained significant after adjusting for hydration measures."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Within-subject with three timepoints in a single day, and the authors specifically adjusted for hydration - which is the obvious artefactual explanation - and the effects survived. Limitations: n=21, males only, no non-deprived control arm for the third timepoint, whole-brain voxelwise testing, no numeric magnitudes in the retrievable abstract."
+funding: "Non-US government support (Norway)"
+notes: |
+  THE WHITE MATTER COUNTERPART OF THE STATE-VERSUS-TRAIT PROBLEM, AND IT IS ARGUABLY MORE
+  DAMAGING TO THE OBSERVATIONAL LITERATURE THAN THE GREY MATTER VERSION.
+
+  Within ONE 23-hour period, whole-brain fractional anisotropy went UP over the first 14 h of
+  waking and then DOWN over the next 9 h. Both changes were widespread and both survived
+  adjustment for hydration.
+
+  DIRECT CONSEQUENCE FOR THIS SHARD'S QUESTION 5. Every 'FA is lower in adolescents who sleep
+  less' finding (mulder2019, telzer2015, and the ODI finding in limasantos2025) is a
+  single-timepoint measurement of a quantity that demonstrably swings in both directions within
+  a day depending on hours awake. Since short sleepers arrive at the scanner in a different
+  homeostatic state than long sleepers, and since no study in this domain standardised the
+  pre-scan night, the observational FA differences have an entirely mundane candidate explanation
+  that has never been excluded.
+
+  This is why I treat the whole white matter strand of the adolescent literature as
+  hypothesis-generating only, and why the per-hour FA effect the task asked for should not be
+  reported as a structural fact even where a number exists.
+
+  Companion papers in the same programme: elvsashagen2017 (cortical thickness diurnal change),
+  voldsbekk2022 (intracortical T1w/T2w ratio after 32 h). Same cohort_family - do not
+  double-count.
+shard: "s15_brain_structure"

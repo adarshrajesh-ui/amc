@@ -1,0 +1,95 @@
+study_id: zhang2024
+citation: "Zhang R, Luo L, Zhang L, Lin X, Wu C, Jiang F, Wang J. Genetically Supported Causality between Brain Structural Connectome and Sleep Duration in Children: A Two-Sample Mendelian Randomization Study. eNeuro. 2024;11(12):ENEURO.0267-24.2024."
+doi: "10.1523/ENEURO.0267-24.2024"
+pmid: "39632091"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11654012/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Genetically Supported Causality between Brain Structural Connectome and Sleep Duration in Children: A Two-Sample Mendelian Randomization Study"
+access_tier: abstract_only
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [9, 11]
+  pct_female: null
+  country: "Multi-national (GWAS consortia)"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: mr_rh_somatomotor_to_thalamus_connectivity_causes_longer_sleep
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "genetically instrumented white-matter structural connectivity, right-hemisphere somatomotor network to thalamus -> children's sleep duration (two-sample MR, 206 connections tested)"}
+    scale: smd
+    unit: "beta, sleep duration per SD of genetically instrumented structural connectivity"
+    value: 0.20
+    se: 0.0638
+    ci: [0.07, 0.32]
+    conversion_formula: "Reported directly: beta = 0.20, 95% CI [0.07, 0.32], p = 1.63e-3. se = (0.32 - 0.07)/3.92 = 0.25/3.92 = 0.0638."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "DIRECTION OF CAUSATION IS THE ENTIRE POINT: the exposure is BRAIN STRUCTURE and the outcome is SLEEP DURATION. Positive = stronger genetically instrumented connectivity CAUSES longer sleep. The arrow runs brain -> sleep, not sleep -> brain."
+    covariates: ["MR sensitivity analyses (pleiotropy, heterogeneity)"]
+    followup_years: null
+    cohort_family: "GWAS_connectome_sleep"
+    quote: "increased white-matter SC from the LH dorsal attention network to the thalamus (beta = 0.14; 95% CI = [8.45 x 10-4, 0.27]; p = 0.05), from the right hemisphere (RH) control network to the thalamus (beta = 0.10; 95% CI = [0.01, 0.19]; p = 0.03), ... and from the RH somatomotor network to the thalamus (beta = 0.20; 95% CI = [0.07, 0.32]; p = 1.63 x 10-3) correlated with longer sleep durations in children."
+  - outcome_domain: sleep_need
+    outcome_construct: mr_lh_somatomotor_to_default_connectivity_causes_shorter_sleep
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "genetically instrumented connectivity, left-hemisphere somatomotor network to left default network -> children's sleep duration"}
+    scale: smd
+    unit: "beta, sleep duration per SD of genetically instrumented structural connectivity"
+    value: -0.18
+    se: 0.0791
+    ci: [-0.34, -0.03]
+    conversion_formula: "Reported directly: beta = -0.18, 95% CI [-0.34, -0.03], p = 0.02. se = (-0.03 - (-0.34))/3.92 = 0.31/3.92 = 0.0791."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = stronger connectivity CAUSES shorter sleep. Again brain -> sleep. Some brain configurations genetically dispose a child to sleep less."
+    covariates: ["MR sensitivity analyses"]
+    followup_years: null
+    cohort_family: "GWAS_connectome_sleep"
+    quote: "Stronger connectivity from the left hemisphere (LH) control network to the accumbens (beta = -0.15; 95% CI = [-0.30, -2.88 x 10-3]; p = 0.05) and from the LH somatomotor network to the LH default network (beta = -0.18; 95% CI = [-0.34, -0.03]; p = 0.02) in white-matter structural connectivity (SC) were associated with shorter sleep durations."
+rob:
+  tool: MR-STROBE
+  judgement: moderate
+  notes: "Mendelian randomization with sensitivity analyses for pleiotropy and heterogeneity, which is the right framework for a causal-direction question. Serious concerns: 206 connections tested with several 'findings' at p = 0.05, 0.03, 0.04 - i.e. barely nominal and clearly uncorrected for 206 tests, so most of these individual estimates are not credible; only the RH limbic (p = 3.8e-3) and RH somatomotor (p = 1.6e-3) thalamic connections would plausibly survive correction; sample sizes for the contributing GWAS not recoverable from the abstract; imaging-derived-phenotype GWAS instruments are weak."
+funding: "Non-US government support (China)"
+notes: |
+  RECORDED FOR CAUSAL DIRECTION, NOT FOR ITS SPECIFIC COEFFICIENTS.
+
+  This study asked the question in the direction almost nobody asks it: does brain structure cause
+  sleep duration? Using genetic instruments, the answer was yes. The authors' conclusion: "Our
+  findings demonstrate a causal relationship between specific brain areas and sleep duration."
+
+  WHY THIS MATTERS SO MUCH FOR THIS SHARD. Every cross-sectional finding in this domain -
+  'short sleepers have smaller frontal volumes', 'short sleepers have thinner cortex' - is
+  compatible with two causal stories, and the entire popular narrative assumes one of them. This
+  record supplies genetic evidence for the OTHER one.
+
+  IT IS NOT AN ISOLATED RESULT. It converges with two independent lines already in this shard:
+    - fjell2023: MR found no causal effect of sleep duration on any brain measure, but DID find a
+      robust effect of intracranial volume ON sleep duration.
+    - chen2026: the phenotypically normal 'natural short sleeper' subtype of adolescent
+      insufficient sleep carried a POLYGENIC PREDISPOSITION TO SHORT SLEEP alongside its reduced
+      cortical thickness.
+    - cheng2021's own cross-lagged model: depressive problems predicted shorter sleep a year
+      later, not the reverse; and the authors modelled brain structure as the PREDICTOR of sleep.
+
+  Four independent designs, all pointing to the arrow running from brain and psychiatric traits
+  toward sleep duration rather than the other way. That is the single most important structural
+  fact about this literature and it is why cross-sectional volume differences cannot be read as
+  damage.
+
+  I DO NOT USE THE INDIVIDUAL COEFFICIENTS AS RELIABLE. With 206 connections tested and several
+  p-values at exactly 0.05, this is an uncorrected screen. The directional conclusion is what
+  survives; the specific betas should not be pooled.
+
+  Population is children (the sleep-duration GWAS is paediatric), not 16-19 year olds.
+shard: "s15_brain_structure"

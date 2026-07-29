@@ -1,0 +1,87 @@
+study_id: liu2014
+citation: "Liu C, Kong XZ, Liu X, Zhou R, Wu B. Long-term total sleep deprivation reduces thalamic gray matter volume in healthy men. Neuroreport. 2014;25(5):320-323."
+doi: "10.1097/WNR.0000000000000091"
+pmid: "24346259"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Long-term total sleep deprivation reduces thalamic gray matter volume in healthy men"
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: "China"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: thalamic_gray_matter_volume_after_72h_total_deprivation
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 3,
+               contrast_label: "approximately 72 h total sleep deprivation vs rested baseline, paired within-subject VBM"}
+    scale: raw_units
+    unit: "direction of change in regional grey matter volume (qualitative; no magnitude in retrievable abstract)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded -1 = significant DECREASE in thalamic GM volume. Abstract reports significance and direction only - no cluster statistics, no percentage, no CI. se null - not invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = thalamic grey matter volume LOWER after 72 h awake. The hippocampus showed NO change and whole-brain grey matter volume showed NO change."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The results revealed significant loss of gray matter volume in the thalamus but not in the hippocampus. No overall decrease in whole brain gray matter volume was noted after sleep deprivation."
+  - outcome_domain: brain_structure
+    outcome_construct: whole_brain_and_hippocampal_gm_volume_after_72h_deprivation
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 3,
+               contrast_label: "72 h total sleep deprivation vs baseline, whole-brain and hippocampal GM volume"}
+    scale: raw_units
+    unit: "direction of change (qualitative)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded null: no significant change in hippocampus or in whole-brain grey matter volume."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no detectable change. Notable because three full days without any sleep - an exposure far more extreme than anything the subject experienced - did not measurably reduce global grey matter or hippocampal volume."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "No overall decrease in whole brain gray matter volume was noted after sleep deprivation."
+rob:
+  tool: RoB2
+  judgement: high
+  notes: "Sample size not recoverable from the abstract (recorded as null rather than guessed) - a Neuroreport short report of this era is typically 15-25 participants. Paired VBM with no non-deprived control arm, so time/scanner drift and repeat-scan effects are unaddressed. Males only. No magnitudes published in the abstract. No recovery scan, so reversibility was not tested here."
+funding: "Non-US government support (China)"
+notes: |
+  RECORDED PRIMARILY FOR ITS NULLS, WHICH ARE MORE INFORMATIVE THAN ITS POSITIVE FINDING.
+
+  Seventy-two hours of TOTAL sleep deprivation - an exposure vastly more severe than 5-6 h of
+  weekday sleep, and one no adolescent in this scenario approached - produced:
+    - NO change in whole-brain grey matter volume
+    - NO change in hippocampal volume
+    - a localised reduction in thalamic grey matter volume
+
+  THE CEILING THIS PUTS ON THE ACUTE STORY. If three days of complete sleeplessness cannot move
+  global grey matter or the hippocampus, then the claim that habitual 5-6 h sleep progressively
+  erodes global brain volume has no experimental support at the top of the dose range.
+
+  THE THALAMIC FINDING SHOULD NOT BE READ AS NEURAL LOSS. Thalamic volume is the single most
+  state-labile subcortical measure in this literature: in fjell2023 the thalamus was one of only
+  two structures with any longitudinal signal and its cross-sectional optimum collapsed to the
+  4 h boundary once global sleep quality was controlled. Combined with bernardi2016 showing that
+  acute deprivation-related volume changes fully revert after recovery sleep, the most
+  parsimonious reading of a thalamic volume drop after 72 h awake is a reversible physiological
+  state - fluid distribution, extracellular space, perfusion - not neuronal loss.
+
+  n IS RECORDED AS null. I could not retrieve the sample size and will not invent it. This
+  limits the record's poolable weight and that is the correct consequence.
+shard: "s15_brain_structure"

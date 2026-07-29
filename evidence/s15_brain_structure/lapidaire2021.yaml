@@ -1,0 +1,106 @@
+study_id: lapidaire2021
+citation: "Lapidaire W, Urrila AS, Artiges E, Miranda R, Vulser H, Bezivin-Frere P, et al. Irregular sleep habits, regional grey matter volumes, and psychological functioning in adolescents. PLoS One. 2021;16(2):e0243720."
+doi: "10.1371/journal.pone.0243720"
+pmid: "33566829"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7875363/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Irregular sleep habits, regional grey matter volumes, and psychological functioning in adolescents"
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 101
+n_studies_pooled: null
+population:
+  age_mean: 16.83
+  age_range: [16, 18]
+  pct_female: 55.0
+  country: "France"
+  adolescent_match: exact_16_19
+effects:
+  # ---------- THE MOST AGE-MATCHED NULL IN THE ENTIRE SHARD ----------
+  - outcome_domain: brain_structure
+    outcome_construct: gmv_amygdala_hippocampus_mpfc_vs_sleep_debt
+    exposure: {type: weekend_catchup, dose_h: 1.67, referent_h: 0, duration_days: null,
+               contrast_label: "sleep debt = weekend minus weekday time in bed (mean 1 h 40 min, SD 59 min) vs regional GMV"}
+    scale: per_hour_beta
+    unit: "GMV change per hour of sleep debt (arbitrary VBM units)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded null. Authors report no significant correlation; no point estimate or SE is published for the null contrast. se null by design - not invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no association. Harm would be negative (smaller GMV with greater sleep debt). Not observed in amygdala, hippocampus or mPFC at p<0.05 FWE."
+    covariates: ["age", "sex", "volume scaling factor (head size)"]
+    followup_years: null
+    cohort_family: "IMAGEN"
+    quote: "No statistically significant correlations between WE bed time, WE delay in bed time, or sleep debt and regional grey matter volumes were found."
+  - outcome_domain: brain_structure
+    outcome_construct: gmv_mpfc_vs_weekend_wakeup_time
+    exposure: {type: social_jetlag, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "later weekend wake-up time (timing, NOT duration) vs mPFC GMV, ROI VBM"}
+    scale: raw_units
+    unit: "peak-voxel t statistic (SPM8 VBM, ROI-restricted)"
+    value: 3.11
+    se: null
+    ci: null
+    conversion_formula: "Peak-voxel t from Table 2, p<0.05 FWE. No regression slope in interpretable volumetric units is published; GMV is in arbitrary modulated-VBM units. Converting this selected peak t to r would be upward-biased by voxel selection, so no conversion is offered."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive t = LATER weekend wake-up associated with SMALLER mPFC GMV. This is a sleep-TIMING/irregularity effect, not a sleep-DURATION effect."
+    covariates: ["age", "sex", "volume scaling factor"]
+    followup_years: null
+    cohort_family: "IMAGEN"
+    quote: "WE wake up time correlated negatively with GMV in the bilateral amygdalae and the mPFC (p = 0.011, p = 0.041, p = 0.020, resp.; Table 2, Fig 1)."
+  - outcome_domain: exposure_measurement
+    outcome_construct: weekday_time_in_bed_distribution_in_age_matched_cohort
+    exposure: {type: descriptive, dose_h: 8.3, referent_h: null, duration_days: null,
+               contrast_label: "observed weekday time in bed at mean age 16.83 y"}
+    scale: hours
+    unit: "hours per weekday night (mean; SD 0.98 h)"
+    value: 8.3
+    se: 0.098
+    ci: null
+    conversion_formula: "Table 1: Time in bed WD = 8:18 (SD 0:59) -> 8.30 h (SD 0.983 h). se of the mean = 0.983/sqrt(101) = 0.098."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Descriptive, not an effect. Recorded because it quantifies the EXTRAPOLATION GAP: the subject's 5-6 h weekday sleep is (8.30-5.5)/0.983 = 2.8 SD below this age-matched cohort's mean. His exposure lies essentially outside the observed range of the best age-matched imaging cohort."
+    covariates: []
+    followup_years: null
+    cohort_family: "IMAGEN"
+    quote: "| Time in bed WD | 8:18 | 0:59"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "Cross-sectional; self-reported bed/wake times only (no actigraphy or PSG); n=101 with ROI-restricted VBM; psychological outcomes available in only 74-82 of 101 participants; no control for the previous night's sleep before scanning, so state effects (see bernardi2016) are uncontrolled; no control for SES or screen use. Cannot support any causal claim."
+funding: "European Union FP6 IMAGEN; Medical Research Council; Medical Research Foundation"
+notes: |
+  This is the CLOSEST cross-sectional study to the subject's age (mean 16.83 y, exactly the
+  16-19 window) and it is the follow-up of the seed study urrila2017 in the same IMAGEN cohort.
+
+  WHAT IT FOUND: only sleep TIMING and IRREGULARITY measures (later weekend wake-up time;
+  larger weekend delay in wake-up time) correlated with smaller GMV in amygdala, hippocampus
+  and mPFC.
+
+  WHAT IT DID NOT FIND: sleep debt (the weekday-to-weekend time-in-bed difference, which is
+  the closest available analogue of the subject's pattern of weekday restriction plus weekend
+  catch-up) showed NO association with regional GMV. The authors state this explicitly in the
+  discussion: "The current results also do not provide evidence of negative effects of sleep
+  debt, as measured by time in bed difference between WD and WE, on the adolescent brain."
+
+  IMPORTANT HONESTY CONSTRAINT ON WHAT I CAN CLAIM: weekday time in bed was MEASURED
+  (Table 1) but the paper does NOT report a weekday-time-in-bed-versus-GMV test. Table 2 lists
+  only weekend wake-up time and weekend delay in wake-up time. I therefore record sleep debt
+  as an explicit tested null and do NOT record weekday duration as a tested null, because I
+  cannot verify that test was run. Absence of a reported test is not a reported null.
+
+  ALSO NOTE THE AUTHORS' OWN AGE-DEPENDENCE ARGUMENT, which cuts against a 16-19 sensitive
+  period for DURATION specifically: "time in bed during the week might be a more important
+  factor in earlier brain developmental phases, while sleep timing and regularity in sleep
+  timing might be more important later during adolescence."
+shard: "s15_brain_structure"

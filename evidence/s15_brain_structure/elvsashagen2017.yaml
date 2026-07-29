@@ -1,0 +1,90 @@
+study_id: elvsashagen2017
+citation: "Elvsashagen T, Zak N, Norbom LB, Pedersen PO, Quraishi SH, Bjornerud A, et al. Evidence for cortical structural plasticity in humans after a day of waking and sleep deprivation. NeuroImage. 2017;156:214-223."
+doi: "10.1016/j.neuroimage.2017.05.027"
+pmid: "28526620"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Evidence for cortical structural plasticity in humans after a day of waking and sleep deprivation"
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 61
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: "Norway"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: right_prefrontal_cortical_thickness_morning_to_evening
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 1,
+               contrast_label: "same-day morning scan vs evening scan (~14 h of normal waking, no deprivation yet), all 61 participants"}
+    scale: raw_units
+    unit: "direction of change in cortical thickness (qualitative; no magnitude in retrievable abstract)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded +1 = significant INCREASE. Abstract reports significance and direction only; no millimetre magnitude, no CI. se null - not invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive = cortical thickness INCREASED from morning to evening within a single ordinary day, before any sleep deprivation. This is the crux: a structural MRI metric moves detectably over ~14 waking hours in the same person."
+    covariates: []
+    followup_years: null
+    cohort_family: "Oslo_sleep_deprivation"
+    quote: "We found significantly increased right prefrontal cortical thickness from morning to evening across all participants."
+  - outcome_domain: brain_structure
+    outcome_construct: medial_parietal_cortical_thinning_after_23h_deprivation
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1,
+               contrast_label: "morning after 23 h total sleep deprivation vs previous morning (deprived subgroup, n=41)"}
+    scale: raw_units
+    unit: "direction of change in cortical thickness (qualitative)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded -1 = significant THINNING in the within-group pairwise comparison. No magnitude published in the abstract. Note the group-by-time interaction was NOT significant, so this cannot be attributed to deprivation with confidence."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = bilateral medial parietal (precuneus, posterior cingulate) THINNING after 23 h awake. But see the covariates/notes: there was no significant group x time interaction versus the slept control group, so the authors do not claim deprivation caused it."
+    covariates: []
+    followup_years: null
+    cohort_family: "Oslo_sleep_deprivation"
+    quote: "In addition, pairwise comparisons in the deprived group between the two morning scans showed significant thinning of mainly bilateral medial parietal cortices after 23h of sleep deprivation, including the precuneus and posterior cingulate cortex. However, there were no significant group (sleep vs sleep deprived group) by time interactions and we can therefore not rule out that other mechanisms than sleep deprivation per se underlie the bilateral medial parietal cortical thinning observed in the deprived group."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Within-subject repeated scanning with a non-deprived comparison group (n=20) is a strong design for acute effects. Key limitation stated by the authors themselves: the group x time interaction was NOT significant, so the deprivation-specific thinning is not established - only the within-group pairwise contrast was significant, which is a weaker and multiplicity-prone test. Males only (n=61, all male), so no sex generalisation. No numeric magnitudes retrievable from the abstract."
+funding: "Non-US government support (Norway); South-Eastern Norway Regional Health Authority / Research Council of Norway (per journal record)"
+notes: |
+  THIS IS THE STATE-VERSUS-TRAIT PROBLEM IN ITS PUREST FORM, AND THE NUMBER THAT MATTERS IS
+  THE TIME CONSTANT, NOT THE EFFECT SIZE.
+
+  Right prefrontal cortical thickness increased measurably between a morning scan and an evening
+  scan ON THE SAME DAY, in the same people, with no sleep manipulation at all. Cortical thickness
+  - the exact metric used to claim 'thinner cortex in short sleepers' in cross-sectional studies -
+  has detectable diurnal variation.
+
+  THE IMPLICATION FOR EVERY CROSS-SECTIONAL RECORD IN THIS SHARD: if thickness varies within a
+  single day as a function of hours awake, then a cohort study that scans habitual short sleepers
+  and habitual long sleepers - without standardising time of day or the prior night's sleep -
+  is partly measuring how long each participant had been awake when they entered the scanner.
+  Habitual short sleepers wake earlier relative to their scan slot or are more sleep-pressured;
+  either produces a systematic state difference masquerading as a trait difference. I found no
+  observational study in this domain that controlled the pre-scan night's sleep.
+
+  IMPORTANT HONESTY POINT ABOUT THE DEPRIVATION RESULT ITSELF: the widely-cited 'sleep
+  deprivation thins the cortex' claim from this paper is weaker than usually reported. The
+  group-by-time interaction was null. The authors are explicit that they cannot rule out
+  non-deprivation mechanisms. I record it with that caveat attached rather than as a clean
+  deprivation effect.
+
+  Combined with bernardi2016 (all such changes revert after recovery sleep) and elvsashagen2015
+  (FA changes within hours of waking), the acute literature establishes that MRI structural
+  metrics in this field are substantially state-dependent on a timescale of hours.
+shard: "s15_brain_structure"

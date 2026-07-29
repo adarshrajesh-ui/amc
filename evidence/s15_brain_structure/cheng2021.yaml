@@ -1,0 +1,113 @@
+study_id: cheng2021
+citation: "Cheng W, Rolls E, Gong W, Du J, Zhang J, Zhang XY, Li F, Feng J. Sleep duration, brain structure, and psychiatric and cognitive problems in children. Molecular Psychiatry. 2021;26(8):3992-4003."
+doi: "10.1038/s41380-020-0663-2"
+pmid: "32015467"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8855973/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep duration, brain structure, and psychiatric and cognitive problems in children"
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 11067
+n_studies_pooled: null
+population:
+  age_mean: 9.92
+  age_range: [9, 11]
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  # ---------- THE HEADLINE CROSS-SECTIONAL EFFECT: trivially small ----------
+  - outcome_domain: brain_structure
+    outcome_construct: total_cortical_volume_vs_sleep_duration
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "parent-reported habitual sleep duration (continuous) vs whole-brain cortical volume, linear mixed model"}
+    scale: cohens_d
+    unit: null
+    value: 0.095
+    se: 0.0191
+    ci: [0.058, 0.132]
+    conversion_formula: "Paper reports r=0.047, Cohen's d=0.095, p=6.2e-7 for total cortical volume. Check: d = 2r/sqrt(1-r^2) = 2(0.047)/sqrt(1-0.002209) = 0.0941, matches the reported 0.095. se(r) = sqrt((1-r^2)/(n-2)) = sqrt(0.997791/11065) = 0.009495. se(d) = 2*se(r)/(1-r^2)^1.5 = 2(0.009495)/0.996688 = 0.01905. ci = d +/- 1.96*se(d)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive = LONGER sleep associated with LARGER cortical volume. Harm direction is therefore that short sleep goes with smaller volume. MAGNITUDE: r=0.047 means sleep duration explains r^2 = 0.22% of the variance in cortical volume."
+    covariates: ["age", "sex", "BMI", "pubertal score", "race", "parental income", "parental education"]
+    followup_years: null
+    cohort_family: "ABCD"
+    quote: "Both cortical area and volume of the whole brain were significantly positively correlated with sleep duration (r=0.046, Cohen's d=0.093, p=1.0x10-6 and r=0.047, d=0.095, p=6.2x10-7 respectively)."
+  - outcome_domain: brain_structure
+    outcome_construct: cortical_thickness_vs_sleep_duration
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "habitual sleep duration vs cortical THICKNESS"}
+    scale: cohens_d
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded null. Authors state cortical thickness was not associated with sleep duration and report no numeric estimate for it. se null - not invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no association. Important because cortical THINNING is the developmental process the 'permanent damage' narrative invokes, and it was the one metric that showed nothing in the largest paediatric sample available."
+    covariates: ["age", "sex", "BMI", "pubertal score", "race", "parental income", "parental education"]
+    followup_years: null
+    cohort_family: "ABCD"
+    quote: "(Cortical thickness was not associated with sleep duration or with most of the other measures, and for brevity is not described further.)"
+  # ---------- REVERSE CAUSATION, DEMONSTRATED IN THE SAME COHORT ----------
+  - outcome_domain: psychiatric
+    outcome_construct: cross_lagged_depressive_problems_t1_to_sleep_duration_t2
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "baseline depressive problems score -> sleep duration 1 year later (cross-lagged panel model)"}
+    scale: smd
+    unit: "standardized cross-lagged regression coefficient"
+    value: -0.081
+    se: 0.016
+    ci: [-0.112, -0.050]
+    conversion_formula: "Reported directly: beta = -0.081, SE = 0.016, p<1e-4. ci = beta +/- 1.96*se."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = MORE depressive problems at baseline predicts SHORTER sleep one year later. This is the REVERSE of the causal story usually told. The forward path (sleep -> later depression) was null: beta=-0.018, SE=0.013, p=0.17."
+    covariates: ["age", "sex", "BMI", "pubertal score", "race", "parental income", "parental education"]
+    followup_years: 1.0
+    cohort_family: "ABCD"
+    quote: "the depressive problems score is the top contribution from the different psychiatric measures to the association with decreased sleep duration (beta=-0.081, SE=0.016, p<1x10-4); and the reverse was not found (beta=-0.018, SE=0.013, p=0.17)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "Very large n but the brain-structure analysis is entirely CROSS-SECTIONAL: 'The neuroimaging was available only at the baseline time.' Sleep duration is parent-reported (single item). No actigraphy. No control of the pre-scan night's sleep. Screen time and environmental risk are shown to correlate with sleep duration in the same paper but are NOT included as covariates in the brain models, so confounding is demonstrated and then not adjusted for. Multiplicity is extreme (whole-brain parcellations x many behavioural measures)."
+funding: "NIDA/NIH; National Key R&D Program of China; Shanghai Municipal Science and Technology Major Project; National Natural Science Foundation of China"
+notes: |
+  THIS IS THE SEED STUDY THE TASK NAMED, AND ITS REAL CONTENT DIFFERS IMPORTANTLY FROM ITS
+  REPUTATION. Three corrections to the popular reading:
+
+  1. THE EFFECT IS TRIVIALLY SMALL. r = 0.047 for cortical volume. Sleep duration accounts for
+     0.22% of the variance. In an n of 11,067 this clears p = 6.2e-7 while being of no
+     conceivable individual-level significance. This is precisely the imaging-genetics-era
+     phenomenon the task flagged: power to detect effects far too small to matter.
+
+  2. IT IS CROSS-SECTIONAL, NOT LONGITUDINAL, FOR BRAIN STRUCTURE. The paper is often cited as
+     longitudinal. The longitudinal component involves only sleep and psychiatric scores;
+     there was exactly one MRI timepoint. It therefore cannot speak to structural CHANGE at all.
+
+  3. THE ONE LONGITUDINAL RESULT RUNS BACKWARDS. The cross-lagged model found depressive
+     problems predicting SHORTER SLEEP a year later (beta = -0.081, p < 1e-4) with the forward
+     path null (p = 0.17). And the authors' own mediation model is oriented brain -> sleep, not
+     sleep -> brain: "The interpretation is that depressive problems significantly mediate the
+     effect of brain structure on sleep."
+
+  4. CORTICAL THICKNESS - the metric tied to the adolescent thinning trajectory - showed NOTHING.
+
+  CONFOUNDING IS VISIBLE IN THE PAPER'S OWN FIGURE 1: screen time, environmental/neighbourhood
+  risk, family conflict, parental psychopathology and cultural values all correlate with child
+  sleep duration. "the screen time utilization (e.g. the use of mobile phones, TV, internet,
+  and video games, abcd_stq01) was negatively correlated with sleep duration". None of these
+  are in the brain-structure models.
+
+  AGE MISMATCH: 9-11 years old. This is pre-pubertal to early-pubertal, not 16-19. Set
+  adolescent_match to mixed rather than good, and inflate uncertainty for transport to a
+  19-year-old.
+shard: "s15_brain_structure"

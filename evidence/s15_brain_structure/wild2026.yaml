@@ -1,0 +1,88 @@
+study_id: wild2026
+citation: "Wild S, Inderkum A, Rupp D, Markovic A, Castiglione CEG, Hamann C, Adorjan K, Kaess M, O'Gorman Tuura RL, Tarokh L. Sleep as a moderator of adolescent brain development - evidence from a longitudinal MRI study. Sleep. 2026;49(6):zsag011."
+doi: "10.1093/sleep/zsag011"
+pmid: "41562565"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13266549/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep as a moderator of adolescent brain development-evidence from a longitudinal MRI study"
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 39
+n_studies_pooled: null
+population:
+  age_mean: 12.72
+  age_range: [10, 14]
+  pct_female: null
+  country: "Switzerland"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: gmv_change_moderated_by_actigraphic_sleep_duration
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: 130,
+               contrast_label: "actigraphic sleep duration averaged over ~130 nights, as a MODERATOR of 6-month change in grey matter volume across 7 socioemotional ROIs (thalamus, precuneus, orbitofrontal cortex, amygdala among them)"}
+    scale: raw_units
+    unit: "delta R-squared (incremental variance explained by the sleep x time moderation term)"
+    value: 0.11
+    se: null
+    ci: null
+    conversion_formula: "Abstract reports a RANGE across ROIs and sleep metrics: '.11 <= delta-R2 >= .50; .001 < p < .020'. I record the LOWER bound (0.11) as the conservative point value because the upper bound (0.50) comes from the most favourable of 28 tests (7 ROIs x 4 sleep metrics) in n=39 and is certain to be inflated by selection. No CI or SE is published, so se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Direction requires care. Shorter and more disrupted sleep was associated with ATTENUATED structural change, not with loss. During this developmental window normative change in several of these regions is volume REDUCTION, so 'attenuated change' is not automatically 'damage' - it could equally be read as delayed maturation, and the abstract does not resolve the sign per region."
+    covariates: ["age", "sex (not confirmed from abstract)"]
+    followup_years: 0.5
+    cohort_family: "Bern_adolescent_sleep_MRI"
+    quote: "Sleep duration and efficiency moderated grey matter volume changes in regions including the thalamus, precuneus, orbitofrontal cortex, and amygdala (.11 <= delta-R2 >= .50; .001 < p <.020). Shorter and more disrupted sleep was associated with attenuated structural changes."
+  - outcome_domain: brain_structure
+    outcome_construct: gmv_change_moderated_by_sleep_regularity_and_midpoint
+    exposure: {type: social_jetlag, dose_h: null, referent_h: null, duration_days: 130,
+               contrast_label: "actigraphic sleep regularity and sleep midpoint as moderators of 6-month GMV change"}
+    scale: raw_units
+    unit: "delta R-squared"
+    value: 0.05
+    se: null
+    ci: null
+    conversion_formula: "Lower bound of the reported range '.05 <= delta-R2 >= .30, .001 < p <.043'. Lower bound taken for the same anti-selection reason as above."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Timing and regularity also moderate structural change. Sign per region not resolvable from the abstract."
+    covariates: ["age", "sex (not confirmed)"]
+    followup_years: 0.5
+    cohort_family: "Bern_adolescent_sleep_MRI"
+    quote: "Sleep regularity and sleep midpoint further moderated changes in grey matter volume (.05 <= delta-R2 >= .30, .001 < p <.043), indicating a role for these parameters in brain development."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "The DESIGN is the best in the shard for the causal question - two structural scans plus ~130 nights of objective actigraphy in between, which is the only study here with objective exposure AND repeated structural imaging. But n=39 with 7 ROIs x 4 sleep metrics = 28 moderation models, delta-R2 values up to 0.50 in 39 people, and p-values as high as 0.043 reported as findings, is a textbook recipe for irreproducible effects. No correction for multiple comparisons is described in the abstract. A 6-month interval is short relative to measurement error in volumetric change."
+funding: "Swiss National Science Foundation"
+notes: |
+  THE ONLY STUDY THAT ACTUALLY ASKS THE TASK'S QUESTION 2 WITH OBJECTIVE EXPOSURE: does sleep
+  at time 1 predict CHANGE in brain structure by time 2 in adolescents? It answers yes, and it is
+  the strongest design available - and it is also, unfortunately, 39 people.
+
+  WHY I DO NOT WEIGHT THIS HEAVILY DESPITE THE DESIGN:
+    - n=39 with about 28 moderation models and no described multiplicity correction.
+    - delta-R2 of up to 0.50 for a sleep-by-time interaction on regional volume change in 39
+      adolescents is not a credible population effect size; it is what selection on the maximum
+      looks like. I deliberately record the LOWER bound of each reported range.
+    - the interval is 6 months, so measured 'change' is a small signal against scanner and
+      segmentation noise.
+    - ages 10-14 (mean 12.7), i.e. early adolescence, not 16-19.
+
+  THE DIRECTION IS GENUINELY AMBIGUOUS AND THIS MATTERS FOR THE PERMANENCE VERDICT. The finding
+  is that short/disrupted sleep goes with ATTENUATED structural change. In several of these
+  regions the normative adolescent trajectory is volume decrease (cortical thinning and
+  pruning-related reduction). Attenuated change against a normatively decreasing trajectory
+  means LESS reduction, which cannot be described as atrophy or damage without further
+  argument. The abstract does not give per-region signs, so I cannot resolve it, and I flag that
+  as an extraction limit rather than assuming harm.
+
+  This is the record to revisit first if full text becomes available - the per-region signs and
+  any multiplicity correction would materially change its weight.
+shard: "s15_brain_structure"

@@ -1,0 +1,89 @@
+study_id: ananth2026
+citation: "Ananth R, Swierz J, Shafizadeh B, Martin S, Lim MM, Cho Y. Structural Brain Correlates of Insufficient Sleep in Adolescents: A Narrative Review of MRI Evidence. Children (Basel). 2026;13(7):903."
+doi: "10.3390/children13070903"
+pmid: "42509928"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Structural Brain Correlates of Insufficient Sleep in Adolescents: A Narrative Review of MRI Evidence"
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [10, 19]
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_of_insufficient_sleep_in_us_high_school_students
+    exposure: {type: descriptive, dose_h: null, referent_h: 8.0, duration_days: null,
+               contrast_label: "proportion of US high school students obtaining the recommended 8-10 h of nightly sleep"}
+    scale: probability
+    unit: "proportion obtaining recommended sleep"
+    value: 0.30
+    se: null
+    ci: null
+    conversion_formula: "Reported as 'fewer than 30%'; recorded as an upper bound of 0.30. No CI given (this is a review restating surveillance data). se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is a BASE RATE, not an effect. Recorded because it establishes that the subject's exposure is the statistical NORM among his peers, not an outlier. Over 70% of US high school students are 'insufficient sleepers' by the same definition applied in the imaging studies."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Insufficient sleep represents a public health challenge affecting the majority of adolescents in industrialized societies, with fewer than 30% of high school students obtaining the recommended 8-10 h of nightly sleep."
+  - outcome_domain: brain_structure
+    outcome_construct: qualitative_synthesis_of_adolescent_mri_findings
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "narrative synthesis across DTI, VBM and volumetric studies of adolescent sleep duration, regularity and quality"}
+    scale: raw_units
+    unit: "direction of synthesised association (qualitative)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded -1 = review concludes associations are in the harm direction. NARRATIVE review: no pooled effect size, no meta-analysis, no formal risk-of-bias assessment. No magnitude exists to extract. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = review's conclusion is that insufficient sleep is linked to alterations in white matter microstructure, cortical thickness and grey matter volume. Note the carefully hedged wording: 'measurable alterations' and 'detectable effects', NOT damage, impairment or permanence."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "In summary, results from these studies link insufficient sleep to measurable alterations in white matter microstructure, cortical thickness, and gray matter volume during adolescence, establishing detectable effects of brain morphology during a period of heightened neurobiological vulnerability."
+rob:
+  tool: AMSTAR-2
+  judgement: critical
+  notes: "NARRATIVE review, self-described. No pre-registered protocol, no reproducible search strategy reported, no formal risk-of-bias appraisal of included studies, no quantitative synthesis, no assessment of publication bias, and no separation of cross-sectional from longitudinal evidence in the abstract-level conclusions. AMSTAR-2 judgement is critical for these reasons. Included for orientation and base rates only; contributes NO effect estimate."
+funding: "NIA (NIH); US Department of Veterans Affairs; Burroughs Wellcome Fund"
+notes: |
+  INCLUDED FOR TWO REASONS ONLY, NEITHER OF WHICH IS ITS EFFECT SYNTHESIS.
+
+  1. IT CONFIRMS THAT NO POOLED PER-HOUR VOLUMETRIC ESTIMATE EXISTS. This is, as of my search, the
+     most recent review devoted specifically to the question this shard was assigned - structural
+     brain correlates of insufficient sleep in adolescents - and it is a NARRATIVE review that
+     reports no pooled effect size of any kind. The authors state that "no review has
+     systematically examined the effects of insufficient sleep on structural brain development."
+     That is an admission, in 2026, that the quantitative synthesis this shard was asked to
+     extract has never been performed. It is not that I failed to find the number; the number does
+     not exist.
+
+  2. THE BASE RATE REFRAMES THE QUESTION. Fewer than 30% of US high school students get the
+     recommended 8-10 h. The subject is therefore inside the majority, not in a rare high-risk
+     tail. Every imaging cohort in this shard drew its 'insufficient sleep' group from that same
+     majority, which means the comparison groups in those studies are the unusual ones. This has a
+     direct bearing on how alarming a 0.2%-of-variance cross-sectional difference should sound:
+     if short sleep produced meaningful structural damage, the effect would be visible as a
+     population-level phenomenon in the great majority of American adolescents, and it is not.
+
+  I deliberately do NOT use this review as a source for any numeric effect, and I do not adopt its
+  conclusion as evidence. Its own language is notably more restrained than its framing suggests:
+  it claims "measurable alterations" and "detectable effects", which is compatible with everything
+  in this shard, including the interpretation that those detectable differences are small,
+  confounded, partly state-dependent and of unknown functional significance.
+shard: "s15_brain_structure"

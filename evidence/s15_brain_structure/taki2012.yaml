@@ -1,0 +1,68 @@
+study_id: taki2012
+citation: "Taki Y, Hashizume H, Thyreau B, Sassa Y, Takeuchi H, Wu K, et al. Sleep duration during weekdays affects hippocampal gray matter volume in healthy children. NeuroImage. 2012;60(1):471-475."
+doi: "10.1016/j.neuroimage.2011.11.072"
+pmid: "22197742"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep duration during weekdays affects hippocampal gray matter volume in healthy children"
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 290
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [5, 18]
+  pct_female: null
+  country: "Japan"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: bilateral_hippocampal_body_gmv_vs_weekday_sleep_duration
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "self/parent-reported weekday sleep duration vs regional GM volume of bilateral hippocampal body, VBM"}
+    scale: raw_units
+    unit: "direction of association (qualitative; no magnitude in the retrievable abstract)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded +1 = significant POSITIVE correlation. The abstract reports significance and direction only; no correlation coefficient, no slope, no cluster statistics, no CI. Full text not retrievable (not in PMC Open Access). se null - not invented. DO NOT pool a magnitude from this record."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive = LONGER weekday sleep associated with LARGER hippocampal GM volume; harm direction is that short sleep goes with smaller hippocampus."
+    covariates: ["age", "sex", "intracranial volume"]
+    followup_years: null
+    cohort_family: "Tohoku_child_MRI"
+    quote: "We found that the regional gray matter volume of the bilateral hippocampal body was significantly positively correlated with sleep duration during weekdays after adjusting for age, sex, and intracranial volume."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "Cross-sectional VBM in an age range of 5-18 y, which mixes pre-pubertal children with late adolescents while hippocampal and neocortical volume trajectories differ in direction across that span; region-of-interest approach; self/parent-reported sleep; no SES, screen-use or psychiatric adjustment reported in the abstract; no control of pre-scan sleep. The paper's own title asserts 'affects', which the design cannot support."
+funding: "Non-US government support (Japan)"
+notes: |
+  THE MOST-CITED PAEDIATRIC HIPPOCAMPAL FINDING, AND IT HAS NOT HELD UP.
+
+  WHAT I COULD NOT GET: no numeric effect size is available. The abstract gives direction and
+  significance only, and the full text is not in PMC Open Access. Per the hard rules I record
+  the direction with a verbatim quote and leave the magnitude null rather than guessing. The
+  task asked for volume difference per hour in mm3 or SD - this paper does not supply it in any
+  retrievable form.
+
+  FAILED REPLICATION: urrila2017, in a larger and much more age-homogeneous adolescent sample
+  (n=177, ages 13.4-15.5), explicitly failed to reproduce a hippocampus-sleep correlation at a
+  corrected whole-brain threshold, and attributed the discrepancy partly to Taki's
+  region-of-interest approach and partly to the 5-18 y age mixture.
+
+  CONVERGENT EVIDENCE AGAINST A CAUSAL READING: in fjell2023, hippocampal volume peaked
+  cross-sectionally at 6.3 h of sleep (95% CI 4.7-7.1) and hippocampal ATROPHY RATE was
+  unrelated to sleep duration across 8,150 longitudinal observations (F=2, p=0.43). A
+  cross-sectional positive hippocampus-sleep correlation in children is therefore not
+  reproducible as a progressive structural process.
+
+  AGE MISMATCH: 5-18 y pooled. Not informative specifically about 16-19.
+shard: "s15_brain_structure"

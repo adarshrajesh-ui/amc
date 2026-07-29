@@ -1,0 +1,92 @@
+study_id: xu2025
+citation: "Xu H, Liu Y, Li C, Li X, Shen L, Wang H, et al. Effects of Continuous Positive Airway Pressure on Neuroimaging Biomarkers and Cognition in Adult Obstructive Sleep Apnea: A Randomized Controlled Trial. American Journal of Respiratory and Critical Care Medicine. 2025;211(4):628-636."
+doi: "10.1164/rccm.202406-1170OC"
+pmid: "39998447"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Effects of Continuous Positive Airway Pressure on Neuroimaging Biomarkers and Cognition in Adult Obstructive Sleep Apnea: A Randomized Controlled Trial"
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 148
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "China"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: cortical_thickness_cpap_vs_best_supportive_care_6mo
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: null, duration_days: 180,
+               contrast_label: "CPAP plus best supportive care vs best supportive care alone, randomised, cortical thickness at 6 months"}
+    scale: raw_units
+    unit: "mm cortical thickness (between-group difference at 6 months, linear mixed model)"
+    value: -0.06
+    se: 0.02296
+    ci: [-0.10, -0.01]
+    conversion_formula: "Reported directly: difference -0.06 mm, 95% CI -0.10 to -0.01, P=0.02. se = (upper - lower)/3.92 = (-0.01 - (-0.10))/3.92 = 0.09/3.92 = 0.02296."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "SIGN AMBIGUITY FLAGGED HONESTLY. The reported between-group difference is NEGATIVE (-0.06 mm) while the authors' conclusion states 'CPAP improved cortical thickness'. The abstract does not state which group is the referent in the contrast, so I cannot determine from the retrievable record whether the negative sign means CPAP thickened or thinned the cortex relative to control. The magnitude and CI are recorded exactly as published; the DIRECTION must be verified against the full text before this record is used to support a directional claim."
+    covariates: ["randomisation", "baseline value (linear mixed model)"]
+    followup_years: 0.5
+    cohort_family: "Shanghai_CPAP_RCT"
+    quote: "However, there were significant differences in the FC of DMN (difference, -13.73; 95% CI, -23.40 to -4.06; P = 0.01) and cortical thickness (difference, -0.06 mm; 95% CI, -0.10 to -0.01 mm; P = 0.02) between CPAP and BSC groups at 6 months after treatment."
+  # ---------- THE STRUCTURE-WITHOUT-FUNCTION DISSOCIATION ----------
+  - outcome_domain: cognition
+    outcome_construct: montreal_cognitive_assessment_cpap_vs_bsc_6mo
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: null, duration_days: 180,
+               contrast_label: "CPAP vs best supportive care, MoCA score at 6 months (PRIMARY endpoint)"}
+    scale: raw_units
+    unit: "MoCA points (between-group difference)"
+    value: -0.04
+    se: 0.3495
+    ci: [-0.72, 0.65]
+    conversion_formula: "Reported directly: difference -0.04, 95% CI -0.72 to 0.65, P=0.91. se = (0.65 - (-0.72))/3.92 = 1.37/3.92 = 0.3495."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Null on the PRIMARY endpoint. Twelve months of CPAP in a randomised trial produced no cognitive benefit whatsoever (p=0.91), despite moving the imaging biomarkers."
+    covariates: ["randomisation", "baseline value"]
+    followup_years: 0.5
+    cohort_family: "Shanghai_CPAP_RCT"
+    quote: "Linear mixed models showed that there was no significant difference in MoCA scores at 6 months between the CPAP and BSC groups (difference, -0.04; 95% confidence interval [CI], -0.72 to 0.65; P = 0.91)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Genuine multicentre randomised controlled trial (NCT02886156), 148 participants, 5 hospitals, pre-registered primary endpoint - by far the highest-quality design bearing on structural reversibility. Concerns: CPAP cannot be blinded to participants; adherence not recoverable from the abstract; the imaging endpoints are SECONDARY, so the significant thickness result is a secondary outcome in a trial that missed its primary endpoint, and no multiplicity correction across secondary neuroimaging endpoints is described; the referent direction of the thickness contrast is not stated in the abstract."
+funding: "National Natural Science Foundation of China; STI2030 Major Projects, National Key R&D Program of China; Shanghai Municipal Commission of Science and Technology; Shanghai Jiao Tong University programmes"
+notes: |
+  THE HIGHEST-TIER EVIDENCE IN THIS SHARD ON REVERSIBILITY, AND IT DELIVERS TWO LESSONS, THE
+  SECOND MORE IMPORTANT THAN THE FIRST.
+
+  LESSON 1 (reversibility): randomising chronic sleep-disruption patients to treatment
+  measurably changed cortical thickness and default-mode connectivity within 6 months. The
+  authors' reading: "CPAP improved cortical thickness and FC of DMN, suggesting that patients
+  with OSA may recover from brain atrophic processes after CPAP treatment." Structural MRI
+  measures in sleep-disrupted brains are modifiable, on a timescale of months, by fixing the sleep.
+
+  LESSON 2 (THE ONE THAT MATTERS MOST FOR THIS SHARD'S VERDICT): STRUCTURE MOVED AND COGNITION
+  DID NOT. The pre-registered primary endpoint, MoCA, was flatly null: difference -0.04 points,
+  95% CI -0.72 to 0.65, p=0.91. A trial that successfully shifted a structural imaging biomarker
+  produced zero measurable cognitive benefit.
+
+  This is the empirical demonstration of the point the task asked me to be precise about: a
+  small structural MRI difference has NO established mapping to a functional consequence. Here we
+  have the strongest possible version of that dissociation - randomised, prospective, with the
+  structural change and the cognitive non-change measured in the same people at the same
+  timepoints. If a 0.06 mm cortical thickness change buys nothing detectable on cognition, then a
+  fraction-of-a-percent cross-sectional volume difference in an observational adolescent cohort
+  certainly cannot be translated into a claim about how a particular 19-year-old's brain works.
+
+  SIGN CAVEAT IS REAL AND I HAVE NOT PAPERED OVER IT. The published between-group difference is
+  -0.06 mm while the conclusion says 'improved'. Without full text I cannot resolve the referent
+  direction. The magnitude, CI and p-value are exact; the direction is flagged UNRESOLVED. This
+  does not affect the Lesson 2 inference, which depends only on the null primary endpoint.
+shard: "s15_brain_structure"

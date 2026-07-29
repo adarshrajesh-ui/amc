@@ -1,0 +1,124 @@
+study_id: alvarezornelas2025
+citation: "Alvarez-Ornelas NA, Macias-Cervantes HE, Rodriguez-Villasenor P, Sanchez-Figueroa O, Flores-Rodriguez R, Garcia-Cisneros ZG, et al. Sleep deprivation as a risk factor for cortical gray matter reduction in new medical residents. Journal of Neuroradiology. 2025;52(4):101357."
+doi: "10.1016/j.neurad.2025.101357"
+pmid: "40449887"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep deprivation as a risk factor for cortical gray matter reduction in new medical residents"
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 41
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "Mexico"
+  adolescent_match: good_young_adult
+effects:
+  # ---------- THE ONLY WITHIN-PERSON LONGITUDINAL VOLUMETRIC ESTIMATE UNDER CHRONIC SLEEP LOSS ----------
+  - outcome_domain: brain_structure
+    outcome_construct: total_gray_matter_volume_change_after_4mo_shift_work
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 120,
+               contrast_label: "4 months of first-year medical residency including night shifts; paired within-person MRI (volBrain), baseline vs 4 months"}
+    scale: raw_units
+    unit: "cm3 change in total gray matter volume (within-person, paired)"
+    value: -12.93
+    se: null
+    ci: null
+    conversion_formula: "Computed from reported paired means: 715.11 - 728.04 = -12.93 cm3 (p<0.01). Percentage change = -12.93/728.04 = -1.78%. se is NOT derivable: the paper reports only the BETWEEN-person SDs at each timepoint (63.95 and 59.38 cm3), not the SD of the within-person paired difference, and a paired SE cannot be recovered from between-person SDs without the test-retest correlation. se deliberately left null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = total gray matter volume DECREASED by 12.93 cm3 (1.78%) over 4 months. This is the single largest and most concrete longitudinal volumetric change associated with chronic sleep loss that I located in any human study. It is also almost certainly an overestimate of any sleep-specific effect - see notes."
+    covariates: []
+    followup_years: 0.33
+    cohort_family: "Guanajuato_residents"
+    quote: "For gray matter volume, a baseline value of 728.04 +/- 63.95 cm3 and a final value of 715.11 +/- 59.38 cm3 were found (p < 0.01)"
+  - outcome_domain: brain_structure
+    outcome_construct: frontal_lobe_gray_matter_volume_change_after_4mo_shift_work
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 120,
+               contrast_label: "4 months of residency with night shifts, frontal lobe gray matter volume, paired within-person"}
+    scale: raw_units
+    unit: "cm3 change in frontal lobe gray matter volume"
+    value: -5.47
+    se: null
+    ci: null
+    conversion_formula: "Computed from reported paired means: 176.45 - 181.92 = -5.47 cm3 (p<0.001). Percentage change = -5.47/181.92 = -3.01%. se not derivable for the same reason as above."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = frontal lobe gray matter volume decreased 5.47 cm3 (3.01%) in 4 months - the largest regional reduction. Frontal cortex is the region the adolescent literature and the 'prefrontal maturation into the mid-20s' argument both single out."
+    covariates: []
+    followup_years: 0.33
+    cohort_family: "Guanajuato_residents"
+    quote: "the frontal lobe showed the greatest reduction, with an initial value of 181.92 +/- 15.58 cm3 and a final volume of 176.45 +/- 17.35 cm3 (p = <0.001)"
+  - outcome_domain: brain_structure
+    outcome_construct: odds_of_gray_matter_reduction_with_night_shifts
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 120,
+               contrast_label: "working night shifts vs not, odds of gray matter reduction"}
+    scale: log_or
+    unit: "log odds ratio"
+    value: 0.4187
+    se: 0.3809
+    ci: [-0.0726, 1.4207]
+    conversion_formula: "Reported OR = 1.52, 95% CI 0.93-4.14. log_or = ln(1.52) = 0.4187. se = (ln(4.14) - ln(0.93))/3.92 = (1.4207 - (-0.0726))/3.92 = 1.4933/3.92 = 0.3809. ci = [ln(0.93), ln(4.14)]."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "Positive = night shifts associated with higher odds of gray matter reduction. BUT THE CONFIDENCE INTERVAL CROSSES THE NULL (0.93 to 4.14 on the OR scale; -0.073 to 1.421 on the log scale) while the paper reports p = 0.01. That is an internal contradiction: a CI containing 1.0 is incompatible with p = 0.01. This is a reporting error somewhere in the paper and it materially undermines confidence in its statistics."
+    covariates: []
+    followup_years: 0.33
+    cohort_family: "Guanajuato_residents"
+    quote: "We found an OR of 1.52 (95 % CI 0.93-4.14, p = 0.01) between working night shifts and gray matter reduction."
+rob:
+  tool: ROBINS-I
+  judgement: critical
+  notes: "NO CONTROL GROUP. This is the fatal flaw: 41 first-year residents scanned twice, 4 months apart, with nothing to compare the change against. Everything that happens to a new medical resident is confounded with the sleep loss - acute occupational stress, cortisol elevation, dietary change, weight change, dehydration, alcohol, infection exposure, and simple scanner/segmentation test-retest drift over 4 months on an automated pipeline (volBrain). Sleep exposure was assessed by questionnaire at baseline only; night-shift status is a crude proxy. The reported OR CI (0.93-4.14) contradicts the reported p = 0.01. ROBINS-I judgement is critical."
+funding: "Not stated in the retrievable record"
+notes: |
+  THIS IS THE MOST ALARMING-LOOKING NUMBER IN THE ENTIRE SHARD, AND IT IS ALSO THE LEAST
+  TRUSTWORTHY. Both facts must be reported together.
+
+  THE HEADLINE: 1.78% loss of total gray matter volume, and 3.01% loss of frontal lobe gray
+  matter, in 4 months, measured within the same people. If that were a valid estimate of a
+  sleep-specific effect it would be the strongest evidence for structural harm anywhere in this
+  literature - it is roughly an order of magnitude larger than any cross-sectional per-SD estimate
+  (compare kocevska2017 at about 1% per SD, and cheng2021 at 0.22% of variance).
+
+  WHY I DO NOT BELIEVE IT AS A SLEEP EFFECT, IN ORDER OF severity:
+
+  1. NO CONTROL GROUP. A 1.78% apparent decline over 4 months in an uncontrolled automated
+     volumetric pipeline is entirely within the range of test-retest and segmentation drift.
+     Without a comparison arm scanned on the same scanner over the same interval, the measurement
+     is uninterpretable.
+
+  2. STARTING MEDICAL RESIDENCY IS NOT AN ISOLATED SLEEP EXPOSURE. It is one of the most severe
+     combined stress, workload, nutrition and circadian insults in ordinary adult life. Attributing
+     the whole change to sleep deprivation is unsupported by the design.
+
+  3. THE STATISTICS CONTRADICT THEMSELVES. An odds ratio of 1.52 with a 95% CI of 0.93-4.14 cannot
+     have p = 0.01. One of those numbers is wrong. When the one inferential statistic linking the
+     exposure to the outcome is internally inconsistent, the causal claim in the title is not
+     supported by the paper's own analysis.
+
+  4. IT CONTRADICTS THE MUCH LARGER AND BETTER-CONTROLLED EVIDENCE. fjell2023 found no
+     sleep-atrophy relationship across 8,153 longitudinal scans over up to 11 years. liu2014 found
+     no whole-brain gray matter change after 72 h of TOTAL sleep deprivation. A real 1.78%
+     four-month effect would have been trivially detectable in those designs.
+
+  RELEVANCE TO THE SUBJECT IS LIMITED EVEN IF TAKEN AT FACE VALUE. Night-shift rotation with
+  circadian inversion is not the same exposure as consistently going to bed late and sleeping
+  5-6 h on a stable schedule with weekend recovery. The subject has no circadian inversion.
+
+  I include this record specifically so the downstream model sees the strongest pro-harm number
+  in the literature together with the reasons it should be heavily discounted, rather than
+  encountering it later as an unexamined outlier.
+
+  VERIFICATION NOTE: PMID verified via PubMed esummary and DOI 10.1016/j.neurad.2025.101357
+  independently confirmed via Crossref (returned title "Sleep deprivation as a risk factor for
+  cortical gray matter reduction in new medical residents", Journal of Neuroradiology - exact match).
+shard: "s15_brain_structure"

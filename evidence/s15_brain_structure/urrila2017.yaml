@@ -1,0 +1,107 @@
+study_id: urrila2017
+citation: "Urrila AS, Artiges E, Massicotte J, Miranda R, Vulser H, Bezivin-Frere P, et al. Sleep habits, academic performance, and the adolescent brain structure. Scientific Reports. 2017;7:41678."
+doi: "10.1038/srep41678"
+pmid: "28181512"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5299428/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep habits, academic performance, and the adolescent brain structure"
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 177
+n_studies_pooled: null
+population:
+  age_mean: 14.4
+  age_range: [13.4, 15.5]
+  pct_female: 52.0
+  country: "France"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: gmv_left_superior_middle_frontal_gyrus_vs_weekday_time_in_bed
+    exposure: {type: per_hour_less_sleep, dose_h: 8.8, referent_h: null, duration_days: null,
+               contrast_label: "weekday time in bed (mean 8.8 h, SD 0.8 h) vs regional GMV, whole-brain VBM"}
+    scale: raw_units
+    unit: "peak-voxel t statistic (SPM8 VBM, whole-brain, cluster p=0.049 FWE)"
+    value: 4.08
+    se: null
+    ci: null
+    conversion_formula: "Table 2, peak voxel MNI -28,36,37, t=4.08, cluster k=1222, cluster-level p=0.049 FWE. A naive peak-to-r conversion gives r = t/sqrt(t^2+df) = 4.08/sqrt(16.65+172) = 0.297 with df=172 (177 - 5 regressors), but this is NOT reported as an effect size and would be substantially upward-biased because the voxel was selected as the whole-brain maximum. I therefore record the t statistic and explicitly decline to publish the biased r as the effect estimate."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive t = LONGER weekday time in bed associated with LARGER GMV in left superior/middle frontal gyrus. Only ONE cluster survived for weekday duration and it barely cleared threshold (cluster p = 0.049)."
+    covariates: ["sex", "pubertal development scale", "volume scaling factor (head size)"]
+    followup_years: null
+    cohort_family: "IMAGEN"
+    quote: "Superior frontal gyrus L | 9 | 1222 | 0.049 | -28 | 36 | 37 | 3.41E-05 | | 4.08"
+  - outcome_domain: brain_structure
+    outcome_construct: hippocampal_gmv_vs_sleep_habits_primary_threshold
+    exposure: {type: per_hour_less_sleep, dose_h: 8.8, referent_h: null, duration_days: null,
+               contrast_label: "weekday time in bed and weekend bedtime vs hippocampal GMV, whole-brain VBM at the pre-specified threshold"}
+    scale: raw_units
+    unit: "peak-voxel t statistic"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded null: no hippocampal cluster survived the pre-specified whole-brain threshold. A correlation appeared ONLY after relaxing to p<0.001 uncorrected with extent 50 voxels, which is an exploratory, non-corrected threshold."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = failed replication of taki2012 at a corrected threshold. Directly contradicts the most-cited paediatric hippocampal finding."
+    covariates: ["sex", "pubertal development scale", "volume scaling factor"]
+    followup_years: null
+    cohort_family: "IMAGEN"
+    quote: "Contrary to our expectations and previous findings13, we did not see a correlation of sleep habits with hippocampal GMV."
+  - outcome_domain: exposure_measurement
+    outcome_construct: weekday_time_in_bed_distribution
+    exposure: {type: descriptive, dose_h: 8.8, referent_h: null, duration_days: null,
+               contrast_label: "observed weekday time in bed, mean age 14.4 y"}
+    scale: hours
+    unit: "hours per weekday night (mean; SD 0.8 h)"
+    value: 8.8
+    se: 0.060
+    ci: null
+    conversion_formula: "Table 1: Time in bed WD = 8.8 h, SD 0.8. se of mean = 0.8/sqrt(177) = 0.060."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Descriptive. Quantifies the extrapolation gap: the subject at 5-6 h weekday is (8.8-5.5)/0.8 = 4.1 SD below this cohort's mean. The dose-response curve reported here is fitted over a range that does not include his exposure."
+    covariates: []
+    followup_years: null
+    cohort_family: "IMAGEN"
+    quote: "Time in bed WD (h) | 8.8 | 0.8"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "Cross-sectional VBM; self-reported bed/wake times; six separate whole-brain analyses (bedtime, wake time, time in bed x weekday, weekend) with FWE correction WITHIN but not ACROSS the six analyses; conservative 1200-voxel extent threshold chosen post hoc enough to change the hippocampal conclusion; the previous night's sleep before scanning was not controlled; no SES or screen-time adjustment. Grey matter volume is reported in arbitrary units, so no interpretable magnitude exists."
+funding: "European Union FP6 IMAGEN; Academy of Finland; Finnish foundations (non-US government support)"
+notes: |
+  THE SEED STUDY THE TASK NAMED. Reality check on what it can deliver:
+
+  1. NO EXTRACTABLE VOLUME-PER-HOUR EFFECT EXISTS. The task asked for volume difference per hour
+     of sleep in mm3 or SD units. This paper cannot supply it. Grey matter volume is reported in
+     arbitrary modulated-VBM units - the figure legend states plainly: "GMV is expressed in
+     arbitrary units." The only quantities published are peak-voxel t statistics, cluster
+     extents and MNI coordinates. Anyone reporting an mm3-per-hour figure from this paper has
+     fabricated it.
+
+  2. AGE IS 14, NOT 16-19. Mean 14.4 y, range 13.4-15.5. This is the same IMAGEN cohort later
+     rescanned at 16.8 y (see lapidaire2021), where the weekday/sleep-debt findings did not hold.
+
+  3. THE WEEKDAY-DURATION RESULT IS THE WEAKEST IN THE PAPER. Exactly one cluster survived, at
+     cluster-level p = 0.049. The robust findings were all weekend TIMING measures (bedtime,
+     wake-up time), not duration. The authors themselves emphasise timing:
+     "The most significant results were indeed related to timing of sleep during weekends."
+
+  4. IT FAILS TO REPLICATE taki2012 ON THE HIPPOCAMPUS at a corrected threshold, and the authors
+     offer a developmental explanation that argues against a single sensitive window:
+     "The hippocampus region might therefore be more vulnerable to sleep habits at a different
+     phase of development than the neocortex."
+
+  5. EXPOSURE RANGE DOES NOT COVER THE SUBJECT. Cohort mean weekday time in bed was 8.8 h. These
+     adolescents were, by any standard, well slept. The study contains essentially no
+     observations at 5-6 h.
+shard: "s15_brain_structure"

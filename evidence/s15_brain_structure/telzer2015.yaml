@@ -1,0 +1,104 @@
+study_id: telzer2015
+citation: "Telzer EH, Goldenberg D, Fuligni AJ, Lieberman MD, Galvan A. Sleep variability in adolescence is associated with altered brain development. Developmental Cognitive Neuroscience. 2015;14:16-22."
+doi: "10.1016/j.dcn.2015.05.007"
+pmid: "26093368"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4536158/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep variability in adolescence is associated with altered brain development"
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 48
+n_studies_pooled: null
+population:
+  age_mean: 16.3
+  age_range: [14, 18]
+  pct_female: 56.3
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  # ---------- THE CRITICAL NULL: average sleep DURATION was unrelated to white matter ----------
+  - outcome_domain: brain_structure
+    outcome_construct: whole_brain_fa_vs_average_sleep_duration
+    exposure: {type: per_hour_less_sleep, dose_h: 8.0, referent_h: null, duration_days: 14,
+               contrast_label: "average nightly sleep duration from 14 days of time-stamped daily diaries vs whole-brain FA (TBSS) 1.5 years later"}
+    scale: per_hour_beta
+    unit: "FA per hour of average sleep"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded null. Authors state average sleep duration was not associated with white matter integrity; no point estimate or SE is published for the null. se null - not invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no association between average sleep DURATION and FA. Harm would be positive-sloped (less sleep -> lower FA). Not observed."
+    covariates: ["sleep duration variability", "bedtime variability", "weekend-weekday sleep difference", "age", "sex"]
+    followup_years: 1.5
+    cohort_family: "UCLA_adolescent_diary"
+    quote: "Interestingly, average sleep duration was not associated with white matter integrity."
+  - outcome_domain: brain_structure
+    outcome_construct: whole_brain_fa_vs_sleep_duration_variability_18mo_lag
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 14,
+               contrast_label: "day-to-day SD of nightly sleep duration measured 1.5 years BEFORE the diffusion scan vs FA, controlling for average duration and bedtime variability"}
+    scale: raw_units
+    unit: "direction of association (qualitative; TBSS voxelwise, no interpretable slope published)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded -1 = significant NEGATIVE association. TBSS output is voxelwise cluster statistics; no per-unit slope is published. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = GREATER day-to-day variability in sleep duration associated with LOWER FA. Note this is IRREGULARITY, not insufficiency, and it survived adjustment for average duration."
+    covariates: ["average sleep duration", "bedtime variability", "weekend-weekday sleep difference"]
+    followup_years: 1.5
+    cohort_family: "UCLA_adolescent_diary"
+    quote: "We find that greater variability in sleep duration one year prior to a DTI scan is associated with lower white matter integrity above and beyond the effects of sleep duration, and variability in bedtime, whereas sleep variability a few months prior to the scan is not associated with white matter integrity."
+  - outcome_domain: exposure_measurement
+    outcome_construct: average_diary_sleep_duration_in_cohort
+    exposure: {type: descriptive, dose_h: 8.0, referent_h: null, duration_days: 14,
+               contrast_label: "observed average nightly sleep from daily diaries, ages 14.8-16.3"}
+    scale: hours
+    unit: "hours per night (cohort average)"
+    value: 8.0
+    se: null
+    ci: null
+    conversion_formula: "Text states adolescents 'averaged over 8 h of sleep per night'; exact mean and SD not given in the retrieved text, so se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Descriptive. Another well-slept cohort. The paper notes the lower tail reached 4.5 h ('some participants attained as few as 4.5 h of sleep on average'), so unlike other cohorts there WERE a handful of observations near the subject's exposure - and average duration was still null for FA."
+    covariates: []
+    followup_years: null
+    cohort_family: "UCLA_adolescent_diary"
+    quote: "Adolescents in this study averaged over 8 h of sleep per night ... Yet, some participants attained as few as 4.5 h of sleep on average. Interestingly, average sleep duration was not associated with white matter integrity."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "n=48 - severely underpowered for voxelwise imaging; 4 sleep metrics x 2 waves x whole-brain TBSS with no correction across metrics or waves; self-reported diaries (though time-stamped, with 96% compliance, which is better than single-item recall); 4 participants with >2 mm translational motion retained; single diffusion scan, so the 'brain development' framing is inferential - there is no measured change in the brain. Authors concede: 'Our study is correlational and does not provide evidence about the direction or causality of the effects.'"
+funding: "NICHD; NIDA; US government non-PHS support"
+notes: |
+  IMPORTANT BECAUSE OF WHAT IT SEPARATES: this is a well-known 'adolescent sleep harms white
+  matter' citation, but the harmful exposure was IRREGULARITY, not INSUFFICIENCY, and average
+  duration was explicitly null even though the sample's lower tail reached 4.5 h.
+
+  RELEVANCE TO THE SUBJECT'S PATTERN, STATED CAREFULLY. His pattern includes substantial
+  day-to-day and weekday/weekend variability (5-6 h weekdays, 7-8 h weekends, occasional 3-4 h
+  and occasional 10-11 h nights). Telzer's variability finding is the one result in the
+  adolescent structural literature that maps onto that. But two things blunt it:
+    (a) it did NOT survive as a weekday-to-weekend contrast - only day-to-day within-week SD;
+        guldner2023 found the opposite pattern for weekend variability (protective), so the
+        two age-appropriate longitudinal DTI studies disagree on which variability metric matters;
+    (b) n=48 with uncorrected multi-metric voxelwise testing is exactly the design that produces
+        non-replicable imaging findings.
+
+  ONE HONEST POINT IN FAVOUR OF A LAGGED EFFECT: variability 1.5 years before the scan predicted
+  FA, while variability a few months before did not. The authors read this as accumulation rather
+  than acute state, which if true would argue AGAINST the pure state-artefact explanation for
+  this particular finding. With n=48 and no replication, I weight this weakly.
+
+  NOTE ALSO: no gray matter volume measure. This record contributes only to the white matter
+  strand.
+shard: "s15_brain_structure"

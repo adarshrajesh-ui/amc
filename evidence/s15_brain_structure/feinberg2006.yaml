@@ -1,0 +1,92 @@
+study_id: feinberg2006
+citation: "Feinberg I, Higgins LM, Khaw WY, Campbell IG. The adolescent decline of NREM delta, an indicator of brain maturation, is linked to age and sex but not to pubertal stage. American Journal of Physiology - Regulatory, Integrative and Comparative Physiology. 2006;291(6):R1724-R1729."
+doi: "10.1152/ajpregu.00293.2006"
+pmid: "16857890"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2730182/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "The adolescent decline of NREM delta, an indicator of brain maturation, is linked to age and sex but not to pubertal stage"
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 69
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [9, 14]
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: nrem_delta_power_density_decline_ages_12_to_14
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "normative longitudinal decline in NREM delta power density between ages 12 and 14, in-home sleep EEG at 6-month intervals over 2 years"}
+    scale: pct_change
+    unit: "percent decline in NREM delta power density"
+    value: -25.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly as a 25% decline between ages 12 and 14. No CI or SE published in the abstract. se null - not invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = DECLINE. This is a NORMATIVE developmental process, not an effect of any exposure. Recorded as the baseline maturational trajectory against which any putative sleep-restriction effect on pruning would have to be detected."
+    covariates: ["Tanner stage", "height", "weight", "BMI"]
+    followup_years: 2.0
+    cohort_family: "Davis_adolescent_EEG"
+    quote: "DPD declined by 25% between ages 12 and 14 years. This decline was parallel in the two sexes, but levels were lower in girls, suggesting that their DPD decline began earlier."
+  - outcome_domain: brain_structure
+    outcome_construct: delta_decline_related_to_age_not_pubertal_stage
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "NREM delta power density regressed on Tanner stage, height, weight and BMI with age controlled, and on age with those controlled"}
+    scale: raw_units
+    unit: "direction of association (qualitative)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded 0 = NO relationship with any pubertal or physical-growth measure once age was controlled. No coefficients published in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 for pubertal stage. Delta decline tracks CHRONOLOGICAL AGE and is unrelated to Tanner stage, height, weight or BMI once age is held constant. Directly relevant to the task's question about whether the sleep-brain relationship differs by pubertal stage: the best-established marker of adolescent synaptic pruning is age-programmed, not puberty-driven."
+    covariates: ["age", "Tanner stage", "height", "weight", "BMI"]
+    followup_years: 2.0
+    cohort_family: "Davis_adolescent_EEG"
+    quote: "Mixed effect analyses demonstrated that DPD was strongly related to age with Tanner stage, height, weight and body mass index controlled but that none of these measures of physical and sexual development was related to DPD with age controlled."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: low
+  notes: "Excellent design for its purpose: longitudinal in-home polysomnographic EEG at 6-month intervals over 2 years in two age cohorts, with concurrent Tanner staging. Objective exposure and objective outcome. Limitations for THIS shard: n=69 across two cohorts; ages 9-14, so it stops just below the subject's window; it is a normative/descriptive study with NO sleep-restriction exposure, so it cannot speak to whether restriction perturbs the trajectory - it only characterises the trajectory."
+funding: "NIMH (NIH)"
+notes: |
+  RECORDED AS THE NORMATIVE BASELINE FOR THE SYNAPTIC-PRUNING STRAND OF THE ARGUMENT, AND IT
+  DELIVERS TWO USEFUL CONSTRAINTS PLUS ONE IMPORTANT LIMITATION.
+
+  CONSTRAINT 1 - THE PRUNING TRAJECTORY IS STEEP AND AGE-PROGRAMMED. NREM delta power density
+  falls 25% between ages 12 and 14. Feinberg's long-standing hypothesis, stated in this paper, is
+  that this decline indexes synaptic pruning: "We hypothesize that the DPD decline is caused by
+  age-programmed synaptic pruning that decreases waking brain metabolic rate."
+
+  CONSTRAINT 2 - IT IS DRIVEN BY AGE, NOT PUBERTY. With Tanner stage, height, weight and BMI
+  controlled, delta still tracked age; with age controlled, none of the pubertal or growth
+  measures predicted delta. This is the direct answer to the task's question about pubertal-stage
+  moderation of the sleep-brain relationship: the pruning clock is not a pubertal clock. A model
+  in which sleep restriction is dangerous specifically because it coincides with pubertal
+  maturation has no support from the best marker available.
+
+  THE HONEST LIMITATION, WHICH IS ALSO THE BIGGEST GAP IN THIS SHARD. This study measures the
+  normative trajectory in UNMANIPULATED adolescents. It does NOT test whether chronic sleep
+  restriction alters that trajectory. I searched specifically for a study that measured the
+  adolescent NREM delta / slow-wave-activity decline under chronic sleep restriction and found
+  none. That experiment - chronically restrict adolescents for months and track the delta decline
+  slope against a control group - is the study that would actually answer the pruning question in
+  humans, and it does not exist. It is also, for obvious reasons, close to unethical to run.
+
+  So the pruning mechanism remains: plausible in theory, demonstrated in mice (tuan2019),
+  quantified normatively in humans (this record), and untested in humans under restriction.
+  A 25% two-year normative swing also implies that detecting a modest exposure effect against
+  that background would require a large, well-controlled longitudinal design.
+shard: "s15_brain_structure"
