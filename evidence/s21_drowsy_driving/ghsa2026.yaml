@@ -1,0 +1,220 @@
+study_id: ghsa2026
+citation: "Governors Highway Safety Association. Wake Up Call: Understanding Drowsy Driving and What States Can Do (update to the 2016 report). Washington, DC: GHSA."
+doi: null
+pmid: null
+url: "https://www.ghsa.org/resources/drowsy-driving"
+verification:
+  crossref_ok: null
+  pubmed_ok: null
+  status: UNVERIFIED
+  resolved_title: "Wake Up Call: Understanding Drowsy Driving and What States Can Do"
+access_tier: full_text
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [16, 100]
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: fraction_of_baseline_driving_time_spent_observably_drowsy
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "share of all BASELINE (non-crash) driving time in the SHRP2 naturalistic driving study during which the driver was observably drowsy by PERCLOS eyelid-closure coding"}
+    scale: probability
+    unit: "proportion of driving time"
+    value: 0.015700
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported directly: "researchers have also estimated that about 1.57% of baseline driving is drowsy."
+      No interval is published in the GHSA report and I did not retrieve the underlying primary analysis,
+      so se is null.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      THIS IS THE MISSING DENOMINATOR OF THE WHOLE FIELD AND IT IS THE MOST USEFUL SINGLE NUMBER IN THIS
+      RECORD. Every other source reports what share of CRASHES involve drowsiness; this reports what share
+      of DRIVING involves drowsiness. Having both lets me compute the drowsy-driving crash odds ratio from
+      first principles, with no self-report and no police coding anywhere in it:
+        OR = [0.095/(1-0.095)] / [0.0157/(1-0.0157)] = 0.104972 / 0.015950 = 6.58
+      using owens2018_aaa's PERCLOS-observed 9.5% of crashes and this record's 1.57% of baseline driving.
+      A drowsy-driving crash odds ratio of about 6.6, derived entirely from video of drivers' eyes, is the
+      cleanest causal anchor available in this literature. I use it in Route 3 of injury_channel.md.
+    covariates: []
+    followup_years: null
+    cohort_family: "SHRP2_NDS"
+    quote: >
+      researchers have also estimated that about 1.57% of baseline driving is drowsy. This means that at any given
+      moment on the road, three out of every 200 people behind the wheel are driving drowsy.
+  - outcome_domain: baseline_risk
+    outcome_construct: modelled_annual_us_drowsy_driving_deaths_2023
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "GHSA's restatement of the AAA model applied to 2023 FARS totals: 6,326 US roadway deaths caused by drowsy driving, versus NHTSA's counted 633"}
+    scale: raw_units
+    unit: "deaths per year"
+    value: 6326.000000
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported directly: "Assuming the same proportion of fatalities in 2023 involved drowsy driving, there
+      would have been 6,326 roadway deaths in 2023 caused by drowsy driving. This is ten times more than the
+      raw FARS data reported by NHTSA." No interval published; se null.
+      Cross-check: 6,326 / 633 = 9.99, so "ten times" is exact rather than rhetorical.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive count. This is the same quantity as tefft2024_aaa's 5,967/year annual average, updated to
+      2023's higher total fatality count. Recorded here because it is the version an independent
+      organisation (a state highway-safety association, not the AAA Foundation that produced the model)
+      chose to endorse, and because the 10x framing is theirs, not mine.
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "CISS_FARS_2017_2021"
+    quote: >
+      Assuming the same proportion of fatalities in 2023 involved drowsy driving, there would have been 6,326
+      roadway deaths in 2023 caused by drowsy driving. This is ten times more than the raw FARS data reported by
+      NHTSA.
+  - outcome_domain: baseline_risk
+    outcome_construct: self_reported_drowsy_driving_prevalence_college_students
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "share of US COLLEGE STUDENTS reporting drowsy driving in the past month (three surveys: ~50% of 718; 31% of 450) and having FALLEN ASLEEP while driving (20% of 1,039)"}
+    scale: probability
+    unit: "proportion reporting drowsy driving in the past month"
+    value: 0.310000
+    se: null
+    ci: null
+    conversion_formula: >
+      The report cites three separate college-student surveys with prevalences of "nearly half" (718
+      students), 31% (450 students) and, for the stronger outcome of having fallen asleep at the wheel, 20%
+      (1,039 students). I have recorded the 31%/past-month figure as the value because it is the one stated
+      as a precise number for the past-month window; se is null because no interval is published and
+      because the three surveys disagree by more than any within-survey interval would capture.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive, and DIRECTLY RELEVANT TO THIS SUBJECT, who is an 18-year-old entering his second year of
+      college. Between 31% and ~50% of US college students report drowsy driving within the past month, and
+      one in five reports having actually FALLEN ASLEEP at the wheel. This corroborates owens2019's 47.6%
+      past-year figure in high-school drivers and establishes that the exposure of interest is not rare or
+      exotic in this exact population — it is the modal experience.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: >
+      A survey of 718 college students at a sizable university in the Southwestern U.S. found that nearly half
+      reported drowsy driving in the past month. Two other recent studies found 20% of 1,039 college students
+      reported having fallen asleep while driving and 31% of 450 university students reported driving while drowsy
+      at least once in the past month.
+  - outcome_domain: baseline_risk
+    outcome_construct: age_gradient_in_self_reported_drowsy_driving
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "QUALITATIVE: drivers aged 16-24 drive drowsy MORE FREQUENTLY than older drivers, and males more than females"}
+    scale: probability
+    unit: "qualitative — no number published, see conversion_formula"
+    value: 0.310000
+    se: null
+    ci: null
+    conversion_formula: >
+      NO AGE-SPECIFIC RATE IS PUBLISHED. The report states only the direction: "Younger drivers 16 to 24
+      years old drive drowsy more frequently than older drivers" and "Males drive drowsy somewhat more
+      frequently than females." I have carried the college-student past-month prevalence (31%) forward as
+      the value rather than invent an age-specific rate, and I flag here that the recorded value is a
+      placeholder for a DIRECTION, not a measured age-specific quantity. se null.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      DIRECTIONALLY IMPORTANT, NUMERICALLY WEAK. Both of the subject's demographic characteristics — male,
+      under 25 — are associated with MORE frequent drowsy driving. Combined with tefft2024_aaa's finding
+      that the drowsy share of fatal crashes is highest at ages 16-20, this consistently indicates that
+      using all-ages coefficients for this subject is conservative. It does not tell me by how much.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: >
+      Males drive drowsy somewhat more frequently than females. Younger drivers 16 to 24 years old drive drowsy
+      more frequently than older drivers.
+rob:
+  tool: none
+  judgement: na
+  notes: >
+    A POLICY REVIEW, NOT A STUDY. It conducts no primary analysis; it collates and interprets other
+    people's numbers, and I have used it accordingly — as (a) the only retrievable source for the SHRP2
+    baseline-drowsy-driving-time figure of 1.57%, (b) an independent transcription of NHTSA's own counted
+    figures, and (c) a pointer to college-student prevalence surveys.
+    WHAT LIMITS IT: (i) grey literature, no DOI, no PMID, no peer review; (ii) it is an ADVOCACY document
+    produced by an association of state highway safety offices, so its framing is directional even where its
+    numbers are accurate; (iii) the 1.57% figure is cited to a reference I did not retrieve, so for that
+    number this record is effectively secondhand even though I read the GHSA report itself — I have kept
+    `access_tier: full_text` because I did retrieve THIS document in full, and flagged the chain here;
+    (iv) the college-student prevalences come from three small convenience surveys of single universities
+    that I did not retrieve and cannot appraise, and they disagree with each other (31% vs "nearly half");
+    (v) it contains at least one internal citation slip — it dates the AAA PERCLOS study to 2016 in the
+    footnote and 2018 elsewhere, and gives a URL for the Tefft 2024 drowsy-driving brief that actually
+    points at a different AAA report on countermeasures. Neither slip affects the numbers I extracted, but
+    it does mean the document is not carefully copy-edited.
+funding: "Governors Highway Safety Association. The 2026 update's sponsor is not stated in the retrieved text."
+notes: >
+  RETRIEVED DIRECTLY, HTTP 200, full text stored at src/ghsa2026_wakeupcall.txt. No DOI or PMID exists for
+  a GHSA report, so verification `status` is UNVERIFIED.
+  .
+  VERBATIM QUOTES (src/ghsa2026_wakeupcall.txt):
+  THE BASELINE-EXPOSURE NUMBER: "Using the same SHRP2 data and method of examining a driver's eyes,
+  researchers have also estimated that about 1.57% of baseline driving is drowsy. This means that at any
+  given moment on the road, three out of every 200 people behind the wheel are driving drowsy." And in the
+  pull-quote: "1.57% The percentage of baseline driving that is drowsy— that's three out of every 200 people
+  behind the wheel."
+  THE PERCLOS CRASH SHARE: "Using the SHRP2 file, a 2016 AAA Foundation for Traffic Safety (AAAFTS) study
+  observed video of the drivers' eyes for one to three minutes before 701 crashes ranging from minor to
+  severe. The researchers found that about 9% of all crashes and about 10.8% of all police reportable
+  crashes involved a drowsy driver. While the number of crashes was limited and the data are more than 10
+  years old, it is safe to estimate that approximately 9-11% of relatively minor crashes involve a drowsy
+  driver."
+  THE OFFICIAL FIGURES: "In 2023 (the most recent year for which data are available), FARS indicated that
+  1.5% of fatal crashes involved a drowsy driver and 1.8% of drivers in fatal crashes were either 'drowsy,
+  asleep, fatigued, ill or black[ed] out.' Using these data, NHTSA reported that 633 people were killed in
+  drowsy driving crashes in 2023."
+  THE DISCREPANCY, IN THEIR WORDS: "Police reports, from which the FARS data are derived, substantially
+  underestimate drowsy driving because officers have no direct observation of drivers before they crash and
+  states and localities have different policies on how to report suspected drowsy driving. As a result, the
+  national raw FARS numbers are a substantial undercount of the total prevalence of drowsy driving among all
+  traffic fatalities."
+  THEIR ENDORSEMENT OF THE MODEL ESTIMATE: "A 2024 AAAFTS research report applied a model developed from
+  NHTSA's Crash Investigation Sampling System (CISS) to FARS data and concluded that 'an estimated 17.6% of
+  all fatal crashes in the years 2017-2021 involved a drowsy driver.' This is probably the best available
+  estimate of drowsiness in fatal crashes in the U.S."
+  THE ARITHMETIC: "Applying this estimate to the FARS fatality totals for 2017-2021 yields an annual drowsy
+  driving fatality average of 5,967. That's more than the average number of motorcyclist fatalities for the
+  same five years (5,414) and slightly less than the average annual number of pedestrians killed in motor
+  vehicle crashes (6,551). Assuming the same proportion of fatalities in 2023 involved drowsy driving, there
+  would have been 6,326 roadway deaths in 2023 caused by drowsy driving. This is ten times more than the raw
+  FARS data reported by NHTSA."
+  WHO DRIVES DROWSY: "Males drive drowsy somewhat more frequently than females. Younger drivers 16 to 24
+  years old drive drowsy more frequently than older drivers." And: "A survey of 718 college students at a
+  sizable university in the Southwestern U.S. found that nearly half reported drowsy driving in the past
+  month. Two other recent studies found 20% of 1,039 college students reported having fallen asleep while
+  driving and 31% of 450 university students reported driving while drowsy at least once in the past month."
+  IMPAIRMENT EQUIVALENCE: "In one study, 17 to 19 hours without sleep led to performance impairments
+  equivalent or worse than the effects of a Blood Alcohol Content (BAC) of 0.05." (citing Williamson & Feyer
+  2000, doi 10.1136/oem.57.10.649 — a lab study of TOTAL sleep deprivation, which is NOT this subject's
+  exposure and which I have deliberately not extracted as an effect.)
+  SELF-REPORT TRENDS: "Between 2010 and 2023, the percentage of adults who admitted to any drowsy driving
+  ranged from 31.8% in 2011 to 17.3% in 2020."
+  .
+  THE 1.57% FIGURE IS THE REASON THIS RECORD EXISTS. Without a denominator for drowsy driving TIME, the
+  whole literature can only say "drowsiness is over-represented in crashes" and cannot say how risky an hour
+  of drowsy driving is. With it, and with owens2018_aaa's 9.5% of crashes, the implied crash odds ratio for
+  driving in a PERCLOS-drowsy state is about 6.6 — and crucially, both terms come from the same study,
+  the same coding protocol and the same drivers, so the ratio is internally consistent and free of
+  self-report bias in a way nothing else in this shard is.
+  WHY THAT DOES NOT MAKE THE ANSWER BIG. An odds ratio of 6.6 applies only to the 1.57% of driving time
+  spent drowsy. Habitual 5.5-6 h sleep raises that share — owens2019 implies by roughly 1.3-fold in
+  adolescents — but 1.3 x 1.57% is 2.1%, so the subject's overall risk multiplier is only about 1.03. That
+  is the arithmetic reason Route 3 gives the smallest of my three estimates, and it is a genuine and
+  important constraint rather than a nuisance: a large per-episode risk applied to a small share of driving
+  time yields a small aggregate excess.
+shard: "s21_drowsy_driving"

@@ -1,0 +1,156 @@
+study_id: cummings2001
+citation: "Cummings P, Koepsell TD, Moffat JM, Rivara FP. Drowsiness, counter-measures to drowsiness, and the risk of a motor vehicle crash. Inj Prev. 2001;7(3):194-199."
+doi: "10.1136/ip.7.3.194"
+pmid: "11565983"
+url: "https://doi.org/10.1136/ip.7.3.194"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Drowsiness, counter-measures to drowsiness, and the risk of a motor vehicle crash."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: T5
+n: 399
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: mortality
+    outcome_construct: motor_vehicle_crash_matched_case_control
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "driver FELT THEY WERE FALLING ASLEEP vs not; matched case-control on location, direction, hour and day of week"}
+    scale: log_rr
+    unit: null
+    value: 2.653242
+    se: 1.187235
+    ci: [0.336472, 4.990433]
+    conversion_formula: >
+      Reported adjusted relative risk 14.2 (95% CI 1.4 to 147).
+      log_rr = ln(14.2) = 2.653242; se = (ln(147) - ln(1.4))/3.92 = 1.187235;
+      ci = [ln(1.4), ln(147)] = [0.336472, 4.990433].
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = HARM. 14.2-fold. THE CI SPANS TWO ORDERS OF MAGNITUDE (1.4 to 147) — this estimate rests
+      on a handful of exposed cases and is essentially uninformative about magnitude. It establishes SIGN
+      and little else. Do not use 14.2 as a coefficient anywhere.
+    covariates: ["matched on driving location, travel direction, hour of day and day of week", "adjusted (covariate list not enumerated in the abstract)"]
+    followup_years: null
+    cohort_family: "WA_rural_highway_CC"
+    quote: >
+      Crash risk was greater among drivers who felt they were falling asleep (adjusted relative risk (aRR) 14.2,
+      95% confidence interval (CI) 1.4 to 147)
+  - outcome_domain: mortality
+    outcome_construct: motor_vehicle_crash_matched_case_control
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "CONFOUNDING/EXPOSURE BENCHMARK: each additional 100 MILES driven on the trip"}
+    scale: log_rr
+    unit: null
+    value: 0.788457
+    se: 0.218737
+    ci: [0.336472, 1.193922]
+    conversion_formula: >
+      aRR 2.2 per additional 100 miles (95% CI 1.4 to 3.3).
+      log_rr = ln(2.2) = 0.788457; se = (ln(3.3) - ln(1.4))/3.92 = 0.218737.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = HARM. RECORDED DELIBERATELY AS THE EXPOSURE-CONFOUNDING BENCHMARK. Trip distance alone
+      multiplies crash risk by 2.2 per 100 miles, with a TIGHTER interval than any sleep variable in this
+      literature. Miles driven is the dominant driver of crash risk, and only gottlieb2018 adjusts for it.
+      Any sleep-crash association from a study that does not control driving exposure is suspect, because
+      short sleepers drive more and drive further.
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: "WA_rural_highway_CC"
+    quote: >
+      those who drove longer distances (aRR 2.2 for each additional 100 miles, 95% CI 1.4 to 3.3)
+  - outcome_domain: mortality
+    outcome_construct: motor_vehicle_crash_matched_case_control
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "COUNTERMEASURE: drank coffee within the last two hours vs not"}
+    scale: log_rr
+    unit: null
+    value: -0.693147
+    se: 0.280258
+    ci: [-1.203973, -0.105361]
+    conversion_formula: >
+      aRR 0.5 (95% CI 0.3 to 0.9). log_rr = ln(0.5) = -0.693147;
+      se = (ln(0.9) - ln(0.3))/3.92 = 0.280258.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      NEGATIVE = PROTECTIVE (halved crash risk). RECORDED BECAUSE IT IS AN EFFECT-MODIFIER THE DOWNSTREAM
+      MODEL SHOULD KNOW ABOUT, AND BECAUSE IT IS ALSO A WARNING ABOUT THIS STUDY'S CREDIBILITY. The paper
+      reports that drinking coffee (aRR 0.5), using a rest stop (0.5) and PLAYING A RADIO (0.6) each about
+      halved crash risk. A radio halving crash risk is not a plausible causal effect of that size; it is
+      the signature of confounding by driver type and trip type in a 200-case matched design. That should
+      lower confidence in the sleep estimates from the same model. It ALSO matters substantively for this
+      subject: a sleep-restricted college student who drinks caffeine — which is nearly all of them — has
+      partly self-treated the exposure, which argues for the lower end of my causal-fraction range.
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: "WA_rural_highway_CC"
+    quote: >
+      drank coffee within the last two hours (aRR 0.5, 95% CI 0.3 to 0.9)
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: >
+    (1) SCHEMA MAPPING: this is a MATCHED CASE-CONTROL study. The schema's `design` enum has no
+        `case_control` value, so `cross_sectional` is used as the nearest available; `tier` is T5 rather
+        than TX because it is an analytic design with a controls series matched on time and place, not a
+        descriptive survey. There is no prospective follow-up, hence not T4.
+    (2) VERY SMALL: 200 crash drivers, 199 matched controls. Every interval is wide; the headline
+        drowsiness RR has a 100-fold CI.
+    (3) EXPOSURE MEASURED BY ROADSIDE INTERVIEW AFTER THE EVENT for cases. A driver who has just crashed
+        while nodding off may or may not admit it; the direction of that bias is not knowable.
+    (4) THE MATCHING IS A STRENGTH AND A LIMITATION. Matching on hour, day and location controls the
+        circadian and traffic-exposure confounders extremely well — better than most studies here. But it
+        also means the estimate is conditional on time of day, so it does NOT capture the part of drowsy
+        crash risk that operates through driving at bad hours.
+    (5) IMPLAUSIBLE PROTECTIVE EFFECTS (radio aRR 0.6, rest stop 0.5, coffee 0.5) suggest residual
+        confounding by driver/trip type that the matching did not remove.
+    (6) RURAL WASHINGTON STATE MAJOR HIGHWAYS ONLY. Long-distance rural highway driving is where
+        drowsiness matters most; this is NOT the driving environment of a typical 17-year-old commuting to
+        school. Transportability is poor in a way that inflates the drowsiness coefficient for our purpose.
+    (7) NO AGE STRATIFICATION and no age range published in the abstract, so `population.age_range` is
+        null and `adolescent_match` is `mixed`.
+funding: "PHS HHS (US Public Health Service), per the PubMed grant record."
+notes: >
+  REQUIRED EXTRACTION #1 (crash risk by sleep in the preceding period). This is the OTHER classic
+  population-based case-control study besides connor2002, and it is the one that reports a sleep-hours
+  contrast in a 48-hour window.
+  .
+  VERBATIM QUOTE (abstract, PMID 11565983): "Drivers on major highways in a rural Washington county were
+  studied using a matched case-control design. Control (n=199) drivers were matched to drivers in crashes
+  (n=200) on driving location, travel direction, hour, and day of the week. RESULTS: Crash risk was
+  greater among drivers who felt they were falling asleep (adjusted relative risk (aRR) 14.2, 95%
+  confidence interval (CI) 1.4 to 147) and those who drove longer distances (aRR 2.2 for each additional
+  100 miles, 95% CI 1.4 to 3.3). Risk was also greater among drivers who had slept nine or fewer hours in
+  the previous 48 hours, compared with those who had slept 12 hours. Crash risk was less for drivers who
+  used a highway rest stop (aRR 0.5, 95% CI 0.3 to 1.0), drank coffee within the last two hours (aRR 0.5,
+  95% CI 0.3 to 0.9), or played a radio while driving (aRR 0.6, 95% CI .4 to 1.0)."
+  RECOMMENDATION, VERBATIM: "get at least nine hours sleep in the 48 hours before a trip".
+  .
+  WHY I DID NOT EXTRACT THE SLEEP-HOURS EFFECT AS A NUMBER. The abstract says "Risk was also greater among
+  drivers who had slept nine or fewer hours in the previous 48 hours, compared with those who had slept 12
+  hours" AND GIVES NO POINT ESTIMATE AND NO INTERVAL for it. Under hard rule #2 I may not extract what I
+  cannot quote, so that effect is absent from this record even though it is the one most on-topic. THIS IS
+  A REAL LOSS: the paper's <=9 h / 48 h threshold is roughly 4.5 h per night, and its 12 h referent is 6 h
+  per night, which would have been an almost exact match to the subject's contrast. The full text is
+  available via PMC1730751 but Europe PMC and NCBI both refused the body text for this record, so I am
+  recording the gap rather than filling it with a guess.
+  .
+  n = 399 = 200 cases + 199 controls.
+  .
+  DE-DUPLICATION: cohort_family WA_rural_highway_CC. Independent of every other record in this shard.
+  This study is one of the six case-control studies inside bioulac2017's pooled OR of 2.51, so it is
+  NOT independent of that record and the pooler must not count both at full weight.
+shard: "s21_drowsy_driving"

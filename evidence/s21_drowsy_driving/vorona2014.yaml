@@ -1,0 +1,158 @@
+study_id: vorona2014
+citation: "Vorona RD, Szklo-Coxe M, Lamichhane R, Ware JC, McNallen A, Leszczyszyn D. Adolescent crash rates and school start times in two central Virginia counties, 2009-2011: a follow-up study to a southeastern Virginia study, 2007-2008. J Clin Sleep Med. 2014;10(11):1169-1177."
+doi: "10.5664/jcsm.4192"
+pmid: "25325600"
+url: "https://doi.org/10.5664/jcsm.4192"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Adolescent crash rates and school start times in two central Virginia counties, 2009-2011: a follow-up study to a southeastern Virginia study, 2007-2008."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [16, 18]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: mortality
+    outcome_construct: teen_driver_crash_rate_ratio_early_vs_late_start_county
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "EARLY-start county (Henrico) vs LATE-start county (Chesterfield), school year 2009-2010: 48.8 vs 37.9 crashes per 1000 licensed 16-18 y drivers"}
+    scale: log_rr
+    unit: null
+    value: 0.252779
+    se: null
+    ci: null
+    conversion_formula: >
+      Rate ratio computed by me from the two published rates: 48.8 / 37.9 = 1.287599; log_rr = 0.252779.
+      SE: NOT DERIVABLE. Unlike vorona2011, THIS ABSTRACT DOES NOT PRINT THE LICENSED-DRIVER
+      DENOMINATORS, so I cannot reconstruct crash counts and cannot compute a Poisson SE without
+      inventing a denominator. Per the extraction instructions ("Never invent an SE") se is null.
+      The paper reports p = 0.04 for this comparison; a downstream model can use that directly if it
+      wants an approximate precision.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = HARM from the earlier start time. RR 1.29. BUT SEE rob: this is a between-county
+      cross-section with no before-and-after and n = 2 clusters, so it is not an estimate of a causal
+      effect of start time.
+    covariates: ["adult crash rates in the same counties compared and reported not to differ", "traffic congestion compared and reported not to differ"]
+    followup_years: null
+    cohort_family: "Virginia_DMV_SST"
+    quote: >
+      Henrico teens manifested a statistically higher crash rate of 48.8/1000 licensed drivers versus
+      Chesterfield's 37.9/1000 (p = 0.04) for 2009-2010.
+  - outcome_domain: mortality
+    outcome_construct: teen_driver_crash_rate_ratio_early_vs_late_start_county
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "same two counties, 2010-2011, restricted to 16-17 y drivers: 53.2 vs 42.0 per 1000 licensed drivers"}
+    scale: log_rr
+    unit: null
+    value: 0.236389
+    se: null
+    ci: null
+    conversion_formula: >
+      53.2 / 42.0 = 1.266667; log_rr = 0.236389. SE not derivable (no denominators published).
+      Reported as statistically significant for 16-17 y olds; the 16-18 y version of the same year was
+      NOT significant (p = 0.09).
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = HARM from earlier start. RR 1.27. NOTE THE POST-HOC AGE RESTRICTION: the authors report
+      significance for 16-17 y olds in 2010-2011 but only a non-significant "trend" (p = 0.09) for the
+      16-18 y group they had pre-specified in the earlier paper. Changing the age window between years
+      to obtain significance is a multiplicity problem and I am flagging it rather than passing the
+      "significant" label through.
+    covariates: []
+    followup_years: null
+    cohort_family: "Virginia_DMV_SST"
+    quote: >
+      For 2010-2011, HC 16-17 year old teens demonstrated a statistically significant higher crash rate (53.2/1000
+      versus 42.0/1000), while for 16-18 teens a similar trend was found, albeit nonsignificant (p = 0.09).
+  - outcome_domain: mortality
+    outcome_construct: run_off_road_right_crash_direction_of_effect
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "run-off-road-to-the-RIGHT crashes (the authors' own designated 'potentially sleep-related' crash type) in the LATE-start county vs the EARLY-start county"}
+    scale: log_rr
+    unit: null
+    value: 0.000000
+    se: null
+    ci: null
+    conversion_formula: >
+      NO EFFECT SIZE IS PUBLISHED IN THE ABSTRACT — only the direction and the word "significantly".
+      I have recorded value 0 / se null as a PLACEHOLDER FOR A QUALITATIVE FINDING and have NOT invented
+      a magnitude. The finding itself is recorded because its DIRECTION is decision-relevant.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      SIGN-REVERSAL EVIDENCE, RECORDED DELIBERATELY. The authors' own post-hoc analysis found
+      SIGNIFICANTLY MORE run-off-road-to-the-right crashes — the subtype they nominate as
+      "potentially sleep-related" — in CHESTERFIELD, the LATE-START county. That is the OPPOSITE
+      direction to their headline. If drowsiness were the mechanism, the sleep-related crash subtype
+      should move WITH the total, not against it. A downstream model must not read this record as
+      supporting a drowsiness mechanism; the mechanism test inside the paper came out backwards.
+    covariates: []
+    followup_years: null
+    cohort_family: "Virginia_DMV_SST"
+    quote: >
+      Post hoc analyses found significantly more run-off road crashes to the right (potentially sleep-related) in
+      Chesterfield teens.
+rob:
+  tool: ROBINS-I
+  judgement: critical
+  notes: >
+    SAME DESIGN FLAW AS vorona2011, SAME TEAM, SAME DATA SOURCE, DIFFERENT COUNTIES. `design` is
+    `cross_sectional` and `tier` is TX, NOT `quasi_experiment` / T2, because nothing changed anywhere in
+    this study: two counties that already differed were compared.
+    (1) NO INTERVENTION, NO PRE-POST. The identifying assumption is that Henrico and Chesterfield are
+        exchangeable apart from school start time, supported only by an adult-crash-rate comparison and
+        a congestion comparison.
+    (2) N = 2 CLUSTERS. Any county-level difference — road mix, licensure age profile, share of teens
+        who drive to school, enforcement, reporting thresholds, trip length — is perfectly confounded
+        with start time. The p-values quantify Poisson noise in crash counts and nothing else.
+    (3) NO SLEEP MEASURED, in either county, at any point.
+    (4) OUTCOME-DEFINITION AND AGE-WINDOW FLEXIBILITY across the two study years (16-18 in 2009-2010,
+        16-17 in 2010-2011) with the wider window non-significant.
+    (5) THE PAPER'S OWN MECHANISM TEST POINTS THE WRONG WAY (run-off-road-right, see above).
+    (6) The morning/afternoon crash-peak timing difference the authors offer as corroboration is exactly
+        what foss2019 showed to be EXPOSURE DISPLACEMENT rather than drowsiness.
+funding: "Not stated in the retrievable abstract."
+notes: >
+  REQUIRED EXTRACTION #3. This is the second of the "weak two-county comparisons" the task warned about,
+  and I am recording it as such (TX, ROBINS-I critical) rather than as quasi-experimental evidence.
+  .
+  VERBATIM QUOTE (abstract, PMID 25325600): "Virginia Department of Motor Vehicles supplied
+  de-identified aggregate data on weekday crashes and time-of-day for 16-18 year old (teen) and adult
+  drivers for school years 2009-2010 and 2010-2011 in Henrico and Chesterfield Counties. Teen crash
+  rates for counties with early versus later school start-times were compared using two-sample Z-tests
+  and these compared to adult crash rates using pair-wise tests. RESULTS: Henrico teens manifested a
+  statistically higher crash rate of 48.8/1000 licensed drivers versus Chesterfield's 37.9/1000
+  (p = 0.04) for 2009-2010. For 2010-2011, HC 16-17 year old teens demonstrated a statistically
+  significant higher crash rate (53.2/1000 versus 42.0/1000), while for 16-18 teens a similar trend was
+  found, albeit nonsignificant (p = 0.09). Crash peaks occurred 1 hour earlier in the morning and 2
+  hours earlier in the afternoon in Chesterfield, consistent with commute times. Post hoc analyses found
+  significantly more run-off road crashes to the right (potentially sleep-related) in Chesterfield teens.
+  Adult crash rates and traffic congestion did not differ between counties."
+  .
+  WHAT IT IS WORTH: the SIGN. Across five independent analyses (danner2008 Kentucky pre-post, vorona2011
+  Virginia Beach/Chesapeake, this one, binhasan2020 Fairfax pre-post, foss2019 North Carolina ITS) the
+  direction is the same. Consistency of sign across designs with different failure modes is worth
+  something. What it is NOT worth is a magnitude: the implied effects range from about 6% (binhasan2020)
+  to about 41% (vorona2011 2008), and no design in the set can adjudicate.
+  .
+  COHORT-FAMILY WARNING: cohort_family Virginia_DMV_SST is shared with vorona2011 (Virginia Beach /
+  Chesapeake) and binhasan2020 (Fairfax County vs "the rest of Virginia", where "the rest of Virginia"
+  INCLUDES Virginia Beach, Chesapeake, Henrico and Chesterfield). These three records draw on the same
+  state administrative crash system and overlapping jurisdictions and are NOT independent replications.
+  .
+  ACCESS: abstract_only (Europe PMC returns 404 for PMC4224716; NCBI PMC serves a publisher restriction).
+  n: null. The abstract gives rates per 1000 licensed drivers but not the licensed-driver counts, so I
+  cannot state an n and have not invented one.
+shard: "s21_drowsy_driving"

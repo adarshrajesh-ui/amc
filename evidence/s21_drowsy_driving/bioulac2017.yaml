@@ -1,0 +1,114 @@
+study_id: bioulac2017
+citation: "Bioulac S, Micoulaud-Franchi JA, Arnaud M, Sagaspe P, Moore N, Salvo F, Philip P. Risk of Motor Vehicle Accidents Related to Sleepiness at the Wheel: A Systematic Review and Meta-Analysis. Sleep. 2017;40(10):zsx134."
+doi: "10.1093/sleep/zsx134"
+pmid: "28958002"
+url: "https://doi.org/10.1093/sleep/zsx134"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Risk of Motor Vehicle Accidents Related to Sleepiness at the Wheel: A Systematic Review and Meta-Analysis."
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 70098
+n_studies_pooled: 17
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: mortality
+    outcome_construct: motor_vehicle_accident_any
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "SELF-REPORTED SLEEPINESS AT THE WHEEL (present vs absent) — NOT a sleep-duration contrast; random-effects pooled adjusted OR across 17 studies"}
+    scale: log_or
+    unit: null
+    value: 0.920283
+    se: 0.151758
+    ci: [0.625938, 1.220830]
+    conversion_formula: >
+      Pooled OR 2.51 (95% CI 1.87-3.39). log_or = ln(2.51) = 0.920283;
+      se = (ln(3.39) - ln(1.87))/3.92 = 0.151758; ci = [ln(1.87), ln(3.39)] = [0.625938, 1.220830].
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = HARM. Drivers who report sleepiness at the wheel have 2.51x the odds of a motor vehicle
+      accident. READ THE EXPOSURE DEFINITION BEFORE USING THIS NUMBER: the exposure is SLEEPINESS AT THE
+      WHEEL, i.e. the proximal symptom, NOT habitual sleep duration. It is therefore NOT the coefficient
+      this shard needs; it is the ceiling on what full expression of the mechanism can do.
+    covariates: ["studies were required to provide ADJUSTED risk estimates; the specific covariate sets vary across the 17 included studies and are not enumerated in the abstract"]
+    followup_years: null
+    cohort_family: null
+    quote: >
+      Sleepiness at the wheel was associated with an increased risk of motor vehicle accidents (pooled OR 2.51
+      [95% CI 1.87; 3.39]).
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    A properly conducted systematic review (PROSPERO CRD42015024805; Medline + Scopus + Web of Science;
+    adjusted estimates only; random-effects pooling; heterogeneity quantified; meta-regression for
+    sources of heterogeneity). The problems are in the EVIDENCE BASE, not the review method:
+    (1) EXPOSURE IS THE WRONG CONSTRUCT FOR THIS SHARD. "Self-reported sleepiness at the wheel" is a
+        proximal state, and self-report of it is contaminated by the outcome: a driver who has crashed is
+        more likely to recall and to report having felt sleepy. In the 10 cross-sectional studies
+        (51,520 of the 70,098 participants) exposure and outcome were measured at the same moment, so
+        reverse reporting is essentially unavoidable. This biases the pooled OR UPWARD.
+    (2) MASSIVE HETEROGENEITY: Q = 93.21, I2 = 83%. A pooled point estimate from an 83%-heterogeneous set
+        of 17 studies with different exposure wordings, different outcome severities (professional and
+        non-professional drivers, two- and four-wheeled vehicles, "with or without objective
+        consequences") and different adjustment sets should be read as a central tendency of a very
+        broad distribution, not as a transportable parameter.
+    (3) DESIGN MIX IS DOMINATED BY CROSS-SECTIONS: 10 cross-sectional, 6 case-control, 1 cohort. Only
+        13,674 of 70,098 participants come from the single prospective study.
+    (4) NO AGE STRATIFICATION reported in the abstract, so no adolescent-specific pooled estimate.
+    (5) The authors' own conclusion is deliberately hedged: "Further studies are required to explore the
+        nature of this relationship" — i.e. they do not claim to have established causality.
+funding: "Not stated in the retrievable abstract."
+notes: >
+  REQUIRED EXTRACTION #1, third bullet ("any meta-analysis of sleep duration or sleepiness and
+  motor-vehicle crash risk"). REPORTING REALITY, AS THE INSTRUCTIONS REQUIRE: I searched for a
+  meta-analysis of HABITUAL SLEEP DURATION and crash risk and could not find one. This is the only
+  systematic review with a pooled quantitative estimate in the area, and its exposure is SLEEPINESS AT
+  THE WHEEL, not sleep duration. THE DOSE-RESPONSE META-ANALYSIS THIS SHARD WOULD IDEALLY USE DOES NOT
+  EXIST. That absence is the single biggest evidence gap in this domain and I have said so in
+  station_report.md.
+  .
+  VERBATIM QUOTES (abstract, PMID 28958002):
+  METHODS: "The outcome measure of interest was motor vehicle accident defined as involving four- or
+  two-wheeled vehicles in road traffic, professional and nonprofessional drivers, with or without
+  objective consequences. The exposure was sleepiness at the wheel defined as self-reported sleepiness at
+  the wheel. Studies were included if they provided adjusted risk estimates of motor vehicle accidents
+  related to sleepiness at the wheel."
+  RESULTS: "Ten cross-sectional studies (51,520 participants), six case-control studies (4904
+  participants), and one cohort study (13,674 participants) were included. Sleepiness at the wheel was
+  associated with an increased risk of motor vehicle accidents (pooled OR 2.51 [95% CI 1.87; 3.39]). A
+  significant heterogeneity was found between the individual risk estimates (Q = 93.21; I2 = 83%)."
+  CONCLUSION: "Sleepiness at the wheel increases the risk of motor vehicle accidents and should be
+  considered when investigating fitness to drive. Further studies are required to explore the nature of
+  this relationship."
+  .
+  n = 70,098 = 51,520 + 4,904 + 13,674, summed by me from the three design-specific totals printed in the
+  abstract.
+  .
+  HOW I USE THIS IN injury_channel.md, AND HOW I DO NOT. I do NOT use 2.51 as the subject's risk ratio.
+  The subject's exposure is habitual 5.5-6 h weekday sleep, which produces sleepiness at the wheel on
+  SOME of his trips, not on all of them. 2.51 is the coefficient for the trips on which the mechanism is
+  actually expressed. Multiplying a habitual-sleep exposure by 2.51 would double-count the pathway.
+  I use 2.51 only to set the UPPER BOUND of the risk-ratio range (2.2-2.5), i.e. the value the estimate
+  would take if the subject's short sleep translated into at-the-wheel sleepiness on essentially every
+  exposed trip.
+  .
+  CONVERGENCE WORTH NOTING: 2.51 here vs 8.2 for acute Stanford-Sleepiness-Scale-defined sleepiness in
+  connor2002 vs 14.2 for "felt they were falling asleep" in cummings2001. The pooled figure is far lower
+  than the two case-control point estimates for the most extreme sleepiness states, which is what you
+  expect when a broad "any sleepiness" exposure is averaged over mild and severe states.
+  .
+  ACCESS: abstract_only (Oxford University Press full text paywalled). Every number above is quoted
+  verbatim from the PubMed abstract. I did not see the forest plot, so I cannot report study-level
+  estimates, prediction intervals, or the meta-regression coefficients.
+shard: "s21_drowsy_driving"

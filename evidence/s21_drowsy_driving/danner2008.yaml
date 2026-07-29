@@ -1,0 +1,139 @@
+study_id: danner2008
+citation: "Danner F, Phillips B. Adolescent sleep, school start times, and teen motor vehicle crashes. J Clin Sleep Med. 2008 Dec 15;4(6):533-535."
+doi: "10.5664/jcsm.27345"
+pmid: "19110880"
+url: "https://doi.org/10.5664/jcsm.27345"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Adolescent sleep, school start times, and teen motor vehicle crashes."
+access_tier: abstract_only
+secondhand_via: null
+design: quasi_experiment
+tier: T2
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [16, 18]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: mortality
+    outcome_construct: teen_driver_crash_rate_difference_in_differences
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 730,
+               contrast_label: "1-hour DELAY in high-school start time, Fayette County KY: teen crash rate 2 y after vs 2 y before, differenced against the rest of Kentucky over the same period"}
+    scale: log_rr
+    unit: null
+    value: -0.255431
+    se: null
+    ci: null
+    conversion_formula: >
+      Difference-in-differences computed by me from the two percentages the abstract reports.
+      Study county post/pre ratio = 1 - 0.165 = 0.8350.
+      Rest-of-state post/pre ratio = 1 + 0.078 = 1.0780.
+      DiD rate ratio = 0.8350 / 1.0780 = 0.774583; log_rr = ln(0.774583) = -0.255431.
+      NO STANDARD ERROR IS DERIVABLE: the abstract reports neither crash counts, nor licensed-driver
+      denominators, nor any CI, p-value or test statistic for the crash comparison. se is therefore null
+      per the shard instruction "Never invent an SE."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NEGATIVE = BENEFIT (fewer crashes after the start-time delay). A 22.5% relative reduction in teen
+      crash rate attributable to a 1-hour later start, on a difference-in-differences reading. This is
+      the LARGEST effect claimed by any school-start-time study and it is also the WEAKEST identified.
+      Do not use this point estimate as an effect size; use it only as directional corroboration.
+    covariates: []
+    followup_years: 2.0
+    cohort_family: "Fayette_County_KY_SST"
+    quote: >
+      Average crash rates for teen drivers in the study county in the 2 years after the change in school start
+      time dropped 16.5%, compared with the 2 years prior to the change, whereas teen crash rates for the rest of
+      the state increased 7.8% over the same time period.
+  - outcome_domain: sleep_need
+    outcome_construct: nightly_sleep_duration_change_after_start_time_delay
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "self-reported average nightly sleep and weekend catch-up sleep, before vs after 1-hour start-time delay"}
+    scale: raw_units
+    unit: "direction of change only; no magnitude reported in the retrievable abstract"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "No numeric magnitude is available. Recorded as value 1.0 = 'increase observed', a direction flag only. DO NOT POOL THIS."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = sleep INCREASED. The abstract states only "Average hours of nightly sleep increased and
+      catch-up sleep on weekends decreased" without magnitudes; the full text is not retrievable
+      (publisher blocks XML download for PMC2603528, and PMC HTML is behind a reCAPTCHA). THE FIRST-STAGE
+      MAGNITUDE OF THIS QUASI-EXPERIMENT IS THEREFORE UNKNOWN TO ME. That is a serious gap: without it,
+      the crash change cannot be converted into an effect per hour of sleep, which is what the downstream
+      model actually needs. Flagged, not guessed.
+    covariates: []
+    followup_years: null
+    cohort_family: "Fayette_County_KY_SST"
+    quote: >
+      Average hours of nightly sleep increased and catch-up sleep on weekends decreased.
+rob:
+  tool: ROBINS-I
+  judgement: critical
+  notes: >
+    RISK OF BIAS IS CRITICAL AND I AM NOT GOING TO SOFTEN IT. This is a single-county pre-post comparison
+    with one aggregate control unit (the rest of the state).
+    (1) N = 1 treated cluster. There is no replication, no synthetic control, no other candidate county,
+        and therefore no way to estimate cluster-level sampling variability. The 16.5% and 7.8% figures
+        have no uncertainty attached and none can be constructed from published information.
+    (2) NO CONCURRENT TREND CONTROL BEYOND A SINGLE STATE AVERAGE. The rest of Kentucky is not a
+        credible counterfactual for one urban county (Fayette/Lexington); the state average is dominated
+        by rural counties with different road types, different crash mixes and different licensing
+        patterns.
+    (3) 2 years pre and 2 years post only. Teen crash rates were falling nationally over this era for
+        reasons unrelated to sleep (graduated driver licensing roll-out, vehicle safety, later
+        licensure). A 2-year window cannot separate the intervention from those trends.
+    (4) NO MECHANISM TEST. The paper does not show that the reduction occurred in the hours or crash
+        types where drowsiness should act. foss2019, which DID run that test with far better methods,
+        found the change was concentrated in the commuting hours and found NO change in early-morning or
+        night-time crashes — i.e. the mechanism was probably EXPOSURE SHIFT, not reduced drowsiness.
+    (5) The sleep measurement (questionnaire) and the crash measurement (aggregate county rates) are on
+        DIFFERENT populations — the students surveyed are not the drivers whose crashes are counted.
+    (6) Multiple-comparisons and publication-bias risk: this is a 3-page research letter reporting a
+        favourable result.
+funding: "Not stated in the retrievable abstract."
+notes: >
+  REQUIRED EXTRACTION #3 (quasi-experimental school-start-time evidence). The task instructed me to
+  "note the identification strategy honestly — several of these are weak two-county comparisons and you
+  should say so." I am doing that. THIS ONE IS THE WEAKEST DESIGN IN THE SET THAT NONETHELESS CLAIMS THE
+  LARGEST EFFECT, which is the classic signature of a result that will not replicate.
+  .
+  WHAT IT ACTUALLY SHOWS: teen crash rates in one Kentucky county fell 16.5% across a 1-hour start-time
+  delay while rising 7.8% in the rest of the state. That is a real, correctly reported contrast. It is
+  not an effect size, because a single treated cluster with no variance estimate cannot produce one.
+  .
+  ARITHMETIC I PERFORMED, SHOWN IN FULL SO IT CAN BE CHECKED: 0.835 / 1.078 = 0.7746, i.e. a 22.5%
+  relative reduction. Note that the naive reading — "16.5% reduction" — understates the DiD because the
+  comparison group rose; and note equally that the DiD reading is only as good as the comparison group,
+  which here is poor. I report the DiD number but weight it at essentially zero in injury_channel.md.
+  .
+  VERBATIM QUOTE (abstract, PMID 19110880): "STUDY OBJECTIVES: To assess the effects of delayed
+  high-school start times on sleep and motor vehicle crashes. METHODS: The sleep habits and motor vehicle
+  crash rates of adolescents from a single, large, county-wide, school district were assessed by
+  questionnaire before and after a 1-hour delay in school start times. RESULTS: Average hours of nightly
+  sleep increased and catch-up sleep on weekends decreased. Average crash rates for teen drivers in the
+  study county in the 2 years after the change in school start time dropped 16.5%, compared with the 2
+  years prior to the change, whereas teen crash rates for the rest of the state increased 7.8% over the
+  same time period. CONCLUSIONS: Later school start times may both increase the sleep of adolescents and
+  decrease their risk of motor vehicle crashes."
+  Note the authors' own hedge: "MAY both increase ... and decrease".
+  .
+  ACCESS: abstract_only. Europe PMC returns HTTP 404 for the full text and NCBI efetch for PMC2603528
+  returns "The publisher of this article does not allow downloading of the full text in XML form";
+  pmc.ncbi.nlm.nih.gov serves a reCAPTCHA to automated clients. n is recorded as null because the
+  abstract gives no sample size for either the survey or the crash denominator, and I will not invent one.
+  .
+  A NOTE ON THE COUNTY NAME: the abstract says only "a single, large, county-wide school district" in
+  Kentucky; the authors are at the University of Kentucky, Lexington, and the district is generally
+  identified as Fayette County. I use "Fayette_County_KY_SST" as the cohort_family label for
+  de-duplication purposes but flag that the county is NOT named in the text I retrieved.
+shard: "s21_drowsy_driving"

@@ -1,0 +1,136 @@
+study_id: binhasan2020
+citation: "Bin-Hasan S, Kapur K, Rakesh K, Owens J. School start time change and motor vehicle crashes in adolescent drivers. J Clin Sleep Med. 2020;16(3):371-376."
+doi: "10.5664/jcsm.8208"
+pmid: "31992393"
+url: "https://doi.org/10.5664/jcsm.8208"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "School start time change and motor vehicle crashes in adolescent drivers."
+access_tier: abstract_only
+secondhand_via: null
+design: quasi_experiment
+tier: T2
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [16, 18]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: mortality
+    outcome_construct: teen_driver_crash_rate_ratio_before_vs_after_start_time_delay
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "BEFORE (2013-15) vs AFTER (2015-17) a 50-min high-school start-time delay (07:20 -> 08:10) in Fairfax County VA; 16-18 y licensed drivers, Sep-Jun; 31.63 vs 29.59 crashes per 1000"}
+    scale: log_or
+    unit: null
+    value: 0.067659
+    se: 0.033426
+    ci: [0.000000, 0.131028]
+    conversion_formula: >
+      The paper reports OR 1.07 (95% CI 1.00-1.14), P = .03, for BEFORE vs AFTER.
+      log_or = ln(1.07) = 0.067659; se = (ln(1.14) - ln(1.00))/3.92 = 0.033426;
+      ci = [ln(1.00), ln(1.14)] = [0.000000, 0.131028].
+      Cross-check on the raw rates: 31.63/29.59 = 1.0689, consistent with the reported OR of 1.07.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = HARM from the EARLIER start time, i.e. the pre-change (earlier-start) period had 1.07x
+      the crash odds of the post-change (later-start) period. A 7% effect. The lower CI bound is exactly
+      1.00, so this is the weakest possible "significant" result (P = .03 as printed).
+    covariates: ["contemporaneous comparison against the rest of Virginia, which showed no significant change over the same period"]
+    followup_years: null
+    cohort_family: "Virginia_DMV_SST"
+    quote: >
+      The crash rate per 1000 in 16- to 18-year-old licensed drivers in FC during T1 was significantly higher
+      compared to T2, 31.63 versus 29.59 accidents per 1,000 (95% confidence interval, 1.0-1.14, odds ratio 1.07,
+      P = .03).
+  - outcome_domain: mortality
+    outcome_construct: distraction_related_teen_crash_rate_ratio_before_vs_after_delay
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "DISTRACTION-related crashes only, BEFORE vs AFTER the delay in Fairfax County: 7.01 vs 6.13 per 1000"}
+    scale: log_or
+    unit: null
+    value: 0.131028
+    se: 0.071448
+    ci: [-0.010050, 0.270027]
+    conversion_formula: >
+      OR 1.14 (95% CI 0.99-1.31), P = .05. log_or = ln(1.14) = 0.131028;
+      se = (ln(1.31) - ln(0.99))/3.92 = 0.071448; ci = [ln(0.99), ln(1.31)].
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = more DISTRACTION-related crashes in the earlier-start period. Not significant
+      (CI spans 1). RECORDED BECAUSE IT IS DIAGNOSTICALLY AWKWARD: the crash subtype that moved MOST
+      (point estimate 1.14) is the DISTRACTION subtype, not a drowsiness subtype. Either sleep loss acts
+      partly through attention/distraction (a real causal route), or the "start-time effect" is picking
+      up something about the driving environment. The paper cannot distinguish these.
+    covariates: []
+    followup_years: null
+    cohort_family: "Virginia_DMV_SST"
+    quote: >
+      there was a trend toward significance in distraction-related crashes per 1,000 in FC at T1 compared to T2 at
+      7.01 versus 6.13 (95% confidence interval, 0.99-1.31, odds ratio 1.14, P = .05), but were not significantly
+      different in the remainder of the state.
+rob:
+  tool: ROBINS-I
+  judgement: high
+  notes: >
+    A GENUINE PRE-POST WITH A CONTEMPORANEOUS CONTROL, so `quasi_experiment` / T2 is defensible — but at
+    the weak end of T2, well below foss2019.
+    STRENGTHS: (1) a real intervention (50-min delay, county-wide, fall 2015) with 2 years before and 2
+    years after; (2) a contemporaneous comparison group ("the rest of Virginia") that showed no
+    significant change; (3) restricted to Sep-Jun (school months) and to 16-18 y licensed drivers;
+    (4) rate denominators are licensed drivers, and the direction matches four other analyses.
+    WEAKNESSES THAT MATTER:
+    (a) TWO PERIODS, NOT A TIME SERIES. There is no modelling of pre-existing trend. US teen crash rates
+        were changing nationally over 2013-2017, and a 7% between-period difference is well inside the
+        range of ordinary secular drift. foss2019 handled this with ARIMA; this paper did not.
+    (b) THE CONTROL GROUP CONTAINS THE OTHER STUDIES' TREATED UNITS. "The rest of Virginia" includes
+        Virginia Beach, Chesapeake, Henrico and Chesterfield — the jurisdictions vorona2011 and
+        vorona2014 claim are differentially affected by start times. The control is not clean.
+    (c) NO SLEEP MEASURED. The mediator is assumed, not observed. Fairfax County's own survey work
+        (owens2019, same senior author, same county, overlapping years) shows school-night sleep was
+        still well under 8 h after the change, so the dose delivered was small.
+    (d) EFFECT IS 7% WITH A LOWER CI BOUND OF EXACTLY 1.00.
+    (e) The largest subtype effect is distraction-related, not drowsiness-related.
+    (f) Outcome is police-reported crashes of any severity, not injuries or deaths.
+funding: "Not stated in the retrievable abstract."
+notes: >
+  REQUIRED EXTRACTION #3 — this is the "newer replication" the task asked me to look for, and it is real.
+  .
+  VERBATIM QUOTE (abstract, PMID 31992393): "The crash rate per 1000 in 16- to 18-year-old licensed
+  drivers in FC during T1 was significantly higher compared to T2, 31.63 versus 29.59 accidents per
+  1,000 (95% confidence interval, 1.0-1.14, odds ratio 1.07, P = .03). In contrast, adolescent crash
+  rates in the rest of Virginia were not statistically significantly different at T1 versus T2. With
+  regard to subtypes of crashes, there was a trend toward significance in distraction-related crashes
+  per 1,000 in FC at T1 compared to T2 at 7.01 versus 6.13 (95% confidence interval, 0.99-1.31, odds
+  ratio 1.14, P = .05), but were not significantly different in the remainder of the state."
+  METHODS, VERBATIM: "Virginia Department of Motor Vehicles crash data in drivers age 16 to 18 years old
+  between September and June of each year in FC versus the rest of the state were compared in the
+  combined 2-year periods preceding (2013-2014 and 2014-2015; T1) and following (2015-2016 and 2016-2017;
+  T2) school start time change in the fall of 2015."
+  .
+  THE MAGNITUDE PROBLEM IN THE SST LITERATURE, STATED PLAINLY. Five analyses, same nominal direction,
+  wildly different magnitudes:
+    binhasan2020 (Fairfax pre-post, 50-min delay)                 RR ~1.07
+    foss2019     (NC interrupted time series, 75-min delay)       RR ~1.16, p = .076 (not significant)
+    vorona2014   (Henrico vs Chesterfield cross-section)          RR ~1.27-1.29
+    vorona2011   (Virginia Beach vs Chesapeake cross-section)     RR ~1.28-1.41
+    danner2008   (Kentucky county pre-post, 60-min delay)         RR ~1.17 (16.5% reduction)
+  THE TWO DESIGNS WITH ACTUAL PRE-POST IDENTIFICATION (this one and foss2019) GIVE THE TWO SMALLEST
+  ESTIMATES, and the two pure cross-sections give the two largest. That ordering is exactly what you
+  expect if the cross-sectional estimates are inflated by between-place confounding. I use this pattern
+  in injury_channel.md as evidence for a causal fraction near 0.5 rather than near 1.
+  .
+  DOSE CAVEAT (applies to the whole SST literature and is the reason none of it can be scaled up to this
+  subject's exposure): a 50-75 min start-time delay buys adolescents perhaps 20-45 min more school-night
+  sleep, not the 1.5-2.5 h that separates a 5.5-6 h sleeper from a 7.5-8 h sleeper. The SST studies
+  therefore bound the effect of a SMALL dose change and cannot be linearly extrapolated to a large one.
+  .
+  ACCESS: abstract_only (Europe PMC 404 for PMC7075093; the retrieved PMC XML stub contains no body).
+  n: null — the abstract reports rates per 1000 licensed drivers but not the licensed-driver counts.
+shard: "s21_drowsy_driving"

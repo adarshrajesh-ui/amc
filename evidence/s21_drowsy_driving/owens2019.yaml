@@ -1,0 +1,161 @@
+study_id: owens2019
+citation: "Owens JA, Dearth-Wesley T, Herman AN, Whitaker RC. Drowsy Driving, Sleep Duration, and Chronotype in Adolescents. J Pediatr. 2019;205:224-229."
+doi: "10.1016/j.jpeds.2018.09.072"
+pmid: "30392873"
+url: "https://doi.org/10.1016/j.jpeds.2018.09.072"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Drowsy Driving, Sleep Duration, and Chronotype in Adolescents."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 431
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [15.5, 18.7]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: mortality
+    outcome_construct: self_reported_drowsy_driving_prevalence_difference
+    exposure: {type: habitual_short_sleep, dose_h: 6.5, referent_h: 8.5, duration_days: null,
+               contrast_label: "SCHOOL-NIGHT sleep < 7 h vs >= 8 h; outcome = ever driven while feeling drowsy in the last year; covariate-adjusted PREVALENCE DIFFERENCE in percentage points"}
+    scale: probability
+    unit: "absolute prevalence difference (proportion)"
+    value: 0.139000
+    se: 0.055867
+    ci: [0.030000, 0.249000]
+    conversion_formula: >
+      Reported directly as an adjusted prevalence difference: 13.9% (95% CI 3.0%-24.9%) higher.
+      Converted to proportions: value 0.139, ci [0.030, 0.249];
+      se = (0.249 - 0.030)/3.92 = 0.055867.
+      NOTE: this is an ABSOLUTE RISK DIFFERENCE on a PROBABILITY scale, not a ratio. It must not be
+      exponentiated. On a relative scale, against the 47.6% overall drowsy-driving prevalence, +13.9
+      percentage points is roughly a 1.3-fold relative increase.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = HARM. Adolescent drivers sleeping < 7 h on school nights were 13.9 percentage points MORE
+      likely to report drowsy driving than those sleeping >= 8 h. THIS IS THE FIRST LINK IN THE CAUSAL
+      CHAIN, MEASURED IN EXACTLY THE RIGHT POPULATION: short school-night sleep -> more drowsy driving.
+      The outcome is a SELF-REPORTED STATE, NOT A CRASH.
+    covariates: ["age", "sex", "race/ethnicity", "grade", "parent education (the abstract states 'covariate-adjusted' without a full list)"]
+    followup_years: null
+    cohort_family: "FairfaxCounty_Owens"
+    quote: >
+      The covariate-adjusted prevalence of drowsy driving was 13.9% (95% CI 3.0%-24.9%) higher in students who
+      slept <7 hours on school-nights than in those who slept 8 or more hours.
+  - outcome_domain: circadian
+    outcome_construct: self_reported_drowsy_driving_prevalence_difference
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "EVENING chronotype (upper/lower tertile of Morningness-Eveningness Scale for Children) vs MORNING chronotype"}
+    scale: probability
+    unit: "absolute prevalence difference (proportion)"
+    value: 0.152000
+    se: 0.054592
+    ci: [0.045000, 0.259000]
+    conversion_formula: >
+      Reported as 15.2% (95% CI 4.5%-25.9%) higher adjusted prevalence.
+      value 0.152; se = (0.259 - 0.045)/3.92 = 0.054592.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = HARM associated with evening chronotype. RECORDED AS A CONFOUNDING/EFFECT-MODIFICATION
+      WARNING: the chronotype effect (15.2 pp) is slightly LARGER than the sleep-duration effect
+      (13.9 pp), and adolescent chronotype is a biological trait that CAUSES short school-night sleep.
+      Any model that treats "hours slept" as the sole exposure is partly measuring circadian phase.
+      For this subject that is arguably a feature rather than a bug — an 18-year-old whose weekday sleep
+      is 5.5-6 h is very likely evening-typed — but it means the two effects cannot be added.
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: "FairfaxCounty_Owens"
+    quote: >
+      Compared with those with a morning chronotype, the adjusted prevalence of drowsy driving was 15.2% (95% CI
+      4.5%-25.9%) higher among those with an evening chronotype.
+  - outcome_domain: baseline_risk
+    outcome_construct: drowsy_driving_prevalence_in_high_school_drivers
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "unconditional prevalence of ever drowsy driving in the past year among US high-school students who drive"}
+    scale: probability
+    unit: "proportion"
+    value: 0.476000
+    se: 0.024065
+    ci: [0.428833, 0.523167]
+    conversion_formula: >
+      Reported directly: "47.6% reported drowsy driving". n = 431.
+      se computed by me as the binomial standard error: sqrt(0.476 * 0.524 / 431) = sqrt(0.00057918)
+      = 0.024065; ci = 0.476 +/- 1.96 * 0.024065 = [0.428833, 0.523167].
+      This SE is a simple binomial SE and takes no account of the survey design or clustering by school.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive. NEARLY HALF of high-school drivers report having driven drowsy in the past year. This
+      is the number that makes the channel worth pricing at all: the exposure is not rare.
+    covariates: []
+    followup_years: null
+    cohort_family: "FairfaxCounty_Owens"
+    quote: >
+      Among survey respondents, 63.1% drove at least several times a week and 47.6% reported drowsy driving.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: >
+    (1) CROSS-SECTIONAL ONLINE SURVEY, single county, single spring (2015), 431 drivers. Both exposure and
+        outcome are self-reported in the same instrument at the same moment, so common-method variance is
+        unavoidable: a student who thinks of himself as tired will report both less sleep and more drowsy
+        driving.
+    (2) THE OUTCOME IS NOT A CRASH. It is "having ever driven a car or motor vehicle while feeling drowsy
+        in the last year" — a dichotomised, unverifiable, extremely low-threshold self-report. It cannot
+        be converted into crash risk without an external multiplier, which this paper does not supply.
+        This is why `tier` is TX (context only), not T5.
+    (3) SELECTION: online survey of one affluent, high-achieving suburban school district (Fairfax County
+        VA). Response rate not stated in the abstract. Generalisability to a national teen is unknown.
+    (4) NO CRASH OUTCOME MEANS NO EFFECT ON MORTALITY CAN BE READ OFF THIS RECORD DIRECTLY.
+    (5) The 15.5-18.7 y age range is an exact match to the subject's exposure window, which is why the
+        record is retained despite (1)-(4).
+funding: "Not stated in the retrievable abstract."
+notes: >
+  REQUIRED EXTRACTION #2 (young drivers specifically; "any study of sleep duration and crash risk in high
+  school or college students"). REPORTING REALITY: I could not find a study of high-school or college
+  students that measured SLEEP DURATION against an OBJECTIVELY VERIFIED CRASH outcome in a US sample. The
+  closest are this record (right population, right exposure, WRONG outcome — a self-reported state, not a
+  crash), pizza2010 (right population, self-reported crashes, Italian high schools) and martiniuk2013
+  (right age band, POLICE-REPORTED crashes, but Australian and 17-24 y). THE US ADOLESCENT
+  SLEEP-DURATION-TO-VERIFIED-CRASH STUDY DOES NOT EXIST.
+  .
+  VERBATIM QUOTES (abstract, PMID 30392873):
+  DESIGN: "Cross-sectional observational data were obtained from an online survey in spring 2015 of 431
+  drivers, age 15.5-18.7 years, attending Fairfax County (Virginia) Public schools. Drowsy driving was
+  defined as having ever 'driven a car or motor vehicle while feeling drowsy' in the last year.
+  School-night sleep duration was calculated from school-night bedtime and wake time. Those with scores in
+  the lower and upper tertiles of the Morningness-Eveningness Scale for Children were designated as having
+  an evening or morning chronotype, respectively."
+  RESULTS: "Among survey respondents, 63.1% drove at least several times a week and 47.6% reported drowsy
+  driving. The covariate-adjusted prevalence of drowsy driving was 13.9% (95% CI 3.0%-24.9%) higher in
+  students who slept <7 hours on school-nights than in those who slept 8 or more hours. Compared with
+  those with a morning chronotype, the adjusted prevalence of drowsy driving was 15.2% (95% CI 4.5%-25.9%)
+  higher among those with an evening chronotype."
+  .
+  HOW I USE THIS IN injury_channel.md: as the SECOND-STAGE MULTIPLIER in the mechanistic cross-check
+  (Route 3). The GHSA/SHRP2 figure is that 1.57% of all baseline driving is done in an observably drowsy
+  state. If short school-night sleep raises drowsy-driving propensity by roughly the relative amount
+  implied here (+13.9 pp on a 47.6% base, i.e. about 1.3-fold), then the subject's drowsy-driving
+  share rises from about 1.57% to about 2.1% of his driving time, and combining that with the
+  naturalistic drowsy-crash odds ratio gives an independent estimate of his excess crash risk. That route
+  gives the LOWEST of my three estimates, and I report it rather than discarding it.
+  .
+  IMPORTANT COINCIDENCE THE DOWNSTREAM MODEL SHOULD KNOW ABOUT: this survey is Fairfax County, spring
+  2015 — the SAME COUNTY and the SAME SCHOOL YEAR as the start-time change evaluated in binhasan2020, by
+  an overlapping author team. It documents that even a district that delayed start times still had
+  47.6% of its student drivers reporting drowsy driving, which is a direct argument that start-time
+  delays deliver a small dose. cohort_family FairfaxCounty_Owens is set to flag the overlap; the two
+  records use different data (survey vs DMV crash records) so they are not the same effect, but they are
+  not independent samples of the world either.
+  .
+  ACCESS: abstract_only (Elsevier full text paywalled). Every number above is verbatim from PubMed.
+shard: "s21_drowsy_driving"

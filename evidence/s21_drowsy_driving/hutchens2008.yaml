@@ -1,0 +1,127 @@
+study_id: hutchens2008
+citation: "Hutchens L, Senserrick TM, Jamieson PE, Romer D, Winston FK. Teen driver crash risk and associations with smoking and drowsy driving. Accid Anal Prev. 2008;40(3):869-876."
+doi: "10.1016/j.aap.2007.10.001"
+pmid: "18460353"
+url: "https://doi.org/10.1016/j.aap.2007.10.001"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Teen driver crash risk and associations with smoking and drowsy driving"
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 506
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [14, 22]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: mortality
+    outcome_construct: ever_crash_involvement_as_driver
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "DRIVING ALONE WHILE DROWSY vs not, among US licensed drivers aged 14-22; outcome = ever crash-involved as a driver. Direction and significance reported; NO EFFECT SIZE PUBLISHED IN THE ABSTRACT."}
+    scale: log_or
+    unit: null
+    value: 0.000000
+    se: null
+    ci: null
+    conversion_formula: >
+      NO MAGNITUDE IS AVAILABLE. The abstract states only: "Aside from length of licensure, only driving
+      alone while drowsy and being a current smoker were associated with having been in a crash." It reports
+      neither the odds ratio nor a p-value, so under hard rule #2 I cannot extract a number and I have not
+      invented one. value 0 / se null encodes DIRECTION-AND-SIGNIFICANCE-ONLY and MUST NOT be read as a null
+      effect. Elsevier full text is paywalled and no open version was retrievable.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      DIRECTION: DROWSY DRIVING WAS ASSOCIATED WITH HIGHER CRASH INVOLVEMENT in a nationally representative
+      US sample of young drivers, surviving a multivariate model that also contained demographic and driving
+      variables. RECORDED BECAUSE IT IS ONE OF ONLY TWO STUDIES I FOUND WITH A NATIONALLY REPRESENTATIVE US
+      SAMPLE OF DRIVERS UNDER 25 AND A CRASH OUTCOME — but recorded WITHOUT a magnitude, which is the honest
+      state of the evidence.
+    covariates: ["length of licensure", "current smoking", "demographic potential confounders (the abstract states 'controlling for potential demographic confounders' without enumerating them)"]
+    followup_years: null
+    cohort_family: "NAYDS_2005"
+    quote: >
+      Aside from length of licensure, only driving alone while drowsy and being a current smoker were associated
+      with having been in a crash.
+  - outcome_domain: mortality
+    outcome_construct: ever_crash_involvement_as_driver
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "CONFOUNDING BENCHMARK: CURRENT SMOKING vs not, in the SAME multivariate model. Direction and significance only."}
+    scale: log_or
+    unit: null
+    value: 0.000000
+    se: null
+    ci: null
+    conversion_formula: "As above — no magnitude published. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      DIRECTION: SMOKING WAS ALSO ASSOCIATED WITH CRASH INVOLVEMENT, alongside drowsy driving, and the two
+      were the ONLY behavioural predictors that survived. RECORDED DELIBERATELY AS A CONFOUNDING YARDSTICK.
+      This exactly reproduces pizza2010's Italian finding (smoking OR 3.2, drowsy driving OR 2.1), in a US
+      national sample. Two independent samples on two continents both find that the crash-prone young driver
+      is characterised jointly by smoking and drowsy driving. That pairing is much easier to explain as a
+      shared behavioural/impulsivity phenotype than as two independent physiological mechanisms.
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: "NAYDS_2005"
+    quote: >
+      Aside from length of licensure, only driving alone while drowsy and being a current smoker were associated
+      with having been in a crash.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: >
+    (1) CROSS-SECTIONAL TELEPHONE SURVEY, 2005, N = 900 young drivers aged 14-22 of whom 506 licensed drivers
+        were analysed (learners excluded). Self-reported exposure AND self-reported crash history in one
+        instrument.
+    (2) OUTCOME IS "CRASH INVOLVEMENT (EVER) AS A DRIVER", with no time window and no verification. Because
+        exposure is measured now and the crash may predate it, temporal ordering is not established and
+        reverse causation is fully open.
+    (3) EXPOSURE IS "DRIVING ALONE WHILE DROWSY", NOT SLEEP DURATION. This study reports no sleep-duration
+        contrast at all, so it cannot contribute to the dose-response question. That is why tier is TX.
+    (4) NO EFFECT SIZES RETRIEVABLE. Both effects in this record are direction-only.
+    (5) SMALL: 506 analysed.
+    (6) STRENGTH THAT JUSTIFIES KEEPING IT: NATIONALLY REPRESENTATIVE US SAMPLE, EXACTLY THE RIGHT AGE BAND
+        (14-22), and drowsy driving survived a multivariate model. For requirement #2 this is one of the few
+        US young-driver records that exists at all.
+funding: "Not stated in the retrievable abstract. The authors' affiliations point to the Children's Hospital of Philadelphia / Annenberg Public Policy Center National Annenberg Survey of Youth programme."
+notes: >
+  REQUIRED EXTRACTION #2 ("Look for work on young-driver drowsy-driving crashes"). This is the most on-point
+  US nationally-representative young-driver study I could find, AND I AM REPORTING THAT ITS NUMBERS ARE NOT
+  RETRIEVABLE rather than filling the gap.
+  .
+  VERBATIM QUOTE (abstract, PMID 18460353): "Motor vehicle crashes are the leading cause of death for young
+  people in the United States. The goal of this study was to identify risk factor profiles of teen and young
+  adult drivers involved in crashes. General demographic and behavioral as well as driving-related factors
+  were considered. Analysis of a nationally representative telephone survey of U.S. young drivers ages 14 to
+  22 (N=900) conducted in 2005 was restricted to 506 licensed drivers (learners excluded). Statistically
+  significant univariate associations between factors of interest and the primary outcome, crash involvement
+  (ever) as a driver, were identified and included within a multivariate logistic regression model,
+  controlling for potential demographic confounders. Aside from length of licensure, only driving alone while
+  drowsy and being a current smoker were associated with having been in a crash. Gaining a better
+  understanding of these behaviors could enhance the development of more customized interventions for new
+  drivers."
+  .
+  ONE INFERENCE FROM THIS RECORD THAT IS WORTH MORE THAN ITS MISSING ODDS RATIO. The abstract says that of
+  all the general demographic, behavioural and driving-related factors screened, only THREE survived: length
+  of licensure, drowsy driving and smoking. Length of licensure is driving exposure. So in a nationally
+  representative US sample of young drivers, drowsy driving is one of only two BEHAVIOURAL predictors of
+  crash involvement that survives adjustment — which is a genuine argument that the drowsiness channel is
+  real and not merely one entry in a long list of correlated risk markers. Against that, the surviving
+  companion is smoking, which has no plausible direct vigilance mechanism, so the pair is equally readable as
+  a single latent behavioural factor.
+  .
+  n = 506, the analysed sample of licensed drivers (not the 900 surveyed). age_range [14, 22] is quoted from
+  the abstract; no age_mean is published and I have not invented one. `adolescent_match: exact_16_19` because
+  the band brackets the subject's exposure window tightly, though it extends to 22.
+  .
+  ACCESS: abstract_only. Elsevier paywall; no PMC deposit.
+shard: "s21_drowsy_driving"

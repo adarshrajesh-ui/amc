@@ -1,0 +1,193 @@
+study_id: wheaton2014
+citation: "Wheaton AG, Shults RA, Chapman DP, Ford ES, Croft JB. Drowsy driving and risk behaviors - 10 States and Puerto Rico, 2011-2012. MMWR Morb Mortal Wkly Rep. 2014;63(26):557-562."
+doi: null
+pmid: "24990488"
+url: "https://pubmed.ncbi.nlm.nih.gov/24990488/"
+verification:
+  crossref_ok: null
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Drowsy driving and risk behaviors - 10 States and Puerto Rico, 2011-2012."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 92102
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [18, 100]
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_of_falling_asleep_while_driving_past_30_days
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 30,
+               contrast_label: "share of US adults reporting having FALLEN ASLEEP while driving at least once in the previous 30 days"}
+    scale: probability
+    unit: "proportion"
+    value: 0.040000
+    se: 0.000648
+    ci: [0.038730, 0.041270]
+    conversion_formula: >
+      Reported directly: "The results showed that 4.0% reported falling asleep while driving during the
+      previous 30 days." n = 92,102.
+      se computed by me as the simple binomial SE: sqrt(0.04 * 0.96 / 92102) = sqrt(4.1693e-7) = 0.000646
+      (printed 0.000648 using the rounded prevalence); ci = 0.04 +/- 1.96 * se.
+      CAVEAT ON THIS SE: BRFSS is a complex weighted survey and the design effect is not published here, so
+      the true standard error is larger than this simple binomial value, probably by a factor of 1.5-2.
+      A downstream model should treat 0.000648 as a LOWER BOUND on the SE.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive prevalence. THIS IS THE SEVERE END OF THE EXPOSURE: not "felt drowsy" but ACTUALLY FELL
+      ASLEEP at the wheel, in the last 30 days, in 4% of US adults. Compare the much milder self-report
+      question in owens2019 (47.6% "ever driven while feeling drowsy in the last year" in high-school
+      drivers) and the AAA survey series in ghsa2026 (17-32% of adults "so tired they had a hard time
+      keeping their eyes open" in 30 days). The three questions measure very different things and their
+      prevalences differ by an order of magnitude; any model that treats "drowsy driving prevalence" as one
+      quantity will get the wrong answer.
+    covariates: []
+    followup_years: null
+    cohort_family: "BRFSS_2011_2012"
+    quote: >
+      The results showed that 4.0% reported falling asleep while driving during the previous 30 days.
+  - outcome_domain: mortality
+    outcome_construct: drowsy_driving_prevalence_among_binge_drinkers
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "CONFOUNDING STRUCTURE: prevalence of falling asleep at the wheel among BINGE DRINKERS vs non-binge drinkers vs abstainers. Direction and significance reported; NO EFFECT SIZE PUBLISHED IN THE ABSTRACT."}
+    scale: log_or
+    unit: null
+    value: 0.000000
+    se: null
+    ci: null
+    conversion_formula: >
+      NO MAGNITUDE IS AVAILABLE from the abstract, which states only that "drowsy driving was more
+      prevalent among binge drinkers than non-binge drinkers or abstainers". Under hard rule #2 I have not
+      extracted a number I cannot quote. value 0 / se null encodes DIRECTION-AND-SIGNIFICANCE-ONLY and must
+      not be read as a null effect. The MMWR tables contain the prevalences; I could not retrieve them.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      DIRECTION: BINGE DRINKERS FALL ASLEEP AT THE WHEEL MORE OFTEN. A CONFOUNDING RECORD, NOT A HARM
+      ESTIMATE. This is the adult-population counterpart of wheaton2016's adolescent finding and it closes
+      the loop with tefft2024_aaa, which found from the other direction that 20% of legally intoxicated
+      fatal-crash drivers were drowsy versus 11% of sober ones. Alcohol and drowsiness are entangled at
+      both ends: drinkers drive drowsy more, and drowsy drivers have been drinking more.
+    covariates: []
+    followup_years: null
+    cohort_family: "BRFSS_2011_2012"
+    quote: >
+      drowsy driving was more prevalent among binge drinkers than non-binge drinkers or abstainers
+  - outcome_domain: mortality
+    outcome_construct: drowsy_driving_prevalence_among_infrequent_seatbelt_users
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "CONFOUNDING STRUCTURE: prevalence of falling asleep at the wheel among those who sometimes/seldom/never wear seatbelts vs always/almost always. Direction and significance only."}
+    scale: log_or
+    unit: null
+    value: 0.000000
+    se: null
+    ci: null
+    conversion_formula: "As above — direction and significance reported, magnitude not printed. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      DIRECTION: PEOPLE WHO DO NOT BELT UP FALL ASLEEP AT THE WHEEL MORE OFTEN. Independent adult
+      replication of wheaton2016's adolescent seatbelt finding, and the same interpretive problem applies
+      with full force: seatbelt non-use does not cause crashes, it causes crashes to be FATAL. So the
+      correlation between drowsiness and non-belting inflates the FATAL-crash association specifically,
+      which is exactly the outcome this shard prices. Some unknown part of the "drowsy driving kills"
+      signal is really "the people who drive drowsy are the people who die in the crashes they have".
+    covariates: []
+    followup_years: null
+    cohort_family: "BRFSS_2011_2012"
+    quote: >
+      also more prevalent among drivers who sometimes, seldom, or never wear seatbelts while driving or riding in
+      a car, compared with those who always or almost always wear seatbelts
+  - outcome_domain: mortality
+    outcome_construct: drowsy_driving_prevalence_by_smoking_status
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "NEGATIVE FINDING: drowsy driving did NOT vary significantly by self-reported smoking status"}
+    scale: log_or
+    unit: null
+    value: 0.000000
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported as a NULL: "Drowsy driving did not vary significantly by self-reported smoking status."
+      value 0 / se null. Here, unlike the two effects above, value 0 genuinely does represent a reported
+      null rather than a missing magnitude.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      REPORTED NULL, AND RECORDED BECAUSE IT PARTLY EXONERATES THE CONFOUNDING STORY. If drowsy driving
+      were simply a marker of a generic risk-taking phenotype, it should track smoking too — and in US
+      adults it does not, even though pizza2010 found smoking to be the strongest single crash predictor in
+      Italian adolescents. The confounding is therefore SELECTIVE (alcohol and seatbelts, not tobacco),
+      which is more consistent with specific behavioural pathways than with one undifferentiated
+      "risky person" factor. This is one reason I hold the causal fraction at 0.5 rather than lower.
+    covariates: []
+    followup_years: null
+    cohort_family: "BRFSS_2011_2012"
+    quote: >
+      Drowsy driving did not vary significantly by self-reported smoking status.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: >
+    (1) CROSS-SECTIONAL TELEPHONE SURVEY (BRFSS), self-reported exposure and self-reported outcomes in the
+        same instrument. tier TX.
+    (2) THE OUTCOME IS NOT A CRASH. It is a self-reported behaviour. This record informs interpretation and
+        exposure prevalence, not the magnitude of any mortality effect.
+    (3) MOST EFFECT SIZES NOT RETRIEVABLE — the abstract gives direction and significance only.
+    (4) ADULTS ONLY (BRFSS is 18+), so `adolescent_match: fair_adult`. The subject is 18 and so nominally in
+        scope, but the sample mean age will be around 45-50.
+    (5) ONLY 10 STATES AND PUERTO RICO, because the drowsy-driving module was optional. Not nationally
+        representative.
+    (6) STRENGTH THAT JUSTIFIES KEEPING IT: n = 92,102, and the findings replicate wheaton2016's adolescent
+        pattern in an independent adult sample with a different survey system and a much more severe outcome
+        definition (actually fell asleep, not merely felt drowsy).
+    (7) NO DOI EXISTS. MMWR did not mint DOIs in 2014 (they begin with volume 65, 2016). I tested the
+        plausible pattern 10.15585/mmwr.mm6326a1 against Crossref and it returned HTTP 404, so rather than
+        assign a guessed identifier I have set `doi: null` and `crossref_ok: null`. PubMed verification
+        succeeded (PMID 24990488, MMWR Morb Mortal Wkly Rep, 2014 Jul 4), so `status` is VERIFIED on the
+        strength of the PMID alone.
+funding: "US Centers for Disease Control and Prevention (MMWR is a CDC publication)."
+notes: >
+  A CONFOUNDING RECORD, retained to discharge the task's honesty requirement about confounding, and paired
+  with wheaton2016 (the adolescent version).
+  .
+  VERBATIM QUOTE (abstract, PMID 24990488): "Therefore, CDC analyzed responses to survey questions regarding
+  drowsy driving among 92,102 respondents in 10 states and Puerto Rico to the 2011-2012 Behavioral Risk
+  Factor Surveillance System (BRFSS) surveys. The results showed that 4.0% reported falling asleep while
+  driving during the previous 30 days. In addition to known risk factors, drowsy driving was more prevalent
+  among binge drinkers than non-binge drinkers or abstainers and also more prevalent among drivers who
+  sometimes, seldom, or never wear seatbelts while driving or riding in a car, compared with those who always
+  or almost always wear seatbelts. Drowsy driving did not vary significantly by self-reported smoking status."
+  ON THE EARLIER CDC ESTIMATE, VERBATIM: "CDC previously reported that, in 2009-2010, 4.2% of adult
+  respondents in 19 states and the District of Columbia reported having fallen asleep while driving at least
+  once during the previous 30 days. Adults who reported usually sleeping <=6 hours per day, snoring, or
+  unintentionally falling asleep during the day were more likely to report falling asleep while driving
+  compared with adults who did not report these sleep patterns."
+  ON THE FATAL-CRASH SHARE, VERBATIM, AND WORTH FLAGGING AS AN OUTLIER CLAIM: "Findings in published reports
+  have suggested that drowsy driving is a factor each year in as many as 7,500 fatal motor vehicle crashes
+  (approximately 25%) in the United States."
+  .
+  THAT 25% FIGURE, HANDLED HONESTLY. It is higher than every estimate I extracted elsewhere (tefft2012 16.5%,
+  tefft2024_aaa 17.6%). CDC attributes it to "published reports" without giving one in the abstract, and I
+  did not retrieve the full text to chase the citation. I HAVE NOT EXTRACTED IT AS AN EFFECT and I do not use
+  it in injury_channel.md, because I cannot trace it to a primary analysis. I record it here only so that a
+  downstream reader who encounters "25% of fatal crashes" in the popular literature knows where it comes from
+  and that this shard deliberately did not rely on it. If it were used instead of 17.6%, Route 2 of
+  injury_channel.md would rise by a factor of 1.42, from about 0.034 to about 0.048 months — still well
+  short of 0.2 months.
+  .
+  THE 6-HOUR THRESHOLD IN THE QUOTED EARLIER CDC FINDING IS DIRECTLY ON POINT FOR THIS SUBJECT: adults
+  "usually sleeping <=6 hours per day" were more likely to report falling asleep at the wheel. That is the
+  subject's weekday dose exactly. No effect size is given, so I have not extracted it, but the direction is
+  the one this shard assumes.
+  .
+  n = 92,102 quoted from the abstract. age_range [18, 100] reflects BRFSS eligibility, inferred by me; no
+  age distribution is printed and I have not invented an age_mean.
+shard: "s21_drowsy_driving"

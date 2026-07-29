@@ -1,0 +1,211 @@
+study_id: tefft2024_aaa
+citation: "Tefft BC. Drowsy Driving in Fatal Crashes, United States, 2017-2021 (Research Brief). Washington, DC: AAA Foundation for Traffic Safety; 2024."
+doi: null
+pmid: null
+url: "https://aaafoundation.org/drowsy-driving-in-fatal-crashes-united-states-2017-2021/"
+verification:
+  crossref_ok: null
+  pubmed_ok: null
+  status: UNVERIFIED
+  resolved_title: "Drowsy Driving in Fatal Crashes, United States, 2017-2021"
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: 208727
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [16, 100]
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: drowsy_driver_share_of_fatal_crashes_imputed_2017_2021
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "share of ALL US FATAL crashes in 2017-2021 that involved a drowsy driver, imputed from a CISS-derived model applied to FARS"}
+    scale: probability
+    unit: "proportion of fatal crashes"
+    value: 0.176000
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported directly as "an estimated 17.6% of all fatal crashes in years 2017-2021 involved a drowsy
+      driver". NO CONFIDENCE INTERVAL IS PUBLISHED IN THE RETRIEVABLE BRIEF, so se is null and I have not
+      invented one.
+      FOR ORIENTATION ONLY, NOT USED AS THE SE: tefft2012's comparable estimate of 16.5% carried a CI of
+      12.5-20.6%, implying se ~0.021. If a downstream model needs a precision for 17.6%, borrowing that
+      relative width (se ~0.022) is the least arbitrary choice available, but it would be an assumption,
+      not a datum.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive prevalence. HIGHER = more of the fatal-crash burden is drowsiness-related.
+      THIS IS THE NUMBER I USE FOR THE DROWSY SHARE OF FATAL CRASHES IN ROUTE 2 of injury_channel.md.
+      It is the most recent estimate, on the most recent data, using the largest sample, and the
+      Governors Highway Safety Association's 2026 review calls it "probably the best available estimate
+      of drowsiness in fatal crashes in the U.S."
+    covariates: ["imputation model developed on CISS in-depth crash investigations and validated by masking known-drowsiness cases; applied to all FARS passenger-vehicle drivers"]
+    followup_years: null
+    cohort_family: "CISS_FARS_2017_2021"
+    quote: >
+      Results show that an estimated 17.6% of all fatal crashes in years 2017-2021 involved a drowsy driver.
+  - outcome_domain: baseline_risk
+    outcome_construct: annual_us_deaths_in_drowsy_driving_fatal_crashes
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "people killed in crashes involving a drowsy driver, United States, 5-year total 2017-2021"}
+    scale: raw_units
+    unit: "deaths over 5 years"
+    value: 29834.000000
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported directly: "Over the 5-year study period, an estimated 29,834 people were killed in crashes
+      that involved drowsy drivers." No interval published; se null.
+      ANNUALISED BY ME: 29,834 / 5 = 5,966.8 deaths per year, which matches the Governors Highway Safety
+      Association's independent restatement of "an annual drowsy driving fatality average of 5,967".
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive count. THIS IS THE OTHER HALF OF THE ORDER-OF-MAGNITUDE COMPARISON THE TASK DEMANDED.
+      Research-based: ~5,967 deaths per year. Police-reported (NHTSA/FARS 2023): 633 deaths. Ratio 9.4x —
+      the GHSA states flatly that the model figure "is ten times more than the raw FARS data reported by
+      NHTSA." For scale, the brief notes 5,967 exceeds the annual average of motorcyclist deaths (5,414)
+      and approaches that of pedestrians killed (6,551).
+    covariates: []
+    followup_years: 5.0
+    cohort_family: "CISS_FARS_2017_2021"
+    quote: >
+      Over the 5-year study period, an estimated 29,834 people were killed in crashes that involved drowsy
+      drivers.
+  - outcome_domain: baseline_risk
+    outcome_construct: drowsy_share_highest_in_drivers_aged_16_20
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "AGE GRADIENT: the age group with the HIGHEST percentage of fatal-crash-involved drivers who were drowsy"}
+    scale: probability
+    unit: "qualitative — see conversion_formula"
+    value: 0.176000
+    se: null
+    ci: null
+    conversion_formula: >
+      NO AGE-SPECIFIC PERCENTAGE IS PUBLISHED IN THE RETRIEVABLE BRIEF. The brief states only the
+      qualitative ordering: "the proportion of fatal-crash-involved drivers who were drowsy was greatest
+      among drivers aged 16-20". I have therefore set `value` to the OVERALL 17.6% rather than invent an
+      age-specific number, and I am flagging in this field that the true 16-20 figure is HIGHER than the
+      recorded value by an unpublished amount. se is null.
+      I attempted to retrieve the full report PDF from aaafoundation.org on three candidate upload paths
+      and all returned HTTP 404; only the publisher's research-brief landing page was retrievable.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      DIRECTIONALLY CRITICAL FOR THIS SHARD, NUMERICALLY UNAVAILABLE. The one age-specific fact published
+      is that 16-20-year-olds have the HIGHEST drowsy percentage of any age group. That means my use of
+      17.6% for an 18-year-old is CONSERVATIVE — the true adolescent share is above it. I have deliberately
+      not scaled it up, because I have no number to scale it by. This is the largest single quantitative
+      gap in the shard and it is recorded as such in station_report.md.
+    covariates: []
+    followup_years: null
+    cohort_family: "CISS_FARS_2017_2021"
+    quote: >
+      In percentage terms, the proportion of fatal-crash-involved drivers who were drowsy was greatest among
+      drivers aged 16-20; however, the largest number of drowsy drivers in crashes were aged 21-34.
+  - outcome_domain: baseline_risk
+    outcome_construct: drowsy_share_by_alcohol_status
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "CONFOUNDING STRUCTURE: percentage of fatal-crash drivers who were drowsy, by BAC — 11% at BAC 0.00, 17% at BAC 0.01-0.07, 20% at BAC >= 0.08"}
+    scale: probability
+    unit: "proportion drowsy among fatal-crash drivers at BAC >= 0.08"
+    value: 0.200000
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported directly: "An estimated 17% of drivers with BAC of 0.01-0.07 and 20% of drivers with BAC
+      >=0.08 were drowsy, compared with 11% of those who had not been drinking." I have recorded the
+      BAC >= 0.08 value; the 11% and 17% values are in `notes` as the comparison points. No CIs published.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      RECORDED DELIBERATELY AS A CONFOUNDING RECORD, NOT AS A HARM ESTIMATE. Drowsiness and alcohol
+      CO-OCCUR: 20% of legally-drunk fatal-crash drivers were drowsy versus 11% of sober ones, and one
+      third of drowsy drivers in fatal crashes had been drinking. Sleep-restricted young people also drink
+      more (see wheaton2014, wheaton2016). Any observational estimate of "the effect of short sleep on
+      crash risk" that does not control alcohol is partly measuring alcohol. This is the single most
+      concrete quantitative basis for holding the causal fraction well below 1 in injury_channel.md.
+    covariates: []
+    followup_years: null
+    cohort_family: "CISS_FARS_2017_2021"
+    quote: >
+      An estimated 17% of drivers with BAC of 0.01-0.07 and 20% of drivers with BAC >=0.08 were drowsy, compared
+      with 11% of those who had not been drinking.
+rob:
+  tool: none
+  judgement: na
+  notes: >
+    A PREVALENCE ESTIMATION EXERCISE, so RoB tools do not apply.
+    STRENGTHS: (1) the largest relevant sample ever assembled — 208,727 passenger-vehicle drivers in
+    152,174 fatal crashes (FARS census 2017-2021), with the imputation model built on 20,292 drivers in
+    11,268 CISS in-depth investigations; (2) the model was VALIDATED by masking drowsiness in cases where
+    it was actually known and comparing imputed to actual, which is the right check and is more than
+    tefft2012 reported; (3) the estimate (17.6%) closely reproduces tefft2012's independent 16.5% on
+    different data, a decade earlier, with a different imputation approach.
+    WEAKNESSES: (a) GREY LITERATURE — no journal peer review, no DOI, no PMID, and I could not retrieve
+    the full report, only the publisher's brief; (b) NO CONFIDENCE INTERVALS in the retrievable text, so
+    every effect in this record has se null; (c) the whole estimate is model-based — nobody observed these
+    208,727 drivers' eyelids, unlike owens2018_aaa; (d) motorcycles, large trucks and buses excluded, so
+    it is not "all fatal crashes" in the strictest sense despite the wording; (e) the crucial
+    age-stratified numbers exist in the full report but were not retrievable.
+funding: "AAA Foundation for Traffic Safety. Underlying data from NHTSA (CISS and FARS)."
+notes: >
+  REQUIRED EXTRACTION #4, second bullet. This is the CURRENT best estimate of the drowsy share of US fatal
+  crashes and the upper term in the order-of-magnitude comparison.
+  .
+  VERIFICATION AND PROVENANCE. No DOI or PMID exists for an AAA Foundation research brief, so `status` is
+  UNVERIFIED. It is NOT secondhand for the numbers I extracted: I retrieved the publisher's own research-
+  brief page from aaafoundation.org (HTTP 200) and stored the extracted text at
+  src/tefft2024_aaa_drowsy_fatal.txt. I ALSO independently corroborated every headline number against the
+  Governors Highway Safety Association's 2026 report (src/ghsa2026_wakeupcall.txt, record ghsa2026), which
+  cites this brief and restates 17.6% and the 5,967 annual average. `access_tier` is abstract_only rather
+  than full_text because I retrieved the brief-level summary, not the full report with its tables — three
+  attempts at candidate PDF paths on aaafoundation.org returned HTTP 404.
+  .
+  VERBATIM QUOTES (publisher research brief, src/tefft2024_aaa_drowsy_fatal.txt):
+  SCOPE: "The current study included data from 20,292 drivers of passenger vehicles in transport that were
+  towed from the scenes of 11,268 unique crashes included in CISS in years 2017-2021. Data on drivers of
+  passenger vehicles involved in fatal crashes were obtained from the NHTSA's Fatality Analysis Reporting
+  System (FARS). The current study included data from 208,727 drivers of passenger vehicles involved in
+  152,174 unique fatal crashes in years 2017-2021; drivers of other types of vehicles (e.g., large trucks,
+  buses, motorcycles, etc.) were not examined."
+  HEADLINE: "Results show that an estimated 17.6% of all fatal crashes in years 2017-2021 involved a drowsy
+  driver. Over the 5-year study period, an estimated 29,834 people were killed in crashes that involved
+  drowsy drivers. The percentage of fatal crashes involving drowsy driving remained approximately constant
+  over the study period; however, the annual number of fatal drowsy driving crashes increased significantly
+  over the study period due to a large increase in total annual fatal crashes."
+  AGE AND SEX AND ALCOHOL: "In percentage terms, the proportion of fatal-crash-involved drivers who were
+  drowsy was greatest among drivers aged 16-20; however, the largest number of drowsy drivers in crashes
+  were aged 21-34. Men were significantly more likely than women to be drowsy, and men accounted for the
+  vast majority of drowsy drivers involved in fatal crashes. Approximately two-thirds of drowsy drivers in
+  fatal crashes had not been drinking alcohol (blood alcohol concentration, BAC = 0.00), however, one-third
+  had non-zero BAC values. Drowsiness was significantly more prevalent among drivers who had been drinking
+  than among those who had not. An estimated 17% of drivers with BAC of 0.01-0.07 and 20% of drivers with
+  BAC >=0.08 were drowsy, compared with 11% of those who had not been drinking."
+  TIMING: "The greatest number of fatal drowsy driving crashes occurred between 11:00 PM and 2:59 AM; the
+  percentage of drivers who were drowsy was highest among those who crashed between the hours of 3:00 AM
+  and 6:59 AM."
+  THE OFFICIAL FIGURE THIS BRIEF IS ARGUING AGAINST, QUOTED IN THE BRIEF ITSELF: "The National Highway
+  Traffic Safety Administration (NHTSA) states that 91,000 police-reported crashes resulting in 50,000
+  injuries and 800 fatalities annually—amounting to approximately 1%-2% of all crashes, injuries, and
+  deaths—involve drowsy driving; however, the contribution of drowsy driving in motor vehicle crashes is
+  difficult to measure. Although reports by police officers who investigate crashes sometimes indicate that
+  a driver was drowsy, data derived from these reports are widely regarded as substantial underestimates of
+  the true scope of the problem."
+  .
+  THE TIMING POINT MATTERS FOR THIS SUBJECT AND IS WORTH SPELLING OUT. Drowsy fatal crashes concentrate at
+  23:00-02:59 by COUNT and at 03:00-06:59 by PERCENTAGE. From iihs2024_fars, 35% of all teen crash deaths
+  occur between 21:00 and 03:00. So the hours where teens die and the hours where drowsiness dominates
+  overlap heavily. Separately, NMVCCS — the dataset behind the tefft2016_aaa and tefft2018 odds ratios —
+  EXCLUDED midnight to 05:59 entirely. The best odds ratios available for this shard therefore come from a
+  dataset that omitted the worst hours, which is a structural reason to treat those odds ratios as a floor.
+  .
+  n = 208,727, the number of FARS passenger-vehicle drivers analysed.
+shard: "s21_drowsy_driving"

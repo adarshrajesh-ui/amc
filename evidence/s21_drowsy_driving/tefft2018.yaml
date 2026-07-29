@@ -1,0 +1,194 @@
+study_id: tefft2018
+citation: "Tefft BC. Acute sleep deprivation and culpable motor vehicle crash involvement. Sleep. 2018 Oct 1;41(10):zsy144."
+doi: "10.1093/sleep/zsy144"
+pmid: "30239905"
+url: "https://doi.org/10.1093/sleep/zsy144"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Acute sleep deprivation and culpable motor vehicle crash involvement."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: T5
+n: 6845
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [14, 100]
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: mortality
+    outcome_construct: culpable_crash_involvement_rate_ratio
+    exposure: {type: total_deprivation, dose_h: 6, referent_h: 8, duration_days: 1,
+               contrast_label: "6 h slept in 24 h before crash vs 7-9 h; culpable crash involvement"}
+    scale: log_or
+    unit: null
+    value: 0.262364
+    se: 0.125359
+    ci: [0.039221, 0.530628]
+    conversion_formula: "log_or = ln(1.3) = 0.262364; se = (ln(1.7) - ln(1.04))/3.92 = 0.125359"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = HARM. Peer-reviewed replication of tefft2016_aaa's 6-7 h estimate; identical point estimate (1.3), slightly different CI because the referent here is 7-9 h rather than >=7 h."
+    covariates: ["fatigue-related factors", "driver-related factors", "environmental factors", "recent change in sleep schedule", "typically feeling drowsy on waking", "driving duration 3+ h"]
+    followup_years: null
+    cohort_family: "NMVCCS_2005_2007"
+    quote: >
+      Drivers who reported having slept for 6, 5, 4, and less than 4 hr in the 24 hr before crashing had 1.3 (95%
+      confidence interval [CI] = 1.04 to 1.7), 1.9 (1.1 to 3.2), 2.9 (1.4 to 6.2), and 15.1 (4.2 to 54.4) times
+      the odds, respectively, of having been culpable for their crashes, compared with drivers who reported 7-9 hr
+      of sleep.
+  - outcome_domain: mortality
+    outcome_construct: culpable_crash_involvement_rate_ratio
+    exposure: {type: total_deprivation, dose_h: 5, referent_h: 8, duration_days: 1,
+               contrast_label: "5 h slept in 24 h before crash vs 7-9 h"}
+    scale: log_or
+    unit: null
+    value: 0.641854
+    se: 0.272408
+    ci: [0.095310, 1.163151]
+    conversion_formula: "log_or = ln(1.9) = 0.641854; se = (ln(3.2) - ln(1.1))/3.92 = 0.272408"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = HARM. OR 1.9, same point estimate as the grey-literature version but with a 46% wider CI after peer review. This is the peer-reviewed anchor for 'slept ~5 h then drove'."
+    covariates: ["fatigue-related factors", "driver-related factors", "environmental factors", "recent change in sleep schedule", "typically feeling drowsy on waking", "driving duration 3+ h"]
+    followup_years: null
+    cohort_family: "NMVCCS_2005_2007"
+    quote: >
+      Drivers who reported having slept for 6, 5, 4, and less than 4 hr in the 24 hr before crashing had 1.3 (95%
+      confidence interval [CI] = 1.04 to 1.7), 1.9 (1.1 to 3.2), 2.9 (1.4 to 6.2), and 15.1 (4.2 to 54.4) times
+      the odds, respectively, of having been culpable for their crashes, compared with drivers who reported 7-9 hr
+      of sleep.
+  - outcome_domain: mortality
+    outcome_construct: culpable_crash_involvement_rate_ratio
+    exposure: {type: total_deprivation, dose_h: 4, referent_h: 8, duration_days: 1,
+               contrast_label: "4 h slept in 24 h before crash vs 7-9 h"}
+    scale: log_or
+    unit: null
+    value: 1.064711
+    se: 0.379611
+    ci: [0.336472, 1.824549]
+    conversion_formula: "log_or = ln(2.9) = 1.064711; se = (ln(6.2) - ln(1.4))/3.92 = 0.379611"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = HARM. NOTE THE DISAGREEMENT WITH THE GREY-LITERATURE VERSION: the same data gave OR 4.3 in tefft2016_aaa and OR 2.9 here after peer review — a 33% reduction on the ratio scale. Report both; do not average."
+    covariates: ["fatigue-related factors", "driver-related factors", "environmental factors", "recent change in sleep schedule", "typically feeling drowsy on waking", "driving duration 3+ h"]
+    followup_years: null
+    cohort_family: "NMVCCS_2005_2007"
+    quote: >
+      Drivers who reported having slept for 6, 5, 4, and less than 4 hr in the 24 hr before crashing had 1.3 (95%
+      confidence interval [CI] = 1.04 to 1.7), 1.9 (1.1 to 3.2), 2.9 (1.4 to 6.2), and 15.1 (4.2 to 54.4) times
+      the odds, respectively, of having been culpable for their crashes, compared with drivers who reported 7-9 hr
+      of sleep.
+  - outcome_domain: mortality
+    outcome_construct: culpable_crash_involvement_rate_ratio
+    exposure: {type: total_deprivation, dose_h: 3.5, referent_h: 8, duration_days: 1,
+               contrast_label: "<4 h slept in 24 h before crash vs 7-9 h"}
+    scale: log_or
+    unit: null
+    value: 2.714695
+    se: 0.653388
+    ci: [1.435085, 3.996364]
+    conversion_formula: "log_or = ln(15.1) = 2.714695; se = (ln(54.4) - ln(4.2))/3.92 = 0.653388"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = HARM. OR 15.1 — HIGHER than the grey-literature 11.5. Rests on 80 drivers; the CI spans 4.2 to 54.4, a 13-fold range. Not the subject's routine exposure."
+    covariates: ["fatigue-related factors", "driver-related factors", "environmental factors", "recent change in sleep schedule", "typically feeling drowsy on waking", "driving duration 3+ h"]
+    followup_years: null
+    cohort_family: "NMVCCS_2005_2007"
+    quote: >
+      Drivers who reported having slept for 6, 5, 4, and less than 4 hr in the 24 hr before crashing had 1.3 (95%
+      confidence interval [CI] = 1.04 to 1.7), 1.9 (1.1 to 3.2), 2.9 (1.4 to 6.2), and 15.1 (4.2 to 54.4) times
+      the odds, respectively, of having been culpable for their crashes, compared with drivers who reported 7-9 hr
+      of sleep.
+  - outcome_domain: mortality
+    outcome_construct: single_vs_multi_vehicle_crash_or_ratio
+    exposure: {type: total_deprivation, dose_h: 3.5, referent_h: 8, duration_days: 1,
+               contrast_label: "<4 h slept: EXCESS odds of culpable involvement in SINGLE-vehicle vs MULTIPLE-vehicle crashes"}
+    scale: log_or
+    unit: null
+    value: 1.223775
+    se: 0.250212
+    ci: [0.741937, 1.722767]
+    conversion_formula: "log_or = ln(3.4) = 1.223775; se = (ln(5.6) - ln(2.1))/3.92 = 0.250212"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = the sleep-deprivation effect is concentrated in SINGLE-VEHICLE crashes (3.4x greater increase in odds than for multi-vehicle). MECHANISTICALLY IMPORTANT: run-off-road/single-vehicle is the drowsy-crash signature, and IIHS reports 41% of 16-19 y drivers in fatal crashes were in single-vehicle crashes — the highest of any age group. This is the strongest internal evidence in the whole shard that the association is causal rather than confounded, because confounding by night-time exposure or alcohol would not selectively produce single-vehicle culpability in this pattern."
+    covariates: ["fatigue-related factors", "driver-related factors", "environmental factors"]
+    followup_years: null
+    cohort_family: "NMVCCS_2005_2007"
+    quote: >
+      Drivers who had slept less than 4 hr had 3.4 (95% CI = 2.1 to 5.6) times the increase in odds of culpable
+      involvement in single-vehicle crashes compared with multiple-vehicle crashes.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Peer-reviewed version of the analysis in tefft2016_aaa, on the same NMVCCS 2005-2007 probability
+    sample. Same design strengths (quasi-induced-exposure culpability comparison, nationally
+    representative, on-scene investigation, reconstructed sleep timing) and the same core limitations:
+    self-reported exposure from crash-involved drivers, investigator culpability judgement not blind to
+    crash configuration or time of day, and — decisively for this shard — NO CRASHES BETWEEN MIDNIGHT
+    AND 05:59 in the sampling frame, which the author states makes the estimates conservative. The n
+    here (6,845) is 389 lower than the grey-literature report's 7,234 because of different exclusions.
+funding: "AAA Foundation for Traffic Safety. Data collected by the US Department of Transportation (NMVCCS)."
+notes: >
+  PRIMARY TARGET #1(b). This is the PEER-REVIEWED, DOI- AND PMID-VERIFIED anchor for the acute
+  sleep-duration crash-risk gradient, and under gate G2 it, not tefft2016_aaa, should carry the
+  acute-sleep effects in the primary model.
+  .
+  MISMATCH WITH THE TASK PROMPT, REPORTED AS REALITY: the task asked for odds ratios "at 4-5 h, 5-6 h
+  and 6-7 h of sleep versus 7+ h". The PEER-REVIEWED paper does not use those bins — it uses
+  point-hour categories 6, 5, 4 and <4 h against a 7-9 h referent. The 4-5/5-6/6-7 h bins the task
+  described exist only in the grey-literature technical report (tefft2016_aaa), which reports
+  4.3 / 1.9 / 1.3. Both are recorded in this shard; they are the same data.
+  .
+  THE TWO VERSIONS DISAGREE, AND THE DIRECTION IS INFORMATIVE:
+    dose            tefft2016_aaa (report)   tefft2018 (peer-reviewed)
+    6(-7) h         1.3 (1.1-1.7)            1.3 (1.04-1.7)
+    5(-6) h         1.9 (1.3-2.6)            1.9 (1.1-3.2)
+    4(-5) h         4.3 (2.2-8.3)            2.9 (1.4-6.2)
+    <4 h            11.5 (2.9-45.7)          15.1 (4.2-54.4)
+  The two estimates the subject's dose actually depends on (6 h and 5 h) are IDENTICAL across versions;
+  only the extreme categories moved. That is reassuring for our use case specifically.
+  .
+  DE-DUPLICATION WARNING: SAME DATA AS tefft2016_aaa. cohort_family NMVCCS_2005_2007 on both. Choose
+  one per contrast; never average.
+  .
+  ALL FOUR ORs ARE FOR *ACUTE* SLEEP IN THE 24 h BEFORE THE CRASH, NOT HABITUAL SLEEP. This paper does
+  not report a habitual-sleep analysis; for that, see tefft2016_aaa BLOCK B, where habitual 5-6 h gives
+  a null OR of 1.4 (0.5-3.6). Anyone using 1.9 as "the crash risk of a habitual 5-6 h sleeper" is
+  substituting an acute estimate for a habitual one.
+  .
+  VERBATIM QUOTE (abstract, PubMed, PMID 30239905): "Participants were 6845 drivers involved in a
+  representative sample of crashes investigated by the US Department of Transportation in years
+  2005-2007. A modified case-control study design was used to compare self-reported hours of sleep in
+  the 24 hr before crashing between drivers deemed culpable versus nonculpable. Analyses controlled for
+  fatigue-related, driver-related, and environmental factors. Specific errors that led to crashes were
+  also examined. RESULTS: Drivers who reported having slept for 6, 5, 4, and less than 4 hr in the 24 hr
+  before crashing had 1.3 (95% confidence interval [CI] = 1.04 to 1.7), 1.9 (1.1 to 3.2), 2.9 (1.4 to
+  6.2), and 15.1 (4.2 to 54.4) times the odds, respectively, of having been culpable for their crashes,
+  compared with drivers who reported 7-9 hr of sleep. Drivers who had slept less than 4 hr had 3.4 (95%
+  CI = 2.1 to 5.6) times the increase in odds of culpable involvement in single-vehicle crashes compared
+  with multiple-vehicle crashes. Recent change in sleep schedule, typically feeling drowsy upon waking,
+  and driving for 3+ hr were also associated with culpability (all p <= 0.013). Assuming nonculpable
+  drivers comprised a representative sample of all drivers present where crashes occurred, these odds
+  ratios approximate incidence rate ratios for culpable crash involvement per unit of time driving.
+  CONCLUSIONS: Driving after having slept less than 7 hr in a 24 hr period is associated with elevated
+  risk of culpable crash involvement. Risk is greatest for drivers who have slept less than 4 hr and is
+  manifested disproportionately in single-vehicle crashes."
+  .
+  ACCESS: abstract_only. The Sleep full text is paywalled and Europe PMC/NCBI return
+  "The publisher of this article does not allow downloading of the full text in XML form." Every number
+  recorded here is present verbatim in the PubMed abstract quoted above; no number is taken from the
+  body of the paper. The grey-literature twin (tefft2016_aaa) IS held in full text, which is why the
+  richer habitual/deviation analyses are extracted there.
+  .
+  SCHEMA MAPPING NOTE: this is a case-control (quasi-induced-exposure) study; the schema's `design`
+  enum has no `case_control` value and `cross_sectional` is the nearest available. tier T5 assigned
+  (analytic observational, self-reported exposure, no prospective follow-up).
+shard: "s21_drowsy_driving"

@@ -1,0 +1,154 @@
+study_id: vorona2011
+citation: "Vorona RD, Szklo-Coxe M, Wu A, Dubik M, Zhao Y, Ware JC. Dissimilar teen crash rates in two neighboring southeastern Virginia cities with different high school start times. J Clin Sleep Med. 2011 Apr 15;7(2):145-151."
+doi: "10.5664/jcsm.28101"
+pmid: "21509328"
+url: "https://doi.org/10.5664/jcsm.28101"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Dissimilar teen crash rates in two neighboring southeastern Virginia cities with different high school start times."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 21375
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [16, 18]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: mortality
+    outcome_construct: teen_driver_crash_rate_ratio_early_vs_late_start_city
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "EARLY-start city (Virginia Beach, starts 75-80 min earlier) vs LATE-start city (Chesapeake): weekday crash rate per 1000 licensed 16-18 y drivers, 2008"}
+    scale: log_rr
+    unit: null
+    value: 0.345019
+    se: 0.060938
+    ci: [0.225581, 0.464457]
+    conversion_formula: >
+      Rate ratio computed by me from the two published rates: 65.8 / 46.6 = 1.412017;
+      log_rr = 0.345019.
+      SE computed from implied crash counts, since the paper reports rates and driver denominators but
+      not a CI: crashes_VB = 65.8/1000 * 12916 = 850; crashes_Ches = 46.6/1000 * 8459 = 394;
+      se(log RR) = sqrt(1/850 + 1/394) = sqrt(0.00117647 + 0.00253807) = sqrt(0.00371454) = 0.060938.
+      ci = 0.345019 +/- 1.96 * 0.060938. The paper reports p < 0.001, consistent with this SE.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = HARM from the earlier start time. Teens in the early-start city had 1.41x the crash rate.
+      BUT SEE rob: THIS IS A CROSS-SECTIONAL COMPARISON OF TWO CITIES WITH NO BEFORE-AND-AFTER, so the
+      1.41 is a between-city rate ratio, not a causal effect of start time. The narrow CI reflects large
+      crash counts and says nothing about the (unquantifiable) between-city confounding.
+    covariates: ["AM and PM traffic congestion (peak hours) compared and reported not to explain the difference"]
+    followup_years: null
+    cohort_family: "Virginia_DMV_SST"
+    quote: >
+      For VB and Chesapeake, teen drivers' crash rates in 2008 were 65.8/1000 and 46.6/1000 (p < 0.001),
+      respectively, and in 2007 were 71.2/1000 and 55.6/1000.
+  - outcome_domain: mortality
+    outcome_construct: teen_driver_crash_rate_ratio_early_vs_late_start_city
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "same two cities, 2007 replication: 71.2 vs 55.6 crashes per 1000 licensed 16-18 y drivers"}
+    scale: log_rr
+    unit: null
+    value: 0.247310
+    se: 0.056689
+    ci: [0.136199, 0.358420]
+    conversion_formula: >
+      71.2 / 55.6 = 1.280576; log_rr = 0.247310.
+      Implied counts using the 2008 driver denominators (the paper does not print 2007 denominators):
+      crashes_VB = 71.2/1000 * 12916 = 920; crashes_Ches = 55.6/1000 * 8459 = 470;
+      se = sqrt(1/920 + 1/470) = sqrt(0.00108696 + 0.00212766) = sqrt(0.00321462) = 0.056689.
+      ci = 0.247310 +/- 1.96 * 0.056689.
+      CAVEAT ON THIS SE: it reuses the 2008 licensed-driver counts because the 2007 counts are not
+      published. If 2007 licensure differed materially the SE is slightly wrong. The point estimate is
+      unaffected (it uses only the published rates).
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = HARM from earlier start. RR 1.28 in the prior year — SMALLER than 2008's 1.41. The
+      effect is not stable across two adjacent years in the same two cities, which is itself evidence
+      that year-to-year noise is comparable to the claimed effect.
+    covariates: []
+    followup_years: null
+    cohort_family: "Virginia_DMV_SST"
+    quote: >
+      For VB and Chesapeake, teen drivers' crash rates in 2008 were 65.8/1000 and 46.6/1000 (p < 0.001),
+      respectively, and in 2007 were 71.2/1000 and 55.6/1000.
+rob:
+  tool: ROBINS-I
+  judgement: critical
+  notes: >
+    THIS IS NOT A QUASI-EXPERIMENT AND I HAVE DELIBERATELY NOT LABELLED IT AS ONE. It is a
+    CROSS-SECTIONAL ECOLOGICAL COMPARISON OF TWO CITIES, which is why design is `cross_sectional` and
+    tier is TX rather than T2. Nothing changed; the authors compared two places that already differed.
+    (1) NO PRE-POST, NO INTERVENTION. There is no start-time change anywhere in this study. The entire
+        identifying assumption is that Virginia Beach and Chesapeake are exchangeable apart from school
+        start time. The authors support this only with a demographic-similarity assertion and a traffic
+        congestion comparison.
+    (2) N = 2 CLUSTERS. With two units there is no way to distinguish the start-time difference from any
+        other city-level difference: road geometry, speed limits, urban/suburban mix, military-base
+        commuting patterns (both cities are in the Hampton Roads Navy area), enforcement intensity,
+        crash-reporting thresholds, average trip length, or the share of teens who drive to school at all.
+        The reported CIs quantify Poisson noise in crash counts and NOTHING ELSE. They are not confidence
+        intervals for a causal effect.
+    (3) NO SLEEP MEASUREMENT AT ALL. The proposed mediator was never measured in either city. The paper's
+        own conclusion concedes this: "Future studies using individual level data may clarify if sleep
+        restriction, circadian dyssynchrony, and sleep inertia MIGHT contribute."
+    (4) The one piece of mechanism evidence — that the morning crash peak occurred an hour earlier in
+        Virginia Beach — is equally consistent with pure EXPOSURE SHIFT (more teens on the road at a
+        given clock hour) as with drowsiness, and exposure shift is what foss2019 actually found when it
+        tested the two explanations against each other.
+    (5) Denominator is LICENSED DRIVERS, not miles driven. If teens in the early-start city drive more
+        (e.g. because bus service or school choice differs), the whole difference is exposure.
+    (6) The effect size is not stable across the two available years (1.41 in 2008, 1.28 in 2007).
+funding: "Not stated in the retrievable abstract."
+notes: >
+  REQUIRED EXTRACTION #3. The task warned that "several of these are weak two-county comparisons and you
+  should say so." THIS IS THE ARCHETYPE OF THAT PROBLEM, and I am recording it as TX/critical rather than
+  as quasi-experimental evidence, because calling a two-city cross-section a quasi-experiment would
+  misinform the downstream model about what tier T2 means.
+  .
+  WHY IT IS STILL WORTH RECORDING: taken together with vorona2014 (a different pair of Virginia
+  jurisdictions), danner2008 (Kentucky, pre-post), foss2019 (North Carolina, interrupted time series) and
+  binhasan2020 (Fairfax County, pre-post), five independent analyses all point the same direction. The
+  CONSISTENCY OF SIGN across designs is worth something even when no individual design is credible. What
+  it is NOT worth is a magnitude: the five studies' implied effects range from ~6% to ~22% and their
+  designs are too weak to adjudicate between those.
+  .
+  A SPECIFIC INTERNAL CONTRADICTION WORTH FLAGGING, WHICH THE AUTHORS THEMSELVES REPORT IN THE FOLLOW-UP:
+  in vorona2014, post-hoc analysis found significantly MORE run-off-road-to-the-right crashes
+  (the crash type the authors call "potentially sleep-related") in the LATE-start county, i.e. the
+  OPPOSITE direction to the overall finding. If the mechanism were drowsiness, the sleep-related crash
+  subtype should move WITH the total, not against it.
+  .
+  VERBATIM QUOTE (abstract, PMID 21509328): "Virginia Beach (VB) and Chesapeake are adjacent,
+  demographically similar cities. VB high schools start 75-80 minutes earlier than Chesapeake's. We
+  hypothesized that VB teens would manifest a higher crash rate than Chesapeake teens. METHODS: The
+  Virginia Department of Motor Vehicles (DMV) provided de-identified, aggregate 2008 and 2007 data for
+  weekday crashes and crash times in VB and Chesapeake for drivers aged 16-18 years ("teens"), and
+  provided 2008 and 2007 crash data for all drivers. ... RESULTS: In 2008, there were 12,916 and 8,459
+  Virginia Beach and Chesapeake 16- to 18-year-old drivers, respectively. For VB and Chesapeake, teen
+  drivers' crash rates in 2008 were 65.8/1000 and 46.6/1000 (p < 0.001), respectively, and in 2007 were
+  71.2/1000 and 55.6/1000. Teen drivers' crash peaks in the morning occurred one hour earlier in VB than
+  Chesapeake, consistent with school commute time. Congestion data for VB and Chesapeake did not explain
+  the different crash rates. CONCLUSIONS: A significantly increased teen crash rate for both 2008 and 2007
+  occurred in VB, the city with earlier high school start times. Future studies using individual level
+  data may clarify if sleep restriction, circadian dyssynchrony, and sleep inertia might contribute to
+  this increased crash rate."
+  .
+  ACCESS: abstract_only (Europe PMC 404; NCBI efetch for PMC3077341 returns publisher restriction).
+  n = 21,375 = 12,916 + 8,459 licensed 16-18 y drivers in the 2008 comparison.
+  .
+  COHORT-FAMILY WARNING: vorona2011 and vorona2014 both use Virginia DMV aggregate crash data on 16-18 y
+  drivers, same team, same design template, adjacent years, DIFFERENT jurisdictions. binhasan2020 ALSO
+  uses Virginia DMV data on 16-18 y drivers, for Fairfax County and "the rest of the state" — which
+  INCLUDES Virginia Beach, Chesapeake, Henrico and Chesterfield. These three records are therefore NOT
+  fully independent. I have set cohort_family: Virginia_DMV_SST on all three so the pooler cannot treat
+  them as independent replications.
+shard: "s21_drowsy_driving"
