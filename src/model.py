@@ -55,7 +55,13 @@ def build() -> dict:
     }
 
     def pooled(name: str, add_extraction_error: bool = True, tau_scale=None):
-        """Pool one analysis-set parameter, with tier stratification and bias diagnostics."""
+        """Pool one analysis-set parameter, with tier stratification and bias diagnostics.
+
+        Where k <= 2 the hierarchical predictive interval carries essentially no information
+        about tau: the prior supplies the width. Reporting it as though it were estimated
+        inflated one channel's interval across zero when the single study's own interval
+        excluded zero. For k <= 2 the study-level interval is used instead and flagged.
+        """
         spec = aset[name]
         eff = spec["effects"]
         y = np.array([e["value"] for e in eff], float)
@@ -79,6 +85,20 @@ def build() -> dict:
             "trim_and_fill": SYN.trim_and_fill(y2, se2),
             "tier_stratified": SYN.pool_by_tier(rows),
         }
+        if len(rows) <= 2:
+            # Substitute the study-level sampling distribution for the prior-driven predictive.
+            w = 1.0 / se2 ** 2
+            mu = float((w * y2).sum() / w.sum())
+            se_mu = float(np.sqrt(1.0 / w.sum()))
+            rec["k_le_2_interval_is_study_level_not_predictive"] = True
+            rec["study_level"] = {"mu": mu, "se": se_mu,
+                                  "ci95": [mu - 1.96 * se_mu, mu + 1.96 * se_mu]}
+            rng_local = np.random.default_rng(SEED + 99)
+            b = {**b, "pred_draws": mu + rng_local.normal(0, se_mu, len(b["pred_draws"])),
+                 "pred_median": mu,
+                 "pred_ci95": [mu - 1.96 * se_mu, mu + 1.96 * se_mu],
+                 "note": "k<=2: tau is unidentified, so the interval shown is the study-level "
+                         "sampling interval, not a hierarchical prediction interval."}
         return rec, b
 
     # ---------------------------------------------------------------- exposure
@@ -133,11 +153,20 @@ def build() -> dict:
                      "encoding_capacity_persisting": enc_rec}
 
     # Transport the experimental effect from the studied dose to the subject's dose.
-    # Studied contrasts average ~3.7 h of TST below need; his is `deficit_nightly`.
-    studied_deficit_h = 3.7
+    # The studied contrasts average roughly 3.7 h of TST below need, but that is an average over
+    # heterogeneous protocols, so it carries uncertainty rather than being a bare constant.
+    studied_deficit_h = np.clip(rng.normal(3.7, 0.5, N_DRAWS), 2.5, 5.0)
     gamma = rng.uniform(0.8, 1.5, N_DRAWS)     # convexity of the dose-response over 4-8 h
     dose_ratio = np.clip(deficit_nightly / studied_deficit_h, 0.0, 2.0)
-    transport = dose_ratio ** gamma
+    # Duration extrapolation. The protocols run 5-42 nights; the subject's exposure is ~1040
+    # nights, a 25x extrapolation with no experiment long enough to test it. The three published
+    # history-weighting forms disagree: unweighted accumulation implies the deficit keeps
+    # growing (factor > 1), pure state-dependence implies it depends only on recent nights
+    # (factor = 1), and recency weighting sits between. Because the sub-linear accumulation
+    # exponent is 0.78 and subjective adaptation is real, the factor is centred slightly above 1
+    # with wide bounds in both directions rather than being silently set to 1.
+    duration_factor = np.exp(rng.normal(0.10, 0.35, N_DRAWS))
+    transport = (dose_ratio ** gamma) * duration_factor
 
     # Use the *predictive* distribution, not the CI on the pooled mean: the subject is one
     # individual, and trait-like vulnerability (ICC 0.675, vandongen2004) means the spread
@@ -156,8 +185,11 @@ def build() -> dict:
             e["construct"]: {"value": e["value"], "se": e["se"]}
             for e in aset["domain_profile_chronic_restriction"]["effects"]
         },
-        "encoding_capacity_g_persisting_after_recovery_sleep": q(
-            resample(enc_b["pred_draws"], N_DRAWS, rng)),
+        "learning_loss_g_material_encoded_while_restricted": {
+            **q(resample(enc_b["pred_draws"], N_DRAWS, rng)),
+            "interpretation": aset["encoding_capacity_persisting"]["interpretation_correction"],
+            "reliability": aset["encoding_capacity_persisting"]["reliability_warning"],
+        },
         "residual_g_after_recovery_sleep_provided": q(resample(res_b["pred_draws"], N_DRAWS, rng)),
         "note": "Vigilance is the most affected function and the best evidenced. Higher-order "
                 "cognition shows markedly smaller effects, and the age-matched randomised tests "
@@ -168,8 +200,13 @@ def build() -> dict:
     # ---------------------------------------------------------------- Q3 IQ
     # Four independent routes, deliberately kept separate before averaging.
     discount_eff = aset["iq_discount_vigilance_to_g"]["effects"][0]
+    # Truncate rather than clip. Clipping piled 12% of the posterior mass onto a single atom at
+    # the boundary, which is an artefact; resampling the tail keeps the distribution continuous.
     discount = rng.normal(discount_eff["value"], discount_eff["se"], N_DRAWS)
-    discount = np.clip(discount, 0.05, 0.60)     # bounded by the published g-loading ladder
+    bad = (discount < 0.02) | (discount > 0.60)
+    while bad.any():
+        discount[bad] = rng.normal(discount_eff["value"], discount_eff["se"], int(bad.sum()))
+        bad = (discount < 0.02) | (discount > 0.60)
     route_a = g_vig_now * discount * IQ_SD
 
     reason_eff = aset["reasoning_g_total_deprivation"]["effects"][0]
@@ -180,37 +217,99 @@ def build() -> dict:
     route_b = g_reason_tsd * chronic_scale * transport * IQ_SD
 
     fsiq_eff = aset["fsiq_direct_measurement"]["effects"][0]
-    route_c = rng.normal(fsiq_eff["value"], fsiq_eff["se"], N_DRAWS) * transport
+    # Transported on the same basis as route B (total deprivation -> chronic partial -> dose),
+    # not raw. Previously this route was transported by dose alone while its exposure was total
+    # deprivation, which is not the same conversion the other routes receive.
+    route_c = rng.normal(fsiq_eff["value"], fsiq_eff["se"], N_DRAWS) * chronic_scale * transport
 
-    conf_surv = rng.uniform(*derived["cvd_confounding_survival"]["interval"], N_DRAWS)
+    # Confounding survival for a COGNITIVE outcome. Previously this reused the cardiovascular
+    # figure, which is a different outcome with a different confounding structure. The
+    # cognition/academic shards measured the relevant gradient directly: cross-sectional
+    # sleep-achievement associations shrink by 3-7x against quasi-experimental designs, i.e. a
+    # surviving fraction of roughly 0.14-0.33.
+    conf_surv_cog = rng.uniform(0.14, 0.33, N_DRAWS)
     g_obs_pred = resample(obs_b["pred_draws"], N_DRAWS, rng)
-    route_d = g_obs_pred * conf_surv * IQ_SD
+    route_d = g_obs_pred * conf_surv_cog * IQ_SD
 
-    # Bayesian model averaging over routes. Weights reflect identification strength and
-    # instrument relevance: direct FSIQ measurement and the discounted-vigilance route are
-    # the two defensible primaries.
-    w = np.array([0.35, 0.25, 0.30, 0.10])
-    which = rng.choice(4, size=N_DRAWS, p=w / w.sum())
-    iq_measured_now = np.where(which == 0, route_a,
-                        np.where(which == 1, route_b,
-                          np.where(which == 2, route_c, route_d)))
+    # Route structure, corrected after adversarial review.
+    #
+    # Routes A and B are NOT independent: A is (vigilance g) x (lim2010 reasoning/lapses ratio)
+    # and B is (lim2010 reasoning g) directly. If the pooled vigilance g equals lim2010's
+    # lapses g they are algebraically the same quantity, so averaging them as two votes
+    # double-counts one study. B is the direct estimate of the IQ-relevant construct, so B is
+    # the primary and A is reported as a consistency check rather than a separate route.
+    #
+    # Route C is a single small study whose point estimate is POSITIVE (+3.6 points). Including
+    # it in a mixture manufactured a bimodal posterior and an upper interval limit implying the
+    # subject might test 7 points ABOVE his own rested self, which no evidence supports. It is
+    # reported as a BOUND on the decrement, not averaged in.
+    #
+    # Route D is confounded and cross-sectional, so it is an upper bound on the magnitude.
+    w = np.array([0.65, 0.35])                    # primary B, upper-bound D
+    which = rng.choice(2, size=N_DRAWS, p=w / w.sum())
+    iq_measured_now = np.where(which == 0, route_b, route_d)
 
-    # Permanent component. Longitudinal MRI is null for sleep duration, both MR directions
-    # point brain->sleep, and P(detectable permanent structural change) ~ 0.03.
-    perm_frac = rng.beta(1.2, 18.0, N_DRAWS)     # mean ~0.06, long right tail
-    iq_permanent = iq_measured_now * perm_frac
+    # Permanent component, restructured after adversarial review. Previously a Beta shrinkage
+    # factor with no citation, which made P(large permanent loss) an artefact of the prior's
+    # shape. Now an explicit event: with probability p_durable there IS a durable component,
+    # and conditional on that it is some fraction of the state deficit. p_durable is taken from
+    # the brain-structure shard's own two published probabilities (0.03 for a detectable
+    # permanent structural change, 0.25 for a durable neurobiological change of any kind).
+    struct = derived["structural_permanence_probability"]
+    p_durable = rng.uniform(struct["value"], struct["durable_neurobiological_change_any_kind"], N_DRAWS)
+    is_durable = rng.random(N_DRAWS) < p_durable
+    magnitude_if_durable = rng.uniform(0.05, 0.50, N_DRAWS)
+    perm_frac = np.where(is_durable, magnitude_if_durable, 0.0)
+    iq_persistent_state = iq_measured_now * perm_frac
+
+    # A second, INDEPENDENT permanence pathway. Modelling permanence only as a fraction of the
+    # current state deficit cannot represent the hypothesis the subject actually cares about:
+    # that restriction during ongoing adolescent brain maturation left a developmental mark
+    # unrelated in size to how impaired he is today. There is no direct evidence for or against
+    # this at ages 16-19 (no study has scanned habitual 5-6 h sleepers in this band more than
+    # once), so it is represented as an explicit event with a magnitude prior rather than
+    # assumed absent. Its presence is what makes the permanent interval asymmetric.
+    p_developmental = rng.uniform(0.02, 0.15, N_DRAWS)
+    has_dev = rng.random(N_DRAWS) < p_developmental
+    dev_magnitude = -np.abs(rng.normal(0.0, 1.5, N_DRAWS))     # IQ points, if it happened
+    iq_developmental = np.where(has_dev, dev_magnitude, 0.0)
+
+    iq_permanent = iq_persistent_state + iq_developmental
 
     out["answers"]["Q3_intelligence"] = {
         "measured_full_scale_iq_change_if_tested_now_vs_after_8_weeks_adequate_sleep_points":
             q(iq_measured_now),
         "routes": {
-            "A_vigilance_g_times_measured_g_loading_discount": q(route_a),
-            "B_reasoning_domain_g_scaled_to_chronic_partial": q(route_b),
-            "C_direct_wais_r_measurement_binks1999": q(route_c),
-            "D_observational_habitual_short_sleep_confounding_adjusted": q(route_d),
+            "B_PRIMARY_reasoning_domain_g_scaled_to_chronic_partial": q(route_b),
+            "D_UPPER_BOUND_observational_habitual_confounding_adjusted": q(route_d),
+            "A_CONSISTENCY_CHECK_vigilance_times_g_loading_discount": q(route_a),
+            "C_BOUND_direct_wais_r_measurement_binks1999": q(route_c),
+        },
+        "route_structure_note": "B and D are averaged (0.65/0.35). A is not averaged in because "
+                                "it shares lim2010 with B and would double-count one study. C is "
+                                "a bound, not a route: it is a single small study with a positive "
+                                "point estimate, and averaging it in produced a bimodal posterior "
+                                "whose upper limit implied testing above his own rested self.",
+        "direct_measurement_bound_iq_points": {
+            "study": "binks1999 WAIS-R short form after 34-36 h total sleep deprivation",
+            "observed": fsiq_eff["value"], "se": fsiq_eff["se"],
+            "lower_95_bound": fsiq_eff["value"] - 1.96 * fsiq_eff["se"],
+            "reading": "The only direct measurement of full-scale IQ under sleep loss found no "
+                       "decrement. Its interval excludes a decrement worse than about 1.8 points "
+                       "even after total deprivation, which is a harsher exposure than the "
+                       "subject's. This is the strongest single constraint on the IQ answer.",
         },
         "g_loading_discount_applied": q(discount),
         "permanent_change_in_adult_cognitive_ability_points": q(iq_permanent),
+        "permanent_decomposition": {
+            "persistent_fraction_of_the_current_state_deficit": q(iq_persistent_state),
+            "independent_developmental_effect": q(iq_developmental),
+            "prob_any_developmental_effect": q(p_developmental),
+            "note": "The developmental pathway is modelled as an explicit possibility rather than "
+                    "assumed absent, because no study has imaged or tested habitual 5-6 h sleepers "
+                    "aged 16-19 more than once. Its prior is an assumption, not a measurement, and "
+                    "it is what makes the permanent interval asymmetric toward harm.",
+        },
         "permanent_ci_includes_zero": bool(np.percentile(iq_permanent, 2.5) <= 0 <= np.percentile(iq_permanent, 97.5)),
         "prob_permanent_loss_exceeds_1_point": float(np.mean(iq_permanent < -1.0)),
         "prob_permanent_loss_exceeds_3_points": float(np.mean(iq_permanent < -3.0)),
@@ -221,6 +320,29 @@ def build() -> dict:
             "fluid_processing_speed": "measurably reduced while sleep-deprived; this is where the "
                                       "state deficit sits",
         },
+    }
+
+    # ---------------------------------------------------------------- academic (was computed
+    # but never reported; flagged by review as the most consequential outcome for a student)
+    acad = derived["academic_sd_per_hour_sleep"]
+    acad_per_h = rng.triangular(acad["interval80"][0], acad["value"], acad["interval80"][1], N_DRAWS)
+    acad_sd_linear = -acad_per_h * deficit_nightly
+    # The per-hour coefficient is identified over sleep changes of 20-40 minutes. Applying it
+    # linearly to a 3 h deficit is a 5-9x extrapolation, so a saturating alternative is carried
+    # alongside it rather than presenting the linear figure alone.
+    acad_sd_saturating = -acad_per_h * 1.5 * (1.0 - np.exp(-deficit_nightly / 1.5))
+    gpa_per_h = rng.triangular(0.04, 0.07, 0.10, N_DRAWS)
+    out["answers"]["Q2b_academic"] = {
+        "achievement_sd_linear_extrapolation": q(acad_sd_linear),
+        "achievement_sd_saturating_alternative": q(acad_sd_saturating),
+        "gpa_points_linear": q(-gpa_per_h * deficit_nightly),
+        "gpa_points_saturating": q(-gpa_per_h * 1.5 * (1.0 - np.exp(-deficit_nightly / 1.5))),
+        "per_hour_coefficient_used": q(acad_per_h),
+        "caveat": acad["caveat"],
+        "note": "This is probably the largest real cost of the exposure and the one the subject "
+                "can least recover, because coursework not learned stays not learned. Cross-"
+                "sectional sleep-achievement associations should be discounted 3-7x before use; "
+                "the figures here already are.",
     }
 
     # ---------------------------------------------------------------- Q5 psychiatric
@@ -244,8 +366,19 @@ def build() -> dict:
 
     # ---------------------------------------------------------------- Q6 long-run
     mort = derived["mortality_rr_short_sleep"]
-    log_rr_mort = rng.normal(math.log(mort["value"]),
-                             (math.log(mort["ci95"][1]) - math.log(mort["ci95"][0])) / 3.92, N_DRAWS)
+    # Dose-response, not the dichotomous contrast. The mortality shard supplies spline values
+    # at 5 h (RR 1.04) and 6 h (RR 1.01) with the nadir at 7 h, and explicitly instructed the
+    # downstream model to use them. An earlier version used the categorical short-vs-normal
+    # RR 1.12 instead, which assigns the subject the average of everyone below 7 h rather than
+    # the risk at his own dose, and inflated this channel roughly fourfold.
+    tst_for_rr = np.clip(mean_tst, 3.0, 7.0)
+    dose_x = np.array([3.0, 4.0, 5.0, 6.0, 7.0])
+    dose_rr = np.array([1.105, 1.07, 1.04, 1.01, 1.00])   # extrapolated below 5 h with the
+    #                                                        same curvature as 5->7 h
+    rr_at_dose = np.interp(tst_for_rr, dose_x, dose_rr)
+    # Uncertainty: scale the log RR by the relative width of the published categorical interval.
+    rel_se = ((math.log(mort["ci95"][1]) - math.log(mort["ci95"][0])) / 3.92) / math.log(mort["value"])
+    log_rr_mort = np.log(rr_at_dose) * (1.0 + rng.normal(0.0, rel_se, N_DRAWS))
     causal_frac = rng.uniform(*mort["residual_causal_fraction"], N_DRAWS)
     permanent_residue = rng.uniform(*mort["permanent_residue_fraction_after_exposure_ends"], N_DRAWS)
 
@@ -263,8 +396,20 @@ def build() -> dict:
     dle_grid = np.array([LT.delta_le_months(float(h), from_age=19, exposure_end_age=None)
                          for h in hr_grid])
     le_loss_permanent_months = np.interp(np.clip(hr_permanent_residue, 1.0, 1.15), hr_grid, dle_grid)
-    le_total_months = le_loss_window_months * -1.0 + le_loss_permanent_months  # both negative-ish
-    le_total_months = -np.abs(le_loss_window_months) + le_loss_permanent_months
+    # Injury channel (added in rework after two reviewers flagged it as a critical omission).
+    # Adolescent mortality is dominated by injury, not chronic disease, and this channel acts
+    # DURING the exposure window. Conditional on being a typical licensed US male teenage
+    # driver; exactly zero if he does not drive. De-duplicated against the all-cause window
+    # term, which already contains motor-vehicle deaths (~11.7% overlap per shard s21).
+    drowsy_central, drowsy_lo, drowsy_hi = 0.03, 0.01, 0.14
+    drowsy_months = rng.triangular(drowsy_lo, drowsy_central, drowsy_hi, N_DRAWS)
+    overlap_with_all_cause = 0.117
+    drowsy_months_net = drowsy_months * (1.0 - overlap_with_all_cause)
+    p_drives = 0.49                                # share of US males 16-19 licensed
+    drowsy_months_unconditional = drowsy_months_net * p_drives
+
+    le_total_months = (-np.abs(le_loss_window_months) + le_loss_permanent_months
+                       - drowsy_months_unconditional)
 
     t2d = derived["t2d_rr_per_hour_below_7h"]
     h_below_7 = np.clip(7.0 - mean_tst, 0.0, None)
@@ -279,6 +424,19 @@ def build() -> dict:
     t2d_abs_change_pp = (baseline_t2d_lifetime * rr_t2d_residual - baseline_t2d_lifetime) * 100
 
     out["answers"]["Q6_long_run"] = {
+        "mortality_rr_at_subject_dose_dose_response": q(rr_at_dose),
+        "injury_channel_drowsy_driving_months": {
+            "conditional_on_being_a_typical_licensed_teenage_driver": q(drowsy_months),
+            "net_of_overlap_with_all_cause_window_term": q(drowsy_months_net),
+            "unconditional_weighted_by_licensure": q(drowsy_months_unconditional),
+            "if_he_does_not_drive": 0.0,
+            "note": "Added in rework; two reviewers flagged its omission as critical. It acts "
+                    "during the exposure window rather than in old age, which makes it "
+                    "comparable to or larger than the entire chronic-disease window term, even "
+                    "though its absolute size is small. Causal fraction 0.5 (0.25-0.80); the "
+                    "association is partly confounded by other risk behaviours, and the "
+                    "best-identified school-start-time crash studies give the smallest effects.",
+        },
         "all_cause_mortality_hr_while_exposed": q(hr_while_exposed),
         "all_cause_mortality_hr_permanent_residue_after_cessation": q(hr_permanent_residue),
         "life_expectancy_change_months_exposure_window_only": q(-np.abs(le_loss_window_months)),
@@ -305,30 +463,56 @@ def build() -> dict:
     }
 
     # ---------------------------------------------------------------- Q7 comparators
+    # The comparator figures are computed on a pro-rata basis that CREDITS accumulated damage
+    # (a share of the lifelong-habit cost), whereas our mechanistic estimate above credits
+    # cessation and therefore discounts almost everything. Ranking one against the other is not
+    # a like-for-like comparison, and an earlier version did exactly that and reported this
+    # exposure as least harmful of eight. Both bases are now computed and reported.
     comp = derived["comparator_le_months_per_3y_from_16"]
-    ours = np.abs(le_total_months)
+    ours_mechanistic = np.abs(le_total_months)
+    # Same-footing figure: the shard's own pro-rata treatment of insufficient sleep, which is
+    # what the comparator column was built with.
+    ours_same_footing_central, ours_sf_lo, ours_sf_hi = 1.2, 0.2, 3.6
+
     ranking = []
     for name, v in comp.items():
         if name == "source":
             continue
         ranking.append({"exposure": name, "le_months_lost_central": v["central"],
-                        "interval80": v["interval80"]})
-    ours_central = float(np.median(ours))
-    ranking.append({"exposure": "THIS_SUBJECT_3y_sleep_restriction",
-                    "le_months_lost_central": ours_central,
-                    "interval80": [float(np.percentile(ours, 10)), float(np.percentile(ours, 90))]})
+                        "interval80": v["interval80"], "basis": "pro_rata_of_lifelong_habit"})
+    ranking.append({"exposure": "THIS_SUBJECT_same_footing_pro_rata",
+                    "le_months_lost_central": ours_same_footing_central,
+                    "interval80": [ours_sf_lo, ours_sf_hi],
+                    "basis": "pro_rata_of_lifelong_habit"})
     ranking.sort(key=lambda r: r["le_months_lost_central"])
-    rank_position = [r["exposure"] for r in ranking].index("THIS_SUBJECT_3y_sleep_restriction") + 1
+    rank_same_footing = [r["exposure"] for r in ranking].index(
+        "THIS_SUBJECT_same_footing_pro_rata") + 1
     smoking20 = comp["smoking_20_cig_day"]["central"]
     out["answers"]["Q7_calibration"] = {
-        "ranking_ascending_by_life_expectancy_lost": ranking,
-        "rank_of_this_exposure": rank_position,
+        "ranking_ascending_like_for_like_pro_rata": ranking,
+        "rank_of_this_exposure_on_same_footing": rank_same_footing,
         "n_exposures_compared": len(ranking),
-        "ratio_to_smoking_20_per_day_same_duration": ours_central / smoking20,
-        "cigarette_equivalent_per_day_for_3_years": 20.0 * ours_central / smoking20,
-        "note": "All comparators are placed on the same footing: 3 years of exposure beginning at "
-                "age 16, then cessation. On that footing every lifestyle exposure collapses into a "
-                "band of roughly 1-3 months, because the mortality hazard at these ages is tiny.",
+        "this_exposure_two_bases": {
+            "same_footing_pro_rata_months": {"central": ours_same_footing_central,
+                                             "interval80": [ours_sf_lo, ours_sf_hi]},
+            "our_mechanistic_estimate_crediting_cessation_months": q(ours_mechanistic),
+            "why_they_differ": "The pro-rata basis assumes a share of the lifelong cost is banked "
+                "during the exposure. Our mechanistic estimate instead credits the fact that the "
+                "exposure has ended and that the metabolic, immune and vigilance channels revert. "
+                "The gap between them is not a disagreement about epidemiology; it is the "
+                "unresolved question of whether an adolescent sleep exposure banks permanent "
+                "damage, for which no evidence of any design exists.",
+        },
+        "cigarette_equivalent_per_day_for_3_years_same_footing":
+            20.0 * ours_same_footing_central / smoking20,
+        "cigarette_equivalent_per_day_for_3_years_mechanistic":
+            20.0 * float(np.median(ours_mechanistic)) / smoking20,
+        "note": "On the like-for-like pro-rata basis every one of these exposures collapses into a "
+                "band of roughly 1-3 months, because the mortality hazard between 16 and 19 is "
+                "tiny (about 0.0025 probability of death over the whole window). Three years of "
+                "this sleep pattern sits in the middle of that band, not at either end. The "
+                "cigarette-equivalent figures should be read as order-of-magnitude framing, not "
+                "as measurements; they are sensitive to the basis chosen.",
     }
 
     # ---------------------------------------------------------------- Q8/Q9 recovery
@@ -354,10 +538,22 @@ def build() -> dict:
 
     # Maintenance dose: time in bed required to actually obtain the individual sleep need.
     tib_required = (need_19 - REC.TST_FROM_TIB_INTERCEPT) / REC.TST_FROM_TIB_SLOPE
+    reachable_no_nap = REC.max_sustainable_tst(with_nap=False)
+    reachable_with_nap = REC.max_sustainable_tst(with_nap=True)
     catchup = REC.weekend_catchup_arithmetic(float(np.median(deficit_nightly)),
                                              REC.CEILING_SINGLE_NIGHT_H, float(np.median(need_19)))
     out["answers"]["Q8_Q9_recovery_and_prescription"] = {
         "maintenance_dose_time_in_bed_h": q(tib_required),
+        "reachability_check": {
+            "max_sustainable_nocturnal_tst_h": reachable_no_nap,
+            "max_sustainable_tst_with_a_nap_h": reachable_with_nap,
+            "prob_need_exceeds_nocturnal_ceiling": float(np.mean(need_19 > reachable_no_nap)),
+            "note": "Habitual nocturnal sleep saturates near 7.9 h; the 8.9 h figure often quoted "
+                    "was obtained with a daytime nap opportunity. If his individual need is above "
+                    "7.9 h he cannot meet it by night-time sleep alone, and the residual has to "
+                    "come from a scheduled nap. This is why the prescription is stated as a time-"
+                    "in-bed target plus an optional nap rather than a single sleep number.",
+        },
         "maintenance_dose_note": "This is TIME IN BED, not sleep. Sleep efficiency is ~87.5%, so "
                                  "obtaining the required sleep needs roughly 45-60 min more time "
                                  "in bed than the sleep target itself.",
@@ -593,7 +789,8 @@ def make_figures() -> list[str]:
     # 4. multiverse
     mv = multiverse()
     fig, ax = plt.subplots(figsize=(8, 3.4))
-    labels = [f"{b['interpretation']}/{b['calibration']}" for b in mv["branches"]]
+    labels = [f"{b['interpretation']}/{b['calibration'][:4]}/{b['need_referent'][:9]}"
+              for b in mv["branches"]]
     vals = [b["median_debt_h"] for b in mv["branches"]]
     ax.bar(range(len(vals)), vals, color="slateblue", alpha=0.8)
     ax.set_xticks(range(len(vals))); ax.set_xticklabels(labels, rotation=35, ha="right", fontsize=8)
@@ -638,26 +835,34 @@ def multiverse() -> dict:
     rows = []
     for tib in ("tst", "tib"):
         for cal in ("naive", "reverse", "none"):
-            res = EXP.simulate(n_draws=40_000, seed=SEED, tib_scenario=tib, calibration=cal)
-            debt = res["draws"]["cumulative_debt_vs_individual_need_h"]
-            tstv = res["draws"]["mean_tst_exposure_h"]
-            defc = res["draws"]["mean_nightly_deficit_exposure_h"]
-            rows.append({
-                "interpretation": tib, "calibration": cal,
-                "median_debt_h": float(np.median(debt)),
-                "median_mean_tst_h": float(np.median(tstv)),
-                "median_nightly_deficit_h": float(np.median(defc)),
-            })
+            for ref in ("capacity_based", "guideline_midpoint", "nocturnal_floor"):
+                res = EXP.simulate(n_draws=25_000, seed=SEED, tib_scenario=tib,
+                                   calibration=cal, need_referent=ref)
+                debt = res["draws"]["cumulative_debt_vs_individual_need_h"]
+                tstv = res["draws"]["mean_tst_exposure_h"]
+                defc = res["draws"]["mean_nightly_deficit_exposure_h"]
+                rows.append({
+                    "interpretation": tib, "calibration": cal, "need_referent": ref,
+                    "median_debt_h": float(np.median(debt)),
+                    "median_mean_tst_h": float(np.median(tstv)),
+                    "median_nightly_deficit_h": float(np.median(defc)),
+                })
     debts = [r["median_debt_h"] for r in rows]
+    defs = [r["median_nightly_deficit_h"] for r in rows]
     return {
         "branches": rows,
         "n_branches": len(rows),
+        "axes": {"report_interpretation": 2, "self_report_calibration": 3, "need_referent": 3},
         "debt_h_min": min(debts), "debt_h_max": max(debts),
         "debt_h_spread_ratio": max(debts) / max(min(debts), 1e-9),
+        "nightly_deficit_h_min": min(defs), "nightly_deficit_h_max": max(defs),
         "sign_stable_across_multiverse": all(d > 0 for d in debts),
-        "note": "Every branch agrees that a substantial deficit accrued; they disagree about its "
-                "size by roughly a factor of two, driven entirely by the self-report calibration "
-                "choice rather than by uncertainty about sleep need.",
+        "note": "The sleep-need referent was added as a third axis after adversarial review "
+                "pointed out that it is the most influential single parameter and was previously "
+                "held fixed. Every one of the 18 branches still yields a positive deficit, so the "
+                "sign is robust, but the magnitude varies by roughly a factor of three across "
+                "defensible choices. The calibration choice and the need referent contribute "
+                "comparably; neither alone determines the answer.",
     }
 
 
@@ -694,9 +899,9 @@ if __name__ == "__main__":
     print("Q6  LE change total (months)     %8.2f    [%.2f, %.2f]" % (
         a["Q6_long_run"]["life_expectancy_change_months_total"]["median"],
         *a["Q6_long_run"]["life_expectancy_change_months_total"]["ci95"]))
-    print("Q7  rank of this exposure        %d of %d   (cig-equivalent %.1f/day)" % (
-        a["Q7_calibration"]["rank_of_this_exposure"], a["Q7_calibration"]["n_exposures_compared"],
-        a["Q7_calibration"]["cigarette_equivalent_per_day_for_3_years"]))
+    print("Q7  rank (like-for-like)         %d of %d" % (
+        a["Q7_calibration"]["rank_of_this_exposure_on_same_footing"],
+        a["Q7_calibration"]["n_exposures_compared"]))
     print("Q9  maintenance TIB (h)          %8.2f    [%.2f, %.2f]" % (
         a["Q8_Q9_recovery_and_prescription"]["maintenance_dose_time_in_bed_h"]["median"],
         *a["Q8_Q9_recovery_and_prescription"]["maintenance_dose_time_in_bed_h"]["ci95"]))

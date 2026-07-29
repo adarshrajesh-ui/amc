@@ -70,10 +70,23 @@ ANALYSIS_SET: dict[str, dict] = {
         ],
     },
     "domain_profile_chronic_restriction": {
-        "what": "Per-domain profile under chronic partial restriction (not total deprivation).",
+        "what": "Overall neurocognitive performance under chronic partial restriction (not total "
+                "deprivation), from the meta-analytic composite.",
         "scale": "hedges_g", "canonical": "negative_is_worse",
+        "double_counting_correction": "Earlier versions pooled lowe2017's overall composite "
+            "together with three of its own constituent sub-domains as if they were four "
+            "independent studies. That violates the de-duplication rule, understates the "
+            "interval, and pulls the estimate toward the composite by construction. Only the "
+            "composite is pooled; the sub-domains are reported descriptively below.",
         "selectors": [
             ("lowe2017", "overall_neurocognitive_performance_pooled_across_domains", False),
+        ],
+    },
+    "domain_subscales_descriptive_only": {
+        "what": "Constituent sub-domains of the same meta-analysis. Reported to show the shape of "
+                "the profile. MUST NOT be pooled with the composite above.",
+        "scale": "hedges_g", "canonical": "negative_is_worse", "pool": False,
+        "selectors": [
             ("lowe2017", "sustained_attention_pooled", False),
             ("lowe2017", "executive_functioning_pooled", False),
             ("lowe2017", "long_term_memory_pooled", False),
@@ -119,9 +132,19 @@ ANALYSIS_SET: dict[str, dict] = {
         ],
     },
     "encoding_capacity_persisting": {
-        "what": "Encoding capacity measured AFTER recovery sleep in age-matched adolescents. "
-                "This is the learning-loss channel.",
+        "what": "Memory for material ENCODED DURING a restricted week, retrieved after recovery "
+                "sleep, in age-matched adolescents (cousins2018).",
         "scale": "hedges_g", "canonical": "negative_is_worse",
+        "interpretation_correction": "Adversarial review established that encoding happened "
+            "during the restricted week and only RETRIEVAL followed recovery sleep. So this does "
+            "NOT show a persisting deficit in the faculty of encoding; it shows that material "
+            "learned while sleep-restricted stays less well learned after sleep normalises. That "
+            "is the learning-loss channel (knowledge not acquired), not a permanent ability "
+            "change, and the report must not present it as the latter.",
+        "k": 1,
+        "reliability_warning": "k=1, abstract-only, one research programme. Two randomised, "
+            "age-matched null results sit in the corpus but carry se: null and so cannot enter "
+            "any inverse-variance pool, which biases this channel in one direction.",
         "selectors": [("cousins2018", "picture_recognition_memory_encoding_capacity", False)],
     },
 }

@@ -54,8 +54,22 @@ def tst_from_opportunity(tib_h: np.ndarray | float, nap_h: float = 0.0) -> np.nd
 
 
 def sustained_tst(tib_h: float, nap_h: float = 0.0) -> float:
-    """Sleep obtained per 24 h under a policy sustained for weeks, not one recovery night."""
-    return float(min(tst_from_opportunity(tib_h, nap_h), CEILING_SUSTAINED_H + nap_h))
+    """Sleep obtained per 24 h under a policy sustained for weeks, not one recovery night.
+
+    Without a daytime nap the binding constraint is the NOCTURNAL asymptote (7.9 h), not the
+    total-sleep asymptote (8.9 h): klerman2008's subjects only reached 8.9 h per 24 h because
+    the protocol included a daytime sleep opportunity. An earlier version applied the 8.9 h cap
+    to no-nap policies, which let the model prescribe a maintenance dose it simultaneously
+    claimed was unachievable.
+    """
+    nocturnal_cap = CEILING_NOCTURNAL_ONLY_H
+    nocturnal = min(float(tst_from_opportunity(tib_h, 0.0)), nocturnal_cap)
+    return float(min(nocturnal + nap_h, CEILING_SUSTAINED_H))
+
+
+def max_sustainable_tst(with_nap: bool = False) -> float:
+    """Ceiling on habitual daily sleep. Determines whether a sleep target is even reachable."""
+    return CEILING_SUSTAINED_H if with_nap else CEILING_NOCTURNAL_ONLY_H
 
 
 def recovery_trajectory(impairment_now: np.ndarray, tau_days: np.ndarray,
@@ -91,6 +105,11 @@ def policies() -> dict:
         "9h_every_night": {"tib_weekday": 9.0, "tib_weekend": 9.0, "nap": 0.0},
         "8h_plus_scheduled_nap": {"tib_weekday": 8.0, "tib_weekend": 8.0, "nap": 0.5},
         "weekday_5.5h_weekend_10h_catchup": {"tib_weekday": 5.5, "tib_weekend": 10.0, "nap": 0.0},
+        # Policies that actually reach the requirement. An earlier menu contained none, so every
+        # projected recovery curve was capped by an under-sleeping policy and the report was
+        # prescribing a dose it had not simulated.
+        "9.5h_in_bed_every_night": {"tib_weekday": 9.5, "tib_weekend": 9.5, "nap": 0.0},
+        "9h_in_bed_plus_45min_nap": {"tib_weekday": 9.0, "tib_weekend": 9.0, "nap": 0.75},
     }
 
 

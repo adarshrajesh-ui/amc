@@ -47,12 +47,29 @@ PRIORS = {
     # Sleep efficiency TST/TIB in healthy 16-25 year olds (evans2021, mitterling2015,
     # meredithjones2024 -> 0.872 / 0.870 / 0.891).
     "sleep_efficiency": (0.875, 0.06),
-    # Individual sleep need. T1 evidence is flat across the guideline step at 18:
-    # short2018sleepneed 9.0-9.35 h at 15-17; klerman2008 asymptote 8.9 h at 18-32;
-    # kitamura2016 asymptote 8.41 h. SD of individual need 0.70 h (0.44-0.96), thin evidence.
-    "need_at_16_h": 9.00,
-    "need_at_19_h": 8.70,
-    "need_sd_individual_h": 0.70,
+    # Individual sleep need. This is the single most influential parameter in the model and it
+    # is genuinely contested, so the referent is a named, switchable choice rather than a
+    # constant. The distinction that matters: klerman2008's 8.9 h is an ad-lib asymptote
+    # measured with 16 h in bed INCLUDING a daytime nap opportunity, and that paper describes
+    # the quantity as the maximal capacity for sleep. Capacity is an upper bound on need, not
+    # need. Using it as the requirement both overstates the deficit and produces a requirement
+    # (8.7 h) above the model's own sustained nocturnal ceiling (7.9 h), which is incoherent.
+    #
+    #   capacity_based      klerman2008 / short2018 ad-lib asymptotes (upper bound)
+    #   guideline_midpoint  NSF midpoints: 9.0 h at 14-17, 8.0 h at 18-25 (primary)
+    #   nocturnal_floor     achievable without napping; near the cognitive optima reported by
+    #                       wild2018 (7.38 h) and fjell2023 (6.5 h volumetric)
+    "need_referent_options": {
+        "capacity_based": {"at_16": 9.00, "at_19": 8.70},
+        "guideline_midpoint": {"at_16": 8.75, "at_19": 8.15},
+        "nocturnal_floor": {"at_16": 8.00, "at_19": 7.50},
+    },
+    "need_referent_default": "guideline_midpoint",
+    # SD of individual need. Thin: kitamura2016 alone (0.18 x sqrt(15), n=15). Widened from
+    # 0.70 to 0.80 because a between-person SD resting on 15 subjects should not be treated as
+    # precisely known, and no clipping floor is applied.
+    "need_sd_individual_h": 0.80,
+    "need_hard_bounds_h": (6.0, 11.0),
     # Night-to-night within-epoch variability. The subject reports weekday sleep ranging
     # 3-7 h around a ~5 h mean, implying roughly 1.0-1.3 h SD.
     "sigma_night_h": (1.15, 0.20),
@@ -132,15 +149,24 @@ def build_calendar() -> dict:
     return {"nights": nights, "epochs": {e.label: e for e in EPOCHS}}
 
 
-def need_curve(ages: np.ndarray) -> np.ndarray:
-    """Population-mean sleep need by age, linear between the two anchor ages."""
-    a16, a19 = PRIORS["need_at_16_h"], PRIORS["need_at_19_h"]
-    return np.clip(a16 + (ages - 16.0) * (a19 - a16) / 3.0, 8.0, 9.5)
+def need_curve(ages: np.ndarray, referent: str | None = None) -> np.ndarray:
+    """Population-mean sleep need by age, linear between the two anchor ages.
+
+    No clipping. An earlier version clipped to [8.0, 9.5], which silently truncated the
+    parameter: lowering the referent below 8 h changed nothing in the deficit while the value
+    *reported* as the inferred need bypassed the clip, so the printed need and the need the
+    ledger consumed were different quantities.
+    """
+    referent = referent or PRIORS["need_referent_default"]
+    opt = PRIORS["need_referent_options"][referent]
+    a16, a19 = opt["at_16"], opt["at_19"]
+    return a16 + (np.asarray(ages, float) - 16.0) * (a19 - a16) / 3.0
 
 
 def simulate(n_draws: int = 200_000, seed: int = 20260728,
              tib_scenario: str = "mixed", calibration: str = "mixed",
-             counterfactual: str = "none", dtype=np.float32) -> dict:
+             counterfactual: str = "none", need_referent: str | None = None,
+             dtype=np.float32) -> dict:
     """Simulate the exposure history.
 
     tib_scenario: 'tst' (reports are total sleep time), 'tib' (reports are time in bed),
@@ -154,6 +180,7 @@ def simulate(n_draws: int = 200_000, seed: int = 20260728,
     epochs = cal["epochs"]
     n_nights = len(nights)
 
+    need_referent = need_referent or PRIORS["need_referent_default"]
     # ---- person-level latent draws (once per simulated person) ----
     need_offset = rng.normal(0.0, PRIORS["need_sd_individual_h"], n_draws).astype(dtype)
     sigma_night = np.abs(rng.normal(*PRIORS["sigma_night_h"], n_draws)).astype(dtype)
@@ -278,7 +305,8 @@ def simulate(n_draws: int = 200_000, seed: int = 20260728,
         tst = mu_true + rng.normal(0.0, 1.0, n_draws).astype(dtype) * sigma_night
         tst = np.clip(tst, 1.5, PRIORS["ceiling_single_night_h"]).astype(np.float64)
 
-        need = need_curve(np.array([age]))[0] + need_offset
+        lo, hi = PRIORS["need_hard_bounds_h"]
+        need = np.clip(need_curve(np.array([age]), need_referent)[0] + need_offset, lo, hi)
         deficit = need - tst
 
         sum_tst += tst
@@ -328,8 +356,12 @@ def simulate(n_draws: int = 200_000, seed: int = 20260728,
             "frac_nights_below_6h": n_below_6 / max(n_exposure_nights, 1),
             "frac_nights_below_5h": n_below_5 / max(n_exposure_nights, 1),
             "steady_state_ewma_deficit_h": ewma_deficit,
-            "individual_need_at_19_h": PRIORS["need_at_19_h"] + need_offset,
+            # Reported need must be the SAME quantity the ledger consumed, including bounds.
+            "individual_need_at_19_h": np.clip(
+                need_curve(np.array([AGE_NOW]), need_referent)[0] + need_offset,
+                *PRIORS["need_hard_bounds_h"]),
         },
+        "need_referent": need_referent,
         "epoch_means": {
             label: {"mean_tst_h": float(np.mean(v["tst"] / v["n"])),
                     "mean_deficit_h": float(np.mean(v["deficit"] / v["n"])),
@@ -364,7 +396,8 @@ def envelope() -> dict:
     mean_tst_reported = school_frac * mean_tst_term + (1 - school_frac) * mean_tst_break
     # A single flat calibration: reports overstate objective TST by ~1 h, applied once.
     mean_tst = mean_tst_reported - 1.0
-    need = 8.85
+    opt = PRIORS["need_referent_options"][PRIORS["need_referent_default"]]
+    need = (opt["at_16"] + opt["at_19"]) / 2.0
     return {
         "years_exposed": years,
         "n_nights": n_nights,
