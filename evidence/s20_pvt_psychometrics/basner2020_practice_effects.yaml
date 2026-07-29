@@ -1,0 +1,121 @@
+study_id: basner2020_practice_effects
+citation: "Basner M, Hermosillo E, Nasrini J, Saxena S, Dinges DF, Moore TM, Gur RC. Cognition test battery: Adjusting for practice and stimulus set effects for varying administration intervals in high performing individuals. J Clin Exp Neuropsychol. 2020;42(5):516-529."
+doi: "10.1080/13803395.2020.1773765"
+pmid: "32539487"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7375457/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Cognition test battery: Adjusting for practice and stimulus set effects for varying administration intervals in high performing individuals"
+access_tier: full_text
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: 46
+n_studies_pooled: null
+population:
+  age_mean: 32.5
+  age_range: [25, 54]
+  pct_female: 50.0
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvt_response_speed_practice_effect_across_15_administrations
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "logarithmic trend across 15 repeated administrations of the PVT within the Cognition battery; outcome = PVT Slowness (10 - 1/RT)"}
+    scale: raw_units
+    unit: "standardized beta per loge(administration number) (SD units)"
+    value: 0.02
+    se: 0.03
+    ci: [-0.039, 0.079]
+    conversion_formula: "Published Table 3: unstandardized beta 0.0126 (SE 0.0163), standardized beta 0.02 (SE 0.03), P = 0.44. CI computed by me as 0.02 +/- 1.96*0.03."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive would mean getting SLOWER with practice; the estimate is indistinguishable from zero. THIS IS THE DEFINITIVE PRACTICE-EFFECT NUMBER FOR PVT RESPONSE SPEED: 0.02 SD across 15 administrations, P = 0.44. The PVT was the ONLY test of the 10 in the battery with no significant speed practice effect."
+    covariates: ["administration interval group (>=10 days, <=5 days, 4x/day)", "stimulus set"]
+    followup_years: null
+    cohort_family: "Penn_Cognition_battery"
+    quote: "Except for the PVT, all tests demonstrated a significant practice effect in the speed domain (all P<0.02 for logarithmic slope; Table 3)."
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvt_accuracy_practice_effect_across_15_administrations
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "logarithmic trend across 15 repeated PVT administrations; outcome = PVT Accuracy (%)"}
+    scale: raw_units
+    unit: "standardized beta per loge(administration number) (SD units)"
+    value: 0.09
+    se: 0.04
+    ci: [0.012, 0.168]
+    conversion_formula: "Published Table 3: unstandardized beta 0.50 (SE 0.20) %, standardized beta 0.09 (SE 0.04), P = 0.02. CI computed by me as 0.09 +/- 1.96*0.04."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive = getting MORE accurate (fewer lapses) with repeated administration. Small (0.09 SD) but statistically significant. So the PVT is NOT completely practice-free: the LAPSE/accuracy side of the PVT does improve with repetition, which is a second reason to prefer mean 1/RT for an n-of-1 series."
+    covariates: ["administration interval group", "stimulus set"]
+    followup_years: null
+    cohort_family: "Penn_Cognition_battery"
+    quote: "Table 3 ... PVT Accuracy [%] 0.50 (0.20) 0.09 (0.04) 0.02*"
+  - outcome_domain: exposure_measurement
+    outcome_construct: practice_effect_persistence_beyond_second_administration
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "shape of the learning curve across 15 administrations, all 10 Cognition tests"}
+    scale: raw_units
+    unit: "qualitative: non-linear practice effects persisting well beyond administration 2"
+    value: 2.0
+    se: null
+    ci: null
+    conversion_formula: "No single numeric asymptote is published; value 2 records the administration number BEYOND which practice effects continued (i.e. two familiarisation sessions are demonstrably NOT enough for the other 9 tests). Not a pooled effect size."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "The common practice of one or two familiarisation sessions is insufficient for most cognitive tests. Only the PVT's speed metric is exempt. Directly determines the run-in requirement in protocol_basis.md."
+    covariates: []
+    followup_years: null
+    cohort_family: "Penn_Cognition_battery"
+    quote: "Protracted, non-linear practice effects well beyond the second administration were observed for most of the 10 Cognition tests both in accuracy and speed, but test-retest administration interval significantly affected practice effects only for 3 out of the 10 tests and only in the speed domain."
+  - outcome_domain: exposure_measurement
+    outcome_construct: administration_interval_effect_on_pvt_practice
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "does the retest interval (>=10 d vs <=5 d vs 4x/day) change the practice slope? PVT"}
+    scale: probability
+    unit: "p-value for the loge(admin) x administration-interval interaction (PVT was not among the 3 significant tests)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "The paper reports that the interaction was significant only for MP (p<0.01), AM (p=0.03) and ERT (p=0.01); the PVT is therefore non-significant but its exact p is not restated in the text I retrieved. I record value 1.0 as a placeholder meaning 'non-significant, exact p not extracted' - DO NOT POOL THIS NUMBER."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Testing the PVT four times a day versus once every ten days does not change its (already null) practice slope. Practically: a daily-testing n-of-1 protocol does not incur an extra practice penalty relative to sparse testing."
+    covariates: []
+    followup_years: null
+    cohort_family: "Penn_Cognition_battery"
+    quote: "Practice effects were modified by administration interval for speed outcomes on the MP (p<0.01), AM (p=0.03), and ERT (p=0.01; Figure 3) only."
+rob:
+  tool: none
+  judgement: na
+  notes: "Methodological/normative study, not an intervention trial, so RoB2 does not apply. Design strength: each of 46 subjects performed all 15 battery versions in a randomised but balanced order, which is what allows practice and stimulus-set effects to be disentangled. Weaknesses for this shard: mean age 32.5 (range 25-54) so adolescent_match poor_midlife; the PVT here is the ~3-min Cognition-battery PVT embedded in a 10-test battery, so carryover fatigue from the other 9 tests is present and the practice estimate is not for a stand-alone PVT; the metrics are 'PVT Slowness (10 - 1/s)' and 'PVT Accuracy (%)', not lapse count."
+funding: "Not extracted from the retrieved manuscript text; NASA-related (Cognition was developed for spaceflight)."
+notes: |
+  THIS IS THE RECORD THAT SETTLES THE PRACTICE-EFFECT / WASHOUT QUESTION QUANTITATIVELY, and it
+  partially CONTRADICTS the Dinges-group review claim (repeated verbatim in both basner2011 papers)
+  that "PVT performance does not improve as a function of repeated administration". Measured
+  directly across 15 administrations in the same 46 people:
+    - PVT response SPEED: standardized practice beta = 0.02 (SE 0.03), P = 0.44 -> genuinely null.
+      This is the strongest available justification for using mean 1/RT as the n-of-1 primary
+      outcome: it needs essentially NO practice-effect washout.
+    - PVT ACCURACY (the lapse side): standardized beta = 0.09 (SE 0.04), P = 0.02 -> small but real.
+      A lapse-based primary outcome WOULD need a run-in and/or an explicit practice term in the model.
+    - Every other test in the battery had a significant speed practice effect, with standardized
+      effects >= 0.31 for BART, ERT, DSST and VOLT and <= 0.19 for the rest.
+
+  Direct quote on the residual practice effect and its implication for choosing outcomes:
+  "Thus, effect sizes are small to negligible for most accuracy domains while notable for four speed
+  domains. That effects were stronger for speed than accuracy would suggest caution in using speed
+  measures as primary outcome in treatment studies, unless a control group is included with the same
+  number of repeated measures or correction algorithms as the ones derived in this study are
+  available." Note that this general caution does NOT apply to the PVT, which is the exception.
+
+  PRACTICAL CONSEQUENCE FOR THE PROTOCOL. Because the practice slope is logarithmic (steepest early)
+  and the PVT-speed slope is null while PVT-accuracy is small-but-real, the run-in requirement is
+  driven by (a) the accuracy metric, and (b) Thompson 2022's finding of a significant systematic
+  mean-RT shift between sessions 1 and 2. protocol_basis.md therefore specifies a >=5-session
+  familiarisation run-in whose data are DISCARDED, plus a loge(session) practice covariate retained
+  in the analysis model as insurance. That is a design choice I am making from these two records; it
+  is not itself an extracted number.
+shard: "s20_pvt_psychometrics"

@@ -1,0 +1,78 @@
+study_id: khitrov2014_pcpvt
+citation: "Khitrov MY, Laxminarayan S, Thorsley D, Ramakrishnan S, Rajaraman S, Wesensten NJ, Reifman J. PC-PVT: a platform for psychomotor vigilance task testing, analysis, and prediction. Behav Res Methods. 2014;46(1):140-147."
+doi: "10.3758/s13428-013-0339-9"
+pmid: "23709163"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3936124/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "PC-PVT: A platform for psychomotor vigilance task testing, analysis, and prediction"
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: pcpvt_reaction_time_timing_error_vs_pvt192_gold_standard
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "freely available PC-based PVT software vs the PVT-192 hardware gold standard, across a wide range of PC hardware configurations"}
+    scale: raw_units
+    unit: "ms of average added delay in measured reaction time"
+    value: 10.0
+    se: null
+    ci: null
+    conversion_formula: "published as 'an average delay of less than 10 ms'; I record 10 ms as the stated UPPER BOUND, not a point estimate."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Smaller = more accurate. <10 ms is comparable to the PVT-192 gold standard. Matters because a 10-ms systematic bias is ~4% of a typical 250-ms PVT RT and would be confounded with a real effect if hardware changed mid-protocol."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "We showed that the system is capable of measuring reaction times with an average delay of less than 10 ms, a margin of error that is comparable to that of the gold standard. The most critical aspect of hardware selection is the type of mouse used for response detection, with gaming mice showing a significant advantage over standard ones."
+  - outcome_domain: exposure_measurement
+    outcome_construct: pcpvt_free_availability
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "public availability of a validated PVT implementation"}
+    scale: raw_units
+    unit: "binary: 1 = freely downloadable validated implementation exists"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "not an effect size; records the existence of a free validated instrument"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = the subject can obtain a validated PVT at zero cost. Download URL as published: http://bhsai.org/downloads/pc-pvt/"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The software is free to download from http://bhsai.org/downloads/pc-pvt/ ."
+rob:
+  tool: none
+  judgement: na
+  notes: "Software validation/engineering study, not a clinical or behavioural trial - RoB2 inapplicable. Abstract-only access. It validates TIMING ACCURACY against the PVT-192, not sensitivity to sleep loss (for that, see basner2011_pvt_metrics and grant2017_pvt3_smartphone). No human sample size reported in the abstract, hence n = null. Developed and published by the US Army BHSAI; the download URL was live as published in 2014 and I did NOT verify that it still resolves in 2026."
+funding: "US Army Medical Research and Materiel Command / Telemedicine and Advanced Technology Research Center (BHSAI)."
+notes: |
+  PART A5 ANSWER, part 1 of 3. This is the primary freely available, validated, timing-characterised
+  PVT implementation. Two operationally critical findings for a self-administered protocol:
+    1. Millisecond accuracy is NOT automatic on consumer hardware. Verbatim: "general-purpose
+       computers are not designed with the millisecond-level accuracy of operation required for such
+       applications. Software that does not control for the various sources of delay may return
+       reaction time values that are substantially different from the true reaction times."
+       Only 15 of the 44 tested hardware configurations achieved <10 ms average delay in the
+       follow-up paper (reifman2018_pcpvt2).
+    2. THE INPUT DEVICE IS THE DOMINANT ERROR SOURCE: "The most critical aspect of hardware
+       selection is the type of mouse used for response detection, with gaming mice showing a
+       significant advantage over standard ones."
+  Protocol consequence: the same computer, the same input device and the same software build must be
+  used for all 4 weeks, and a gaming-grade (high-polling-rate) mouse or an external button is
+  preferred. A device change mid-protocol would inject a step change of the same order as the
+  effect being measured.
+shard: "s20_pvt_psychometrics"

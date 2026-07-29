@@ -1,0 +1,116 @@
+study_id: rupp2012_traitlike
+citation: "Rupp TL, Wesensten NJ, Balkin TJ. Trait-like vulnerability to total and partial sleep loss. Sleep. 2012;35(8):1163-1172."
+doi: "10.5665/sleep.2010"
+pmid: "22851812"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3397820/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Trait-Like Vulnerability to Total and Partial Sleep Loss"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 19
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [18, 39]
+  pct_female: 42.1
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_icc_across_tsd_and_sr
+    exposure: {type: chronic_restriction, dose_h: 3, referent_h: 10, duration_days: 7, contrast_label: "stability of the individual's impairment between 63 h TSD and 7 nights of 3h TIB SR, order counterbalanced, 2-4 weeks apart; last-day (08:00-20:00) averages"}
+    scale: raw_units
+    unit: "ICC (proportion of variance from stable between-person differences)"
+    value: 0.89
+    se: null
+    ci: null
+    conversion_formula: "Published Table 3. Verified: ICC = sigma2_bs/(sigma2_bs+sigma2_ws) = 83.90/(83.90+10.45) = 0.8892. Wald Z = 2.55, P = 0.011."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = an individual's vulnerability generalises across sleep-loss TYPE (total vs chronic partial). 'Almost perfect' on the authors' benchmark scale."
+    covariates: []
+    followup_years: null
+    cohort_family: "WRAIR_Rupp_TSD_SR"
+    quote: "Volunteers who displayed greater vulnerability to TSD displayed greater vulnerability to SR on cognitive performance tasks (ICC: PVT lapses = 0.89; PVT speed = 0.86; 1-Back = 0.88; mathematical processing = 0.68, Ps < 0.05)."
+  - outcome_domain: cognition
+    outcome_construct: pvt_speed_icc_across_tsd_and_sr
+    exposure: {type: chronic_restriction, dose_h: 3, referent_h: 10, duration_days: 7, contrast_label: "63 h TSD vs 7 nights 3h TIB SR; PVT speed (mean 1/RT), last-day averages"}
+    scale: raw_units
+    unit: "ICC"
+    value: 0.86
+    se: null
+    ci: null
+    conversion_formula: "Published Table 3. Verified: 0.74/(0.74+0.12) = 0.8605."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more trait-like."
+    covariates: []
+    followup_years: null
+    cohort_family: "WRAIR_Rupp_TSD_SR"
+    quote: "Volunteers who displayed greater vulnerability to TSD displayed greater vulnerability to SR on cognitive performance tasks (ICC: PVT lapses = 0.89; PVT speed = 0.86; ...)"
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_within_person_variance_component
+    exposure: {type: chronic_restriction, dose_h: 3, referent_h: 10, duration_days: 7, contrast_label: "within-subjects variance component between the TSD and SR exposures; PVT lapses"}
+    scale: raw_units
+    unit: "lapses per PVT (SD, = sqrt of published within-subjects variance component)"
+    value: 3.23
+    se: 0.555
+    ci: null
+    conversion_formula: "sigma2_ws = 10.45 (SE 3.59) lapses^2 -> sigma_ws = sqrt(10.45) = 3.233 lapses. Delta-method SE = 3.59/(2*3.233) = 0.555."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "A directly measured within-person SD across two sleep-loss exposures. NOTE it is inflated because the two 'replicates' were DIFFERENT exposures (63 h TSD vs 7 x 3h TIB), so genuine condition differences are folded into sigma_ws. Companion sigma_bs = sqrt(83.90) = 9.16 lapses."
+    covariates: []
+    followup_years: null
+    cohort_family: "WRAIR_Rupp_TSD_SR"
+    quote: "Table 3 - Results of variance components analyses performed to assess trait-like inter-individual variability in impairment resulting from TSD and SR ... PVT lapses 83.90 (30.62) ... 10.45 (3.59) ... 0.89 ... 2.55 ... 0.011"
+  - outcome_domain: cognition
+    outcome_construct: pvt_speed_within_person_variance_component
+    exposure: {type: chronic_restriction, dose_h: 3, referent_h: 10, duration_days: 7, contrast_label: "within-subjects variance component between TSD and SR exposures; PVT speed (mean 1/RT)"}
+    scale: raw_units
+    unit: "s^-1 (SD of mean 1/RT, = sqrt of published within-subjects variance component)"
+    value: 0.346
+    se: 0.0578
+    ci: null
+    conversion_formula: "sigma2_ws = 0.12 (SE 0.04) -> sigma_ws = sqrt(0.12) = 0.3464 s^-1. Delta-method SE = 0.04/(2*0.3464) = 0.0578."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Within-person SD of PVT response speed between two sleep-loss exposures. Again inflated by the TSD-vs-SR condition difference; treat as an upper bound. Companion sigma_bs = sqrt(0.74) = 0.860 s^-1."
+    covariates: []
+    followup_years: null
+    cohort_family: "WRAIR_Rupp_TSD_SR"
+    quote: "PVT speed 0.74 (0.28) ... 0.12 (0.04) ... 0.86"
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "n = 19; variance-component SEs are 33-37% of the point estimates so the ICCs are imprecise. The two 'replicate' exposures were deliberately DIFFERENT (63 h TSD vs 7 nights of 3 h TIB), which is the point of the paper (cross-paradigm generalisation) but means sigma_ws is not a pure test-retest term. An erratum exists (Sleep. 2013 Jun;36(6):959)."
+funding: "US Army Medical Research and Materiel Command / Walter Reed Army Institute of Research (military laboratory)."
+notes: |
+  FULL PUBLISHED TABLE 3 rows I could align, verified by recomputing ICC from the components:
+    Measure      sigma2_bs (SE)     sigma2_ws (SE)    ICC   check
+    PVT lapses    83.90 (30.62)      10.45 (3.59)     0.89  83.90/94.35 = 0.8892  OK
+    PVT speed      0.74 (0.28)        0.12 (0.04)     0.86  0.74/0.86   = 0.8605  OK
+    MATH          35.82 (15.52)      17.21 (5.9)      0.68  35.82/53.03 = 0.6755  OK
+    1-Back       729.38 (268.46)    102.50 (35.16)    0.88  729.38/831.88 = 0.8768 OK
+  Mood/other ICCs from the abstract: vigor 0.91, fatigue 0.73, happiness 0.85.
+
+  Table 4 repeats the analysis WITH baseline performance as a covariate; PVT lapses stayed at
+  ICC = 0.89 (sigma2_bs 52.74 (20.66), sigma2_ws 6.77 (2.62); check 52.74/59.51 = 0.886), but PVT
+  SPEED collapsed to ICC = 0.54 (sigma2_bs 0.19 (0.12), sigma2_ws 0.16 (0.06); check 0.19/0.35 =
+  0.543). Interpretation that matters for the protocol: much of the apparent trait-like stability
+  of PVT RESPONSE SPEED is inherited from stable baseline speed differences, whereas trait-like
+  stability of LAPSE vulnerability survives baseline adjustment. For an n-of-1 design (where the
+  person is their own baseline) this is reassuring in one direction - baseline aptitude cancels -
+  and a caution in the other: the person's own baseline speed must be measured well.
+
+  DESIGN detail worth copying: both sleep-loss conditions were preceded by SEVEN in-laboratory
+  nights at 10 h TIB, i.e. a long sleep-satiation run-in, and followed by 3 recovery nights at 8 h
+  TIB, with the two conditions separated by 2-4 weeks. That is the closest published analogue of an
+  adequately washed-out 2-period crossover for sleep dose.
+shard: "s20_pvt_psychometrics"

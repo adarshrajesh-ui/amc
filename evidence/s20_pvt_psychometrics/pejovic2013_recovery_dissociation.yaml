@@ -1,0 +1,328 @@
+study_id: pejovic2013_recovery_dissociation
+citation: "Pejovic S, Basta M, Vgontzas AN, Kritikou I, Shaffer ML, Tsaoussoglou M, Stiffler D, Stefanakis Z, Bixler EO, Chrousos GP. Effects of recovery sleep after one work week of mild sleep restriction on interleukin-6 and cortisol secretion and daytime sleepiness and performance. American Journal of Physiology-Endocrinology and Metabolism. 2013;305(7):E890-E896."
+doi: "10.1152/ajpendo.00301.2013"
+pmid: "23941878"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3798707/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Effects of recovery sleep after one work week of mild sleep restriction on interleukin-6 and cortisol secretion and daytime sleepiness and performance"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 30
+n_studies_pooled: null
+population:
+  age_mean: 24.7
+  age_range: null
+  pct_female: 46.7
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  # ================= THE DOUBLE DISSOCIATION AFTER 2 RECOVERY NIGHTS =================
+  # (a) SUBJECTIVE sleepiness fully normalises and OVERSHOOTS to better-than-baseline
+  - outcome_domain: recovery
+    outcome_construct: subjective_sleepiness_sss_after_2_recovery_nights_vs_baseline
+    exposure:
+      type: recovery_sleep
+      dose_h: 10.0
+      referent_h: 8.0
+      duration_days: 2
+      contrast_label: "Stanford Sleepiness Scale, day 13 (after 2 nights x 10 h TIB recovery) vs day 4 baseline (8 h TIB), following 6 nights of 6 h TIB"
+    scale: cohens_d
+    unit: null
+    value: 0.365
+    se: 0.184
+    ci: [0.005, 0.726]
+    conversion_formula: "Reported paired difference (baseline minus recovery) = 0.24 +/- 0.12 SE, P = 0.04, n = 30. SD_diff = 0.12*sqrt(30) = 0.657. d_z = 0.24/0.657 = 0.365. SE(d_z) = sqrt(1/30 + 0.365^2/(2*30)) = 0.184."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = subject reports being LESS sleepy after recovery than at baseline, i.e. subjective state OVER-recovers. The self-report says 'better than normal'."
+    covariates: ["gender", "time of day", "subject random effect"]
+    followup_years: null
+    cohort_family: PennState_Hershey_sleep_restriction
+  # (b) OBJECTIVE physiological sleepiness (MSLT) also normalises and overshoots
+  - outcome_domain: recovery
+    outcome_construct: mslt_sleep_latency_after_2_recovery_nights_vs_baseline
+    exposure:
+      type: recovery_sleep
+      dose_h: 10.0
+      referent_h: 8.0
+      duration_days: 2
+      contrast_label: "MSLT mean daily sleep latency, day 13 (after 2 nights x 10 h TIB recovery) vs day 4 baseline (8 h TIB)"
+    scale: raw_units
+    unit: "minutes of MSLT sleep latency"
+    value: 2.50
+    se: 0.90
+    ci: [0.74, 4.26]
+    conversion_formula: "Reported directly: 'difference of the mean SL (baseline minus recovery): -2.50 +/- 0.90 min, P < 0.01'. Sign flipped here so positive = LONGER latency after recovery. d_z = 2.50/(0.90*sqrt(30)) = 0.507."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = longer sleep latency = LESS physiologically sleepy after recovery than at baseline. Objective sleepiness also over-recovers."
+    covariates: ["gender", "time of day"]
+    followup_years: null
+    cohort_family: PennState_Hershey_sleep_restriction
+  # (c) but PVT LAPSES are STILL WORSE THAN BASELINE after the same 2 recovery nights
+  - outcome_domain: recovery
+    outcome_construct: pvt_lapses_after_2_recovery_nights_vs_baseline
+    exposure:
+      type: recovery_sleep
+      dose_h: 10.0
+      referent_h: 8.0
+      duration_days: 2
+      contrast_label: "PVT lapses (sqrt-transformed), day 13 (after 2 nights x 10 h TIB recovery) vs day 4 baseline (8 h TIB), following 6 nights of 6 h TIB"
+    scale: cohens_d
+    unit: null
+    value: -0.393
+    se: 0.189
+    ci: [-0.764, -0.021]
+    conversion_formula: "Table 3 B vs R P = 0.04, paired, n = 30, df = 29. t = t.isf(0.04/2, 29) = 2.150. d_z = t/sqrt(n) = 2.150/5.477 = 0.393. SE(d_z) = sqrt(1/30 + 0.393^2/(2*30)) = 0.189. Sign set negative = worse. Transformed means: baseline 2.9 +/- 0.4, restriction 3.96 +/- 0.6, recovery 4.3 +/- 0.6."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NEGATIVE = MORE lapses (worse vigilance) after 2 recovery nights than at baseline. Objective attentional performance has NOT recovered while both subjective and physiological sleepiness have over-recovered."
+    covariates: ["gender", "time of day", "subject random effect"]
+    followup_years: null
+    cohort_family: PennState_Hershey_sleep_restriction
+  # (d) and there is essentially ZERO improvement from restriction to recovery
+  - outcome_domain: recovery
+    outcome_construct: pvt_lapses_recovery_vs_restriction_no_improvement
+    exposure:
+      type: recovery_sleep
+      dose_h: 10.0
+      referent_h: 6.0
+      duration_days: 2
+      contrast_label: "PVT lapses (sqrt-transformed), day 13 (after 2 nights x 10 h TIB recovery) vs day 10 (end of 6 nights x 6 h TIB restriction)"
+    scale: cohens_d
+    unit: null
+    value: -0.074
+    se: 0.183
+    ci: [-0.432, 0.285]
+    conversion_formula: "Table 3 SR vs R P = 0.69, paired, n = 30, df = 29. t = t.isf(0.69/2, 29) = 0.403. d_z = 0.403/5.477 = 0.074. SE = sqrt(1/30 + 0.074^2/(2*30)) = 0.183. Direction of the point estimate is set negative because the transformed lapse mean moved the WRONG way (3.96 -> 4.3)."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "Point estimate slightly NEGATIVE (worse) and CI straddles zero: two nights of 10 h TIB produced no detectable improvement in PVT lapses. Essentially a null recovery effect."
+    covariates: ["gender", "time of day", "subject random effect"]
+    followup_years: null
+    cohort_family: PennState_Hershey_sleep_restriction
+  # ================= CALIBRATION ANCHOR: SIZE OF A 2 h/night RESTRICTION EFFECT =================
+  # This is the closest published analogue to the 1-2 h manipulation the n-of-1 protocol will use.
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_6h_vs_8h_tib_6_nights
+    exposure:
+      type: chronic_restriction
+      dose_h: 6.0
+      referent_h: 8.0
+      duration_days: 6
+      contrast_label: "PVT lapses (sqrt-transformed), 6 nights of 6 h TIB vs 4 nights of 8 h TIB baseline; same subjects"
+    scale: cohens_d
+    unit: null
+    value: -0.331
+    se: 0.188
+    ci: [-0.699, 0.036]
+    conversion_formula: "Table 3 B vs SR P = 0.08, paired, n = 30, df = 29. t = 1.814; d_z = 1.814/5.477 = 0.331; SE = sqrt(1/30 + 0.331^2/(2*30)) = 0.188."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NEGATIVE = more lapses under 6 h TIB. NOTE this did NOT reach p<0.05 with n = 30 - a 2 h/night restriction for 6 nights is a MARGINAL effect on PVT lapses at the group level."
+    covariates: ["gender", "time of day", "subject random effect"]
+    followup_years: null
+    cohort_family: PennState_Hershey_sleep_restriction
+  - outcome_domain: cognition
+    outcome_construct: pvt_fastest10pct_rt_6h_vs_8h_tib_6_nights
+    exposure:
+      type: chronic_restriction
+      dose_h: 6.0
+      referent_h: 8.0
+      duration_days: 6
+      contrast_label: "PVT fastest-10% RT, 6 nights of 6 h TIB vs 8 h TIB baseline; same subjects"
+    scale: cohens_d
+    unit: null
+    value: -0.417
+    se: 0.190
+    ci: [-0.790, -0.044]
+    conversion_formula: "Table 3 B vs SR P = 0.03, paired, n = 30, df = 29. t = 2.282; d_z = 2.282/5.477 = 0.417; SE = sqrt(1/30 + 0.417^2/(2*30)) = 0.190. Raw means 181.9 +/- 2.7 ms -> 190.9 +/- 3.6 ms, i.e. +9.0 ms (+4.9%)."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NEGATIVE = slower fastest-10% RT (worse). This was the ONLY PVT metric reaching p<0.05 for the 2 h/night restriction, consistent with Thompson 2022 finding fastest-10% RT the most reliable PVT metric at near-rested levels."
+    covariates: ["gender", "time of day", "subject random effect"]
+    followup_years: null
+    cohort_family: PennState_Hershey_sleep_restriction
+  - outcome_domain: cognition
+    outcome_construct: pvt_median_rt_6h_vs_8h_tib_6_nights
+    exposure:
+      type: chronic_restriction
+      dose_h: 6.0
+      referent_h: 8.0
+      duration_days: 6
+      contrast_label: "PVT median RT, 6 nights of 6 h TIB vs 8 h TIB baseline; same subjects"
+    scale: cohens_d
+    unit: null
+    value: -0.343
+    se: 0.188
+    ci: [-0.712, 0.025]
+    conversion_formula: "Table 3 B vs SR P = 0.07, paired, n = 30, df = 29. t = 1.881; d_z = 0.343; SE = 0.188. Raw means 231.5 +/- 5.6 ms -> 251.4 +/- 10.1 ms, i.e. +19.9 ms (+8.6%)."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NEGATIVE = slower median RT (worse)."
+    covariates: ["gender", "time of day", "subject random effect"]
+    followup_years: null
+    cohort_family: PennState_Hershey_sleep_restriction
+  - outcome_domain: cognition
+    outcome_construct: subjective_sleepiness_sss_6h_vs_8h_tib_6_nights
+    exposure:
+      type: chronic_restriction
+      dose_h: 6.0
+      referent_h: 8.0
+      duration_days: 6
+      contrast_label: "Stanford Sleepiness Scale, 6 nights of 6 h TIB vs 8 h TIB baseline; same subjects"
+    scale: cohens_d
+    unit: null
+    value: -0.974
+    se: 0.212
+    ci: [-1.390, -0.558]
+    conversion_formula: "Reported paired difference (baseline minus restriction) = -0.96 +/- 0.18 SE, P < 0.01, n = 30. SD_diff = 0.18*sqrt(30) = 0.986. d_z = -0.96/0.986 = -0.974. SE(d_z) = sqrt(1/30 + 0.974^2/(2*30)) = 0.212."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NEGATIVE = sleepier. The SUBJECTIVE signal for a 2 h/night restriction (|d_z| = 0.97) is ~3x LARGER than the PVT-lapse signal (|d_z| = 0.33) in the same subjects. Subjective sleepiness detects the RESTRICTION well; the problem is that it also declares the RECOVERY complete when it is not."
+    covariates: ["gender", "time of day", "subject random effect"]
+    followup_years: null
+    cohort_family: PennState_Hershey_sleep_restriction
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "No randomization or control arm - a single fixed baseline -> restriction -> recovery sequence, so order effects and practice effects are confounded with condition (practice would bias PVT the OTHER way, i.e. against the observed deterioration, so the direction of the key finding is conservative). Not blinded (impossible). Recovery-day testing started 1 h later (0900/1000) than baseline/restriction days (0800), so the recovery-day PVT and SSS series omit the earliest, sleepiest time points - this biases the recovery day to look BETTER, which strengthens the PVT non-recovery finding but weakens the SSS/MSLT over-recovery finding. Subjects went home on non-blood-draw nights with only actigraphy + log verification of the 6 h schedule. Only 2 recovery nights measured, so nothing can be said about 3+ nights."
+funding: "NIH (see paper); Pennsylvania State University College of Medicine"
+notes: |
+  ===== PART B7 CORE RECORD: CAN THE SUBJECT DETECT HIS OWN RECOVERY? NO. =====
+  This is the single most decision-relevant study for the report's "two good nights will not fix it,
+  and you will not be able to tell" claim, because it measured SUBJECTIVE sleepiness (SSS),
+  PHYSIOLOGICAL sleepiness (MSLT) and OBJECTIVE PERFORMANCE (PVT) in the SAME 30 subjects at the
+  SAME three time points, with a MILD (2 h/night) restriction that closely matches the intended
+  n-of-1 manipulation.
+
+  THE HEADLINE DOUBLE DISSOCIATION (all three from the same n = 30, same days):
+    after 2 nights of 10 h TIB following 6 nights of 6 h TIB, relative to 8 h TIB baseline --
+      SSS  subjective sleepiness : BETTER than baseline, P = 0.04   (d_z = +0.37)
+      MSLT physiological sleepiness: BETTER than baseline, P < 0.01  (+2.50 min latency, d_z = +0.51)
+      PVT  lapses                 : WORSE  than baseline, P = 0.04   (d_z = -0.39)
+      PVT  lapses vs restriction   : NO improvement,      P = 0.69   (d_z = -0.07)
+
+  VERBATIM QUOTES
+  ---------------
+  Abstract, the one-sentence version:
+  "Subjective and objective sleepiness increased significantly after restriction and returned to
+  baseline after recovery. In contrast, performance deteriorated significantly after restriction and
+  did not improve after recovery."
+  "Extended recovery sleep over the weekend reverses the impact of one work week of mild sleep
+  restriction on daytime sleepiness, fatigue, and IL-6 levels, reduces cortisol levels, but does not
+  correct performance deficits."
+
+  SSS (subjective) result verbatim:
+  "Neither group by gender nor gender by time interaction effects were observed for SSS. Subjective
+  sleepiness increased after sleep restriction compared with baseline level [difference for the SSS
+  (baseline minus restriction): -0.96 +/- 0.18, P < 0.01], whereas following recovery sleep it
+  improved even more and was significantly lower than baseline level [difference for the SSS
+  (baseline minus recovery): 0.24 +/- 0.12, P = 0.04]."
+
+  MSLT (physiological) result verbatim:
+  "After 1 wk of modest sleep loss, the average daily SL decreased compared with baseline [difference
+  of the mean SL (baseline minus restriction): 3.78 +/- 0.91 min, P < 0.01; Fig. 1], with the
+  strongest responses observed at 0900 and 1900 h, when sleep latency decreased by 6.70 +/- 1.42 min
+  and 4.87 +/- 1.42 min, respectively (both P < 0.01). After 2 recovery nights, the average daily SL
+  increased compared with restriction [difference of the mean SL (restriction minus recovery): 6.29
+  +/- 0.95 min, P < 0.01]. Interestingly, the average daily SL was longer after 2 recovery nights
+  compared with baseline [difference of the mean SL (baseline minus recovery): -2.50 +/- 0.90 min,
+  P < 0.01]."
+
+  PVT (objective performance) result verbatim:
+  "Neither group by gender nor gender by time or group by time interaction effects were observed for
+  any of the PVT variables. A significant deterioration of performance in number of lapses, median
+  RT, and fastest 10% RTs per trial was observed after 1 wk of mild sleep restriction compared with
+  baseline (Table 3). No improvement was observed in any of the variables examined after recovery
+  compared with restriction (Table 3)."
+
+  Discussion verbatim:
+  "Another noteworthy finding is that 2 nights of extended sleep did not result in performance
+  improvement as measured by PVT, suggesting that 2 nights of extended recovery sleep may not be
+  sufficient to overcome behavioral alertness deficits resulting from mild sleep restriction. Our
+  findings are consistent with several recent experiments reporting incomplete recovery of
+  performance deficits even after 2 or 3 nights of regular or extended sleep post mild to severe
+  restriction of sleep (2, 4, 5, 34)."
+  "Furthermore, the observed dissociation of the effects of extended recovery sleep or daytime naps
+  following sleep loss on MSLT vs. PVT may indicate that, although they correlate significantly, they
+  may be measuring different central nervous system functions (34, 37, 39)."
+
+  TABLE 3 VERBATIM (means +/- SE, n = 30; columns Baseline | Restriction | Recovery | P(B vs SR) |
+  P(SR vs R) | P(B vs R)):
+    PVT lapses total (a)   2.9 +/- 0.4  | 3.96 +/- 0.6 | 4.3 +/- 0.6  | 0.08 | 0.69 | 0.04
+    PVT fastest 10% (ms)   181.9 +/- 2.7| 190.9 +/- 3.6| 189.8 +/- 4.8| 0.03 | 0.83 | 0.13
+    PVT slowest 10% (s)(b) 2.5 +/- 0.1  | 2.2 +/- 0.2  | 2.2 +/- 0.2  | 0.21 | 0.70 | 0.11
+    PVT median RT (ms)     231.5 +/- 5.6| 251.4 +/- 10.1| 253.2 +/- 15.8| 0.07 | 0.92 | 0.18
+    "a Conducted on transformed lapses frequency [sqrt(x) + sqrt(x+1)]."
+    "b Conducted on transformed data 1/RT."
+
+  *** REPORTING DISCREPANCY - REPORTED AS REALITY PER INSTRUCTION 4 ***
+  The Results text says a "significant deterioration ... in number of lapses, median RT, and fastest
+  10% RTs" occurred after restriction, but Table 3 gives P = 0.08 (lapses), P = 0.07 (median RT) and
+  P = 0.03 (fastest 10%) for that contrast. Only fastest-10% RT meets P < 0.05. I have extracted the
+  TABLE p-values, not the text's characterisation. The practical implication is important and should
+  NOT be softened: with n = 30 subjects, a 2 h/night restriction for 6 nights produced only a
+  MARGINAL group-level PVT lapse effect (|d_z| = 0.33). A 1-2 h manipulation is a small effect on
+  the PVT and the n-of-1 protocol must be powered accordingly.
+
+  ARITHMETIC PERFORMED
+  --------------------
+  1) d_z back-calculated from two-sided paired p-values, n = 30, df = 29:
+       t = t.isf(p/2, 29);  d_z = t/sqrt(30);  SE(d_z) = sqrt(1/30 + d_z^2/60)
+       p=0.03 -> t=2.282 -> d_z=0.417, SE=0.190
+       p=0.04 -> t=2.150 -> d_z=0.393, SE=0.189
+       p=0.07 -> t=1.881 -> d_z=0.343, SE=0.188
+       p=0.08 -> t=1.814 -> d_z=0.331, SE=0.188
+       p=0.21 -> t=1.282 -> d_z=0.234, SE=0.185
+       p=0.69 -> t=0.403 -> d_z=0.074, SE=0.183
+     All such records carry inferred_from_ci: true.
+  2) For SSS and MSLT the paired mean difference and its SE are reported directly, so
+       SD_of_paired_difference = SE * sqrt(30) and d_z = diff / SD_diff:
+       SSS  B-SR: SD_diff = 0.18*5.477 = 0.986 -> d_z = -0.96/0.986 = -0.974
+       SSS  B-R : SD_diff = 0.12*5.477 = 0.657 -> d_z = +0.24/0.657 = +0.365
+       MSLT B-SR: SD_diff = 0.91*5.477 = 4.98  -> d_z = 3.78/4.98  = +0.758
+       MSLT B-R : SD_diff = 0.90*5.477 = 4.93  -> d_z = -2.50/4.93 = -0.507 (latency longer at recovery)
+  3) Back-transforming the lapse means through y = sqrt(x) + sqrt(x+1) (numeric inversion):
+       baseline    y = 2.90 -> ~1.6 lapses per 10-min trial
+       restriction y = 3.96 -> ~3.4 lapses
+       recovery    y = 4.30 -> ~4.1 lapses
+     These raw counts are MY back-transformation, not reported by the authors; treat as approximate
+     and use the transformed scale for any inferential work. They are useful only as an order-of-
+     magnitude anchor: a rested young adult produces ~1-2 lapses per 10-min PVT, and 2 h/night of
+     restriction roughly doubles it.
+
+  PROTOCOL DETAILS WORTH COPYING (Part C)
+  ---------------------------------------
+  Run-in / habitual-sleep verification:
+  "Adequate sleep time and regular sleep schedules (i.e., habitual betime between 2200 and 2300,
+  habitual sleep duration between 7.5 and 8 h of sleep per night, and no exposure to sleep
+  restriction/recovery sleep pattern) were verified with a sleep log and actigraphy for 2 wk prior to
+  the study" -> 14 nights of concurrent diary + actigraphy as the habitual-sleep estimate.
+
+  PVT practice trials (practice-effect washout, Part A3):
+  "Each PVT trial lasted for 10 min, and each subject had three practice trials within an hour the
+  night before the next day's testing."
+
+  Restriction implemented by fixing bedtime and advancing wake time:
+  "During the first 4 consecutive nights (baseline nights), the subjects were allowed to sleep for
+  8 h (2230-0630). During the subsequent 6 nights (sleep restriction nights), the subjects were
+  awakened 2 h earlier (0430). During the next 3 nights (recovery nights), they were allowed to sleep
+  for 10 h (2230-0830). We chose a 5-day restriction period and a 2-night recovery period to mimic
+  the weeklong work schedule and rest period of a typical worker."
+  -> this is precisely the weekday-restriction / weekend-catch-up pattern of the index subject.
+
+  Measurement schedule: PVT every 2 h from 0800 to 2200 (0800 start on baseline and restriction days,
+  1000 start on the recovery day); SSS hourly; MSLT six times per day.
+
+  SECONDARY: baseline SWS predicted the subjective but not the objective response, in women only:
+  "Increased baseline SWS was associated with a lesser degree of subjective sleepiness after
+  restriction (r = -0.57, P = 0.03) and greater improvement after recovery (r = 0.54, P = 0.04) in
+  women, but not in men." (n = 14 women, so these r values are fragile; not extracted as effects.)
+shard: "s20_pvt_psychometrics"

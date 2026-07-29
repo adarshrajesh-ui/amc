@@ -1,0 +1,89 @@
+study_id: dennis2017_traitlike
+citation: "Dennis LE, Wohl RJ, Selame LA, Goel N. Healthy Adults Display Long-Term Trait-Like Neurobehavioral Resilience and Vulnerability to Sleep Loss. Sci Rep. 2017;7(1):14889."
+doi: "10.1038/s41598-017-14006-7"
+pmid: "29097703"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5668275/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Healthy Adults Display Long-Term Trait-Like Neurobehavioral Resilience and Vulnerability to Sleep Loss"
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 47
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: neurobehavioral_icc_repeated_tsd_over_years
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: null, contrast_label: "two TSD exposures in the same individual separated by 27-2091 days (mean 444 d, median 210 d), n=23"}
+    scale: raw_units
+    unit: "ICC range across measures"
+    value: 0.885
+    se: null
+    ci: [0.82, 0.95]
+    conversion_formula: "value = midpoint of the published 82%-95% range; the 'ci' field holds the published RANGE ACROSS MEASURES, not a confidence interval."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more trait-like. Stability holds over YEARS, not just weeks - so a vulnerability phenotype measured now is informative about the same person later."
+    covariates: []
+    followup_years: 1.22
+    cohort_family: "Goel_RushPenn_ID"
+    quote: "In 23 healthy adults, neurobehavioral vulnerability to TSD exposures, separated by 27-2,091 days (mean: 444 days; median: 210 days), showed trait-like stability in performance and subjective measures (82-95% across measures)."
+  - outcome_domain: cognition
+    outcome_construct: neurobehavioral_icc_repeated_chronic_restriction_over_years
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null, contrast_label: "two chronic sleep restriction exposures in the same individual separated by 78-3058 days (mean 935 d, median 741 d), n=24"}
+    scale: raw_units
+    unit: "ICC range across measures"
+    value: 0.82
+    se: null
+    ci: [0.72, 0.92]
+    conversion_formula: "value = midpoint of the published 72%-92% range; the 'ci' field holds the published RANGE ACROSS MEASURES."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more trait-like. First demonstration that the CHRONIC RESTRICTION phenotype (the exposure this subject actually has) is stable over years."
+    covariates: []
+    followup_years: 2.56
+    cohort_family: "Goel_RushPenn_ID"
+    quote: "Similarly, in 24 healthy adults, neurobehavioral vulnerability to SR exposures, separated by 78-3,058 days (mean: 935 days; median: 741 days), also showed stability (72-92% across measures)."
+  - outcome_domain: cognition
+    outcome_construct: objective_vs_subjective_domain_consistency
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "consistency of individual responses within vs between objective performance and subjective rating domains"}
+    scale: raw_units
+    unit: "qualitative: within-domain consistency present, between-domain absent"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No numeric cross-domain estimate published; encodes direction only (0 = no cross-domain consistency). Do not pool quantitatively."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Independently replicates yamazaki2020_traitlike: objective and subjective vulnerability are separate phenotypes."
+    covariates: []
+    followup_years: null
+    cohort_family: "Goel_RushPenn_ID"
+    quote: "Cognitive performance outcomes and subjective ratings showed consistency across objective measures, and consistency across subjective measures, but not between objective and subjective domains."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Abstract-level extraction only (I did not retrieve the full text, so the per-measure ICCs and the PVT-specific value are not in hand - only the published ranges). n = 23 (TSD arm) + 24 (SR arm) with substantial likely overlap of individuals across arms; the recorded n=47 is the sum and should NOT be treated as 47 independent people. Retrospective assembly of repeat participants introduces selection (people who returned for a second study). Same laboratory lineage as yamazaki2020_traitlike and vandongen2004_traitlike."
+funding: "Not extracted."
+notes: |
+  Included because it is the ONLY evidence on whether the vulnerability phenotype is stable over
+  the timescale that matters here: this subject has been chronically restricted for ~3 years, and
+  the question is whether a 4-week measurement now generalises. It does: intervals ran up to
+  3,058 days (8.4 years) for the restriction arm and the ICCs stayed in the 0.72-0.92 band.
+
+  ACCESS LIMITATION, stated honestly: PMC5668275 exists and is open access, but I extracted only
+  the PubMed abstract for this record and did not pull the per-measure table, so no PVT-specific
+  ICC is recorded here. The PVT-specific trait ICCs used in the protocol come from
+  vandongen2004_traitlike (0.675, 20-min PVT lapses) and rupp2012_traitlike (0.89 lapses /
+  0.86 speed), both full-text verified.
+shard: "s20_pvt_psychometrics"

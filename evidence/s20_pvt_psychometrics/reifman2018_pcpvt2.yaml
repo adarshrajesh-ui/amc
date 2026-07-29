@@ -1,0 +1,57 @@
+study_id: reifman2018_pcpvt2
+citation: "Reifman J, Kumar K, Khitrov MY, Liu J, Ramakrishnan S. PC-PVT 2.0: An updated platform for psychomotor vigilance task testing, analysis, prediction, and visualization. J Neurosci Methods. 2018;304:39-45."
+doi: "10.1016/j.jneumeth.2018.04.007"
+pmid: "29679703"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "PC-PVT 2.0: An updated platform for psychomotor vigilance task testing, analysis, prediction, and visualization"
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: pcpvt2_hardware_configurations_meeting_10ms_accuracy
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "44 distinct PC hardware configurations tested for RT measurement accuracy"}
+    scale: raw_units
+    unit: "number of hardware configurations (out of 44) achieving <10 ms average RT delay"
+    value: 15.0
+    se: null
+    ci: null
+    conversion_formula: "published count: 15 of 44"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Only 34% (15/44) of tested consumer PC configurations measured reaction time accurately enough to match the PVT-192. THIS IS THE SINGLE MOST IMPORTANT PRACTICAL WARNING FOR A SELF-ADMINISTERED PVT PROTOCOL: most off-the-shelf setups are not accurate enough."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "We characterized the accuracy and precision of the software in measuring RT, using 44 distinct combinations of PC hardware system configurations. RESULTS: We found that 15 system configurations measured RTs with an average delay of less than 10 ms, an error comparable to that of the PVT-192. To achieve such small delays, the system configuration should always use a gaming mouse as"
+rob:
+  tool: none
+  judgement: na
+  notes: "Software/engineering validation, RoB2 inapplicable. Abstract-only access (Elsevier, not in PMC), and the abstract is truncated mid-sentence in the PubMed record so the full hardware recipe is not extractable. Windows 10 only as published in 2018; current OS compatibility not verified. Free-download status of version 2.0 not confirmed from the abstract (version 1.0 was explicitly free)."
+funding: "US Army Medical Research and Materiel Command (BHSAI)."
+notes: |
+  PART A5 ANSWER, part 2 of 3. Updates khitrov2014_pcpvt. Two additions relevant to the protocol:
+    1. Quantifies the hardware risk precisely: 15/44 configurations acceptable. Any protocol that
+       says "install a PVT app and use it daily" without pinning hardware is measuring an unknown
+       amount of device noise on top of the biology.
+    2. PC-PVT 2.0 couples the test schedule to the subject's sleep/wake AND CAFFEINE schedule and
+       produces individualised performance predictions. Verbatim: "the PC-PVT 2.0 for Windows 10
+       operating system, which has the capability to couple PVT tests of a study protocol with the
+       study's sleep/wake and caffeine schedules, and make real-time individualized predictions of
+       PVT performance for such schedules." Caffeine scheduling is a first-class confounder in a
+       student self-experiment and this tool at least makes it explicit.
+shard: "s20_pvt_psychometrics"

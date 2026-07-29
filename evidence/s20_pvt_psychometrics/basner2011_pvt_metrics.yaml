@@ -1,0 +1,262 @@
+study_id: basner2011_pvt_metrics
+citation: "Basner M, Dinges DF. Maximizing sensitivity of the psychomotor vigilance test (PVT) to sleep loss. Sleep. 2011;34(5):581-591."
+doi: "10.1093/sleep/34.5.581"
+pmid: "21532951"
+url: "https://europepmc.org/articles/PMC3079937"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Maximizing sensitivity of the psychomotor vigilance test (PVT) to sleep loss."
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 74
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [22, 45]
+  pct_female: 45.9
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  # ---------- PART A1: rank-ordered sensitivity of the 10 PVT metrics ----------
+  - outcome_domain: cognition
+    outcome_construct: pvt_mean_reciprocal_rt_response_speed
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 10, duration_days: 5, contrast_label: "5 nights 4h TIB (day after R5) vs day after baseline night 2 (10h TIB); 10-min PVT"}
+    scale: cohens_d
+    unit: "d_z (paired: mean within-subject difference / SD of within-subject differences)"
+    value: 1.21
+    se: 0.166
+    ci: [0.94, 1.59]
+    conversion_formula: "value as published (d_z). se approximated from the published nonparametric bootstrap CI: se = (1.59-0.94)/3.92 = 0.166"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = larger deficit; sign of mean 1/RT effect sizes was multiplied by -1 by the authors so that larger = worse. RANK 1 of 10 metrics under chronic partial sleep deprivation."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_TSD_PSD"
+    quote: "Effect sizes were high for both TSD (1.59-1.94) and PSD (0.88-1.21) for PVT metrics related to lapses and to measures of psychomotor speed, i.e., mean 1/RT (response time) and mean slowest 10% 1/RT. In contrast, PVT mean and median RT outcomes scored low to moderate effect sizes influenced by extreme values."
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_500ms
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 10, duration_days: 5, contrast_label: "5 nights 4h TIB (day after R5) vs day after baseline night 2 (10h TIB); 10-min PVT"}
+    scale: cohens_d
+    unit: "d_z (paired)"
+    value: 0.91
+    se: 0.120
+    ci: [0.71, 1.18]
+    conversion_formula: "published d_z; se = (1.18-0.71)/3.92 = 0.120"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = more lapses = worse. RANK 5 of 10 metrics under PSD (Table 2)."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_TSD_PSD"
+    quote: "Table 2 - Rank order of effect sizes of 10 PVT outcome metrics for the 10-min PVT in both acute total and chronic partial sleep deprivation ... Chronic Partial Sleep Deprivation ... Number of Lapses 0.91 (0.71; 1.18)"
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapse_probability
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 10, duration_days: 5, contrast_label: "5 nights 4h TIB vs baseline; 10-min PVT"}
+    scale: cohens_d
+    unit: "d_z (paired)"
+    value: 0.88
+    se: 0.112
+    ci: [0.69, 1.13]
+    conversion_formula: "published d_z; se = (1.13-0.69)/3.92 = 0.112"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = worse. RANK 8 of 10 under PSD - lapse probability was NOT more sensitive than raw lapse count."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_TSD_PSD"
+    quote: "Lapse Probability 0.88 (0.69; 1.13)"
+  - outcome_domain: cognition
+    outcome_construct: pvt_mean_rt
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 10, duration_days: 5, contrast_label: "5 nights 4h TIB vs baseline; 10-min PVT"}
+    scale: cohens_d
+    unit: "d_z (paired)"
+    value: 0.43
+    se: 0.143
+    ci: [0.35, 0.91]
+    conversion_formula: "published d_z; se = (0.91-0.35)/3.92 = 0.143"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = worse. RANK 9 of 10 under PSD. Mean RT is the WORST choice of primary outcome despite being the 2nd most commonly reported metric in the literature."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_TSD_PSD"
+    quote: "Mean RT 0.43 (0.35; 0.91) ... PVT mean and median metrics, which are among the most widely used outcomes, should be avoided as primary measures of alertness."
+  - outcome_domain: cognition
+    outcome_construct: pvt_median_rt
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 10, duration_days: 5, contrast_label: "5 nights 4h TIB vs baseline; 10-min PVT"}
+    scale: cohens_d
+    unit: "d_z (paired)"
+    value: 0.96
+    se: 0.140
+    ci: [0.74, 1.29]
+    conversion_formula: "published d_z; se = (1.29-0.74)/3.92 = 0.140"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = worse. RANK 4 of 10 under PSD, but RANK 10 of 10 under TSD (0.38) - median RT is unstable across paradigms because of extreme-value sensitivity."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_TSD_PSD"
+    quote: "Median RT 0.96 (0.74; 1.29)"
+  - outcome_domain: cognition
+    outcome_construct: pvt_mean_reciprocal_rt_response_speed
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.375, contrast_label: "33 h awake (bouts at 15-33 h awake) vs <=13 h awake; 10-min PVT"}
+    scale: cohens_d
+    unit: "d_z (paired)"
+    value: 1.93
+    se: 0.281
+    ci: [1.55, 2.65]
+    conversion_formula: "published d_z; se = (2.65-1.55)/3.92 = 0.281"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = worse. RANK 2 of 10 under TSD (top rank was lapses+false starts, 1.94)."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_TSD_PSD"
+    quote: "For the full 10-min PVT and TSD, the highest overall effect size was observed for number of lapses and false starts (1.94), followed by mean 1/RT (1.93), and number of lapses and slowest 10% 1/RT (both 1.86, see Table 2)."
+  # ---------- Table 4: raw within-subject differences and SDs (the power-calculation inputs) ----------
+  - outcome_domain: cognition
+    outcome_construct: pvt_mean_reciprocal_rt_within_subject_difference
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 10, duration_days: 1, contrast_label: "1 night 4h TIB (day R1) vs day after baseline night 2 (10h TIB); 10-min PVT; daily mean of 3 bouts at 12:00/16:00/20:00"}
+    scale: raw_units
+    unit: "s^-1 (mean 1/RT, i.e. reciprocal response time in inverse seconds)"
+    value: -0.125
+    se: 0.0323
+    ci: [-0.188, -0.063]
+    conversion_formula: "Table 4 published difference (SDP-NSDP) with nonparametric bootstrap CI; se = (0.188-0.063)/3.92 = 0.0319 (reported 0.0323 from se = SD_diff/sqrt(n) = 0.212/sqrt(43) = 0.0323)"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = slower responding (lower response speed) = worse after restriction. THE COMPANION SD OF THE WITHIN-SUBJECT DIFFERENCE IS 0.212 s^-1 (95% CI 0.162-0.254) - this is the sigma_d used for the n-of-1 power calculation."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_TSD_PSD"
+    quote: "Table 4 - Retrospective power calculation for the outcomes mean 1/RT and number of lapses ... 1 Night of 4 h TIB ... Difference SDP - NSDP [1/s] -0.125 (-0.188; -0.063) ... Standard Deviation SDP - NSDP [1/s] 0.212 (0.162; 0.254) ... Effect Size 0.59 (0.32; 0.92) ... Required Sample Size [N] 25 (12; 81)"
+  - outcome_domain: cognition
+    outcome_construct: pvt_mean_reciprocal_rt_within_subject_difference
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 10, duration_days: 5, contrast_label: "5 nights 4h TIB (day R5) vs day after baseline night 2 (10h TIB); 10-min PVT"}
+    scale: raw_units
+    unit: "s^-1 (mean 1/RT)"
+    value: -0.545
+    se: 0.0689
+    ci: [-0.680, -0.413]
+    conversion_formula: "Table 4 published; se = SD_diff/sqrt(n) = 0.452/sqrt(43) = 0.0689"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse. Companion SD of within-subject difference = 0.452 s^-1 (0.363; 0.544); d_z = 1.21; required N = 8."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_TSD_PSD"
+    quote: "5 Nights of 4 h TIB ... -0.545 (-0.680; -0.413) ... 0.452 (0.363; 0.544) ... 1.21 (0.94; 1.59) ... 8 (6; 11)"
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_within_subject_difference
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 10, duration_days: 1, contrast_label: "1 night 4h TIB (day R1) vs day after baseline night 2; 10-min PVT"}
+    scale: raw_units
+    unit: "lapses per 10-min PVT (RT >= 500 ms), daily mean of 3 bouts"
+    value: 1.21
+    se: 0.503
+    ci: [0.36, 2.29]
+    conversion_formula: "Table 4 published; se = SD_diff/sqrt(n) = 3.30/sqrt(43) = 0.503"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = MORE lapses = worse. Companion SD of the within-subject difference = 3.30 lapses (1.65; 4.93); d_z = 0.37; required N = 61. Lapses are markedly less efficient than mean 1/RT at low restriction doses."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_TSD_PSD"
+    quote: "Number of Lapses ... 1 Night of 4 h TIB ... 1.21 (0.36; 2.29) ... 3.30 (1.65; 4.93) ... 0.37 (0.18; 0.62) ... 61 (23; 262)"
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_within_subject_difference
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 10, duration_days: 5, contrast_label: "5 nights 4h TIB (day R5) vs day after baseline night 2; 10-min PVT"}
+    scale: raw_units
+    unit: "lapses per 10-min PVT (RT >= 500 ms), daily mean of 3 bouts"
+    value: 7.82
+    se: 1.308
+    ci: [5.36, 10.43]
+    conversion_formula: "Table 4 published; se = SD_diff/sqrt(n) = 8.58/sqrt(43) = 1.308"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = worse. Companion SD of within-subject difference = 8.58 lapses (6.82; 9.90); d_z = 0.91; required N = 12."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_TSD_PSD"
+    quote: "5 Nights of 4 h TIB ... 7.82 (5.36; 10.43) ... 8.58 (6.82; 9.90) ... 0.91 (0.71; 1.18) ... 12 (8; 18)"
+  # ---------- test duration: how short can the PVT be? ----------
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvt_minimum_useful_duration_saturation_point
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "effect size as a function of analysed portion (first 1-10 min) of the 10-min PVT, PSD study"}
+    scale: raw_units
+    unit: "minutes of test duration at which effect size saturates (PSD)"
+    value: 3.0
+    se: null
+    ci: null
+    conversion_formula: "verbatim statement, no numeric SE derivable"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "3 min is the point beyond which effect sizes stopped increasing materially under chronic partial sleep deprivation for fastest 10% RT, mean 1/RT and all lapse-based metrics; supports a 3-min test for daily self-administration."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_TSD_PSD"
+    quote: "This especially applies to the PSD study, where effect sizes did not increase substantially after the third minute of the test for the fastest 10% RT, mean 1/RT, and all outcome measures based on lapses."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Within-subject, no blinding possible (impossible for sleep dose). Healthy screened volunteers aged 22-45, so directly relevant to an 18-19 y/o only by extrapolation. Effect sizes are d_z (paired) computed across subjects, so the SD term contains BOTH within-person day-to-day noise AND between-person differential vulnerability; using it as a within-person sigma is therefore CONSERVATIVE. Retrospective (post hoc) power calculations, explicitly offered by the authors for prospective use."
+funding: "Not extracted from the retrieved text; UPenn Division of Sleep and Chronobiology (NIH/NASA-supported programme)."
+notes: |
+  RECONSTRUCTION AND INDEPENDENT VERIFICATION OF TABLE 4. The PDF text-extraction interleaved
+  Table 4's columns. I reconstructed the assignment and then verified it by independently
+  recomputing every published "Required Sample Size" from the published effect size, using a
+  two-sided one-sample t-test at alpha=0.05, power=0.80 (the authors' own stated method: SAS
+  Proc Power). All 14 cells reproduced to +/-1 subject:
+    mean 1/RT  d_z=1.44 -> N=6  (pub 6);  d_z=1.93 -> N=5  (pub 5)
+    mean 1/RT  d_z=0.59 -> N=25 (pub 25); 0.81 -> 14 (14); 0.82 -> 14 (14); 0.95 -> 11 (11); 1.21 -> 8 (8)
+    lapses     d_z=1.26 -> N=8  (pub 8);  d_z=1.86 -> N=5  (pub 5)
+    lapses     d_z=0.37 -> N=61 (pub 61); 0.47 -> 37 (37); 0.67 -> 20 (20); 0.70 -> 19 (19); 0.91 -> 12 (12)
+  Full reconstructed Table 4 (Difference | SD of difference | d_z | required N):
+    MEAN 1/RT [s^-1]
+      23 h TSD           -0.627 (-0.775,-0.475) | 0.434 (0.331,0.516) | 1.44 (1.03,2.13) | 6  (4,12)
+      33 h TSD           -0.659 (-0.779,-0.543) | 0.341 (0.250,0.414) | 1.93 (1.55,2.65) | 5  (4,6)
+      1 night 4h TIB     -0.125 (-0.188,-0.063) | 0.212 (0.162,0.254) | 0.59 (0.32,0.92) | 25 (12,81)
+      2 nights 4h TIB    -0.248 (-0.339,-0.158) | 0.306 (0.239,0.363) | 0.81 (0.54,1.17) | 14 (8,29)
+      3 nights 4h TIB    -0.314 (-0.430,-0.202) | 0.385 (0.304,0.452) | 0.82 (0.55,1.15) | 14 (9,28)
+      4 nights 4h TIB    -0.440 (-0.580,-0.306) | 0.464 (0.363,0.544) | 0.95 (0.71,1.25) | 11 (8,18)
+      5 nights 4h TIB    -0.545 (-0.680,-0.413) | 0.452 (0.363,0.544) | 1.21 (0.94,1.59) | 8  (6,11)
+    NUMBER OF LAPSES
+      23 h TSD           10.73 (7.79,13.70) | 11.07 (9.00,13.11) | 1.26 (0.90,1.80) | 8  (5,12)
+      33 h TSD            8.54 (6.45,10.20) |  5.94 (4.58,6.99)  | 1.86 (1.45,2.59) | 5  (4,6)
+      1 night 4h TIB      1.21 (0.36,2.29)  |  3.30 (1.65,4.93)  | 0.37 (0.18,0.62) | 61 (23,262)
+      2 nights 4h TIB     2.38 (0.93,3.90)  |  5.01 (3.42,6.35)  | 0.47 (0.20,0.79) | 37 (15,205)
+      3 nights 4h TIB     3.47 (2.02,5.09)  |  5.18 (3.52,6.78)  | 0.67 (0.48,0.92) | 20 (12,37)
+      4 nights 4h TIB     5.57 (3.36,8.05)  |  7.95 (5.22,10.15) | 0.70 (0.53,0.92) | 19 (12,30)
+      5 nights 4h TIB     7.82 (5.36,10.43) |  8.58 (6.82,9.90)  | 0.91 (0.71,1.18) | 12 (8,18)
+    (One caveat flagged by the authors: footnote 6 marks the 4 short-restriction lapse rows as
+     non-normally distributed.)
+
+  DOSE SLOPE DERIVED BY ME (arithmetic shown in protocol_basis.md): OLS regression of the
+  mean-1/RT difference on restriction night number k (k=1..5; y=0.125,0.248,0.314,0.440,0.545)
+  gives slope = 1.032/10 = 0.1032 s^-1 per night of 4 h TIB relative to a 10 h TIB baseline.
+
+  Authors' definition of effect size (verbatim): "Effect size is calculated as the average of
+  within-subject differences divided by the standard deviation of within-subject differences
+  (i.e., the average of within-subject difference is expressed in standard deviation units)."
+  This is d_z, exactly the quantity a paired-t power calculation consumes.
+
+  TSD full-table ranks (Table 2): lapses+false starts 1.94 (1.53,2.69); mean 1/RT 1.93 (1.55,2.65);
+  lapses 1.86 (1.45,2.59); slowest 10% 1/RT 1.86 (1.54,2.58); performance score 1.68 (1.34,2.28);
+  lapse probability 1.59 (1.27,2.16); fastest 10% RT 1.54 (1.22,2.08); false starts 1.29 (0.98,1.78);
+  mean RT 0.64 (0.53,1.23); median RT 0.38 (0.33,1.83).
+  PSD ranks (Table 2): mean 1/RT 1.21; fastest 10% RT 1.13; slowest 10% 1/RT 1.11; median RT 0.96;
+  lapses 0.91; lapses+false starts 0.90; performance score 0.88; lapse probability 0.88;
+  mean RT 0.43; false starts 0.39.
+
+  Also carries the group's test-retest claim (secondhand within this paper, citing Dorrian, Rogers
+  & Dinges 2005 book chapter as ref 6): "Moreover, the 10-min PVT has been shown to be highly
+  reliable, with intra-class correlations for key metrics such as lapses measuring test-retest
+  reliability above 0.8." I could NOT verify that >0.8 figure against a retrievable primary
+  source; the directly measured ICCs I did retrieve (Sunwoo 2012, Thompson 2022, Wilson 2010)
+  are lower for lapses. See station_report.md.
+shard: "s20_pvt_psychometrics"

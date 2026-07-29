@@ -1,0 +1,106 @@
+study_id: sunwoo2012_pvt_reliability
+citation: "Sunwoo BY, Jackson N, Maislin G, Gurubhagavatula I, George CF, Pack AI. Reliability of a single objective measure in assessing sleepiness. Sleep. 2012;35(1):149-158."
+doi: "10.5665/sleep.1606"
+pmid: "22215929"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3242682/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Reliability of a Single Objective Measure in Assessing Sleepiness"
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 372
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US/Canada"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvt_median_rt_test_retest_icc_within_day
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "4 repeated PVT administrations across one day, each immediately before an MSLT nap opportunity; single vs multiple administration"}
+    scale: raw_units
+    unit: "ICC (continuous outcome)"
+    value: 0.69
+    se: null
+    ci: null
+    conversion_formula: "published ICC; no CI reported in the abstract"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = a single PVT administration better reproduces the multi-administration estimate. 0.69 is 'substantial' but NOT the >0.8 often claimed for the PVT."
+    covariates: ["adjusted for test administration order (time-of-day) effects"]
+    followup_years: null
+    cohort_family: "Penn_CVO_OSA"
+    quote: "AS CONTINUOUS MEASURES, ICC WERE AS FOLLOWS: MSLT 0.45, PVT median response time 0.69, PVT number of lapses 0.51, 10-min DADT tracking error 0.87, 20-min DADT tracking error 0.90."
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvt_lapses_test_retest_icc_within_day
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "4 repeated PVT administrations across one day"}
+    scale: raw_units
+    unit: "ICC (continuous outcome)"
+    value: 0.51
+    se: null
+    ci: null
+    conversion_formula: "published ICC"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more reliable. 0.51 is only 'moderate'. THIS IS THE SINGLE MOST IMPORTANT RELIABILITY NUMBER IN THIS RECORD: raw lapse COUNT is the least reliable of the PVT outcomes measured here, which is a second, independent reason (beyond effect size) to prefer mean 1/RT as the n-of-1 primary outcome."
+    covariates: ["adjusted for administration order"]
+    followup_years: null
+    cohort_family: "Penn_CVO_OSA"
+    quote: "PVT number of lapses 0.51"
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvt_lapses_test_retest_icc_binary_impaired
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "4 repeated PVT administrations, outcome dichotomised as impaired / not impaired"}
+    scale: raw_units
+    unit: "ICC (binary outcome)"
+    value: 0.85
+    se: null
+    ci: null
+    conversion_formula: "published ICC"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more reliable. Dichotomising lapse count raises reliability from 0.51 to 0.85, i.e. the PVT classifies a person as impaired-or-not far more reliably than it quantifies HOW impaired."
+    covariates: ["adjusted for administration order"]
+    followup_years: null
+    cohort_family: "Penn_CVO_OSA"
+    quote: "Based on binary outcomes, ICC were: MSLT 0.63, PVT number of lapses 0.85, 10-min DADT 0.95, 20-min DADT 0.96."
+  - outcome_domain: exposure_measurement
+    outcome_construct: epworth_vs_objective_test_correlation
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "Epworth Sleepiness Scale vs objective sleepiness tests"}
+    scale: raw_units
+    unit: "Pearson/Spearman r range (ESS vs MSLT, the STRONGEST of the objective tests)"
+    value: -0.23
+    se: null
+    ci: [-0.270, -0.195]
+    conversion_formula: "value = midpoint of the published range [-0.270, -0.195]; the 'ci' field holds the published RANGE ACROSS TIME POINTS, not a confidence interval."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = greater self-reported sleepiness goes with shorter sleep latency (worse). |r| ~ 0.2 means a subjective sleepiness questionnaire explains ~4-7% of the variance in objective sleepiness. Relevant to PART B: self-report is a weak proxy."
+    covariates: []
+    followup_years: null
+    cohort_family: "Penn_CVO_OSA"
+    quote: "Correlation between ESS and different objective tests was strongest for MSLT, range [-0.270 to -0.195] and persisted across all time points."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Large (n=372) but a clinical sample of commercial vehicle operators OVERSAMPLED FOR OSA RISK, i.e. an adult occupational population with sleep pathology, not healthy adolescents - adolescent_match poor_midlife. Crucially the four 'repeats' were WITHIN ONE DAY (before each MSLT nap), so this ICC mixes measurement error with circadian/time-of-day variation and does NOT estimate DAY-TO-DAY test-retest reliability. The authors did adjust for administration order. Age/sex not extracted (abstract-only access)."
+funding: "Not extracted."
+notes: |
+  WHY THIS RECORD MATTERS DESPITE ITS LIMITATIONS. It is the largest published PVT reliability
+  estimate (n=372) and it directly contradicts the frequently repeated claim that PVT test-retest
+  ICCs are "above 0.8" for lapses (a claim traced to Dorrian, Rogers & Dinges 2005, a book chapter
+  I could not retrieve). Measured here, on a continuous scale, lapses give ICC = 0.51 and median RT
+  gives 0.69. That is a materially worse measurement instrument than the folklore suggests, and it
+  is the reason the protocol in protocol_basis.md (a) uses mean 1/RT rather than lapse count and
+  (b) averages multiple bouts per day.
+
+  Time-of-day matters and must be controlled: "Statistically significant time of day effects were
+  seen in both the MSLT and PVT but not the DADT." A daily-PVT protocol must therefore fix the
+  clock time of testing, or time of day will masquerade as a treatment effect.
+shard: "s20_pvt_psychometrics"

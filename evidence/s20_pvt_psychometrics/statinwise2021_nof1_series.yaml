@@ -1,0 +1,149 @@
+study_id: statinwise2021_nof1_series
+citation: "Herrett E, Williamson E, Brack K, Perkins A, Thayne A, Shakur-Still H, Roberts I, Prowse D, et al. The effect of statins on muscle symptoms in primary care: the StatinWISE series of 200 N-of-1 RCTs. Health Technology Assessment. 2021;25(16)."
+doi: "10.3310/hta25160"
+pmid: "33709907"
+url: "https://doi.org/10.3310/hta25160"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "The effect of statins on muscle symptoms in primary care: the StatinWISE series of 200 N-of-1 RCTs"
+access_tier: full_text
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 200
+n_studies_pooled: 200
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "GB"
+  adolescent_match: poor_midlife
+effects:
+  # THE DECISION-RELEVANT NUMBER: individual-level power achieved by a 1-year, 6-period n-of-1 RCT
+  - outcome_domain: exposure_measurement
+    outcome_construct: individual_level_power_achieved_in_a_real_nof1_trial
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: 365
+      contrast_label: "statistical power for the INDIVIDUAL-level treatment comparison in a 6-period (3 crossovers), 2-months-per-period n-of-1 RCT with 7 daily outcome measurements in the last week of each period"
+    scale: probability
+    unit: "power to detect an effect of >= 10 mm on a 100 mm VAS, alpha not stated for this criterion"
+    value: 0.625
+    se: null
+    ci: [0.55, 0.70]
+    conversion_formula: "Reported directly as a range: 'Full adherence throughout the trial would provide between 55% and 70% power to detect effects of >= 10 mm for individual treatment comparisons.' value = midpoint of 0.55 and 0.70 = 0.625; ci field carries the reported range (NOT a confidence interval - flagged here because the schema has no 'range' field). se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = better powered. This is the empirical reality check: even a fully adherent 12-month, 3-crossover n-of-1 RCT with 7 repeated daily measurements per period reached only ~55-70% power for the INDIVIDUAL, not 80%. Individual-level inference is intrinsically hard to power."
+    covariates: []
+    followup_years: 1.0
+    cohort_family: StatinWISE
+  - outcome_domain: exposure_measurement
+    outcome_construct: repeated_daily_measurement_as_the_power_lever_in_nof1
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: 7
+      contrast_label: "7 daily outcome measurements in the final week of each treatment period vs 1 measurement per period"
+    scale: raw_units
+    unit: "measurements per period"
+    value: 7.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: 'To increase the statistical power for the analysis of individual N-of-1 trials, we asked participants to report symptoms daily in the last week of each period, rather than once per period.' A design count; no uncertainty."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Descriptive design parameter. The transferable lesson: in an n-of-1 trial the cheapest way to buy power is MORE REPEATED MEASUREMENTS WITHIN each period, not more periods."
+    covariates: []
+    followup_years: null
+    cohort_family: StatinWISE
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "Randomised, placebo-controlled, double-blind series of n-of-1 trials with independent randomisation codes held by an LSHTM clinical trials unit and blinding of patients, general practice staff and trial staff. Population is a primary-care statin-intolerant adult cohort, so adolescent_match is poor_midlife and the CLINICAL content is irrelevant to this shard. This record is included PURELY as a methodological exemplar of how a real, well-conducted series of n-of-1 RCTs is designed, powered and analysed - not for any statin-related effect."
+funding: "NIHR Health Technology Assessment programme (project 14/49/159)"
+notes: |
+  ===== PART C8: A FULLY WORKED, REAL EXAMPLE OF A SERIES OF N-OF-1 RCTs =====
+  Included for METHOD ONLY. The clinical topic (statins and muscle symptoms) has nothing to do with
+  sleep; what makes this record valuable is that it is a large, rigorous, fully reported n-of-1 series
+  that states its individual-level power, its randomisation scheme, its washout handling and its exact
+  statistical model. Open access via the NIHR Journals Library; PDF downloaded from
+  https://njl-admin.nihr.ac.uk/document/download/2036169 and text extracted with pdfminer.six.
+
+  THE DESIGN, VERBATIM
+  --------------------
+  "Participants were randomised to a sequence of six 2-month treatment periods during which they
+  received either atorvastatin 20 mg daily or placebo."
+  "duration of the trial was 1 year for each participant and comprised six 2-month treatment periods
+  (three of placebo and three of active treatment) in a randomly allocated order"
+  "consisted of six treatment periods of 8 weeks' duration each (i.e. 56 daily capsules). During each
+  treatment period participants received 20 mg of atorvastatin or placebo."
+  "Eight treatment sequences were defined (Table 1) and given an equal corresponding range of values
+  between 0 and 1."
+  Blinding: "Patients, general practice staff and trial staff were blind to allocation in each
+  treatment period."
+  Outcome timing: "On the last week of each treatment period, participants rated their [symptoms]"
+  and "Secondary outcomes were collected on the last day of each treatment period".
+
+  THE POWER STATEMENT, VERBATIM (the most important sentence in this record)
+  -------------------------------------------------------------------------
+  "To increase the statistical power for the analysis of individual N-of-1 trials, we asked
+  participants to report symptoms daily in the last week of each period, rather than once per period.
+  Full adherence throughout the trial would provide between 55% and 70% power to detect effects of
+  >= 10 mm for individual treatment comparisons."
+
+  And on attrition:
+  "We anticipated that some patients will not provide complete data in each treatment period, and that
+  some would not complete their 12-month follow-up. By designing this study as a series of N-of-1
+  trials, which offer individual participant benefit in the form of an individualised estimate of
+  effect, we hoped to minimise this type of dropout. However, we accounted for this in our sample size
+  calculation by allowing for 40% loss to follow-up."
+
+  THE ANALYSIS MODEL, VERBATIM (this is the template for the self-experiment's analysis)
+  ------------------------------------------------------------------------------------
+  "The primary analysis was a linear mixed model for VAS muscle symptom scores with random effects for
+  participant and treatment. Residual errors were modelled using a first-order auto-regressive error
+  structure within each treatment period to account for correlation between the seven daily
+  measurements, with robust standard errors to account for non-normality of the VAS scores. Although
+  VAS muscle symptom scores are not normally distributed, analysing such data using normal-based
+  methods is likely to be a sufficiently robust approach. All tests were two-sided, with a p-value of
+  < 0.05 being considered as statistically significant."
+
+  Individual feedback (relevant because our subject IS the participant):
+  "At the end of the trial, patients were shown numerical and graphical summaries of their individual
+  data in relation to their statin and placebo periods, and were asked if this was helpful and whether
+  or not they would restart a statin."
+
+  FIVE TRANSFERABLE DESIGN LESSONS FOR THE 4-WEEK SLEEP SELF-EXPERIMENT
+  --------------------------------------------------------------------
+  1. POWER LEVER = REPEATED MEASUREMENTS WITHIN PERIOD. StatinWISE bought power by moving from 1 to 7
+     measurements per period. A daily PVT is the sleep analogue and is exactly why a 3-minute PVT-B
+     (which a real person will actually do every day) may beat a 10-minute PVT that gets skipped.
+  2. AUTOCORRELATION MUST BE MODELLED, NOT IGNORED. Their AR(1) within-period error structure is the
+     right default for a daily PVT series too. A naive paired t-test over daily values will
+     UNDERSTATE the standard error, which is why the n I compute in protocol_basis.md is a lower bound.
+  3. ROBUST STANDARD ERRORS for a non-normal outcome. PVT lapse counts are strongly right-skewed and
+     bounded below at zero, so the same remedy applies (or analyse 1/RT, which Basner & Dinges 2011
+     show is near-normal, or the sqrt(x)+sqrt(x+1) lapse transform Pejovic 2013 used).
+  4. THREE CROSSOVERS (6 periods) IS WHAT A SERIOUS N-OF-1 LOOKS LIKE, and it still only reached
+     55-70% individual power for a moderate effect. A 4-week sleep protocol therefore cannot promise
+     80% individual power on a single 2-period comparison - the honest framing is either more pairs,
+     or daily measurements, or both, and an explicit statement of the power actually achieved.
+  5. PRE-GENERATED, EXTERNALLY HELD RANDOMISATION SEQUENCE. Eight fixed sequences with equal
+     probability. The self-experiment analogue: generate the randomised night-order in advance,
+     record it before starting, and do not regenerate it.
+
+  A CAUTION THE REPORT SHOULD NOT SKIP
+  ------------------------------------
+  StatinWISE could blind its intervention with an identical placebo capsule. A sleep-duration
+  manipulation CANNOT be blinded. So StatinWISE's 55-70% individual power is an OPTIMISTIC ceiling
+  for our design in one respect (they had blinding) and a pessimistic floor in another (their outcome
+  was a subjective VAS with large day-to-day noise; a PVT metric may be less noisy). Do not transfer
+  the 55-70% figure directly as our expected power - it is a reality anchor, not our estimate.
+shard: "s20_pvt_psychometrics"

@@ -1,0 +1,179 @@
+study_id: vandongen2003_subjective_plateau
+citation: "Van Dongen HPA, Maislin G, Mullington JM, Dinges DF. The cumulative cost of additional wakefulness: dose-response effects on neurobehavioral functions and sleep physiology from chronic sleep restriction and total sleep deprivation. Sleep. 2003;26(2):117-126."
+doi: "10.1093/sleep/26.2.117"
+pmid: "12683469"
+url: "https://www.med.upenn.edu/uep/assets/user-content/documents/VanDongen_etal_Sleep_26_2_2003.pdf"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "The cumulative cost of additional wakefulness: dose-response effects on neurobehavioral functions and sleep physiology from chronic sleep restriction and total sleep deprivation."
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 48
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [21, 38]
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  # ---------- PART B6: the subjective sleepiness plateau ----------
+  - outcome_domain: cognition
+    outcome_construct: subjective_sleepiness_response_curvature_chronic_restriction
+    exposure: {type: chronic_restriction, dose_h: 6, referent_h: 8, duration_days: 14, contrast_label: "curvature parameter theta of the sleepiness response over 14 days, pooled across the 8h/6h/4h TIB conditions; Stanford Sleepiness Scale"}
+    scale: raw_units
+    unit: "theta (curvature parameter; theta -> 1 = near-linear accumulation, theta -> 0 = saturating/plateau)"
+    value: 0.24
+    se: 0.04
+    ci: [0.162, 0.318]
+    conversion_formula: "published estimate +/- s.e. (0.24 +/- 0.04); CI = 0.24 +/- 1.96*0.04 computed by me"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "LOW theta = subjective sleepiness SATURATES (plateaus) across days of chronic restriction. Contrast the SAME parameter for the SAME scale under total sleep deprivation: 0.86 +/- 0.14, i.e. near-linear. THIS PAIR OF NUMBERS IS THE QUANTITATIVE CORE OF THE 'YOU CANNOT TELL HOW IMPAIRED YOU ARE' CLAIM."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_dose_response_2003"
+    quote: "The curvature for subjective sleepiness as assessed by the SSS was statistically estimated to be 0.86 +/- 0.14 for the 0 h sleep condition, and 0.24 +/- 0.04 for the 8 h, 6 h and 4 h sleep period conditions (theta estimate +/- s.e.). Thus, the profile of subjective sleepiness across days was near-linear for the 0 h sleep condition, while it was near-saturating for the 4 h and 6 h sleep period conditions (Figure 1B)."
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapse_response_curvature_chronic_restriction
+    exposure: {type: chronic_restriction, dose_h: 6, referent_h: 8, duration_days: 14, contrast_label: "curvature parameter theta of the PVT lapse response over 14 days, pooled across 8h/6h/4h TIB conditions"}
+    scale: raw_units
+    unit: "theta (curvature parameter)"
+    value: 0.78
+    se: 0.04
+    ci: [0.702, 0.858]
+    conversion_formula: "published estimate +/- s.e. (0.78 +/- 0.04); CI computed by me as 0.78 +/- 1.96*0.04"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "HIGH theta = PVT impairment accumulates NEAR-LINEARLY and does NOT plateau. Directly compare with the SSS theta of 0.24 in the SAME subjects, SAME conditions, SAME days: objective deficit keeps growing while the feeling of sleepiness flattens out. This is a within-study, within-subject dissociation, which is the strongest possible design for this claim."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_dose_response_2003"
+    quote: "For the 8 h, 6 h and 4 h sleep period conditions, curvature (parameter theta in equation (1)) was statistically estimated to be 0.78 +/- 0.04 for psychomotor vigilance task performance, 0.59 +/- 0.04 for digit symbol substitution task performance, and 0.45 +/- 0.04 for serial addition/subtraction task performance (estimate +/- s.e.)."
+  - outcome_domain: cognition
+    outcome_construct: subjective_sleepiness_magnitude_14d_restriction_vs_3d_tsd
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 8, duration_days: 14, contrast_label: "SSS change after 14 days at 6h or 4h TIB versus SSS change after 3 days of total sleep deprivation"}
+    scale: raw_units
+    unit: "Stanford Sleepiness Scale units (1-7 scale)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "published as 'only approximately 1 unit' for 14 d of 6h/4h restriction vs 'more than 2 units' for 3 d TSD. Point estimates only; no SE published for this comparison."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive = sleepier. After 14 nights at 4-6 h, the subject FEELS about 1 SSS unit sleepier - i.e. 'only slightly sleepy' - while their PVT performance has degraded to a level equal to 1-2 nights of total sleep deprivation. The felt signal understates the measured deficit by roughly half on the same instrument's scale."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_dose_response_2003"
+    quote: "The average response to 3 days of total sleep deprivation spanned more than 2 units on the Stanford Sleepiness Scale, while the response to 14 days of sleep restricted to 6 h or 4 h per day was only approximately 1 unit on this scale."
+  - outcome_domain: cognition
+    outcome_construct: subjective_sleepiness_fails_to_discriminate_4h_from_6h
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 6, duration_days: 14, contrast_label: "rate of change of SSS across days: 6h TIB vs 4h TIB condition"}
+    scale: probability
+    unit: "p-value for the difference in the rate of change of subjective sleepiness between the 6 h and 4 h conditions (F1,30 = 0.10)"
+    value: 0.75
+    se: null
+    ci: null
+    conversion_formula: "published test statistic and p-value; a p-value, not an effect size"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Non-significant = subjective sleepiness CANNOT DISTINGUISH 4 h from 6 h of nightly sleep, a 50% difference in dose, over 14 days. Objective PVT lapses did distinguish them. Direct evidence that self-report cannot be used to titrate one's own sleep dose."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_dose_response_2003"
+    quote: "Similarity in the rate of change across days was observed for the 6 h and 4 h sleep period conditions (F1,30 = 0.10, P = 0.75)."
+  # ---------- the critical wake duration: the basis for the ad-lib sleep-need estimate ----------
+  - outcome_domain: sleep_need
+    outcome_construct: critical_wake_duration_xi_implied_sleep_need
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "statistically estimated subject-specific critical wake duration xi beyond which PVT lapses accumulate near-linearly, pooled across 4h/6h/8h/0h conditions"}
+    scale: hours
+    unit: "hours of wakefulness per 24 h beyond which behavioural-alertness deficits accumulate"
+    value: 15.84
+    se: 0.73
+    ci: [14.41, 17.27]
+    conversion_formula: "published estimate 15.84 h (s.e. 0.73 h); CI = 15.84 +/- 1.96*0.73 computed by me. IMPLIED DAILY SLEEP NEED = 24 - 15.84 = 8.16 h (s.e. 0.73 h)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Wakefulness in EXCESS of ~15.84 h/day is what accumulates a neurobehavioural cost. The complement, 8.16 h, is the group-average daily sleep need implied by performance data rather than by opinion. Used in protocol_basis.md to convert a TIB contrast into an excess-wakefulness dose."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_dose_response_2003"
+    quote: "A statistical model revealed that, regardless of the mode of sleep deprivation, lapses in behavioral alertness were near-linearly related to the cumulative duration of wakefulness in excess of 15.84 h (s.e. 0.73 h)."
+  - outcome_domain: sleep_need
+    outcome_construct: critical_wake_duration_matches_habitual_wake_duration
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "difference between each subject's empirical-Bayes critical wake duration xi and their actigraphy-derived habitual wake duration"}
+    scale: hours
+    unit: "hours (habitual wake duration minus critical wake duration xi)"
+    value: 0.1
+    se: 0.5
+    ci: [-0.88, 1.08]
+    conversion_formula: "published mean +/- s.e. (0.1 +/- 0.5 h), t23 = 0.17, P = 0.86; CI = 0.1 +/- 1.96*0.5 computed by me"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Indistinguishable from zero: a person's performance-derived sleep NEED matches their pre-study habitual sleep duration on average. IMPORTANT CAVEAT FOR THIS SUBJECT: this equivalence was found in adults whose habitual sleep was NOT chronically curtailed to 5-6 h, so it cannot be read as 'whatever you habitually sleep is what you need'. The paper's own companion finding cuts the other way: longer habitual sleepers were MORE affected by imposed restriction (r32 = 0.29, P = 0.048)."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_dose_response_2003"
+    quote: "The subject-specific values for xi, statistically determined with empirical Bayes estimation, were similar to the subject-specific habitual wake durations (derived from average sleep durations in the 5 days prior to the experiment). The difference between habitual wake duration and critical wake duration xi was 0.1 +/- 0.5 h (mean +/- s.e.), which was not significantly different from zero (t23 = 0.17, P = 0.86)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomised to 4h/6h/8h TIB for 14 days (parallel-arm for the restriction doses) plus a separate 3-day TSD experiment, 12 days inpatient with continuous monitoring - a strong design, but no blinding is possible and the TSD comparison is a separate experiment rather than a randomised arm of the same one. n = 48 across both experiments so per-arm n is ~13. Healthy adults 21-38, adolescent_match fair_adult. Curvature parameters come from a specific non-linear mixed model (equation 1), so they are model-dependent quantities, not model-free descriptive statistics."
+funding: "Not extracted from the retrieved PDF; NIH-supported UPenn programme."
+notes: |
+  THIS IS THE PRIMARY SOURCE FOR THE ENTIRE 'YOU CANNOT TELL HOW IMPAIRED YOU ARE' CLAIM, and it is
+  best stated as the within-study contrast of two curvature parameters estimated in the SAME people
+  on the SAME days:
+      PVT lapses, chronic restriction:            theta = 0.78 +/- 0.04  (near-linear accumulation)
+      Stanford Sleepiness Scale, same conditions: theta = 0.24 +/- 0.04  (near-saturating plateau)
+      Stanford Sleepiness Scale, total deprivation: theta = 0.86 +/- 0.14 (near-linear - so the
+          plateau is NOT a ceiling artefact of the scale)
+  The authors make the no-ceiling argument explicitly: "It is unlikely that this was the result of a
+  ceiling effect or other metric-related artifact, because subjects in the total sleep deprivation
+  condition reported considerably greater levels of sleepiness, and did not show evidence of
+  adaptation."
+
+  THE FULL DISCUSSION PASSAGE, verbatim, because it is the most quotable statement of the finding:
+  "Chronic restriction of sleep to 4 h and 6 h initially elevated subjective sleepiness ratings on
+  both the Stanford Sleepiness Scale and the Karolinska Sleepiness Scale, but as sleep restriction
+  continued, there were only minor further increases in these ratings (Figure 1B). In fact, unlike
+  PVT and DSST performance functions (Figures 1A, 1C), sleepiness ratings never reached levels
+  equivalent to those found after 2 nights of total sleep deprivation. Surprisingly, by the end of
+  the 14 days of sleep restriction, when performance was at its worst levels, subjects in the 4 h and
+  6 h sleep period conditions reported feeling only slightly sleepy. Therefore, unlike performance
+  measures, sleepiness ratings appeared to show adaptation to chronic partial sleep deprivation."
+
+  AND THE MECHANISM/IMPLICATION, verbatim: "These findings for subjective sleepiness suggest that
+  once sleep restriction is chronic, subjects either cannot reliably introspect with regard to their
+  actual sleepiness levels, or as long as they are receiving at least approximately 4 h of sleep
+  nightly they do not experience a sense of sleepiness anywhere near the levels found for total sleep
+  deprivation. Regardless of the explanation, the lack of reports of intense feelings of sleepiness
+  during chronic sleep restriction may explain why sleep restriction is widely practiced - people
+  have the subjective impression they have adapted to it because they do not feel particularly
+  sleepy."
+
+  And the abstract's summary sentence: "Sleepiness ratings suggest that subjects were largely unaware
+  of these increasing cognitive deficits, which may explain why the impact of chronic sleep
+  restriction on waking cognitive functions is often assumed to be benign."
+
+  MAGNITUDE ANCHOR for the deficit the subject cannot feel: "In the 4 h sleep period condition,
+  lapses in behavioral alertness and reductions in working memory performance reached levels
+  equivalent to those observed after 2 nights without sleep (Figures 1A, 1C). ... Subjects in the 6 h
+  sleep period condition also reached levels of impairment equivalent to those observed after 1 night
+  of total sleep loss for lapses in behavioral alertness and working memory performance."
+
+  MODEL FIT: with between-subject variance in xi and gamma taken into account, the cumulative-excess-
+  wakefulness model "explained 83.0% of the variance in the PVT data" with curvature theta = 0.67
+  +/- 0.05. This is what licenses the linearisation used in protocol_basis.md to convert a 1-2 h
+  nightly TIB contrast into an expected mean-1/RT effect.
+
+  NOTE ON OVERLAP: shard s01 (cognition_dose_response) and s06 (sleep_need_measurement) will almost
+  certainly also extract from this paper. My record deliberately extracts only the SUBJECTIVE/
+  OBJECTIVE DISSOCIATION parameters and the critical-wake-duration/sleep-need parameters, not the
+  primary dose-response lapse effect sizes. De-duplicate on cohort_family = UPenn_Dinges_dose_response_2003.
+shard: "s20_pvt_psychometrics"

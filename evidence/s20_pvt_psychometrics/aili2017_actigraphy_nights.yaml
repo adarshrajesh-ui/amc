@@ -1,0 +1,196 @@
+study_id: aili2017_actigraphy_nights
+citation: "Aili K, Astrom-Paulsson S, Stoetzer U, Svartengren M, Hillert L. Reliability of Actigraphy and Subjective Sleep Measurements in Adults: The Design of Sleep Assessments. Journal of Clinical Sleep Medicine. 2017;13(1):39-47."
+doi: "10.5664/jcsm.6384"
+pmid: "27707448"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5181612/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Reliability of Actigraphy and Subjective Sleep Measurements in Adults: The Design of Sleep Assessments"
+access_tier: full_text
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: 54
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "SE"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: nights_of_actigraphy_needed_for_reliable_total_sleep_time
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: null
+      contrast_label: "nights of actigraphy required for a Spearman-Brown reliability coefficient >= 0.70 for actigraphy-measured TOTAL SLEEP TIME, in a working adult population measured over 7 consecutive nights"
+    scale: raw_units
+    unit: "nights (lower bound; >7 means not achieved within the 7-night window)"
+    value: 7.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: 'For actigraphy measured total sleep time, more than seven nights are recommended.' and 'When including individuals working during the weekend, sufficient reliability (a Spearman Brown coefficient >= 0.7) was not reached over the 7-day period.' value = 7 encodes the LOWER BOUND: 7 nights was demonstrably insufficient. The true requirement is >7 and is not identified by this study."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more nights needed. This is a CENSORED observation: the study ran out of nights before reaching R = 0.70 for total sleep time. It bounds the answer from below at 7 nights and is consistent with the 13-night figure derived from Knutson 2007."
+    covariates: ["weekend vs weeknight composition", "whether the participant worked weekends"]
+    followup_years: null
+    cohort_family: Stockholm_Stress_Center
+  - outcome_domain: exposure_measurement
+    outcome_construct: nights_needed_for_reliable_actigraphic_sleep_efficiency
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: null
+      contrast_label: "nights of actigraphy required for Spearman-Brown reliability >= 0.70 for actigraphic SLEEP EFFICIENCY"
+    scale: raw_units
+    unit: "nights"
+    value: 5.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: 'at least five nights when assessing (actigraphy) sleep efficiency'; and '5 days or more for sleep efficiency (4 when excluding individuals who had been working during the weekend)'."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more nights needed. Included to document the ORDERING of difficulty across parameters (sleep percent 2 < efficiency 5 < duration >7), which is the transferable finding."
+    covariates: ["weekend vs weeknight composition"]
+    followup_years: null
+    cohort_family: Stockholm_Stress_Center
+  - outcome_domain: exposure_measurement
+    outcome_construct: nights_needed_for_reliable_self_reported_sleep_quality_diary
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: null
+      contrast_label: "nights of DIARY (Karolinska sleep diary quality index) required for Spearman-Brown reliability >= 0.70"
+    scale: raw_units
+    unit: "nights"
+    value: 6.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: 'At least six nights of measurements are required for a reliable measure of self-reported sleep quality.'"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more nights needed. The diary needs MORE nights than most actigraphy parameters, contradicting the intuition that a diary is the cheap-and-adequate option."
+    covariates: ["weekend vs weeknight composition"]
+    followup_years: null
+    cohort_family: Stockholm_Stress_Center
+  - outcome_domain: exposure_measurement
+    outcome_construct: weekend_minus_weekday_total_sleep_time_difference
+    exposure:
+      type: weekend_catchup
+      dose_h: null
+      referent_h: null
+      duration_days: null
+      contrast_label: "actigraphic total sleep time on weekend nights (Fri, Sat) minus week nights (Mon-Thu), paired t-test, working adults"
+    scale: raw_units
+    unit: "minutes of total sleep time"
+    value: 38.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: 'On average, total sleep time during weekend nights was 38 min longer than during week nights (64 min longer when excluding those who had been working during the weekend), which was statistically significant (p < 0.05).' Recorded value 38 min is the full-sample estimate; 64 min is the estimate among those NOT working weekends, which is the condition analogous to a student. se: null (only p < 0.05 reported, no SE or CI)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = more sleep at weekends. Documents that a systematic weekday/weekend component exists even in employed adults; in a college student it is far larger (~2 h by the index subject's history). Relevant because it means a pooled 'habitual duration' is a mixture of two distributions, not one."
+    covariates: []
+    followup_years: null
+    cohort_family: Stockholm_Stress_Center
+rob:
+  tool: none
+  judgement: na
+  notes: "Descriptive reliability study, so RoB2 is not applicable. Limitations for our use: (a) n = 54 (49 entering the 7-night ICC analysis, 51 for the 4-night analysis, 38 after excluding weekend workers) - small for variance-component estimation, so the night-count thresholds are imprecise; (b) all participants worked at the same location, and the authors themselves flag this: 'the studied group is more homogenous than a random sample from a general population would be'; (c) only 7 nights were recorded, so the total-sleep-time requirement is censored and unidentified above 7; (d) working adults, not students, so adolescent_match is fair_adult. Age and sex distribution are not stated in the text I retrieved, hence nulls."
+funding: "Stockholm Stress Center, a FAS/Forte Center of Excellence (dnr 2009-1758); Future Occupational Health Services FAS/Forte 2010-1563. 'This was not an industry supported study.'"
+notes: |
+  ===== PART C9: THE STUDY THAT ASKED OUR EXACT QUESTION =====
+  Full text obtained from PMC (PMC5181612) by fetching the rendered article HTML with a browser
+  user-agent and flattening it, because the BioC API, the Europe PMC fullTextXML endpoint and the
+  PMC OA service all refused this article (the OA service returns
+  "identifier 'PMC5181612' is not Open Access") and jcsm.aasm.org served no PDF to curl.
+
+  WHAT I COULD NOT GET: Table 4 (the per-parameter single-measure ICC values) and Figure 3 (the
+  Spearman-Brown curves) are IMAGES in the PMC rendering, so the numeric ICCs are NOT in this record.
+  I have the night-count thresholds, the method, and the discussion, but not the underlying ICCs. The
+  ICC-based arithmetic in protocol_basis.md therefore uses Knutson 2007's variance components, not
+  Aili's ICCs.
+
+  VERBATIM QUOTES
+  ---------------
+  Aim - this is precisely the Part C9 question:
+  "The aim of the study was to investigate how many nights of measurement are needed for a reliable
+  measure of sleep in a working population including adult women and men."
+
+  Method:
+  "In all, 54 individuals participated in the study. Sleep was assessed for 7 consecutive nights using
+  actigraphy as an objective measure, and the Karolinska sleep diary for a subjective measure of
+  quality. Using intra-class correlation and the Spearman-Brown formula, calculations of how many
+  nights of measurements were required for a reliable measure were performed."
+  "An intra-class correlation (ICC) coefficient was calculated using a two-way random model, which
+  provides a ratio of the between-subjects variance to the sum of all the variance components. The
+  intra-class correlation estimates the reliability of the measures for each parameter on a single
+  night of measurement. In this study setting, a low single-measure intra-class correlation indicates a
+  high intra-individual day-by-day variation."
+  "The Spearman-Brown formula was then applied to estimate the effects of changes in number of
+  aggregated days of measurement on the reliability of each test."
+  "A Spearman-Brown reliability coefficient of >= 0.7 was used to indicate acceptable reliability, in
+  accordance with the previous literature."
+
+  THE RESULTS (Conclusions section, verbatim):
+  "The results in the present study suggest that data from at least two nights are to be recommended
+  when assessing the actigraphy sleep measure sleep percent and at least five nights when assessing
+  (actigraphy) sleep efficiency. For actigraphy measured total sleep time, more than seven nights are
+  recommended. At least six nights of measurements are required for a reliable measure of self-reported
+  sleep quality. However, if measurements are performed on Monday through Thursday, four nights of
+  measurement seem to be sufficient to obtain a reliable objective and subjective measure. Depending on
+  the purpose of the sleep assessment, it may be preferable to collect data during weeknights only.
+  Information on whether weekend nights are included or not are important when presenting the results
+  of sleep studies. The low overall correlations between actigraphy sleep measurements and self-reports
+  in this study suggest that subjectively and actigraphy measured sleep capture different dimensions of
+  sleep."
+
+  The censoring statement (why "more than seven" is all they can say):
+  "Our study suggests that not even measurements lasting a full week would give a satisfactorily
+  reliable measure of total sleep time."
+  "When including individuals working during the weekend, sufficient reliability (a Spearman Brown
+  coefficient >= 0.7) was not reached over the 7-day period."
+
+  Their reconciliation with the rest of the literature, which is useful for the report:
+  "Knutson and colleagues found that five or six days of measurement of sleep duration (using the same
+  definition as for the parameter total sleep time that was used in our study) should be sufficient for
+  adults, and in a study including only women it was suggested that at least five days of measurement
+  are needed."
+  Note the tension: Aili could not reach R = 0.70 for TST in 7 nights, whereas she reports Knutson as
+  recommending 5-6 days. My own Spearman-Brown derivation from Knutson 2007's published variance
+  components gives 8 nights for R = 0.70 and 13 nights for R = 0.80 - closer to Aili's empirical result
+  than to the 5-6 day figure. The report should quote the range and not pretend the literature is
+  unanimous.
+
+  WEEKDAY-ONLY MEASUREMENT: A TEMPTATION TO REFUSE
+  -----------------------------------------------
+  "Further, higher reliability was observed for measurements when including only week nights (Monday to
+  Thursday) than when including weekend nights."
+  "We chose to let four nights represent week nights, i.e., the nights of Monday through Thursday, for
+  two reasons. One is that the night between Sunday and Monday may not be representative of a "normal"
+  week night."
+  Restricting to Mon-Thu raises reliability because it removes a real, systematic source of variance.
+  For THIS subject that variance IS the exposure of interest (weekday 5-6 h vs weekend 7-8 h), so
+  weekday-only measurement would be measuring the wrong thing. Take the reliability hit, record all 7
+  nights, and estimate weekday and weekend means separately. Acebo 1999 points the same way (month-to-
+  month stability required weekend nights to be included).
+
+  SECONDARY FINDING WORTH CARRYING INTO PART B6
+  --------------------------------------------
+  "Overall, there was a low correlation between the investigated actigraphy sleep parameters and
+  subjective sleep quality, suggesting that the two methods of measurement capture different dimensions
+  of sleep." and "the correlations were overall very low and in most cases nonsignificant."
+  This is the SLEEP-measurement analogue of the subjective/objective dissociation my Part B documents
+  for PERFORMANCE: the subject's rating of how he slept is a poor proxy for how he actually slept, just
+  as his rating of how alert he is is a poor proxy for how he actually performs. Both diaries AND
+  actigraphy are therefore required; neither substitutes for the other.
+shard: "s20_pvt_psychometrics"
