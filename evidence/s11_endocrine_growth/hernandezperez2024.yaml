@@ -1,0 +1,70 @@
+study_id: hernandezperez2024
+citation: 'Hernandez-Perez JG, Taha S, Torres-Sanchez LE, Villasante-Tezanos A, Milani SA, Baillargeon J, Canfield S, Lopez
+  DS. Association of sleep duration and quality with serum testosterone concentrations among men and women: NHANES 2011-2016.
+  Andrology. 2024;12(3):518-526.'
+doi: 10.1111/andr.13496
+pmid: '37452666'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: 'Association of sleep duration and quality with serum testosterone concentrations among men and women:
+    NHANES 2011-2016'
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 8748
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 20
+  - 40
+  pct_female: null
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: endocrine
+  outcome_construct: odds_of_high_total_testosterone_with_short_sleep_men_20_40
+  exposure:
+    type: habitual_short_sleep
+    dose_h: 6
+    referent_h: 7.5
+    duration_days: null
+    contrast_label: self-reported sleep <=6 h vs 7-8 h, men aged 20-40 y
+  scale: log_or
+  unit: log odds of being in the HIGH testosterone category
+  value: 1.2865
+  se: 0.49485
+  ci:
+  - 0.3148
+  - 2.2546
+  conversion_formula: log_or = ln(3.62) = 1.2865; se = (ln(9.53) - ln(1.37))/3.92 = (2.25464 - 0.31481)/3.92 = 0.49485;
+    ci = ln of the reported bounds [1.37, 9.53].
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: 'POSITIVE = short sleepers had HIGHER odds of high testosterone. This is the OPPOSITE direction to the
+    lab studies, in the age band closest to the subject. Cross-sectional and almost certainly confounded (reverse causation:
+    high testosterone delays bedtime), but it means the observational literature provides no support for a clinically meaningful
+    testosterone deficit in short-sleeping young men.'
+  covariates:
+  - age
+  - sex
+  - race/ethnicity
+  - BMI
+  - other NHANES covariates per weighted multivariable model
+  followup_years: null
+  cohort_family: NHANES
+  quote: 'Sleep deprivation (<=6 h) was associated with high testosterone (odds ratio = 3.62; 95% confidence interval: 1.37,
+    9.53) among young men (20-40 years old); meanwhile, middle-aged men (41-64 years old) who reported more sleep duration
+    had low testosterone (odds ratio = 2.03; 95% confidence interval: 1.10, 3.73).'
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: cross-sectional; self-reported sleep; single morning-ish testosterone draw; wide CI (1.37-9.53) implies few young
+    short-sleeping men in the high category; multiple age x sex subgroups tested
+funding: Non-US government / NIH
+notes: SE recorded as 0.49485 in the notes-level arithmetic; the se field carries that value. Direction is a genuine contradiction
+  of the lab literature and should widen the posterior rather than be discarded.
+shard: s11_endocrine_growth

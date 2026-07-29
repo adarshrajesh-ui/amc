@@ -1,0 +1,85 @@
+study_id: gupta2020
+citation: Gupta N, Liu C, King E, Sylvester F, Lee D, Boyle B, Trauernicht A, Chen S, Colletti R. Continued statural growth
+  in older adolescents and young adults with Crohn's disease and ulcerative colitis beyond the time of expected growth plate
+  closure. Inflamm Bowel Dis. 2020;26(12):1880-1889.
+doi: 10.1093/ibd/izz334
+pmid: '31968095'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: Continued Statural Growth in Older Adolescents and Young Adults With Crohn's Disease and Ulcerative Colitis
+    Beyond the Time of Expected Growth Plate Closure
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 3007
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 17
+  - 25
+  pct_female: 48.0
+  country: US
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: radiographic_age_of_growth_plate_closure_males
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: standard radiographic definition of the end of statural growth
+  scale: years
+  unit: bone age (years) at radiographic growth-plate closure in males
+  value: 17.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Reference timing, not an effect. The subject was 16 at exposure onset, i.e. within ~1 year of the conventional
+    radiographic end of statural growth in males.
+  covariates: []
+  followup_years: null
+  cohort_family: ImproveCareNow
+  quote: Cessation of statural growth occurs with radiographic closure of the growth plates, radiographically defined as
+    bone age (BA) 15 years in females and 17 in males.
+- outcome_domain: anthropometric
+  outcome_construct: median_residual_height_gain_beyond_age_17_males_chronic_disease
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: males older than chronological age 17 y with Crohn's disease, height at >=3 visits >=6 months apart
+  scale: raw_units
+  unit: cm of median height gained after chronological age 17 y
+  value: 1.6
+  se: null
+  ci: null
+  conversion_formula: Median reported directly (1.6 cm in males with CD, 1.3 cm in males with UC, P=0.0004 between them).
+    No dispersion reported; se=null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'Positive = height still gained after age 17. EMPIRICAL CEILING: even in a growth-impaired population
+    (chronic inflammatory bowel disease, in which delayed bone age is common and 80% still grew), the median total residual
+    height after age 17 was only 1.3-1.6 cm. A healthy 16-19 year old has no more than this to lose, and probably less.'
+  covariates: []
+  followup_years: null
+  cohort_family: ImproveCareNow
+  quote: Of these patients, 80% manifested continued growth, more commonly in CD (81%) than UC (75%; P = 0.0002) and in
+    females with CD (83%) than males with CD (79%; P = 0.012). Median height gain was greater in males with CD (1.6 cm)
+    than in males with UC (1.3 cm; P = 0.0004), and in females with CD (1.8 cm) than in females with UC (1.5 cm; P = 0.025).
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: large registry cohort with serial measured heights (strength); population has chronic disease so it is enriched
+    for delayed maturation, which biases residual growth UPWARD relative to healthy adolescents
+funding: Non-US government
+notes: 'Selected as the height ceiling because the bias runs in the conservative direction: if chronically ill adolescents
+  with delayed bone age gain a median of only 1.3-1.6 cm after 17, a healthy well-nourished male gains no more.'
+shard: s11_endocrine_growth

@@ -1,0 +1,67 @@
+study_id: chen2025beijing
+citation: 'Chen Y, Wu L, Liao Z, Huang Y, Liu Q, Li S, Liu J, Zong X, Tai J, Chen F. Status of sleeping habits and its influence
+  on growth and metabolism of children in Beijing: a population-based cross-sectional study. BMC Public Health. 2025;25(1):474.'
+doi: 10.1186/s12889-025-21637-3
+pmid: '39910513'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: 'Status of sleeping habits and its influence on growth and metabolism of children in Beijing: a population-based
+    cross-sectional study'
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 5832
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 6
+  - 18
+  pct_female: null
+  country: CN
+  adolescent_match: mixed
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: height_for_age_z_score_and_poor_sleep_habits
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: poor sleep habits by Children's Sleep Habits Questionnaire (CSHQ) vs not, children and adolescents 6-18
+      y
+  scale: raw_units
+  unit: height-for-age z score (HAZ) units
+  value: -0.111
+  se: null
+  ci: null
+  conversion_formula: Reported as beta = -0.111 with p < 0.05; no SE or CI given, so se=null. If interpreted as the contrast
+    for the 'poor sleep habits' indicator, -0.111 HAZ maps to 0.111 * 7.30 cm = 0.81 cm of adult stature using the WHO 19-y
+    stature SD of 7.2983 cm.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'Negative = shorter for age with poor sleep habits (harm). THE ONLY sleep-to-stature association found
+    in a sample spanning adolescence. Magnitude bound: even taken at face value it is ~0.8 cm. Internally inconsistent,
+    though: sleep-disordered breathing was POSITIVELY associated with HAZ in the 6-11 y group (beta = +0.240, p < 0.05),
+    the opposite sign to the adenotonsillectomy literature, which is a strong hint of residual confounding.'
+  covariates:
+  - age
+  - sex (analysed by age group)
+  followup_years: null
+  cohort_family: Beijing_schools_2022_2023
+  quote: Linear regression analysis showed that poor sleep habits were negatively correlated with height for age (HAZ) and
+    systolic blood pressure (SBP) (beta = -0.111 and - 0.459, respectively; p < 0.05). ... while SDB was positively correlated
+    with HAZ only in children aged 6-11 years (beta = 0.240, p < 0.05).
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: cross-sectional; exposure is a composite sleep-habits questionnaire score rather than measured sleep duration;
+    the scaling of beta (per CSHQ unit vs binary indicator) is not resolvable from the abstract; attained height is not
+    final adult height; opposite-signed SDB association in the same paper suggests confounding
+funding: null
+notes: Included because sleep-duration-to-stature evidence is nearly absent and this is the closest available. It measures
+  ATTAINED height in a 6-18 y cross-section, which cannot identify an effect of exposure at 16-19 on FINAL height.
+shard: s11_endocrine_growth

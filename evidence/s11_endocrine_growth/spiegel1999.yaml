@@ -1,0 +1,82 @@
+study_id: spiegel1999
+citation: Spiegel K, Leproult R, Van Cauter E. Impact of sleep debt on metabolic and endocrine function. Lancet. 1999;354(9188):1435-1439.
+doi: 10.1016/S0140-6736(99)01376-8
+pmid: '10543671'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: Impact of sleep debt on metabolic and endocrine function
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: balbo2010 (Int J Endocrinol 2010;2010:759234) for the cortisol magnitudes and the 8-h dose-response point
+design: lab_restriction_within_subject
+tier: T1
+n: 11
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: endocrine
+  outcome_construct: evening_cortisol_elevation_under_4h_tib
+  exposure:
+    type: chronic_restriction
+    dose_h: 4
+    referent_h: 12
+    duration_days: 6
+    contrast_label: 6 nights 4 h TIB vs 6 nights 12 h TIB (fully rested)
+  scale: pct_change
+  unit: qualitative direction (elevation), p=0.0001
+  value: 1.0
+  se: null
+  ci: null
+  conversion_formula: No magnitude in the abstract; only p=0.0001. value=1 encodes a signed but unquantified elevation.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Positive = HIGHER evening cortisol under sleep debt (harm). Magnitude not extractable from the abstract.
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: Glucose tolerance was lower in the sleep-debt condition than in the fully rested condition (p<0.02), as were thyrotropin
+    concentrations (p<0.01). Evening cortisol concentrations were raised (p=0.0001) and activity of the sympathetic nervous
+    system was increased in the sleep-debt condition (p<0.02).
+- outcome_domain: endocrine
+  outcome_construct: rate_of_evening_free_cortisol_decline_1600_2100
+  exposure:
+    type: chronic_restriction
+    dose_h: 4
+    referent_h: 12
+    duration_days: 6
+    contrast_label: 6 nights 4 h TIB vs 6 nights 12 h TIB; salivary free cortisol decline 16:00-21:00
+  scale: raw_units
+  unit: fold slowing of the evening free-cortisol decline
+  value: 6.0
+  se: null
+  ci: null
+  conversion_formula: 'Secondhand: ''about six times slower''. No dispersion available; se=null.'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'Positive = the evening shutdown of cortisol is ~6x slower under sleep debt, and its onset delayed by
+    ~1.5 h (harm: flatter diurnal slope). Read via balbo2010 because the Lancet full text was not retrieved.'
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: '[SECONDHAND, Balbo/Leproult/Van Cauter 2010, Int J Endocrinol 2010;2010:759234] The state of sleep debt, as compared
+    to the fully rested state, was associated with elevated cortisol concentrations in the afternoon and in the early evening
+    and with a shorter quiescent period, due to a delay in its onset by nearly 1.5 hour. In addition, the rate of decrease
+    of free cortisol concentrations in saliva between 16.00 hours and 21.00 hours was about six times slower in the sleep-debt
+    than in the fully rested condition.'
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: n=11; the comparator is 12 h TIB, which is not a plausible habitual sleep duration - this inflates the contrast.
+    Balbo 2010 reports that when 9 of these 11 men were later studied at 8 h TIB, 'cortisol evening levels observed under
+    8-hour bedtime condition were intermediate between those measured under 4-hour and 12-hour bedtime conditions', i.e.
+    roughly half the headline effect corresponds to the 12 h arm being supranormal.
+funding: Non-US government / US government
+notes: The single most-cited sleep-endocrine result. Its 4h-vs-12h design means the widely quoted magnitudes overstate the
+  5.5h-vs-8h contrast that applies to the subject.
+shard: s11_endocrine_growth

@@ -1,0 +1,62 @@
+study_id: depner2021
+citation: Depner CM, Rice JD, Tussey EJ, Eckel RH, Bergman BC, Higgins JA, Melanson EL, Kohrt WM, Wright KP, Swanson CM.
+  Bone turnover marker responses to sleep restriction and weekend recovery sleep. Bone. 2021;152:116096.
+doi: 10.1016/j.bone.2021.116096
+pmid: '34216838'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: Bone turnover marker responses to sleep restriction and weekend recovery sleep
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 20
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 40.0
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: recovery
+  outcome_construct: bone_turnover_markers_sleep_restriction_with_or_without_weekend_recovery
+  exposure:
+    type: weekend_catchup
+    dose_h: 5
+    referent_h: 9
+    duration_days: 9
+    contrast_label: 9 nights 5 h/night, vs 4 nights 5 h + ad libitum weekend recovery, vs 9 h/night control; randomised
+  scale: pct_change
+  unit: '% change in P1NP/osteocalcin/CTX (null)'
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: No significant change baseline to day 11 (all p >= 0.3) and no group x time interaction (p >= 0.4).
+    value=0 encodes the null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: value=0 encodes a NULL for BOTH the sustained-restriction and the weekend-recovery patterns. The weekend-catch-up
+    arm is the closest laboratory analogue of the subject's weekday-restriction/weekend-recovery schedule, and it produced
+    no bone-turnover change either.
+  covariates:
+  - age
+  - sex
+  followup_years: null
+  cohort_family: Colorado_sleep_bone
+  quote: There was no significant difference between the three study groups in change over time (p >= 0.4 for interaction
+    between assigned group and time for all BTMs), adjusted for age and sex. There was no significant change in N-terminal
+    propeptide of procollagen type I (P1NP), osteocalcin, or C-telopeptide of type I collagen (CTX) from baseline to day
+    11 (all p >= 0.3).
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: small secondary analysis of stored serum (control arm n=3); mixed sex; ad libitum food intake after baseline; underpowered
+    for small effects, so this is a weak null rather than strong evidence of no effect
+funding: NIH / non-US government
+notes: Authors are explicit that this is 'a small secondary analysis' and hypothesise that 'age, sex, weight change and
+  morning circadian misalignment modify the effects of sleep restriction on bone metabolism' - i.e. the circadian and weight
+  components, not sleep duration, carry the signal.
+shard: s11_endocrine_growth

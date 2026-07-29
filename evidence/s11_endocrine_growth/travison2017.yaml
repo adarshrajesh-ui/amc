@@ -1,0 +1,63 @@
+study_id: travison2017
+citation: Travison TG, Vesper HW, Orwoll E, Wu F, Kaufman JM, Wang Y, Lapauw B, Fiers T, Matsumoto AM, Bhasin S. Harmonized
+  reference ranges for circulating testosterone levels in men of four cohort studies in the United States and Europe. J
+  Clin Endocrinol Metab. 2017;102(4):1161-1173.
+doi: 10.1210/jc.2016-2935
+pmid: '28324103'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: Harmonized Reference Ranges for Circulating Testosterone Levels in Men of Four Cohort Studies in the United
+    States and Europe
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: 9054
+n_studies_pooled: 4
+population:
+  age_mean: null
+  age_range:
+  - 19
+  - 39
+  pct_female: 0.0
+  country: US/EU
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: comparator
+  outcome_construct: harmonized_total_testosterone_median_healthy_nonobese_men_19_39
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: CDC-calibrated harmonized reference distribution, healthy nonobese men 19-39 y
+  scale: raw_units
+  unit: ng/dL total testosterone (50th percentile)
+  value: 531.0
+  se: null
+  ci:
+  - 264.0
+  - 916.0
+  conversion_formula: ci field holds the 2.5th and 97.5th percentiles of the reference distribution (264, 916 ng/dL), NOT
+    a confidence interval on the median. 5th percentile = 303, 95th = 852.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'Reference distribution, not an effect. Used to convert the Leproult 2011 testosterone deltas into clinical
+    units: rested 530.3 ng/dL sits at the 50th percentile, restricted 475.5 ng/dL at ~the 34th percentile (z = -0.40) and
+    1.80x the 264 ng/dL lower reference limit.'
+  covariates: []
+  followup_years: null
+  cohort_family: FHS_EMAS_MrOS_MSSO
+  quote: In healthy nonobese men, 19 to 39 years, harmonized 2.5th, 5th, 50th, 95th, and 97.5th percentile values were 264,
+    303, 531, 852, and 916 ng/dL, respectively. ... Harmonized normal range in a healthy nonobese population of European
+    and American men, 19 to 39 years, is 264 to 916 ng/dL.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: low
+  notes: large multi-cohort sample cross-calibrated to a CDC reference method; the definitive modern reference range
+funding: NIH / non-US government
+notes: Provides the denominator for the 'is a 10-15% testosterone drop clinically meaningful?' question. The implied SD
+  of the young-male distribution is (531-303)/1.6449 = 138.6 ng/dL, so a 10.3% drop = 54.8 ng/dL = 0.40 SD.
+shard: s11_endocrine_growth

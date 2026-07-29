@@ -1,0 +1,121 @@
+study_id: who2007hfaboys
+citation: 'World Health Organization. WHO Growth Reference 5-19 years: height-for-age (boys), z-scores, LMS parameter table
+  (hfa-boys-z-who-2007-exp.xlsx). Geneva: WHO; 2007.'
+doi: null
+pmid: null
+url: https://cdn.who.int/media/docs/default-source/child-growth/growth-reference-5-19-years/height-for-age-(5-19-years)/hfa-boys-z-who-2007-exp.xlsx
+verification:
+  crossref_ok: null
+  pubmed_ok: null
+  resolved_title: hfa-boys-z-who-2007-exp.xlsx (WHO Growth Reference 5-19 y, height-for-age boys, LMS/z-score table; 168
+    monthly rows, ages 61-228 months)
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 5
+  - 19
+  pct_female: 0.0
+  country: international
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: residual_median_stature_growth_age_16_0_to_19_0_boys
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: WHO median (M) stature at 228 months minus median stature at 192 months, boys
+  scale: raw_units
+  unit: cm of median stature remaining between age 16.0 and 19.0 y
+  value: 3.65
+  se: null
+  ci:
+  - 3.65
+  - 3.65
+  conversion_formula: 'From the LMS table rows: Month 192 M=172.8967 cm; Month 228 M=176.5432 cm. residual = 176.5432 -
+    172.8967 = 3.6465 cm. ci is degenerate because this is a fixed reference quantity, not a sampled estimate. As a share
+    of adult stature: 3.6465/176.5432 = 2.07%. In SD units of 19-y stature (table StDev at month 228 = 7.2983 cm): 0.500
+    SD.'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'This is the ARITHMETIC CEILING on any height effect of an exposure beginning at age 16.0: only 3.65 cm
+    of median growth remains. Complete arrest of growth (physiologically absurd) would cost 3.65 cm; a 10% suppression of
+    residual velocity costs 0.36 cm; a 20% suppression costs 0.73 cm.'
+  covariates: []
+  followup_years: 3.0
+  cohort_family: WHO_2007_reference
+  quote: '[VERBATIM ROWS from the downloaded WHO LMS table hfa-boys-z-who-2007-exp.xlsx; header: Month, L, M, S, StDev,
+    SD5neg, SD4neg, SD3neg, SD2neg, SD1neg, SD0, SD1, SD2, SD3, SD4] Month 180 M=168.9580 | Month 186 M=171.1468 | Month
+    192 M=172.8967 | Month 198 M=174.2251 | Month 204 M=175.1609 | Month 210 M=175.7672 | Month 216 M=176.1449 | Month 222
+    M=176.3851 | Month 228 M=176.5432; last row = (228, L=1, M=176.5432, S=0.04134, StDev=7.2983).'
+- outcome_domain: anthropometric
+  outcome_construct: pct_of_age_19_median_stature_attained_by_age_16_0_boys
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: WHO median stature at 192 months as a percentage of median stature at 228 months
+  scale: pct_change
+  unit: '% of age-19 median stature already attained at age 16.0'
+  value: 97.93
+  se: null
+  ci: null
+  conversion_formula: 100 * 172.8967/176.5432 = 97.93%. At 17.0 y (M=175.1609) it is 99.22%; at 18.0 y (M=176.1449) it is
+    99.77%.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Positive = fraction of final stature already banked before the exposure began. 97.9% of adult height was
+    already attained at exposure onset.
+  covariates: []
+  followup_years: null
+  cohort_family: WHO_2007_reference
+  quote: '[VERBATIM ROWS from the downloaded WHO LMS table hfa-boys-z-who-2007-exp.xlsx; header: Month, L, M, S, StDev,
+    SD5neg, SD4neg, SD3neg, SD2neg, SD1neg, SD0, SD1, SD2, SD3, SD4] Month 180 M=168.9580 | Month 186 M=171.1468 | Month
+    192 M=172.8967 | Month 198 M=174.2251 | Month 204 M=175.1609 | Month 210 M=175.7672 | Month 216 M=176.1449 | Month 222
+    M=176.3851 | Month 228 M=176.5432; last row = (228, L=1, M=176.5432, S=0.04134, StDev=7.2983).'
+- outcome_domain: anthropometric
+  outcome_construct: annual_median_height_velocity_boys_16_to_19
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: successive annual differences in WHO median stature, boys, ages 16-19 y
+  scale: raw_units
+  unit: cm/y median height velocity at age 18-19 y
+  value: 0.398
+  se: null
+  ci: null
+  conversion_formula: '16->17 y: 175.1609-172.8967 = 2.264 cm/y; 17->18 y: 176.1449-175.1609 = 0.984 cm/y; 18->19 y: 176.5432-176.1449
+    = 0.398 cm/y. Value reported is the 18-19 y velocity.'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Positive = residual growth velocity. By age 18-19 median velocity is 0.4 cm/y, i.e. below the measurement
+    precision of routine stadiometry. There is effectively nothing left to lose in the final two years of the exposure window.
+  covariates: []
+  followup_years: null
+  cohort_family: WHO_2007_reference
+  quote: '[VERBATIM ROWS from the downloaded WHO LMS table hfa-boys-z-who-2007-exp.xlsx; header: Month, L, M, S, StDev,
+    SD5neg, SD4neg, SD3neg, SD2neg, SD1neg, SD0, SD1, SD2, SD3, SD4] Month 180 M=168.9580 | Month 186 M=171.1468 | Month
+    192 M=172.8967 | Month 198 M=174.2251 | Month 204 M=175.1609 | Month 210 M=175.7672 | Month 216 M=176.1449 | Month 222
+    M=176.3851 | Month 228 M=176.5432; last row = (228, L=1, M=176.5432, S=0.04134, StDev=7.2983).'
+rob:
+  tool: none
+  judgement: na
+  notes: authoritative international growth reference; a reference distribution, not a study. Downloaded and parsed directly
+    from the WHO CDN in this session.
+funding: WHO
+notes: 'Verbatim table rows parsed from the downloaded file (columns Month, L, M, S, StDev, ...): Month 192 M=172.8967;
+  Month 198 M=174.2251; Month 204 M=175.1609; Month 210 M=175.7672; Month 216 M=176.1449; Month 222 M=176.3851; Month 228
+  M=176.5432; StDev at Month 228 = 7.2983. The reference terminates at 19.0 y, so a small amount of post-19 growth is not
+  captured - which only makes the residual-growth estimate more conservative (larger) than truth for the 16-19 window.'
+shard: s11_endocrine_growth

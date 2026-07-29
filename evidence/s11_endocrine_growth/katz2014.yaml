@@ -1,0 +1,70 @@
+study_id: katz2014
+citation: 'Katz ES, Moore RH, Rosen CL, Mitchell RB, Amin R, Arens R, Muzumdar H, Chervin RD, Marcus CL, Paruthi S, Willging
+  P, Redline S. Growth after adenotonsillectomy for obstructive sleep apnea: an RCT. Pediatrics. 2014;134(2):282-289.'
+doi: 10.1542/peds.2014-0591
+pmid: '25070302'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: 'Growth After Adenotonsillectomy for Obstructive Sleep Apnea: An RCT'
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 464
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 5
+  - 9.9
+  pct_female: null
+  country: US
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: bmi_z_score_change_over_7_months_early_adenotonsillectomy_vs_watchful_waiting
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: 210
+    contrast_label: early adenotonsillectomy vs watchful waiting with supportive care, 7-month interval, children with OSAS
+      (mean AHI 5.1/h)
+  scale: raw_units
+  unit: BMI z-score units
+  value: 0.18
+  se: 0.0463
+  ci:
+  - 0.089
+  - 0.271
+  conversion_formula: value = 0.31 (eAT) - 0.13 (WWSC) = 0.18 BMI z units. Only 'P < .0001' is reported; using the boundary
+    p=.0001 with large df, z=3.891, giving SE <= 0.18/3.891 = 0.0463 (an upper bound); ci = 0.18 +/- 1.96*SE.
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: 'Positive = MORE weight gain in the treated arm. Note the direction: relieving the sleep disorder increased
+    adiposity, and 52% vs 21% of overweight children became obese. The randomised evidence for ''fixing sleep improves growth''
+    delivers fat mass, not stature.'
+  covariates:
+  - baseline weight
+  - AHI
+  - race
+  - gender
+  - follow-up AHI
+  followup_years: 0.58
+  cohort_family: CHAT
+  quote: Interval increases in the BMI z score (0.13 vs. 0.31) was observed in both the WWSC and eAT intervention arms,
+    respectively, but were greater with eAT (P < .0001). ... A greater proportion of overweight children randomized to eAT
+    compared with WWSC developed obesity over the 7-month interval (52% vs. 21%; P < .05). ... eAT for OSAS in children
+    results in clinically significant greater than expected weight gain, even in children overweight at baseline.
+rob:
+  tool: RoB2
+  judgement: low
+  notes: properly randomised multicentre trial with objective polysomnography; the abstract reports BMI z score and does
+    not report a separate stature z-score contrast, so a height effect cannot be extracted
+funding: NIH
+notes: The only RCT of a sleep intervention with anthropometric outcomes. It reports BMI z score, not stature; a randomised
+  estimate of a height effect is therefore unavailable even in the paediatric SDB literature where the observational signal
+  is strongest.
+shard: s11_endocrine_growth

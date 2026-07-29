@@ -1,0 +1,83 @@
+study_id: spiegel2000gh
+citation: Spiegel K, Leproult R, Colecchia EF, L'Hermite-Baleriaux M, Nie Z, Copinschi G, Van Cauter E. Adaptation of the
+  24-h growth hormone profile to a state of sleep debt. Am J Physiol Regul Integr Comp Physiol. 2000;279(3):R874-R883.
+doi: 10.1152/ajpregu.2000.279.3.R874
+pmid: '10956244'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: Adaptation of the 24-h growth hormone profile to a state of sleep debt
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: magee2010 (Journal of Obesity 2010;2010:821710) for the direction of the 24-h GH change
+design: lab_restriction_within_subject
+tier: T1
+n: 11
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: endocrine
+  outcome_construct: gh_profile_shape_biphasic_redistribution
+  exposure:
+    type: chronic_restriction
+    dose_h: 4
+    referent_h: 12
+    duration_days: 6
+    contrast_label: 6 nights 4 h TIB (01:00-05:00) vs 7 nights 12 h TIB (21:00-09:00)
+  scale: pct_change
+  unit: qualitative pattern change (biphasic vs monophasic)
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'value=0 encodes REDISTRIBUTION not loss: a presleep ''circadian'' pulse appears and is NEGATIVELY correlated
+    with the postsleep pulse, i.e. the two trade off. No 24-h total is quoted in the abstract, so no signed magnitude is
+    extractable.'
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: During the state of sleep debt, the GH secretory pattern was biphasic, with both a presleep onset "circadian" pulse
+    and a postsleep onset pulse. Postsleep onset GH secretion was negatively related to presleep onset secretion and tended
+    to be positively correlated with the amount of concomitant SWA.
+- outcome_domain: sleep_need
+  outcome_construct: sws_and_swa_under_4h_restriction
+  exposure:
+    type: chronic_restriction
+    dose_h: 4
+    referent_h: 12
+    duration_days: 6
+    contrast_label: 6 nights 4 h TIB vs 7 nights 12 h TIB
+  scale: pct_change
+  unit: qualitative direction (increase)
+  value: 1.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Positive = SWS/SWA INCREASED under restriction. Slow-wave sleep, the GH-permissive stage, is preserved
+    and intensified rather than sacrificed. No magnitude in abstract.
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: When sleep was restricted, both SWS and SWA were increased during early sleep.
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: n=11, no blinding possible, comparator is 12 h TIB (supraphysiological) not 8 h, which exaggerates any contrast
+    versus real-world sleep
+funding: NIH / non-US government / US government
+notes: 'Full text is paywalled (OpenAlex oa_status=closed; publisher blocks scraping), so only the abstract was read directly.
+  A review by the same literature (Magee CA et al., J Obesity 2010) characterises the direction of the 24-h change: ''The
+  elevation in GH levels observed by Spiegel et al. [41] was the result of an extended period of nocturnal GH secretion.''
+  i.e. GH went UP, via a lengthened secretory window, not down. Authors'' own summary: ''neither the GH profile nor the
+  distribution of SWA conformed with predictions from acute sleep deprivation studies, indicating that adaptation mechanisms
+  are operative during chronic partial sleep loss.'''
+shard: s11_endocrine_growth

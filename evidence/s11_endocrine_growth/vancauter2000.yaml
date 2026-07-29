@@ -1,0 +1,112 @@
+study_id: vancauter2000
+citation: Van Cauter E, Leproult R, Plat L. Age-related changes in slow wave sleep and REM sleep and relationship with growth
+  hormone and cortisol levels in healthy men. JAMA. 2000;284(7):861-868.
+doi: 10.1001/jama.284.7.861
+pmid: '10938176'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: Age-Related Changes in Slow Wave Sleep and REM Sleep and Relationship With Growth Hormone and Cortisol
+    Levels in Healthy Men
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 149
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 16
+  - 83
+  pct_female: 0.0
+  country: US/BE
+  adolescent_match: mixed
+effects:
+- outcome_domain: sleep_need
+  outcome_construct: pct_slow_wave_sleep_age_16_25
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: healthy men aged 16-25 y, polysomnography
+  scale: pct_change
+  unit: '% of sleep period spent in deep slow wave sleep'
+  value: 18.9
+  se: 1.3
+  ci:
+  - 16.4
+  - 21.4
+  conversion_formula: se = reported SEM (1.3); ci = 18.9 +/- 1.96*1.3.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'Positive = more SWS. BASELINE ANCHOR for a 16-19 year old: at this age SWS occupies ~19% of the sleep
+    period, the lifetime maximum, and it falls to 3.4% by midlife.'
+  covariates: []
+  followup_years: null
+  cohort_family: VanCauter_pooled_1985_1999
+  quote: The mean (SEM) percentage of deep slow wave sleep decreased from 18.9% (1.3%) during early adulthood (age 16-25
+    years) to 3.4% (1.0%) during midlife (age 36-50 years) and was replaced by lighter sleep (stages 1 and 2) without significant
+    increases in sleep fragmentation or decreases in rapid eye movement (REM) sleep.
+- outcome_domain: endocrine
+  outcome_construct: gh_secretion_decline_per_decade_early_adulthood_to_midlife
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: per decade of age, early adulthood (16-25 y) to midlife (36-50 y)
+  scale: per_hour_beta
+  unit: microgram of 24-h GH secretion lost per decade of age
+  value: -372.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'Negative = GH secretion falls with age. NOT a sleep-restriction effect. This is the COMPARATOR MAGNITUDE:
+    normal ageing removes 372 microgram of 24-h GH per decade, which dwarfs anything an 8-night restriction protocol produces.
+    P<.001; no SE reported.'
+  covariates:
+  - age
+  followup_years: null
+  cohort_family: VanCauter_pooled_1985_1999
+  quote: The decline in slow wave sleep from early adulthood to midlife was paralleled by a major decline in GH secretion
+    (-372 microg per decade; P<.001). From midlife to late life, GH secretion further declined at a slower rate (-43 microg
+    per decade; P<.02). Independently of age, the amount of GH secretion was significantly associated with slow wave sleep
+    (P<.001).
+- outcome_domain: endocrine
+  outcome_construct: evening_cortisol_rise_per_decade_of_age
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: per decade of age, significant only after age 50 y
+  scale: per_hour_beta
+  unit: nmol/L evening cortisol per decade of age
+  value: 19.3
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Positive = higher evening cortisol with age. Comparator magnitude for the sleep-restriction cortisol effects;
+    note it becomes significant only after age 50, i.e. it is NOT a young-adult phenomenon. P<.001; no SE reported.
+  covariates:
+  - age
+  followup_years: null
+  cohort_family: VanCauter_pooled_1985_1999
+  quote: Increasing age was associated with an elevation of evening cortisol levels (+19. 3 nmol/L per decade; P<.001) that
+    became significant only after age 50 years, when sleep became more fragmented and REM sleep declined.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: cross-sectional pooling of studies run 1985-1999 across 4 laboratories; healthy volunteers only; age gradients
+    are between-subject, not longitudinal
+funding: Non-US government / US PHS
+notes: Frequently miscited as evidence that sleep loss destroys GH. It is an AGE-gradient study, not a sleep-restriction
+  study. Its real value here is (a) the 16-25 y SWS baseline of 18.9% and (b) the magnitude of the ageing comparator.
+shard: s11_endocrine_growth

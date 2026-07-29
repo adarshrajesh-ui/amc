@@ -1,0 +1,81 @@
+study_id: arnal2016
+citation: Arnal PJ, Drogou C, Sauvet F, Regnauld J, Dispersyn G, Faraut B, Millet GY, Leger D, Gomez-Merino D, Chennaoui
+  M. Effect of sleep extension on the subsequent testosterone, cortisol and prolactin responses to total sleep deprivation
+  and recovery. J Neuroendocrinol. 2016;28(2):12346.
+doi: 10.1111/jne.12346
+pmid: '26647769'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: Effect of Sleep Extension on the Subsequent Testosterone, Cortisol and Prolactin Responses to Total Sleep
+    Deprivation and Recovery
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 14
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: FR
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: recovery
+  outcome_construct: testosterone_and_cortisol_return_to_baseline_after_one_recovery_night
+  exposure:
+    type: recovery_sleep
+    dose_h: 8
+    referent_h: null
+    duration_days: 1
+    contrast_label: one night of recovery sleep after 24 h continuous awakening; 07:00 samples, baseline vs recovery
+  scale: pct_change
+  unit: '% residual deficit after one recovery night'
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: No residual point estimate reported; authors state basal levels were recovered. value=0 encodes complete
+    recovery.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: value=0 = FULL RECOVERY. Testosterone, cortisol and prolactin all fell at 24 h of continuous wakefulness
+    and all returned to basal levels after a single recovery night. No carry-over.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: At 24 h of awakening, testosterone, cortisol and prolactin concentrations were significantly lower compared to
+    B-07.00 and recovered basal levels after recovery sleep at R-07.00 (P < 0.001 for all).
+- outcome_domain: endocrine
+  outcome_construct: effect_of_6_nights_prophylactic_sleep_extension_on_hormone_response
+  exposure:
+    type: sleep_extension
+    dose_h: 10
+    referent_h: 8.5
+    duration_days: 6
+    contrast_label: 6 nights 21:00-07:00 TIB (extended) vs 22:30-07:00 (habitual), then total sleep deprivation
+  scale: pct_change
+  unit: '% change in the hormone response attributable to prior extension (null)'
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'value=0 encodes a NULL: banking sleep in advance did not protect testosterone or cortisol from the subsequent
+    deprivation. Relevant to whether weekend catch-up ''pre-pays'' for a restricted week - for these hormones, it does not.'
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: No effect of sleep extension was observed on testosterone, cortisol and catecholamines concentrations at 24 and
+    34 h of awakening.
+rob:
+  tool: RoB2
+  judgement: low
+  notes: randomised counterbalanced crossover with a proper habitual-sleep comparator; n=14; total sleep deprivation is
+    a more extreme exposure than the subject's
+funding: Non-US government
+notes: 'Exposure is total sleep deprivation, not chronic partial restriction, so transportability is limited. Its value
+  is the clean recovery kinetics: one night restores baseline.'
+shard: s11_endocrine_growth

@@ -1,0 +1,83 @@
+study_id: axelsson2005
+citation: Axelsson J, Ingre M, Akerstedt T, Holmback U. Effects of acutely displaced sleep on testosterone. J Clin Endocrinol
+  Metab. 2005;90(8):4530-4535.
+doi: 10.1210/jc.2005-0520
+pmid: '15914523'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: Effects of Acutely Displaced Sleep on Testosterone
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 7
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 22
+  - 32
+  pct_female: 0.0
+  country: SE
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: endocrine
+  outcome_construct: testosterone_rise_across_night_sleep
+  exposure:
+    type: other
+    dose_h: 8
+    referent_h: null
+    duration_days: 1
+    contrast_label: night sleep 23:00-07:00, hourly sampling; testosterone at sleep onset vs sleep offset
+  scale: pct_change
+  unit: '% rise in testosterone across the sleep period'
+  value: 65.4
+  se: null
+  ci: null
+  conversion_formula: value = 100*(25.3-15.3)/15.3 = 65.36%. Reported values are mean +/- SEM per timepoint (15.3+/-2.1
+    to 25.3+/-2.2 nmol/L); no SE for the within-subject change is derivable. se=null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Positive = testosterone RISES during sleep and falls during wake. Quantifies how large the normal sleep-driven
+    testosterone swing is (~65% within one night), which is 5-6x larger than the 10-13% daytime deficit reported under a
+    week of restriction.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Mean testosterone levels increased as a log-linear function of time (hours) across both sleep periods (b = 4.88;
+    P < 0.001), from 15.3 +/- 2.1 to 25.3 +/- 2.2 nmol/liter during night sleep and from 17.3 +/- 2.1 to 26.4 +/- 2.9 nmol/liter
+    during day sleep.
+- outcome_domain: endocrine
+  outcome_construct: testosterone_rise_across_daytime_sleep
+  exposure:
+    type: other
+    dose_h: 8
+    referent_h: null
+    duration_days: 1
+    contrast_label: sleep displaced to 07:00-15:00, hourly sampling
+  scale: pct_change
+  unit: '% rise in testosterone across the sleep period'
+  value: 52.6
+  se: null
+  ci: null
+  conversion_formula: value = 100*(26.4-17.3)/17.3 = 52.60%. se=null for the same reason as above.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Positive = testosterone rises during sleep even when sleep is moved to the daytime, i.e. the driver is
+    SLEEP, not clock time. Implies testosterone is recoverable by sleeping, whenever that sleep occurs - directly relevant
+    to weekend catch-up.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: In conclusion, testosterone increased during sleep and fell during waking, whereas circadian effects seemed marginal.
+    Individual differences were pronounced.
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: n=7, balanced order, constant bed rest; very small sample and 'individual differences were pronounced'
+funding: Non-US government
+notes: 'Mechanism: the testosterone deficit under restriction is a shortfall of sleep-driven accumulation, not damage to
+  the gonadal axis. The axis works normally whenever sleep is provided.'
+shard: s11_endocrine_growth

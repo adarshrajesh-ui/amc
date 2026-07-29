@@ -1,0 +1,81 @@
+study_id: balbo2010
+citation: Balbo M, Leproult R, Van Cauter E. Impact of sleep and its disturbances on hypothalamo-pituitary-adrenal axis
+  activity. Int J Endocrinol. 2010;2010:759234.
+doi: 10.1155/2010/759234
+pmid: '20628523'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: Impact of Sleep and Its Disturbances on Hypothalamo-Pituitary-Adrenal Axis Activity
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: reports the Spiegel 1999 (PMID 10543671) cortisol magnitudes and the 8-h intermediate dose-response
+design: normative_descriptive
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: US
+  adolescent_match: mixed
+effects:
+- outcome_domain: endocrine
+  outcome_construct: evening_cortisol_dose_response_4h_8h_12h
+  exposure:
+    type: chronic_restriction
+    dose_h: 8
+    referent_h: 12
+    duration_days: 6
+    contrast_label: 8 h TIB condition placed between the 4 h and 12 h TIB conditions in the same 9 of 11 men
+  scale: pct_change
+  unit: qualitative position on a monotone dose-response
+  value: 0.5
+  se: null
+  ci: null
+  conversion_formula: value=0.5 encodes 'intermediate between 4 h and 12 h' - i.e. roughly half of the 4h-vs-12h evening
+    cortisol difference is attributable to the 12 h arm being supranormal rather than to the 4 h arm being pathological.
+  from_figure: true
+  inferred_from_ci: false
+  direction_note: Positive = higher evening cortisol at shorter sleep. Establishes monotone dose-response AND that the canonical
+    4h-vs-12h contrast roughly doubles the effect relative to an 8 h referent.
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: Nine of the eleven subjects of the previous study participated, one year later, in a separate protocol with 8-hour
+    bedtime, using the same experimental procedures. Interestingly, cortisol evening levels observed under 8-hour bedtime
+    condition were intermediate between those measured under 4-hour and 12-hour bedtime conditions [84] (Figure 5).
+- outcome_domain: endocrine
+  outcome_construct: secondhand_spiegel1999_cortisol_magnitudes
+  exposure:
+    type: chronic_restriction
+    dose_h: 4
+    referent_h: 12
+    duration_days: 6
+    contrast_label: 6 nights 4 h TIB vs fully rested (12 h TIB), n=11
+  scale: hours
+  unit: hours of delay in the onset of the evening cortisol quiescent period
+  value: 1.5
+  se: null
+  ci: null
+  conversion_formula: Reported as 'nearly 1.5 hour'. No dispersion; se=null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'Positive = later shutdown of cortisol secretion (harm: extended glucocorticoid exposure).'
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: The state of sleep debt, as compared to the fully rested state, was associated with elevated cortisol concentrations
+    in the afternoon and in the early evening and with a shorter quiescent period, due to a delay in its onset by nearly
+    1.5 hour. In addition, the rate of decrease of free cortisol concentrations in saliva between 16.00 hours and 21.00
+    hours was about six times slower in the sleep-debt than in the fully rested condition.
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: narrative review by the authors of the primary studies it summarises; used to recover magnitudes from a paywalled
+    primary and to establish the dose-response caveat
+funding: null
+notes: 'Also documents a biphasic HPA response to sleep loss: HPA activation early, blunting when wakefulness is prolonged.
+  And notes contradictory findings on whether recovery sleep normalises cortisol.'
+shard: s11_endocrine_growth
