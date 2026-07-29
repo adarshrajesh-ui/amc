@@ -1,0 +1,158 @@
+study_id: rupp2009
+citation: "Rupp TL, Wesensten NJ, Bliese PD, Balkin TJ. Banking sleep: realization of benefits during subsequent sleep restriction and recovery. Sleep. 2009;32(3):311-321."
+doi: "10.1093/sleep/32.3.311"
+pmid: "19294951"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2647785/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Banking sleep: realization of benefits during subsequent sleep restriction and recovery."
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 24
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [18, 39]
+  pct_female: null
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: subjective_sleepiness_shows_no_group_difference_while_pvt_does
+    exposure: {type: chronic_restriction, dose_h: 3, referent_h: 3, duration_days: 7,
+               contrast_label: "prior sleep extension (10h TIB x 1 week) vs prior habitual sleep (7.09h), both then restricted to 3h TIB x 7 nights"}
+    scale: raw_units
+    unit: "number of study phases (of 3: extension, restriction, recovery) in which subjective sleepiness differed between groups"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Counted from the authors' explicit statement. THE CONTRAST IS THE POINT: across
+      the identical phases, PVT lapses and modified MWT sleep latency DID differ significantly between
+      the groups, while subjective sleepiness differed in ZERO phases. Same subjects, same days, same
+      manipulation. This is the cleanest available demonstration that subjective sleepiness is not merely
+      a flatter version of objective impairment but can be entirely blind to a real, measurable,
+      randomised difference in neurobehavioral capacity. No magnitudes are extractable because only the
+      abstract was retrievable, so se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = subjective sleepiness detected nothing; the objective measures detected a
+      significant group difference over the same period. Self-report therefore CANNOT be used to
+      titrate or monitor a chronic restriction dose."
+    covariates: ["randomised group allocation", "repeated hourly testing 08:00-18:00"]
+    followup_years: null
+    cohort_family: null
+    quote: "Psychomotor vigilance task (PVT) lapses were more frequent and modified maintenance of
+      wakefulness (MWT) sleep latency was shorter in the Habitual group than in the Extended group across
+      the sleep restriction phase. During the Recovery phase, PVT speed rebounded faster (and PVT lapsing
+      recovered significantly after the first night of recovery sleep) in the Extended group. No group
+      differences in subjective sleepiness were evident during any phase of the study."
+  - outcome_domain: recovery
+    outcome_construct: prior_sleep_history_modifies_both_restriction_tolerance_and_recovery_rate
+    exposure: {type: sleep_extension, dose_h: 10, referent_h: 7.09, duration_days: 7,
+               contrast_label: "one week of 10h TIB before restriction vs one week of habitual 7.09h TIB"}
+    scale: raw_units
+    unit: "1 = pre-restriction sleep history significantly modified BOTH impairment during restriction and rate of recovery"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Binary encoding of the randomised primary result. No effect sizes are available
+      from the abstract. WHAT IT IMPLIES STRUCTURALLY, and this is the reason the record is here: the
+      neurobehavioral response to a given nightly dose is NOT a function of that dose alone. It depends
+      on the accumulated sleep history of the preceding weeks, and the dependence is bidirectional -
+      prior extension both blunts the impairment and speeds the recovery. A dose-response function of the
+      form deficit = f(nightly hours, nights) is therefore mis-specified; it needs a state variable
+      carrying sleep history. This is the empirical result that McCauley 2009 formalises as a moving
+      asymptote and that Van Dongen 2004 shows is ALSO partly trait rather than state."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = history matters; banking sleep in advance genuinely protects, and its absence
+      genuinely aggravates, at a fixed restriction dose"
+    covariates: ["randomised allocation to Extended vs Habitual", "hourly testing"]
+    followup_years: null
+    cohort_family: null
+    quote: "The extent to which sleep restriction impairs objectively measured alertness and performance,
+      and the rate at which these impairments are subsequently reversed by recovery sleep, varies as a
+      function of the amount of nightly sleep obtained prior to the sleep restriction period. This
+      suggests that the physiological mechanism(s) underlying chronic sleep debt undergo long-term
+      (days/weeks) accommodative/adaptive changes."
+  - outcome_domain: exposure_measurement
+    outcome_construct: habitual_sleep_duration_in_the_control_arm
+    exposure: {type: habitual_short_sleep, dose_h: 7.09, referent_h: null, duration_days: 7,
+               contrast_label: "measured habitual TIB of young adults asked to sleep normally for one week"}
+    scale: hours
+    unit: "hours of habitual time in bed, mean (SD 0.7)"
+    value: 7.09
+    se: 0.202
+    ci: [6.694, 7.486]
+    conversion_formula: "Mean and SD reported directly. SE = 0.7/sqrt(12) = 0.202 assuming the Habitual
+      arm was half of the 24 randomised subjects; the per-arm n is not stated in the abstract, so this SE
+      is APPROXIMATE and depends on that assumption. CI = value +/- 1.96*SE.
+      WHY THIS NUMBER IS WORTH RECORDING: the 'normal' comparison condition in this literature is 7.1 h,
+      not 8 h. Several dose-response contrasts elsewhere in this shard are stated 'versus 8 h', but the
+      referent that free-living young adults actually achieve is closer to 7 h. Anchoring a spline at 8 h
+      as the population norm slightly overstates how far below normal a 5-6 h schedule sits."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive exposure measurement, not an outcome"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Participants were randomly assigned to an Extended (10 h time in bed [TIB]) or Habitual TIB
+      [mean (SD) hours = 7.09 (0.7)] sleep group for one week, followed by 1 Baseline (10 hours or
+      habitual TIB), 7 Sleep Restriction (3 h TIB), and 5 Recovery Sleep nights (8 h TIB)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Genuinely randomised parallel-group allocation of the pre-restriction manipulation, residential
+    laboratory setting, hourly objective testing 08:00-18:00 throughout, and a well-powered-for-purpose
+    design in that both groups received the identical 3 h restriction dose so the restriction itself is
+    not the randomised variable. Concerns: n = 24 total across two arms; no blinding is possible; the
+    Baseline night differed BETWEEN arms by design (10 h for the Extended group versus habitual TIB for
+    the Habitual group), so the two groups enter restriction from different immediate baselines as well as
+    different histories, which partly conflates 'banked sleep over a week' with 'one better night just
+    before'. Access is abstract-only: the PMC deposit contains the structured abstract but no body,
+    tables or figures, and no repository PDF was located, so no per-day means, SDs or effect sizes could
+    be extracted. Every effect in this record is therefore a direction or a design quantity, not a
+    magnitude. The 3 h TIB dose is also far more severe than our subject's habitual exposure and sits at
+    or below McCauley's 3.8 h bifurcation threshold, so the impairment trajectory here is the divergent
+    regime rather than the convergent one."
+funding: "Military Operational Medicine Research Program, US Army Medical Research and Materiel Command
+  (per the parent programme); not restated in the retrieved abstract"
+notes: |
+  TWO REASONS THIS RECORD EARNS ITS PLACE, neither of which is a dose-response slope.
+
+  1. THE HARDEST EVIDENCE IN THE SHARD FOR SUBJECTIVE/OBJECTIVE DISSOCIATION. Most of the dissociation
+     evidence here is a difference in DEGREE - Van Dongen 2003's subjective accumulation exponent
+     (theta = 0.24) being about a third of the PVT exponent (theta = 0.78), or Belenky 2003's 3 h arm
+     gaining 15.5 lapses while gaining only 0.71 Stanford Sleepiness Scale points. Rupp 2009 is a
+     difference in KIND: a randomised manipulation produced a significant objective difference in lapses
+     and in physiological sleep propensity (MWT), and subjective sleepiness reported nothing at all, in
+     any phase. If subjective report can be completely blind to a real difference in capacity, then a
+     subject's own sense of having "adapted" to 5-6 h carries essentially no information about whether
+     his performance has adapted. That is directly on point for a college student who believes he is fine.
+
+  2. IT SHOWS THE DOSE-RESPONSE FUNCTION NEEDS A HISTORY TERM. One week of 10 h TIB beforehand
+     measurably reduced impairment during seven subsequent nights at 3 h TIB and measurably accelerated
+     recovery afterwards. So the mapping from nightly hours to deficit is state-dependent. For our
+     subject the implication runs the unfavourable direction: three years of weekday restriction means he
+     enters every new week with a depleted rather than a banked state, and Rupp's result predicts he will
+     both impair faster and recover slower than a naive subject given the same week.
+
+  DESIGN, for the record: 24 healthy adults aged 18-39, randomised to Extended (10 h TIB) or Habitual
+  (7.09 h, SD 0.7) sleep for one week at home; then 1 baseline night, 7 nights at 3 h TIB, then 5
+  recovery nights at 8 h TIB, all in a residential sleep/performance facility, with performance and
+  alertness tests hourly between 08:00 and 18:00 during all in-laboratory phases. Outcomes: PVT lapses
+  and speed, modified Maintenance of Wakefulness Test sleep latency, subjective sleepiness.
+
+  A NOTE ON THE AUTHORS' MECHANISTIC CLAIM. They interpret their result as evidence that "the
+  physiological mechanism(s) underlying chronic sleep debt undergo long-term (days/weeks)
+  accommodative/adaptive changes." Read carefully, this is an argument for adaptation of the SUBSTRATE,
+  not for adaptation of PERFORMANCE - performance still degraded in both arms. It should not be cited as
+  evidence that people habituate to chronic restriction. Nothing in this shard supports that; the
+  objective measures degrade in every study, at every dose tested, including in the arm with a week of
+  banked sleep.
+shard: "s01_cognition_dose_response"

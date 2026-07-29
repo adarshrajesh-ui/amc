@@ -1,0 +1,98 @@
+study_id: markwald2013
+citation: Markwald RR, Melanson EL, Smith MR, Higgins J, Perreault L, Eckel RH, Wright KP Jr. Impact of insufficient sleep on total daily energy expenditure, food intake, and weight gain. Proceedings of the National Academy of Sciences USA. 2013;110(14):5695-5700.
+doi: 10.1073/pnas.1216951110
+pmid: '23479616'
+url: https://www.pnas.org/doi/10.1073/pnas.1216951110
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Impact of insufficient sleep on total daily energy expenditure, food intake, and weight gain.
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 16
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: US
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: metabolic
+  outcome_construct: total_daily_energy_expenditure_kcal_per_day
+  exposure:
+    type: chronic_restriction
+    dose_h: 5.0
+    referent_h: 9.0
+    duration_days: 5
+    contrast_label: 5 d of 5 h sleep opportunity vs 9 h control, 24-h EE by room calorimetry/DLW
+  scale: raw_units
+  unit: kcal/day
+  value: 111.0
+  se: null
+  ci: null
+  conversion_formula: Authors report ~5% (~111 kcal/d or ~464 kJ/d) increase. No CI or SD given in the retrieved text, so se is null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'POSITIVE = energy EXPENDITURE ROSE under sleep restriction. This is the PARTIAL OFFSET: staying awake longer costs ~111 kcal/d, which cancels roughly 29% of the +385 kcal/d intake increase pooled by Al Khatib 2017.'
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: The average increase of ~5% (~111 kcal/d or ~464 kJ/d) in 24-h EE observed during sleep loss compared with 9-h control is similar to the energy cost of a 70-kg adult performing water aerobics for ~24 min.
+- outcome_domain: anthropometric
+  outcome_construct: body_weight_change_kg_restriction
+  exposure:
+    type: chronic_restriction
+    dose_h: 5.0
+    referent_h: 9.0
+    duration_days: 5
+    contrast_label: weight change across 5 d of insufficient sleep with ad libitum food
+  scale: raw_units
+  unit: kg
+  value: 0.82
+  se: 0.1175
+  ci:
+  - 0.59
+  - 1.05
+  conversion_formula: se = SD/sqrt(n) = 0.47/sqrt(16) = 0.1175. ci = 0.82 +/- 1.96*0.1175.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = weight GAINED during 5 d of insufficient sleep (harm), despite the +5% rise in expenditure
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Insufficient sleep led to 0.82 +/- 0.47 kg (+/-SD) weight gain despite changes in hunger and satiety hormones ghrelin and leptin, and peptide YY, which signaled excess energy stores.
+- outcome_domain: recovery
+  outcome_construct: body_weight_change_kg_after_sleep_normalisation
+  exposure:
+    type: recovery_sleep
+    dose_h: 9.0
+    referent_h: 5.0
+    duration_days: 5
+    contrast_label: transition FROM insufficient (5 h) TO adequate/recovery (9 h) sleep, 5 d
+  scale: raw_units
+  unit: kg
+  value: -0.03
+  se: 0.1768
+  ci:
+  - -0.376
+  - 0.316
+  conversion_formula: se = SD/sqrt(n) = 0.50/sqrt(8) = 0.1768 (n=8, the order subgroup that went 5 h -> 9 h). ci = -0.03 +/- 1.96*0.1768.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'THE MOST DIRECT REVERSIBILITY DATUM AVAILABLE. Essentially ZERO (-0.03 kg): when sleep normalised, intake fell and weight STOPPED rising, but the ~0.8 kg already gained was NOT lost within 5 days. Reversibility of intake looks fast; reversal of accumulated weight was not observed.'
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: We also found that transitioning from an insufficient to adequate/recovery sleep schedule decreased energy intake, especially of fats and carbohydrates, and led to -0.03 +/- 0.50 kg weight loss.
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: n=16, crossover with order effects analysed by one-tailed tests. 5-day conditions only. Ad libitum access to hyperpalatable food provided ~130-150% of baseline calories, which maximises the intake response and limits ecological validity.
+funding: NIH; see paper (numerous author disclosures listed)
+notes: 'KEY SOURCE for the energy-expenditure offset. Verbatim on the direction of intake after normalisation: ''participants reduced their food intake after transitioning from the 5-h to 9-h condition''. Also verbatim: ''Our findings suggest that increased food intake during insufficient sleep is a physiological adaptation to provide energy needed to sustain additional wakefulness; yet when food is easily accessible, intake surpasses that needed.'' Weight-gain SE assumes independence across the 16 subjects; the -0.03 kg recovery figure is from the n=8 order subgroup.'
+shard: s09_obesity_bmi

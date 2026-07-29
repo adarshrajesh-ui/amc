@@ -1,0 +1,96 @@
+study_id: cohen2010
+citation: "Cohen DA, Wang W, Wyatt JK, Kronauer RE, Dijk DJ, Czeisler CA, Klerman EB. Uncovering residual effects of chronic sleep loss on human performance. Sci Transl Med. 2010;2(14):14ra3."
+doi: "10.1126/scitranslmed.3000458"
+pmid: "20371466"
+url: "https://pubmed.ncbi.nlm.nih.gov/20371466/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Uncovering Residual Effects of Chronic Sleep Loss on Human Performance"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 17
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [20, 34]
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: pvt_rt_deterioration_rate_per_hour_awake_week2_vs_week1
+    exposure: {type: chronic_restriction, dose_h: 5.6, referent_h: 8, duration_days: 21, contrast_label: "rate of median-RT increase per hour awake, week 2 vs week 1 of chronic sleep loss (~5.6 h sleep/24 h), each wake episode preceded by a 10 h sleep opportunity"}
+    scale: per_hour_beta
+    unit: "ms of median PVT reaction time per hour of wakefulness"
+    value: 45.0
+    se: null
+    ci: null
+    conversion_formula: "Reported slopes: week 1 = 24 ms/h awake, week 2 = 69 ms/h, week 3 = 65 ms/h. Week 2 minus week 1 = +45 ms/h, a 2.88-fold increase. Difference between weeks 1 and 2 significant at p < 0.0001. No SE reported for the slope difference, so se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = performance decays FASTER per waking hour. The rate of deterioration nearly TRIPLED (24 -> 69 ms/h) by week 2 while the y-intercept did not change, so the damage is invisible at the start of the day and only appears as the day goes on."
+    covariates: ["circadian phase (forced desynchrony)"]
+    followup_years: null
+    cohort_family: null
+    quote: "However, there was a marked increase in slope after the first week, reflecting slower reaction times with increasing hours awake (1st week: slope = 24 msec/hour awake; 2nd week: slope = 69 msec/hour awake; 3rd week: slope = 65 msec/hour awake). The differences in slope between the 1st and 2nd weeks were significant (p<0.0001)."
+  - outcome_domain: recovery
+    outcome_construct: morning_performance_appears_recovered_after_10h_sleep_opportunity
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 10, duration_days: 21, contrast_label: "median PVT RT at 2 h after waking from a 10 h sleep opportunity, weeks 1-3 of chronic sleep loss vs 2 baseline days and vs a non-sleep-lost control protocol"}
+    scale: raw_units
+    unit: "ms of median PVT reaction time at 2 h awake, week 3 minus baseline"
+    value: 35.0
+    se: null
+    ci: null
+    conversion_formula: "Reported medians at 2 h awake: baseline (2 days) 256 ms; week 1 256 ms; week 2 278 ms; week 3 291 ms. Week 3 minus baseline = +35 ms, and the authors report this was not significantly different from the 1:2 control protocol (p = 0.42). No SE reported."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = slower, but statistically indistinguishable from control. This is the FALSE-RECOVERY signal: after a 10 h sleep opportunity, morning performance looks essentially normal even in week 3 of severe chronic sleep loss. Any self-assessment or single morning test will therefore MISS the residual deficit."
+    covariates: ["circadian phase (forced desynchrony)"]
+    followup_years: null
+    cohort_family: null
+    quote: "When comparing the first PVT results at 2 hours awake, performance was near baseline levels across all three weeks of chronic sleep loss (two baseline days: median RT = 256msec; 1st week: median RT =256msec; 2nd week: median RT = 278msec; and 3rd week: median RT = 291msec), and not significantly different from the control data with a 1:2 sleep:wake ratio (1st week: 270msec; 2nd week: 305msec; 3rd week: 309msec; p=0.42)."
+  - outcome_domain: cognition
+    outcome_construct: pvt_rt_at_30h_awake_week2_vs_week1
+    exposure: {type: chronic_restriction, dose_h: 5.6, referent_h: 8, duration_days: 21, contrast_label: "median PVT RT at 30 consecutive hours awake, week 2 vs week 1 of chronic sleep loss"}
+    scale: raw_units
+    unit: "ms of median PVT reaction time at 30 h awake, week 2 minus week 1"
+    value: 1287.0
+    se: null
+    ci: null
+    conversion_formula: "Reported medians at 30 h awake: week 1 = 667 ms, week 2 = 1954 ms, week 3 = 2013 ms. Week 2 minus week 1 = +1287 ms, a 2.93-fold increase. No SE reported."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = dramatically slower. Same subjects, same sleep opportunity, same hours awake - only the accumulated chronic debt differs. A median RT of ~2 s on a simple reaction-time task is functionally equivalent to falling asleep at the task."
+    covariates: ["circadian phase (forced desynchrony)"]
+    followup_years: null
+    cohort_family: null
+    quote: "In contrast, when comparing the last performance test of each wake episode, which was administered at 30 consecutive hours awake, there was a dramatic increase in median RT between the first and second weeks on the chronic sleep loss protocol (1st week: median RT = 667ms; 2nd week: median RT = 1,954msec; 3rd week: median RT = 2,013msec)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Exceptionally well-controlled forced-desynchrony design that separates chronic debt, hours awake and circadian phase - unique in the literature. But the control group is a HISTORICAL comparison from a separate protocol (n=8, 1:2 sleep:wake), not a concurrently randomized arm, and the sleep-loss group is only n=9. The exposure (32.85 h wake episodes, 42.85 h days) is far from any real-world schedule, so the absolute magnitudes do not transport; the mechanism (intercept preserved, slope amplified) is what transports. Ages 20-34, so fair but not exact age match. Median RT was chosen deliberately as a conservative measure."
+funding: "NIH (R01 HL077453, R01 HL080978, P30 HL101299 and related), NSBRI/NASA, Harvard CTSC"
+notes: |
+  This is the mechanistic key to the whole shard. It explains WHY the other studies find incomplete recovery
+  even when subjects report feeling fine and score normally in the morning:
+    - The y-intercept of the performance-vs-hours-awake function (i.e. morning performance after a 10 h sleep
+      opportunity) did NOT change across three weeks of chronic sleep loss.
+    - The SLOPE nearly tripled: 24 -> 69 ms/h awake between weeks 1 and 2, sustained at 65 ms/h in week 3.
+  So a chronically sleep-restricted person is not uniformly impaired; they are normal at wake-up and then
+  degrade ~3x faster than they should. Recovery sleep restores the intercept quickly and the slope slowly.
+  Practical consequence for the recovery prescription: do not judge recovery by how you feel or perform in the
+  morning. The right test is late-day performance, or performance after a long continuous period of demand
+  (an exam block, a long drive, an evening study session).
+  Authors' framing of the two-process interpretation: "This analysis indicates that the 10-hour sleep
+  opportunities in the chronic sleep loss protocol were sufficient to dissipate an acute homeostatic process
+  to baseline levels in this task even during the 3rd week, but a separate chronic sleep homeostatic process
+  accelerated the performance deterioration over consecutive hours awake."
+  The protocol also included 10 recovery days at 10 h sleep opportunity after the FD segment, but the paper's
+  reported analyses focus on the FD segment; I did not find quotable recovery-day performance numbers, so I
+  extract no recovery-trajectory estimate from this study.
+  n recorded as 17 (9 chronic sleep loss + 8 control); the chronic sleep loss group alone is n=9.
+shard: "s05_recovery_kinetics"

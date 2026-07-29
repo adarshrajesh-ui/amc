@@ -1,0 +1,77 @@
+study_id: voldsbekk2022
+citation: "Voldsbekk I, Bjornerud A, Groote I, Zak N, Roelfs D, Maximov II, et al. Evidence for widespread alterations in cortical microstructure after 32 h of sleep deprivation. Translational Psychiatry. 2022;12(1):161."
+doi: "10.1038/s41398-022-01909-x"
+pmid: "35422097"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9010475/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Evidence for widespread alterations in cortical microstructure after 32 h of sleep deprivation"
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 41
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 63.4
+  country: "Norway"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: intracortical_t1w_t2w_ratio_change_after_32h_deprivation
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.33,
+               contrast_label: "32 h total sleep deprivation (n=18) vs normal sleep-wake cycle (n=23), change in intracortical T1w/T2w ratio, 4 significant clusters"}
+    scale: raw_units
+    unit: "direction of group difference in T1w/T2w ratio change (qualitative; no magnitude in retrievable abstract)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded +1 = significant INCREASE in the deprived group with a DECREASE in the control group, i.e. a significant group-by-time difference in 4 clusters. No numeric ratio magnitudes or CIs published in the abstract. se null - not invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive = T1w/T2w ratio INCREASED after 32 h deprivation while it DECREASED over the same interval in the rested control group. The T1w/T2w ratio is used as a proxy for myelin and dendritic density, so a 32-hour intervention moved a putative MYELIN marker - which is the same class of measure used to claim durable white matter differences in adolescents."
+    covariates: ["in-scanner head movement", "cortical thickness", "hydration"]
+    followup_years: null
+    cohort_family: "Oslo_sleep_deprivation"
+    quote: "Across clusters, the sleep deprived group showed an increased T1w/T2w ratio, while the normal sleep-wake group exhibited a reduced ratio. These changes were not explained by in-scanner head movement, and 95% of the effects across clusters remained significant after adjusting for cortical thickness and hydration."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Has the parallel non-deprived control arm that elvsashagen2017 lacked, and the authors pre-emptively adjusted for the three obvious artefactual explanations - head motion, cortical thickness and hydration - with 95% of effects surviving. That is unusually careful. Concerns: n=41 split 18/23; allocation procedure not described in the abstract; four clusters from a whole-cortex search; the biological meaning of the T1w/T2w ratio is genuinely uncertain, as the authors concede."
+funding: "Non-US government support (Norway); Research Council of Norway / South-Eastern Norway Regional Health Authority per journal record"
+notes: |
+  THE STRONGEST ACUTE-STATE RECORD, BECAUSE IT HAS A CONTROL ARM AND IT SURVIVES THE OBVIOUS
+  ARTEFACT CHECKS.
+
+  Thirty-two hours of sleep deprivation shifted the intracortical T1w/T2w ratio - a putative
+  index of MYELIN and dendritic density - in the opposite direction from a rested control group,
+  and the effect was not attributable to head motion, cortical thickness or hydration.
+
+  WHY THIS IS THE MOST IMPORTANT ACUTE RECORD FOR THE STATE-VERSUS-TRAIT ARGUMENT. Volume and
+  thickness could be dismissed as fluid shifts. Myelin-sensitive contrast is supposed to be the
+  slow, structural, hard-to-move quantity - the kind of measure people invoke when they say
+  'myelination continues into the mid-20s and sleep restriction could disrupt it'. This study
+  moved it in 32 hours.
+
+  So when an adolescent cross-sectional or single-scan study reports a difference in a
+  myelin-sensitive or diffusion-based measure between short and long sleepers, the timescale
+  argument that would justify calling it developmental damage is not available. The measure is
+  demonstrably state-sensitive on a scale of one day.
+
+  IMPORTANT LIMIT ON WHAT I CLAIM: this study did NOT include a recovery scan, so it does not
+  itself establish reversal. Reversal comes from bernardi2016. And the authors are appropriately
+  cautious about biological interpretation: "While the intracortical changes detected by this
+  study could reflect alterations in myelin or dendritic density, or both, histological analyses
+  are needed to clarify the precise underlying cortical processes."
+
+  POPULATION IS THE CLOSEST OF THE ACUTE STUDIES TO THE SUBJECT: 41 healthy young adults, 26
+  women - hence adolescent_match good_young_adult rather than fair_adult.
+
+  Same research programme as elvsashagen2015 and elvsashagen2017 - shared cohort_family
+  Oslo_sleep_deprivation, do not treat the three as independent.
+shard: "s15_brain_structure"

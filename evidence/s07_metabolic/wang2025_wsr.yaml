@@ -1,0 +1,133 @@
+study_id: wang2025_wsr
+citation: "Wang H, Wei X, Ba Y, Liu H, Zhou Y, Wang W, Zheng L. Nonlinear association between weekend sleep recovery (WSR) and insulin resistance: benefits in males and short weekday sleepers. Endocr Connect. 2025;14(7):e250191."
+doi: "10.1530/EC-25-0191"
+pmid: "40590721"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12268986/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Nonlinear association between weekend sleep recovery (WSR) and insulin resistance: benefits in males and short weekday sleepers."
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 4036
+n_studies_pooled: null
+population:
+  age_mean: 49.62
+  age_range: null
+  pct_female: 51.54
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: homa_ir_weekend_recovery_sleep_males
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: 0, duration_days: null, contrast_label: "any weekend sleep recovery (WSR >0 h, i.e. weekend minus weekday sleep duration) vs no recovery (WSR <=0 h), MALES ONLY; fully adjusted model II"}
+    scale: raw_units
+    unit: "points on a HOMA-IR index RESCALED TO 0-100 (NOT raw HOMA-IR units - see conversion_formula)"
+    value: -0.68
+    se: 0.28827
+    ci: [-1.245, -0.115]
+    conversion_formula: "Published beta = -0.68, 95% CI -1.21 to -0.08, P = 0.0132. se from CI width = (-0.08 - (-1.21))/3.92 = 1.13/3.92 = 0.28827; ci recomputed as -0.68 +/- 1.96*0.28827 = -1.245 to -0.115. NOTE A MINOR INTERNAL INCONSISTENCY IN THE SOURCE: -0.68 is not centred in (-1.21, -0.08) - the midpoint is -0.645 - and the SE implied by P=0.0132 (z=2.4783, se=0.27438) differs slightly from the CI-implied SE (0.28827). I used the CI-based SE as the more conservative of the two. CRITICAL UNIT WARNING: the methods state the outcome is 'the continuous HOMA-IR index (scaled to 0-100)', so these betas are in rescaled index points, NOT raw HOMA-IR units. They therefore CANNOT be compared directly with zuraikat2024's raw HOMA-IR beta of +0.30 or hartescu2022's -0.51."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NEGATIVE = BENEFIT (lower insulin resistance in men who obtain weekend recovery sleep). This is the male-specific estimate and it is the one to use: the authors found no significant association in females."
+    covariates: ["sex", "age", "race/ethnicity", "education level", "BMI", "smoking status", "alcohol use", "SOCIAL JETLAG", "cardiovascular disease status", "WEEKDAY SLEEP HOURS", "hypertension status"]
+    followup_years: null
+    cohort_family: "NHANES"
+    quote: "Stratified analyses revealed stronger effects in males (beta = -0.68, 95% CI: -1.21 to -0.08, P = 0.0132) and in participants with weekday sleep <=7 h (beta = -0.39, 95% CI: -0.72 to -0.07, P = 0.0182). No significant associations were observed in females or in those with >7 h of weekday sleep."
+  - outcome_domain: metabolic
+    outcome_construct: homa_ir_weekend_recovery_sleep_short_weekday_sleepers
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: 0, duration_days: null, contrast_label: "any weekend sleep recovery (WSR >0 h) vs none (WSR <=0 h), restricted to participants with WEEKDAY SLEEP <=7 h; fully adjusted model II"}
+    scale: raw_units
+    unit: "points on a HOMA-IR index rescaled to 0-100 (NOT raw HOMA-IR units)"
+    value: -0.39
+    se: 0.16582
+    ci: [-0.715, -0.065]
+    conversion_formula: "Published beta = -0.39, 95% CI -0.72 to -0.07, P = 0.0182. se = (-0.07 - (-0.72))/3.92 = 0.65/3.92 = 0.16582. Back-check: -0.39 +/- 1.96*0.16582 = -0.715 to -0.065, closely reproducing the published CI. Same 0-100 rescaling caveat applies."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NEGATIVE = BENEFIT. This is the SHORT-WEEKDAY-SLEEPER stratum, i.e. the subject's stratum. Weekend recovery was associated with lower insulin resistance ONLY among those sleeping <=7 h on weekdays, and NOT among those sleeping >7 h - exactly the interaction one would predict if weekend sleep is compensating for a real weekday deficit rather than acting as a general health marker."
+    covariates: ["sex", "age", "race/ethnicity", "education level", "BMI", "smoking status", "alcohol use", "social jetlag", "cardiovascular disease status", "weekday sleep hours", "hypertension status"]
+    followup_years: null
+    cohort_family: "NHANES"
+    quote: "and in participants with weekday sleep <=7 h (beta = -0.39, 95% CI: -0.72 to -0.07, P = 0.0182). No significant associations were observed in females or in those with >7 h of weekday sleep."
+  - outcome_domain: metabolic
+    outcome_construct: homa_ir_weekend_recovery_0_to_2h_full_sample
+    exposure: {type: weekend_catchup, dose_h: 1.0, referent_h: 0, duration_days: null, contrast_label: "MODERATE weekend recovery of 0-2 h vs <=0 h, full sample; fully adjusted model II"}
+    scale: raw_units
+    unit: "points on a HOMA-IR index rescaled to 0-100 (NOT raw HOMA-IR units)"
+    value: -1.14
+    se: 0.30867
+    ci: [-1.745, -0.535]
+    conversion_formula: "Published beta = -1.14, 95% CI -1.74 to -0.53, P = 0.0002. se = (-0.53 - (-1.74))/3.92 = 1.21/3.92 = 0.30867. Back-check: -1.14 +/- 1.96*0.30867 = -1.745 to -0.535, reproducing the published CI. For comparison the >2 h stratum gave beta = -1.27 (95% CI -2.21 to -0.32, P = 0.0085, se = 0.48214) and the any-recovery contrast gave beta = -1.16 (95% CI -1.74 to -0.58, se = 0.29592)."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NEGATIVE = BENEFIT. Full-sample estimate for the 0-2 h recovery band, which is the band the subject occupies (weekend 7-8 h minus weekday 5-6 h is roughly 2 h). Full-sample rather than male-specific, so prefer the male estimate above for the subject."
+    covariates: ["sex", "age", "race/ethnicity", "education level", "BMI", "smoking status", "alcohol use", "social jetlag", "cardiovascular disease status", "weekday sleep hours", "hypertension status"]
+    followup_years: null
+    cohort_family: "NHANES"
+    quote: "Notably, the most pronounced effect was observed in the moderate WSR duration group (0-2 h), which exhibited the most substantial reduction in HOMA-IR ( beta = -1.14, 95% CI: -1.74 to -0.53, P = 0.0002). Conversely, WSR durations exceeding 2 h showed a diminishing and statistically marginal association with insulin resistance ( beta = -1.27, 95% CI: -2.21 to -0.32, P = 0.0085)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "Cross-sectional NHANES analysis; tiered TX and rated high risk of bias. The design cannot establish direction of causation, and for this exposure reverse causation is a live and specific worry: people who are metabolically healthier may simply sleep differently at weekends. Author-stated limitations, which I accept: cross-sectional design precludes causal inference; ALL sleep data are SELF-REPORTED questionnaire items subject to recall bias and misreporting (the authors call for actigraphy/PSG validation); US-specific lifestyle limits generalisability; residual confounding from undiagnosed sleep disorders, obesity, and family history of diabetes cannot be ruled out. Additional concerns of my own, which matter for how the numbers may be used: (1) THE OUTCOME IS RESCALED - HOMA-IR was transformed to a 0-100 index, so the betas are not interpretable in clinical HOMA-IR units and cannot be compared with the trial literature; (2) the abstract's headline 'plateau beyond 2 h' claim is NOT clearly supported by the reported point estimates, since the >2 h stratum beta (-1.27) is numerically LARGER than the 0-2 h stratum beta (-1.14) - the authors appear to be describing a change in statistical strength and in the spline shape rather than in magnitude, and the discussion concedes the second spline segment shows a 'non-significant positive trend'. Do not repeat the plateau claim as if it were a quantitative finding; (3) many subgroup and threshold analyses without evident multiplicity control; (4) the male-stratum CI is internally inconsistent with its own point estimate and p-value (see conversion_formula)."
+funding: "Not identified in the retrieved text. The authors declare no commercial or financial conflicts of interest."
+notes: |
+  *** THIS IS THE BEST EXPOSURE-PATTERN MATCH IN THE ENTIRE SHARD, AND SIMULTANEOUSLY ONE OF THE
+  WEAKEST DESIGNS. Both facts must travel together. ***
+
+  WHY THE EXPOSURE MATCH IS SO CLOSE: the study's positive strata are (a) MALES and (b) people whose
+  WEEKDAY sleep is <=7 h, and its focal exposure is weekend recovery of 0-2 h. Our subject is male,
+  slept 5-6 h on weekdays, and slept 7-8 h at weekends - a recovery of roughly 2 h. He sits in every
+  favourable stratum this paper identifies, in the band where the estimated benefit is largest, and
+  right at the 2 h inflection point the authors locate. No other record in the shard aligns this
+  precisely with his actual weekly pattern.
+
+  WHAT IT ADDS THAT THE EXPERIMENTS DO NOT: the experimental weekend-recovery records are pessimistic.
+  depner2019 found weekend recovery did NOT prevent metabolic dysregulation (and cumulatively added
+  only ~1.1 h of sleep while delaying circadian phase); cheung2026 found 8 h weekend recovery
+  insufficient, with schedule VARIABILITY causing about 2.5x worse glucose deterioration than stable
+  short sleep. Those are 1-3 week lab protocols. This record, at population scale and over habitual
+  real-world exposure, points the other way: weekend recovery is associated with LOWER insulin
+  resistance, specifically in short-sleeping men. The honest synthesis is that weekend catch-up is
+  probably PARTIALLY protective relative to no catch-up, while still being clearly inferior to
+  simply sleeping enough on weekdays - and that lab protocols compressing the pattern into 1-3 weeks
+  may not capture whatever benefit accrues over years. The cross-sectional design means this cannot
+  overturn the experiments; it can only widen the posterior.
+  See also liu2025_wcs-adjacent NHANES work (PMID 40437485, BMC Med 2025) on the same question, which
+  I screened but did not extract - noted in screening_log.md as a de-duplication issue since it draws
+  on the same NHANES resource and would double-count.
+
+  THE SOCIAL-JETLAG ADJUSTMENT IS WHAT MAKES THIS INTERPRETABLE, AND IT CUTS BOTH WAYS: model II
+  adjusts for social jetlag AND for weekday sleep hours. So the estimate is the association of
+  weekend recovery with insulin resistance holding constant both the weekday deficit and the
+  circadian misalignment that weekend recovery normally creates. That is the right conditioning if one
+  wants the "sleep quantity recovered" pathway isolated. But it also means the estimate DOES NOT
+  include the circadian cost of shifting one's schedule at weekends - and that cost is precisely what
+  leproult2014, cheung2026, chen2021, and depner2019 identify as the more damaging insult. So this
+  record should NOT be read as saying "weekend catch-up is net beneficial for the subject". It says
+  "the extra sleep obtained at weekends is associated with benefit, once the circadian penalty is
+  statistically removed". The net effect for a real person doing both at once is not estimated here.
+  The authors themselves make this point in discussing why benefits do not extend beyond 2 h.
+
+  AGE IS THE DISQUALIFYING MISMATCH: mean age 49.62 years, NHANES adults. Two and a half decades older
+  than the subject, and adolescents are absent entirely. Scored poor_midlife. The authors also note the
+  breakpoint corresponded to a predicted HOMA-IR of 3.78, above the clinical insulin-resistance cutoff
+  of 2.5-2.8, and infer that "WSR may play a stronger role in people with preexisting metabolic
+  dysfunction". A healthy 18-year-old is on the other side of that line, which argues for attenuating
+  this estimate substantially before applying it to him.
+
+  UNIT HAZARD - FLAGGING FOR THE POOLER IN THE STRONGEST TERMS: the outcome is a HOMA-IR index
+  RESCALED TO 0-100, not raw HOMA-IR. A beta of -1.16 here is roughly 1.2% of the index range, NOT a
+  1.16-unit fall in clinical HOMA-IR (which would be enormous). Any pooling that mixes these betas
+  with zuraikat2024 (+0.30 raw HOMA-IR units) or hartescu2022 (-0.51 raw HOMA-IR units) without
+  rescaling would be a serious error. I could not recover the min and max used for the rescaling, so
+  I cannot supply a conversion factor; these three effects are recorded as raw_units with explicit
+  unit strings and MUST NOT be pooled on a common scale without one.
+
+  Cohort family NHANES - de-duplicate against any other NHANES-derived effect in the factory,
+  including PMID 40437485 if another shard extracted it.
+shard: "s07_metabolic"

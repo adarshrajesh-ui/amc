@@ -1,0 +1,117 @@
+study_id: doll2004
+citation: 'Doll R, Peto R, Boreham J, Sutherland I. Mortality in relation to smoking: 50 years'' observations
+  on male British doctors. BMJ. 2004;328(7455):1519.'
+doi: 10.1136/bmj.38142.554479.AE
+pmid: '15213107'
+url: https://www.bmj.com/content/328/7455/1519
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Mortality in relation to smoking: 50 years'' observations on male British doctors'
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 34439
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: UK
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_lost_continuing_cigarette_smoker_vs_never
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: lifelong cigarette smoking (men born 1900-1930) vs lifelong non-smoker
+  scale: years
+  unit: years of life expectancy lost
+  value: -10.0
+  se: null
+  ci: null
+  conversion_formula: Reported directly as 'about 10 years younger'. No CI published; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = life expectancy LOST by the smoker. Exposure is LIFELONG (roughly age 20
+    to death), NOT 3 years.
+  covariates:
+  - age
+  - birth cohort
+  followup_years: 50.0
+  cohort_family: British_Doctors_Study
+  quote: Men born in 1900-1930 who smoked only cigarettes and continued smoking died on average about
+    10 years younger than lifelong non-smokers. Cessation at age 60, 50, 40, or 30 years gained, respectively,
+    about 3, 6, 9, or 10 years of life expectancy.
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_gained_by_cessation_at_age_30
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: stopping cigarettes at age 30 vs continuing to smoke
+  scale: years
+  unit: years of life expectancy gained
+  value: 10.0
+  se: null
+  ci: null
+  conversion_formula: Reported directly ('about ... 10 years'). No CI published; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'positive = life expectancy REGAINED. Quitting at 30 recovers essentially ALL of the
+    ~10 y lost: the KEY reversibility benchmark for an exposure stopped in early adulthood.'
+  covariates:
+  - age
+  - birth cohort
+  followup_years: 50.0
+  cohort_family: British_Doctors_Study
+  quote: Men born in 1900-1930 who smoked only cigarettes and continued smoking died on average about
+    10 years younger than lifelong non-smokers. Cessation at age 60, 50, 40, or 30 years gained, respectively,
+    about 3, 6, 9, or 10 years of life expectancy.
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_gained_by_cessation_at_age_40
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: stopping cigarettes at age 40 vs continuing to smoke
+  scale: years
+  unit: years of life expectancy gained
+  value: 9.0
+  se: null
+  ci: null
+  conversion_formula: Reported directly. No CI published; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = life expectancy REGAINED by quitting at 40.
+  covariates:
+  - age
+  - birth cohort
+  followup_years: 50.0
+  cohort_family: British_Doctors_Study
+  quote: Men born in 1900-1930 who smoked only cigarettes and continued smoking died on average about
+    10 years younger than lifelong non-smokers. Cessation at age 60, 50, 40, or 30 years gained, respectively,
+    about 3, 6, 9, or 10 years of life expectancy.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: low
+  notes: '50-year follow-up, near-complete mortality ascertainment, repeated exposure measurement. Male
+    British doctors only: a socially and behaviourally atypical cohort. Observational, so residual confounding
+    by other risk behaviours cannot be excluded, but the effect size is far too large to be confounding
+    alone.'
+funding: UK Medical Research Council, Cancer Research UK, British Heart Foundation (per report)
+notes: 'THE canonical smoking life-expectancy anchor. Note carefully: the 10-year figure is for PROLONGED
+  (lifelong) smoking, not 3 years. The cessation gradient (3/6/9/10 y for quitting at 60/50/40/30) is
+  what makes this study usable for our subject, who is stopping an exposure at 19. The abstract''s conclusion
+  is even more explicit: ''cessation at age 50 halved the hazard, and cessation at age 30 avoided almost
+  all of it.'' Full text not retrievable (BMJ blocks PMC XML download), so the per-cigarettes-per-day
+  dose table could not be extracted here; see banks2015 for dose.'
+shard: s18_comparators

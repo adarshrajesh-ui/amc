@@ -1,0 +1,76 @@
+study_id: chan2019
+citation: "Chan KC, Au CT, Hui LL, Ng SK, Wing YK, Li AM. How OSA Evolves From Childhood to Young Adulthood: Natural History From a 10-Year Follow-up Study. Chest. 2019;156(1):120-130."
+doi: "10.1016/j.chest.2019.03.007"
+pmid: "30922948"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "How OSA Evolves From Childhood to Young Adulthood: Natural History From a 10-Year Follow-up Study."
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 243
+n_studies_pooled: null
+population:
+  age_mean: 20.2
+  age_range: [16, 25]
+  pct_female: 41.0
+  country: "Hong Kong"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: incident_osa_oahi_ge5_by_early_adulthood
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "incidence of OSA (obstructive apnoea-hypopnoea index >= 5 events/h on PSG) at mean age 20.2, in a community cohort followed 10.4 years from mean age 9.8"}
+    scale: probability
+    unit: "proportion developing OAHI >= 5 by mean age 20.2"
+    value: 0.22
+    se: 0.0266
+    ci: [0.168, 0.272]
+    conversion_formula: "'Incidence of adolescent/adult OSA with an OAHI >= 5 events/h at follow-up was 22%' verbatim. n = 243. se = sqrt(0.22*0.78/243) = 0.02659; Wald 95% CI = [0.168, 0.272]. My construction. THE DENOMINATOR IS UNCERTAIN: 'incidence' should be computed among those without OSA at baseline, which is a subset of 243, so this se is if anything too narrow - flagged."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "higher = more disease. THIS IS THE ONLY OBJECTIVE (POLYSOMNOGRAPHIC) SLEEP-APNOEA DATA I COULD RETRIEVE AT OUR SUBJECT'S ACTUAL AGE (mean 20.2 years), AND IT MUST NOT BE READ AS A POPULATION PREVALENCE. The cohort was assembled from 'a cohort established for an OSA prevalence study', i.e. it is enriched for childhood OSA cases and their comparators, and 22% is an incidence within that enriched sample. It sets no upper bound on, and gives no unbiased estimate of, prevalence in an unselected lean 19-year-old. I record it because its RISK-FACTOR finding is directly usable even though its rate is not."
+    covariates: ["sex", "baseline BMI z score", "baseline OAHI"]
+    followup_years: 10.4
+    cohort_family: "HongKong_childhood_OSA_cohort"
+    quote: "Two hundred and forty-three participants (59% male) took part, and their mean age was 9.8 (SD, +/- 1.8) and 20.2 (SD, +/- 1.9) years at baseline and follow-up, respectively. The mean follow-up duration was 10.4 (SD, +/- 1.1) years. ... Overall polysomnographic remission rate (with OAHI < 1 event/h at follow-up) of childhood OSA was 30%, and 69% had an OAHI < 5 events/h at follow-up. Complete remission of OSA was associated with female sex. Incidence of adolescent/adult OSA with an OAHI >= 5 events/h at follow-up was 22%. Male sex and higher baseline BMI z score were associated with incident OSA."
+  - outcome_domain: baseline_risk
+    outcome_construct: risk_factors_for_incident_young_adult_osa
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "qualitative direction of the two factors associated with incident OSA between childhood and age ~20: male sex and higher baseline BMI z score"}
+    scale: raw_units
+    unit: "qualitative direction code (+1 = both male sex and higher BMI raise incident OSA risk)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "No odds ratios or effect sizes are reported in the abstract, only the direction: 'Male sex and higher baseline BMI z score were associated with incident OSA.' Coded +1 for direction so the record is schema-valid. No arithmetic, no se - I could not obtain the full text (Unpaywall reports no OA location for 10.1016/j.chest.2019.03.007)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = male sex and higher BMI raise risk. THE TWO-FACTOR SPLIT IS WHAT MAKES THIS USABLE FOR OUR SUBJECT: he carries one risk factor (male) and lacks the other (his BMI is presumed normal). Since BMI is the dominant driver in every OSA prevalence model I retrieved - in peppard2013 the lean-to-obese gradient within men aged 30-49 is 7.0% -> 79.5% for AHI >= 5, an 11-fold range, far larger than the 30-49 -> 50-70 age gradient - a normal BMI is the single most protective fact available about this subject, and it is the reason the recommended symptomatic-OSA posterior is ~1%."
+    covariates: ["sex", "BMI z score"]
+    followup_years: 10.4
+    cohort_family: "HongKong_childhood_OSA_cohort"
+    quote: "Complete remission of OSA was associated with female sex. ... Male sex and higher baseline BMI z score were associated with incident OSA."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "Design strengths: prospective, 10.4-year follow-up, and OUTCOME ASCERTAINED BY POLYSOMNOGRAPHY at a mean age of 20.2 - which is why it is the only objective apnoea record in this shard at the right age. Fatal weaknesses for prevalence purposes: (1) the sample is drawn from a cohort originally established for an OSA prevalence study and is therefore enriched for cases, so neither the 22% incidence nor any implied prevalence transports to an unselected population; (2) n = 243 with an unstated attrition denominator from the original cohort, so selective retention is unquantifiable; (3) single Hong Kong Chinese population, and craniofacial risk profiles for OSA differ substantially by ancestry, which matters when the comparator (peppard2013) is 96% non-Hispanic white; (4) no adjusted effect sizes in the abstract and no full-text access on my side. Tier T4 reflects the prospective-with-objective-exposure design; the TX-like interpretive weight is enforced through rob and through the direction_note warnings."
+funding: "Not stated in the abstract"
+notes: |
+  ACCESS: abstract only.
+  WHY IT IS IN THE SHARD. The task asked for young-adult-specific OSA data. peppard2013 stops at 30 and
+  benjafield2019 stops at 30. This is the only retrievable study that put a polysomnograph on people at our subject's
+  age and reported apnoea-hypopnoea indices. Its rate is unusable for a prevalence prior because of case enrichment,
+  but two things it says ARE usable:
+    1. Childhood and adolescent OSA are described as 'distinct entities, with the latter more likely to persist into
+       adulthood' - so a subject with no childhood history of snoring/apnoea/adenotonsillectomy has a lower prior
+       still, and the report should ask that history question because it is free.
+    2. The risk factors at this age are male sex and BMI. Our subject has one and not the other.
+  A CONCRETE SCREENING IMPLICATION: because obesity dominates and our subject is lean, the pre-test probability of
+  clinically meaningful sleep-disordered breathing is low enough that a home sleep apnoea test is NOT indicated on the
+  presentation as described. It becomes indicated only if the screen returns habitual snoring, witnessed apnoeas,
+  unrefreshing sleep despite adequate time in bed, or an Epworth score above 10 that survives a time-in-bed extension
+  trial. That conditional-referral logic is written into instruments.md rather than being left implicit.
+shard: "s19_sleep_disorders"

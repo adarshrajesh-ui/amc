@@ -1,0 +1,144 @@
+study_id: sadeh2003
+citation: "Sadeh A, Gruber R, Raviv A. The effects of sleep restriction and extension on school-age children: what a difference an hour makes. Child Development. 2003;74(2):444-455."
+doi: "10.1111/1467-8624.7402008"
+pmid: "12705565"
+url: "https://socsci3.tau.ac.il/clinic/articles/sleep%20res-ext%202003.pdf"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "The Effects of Sleep Restriction and Extension on School-Age Children: What a Difference an Hour Makes"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 72
+n_studies_pooled: null
+population:
+  age_mean: 10.6
+  age_range: [9.1, 12.2]
+  pct_female: 49.4
+  country: "Israel"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: cognition
+    outcome_construct: digit_span_forward_short_term_memory
+    exposure: {type: sleep_extension, dose_h: 1, referent_h: -1, duration_days: 3, contrast_label: "+1 h sleep extension vs -1 h sleep restriction, 3 nights at home; difference-in-differences vs own baseline"}
+    scale: hedges_g
+    unit: null
+    value: -0.762
+    se: 0.310
+    ci: [-1.371, -0.154]
+    conversion_formula: "Table 2, difference-in-differences. Restricted group (n=28) 5.61 (0.69) -> 5.25 (0.89), change -0.36. Extended group (n=21) 5.43 (0.98) -> 5.71 (0.90), change +0.28. DiD = 0.28 - (-0.36) = +0.64 digits favouring extension. Baseline pooled SD = sqrt((27*0.69^2 + 20*0.98^2)/47) = 0.826, so g = 0.64/0.826 x J(0.9840) = 0.762, signed NEGATIVE because the restriction arm is the exposed arm. SE REQUIRES AN ASSUMPTION: change-score SDs are not reported, so Var(change) = SD_pre^2 + SD_post^2 - 2*r*SD_pre*SD_post with an assumed pre-post r. At r = 0.5, SE(DiD) = 0.256 -> SE(g) = 0.310 (recorded here, the conservative choice). At r = 0.7, SE(g) = 0.242 and the CI would be [-1.238, -0.287]. The reported omnibus Group x Period F(2,61) = 3.25, p < .05, is consistent with a CI that excludes zero."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = the sleep-restricted arm did worse than the sleep-extended arm on forward digit span"
+    covariates: ["gender", "grade (age)", "baseline performance"]
+    followup_years: null
+    cohort_family: "Sadeh_TelAviv_2003"
+    quote: "These interactions and the post hoc tests indicated that children who extended their sleep significantly improved their performance (from baseline to postintervention period) on the digit forward memory test, whereas the performance of the other groups did not change."
+  - outcome_domain: cognition
+    outcome_construct: cpt_reaction_time_sustained_attention
+    exposure: {type: sleep_extension, dose_h: 1, referent_h: -1, duration_days: 3, contrast_label: "+1 h extension vs -1 h restriction, 3 nights; continuous performance task reaction time"}
+    scale: hedges_g
+    unit: null
+    value: -0.414
+    se: 0.298
+    ci: [-0.998, 0.169]
+    conversion_formula: "Table 2. Restricted 641.0 (55.7) -> 639.9 (61.1) ms, change -1.1. Extended 615.8 (73.5) -> 587.8 (67.8) ms, change -28.0. DiD = -26.9 ms favouring extension (faster). Baseline pooled SD = 63.884 ms. g = 26.9/63.884 x J = 0.414, signed negative for the restricted arm. SE at assumed pre-post r = 0.5 is 0.298 (recorded); at r = 0.7 it is 0.231 and the CI would be [-0.867, 0.039]. NOTE the tension: the paper's omnibus Group x Period F(2,61) = 6.74, p < .005, is the STRONGEST interaction in the table, yet my reconstructed pairwise CI crosses zero at r = 0.5. That is because the omnibus F uses all three groups and the true within-subject correlation is almost certainly above 0.5. Treat the point estimate as sound and the SE as pessimistic."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = restricted arm slower / worse than extended arm on CPT reaction time"
+    covariates: ["gender", "grade (age)", "baseline performance"]
+    followup_years: null
+    cohort_family: "Sadeh_TelAviv_2003"
+    quote: "On the CPT, children in the SEG significantly improved their reaction time, whereas the performance of children in the other groups (SRG and NCG) did not change significantly."
+  - outcome_domain: cognition
+    outcome_construct: simple_reaction_time
+    exposure: {type: sleep_extension, dose_h: 1, referent_h: -1, duration_days: 3, contrast_label: "+1 h extension vs -1 h restriction, 3 nights; simple reaction time"}
+    scale: hedges_g
+    unit: null
+    value: -0.311
+    se: 0.273
+    ci: [-0.846, 0.224]
+    conversion_formula: "Table 2. Restricted 431.4 (82.5) -> 458.2 (77.1) ms, change +26.8 (slower). Extended 414.2 (50.2) -> 418.7 (58.4) ms, change +4.5. DiD = -22.3 ms favouring extension. Baseline pooled SD = 70.586 ms. g = 22.3/70.586 x J = 0.311, signed negative for restriction. SE at r = 0.5 = 0.273 (recorded); at r = 0.7 = 0.212. Omnibus Group x Period F(2,61) = 3.94, p < .05. Both restriction AND no-change groups deteriorated here while extension held steady, which the authors read as a practice/boredom effect that only extension protected against."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = restricted arm slower / worse than extended arm on simple reaction time"
+    covariates: ["gender", "grade (age)", "baseline performance"]
+    followup_years: null
+    cohort_family: "Sadeh_TelAviv_2003"
+    quote: "On the simple reaction time test, performance of the children from the SRG and the NCG significantly deteriorated whereas performance of the children from the SEG remained stable."
+  - outcome_domain: cognition
+    outcome_construct: digit_span_backward_working_memory
+    exposure: {type: sleep_extension, dose_h: 1, referent_h: -1, duration_days: 3, contrast_label: "+1 h extension vs -1 h restriction, 3 nights; backward digit span (NULL result)"}
+    scale: hedges_g
+    unit: null
+    value: -0.365
+    se: 0.322
+    ci: [-0.996, 0.266]
+    conversion_formula: "Table 2. Restricted 4.14 (0.89) -> 4.36 (1.16), change +0.22. Extended 4.43 (1.29) -> 5.05 (1.32), change +0.62. DiD = +0.40 favouring extension. Baseline pooled SD = 1.079. g = 0.40/1.079 x J = 0.365. SE at r = 0.5 = 0.322. RECORDED AS A NULL: omnibus Group x Period F(2,61) = 0.71, non-significant. Included deliberately so the pooler sees the full outcome set rather than only the three significant rows, which would inflate the pooled youth estimate."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = restricted arm worse; not statistically distinguishable from zero in this study"
+    covariates: ["gender", "grade (age)", "baseline performance"]
+    followup_years: null
+    cohort_family: "Sadeh_TelAviv_2003"
+    quote: "Digit span BW ... 4.14 (0.89) ... 4.36 (1.16) ... 4.43 (1.29) ... 5.05 (1.32) ... 0.71"
+  - outcome_domain: exposure_measurement
+    outcome_construct: achieved_sleep_change_under_home_manipulation
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 3, contrast_label: "actigraphic change in sleep period achieved by each arm"}
+    scale: hours
+    unit: "hours of sleep period change"
+    value: -1.267
+    se: null
+    ci: null
+    conversion_formula: "Extension arm gained 35 min; restriction arm lost 41 min; total achieved separation = 76 min = 1.267 h. Signed negative for the restriction direction. NO SE derivable: the paper reports group mean changes but not their SDs. IMPORTANT: the nominal manipulation was +/-1 h (a 2 h separation) but only 1.27 h of separation was actually achieved, a 63% pass-through, closely matching the 69% TIB-to-TST pass-through in campbell2024."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = direction of restriction; this row is exposure fidelity, not an outcome"
+    covariates: []
+    followup_years: null
+    cohort_family: "Sadeh_TelAviv_2003"
+    quote: "sleep was significantly extended from baseline to intervention period in the sleep extension group (by an average of 35 min) and that sleep was significantly shortened in the sleep restriction group (41 min)"
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomized allocation to extension vs restriction with objective actigraphic verification and a within-child baseline-vs-intervention design, which is strong for 2003. BUT the analysed groups are NOT the randomized groups: the authors re-classified children into extension / no-change / restriction according to whether they actually achieved a >=30 min change, which breaks randomization and makes the comparison partly observational (compliance is plausibly correlated with family functioning and baseline sleep). Blinding was impossible. No correction for multiple outcomes across a 7-measure battery; 3 of 7 measures reached p < .05, which is above chance but not by a wide margin. Change-score SDs are not published, so every SE I report rests on an assumed pre-post correlation. Small arms (n = 21 and 28)."
+funding: "Not stated in the retrieved text."
+notes: |
+  THE ORIGIN OF THE "YEARS OF DEVELOPMENT" FRAMING, and this is why the record matters beyond its own effect sizes. Sadeh et al.
+  benchmarked their manipulation against the age difference between 4th and 6th graders measured on the same battery in the same
+  sample, and concluded: "For better appreciation of the size of the manipulation effects, it should be noted that the size of
+  the differential effect of the extension-restriction manipulation on the NES measures was larger than or similar to the highly
+  significant age differences between the fourth- and sixth-grade students on these measures. It could be interpreted that the
+  manipulation effects on these neurobehavioral functions are similar to those gained by 2 years of development."
+
+  So the claim is: a 1.27 h achieved difference in sleep, sustained 3 nights, moves this battery about as much as 2 years of
+  childhood development. That is a QUALITATIVE claim in the original - the authors report the age F values (digit forward
+  F(1,60) = 16.90; CPT RT F(1,60) = 12.79; simple RT F(1,60) = 6.82) but never divide one estimate by the other. I did not
+  fabricate a ratio for them. The quantified analogue in the right age band is campbell2024, which does the division properly:
+  3.85 y (95% CI 2.4-5.3) of adolescent maturation for a 3 h TIB reduction on PVT LSNR, i.e. ~1.28 y per hour of TIB. Sadeh's
+  ~2 y for ~1.27 h and Campbell's ~1.6 y for 1.27 h are the same order of magnitude, from independent samples, decades apart,
+  which is a genuine and non-trivial convergence.
+
+  DOMAIN PATTERN: the significant effects were on forward digit span (short-term memory, g = -0.76), CPT reaction time
+  (sustained attention, g = -0.41) and simple reaction time (g = -0.31); the null was backward digit span (working memory,
+  g = -0.37 but F = 0.71). Note this is NOT the adult ordering from lim2010, where simple attention lapses dominate and
+  short-term memory is mid-pack. With k = 4 outcomes and n ~ 50 per contrast, the ordering here is not reliable.
+
+  WHY I DID NOT REPORT A g FOR THE ACADEMIC OUTCOME: there is none. The paper measures neurobehavioural tests, not grades. The
+  authors bridge to academics only by citing an EXTERNAL correlation (Arcia et al. 1991: digit span correlated r = .56 with
+  reading and r = .58 with mathematics on the California Achievement Test). That external correlation is a useful g-loading
+  datum in its own right and I use it in iq_conversion_basis.md, but it is secondhand within this paper and I have not turned it
+  into an effect estimate here.
+
+  ADOLESCENT MATCH IS "mixed", NOT "exact": ages 9.1-12.2 sit well below the target subject at 18. The transportability
+  argument is that campbell2024 found NO TIB-by-age interaction from 9.9 to 22.8 y, which licenses carrying child-age
+  restriction effects upward. Without that companion finding I would have downgraded this record much harder.
+
+  ONE MORE FINDING WORTH FLAGGING to anyone modelling recovery: sleep restriction IMPROVED objective sleep quality (higher sleep
+  percent, more quiet sleep, fewer night wakings) while simultaneously degrading daytime function. Homeostatic compensation
+  makes the sleep itself look better on actigraphy at the same time as the cognitive cost is being paid. A model that infers
+  "adequate sleep" from good sleep efficiency will therefore get this subject wrong.
+shard: "s02_cognition_meta"

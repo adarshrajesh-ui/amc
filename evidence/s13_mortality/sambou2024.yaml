@@ -1,0 +1,108 @@
+study_id: sambou2024
+citation: "Sambou ML, Zhao X, Hong T, Wang N, Dai J. Associations between sleep-behavioral traits and healthspan: A one-sample Mendelian randomization study based on 388,909 participants of the UK-Biobank. J Affect Disord. 2024 Apr 1;350:854-862."
+doi: "10.1016/j.jad.2024.01.122"
+pmid: "38262521"
+url: "https://doi.org/10.1016/j.jad.2024.01.122"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Associations between sleep-behavioral traits and healthspan: A one-sample Mendelian randomization study based on 388,909 participants of the UK-Biobank."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 388909
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [37, 73]
+  pct_female: null
+  country: "UK"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: mortality
+    outcome_construct: terminated_healthspan_mr
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: 7.5, duration_days: null,
+               contrast_label: "MR (IVW, 590 sleep-trait instruments): genetically predicted HEALTHY sleep duration (7-8 h/d) vs not, outcome = terminated healthspan (first of CHF, MI, COPD, stroke, dementia, diabetes, cancer, or death)"}
+    scale: log_or
+    unit: null
+    value: -0.020203
+    se: 0.007770
+    ci: [-0.030459, 0.000000]
+    conversion_formula: "OR 0.98 (0.97-1.00); value=ln(0.98)=-0.02020; se=(ln1.00-ln0.97)/3.92=0.00777"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      negative = LOWER risk of healthspan termination from genetically predicted healthy sleep duration.
+      The causal estimate is 2% - it is statistically significant (P=0.036) and substantively trivial,
+      with the upper CI bound touching exactly 1.00. Compare the observational estimate in the SAME
+      paper and SAME cohort: HR 0.93 (0.92-0.96) by IPTW. On the log scale the MR effect is
+      -0.0202 against an observational -0.0726, so THE GENETIC ESTIMATE IS 28% OF THE OBSERVATIONAL ONE
+      and 72% of the observational association does not survive instrumentation.
+    covariates: ["MR-Egger tested for pleiotropy; weighted median sensitivity analysis"]
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "MR results further indicated causal associations between healthy sleep duration (OR = 0.98; 95%CI: 0.97-1.00; P = 0.036) and insomnia (OR = 1.02; 95%CI: 1.01-1.03; P < 0.001) with terminated healthspan. MR-egger did not suggest any potential pleiotropy."
+  - outcome_domain: mortality
+    outcome_construct: terminated_healthspan_observational_iptw
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: 7.5, duration_days: null,
+               contrast_label: "OBSERVATIONAL (IPTW-weighted Cox): self-reported sleep duration 7-8 h/d vs not, same cohort, same outcome - the comparator for the MR estimate above"}
+    scale: log_hr
+    unit: null
+    value: -0.072571
+    se: 0.010857
+    ci: [-0.083382, -0.040822]
+    conversion_formula: "HR 0.93 (0.92-0.96); value=ln(0.93)=-0.07257; se=(ln0.96-ln0.92)/3.92=0.01086"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      negative = LOWER risk of healthspan termination for people reporting 7-8 h. Recorded ONLY as the
+      denominator of the MR-vs-observational attenuation calculation: 0.0202/0.0726 = 28% survives.
+    covariates: ["IPTW over measured covariates (full list not in abstract)"]
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "In IPTW, we observed a decreased risk of terminated healthspan for healthy sleep behaviors such as 'sleep duration 7-8h/d' (Hazard ratio, HR = 0.93; 95 % confidence interval, CI: 0.92-0.96; P < 0.001)"
+rob:
+  tool: MR-STROBE
+  judgement: high
+  notes: >
+    Serious limitations for our purpose. (1) ONE-SAMPLE MR in UK Biobank, so instrument and outcome come
+    from the same participants, which inflates weak-instrument bias towards the observational estimate -
+    that biases this result in the ANTI-conservative direction and the true causal effect is plausibly
+    smaller than 0.98. (2) The exposure is a BINARY "healthy sleep duration 7-8 h", not hours of sleep,
+    so no per-hour effect and no dose-response; it cannot tell us about 5-6 h specifically. (3) The
+    outcome is TERMINATED HEALTHSPAN - a composite in which death is one of eight events and the other
+    seven are common chronic diseases - so this is not an all-cause-mortality estimate and must not be
+    entered into a mortality pool as if it were. (4) Sleep-duration genetic instruments have small
+    effects (roughly minutes per allele) and the linear extrapolation from allele-level effects to a
+    multi-hour behavioural contrast is exactly the extrapolation MR is worst at. (5) 590 instruments
+    across six sleep traits raises pleiotropy concerns despite the null MR-Egger intercept.
+    (6) Abstract-only access. (7) UK Biobank healthy-volunteer selection.
+funding: null
+notes: >
+  THIRD INDEPENDENT MR DATA POINT, and it is the one that best characterises the state of MR evidence:
+  directionally consistent with a causal effect, magnitude trivial.
+  .
+  THE THREE MR RESULTS I FOUND, SIDE BY SIDE:
+    wu2024   (Transl Psychiatry) - genetically predicted SHORT sleep reduces lifespan, beta -0.60, but
+             the continuous sleep-duration instrument was NULL in the same paper, and the lifespan unit
+             is a parental-survival Cox residual that cannot be converted to months.
+    zhang2025 (Rejuvenation Res) - MR for short and long sleep duration on all-cause mortality: NULL,
+             while the observational HRs in the same paper were 1.25 and 1.74. Only napping survived.
+    sambou2024 (this record) - MR OR 0.98 (0.97-1.00) for healthy sleep duration on terminated
+             healthspan; significant at P=0.036, i.e. a 2% effect on a composite that is mostly not death.
+  .
+  MY READ ON THE MR EVIDENCE AS A WHOLE: it does not support a large causal mortality effect of
+  habitual sleep duration, and two of the three analyses are consistent with no effect on death at all.
+  It is important to state why this is weaker evidence than it looks in either direction. Sleep-duration
+  MR instruments explain a tiny fraction of variance in sleep duration; the resulting estimates have
+  wide true uncertainty even when the reported CIs are narrow; and crucially THE MR ESTIMAND IS WRONG
+  FOR OUR QUESTION - it is the effect of lifelong genetic liability to sleep slightly less, not the
+  effect of behaviourally sleeping 5-6 h for three years in adolescence and then stopping. MR cannot
+  rule out a real short-term effect of behavioural restriction, and equally cannot be used to license one.
+  .
+  COHORT OVERLAP WARNING: UK_Biobank. Overlaps wu2024 partially (wu2024 uses UK Biobank sleep GWAS
+  instruments and a parental-lifespan GWAS), and overlaps the entire UK Biobank accelerometer cluster.
+  Do not treat as independent of those.
+shard: "s13_mortality"

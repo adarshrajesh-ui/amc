@@ -1,0 +1,80 @@
+study_id: windred2024
+citation: "Windred DP, Burns AC, Lane JM, Saxena R, Rutter MK, Cain SW, Phillips AJK. Sleep regularity is a stronger predictor of mortality risk than sleep duration: A prospective cohort study. Sleep. 2024 Jan 11;47(1):zsad253."
+doi: "10.1093/sleep/zsad253"
+pmid: "37738616"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10782501/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep regularity is a stronger predictor of mortality risk than sleep duration: A prospective cohort study."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 60977
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [40, 79]
+  pct_female: null
+  country: "UK"
+  adolescent_match: poor_elderly
+effects:
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_by_sleep_regularity
+    exposure: {type: social_jetlag, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "higher Sleep Regularity Index quintiles vs the LEAST regular quintile, accelerometer-derived"}
+    scale: log_hr
+    unit: null
+    value: -0.438535
+    se: null
+    ci: [-0.653926, -0.223144]
+    conversion_formula: "The paper reports a RANGE across quintiles, not a single contrast: '20%-48% lower risk of all-cause mortality'. Range endpoints on the log scale: ln(0.80) = -0.223144 (the 20% figure, weakest quintile contrast) and ln(0.52) = -0.653926 (the 48% figure, strongest quintile contrast). value = midpoint of those endpoints = -0.438535, ci = the two endpoints. se is null because NO CI is reported for any single contrast. DO NOT treat value/ci here as a conventional point estimate and 95% interval - the interval is a range of point estimates across quintiles, not sampling uncertainty."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      negative = LOWER mortality with more regular sleep. Recorded with deliberate imprecision: the
+      abstract gives only a range across quintiles (20%-48% lower risk) and no single contrast, so no
+      honest point estimate with an SE is derivable. The finding that matters is the COMPARISON, not the
+      magnitude: sleep REGULARITY out-predicted sleep DURATION for all-cause mortality, and duration
+      added nothing to a regularity model (p = 0.14-0.20).
+    covariates: ["age", "sex", "ethnicity", "sociodemographic factors", "lifestyle factors", "health factors"]
+    followup_years: 7.8
+    cohort_family: "UK_Biobank"
+    quote: "We calculated Sleep Regularity Index (SRI) scores from > 10 million hours of accelerometer data in 60 977 UK Biobank participants ... Higher sleep regularity was associated with a 20%-48% lower risk of all-cause mortality (p < .001 to p = 0.004), a 16%-39% lower risk of cancer mortality ... least regular quintile. Results were adjusted for age, sex, ethnicity, and sociodemographic, lifestyle, and health factors. Sleep regularity was a stronger predictor of all-cause mortality than sleep duration, by comparing equivalent mortality models, and by comparing nested SRI-mortality models with and without sleep duration (p = 0.14-0.20)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Objective exposure, very large accelerometry base (>10 million hours), formal nested-model comparison
+    against sleep duration. Weaknesses for our use: (1) only 1859 deaths over up to 7.8 years, so the
+    quintile contrasts are not tightly estimated; (2) the abstract reports ranges rather than single
+    contrasts with CIs, so no clean effect size is extractable - I have recorded this honestly rather than
+    manufacture one; (3) the Sleep Regularity Index conflates timing variability with duration
+    variability, and its behavioural meaning in a 60-year-old retiree differs from that in a student;
+    (4) 7 days of wear; (5) a published commentary exists (Sleep 2024;47(1):zsad285) which I did not
+    retrieve; (6) abstract-only access; (7) healthy-volunteer subsample.
+funding: null
+notes: >
+  Included for one reason, which is important enough to justify a record with no usable point estimate:
+  IT REFRAMES WHAT THE MORTALITY SIGNAL IS ABOUT. In the largest objective test to date, sleep REGULARITY
+  beat sleep DURATION as a predictor of all-cause mortality, and adding duration to a regularity model
+  did not improve it (p = 0.14-0.20).
+  .
+  WHY THIS CUTS BOTH WAYS FOR THE SUBJECT, and I cannot resolve which dominates:
+  (a) AGAINST him: his pattern IS irregular by construction - 5-6 h on weekdays, 7-8 h at weekends,
+      3-4 h before exams, occasional 10-11 h nights. On the Sleep Regularity Index he would score poorly,
+      and it is irregularity, not mean duration, that carried the mortality signal here. This is the one
+      framing in which the subject's specific pattern looks WORSE rather than better than a simple
+      "sleeps 6 h" phenotype. It also directly tensions with the weekend-catch-up literature
+      (akerstedt2019, li2026), which treats the same weekend extension as protective. Those two bodies
+      of evidence are in genuine conflict about whether weekend catch-up sleep helps or hurts.
+  (b) FOR him: if the mortality signal attaches to circadian irregularity rather than to accumulated
+      sleep debt, then it is a CONCURRENT exposure marker rather than a cumulative-damage marker, and
+      stopping the behaviour should stop the risk - which is exactly the question the downstream model is
+      trying to answer, and the answer favours near-complete reversibility.
+  .
+  COHORT OVERLAP WARNING: UK_Biobank accelerometer subsample; overlaps chaput2026, saintmaurice2024,
+  liang2023, li2026.
+shard: "s13_mortality"

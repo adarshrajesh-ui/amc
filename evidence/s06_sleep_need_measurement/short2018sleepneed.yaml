@@ -1,0 +1,92 @@
+study_id: short2018sleepneed
+citation: "Short MA, Weber N, Reynolds C, Coussens S, Carskadon MA. Estimating adolescent sleep need using dose-response modeling. Sleep. 2018;41(4):zsy011."
+doi: "10.1093/sleep/zsy011"
+pmid: "29325109"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Estimating adolescent sleep need using dose-response modeling"
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 34
+n_studies_pooled: null
+population:
+  age_mean: 16.0
+  age_range: [15, 17]
+  pct_female: null
+  country: "Australia"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: adolescent_sleep_need_from_10h_tib_opportunity
+    exposure: {type: sleep_extension, dose_h: 10, referent_h: null, duration_days: 4, contrast_label: "total sleep time obtained under 10-h time-in-bed opportunities (baseline + recovery nights)"}
+    scale: hours
+    unit: "hours of total sleep time"
+    value: 9.0
+    se: null
+    ci: null
+    conversion_formula: "verbatim: 'Sleep need estimated from 10-hour TIB sleep opportunities was approximately 9 hours'. The abstract gives no SD or CI and full text was inaccessible, so se: null. Note the word 'approximately' in the source."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "requirement estimate for 15-17 year olds. Derived from sleep obtained, so it is a satiated-sleep estimate; also implies sleep efficiency under a 10-h opportunity of about 9.0/10 = 90%."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      Sleep need estimated from 10-hour TIB sleep opportunities was approximately 9 hours, while modeling PVT
+      lapse data suggested that 9.35 hours of sleep is needed to maintain optimal sustained attention performance.
+  - outcome_domain: sleep_need
+    outcome_construct: adolescent_sleep_need_for_optimal_sustained_attention
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: 10, duration_days: 5, contrast_label: "sleep duration required to maintain optimal PVT performance, from dose-response model across 5 h / 7.5 h / 10 h TIB arms"}
+    scale: hours
+    unit: "hours of sleep needed to maintain optimal sustained attention"
+    value: 9.35
+    se: null
+    ci: null
+    conversion_formula: "verbatim: 'modeling PVT lapse data suggested that 9.35 hours of sleep is needed to maintain optimal sustained attention performance'. No CI in the abstract; full text paywalled (Unpaywall reports OA at academic.oup.com but the publisher returned HTTP 403 to automated retrieval)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "THE MOST DIRECTLY RELEVANT SLEEP-NEED ESTIMATE IN THE SHARD: functionally-defined (not opinion-defined) sleep need, measured in a within-subject lab protocol, in exactly our subject's early-window age band. Higher than every guideline midpoint."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      modeling PVT lapse data suggested that 9.35 hours of sleep is needed to maintain optimal sustained attention
+      performance. ... Adolescents require more sleep for optimal functioning than typically obtained.
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "T1 within-subject laboratory dose-response design with three TIB arms (5 h / 7.5 h / 10 h) over 9 nights, which is the strongest available design for estimating sleep need; but n=34 split across three arms, healthy volunteers, and abstract-only access means I cannot check the model form, the CI on 9.35 h, or whether an asymptote was genuinely reached. The 'sleep need' construct is model-dependent."
+funding: "not stated in retrieved abstract"
+notes: |
+  Verbatim (abstract, retrieved from PubMed):
+  "STUDY OBJECTIVES: This study will (1) estimate the nightly sleep need of human adolescents, (2) determine the time course
+  and severity of sleep-related deficits when sleep is reduced below this optimal quantity, and (3) determine whether sleep
+  restriction perturbs the circadian system as well as the sleep homeostat.
+  METHODS: Thirty-four adolescents aged 15 to 17 years spent 10 days and nine nights in the sleep laboratory. Between two
+  baseline nights and two recovery nights with 10 hours' time in bed (TIB) per night, participants experienced either severe
+  sleep restriction (5-hour TIB), moderate sleep restriction (7.5-hour TIB), or no sleep restriction (10-hour TIB) for five
+  nights. A 10-minute psychomotor vigilance task (PVT; lapse = response after 500 ms) and the Karolinska Sleepiness Scale were
+  administered every 3 hours during wake. Salivary dim-light melatonin onset was calculated at baseline and after four nights
+  of each sleep dose to estimate circadian phase.
+  RESULTS: Dose-dependent deficits to sleep duration, circadian phase timing, lapses of attention, and subjective sleepiness
+  occurred. Less TIB resulted in less sleep, more lapses of attention, greater subjective sleepiness, and larger circadian
+  phase delays. Sleep need estimated from 10-hour TIB sleep opportunities was approximately 9 hours, while modeling PVT lapse
+  data suggested that 9.35 hours of sleep is needed to maintain optimal sustained attention performance.
+  CONCLUSIONS: Sleep restriction perturbs homeostatic and circadian systems, leading to dose-dependent deficits to sustained
+  attention and sleepiness. Adolescents require more sleep for optimal functioning than typically obtained."
+  WHY THIS IS THE ANCHOR FOR AGES 16-18: it is the only T1 estimate of sleep need measured in 15-17 year olds. Both of its
+  numbers (9.0 h satiated, 9.35 h for optimal PVT) sit at or ABOVE the top of the NSF 8-10 h band midpoint and well above the
+  7 h adult floor. Anyone anchoring a 16-17 year old's requirement at 8 h is using a number this study contradicts.
+  ALSO NOTE THE 5-HOUR ARM: this protocol restricted adolescents to 5-hour TIB for five consecutive nights, which is almost
+  exactly our subject's reported weekday exposure. The dose-response deficits it documents (PVT lapses, sleepiness, circadian
+  phase delay) are the direct experimental analogue of the exposure being modelled, though the OUTCOME magnitudes belong to
+  the cognition shard, not this one.
+  WHAT IS MISSING: no between-person SD of sleep need is reported in the abstract. So this paper pins the CENTRE of the
+  adolescent sleep-need prior but contributes nothing to its SPREAD. The spread has to come from kitamura2016 (n=15, ages
+  20-26). See exposure_priors.md section (iv) and station_report.md for why this is the shard's biggest gap.
+shard: "s06_sleep_need_measurement"

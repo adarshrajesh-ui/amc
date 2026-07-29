@@ -1,0 +1,76 @@
+study_id: skorucak2018
+citation: "Skorucak J, Arbon EL, Dijk DJ, Achermann P. Response to chronic sleep restriction, extension, and subsequent total sleep deprivation in humans: adaptation or preserved sleep homeostasis? Sleep. 2018;41(7):zsy078."
+doi: "10.1093/sleep/zsy078"
+pmid: "29722893"
+url: "https://pubmed.ncbi.nlm.nih.gov/29722893/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Response to chronic sleep restriction, extension, and subsequent total sleep deprivation in humans: adaptation or preserved sleep homeostasis?"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 35
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "UK"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: sleep_homeostasis_does_not_adapt_to_chronic_restriction
+    exposure: {type: chronic_restriction, dose_h: 6, referent_h: 10, duration_days: 7, contrast_label: "7 days of 6 h TIB restriction vs 7 days of 10 h TIB extension, crossover, EEG slow-wave activity and slow-wave energy responses"}
+    scale: probability
+    unit: "direction indicator: 0 = no adaptation, homeostatic response preserved"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded as a direction indicator. The abstract reports that SWA responses did not diminish significantly over the intervention and did not deviate significantly from two-process model predictions; no effect size or SE is given for the null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = NO adaptation. This is the key answer to 'does sleep need itself change after chronic restriction?': in humans, the homeostatic process did NOT down-regulate over a week of 6 h TIB, and behaved as the standard two-process model predicts. The body does not learn to need less sleep - it stays in deficit. (Some rodent studies show homeostatic blunting; this study finds the human response preserved.)"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The SWA responses did not diminish significantly in the course of the intervention and did not deviate significantly from the predictions of the two-process model."
+  - outcome_domain: sleep_need
+    outcome_construct: rem_sleep_is_the_primary_casualty_of_restriction_within_ecological_range
+    exposure: {type: chronic_restriction, dose_h: 6, referent_h: 10, duration_days: 7, contrast_label: "sleep architecture after 7 days at 6 h TIB vs 7 days at 10 h TIB"}
+    scale: probability
+    unit: "direction indicator: 1 = REM sleep bore the reduction while SWA/SWE were largely spared"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded as a direction indicator; the abstract reports the architecture result qualitatively without magnitudes."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = REM selectively lost. Within the ecologically realistic 6-10 h range, restriction primarily removes REM sleep, while SWA and accumulated slow-wave energy are protected. Practical consequence: slow-wave sleep measures (including those from consumer wearables) will look normal in a chronically restricted person, so preserved deep sleep is not evidence of adequacy. Converges with Bougard 2018, where N3 was maintained yet microsleeps persisted."
+    covariates: []
+    followup_years: null
+    cohort_family: "Surrey_SR_extension_crossover"
+    quote: "Sleep restriction resulted primarily in a reduction of rapid eye movement (REM) sleep. SWA and accumulated SWA (slow-wave energy, SWE) were not much affected by sleep extension/restriction."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomized crossover with both a restriction (6 h TIB) and an extension (10 h TIB) arm in the same 35 participants plus a subsequent total-sleep-deprivation challenge - a strong design for the adaptation question specifically. Downgraded because I could obtain only the abstract, so I cannot check the model-fitting assumptions behind the 'no deviation from two-process predictions' conclusion, and cannot extract SEs. Critically, this is a NULL result being used as evidence for preserved homeostasis, and a null in n=35 does not exclude a modest degree of adaptation. Ages and sex distribution are not stated in the abstract, so those fields are null."
+funding: "Not verifiable from the abstract. The Surrey chronic sleep restriction/extension protocol was BBSRC-funded in related publications, but I did not verify this."
+notes: |
+  Directly addresses shard requirement 7 ("evidence on whether sleep need itself changes after chronic
+  restriction"). The answer, from the best available human design, is NO: over a week of 6 h TIB the
+  homeostatic slow-wave response neither blunted nor deviated from the two-process model, and the response to a
+  subsequent total-sleep-deprivation challenge did not differ between the previously-restricted and
+  previously-extended conditions.
+  Why this matters for the report: it rules out the most comforting possible interpretation of Belenky's
+  "the brain adapts to chronic sleep restriction" language. Belenky's group inferred adaptation from stabilised
+  (but reduced) performance. Skorucak et al. show the underlying sleep-regulatory process is NOT adapting - so
+  the performance plateau is a degraded steady state being held at a reduced level, not a new equilibrium in
+  which less sleep suffices. Kitamura's asymptote result points the same way: given unrestricted opportunity,
+  habitual short sleepers revert to ~8.4 h, i.e. their need never fell to match their habit.
+  Caveat to state plainly: this is a null finding on a 7-day exposure in adults. It does not exclude adaptation
+  over 3 years of restriction beginning in adolescence, which no study has tested.
+  ACCESS LIMITATION LOGGED: abstract only.
+shard: "s05_recovery_kinetics"

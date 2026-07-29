@@ -1,0 +1,96 @@
+study_id: meininger2014
+citation: "Meininger JC, Gallagher MR, Eissa MA, Nguyen TQ, Chan W. Sleep duration and its association with ambulatory blood pressure in a school-based, diverse sample of adolescents. Am J Hypertens. 2014 Jul;27(7):948-955."
+doi: "10.1093/ajh/hpt297"
+pmid: "24487981"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep Duration and Its Association With Ambulatory Blood Pressure in a School-Based, Diverse Sample of Adolescents"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 366
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [11, 16]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: cardiovascular
+    outcome_construct: ambulatory_24h_systolic_bp_per_hour_nighttime_sleep
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "per 1 additional hour of ACTIGRAPHY-measured nighttime sleep; 24-h ambulatory SBP measured every 30 min on a school day"}
+    scale: per_hour_beta
+    unit: "mmHg per additional hour of nighttime sleep"
+    value: -0.57
+    se: 0.1465
+    ci: null
+    conversion_formula: >
+      The paper reports the coefficient and a p-value bound only (-0.57 mm Hg, P < 0.0001), with no CI
+      or SE in the text I retrieved. SE bounded from the p-value: P < 0.0001 (two-sided) implies
+      |z| > 3.891, so SE < 0.57/3.891 = 0.1465. I record 0.1465, the MAXIMUM SE consistent with the
+      reported p-value, which is the conservative (widest) choice. The true SE is smaller.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      NEGATIVE = each extra hour of nighttime sleep is associated with LOWER 24-h systolic BP, so each
+      hour LOST is associated with +0.57 mmHg. Sign convention: harm from short sleep = positive BP
+      change, so the harm direction here is +0.57 mmHg per hour of sleep lost.
+    covariates: ["demographic factors", "anthropometric indices", "physical activity", "position and location at the time of each BP measurement", "duration of daytime sleep (napping)"]
+    followup_years: null
+    cohort_family: null
+    quote: "Controlling for duration of sleep during the day and covariables, each additional hour of nighttime sleep was associated with lower SBP (-0.57; P < 0.0001); controlling for nighttime sleep duration and covariables, each additional hour of daytime sleep was associated with lower SBP (-0.73; P < 0.001) and lower DBP (-0.50; P < 0.001)."
+  - outcome_domain: exposure_measurement
+    outcome_construct: actigraphy_measured_sleep_in_adolescents
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "observed mean nighttime sleep duration, actigraphy, US adolescents aged 11-16 on a school night"}
+    scale: hours
+    unit: "hours of actigraphy-measured nighttime sleep"
+    value: 6.83
+    se: 0.0711
+    ci: null
+    conversion_formula: "reported as mean 6.83 h (SD = 1.36) at night; SE of the mean = 1.36/sqrt(366) = 0.0711"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Not an effect - a NORMATIVE ANCHOR. The average US adolescent in this sample slept 6.83 h on a
+      school night by actigraphy, i.e. the subject's 5-6 h weekday sleep is short relative to peers but
+      the peer mean is itself well below guideline. Any cross-sectional adolescent comparison therefore
+      contrasts short sleepers against a reference group that is also sleep-restricted, biasing
+      estimated effects TOWARD ZERO.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The mean sleep duration was 6.83 (SD = 1.36) hours at night, and 7.23 (SD = 1.67) hours over 24 hours."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: >
+    Design strengths: objective actigraphy exposure and 24-h ambulatory BP (the same superior
+    instrumentation Covassin 2021 argues for), ethnically diverse school-based sample, adjustment for
+    posture and location at each BP reading. Fatal limitation for causal purposes: CROSS-SECTIONAL, so
+    tier TX (context only, not primary) per the shard's tier definitions. Reverse causation and
+    confounding by unmeasured factors are unaddressed; no CIs or SEs reported in the text for the
+    key coefficients; and the outcome is a continuous BP reading in healthy children, not incident
+    disease.
+funding: null
+notes: >
+  Target extraction #6, blood-pressure component - and the ONLY genuinely age-matched record in this
+  shard (ages 11-16, adjacent to the subject's 16-19 exposure window).
+  THE NUMBER THAT MATTERS: 0.57 mmHg of systolic BP per hour of sleep lost. For the subject, sleeping
+  roughly 1.5-2 h less than the ~7.5 h optimum on weekdays, the implied cross-sectional association is
+  about 0.9-1.1 mmHg of systolic BP. That is clinically negligible - roughly a tenth of the
+  within-person variability of a single BP measurement - and it is an ASSOCIATION, not a causal effect.
+  It is also reassuringly consistent in magnitude with the experimental evidence in young males
+  (hu2020_bp_rct_ma pooled WMD +1.0 mmHg, CI -2.3 to 4.2; covassin2021 null in men), which is the
+  strongest convergence available in this shard: three different designs all put a young male's BP
+  change from chronic short sleep at approximately 0-3 mmHg.
+  HONEST CAVEAT ON AGE MATCHING: adolescent_match is set to exact_16_19 because the sample is 11-16,
+  but the tier is TX and the outcome is a surrogate. There is NO prospective study of adolescent short
+  sleep predicting incident cardiovascular disease, because such a study would need decades of
+  follow-up from adolescence. This is the central evidence gap in the shard.
+shard: "s08_cardiovascular"

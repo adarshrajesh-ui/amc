@@ -1,0 +1,88 @@
+study_id: loh2004_short_pvt_validity
+citation: "Loh S, Lamond N, Dorrian J, Roach G, Dawson D. The validity of psychomotor vigilance tasks of less than 10-minute duration. Behav Res Methods Instrum Comput. 2004;36(2):339-346."
+doi: "10.3758/bf03195580"
+pmid: "15354700"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "The validity of psychomotor vigilance tasks of less than 10-minute duration"
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "AU"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: short_pvt_sensitivity_monotonic_loss_with_duration
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1, contrast_label: "one night of sustained wakefulness; 10-min PVT vs its first 5 min vs its first 2 min, same test sessions"}
+    scale: raw_units
+    unit: "minutes of test duration below which sensitivity to sleep loss is materially lost (lapse percentage failed at both 5 and 2 min)"
+    value: 5.0
+    se: null
+    ci: null
+    conversion_formula: "No numeric effect size is reported in the abstract; value 5.0 records the shortest duration the authors endorse ('the 5-min PVT may provide a viable alternative ... for some performance metrics'). NOT a pooled effect size - do not meta-analyse."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Shorter test = less sensitive, monotonically. Independent confirmation of the direction and the metric-dependence that Basner 2011's PVT-B paper quantified as a 22.7% mean effect-size loss at 3 min."
+    covariates: []
+    followup_years: null
+    cohort_family: "UniSA_Dawson_TSD"
+    quote: "However, the shorter the task sampling time, the less sensitive the test is to sleepiness. Nevertheless, the 5-min PVT may provide a viable alternative to the 10-min PVT for some performance metrics."
+  - outcome_domain: exposure_measurement
+    outcome_construct: lapse_percentage_is_the_first_metric_to_fail_on_short_pvt
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1, contrast_label: "which of 4 PVT metrics retained significant sensitivity on the first 5 min and first 2 min of the PVT"}
+    scale: raw_units
+    unit: "number of the 4 tested metrics that lost statistical significance when the test was shortened (1 of 4: lapse percentage)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Count derived from the abstract's explicit statement; a descriptive count, not an effect size."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Mean RT, fastest 10% RT and slowest 10% RT all survived shortening to 2 min; LAPSE PERCENTAGE did not. This is a second, independent line of evidence (alongside Sunwoo 2012's ICC 0.51 and Thompson 2022's SEM% 32.6-168.7% for error metrics) that a lapse-based primary outcome is the wrong choice for a short daily PVT."
+    covariates: []
+    followup_years: null
+    cohort_family: "UniSA_Dawson_TSD"
+    quote: "Performance during the first 5 min and the first 2 min of the PVT deteriorated in a manner similar to that observed for the whole 10-min task, with all metrics except lapse percentage displaying significant impairment across the night."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Abstract-only access (Springer/Psychonomic Society, 2004, not in PMC). Sample size, age and sex are not stated in the abstract, so n is null and adolescent_match is 'mixed' - a real weighting limitation. The three 'tests' are nested (the 5-min and 2-min data are the opening minutes of the same 10-min administrations), so they are perfectly dependent by construction; this isolates duration cleanly but means the short versions were performed with a 10-min expectation, which is the opposite confound to the one Basner 2011's PVT-B paper had (different hardware and known durations). Acute total sleep deprivation only - no chronic partial restriction, which is the exposure of interest here."
+funding: "Not extracted."
+notes: |
+  ADDED TO PART A2 BECAUSE THE PVT-B PAPER ALONE IS THIN. Basner, Mollicone & Dinges 2011 reports the
+  3-min PVT-B's effect-size attenuation (22.7% on average) but reports NO correlation with the 10-min
+  PVT (see the reality-check note in basner2011_pvtb.yaml). Loh 2004 is the independent, earlier,
+  differently-designed test of the same question, and it agrees on both of the points the protocol
+  depends on:
+    (1) sensitivity falls monotonically as the test is shortened - there is no free lunch in going from
+        10 min to 3 min;
+    (2) the metric that breaks first is the LAPSE-based one, while reaction-speed metrics survive.
+  Point (2) is the decisive one for this shard, because it converges with three other independent
+  sources on the same conclusion:
+    Loh 2004        lapse percentage loses significance at 5 and 2 min; speed metrics do not
+    Basner 2011     mean 1/RT rank 1 of 10 under chronic restriction (d_z 1.21); lapses rank 5 (0.91)
+    Sunwoo 2012     lapse-count ICC 0.51 vs median-RT ICC 0.69 (n = 372)
+    Thompson 2022   error/lapse metric SEM% 32.60-168.69% on a 5-min PVT vs 4.14% for mean RT
+  Four independent datasets, four different designs, same answer: use a SPEED metric (mean 1/RT), not
+  a lapse count, as the primary outcome of a short daily PVT.
+
+  DISAGREEMENT WITH BASNER ON THE MINIMUM DURATION, REPORTED AS REALITY. Loh 2004 endorses 5 min and is
+  non-committal about 2 min; Basner & Dinges 2011 found effect sizes saturating after the THIRD minute
+  under chronic partial restriction, and the validated PVT-B is 3 min. Thompson 2022 asserts (citing
+  others) that 5 min is "more valid" than 3 min. The literature genuinely does not agree on 3 vs 5 min.
+  protocol_basis.md handles this by specifying a 3-min PVT-B (because compliance dominates everything
+  else in a self-experiment) with the 355-ms lapse threshold and mean 1/RT as primary, while noting that
+  5 min would be strictly better if the subject will tolerate it, and by applying Basner's published
+  22.7% effect-size attenuation as a power penalty rather than pretending the short test is free.
+shard: "s20_pvt_psychometrics"

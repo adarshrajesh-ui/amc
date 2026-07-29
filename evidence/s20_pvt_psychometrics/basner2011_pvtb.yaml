@@ -1,0 +1,129 @@
+study_id: basner2011_pvtb
+citation: "Basner M, Mollicone D, Dinges DF. Validity and sensitivity of a brief psychomotor vigilance test (PVT-B) to total and partial sleep deprivation. Acta Astronaut. 2011;69(11-12):949-959."
+doi: "10.1016/j.actaastro.2011.07.015"
+pmid: "22025811"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3197786/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Validity and sensitivity of a brief psychomotor vigilance test (PVT-B) to total and partial sleep deprivation"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 74
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [22, 45]
+  pct_female: 45.9
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvtb_vs_pvt_effect_size_attenuation
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "3-min PVT-B vs standard 10-min PVT, averaged over 5 outcome metrics x (TSD, PSD)"}
+    scale: pct_change
+    unit: "% reduction in d_z when moving from the 10-min PVT to the 3-min PVT-B"
+    value: -22.7
+    se: null
+    ci: null
+    conversion_formula: "published average; range 6.9% to 67.8%. No SE reported and none derivable (it is a mean over 10 metric x paradigm cells, not an estimate with sampling error given)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = PVT-B is LESS sensitive than the 10-min PVT. This is the cost of shortening the test by 70%."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_TSD_PSD"
+    quote: "For all outcome variables and during both TSD and PSD, effect sizes for the PVT-B were lower compared to the PVT. They decreased on average by 22.7%. The smallest decrease (6.9%) was observed for the performance score during TSD and the highest decrease (67.8%) for the fastest 10% RT during PSD."
+  - outcome_domain: cognition
+    outcome_construct: pvtb_lapses_355ms_threshold
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 10, duration_days: 5, contrast_label: "PSD: 5 nights 4h TIB vs baseline; 3-min PVT-B, lapse threshold 355 ms"}
+    scale: cohens_d
+    unit: "d_z (paired)"
+    value: 0.76
+    se: null
+    ci: null
+    conversion_formula: "published point estimate; the paper's bootstrap CIs for this cell are shown only in Figure 2, which I did not digitise, so se is null"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = worse. With the standard 500 ms threshold the PVT-B d_z was only 0.65; lowering the threshold to 355 ms raised it to 0.76. Under TSD the equivalent pair was 1.38 -> 1.49."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_TSD_PSD"
+    quote: "After reducing the lapse threshold from 500 ms to 355 ms for PVT-B, mixed model ANOVAs indicated no differential sensitivity to sleep loss between PVT-B and PVT for all outcome variables (all P>0.15) but the fastest 10% response times during PSD (P<0.001), and effect sizes increased from 1.38 to 1.49 (TSD) and 0.65 to 0.76 (PSD), respectively."
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvtb_vs_pvt_differential_sensitivity_reciprocal_rt_psd
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "mixed-model ANOVA test-version x test-time interaction, mean reciprocal RT, PSD, DF 6;546"}
+    scale: probability
+    unit: "p-value for the version x time interaction (null = tests track each other equally)"
+    value: 0.39
+    se: null
+    ci: null
+    conversion_formula: "published p-value from Table 2; a p-value, not an effect size"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Non-significant interaction = PVT-B response speed tracks the 10-min PVT with NO differential sensitivity to chronic restriction. Corresponding TSD interaction p = 0.9217. This, not a correlation coefficient, is the validation statistic the paper reports."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_TSD_PSD"
+    quote: "Table 2 ... Mean RRT <.0001 <.0001 0.9217 <.0001 <.0001 0.3900 ... Slowest 10% RRT <.0001 <.0001 0.7735 <.0001 <.0001 0.9884"
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvtb_paired_administrations_contributing_to_validation
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "number of PVT-B / PVT test pairs performed in close temporal proximity"}
+    scale: raw_units
+    unit: "paired test administrations"
+    value: 1656
+    se: null
+    ci: null
+    conversion_formula: "published count"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive - establishes the density of the validation dataset"
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_TSD_PSD"
+    quote: "For this purpose, 74 subjects contributed 1,656 pairs of both versions of the test that were performed in close temporal proximity."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Same 74-subject TSD/PSD dataset as basner2011_pvt_metrics - the two records are NOT independent and must not be pooled as separate studies. Authors themselves flag a confound: the two tests ran on different hardware with different ISI ranges and subjects knew the durations differed, and test order was not counterbalanced in a crossover; they state that 'More studies using the same hardware for both tests and counter-balancing the order of test administration in a cross-over fashion are needed'. Effect sizes for individual PVT-B metrics are reported only in Figure 2, so only the values restated in the text/abstract are extractable."
+funding: "Not stated in the retrieved manuscript text; NASA-related (the PVT-B is the basis of the ISS 'Reaction Self Test')."
+notes: |
+  REALITY CHECK vs THE TASK BRIEF. The task asked for "the correlation and the effect-size
+  attenuation". The attenuation is reported (22.7% mean, 6.9-67.8% range). A CORRELATION
+  COEFFICIENT BETWEEN PVT-B AND PVT IS NOT REPORTED ANYWHERE IN THIS PAPER. The authors validated
+  concordance with (a) effect-size comparison and (b) mixed-model ANOVA version x time interaction
+  tests over 1,656 paired administrations. I did not fabricate an r. The nearest published
+  PVT-shortening correlation I could verify is in Grant et al. 2017 (grant2017_pvt3_smartphone),
+  which does report significant lapse-count correlations between a 3-min smartphone/tablet PVT
+  and a 10-min laptop PVT.
+
+  PVT-B DESIGN SPECIFICATION (needed to build the protocol):
+    - duration 3 min (70% shorter than the 10-min PVT)
+    - inter-stimulus interval 1-4 s (vs the standard 2-10 s). Because ISIs were shortened, the
+      SAMPLING RATE only fell 32.4% even though duration fell 70%.
+    - lapse threshold must be lowered from 500 ms to 355 ms, otherwise PVT-B under-counts lapses
+      and shows genuine differential insensitivity to sleep loss (version x time interaction
+      p<0.0001 with the 500 ms threshold; p=0.3531 with 355 ms in PSD, p=0.1554 in TSD).
+    - recommended primary outcomes for the PVT-B: mean 1/RT and slowest 10% 1/RT (the only two
+      metrics that retained LARGE Cohen effect sizes under chronic partial sleep deprivation),
+      plus the performance score (= 100% minus lapses+false starts over valid stimuli+false starts)
+      which lost the least sensitivity (6.9%) relative to the 10-min PVT.
+    - PVT-B responses are systematically FASTER, with MORE false starts and FEWER 500-ms lapses
+      than the 10-min PVT (all p<0.01), so PVT-B and PVT scores are NOT interchangeable in
+      absolute terms - only within-subject change is comparable.
+  Verbatim: "the utility of the PVT-B depends on the outcome metric" and, on PSD, "On the PVT-B,
+  only mean 1/RT and slowest 10% 1/RT still scored large effect sizes. The effect sizes of lapses
+  (both 500 ms and 355 ms definitions) and the performance score dropped to medium (>0.5 and
+  <0.8), while the effect size of fastest 10% RT dropped to low (>0.2 and <0.5)."
+
+  Also carries the group's (secondhand, chapter-cited) practice-effect claim: "An advantage the
+  PVT has over nearly all other cognitive tests is that it is virtually unaffected by either
+  aptitude (inter-individual variability) or learning (intra-subject variability) - that is, PVT
+  performance does not improve as a function of repeated administration. The test has high
+  reliability, with intra-class correlations measuring test-retest reliability above 0.8."
+  For a directly measured test of that claim see basner2020_practice_effects.
+shard: "s20_pvt_psychometrics"

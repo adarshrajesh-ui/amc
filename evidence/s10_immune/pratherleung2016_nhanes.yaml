@@ -1,0 +1,126 @@
+study_id: pratherleung2016_nhanes
+citation: "Prather AA, Leung CW. Association of insufficient sleep with respiratory infection among adults in the United States. JAMA Internal Medicine. 2016;176(6):850-852."
+doi: "10.1001/jamainternmed.2016.0787"
+pmid: "27064773"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4899278/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Association of Insufficient Sleep With Respiratory Infection Among Adults in the United States."
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 22726
+n_studies_pooled: null
+population:
+  age_mean: 46.2
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: immune
+    outcome_construct: self_reported_head_or_chest_cold_past_30d
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7.5, duration_days: null, contrast_label: "self-reported weekday sleep <=5 h vs 7-8 h; head or chest cold in the past 30 days"}
+    scale: log_or
+    unit: null
+    value: 0.1570
+    se: 0.0740
+    ci: [0.0100, 0.3001]
+    conversion_formula: "Model 2 (fully adjusted) OR 1.17 (1.01-1.35) -> log_or = ln(1.17) = 0.1570; se = (ln 1.35 - ln 1.01)/3.92 = 0.0740. Model 1 (age+sex only) was OR 1.28 (1.10-1.48), log_or = 0.2469, se = 0.0757."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. Barely significant after full adjustment (P = .04, lower CI bound 1.01) and substantially attenuated from the age/sex-adjusted estimate. A small effect."
+    covariates: ["age", "sex", "race/ethnicity", "education", "income", "BMI", "smoking", "alcohol", "physical activity", "self-reported health (Model 2)"]
+    followup_years: 0.082
+    cohort_family: "NHANES"
+    quote: "Head or Chest Colds | Sleep duration, h | <=5 | 624 (19.0) | 1.28 (1.10-1.48) | .001 | 1.17 (1.01-1.35) | .04 | 6 | 828 (16.1) | 1.04 (0.94-1.16) | .43 | 1.02 (0.91-1.14) | .75 | 7-8 | 1779 (15.5) | 1 [Reference] | | 1 [Reference] | | >=9 | 253 (15.7) | 1.03 (0.89-1.20) | .69 | 0.97 (0.83-1.14) | .73"
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_rate_head_or_chest_cold_past_30d_by_sleep_category
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7.5, duration_days: null, contrast_label: "ABSOLUTE weighted 30-day cold rate, <=5 h vs 7-8 h"}
+    scale: probability
+    unit: "absolute risk difference, proportion reporting a head/chest cold in 30 days"
+    value: 0.035
+    se: null
+    ci: null
+    conversion_formula: "Directly from the published table's weighted percentages: <=5 h = 19.0%, 6 h = 16.1%, 7-8 h = 15.5%, >=9 h = 15.7%. ARD = 19.0 - 15.5 = 3.5 percentage points. These are UNADJUSTED weighted rates, so the adjusted ARD would be smaller (the adjusted OR 1.17 on a 15.5% baseline implies about +2.2 points). No SE published for the weighted percentages, so se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. THIS IS THE KEY ABSOLUTE NUMBER for the domain: nationally, 15.5% of 7-8 h sleepers reported a cold in the past 30 days vs 19.0% of <=5 h sleepers - an absolute gap of 3.5 percentage points, i.e. roughly one extra cold-month per 29 short sleepers per month. Note the flat gradient: 6 h (16.1%) and >=9 h (15.7%) are barely different from 7-8 h."
+    covariates: []
+    followup_years: 0.082
+    cohort_family: "NHANES"
+    quote: "Head or Chest Colds | Sleep duration, h | <=5 | 624 (19.0) | ... | 6 | 828 (16.1) | ... | 7-8 | 1779 (15.5) | 1 [Reference] | ... | >=9 | 253 (15.7)"
+  - outcome_domain: immune
+    outcome_construct: self_reported_other_infection_past_30d_flu_pneumonia_ear
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7.5, duration_days: null, contrast_label: "self-reported weekday sleep <=5 h vs 7-8 h; influenza, pneumonia or ear infection in the past 30 days"}
+    scale: log_or
+    unit: null
+    value: 0.4121
+    se: 0.1255
+    ci: [0.1655, 0.6575]
+    conversion_formula: "Model 2 (fully adjusted) OR 1.51 (1.18-1.93) -> log_or = ln(1.51) = 0.4121; se = (ln 1.93 - ln 1.18)/3.92 = 0.1255. Model 1 was OR 1.82 (1.42-2.34)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. The effect on more serious infections (influenza/pneumonia/ear) is substantially larger than on colds - OR 1.51 vs 1.17 - and survives full adjustment at P = .001."
+    covariates: ["age", "sex", "race/ethnicity", "education", "income", "BMI", "smoking", "alcohol", "physical activity", "self-reported health (Model 2)"]
+    followup_years: 0.082
+    cohort_family: "NHANES"
+    quote: "Infections c | Sleep duration, h | <=5 | 188 (5.9) | 1.82 (1.42-2.34) | <.001 | 1.51 (1.18-1.93) | .001 | 6 | 193 (3.4) | 1.05 (0.82-1.34) | .71 | 0.97 (0.76-1.25) | .82 | 7-8 | 407 (3.3) | 1 [Reference] | | 1 [Reference] | | >=9 | 63 (2.9) | 0.93 (0.73-1.19) | .58 | 0.83 (0.65-1.06) | .14"
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_rate_other_infection_past_30d_by_sleep_category
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7.5, duration_days: null, contrast_label: "ABSOLUTE weighted 30-day rate of influenza/pneumonia/ear infection, <=5 h vs 7-8 h"}
+    scale: probability
+    unit: "absolute risk difference, proportion reporting infection in 30 days"
+    value: 0.026
+    se: null
+    ci: null
+    conversion_formula: "From the table's weighted percentages: <=5 h = 5.9%, 6 h = 3.4%, 7-8 h = 3.3%, >=9 h = 2.9%. ARD = 5.9 - 3.3 = 2.6 percentage points (unadjusted). se null - no SE published for weighted percentages."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. In relative terms this is a near-doubling (5.9% vs 3.3%), but in absolute terms it is 2.6 percentage points over 30 days. Absolute framing is essential here: the relative effect sounds much larger than the absolute one."
+    covariates: []
+    followup_years: 0.082
+    cohort_family: "NHANES"
+    quote: "Infections c | Sleep duration, h | <=5 | 188 (5.9) | ... | 6 | 193 (3.4) | ... | 7-8 | 407 (3.3) | 1 [Reference] | ... | >=9 | 63 (2.9)"
+  - outcome_domain: immune
+    outcome_construct: null_at_6_hours_sleep
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7.5, duration_days: null, contrast_label: "self-reported 6 h vs 7-8 h; colds AND infections"}
+    scale: log_or
+    unit: null
+    value: 0.0198
+    se: 0.0605
+    ci: [-0.0943, 0.1310]
+    conversion_formula: "Colds, Model 2: OR 1.02 (0.91-1.14) -> log_or = 0.0198; se = (ln 1.14 - ln 0.91)/3.92 = 0.0575. Infections, Model 2: OR 0.97 (0.76-1.25), log_or = -0.0305. Recorded here as the colds estimate; se rounded from the colds calculation."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "IMPORTANT NULL AND A THRESHOLD SIGNAL. positive would = harm. At 6 h/night there is NO detectable excess of colds (OR 1.02) or infections (OR 0.97) in 22,726 Americans. The whole association is carried by the <=5 h group. Directly relevant: the subject's weekday sleep of 5-6 h straddles the threshold at which this large population study starts to see anything at all."
+    covariates: ["age", "sex", "race/ethnicity", "education", "income", "BMI", "smoking", "alcohol", "physical activity", "self-reported health"]
+    followup_years: 0.082
+    cohort_family: "NHANES"
+    quote: "No such associations were observed among those who slept 6 and 9 or more hours."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "TIER TX - CONTEXT ONLY, NOT A PRIMARY CAUSAL ESTIMATE. Cross-sectional: sleep duration and 30-day infection history were reported at the same interview, so a cold could have caused the short sleep rather than the reverse (colds disrupt sleep), and the paper cannot distinguish these. Exposure and outcome are BOTH self-reported, the outcome by recall over 30 days. Strengths: very large (22,726), nationally representative with survey weights, and it reports absolute weighted rates by category, which is why I retained it - it is my best source of population-level ABSOLUTE infection rates. Mean age 46 y, so poorly matched to an 18-year-old."
+funding: "not extracted (research letter)"
+notes: |
+  Sample: "Participants were 22 726 Americans (mean [SE] age, 46.2 [0.3] years) enrolled in the 2005 to
+  2012 National Health and Nutrition Examination Surveys (NHANES)". Exposure distribution: 13.6%
+  reported <=5 h, 23.0% 6 h, 56.3% 7-8 h, 7.1% >=9 h.
+  WHY THIS RECORD EARNS ITS PLACE despite being TX: it is the only source in my set that gives
+  population ABSOLUTE 30-day infection rates by sleep-duration category, which the summary needs.
+  THE MOST DECISION-RELEVANT FEATURE is the shape, not the size: a clear step at <=5 h and NOTHING at
+  6 h. Combined with prather2015_rhinovirus (threshold at ~6 h actigraphic) and patel2012_pneumonia
+  (6 h null after full adjustment), three independent datasets place the inflection point around 5-6 h.
+  Two other rows in the same table are worth flagging: SLEEP DISTURBANCE ("trouble sleeping" told to a
+  physician) was associated with colds at OR 1.27 (1.13-1.42) in Model 2 - a MORE robust association
+  than short duration itself. Diagnosed sleep disorder predicted infections at OR 1.88 (1.39-2.53).
+  This reproduces the pattern in irwin2016_inflammation_meta: sleep DISTURBANCE beats sleep DURATION
+  as a predictor of immune outcomes.
+  Note on the infections outcome definition: footnote c in the published table defines it as
+  influenza, pneumonia, or ear infections in the past 30 days.
+shard: "s10_immune"

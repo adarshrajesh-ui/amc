@@ -1,0 +1,133 @@
+study_id: fan2019
+citation: "Fan L, Xu W, Cai Y, Hu Y, Wu C. Sleep Duration and the Risk of Dementia: A Systematic Review and Meta-analysis of Prospective Cohort Studies. Journal of the American Medical Directors Association. 2019 Dec;20(12):1480-1487.e5."
+doi: "10.1016/j.jamda.2019.06.009"
+pmid: "31604673"
+url: "https://pubmed.ncbi.nlm.nih.gov/31604673/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Sleep Duration and the Risk of Dementia: A Systematic Review and Meta-analysis of Prospective Cohort Studies."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: null
+n_studies_pooled: 7
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multiple"
+  adolescent_match: poor_elderly
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_all_cause_dementia_SHORT_sleep_duration
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "short sleep duration vs normal, as defined in each contributing prospective cohort; 7 studies for all-cause dementia"}
+    scale: log_hr
+    unit: null
+    value: 0.18232
+    se: 0.14236
+    ci: [-0.09431, 0.46373]
+    conversion_formula: >
+      HR = 1.20, 95% CI 0.91-1.59. log_hr = ln(1.20) = 0.18232;
+      se = (ln(1.59) - ln(0.91))/3.92 = (0.46373 - (-0.09431))/3.92 = 0.14236.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE point estimate but the CI CROSSES THE NULL and the authors report it as NOT statistically
+      associated. THIS IS DISCONFIRMING EVIDENCE FOR THE HEADLINE CLAIM: a dedicated meta-analysis of
+      prospective cohorts, restricted to sleep DURATION rather than lumped sleep problems, found that short
+      sleep was not significantly associated with all-cause dementia.
+    covariates: ["as adjusted in the contributing primary studies (heterogeneous)"]
+    followup_years: null
+    cohort_family: null
+    quote: "Short sleep duration was not statistically associated with an increased risk of all-cause dementia (HR = 1.20, 95% CI = 0.91-1.59) or AD (HR = 1.18, 95% CI = 0.91-1.54)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_alzheimers_disease_SHORT_sleep_duration
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "short sleep duration vs normal; 6 studies for Alzheimer's disease"}
+    scale: log_hr
+    unit: null
+    value: 0.16551
+    se: 0.13421
+    ci: [-0.09431, 0.43178]
+    conversion_formula: >
+      HR = 1.18, 95% CI 0.91-1.54. log_hr = ln(1.18) = 0.16551;
+      se = (ln(1.54) - ln(0.91))/3.92 = (0.43178 - (-0.09431))/3.92 = 0.13421.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE point estimate, CI CROSSES THE NULL. Null for the specific disease that the mechanistic
+      amyloid chain is about. If short sleep caused Alzheimer's through amyloid, this is the estimate that
+      should have been positive, and it is not.
+    covariates: ["as adjusted in the contributing primary studies (heterogeneous)"]
+    followup_years: null
+    cohort_family: null
+    quote: "Short sleep duration was not statistically associated with an increased risk of all-cause dementia (HR = 1.20, 95% CI = 0.91-1.59) or AD (HR = 1.18, 95% CI = 0.91-1.54)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_all_cause_dementia_LONG_sleep_duration
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "long sleep duration vs normal, as defined in each contributing cohort; 7 studies"}
+    scale: log_hr
+    unit: null
+    value: 0.57098
+    se: 0.14930
+    ci: [0.27763, 0.86289]
+    conversion_formula: >
+      HR = 1.77, 95% CI 1.32-2.37. log_hr = ln(1.77) = 0.57098;
+      se = (ln(2.37) - ln(1.32))/3.92 = (0.86289 - 0.27763)/3.92 = 0.14930.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = harm from LONG sleep. The only significant duration finding in this meta-analysis points
+      at long, not short, sleep. Long sleep is not the subject's exposure.
+    covariates: ["as adjusted in the contributing primary studies (heterogeneous)"]
+    followup_years: null
+    cohort_family: null
+    quote: "Pooled analyses showed that long sleep duration was associated with a 77% increased risk of all-cause dementia [hazard ratio (HR) = 1.77, 95% confidence interval (CI) = 1.32-2.37] and a 63% increased risk of AD (HR = 1.63, 95% CI = 1.24-2.13)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_alzheimers_disease_LONG_sleep_duration
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "long sleep duration vs normal; 6 studies for Alzheimer's disease"}
+    scale: log_hr
+    unit: null
+    value: 0.48858
+    se: 0.13801
+    ci: [0.21511, 0.75612]
+    conversion_formula: >
+      HR = 1.63, 95% CI 1.24-2.13. log_hr = ln(1.63) = 0.48858;
+      se = (ln(2.13) - ln(1.24))/3.92 = (0.75612 - 0.21511)/3.92 = 0.13801.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = harm from long sleep on Alzheimer's specifically."
+    covariates: ["as adjusted in the contributing primary studies (heterogeneous)"]
+    followup_years: null
+    cohort_family: null
+    quote: "Pooled analyses showed that long sleep duration was associated with a 77% increased risk of all-cause dementia [hazard ratio (HR) = 1.77, 95% confidence interval (CI) = 1.32-2.37] and a 63% increased risk of AD (HR = 1.63, 95% CI = 1.24-2.13)."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    Restricted to PROSPECTIVE cohorts and to sleep DURATION specifically, which makes it more relevant to
+    this shard's question than Bubu 2017 despite pooling far fewer studies. Concerns: only 7 studies for
+    all-cause dementia and 6 for AD; heterogeneity statistics are not given in the abstract and the full
+    text is paywalled with no PMC deposit, so I2 is UNKNOWN to this shard; "short" and "long" are defined
+    by each contributing cohort rather than harmonised; follow-up durations are not stated in the abstract;
+    and the contributing cohorts are predominantly elderly at baseline, so reverse causation is unaddressed.
+funding: "See paper"
+notes: >
+  DISCONFIRMING EVIDENCE, and the cleanest single refutation of the claim that the epidemiology
+  establishes short-sleep harm. Retrieved as ABSTRACT ONLY (paywalled, no PMC deposit).
+  Authors' own conclusion, verbatim: "CONCLUSIONS AND IMPLICATIONS: Only long sleep duration is
+  significantly associated with an increased risk of all-dementia and AD. Future studies are needed to
+  better understand the mechanisms underlying this association."
+  READ ALONGSIDE wu2018.yaml, which pooled a partly overlapping but broader literature (9 cohorts, 22,187
+  participants, outcome = any "cognitive disorder") and DID find short sleep significant at RR 1.34
+  (1.15-1.56). The two disagree because they define the outcome differently: Fan restricted to dementia
+  and AD diagnoses in prospective cohorts, Wu included cognitive decline and cognitive impairment. The
+  narrower and harder the outcome, the weaker the short-sleep signal. That gradient is diagnostic and
+  should be reported.
+shard: "s14_dementia_amyloid"

@@ -1,0 +1,111 @@
+study_id: senn2019_nof1_sample_size
+citation: "Senn S. Sample size considerations for n-of-1 trials. Statistical Methods in Medical Research. 2019;28(2):372-383."
+doi: "10.1177/0962280217726801"
+pmid: "28882093"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sample size considerations for n-of-1 trials"
+access_tier: abstract_only
+secondhand_via: null
+design: guideline_consensus
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "LU"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: nof1_sample_size_planning_criteria_count
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: null
+      contrast_label: "number of distinct criteria identified for planning sample sizes in n-of-1 trials"
+    scale: raw_units
+    unit: "planning criteria"
+    value: 5.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly in the abstract: 'five different criteria for planning sample sizes for n-of-1 trials are identified'. A count; no uncertainty applies."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Descriptive count, not a health effect. Recorded to register the methodological source used for the power arithmetic in protocol_basis.md."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+rob:
+  tool: none
+  judgement: na
+  notes: "Methodological/statistical paper, not an empirical study; contributes no effect estimate. ABSTRACT ONLY - Unpaywall reports is_oa = False for 10.1177/0962280217726801 and I found no repository copy, so I have the MODEL STRUCTURE from the abstract but NOT the five criteria individually, NOT the formulae, and NOT the worked examples. The power arithmetic in protocol_basis.md is therefore MY OWN standard paired-t computation, and I have labelled it as such rather than attributing it to Senn."
+funding: "Not stated in abstract"
+notes: |
+  ===== PART C8: THE CORRECT VARIANCE STRUCTURE FOR N-OF-1 POWER =====
+  ACCESS LIMITATION, STATED PLAINLY: abstract only, paywalled, no OA copy located. What the abstract
+  does give is the thing that matters most for my shard - the correct VARIANCE DECOMPOSITION for
+  n-of-1 power - and it is worth quoting exactly because it identifies the component that the naive
+  calculation omits.
+
+  VERBATIM ABSTRACT
+  -----------------
+  "N-of-1 trials are trials in which patients are treated with two or more treatments on multiple
+  occasions. They can have many different purposes and can be analysed in different frameworks. In
+  this note, five different criteria for planning sample sizes for n-of-1 trials are identified, and
+  formulae and advice to address the associated tasks are provided. The basic design addressed is that
+  of randomisation to treatment and control within cycles of pairs of episodes and the model assumed is
+  that of a Normal-Normal mixture with variance components corresponding to within-cycle within-patient
+  variation and treatment-by-patient interaction. The code to accomplish the tasks has been written in
+  GenStat(R), SAS(R) and R(R) and the application of the approaches is illustrated."
+
+  THE THREE THINGS THIS ESTABLISHES FOR THE PROTOCOL
+  -------------------------------------------------
+  1. THE CANONICAL DESIGN is "randomisation to treatment and control within cycles of pairs of
+     episodes". This is the same ABAB pair structure CENT 2015 defines, arrived at independently from
+     the statistical side. The n-of-1 sleep protocol should be built out of RANDOMISED PAIRS
+     (short-sleep night/block vs long-sleep night/block, order randomised within each pair), not as
+     one long restriction block followed by one long extension block.
+
+  2. THE VARIANCE COMPONENTS THAT MATTER are named as "within-cycle within-patient variation" and
+     "treatment-by-patient interaction". For a single-subject experiment this maps onto:
+       * within-cycle within-person variation = the night-to-night noise in the daily PVT metric at a
+         fixed sleep condition. THIS is the SD that belongs in the denominator of an n-of-1 power
+         calculation - not the between-subject SD that published group studies report. Getting this
+         right is the entire reason Part A3 of my brief exists.
+       * treatment-by-patient interaction = the individual-differences term. In a single-subject trial
+         this is not estimable and does not inflate the within-person contrast; it is precisely why
+         a population effect size can badly misestimate this one person (see
+         vandongen2004_traitlike.yaml, ICC 0.675 for PVT lapses) and therefore why the n-of-1 design
+         is the right choice for this subject at all.
+
+  3. "They can have many different purposes" - the five criteria being distinct means the required
+     number of periods depends on WHICH question is asked (detect an effect in this patient; estimate
+     it with given precision; estimate the population mean from a series; estimate the
+     treatment-by-patient interaction; make a treatment decision). The report must state which one it
+     is powering for. My protocol_basis.md powers criterion 1 for a single individual: detect a
+     within-person mean difference at alpha = 0.05, two-sided, 80% power.
+
+  HONEST ATTRIBUTION NOTE
+  -----------------------
+  Because I could not read the formulae, the arithmetic in protocol_basis.md is the ordinary
+  paired-t / one-sample-t sample size computation
+      n = (z_{1-alpha/2} + z_{1-beta})^2 / d_z^2  (normal approximation, then iterated on the t
+      distribution),
+  with the within-person night-to-night SD taken from the empirical reliability records in Part A3.
+  It is NOT Senn's formula and is NOT presented as such. Two Senn-flagged complications that my simple
+  calculation does NOT handle, and which I flag as limitations in protocol_basis.md:
+    (a) SERIAL AUTOCORRELATION between consecutive nights - a paired-t treats nights as independent;
+        real daily PVT series are positively autocorrelated, which INFLATES the required number of
+        nights relative to my figure. StatinWISE handled the analogous problem with a first-order
+        autoregressive error structure within each treatment period.
+    (b) CARRYOVER / period effects - Belenky 2003 shows a restriction period contaminates the next
+        several nights, so the effective number of independent pairs is smaller than the nominal count.
+  Both push in the same direction: my computed n is a LOWER BOUND on the nights actually required.
+shard: "s20_pvt_psychometrics"

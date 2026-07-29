@@ -1,0 +1,111 @@
+study_id: seshadri1997_dementia_lifetime
+citation: Seshadri S, Wolf PA, Beiser A, Au R, McNulty K, White R, D'Agostino RB. Lifetime risk of dementia
+  and Alzheimer's disease. The impact of mortality on risk estimates in the Framingham Study. Neurology.
+  1997;49(6):1498-1504.
+doi: 10.1212/wnl.49.6.1498
+pmid: '9409336'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Lifetime risk of dementia and Alzheimer's disease. The impact of mortality on risk estimates
+    in the Framingham Study.
+access_tier: abstract_only
+design: prospective_cohort_objective
+n: 2611
+population:
+  age_mean: 66.0
+  age_range:
+  - 65
+  - 100
+  pct_female: 59.4
+  country: US
+  adolescent_match: poor_elderly
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: remaining_lifetime_risk_dementia_age_65_male
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: remaining lifetime risk of any dementing illness for a 65-year-old man
+  value: 0.109
+  se: 0.014795918367346941
+  ci:
+  - 0.08
+  - 0.138
+  conversion_formula: se = (0.138 - 0.080)/3.92 = 0.0148 on the probability scale
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. Competing mortality accounted for.
+  covariates: []
+  followup_years: 20.0
+  cohort_family: Framingham
+  quote: In a 65-year-old man, the remaining lifetime risk of AD was 6.3% (95% CI, 3.9 to 8.7) and the
+    remaining lifetime risk of developing any dementing illness was 10.9% (95% CI, 8.0 to 13.8); corresponding
+    risks for a 65-year-old woman were 12% (95% CI, 9.2 to 14.8) and 19% (95% CI, 17.2 to 22.5).
+- outcome_domain: baseline_risk
+  outcome_construct: remaining_lifetime_risk_alzheimer_age_65_male
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: remaining lifetime risk of Alzheimer's disease for a 65-year-old man
+  value: 0.063
+  se: 0.012244897959183673
+  ci:
+  - 0.039
+  - 0.087
+  conversion_formula: se = (0.087 - 0.039)/3.92 = 0.0122
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease.
+  covariates: []
+  followup_years: null
+  cohort_family: Framingham
+  quote: In a 65-year-old man, the remaining lifetime risk of AD was 6.3% (95% CI, 3.9 to 8.7) ...
+- outcome_domain: baseline_risk
+  outcome_construct: cumulative_incidence_dementia_65_to_100_male_NOT_competing_adjusted
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: cumulative incidence of dementia, men, age 65 to 100, mortality ignored
+  value: 0.328
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'higher = more disease. NEGATIVE CONTROL: 32.8% ignoring competing mortality versus
+    10.9% accounting for it, a factor of 3.01, in the same men. The authors'' framing: ''Conventional
+    estimates of cumulative incidence overestimate the risk when there is a substantial probability of
+    mortality due to competing causes.'' No CI reported, so se is null.'
+  covariates: []
+  followup_years: null
+  cohort_family: Framingham
+  quote: 'The cumulative incidence between age 65 and 100 years was much higher: for AD, 25.5% in men
+    and 28.1% in women; for dementia, 32.8% in men and 45% in women. The actual remaining lifetime risk
+    of AD or dementia varies with age, sex, and life expectancy and is lower than the hypothetical risk
+    estimated by a cumulative incidence in the same population.'
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: 1997 vintage, mean baseline age 66, only 198 incident dementia cases. Elderly index age, so transportability
+    to a 19-year-old is poor except as a demonstration of the competing-risk principle.
+funding: NIH/NIA/NINDS
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

@@ -1,0 +1,96 @@
+study_id: mitterling2015
+citation: "Mitterling T, Hogl B, Schonwald SV, Hackner H, Gabelia D, Biermayr M, Frauscher B. Sleep and Respiration in 100 Healthy Caucasian Sleepers - A Polysomnographic Study According to American Academy of Sleep Medicine Standards. Sleep. 2015;38(6):867-875."
+doi: "10.5665/sleep.4730"
+pmid: "25515109"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4434553/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Sleep and Respiration in 100 Healthy Caucasian Sleepers-A Polysomnographic Study According to American Academy of Sleep Medicine Standards."
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: 100
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [19, 77]
+  pct_female: null
+  country: "Austria"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: psg_sleep_efficiency_tst_over_tib_under_30y
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 1, contrast_label: "PSG sleep efficiency (TST/time in bed), youngest age stratum (<= 30 y), single in-laboratory night"}
+    scale: probability
+    unit: "proportion of time in bed spent asleep"
+    value: 0.870
+    se: null
+    ci: [0.719, 0.941]
+    conversion_formula: "Abstract reports 'sleep efficiency [<= 30 y: 87.0 (71.9-94.1)%]'. value = 87.0/100 = 0.870 (this is a MEDIAN, not a mean). ci field holds the bracketed percentile range as printed, /100. DERIVED SD: the paper states it produced 'percentile curves' but the abstract does not label which percentiles the bracketed values are. If 5th-95th, SD ~ (94.1-71.9)/3.29 = 6.75 percentage points (0.0675). If 10th-90th, SD ~ (94.1-71.9)/2.56 = 8.67 points (0.0867). I did not get the full text, so the SD is NOT recorded as a point estimate here; se is left null."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "higher = more of time in bed is actually asleep. This is the multiplier the model needs to convert a reported TIME IN BED into TOTAL SLEEP TIME. Note the distribution is left-skewed (median 87.0 sits 15.1 points above the lower bound but only 7.1 points below the upper), because efficiency is bounded at 100%."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Percentile curves showed age-related differences in sleep architecture: a decrease was found for sleep efficiency [<= 30 y: 87.0 (71.9-94.1)% versus > 60 y: 79.7 (44.5-90.9)%]"
+  - outcome_domain: exposure_measurement
+    outcome_construct: psg_waso_percent_under_30y
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 1, contrast_label: "PSG wake after sleep onset as % of time in bed, <= 30 y"}
+    scale: probability
+    unit: "proportion of time in bed awake after sleep onset"
+    value: 0.060
+    se: null
+    ci: [0.019, 0.228]
+    conversion_formula: "Abstract: 'the percentage of wake time after sleep onset increased with age [<= 30 y 6.0 (1.9-22.8)% versus > 60 y: 15.2 (6.3-48.7)%]'. value = 6.0/100 (median); ci = printed percentile range /100."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "higher = more fragmented sleep. Together with sleep-onset latency this is the arithmetic complement of sleep efficiency; it decomposes WHERE the TIB-TST gap comes from in young adults (median only 6% WASO, so most of the 13% inefficiency at <= 30 y is sleep-onset latency plus time awake before rising)."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "whereas the percentage of wake time after sleep onset increased with age [<= 30 y 6.0 (1.9-22.8)% versus > 60 y: 15.2 (6.3-48.7)%]"
+  - outcome_domain: sleep_need
+    outcome_construct: psg_total_sleep_time_under_30y_fixed_opportunity
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 1, contrast_label: "PSG total sleep time, <= 30 y, single laboratory night"}
+    scale: hours
+    unit: "hours"
+    value: 6.892
+    se: null
+    ci: [5.760, 7.532]
+    conversion_formula: "Abstract: 'total sleep time [<= 30 y: 413.5 (345.6-451.9) min ...]'. value = 413.5/60 = 6.892 h (median); ci = 345.6/60 and 451.9/60."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "descriptive only. THIS IS NOT A SLEEP-NEED ESTIMATE: it is one lab night under a laboratory schedule, and it is CENSORED by the time in bed the protocol allowed. Contrast with the sleep-satiation designs (klerman2008 8.9 h, kitamura2016 8.41 h, short2018sleepneed 9.0 h) which deliberately removed that ceiling."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "a decrease was found for sleep efficiency [<= 30 y: 87.0 (71.9-94.1)% versus > 60 y: 79.7 (44.5-90.9)%], total sleep time [<= 30 y: 413.5 (345.6-451.9) min versus > 60 y: 378.3 (216.0-440.0) min]"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Strengths: healthy sleepers drawn from a representative population sample via two-step screening, current AASM scoring criteria, single site. Weaknesses for our purpose: only ONE laboratory night per subject with no habituation night reported in the abstract, so the values carry a first-night effect that biases sleep efficiency DOWNWARD; the <= 30 y stratum is not broken out further, so the n for ages 19-25 is unknown and the stratum may be dominated by people in their late twenties; medians with unlabelled percentile ranges rather than means with SDs; single-country (Austria), all Caucasian; 8% of this 'healthy' sample had an apnea-hypopnea index > 15/h."
+funding: "Not stated in the abstract"
+notes: |
+  PRIMARY SOURCE for shard task 8 (sleep-efficiency norms in a young-adult band) because it is the only retrieved study
+  reporting PSG sleep efficiency for a stratum (<= 30 y) that actually contains 18-25 year olds. Access is abstract-only:
+  the PMC deposit (PMC4434553) contains the abstract but not the tables or the percentile curves, and the OUP PDF is
+  behind Cloudflare. Everything above is quoted from the abstract verbatim.
+  ARITHMETIC CHECK on internal consistency of the <= 30 y stratum: TST 413.5 min at 87.0% efficiency implies time in bed
+  of 413.5/0.870 = 475.3 min = 7.92 h, and hence a TIB-minus-TST gap of 61.8 min. WASO accounts for 6.0% of TIB
+  = 28.5 min of that, leaving ~33 min for sleep-onset latency plus time awake before rising. That is consistent with the
+  independent pediatric sleep-onset-latency estimate of 19.4 min in galland2018.
+  WHY THE MEDIAN, NOT THE MEAN, IS WHAT IS REPORTED: the paper's design goal was percentile CURVES for clinical reference,
+  so it reports medians. For a Bayesian prior on a bounded, left-skewed quantity the median is arguably the better central
+  anchor anyway, but the modeller should not treat 0.870 as a mean of a symmetric distribution.
+  TRIANGULATION for sleep efficiency (TST/TIB), all from PSG:
+    Mitterling 2015, <= 30 y, Austria, lab       : 0.870 (median; percentile range 0.719-0.941)
+    Meredith-Jones 2024, ages 8-16, NZ, at home  : 0.891 (mean; SD 0.125)  <- see meredithjones2024.yaml
+    Boulos 2019, adult PSG meta-analysis         : declines 2.1 percentage points per decade of age <- see boulos2019.yaml
+  Ohayon 2004 independently establishes that sleep efficiency does NOT change across adolescence (effect size 0.01, 95% CI
+  -0.13 to 0.15; see ohayon2004.yaml), which is what licenses borrowing the 8-16 y and <= 30 y values for a 16-19 year old.
+  The two point estimates bracket 0.87-0.89 and that is the basis for exposure_priors.md section (iii).
+shard: "s06_sleep_need_measurement"

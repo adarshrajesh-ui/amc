@@ -1,0 +1,75 @@
+study_id: mcneil2017
+citation: 'McNeil J, St-Onge MP. Increased energy intake following sleep restriction in men and women: A one-size-fits-all conclusion? Obesity (Silver Spring). 2017;25(6):989-992.'
+doi: 10.1002/oby.21831
+pmid: '28401667'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Increased energy intake following sleep restriction in men and women: A one-size-fits-all conclusion?'
+access_tier: abstract_only
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 43
+n_studies_pooled: null
+population:
+  age_mean: 31.0
+  age_range: null
+  pct_female: null
+  country: US/Canada
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: metabolic
+  outcome_construct: energy_intake_response_phase_order_effect
+  exposure:
+    type: chronic_restriction
+    dose_h: 3.75
+    referent_h: 8.0
+    duration_days: null
+    contrast_label: 3.5-4 h TIB vs 7-9 h TIB; effect of randomisation order on delta-EI
+  scale: raw_units
+  unit: kcal/day
+  value: -568.0
+  se: 180.102
+  ci:
+  - -921.0
+  - -215.0
+  conversion_formula: se = (-215 - (-921))/3.92 = 180.10
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Negative = participants randomised to habitual sleep FIRST showed LARGER intake increases under restriction. Encodes an order/carryover artefact that inflates crossover estimates of the intake effect.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Only phase order was associated with deltaEI (beta = -568 kcal/d, 95% confidence interval for beta = -921 to -215 kcal/d; P = 0.002); participants randomized to the habitual sleep condition first had greater increases in EI when sleep was restricted (P = 0.01).
+- outcome_domain: metabolic
+  outcome_construct: energy_intake_response_interindividual_range
+  exposure:
+    type: chronic_restriction
+    dose_h: 3.75
+    referent_h: 8.0
+    duration_days: null
+    contrast_label: observed range of individual delta-EI (restricted minus habitual sleep)
+  scale: raw_units
+  unit: kcal/day (width of observed range)
+  value: 2250.0
+  se: null
+  ci: null
+  conversion_formula: range width = 1437 - (-813) = 2250 kcal/day. Descriptive spread, not a mean effect; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'Encodes HETEROGENEITY: a substantial minority of individuals ATE LESS under sleep restriction. The population-mean +385 kcal/day does not describe any given individual, including our subject.'
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Large interindividual variations in EI change (deltaEI) between restricted and habitual sleep conditions were noted (-813 to 1437 kcal/d).
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: Pooled individual data from two randomised crossover trials (n=43), age 31 +/- 7 y. Purpose is heterogeneity characterisation, not effect estimation.
+funding: not stated in abstract
+notes: 'Use for VARIANCE, not for the mean. Authors'' conclusion: ''suggesting that not all participants were negatively impacted by the effects of sleep restriction.'''
+shard: s09_obesity_bmi

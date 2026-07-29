@@ -1,0 +1,142 @@
+study_id: michaud2021
+citation: "Michaud AL, Zhou ES, Chang G, Recklitis CJ. Validation of the Insomnia Severity Index (ISI) for identifying insomnia in young adult cancer survivors: comparison with a structured clinical diagnostic interview of the DSM-5 (SCID-5). Sleep Med. 2021;81:80-85."
+doi: "10.1016/j.sleep.2021.01.045"
+pmid: "33640841"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Validation of the Insomnia Severity Index (ISI) for identifying insomnia in young adult cancer survivors: comparison with a structured clinical diagnostic interview of the DSM-5 (SCID-5)."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 250
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: isi_auc_against_scid5_insomnia_young_adults
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "discrimination of ISI total score against SCID-5-diagnosed DSM-5 insomnia disorder, young adult sample"}
+    scale: probability
+    unit: "area under the ROC curve"
+    value: 0.91
+    se: null
+    ci: null
+    conversion_formula: "Reported as AUC = 0.91 with no CI in the abstract; full text not retrieved, so se and ci are null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = better discrimination. 0.91 is excellent, and importantly this is against a STRUCTURED DSM-5 CLINICAL INTERVIEW (SCID-5), the gold standard - not against another questionnaire."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The ISI had excellent discrimination, with an AUC = 0.91."
+  - outcome_domain: exposure_measurement
+    outcome_construct: isi_screening_cutoff_8_young_adults
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "ISI >= 8 as a clinical SCREENING threshold in young adults (criterion: sensitivity >= 0.85 and specificity >= 0.75)"}
+    scale: raw_units
+    unit: "ISI points (0-28); score >= 8 = screen positive"
+    value: 8.0
+    se: null
+    ci: null
+    conversion_formula: "Threshold, not an estimate. Sensitivity 0.85, specificity 0.77 at this cut-off. DERIVED BY ME: LR+ = 0.85/(1-0.77) = 0.85/0.23 = 3.696; LR- = (1-0.85)/0.77 = 0.15/0.77 = 0.1948. Compare Morin 2011's community cut-off of >= 10 (sens 0.861, spec 0.877), which gives LR+ 7.00 and LR- 0.159."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "The optimal SCREENING cut-off in this young-adult sample was 8, LOWER than the >= 10 derived by Morin in a middle-aged community sample. LR+ is correspondingly weaker (3.70 vs 7.00) but LR- is comparable (0.195 vs 0.159)."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "A cut-off score >=8 met study clinical screening criteria with sensitivity of 0.85 and specificity of 0.77. A cut-off score >=7 with a higher sensitivity (0.96) but lower specificity (0.70) was noted as a potential alternative. Cut-off scores >=12 and >= 14 were recommended for applications prioritizing overall accuracy."
+  - outcome_domain: exposure_measurement
+    outcome_construct: isi_high_sensitivity_cutoff_7_young_adults
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "ISI >= 7 as a high-sensitivity RULE-OUT threshold in young adults"}
+    scale: raw_units
+    unit: "ISI points (0-28); score >= 7 = screen positive"
+    value: 7.0
+    se: null
+    ci: null
+    conversion_formula: "Sensitivity 0.96, specificity 0.70. DERIVED BY ME: LR+ = 0.96/0.30 = 3.200; LR- = 0.04/0.70 = 0.0571. This LR- of 0.057 makes ISI < 7 the single strongest RULE-OUT for insomnia disorder in my whole instrument set."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Use for ruling OUT: an ISI below 7 divides the insomnia odds by ~17.5. At my adopted adolescent prior of 18% (odds 0.220), an ISI < 7 gives posterior odds 0.0126 = 1.2% probability."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "A cut-off score >=7 with a higher sensitivity (0.96) but lower specificity (0.70) was noted as a potential alternative."
+  - outcome_domain: baseline_risk
+    outcome_construct: scid5_insomnia_disorder_prevalence_in_sample
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "proportion meeting DSM-5 insomnia disorder criteria on SCID-5 in this young-adult cancer-survivor sample"}
+    scale: probability
+    unit: "proportion"
+    value: 0.208
+    se: 0.0257
+    ci: [0.158, 0.258]
+    conversion_formula: "52/250 = 0.208. se = sqrt(0.208*0.792/250) = sqrt(0.000659) = 0.0257. 95% CI = 0.208 +/- 1.96*0.0257 = [0.158, 0.258]. CI is my computation."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NOT usable as our subject's prior - cancer survivorship substantially elevates insomnia risk and this is a clinic-recruited sample. Recorded only to document the sample's case mix, which matters for interpreting the ROC-derived cut-offs (a 20.8% base rate is close to my adopted adolescent prior of 18%, which makes the reported operating characteristics reasonably transportable even though the population is not)."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Of 250 participants, 52 met criteria for SCID-5 insomnia disorder diagnosis."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: |
+    Strengths: n = 250, gold-standard comparator (SCID-5 structured clinical interview for DSM-5
+    insomnia disorder - the strongest reference standard of any instrument-validation study in this
+    shard), pre-specified acceptability criteria for the cut-off (sensitivity >= 0.85 AND
+    specificity >= 0.75), multiple cut-offs reported for different purposes.
+    Concerns: (1) YOUNG ADULT CANCER SURVIVORS, not healthy young adults - survivorship raises both
+    insomnia prevalence and the frequency of competing somatic causes of sleep disruption, so
+    specificity may be pessimistic relative to a healthy sample; (2) ABSTRACT ONLY, so I could not
+    verify the age range, sex distribution, time since treatment, or obtain a CI on the AUC;
+    (3) cross-sectional single-administration design with no test-retest data; (4) the ISI is
+    DSM-IV-based while the reference standard is DSM-5, a mismatch the authors themselves note.
+funding: "NCI NIH HHS (per PubMed grant record)."
+notes: |
+  WHY THIS RECORD MATTERS: it is the only ISI validation I found that uses a STRUCTURED DSM-5
+  CLINICAL INTERVIEW as the reference standard in a YOUNG ADULT sample, and it disagrees with the
+  cut-off I recommend from Morin 2011.
+
+  THE DISAGREEMENT, AND HOW I RESOLVED IT:
+
+  | Source | Population | Reference standard | Screening cut-off | LR+ | LR- |
+  |---|---|---|---|---|---|
+  | morin2011 | community adults (Canada) | insomnia case criteria | >= 10 | 7.00 | 0.159 |
+  | michaud2021 (this) | young adults (cancer survivors, US) | SCID-5 interview | >= 8 | 3.70 | 0.195 |
+  |            |                            |                     | >= 7 | 3.20 | 0.057 |
+
+  All LRs above are DERIVED BY ME from the reported sensitivity/specificity pairs.
+
+  The younger sample yielded a LOWER optimal screening threshold (8 vs 10). That direction is what
+  you would expect if young adults under-report or normalise insomnia symptoms, but with two
+  studies in different populations I cannot attribute the difference to age with any confidence -
+  the cancer-survivorship confound is at least as plausible an explanation.
+
+  The authors' own closing caution is the most useful thing in the paper and the report should
+  quote it: "Results of this study and prior studies of the ISI offer important reminders that
+  cut-off scores derived from different populations are not generalizable." Neither >= 10 nor >= 8
+  has been validated in healthy 18-19 year olds. That remains a genuine gap.
+
+  PRACTICAL RECOMMENDATION I DRAW FROM HAVING BOTH: use the ISI as a graded instrument rather than
+  a single dichotomy, because the two validations agree far more about the extremes than about the
+  middle.
+    - ISI < 7  -> insomnia disorder effectively excluded (LR- 0.057; posterior ~1% from an 18%
+                 prior). This is the strongest rule-out in my entire instrument set.
+    - ISI 7-9  -> INDETERMINATE ZONE. Positive by michaud2021, negative by morin2011. Do not
+                 dichotomise here; proceed to the 14-day diary.
+    - ISI >= 10 -> positive by both (LR+ 3.7-7.0; posterior ~45-61% from an 18% prior).
+    - ISI >= 15 -> moderate-severe band; refer for CBT-I. Selects ~7.5% of the general population
+                 (vanstraten2025.yaml).
+  This graded reading is my synthesis [judgement], not a published algorithm.
+
+  UNCHANGED CAVEAT FROM sletten2018: whatever threshold is used, the ISI does not separate insomnia
+  disorder from DSWPD - DLMO-confirmed DSWPD patients averaged ISI 12.93 and would screen positive
+  on every cut-off in the table above.
+shard: "s19_sleep_disorders"

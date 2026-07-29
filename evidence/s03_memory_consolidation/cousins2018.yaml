@@ -1,0 +1,69 @@
+study_id: cousins2018
+citation: "Cousins JN, Sasmita K, Chee MWL. Memory encoding is impaired after multiple nights of partial sleep restriction. Journal of Sleep Research. 2018;27(1):138-145."
+doi: "10.1111/jsr.12578"
+pmid: "28677325"
+url: "https://doi.org/10.1111/jsr.12578"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Memory encoding is impaired after multiple nights of partial sleep restriction."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 59
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [15, 19]
+  pct_female: null
+  country: "SG"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: cognition
+    outcome_construct: picture_recognition_memory_encoding_capacity
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 5, contrast_label: "5 h TIB x 5 consecutive nights vs 9 h TIB; picture encoding on day 6; recognition tested AFTER 3 nights of 9 h recovery sleep in both arms"}
+    scale: hedges_g
+    unit: null
+    value: -0.89
+    se: 0.27
+    ci: [-1.43, -0.36]
+    conversion_formula: "Back-computed from the reported P and group sizes per the instructions' p-value rule. Two-tailed P = 0.001 at df = 57 gives t = 3.470; d = t*sqrt(1/29+1/30) = 0.9035; Hedges' J = 1-3/(4*57-1) = 0.9868; g = 0.8916; SE = sqrt(1/29+1/30+g^2/(2*57)) = 0.2735. Sign set negative to denote harm."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = worse recognition of material encoded while chronically sleep-restricted. Because recognition was tested only after 3 recovery nights, this is an ENCODING deficit, not test-time fatigue."
+    covariates: []
+    followup_years: null
+    cohort_family: "NeedForSleep_Singapore"
+    quote: "we employed a parallel-group design with 59 adolescents randomized into sleep-restricted (SR) and control groups. Both groups were afforded 9 h time in bed (TIB) for 2 baseline nights, followed by 5 consecutive nights of 5 h TIB for the SR group (n = 29) and 9 h TIB for the control group (n = 30). Participants then performed a picture-encoding task. Encoding ability was measured with a recognition test after 3 nights of 9 h TIB recovery sleep for both groups, allowing the assessment of encoding ability without the confounding effects of fatigue at retrieval. Memory was significantly worse in the sleep-restricted group (P = 0.001), and this impairment was not correlated with decline in vigilance."
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "Randomised parallel groups; dose and duration verified by protocol in a residential boarding-school setting; the key design strength is that retrieval happened after 3 recovery nights in BOTH arms, which removes test-time fatigue as an explanation. No blinding possible. Single site, Singaporean adolescents."
+funding: "not stated in retrieved abstract"
+notes: |
+  THIS IS THE SINGLE MOST DECISION-RELEVANT RECORD IN THIS SHARD for channel (c).
+  It is the only study I found that (i) uses partial restriction at the subject's own weekday dose,
+  (ii) in the subject's own age band, (iii) over multiple consecutive nights, and (iv) deliberately
+  separates encoding capacity from state-dependent performance by testing after full recovery sleep.
+
+  Design logic worth restating for the modeller: both arms had identical 9 h TIB for the three nights
+  before the recognition test. Any group difference at test therefore cannot be a reversible state
+  deficit (channel a) - it is knowledge that was never properly encoded during the restricted week
+  (channel c). The authors additionally report that "this impairment was not correlated with decline in
+  vigilance", which further dissociates it from the sleepiness/attention channel.
+
+  ACCESS LIMITATION: abstract only. No PMC or Europe PMC full text; paywalled at Wiley. I therefore have
+  the P-value and the group ns but NOT the means, SDs, or the authors' own effect size. The g = -0.89
+  above is back-computed from P = 0.001 and is approximate; because the abstract reports "P = 0.001"
+  rather than "P < 0.001", the back-computation should be close to exact, but the modeller should treat
+  the SE as approximate. Obtaining the full text to recover the means/SDs is the highest-value
+  follow-up action for this shard.
+
+  COHORT OVERLAP WARNING: this study is part of the Need for Sleep Study programme at Duke-NUS,
+  the same programme as huang2016, lo2016, ong2016 and the 2022 dose-response work of Lo et al.
+  cohort_family is set to NeedForSleep_Singapore on all of them. The samples are separate cohorts run
+  under a common protocol at the same boarding school, but they are NOT independent laboratories and
+  the pooler must not treat them as four independent replications.
+shard: "s03_memory_consolidation"

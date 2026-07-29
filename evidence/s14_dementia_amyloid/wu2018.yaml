@@ -1,0 +1,113 @@
+study_id: wu2018
+citation: "Wu L, Sun D, Tan Y. A systematic review and dose-response meta-analysis of sleep duration and the occurrence of cognitive disorders. Sleep and Breathing. 2018 Sep;22(3):805-814."
+doi: "10.1007/s11325-017-1527-0"
+pmid: "28589251"
+url: "https://pubmed.ncbi.nlm.nih.gov/28589251/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "A systematic review and dose-response meta-analysis of sleep duration and the occurrence of cognitive disorders."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: dose_response_meta_analysis
+tier: T5
+n: 22187
+n_studies_pooled: 9
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multiple (predominantly Caucasian populations)"
+  adolescent_match: poor_elderly
+effects:
+  - outcome_domain: cognition
+    outcome_construct: incident_cognitive_disorders_shortest_vs_middle_sleep_duration_category
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: 7.5, duration_days: null,
+               contrast_label: "shortest sleep duration category vs middle category, pooled across 9 cohorts; outcome = cognitive decline, dementia, AD or cognitive impairment"}
+    scale: log_rr
+    unit: null
+    value: 0.29267
+    se: 0.07779
+    ci: [0.13976, 0.44469]
+    conversion_formula: >
+      RR = 1.34, 95% CI 1.15-1.56. log_rr = ln(1.34) = 0.29267;
+      se = (ln(1.56) - ln(1.15))/3.92 = (0.44469 - 0.13976)/3.92 = 0.07779.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = harm. NOTE THE OUTCOME: "cognitive disorders" is a composite of cognitive decline,
+      dementia, Alzheimer's disease AND cognitive impairment. It is a much softer and broader endpoint
+      than incident dementia, and the composite is what makes short sleep significant here while
+      Fan 2019's dementia-only pooling was null. The authors also report the association was stronger
+      when exposure was SELF-REPORTED, which is the direction expected if measurement error and
+      confounding rather than biology drive it.
+    covariates: ["as adjusted in the contributing primary studies (heterogeneous)"]
+    followup_years: null
+    cohort_family: null
+    quote: "Compared with the middle category, both short and long sleep duration were accompanied by a significantly higher incident risk of cognitive disorders, and the relative risks (RRs) and 95% confidence intervals (CIs) were 1.34 (1.15, 1.56) and 1.21 (1.06, 1.39), respectively."
+  - outcome_domain: cognition
+    outcome_construct: incident_cognitive_disorders_longest_vs_middle_sleep_duration_category
+    exposure: {type: other, dose_h: null, referent_h: 7.5, duration_days: null,
+               contrast_label: "longest sleep duration category vs middle category, pooled across 9 cohorts"}
+    scale: log_rr
+    unit: null
+    value: 0.19062
+    se: 0.06914
+    ci: [0.05827, 0.32930]
+    conversion_formula: >
+      RR = 1.21, 95% CI 1.06-1.39. log_rr = ln(1.21) = 0.19062;
+      se = (ln(1.39) - ln(1.06))/3.92 = (0.32930 - 0.05827)/3.92 = 0.06914.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = harm from long sleep. Confirms the U shape rather than a monotonic short-sleep dose-response."
+    covariates: ["as adjusted in the contributing primary studies (heterogeneous)"]
+    followup_years: null
+    cohort_family: null
+    quote: "Compared with the middle category, both short and long sleep duration were accompanied by a significantly higher incident risk of cognitive disorders, and the relative risks (RRs) and 95% confidence intervals (CIs) were 1.34 (1.15, 1.56) and 1.21 (1.06, 1.39), respectively."
+  - outcome_domain: cognition
+    outcome_construct: sleep_duration_associated_with_lowest_risk_nadir_of_the_U_curve
+    exposure: {type: descriptive, dose_h: 7.5, referent_h: null, duration_days: null,
+               contrast_label: "position of the dose-response nadir, generalized least-squares trend estimation"}
+    scale: hours
+    unit: "hours of sleep per day at the minimum of the fitted U-shaped curve"
+    value: 7.5
+    se: null
+    ci: [7.0, 8.0]
+    conversion_formula: >
+      Reported as "The lowest incident risk of cognitive disorders was found at the sleep duration of 7-8 h
+      per day." The value 7.5 is the midpoint of the printed 7-8 h interval, and the ci field holds the
+      PRINTED RANGE, not a confidence interval. se is null.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive location of the optimum, not an effect. Included because it is the number that actually
+      answers "how much sleep is best" from this literature, and because it establishes that the shape is
+      U-shaped, so the relevant contrast for the subject is 5-6 h against roughly 7.5 h.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "CONCLUSIONS: The lowest incident risk of cognitive disorders was found at the sleep duration of 7-8 h per day. The present study includes a small number of studies, and the study participants mostly consist of Caucasian population."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    A genuine dose-response synthesis using generalized least-squares trend estimation, which is the
+    right tool. Limitations, several stated by the authors: only 9 cohorts and 22,187 participants; almost
+    entirely Caucasian; heterogeneity statistics are not given in the abstract and the full text is
+    paywalled with no PMC deposit, so I2 is UNKNOWN to this shard; follow-up durations are not stated;
+    the composite "cognitive disorders" outcome mixes reversible cognitive decline with dementia
+    diagnoses; and the finding that the short-sleep association was "more robust in the subgroup of the
+    measurement of sleep duration based on self-report" is a warning sign rather than a reassurance,
+    since objective measurement should strengthen a real biological association, not weaken it.
+funding: "See paper"
+notes: >
+  Retrieved as ABSTRACT ONLY (paywalled, no PMC deposit). Search ran to 4 May 2016, so this synthesis
+  predates Sabia 2021, Winer 2021 and the whole follow-up-stratification literature; it is superseded on
+  the causal question by howard2024.yaml but retained because it is the only proper dose-response fit
+  with a published nadir.
+  Verbatim on the self-report subgroup: "Stratified analyses showed that the association between short
+  sleep duration and cognitive disorders was more robust in the subgroup of the measurement of sleep
+  duration based on self-report."
+shard: "s14_dementia_amyloid"

@@ -1,0 +1,140 @@
+study_id: klingenberg2013
+citation: "Klingenberg L, Chaput JP, Holmback U, Visby T, Jennum P, Nikolic M, Astrup A, Sjodin A. Acute sleep restriction reduces insulin sensitivity in adolescent boys. Sleep. 2013 Jul 1;36(7):1085-1090."
+doi: "10.5665/sleep.2816"
+pmid: "23814346"
+url: "https://pubmed.ncbi.nlm.nih.gov/23814346/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Acute Sleep Restriction Reduces Insulin Sensitivity in Adolescent Boys."
+access_tier: abstract_only
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 21
+n_studies_pooled: null
+population:
+  age_mean: 16.8
+  age_range: null
+  pct_female: 0.0
+  country: "Denmark"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: homa_ir
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 9, duration_days: 3, contrast_label: "4 h/night x 3 nights vs 9 h/night x 3 nights, randomised crossover"}
+    scale: pct_change
+    unit: "% higher HOMA-IR in short-sleep vs long-sleep condition"
+    value: 65.0
+    se: 18.3
+    ci: null
+    conversion_formula: "Reported as '65% higher (P = 0.002)'. SE backed out from the two-tailed p and n=21 paired design: df=20, t=t.isf(0.002/2,20)=3.5518, SE=65/3.5518=18.30 percentage points. inferred_from_ci flagged true because the SE is derived from a p-value, not published."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = HARM (higher HOMA-IR = more insulin resistance) after 3 nights of 4 h sleep"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The homeostasis model assessment of insulin resistance (HOMA-IR) index was 65% higher (P = 0.002) and the Matsuda index was 28% lower (P = 0.007) in the SS condition compared to the LS condition."
+  - outcome_domain: metabolic
+    outcome_construct: matsuda_index_whole_body_insulin_sensitivity
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 9, duration_days: 3, contrast_label: "4 h/night x 3 nights vs 9 h/night x 3 nights, randomised crossover"}
+    scale: pct_change
+    unit: "% lower Matsuda index in short-sleep vs long-sleep condition"
+    value: -28.0
+    se: 9.32
+    ci: null
+    conversion_formula: "Reported as '28% lower (P = 0.007)'. df=20, t=t.isf(0.007/2,20)=3.0048, SE=28/3.0048=9.32 percentage points."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = HARM (lower Matsuda index = lower whole-body insulin sensitivity)"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "the Matsuda index was 28% lower (P = 0.007) in the SS condition compared to the LS condition."
+  - outcome_domain: metabolic
+    outcome_construct: fasting_insulin
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 9, duration_days: 3, contrast_label: "4 h/night x 3 nights vs 9 h/night x 3 nights, randomised crossover"}
+    scale: pct_change
+    unit: "% higher fasting insulin"
+    value: 59.0
+    se: 15.33
+    ci: null
+    conversion_formula: "Reported as '59% higher (P = 0.001)'. df=20, t=t.isf(0.001/2,20)=3.8495, SE=59/3.8495=15.33 percentage points."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = HARM (compensatory hyperinsulinaemia)"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Fasting insulin was 59% higher (P = 0.001) in the SS than the LS condition as was both fasting (24%, P < 0.001) and post-prandial (11%, P = 0.018) C-peptide."
+  - outcome_domain: metabolic
+    outcome_construct: fasting_glucose
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 9, duration_days: 3, contrast_label: "4 h/night x 3 nights vs 9 h/night x 3 nights, randomised crossover"}
+    scale: pct_change
+    unit: "% change in pre- and post-prandial glucose (null result)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Explicit NULL result: 'Pre- and post-prandial glucose and glucagon were unchanged between conditions.' No magnitude or CI published. Recorded as 0 to register the null; se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "zero = no detected change. IMPORTANT: at age 16-17 the pancreas fully compensated - glucose stayed normal while insulin rose 59%. Frank dysglycaemia was NOT produced."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Pre- and post-prandial glucose and glucagon were unchanged between conditions."
+  - outcome_domain: endocrine
+    outcome_construct: cortisol_awakening_response_and_24h_norepinephrine
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 9, duration_days: 3, contrast_label: "4 h/night x 3 nights vs 9 h/night x 3 nights, randomised crossover"}
+    scale: pct_change
+    unit: "% change (null result)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Explicit NULL: awakening cortisol response and 24-h norepinephrine not affected; 24-h epinephrine was 24% LOWER (P=0.013), i.e. opposite to a stress interpretation. Recorded as 0 to register the null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "zero = no endocrine stress response detected. This CONTRADICTS the cortisol-mediated mechanism implied by spiegel1999 and buxton2010 in adults."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The awakening cortisol response and 24-h norepinephrine were not affected by sleep duration, whereas 24-h epinephrine was 24% lower (P = 0.013) in the SS condition. Neither daytime nor 24-h sympathovagal balance differed between sleep conditions."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomised crossover, which is the best available design, and the only one performed in the exact target age band. Limitations: n=21, HOMA-IR and Matsuda are surrogate indices (no clamp), no blinding possible, single country/ethnicity, all normal-weight so no generalisation to overweight adolescents. SEs here are derived from p-values rather than published, so precision is approximate."
+funding: "Not retrievable from the abstract; the study is from the University of Copenhagen Department of Nutrition, Exercise and Sports (funder left unstated rather than guessed)."
+notes: |
+  *** HIGHEST-PRIORITY AGE MATCH IN THIS SHARD. *** Mean age 16.8 +/- 1.3 y, all male, healthy,
+  normal weight. This is the only experimental sleep-restriction/insulin study that sits inside the
+  subject's own age band, and the subject's sex. Every adult lab study in this shard should be
+  down-weighted relative to this one on transportability grounds, and up-weighted on precision.
+
+  DISTANCE FROM OUR SUBJECT'S EXPOSURE:
+  * Dose: 4 h/night, i.e. 1-2 h/night MORE severe than the subject's habitual weekday 5-6 h. It does
+    however closely match the subject's OCCASIONAL 3-4 h pre-exam nights, which makes this the best
+    available evidence for what those specific nights did.
+  * Referent: 9 h/night - a genuinely age-appropriate adolescent sleep opportunity, not an extension
+    artefact. The 4-vs-9 h contrast (5 h/night) is about 1.7-2.5x the subject's habitual weekday
+    deficit against a 8-9 h requirement.
+  * Duration: only 3 consecutive nights, SHORTER than the subject's 5-night school week. So this is
+    a partial analogue of a single week, and cannot address 3 years of repetition.
+  * Setting: laboratory, so the free-living appetite/activity pathways are suppressed.
+  * NO recovery arm and no follow-up, so it contributes nothing directly on reversibility. It does
+    show the effect is present after only 3 nights, i.e. it develops fast.
+
+  TWO FINDINGS THE MODELLER SHOULD NOT MISS:
+  1. In adolescents the insult appeared as COMPENSATED insulin resistance: fasting insulin +59% and
+     HOMA-IR +65% with glucose completely unchanged. So for an 18-year-old the plausible short-run
+     phenotype is raised insulin demand with normal glucose, not dysglycaemia. Any model that
+     converts these percentages into near-term diabetes probability is mis-specified.
+  2. The HOMA-IR (+65%) and Matsuda (-28%) effects are LARGER in relative terms than the adult clamp
+     effect in buxton2010 (-11%), despite a shorter exposure. This is consistent with adolescents
+     being MORE metabolically sensitive to sleep loss, but the measures are different (surrogate
+     indices vs clamp) so the comparison is suggestive, not quantitative. Adolescence is already a
+     period of physiological insulin resistance, which could plausibly amplify or mask the effect;
+     nobody has run a clamp protocol in this age group, so this is a genuine gap.
+shard: "s07_metabolic"

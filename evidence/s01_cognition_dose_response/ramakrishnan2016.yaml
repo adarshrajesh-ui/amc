@@ -1,0 +1,283 @@
+study_id: ramakrishnan2016
+citation: "Ramakrishnan S, Wesensten NJ, Balkin TJ, Reifman J. A Unified Model of Performance: Validation of its Predictions across Different Sleep/Wake Schedules. Sleep. 2016;39(1):249-262."
+doi: "10.5665/sleep.5358"
+pmid: "26518594"
+url: "https://europepmc.org/articles/PMC4678351"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "A Unified Model of Performance: Validation of its Predictions across Different Sleep/Wake Schedules"
+access_tier: full_text
+secondhand_via: "Model FITTED to the group-average PVT lapse data of Belenky G et al., J Sleep Res 2003;12:1-12 (this shard's belenky2003 record) and VALIDATED against, among others, Banks S et al., Sleep 2010;33:1013-26 (this shard's banks2010 record). No new human subjects."
+design: normative_descriptive
+tier: TX
+n: 57
+n_studies_pooled: 6
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: time_constant_of_sleep_debt_accumulation_and_dissipation_tau_LA
+    exposure: {type: chronic_restriction, dose_h: 3, referent_h: 9, duration_days: 7,
+               contrast_label: "tau_LA, the exponential time constant governing accumulation and clearance of sleep debt, fitted to 7 nights at 3 / 5 / 7 / 9 h TIB"}
+    scale: raw_units
+    unit: "days (time constant of the exponential rise and fall of sleep debt)"
+    value: 7.00
+    se: 1.67
+    ci: [3.727, 10.273]
+    conversion_formula: "Reported directly with its standard error as one of eight fitted UMP parameters:
+      'tau_LA = 7.00 (1.67) d'. CI = 7.00 +/- 1.96 x 1.67 = [3.73, 10.27].
+      THIS IS THE PUBLISHED ESTIMATE OF THE ACCUMULATION RATE THAT THE BRIEF EXPLICITLY ASKS FOR, and to this
+      shard's knowledge it is the only one reported with an uncertainty attached anywhere in the literature.
+      WHAT IT MEANS MECHANICALLY. In the UMP, sleep debt obeys dDebt/dt = [Loss(t) - Debt(t)] / tau_LA, a
+      first-order linear ODE driven by Loss(t) = +1 during wakefulness and -2 during sleep. So debt is an
+      exponentially recency-weighted integral of the sleep/wake history with a 7-day memory: today's debt
+      reflects roughly the last week of sleep, and nights more than ~2-3 weeks back contribute almost
+      nothing. Debt then sets the LOWER ASYMPTOTE of the homeostatic process via L(t) = U x Debt(t), i.e.
+      accumulated debt limits how far performance can recover during any subsequent sleep episode. That is
+      the formal mechanism by which chronic restriction differs from acute deprivation.
+      THE CONSEQUENCE FOR A THREE-YEAR EXPOSURE, AND IT IS THE MOST IMPORTANT THING IN THIS RECORD. A 7-day
+      time constant means the deficit SATURATES, and saturates fast: after 7 days of a fixed schedule the
+      debt term has covered 1 - e^-1 = 63% of its asymptote; after 14 days, 1 - e^-2 = 86%; after 21 days,
+      95%. So on this model our subject's impairment reached its steady state within about THREE WEEKS of
+      starting the schedule at age 16, and the remaining ~3 years of restriction added essentially nothing
+      further via this pathway. A model that extrapolates a linear day-over-day accumulation slope from
+      Van Dongen 2003's 14-day trajectory out to 1000 days will overestimate the neurobehavioural deficit by
+      orders of magnitude. THIS IS THE SINGLE STRONGEST QUANTITATIVE ARGUMENT AGAINST LINEAR EXTRAPOLATION
+      IN THE WHOLE SHARD.
+      THE MATCHING CAVEAT, which must travel with the number: tau_LA governs the STATE variable that this
+      class of model tracks (current performance capacity). It says nothing about slow structural or
+      cumulative-risk processes with much longer time constants - neurodevelopment, metabolic or
+      cardiovascular remodelling, academic trajectory - which are other shards' territory. Saturation of the
+      vigilance deficit at 3 weeks is fully compatible with a monotonically worsening 3-year outcome on
+      those axes. Read this parameter as bounding the NEUROBEHAVIOURAL state, not total harm."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Larger tau_LA = slower accumulation and slower clearance of sleep debt. 7 days is the
+      e-folding time; the deficit is ~86% saturated by day 14 and ~95% by day 21 on a fixed schedule."
+    covariates: ["fitted jointly with 7 other parameters by least squares on group-average PVT lapses across 4 dose arms simultaneously"]
+    followup_years: null
+    cohort_family: WRAIR_2003
+    quote: "By minimizing the objective function in Equation 6, we obtained the following UMP parameter
+      estimates (standard error): U = 18.35 (0.73) lapses, tau_w = 40.00 (3.19) h, tau_s = 2.11 (0.11) h,
+      S0 = 0.00 (0.66) lapses, kappa = 3.26 (0.26) lapses, phi = 2.31 (0.26) h, tau_LA = 7.00 (1.67) d,
+      L0 = -4.96 (0.00) lapses."
+  - outcome_domain: cognition
+    outcome_construct: upper_asymptote_of_pvt_lapses_under_unbounded_sleep_loss
+    exposure: {type: chronic_restriction, dose_h: 3, referent_h: 9, duration_days: 7,
+               contrast_label: "U, the ceiling on PVT lapses that no amount of further sleep loss can exceed"}
+    scale: raw_units
+    unit: "PVT lapses (10-min test) at the upper asymptote of the homeostatic process"
+    value: 18.35
+    se: 0.73
+    ci: [16.919, 19.781]
+    conversion_formula: "Reported directly with SE: 'U = 18.35 (0.73) lapses'. CI = 18.35 +/- 1.96 x 0.73.
+      WHY THIS MATTERS INDEPENDENTLY OF tau_LA: it is a hard CEILING on the outcome scale, fitted to data
+      rather than assumed. Performance impairment in this model is P(t) = S(t) + kappa x C(t), where S is
+      bounded above by U = 18.35 lapses and kappa = 3.26 lapses is the circadian amplitude. So the model
+      says PVT lapses cannot exceed roughly 18.35 + 3.26 = 21.6 in a 10-minute test no matter how severe or
+      prolonged the sleep loss.
+      THIS IS A SECOND, INDEPENDENT SATURATION ARGUMENT, and it is structurally different from the tau_LA
+      one. tau_LA saturates the deficit in TIME (3 weeks). U saturates it in MAGNITUDE (a lapse ceiling).
+      Both must hold simultaneously in this model. Any downstream dose-response function that is unbounded
+      above in lapses - a linear or power-law extrapolation, for instance - is inconsistent with the best
+      available fit to the only 4-dose 7-night experiment in the literature.
+      CROSS-CHECK AGAINST THIS SHARD'S OTHER RECORDS: Van Dongen 2003's 4h TIB arm reached roughly 10-12
+      lapses by day 14 in the digitised Figure 1, i.e. only about half of U. Belenky 2003's 3h arm was
+      similar. So the empirical data sit well below the fitted ceiling, which means the ceiling is an
+      extrapolation of the model's functional form rather than something directly observed - treat U as
+      weakly identified at the top end even though its nominal SE is small."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher U = worse achievable performance. This is a ceiling on harm on the lapse scale,
+      not an effect estimate."
+    covariates: ["fitted jointly with the other 7 UMP parameters"]
+    followup_years: null
+    cohort_family: WRAIR_2003
+    quote: "The UMP consists of eight parameters: (1) U, the upper asymptote of the homeostatic process S;
+      (2) tau_w, the time constant of increasing homeostatic pressure during wake time; (3) tau_s, the time
+      constant of decreasing homeostatic pressure during sleep; (4) S0, the initial state value for process
+      S; (5) kappa, the amplitude of the circadian process C; (6) phi, the circadian phase; (7) tau_LA, the
+      time constant accounting for the exponential rise and fall of sleep debt (via modulation of the lower
+      asymptote L) as a function of sleep/wake history; and (8) L0, the initial state value of L."
+  - outcome_domain: cognition
+    outcome_construct: out_of_sample_predictive_accuracy_of_the_dose_response_functional_form
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 7,
+               contrast_label: "prediction of PVT lapses in 14 sleep/wake conditions from 5 studies in 4 other laboratories, using parameters fitted only to Belenky 2003"}
+    scale: pct_change
+    unit: "% of maximum impairment level (RMSE of prediction), range across 14 validated conditions"
+    value: 36.0
+    se: null
+    ci: [7.0, 36.0]
+    conversion_formula: "Reported as a RANGE, not a point estimate with an SE: 'RMSEs across studies ranging
+      from 7% to 36% of the maximum impairment levels'. Recorded as value = 36.0, the WORST case, so the
+      number is conservative if used as an error bound; the ci field carries the full published range
+      [7, 36] rather than a confidence interval, and se is null because none is derivable. inferred_from_ci
+      is false because no interval was converted into an SE.
+      A SECOND, MORE INTERPRETABLE ACCURACY FIGURE FROM THE SAME PAPER: 'on average, 87% of the UMP
+      predictions lay within 2 standard errors of the measured data'. And for schedules of a type never used
+      in fitting (total deprivation and naps), 'the UMP accurately predicted performance impairment (average
+      error of 15%)'.
+      WHY THIS RECORD IS THE ONE THAT LICENSES USING ANY OF THESE FUNCTIONAL FORMS AT ALL. Every other model
+      record in this shard (mccauley2009, rajdev2013) reports a functional form fitted to the same one or two
+      datasets that motivated it - which is unfalsifiable in practice. This paper does the thing that was
+      missing: it fits 8 parameters to ONE study (Belenky 2003, 4 dose arms) and then predicts, with no
+      refitting, 14 conditions from 5 other studies in 4 other laboratories spanning total deprivation
+      (40-88 h), chronic restriction (2-6 h/night), controls (8-10 h/night) and nap schedules. The authors
+      state the motivation plainly: historically such models 'were limited to predicting performance in
+      similar studies, restricting their practical utility'.
+      HOW MUCH CONFIDENCE THIS ACTUALLY BUYS, stated honestly, because it is less than it first appears.
+      (a) The single free normalisation. The authors add a per-condition constant delta to every prediction,
+          computed as the observed-minus-predicted difference on the FIRST day of restriction. So each
+          validation condition gets its own intercept fitted from the data it is predicting. What is
+          validated is the SHAPE of the trajectory, not its level.
+      (b) The errors are not small. 36% of maximum impairment is a large miss at the worst end, and even the
+          in-sample fits ranged from 1.20 lapses RMSE (7h TIB arm) to 3.26 lapses (3h TIB arm) - the model
+          fits the mild doses well and the SEVERE doses poorly, and it under-predicted the 3h arm's last two
+          days by 4.92 lapses. The dose range our subject occupies on his worst nights is where this class of
+          model is least accurate.
+      (c) All six studies are in adults. There is no adolescent validation of any of these functional forms
+          anywhere in this shard's screened literature. That is the largest single reason to inflate
+          uncertainty when transporting tau_LA = 7 d to a 16-19 year old."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Lower = better prediction. This is a model-adequacy statistic, not a harm estimate. The
+      ci field carries the published RANGE of RMSEs (7-36%), not a confidence interval."
+    covariates: ["per-condition additive constant delta fitted from day 1 of each validation condition", "circadian phase assumed equal across studies", "S0 and L0 fixed at the values implied by 3 nights of 8h TIB baseline"]
+    followup_years: null
+    cohort_family: null
+    quote: "The UMP accurately predicted PVT performance trends across 14 different sleep/wake conditions,
+      yielding average prediction errors between 7% and 36%, with the predictions lying within 2 standard
+      errors of the measured data 87% of the time. In addition, the UMP accurately predicted performance
+      impairment (average error of 15%) for schedules (TSD and naps) not used in model development."
+  - outcome_domain: sleep_need
+    outcome_construct: maximal_sleep_capacity_used_to_bound_the_debt_scale
+    exposure: {type: sleep_extension, dose_h: 16, referent_h: null, duration_days: null,
+               contrast_label: "maximal capacity for sleep in well-rested young adults given a 16h sleep opportunity per 24h"}
+    scale: hours
+    unit: "hours of sleep per 24 h at the physiological ceiling under well-rested conditions"
+    value: 8.9
+    se: null
+    ci: null
+    conversion_formula: "Quoted by these authors from Klerman EB, Dijk DJ, Curr Biol 2008;18:1118-23, and
+      used here to RE-SCALE the model: the original UMP allowed sleep debt to run down to -2 (notionally 24 h
+      of sleep/day), which the authors reject as physiologically impossible, replacing it with a minimum debt
+      level of -0.11 corresponding to 8.9 h of sleep/day. se is null - no interval is given, and the value is
+      secondhand from Klerman & Dijk.
+      WHY A HOUSEKEEPING PARAMETER IS DECISION-RELEVANT HERE. It sets the FLOOR on recoverable debt, i.e. how
+      much credit banking extra sleep can ever buy. Because well-rested young adults cannot sleep more than
+      about 8.9 h/day even given 16 h of opportunity, the negative-debt reservoir is shallow (-0.11 versus the
+      +1 available on the deprivation side, a roughly 9:1 asymmetry). CONSEQUENCE: on this model, debt
+      accumulates far more readily than it can be pre-paid or repaid. Weekend extension to 10-11 h - which
+      our subject does - cannot bank much credit, because the extra time in bed does not convert into sleep
+      once debt is cleared. This is the model-side counterpart of the empirical findings in banks2010
+      (recovery saturates and is incomplete even at 10 h TIB), yamazaki2021 (deficits persist after 4 nights
+      of 12 h TIB) and smith2021 (six weekends of recovery did not restore vigilance).
+      IMPORTANT CAVEAT FROM THE AUTHORS THEMSELVES: the 8.9 h ceiling applies only when WELL RESTED. 'Under
+      sleep-deprived conditions or when carrying a positive sleep debt, an individual can certainly sleep
+      > 8.9 h/day, and this is considered in our model.' So the asymmetry is about the ceiling on BANKING
+      credit, not a claim that a sleep-deprived person cannot sleep 11 hours.
+      ALSO NOTE THE AGE MISMATCH IN THE OPPOSITE DIRECTION TO USUAL: 8.9 h is a YOUNG-ADULT ceiling. Short
+      2018 and Campbell 2017 both measure ~8.9 h of actual sleep in 15-17 year olds given only 10 h TIB, and
+      Short's behavioural criterion puts adolescent NEED at 9.35 h. If adolescent need exceeds the adult
+      capacity ceiling used here, the model's debt scale is mis-calibrated for an adolescent in the
+      unfavourable direction."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is a physiological ceiling on sleep obtained, not a harm estimate. Its role is to
+      bound how much sleep debt can be repaid or banked."
+    covariates: ["16h sleep opportunity per 24h", "well-rested condition", "young adults"]
+    followup_years: null
+    cohort_family: null
+    quote: "However, it is unlikely that normal, healthy, non-sleep-deprived individuals can sleep for 24
+      consecutive hours during 24 h of TIB. In fact, the estimated maximal capacity for sleep (under
+      well-rested conditions) in young adults when given 16 h of sleep opportunity per 24 h is 8.9 h.
+      Therefore, in the current work, we modified the UMP to impose a minimum debt level of -0.11
+      (corresponding to the asymptotic debt limit associated with 8.9 h of sleep/day) instead of the previous
+      limit of -2."
+rob:
+  tool: none
+  judgement: na
+  notes: "NOT A PRIMARY STUDY - this is a biomathematical modelling paper, so RoB2/ROBINS-I do not apply and
+    tier is TX. It contributes no new human data and it is recorded here ONLY as a source of published
+    functional forms and fitted parameters, which is what item 6 of the brief and notes_for_modeller.md ask
+    for. The n field (57) is the sum of the four Belenky 2003 arm sizes reported in this paper's Table 1
+    (14 + 12 + 15 + 16 = 57), i.e. the training data, NOT an independent sample; belenky2003 in this shard
+    records n = 66 randomised, so the pooler must treat this record as fully redundant with belenky2003 and
+    banks2010 for evidential purposes - hence cohort_family WRAIR_2003 on the fitted
+    parameters - the SAME string belenky2003 uses, so a pooler de-duplicating on that field will
+    collapse them rather than treating the refit as independent evidence. DOUBLE-COUNTING RISK IS REAL AND SPECIFIC: the training study (Belenky 2003) and one
+    validation study (Banks 2010) both already have their own records in this shard.
+    THE HONEST ASSESSMENT OF THE MODEL ITSELF: (1) the out-of-sample validation is genuine and unusually
+    thorough for this literature (14 conditions, 5 studies, 4 laboratories, including schedule TYPES absent
+    from the fitting data), which is why this record is preferred over mccauley2009 and rajdev2013 as the
+    primary source for a functional form; but (2) a per-condition additive constant delta is fitted from day
+    1 of each validation condition, so only trajectory SHAPE is validated, not absolute level; (3) accuracy
+    degrades systematically at severe doses - in-sample RMSE was 1.20 lapses at 7h TIB but 3.26 lapses at 3h
+    TIB, with the 3h arm's final two days under-predicted by 4.92 lapses - and the severe end is exactly
+    where our subject's worst nights sit; (4) circadian phase was ASSUMED equal across all six studies
+    rather than measured, which Short 2018 shows is wrong under restriction (phase delays scale with dose);
+    (5) EVERY dataset is adult, so none of the eight parameters has ever been estimated or validated in
+    adolescents. Parameter uncertainty as published is also wide where it matters most: tau_LA = 7.00 d has
+    SE 1.67 d, a 95% interval of roughly 3.7 to 10.3 days, which propagates into a factor-of-three range in
+    how fast the deficit saturates."
+funding: "Not extracted from the retrieved text (US Army Medical Research and Materiel Command / Department of Defense High Performance Computing programme support is typical of this group but was not confirmed in the retrieved sections; recorded as unknown rather than guessed)."
+notes: |
+  ROLE OF THIS RECORD. It is the shard's best single source for a PUBLISHED, OUT-OF-SAMPLE-VALIDATED
+  functional form for the accumulation of neurobehavioural deficit under chronic restriction, and it supplies
+  the accumulation-rate estimate the brief asks for. The complete equation set and all eight fitted
+  parameters are transcribed verbatim into notes_for_modeller.md.
+
+  THE FULL MODEL, as printed in the paper's Table 2 (transcribed verbatim in notes_for_modeller.md):
+    (1) P(t) = S(t) + kappa x C(t)
+    (2) C(t) = sum_{i=1..5} a_i sin[i x (2 pi / tau) x (t + phi)],  a = (0.97, 0.22, 0.07, 0.03, 0.001)
+    (3) dS(t)/dt = [U - S(t)] / tau_w  during wakefulness ;  [L(t) - S(t)] / tau_s  during sleep
+    (4) L(t) = U x Debt(t)
+    (5) dDebt(t)/dt = [Loss(t) - Debt(t)] / tau_LA ,  Loss(t) = +1 awake, -2 asleep
+  Fitted on Belenky 2003 (7 nights at 3 / 5 / 7 / 9 h TIB, 4 arms simultaneously):
+    U = 18.35 (0.73) lapses ; tau_w = 40.00 (3.19) h ; tau_s = 2.11 (0.11) h ; S0 = 0.00 (0.66) lapses ;
+    kappa = 3.26 (0.26) lapses ; phi = 2.31 (0.26) h ; tau_LA = 7.00 (1.67) d ; L0 = -4.96 (0.00) lapses.
+
+  THE THREE STRUCTURAL CLAIMS THE DOWNSTREAM MODEL SHOULD TAKE FROM THIS, in order of importance.
+
+  1. THE DEFICIT SATURATES ON A ~7-DAY TIME CONSTANT, NOT LINEARLY. This is the direct answer to the brief's
+     question about whether the decrement continues to accumulate or plateaus. 63% of the asymptote by day
+     7, 86% by day 14, 95% by day 21. Van Dongen 2003's 14-day trajectory looks near-linear precisely
+     BECAUSE 14 days is only two time constants - the curvature is there but modest over that window, which
+     is why the same data support both a "cumulative, still rising at day 14" reading and an exponential
+     saturation. Extrapolating the apparent linear slope to 3 years is the error this parameter forbids.
+     The 95% interval on tau_LA (3.7-10.3 d) means that at one month saturation is between 94.6% (tau =
+     10.27 d) and 99.97% (tau = 3.73 d) complete - so the qualitative conclusion is robust across the whole
+     admissible range even though the parameter itself is loose to a factor of three.
+
+  2. HARM IS BOUNDED IN MAGNITUDE AS WELL AS IN TIME. U = 18.35 lapses caps the homeostatic contribution;
+     with kappa = 3.26 the model's worst attainable state is about 21.6 lapses per 10-min PVT. Observed data
+     in Van Dongen 2003's 4h arm and Belenky 2003's 3h arm reach only about half of that, so the ceiling is
+     an extrapolation of the functional form rather than an observed plateau - weakly identified, but it
+     rules out unbounded dose-response functions.
+
+  3. DEBT ACCUMULATES ~9x MORE READILY THAN IT CAN BE BANKED. Loss(t) = +1 while awake but the debt floor is
+     -0.11 (revised from -2), because well-rested young adults cannot sleep more than ~8.9 h/day even given
+     16 h of opportunity. This asymmetry is the model-side explanation for why weekend catch-up underperforms
+     intuition, and it converges with three independent empirical records in this shard (banks2010,
+     yamazaki2021, smith2021).
+
+  WHY THIS IS PREFERRED OVER THE OTHER TWO MODEL RECORDS, and where they disagree. mccauley2009 posits a
+  BIFURCATION at 3.8 h of daily sleep (20.2 h of wakefulness), below which deficits diverge without bound
+  rather than saturating; rajdev2013 is the direct antecedent of this model (the UMP's origin paper) but was
+  retrievable only as an abstract, so no equations could be taken from it. This paper is the only one of the
+  three that fits its parameters to one dataset and then predicts others without refitting. THE DISAGREEMENT
+  THAT MATTERS FOR OUR SUBJECT: on the UMP, a 5-6 h weekday schedule saturates within weeks at a bounded
+  deficit; on McCauley's bifurcating model, a schedule below the critical threshold diverges. Our subject's
+  weekday sleep of 5-6 h TIB (perhaps 3.5-4.2 h of actual sleep after applying Campbell's 69% TIB-to-TST
+  efficiency) sits UNCOMFORTABLY CLOSE TO McCAULEY'S 3.8 h CRITICAL VALUE, and his occasional 3-4 h
+  pre-exam nights fall below it. The two published models therefore give qualitatively different answers for
+  exactly this subject, and that structural disagreement - not parameter uncertainty within either model -
+  is the dominant uncertainty in the shard's dose-response backbone. It is documented in full in
+  notes_for_modeller.md and flagged in station_report.md as the largest gap.
+shard: "s01_cognition_dose_response"

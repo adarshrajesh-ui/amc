@@ -1,0 +1,193 @@
+study_id: dinges1997
+citation: "Dinges DF, Pack F, Williams K, Gillen KA, Powell JW, Ott GE, Aptowicz C, Pack AI. Cumulative sleepiness, mood disturbance, and psychomotor vigilance performance decrements during a week of sleep restricted to 4-5 hours per night. Sleep. 1997;20(4):267-277."
+doi: "10.1093/sleep/20.4.267"
+pmid: "9231952"
+url: "https://pubmed.ncbi.nlm.nih.gov/9231952/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Cumulative sleepiness, mood disturbance, and psychomotor vigilance performance decrements during a week of sleep restricted to 4-5 hours per night."
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 16
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: achieved_tst_under_a_nominal_5h_dose
+    exposure: {type: chronic_restriction, dose_h: 4.98, referent_h: 7.43, duration_days: 7,
+               contrast_label: "sleep restricted 33% below each subject's own habitual duration for 7 nights"}
+    scale: hours
+    unit: "hours of achieved nightly sleep, mean (SD 0.57)"
+    value: 4.98
+    se: 0.1425
+    ci: [4.701, 5.259]
+    conversion_formula: "Mean and SD reported directly. SE = SD/sqrt(n) = 0.57/sqrt(16) = 0.1425;
+      CI = 4.98 +/- 1.96*0.1425. The referent shown (7.43 h) is BACK-CALCULATED, not reported:
+      4.98 / (1 - 0.33) = 7.43 h implied habitual duration, since the design set each subject's dose to
+      33% below their own habitual sleep. Flagged as derived."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "this is the achieved dose, not an outcome; recorded because 4.98 h is the closest
+      match in the entire adult literature to our subject's habitual 5-6 h weekday sleep"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "16 healthy young adults had their sleep restricted 33% below habitual sleep duration, to an
+      average 4.98 hours per night [standard deviation (SD) = 0.57] for seven consecutive nights.
+      Subjects slept in the laboratory, and sleep and waking were monitored by staff and actigraphy."
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapse_frequency_and_duration_increase_over_7_nights
+    exposure: {type: chronic_restriction, dose_h: 4.98, referent_h: 7.43, duration_days: 7,
+               contrast_label: "7 nights at ~5h sleep vs own habitual baseline, tests 3x/day"}
+    scale: raw_units
+    unit: "largest p-value across the significant PVT parameters (frequency and duration of lapses)"
+    value: 0.018
+    se: null
+    ci: null
+    conversion_formula: "The paper reports only a p-value RANGE across multiple PVT parameters
+      (p = 0.018 to p = 0.0001) with no means, SDs or F statistics in the abstract, and the full text
+      was not retrievable. The most conservative endpoint of the range is recorded so that no
+      significance is overstated. NO effect size is derivable and none has been invented; se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "lapses INCREASED (worsened) across days of restriction; the recorded number is a
+      p-value, not a magnitude, and must not be treated as an effect size"
+    covariates: ["time of day (1000, 1600, 2200 h)"]
+    followup_years: null
+    cohort_family: null
+    quote: "PVT performance parameters, including the frequency and duration of lapses, were also
+      significantly increased by restriction (p = 0.018 to p = 0.0001). Significant time-of-day effects
+      were evident in SSS and PVT data, but time-of-day did not interact with the effects of sleep
+      restriction across days."
+  - outcome_domain: cognition
+    outcome_construct: no_asymptote_reached_by_night_7_at_a_5h_dose
+    exposure: {type: chronic_restriction, dose_h: 4.98, referent_h: 7.43, duration_days: 7,
+               contrast_label: "was a steady state reached within 7 nights at ~5h sleep? explicit authors' answer"}
+    scale: raw_units
+    unit: "1 = authors state no asymptote/steady state was reached; 0 = plateau reached"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Binary encoding of the authors' own explicit conclusion, so that the
+      accumulate-vs-plateau question can be tallied across studies. Direct quote given below; the
+      authors additionally verified continuation past the protocol in a subset ('the elevated sleepiness
+      and performance deficits continued beyond day 7 of restriction')."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = still accumulating at the end of the exposure, i.e. NO saturation at a 5h dose
+      within one week - the same conclusion Van Dongen 2003 reached at 14 nights"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "These findings suggest that cumulative nocturnal sleep debt had a dynamic and escalating
+      analog in cumulative daytime sleepiness and that asymptotic or steady-state sleepiness was not
+      achieved in response to sleep restriction."
+  - outcome_domain: recovery
+    outcome_construct: nights_of_recovery_sleep_required
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: null, duration_days: 2,
+               contrast_label: "recovery nights needed to clear the deficit after 7 nights at ~5h"}
+    scale: raw_units
+    unit: "nights of unrestricted sleep judged necessary for recovery"
+    value: 2.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly, from a subset of subjects only ('Data from subsets of
+      subjects also showed ... that recovery from these deficits appeared to require two full nights of
+      sleep'). Weak evidence: subset analysis, no n given for the subset, and the conclusion is
+      qualitative. It is also the most OPTIMISTIC recovery estimate in this shard and is contradicted by
+      Axelsson 2008 (lapses not recovered after 7 nights), Belenky 2003 (93-112% of the deficit retained
+      after 3 nights) and Lo 2017 (incomplete after 2 nights in adolescents). Recorded so the
+      disagreement is visible, not so it is believed."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "larger = slower recovery; treat 2 nights as a lower bound that later and better
+      controlled studies do not support"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Data from subsets of subjects also showed: 1) that significant decreases in the MSLT
+      occurred during sleep restriction, 2) that the elevated sleepiness and performance deficits
+      continued beyond day 7 of restriction, and 3) that recovery from these deficits appeared to
+      require two full nights of sleep."
+  - outcome_domain: cognition
+    outcome_construct: correlation_pvt_lapse_accumulation_with_mslt_sleep_latency
+    exposure: {type: chronic_restriction, dose_h: 4.98, referent_h: 7.43, duration_days: 7,
+               contrast_label: "day-by-day cumulative lapse increase vs MSLT latency, across an earlier comparable experiment"}
+    scale: raw_units
+    unit: "Pearson r between cumulative PVT lapses and MSLT sleep latency across days"
+    value: -0.95
+    se: null
+    ci: null
+    conversion_formula: "Reported directly. Not converted to a Fisher-z SE because the correlation is
+      across DAY-LEVEL group means from two different experiments, not across subjects, so the effective
+      n is the number of days (~7) and any SE computed from it would be misleadingly precise.
+      Recorded as evidence that the PVT-lapse trajectory is a valid index of physiological sleep
+      pressure rather than an artefact of the task."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = as lapses accumulate, MSLT latency shortens (sleepier); the two indices
+      move together almost perfectly at the group-mean level"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The cumulative increase in performance lapses across days of sleep restriction correlated
+      closely with MSLT results (r = -0.95) from an earlier comparable experiment by Carskadon and
+      Dement (1)."
+rob:
+  tool: RoB2
+  judgement: high
+  notes: "Single-arm within-subject design with no parallel non-restricted control, so day-over-day
+    change is confounded with practice on the PVT and with laboratory-residence effects; this is the
+    exact confound Van Dongen 2003 later controlled by retaining an 8 h TIB arm (which showed a
+    +2.6-lapse rise over 14 days from practice/protocol alone - see vandongen2003.yaml). Dose was
+    individualised (33% below each subject's habitual sleep) rather than fixed, so 'the dose' is a
+    distribution centred on 4.98 h, not a single level. Several key conclusions (continuation past day 7,
+    2-night recovery, MSLT decrease) rest on unspecified SUBSETS of the 16 subjects. Abstract only: no
+    means, SDs, or per-day values could be extracted, so this study contributes qualitative shape
+    evidence and the achieved-dose figure, not effect sizes. Historical importance is high (it is the
+    primary that motivated Van Dongen 2003 and Belenky 2003) but its quantitative content here is thin."
+funding: "Not stated in the retrieved abstract (NIH-supported per the parent programme; not verified)"
+notes: |
+  WHY IT IS HERE. This is the founding chronic-restriction experiment at a ~5 h dose - the dose that
+  matches our subject's habitual weekday sleep more closely than any adult study in this shard - and it
+  is the source of the claim that the deficit is CUMULATIVE rather than self-limiting. Banks & Dinges
+  2007 cite it as the primary for that claim, and Van Dongen 2003 was designed as its dose-ranging
+  successor.
+
+  DESIGN: 16 healthy young adults, laboratory residence, sleep restricted to 33% below each individual's
+  habitual duration -> achieved mean 4.98 h/night (SD 0.57) for 7 consecutive nights. Testing 3x daily
+  (10:00, 16:00, 22:00): SSS, POMS, PVT, probed memory, serial addition. Visual analogue scales once
+  daily. MSLT and post-day-7 continuation in subsets.
+
+  THE ONE SENTENCE THE MODELLER SHOULD CARRY: "asymptotic or steady-state sleepiness was not achieved in
+  response to sleep restriction". At a 5 h dose over 7 nights, nothing had levelled off. This is
+  concordant with Van Dongen 2003 at 14 nights and with Lo 2016 in adolescents at 5 h over 7 nights, and
+  it is the empirical basis for treating the 5-6 h weekday dose as producing a deficit that is still
+  growing at the end of a school week.
+
+  A TIMING DETAIL WITH DIRECT BEARING ON THE HABITUATION QUESTION: "Subjective changes tended to precede
+  performance changes by 1 day, but overall changes in both classes of measure were greatest during the
+  first 2 days (P1, P2) and last 2 days (P6, P7) of sleep restriction." So at a 5 h dose over one week
+  the subjective and objective trajectories were broadly PARALLEL, with subjective leading by a day -
+  no dissociation yet. The dissociation documented by Van Dongen 2003 emerges over 14 nights, and the
+  dissociation documented by Rupp 2009 emerges at a 3 h dose. One week at 5 h is evidently not long
+  enough or severe enough to open the gap. This is a consistent and important boundary condition: the
+  subjective/objective divergence is a function of DURATION and SEVERITY, not a fixed property of the
+  measures.
+
+  WHAT I COULD NOT GET. Sleep (Oxford) content from 1997 is paywalled and not in PMC; direct PDF
+  retrieval returned 403 behind Cloudflare, and no author-repository copy was located. All numbers above
+  come from the PubMed abstract, which is unusually detailed for the era but contains no per-day means
+  or SDs. If the pipeline can obtain the full text later, the per-day PVT means for the 5 h arm would be
+  the single most valuable addition to this shard, because they would give an independent 5 h trajectory
+  to set against Van Dongen's interpolated 4 h and 6 h arms.
+shard: "s01_cognition_dose_response"

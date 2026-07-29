@@ -1,0 +1,95 @@
+study_id: weedon2022
+citation: "Weedon MN, Jones SE, Lane JM, Lee J, Ollila HM, Dawes A, Tyrrell J, Beaumont RN, Partonen T, Merikanto I, Rich SS, Rotter JI, Nedeljkovic I, Kaprio J, Sinnott-Armstrong N, Rivas M, Redline S, Saxena R, Wood AR. The impact of Mendelian sleep and circadian genetic variants in a population setting. PLoS Genetics. 2022;18(9):e1010356."
+doi: "10.1371/journal.pgen.1010356"
+pmid: "36137075"
+url: "https://doi.org/10.1371/journal.pgen.1010356"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "The impact of Mendelian sleep and circadian genetic variants in a population setting"
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 191929
+n_studies_pooled: 4
+population:
+  age_mean: null
+  age_range: [18, 100]
+  pct_female: null
+  country: "UK, Finland, US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: penetrance_of_familial_natural_short_sleep_variants_in_population
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "association of previously reported ADRB1 / DEC2(BHLHE41) / GRM1 / NPSR1 familial-natural-short-sleep variants with extreme sleep phenotypes in 191,929 population-based individuals"}
+    scale: hours
+    unit: "hours of difference in sleep duration attributable to the reported FNSS variants (null result)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "no arithmetic. The paper reports a NULL: 'We found no association between variants analyzed and extreme sleep or circadian phenotypes.' value = 0.0 encodes the null point estimate. The abstract does not give the per-variant effect estimates or their CIs, so se: null and the null is qualitative rather than a tight interval."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL. The familial short-sleep variants do NOT shorten sleep when found incidentally in the general population. This shrinks the case for a fat lower tail on the sleep-need prior."
+    covariates: []
+    followup_years: null
+    cohort_family: "UK_Biobank_FINRISK_Health2000_MESA"
+    quote: |
+      We found no association between variants analyzed and extreme sleep or circadian phenotypes. ... Our results
+      indicate that previously reported variants for Mendelian sleep and circadian conditions are often not highly
+      penetrant when ascertained incidentally from the general population.
+  - outcome_domain: circadian
+    outcome_construct: per3_sleep_midpoint_shift
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep-midpoint shift for the reported PER3 variant, population setting"}
+    scale: hours
+    unit: "hours earlier sleep midpoint"
+    value: 0.117
+    se: null
+    ci: null
+    conversion_formula: "verbatim: 'only PER3 and CRY1 variants demonstrated association with earlier and later sleep timing, respectively; however, the magnitude of effect was smaller than previously reported (sleep midpoint ~7 mins earlier and ~5 mins later, respectively)'. value = 7/60 = 0.117 h."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "the ONLY surviving associations are for sleep TIMING, not duration, and they are ~7 and ~5 minutes rather than the hours reported in the original pedigrees. Included to calibrate how much shrinkage to expect between family-ascertained sleep genetics and population reality."
+    covariates: []
+    followup_years: null
+    cohort_family: "UK_Biobank_FINRISK_Health2000_MESA"
+    quote: |
+      Using sleep timing as a proxy measure for sleep phase, only PER3 and CRY1 variants demonstrated association
+      with earlier and later sleep timing, respectively; however, the magnitude of effect was smaller than
+      previously reported (sleep midpoint ~7 mins earlier and ~5 mins later, respectively).
+rob:
+  tool: MR-STROBE
+  judgement: low
+  notes: "very large (n=191,929) whole-exome/genome-sequenced population sample across four independent cohorts, pre-specified variant list, appropriate burden testing. This is a well-powered null. Main limitation for us: sleep duration is self-reported (plus accelerometry in a subset) and the cohorts are adult, so the analysis inherits the measurement error documented elsewhere in this shard, which biases towards the null."
+funding: "not stated in retrieved abstract"
+notes: |
+  Retrieved because the task asked for "short-sleeper phenotypes including DEC2/ADRB1 familial natural short sleep" evidence on
+  the between-person SD of sleep need. This paper is the reality check on that literature, and it is the reason I do NOT widen
+  the sleep-need prior to accommodate a genetic short-sleeper tail.
+  Verbatim (abstract): "Rare variants in ten genes have been reported to cause Mendelian sleep conditions characterised by
+  extreme sleep duration or timing. These include familial natural short sleep (ADRB1, DEC2/BHLHE41, GRM1 and NPSR1), advanced
+  sleep phase (PER2, PER3, CRY2, CSNK1D and TIMELESS) and delayed sleep phase (CRY1). The association of variants in these genes
+  with extreme sleep conditions were usually based on clinically ascertained families, and their effects when identified in the
+  population are unknown... Analyses were performed using 191,929 individuals with data on sleep and whole-exome or genome-sequence
+  data from 4 population-based studies: UK Biobank, FINRISK, Health-2000-2001, and the Multi-Ethnic Study of Atherosclerosis
+  (MESA)... We identified carriers for 10 out of 12 previously reported pathogenic variants for 8 of the 10 genes. They ranged in
+  frequency from 1 individual with the variant in CSNK1D to 1,574 individuals with a reported variant in the PER3 gene in the UK
+  Biobank. No carriers for variants reported in NPSR1 or PER2 were identified. We found no association between variants analyzed
+  and extreme sleep or circadian phenotypes. Using sleep timing as a proxy measure for sleep phase, only PER3 and CRY1 variants
+  demonstrated association with earlier and later sleep timing, respectively; however, the magnitude of effect was smaller than
+  previously reported (sleep midpoint ~7 mins earlier and ~5 mins later, respectively). We also performed burden tests of protein
+  truncating (PTVs) or rare missense variants for the 10 genes. Only PTVs in PER2 and PER3 were associated with a relevant trait
+  (for example, 64 individuals with a PTV in PER2 had an odds ratio of 4.4 for being 'definitely a morning person', P = 4x10-8;
+  and had a 57-minute earlier midpoint sleep, P = 5x10-7). Our results indicate that previously reported variants for Mendelian
+  sleep and circadian conditions are often not highly penetrant when ascertained incidentally from the general population."
+  DECISION-RELEVANT CONCLUSION FOR THIS SHARD: he2009dec2 and shi2019adrb1 report striking short-sleep phenotypes (6.25 h mean in
+  DEC2 carriers; a lifelong <6.5 h requirement across >50 FNSS families), and it is tempting to use them to argue that our
+  subject might simply be a natural short sleeper who needs 6 h. This paper says that argument is not supported: in ~192,000
+  population-sequenced people the same variants produced no detectable shortening. The prior probability that a randomly selected
+  18-year-old male is a genuine FNSS case is very small, and nothing in the case description (he reports weekend catch-up sleep of
+  7-8 h and occasional 10-11 h nights, which is the OPPOSITE of the FNSS phenotype - true natural short sleepers do not
+  sleep-in) supports it. Recommend a thin-tailed normal for sleep need rather than a mixture with a short-sleeper component. If
+  the modeller wants a mixture anyway, weight the short-sleeper component at well under 1%.
+shard: "s06_sleep_need_measurement"

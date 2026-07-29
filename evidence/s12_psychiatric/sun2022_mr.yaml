@@ -1,0 +1,147 @@
+study_id: sun2022_mr
+citation: "Sun X, Liu B, Liu S, Wu DJH, Wang J, Qian Y, Ye D, Mao Y. Sleep disturbance and psychiatric disorders: a bidirectional Mendelian randomisation study. Epidemiol Psychiatr Sci. 2022 Apr 25;31:e26."
+doi: "10.1017/S2045796021000810"
+pmid: "35465862"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Sleep disturbance and psychiatric disorders: a bidirectional Mendelian randomisation study."
+access_tier: full_text
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 449734
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [40, 69]
+  pct_female: null
+  country: "UK / multinational (UK Biobank + Psychiatric Genomics Consortium)"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: mdd_from_insomnia
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "FORWARD: genetically predicted INSOMNIA symptoms -> major depressive disorder, IVW, 150 SNPs"}
+    scale: log_or
+    unit: null
+    value: 0.27003
+    se: 0.02338
+    ci: [0.22314, 0.31481]
+    conversion_formula: "OR 1.31 (1.25-1.37); log(1.31)=0.27003; se=(log(1.37)-log(1.25))/3.92=0.02338"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = genetically higher insomnia liability RAISES MDD risk. Forward arrow, insomnia exposure."
+    covariates: ["MR assumptions; pleiotropic SNPs removed; MR-Egger, weighted-median, MR-PRESSO, RAPS sensitivity analyses concordant"]
+    followup_years: null
+    cohort_family: "UK_Biobank_plus_PGC"
+    quote: "ically determined insomnia was 1.33 (95% confidence interval (CI) 1.22–1.45; p = 5.03 × 10 −11 ) for attention-deficit/hyperactivity disorder (ADHD), 1.31 (95% CI 1.25–1.37; p = 6.88 × 10 −31 ) for major depressive disorder (MDD)"
+  - outcome_domain: psychiatric
+    outcome_construct: insomnia_from_mdd_reverse_direction
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "REVERSE: genetically predicted MDD -> insomnia, IVW, 12 SNPs for MDD"}
+    scale: log_or
+    unit: null
+    value: 0.31481
+    se: 0.09277
+    ci: [0.13103, 0.49470]
+    conversion_formula: "OR 1.37 (1.14-1.64); log(1.37)=0.31481; se=(log(1.64)-log(1.14))/3.92=0.09277"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = genetically higher MDD liability RAISES insomnia. Reverse arrow. Point estimate (1.37) is LARGER than the forward arrow (1.31) -- the two directions are of comparable magnitude, so on the insomnia axis the relationship is genuinely bidirectional and roughly symmetric."
+    covariates: ["MR assumptions; weighted-median OR 1.40 (1.18-1.65); MR-PRESSO after outlier removal OR 1.45 (1.24-1.69); MR-Egger intercept p=0.067"]
+    followup_years: null
+    cohort_family: "UK_Biobank_plus_PGC"
+    quote: "there was a statistically significant causal effect of MDD on insomnia after adjusting for multiple testing. The corresponding effect estimate was 1.37 (95% CI 1.14–1.64; p  = 0.001) for MDD in the IVW method and remained consistent in the weighted-median method (OR = 1.40, 95% CI 1.18–1.65; p  = 1.24 × 10 −4 )"
+  - outcome_domain: psychiatric
+    outcome_construct: mdd_from_sleep_duration_null
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "FORWARD: genetically predicted continuous SLEEP DURATION -> MDD, IVW, 69 SNPs. NULL RESULT."}
+    scale: log_or
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "NO POINT ESTIMATE IS QUOTABLE for sleep duration -> MDD. The paper reports it only as a non-significant result in the text and displays it in Fig. 2, which I cannot read numerically. I record value 0.0 to encode 'null result' with se: null, and I do NOT claim the point estimate was exactly 1.00. The quote below is the paper's own statement of the null."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "0 = NO detectable causal effect of genetically predicted sleep duration on MDD, in a study that DID detect insomnia -> MDD at p = 6.88e-31 in the same sample with the same methods. This dissociation is the single most important finding in my shard."
+    covariates: ["MR assumptions; MR-Egger intercept p=0.545 (no pleiotropy); weighted-median concordant"]
+    followup_years: null
+    cohort_family: "UK_Biobank_plus_PGC"
+    quote: "For sleep duration, the IVW method yielded a nominal association of sleep duration on BD (OR = 1.01, 95% CI 1.00–1.01; p  = 0.029) ( Fig. 2 ). ... Additionally, we did not observe statistically significant effects of sleep duration on other psychiatric disorders was observed ( Fig. 2 )."
+  - outcome_domain: psychiatric
+    outcome_construct: sleep_duration_from_mdd_reverse_direction
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "REVERSE: genetically predicted MDD -> sleep DURATION, IVW"}
+    scale: log_or
+    unit: null
+    value: -0.08338
+    se: 0.02968
+    ci: [-0.13926, -0.02020]
+    conversion_formula: "OR 0.92 (0.87-0.98); log(0.92) = -0.08338; se = (log(0.98)-log(0.87))/3.92 = 0.02968"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = genetically higher MDD liability SHORTENS sleep duration. This is reverse causation caught in the act, with genetic instruments: depression makes people short sleepers. Crucially, this REVERSE arrow on the duration axis IS statistically significant while the FORWARD arrow on the same axis in the same study is NOT."
+    covariates: ["MR assumptions; 'consistent results were observed in sensitivity analyses'"]
+    followup_years: null
+    cohort_family: "UK_Biobank_plus_PGC"
+    quote: "a suggestive association between MDD and sleep duration was found using the IVW method (OR = 0.92, 95% CI 0.87–0.98; p  = 0.015), and consistent results were observed in sensitivity analyses (online Supplementary Table 12)."
+rob:
+  tool: MR-STROBE
+  judgement: low
+  notes: "Well-conducted bidirectional two-sample MR: large instruments (150 SNPs insomnia, 69 sleep duration, 228 chronotype), pleiotropic SNPs excluded via GWAS Catalog lookup, MR-Egger intercept tests reported throughout and null, weighted-median / MR-PRESSO / weights-modified-IVW / RAPS sensitivity analyses concordant, reverse-direction F-statistics reported (median F = 35.7 for MDD) so weak-instrument bias is not severe. Two real limitations, both stated by the authors: European ancestry only, and 'MR analyses performed on a dichotomisation of an underlying continuous factor (e.g. chronotype, sleep duration) may be biased by horizontal pleiotropy.' The MDD instrument has only 12 SNPs, so the reverse-direction estimates are less precise than the forward ones."
+funding: null
+notes: |
+  THIS RECORD IS THE ANALYTIC CENTREPIECE OF MY SHARD. It is a single study, one sample, one method,
+  that estimates all four arrows of interest. Because the instruments are genetic, and because the
+  same pipeline was applied to each arrow, the comparisons between arrows are internally valid in a
+  way that cross-study comparisons are not. All four:
+
+    insomnia          -> MDD:            OR 1.31 (1.25-1.37), p = 6.88e-31   SIGNIFICANT
+    MDD               -> insomnia:       OR 1.37 (1.14-1.64), p = 0.001      SIGNIFICANT
+    sleep DURATION    -> MDD:            NOT SIGNIFICANT
+    MDD               -> sleep DURATION: OR 0.92 (0.87-0.98), p = 0.015      SIGNIFICANT
+
+  READ THAT TABLE COLUMN BY COLUMN. On the INSOMNIA axis, causation runs both ways with roughly equal
+  force (log 1.31 = 0.270 forward, log 1.37 = 0.315 reverse; the reverse arrow is if anything the
+  larger). On the SLEEP DURATION axis, the only arrow that survives is the REVERSE one: depression
+  shortens sleep, but genetically proxied sleep duration does not detectably cause depression.
+
+  WHAT THIS MEANS FOR AN 18-YEAR-OLD WITH WORKLOAD-IMPOSED SHORT SLEEP AND NO INSOMNIA.
+  His exposure sits on the duration axis, not the insomnia axis. On the duration axis, this study
+  finds the forward causal arrow to be undetectable and the reverse arrow to be real. That is the
+  strongest single piece of evidence in my shard that the epidemiological short-sleep/depression
+  association is substantially reverse causation and substantially insomnia-mediated, and that its
+  causal relevance to HIS specific exposure is much smaller than the observational literature implies.
+
+  DO NOT OVERREAD THE NULL. Four honest caveats, because this is the number most likely to be misused:
+    (1) A null is not a zero. The paper does not print the sleep-duration -> MDD point estimate or CI
+        in text; it is in Fig. 2, which I could not read numerically. I have therefore recorded value
+        0.0 with se: null and from_figure: true, and I explicitly do not assert OR = 1.00. The true
+        effect could be modestly positive and merely underpowered. zhang2024_mr, using a DICHOTOMOUS
+        "short sleep duration" instrument rather than a continuous one, did find OR 1.179
+        (1.108-1.255), so the duration axis is not uniformly null across studies -- see that record.
+    (2) The instrument is continuous, population-average sleep duration in middle-aged Britons
+        (UK Biobank, ~40-69 y). Genetic propensity to sleep half an hour less across a lifetime is
+        not the same exposure as a behaviourally imposed 2-3 h weeknight deficit sustained for three
+        years at ages 16-19. MR estimates lifelong small-magnitude shifts, not acute large deficits.
+        adolescent_match is poor_midlife for exactly this reason.
+    (3) MR cannot capture threshold or dose-nonlinear effects. If the harm of short sleep only
+        appears below ~6 h, a linear instrument spanning the normal range would miss it.
+    (4) The authors themselves flag that dichotomising an underlying continuous trait can bias MR
+        via horizontal pleiotropy.
+
+  CONCORDANCE WITH THE OTHER MR STUDIES IN MY SHARD:
+    sun2022  (this):    insomnia -> MDD 1.31; MDD -> insomnia 1.37; duration -> MDD null
+    zhang2024_mr:       insomnia -> MDD 1.233; short duration -> MDD 1.179; continuous duration -> MDD 0.998
+    cai2021_mr:         insomnia -> MDD bxy 0.57; MDD -> insomnia bxy 0.16
+    gao2019_mr:         insomnia -> MDD NOT significant (discordant; smaller GWAS)
+    daghlas2021_mr:     1 h earlier sleep midpoint -> MDD OR 0.77 (0.63-0.94)  [TIMING, not duration]
+  Across four of the five, insomnia carries a clear causal signal toward MDD; sleep duration carries
+  either none or a much weaker one. cai2021 is the only study giving a directional asymmetry FAVOURING
+  the forward arrow (0.57 forward vs 0.16 reverse on the insomnia axis), and it disagrees with
+  sun2022's near-symmetry; I flag this disagreement rather than averaging over it.
+
+  ARITHMETIC. insomnia->MDD: log(1.31)=+0.27003, se=(log1.37-log1.25)/3.92=0.02338.
+              MDD->insomnia: log(1.37)=+0.31481, se=(log1.64-log1.14)/3.92=0.09277.
+              MDD->duration: log(0.92)=-0.08338, se=(log0.98-log0.87)/3.92=0.02968.
+shard: "s12_psychiatric"

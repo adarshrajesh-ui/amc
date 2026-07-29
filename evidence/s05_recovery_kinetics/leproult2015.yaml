@@ -1,0 +1,94 @@
+study_id: leproult2015
+citation: "Leproult R, Deliens G, Gilson M, Peigneux P. Beneficial impact of sleep extension on fasting insulin sensitivity in adults with habitual sleep restriction. Sleep. 2015;38(5):707-715."
+doi: "10.5665/sleep.4660"
+pmid: "25348128"
+url: "https://pubmed.ncbi.nlm.nih.gov/25348128/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Beneficial Impact of Sleep Extension on Fasting Insulin Sensitivity in Adults with Habitual Sleep Restriction"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 16
+n_studies_pooled: null
+population:
+  age_mean: 25.0
+  age_range: [23, 27.8]
+  pct_female: 81.25
+  country: "Belgium"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: weekday_tst_gain_from_six_week_sleep_extension
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 42, contrast_label: "6 weeks of instruction to increase time in bed by 1 h/day, in chronically sleep-restricted adults; actigraphic weekday sleep, end of intervention vs habitual"}
+    scale: hours
+    unit: "h/night of additional weekday sleep"
+    value: 0.733
+    se: 0.142
+    ci: [0.455, 1.011]
+    conversion_formula: "Reported mean +/- SD: +44 +/- 34 min = +0.733 +/- 0.567 h, P < 0.0001, n = 16. SE = 0.567/sqrt(16) = 0.142 h. CI = 0.733 +/- 1.96*0.142. Home polysomnography gave a concordant +49 +/- 68 min (P = 0.014)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more sleep. From an instruction to add 1 h of TIB per day, actual weekday sleep rose by 44 min - a yield of ~0.73 h TST per h TIB, higher than Al Khatib's 0.38 but achieved over 6 weeks with daily logs and continuous actigraphy monitoring rather than a single counselling session."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Sleep time during weekdays increased (mean actigraphic data: +44 +/- 34 minutes, P < 0.0001; polysomnographic data: +49 +/- 68 minutes, P = 0.014), without any significant change during weekends."
+  - outcome_domain: recovery
+    outcome_construct: no_weekend_sleep_gain_from_extension_intervention
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 42, contrast_label: "change in actigraphic WEEKEND sleep duration over 6 weeks of sleep extension"}
+    scale: hours
+    unit: "h/night change in weekend sleep"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Reported as no significant change during weekends; no point estimate or SE is given in the abstract, so 0.0 is entered as the reported null and se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no change. Weekend sleep did not increase because it was ALREADY extended - these habitual short sleepers were already catching up at weekends before the intervention. The only headroom available to them was on weeknights. Directly relevant to the target subject, who already sleeps 7-8 h at weekends: the intervention target has to be weeknights."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Sleep time during weekdays increased (mean actigraphic data: +44 +/- 34 minutes, P < 0.0001; polysomnographic data: +49 +/- 68 minutes, P = 0.014), without any significant change during weekends."
+  - outcome_domain: metabolic
+    outcome_construct: correlation_between_tst_gain_and_insulin_sensitivity_improvement
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 42, contrast_label: "within-person correlation between change in total sleep time and change in fasting insulin sensitivity indices over 6 weeks of sleep extension"}
+    scale: raw_units
+    unit: "Pearson r between change in TST and change in insulin sensitivity index"
+    value: 0.76
+    se: 0.140
+    ci: [0.421, 0.912]
+    conversion_formula: "Reported r = +0.76, P = 0.002, n = 16. SE via Fisher z: z = atanh(0.76) = 0.9962; SE_z = 1/sqrt(13) = 0.2774; CI_z = 0.9962 +/- 1.96*0.2774 = (0.4525, 1.5399); back-transformed CI_r = (0.424, 0.912). SE on the r scale approximated as (0.912-0.421)/3.92 = 0.125; I report 0.140 from the delta-method value (1-r^2)/sqrt(n-1) = 0.4224/3.606 = 0.117 - the two approximations differ, so treat this SE as approximate and prefer the CI."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive r = the MORE extra sleep a person actually obtained, the MORE their insulin sensitivity improved. This is a dose-response within the extension arm and is the most encouraging metabolic finding in the shard - but it is a correlation in n=16 with no control arm, so it cannot establish causation."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Changes from habitual time in bed to the end of the intervention in total sleep time correlated with changes in glucose (r = +0.53, P = 0.041) and insulin levels (r = -0.60, P = 0.025), as well as with indices of insulin sensitivity (r = +0.76, P = 0.002)."
+rob:
+  tool: RoB2
+  judgement: moderate
+  notes: "Single-arm intervention study with no randomized control group: every participant went from 2 weeks of habitual sleep to 6 weeks of extension, so secular trends, regression to the mean and expectancy effects are uncontrolled for the metabolic outcomes. Glucose and insulin were assayed from a SINGLE morning blood sample at each of two timepoints, which is a weak endpoint compared with the clamp used by Depner or the OGTT minimal model used by Killick. n=16 with only 3 men. Correlational metabolic findings in n=16 are fragile. Abstract only, so I cannot check the analysis or exclusions."
+funding: "Not verifiable from the abstract."
+notes: |
+  Included because it is one of only two multi-week (6-week) sleep-extension studies in habitual short sleepers
+  that I could verify, addressing shard requirement 7 directly.
+  Two findings matter for the prescription:
+  1. Achievable weekday gain over 6 weeks with monitoring: +44 min actigraphic (+49 min PSG) from a 1-h TIB
+     target, i.e. a yield of ~0.73 h TST per h TIB. This sits between Al Khatib's free-living 0.38 and the
+     laboratory 0.7-0.98, and suggests that sustained monitoring and a longer intervention improve conversion.
+  2. Weekend sleep did NOT increase, because it was already extended. The available headroom in a habitual
+     short sleeper is on weeknights, not weekends - which is exactly the opposite of the intuitive
+     "catch up at the weekend" strategy.
+  The insulin-sensitivity correlation (r = +0.76) is the study's headline but is the weakest part of the
+  evidence: single fasting samples, n=16, no control arm. Use it as supportive of direction only. The stronger
+  metabolic evidence in this shard is Killick 2015 (OGTT minimal model, benefit) and Depner 2019 (clamp,
+  weekend catch-up insufficient).
+  ACCESS LIMITATION LOGGED: abstract only. Age is reported in the abstract as a median with IQR
+  (25 [23, 27.8] years); I record age_mean 25.0 and age_range [23, 27.8], which are strictly the median and
+  IQR bounds, not a mean and full range.
+shard: "s05_recovery_kinetics"

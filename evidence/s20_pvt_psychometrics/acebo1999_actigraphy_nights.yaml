@@ -1,0 +1,152 @@
+study_id: acebo1999_actigraphy_nights
+citation: "Acebo C, Sadeh A, Seifer R, Tzischinsky O, Wolfson AR, Hafer A, Carskadon MA. Estimating sleep patterns with activity monitoring in children and adolescents: how many nights are necessary for reliable measures? Sleep. 1999;22(1):95-103."
+doi: "10.1093/sleep/22.1.95"
+pmid: "9989370"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Estimating Sleep Patterns with Activity Monitoring in Children and Adolescents: How Many Nights Are Necessary for Reliable Measures?"
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: 224
+n_studies_pooled: 3
+population:
+  age_mean: null
+  age_range: [1, 16]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: nights_of_actigraphy_needed_for_adequate_reliability_children_adolescents
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: null
+      contrast_label: "minimum number of usable actigraphy nights for adequate (>= 0.70) reliability of sleep-pattern measures in children and adolescents living at home on self-selected schedules"
+    scale: raw_units
+    unit: "usable nights"
+    value: 5.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly in the abstract conclusion: 'Five or more nights of usable recordings are required to obtain reliable actigraph measures of sleep for children and adolescents.' Supported by: 'Reliability estimates for values aggregated over any 5 nights were adequate (> or = .70) for sleep start time, wake minutes, and sleep efficiency.' No SE applies to a recommended count."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more nights needed. 5 nights is the floor for sleep start time, wake minutes and sleep efficiency; it is NOT sufficient for sleep duration (see next effect)."
+    covariates: []
+    followup_years: null
+    cohort_family: Brown_Bradley_actigraphy
+  - outcome_domain: exposure_measurement
+    outcome_construct: nights_needed_for_sleep_duration_specifically
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: null
+      contrast_label: "nights required for reliable estimates of SLEEP MINUTES / SLEEP PERIOD (i.e. duration), as distinct from timing and efficiency measures"
+    scale: raw_units
+    unit: "usable nights"
+    value: 7.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: 'Measures of sleep minutes and sleep period were less reliable and may require 7 or more nights for estimates of stable individual differences.' Recorded as 7 because that is the stated threshold; the '_or more_' means 7 is a LOWER BOUND."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more nights needed. THIS is the relevant number for our purpose, because the quantity the protocol needs is habitual sleep DURATION, which is the least reliable of the actigraphic measures. 7 nights is the floor, not the target."
+    covariates: []
+    followup_years: null
+    cohort_family: Brown_Bradley_actigraphy
+  - outcome_domain: exposure_measurement
+    outcome_construct: actigraphy_data_loss_rate_requiring_oversampling
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: 7
+      contrast_label: "proportion of weekly actigraphy recordings unusable due to illness, technical problems and non-compliance"
+    scale: probability
+    unit: "proportion of weekly recordings unacceptable for analysis"
+    value: 0.28
+    se: null
+    ci: null
+    conversion_formula: "Reported directly as an upper bound: 'Up to 28% of weekly recordings may be unacceptable for analysis in young participants because of illness, technical problems, and participant noncompliance'. Recorded as 0.28; it is a stated CEILING on loss, not a point estimate with uncertainty."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more data loss. Drives the operational rule: to END UP WITH 5 usable nights you must SCHEDULE at least 7. To end up with 14 usable nights, schedule ~19-20."
+    covariates: []
+    followup_years: null
+    cohort_family: Brown_Bradley_actigraphy
+rob:
+  tool: none
+  judgement: na
+  notes: "Descriptive psychometric study pooling three datasets; not an intervention study, so RoB2 does not apply. ABSTRACT ONLY - the full text is paywalled at Sleep/OUP and I did not retrieve it, so I have the recommended night counts and the reliability threshold but NOT the individual ICC values per measure per number of nights. n = 224 is the sum of the two reported groups (169 children aged 12-60 months + 55 adolescents aged 11-16 years); the 5-night and 7-night recommendations are stated for the combined child-and-adolescent population, and I could not separate the adolescent-only estimates. Note the published erratum (Sleep 1999 Mar 15;22(2):143), whose content I have not seen - a caution if any specific tabled value is later needed."
+funding: "NIH (see paper); E.P. Bradley Hospital / Brown University"
+notes: |
+  ===== PART C9: THE AGE-APPROPRIATE NIGHT-COUNT RECORD =====
+  This is the ONLY record in my Part C9 set whose population actually resembles the index subject.
+  Acebo's adolescent subgroup was 55 adolescents aged 11-16 years living at home on SELF-SELECTED
+  sleep-wake schedules - i.e. exactly the free-living, socially-constrained, high-variability condition
+  the index subject is in, rather than a midlife occupational cohort (Aili 2017, Knutson 2007) or a
+  clinical population (AASM 2018). Hence adolescent_match: exact_16_19 despite the 11-16 range.
+
+  VERBATIM QUOTES
+  ---------------
+  Objective:
+  "This study provides estimates of reliability for aggregated values from 1 to 7 recording nights for
+  five commonly used actigraphic measures of sleep patterns, reliability as a function of night type
+  (weeknight or weekend night), and stability of measures over several months."
+
+  Population and setting:
+  "Data are from three studies that obtained 7 nights of actigraph data (using Mini Motionlogger
+  actigraphs and associated validated algorithms [ASA]) on children and adolescents living at home on
+  self-selected sleep-wake schedules."
+  "Participants were 169 children aged 12-60 months, and 55 adolescents aged 11-16 years."
+
+  THE RESULTS THAT MATTER:
+  "Up to 28% of weekly recordings may be unacceptable for analysis in young participants because of
+  illness, technical problems, and participant noncompliance; studies aiming to collect 5 nights of
+  actigraph data should record for at least 1 full week. Reliability estimates for values aggregated
+  over any 5 nights were adequate (> or = .70) for sleep start time, wake minutes, and sleep
+  efficiency. Measures of sleep minutes and sleep period were less reliable and may require 7 or more
+  nights for estimates of stable individual differences. Reliability for 1- or 2-night aggregates were
+  poor for all measures. We found significant and high correlations between summer and fall session
+  measures for all five variables when weekend nights were included."
+
+  Conclusion:
+  "Five or more nights of usable recordings are required to obtain reliable actigraph measures of sleep
+  for children and adolescents."
+
+  THREE OPERATIONAL RULES THIS GIVES THE PROTOCOL
+  ----------------------------------------------
+  1. "Reliability for 1- or 2-night aggregates were poor for ALL measures." So the common practice of a
+     weekend-plus-a-weekday spot check is worthless. This independently corroborates the derived
+     single-night ICC of 0.236 in knutson2007_actigraphy_variability.yaml.
+  2. DURATION IS THE HARD MEASURE. Sleep minutes / sleep period need 7+ nights while timing and
+     efficiency need 5. Every source in my Part C9 set agrees on this ordering:
+        Acebo 1999 : timing/efficiency 5 nights, DURATION 7+ nights
+        Aili 2017  : sleep percent 2 nights, efficiency 5 nights, DURATION >7 nights
+        Knutson 2007 (my derivation): DURATION 13 nights for R = 0.80
+     Because the protocol's target quantity IS duration, the binding constraint is the largest of
+     these, not the smallest.
+  3. OVERSAMPLE FOR ATTRITION. "studies aiming to collect 5 nights of actigraph data should record for
+     at least 1 full week" - a 40% oversample. Applying the same 28% loss ceiling to a 14-usable-night
+     target gives 14/0.72 = 19.4, i.e. schedule ~20 nights of recording to bank 14 usable ones. For a
+     self-experiment run by the subject himself, compliance is plausibly better than in a
+     12-60-month-old cohort, but the 28% figure is the only empirical loss rate I have and using it is
+     the conservative choice.
+
+  WEEKEND STRUCTURE
+  "reliability as a function of night type (weeknight or weekend night)" was an explicit aim and
+  "significant and high correlations between summer and fall session measures for all five variables
+  WHEN WEEKEND NIGHTS WERE INCLUDED" - i.e. stability over months required the weekend nights to be
+  present. This argues AGAINST Aili 2017's suggestion of restricting measurement to weeknights only:
+  for a subject whose entire exposure pattern is a weekday/weekend oscillation, dropping weekends
+  would discard the signal of interest. Record all 7 nights per week and model weekday/weekend
+  separately.
+shard: "s20_pvt_psychometrics"

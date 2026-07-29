@@ -1,0 +1,152 @@
+study_id: hirshkowitz2015nsf
+citation: "Hirshkowitz M, Whiton K, Albert SM, Alessi C, Bruni O, DonCarlos L, Hazen N, Herman J, Katz ES, Kheirandish-Gozal L, Neubauer DN, O'Donnell AE, Ohayon M, Peever J, Rawding R, Sachdeva RC, Setters B, Vitiello MV, Ware JC, Adams Hillard PJ. National Sleep Foundation's sleep time duration recommendations: methodology and results summary. Sleep Health. 2015;1(1):40-43."
+doi: "10.1016/j.sleh.2014.12.010"
+pmid: "29073412"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "National Sleep Foundation's sleep time duration recommendations: methodology and results summary"
+access_tier: full_text
+secondhand_via: null
+design: guideline_consensus
+tier: TX
+n: null
+n_studies_pooled: 312
+population:
+  age_mean: null
+  age_range: [0, 100]
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: nsf_recommended_range_teenagers_14_17
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "NSF 'Recommended' band, Teenagers 14-17 y"}
+    scale: hours
+    unit: "hours per night (midpoint of the recommended 8-10 h band)"
+    value: 9.0
+    se: null
+    ci: [8.0, 10.0]
+    conversion_formula: "value = midpoint of the verbatim 'Recommended, h' cell '8 to 10'; ci field holds the recommended BAND ITSELF (8-10 h), not a confidence interval. There is no sampling CI: this is an expert-panel appropriateness rating."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "requirement, not exposure. Higher = more sleep needed. Applies to our subject at ages 16-17."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      For teenagers, 8 to 10 hours was considered appropriate, 7 to 9 hours for young adults and adults, and 7 to
+      8 hours of sleep for older adults. [Table 2: Teenagers 14-17y | Recommended, h: 8 to 10]
+  - outcome_domain: sleep_need
+    outcome_construct: nsf_may_be_appropriate_lower_teenagers_14_17
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "NSF 'May be appropriate' band, Teenagers 14-17 y"}
+    scale: hours
+    unit: "hours per night"
+    value: 7.0
+    se: null
+    ci: [7.0, 11.0]
+    conversion_formula: "Table 2 Teenagers 14-17y: 'May be appropriate, h' = '7' (lower side) and '11' (upper side). value = the lower 'may be appropriate' value, 7 h; ci holds the two 'may be appropriate' values."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "7 h is the LOWEST duration the panel would not label inappropriate for a 14-17 year old. Our subject's reported 5-6 h weekday sleep is inside the explicit 'Not recommended' zone."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      Table 2 'Expert panel recommended sleep durations': Teenagers 14-17y | Recommended, h 8 to 10 | May be
+      appropriate, h 7 ... 11 | Not recommended, h Less than 7 ... More than 11
+  - outcome_domain: sleep_need
+    outcome_construct: nsf_not_recommended_threshold_teenagers_14_17
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "NSF 'Not recommended' lower threshold, Teenagers 14-17 y"}
+    scale: hours
+    unit: "hours per night below which sleep is 'not recommended'"
+    value: 7.0
+    se: null
+    ci: null
+    conversion_formula: "Table 2 Teenagers 14-17y 'Not recommended, h' = 'Less than 7' (and 'More than 11'). value = 7 h, the threshold."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "anything under 7 h is 'not recommended' for a 14-17 year old"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      Table 2 'Expert panel recommended sleep durations': Teenagers 14-17y | Not recommended, h: Less than 7 ...
+      More than 11
+  - outcome_domain: sleep_need
+    outcome_construct: nsf_recommended_range_young_adults_18_25
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "NSF 'Recommended' band, Young adults 18-25 y"}
+    scale: hours
+    unit: "hours per night (midpoint of the recommended 7-9 h band)"
+    value: 8.0
+    se: null
+    ci: [7.0, 9.0]
+    conversion_formula: "value = midpoint of the verbatim 'Recommended, h' cell '7 to 9'; ci field holds the recommended BAND (7-9 h). Applies to our subject at ages 18-19."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "requirement. NOTE THE DISCONTINUITY: crossing the 17->18 birthday drops the recommended band by a full hour (8-10 -> 7-9) with no biological event to justify it. Our subject crosses this boundary mid-exposure."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      For teenagers, 8 to 10 hours was considered appropriate, 7 to 9 hours for young adults and adults, and 7 to
+      8 hours of sleep for older adults. [Table 2: Young adults 18-25y | Recommended, h: 7 to 9]
+  - outcome_domain: sleep_need
+    outcome_construct: nsf_not_recommended_threshold_young_adults_18_25
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "NSF 'Not recommended' lower threshold, Young adults 18-25 y"}
+    scale: hours
+    unit: "hours per night below which sleep is 'not recommended'"
+    value: 6.0
+    se: null
+    ci: [6.0, 11.0]
+    conversion_formula: "Table 2 Young adults 18-25y: 'May be appropriate, h' = '6' and '10 to 11'; 'Not recommended, h' = 'Less than 6' and 'More than 11'. value = 6 h threshold; ci holds the outer 'may be appropriate' envelope (6 to 11 h)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "for an 18-25 year old, 6 h 'may be appropriate' and only <6 h is 'not recommended'. Our subject's 5-6 h weekday sleep straddles this threshold at ages 18-19 but is clearly below it at 16-17."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      Table 2 'Expert panel recommended sleep durations': Young adults 18-25y | Recommended, h 7 to 9 | May be
+      appropriate, h 6 ... 10 to 11 | Not recommended, h Less than 6 ... More than 11
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: "Expert-opinion appropriateness ratings, not a pooled evidence synthesis. The panel explicitly used RAM because evidence-based methods 'fall short'. Voting-based, 2 rounds, 18 panellists, and panellists self-rated whether their scores rested on convincing evidence, weaker evidence, expert opinion, or personal experience - the paper does not report the distribution of those self-ratings. Treat as TX context, never as a primary effect estimate."
+funding: "National Sleep Foundation"
+notes: |
+  VERBATIM Table 2 ("Expert panel recommended sleep durations"), the two bands that matter for our subject:
+    Age                     | Recommended, h | May be appropriate, h | Not recommended, h
+    Teenagers 14-17y        | 8 to 10        | 7 ... 11              | Less than 7 ... More than 11
+    Young adults 18-25y     | 7 to 9         | 6 ... 10 to 11        | Less than 6 ... More than 11
+  (In the source the "may be appropriate" and "not recommended" cells are split over two printed lines per age band; the
+  lower-side value appears on the first line and the upper-side value on the second.)
+  VERBATIM abstract: "The panel agreed that, for healthy individuals with normal sleep, the appropriate sleep duration for
+  newborns is between 14 and 17 hours, infants between 12 and 15 hours, toddlers between 11 and 14 hours, preschoolers
+  between 10 and 13 hours, and school-aged children between 9 and 11 hours. For teenagers, 8 to 10 hours was considered
+  appropriate, 7 to 9 hours for young adults and adults, and 7 to 8 hours of sleep for older adults."
+  VERBATIM methodology: "The NSF convened an 18-member multidisciplinary expert panel, representing 12 stakeholder
+  organizations, to evaluate scientific literature concerning sleep duration recommendations. We determined expert
+  recommendations for sufficient sleep durations across the lifespan using the RAND/UCLA Appropriateness Method."
+  "Fifty-eight searches using combinations of search terms related to sleep... yielded 2412 articles. The review team
+  identified 575 articles for full-text review. Of the 575 articles, 312 met our inclusion criteria."
+  "In total, the expert panel met 4 times over the course of 9 months and participated in 2 rounds of voting."
+  EVIDENCE-STRENGTH ADMISSION (verbatim): "It provides a process by which conclusions can be reached using the
+  best-available information when evidence-based medicine methods fall short. To fill the gaps in our understanding, expert
+  panelists reviewed the literature, deliberated, and voted on the appropriateness..."  and "Panelists also noted whether
+  scores were based on convincing scientific evidence, weaker scientific evidence, expert opinion, or their own experience."
+  INDIVIDUAL VARIATION (verbatim): "Importantly, the panel emphasized that some individuals might sleep longer or shorter
+  than the recommended times with no adverse effects."
+  *** THE MOST IMPORTANT SENTENCE IN THIS PAPER FOR OUR PIPELINE (verbatim) ***
+  "It is important to remember that this project focused on sleep duration. The literature, especially cohort and population
+  studies, often do not distinguish between time in bed and actual sleep time. However, actual sleep time is typically less
+  than time in bed, which biases data toward higher sleep duration estimates. By contrast, intervention studies using
+  laboratory measured sleep time will typically produce shorter sleep durations. This data disparity is particularly
+  important when interpreting laboratory-based findings."
+  => The NSF bands are partly anchored on TIME-IN-BED-contaminated self-report. If the exposure engine expresses our
+  subject's sleep as actigraphic/PSG TOTAL SLEEP TIME and compares it to these bands, it will OVERSTATE the sleep debt by
+  roughly the TIB-TST gap (~0.8-1.5 h; see exposure_priors.md section iii). Units must be matched on both sides of the
+  subtraction. This is the single largest systematic error available to the downstream model.
+shard: "s06_sleep_need_measurement"

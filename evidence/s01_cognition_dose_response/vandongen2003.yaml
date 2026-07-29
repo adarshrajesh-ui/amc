@@ -1,0 +1,442 @@
+study_id: vandongen2003
+citation: "Van Dongen HPA, Maislin G, Mullington JM, Dinges DF. The Cumulative Cost of Additional Wakefulness: Dose-Response Effects on Neurobehavioral Functions and Sleep Physiology From Chronic Sleep Restriction and Total Sleep Deprivation. Sleep. 2003;26(2):117-126."
+doi: "10.1093/sleep/26.2.117"
+pmid: "12683469"
+url: "https://academic.oup.com/sleep/article/26/2/117/2749048"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "The Cumulative Cost of Additional Wakefulness: Dose-Response Effects on Neurobehavioral Functions and Sleep Physiology From Chronic Sleep Restriction and Total Sleep Deprivation"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 48
+n_studies_pooled: null
+population:
+  age_mean: 27.6
+  age_range: [21, 38]
+  pct_female: 12.5
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  # ---------------------------------------------------------------- PVT lapses
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 14,
+               contrast_label: "4h TIB vs 8h TIB, day 14 of 14 nights"}
+    scale: raw_units
+    unit: "PVT lapses per 10-min bout (daily mean of 9 bouts 07:30-23:30), change from baseline"
+    value: 12.335
+    se: null
+    ci: null
+    conversion_formula: "Published model y_t = beta*t^theta with theta=0.78 (paper) and beta recovered
+      by least-squares tracing of the printed fitted curves in Fig 1A (RMS residual 0.024 px-units):
+      beta_4h=1.9087, beta_8h=0.3341. Day-14 values 1.9087*14^0.78=14.952 and 0.3341*14^0.78=2.617;
+      difference 12.335. Observed (marker) day-14 points were 13.78 (4h) and 4.16 (8h), difference 9.62."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "positive = MORE lapses = WORSE vigilance under restriction"
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_GCRC_2003
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses
+    exposure: {type: chronic_restriction, dose_h: 6, referent_h: 8, duration_days: 14,
+               contrast_label: "6h TIB vs 8h TIB, day 14 of 14 nights"}
+    scale: raw_units
+    unit: "PVT lapses per 10-min bout (daily mean), change from baseline"
+    value: 7.387
+    se: null
+    ci: null
+    conversion_formula: "beta_6h=1.2770, theta=0.78; 1.2770*14^0.78=10.004 vs 8h 2.617; diff 7.387.
+      Observed markers: 11.06 (6h) vs 4.16 (8h), diff 6.90."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "positive = MORE lapses = WORSE vigilance under restriction"
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_GCRC_2003
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 14,
+               contrast_label: "4h TIB vs 8h TIB, day 14, standardised"}
+    scale: hedges_g
+    unit: null
+    value: 1.435
+    se: 0.489
+    ci: [0.477, 2.393]
+    conversion_formula: "g = (M_4h - M_8h)/SD_pooled * (1 - 3/(4*df-1)), df = 13+9-2 = 20.
+      SD_pooled is NOT published for the restriction arms. It was derived from the grey band in
+      Fig 1A, which the caption defines as the mean +- s.e. range after 2 days of 0h sleep (n=13):
+      digitised band half-width = 2.293 lapses = s.e., so SD = 2.293*sqrt(13) = 8.268. Band centre
+      12.90 reproduces the digitised 0h day-2 marker (12.98), validating the extraction.
+      g = 12.335/8.268 = 1.492, x0.9620 = 1.435. SE(g) = sqrt((13+9)/(13*9) + g^2/(2*20)) = 0.489.
+      Because the 0h arm is the most severely deprived condition its between-subject variance is
+      likely the largest in the study, so this g is probably CONSERVATIVE (biased toward 0).
+      Using the 1-day band instead (SD=7.175) gives g=1.653."
+    from_figure: true
+    inferred_from_ci: true
+    direction_note: "positive = more lapses = worse vigilance; SD is an approximation, see formula"
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_GCRC_2003
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses
+    exposure: {type: chronic_restriction, dose_h: 6, referent_h: 8, duration_days: 14,
+               contrast_label: "6h TIB vs 8h TIB, day 14, standardised"}
+    scale: hedges_g
+    unit: null
+    value: 0.860
+    se: 0.454
+    ci: [-0.030, 1.750]
+    conversion_formula: "As for the 4h arm: g = (10.004-2.617)/8.268 = 0.8935, x0.9620 = 0.860,
+      SE = sqrt(22/117 + 0.860^2/40) = 0.454."
+    from_figure: true
+    inferred_from_ci: true
+    direction_note: "positive = more lapses = worse vigilance; SD is an approximation"
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_GCRC_2003
+  # ------------------------------------------------- per-hour dose-response slope
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_per_hour_tib_below_8h
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: 8, duration_days: 14,
+               contrast_label: "linear dose slope across 8h / 6h / 4h TIB arms at day 14"}
+    scale: per_hour_beta
+    unit: "additional PVT lapses per 10-min bout at day 14, per 1 h less TIB below 8 h"
+    value: 3.084
+    se: null
+    ci: null
+    conversion_formula: "OLS of day-14 model-fitted lapse change on TIB across the three arms:
+      (8h, 2.617), (6h, 10.004), (4h, 14.952). Slope = -3.084 lapses per hour of TIB, i.e. each
+      hour of TIB removed below 8 h costs 3.08 extra lapses by night 14. The relation is slightly
+      CONCAVE, not linear: 8->6h costs 3.69 lapses/h while 8->4h averages 3.08 lapses/h, so the
+      first hour lost is more expensive than the fourth. Slope on the rate parameter beta itself
+      is -0.394 lapses.day^-0.78 per hour of TIB."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "positive value = harm accrues as TIB falls below 8 h"
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_GCRC_2003
+  # ------------------------------------------- accumulation exponents (theta)
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_accumulation_exponent_theta
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: 8, duration_days: 14,
+               contrast_label: "curvature of build-up across 14 nights, 8h/6h/4h arms pooled"}
+    scale: raw_units
+    unit: "dimensionless exponent theta in y_t = beta * t^theta (theta=1 is exactly linear)"
+    value: 0.78
+    se: 0.04
+    ci: [0.702, 0.858]
+    conversion_formula: "Reported directly as estimate +- s.e.; CI = value +- 1.96*se."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "theta near 1 = deficit keeps accumulating almost linearly night after night;
+      theta far below 1 = saturating. 0.78 means NO meaningful plateau within 14 nights."
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_GCRC_2003
+  - outcome_domain: cognition
+    outcome_construct: sss_sleepiness_accumulation_exponent_theta
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: 8, duration_days: 14,
+               contrast_label: "curvature of subjective sleepiness build-up, 8h/6h/4h arms pooled"}
+    scale: raw_units
+    unit: "dimensionless exponent theta in y_t = beta * t^theta"
+    value: 0.24
+    se: 0.04
+    ci: [0.162, 0.318]
+    conversion_formula: "Reported directly as estimate +- s.e. Companion KSS value 0.16 +- 0.03.
+      Ratio theta_PVT/theta_SSS = 0.78/0.24 = 3.25: objective vigilance accumulates 3.3x more
+      linearly than self-rated sleepiness in the very same subjects on the very same days."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0.24 = strongly saturating: subjective sleepiness plateaus while PVT keeps
+      degrading. This is the core habituation/dissociation parameter."
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_GCRC_2003
+  # ------------------------------------------------- subjective sleepiness levels
+  - outcome_domain: cognition
+    outcome_construct: sss_subjective_sleepiness
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 14,
+               contrast_label: "4h TIB vs 8h TIB, day 14, Stanford Sleepiness Scale"}
+    scale: raw_units
+    unit: "Stanford Sleepiness Scale points (1-7 scale), change from baseline"
+    value: 0.772
+    se: null
+    ci: null
+    conversion_formula: "beta_4h=0.5596, beta_8h=0.1498, theta=0.24: 0.5596*14^0.24=1.054 vs
+      0.1498*14^0.24=0.282; difference 0.772 SSS points. The 4h-vs-6h difference is only 0.080
+      points and is not significant (F1,30=0.10, P=0.75), i.e. subjective sleepiness DOES NOT
+      DISCRIMINATE 4h from 6h even though PVT lapses differ by 4.95."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "positive = sleepier. Note 0.77 points on a 7-point scale after 14 nights at
+      4h TIB, vs >2 points after 3 days of total sleep deprivation."
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_GCRC_2003
+  # ------------------------------------------------------- working memory (DSST)
+  - outcome_domain: cognition
+    outcome_construct: dsst_correct_responses
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 14,
+               contrast_label: "4h TIB vs 8h TIB, day 14, digit symbol substitution task"}
+    scale: raw_units
+    unit: "DSST correct responses per 1.5 min, change from baseline"
+    value: -14.752
+    se: null
+    ci: null
+    conversion_formula: "theta=0.59 (paper); traced beta_4h=-1.0839, beta_8h=+2.0251.
+      Day 14: -1.0839*14^0.59=-5.143 vs +2.0251*14^0.59=+9.609; difference -14.752.
+      NOTE the 8h arm IMPROVED by 9.6 correct responses - that gain is the practice/learning
+      curve, so most of this contrast is loss of normal learning rather than absolute decline."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "negative = fewer correct responses = worse working memory under restriction"
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_GCRC_2003
+  - outcome_domain: cognition
+    outcome_construct: dsst_correct_responses
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 14,
+               contrast_label: "4h TIB vs 8h TIB, day 14, DSST, standardised"}
+    scale: hedges_g
+    unit: null
+    value: -1.161
+    se: 0.471
+    ci: [-2.084, -0.238]
+    conversion_formula: "SD_pooled=12.223 derived from the Fig 1C grey band (mean+-s.e. after
+      2 days of 0h sleep, n=13; half-width 3.390 -> SD=3.390*sqrt(13)). Band centre at day 14
+      reproduces 0h-day-1 value plus the 8h practice curve as the caption specifies, validating
+      the extraction. g = -14.752/12.223 = -1.207, x0.9620 = -1.161; SE = 0.471."
+    from_figure: true
+    inferred_from_ci: true
+    direction_note: "negative = worse working memory; SD is an approximation, see formula"
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_GCRC_2003
+  # ------------------------------------------- cognitive throughput (SAST)
+  - outcome_domain: cognition
+    outcome_construct: sast_serial_addition_subtraction_throughput
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 14,
+               contrast_label: "4h TIB vs 8h TIB, day 14, serial addition/subtraction task"}
+    scale: raw_units
+    unit: "SAST correct responses per min, change from baseline"
+    value: -2.753
+    se: null
+    ci: null
+    conversion_formula: "theta=0.45 (paper); traced beta_4h=+0.0176, beta_8h=+0.8571.
+      Day 14: 0.058 vs 2.811; difference -2.753. The 4h arm shows essentially zero improvement
+      (beta ~ 0) - total abolition of the practice curve rather than absolute decline."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "negative = lower throughput = worse under restriction"
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_GCRC_2003
+  # ------------------------------------------------------------ practice effect
+  - outcome_domain: cognition
+    outcome_construct: practice_effect_in_8h_control_arm
+    exposure: {type: descriptive, dose_h: 8, referent_h: 8, duration_days: 14,
+               contrast_label: "8h TIB control arm, day 14 vs baseline, 9 test bouts/day for 14 days"}
+    scale: raw_units
+    unit: "change from baseline in the rested control arm (DSST correct responses per 1.5 min)"
+    value: 9.609
+    se: null
+    ci: null
+    conversion_formula: "Fitted 8h curve at day 14: beta=2.0251, theta=0.59 -> +9.609 DSST correct
+      responses. Companion values: SAST +2.811 correct/min (beta=0.8571, theta=0.45); PVT lapses
+      +2.617 but the paper states beta for PVT in the 8h arm was NOT significantly different from
+      zero (t30=0.77, P=0.45), i.e. PVT shows no learning curve. Practice therefore contaminates
+      DSST and SAST trajectories but not PVT."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "positive = improvement from repeated testing in a fully rested arm; any
+      restriction trajectory on DSST/SAST must be read against this rising baseline"
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_GCRC_2003
+  # ------------------------------------------------------------------ sleep need
+  - outcome_domain: sleep_need
+    outcome_construct: critical_daily_sleep_duration_to_prevent_cumulative_deficit
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 14,
+               contrast_label: "statistically estimated daily sleep need, 24h - xi"}
+    scale: hours
+    unit: "hours of sleep per 24 h"
+    value: 8.16
+    se: 0.73
+    ci: [6.729, 9.591]
+    conversion_formula: "Reported as 24h - xi where xi = 15.84 +- 0.73 h is the fitted critical wake
+      duration in equation (4). CI = value +- 1.96*se. Between-subject SD of xi was 3.58 +- 1.19 h,
+      so individual sleep need is highly variable."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "sleep below this threshold produces cumulative neurobehavioral deficit"
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_GCRC_2003
+  - outcome_domain: exposure_measurement
+    outcome_construct: habitual_sleep_moderates_vulnerability
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: 8, duration_days: 14,
+               contrast_label: "partial r between pre-study sleep duration and subject-specific beta for PVT lapses"}
+    scale: raw_units
+    unit: "partial correlation coefficient (controlling for experimental condition), df=32"
+    value: 0.29
+    se: null
+    ci: null
+    conversion_formula: "Reported as r32 = 0.29, P = 0.048. Directly relevant to a habitually
+      short-sleeping subject: those who habitually slept LONGEST were MORE affected, implying a
+      chronically restricted 18-year-old may show a shallower measured slope than these subjects
+      while sitting at a worse absolute level."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = longer habitual sleep predicts faster deterioration under restriction"
+    covariates: ["experimental condition"]
+    followup_years: null
+    cohort_family: UPenn_GCRC_2003
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomised to dose with continuous in-laboratory monitoring - the strongest available
+    design. Concerns: no blinding is possible; small per-arm n (9/13/13); the 8h control arm was
+    significantly younger than the 6h arm (P=0.022) and the 6h arm was slightly worse on DSST at
+    baseline (P=0.049); healthy screened volunteers aged 21-38 only, so transport to a 16-19 year
+    old is an extrapolation; SDs for the restriction arms are not published, so all standardised
+    effects here rest on a grey-band-derived SD from the 0h arm."
+funding: "NIH (grants cited in the paper: NR04281, RR00040); US Air Force Office of Scientific Research"
+notes: |
+  WHY THIS RECORD MATTERS: this is the only 14-night randomised dose-response experiment with
+  three restriction levels plus a total-deprivation anchor, and it is the primary source for both
+  the dose slope and the subjective/objective dissociation.
+
+  DESIGN: 1 adaptation + 2 baseline nights at 8h TIB (23:30-07:30), then randomisation to 8h
+  (n=9, 2F, 24.1+-2.2y), 6h (n=13, 3F, 30.1+-4.5y) or 4h (n=13, 1F, 27.7+-5.4y) TIB with a fixed
+  07:30 wake time for 14 days; a separate arm was kept awake 88 h (0h, n=13, all male, 27.3+-4.6y).
+  Test battery every 2 h; each plotted point is the mean of 9 bouts between 07:30 and 23:30.
+
+  ACCUMULATE vs PLATEAU (the question asked): objective performance did NOT plateau.
+  Fitted theta = 0.78 (PVT), 0.59 (DSST), 0.45 (SAST) - "cognitive performance impairment
+  accumulated near-linearly over days for all four experimental conditions". Subjective sleepiness
+  DID plateau: theta = 0.24 (SSS) and 0.16 (KSS), described by the authors as "near-saturating".
+
+  DIGITISED RAW DATA (change from baseline; publisher-PDF raster, winner-take-all NCC template
+  matching; overlay-verified). PVT lapses per 10-min bout:
+    8h: d1 -0.23  d2 -0.23  d3 -0.38  d4 0.53  d5 0.13  d6 0.38  d7 1.74  d8 1.08  d9 1.84
+        d10 1.49  d11 1.69  d12 3.25  d13 4.31  d14 4.16
+    6h: d2 1.39  d3 2.54  d4 3.40  d5 4.16  d6 4.16  d7 6.53  d8 5.17  d9 7.03  d10 7.58
+        d11 7.53  d12 10.51  d13 9.20  d14 11.06
+    4h: d3 3.60  d4 4.26  d5 7.03  d6 6.12  d7 9.80  d8 6.98  d9 11.41  d10 11.77  d11 8.69
+        d12 14.84  d13 15.19  d14 13.78
+    0h: d1 8.34  d2 12.98  d3 15.29
+  Stanford Sleepiness Scale points:
+    8h: d1 -0.06  d2 -0.13  d3 0.14  d4 0.26  d5 0.19  d6 0.07  d7 0.27  d8 0.20  d9 0.28
+        d10 0.29  d11 0.16  d12 0.39  d13 0.45  d14 0.39
+    6h: d1 0.37  d2 0.52  d3 0.89  d4 0.92  d5 0.92  d6 0.59  d7 0.62  d8 0.72  d10 1.02
+        d11 0.78  d12 0.87  d13 1.11
+    4h: d1 0.67  d6 1.04  d7 1.17  d8 0.95  d9 1.01  d10 0.72  d12 1.04
+    0h: d1 0.99  d2 1.41  d3 2.09
+  DSST correct responses per 1.5 min:
+    8h: d1 2.45  d3 5.01  d4 5.76  d5 6.29  d6 6.59  d7 5.84  d8 7.42  d9 6.21  d10 7.27
+        d11 7.42  d12 7.72  d13 9.08  d14 6.44
+    6h: d1 -0.56  d2 1.54  d3 1.09  d4 1.09  d5 -0.26  d6 1.77  d7 0.04  d8 1.69  d9 0.64
+        d10 0.49  d11 0.72  d12 0.11  d13 1.32  d14 1.85
+    4h: d1 2.60  d2 -0.41  d4 -1.32  d5 -1.62  d6 -2.52  d7 -4.71  d8 -4.71  d9 -4.63
+        d10 -4.56  d11 -5.46  d12 -6.59  d13 -4.86  d14 -3.58
+    0h: d1 -5.46  d2 -11.33  d3 -15.03
+  SAST correct responses per min:
+    8h: d3 1.85  d4 1.19  d5 1.63  d6 2.13  d7 2.52  d8 2.50  d10 2.74  d11 2.50  d12 2.94  d13 2.54
+    6h: d1 0.12  d2 0.72  d3 1.01  d4 0.87  d5 1.03  d6 1.71  d7 1.03  d8 1.41  d9 2.11
+        d10 2.05  d11 1.93  d12 2.15  d13 2.19  d14 2.01
+    4h: d1 1.09  d2 0.24  d3 0.08  d4 -0.10  d5 0.06  d6 0.10  d7 -0.22  d8 -0.04  d9 0.44
+        d10 0.20  d11 -0.34  d12 -0.22  d13 0.26  d14 0.36
+    0h: d1 -1.49  d2 -3.28
+  Markers are missing on days where a glyph was occluded by another series or by the fitted curve;
+  the published fitted curves below are complete and are the better input for a spline.
+
+  RECOVERED FITTED CURVES y_t = beta * t^theta (beta from least-squares tracing of the printed
+  curves at the paper's own theta; RMS residual 0.013-0.026 plot units):
+    PVT lapses  theta=0.78: beta_8h=0.3341  beta_6h=1.2770  beta_4h=1.9087
+      day-by-day 8h: 0.33 0.57 0.79 0.99 1.17 1.35 1.52 1.69 1.85 2.01 2.17 2.32 2.47 2.62
+      day-by-day 6h: 1.28 2.19 3.01 3.77 4.48 5.17 5.83 6.47 7.09 7.70 8.29 8.87 9.44 10.00
+      day-by-day 4h: 1.91 3.28 4.50 5.63 6.70 7.72 8.71 9.66 10.59 11.50 12.39 13.26 14.11 14.95
+    SSS        theta=0.24: beta_8h=0.1498  beta_6h=0.5170  beta_4h=0.5596
+      day-14 values 0.282 / 0.974 / 1.054
+    DSST       theta=0.59: beta_8h=2.0251  beta_6h=0.2505  beta_4h=-1.0839
+      day-14 values +9.609 / +1.189 / -5.143
+    SAST       theta=0.45: beta_8h=0.8571  beta_6h=0.6364  beta_4h=0.0176
+      day-14 values +2.811 / +2.087 / +0.058
+
+  KEY VERBATIM QUOTES
+  Dose-response and accumulation: "Chronic restriction of the nocturnal sleep period to either 6 h
+  or 4 h per day for 14 days resulted in significant cumulative performance deficits relative to
+  the 8 h sleep period condition (Figure 1). Significant differences among conditions in the rate
+  of change across days (parameter beta in equation (1)) were found for psychomotor vigilance task
+  performance (F2,30 = 3.67, P = 0.037), digit symbol substitution task performance (F2,30 = 5.33,
+  P = 0.010), and serial addition/subtraction task performance (F2,30 = 6.19, P = 0.006)."
+  Curvature: "For the 8 h, 6 h and 4 h sleep period conditions, curvature (parameter theta in
+  equation (1)) was statistically estimated to be 0.78 +- 0.04 for psychomotor vigilance task
+  performance, 0.59 +- 0.04 for digit symbol substitution task performance, and 0.45 +- 0.04 for
+  serial addition/subtraction task performance (estimate +- s.e.). ... These values indicate that
+  cognitive performance impairment accumulated near-linearly over days for all four experimental
+  conditions."
+  Equivalence to total sleep deprivation: "In the 4 h sleep period condition, lapses in behavioral
+  alertness and reductions in working memory performance reached levels equivalent to those
+  observed after 2 nights without sleep (Figures 1A, 1C). Cognitive throughput performance after
+  14 days of sleep restriction was equivalent to that observed after 1 night without any sleep
+  (Figure 1D). Subjects in the 6 h sleep period condition also reached levels of impairment
+  equivalent to those observed after 1 night of total sleep loss for lapses in behavioral alertness
+  and working memory performance."
+  Subjective saturation: "The curvature for subjective sleepiness as assessed by the SSS was
+  statistically estimated to be 0.86 +- 0.14 for the 0 h sleep condition, and 0.24 +- 0.04 for the
+  8 h, 6 h and 4 h sleep period conditions (theta estimate +- s.e.). Thus, the profile of subjective
+  sleepiness across days was near-linear for the 0 h sleep condition, while it was near-saturating
+  for the 4 h and 6 h sleep period conditions (Figure 1B)."
+  Habituation, explicit: "Chronic restriction of sleep to 4 h and 6 h initially elevated subjective
+  sleepiness ratings on both the Stanford Sleepiness Scale and the Karolinska Sleepiness Scale, but
+  as sleep restriction continued, there were only minor further increases in these ratings
+  (Figure 1B). In fact, unlike PVT and DSST performance functions (Figures 1A, 1C), sleepiness
+  ratings never reached levels equivalent to those found after 2 nights of total sleep deprivation.
+  Surprisingly, by the end of the 14 days of sleep restriction, when performance was at its worst
+  levels, subjects in the 4 h and 6 h sleep period conditions reported feeling only slightly sleepy.
+  Therefore, unlike performance measures, sleepiness ratings appeared to show adaptation to chronic
+  partial sleep deprivation."
+  Not a ceiling artefact: "It is unlikely that this was the result of a ceiling effect or other
+  metric-related artifact, because subjects in the total sleep deprivation condition reported
+  considerably greater levels of sleepiness, and did not show evidence of adaptation."
+  Why people think they adapt: "the lack of reports of intense feelings of sleepiness during chronic
+  sleep restriction may explain why sleep restriction is widely practiced - people have the
+  subjective impression they have adapted to it because they do not feel particularly sleepy."
+  Practice effects controlled by design: "The cumulative cognitive deficits are not likely to be due
+  to boredom, monotony, non-compliance, or any other non-sleep-related hypothetical construct, since
+  subjects in the 8 h control condition showed no significant progressive deficits (and displayed
+  continued learning on the working memory and cognitive throughput tasks) despite being exposed to
+  the same degree of laboratory control, experimental procedures, and repeated testing."
+  Practice correction in the figure: "For the DSST and SAST, these gray bands are curved parallel to
+  the practice effect displayed by the subjects in the 8 h sleep period condition, to compensate for
+  different amounts of practice on these tasks."
+  No adaptation claim survives: "Claims that humans adapt to chronic sleep restriction within a few
+  days, on the other hand, are not supported by the present findings."
+  Sleep need: "Accordingly, daily sleep need to prevent cumulative neurobehavioral deficits in these
+  subjects would appear to be 24 h - xi = 8.16 +- 0.73 h (estimate +- s.e.)."
+  Excess-wakefulness model fit: "Taking into account between-subjects variance in xi and gamma, the
+  statistical model in equation (4) explained 83.0% of the variance in the PVT data (Figure 1A).
+  The value for curvature theta was 0.67 +- 0.05 (estimate +- s.e.)."
+  Adolescent transportability, authors' own words: "It is likely that such deficits would also be
+  found in younger subjects (e.g., adolescents) and older individuals."
+  Habitual sleep as moderator: "Partial correlation, controlling for experimental condition,
+  revealed a modest but significant positive relationship between average sleep duration in the
+  5 days prior to the experiment and rate of increase in PVT lapses over the 14 days of sleep
+  restriction (r32 = 0.29, P = 0.048). This suggests that those subjects who habitually slept
+  longest tended to be more affected by the 14 days of imposed sleep restriction."
+  Sleep physiology decoupled from performance: "For total delta power in the non-REM sleep EEG
+  (Figure 2F), no significant progressive changes across days of sleep restriction were observed in
+  any of the three chronic sleep restriction conditions (|t15| < 1.61, P > 0.13)."
+
+  CAVEAT ON DIGITISATION: no per-arm means, SDs or SEs are tabulated anywhere in the paper; Figure 1
+  is the only source. All values above are figure-derived and carry roughly +-0.15 lapse-unit
+  reading error (1 px = 0.050 lapses, 0.0084 SSS points, 0.075 DSST responses, 0.020 SAST
+  responses/min). The recovered betas reproduce the printed curves to RMS < 0.03 plot units.
+shard: "s01_cognition_dose_response"

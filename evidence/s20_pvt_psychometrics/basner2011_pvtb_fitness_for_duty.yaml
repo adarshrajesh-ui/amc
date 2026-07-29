@@ -1,0 +1,128 @@
+study_id: basner2011_pvtb_fitness_for_duty
+citation: "Basner M, Rubinstein J. Fitness for duty: a 3-minute version of the Psychomotor Vigilance Test predicts fatigue-related declines in luggage-screening performance. J Occup Environ Med. 2011;53(10):1146-1154."
+doi: "10.1097/JOM.0b013e31822b8356"
+pmid: "21912278"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 0.9
+  status: VERIFIED
+  resolved_title: "Fitness for Duty"
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 36
+n_studies_pooled: null
+population:
+  age_mean: 30.8
+  age_range: null
+  pct_female: 55.6
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: pvtb_lapse_threshold_predicting_real_task_decrement_lower_cut
+    exposure:
+      type: total_deprivation
+      dose_h: 0
+      referent_h: null
+      duration_days: 1.42
+      contrast_label: "34 h of total sleep deprivation, 3-min PVT and simulated luggage-screening task (SLST) every 2 h; lapse threshold 355 ms; optimal cut dividing SLST threat-detection performance A' into high vs medium"
+    scale: raw_units
+    unit: "lapses per 3-min PVT (355 ms threshold)"
+    value: 11.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly in the abstract: 'Eleven and 20 lapses (355-ms threshold) on the PVT optimally divided SLST performance into high-, medium-, and low-performance bouts'. A published cut-point, not an effect size; no SE exists for it. se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "MORE lapses = worse. Crossing 11 lapses on a 3-min PVT-B marks the transition from high to medium real-task threat-detection performance. This is an ACTIONABLE, absolute, externally-validated threshold rather than a standardised effect size, which is what a self-experimenter actually needs on the day."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_TSD_PSD"
+  - outcome_domain: cognition
+    outcome_construct: pvtb_lapse_threshold_predicting_real_task_decrement_upper_cut
+    exposure:
+      type: total_deprivation
+      dose_h: 0
+      referent_h: null
+      duration_days: 1.42
+      contrast_label: "as above; optimal cut dividing SLST threat-detection performance A' into medium vs low"
+    scale: raw_units
+    unit: "lapses per 3-min PVT (355 ms threshold)"
+    value: 20.0
+    se: null
+    ci: null
+    conversion_formula: "Same published sentence; the upper of the two optimal cut-points. se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "MORE lapses = worse. Above 20 lapses on a 3-min PVT-B, simulated luggage-screening threat detection falls into the lowest band. Note these counts are for the 355 ms threshold on a 3-MINUTE test, so they are not comparable to the 1-2 lapses per 10-min PVT typical of a rested young adult at the 500 ms threshold."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_TSD_PSD"
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvtb_external_validity_against_a_real_world_task
+    exposure:
+      type: total_deprivation
+      dose_h: 0
+      referent_h: null
+      duration_days: 1.42
+      contrast_label: "does the 3-min PVT-B predict performance on an operationally meaningful task, and does it reproduce homeostatic and circadian structure?"
+    scale: raw_units
+    unit: "qualitative: external validity confirmed (no numeric predictive statistic in the abstract)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "The abstract reports the conclusion but not the numeric predictive statistic (e.g. AUC or R2), which is in the paywalled full text. value 1.0 encodes 'confirmed'; DO NOT POOL."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "The 3-min PVT-B predicts a real, non-PVT task, and group assignment 'replicated homeostatic and circadian patterns during total sleep deprivation'. This is the external-validity argument for using a 3-minute test rather than a 10-minute one."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_TSD_PSD"
+    quote: "The 3-minute PVT was able to predict performance on a simulated luggage-screening task."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Abstract-only access (Wolters Kluwer, not in PMC), so no per-cut sensitivity/specificity, no AUC, and no SDs. n = 36 healthy NON-professional subjects, mean age 30.8, 20 women (55.6%) - adolescent_match fair_adult. The cut-points were derived and evaluated in the SAME sample with no external validation, so they are optimistic; the authors themselves say 'Fitness-for-duty feasibility should now be tested in professional screeners and operational environments'. Exposure is 34 h of ACUTE TOTAL sleep deprivation, not chronic partial restriction, so the cut-points are calibrated on the wrong exposure for this subject and must not be transplanted as diagnostic thresholds. Same laboratory and probably overlapping protocol lineage as basner2011_pvt_metrics and basner2011_pvtb - do not treat as an independent study for pooling."
+funding: "Not extracted (abstract-only access)."
+notes: |
+  WHY THIS RECORD IS HERE. Parts A2 and A5 rest on the claim that a 3-minute PVT is good enough to be
+  worth doing daily. basner2011_pvtb establishes that the PVT-B tracks the 10-min PVT with a 22.7% average
+  effect-size penalty; this record establishes the missing external-validity link - that the 3-min PVT-B
+  predicts performance on a task nobody would call a laboratory artefact, and that it reproduces the
+  expected homeostatic and circadian structure across 34 h of wakefulness.
+
+  FULL ABSTRACT, VERBATIM:
+  "To evaluate the ability of a 3-minute Psychomotor Vigilance Test (PVT) to predict fatigue-related
+  performance decrements on a simulated luggage-screening task (SLST). Thirty-six healthy nonprofessional
+  subjects (mean age = 30.8 years, 20 women) participated in a 4-day laboratory protocol including a
+  34-hour period of total sleep deprivation with PVT and SLST testing every 2 hours. Eleven and 20 lapses
+  (355-ms threshold) on the PVT optimally divided SLST performance into high-, medium-, and
+  low-performance bouts with significantly decreasing threat detection performance A'. Assignment to the
+  different SLST performance groups replicated homeostatic and circadian patterns during total sleep
+  deprivation. The 3-minute PVT was able to predict performance on a simulated luggage-screening task.
+  Fitness-for-duty feasibility should now be tested in professional screeners and operational
+  environments."
+
+  TWO USES IN THE PROTOCOL, AND ONE MISUSE TO AVOID
+  ------------------------------------------------
+  USE 1: it independently confirms the 355-ms lapse threshold for the 3-min PVT-B that
+  basner2011_pvtb derived on statistical grounds. Two different papers, two different rationales
+  (differential sensitivity to sleep loss; prediction of an external task), same threshold. The protocol
+  should therefore score PVT-B lapses at 355 ms, not 500 ms.
+
+  USE 2: it supplies the only ABSOLUTE, externally anchored numbers in my whole shard - 11 and 20 lapses
+  per 3-min PVT-B. Every other quantity in this shard is a standardised or within-person-relative change,
+  which is correct for inference but useless for a subject who wants to know whether today's score is bad.
+  A daily plot with horizontal lines at 11 and 20 lapses gives the self-experiment an interpretable
+  y-axis.
+
+  THE MISUSE TO AVOID: these cut-points come from 34 h of ACUTE TOTAL sleep deprivation in a 30-year-old
+  sample, derived and tested in the same 36 people with no external validation. They are a reference
+  annotation, NOT a diagnostic threshold for chronic 1-2 h restriction in an 18-year-old, and the report
+  must not present them as one. The primary outcome remains mean 1/RT (see protocol_basis.md section 1);
+  lapse counts at 355 ms are a secondary, interpretable-scale outcome only.
+shard: "s20_pvt_psychometrics"

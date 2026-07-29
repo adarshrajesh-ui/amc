@@ -1,0 +1,158 @@
+study_id: roenneberg2019
+citation: "Roenneberg T, Pilz LK, Zerbini G, Winnebeck EC. Chronotype and Social Jetlag: A (Self-) Critical Review. Biology (Basel). 2019;8(3):54."
+doi: "10.3390/biology8030054"
+pmid: "31336976"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6784249/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Chronotype and Social Jetlag: A (Self-) Critical Review"
+access_tier: full_text
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: 185333
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational (MCTQ database, predominantly Central Europe)"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: circadian
+    outcome_construct: mctq_msfsc_database_n_with_valid_msfsc
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "MCTQ database as of July 2017, entries with complete core-MCTQ, no alarm on free days, within +/-3 SD"}
+    scale: raw_units
+    unit: "count of respondents"
+    value: 185333.0
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive denominator for the reference MSFsc distribution; MSF has a larger n (221,480) because MSFsc additionally requires work-schedule information"
+    covariates: []
+    followup_years: null
+    cohort_family: "MCTQ_database"
+    quote: "MCTQ entries were only included in these distributions if all questions of the core-MCTQ were answered, no alarm clocks were used on free days, and values were within a +/- 3 sigma range. The resulting population sizes were 221,480 for MSF and 185,333 for MSF sc (note that the latter requires information about work status and regular work schedules and is therefore smaller)."
+
+  - outcome_domain: circadian
+    outcome_construct: msfsc_computation_rule
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "MSFsc formula (the operational definition of MCTQ chronotype)"}
+    scale: raw_units
+    unit: "clock hours (formula, not a point estimate; value 0 is a placeholder)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "If SD_f <= SD_w:  MSFsc = MSF = SO_f + SD_f/2.  If SD_f > SD_w:  MSFsc = MSF - (SD_f - SD_week)/2 = SO_f + SD_week/2. Where SD_w = sleep duration on workdays, SD_f = sleep duration on work-free days, SD_week = weekly average sleep duration = (5*SD_w + 2*SD_f)/7 for a 5-workday week, SO_f = sleep onset on work-free days, MSF = midsleep on free days."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "later MSFsc = later (more delayed) chronotype. The value field is a non-informative placeholder because this record carries a FORMULA, not an estimate; the formula is in conversion_formula and quoted verbatim below."
+    covariates: []
+    followup_years: null
+    cohort_family: "MCTQ_database"
+    quote: "To clean chronotype of the confounder sleep debt, we correct MSF (MSF sc = sleep corrected MSF). For this correction, we first calculate the average sleep duration across the entire week (SD week ) and then correct MSF by subtracting half of the oversleep. This correction is only applied for people who sleep longer on work-free days than on workdays (SD f > SD w ):   If SD f <= SD w : MSF sc = MSF = SO f + SD f /2   (1)   If SD f > SD w : MSF sc = MSF - (SD f - SD week )/2 = SO f + SD week /2   (2)"
+
+  - outcome_domain: circadian
+    outcome_construct: social_jetlag_definition
+    exposure: {type: social_jetlag, dose_h: null, referent_h: null, duration_days: null, contrast_label: "SJL = |MSF - MSW|; SJLsc = |MSFsc - MSWsc| (Jankowski variant)"}
+    scale: raw_units
+    unit: "hours (formula, not a point estimate; value 0 is a placeholder)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "SJL = |MSF - MSW| where MSW = midsleep on workdays. Sleep-corrected variant SJLsc = |MSFsc - MSWsc|, which the authors show simplifies algebraically to |SO_f - SO_w| (absolute difference in sleep ONSET between free and work days)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "larger SJL = greater circadian misalignment. Placeholder value as above."
+    covariates: []
+    followup_years: null
+    cohort_family: "MCTQ_database"
+    quote: "The difference between the average of the midsleep points on workdays (red dots) and those on work-free days (green triangles) is defined as SJL and used as a measure for circadian misalignment ... Interestingly, after mathematical simplification, SJL sc is the absolute difference between sleep onset on free days and sleep onset on workdays (SO f -SO w )."
+
+  - outcome_domain: circadian
+    outcome_construct: late_chronotype_mechanism_bidirectional_sleep_curtailment
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "mechanistic account of why late chronotypes show short weekday / long free-day sleep"}
+    scale: raw_units
+    unit: "qualitative mechanism (value 0 is a placeholder)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is the single most decision-relevant qualitative statement in this paper for our subject. It states that the short-weekday/long-weekend pattern is the EXPECTED consequence of a late chronotype under early social schedules -- i.e. our subject's reported pattern is not diagnostic of behavioural choice; it is exactly what circadian delay produces."
+    covariates: []
+    followup_years: null
+    cohort_family: "MCTQ_database"
+    quote: "On workdays, the sleep of late chronotypes is curtailed at both ends of the night: the late circadian sleep window (opening after the wake maintenance zone) prevents them from falling asleep early enough and the use of an alarm clock prevents them from completing their sleep. On work-free days, the sleep of late chronotypes is ideally free from these external impositions, resulting in later and longer sleep (the oversleep caused by the sleep debt accumulated during the workweek)."
+
+  - outcome_domain: circadian
+    outcome_construct: adolescent_peak_social_jetlag_statement
+    exposure: {type: social_jetlag, dose_h: null, referent_h: null, duration_days: null, contrast_label: "age gradient in social jetlag; adolescents at peak"}
+    scale: raw_units
+    unit: "qualitative (value 0 is a placeholder)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Adolescents carry the highest social jetlag of any age group, which raises the prior for circadian misalignment specifically in our subject's age band."
+    covariates: []
+    followup_years: null
+    cohort_family: "MCTQ_database"
+    quote: "Since school start times are often not attuned to the adolescents' late phases, they experience the most severe SJL, which decreases, but continues to be present, through work life until retirement."
+
+  - outcome_domain: circadian
+    outcome_construct: msfsc_validated_against_dlmo
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "criterion validity of MSFsc against DLMO and other circadian phase markers"}
+    scale: raw_units
+    unit: "qualitative validity statement (value 0 is a placeholder)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Supports using MSFsc as a proxy for circadian phase in the report's measurement protocol when DLMO is not feasible. NOTE: the review asserts significant correlations but does NOT report the correlation coefficients in the text I retrieved, so I cannot supply an r. That is a gap."
+    covariates: []
+    followup_years: null
+    cohort_family: "MCTQ_database"
+    quote: "The MCTQ-chronotype and its assessment of sleep phase have been validated against biochemical biomarkers, such as DLMO and cortisol, and objective behavioral measures of circadian phase (activity acrophase, and sleep behavior from logs or actimetry). They are all significantly correlated with MSF sc ... The current gold standard marker of phase of entrainment is DLMO measured in blood, urine, or saliva. However, these measurements are expensive and burdensome-involving multiple, well-timed sampling."
+rob:
+  tool: none
+  judgement: na
+  notes: "Narrative (explicitly self-critical) review by the instrument's own developers -- a conflict of interest for judgements about the instrument's validity, though the methodological caveats they raise cut against their own tool. The MCTQ database is a self-selected online convenience sample skewed towards Central Europe and towards people interested in chronobiology; it is a reference distribution, not a population norm. The paper reports quartiles/figures rather than tabulated means and SDs by age, so I could not extract an age-18-19 MSFsc mean and SD from this source (see fischer2017.yaml for a population-representative age-resolved alternative, though that one uses uncorrected MSFWe)."
+funding: "Not stated in the retrieved text."
+notes: |
+  WHY THIS RECORD MATTERS: it supplies the exact arithmetic the report needs to convert our subject's
+  self-reported schedule into a chronotype number, plus the mechanistic argument that his reported
+  pattern is the signature of circadian delay rather than evidence against it.
+
+  WORKED EXAMPLE USING OUR SUBJECT'S OWN REPORTED NUMBERS (this arithmetic is MINE, not the paper's;
+  it is illustrative and depends entirely on sleep-onset times he has not yet supplied):
+    Take SD_w = 5.5 h (his 5-6 h weekday sleep) and SD_f = 7.5 h (his 7-8 h weekend sleep).
+    SD_week = (5*5.5 + 2*7.5)/7 = (27.5 + 15)/7 = 42.5/7 = 6.07 h.
+    Since SD_f (7.5) > SD_w (5.5), equation (2) applies:
+      MSFsc = SO_f + SD_week/2 = SO_f + 3.04 h.
+    So if he falls asleep at 01:30 on a free night, MSFsc = 04:32.
+    If he falls asleep at 02:30 on a free night, MSFsc = 05:32.
+    Under the 10-11 h weekend variant (SD_f = 10.5): SD_week = (27.5 + 21)/7 = 6.93 h,
+      MSFsc = SO_f + 3.46 h.
+    CRITICAL MISSING INPUT: sleep ONSET time on free days is the dominant term and we do not have it.
+    Without SO_f no chronotype can be computed. This is the single highest-value question to ask him.
+
+  Also note the authors' warning against a common error the report must avoid, verbatim:
+    "Considering time-in-bed as time-spent-asleep, for example, is a common confusion: four out of the
+    26 studies selected for full-text reading in the review (~15%) used bedtime or time spent in bed to
+    compute SJL. Additionally, two other studies used MSF sc instead of MSF when computing SJL."
+  i.e. SJL must be computed from MSF (uncorrected), while chronotype must be computed from MSFsc.
+
+  Full text retrieved from PubMed Central and parsed to plain text; all quotes verbatim from that
+  retrieval. Unicode subscripts in the original render as spaced characters (e.g. "MSF sc") in my
+  plain-text extraction; I have preserved that spacing in quotes rather than silently editing them.
+shard: "s19_sleep_disorders"

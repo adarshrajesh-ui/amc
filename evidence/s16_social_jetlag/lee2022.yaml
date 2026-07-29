@@ -1,0 +1,93 @@
+study_id: lee2022
+citation: Lee H, Kim YJ, Jeon YH, Kim SH, Park EC. Association of weekend catch-up sleep ratio and subjective
+  sleep quality with depressive symptoms and suicidal ideation among Korean adolescents. Scientific Reports.
+  2022;12(1):10235.
+doi: 10.1038/s41598-022-14352-1
+pmid: '35715557'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Association of weekend catch-up sleep ratio and subjective sleep quality with depressive
+    symptoms and suicidal ideation among Korean adolescents.
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 270619
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 12
+  - 18
+  pct_female: null
+  country: KR
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: psychiatric
+  outcome_construct: depressive_symptoms_excessive_catchup
+  exposure:
+    type: weekend_catchup
+    dose_h: 1.5
+    referent_h: 1.0
+    duration_days: null
+    contrast_label: weekend catch-up sleep RATIO >=1.50 (weekend TST / weekday TST) with GOOD sleep quality
+  scale: log_or
+  unit: null
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'POSITIVE direction = HARM: adolescents with a catch-up ratio >=1.50 had INCREASED odds
+    of depressive symptoms even when their sleep quality was good. This is the harmful arm of the U in
+    a very large adolescent sample. value=0.0/se=null because the abstract states the direction without
+    the OR and I did not retrieve the stratified table; DO NOT POOL as a magnitude.'
+  covariates: []
+  followup_years: null
+  cohort_family: KYRBS_2015_2019
+  quote: Furthermore, adolescents with a CUS ratio of >= 1.50 showed increased odds of depressive symptoms
+    despite having good sleep quality.
+- outcome_domain: psychiatric
+  outcome_construct: depression_and_suicidal_ideation_no_catchup_and_short_weekday
+  exposure:
+    type: habitual_short_sleep
+    dose_h: 5.0
+    referent_h: null
+    duration_days: null
+    contrast_label: catch-up ratio <1.00 AND weekday sleep <5 h (absolutely short sleep, no catch-up)
+  scale: log_or
+  unit: null
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'POSITIVE direction = HARM, and the LARGEST in the study: short weekday sleep with NO
+    catch-up was most strongly associated with both depressive symptoms and suicidal ideation. Establishes
+    that the absence of catch-up is worse than its presence. value=0.0/se=null; do not pool as a magnitude.'
+  covariates: []
+  followup_years: null
+  cohort_family: KYRBS_2015_2019
+  quote: Absolutely short sleep duration (CUS < 1.00 and weekday sleep duration < 5 h) was most associated
+    with depressive symptoms and suicidal ideation.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Enormous nationally representative adolescent sample (n=270,619) across 5 survey years. Cross-sectional;
+    all measures self-reported; exposure is a RATIO of durations, not a timing measure, so it is not social
+    jetlag.
+funding: null
+notes: 'PROVIDES THE U-SHAPE INDEPENDENTLY OF kimcasement2026, in an adolescent sample 145x larger and
+  in a different country, and it is the best available match for our subject''s operationalised exposure
+  because a RATIO is exactly what his pattern specifies. OUR SUBJECT''S RATIO: typical 7.5/5.5 = 1.36
+  (below the harmful >=1.50 threshold); on 10-11 h weekend nights 10.5/5.5 = 1.91 (well above it). So
+  the same subject moves between the safe and harmful bands week to week. The authors'' conclusion is
+  the balanced one: ''Appropriate weekend CUS may benefit adolescents'' mental health.'' All effects are
+  direction-only (se=null): the abstract reports significance without ORs for these specific strata.'
+shard: s16_social_jetlag

@@ -1,0 +1,231 @@
+study_id: gottlieb2018
+citation: "Gottlieb DJ, Ellenbogen JM, Bianchi MT, Czeisler CA. Sleep deficiency and motor vehicle crash risk in the general population: a prospective cohort study. BMC Med. 2018;16(1):44."
+doi: "10.1186/s12916-018-1025-7"
+pmid: "29554902"
+url: "https://doi.org/10.1186/s12916-018-1025-7"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Sleep deficiency and motor vehicle crash risk in the general population: a prospective cohort study."
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 3201
+n_studies_pooled: null
+population:
+  age_mean: 62.3
+  age_range: [40, 89]
+  pct_female: 45.5
+  country: "US"
+  adolescent_match: poor_elderly
+effects:
+  - outcome_domain: mortality
+    outcome_construct: any_self_reported_motor_vehicle_crash_prior_year
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "USUAL sleep duration, per 1 h LESS sleep per night (continuous); outcome = any motor vehicle crash in the preceding year"}
+    scale: log_or
+    unit: null
+    value: 0.122218
+    se: 0.060784
+    ci: [0.009950, 0.246860]
+    conversion_formula: >
+      Table 2, all participants: aOR 1.13 (95% CI 1.01, 1.28) per hour less sleep, P = 0.04.
+      log_or = ln(1.13) = 0.122218; se = (ln(1.28) - ln(1.01))/3.92 = 0.060784;
+      ci = [ln(1.01), ln(1.28)] = [0.009950, 0.246860].
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = HARM per hour of sleep LOST. THE MOST IMPORTANT FEATURE OF THIS ESTIMATE FOR THIS SHARD:
+      it is adjusted for MILES DRIVEN PER YEAR, which directly addresses the leading confounder in this
+      literature (short sleepers drive more). It survives that adjustment.
+    covariates: ["age", "sex", "miles driven per year"]
+    followup_years: 2.0
+    cohort_family: "SHHS"
+    quote: >
+      For every hour decrease in usual sleep duration, the aOR for any motor vehicle crash increased by 13% in the
+      overall population and by 22% in participants who did not report excessive sleepiness (Table 2).
+  - outcome_domain: mortality
+    outcome_construct: any_self_reported_motor_vehicle_crash_prior_year
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "per 1 h LESS sleep, restricted to participants WITHOUT excessive daytime sleepiness (Epworth <= 10), n = 2402"}
+    scale: log_or
+    unit: null
+    value: 0.198851
+    se: 0.078866
+    ci: [0.048790, 0.357674]
+    conversion_formula: >
+      Table 2, non-sleepy subgroup: aOR 1.22 (95% CI 1.05, 1.43), P < 0.01.
+      log_or = ln(1.22) = 0.198851; se = (ln(1.43) - ln(1.05))/3.92 = 0.078866.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = HARM. LARGER, not smaller, among people who do NOT report being sleepy (1.22 vs 1.13).
+      This is important and counter-intuitive: it means the crash risk of short sleep is NOT mediated by
+      conscious awareness of sleepiness, so "I don't feel tired" is not protective, and it also means the
+      association is not merely a self-report artefact of sleepy people reporting both exposure and
+      outcome more readily.
+    covariates: ["age", "sex", "miles driven per year"]
+    followup_years: 2.0
+    cohort_family: "SHHS"
+    quote: >
+      For every hour decrease in usual sleep duration, the aOR for any motor vehicle crash increased by 13% in the
+      overall population and by 22% in participants who did not report excessive sleepiness (Table 2).
+  - outcome_domain: mortality
+    outcome_construct: any_self_reported_motor_vehicle_crash_prior_year
+    exposure: {type: habitual_short_sleep, dose_h: 6.0, referent_h: 7.5, duration_days: null,
+               contrast_label: "usual 6 h per night (n = 626) vs usual 7 or 8 h per night (n = 2105) — THE CLOSEST CATEGORICAL MATCH TO THE SUBJECT'S WEEKLY AVERAGE"}
+    scale: log_or
+    unit: null
+    value: 0.285179
+    se: null
+    ci: null
+    conversion_formula: >
+      Paper states a "33% higher aOR" for 6 h vs 7-8 h. log_or = ln(1.33) = 0.285179.
+      SE: NOT DERIVABLE. NO CI AND NO P-VALUE ARE PRINTED FOR THE CATEGORICAL CONTRASTS — they appear only
+      in Fig. 2b, which I cannot read numerically from the retrieved JATS XML. Per the extraction
+      instructions ("Never invent an SE") se is null.
+      FOR ORIENTATION ONLY, NOT USED AS THE SE: the continuous model's per-hour aOR of 1.13 implies
+      1.13^1.5 = 1.20 for a 1.5 h deficit, which is LOWER than the categorical 1.33; the categorical
+      estimate is therefore at the optimistic-for-harm end of this paper's own internal range.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = HARM. OR 1.33 at 6 h vs 7-8 h. THIS IS ONE OF THE THREE PRIMARY RISK-RATIO ANCHORS I USE
+      in injury_channel.md, alongside tefft2016_aaa's habitual 5-6 h OR of 1.4 and martiniuk2013's <=6 h
+      RR of 1.21 in actual young drivers. All three cluster in the 1.2-1.4 band.
+    covariates: ["age", "sex", "miles driven per year"]
+    followup_years: 2.0
+    cohort_family: "SHHS"
+    quote: >
+      Compared to those sleeping 7 or 8 hours per night (n = 2105), those who reported sleeping only 6 hours per
+      night (n = 626) had a 33% higher aOR for any motor vehicle crash, while those sleeping 5 or fewer hours per
+      night (n = 235) had a 47% higher aOR.
+  - outcome_domain: mortality
+    outcome_construct: any_self_reported_motor_vehicle_crash_prior_year
+    exposure: {type: habitual_short_sleep, dose_h: 5.0, referent_h: 7.5, duration_days: null,
+               contrast_label: "usual <= 5 h per night (n = 235) vs usual 7 or 8 h per night"}
+    scale: log_or
+    unit: null
+    value: 0.385262
+    se: null
+    ci: null
+    conversion_formula: >
+      Paper states a "47% higher aOR". log_or = ln(1.47) = 0.385262. No CI or p-value printed for this
+      categorical contrast; se null, not invented.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = HARM. OR 1.47 at <=5 h. NOTE THE SHALLOW GRADIENT: 1.33 at 6 h rising only to 1.47 at
+      <=5 h. A steep dose-response would be much more convincing; a gradient this flat over a 1-h dose
+      difference is consistent with a modest true effect plus noise.
+    covariates: ["age", "sex", "miles driven per year"]
+    followup_years: 2.0
+    cohort_family: "SHHS"
+    quote: >
+      Compared to those sleeping 7 or 8 hours per night (n = 2105), those who reported sleeping only 6 hours per
+      night (n = 626) had a 33% higher aOR for any motor vehicle crash, while those sleeping 5 or fewer hours per
+      night (n = 235) had a 47% higher aOR.
+  - outcome_domain: baseline_risk
+    outcome_construct: population_attributable_fraction_of_crashes_due_to_short_sleep
+    exposure: {type: habitual_short_sleep, dose_h: 6.0, referent_h: 7.5, duration_days: null,
+               contrast_label: "PAF of all motor vehicle crashes attributable to usual sleep <= 6 h per night, with 7-8 h as the normative referent"}
+    scale: probability
+    unit: "fraction of crashes"
+    value: 0.090000
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported directly as 9% (Miettinen's method applied to the sample crash proportion and the
+      category-specific aORs). No CI is published; se null.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = share of crashes that would not occur if everyone slept 7-8 h. 9%.
+      IMPORTANT SENSITIVITY THE AUTHORS THEMSELVES REPORT: with >=9 h as the referent instead of 7-8 h,
+      the PAF rises from 9% to 30%. The referent choice moves the answer by more than a factor of three.
+      I use the 9% figure (7-8 h referent), because 7-8 h is the counterfactual actually contemplated for
+      this subject, and I flag the 30% as an upper variant.
+    covariates: ["age", "sex", "miles driven per year"]
+    followup_years: 2.0
+    cohort_family: "SHHS"
+    quote: >
+      Considering usual sleep duration of 7 to 8 hours per night as normative, the population-attributable
+      fraction of motor vehicle crashes related to sleep duration of 6 or fewer hours per night was 9%.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    STRENGTHS: (1) PROSPECTIVE — exposure measured at baseline, crash history ascertained 2 years later,
+    so the exposure cannot have been reported in the light of the crash; (2) ADJUSTED FOR MILES DRIVEN PER
+    YEAR, which is the confounder that most other studies in this literature cannot address (indeed
+    3201/4632 were retained precisely because they reported annual mileage); (3) home polysomnography for
+    the sleep-apnea exposure, so the paper can show the sleep-duration effect is not just undiagnosed
+    apnea; (4) the effect persists — indeed strengthens — among the 75% without self-reported sleepiness;
+    (5) multiple pre-specified sensitivity analyses reported, including one on the 1431 excluded for
+    missing mileage, with "little change in effect estimates".
+    WEAKNESSES:
+    (a) POPULATION IS WRONG FOR US. Mean age 62.3, range 40-89. `adolescent_match: poor_elderly`.
+        Transporting a per-hour OR from 62-year-olds to a 17-year-old is the largest single uncertainty
+        in this record. It could go either way: adolescents have greater sleep need and worse
+        vigilance under restriction, but also better baseline reaction time and no comorbidity.
+    (b) OUTCOME IS SELF-REPORTED CRASH OF ANY SEVERITY over the prior year, recalled at a follow-up
+        visit. Recall bias and under-report of minor crashes are certain; whether they correlate with
+        sleep is unknown.
+    (c) EXPOSURE IS A SINGLE SELF-REPORTED "USUAL HOURS" QUESTION, not actigraphy — hence T5 not T4,
+        despite the PSG for apnea.
+    (d) The categorical estimates (1.33, 1.47) are printed without intervals, so their precision is
+        unknown and I could not derive it.
+    (e) THE CONTINUOUS AND CATEGORICAL MODELS DISAGREE (1.13/h implies 1.20 at 6 h vs 7.5 h; the
+        categorical says 1.33). Non-linear models were reported as "not a significantly better fit".
+    (f) SHHS is a study assembled to investigate sleep apnea, so the sample is enriched for
+        sleep-disordered breathing relative to the general population.
+funding: "NHLBI, NIA and NIGMS (NIH). Grant agencies listed in the PubMed record."
+notes: >
+  REQUIRED EXTRACTION #1 (habitual sleep duration and crash risk) and #4 (population attributable
+  fraction). THIS IS THE BEST-CONFOUNDER-CONTROLLED HABITUAL-SLEEP-DURATION ESTIMATE THAT EXISTS, and it
+  is the main reason I am willing to assign a causal fraction as high as ~0.5 rather than ~0.25.
+  .
+  VERBATIM QUOTES, from the full JATS XML retrieved from Europe PMC and stored at
+  src/gottlieb2018_ft.xml:
+  TABLE 2: "Apnea-hypopnea index - per 10 events/hour 1.15 (1.04, 1.26) 1.17 (1.02 1.33) P < 0.01
+  P = 0.02 | Usual sleep duration - per hour less sleep 1.13 (1.01, 1.28) 1.22 (1.05, 1.43) P = 0.04
+  P < 0.01 | Excessive daytime sleepiness (Epworth Sleepiness Scale score >= 11) 1.54 (1.15, 2.07) -
+  P < 0.01 | Values are odds ratio (95% confidence interval), adjusted for age, sex, and miles driven per
+  year"
+  CATEGORICAL RESULTS: "For every hour decrease in usual sleep duration, the aOR for any motor vehicle
+  crash increased by 13% in the overall population and by 22% in participants who did not report
+  excessive sleepiness (Table 2). Crash risk was similar in those who reported sleeping 7 or 8 hours per
+  night. Compared to those sleeping 7 or 8 hours per night (n = 2105), those who reported sleeping only 6
+  hours per night (n = 626) had a 33% higher aOR for any motor vehicle crash, while those sleeping 5 or
+  fewer hours per night (n = 235) had a 47% higher aOR. Those who reported sleeping 9 or more hours per
+  night (n = 235) had the lowest crash risk, with an aOR 24% lower than those sleeping 7 or 8 hours per
+  night. Considering usual sleep duration of 7 to 8 hours per night as normative, the
+  population-attributable fraction of motor vehicle crashes related to sleep duration of 6 or fewer hours
+  per night was 9%."
+  REFERENT SENSITIVITY: "In the present study, when those sleeping 9 or more hours per night are
+  considered the referent group for crash risk, the estimated population-attributable fraction of crashes
+  due to insufficient sleep rises to 30%."
+  EXTERNAL CONVERGENCE, VERBATIM: "the 19% estimate of motor vehicle crashes attributable to sleep
+  deficiency in this analysis is consistent with estimates from the Virginia Tech 100 car naturalistic
+  driving study that 22% of actual and near-crash incidents are attributable to drowsy driving [30], the
+  Institute of Medicine's estimate that 20% of serious motor vehicle crash injuries are attributable to
+  sleep disorders and sleep depriva[tion]"
+  SAMPLE CONSTRUCTION: "Of these, 624 non-drivers were excluded, as were 238 with missing data on
+  sleepiness, sleep duration, or motor vehicle accidents. Of the remaining 4632 individuals, 3201 reported
+  the average number of miles driven per year."
+  BASELINE OUTCOME RATE: "At least one motor vehicle crash during the year prior to follow-up evaluation
+  was reported by 6.9% of the 3201 participants."
+  THE AUTHORS' OWN CAUSAL HEDGE, VERBATIM: "While one must be cautious in drawing a causal inference from
+  observational data..."
+  .
+  pct_female = 45.5, computed by me as 100 - 54.5 from the paper's statement that the included sample
+  "had a higher percentage of men (54.5% vs 39.9%)". The abstract's separate figures (1745 men, 1456
+  women) refer to the 3201-person analysed sample and give 45.5% female directly; the two agree.
+  .
+  DE-DUPLICATION: cohort_family SHHS. The s13_mortality shard already carries SHHS records (zhao2023,
+  yoshiike2023) for MORTALITY outcomes in the same cohort. Those are different outcomes (all-cause and
+  cardiovascular death) from a different follow-up wave, so they are not the same effect, but the pooler
+  should not treat this record as independent of them for cohort-level random effects.
+shard: "s21_drowsy_driving"

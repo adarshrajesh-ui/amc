@@ -1,0 +1,99 @@
+study_id: heissel_norris2018
+citation: "Heissel JA, Norris S. Rise and Shine: The Effect of School Start Times on Academic Performance from Childhood through Puberty. Journal of Human Resources. 2018;53(4):957-992."
+doi: "10.3368/jhr.53.4.0815-7346r1"
+pmid: null
+url: "https://ssrn.com/abstract=2674256"
+verification:
+  crossref_ok: true
+  pubmed_ok: null
+  title_similarity: 0.85
+  status: VERIFIED
+  resolved_title: "Rise and Shine"
+access_tier: full_text
+secondhand_via: "numbers extracted from the authors' working-paper version (SSRN 2674256, 13 April 2017); DOI and journal/volume/pages verified against Crossref for the published JHR version"
+design: instrumental_variable
+tier: T2
+n: 24768
+n_studies_pooled: null
+population:
+  age_mean: 11.0
+  age_range: [8, 16]
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: academic
+    outcome_construct: math_test_score_sd_adolescents
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "1 hour later school start time relative to sunrise, adolescents (post-pubertal)"}
+    scale: per_hour_beta
+    unit: "SD of FCAT math score per hour later start relative to sunrise"
+    value: 0.081
+    se: 0.025
+    ci: [0.032, 0.130]
+    conversion_formula: "point estimate as reported in abstract and conclusion. SE inferred from the reported joint test of the adolescent linear combination P(Start + Start x puberty = 0) = 0.001 -> z = 3.29 -> SE = 0.081/3.29 = 0.0246. Not a directly reported SE."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = later start relative to sunrise raises math scores; early start (less sleep) is harmful"
+    covariates: ["student fixed effects", "grade-by-year fixed effects", "longitude", "demographics", "instrumented with time-zone boundary crossing on residential moves"]
+    followup_years: null
+    cohort_family: Florida_FCAT
+    quote: "Using a long individual panel from the state of Florida, we find that moving start times one hour later relative to sunrise would increase adolescent scores by 0.081 SDs in math and 0.057 SDs in reading."
+  - outcome_domain: academic
+    outcome_construct: reading_test_score_sd_adolescents
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "1 hour later school start time relative to sunrise, adolescents (post-pubertal)"}
+    scale: per_hour_beta
+    unit: "SD of FCAT reading score per hour later start relative to sunrise"
+    value: 0.057
+    se: 0.022
+    ci: [0.014, 0.100]
+    conversion_formula: "point estimate as reported in abstract and conclusion. SE inferred from reported joint test p = 0.008 -> z = 2.65 -> SE = 0.057/2.65 = 0.0215."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = later start relative to sunrise raises reading scores"
+    covariates: ["student fixed effects", "grade-by-year fixed effects", "longitude", "demographics"]
+    followup_years: null
+    cohort_family: Florida_FCAT
+    quote: "Using a long individual panel from the state of Florida, we find that moving start times one hour later relative to sunrise would increase adolescent scores by 0.081 SDs in math and 0.057 SDs in reading."
+  - outcome_domain: academic
+    outcome_construct: math_test_score_sd_prepubescent_contrast
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "1 hour later start relative to sunrise, PRE-pubertal children (age contrast test)"}
+    scale: per_hour_beta
+    unit: "SD of FCAT math score per hour later start relative to sunrise"
+    value: 0.020
+    se: 0.036
+    ci: [-0.051, 0.091]
+    conversion_formula: "reported coefficient on 'Start time - sunrise (h)' in the preferred math specification (0.020, SE 0.036); the adolescent total adds the 'Start time x puberty' interaction of 0.058 (SE 0.021)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "near-zero for pre-pubertal children; the adolescent-specific effect is the interaction term, so the harm of early start times is a PUBERTY-SPECIFIC phenomenon"
+    covariates: ["student fixed effects", "grade-by-year fixed effects", "longitude", "demographics"]
+    followup_years: null
+    cohort_family: Florida_FCAT
+    quote: "In all subsequent specifications, moving start times one hour later increases math scores for prepubescents by 0.009-0.020 SDs; none of the coefficients are close to statistically significant. For adolescents, later start times increase math scores by 0.077-0.084 SDs."
+rob:
+  tool: ROBINS-I
+  judgement: moderate
+  notes: "Very large administrative panel with within-student identification and a strong instrument (Cragg-Donald F-stats 404-1230). Weaknesses: sleep never measured; the instrument (crossing a time-zone boundary when moving house) may bundle other consequences of the move; the authors themselves flag that part of the effect may be a test-day performance effect rather than a learning effect."
+funding: "Not stated in retrieved working paper"
+notes: |
+  IDENTIFYING ASSUMPTION: sunrise time relative to school start time affects achievement only through
+  the circadian/sleep channel. Operationally the authors track the SAME student before and after a
+  residential move that crosses the Florida time-zone boundary, instrumenting hours of sunlight
+  before school with the boundary crossing. The assumption is that moving across the boundary changes
+  the sunrise-to-bell gap but nothing else relevant. This is PARTLY PLAUSIBLE. Strengths: within-student,
+  so time-invariant family confounders are absorbed; the effect appears immediately after the move and
+  persists; and the killer internal test is that the effect on math "spikes precisely at the
+  gender-specific age of median entrance into an important pubertal stage" - a confounder would have to
+  mimic a puberty timing discontinuity that differs by two years between girls and boys.
+  Weaknesses: a household move is a bundled treatment; cross-boundary movers differ from non-movers at
+  baseline ("0.09 and 0.08 SDs lower in math and reading, respectively"), so the within-student design is
+  doing real work; and the authors concede they cannot separate learning effects from test-day effects.
+  NO SLEEP FIRST STAGE. Heissel & Norris do not measure sleep minutes. The effect is per hour of
+  start-time-relative-to-sunrise, not per hour of sleep.
+  KEY VALUE TO THIS SHARD: this is the best available evidence that the start-time/sleep effect is
+  concentrated in POST-PUBERTAL adolescents (0.081 SD) and is essentially zero in pre-pubertal children
+  (0.020 SD, not significant). That directly supports transporting these estimates to a 16-19 year old
+  and argues against transporting the (younger-sample) Edwards and Jagnani estimates unadjusted.
+  Sample: FCAT records, 15 school years (1999-2013); the tables report 24,768-25,191 students and
+  ~99,835-104,791 student-year observations depending on panel. I record n = 24,768 students.
+shard: "s04_academic_natural_experiments"

@@ -1,0 +1,81 @@
+study_id: skorucak2021
+citation: "Skorucak J, Weber N, Carskadon MA, Reynolds C, Coussens S, Achermann P, Short MA. Homeostatic response to sleep restriction in adolescents. Sleep. 2021 Sep 13;44(9):zsab106."
+doi: "10.1093/sleep/zsab106"
+pmid: "33893807"
+url: "https://pubmed.ncbi.nlm.nih.gov/33893807/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Homeostatic response to sleep restriction in adolescents."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 34
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [15, 17]
+  pct_female: null
+  country: "Australia"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: recovery
+    outcome_construct: slow_wave_activity_and_slow_wave_energy_homeostatic_response_under_chronic_restriction
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 10, duration_days: 5,
+               contrast_label: "5 h vs 7.5 h vs 10 h sleep opportunity per night for five consecutive nights, flanked by two 10 h baseline nights and two 10 h recovery nights - a deliberate simulation of a school week between two weekends"}
+    scale: raw_units
+    unit: "deviation of observed slow-wave activity/energy from two-process-model prediction (0 = homeostatic response fully intact)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      A DELIBERATE NULL-DEVIATION FINDING. The abstract states "Only minor differences were found between
+      empirical data and model predictions, indicating that sleep homeostasis is preserved under chronic
+      sleep restriction in adolescents." No numeric deviation, SE or CI is given in the abstract and the full
+      text is paywalled with no PMC deposit, so the point estimate is coded as 0 (no meaningful deviation
+      from predicted homeostatic response) and se is null.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      ZERO = the homeostatic sleep-intensity response is INTACT, i.e. when adolescents are restricted, slow
+      wave activity rises to compensate as the two-process model predicts. The alternative hypothesis the
+      study tested - adaptation or attenuation of the homeostatic response under chronic restriction, as some
+      animal studies suggest - was NOT supported. Direction of concern would be a negative deviation
+      (blunted response).
+    covariates: ["frontal and central EEG derivations analysed separately", "two baseline and two recovery nights per participant"]
+    followup_years: null
+    cohort_family: "Adelaide_adolescent_SR"
+    quote: "Thirty-four participants were allocated to one of three groups with 5, 7.5, or 10 h of sleep opportunity per night for five nights. Each group underwent a protocol of nine nights designed to mimic a school week between two weekends: two baseline nights (10 h sleep opportunity), five condition nights (5, 7.5, or 10 h), and two recovery nights (10 h). Measures of sleep homeostasis (slow-wave activity and slow-wave energy) were calculated from frontal and central EEG derivations and compared to predictions derived from simulations of the homeostatic process of the two-process model of sleep regulation. Only minor differences were found between empirical data and model predictions, indicating that sleep homeostasis is preserved under chronic sleep restriction in adolescents."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: >
+    The only experimental study located anywhere in this shard's search whose EXPOSURE MATCHES THE SUBJECT
+    almost exactly: adolescents, five nights of 5 h sleep opportunity, bracketed by 10 h weekend-analogue
+    nights. Concerns: n = 34 split across three parallel arms (roughly 11 per arm), so each arm is small;
+    the outcome is EEG sleep physiology and model fit, NOT amyloid, tau, cognition or dementia - it bears on
+    this shard only through the mechanistic link that slow wave activity is the operative variable; and the
+    full text is paywalled with no PMC deposit, so no numeric deviations, SEs or model-fit statistics could
+    be extracted.
+funding: "See paper"
+notes: >
+  THE BRIDGE RECORD between the adolescent exposure and the amyloid mechanism, and the reason this shard can
+  say something better than "no data". Retrieved as ABSTRACT ONLY.
+  The logic: Ju 2017 established that SLOW WAVE ACTIVITY, not sleep duration, is what modulates amyloid.
+  This study establishes that in ADOLESCENTS restricted to 5 h for five nights - the subject's weekday
+  pattern - the homeostatic slow-wave response is PRESERVED, meaning sleep intensity rises to partially
+  compensate for lost sleep time. Olsson 2018 then showed that in young adults restricted to 4 h for five to
+  eight nights, with slow wave sleep preserved, CSF amyloid biomarkers did NOT change.
+  Chained, these three studies give a coherent mechanistic reason to expect the subject's exposure NOT to
+  engage the amyloid pathway, and that inference is grounded in measurements rather than in extrapolation
+  from total sleep deprivation. It remains an INFERENCE ACROSS THREE STUDIES, none of which measured amyloid
+  in an adolescent, and it must be labelled as such.
+  IDENTIFIER NOTE: the PubMed citation line renders the article as "Sleep. 2021 Sep 13;44(9):zsab194" while
+  the DOI registered in both PubMed and Crossref is 10.1093/sleep/zsab106. The DOI resolves to this exact
+  title in Crossref with similarity 1.0 and matches the PubMed-registered DOI, so the record is VERIFIED;
+  the zsab194/zsab106 discrepancy appears to be an eLocator inconsistency in the source metadata and is
+  recorded here rather than silently corrected.
+shard: "s14_dementia_amyloid"

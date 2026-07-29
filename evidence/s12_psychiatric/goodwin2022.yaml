@@ -1,0 +1,117 @@
+study_id: goodwin2022
+citation: "Goodwin RD, Dierker LC, Wu M, Galea S, Hoven CW, Weinberger AH. Trends in U.S. Depression Prevalence From 2015 to 2020: The Widening Treatment Gap. Am J Prev Med. 2022 Nov;63(5):726-733."
+doi: "10.1016/j.amepre.2022.05.014"
+pmid: "36272761"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9483000/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Trends in U.S. Depression Prevalence From 2015 to 2020: The Widening Treatment Gap."
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [12, 90]
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: past_year_major_depressive_episode_young_adults_18_25
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "US young adults aged 18-25, past-year major depressive episode, NSDUH 2020 -- the age band our subject is entering"}
+    scale: probability
+    unit: "proportion with past-year MDE"
+    value: 0.172
+    se: 0.0078
+    ci: [0.1567, 0.1873]
+    conversion_formula: "Reported as 17.2% (SE=0.78) i.e. proportion 0.172 with SE 0.0078. CI = 0.172 +/- 1.96*0.0078 = (0.1567, 0.1873)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is the COMBINED-SEX baseline prevalence for the subject's age band. Male-specific prevalence is substantially lower -- roughly half -- and this figure should NOT be used directly for him. See notes."
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "NSDUH"
+    quote: "In 2020, 9.2% (SE=0.31) of Americans aged ≥12 years experienced a past-year major depressive episode. Depression was more common among young adults aged 18-25 years (17.2%, SE=0.78), followed closely by adolescents aged 12-17 years (16.9%, SE=0.84)."
+  - outcome_domain: baseline_risk
+    outcome_construct: past_year_major_depressive_episode_adolescents_12_17
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "US adolescents aged 12-17, past-year MDE, NSDUH 2020 -- the band covering our subject's exposure years at 16-17"}
+    scale: probability
+    unit: "proportion with past-year MDE"
+    value: 0.169
+    se: 0.0084
+    ci: [0.1525, 0.1855]
+    conversion_formula: "Reported as 16.9% (SE=0.84) -> proportion 0.169, SE 0.0084, CI 0.169 +/- 1.96*0.0084."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Combined-sex. Nearly identical to the 18-25 figure, so the age transition itself does not change depression risk much across our subject's window -- unlike suicide MORTALITY, which rises 61% from 15-19 to 20-24 in males (see cdc_suicide_rates)."
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "NSDUH"
+    quote: "Depression was more common among young adults aged 18-25 years (17.2%, SE=0.78), followed closely by adolescents aged 12-17 years (16.9%, SE=0.84)."
+  - outcome_domain: baseline_risk
+    outcome_construct: past_year_mde_whole_population_comparator
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "all Americans aged 12+, past-year MDE, 2020; comparator showing how elevated the young-adult band is"}
+    scale: probability
+    unit: "proportion with past-year MDE"
+    value: 0.092
+    se: 0.0031
+    ci: [0.0859, 0.0981]
+    conversion_formula: "Reported as 9.2% (SE=0.31) -> 0.092, SE 0.0031."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "The 18-25 band runs at roughly 1.9x the all-ages rate. Being 18-25 is itself the single largest risk factor in this table -- larger than anything sleep contributes."
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "NSDUH"
+    quote: "In 2020, 9.2% (SE=0.31) of Americans aged ≥12 years experienced a past-year major depressive episode."
+rob:
+  tool: none
+  judgement: na
+  notes: "Large nationally representative survey (NSDUH) with standardised DSM-based MDE assessment; appropriate for a descriptive denominator. Two caveats stated by the authors: the 2020 point estimates were 'calculated for 2020 and not included in statistical trend analyses because of differences in data collection procedures' (COVID-era changes to NSDUH collection moved it partly online, which affects comparability); and this is a household survey, so institutionalised and homeless populations are excluded. Self/proxy-report diagnosis, not clinician interview."
+funding: null
+notes: |
+  PURPOSE. Supplies the absolute depression denominator that my task requires for an 18-19 year old.
+
+  THE KEY FIGURES (NSDUH 2020, past-year major depressive episode):
+    all Americans 12+       9.2%  (SE 0.31)
+    adolescents 12-17      16.9%  (SE 0.84)
+    young adults 18-25     17.2%  (SE 0.78)
+
+  THE CRITICAL LIMITATION FOR MY USE: THESE ARE COMBINED-SEX AND OUR SUBJECT IS MALE. NSDUH consistently
+  shows past-year MDE in the 18-25 band running roughly twice as high in women as in men. The abstract
+  states only that depression "increased among nearly all sex, racial/ethnic, income, and education
+  groups" and does NOT give sex-stratified prevalences, and I could not retrieve the article text or a
+  sex-stratified NSDUH table that I could quote. I therefore will NOT state a male-specific figure as
+  though I had measured it. What I can say defensibly:
+    - the combined-sex 18-25 figure is 17.2%
+    - the male-specific figure is lower than this, and lower than the female-specific figure
+    - I could not verify the male value and have not invented one
+  In psychiatric_summary.md I present the male baseline as a RANGE anchored on the combined-sex figure and
+  the known direction of the sex difference, and I flag it as the weakest number in my absolute-risk
+  arithmetic. Retrieving a quotable, sex-stratified past-year MDE prevalence for males aged 18-25 is a
+  named gap in station_report.md.
+
+  WHY THE BASE RATE MATTERS MORE THAN THE RELATIVE RISK, WHICH IS THE POINT OF THIS RECORD.
+  Roughly one in six young adults has a past-year major depressive episode. Against a base rate that high,
+  the relative effects available in my shard translate into modest absolute increments. Using the
+  quasi-experimental anchor for behaviourally imposed short sleep (gangwisch2010, OR 1.24 for depression
+  from a 2+ hour reduction in permitted sleep) and a male base rate somewhere in the region of 9-12% for
+  this age band, the implied absolute increase is roughly 2-3 percentage points. Using the genetically
+  identified short-sleep estimate instead (zhang2024_mr, OR 1.179) gives roughly 1.5-2 percentage points.
+  Using the null continuous-duration MR estimate (sun2022_mr) gives approximately zero.
+  So the honest range for the absolute excess risk of a past-year depressive episode attributable to this
+  subject's sleep pattern is roughly 0 to 3 percentage points, on a base of about 1 in 10.
+
+  AND THE COHORT CONTEXT MATTERS TOO. twenge2019 documents that MDE in 18-25 year olds rose from 8.1% in
+  2009 to 13.2% in 2017, and this record shows 17.2% by 2020. Our subject's risk is dominated by being an
+  18-25 year old in the 2020s -- a secular trend that has roughly doubled the base rate in a decade -- far
+  more than by his individual sleep schedule. Declining sleep duration is one of several candidate
+  contributors to that secular trend (twenge2019 names it explicitly as a hypothesis), which is a
+  population-level argument, not an individual-level one, and should not be double-counted as additional
+  personal risk on top of the base rate.
+shard: "s12_psychiatric"

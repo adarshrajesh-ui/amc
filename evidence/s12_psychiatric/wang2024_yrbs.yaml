@@ -1,0 +1,211 @@
+study_id: wang2024_yrbs
+citation: "Wang Z, Tang Y, Wang G, Deng Y, Jiang Y, Sun W, Sun X, Ip P. Insufficient Sleep is Associated With Increasing Trends in Adolescent Suicidal Behaviors. J Adolesc Health. 2024 Jun;74(6):1198-1207."
+doi: "10.1016/j.jadohealth.2024.01.030"
+pmid: "38506779"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Insufficient Sleep is Associated With Increasing Trends in Adolescent Suicidal Behaviors."
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 73356
+n_studies_pooled: null
+population:
+  age_mean: 16.11
+  age_range: [12, 18]
+  pct_female: 50.03
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: suicidal_ideation
+    exposure: {type: habitual_short_sleep, dose_h: 7.0, referent_h: 8.5, duration_days: null, contrast_label: "insufficient sleep (<8 h on school nights) vs sufficient (>=8 h), pooled YRBS 2007-2019"}
+    scale: log_or
+    unit: null
+    value: 0.32208
+    se: 0.03704
+    ci: [0.24686, 0.39204]
+    conversion_formula: "aOR 1.38 (1.28-1.48); log(1.38)=0.32208; se=(log(1.48)-log(1.28))/3.92=0.03704"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher odds of past-year serious suicidal ideation with <8 h school-night sleep"
+    covariates: ["survey year", "sex", "age", "race/ethnicity (multivariate logistic regression; full covariate list in paper)"]
+    followup_years: null
+    cohort_family: "YRBS"
+    quote: "Multivariate logistic regression showed that adolescents with insufficient sleep were more likely to report suicidal ideation (aOR=1.38[95%CI: 1.28, 1.48], p <0.001), suicide plan (aOR=1.34[95%CI: 1.23, 1.46], p <0.001), and suicide attempts(aOR=1.24[95%CI: 1.17, 1.38], p <0.001) than those with sufficient sleep ( Figure 1 )."
+  - outcome_domain: psychiatric
+    outcome_construct: suicide_plan
+    exposure: {type: habitual_short_sleep, dose_h: 7.0, referent_h: 8.5, duration_days: null, contrast_label: "insufficient sleep (<8 h) vs sufficient (>=8 h), pooled YRBS 2007-2019"}
+    scale: log_or
+    unit: null
+    value: 0.29267
+    se: 0.04373
+    ci: [0.20701, 0.37844]
+    conversion_formula: "aOR 1.34 (1.23-1.46); log(1.34)=0.29267; se=(log(1.46)-log(1.23))/3.92=0.04373"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher odds of having made a suicide plan"
+    covariates: ["survey year", "sex", "age", "race/ethnicity"]
+    followup_years: null
+    cohort_family: "YRBS"
+    quote: "suicide plan (aOR=1.34[95%CI: 1.23, 1.46], p <0.001)"
+  - outcome_domain: psychiatric
+    outcome_construct: suicide_attempt
+    exposure: {type: habitual_short_sleep, dose_h: 7.0, referent_h: 8.5, duration_days: null, contrast_label: "insufficient sleep (<8 h) vs sufficient (>=8 h), pooled YRBS 2007-2019"}
+    scale: log_or
+    unit: null
+    value: 0.21511
+    se: 0.04211
+    ci: [0.15700, 0.32208]
+    conversion_formula: "aOR 1.24 (1.17-1.38); log(1.24)=0.21511; se=(log(1.38)-log(1.17))/3.92=0.04211. NOTE the reported CI (1.17-1.38) is ASYMMETRIC around the point estimate 1.24 on the log scale (log-distance to lower bound 0.058, to upper 0.107), which should not happen for a logistic-regression OR. Either the point estimate or a bound is misreported in the source. I have recorded it as printed and flagged it; the modeller should treat this SE as unreliable."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher odds of a past-year suicide attempt"
+    covariates: ["survey year", "sex", "age", "race/ethnicity"]
+    followup_years: null
+    cohort_family: "YRBS"
+    quote: "suicide attempts(aOR=1.24[95%CI: 1.17, 1.38], p <0.001)"
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_prevalence_suicidal_ideation_2019
+    exposure: {type: habitual_short_sleep, dose_h: 7.0, referent_h: 8.5, duration_days: null, contrast_label: "ABSOLUTE weighted prevalence of past-year serious suicidal ideation, YRBS 2019: insufficient sleep 21.88% vs sufficient sleep 10.89%"}
+    scale: probability
+    unit: "absolute risk difference, proportion"
+    value: 0.1099
+    se: null
+    ci: null
+    conversion_formula: "Risk difference = 21.88% - 10.89% = 10.99 percentage points = 0.1099. Both prevalences read directly from Table 1, 2019 column (weighted %). No SEs are given per cell in Table 1, so se: null. Risk ratio = 21.88/10.89 = 2.01."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = EXCESS absolute risk in the insufficient-sleep group. THESE ARE COMBINED-SEX FIGURES and are roughly 1.5-2x too high for a male; see notes."
+    covariates: []
+    followup_years: null
+    cohort_family: "YRBS"
+    quote: "Sleep duration<8h Suicidal ideation | 7,403 | 69.24 | ... |  Sufficient sleep | 332 | 9.45 | 378 | 8.77 | 348 | 10.31 | 372 | 11.15 | 366 | 12.23 | 260 | 10.34 | 213 | 10.89 |  Insufficient sleep | 1249 | 16.42 | 1478 | 15.58 | 1284 | 18.35 | 1384 | 19.37 | 1623 | 19.18 | 1504 | 19.66 | 1412 | 21.88 |"
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_prevalence_suicide_plan_2019
+    exposure: {type: habitual_short_sleep, dose_h: 7.0, referent_h: 8.5, duration_days: null, contrast_label: "ABSOLUTE weighted prevalence of suicide plan, YRBS 2019: insufficient 18.26% vs sufficient 8.77%"}
+    scale: probability
+    unit: "absolute risk difference, proportion"
+    value: 0.0949
+    se: null
+    ci: null
+    conversion_formula: "18.26% - 8.77% = 9.49 pp = 0.0949. Risk ratio = 18.26/8.77 = 2.08. Read from Table 1, 2019 column."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = excess absolute risk with insufficient sleep. Combined-sex."
+    covariates: []
+    followup_years: null
+    cohort_family: "YRBS"
+    quote: "Suicide plan |  Sufficient sleep | 260 | 7.07 | 286 | 6.81 | 295 | 8.67 | 311 | 9.07 | 328 | 10.38 | 207 | 8.88 | 173 | 8.77 |  Insufficient sleep | 973 | 12.65 | 1191 | 12.20 | 1036 | 14.26 | 1179 | 16.00 | 1386 | 15.97 | 1175 | 15.18 | 1150 | 18.26 |"
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_prevalence_suicide_attempt_2019
+    exposure: {type: habitual_short_sleep, dose_h: 7.0, referent_h: 8.5, duration_days: null, contrast_label: "ABSOLUTE weighted prevalence of past-year suicide ATTEMPT, YRBS 2019: insufficient 9.51% vs sufficient 4.97%"}
+    scale: probability
+    unit: "absolute risk difference, proportion"
+    value: 0.0454
+    se: null
+    ci: null
+    conversion_formula: "9.51% - 4.97% = 4.54 pp = 0.0454. Risk ratio = 9.51/4.97 = 1.91. Read from Table 1, 2019 column."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = excess absolute risk of a suicide attempt with insufficient sleep. Combined-sex; male attempt prevalence is roughly half the female rate."
+    covariates: []
+    followup_years: null
+    cohort_family: "YRBS"
+    quote: "Suicide attempts |  Sufficient sleep | 173 | 4.41 | 170 | 3.89 | 170 | 4.88 | 186 | 5.16 | 186 | 6.45 | 113 | 4.23 | 107 | 4.97 |  Insufficient sleep | 658 | 7.99 | 745 | 7.25 | 625 | 8.32 | 686 | 8.92 | 799 | 8.99 | 636 | 7.99 | 613 | 9.51 |"
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_prevalence_injury_by_suicide_attempt_2019
+    exposure: {type: habitual_short_sleep, dose_h: 7.0, referent_h: 8.5, duration_days: null, contrast_label: "ABSOLUTE weighted prevalence of suicide attempt REQUIRING MEDICAL TREATMENT, YRBS 2019: insufficient 2.65% vs sufficient 1.74%"}
+    scale: probability
+    unit: "absolute risk difference, proportion"
+    value: 0.0091
+    se: null
+    ci: null
+    conversion_formula: "2.65% - 1.74% = 0.91 pp = 0.0091. Risk ratio = 2.65/1.74 = 1.52. Read from Table 1, 2019 column. This is the most severe and least self-report-inflated endpoint, and it shows the SMALLEST relative and absolute difference."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = excess absolute risk. The gradient across outcome severity is informative: RR 2.01 for ideation, 2.08 for plan, 1.91 for attempt, 1.52 for medically treated attempt. The association WEAKENS as the endpoint gets harder and less subjective."
+    covariates: []
+    followup_years: null
+    cohort_family: "YRBS"
+    quote: "Injury by suicide attempts |  Sufficient sleep | 42 | 0.97 | 55 | 1.21 | 48 | 1.21 | 55 | 1.40 | 65 | 1.95 | 34 | 1.20 | 33 | 1.74 |  Insufficient sleep | 201 | 2.30 | 237 | 2.17 | 192 | 2.56 | 226 | 3.04 | 253 | 2.89 | 212 | 2.56 | 171 | 2.65 |"
+  - outcome_domain: psychiatric
+    outcome_construct: sex_interaction_female_excess_risk
+    exposure: {type: habitual_short_sleep, dose_h: 7.0, referent_h: 8.5, duration_days: null, contrast_label: "sleep-duration x SEX interaction subgroup: FEMALE adolescents with insufficient sleep, suicidal ideation"}
+    scale: log_or
+    unit: null
+    value: 0.37844
+    se: 0.07254
+    ci: [0.23902, 0.52473]
+    conversion_formula: "OR 1.46 (1.27-1.69); log(1.46)=0.37844; se=(log(1.69)-log(1.27))/3.92=0.07254"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher odds. Females carry the LARGEST risk in the sex interaction (OR 1.46 vs the all-sex 1.38), and the temporal increase in ideation and plans among insufficient sleepers was significant in FEMALES ONLY and non-significant in MALES. Our subject is male -- this is the key sex-specific qualifier."
+    covariates: ["sleep duration x sex interaction"]
+    followup_years: null
+    cohort_family: "YRBS"
+    quote: "However, we found that female adolescents with insufficient sleep were at greatest risk of suicidal ideation (OR=1.46[95%CI:1.27, 1.69], p <0.001) and suicide plan (OR=1.44[95%CI:1.25, 1.66], p <0.001) among subgroup of sleep duration and sex interaction between 2007 and 2019 ( Figure 1 )."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "Enormous, nationally representative, properly survey-weighted (n=73,356 across 7 YRBS waves, school response 75-81%, student response 80-88%). But the design is CROSS-SECTIONAL, which is why I assigned tier TX and not T5: exposure and outcome are self-reported on the same questionnaire at the same moment, so (a) temporal order is unknown, (b) a currently suicidal adolescent's sleep report and suicidality report share mood-state and shared-method variance, and (c) depression -- the obvious common cause -- is NOT among the covariates. The exposure is a single item about school-night sleep. This record's value is in its ABSOLUTE numbers, not in its causal content."
+funding: null
+notes: |
+  THIS IS MY SOURCE FOR THE MANDATORY ABSOLUTE PREVALENCES. Exposure definition, verbatim:
+  "(<8h) and sufficient sleep (≥8h) based on recommendations of optimal sleep hours for adolescents".
+  All prevalences below are survey-weighted percentages from Table 1, 2019 wave (the most recent, and
+  the most relevant to a subject who was 16 in roughly 2023-2024):
+
+    OUTCOME                        SUFFICIENT (>=8h)   INSUFFICIENT (<8h)   RD (pp)   RR
+    serious suicidal ideation           10.89%              21.88%          +10.99   2.01
+    suicide plan                         8.77%              18.26%           +9.49   2.08
+    suicide attempt                      4.97%               9.51%           +4.54   1.91
+    attempt requiring medical care       1.74%               2.65%           +0.91   1.52
+
+  Note that these crude RRs (about 2.0) are much larger than the ADJUSTED ORs from the same paper
+  (1.38, 1.34, 1.24). Adjustment for year, sex, age and race alone roughly halves the association on
+  the log scale, and depression was never adjusted for at all. That is a strong hint about how much
+  further it would fall under proper confounding control.
+
+  THE SEVERITY GRADIENT IS THE MOST DIAGNOSTIC PATTERN IN THIS TABLE. As the endpoint becomes harder
+  and less purely self-reported, the association shrinks monotonically: RR 2.01 (ideation) -> 2.08
+  (plan) -> 1.91 (attempt) -> 1.52 (medically treated attempt). If short sleep were causing suicidality
+  through a biological pathway, there is no reason for the association to be weakest at the most severe,
+  most objectively verifiable endpoint. This pattern is what shared-method variance and mood-congruent
+  reporting look like.
+
+  CRITICAL SEX QUALIFIER FOR OUR SUBJECT, WHO IS MALE. Two findings, both quoted above:
+    (1) In the sleep x sex interaction, FEMALES with insufficient sleep carried the highest risk
+        (ideation OR 1.46, plan OR 1.44) -- above the all-sex estimates of 1.38 and 1.34.
+    (2) The rising temporal trend in ideation and plans among insufficient sleepers was significant in
+        females (ideation ABPC 3.03%, plan ABPC 4.03%) but "non-significantly increasing among male
+        adolescents with insufficient sleep."
+  So the male-specific association is weaker than the headline figures, and the secular worsening is a
+  female phenomenon in these data. This converges with conklin2018_basus, which found chronic sleep
+  deprivation predicted depression in adolescent GIRLS but not BOYS. Two independent datasets, same
+  direction of sex moderation. For our subject this is a genuine downward adjustment on the risk
+  estimate, and it is one of the few sex-specific findings available in this literature.
+
+  ALSO NOTE THE ABSOLUTE LEVELS ARE COMBINED-SEX. In YRBS, female adolescents report roughly twice the
+  ideation and attempt prevalence of males. The male-specific absolute risks are therefore materially
+  lower than the table above -- I did not have male-stratified prevalence cells in Table 1 and will not
+  invent them, so in psychiatric_summary.md I derive male-specific absolute figures from a separate
+  source rather than by halving these.
+
+  DATA-QUALITY FLAG on the suicide-attempt aOR. The printed CI, 1.17-1.38 around a point estimate of
+  1.24, is asymmetric on the log scale in a way a logistic-regression OR cannot be (log-distance to the
+  lower bound is 0.058 versus 0.107 to the upper). Something is misprinted. I recorded it as published
+  and flagged it rather than silently correcting it.
+
+  CONTEXT NUMBER WORTH CARRYING. Insufficient sleep in US adolescents rose from 69.24% (95% CI 67.14-71.27)
+  in 2007 to 78.69% (76.96-80.32) in 2019. Nearly four in five US high-school students now sleep under
+  8 h on school nights. Our subject's 5-6 h weeknights place him well inside the majority category, but
+  toward its short tail; "insufficient sleep" as defined here (<8 h) is a far milder exposure than his.
+  This cuts both ways: it means the reference group in these ORs is not a well-rested population, so the
+  ORs likely UNDERSTATE the contrast between 8.5 h and 5.5 h, while the confounding critique above still
+  stands.
+shard: "s12_psychiatric"

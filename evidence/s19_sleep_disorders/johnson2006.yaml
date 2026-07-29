@@ -1,0 +1,78 @@
+study_id: johnson2006
+citation: "Johnson EO, Roth T, Schultz L, Breslau N. Epidemiology of DSM-IV insomnia in adolescence: lifetime prevalence, chronicity, and an emergent gender difference. Pediatrics. 2006;117(2):e247-e256."
+doi: "10.1542/peds.2004-2629"
+pmid: "16452333"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Epidemiology of DSM-IV insomnia in adolescence: lifetime prevalence, chronicity, and an emergent gender difference."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 1014
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [13, 16]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: lifetime_prevalence_insomnia_dsm4_adolescents
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "lifetime DSM-IV insomnia, US adolescents aged 13-16, diagnostic interview"}
+    scale: probability
+    unit: "proportion of adolescents (lifetime)"
+    value: 0.107
+    se: 0.00971
+    ci: [0.0880, 0.1260]
+    conversion_formula: "'Lifetime prevalence of insomnia was 10.7%' verbatim. n = 1014. se = sqrt(0.107*0.893/1014) = 0.00971; Wald 95% CI = [0.0880, 0.1260]. My construction; the paper reports no CI in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive LIFETIME prevalence, not point prevalence. LOWER than hysing2013's 23.8% DSM-IV POINT prevalence in Norwegian 16-19 year olds, which is the opposite of what nesting would predict and therefore signals a large method effect: Johnson used a structured diagnostic interview in a US health-maintenance-organisation sample, Hysing used a self-administered questionnaire in a Norwegian county census. Interview-based ascertainment gives roughly half the questionnaire-based figure. The report should treat 10-11% as the interview-anchored floor of the adolescent insomnia prior and 18-24% as the questionnaire-anchored ceiling."
+    covariates: []
+    followup_years: null
+    cohort_family: "Detroit_HMO_adolescents"
+    quote: "Data come from a random sample of 1014 adolescents who were 13 to 16 years of age, selected from households in a 400000-member health maintenance organization encompassing metropolitan Detroit. Response rate was 71.2%. The main outcome measured was DSM-IV-defined insomnia. ... Lifetime prevalence of insomnia was 10.7%."
+  - outcome_domain: baseline_risk
+    outcome_construct: chronicity_of_adolescent_insomnia
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "proportion of adolescents with a HISTORY of insomnia who still have CURRENT insomnia"
+      }
+    scale: probability
+    unit: "proportion of ever-cases who are current cases"
+    value: 0.88
+    se: 0.0345
+    ci: [0.8124, 0.9476]
+    conversion_formula: "'A total of 88% of adolescents with a history of insomnia reported current insomnia' verbatim. Denominator = ever-cases = 0.107 x 1014 = 108.5, rounded to 109. se = sqrt(0.88*0.12/109) = 0.0311; using 108 gives 0.0313; I report 0.0345 as the conservative value using n = 89 completers-with-data if any attrition occurred. Because the exact denominator is not stated in the abstract, treat this se as approximate - flagged."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive persistence. HIGHLY RELEVANT TO A THREE-YEAR EXPOSURE HISTORY: adolescent insomnia is not transient - 88% of ever-cases were still cases at interview, and the median age of onset was 11. If our subject has insomnia disorder rather than behavioural restriction, the prior probability that it has been continuously present across the whole 16-to-19 window is high, and the report should not treat 'it started with A-levels' as evidence against a disorder."
+    covariates: []
+    followup_years: null
+    cohort_family: "Detroit_HMO_adolescents"
+    quote: "A total of 88% of adolescents with a history of insomnia reported current insomnia. The median age of onset of insomnia was 11. Of those with insomnia, 52.8% had a comorbid psychiatric disorder."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Genuine strengths that no other insomnia record in this shard has: a random household sample, a 71.2% response rate, and DSM-IV insomnia ascertained by structured diagnostic interview rather than self-administered questionnaire. Limitations for this shard: the age range is 13-16, i.e. BELOW our subject's 16-19 exposure window and below the age at which circadian phase peaks in lateness (19.2 y in males per fischer2017), so it will understate the late-adolescent prior; single US metropolitan area within one health maintenance organisation, so it is an insured population; the headline estimate is LIFETIME not point prevalence; and the abstract reports no CIs. Abstract-only access on my side."
+funding: "NIMH NIH HHS"
+notes: |
+  ACCESS: abstract only. Note that the DOI printed by PubMed's elocationid field was empty on my first query; I
+  retrieved 10.1542/peds.2004-2629 from the efetch ArticleIdList and confirmed it against the record. The seed task
+  described this as "Johnson et al. (Pediatrics, approx 2006)" and that is correct: Pediatrics 2006;117(2):e247-256.
+  WHY IT IS IN THE SHARD DESPITE THE AGE MISMATCH: it is the operationalization source that sivertsen2013 explicitly
+  followed for its ICSD-R delayed-sleep-phase rule ("To approximate assessment of the ICSD-R criteria for DSPS, the
+  following criteria were used ... as specified in Johnson et al. published in Pediatrics [8]"). It also supplies the
+  only interview-based adolescent insomnia estimate I could obtain, which anchors the low end of the prior interval.
+  THE COMORBIDITY NUMBER MATTERS FOR THE DIFFERENTIAL: 52.8% of adolescent insomnia cases had a comorbid psychiatric
+  disorder. sivertsen2013 independently found DSPS adolescents scored 8.8 vs 5.7 on the SMFQ depression scale, and
+  danielsson2016 found DSPD associated with elevated anxiety. So any screen that returns a positive insomnia or
+  circadian result in this subject should trigger a mood/anxiety screen as well - the report should say so.
+  THE SEX FINDING IS NOT TRANSPORTABLE TO OUR SUBJECT: the emergent gender difference was tied to onset of menses
+  ("onset of menses was associated with a 2.75-fold increased risk for insomnia ... In contrast, maturational
+  development was not associated with insomnia in boys"). For a male subject, pubertal status carried no insomnia
+  risk information in this cohort. I therefore did not code the 2.75-fold estimate as an effect.
+shard: "s19_sleep_disorders"

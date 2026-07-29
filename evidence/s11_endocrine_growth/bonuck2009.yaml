@@ -1,0 +1,93 @@
+study_id: bonuck2009
+citation: 'Bonuck KA, Freeman K, Henderson J. Growth and growth biomarker changes after adenotonsillectomy: systematic review
+  and meta-analysis. Arch Dis Child. 2009;94(2):83-91.'
+doi: 10.1136/adc.2008.141192
+pmid: '18684748'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: 'Growth and growth biomarker changes after adenotonsillectomy: systematic review and meta-analysis'
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 363
+n_studies_pooled: 10
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: multiple
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: standardised_height_change_after_adenotonsillectomy
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: pre- vs post-adenotonsillectomy standardised height (z score/centile) in children with sleep-disordered
+      breathing
+  scale: smd
+  unit: null
+  value: 0.34
+  se: 0.0689
+  ci:
+  - 0.2
+  - 0.47
+  conversion_formula: se = (0.47 - 0.20)/3.92 = 0.0689, from the reported 95% CI. If mapped onto the SD of adult male stature
+    (7.30 cm) this would be 2.48 cm (95% CI 1.46-3.43 cm) - see direction_note for why that mapping does not transport.
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: 'Positive = height z score IMPROVED after surgical relief of sleep-disordered breathing. This is the strongest
+    existing evidence that disturbed sleep can restrict growth, and it is the natural upper-bound anchor. THREE reasons
+    it does not transport to the subject: (1) exposure is obstructive SDB with intermittent hypoxaemia and increased work
+    of breathing, not voluntary curtailment of time in bed; (2) the children were far younger and had most of their growth
+    ahead of them, whereas the subject had ~2% of his stature left; (3) the pooled studies are uncontrolled pre/post observational
+    designs, so regression to the mean and normal growth are not separated from treatment effect.'
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: 'Meta-analysis findings for pre/post-surgery changes were: standardised height: 10 studies, 363 total children,
+    pooled standardised mean differences (SMD) = 0.34 (95% CI 0.20 to 0.47); standardised weight: 11 studies, 390 total
+    children, pooled SMD = 0.57 (95% CI 0.44 to 0.70); IGF-1: 7 studies, 177 total children, pooled SMD = 0.53 (95% CI 0.33
+    to 0.73); IGFBP-3: 7 studies, 177 total children, pooled SMD = 0.59 (95% CI 0.34 to 0.83).'
+- outcome_domain: endocrine
+  outcome_construct: igf1_change_after_adenotonsillectomy
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: pre- vs post-adenotonsillectomy serum IGF-1 in children with sleep-disordered breathing
+  scale: smd
+  unit: null
+  value: 0.53
+  se: 0.102
+  ci:
+  - 0.33
+  - 0.73
+  conversion_formula: se = (0.73 - 0.33)/3.92 = 0.1020, from the reported 95% CI.
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: Positive = IGF-1 rose after surgery. The only mediator evidence linking sleep pathology to the growth
+    axis in humans. Note it is IGF-1 (the growth-relevant integrator), not GH pulse amplitude, that tracks growth.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: 'Meta-analysis findings for pre/post-surgery changes were: standardised height: 10 studies, 363 total children,
+    pooled standardised mean differences (SMD) = 0.34 (95% CI 0.20 to 0.47); standardised weight: 11 studies, 390 total
+    children, pooled SMD = 0.57 (95% CI 0.44 to 0.70); IGF-1: 7 studies, 177 total children, pooled SMD = 0.53 (95% CI 0.33
+    to 0.73); IGFBP-3: 7 studies, 177 total children, pooled SMD = 0.59 (95% CI 0.34 to 0.83).'
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: 'pooled uncontrolled pre/post observational studies; ''Setting: Observational studies''; publication bias likely;
+    no randomised comparator'
+funding: null
+notes: The exposure that produces measurable growth effects in humans is sleep-disordered BREATHING in prepubertal children,
+  not short sleep duration in a 16-19 year old. The randomised test of the same intervention (katz2014) found the effect
+  on weight/adiposity, not stature.
+shard: s11_endocrine_growth

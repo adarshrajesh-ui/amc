@@ -1,0 +1,95 @@
+study_id: guedes2016
+citation: "Guedes LG, Abreu GA, Rodrigues DF, Teixeira LR, Luiz RR, Bloch KV. Comparison between self-reported sleep duration and actigraphy among adolescents: gender differences. Revista Brasileira de Epidemiologia. 2016;19(2):339-347."
+doi: "10.1590/1980-5497201600020011"
+pmid: "27532757"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Comparison between self-reported sleep duration and actigraphy among adolescents: gender differences"
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 37
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [12, 17]
+  pct_female: null
+  country: "Brazil"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: selfreport_minus_actigraphy_mean_bias_boys
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "self-reported nocturnal sleep minus 7-day actigraphy, BOYS only"}
+    scale: hours
+    unit: "hours (positive = self-report longer)"
+    value: 1.9
+    se: null
+    ci: [-3.588, 7.388]
+    conversion_formula: "abstract reports mean 1.9 h with SD 2.8 for boys. ci field holds the derived 95% limits of agreement = 1.9 +/- 1.96*2.8 = (-3.59, +7.39) h. se not derivable because the abstract does not give the boys-only n (total n=37 split by sex)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = self-report OVERSTATES actigraphy. MOST DEMOGRAPHICALLY RELEVANT SINGLE ESTIMATE: our subject is an adolescent male, and in this study boys over-reported by 1.9 h vs 0.5 h in girls."
+    covariates: []
+    followup_years: null
+    cohort_family: "ERICA_pilot"
+    quote: |
+      which was higher among boys, 1.9 hours (SD = 2.8; median = 1.6; p < 0.05), than among girls, 0.5 hours (SD =
+      1.4; median = 0.3; p = 0.11).
+  - outcome_domain: exposure_measurement
+    outcome_construct: selfreport_minus_actigraphy_mean_bias_all
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "self-reported nocturnal sleep minus 7-day actigraphy, whole sample"}
+    scale: hours
+    unit: "hours (positive = self-report longer)"
+    value: 1.0
+    se: 0.3452
+    ci: [-3.116, 5.116]
+    conversion_formula: "abstract: 'a mean difference of about one hour (SD = 2.1; median = 0.5; p < 0.01)'. se = 2.1/sqrt(37) = 0.3452. ci field holds derived 95% limits of agreement = 1.0 +/- 1.96*2.1 = (-3.12, +5.12) h."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = self-report OVERSTATES actigraphy. Note mean 1.0 h but MEDIAN only 0.5 h: the difference distribution is right-skewed, so a symmetric normal bias model overstates the typical case and understates the tail."
+    covariates: []
+    followup_years: null
+    cohort_family: "ERICA_pilot"
+    quote: |
+      A mean difference of about one hour (SD = 2.1; median = 0.5; p < 0.01) was found between both strategies
+  - outcome_domain: exposure_measurement
+    outcome_construct: icc_selfreport_actigraphy_boys
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "intraclass correlation, boys"}
+    scale: raw_units
+    unit: "intraclass correlation coefficient"
+    value: 0.06
+    se: null
+    ci: [-0.33, 0.46]
+    conversion_formula: "reported directly (boys ICC 0.06, 95% CI -0.33 to 0.46, p=0.489; girls ICC 0.43, 95% CI 0.12-0.83, p<0.001)"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "ICC of 0.06 in boys is statistically indistinguishable from ZERO agreement: in this sample an adolescent boy's self-reported sleep duration carried essentially no information about his actigraphic sleep."
+    covariates: []
+    followup_years: null
+    cohort_family: "ERICA_pilot"
+    quote: |
+      the intraclass correlation coefficient: 0.06 (95%CI = -0.33 - 0.46; p = 0.489) for boys and 0.43 (95%CI =
+      0.12 - 0.83; p < 0.001) for girls.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "n=37 total, so the sex-stratified estimates rest on roughly 15-22 people per stratum and the SDs (1.4-2.8 h) are very imprecisely estimated; convenience sample; abstract-only access. Include for DIRECTION and for the sex contrast, not as a precise magnitude."
+funding: null
+notes: |
+  Verbatim (abstract): "Thirty-seven subjects, aged 12 to 17 years, answered questions about nocturnal sleep duration and
+  used actigraphy for seven days... A mean difference of about one hour (SD = 2.1; median = 0.5; p < 0.01) was found
+  between both strategies, which was higher among boys, 1.9 hours (SD = 2.8; median = 1.6; p < 0.05), than among girls,
+  0.5 hours (SD = 1.4; median = 0.3; p = 0.11). The graphical evaluation showed similar results, as well as the intraclass
+  correlation coefficient: 0.06 (95%CI = -0.33 - 0.46; p = 0.489) for boys and 0.43 (95%CI = 0.12 - 0.83; p < 0.001) for
+  girls." Conclusion: "they reinforce the need of a careful use of nocturnal sleep measures among adolescents, mainly
+  among boys."
+  WHY THIS MATTERS DESPITE n=37: it is the only retrieved study that stratifies the adolescent self-report bias by sex, and
+  it points the same way as cespedes2016hchs (agreement worse in males). Two independent studies agreeing that the male
+  adolescent self-report is the least reliable case is the justification for putting our subject at the wide end of the
+  measurement-error prior. The SD of 2.8 h for boys should be treated as an upper bound rather than a point estimate given
+  the sample size.
+shard: "s06_sleep_need_measurement"

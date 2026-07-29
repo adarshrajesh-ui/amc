@@ -1,0 +1,117 @@
+study_id: arora2013
+citation: "Arora T, Broglia E, Pushpakumar D, Lodhi T, Taheri S. An investigation into the strength of the association and agreement levels between subjective and objective sleep duration in adolescents. PLoS ONE. 2013;8(8):e72406."
+doi: "10.1371/journal.pone.0072406"
+pmid: "23951321"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3739794/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "An Investigation into the Strength of the Association and Agreement Levels between Subjective and Objective Sleep Duration in Adolescents"
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 225
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [11, 13]
+  pct_female: null
+  country: "UK"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: selfreport_minus_actigraphy_mean_bias_weekday
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "weekday retrospective self-report minus wrist-actigraphy sleep duration"}
+    scale: hours
+    unit: "hours (positive = self-report longer)"
+    value: 1.592
+    se: 0.1003
+    ci: [1.395, 1.788]
+    conversion_formula: "Table 1: self-report vs actigraphy weekday mean difference 95.5 min (95% CI 83.7, 107.3) -> 95.5/60 = 1.592 h; ci = 83.7/60 to 107.3/60; se = ((107.3-83.7)/3.92)/60 = 0.1003 h"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = self-report OVERSTATES actigraphy sleep by ~1.6 h on weekdays. This is a RETROSPECTIVE self-report (the instrument type our subject used), not a diary."
+    covariates: []
+    followup_years: null
+    cohort_family: "MASSES"
+    quote: |
+      Average weekday sleep duration (minutes): Self-report vs Actigraphy 95.5, p<0.001, 95% CI 83.7, 107.3
+  - outcome_domain: exposure_measurement
+    outcome_construct: selfreport_minus_sleepdiary_mean_bias_weekday
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "weekday retrospective self-report minus 7-day prospective sleep diary"}
+    scale: hours
+    unit: "hours (positive = self-report longer)"
+    value: 0.227
+    se: 0.1003
+    ci: [0.030, 0.423]
+    conversion_formula: "Table 1: 13.6 min (95% CI 1.8, 25.4) -> 13.6/60 = 0.227 h; se = ((25.4-1.8)/3.92)/60 = 0.1003 h"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = retrospective self-report exceeds the prospective diary by only ~14 min on weekdays. Most of the self-report-vs-actigraphy gap (95.5 min) is therefore diary-vs-actigraphy (81.9 min), i.e. attributable to the objective/subjective boundary, not to recall failure."
+    covariates: []
+    followup_years: null
+    cohort_family: "MASSES"
+    quote: |
+      Average weekday sleep duration (minutes): Self-report vs Sleep diary 13.6, p=0.017, 95% CI 1.8, 25.4
+  - outcome_domain: exposure_measurement
+    outcome_construct: correlation_selfreport_actigraphy_weekday
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "correlation, weekday self-report vs actigraphy"}
+    scale: raw_units
+    unit: "correlation coefficient"
+    value: 0.17
+    se: null
+    ci: null
+    conversion_formula: "Table 2, reported directly; not statistically significant (self-report vs sleep diary was 0.48**)"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "non-significant correlation between weekday self-report and actigraphy, matching white2026ffcws (rho=0.18)"
+    covariates: []
+    followup_years: null
+    cohort_family: "MASSES"
+    quote: |
+      Self-reported sleep duration was not significantly correlated with actigraphy sleep duration for weekday or
+      combined sleep duration. Sleep diary estimated sleep duration was significantly correlated with actigraphy
+      for weekday, weekend and combined sleep duration.
+  - outcome_domain: exposure_measurement
+    outcome_construct: selfreport_minus_actigraphy_mean_bias_weekend
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "weekend retrospective self-report minus wrist-actigraphy sleep duration"}
+    scale: hours
+    unit: "hours (positive = self-report longer)"
+    value: 2.612
+    se: 0.1404
+    ci: [2.337, 2.888]
+    conversion_formula: "Table 1: 156.7 min (95% CI 140.2, 173.3) -> 156.7/60 = 2.612 h; se = ((173.3-140.2)/3.92)/60 = 0.1408 h"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = self-report OVERSTATES. Weekend bias is far larger than weekday bias, replicating white2026ffcws (74.3 vs 27.5 min). Relevant because our subject's claimed 7-8 h weekend / 10-11 h occasional nights are the LEAST reliable part of his account."
+    covariates: []
+    followup_years: null
+    cohort_family: "MASSES"
+    quote: |
+      Average weekend sleep duration (minutes): Self-report vs Actigraphy 156.7, p<0.001, 95% CI 140.2, 173.3
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "good design (three concurrent instruments in the same 225 adolescents, which is what makes it useful) but the age band is 11-13, below our subject's 16-19 window; school-based sample; no SDs of the differences reported in Table 1, only CIs of the means, so between-person LoA are not derivable."
+funding: "not stated in retrieved text"
+notes: |
+  Verbatim support, Table 1 ("Mean differences between the three sleep measures for average weekday, weekend and combined
+  sleep duration in 225 adolescents"):
+    Average weekday sleep duration (minutes): Self-report vs Sleep diary 13.6, p=0.017, 95% CI 1.8, 25.4
+                                              Self-report vs Actigraphy  95.5, p<0.001, 95% CI 83.7, 107.3
+                                              Actigraphy vs Sleep diary -81.9, p<0.001, 95% CI -93.7, -70.1
+    Average weekend sleep duration (minutes): Self-report vs Actigraphy 156.7, p<0.001, 95% CI 140.2, 173.3
+    Average combined sleep duration (minutes): Self-report vs Actigraphy 111.8, p<0.001, 95% CI 99.0, 124.6
+  Verbatim: "Self-reported sleep duration was not significantly correlated with actigraphy sleep duration for weekday or
+  combined sleep duration. Sleep diary estimated sleep duration was significantly correlated with actigraphy for weekday,
+  weekend and combined sleep duration."
+  Methods (verbatim): "Adolescents (n=225) aged 11-13 years provided estimates for weekday, weekend and combined sleep
+  duration based on self-reported survey data, a 7-day sleep diary, and wrist-worn actigraphy."
+  DECOMPOSITION THAT MATTERS: 95.5 min total weekday gap = 13.6 min (recall/retrospection) + 81.9 min (diary vs actigraphy).
+  So in adolescents the dominant term is NOT faulty recall; it is the systematic offset between any subjective account of
+  sleep and what actigraphy scores as sleep (largely SOL + WASO, see short2012diary). That decomposition is what justifies
+  routing the exposure model through an explicit time-in-bed -> total-sleep-time step (sleep efficiency) rather than a
+  single lumped 'bias' term.
+shard: "s06_sleep_need_measurement"

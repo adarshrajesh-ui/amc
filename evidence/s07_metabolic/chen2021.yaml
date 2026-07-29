@@ -1,0 +1,115 @@
+study_id: chen2021
+citation: "Chen P, Baylin A, Lee J, Dunietz GL, Cantoral A, Tellez Rojo MM, Peterson KE, Jansen EC. The association between sleep duration and sleep timing and insulin resistance among adolescents in Mexico City. J Adolesc Health. 2021 Jul;69(1):57-63."
+doi: "10.1016/j.jadohealth.2020.10.012"
+pmid: "33221190"
+url: "https://pubmed.ncbi.nlm.nih.gov/33221190/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "The Association Between Sleep Duration and Sleep Timing and Insulin Resistance Among Adolescents in Mexico City."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 384
+n_studies_pooled: null
+population:
+  age_mean: 13.8
+  age_range: null
+  pct_female: 51.0
+  country: "Mexico"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: log_homa_ir_per_hour_weekday_actigraphy_sleep
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "per 1 h MORE actigraphy-measured WEEKDAY sleep duration -> change in log HOMA-IR (7 days of actigraphy)"}
+    scale: per_hour_beta
+    unit: "change in log HOMA-IR per +1 h of weekday sleep duration"
+    value: -0.049
+    se: 0.024515
+    ci: [-0.097, -0.0009]
+    conversion_formula: "Published directly: beta = -.049, 95% CI -.097 to -.0009. se = (-0.0009 - (-0.097))/3.92 = 0.0961/3.92 = 0.024515. SIGN CONVENTION: the beta is per ADDITIONAL hour of sleep, so it is negative (more sleep, less insulin resistance). Reversing it: each hour LESS sleep raises log HOMA-IR by 0.049, i.e. multiplies HOMA-IR by exp(0.049) = 1.0502, a +5.0% increase per hour lost. Extrapolated to a 2.5 h weekday deficit: exp(0.049 x 2.5) = 1.130, i.e. +13.0%."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NEGATIVE beta = HARM FROM SHORT SLEEP (the coefficient is per hour of ADDITIONAL sleep, and more sleep lowers HOMA-IR). Read carefully - the sign convention is the opposite of most records in this shard. CI only barely excludes zero (upper bound -0.0009)."
+    covariates: ["age"]
+    followup_years: null
+    cohort_family: "ELEMENT_Mexico_City_birth_cohort"
+    quote: "Shorter sleep duration on weekdays was associated with higher log HOMA-IR (beta = -.049, 95% confidence interval [CI] -.097 to -.0009)."
+  - outcome_domain: circadian
+    outcome_construct: log_homa_ir_per_hour_later_weekend_sleep_midpoint
+    exposure: {type: social_jetlag, dose_h: null, referent_h: null, duration_days: null, contrast_label: "per 1 h LATER actigraphy-measured WEEKEND sleep midpoint -> change in log HOMA-IR"}
+    scale: per_hour_beta
+    unit: "change in log HOMA-IR per +1 h later weekend sleep midpoint"
+    value: 0.0486
+    se: 0.022653
+    ci: [0.0042, 0.093]
+    conversion_formula: "Published directly: beta = .0486, 95% CI .0042 to .093. se = (0.093-0.0042)/3.92 = 0.022653. Each hour later weekend midpoint multiplies HOMA-IR by exp(0.0486) = 1.0498, i.e. +5.0%."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM (later weekend sleep timing associated with higher insulin resistance), INDEPENDENT of sleep duration. Magnitude per hour (+5.0%) is essentially IDENTICAL to the per-hour duration effect."
+    covariates: ["age", "mutually adjusted for sleep duration (reported as 'independently associated')"]
+    followup_years: null
+    cohort_family: "ELEMENT_Mexico_City_birth_cohort"
+    quote: "Later midpoints on weekdays and the weekend were independently associated with higher log HOMA-IR (beta = .0408, 95% CI -.0049 to .087, and beta = .0486, 95% CI .0042 to .093, respectively)."
+  - outcome_domain: circadian
+    outcome_construct: log_homa_ir_per_hour_later_weekday_sleep_midpoint
+    exposure: {type: social_jetlag, dose_h: null, referent_h: null, duration_days: null, contrast_label: "per 1 h LATER actigraphy-measured WEEKDAY sleep midpoint -> change in log HOMA-IR"}
+    scale: per_hour_beta
+    unit: "change in log HOMA-IR per +1 h later weekday sleep midpoint"
+    value: 0.0408
+    se: 0.023444
+    ci: [-0.0049, 0.087]
+    conversion_formula: "Published directly: beta = .0408, 95% CI -.0049 to .087. se = (0.087-(-0.0049))/3.92 = 0.023444. CI CROSSES ZERO, so this one is not statistically significant despite being described as 'independently associated'."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM, but NULL (CI includes zero). Recorded for completeness alongside the significant weekend-midpoint effect."
+    covariates: ["age", "mutually adjusted for sleep duration"]
+    followup_years: null
+    cohort_family: "ELEMENT_Mexico_City_birth_cohort"
+    quote: "Later midpoints on weekdays and the weekend were independently associated with higher log HOMA-IR (beta = .0408, 95% CI -.0049 to .087, and beta = .0486, 95% CI .0042 to .093, respectively)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "CROSS-SECTIONAL, tier TX. Adjusted for AGE ONLY per the retrieved abstract - no adjustment for BMI/adiposity, pubertal stage, physical activity or socioeconomic position. That is a much thinner covariate set than matthews2012 (which adjusted for BMI and waist) or javaheri2011 (which adjusted for adiposity), and both of those found the short-sleep association attenuated substantially once adiposity was included. This estimate should therefore be treated as an UPPER bound that very likely contains confounding by adiposity and puberty. Strength: objective 7-day actigraphy with weekday/weekend separation, which few studies provide."
+funding: "Not retrievable from the abstract (University of Michigan / Mexican National Institute of Public Health authorship; funder left unstated rather than guessed)."
+notes: |
+  WHY THIS RECORD MATTERS DESPITE BEING CROSS-SECTIONAL AND THINLY ADJUSTED: it is the only record in
+  the shard that reports a PER-HOUR beta for adolescents, separated into WEEKDAY vs WEEKEND, and it
+  separates DURATION from TIMING. That combination is exactly the structure of our subject's exposure.
+
+  THE TWO NUMBERS TO CARRY FORWARD:
+  * Duration: each hour of weekday sleep lost raises HOMA-IR by about 5.0% (exp(0.049)). Applied to a
+    2.5 h weekday deficit that is about +13%.
+  * Timing: each hour later weekend sleep midpoint raises HOMA-IR by about 5.0% (exp(0.0486)),
+    INDEPENDENT of duration, and this one is the more robustly significant of the two timing effects.
+
+  *** THE TIMING RESULT IS THE THIRD INDEPENDENT LINE POINTING AT CIRCADIAN DISRUPTION. *** Per hour,
+  later weekend sleep timing was just as strongly associated with insulin resistance as shorter sleep
+  duration. Our subject's weekend recovery necessarily involves a LATER sleep midpoint - that is what
+  sleeping in means. So the very behaviour that partially repays his sleep debt simultaneously
+  increases his circadian misalignment. This converges with:
+    - yuan2021 (experimental): the glycaemic effect of chronic restriction required circadian disruption;
+    - liu2025 (observational): evening chronotype OR 1.59, larger than the short-sleep OR;
+    - depner2019 (experimental): the weekend catch-up itself DELAYED circadian phase.
+  Four independent designs implicating timing. The downstream model should treat the subject's
+  weekday/weekend social jetlag as a distinct exposure from his sleep-duration deficit, not as a
+  mitigation of it.
+
+  *** AGE MISMATCH IS THE MAIN LIMITATION AND IT IS SUBTLER THAN IT LOOKS. *** Mean age 13.8 (SD 1.93)
+  means most participants are in EARLY-TO-MID puberty, whereas our subject is 18 and post-pubertal.
+  Puberty causes a large transient fall in insulin sensitivity that peaks around Tanner stage 3 and
+  recovers by late adolescence, and this analysis did NOT adjust for pubertal stage. So the HOMA-IR
+  values and possibly the sleep-HOMA slope are measured in a physiologically different window from the
+  subject's. adolescent_match is scored 'mixed' rather than exact_16_19 for this reason: the sample is
+  adolescent but the wrong part of adolescence.
+
+  SEX: "Girls showed stronger associations than boys for both sleep duration and timing with HOMA-IR."
+  Our subject is male, so the relevant sex-specific estimate is the WEAKER one. Sex-stratified point
+  estimates were not given in the abstract, so I cannot extract the boys-only beta - this argues for
+  treating the pooled per-hour betas above as over-estimates for a male. Note this runs OPPOSITE to
+  cappuccio2010's adult finding of a larger male effect, so the sex modification story is inconsistent
+  across the literature and should not be leaned on in either direction.
+shard: "s07_metabolic"

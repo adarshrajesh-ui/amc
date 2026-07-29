@@ -1,0 +1,125 @@
+study_id: groen_pabilonia2019
+citation: "Groen JA, Pabilonia SW. Snooze or lose: High school start times and academic achievement. Economics of Education Review. 2019;72:204-218."
+doi: "10.1016/j.econedurev.2019.05.011"
+pmid: null
+url: "https://www.bls.gov/osmr/research-papers/2015/pdf/ec150060.pdf"
+verification:
+  crossref_ok: true
+  pubmed_ok: null
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Snooze or lose: High school start times and academic achievement"
+access_tier: full_text
+secondhand_via: null
+design: quasi_experiment
+tier: T2
+n: 1200
+n_studies_pooled: null
+population:
+  age_mean: 16.0
+  age_range: [14, 19]
+  pct_female: 50.0
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: first_stage_nighttime_sleep_hours_per_hour_later_start
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "1 hour later high school start time -> weekday (M-Th) nighttime diary sleep, female students"}
+    scale: hours
+    unit: "hours of nighttime sleep per hour later start time"
+    value: 0.601
+    se: 0.229
+    ci: [0.152, 1.050]
+    conversion_formula: "reported coefficient on School start time, Supplementary Table 9a column 'Nighttime diary sleep (M-TH)', females: 0.601 (SE 0.229) hours = 36.1 minutes. CI = value +/- 1.96*SE."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = later start yields MORE sleep. THIS IS THE FIRST STAGE the other school-start-time papers lack."
+    covariates: ["school day length", "lagged test scores", "family structure", "parental education", "school and district characteristics", "state compulsory schooling law"]
+    followup_years: null
+    cohort_family: PSID_CDS
+    quote: "The empirical estimates indicate that female students who attend schools with later start times get more sleep (36 minutes more per school night for a 1-hour later start time) and score higher on reading tests (0.16 to 0.28 standard deviations higher for a 1-hour later start time), although not on math tests."
+  - outcome_domain: academic
+    outcome_construct: broad_reading_score_sd_female
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "1 hour later high school start time, female students"}
+    scale: per_hour_beta
+    unit: "SD of Woodcock-Johnson broad reading score per hour later start"
+    value: 0.156
+    se: 0.082
+    ci: [-0.005, 0.317]
+    conversion_formula: "reported coefficient, Supplementary Table 5a, female broad-reading score: 0.156 (SE 0.082), significant at 10%. Published paper describes the range across specifications as 0.16 to 0.28 SD."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = later start raises reading score"
+    covariates: ["school day length", "lagged reading and math scores", "demographics", "family structure", "school and district characteristics"]
+    followup_years: null
+    cohort_family: PSID_CDS
+    quote: "score higher on reading tests (0.16 to 0.28 standard deviations higher for a 1-hour later start time), although not on math tests"
+  - outcome_domain: academic
+    outcome_construct: reading_score_sd_per_hour_of_sleep_iv_implied
+    exposure: {type: per_hour_less_sleep, dose_h: 6.5, referent_h: 7.5, duration_days: null, contrast_label: "implied IV: 1 hour LESS habitual weekday sleep, female high schoolers"}
+    scale: per_hour_beta
+    unit: "SD of reading score per hour LESS sleep"
+    value: -0.260
+    se: 0.148
+    ci: [-0.550, 0.030]
+    conversion_formula: "Wald/IV ratio = reduced form / first stage = 0.156 SD / 0.601 h = 0.260 SD per hour of sleep, sign-flipped for 'less sleep'. SE approximated by delta method ignoring first-stage uncertainty and reduced-form/first-stage covariance: SE ~ 0.082/0.601 = 0.136; inflated to 0.148 by adding the first-stage relative variance term ((0.229/0.601)^2) in quadrature. A properly estimated 2SLS SE would be somewhat larger."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = one hour LESS habitual sleep lowers reading achievement by ~0.26 SD. This is the single most directly usable per-hour-of-sleep academic estimate in the T2 literature at adolescent age."
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: PSID_CDS
+    quote: "female students who attend schools with later start times get more sleep (36 minutes more per school night for a 1-hour later start time) and score higher on reading tests (0.16 to 0.28 standard deviations higher for a 1-hour later start time)"
+  - outcome_domain: academic
+    outcome_construct: broad_reading_score_sd_male_null
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "1 hour later high school start time, male students"}
+    scale: per_hour_beta
+    unit: "SD of broad reading score per hour later start"
+    value: 0.003
+    se: 0.097
+    ci: [-0.187, 0.193]
+    conversion_formula: "reported coefficient, Supplementary Table 5a, male broad-reading score: 0.003 (SE 0.097)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "precise null for males. Directly relevant: our subject is male."
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: PSID_CDS
+    quote: "For male students, we do not find any statistically-significant effects of start times on test scores."
+rob:
+  tool: ROBINS-I
+  judgement: moderate
+  notes: "Nationally representative PSID-CDS panel with 24-hour time diaries (the key strength: an actual sleep first stage). Weaknesses: small analysis sample (~600 per sex), no school fixed effects, and the authors themselves flag possible omitted-variable bias from student sorting into schools with different bell times. Sex-specific results are fragile at this sample size."
+funding: "US Bureau of Labor Statistics (authors' employer); PSID data collection partly supported by NIH R01 HD069609 and NSF 1157698"
+notes: |
+  IDENTIFYING ASSUMPTION: after conditioning on school day length, school characteristics
+  (student-teacher ratio, composition, urbanicity, size), district characteristics (expenditure per
+  pupil, median income), family background, and LAGGED test scores, a school's bell time is
+  uncorrelated with unobserved determinants of achievement. The authors are explicit and honest that
+  this may fail: "it is possible that our estimates suffer from an omitted variables bias due to
+  student sorting into schools with different starting times. Although our models include controls for
+  a number of school characteristics, it could be that schools with earlier start times are better or
+  worse than schools with later start times in ways that we do not capture in our controls."
+  So identification here is WEAKER than Carrell, Edwards or Heissel & Norris - there is no
+  fixed-effects or discontinuity design, only rich controls plus a lagged outcome. Judge it as
+  "selection-on-observables plus value-added", not as a true natural experiment.
+  WHY IT IS STILL THE MOST VALUABLE RECORD IN THIS SHARD: it is the only study in the school-start-time
+  literature that measures BOTH the sleep first stage (24-hour time diaries) and test scores in the SAME
+  nationally representative sample of HIGH SCHOOL students. That lets me form the Wald ratio and express
+  the effect per hour of sleep rather than per hour of bell time: ~0.26 SD of reading per hour of sleep
+  for females (0.16/0.60), or up to ~0.47 SD using the upper end of the reported 0.16-0.28 SD range.
+  These are LARGE - larger than any plausible school-start-time reduced form would suggest - which is a
+  warning that the reduced form is small precisely because the first stage is small (~36 min per hour of
+  bell time). Any per-hour-of-sleep number derived by dividing a small reduced form by a small first
+  stage inherits a lot of noise and any bias in either component.
+  SEX HETEROGENEITY IS A PROBLEM FOR OUR SUBJECT (male). Reading effects are entirely female-driven
+  (0.156 vs 0.003). Male students did get more nighttime sleep (working paper: 0.379 h per hour later
+  start, not significant) but showed no test-score gain, and the authors report the disturbing result
+  that a 1-hour delay "decreases the probability that male students attend a four-year college by 16.7
+  percentage points" - which is almost certainly not a real causal effect of sleep and is better read as
+  evidence that this design is under-powered and sensitive to specification.
+  Working-paper first stage (BLS WP 484, Oct 2015) for reference: "female students... sleep 0.549 hours
+  more per night" and "male students adjust their night sleep by 0.379 hours (not statistically
+  significant)"; extra sleep comes entirely from later wake-up (0.750 h for females), not earlier bedtime.
+  Sample sizes rounded to nearest 10 for NCES disclosure: N = 600 female, 600 male.
+shard: "s04_academic_natural_experiments"

@@ -1,0 +1,101 @@
+study_id: chaput2012
+citation: Chaput JP, Despres JP, Bouchard C, Tremblay A. Longer sleep duration associates with lower adiposity gain in adult short sleepers. International Journal of Obesity. 2012;36(5):752-756.
+doi: 10.1038/ijo.2011.110
+pmid: '21654631'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Longer sleep duration associates with lower adiposity gain in adult short sleepers.
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 216
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 18
+  - 64
+  pct_female: null
+  country: Canada
+  adolescent_match: mixed
+effects:
+- outcome_domain: recovery
+  outcome_construct: bmi_gain_difference_6y_stayed_short_vs_normalised_sleep
+  exposure:
+    type: sleep_extension
+    dose_h: 7.5
+    referent_h: 6.0
+    duration_days: 2190
+    contrast_label: baseline short sleepers (<= 6 h) who INCREASED sleep to 7-8 h by year 6 (mean +1.52 +/- 0.66 h/day, n = 23) vs those who STAYED short (mean -0.11 +/- 0.38 h/day, n = 20); 6-year change in BMI
+  scale: raw_units
+  unit: kg/m2 difference in 6-year BMI change
+  value: 1.1
+  se: 0.36
+  ci:
+  - 0.394
+  - 1.806
+  conversion_formula: 1.1 +/- 0.36 kg/m2 as reported (the +/- value is the SE of the ANCOVA-adjusted group difference). ci = 1.1 +/- 1.96*0.36.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = those who STAYED short-sleeping gained 1.1 kg/m2 MORE BMI over 6 years than those who normalised their sleep. THE SINGLE BEST PIECE OF EVIDENCE THAT NORMALISING SLEEP ATTENUATES FUTURE ADIPOSITY GAIN. It does NOT show that already-accumulated weight is lost.
+  covariates:
+  - relevant covariates per paper (ANCOVA-adjusted)
+  followup_years: 6.0
+  cohort_family: Quebec_Family_Study
+  quote: 'However, short-duration sleepers who maintained their short sleep duration experienced a greater increase in body mass index (BMI) (difference: 1.1 +/- 0.36 kg m(-2), P < 0.05) and fat mass (difference: 2.4 +/- 0.64 kg, P < 0.05) over the 6-year follow-up period than short-duration sleepers who increased their sleep duration, even after adjustment for relevant covariates.'
+- outcome_domain: recovery
+  outcome_construct: fat_mass_gain_difference_6y
+  exposure:
+    type: sleep_extension
+    dose_h: 7.5
+    referent_h: 6.0
+    duration_days: 2190
+    contrast_label: same contrast, outcome = 6-year change in fat mass (objectively measured)
+  scale: raw_units
+  unit: kg difference in 6-year fat-mass change
+  value: 2.4
+  se: 0.64
+  ci:
+  - 1.146
+  - 3.654
+  conversion_formula: 2.4 +/- 0.64 kg as reported (SE of the adjusted group difference). ci = 2.4 +/- 1.96*0.64.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = staying short-sleeping cost an extra 2.4 kg of fat mass over 6 years relative to normalising sleep (harm avoided by normalising).
+  covariates: []
+  followup_years: 6.0
+  cohort_family: Quebec_Family_Study
+  quote: 'short-duration sleepers who maintained their short sleep duration experienced a greater increase in body mass index (BMI) (difference: 1.1 +/- 0.36 kg m(-2), P < 0.05) and fat mass (difference: 2.4 +/- 0.64 kg, P < 0.05) over the 6-year follow-up period than short-duration sleepers who increased their sleep duration, even after adjustment for relevant covariates.'
+- outcome_domain: recovery
+  outcome_construct: adiposity_change_normalised_short_sleepers_vs_never_short_controls
+  exposure:
+    type: sleep_extension
+    dose_h: 7.5
+    referent_h: 7.5
+    duration_days: 2190
+    contrast_label: short sleepers who normalised sleep (n = 23) vs adults who slept 7-8 h at BOTH baseline and year 6 (n = 173)
+  scale: raw_units
+  unit: kg/m2 difference in 6-year BMI change
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: Authors report NO significant difference between these groups and give no point estimate; value encoded as 0 to represent the reported null, se null because it is not derivable.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NULL = after normalising sleep, former short sleepers' subsequent adiposity trajectory became INDISTINGUISHABLE from people who had never been short sleepers. This is the closest available analogue to our subject's situation, and it points toward the FORWARD RISK being largely removed - while saying nothing about weight already accumulated.
+  covariates: []
+  followup_years: 6.0
+  cohort_family: Quebec_Family_Study
+  quote: We did not observe any significant difference in adiposity changes between the control group and short-duration sleepers who increased their sleep duration.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: 'CRITICAL LIMITATION: this is an OBSERVATIONAL, NON-RANDOMISED comparison of n=23 vs n=20 self-selected sleep-changers within an obesity-enriched family cohort. People who spontaneously start sleeping more are very likely to differ in health behaviour, shift work, life stage and stress. Confounding by indication is severe. The observed contrast is also ''less future gain'', NOT ''loss of previously gained weight''.'
+funding: not stated in abstract
+notes: 'THE MOST DIRECTLY RELEVANT REVERSIBILITY RECORD IN THE PUBLISHED LITERATURE, and it is weak: n=43 short sleepers split into 23 who normalised and 20 who did not, unrandomised, adults aged 18-64. The authors'' own framing is deliberately cautious: ''This study suggests for the first time that shifting sleep duration from a short to a healthier length is associated with an attenuation of fat mass gain.'' ATTENUATION OF GAIN, not reversal of gain. Same cohort as chaput2008.'
+shard: s09_obesity_bmi

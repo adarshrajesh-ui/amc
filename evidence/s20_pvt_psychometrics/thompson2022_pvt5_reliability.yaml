@@ -1,0 +1,132 @@
+study_id: thompson2022_pvt5_reliability
+citation: "Thompson BJ, Shugart C, Dennison K, Louder TJ. Test-retest reliability of the 5-minute psychomotor vigilance task in working-aged females. J Neurosci Methods. 2022;365:109379."
+doi: "10.1016/j.jneumeth.2021.109379"
+pmid: "34627928"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Test-retest reliability of the 5-minute psychomotor vigilance task in working-aged females"
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [20, 63]
+  pct_female: 100.0
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvt5_mean_rt_test_retest_icc
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "5-min PVT on two separate days (between-day test-retest)"}
+    scale: raw_units
+    unit: "ICC"
+    value: 0.79
+    se: null
+    ci: null
+    conversion_formula: "published ICC; no CI in the abstract"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more reliable. Companion absolute-reliability figure: SEM% = 4.14% of the mean."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Overall high reliability was shown for the MRT (ICC = 0.79, SEM% = 4.14%) and F10RT% (ICC = 0.83, SEM% = 4.43%) variables"
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvt5_mean_rt_standard_error_of_measurement_relative
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "between-day standard error of measurement, 5-min PVT mean reaction time"}
+    scale: pct_change
+    unit: "SEM as % of the mean (SEM%) - the WITHIN-PERSON day-to-day measurement SD"
+    value: 4.14
+    se: null
+    ci: null
+    conversion_formula: "published SEM%. This is the closest published estimate of a WITHIN-PERSON, BETWEEN-DAY, RESTED-BASELINE SD for a short PVT. Absolute ms value requires the group mean RT, which is in the paywalled full text and which I did NOT retrieve - so I do NOT report a ms value."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Smaller = more precise. 4.14% of mean RT is the day-to-day noise floor for a single 5-min PVT bout in a rested person."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Overall high reliability was shown for the MRT (ICC = 0.79, SEM% = 4.14%)"
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvt5_fastest10pct_rt_test_retest_icc
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "5-min PVT on two separate days"}
+    scale: raw_units
+    unit: "ICC"
+    value: 0.83
+    se: null
+    ci: null
+    conversion_formula: "published ICC"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more reliable. SEM% = 4.43%. The authors nominate F10RT% as the most reliable 5-min PVT variable BECAUSE it showed no systematic error, unlike mean RT."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The finding that the MRT variable displayed systematic error (P = 0.01) indicating that a learning curve may have been present, but the F10RT% did not show systematic error, suggests the F10RT% may be the most reliable PVT variable in a 5-minute duration test."
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvt5_sd_of_rt_and_slowest10pct_reliability
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "5-min PVT on two separate days; SDRT and slowest 10% RT"}
+    scale: raw_units
+    unit: "ICC (upper bound; published only as '< 0.50')"
+    value: 0.50
+    se: null
+    ci: null
+    conversion_formula: "published as ICCs < 0.50; I record the stated upper bound 0.50 and flag it as a bound, not a point estimate."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more reliable. Variability-based PVT metrics (SD of RT, slowest 10% RT) have POOR relative reliability and should not be n-of-1 primary outcomes despite their conceptual appeal."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Poor relative reliability was found for the SDRT and S10RT% variables (ICCs < 0.50) but the S10RT% variable had good absolute reliability (SEM% = 7.12%)."
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvt5_lapse_and_error_metric_reliability
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "5-min PVT; false starts, total errors, sleepiness scale"}
+    scale: pct_change
+    unit: "SEM% range for error-based metrics (lower bound of the published 32.60-168.69% range)"
+    value: 32.60
+    se: null
+    ci: [32.60, 168.69]
+    conversion_formula: "published SEM% range for false starts, total errors and the sleepiness scale; value = lower bound, 'ci' field holds the published RANGE ACROSS METRICS, not a confidence interval."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Larger = worse precision. Error/lapse-count metrics on a 5-min PVT have day-to-day measurement noise of 33-169% of their own mean. They are unusable as an n-of-1 primary outcome in a rested person, because at rested baseline a short PVT produces too few lapses to count reliably."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "with moderate relative reliability (based on ICCs) for the false starts, ERR, and sleepiness scale (ICC = 0.50 - 0.70) variables but these all exhibited poor absolute reliability (based on SEM% values of 32.60 - 168.69%). ... The minor and major lapses and anticipations variables had too few of event occurrences for a confident determination of the reliability."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Abstract-only access (Elsevier, not in PMC). Sample size not stated in the abstract, so n is null - a real limitation for weighting. Females only, aged 20-63 (mean not given), so adolescent_match poor_midlife and sex-restricted. Only TWO administrations, which is the minimum for an ICC and cannot characterise a learning CURVE - the authors infer a learning curve indirectly from a significant systematic mean shift. No absolute (ms) SEM extractable without the full text."
+funding: "Not extracted."
+notes: |
+  THIS RECORD SUPPLIES TWO THINGS THE PROTOCOL NEEDS AND NOTHING ELSE I RETRIEVED SUPPLIES.
+
+  (1) A between-DAY (not within-day) test-retest reliability for a SHORT PVT in a rested state:
+      ICC 0.79 (mean RT) and 0.83 (fastest 10% RT), with SEM% of 4.14% and 4.43%. These are the
+      only rested-baseline, between-day, short-PVT reliability figures I could verify.
+
+  (2) DIRECT EVIDENCE AGAINST THE CLAIM THAT THE PVT IS PRACTICE-EFFECT-FREE, in the metric most
+      people use: mean RT showed a statistically significant systematic between-session shift
+      (P = 0.01) which the authors attribute to a learning curve. Combined with basner2020_practice
+      (which found NO significant practice effect for PVT response SPEED across 15 administrations,
+      std beta = 0.02, P = 0.44, but DID find a small significant one for PVT ACCURACY,
+      std beta = 0.09, P = 0.02), the honest reading is: the PVT has the SMALLEST practice effect of
+      any common cognitive test but it is not exactly zero, and it is detectable at the second
+      administration in mean RT. Hence the protocol's practice-effect washout requirement.
+
+  CAUTION on 3-min vs 5-min: this paper asserts, citing others, that "the 5-minute version has been
+  suggested to be more valid than the 3-minute". Basner's own data (basner2011_pvt_metrics) show
+  effect sizes saturating after the third minute under chronic partial restriction, and the
+  validated PVT-B is 3 min. This is an unresolved disagreement in the literature; the protocol
+  hedges by specifying a 3-min PVT-B with the 355-ms lapse threshold AND mean 1/RT as primary,
+  and notes that 5 min would be strictly better if compliance allows.
+shard: "s20_pvt_psychometrics"

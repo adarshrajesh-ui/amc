@@ -1,0 +1,195 @@
+study_id: lo2016
+citation: "Lo JC, Ong JL, Leong RLF, Gooley JJ, Chee MWL. Cognitive Performance, Sleepiness, and Mood in Partially Sleep Deprived Adolescents: The Need for Sleep Study. Sleep. 2016;39(3):687-698."
+doi: "10.5665/sleep.5552"
+pmid: "26612392"
+url: "https://europepmc.org/articles/PMC4763363"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Cognitive Performance, Sleepiness, and Mood in Partially Sleep Deprived Adolescents: The Need for Sleep Study."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 56
+n_studies_pooled: null
+population:
+  age_mean: 16.6
+  age_range: [15, 19]
+  pct_female: 55.4
+  country: "Singapore"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_sustained_attention
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "5 h TIB x 7 nights vs 9 h TIB control, boarding-school residential protocol"}
+    scale: raw_units
+    unit: "Cohen f2, local effect size of the group x day interaction"
+    value: 1.48
+    se: null
+    ci: null
+    conversion_formula: "Reported directly as Cohen f2 of the group x day interaction over 10 test days (B3, M1-M7, R1-R2). DO NOT convert to Hedges' g: f2 here indexes the divergence of two trajectories across repeated testing, not a single-timepoint standardized mean difference, and the implied partial eta2 of 0.597 would badly overstate a between-group g. The value is recorded so the pooler can use the RANKING across tasks within this study. Authors' cutoffs: 'The cutoffs for small, medium, and large effect sizes were 0.02, 0.15, and 0.35' - so 1.48 is far above 'large'."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "larger f2 = more sensitive to sleep restriction; the underlying change is MORE lapses i.e. worse vigilance"
+    covariates: []
+    followup_years: null
+    cohort_family: "Need_for_Sleep_Study"
+    quote: "In terms of effect size, performance in the PVT was the most sensitive to partial sleep deprivation of all the tests in this study (f 2 = 1.48; Figure 3). In comparison, the A' in SART, was much less affected by sleep restriction (f 2 = 0.20; Figure 3)."
+  - outcome_domain: cognition
+    outcome_construct: verbal_1back_working_memory_a_prime
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "5 h TIB x 7 nights vs 9 h TIB control"}
+    scale: raw_units
+    unit: "Cohen f2, local effect size of the group x day interaction"
+    value: 0.63
+    se: null
+    ci: null
+    conversion_formula: "Reported directly. Ratio to the PVT cell is 0.63/1.48 = 0.426, the age-matched analogue of the lim2010 reasoning-to-vigilance discount (see notes)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "larger f2 = more sensitive; underlying change is lower A' i.e. worse working-memory discriminability"
+    covariates: []
+    followup_years: null
+    cohort_family: "Need_for_Sleep_Study"
+    quote: "The size of the partial sleep deprivation effect on 1- and 3-back was similar in magnitude ( f 2 = 0.63 and 0.70; Figure 3), suggesting that cognitive decrement induced by partial sleep deprivation did not change with executive load."
+  - outcome_domain: cognition
+    outcome_construct: verbal_3back_working_memory_a_prime
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "5 h TIB x 7 nights vs 9 h TIB control"}
+    scale: raw_units
+    unit: "Cohen f2, local effect size of the group x day interaction"
+    value: 0.70
+    se: null
+    ci: null
+    conversion_formula: "Reported directly. Group x day interaction F(9,457) = 3.20, P < 0.001. Ratio to PVT = 0.473."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "larger f2 = more sensitive; underlying change is lower A' i.e. worse high-load working memory"
+    covariates: []
+    followup_years: null
+    cohort_family: "Need_for_Sleep_Study"
+    quote: "The size of the partial sleep deprivation effect on 1- and 3-back was similar in magnitude ( f 2 = 0.63 and 0.70; Figure 3), suggesting that cognitive decrement induced by partial sleep deprivation did not change with executive load."
+  - outcome_domain: cognition
+    outcome_construct: mental_arithmetic_speed_of_processing
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "5 h TIB x 7 nights vs 9 h TIB control"}
+    scale: raw_units
+    unit: "Cohen f2, local effect size of the group x day interaction"
+    value: 1.14
+    se: null
+    ci: null
+    conversion_formula: "Reported directly. IMPORTANT MECHANISM: this interaction is mostly a BLOCKED PRACTICE GAIN, not an absolute decline - the control group improved with repeated testing and the restricted group failed to improve as much. That is a different, and for an examinee arguably more consequential, kind of harm than an absolute performance drop."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "larger f2 = more sensitive; underlying change is attenuated learning/practice gain in the restricted group, and a residual deficit vs control after 2 recovery nights"
+    covariates: []
+    followup_years: null
+    cohort_family: "Need_for_Sleep_Study"
+    quote: "In both the MAT and the SDMT, which are tests of speed of processing, performance improved with repeated testing, but this was attenuated in the SR group relative to the control group (group × day interaction for the MAT: F(9,456) = 4.33, P < 0.001; for the SDMT: F(9,456) = 4.02, P < 0.001)."
+  - outcome_domain: cognition
+    outcome_construct: symbol_digit_modalities_speed_of_processing
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "5 h TIB x 7 nights vs 9 h TIB control"}
+    scale: raw_units
+    unit: "Cohen f2, local effect size of the group x day interaction"
+    value: 0.72
+    se: null
+    ci: null
+    conversion_formula: "Reported directly. The SDMT is a standard clinical processing-speed instrument, which makes this the most externally interpretable of the cognitive cells here."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "larger f2 = more sensitive; underlying change is attenuated practice gain plus residual deficit vs control"
+    covariates: []
+    followup_years: null
+    cohort_family: "Need_for_Sleep_Study"
+    quote: "Although both speed of processing tasks revealed a similar pattern, performance in the MAT was a more sensitive measure of sleep loss than the SDMT ( f 2 = 1.14 and 0.72; Figure 3)."
+  - outcome_domain: cognition
+    outcome_construct: sart_sustained_attention_a_prime
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "5 h TIB x 7 nights vs 9 h TIB control"}
+    scale: raw_units
+    unit: "Cohen f2, local effect size of the group x day interaction"
+    value: 0.20
+    se: null
+    ci: null
+    conversion_formula: "Reported directly. Recorded because it is the same NOMINAL domain as the PVT (sustained attention) yet shows 7.4x less sensitivity, which bounds how much of the PVT effect is domain-general as opposed to task-specific."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "larger f2 = more sensitive; underlying change is lower A'"
+    covariates: []
+    followup_years: null
+    cohort_family: "Need_for_Sleep_Study"
+    quote: "The SART was less sensitive ( f 2 = 0.20 ) than the PVT ( f 2 = 1.48; Figure 3) highlighting the differential sensitivity to multi-night sleep restriction across tasks evaluating the same cognitive domain."
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_absolute_count_after_restriction
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "absolute mean PVT lapses after 7 nights of 5 h TIB in adolescents, vs the ~10 lapses reported in young adults after 7 nights of 4 h TIB"}
+    scale: raw_units
+    unit: "PVT lapses (responses > 500 ms) per 10-min test"
+    value: 18.0
+    se: null
+    ci: null
+    conversion_formula: "Reported as an absolute count in the Discussion, with no SD given, so no g is derivable. Recorded because it is the only ABSOLUTE anchor in the record and it establishes that adolescents at 5 h TIB are at least as impaired as adults at 4 h TIB."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "higher = worse vigilance"
+    covariates: []
+    followup_years: null
+    cohort_family: "Need_for_Sleep_Study"
+    quote: "For example, young adults showed about 10 lapses in the PVT after 7 nights of 4 h TIB,53 whereas an average of 18 lapses were found after 7 nights of 5 h TIB in the current study."
+  - outcome_domain: recovery
+    outcome_construct: residual_vigilance_deficit_after_two_recovery_nights
+    exposure: {type: recovery_sleep, dose_h: 9, referent_h: null, duration_days: 2, contrast_label: "2 nights of 9 h TIB recovery after 7 nights of 5 h TIB; PVT lapses vs own baseline"}
+    scale: raw_units
+    unit: "qualitative: still significantly elevated vs baseline at p < 0.001"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "No effect size is reported for the residual deficit, only its significance. value = 1.0 is a flag meaning 'residual deficit present', not a magnitude. Recorded because the WEEKEND-CATCHUP question is central to the target subject's profile (weekday 5-6 h, weekend 7-8 h) and this is direct age-matched evidence that two long nights do NOT fully restore vigilance."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "presence of a residual deficit = harm persists past the weekend"
+    covariates: []
+    followup_years: null
+    cohort_family: "Need_for_Sleep_Study"
+    quote: "The number of lapses was significantly reduced after the first recovery sleep episode (P < 0.001), but remained elevated relative to baseline after the first two nights of recovery sleep (P < 0.001; left panel in Figure 2A)."
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "Randomized parallel-group allocation with participants blind to group until day 1 ('They were not informed about their grouping until the first day of the 2-w protocol'), residential boarding-school setting giving strong exposure control, actigraphy plus PSG-verified sleep, and a documented control group that held baseline performance. Groups did not differ at baseline on age, sex, BMI, caffeine, nonverbal intelligence, anxiety, depression, chronotype, sleepiness or habitual sleep. Remaining concerns: small n (30 vs 26); blinding of participants to the manipulation is impossible after day 1; effect sizes are reported only as interaction f2 with no SEs or CIs, so no variance is recoverable for the pooler; single-site East Asian high-achieving sample; 3 dropouts plus 1 protocol violation excluded."
+funding: "National Medical Research Council Singapore (STaR/0004/2008 and NMRC/STaR/015/2013) and the Far East Organisation."
+notes: |
+  THE BEST AGE-MATCHED EXPERIMENTAL RECORD IN THIS SHARD, and it is age-matched twice over. First, the participants ARE
+  the target age (15-19 y, mean 16.6). Second, and more usefully, the companion paper on the identical cohort (huang2016,
+  Table 1) reports their HABITUAL sleep at screening: weekday TST 5.37 +/- 0.73 h and 5.61 +/- 0.86 h in the two arms,
+  weekend TST 7.53 +/- 1.14 h and 7.46 +/- 1.10 h. That is a near-exact match to the target subject's stated pattern
+  (weekday ~5-6 h, weekend ~7-8 h). So these adolescents entered the lab ALREADY carrying the subject's exposure, and the
+  experiment then imposed a further step down to 5 h TIB. The measured effects are therefore effects ON TOP OF the
+  subject's baseline, not effects OF it - which means they overstate the incremental harm of the subject's schedule while
+  usefully bounding what a further pre-exam restriction would cost him.
+
+  Achieved sleep, not just opportunity: during the manipulation the SR group's TST was "4.57 +/- 0.07 h and 4.82 +/- 0.07 h"
+  while the control group was maintained "between 7.99 h and 8.18 h". Baseline TST did not differ between groups
+  (SR 6.89 +/- 0.16 h vs control 6.94 +/- 0.11 h, t(53) = 0.25, P = 0.80).
+
+  SCALE WARNING FOR THE POOLER: every cognitive effect in this paper is a Cohen f2 for a group x day INTERACTION, not a
+  Hedges' g. There is no valid algebraic route from an interaction f2 over 10 repeated tests to a between-group
+  standardized mean difference, and no SEs or CIs are published, so se is null throughout. Use these numbers for the
+  ORDERING of domain sensitivity in an age-matched sample, and take magnitudes from lim2010 / lowe2017 / huang2016.
+
+  THE ORDERING IS THE PAYLOAD, and it replicates lim2010's gradient in exactly the target age group:
+    PVT lapses (vigilance)        1.48
+    mental arithmetic             1.14
+    symbol digit / 3-back         0.72 / 0.70
+    verbal 1-back                 0.63
+    subjective sleepiness         0.50
+    SART A' (sustained attention) 0.20
+  Working memory sits at 0.63-0.70 against vigilance at 1.48, a ratio of 0.43-0.47. In lim2010 the working-memory-to-
+  vigilance g ratio is 0.555/0.762 = 0.73 and the reasoning-to-vigilance ratio is 0.125/0.762 = 0.16. So both studies agree
+  that the further a task sits from raw vigilance, the smaller the sleep-loss effect; the age-matched study puts working
+  memory nearer the reasoning end than lim2010 does.
+
+  THE CRITICAL GAP: no reasoning, fluid-intelligence or academic-achievement outcome was administered. Raven's Advanced
+  Progressive Matrices was given ONCE, at screening, purely to confirm the groups were matched on nonverbal intelligence
+  (huang2016 Table 1: RAPM 10.38 +/- 1.06 vs 9.77 +/- 1.98, t = 1.43, P = 0.16). It was not re-administered under
+  restriction. So the single best age-matched experiment in the literature CANNOT tell us whether the subject's IQ score
+  would be depressed, only that his vigilance and working memory would be.
+
+  pct_female derived from "56 participants (25 males)": (56-25)/56 = 55.4%.
+shard: "s02_cognition_meta"

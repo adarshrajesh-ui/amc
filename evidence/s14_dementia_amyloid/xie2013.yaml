@@ -1,0 +1,96 @@
+study_id: xie2013
+citation: "Xie L, Kang H, Xu Q, Chen MJ, Liao Y, Thiyagarajan M, O'Donnell J, Christensen DJ, Nicholson C, Iliff JJ, Takano T, Deane R, Nedergaard M. Sleep drives metabolite clearance from the adult brain. Science. 2013 Oct 18;342(6156):373-377."
+doi: "10.1126/science.1241224"
+pmid: "24136970"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3880190/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Sleep drives metabolite clearance from the adult brain."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: TX
+n: 77
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US (laboratory)"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: exogenous_radiolabelled_ab40_clearance_rate_MOUSE
+    exposure: {type: total_deprivation, dose_h: null, referent_h: null, duration_days: 0.17,
+               contrast_label: "spontaneous wakefulness vs natural sleep in mice, 10-240 min observation window; NOT a sleep-restriction protocol"}
+    scale: raw_units
+    unit: "fold-change in clearance rate constant (sleep vs awake)"
+    value: 2.0
+    se: null
+    ci: null
+    conversion_formula: >
+      The paper reports only "cleared twofold faster" with P<0.05 (ANOVA + Bonferroni) and does not
+      give the rate constants, their SEs, or a CI in the text; Fig 3B is a bar chart. No SE is
+      derivable, so se is null. Do NOT enter this into an inverse-variance pool.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      value > 1 = FASTER clearance while asleep, i.e. wakefulness impairs clearance. This is the
+      single mouse finding on which the entire popular "sleep loss causes Alzheimer's" chain rests.
+      It is a MOUSE result, the exposure is minutes-to-hours of spontaneous wakefulness (not chronic
+      restriction), the tracer is EXOGENOUS radiolabelled Ab1-40 injected intracortically (not
+      endogenous amyloid), and the outcome is a clearance rate over 10-240 minutes (not plaque, not
+      cognition, not dementia).
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Radiolabeled 125 I-Aβ 1-40 was injected intracortically in three groups of animals: freely behaving awake mice, naturally sleeping mice, and animals anesthetized with ketamine/xylazine ( fig. S4 ). Brains were harvested 10 to 240 min later for analysis of 125 I-Aβ retention. Aβ was cleared twofold faster in the sleeping mice as compared with the awake mice ( n = 23 to 29 mice, P < 0.05, ANOVA with Bonferroni test)"
+  - outcome_domain: brain_structure
+    outcome_construct: cortical_interstitial_space_volume_fraction_MOUSE
+    exposure: {type: total_deprivation, dose_h: null, referent_h: null, duration_days: 0.02,
+               contrast_label: "awake (8-10 pm) vs same mice under ketamine/xylazine anaesthesia, paired within-animal"}
+    scale: pct_change
+    unit: "percentage points of interstitial volume fraction alpha"
+    value: 9.1
+    se: 1.5
+    ci: null
+    conversion_formula: >
+      Reported as alpha = 13.6 +/- 1.6% awake vs 22.7 +/- 1.3% anaesthetised in the SAME 10 mice
+      (paired t test, P<0.01). Difference in means = 22.7 - 13.6 = 9.1 percentage points, i.e. a
+      +67% relative increase (the paper rounds this to ">60%"). SE of the paired difference is not
+      reported; the value entered here, 1.5, is the quadrature combination of the two reported SEMs
+      sqrt(1.6^2 + 1.3^2)/... NOTE: this OVERSTATES the paired SE (paired SE is smaller) and is a
+      crude upper bound only: sqrt(1.6^2+1.3^2) = 2.06, divided by sqrt(2) = 1.46 ~ 1.5. Flagged as
+      inferred; do not treat as a published SE.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = interstitial space is LARGER during anaesthesia/sleep than during wakefulness.
+      Note that the ">60% increase" figure quoted everywhere in popular writing is an
+      ANAESTHESIA-vs-wake comparison in 10 mice, not a sleep-restriction comparison.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "anesthesia consistently increased the interstitial space volume fraction by >60%, from 13.6 ± 1.6% for awake mice to 22.7 ± 1.3% in the same mice after they received ketamine/xylazine ( n = 10 mice, P < 0.01, paired t test)"
+rob:
+  tool: none
+  judgement: na
+  notes: >
+    Not a clinical study, so no clinical RoB tool applies; tier TX (mechanistic context only).
+    Substantive concerns for transportability: (1) species is mouse throughout; (2) the exposure is
+    spontaneous wakefulness or ketamine/xylazine anaesthesia over 30-240 minutes, NOT chronic
+    partial sleep restriction; (3) the amyloid measured is an exogenous radiolabelled tracer, not
+    endogenous plaque; (4) the key ">60%" number comes from an anaesthesia contrast in n=10 mice;
+    (5) the central claim has since been directly contradicted in mice by Miao 2024 (see
+    miao2024.yaml), which found clearance REDUCED during sleep and anaesthesia.
+funding: "NIH (grant details in acknowledgements); see paper"
+notes: >
+  MECHANISM LINK 1 of the causal chain. This record exists so the pooler can see exactly how far
+  Xie 2013 is from the subject's exposure. Xie 2013 contains NO chronic restriction arm, NO plaque
+  outcome, NO cognitive outcome, and NO human data. It cannot license any numeric dementia-risk
+  estimate for a 19-year-old. It is retained as TX (context) and must never be weighted as if it
+  were an effect estimate on a human dementia outcome.
+shard: "s14_dementia_amyloid"

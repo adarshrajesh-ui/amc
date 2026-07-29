@@ -1,0 +1,121 @@
+study_id: jagnani2024
+citation: "Jagnani M. Children's Sleep and Human Capital Production. The Review of Economics and Statistics. 2024;106(4):983-996."
+doi: "10.1162/rest_a_01201"
+pmid: null
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: null
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Children's Sleep and Human Capital Production"
+access_tier: full_text
+secondhand_via: null
+design: instrumental_variable
+tier: T2
+n: 7511
+n_studies_pooled: null
+population:
+  age_mean: 11.0
+  age_range: [6, 16]
+  pct_female: null
+  country: "India"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: first_stage_sleep_hours_per_hour_later_sunset
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "1 hour later sunset -> child sleep duration (time-use diary), India Time Use Survey"}
+    scale: hours
+    unit: "hours of sleep per hour later sunset"
+    value: -0.47
+    se: null
+    ci: null
+    conversion_formula: "reported directly in text; SE not stated in the sentence retrieved and I did not locate the Table 1 column 3 standard error in the extracted text, so se is left null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = later sunset REDUCES sleep by ~28 min per hour of sunset delay. Later bedtime with no compensating later wake time."
+    covariates: ["district-by-season fixed effects", "week-of-year fixed effects", "precipitation and temperature at district-interview-date level"]
+    followup_years: null
+    cohort_family: India_ITUS
+    quote: "I find a one-hour delay in sunset reduces sleep by 0.47 hours or roughly 30 minutes (column 3, panel A)."
+  - outcome_domain: academic
+    outcome_construct: math_score_sd_per_10min_later_sunset
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "10 minutes later daily sunset time, controlling for lagged math score"}
+    scale: raw_units
+    unit: "SD of math score per 10 minutes later sunset"
+    value: -0.09
+    se: 0.01
+    ci: [-0.110, -0.070]
+    conversion_formula: "reported coefficient on 'Daily sunset time (10 minutes)' with lagged math score control: -0.09 (SE 0.01). Child fixed-effects specification gives -0.10 (SE 0.05)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = later sunset (hence less sleep) LOWERS math scores"
+    covariates: ["week-of-year fixed effects", "lagged math score", "district-by-season fixed effects"]
+    followup_years: null
+    cohort_family: India_ITUS
+    quote: "In the short run, a 10-minute delay in sunset time reduces math scores by 0.1 SD."
+  - outcome_domain: academic
+    outcome_construct: math_score_sd_per_hour_less_sleep_iv_implied
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "implied IV: 1 hour LESS sleep -> math score"}
+    scale: per_hour_beta
+    unit: "SD of math score per hour LESS sleep"
+    value: -1.15
+    se: 0.13
+    ci: [-1.40, -0.90]
+    conversion_formula: "Wald ratio: reduced form (-0.09 SD per 10 min sunset = -0.54 SD per hour sunset) divided by first stage (-0.47 h sleep per hour sunset) = -1.149 SD per hour of sleep. SE approximated as 0.06/0.47 = 0.128 from the reduced-form SE alone (0.01 per 10 min = 0.06 per hour); first-stage uncertainty not propagated because its SE was not extracted. TREAT AS ORDER-OF-MAGNITUDE ONLY."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = less sleep lowers math scores. IMPLAUSIBLY LARGE (over 1 SD per hour); do not enter at face value into a pooled per-hour estimate."
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: India_ITUS
+    quote: "I show an hour delay in sunset time reduces children's sleep by roughly 30 minutes... In the short run, a 10-minute delay in sunset time reduces math scores by 0.1 SD."
+  - outcome_domain: academic
+    outcome_construct: years_of_education_per_10min_later_annual_avg_sunset
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "10 minutes later annual average sunset time (chronic exposure), India DHS 2015"}
+    scale: years
+    unit: "years of completed education per 10 minutes later annual average sunset"
+    value: -0.14
+    se: null
+    ci: null
+    conversion_formula: "reported directly; SE not located in extracted text, so se left null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = chronically later sunset (hence chronically less sleep) reduces attained education"
+    covariates: ["district-level controls", "east-west within-district variation in annual average sunset"]
+    followup_years: null
+    cohort_family: India_DHS_2015
+    quote: "In the long run, a 10-minute delay in annual average sunset time reduces children's years of education by 0.14 years: school-age children are less likely to complete primary and middle school, and less likely to be currently enrolled in school."
+rob:
+  tool: ROBINS-I
+  judgement: moderate
+  notes: "Careful IV design with a real measured first stage, district-by-season and child fixed effects, weather controls, and time-of-day activity data to probe alternative mechanisms. But the magnitudes are so large that either the test-score SD is small relative to measurement error, or the sunset instrument moves something other than sleep (e.g. same-day heat, light exposure, evening study conditions, kerosene/electric lighting availability), or both."
+funding: "Not extracted from retrieved text"
+notes: |
+  IDENTIFYING ASSUMPTION: within a district and season, variation in sunset time (across dates for the
+  short-run analysis, and east-to-west within district for the long-run analysis) affects children's
+  human capital only through sleep. The author defends this with district-by-season fixed effects,
+  week-of-year fixed effects, child fixed effects, weather controls, and time-use evidence that the
+  displaced time goes to naps and indoor leisure rather than to work. This is a SERIOUS design and the
+  exclusion restriction is the same one used by Giuntella & Mazzonna and Gibson & Shrader, so it inherits
+  their standing in the literature. Two specific worries remain: (a) sunset time is mechanically
+  correlated with day length, evening temperature and evening light, all of which independently affect
+  evening study conditions and same-day cognitive performance in a hot, partially electrified rural
+  setting; and (b) the short-run test is administered on the same day, so a large part of the estimate
+  is plausibly transient alertness rather than learning.
+  MAGNITUDE WARNING - THE MOST IMPORTANT THING IN THIS RECORD: the implied per-hour-of-sleep effect is
+  about -1.15 SD. That is roughly 4-5x the Groen & Pabilonia implied IV (-0.26 SD/h), ~14x the
+  Heissel & Norris reduced form per hour of bell time, and about the same order as a full night of total
+  sleep deprivation in a lab. It cannot be transported to a US college student. Most likely explanations:
+  a low-reliability survey-administered math test (small true-score SD inflates standardized effects),
+  a very short-run alertness channel, and an exceptionally sleep-deprived and resource-poor population
+  ("Almost 40% of school-age children in the ITUS sample get less than 9 hours of daily sleep").
+  I include it because the task asked for sunset-time IV evidence and because it is the only such study
+  with an ACADEMIC outcome, but the modeller should down-weight it heavily on transportability and treat
+  it as establishing SIGN and PERSISTENCE (the long-run education result), not magnitude.
+  POPULATION MISMATCH: Indian children aged 6-16, mostly rural, majority younger than our subject. Given
+  Heissel & Norris's finding that the effect is puberty-specific and rises with age, the age mismatch
+  does not obviously bias the estimate downward - but every other feature of the setting is different.
+  n = 7,511 child-date observations in the math score regressions (4,589 in the lagged-score column,
+  7,415 in the child-fixed-effects column).
+shard: "s04_academic_natural_experiments"

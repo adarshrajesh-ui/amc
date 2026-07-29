@@ -1,0 +1,99 @@
+study_id: spira2013
+citation: "Spira AP, Gamaldo AA, An Y, Wu MN, Simonsick EM, Bilgel M, Zhou Y, Wong DF, Ferrucci L, Resnick SM. Self-reported sleep and beta-amyloid deposition in community-dwelling older adults. JAMA Neurology. 2013 Dec;70(12):1537-1543."
+doi: "10.1001/jamaneurol.2013.4258"
+pmid: "24145859"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4014764/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Self-reported sleep and β-amyloid deposition in community-dwelling older adults."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 70
+n_studies_pooled: null
+population:
+  age_mean: 76.4
+  age_range: [53, 91]
+  pct_female: 47.1
+  country: "US"
+  adolescent_match: poor_elderly
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: mean_cortical_pib_pet_dvr_per_hour_less_self_reported_sleep
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "self-reported average hours of sleep per night vs mean cortical [11C]PiB PET distribution volume ratio; n = 62 with sleep duration data"}
+    scale: per_hour_beta
+    unit: "change in mean cortical PiB DVR per hour LESS self-reported sleep"
+    value: 0.08
+    se: 0.02806
+    ci: [0.03, 0.14]
+    conversion_formula: >
+      Reported as "reports of shorter sleep duration were associated with greater β-amyloid burden, measured
+      by mean cortical DVR (cDVR; B = 0.08, 95% confidence interval (CI) 0.03, 0.14, p = 0.005)".
+      se = (0.14 - 0.03)/3.92 = 0.11/3.92 = 0.02806. Note n = 62 for this analysis, not 70:
+      "N = 70 for all variables except average hours of sleep ( n = 62)."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = shorter self-reported sleep associated with GREATER amyloid burden, i.e. harm. Direction of
+      causality is entirely undetermined: this is CROSS-SECTIONAL, in people with a mean age of 76 who are
+      well inside the age range where preclinical Alzheimer's pathology itself disturbs sleep. Sleep was
+      measured 1.7 +/- 1.6 years (range 0.0-4.9) before or concurrently with the PET scan, so there is
+      effectively no temporal separation.
+    covariates: ["age", "sex", "race", "CES-D depression score", "BMI", "APOE e4 status", "history of cardiovascular or pulmonary disease", "current sleep medication use"]
+    followup_years: null
+    cohort_family: "BLSA"
+    quote: "After adjustment for potential confounders, reports of shorter sleep duration were associated with greater β-amyloid burden, measured by mean cortical DVR (cDVR; B = 0.08, 95% confidence interval (CI) 0.03, 0.14, p = 0.005) and precuneus DVR (B = 0.11, 95% CI 0.03, 0.18, p = 0.007). Reports of lower sleep quality were associated with greater β-amyloid burden measured by precuneus DVR (B = 0.08, 95% CI 0.01, 0.15, p = 0.025)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: precuneus_pib_pet_dvr_per_hour_less_self_reported_sleep
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "self-reported hours of sleep vs precuneus [11C]PiB DVR, a region affected early in Alzheimer's disease"}
+    scale: per_hour_beta
+    unit: "change in precuneus PiB DVR per hour LESS self-reported sleep"
+    value: 0.11
+    se: 0.03827
+    ci: [0.03, 0.18]
+    conversion_formula: >
+      Reported as "precuneus DVR (B = 0.11, 95% CI 0.03, 0.18, p = 0.007)".
+      se = (0.18 - 0.03)/3.92 = 0.15/3.92 = 0.03827.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = shorter sleep associated with greater precuneus amyloid. The precuneus is the region that
+      Shokri-Kojori 2018 found was NOT affected by acute total deprivation but WAS associated with habitual
+      sleep hours - so the acute and chronic signals sit in different places, which the authors of that paper
+      read as evidence for distinct mechanisms.
+    covariates: ["age", "sex", "race", "CES-D depression score", "BMI", "APOE e4 status", "history of cardiovascular or pulmonary disease", "current sleep medication use"]
+    followup_years: null
+    cohort_family: "BLSA"
+    quote: "After adjustment for potential confounders, reports of shorter sleep duration were associated with greater β-amyloid burden, measured by mean cortical DVR (cDVR; B = 0.08, 95% confidence interval (CI) 0.03, 0.14, p = 0.005) and precuneus DVR (B = 0.11, 95% CI 0.03, 0.18, p = 0.007)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: >
+    CROSS-SECTIONAL, which for this question is the fundamental limitation and is why the record is tier TX.
+    Additional concerns: n = 70 overall but only 62 with sleep duration; mean age 76.4 y at sleep assessment
+    with range to 91; 4 participants already had MCI or dementia; sleep exposure is a single self-report item
+    within a sleep-disturbance questionnaire; PET scanners differed across participants (GE Signa 1.5T,
+    Philips 1.5T and Philips Intera 3T for MRI co-registration); and multiple sleep predictors and two PET
+    indices were tested. The authors are appropriately cautious in the abstract's own conclusion.
+funding: "NIH / National Institute on Aging Intramural Research Program; see paper"
+notes: >
+  THE ORIGINAL HUMAN SLEEP-AMYLOID IMAGING FINDING, and the study the task asked for under "Spira". Its own
+  conclusion states the causal question is open, verbatim: "Among community-dwelling older adults, reports of
+  shorter sleep duration and lower sleep quality are associated with greater β-amyloid burden. Further studies
+  with objective sleep measures are needed to determine whether sleep disturbance causes or accelerates
+  Alzheimer disease."
+  ANSWERING THE TASK'S QUESTION DIRECTLY - "does short sleep in midlife predict later amyloid burden?" - this
+  study does NOT address it. The exposure is measured at a mean age of 76.4, concurrently with or at most
+  4.9 years before the PET scan. There is no midlife exposure and no meaningful prospective interval. The
+  same is true of Winer 2021 (cross-sectional, mean age 71.3) and largely of Lucey 2019. The only
+  prospectively designed sleep-to-amyloid-accumulation study located is Winer 2020, and its exposure is
+  slow wave activity and sleep efficiency measured in older adults, not sleep duration in midlife.
+  NO STUDY LOCATED MEASURES SLEEP IN MIDLIFE AND AMYLOID DECADES LATER. That is a genuine gap and is reported
+  as such rather than papered over.
+shard: "s14_dementia_amyloid"

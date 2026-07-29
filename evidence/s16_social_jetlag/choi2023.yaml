@@ -1,0 +1,93 @@
+study_id: choi2023
+citation: 'Choi Y, Kim S, Lee M, Lee HI, Song K, Suh J, Chae HW, Kim HS, Kwon A. Effect of catch-up sleep
+  on obesity in Korean adolescents: a nationwide cross-sectional study. Frontiers in Pediatrics. 2023;11:1213558.'
+doi: 10.3389/fped.2023.1213558
+pmid: '37565249'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Effect of catch-up sleep on obesity in Korean adolescents: a nationwide cross-sectional
+    study.'
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 1306
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 12
+  - 18
+  pct_female: null
+  country: KR
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: overweight_or_obesity_risk_short_weekday_short_catchup
+  exposure:
+    type: weekend_catchup
+    dose_h: 3.0
+    referent_h: 3.0
+    duration_days: null
+    contrast_label: weekday sleep <6 h AND weekend catch-up <3 h vs weekday <6 h with more catch-up
+  scale: log_or
+  unit: null
+  value: 0.6575
+  se: null
+  ci: null
+  conversion_formula: '''increased by a factor of 1.93''; log = ln(1.93) = 0.6575. No CI reported in the
+    abstract, so se=null.'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'POSITIVE = among adolescents sleeping <6 h on weekdays, getting LESS than 3 h of weekend
+    catch-up nearly DOUBLED overweight/obesity risk. PROTECTIVE reading of catch-up: failing to catch
+    up is what carries the risk. This is the closest published match to our subject''s weekday dose.'
+  covariates: []
+  followup_years: null
+  cohort_family: KNHANES_VII
+  quote: The risk of overweight/obesity in adolescents who slept less than 6 h on weekdays increased by
+    a factor of 1.93 when they slept for less than 3 h on weekends.
+- outcome_domain: anthropometric
+  outcome_construct: dose_dependent_protection_per_30_min
+  exposure:
+    type: weekend_catchup
+    dose_h: 0.5
+    referent_h: null
+    duration_days: null
+    contrast_label: per additional 30 min of weekend sleep extension
+  scale: log_or
+  unit: null
+  value: -0.0726
+  se: null
+  ci: null
+  conversion_formula: '''reducing the risk by a factor of ... 0.93'' per 30-min increment of weekend sleep
+    extension; log = ln(0.93) = -0.0726. No CI in the abstract, so se=null.'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NEGATIVE = each extra 30 min of weekend sleep extension was associated with ~7% LOWER
+    relative risk of overweight/obesity. PROTECTIVE and dose-dependent. Note the companion figure of 0.39
+    per 30 min for weekend sleep DURATION is implausibly large as a per-30-min relative risk; see notes.
+  covariates: []
+  followup_years: null
+  cohort_family: KNHANES_VII
+  quote: Increased weekend sleep duration and sleep extension on weekends decreased the relative risk
+    of overweight/obesity with each 30 min increment, reducing the risk by a factor of 0.39 and 0.93,
+    respectively.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Nationally representative (KNHANES) with MEASURED anthropometry, which is better than self-reported
+    BMI. Small (1,306), cross-sectional, self-reported sleep, and the abstract reports point estimates
+    without confidence intervals.
+funding: null
+notes: 'THIRD INDEPENDENT KOREAN ADOLESCENT DATASET (after lee2025 and choi/park) finding weekend catch-up
+  PROTECTIVE against adiposity, here with measured rather than self-reported anthropometry. PUBLISHED-NUMBER
+  CONCERN I am flagging rather than using: the abstract attributes a factor of 0.39 per 30-min increment
+  to weekend sleep duration, which would imply a 61% risk reduction for half an hour of sleep. That is
+  not credible as a per-increment relative risk and probably reflects a different scaling or a reporting
+  error, so I recorded only the 0.93 sleep-extension figure and left se=null on both effects.'
+shard: s16_social_jetlag

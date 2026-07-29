@@ -1,0 +1,84 @@
+study_id: yamazaki2020_traitlike
+citation: "Yamazaki EM, Goel N. Robust stability of trait-like vulnerability or resilience to common types of sleep deprivation in a large sample of adults. Sleep. 2020;43(6):zsz292."
+doi: "10.1093/sleep/zsz292"
+pmid: "31784748"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8152927/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Robust stability of trait-like vulnerability or resilience to common types of sleep deprivation in a large sample of adults"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 83
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: neurobehavioral_icc_range_tsd_vs_chronic_restriction
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 10, duration_days: 5, contrast_label: "stability of individual response between five 4h-TIB SR nights and 36 h TSD, counterbalanced order, separated by four 12h-TIB recovery nights"}
+    scale: raw_units
+    unit: "ICC range across measures (proportion of variance from stable individual differences)"
+    value: 0.845
+    se: null
+    ci: [0.78, 0.91]
+    conversion_formula: "value = midpoint of the published 78%-91% range = 0.845; the 'ci' field holds the published RANGE ACROSS MEASURES, not a confidence interval."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more trait-like. Largest and most demographically diverse test of the trait hypothesis to date (n=83). Confirms the Van Dongen 2004 / Rupp 2012 magnitude."
+    covariates: ["sex", "race", "age", "BMI", "season", "sleep loss order (all tested; none significantly altered the ICCs)"]
+    followup_years: null
+    cohort_family: "Goel_RushPenn_ID"
+    quote: "Participants who displayed neurobehavioral vulnerability to TSD displayed vulnerability to SR, evidenced by substantial to near perfect intraclass correlation coefficients (ICCs; 78%-91% across measures). Sex, race, age, body mass index (BMI), season, and sleep loss order did not impact ICCs significantly."
+  - outcome_domain: cognition
+    outcome_construct: objective_vs_subjective_domain_consistency
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 10, duration_days: 5, contrast_label: "consistency of individual responses WITHIN vs BETWEEN performance and self-report domains"}
+    scale: raw_units
+    unit: "qualitative: significant within-domain consistency, non-significant between-domain consistency"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No numeric estimate is published for the cross-domain consistency; I encode the direction only (value 0 = no cross-domain consistency detected). Do not pool this as a quantitative effect."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "How vulnerable a person's PERFORMANCE is to sleep loss does NOT predict how sleepy they FEEL. Directly supports the subjective/objective dissociation and means self-report cannot substitute for the PVT even at the level of individual phenotype."
+    covariates: []
+    followup_years: null
+    cohort_family: "Goel_RushPenn_ID"
+    quote: "Individuals exhibited significant consistency of responses within, but not between, performance and self-reported domains."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Largest sample in this literature (n=83) and the only one to test demographic moderators, but the two 'replicates' were again DIFFERENT sleep-loss types (5x4h SR vs 36 h TSD), so the ICC measures cross-paradigm generalisation rather than pure test-retest. Age range not extracted from the retrieved text. Healthy screened volunteers only. Overlaps in personnel/laboratory lineage with dennis2017_traitlike and vandongen2004_traitlike - do not treat the trait-ICC estimates as fully independent."
+funding: "Not extracted from the retrieved text."
+notes: |
+  PROTOCOL, verbatim: "Eighty-three adults completed two baseline nights (10 h-12 h time-in-bed,
+  TIB) followed by five 4 h TIB SR nights or 36 h TSD. Participants then received four 12-h TIB
+  recovery nights followed by five SR nights or 36 h TSD, in counterbalanced order to the first
+  sleep loss sequence. Neurobehavioral tests were completed every 2 h during wakefulness."
+  This is the design template for a washed-out 2-period sleep crossover: 2 baseline nights at
+  10-12 h TIB, exposure, then FOUR 12-h-TIB recovery nights before the second exposure.
+  Testing every 2 h during wakefulness (i.e. many bouts per day) is how the laboratory keeps the
+  daily measurement error small - a real-world n-of-1 with 2-3 bouts/day will have a larger
+  day-level sigma than these studies.
+
+  Together with vandongen2004_traitlike (ICC 0.675-0.922, n=21), rupp2012_traitlike (PVT lapses
+  0.89, speed 0.86, n=19) and dennis2017_traitlike (72-95% over months to years, n=23/24), the
+  trait-like ICC for the neurobehavioral response to sleep loss is reproducibly in the 0.68-0.92
+  band across four independent samples and two laboratories.
+
+  WHY THIS IS THE JUSTIFICATION FOR AN N-OF-1 DESIGN, stated arithmetically: if ICC ~ 0.8, then
+  80% of the between-person spread in the sleep-loss response is a stable person-level property.
+  A population mean effect therefore carries a person-level prediction interval roughly
+  sqrt(sigma2_bs + sigma2_ws) wide; using Van Dongen 2004's PVT components that is
+  sqrt(286+138) = 20.6 lapses around a group mean. No population estimate can resolve where in
+  that interval this particular 19-year-old sits. Only measuring him can.
+shard: "s20_pvt_psychometrics"

@@ -1,0 +1,79 @@
+study_id: stager2023_adolescent_crp
+citation: "Stager LM, Thompson-Phillips K, Morgan CH, Watson CS, Grant M, Fobian AD. The impact of longitudinal patterns of adolescent sleep duration on adult C-reactive protein (CRP), waist-to-height ratio (WtHR), and body mass index (BMI) among Black and White individuals. Journal of Adolescent Health. 2023;73(4):776-783."
+doi: "10.1016/j.jadohealth.2023.05.018"
+pmid: "37395694"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10524665/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "The Impact of Longitudinal Patterns of Adolescent Sleep Duration on Adult C-Reactive Protein (CRP), Waist-To-Height Ratio, and Body Mass Index (BMI) Among Black and White Individuals."
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 2399
+n_studies_pooled: null
+population:
+  age_mean: 15.7
+  age_range: [12, 19]
+  pct_female: 59.8
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: immune
+    outcome_construct: adult_crp_after_shortest_adolescent_sleep_trajectory
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "'shortest' adolescent sleep-duration trajectory (24.4% of sample) across grades 7-12 and into young adulthood vs 'stable recommended' trajectory; objectively measured CRP at Wave V"}
+    scale: raw_units
+    unit: "mg/L difference in adult CRP (shortest trajectory minus stable-recommended trajectory)"
+    value: -0.14
+    se: 0.358
+    ci: [-0.842, 0.562]
+    conversion_formula: "From the reported adjusted means: Group 1 'shortest' M = 3.21, SE = 0.29; Group 2 'stable recommended' M = 3.35, SE = 0.21. Difference = 3.21 - 3.35 = -0.14 mg/L. se of difference = sqrt(0.29^2 + 0.21^2) = 0.358; ci = -0.14 +/- 1.96*0.358. DERIVED by me from the published group means and SEs; the paper does not report this contrast directly, because it was not significant."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "THE MOST IMPORTANT NULL IN THIS SHARD FOR THE TARGET SUBJECT, and it points the WRONG WAY for the harm hypothesis. positive would = harm (higher adult CRP). Adolescents on the SHORTEST sleep trajectory had adult CRP of 3.21 mg/L, slightly LOWER than the stable-recommended group's 3.35 mg/L, and the CI comfortably includes zero. In the single best age-matched longitudinal dataset available, chronically short adolescent sleep did NOT produce elevated systemic inflammation in young adulthood."
+    covariates: ["race", "and see paper for model"]
+    followup_years: 14.0
+    cohort_family: "Add_Health"
+    quote: "Trajectory group predicted Wave V CRP (F(2, 127)= 3.80, p <0.05; Table 2). Individuals in Group 3, 'varied' (M=5.23 SE=0.68) had significantly higher CRP as compared with individuals in Group 1, 'shortest' (M=3.21 SE=0.29; t(2, 127)=2.72, p <0.01), and group 2, 'stable recommended' (M=3.35 SE=0.21; t(2, 127)=-2.60, p <0.05; Figure 2a)."
+  - outcome_domain: immune
+    outcome_construct: adult_crp_after_varied_increasing_adolescent_sleep_trajectory
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "'varied' trajectory (8% of sample; sleep duration INCREASING to above recommended across waves) vs 'stable recommended'; adult CRP"}
+    scale: raw_units
+    unit: "mg/L difference in adult CRP (varied trajectory minus stable-recommended)"
+    value: 1.88
+    se: 0.712
+    ci: [0.484, 3.276]
+    conversion_formula: "Group 3 'varied' M = 5.23, SE = 0.68 vs Group 2 'stable recommended' M = 3.35, SE = 0.21. Difference = 1.88 mg/L; se = sqrt(0.68^2 + 0.21^2) = 0.712; ci = 1.88 +/- 1.96*0.712. The paper reports this contrast as significant (t = -2.60, p < .05)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = higher CRP, but the exposure is LONG/INCREASING sleep, not short sleep. The only trajectory group with elevated adult CRP was the one whose sleep rose ABOVE recommended levels. Again the U-shape: whatever links sleep duration to CRP in observational data, it is not a simple 'less sleep = more inflammation' gradient. This group is only 8% of the sample (n approximately 190) and CRP is highly skewed, so treat with caution."
+    covariates: ["race"]
+    followup_years: 14.0
+    cohort_family: "Add_Health"
+    quote: "Regardless of race, individuals with patterns of sleep duration increasing to above what is recommended across waves (Group 3) had elevated CRP."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Design strengths that make the null informative rather than merely uninformative: genuinely longitudinal (5 waves, adolescence to adulthood, ~14 years), exposure measured repeatedly at exactly the target ages (grades 7-12, mean age 15.7 at Wave I), and the OUTCOME IS OBJECTIVELY MEASURED CRP, not self-reported. Weaknesses: exposure is self-reported sleep duration; group-based trajectory modelling imposes discrete classes on continuous data, and the class labels ('shortest', 'varied') hide the actual hour values, which the abstract does not state; the reported F test df (2, 127) is far smaller than N = 2,399, indicating the CRP analysis ran on a much smaller subsample - so the null may simply be underpowered; CRP was measured once; residual confounding by adiposity is likely given the parallel WtHR/BMI findings."
+funding: "not extracted"
+notes: |
+  THIS IS THE CLOSEST THING IN MY EVIDENCE SET TO THE ACTUAL QUESTION ASKED - does short sleep across
+  adolescence leave a durable inflammatory mark in young adulthood? - AND THE ANSWER IS NO.
+  Sample: "Participants (N=2,399; M age =15.7; 40.2% male; 79.2% White, 20.8% Black) from the Add
+  Health database who provided sleep data in Waves I-IV. Grades 7-12 at Wave I."
+  Trajectories: "Three sleep trajectories emerged: Group 1 'shortest' (24.4%), Group 2 'stable
+  recommended' (67.6%), and Group 3 'varied' (8%)."
+  IMPORTANT CAVEAT ON MY OWN NULL: the F-test degrees of freedom for the CRP model are (2, 127),
+  implying the CRP analysis used roughly 130 people, not 2,399. A null on n ~ 130 for a marker as
+  noisy as CRP is weak evidence of absence. My derived CI (-0.84 to +0.56 mg/L) is the honest
+  statement: it excludes a large durable CRP elevation but not a small one.
+  ONE MORE CAUTION about the paper's own abstract: it says "Poor longitudinal sleep predicted elevated
+  CRP and WtHR", which reads as supporting the harm hypothesis. But the CRP elevation was in the
+  'varied'/increasing group, NOT the 'shortest' group - the paper's own numbers contradict the natural
+  reading of its abstract. This is exactly the kind of claim-vs-data gap the task asked me to catch.
+  A significant health disparity finding worth noting though outside my domain: "Black individuals and
+  older individuals were more likely to be in Group 1 compared with Group 2."
+shard: "s10_immune"

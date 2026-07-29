@@ -1,0 +1,102 @@
+study_id: cappuccio2008
+citation: Cappuccio FP, Taggart FM, Kandala NB, Currie A, Peile E, Stranges S, Miller MA. Meta-analysis of short sleep duration and obesity in children and adults. Sleep. 2008;31(5):619-626.
+doi: 10.1093/sleep/31.5.619
+pmid: '18517032'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Meta-analysis of short sleep duration and obesity in children and adults.
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 634511
+n_studies_pooled: 30
+population:
+  age_mean: null
+  age_range:
+  - 2
+  - 102
+  pct_female: null
+  country: multinational
+  adolescent_match: mixed
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: obesity_prevalence_short_vs_normal_sleep_children
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: short vs normal sleep duration, children (12 samples)
+  scale: log_or
+  unit: null
+  value: 0.6366
+  se: 0.13
+  ci:
+  - 0.3784
+  - 0.8879
+  conversion_formula: log_or = ln(1.89); se = (ln(2.43) - ln(1.46))/3.92 = 0.130; ci reported on log scale
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = short sleep associated with HIGHER odds of obesity (harm)
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_multiple_cross_sectional
+  quote: In children the pooled OR for short duration of sleep and obesity was 1.89 (1.46 to 2.43; P < 0.0001).
+- outcome_domain: anthropometric
+  outcome_construct: obesity_prevalence_short_vs_normal_sleep_adults
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: short vs normal sleep duration, adults (18 samples)
+  scale: log_or
+  unit: null
+  value: 0.4383
+  se: 0.0411
+  ci:
+  - 0.3577
+  - 0.5188
+  conversion_formula: log_or = ln(1.55); se = (ln(1.68) - ln(1.43))/3.92 = 0.0411
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = short sleep associated with HIGHER odds of obesity (harm)
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_multiple_cross_sectional
+  quote: In adults the pooled OR was 1.55 (1.43 to 1.68; P < 0.0001).
+- outcome_domain: anthropometric
+  outcome_construct: bmi_per_hour_sleep
+  exposure:
+    type: per_hour_less_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: per 1 h change in sleep duration, adults
+  scale: per_hour_beta
+  unit: kg/m2 per hour of sleep
+  value: -0.35
+  se: 0.1148
+  ci:
+  - -0.57
+  - -0.12
+  conversion_formula: se = (-0.12 - (-0.57))/3.92 = 0.1148
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = each ADDITIONAL hour of sleep is associated with 0.35 kg/m2 LOWER BMI, i.e. each hour LESS sleep is associated with +0.35 kg/m2 (harm)
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_multiple_cross_sectional
+  quote: In adults, the pooled beta for short sleep duration was -0.35 (-0.57 to -0.12) unit change in BMI per hour of sleep change.
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: Pools predominantly CROSS-SECTIONAL studies; authors state causal inference is difficult. Adult per-hour BMI coefficient is ~10x larger than prospective pediatric estimates (Miller 2018), consistent with reverse causation and confounding inflating cross-sectional slopes.
+funding: not stated in abstract
+notes: 'This is the most-cited source of the ''-0.35 kg/m2 per hour'' figure. It is cross-sectional and should be treated as an UPPER bound. Authors'' own conclusion: ''Causal inference is difficult due to lack of control for important confounders and inconsistent evidence of temporal sequence in prospective studies.'' 634,511 participants (30,002 children and 604,509 adults).'
+shard: s09_obesity_bmi

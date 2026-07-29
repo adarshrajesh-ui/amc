@@ -1,0 +1,100 @@
+study_id: hayes2023
+citation: Hayes BL, Vabistsevits M, Martin RM, Lawlor DA, Richmond RC, Robinson T. Establishing causal relationships between sleep and adiposity traits using Mendelian randomization. Obesity (Silver Spring). 2023;31(3):861-870.
+doi: 10.1002/oby.23668
+pmid: '36790827'
+url: https://onlinelibrary.wiley.com/doi/10.1002/oby.23668
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Establishing causal relationships between sleep and adiposity traits using Mendelian randomization.
+access_tier: full_text
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 446118
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: UK/US (UK Biobank, 23andMe, GIANT, EGG)
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: adult_bmi_per_hour_genetically_predicted_sleep
+  exposure:
+    type: per_hour_less_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: genetically predicted sleep duration -> adult BMI (GIANT, N = 339,224), IVW two-sample MR
+  scale: per_hour_beta
+  unit: SD of adult BMI per hour of genetically predicted sleep
+  value: 0.039
+  se: 0.0485
+  ci:
+  - -0.06
+  - 0.13
+  conversion_formula: se = (0.13 - (-0.06))/3.92 = 0.0485
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'NULL, AND THE POINT ESTIMATE IS THE WRONG SIGN for the causal hypothesis: genetically longer sleep is associated with trivially HIGHER (not lower) adult BMI, p = 0.42. MR does NOT support a causal effect of sleep duration on adult BMI.'
+  covariates: []
+  followup_years: null
+  cohort_family: UK_Biobank_GIANT
+  quote: Sleep duration BMI 339,224 No 0.039 (-0.06 to 0.13) 4.20 E-01
+- outcome_domain: anthropometric
+  outcome_construct: clinical_obesity_per_hour_genetically_predicted_sleep
+  exposure:
+    type: per_hour_less_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: genetically predicted sleep duration -> clinically determined obesity (N = 16,033)
+  scale: log_or
+  unit: null
+  value: 0.0
+  se: 0.0026
+  ci:
+  - -0.0101
+  - 0.0
+  conversion_formula: OR 1.00 (0.99 to 1.00); log_or = ln(1.00) = 0; se = (ln(1.00) - ln(0.99))/3.92 = 0.00256
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: EXACT NULL for clinically determined obesity, p = 0.24.
+  covariates: []
+  followup_years: null
+  cohort_family: UK_Biobank
+  quote: Sleep duration Obesity (clinically determined) 16,033 1.00 (0.99 to 1.00) 2.40 E-01
+- outcome_domain: anthropometric
+  outcome_construct: childhood_bmi_per_hour_genetically_predicted_sleep
+  exposure:
+    type: per_hour_less_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: genetically predicted sleep duration -> CHILDHOOD BMI (EGG, N = 35,668), per hour
+  scale: per_hour_beta
+  unit: SD of childhood BMI (1 SD = 4.7 kg/m2) per hour of sleep
+  value: -0.93
+  se: 0.4158
+  ci:
+  - -1.74
+  - -0.11
+  conversion_formula: 'se = (-0.11 - (-1.74))/3.92 = 0.4158. In natural units: -0.93 SD x 4.7 kg/m2 = -4.4 kg/m2 per hour.'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = more sleep -> lower childhood BMI (protective direction), BUT the implied magnitude (~4.4 kg/m2 per hour) is BIOLOGICALLY IMPLAUSIBLE and is characteristic of weak-instrument/violated-assumption inflation. The authors' own Steiger-filtered estimate collapses to -1.77 SD (95% CI -7.24 to 3.39), i.e. no longer distinguishable from zero.
+  covariates: []
+  followup_years: null
+  cohort_family: EGG_childhood_BMI
+  quote: 'For each hour increase in sleep duration, we observed a decrease in child-BMI (SD = 4.7 kg/m 2 ; beta = -0.93 SD, 95% CI: -1.74 to -0.11; Figure 3 ).'
+rob:
+  tool: MR-STROBE
+  judgement: moderate
+  notes: Large, well-conducted bidirectional two-sample MR with MR-Egger, weighted-median, weighted-mode, radial and Steiger sensitivity analyses. Instruments are weak for sleep duration (instruments explained 0.13-2.07% of exposure variance across traits), and the sleep-duration GWAS is in middle-aged/older adults, which limits transport to adolescence.
+funding: MRC Integrative Epidemiology Unit; NIHR Bristol BRC
+notes: 'THE CENTRAL MR RECORD FOR THIS SHARD. Authors'' summary sentence: ''There was little evidence for effects of sleep traits on adiposity traits.'' Insomnia (NOT short sleep duration) was the sleep trait with a causal effect on adiposity (BMI 0.47 SD, 95% CI 0.22-0.73). Reverse direction was also null: ''BMI Sleep duration 446, 118 0.01 (-0.04 to 0.07) 6.30 E-01''. The child-BMI estimate should be treated as an artefact, not an effect size, because Steiger filtering indicated shared causal variants and attenuated it to -1.77 SD (95% CI -7.24 to 3.39).'
+shard: s09_obesity_bmi

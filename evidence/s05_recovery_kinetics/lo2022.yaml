@@ -1,0 +1,120 @@
+study_id: lo2022
+citation: "Lo JC, Leong RLF, Ng ASC, Jamaluddin SA, Ong JL, Ghorbani S, Zhou J, Massar SAA, Chee MWL. Staying vigilant during recurrent sleep restriction: dose-response effects of time-in-bed and benefits of daytime napping. Sleep. 2022;45(4):zsac023."
+doi: "10.1093/sleep/zsac023"
+pmid: "35089345"
+url: "https://pubmed.ncbi.nlm.nih.gov/35089345/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Staying vigilant during recurrent sleep restriction: dose-response effects of time-in-bed and benefits of daytime napping"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 194
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [15, 19]
+  pct_female: 49.5
+  country: "Singapore"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: recovery
+    outcome_construct: weekend_recovery_insufficient_in_adolescents
+    exposure: {type: weekend_catchup, dose_h: 9, referent_h: 9, duration_days: 2, contrast_label: "2 nights of 9 h TIB weekend recovery after 5 nights of 5 h or 6.5 h TIB, in 15-19 year olds"}
+    scale: probability
+    unit: "p-value for time-on-task vigilance deficit vs baseline after 2 weekend recovery nights"
+    value: 0.04
+    se: null
+    ci: null
+    conversion_formula: "Reported p-value directly: ToT effect on PVT lapses after the 2-night 9 h TIB recovery period was still p < .04 relative to baseline in the 5 h and 6.5 h groups. No effect size is reported for this specific contrast, so se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "p < 0.04 means the vigilance deficit was STILL statistically present after a simulated weekend of 2 x 9 h TIB. Two full weekend nights at 9 h TIB did not restore time-on-task vigilance in adolescents. Not a harm magnitude; se null."
+    covariates: ["baseline (day B1 evening) time-on-task effect"]
+    followup_years: null
+    cohort_family: "NeedForSleep_Singapore"
+    quote: "ToT did not return to baseline after two nights of recovery sleep (p < .04 relative to baseline)."
+  - outcome_domain: recovery
+    outcome_construct: deficit_worsens_across_successive_restriction_weeks_despite_weekend_recovery
+    exposure: {type: weekend_catchup, dose_h: 9, referent_h: 9, duration_days: 2, contrast_label: "time-on-task vigilance deficit in restriction week 2 vs matched days of week 1, with an intervening 2-night 9 h TIB weekend"}
+    scale: probability
+    unit: "p-value for week-2 vs week-1 deterioration on matched restriction days"
+    value: 0.006
+    se: null
+    ci: null
+    conversion_formula: "Reported p-values: 6.5 h group M11 vs M21 and M12 vs M22 both p < .006 (M13 vs M23 p = .47); 5 h group all three matched days p < .01. Encoded as the more conservative of the two thresholds. No effect size reported for these contrasts."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "The deficit was LARGER in the second restriction week than the first despite an intervening weekend of 9 h TIB recovery, i.e. debt carried over and compounded. This is the direct experimental analogue of a term of school weeks with weekend catch-up. Not a harm magnitude; se null."
+    covariates: ["baseline time-on-task effect"]
+    followup_years: null
+    cohort_family: "NeedForSleep_Singapore"
+    quote: "The ToT-effect was larger during the second sleep restriction period compared to the first for both the 6.5 h group (M11 vs. M21 and M12 vs. M22: p < .006, except for M13 vs. M23: p = .47) and the 5 h group (all three days: p < .01)."
+  - outcome_domain: sleep_need
+    outcome_construct: tib_dose_that_prevents_vigilance_deficit_in_adolescents
+    exposure: {type: chronic_restriction, dose_h: 8, referent_h: 9, duration_days: 5, contrast_label: "8 h TIB vs 9 h TIB vs 6.5 h vs 5 h nightly TIB across two restriction cycles, adolescents"}
+    scale: hours
+    unit: "h nightly TIB at or above which no vigilance deficit appeared"
+    value: 8.0
+    se: null
+    ci: null
+    conversion_formula: "Reported: the 8 h and 9 h groups showed stable time-on-task effects at baseline levels throughout (9 h group p > 0.34; 8 h group p > 0.30; between-group p > .22), whereas the 6.5 h group deteriorated from the second restriction night (p = .02) and the 5 h group from the second night (p < .001). 8 h TIB is therefore the lowest dose tested that did NOT produce a deficit."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is a protective threshold, not a harm. Note it is a THRESHOLD FOR AVOIDING DETERIORATION over 2 weeks, not the amount needed to RECOVER from a pre-existing debt; the recovery requirement is higher. Also note it is TIB, and adolescent TST at 8 h TIB was 431-450 min = 7.2-7.5 h."
+    covariates: ["baseline time-on-task effect"]
+    followup_years: null
+    cohort_family: "NeedForSleep_Singapore"
+    quote: "The two groups with TIB within the age-specific recommended range of 8 to 10 h evidenced a stable ToT effect throughout the protocol (relative to baseline, 9 h group: p > 0.34; 8 h group: p > 0.30; Figure 2A; right panel), consistent with the expectation in participants with adequate nocturnal sleep."
+  - outcome_domain: recovery
+    outcome_construct: napping_rescues_vigilance_when_total_24h_tib_meets_recommendation
+    exposure: {type: recovery_sleep, dose_h: 8.0, referent_h: 9, duration_days: 5, contrast_label: "6.5 h nocturnal TIB + 1.5 h afternoon nap (8 h total 24-h TIB) vs 6.5 h nocturnal TIB alone"}
+    scale: raw_units
+    unit: "h of total 24-h TIB (night + nap) at which vigilance held at well-rested levels"
+    value: 8.0
+    se: null
+    ci: null
+    conversion_formula: "6.5 h nocturnal TIB + 1.5 h nap TIB = 8.0 h total 24-h TIB. Nap TST from the 1.5-h opportunities was 71-79 min; from the 1-h opportunities 49-55 min."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Split sleep totalling 8 h of 24-h TIB preserved vigilance at well-rested levels, while 6.5 h nocturnal alone did not. Practically important: if a consolidated 8-9 h night is not achievable, a nap that brings TOTAL 24-h opportunity into the recommended range substantially recovers the deficit."
+    covariates: ["baseline time-on-task effect"]
+    followup_years: null
+    cohort_family: "NeedForSleep_Singapore"
+    quote: "Daytime napping attenuated ToT effects when nocturnal sleep restriction was severe (i.e. 5-h TIB/night), and held steady at baseline levels for a milder dose of nocturnal sleep restriction when total TIB across 24 h was within the age-specific recommended sleep duration (i.e. 6.5 h + 1.5 h)."
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "Large (n=194) pooled analysis of the Need for Sleep laboratory studies with parallel randomized TIB groups, PSG-verified sleep, daily PVT, controlled classroom environment with supervision preventing unsanctioned napping and caffeine. Analysis controlled for baseline time-on-task effect. Limitations: this is a secondary/pooled analysis across several protocols in the same programme (so cohort_family is recorded to prevent double counting with lo2016 and lo2017), the 9 h control group ran a 14-day rather than 15-day protocol, group sizes are 24-29 per arm, and the primary outcome is a time-on-task derived index rather than raw lapses. All participants Singaporean, so cultural/sleep-schedule generalisability is limited."
+funding: "National Medical Research Council Singapore; Far East Organization"
+notes: |
+  This is the closest experimental analogue in the literature to the target subject's actual exposure pattern:
+  15-19 year olds, five weekday nights of restriction, two weekend nights of 9 h TIB recovery, repeated.
+  Findings, all in the exact target age band:
+    - 2 weekend nights at 9 h TIB did NOT restore vigilance (p < .04 vs baseline).
+    - The deficit was WORSE in the second restriction week than the first, i.e. weekend catch-up did not
+      reset the accumulating debt.
+    - 8 h and 9 h TIB nightly were protective; 6.5 h began producing deficits by the second night.
+    - A 1.5 h nap on top of 6.5 h nocturnal TIB (8 h total) held vigilance at well-rested levels.
+  The paper also contains an important secondhand summary of the Belenky dataset from Van Dongen's
+  re-analysis, which independently corroborates my belenky2003 record:
+  "Another important finding from this study was that during the recovery sleep period, ToT effects
+  diminished, but did not return to baseline levels after three nights of 9-h TIB, even for individuals with
+  the mildest dose of sleep restriction to 7 h per night."
+  (Note: Lo et al. describe Belenky's recovery nights as 9-h TIB; the Belenky JSR paper and the underlying DOT
+  report both state 8 h TIB. I use 8 h in the belenky2003 record and flag the discrepancy there.)
+  Adolescent TST by TIB dose in this programme, useful for the yield calculation:
+    9 h TIB -> 479-491 min nocturnal TST (7.98-8.18 h)
+    8 h TIB -> 431-450 min (7.18-7.50 h)
+    6.5 h TIB -> 345-371 min (5.75-6.18 h)
+    5 h TIB -> 267-290 min (4.45-4.83 h)
+    baseline 9 h TIB -> 484-503 min (8.07-8.38 h)
+  Implied yield from 5 h to 9 h TIB: (8.08 - 4.64)/4 = 0.86 h TST per h TIB in adolescents, closely matching
+  the adult figure of 0.84-0.89.
+  Related records from the same programme, verified but NOT extracted separately to avoid double-counting:
+  Lo et al. 2016 (DOI 10.5665/sleep.5552, PMID 26612392) and Lo et al. 2017 (DOI 10.1093/sleep/zsw042,
+  PMID 28364507).
+shard: "s05_recovery_kinetics"

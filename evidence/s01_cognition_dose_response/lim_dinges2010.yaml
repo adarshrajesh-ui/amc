@@ -1,0 +1,209 @@
+study_id: lim_dinges2010
+citation: "Lim J, Dinges DF. A meta-analysis of the impact of short-term sleep deprivation on cognitive variables. Psychological Bulletin. 2010;136(3):375-389."
+doi: "10.1037/a0018883"
+pmid: "20438143"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3290659/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "A meta-analysis of the impact of short-term sleep deprivation on cognitive variables."
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: null
+n_studies_pooled: 70
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: null
+  adolescent_match: mixed
+effects:
+  - outcome_domain: cognition
+    outcome_construct: simple_attention_lapses
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1,
+               contrast_label: "short-term (<48h) total sleep deprivation vs rested baseline; lapses on PVT-type tasks"}
+    scale: hedges_g
+    unit: null
+    value: -0.762
+    se: 0.095
+    ci: [-0.948, -0.576]
+    conversion_formula: "Taken verbatim from Table 2, which prints the combined effect size, variance,
+      SE and 95% CI. No conversion performed. Heterogeneity Q = 112.18, df = 16, I2 = 61.6%.
+      SIGN CONVENTION: the authors report all effects as negative for impairment, including lapse counts
+      (where the raw count rises), so -0.762 means MORE lapses."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = impaired; largest single effect in the entire meta-analysis, i.e. lapses
+      of sustained attention are the most sleep-loss-sensitive cognitive outcome measured"
+    covariates: ["random/mixed-effects pooling, weighted by sampling variance"]
+    followup_years: null
+    cohort_family: null
+    quote: "Effect sizes ranged from small and nonsignificant (reasoning accuracy: g-bar = -0.125, 95% CI
+      [-0.27, 0.02]) to large (lapses in simple attention: g-bar = -0.776, 95% CI [-0.96, -0.60],
+      p < .001)."
+  - outcome_domain: cognition
+    outcome_construct: simple_attention_reaction_time
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1,
+               contrast_label: "short-term (<48h) TSD vs rested baseline; RT on simple-attention tasks"}
+    scale: hedges_g
+    unit: null
+    value: -0.732
+    se: 0.072
+    ci: [-0.874, -0.590]
+    conversion_formula: "Table 2 verbatim (variance 0.005, Q = 97.04, df = 25, I2 = 54.1%). No conversion."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = slower responding"
+    covariates: ["mixed-effects pooling"]
+    followup_years: null
+    cohort_family: null
+    quote: "Simple attention | Lapses | -0.762** | 0.009 | 0.095 | -0.948 | -0.576 | 112.18 | 16 | 61.6 ;
+      Reaction time | -0.732** | 0.005 | 0.072 | -0.874 | -0.590 | 97.04 | 25 | 54.1"
+  - outcome_domain: cognition
+    outcome_construct: working_memory_accuracy
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1,
+               contrast_label: "short-term TSD vs rested baseline; working-memory accuracy"}
+    scale: hedges_g
+    unit: null
+    value: -0.555
+    se: 0.095
+    ci: [-0.741, -0.368]
+    conversion_formula: "Table 2 verbatim (variance 0.009, Q = 113.79, df = 25, I2 = 55.4%)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = less accurate; second tier of the hierarchy, ~73% of the lapse effect"
+    covariates: ["mixed-effects pooling"]
+    followup_years: null
+    cohort_family: null
+    quote: "Working memory | Accuracy | -0.555** | 0.009 | 0.095 | -0.741 | -0.368 | 113.79 | 25 | 55.4"
+  - outcome_domain: cognition
+    outcome_construct: processing_speed_accuracy_dsst_and_serial_addition
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1,
+               contrast_label: "short-term TSD vs rested baseline; DSST and serial addition/subtraction accuracy"}
+    scale: hedges_g
+    unit: null
+    value: -0.245
+    se: 0.130
+    ci: [-0.500, 0.010]
+    conversion_formula: "Table 2 verbatim (variance 0.017, Q = 72.99, df = 11, I2 = 52.1%). This is the
+      pooled estimate for exactly the two tasks the shard brief asks about in Van Dongen 2003 - digit
+      symbol substitution and serial addition/subtraction - and it is NOT statistically significant
+      (CI crosses zero). It is the smallest effect in the table apart from reasoning."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = less accurate, but the CI includes zero, so throughput/processing-speed
+      accuracy is NOT reliably impaired by short-term sleep loss at the pooled level"
+    covariates: ["mixed-effects pooling"]
+    followup_years: null
+    cohort_family: null
+    quote: "Processing speed | Accuracy | -0.245 | 0.017 | 0.130 | -0.500 | 0.010 | 72.99 | 11 | 52.1"
+  - outcome_domain: cognition
+    outcome_construct: reasoning_accuracy
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1,
+               contrast_label: "short-term TSD vs rested baseline; reasoning / crystallised intelligence accuracy"}
+    scale: hedges_g
+    unit: null
+    value: -0.125
+    se: 0.072
+    ci: [-0.268, 0.016]
+    conversion_formula: "Table 2 verbatim (variance 0.005, Q = 14.59, df = 11, I2 = 5.4% - the only
+      near-homogeneous domain). Non-significant. Concordant with Lowe 2017's finding of insufficient
+      evidence for an effect on intelligence under RESTRICTION, so two independent meta-analyses agree
+      that crystallised reasoning is the most sleep-loss-resistant domain."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = less accurate, but CI includes zero; smallest effect in the analysis"
+    covariates: ["mixed-effects pooling"]
+    followup_years: null
+    cohort_family: null
+    quote: "Reasoning | Accuracy | -0.125 | 0.005 | 0.072 | -0.268 | 0.016 | 14.59 | 11 | 5.4"
+  - outcome_domain: comparator
+    outcome_construct: ratio_of_lapse_effect_to_processing_speed_effect
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1,
+               contrast_label: "how many times larger is the sustained-attention lapse effect than the processing-speed effect"}
+    scale: raw_units
+    unit: "ratio of pooled |g| for simple-attention lapses to pooled |g| for processing-speed accuracy"
+    value: 3.11
+    se: null
+    ci: null
+    conversion_formula: "0.762 / 0.245 = 3.11. Computed here from the two Table 2 rows above; no SE is
+      derivable for a ratio of correlated pooled estimates without their covariance, which is not
+      published. WHY IT MATTERS: this shard's brief asks for DSST and serial addition alongside PVT.
+      The meta-analytic answer is that those throughput measures carry roughly a third of the signal of
+      lapses, and at the pooled level are not even significantly affected. This independently reproduces
+      the ordering found WITHIN Van Dongen 2003 from the accumulation exponents (PVT theta 0.78 >
+      DSST 0.59 > serial addition 0.45) and within Lowe 2017 under restriction. Three independent lines
+      of evidence therefore agree that the PVT lapse rate should be the primary outcome and throughput
+      measures should carry much less weight."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "larger = sustained attention is more sensitive relative to throughput"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Finally, although tests of processing speed and cognitive throughput such as the Digit Symbol
+      Substitution Test are commonly used in SD paradigms, the results of this analysis demonstrate that
+      their effects are relatively small compared with those of other tests. Indeed, studies of partial
+      SD have demonstrated little or no effect on cognitive throughput tasks (Casement, Broussard,
+      Mullington, & Press, 2006; Dinges et al., 1997)."
+rob:
+  tool: AMSTAR-2
+  judgement: low
+  notes: "Strong methodology for its purpose: 70 articles / 147 data sets / 209 aggregated and 5,104
+    individual effect sizes; a priori inclusion criteria; hand searches of Sleep and J Sleep Res
+    1988-2008 plus reference-list screening; eight laboratories contacted for unpublished data with a
+    100% response rate, which is unusually thorough publication-bias mitigation; study-quality coding;
+    speed and accuracy kept separate rather than aggregated; full per-domain Q, df and I2 reported.
+    THE DECISIVE LIMITATION FOR THIS SHARD IS EXPOSURE MISMATCH, NOT QUALITY: inclusion was restricted
+    to SHORT-TERM TOTAL sleep deprivation (<48 h). None of these pooled estimates describes chronic
+    partial restriction, and the authors' own within-subject SD estimation reverted to a between-groups
+    formula whenever pre-post correlations were unavailable, which biases within-subject effects toward
+    zero. Heterogeneity was moderate (I2 ~ 5-66%) and the authors attribute it to test heterogeneity
+    within their taxonomy. Use this record for the DOMAIN HIERARCHY, never for a dose-response slope."
+funding: "NIH grants NR004281 and RR00040 (per the parent programme); not restated in the retrieved text"
+notes: |
+  ROLE IN THIS SHARD: comparator and domain-weighting source, NOT a dose-response source. The exposure
+  is acute total deprivation under 48 hours, which is not our subject's exposure. What it supplies that
+  nothing else does is a precisely estimated, externally validated RANKING of which cognitive outcomes
+  respond to sleep loss, with real published SEs rather than bounds.
+
+  THE HIERARCHY, from Table 2 (all Hedges' g, negative = impaired):
+    simple attention lapses          -0.762 (SE 0.095)
+    simple attention reaction time   -0.732 (SE 0.072)
+    working memory accuracy          -0.555 (SE 0.095)
+    working memory reaction time     -0.515 (SE 0.097)
+    complex attention accuracy       -0.479 (SE 0.082)
+    short-term memory recall         -0.383 (SE 0.135)
+    short-term memory recognition    -0.378 (SE 0.125)
+    complex attention reaction time  -0.312 (SE 0.059)
+    processing speed reaction time   -0.302 (SE 0.083)
+    processing speed accuracy        -0.245 (SE 0.130)  n.s.
+    reasoning accuracy               -0.125 (SE 0.072)  n.s.
+  Pooled across domains: accuracy and lapses -0.407, reaction time -0.450 (Table 3). Within each domain
+  there was no significant speed-accuracy difference (Table 4, all z < 1.65), so speed and accuracy can
+  be treated as interchangeable indices of the same underlying deficit.
+
+  ONE MODERATOR RESULT WORTH CARRYING: "Of several moderators tested, only time awake was a significant
+  predictor of between-studies variability, and only for accuracy measures". So even within acute
+  deprivation, DURATION of the exposure moves the effect - the same duration-dependence that Lowe 2017
+  found for restriction ("cumulative days of restricted sleep" a significant moderator) and that
+  Van Dongen 2003 quantified as a power law in days.
+
+  A CROSS-EXPOSURE CALIBRATION THAT IS USEFUL DESPITE THE MISMATCH. One night of total deprivation
+  produces a pooled lapse effect of |g| = 0.76. In this shard's primaries, 14 nights at 4 h TIB produces
+  |g| = 1.44 (Van Dongen 2003, 4h vs 8h at day 14) and 7 nights at 5 h TIB in adolescents produces
+  |g| = 2.40 (Lo 2016 at night 7; 2.31 on the baseline-unadjusted contrast). Magnitudes only - the sign
+  convention differs between records because the constructs differ. Chronic partial restriction sustained for one to two
+  weeks therefore reaches and exceeds the impairment of a single all-nighter - which is precisely the
+  claim Van Dongen 2003 and Banks & Dinges 2007 make, here supported by an independently pooled anchor
+  for the all-nighter side of the comparison.
+
+  ALSO NOTE, for the practice-effect question in the shard brief, the authors' rationale for the PVT:
+  the task is chosen throughout this literature partly because it is nearly practice-free. Cohen 2010
+  states this explicitly ("The PVT does not display appreciable practice effects"), and Van Dongen 2003's
+  8 h control arm gives the direct empirical bound (+2.6 lapses over 14 days, versus +9.6 correct
+  responses on DSST over the same period). See vandongen2003.yaml and cohen2010.yaml.
+shard: "s01_cognition_dose_response"

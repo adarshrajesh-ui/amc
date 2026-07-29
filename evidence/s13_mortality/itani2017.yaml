@@ -1,0 +1,108 @@
+study_id: itani2017
+citation: "Itani O, Jike M, Watanabe N, Kaneita Y. Short sleep duration and health outcomes: a systematic review, meta-analysis, and meta-regression. Sleep Med. 2017 Apr;32:246-256."
+doi: "10.1016/j.sleep.2016.08.006"
+pmid: "27743803"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Short sleep duration and health outcomes: a systematic review, meta-analysis, and meta-regression."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: dose_response_meta_analysis
+tier: T5
+n: 5172710
+n_studies_pooled: 153
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "short sleepers vs normal sleepers at baseline, study-specific cutpoints"}
+    scale: log_rr
+    unit: null
+    value: 0.113329
+    se: 0.018229
+    ci: [0.076961, 0.148420]
+    conversion_formula: "log_rr = ln(1.12) = 0.113329; se = (ln(1.16) - ln(1.08))/3.92 = 0.018229"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher all-cause mortality. RR 1.12 - reproduces cappuccio2010 exactly on a much larger
+      base (153 studies, 5,172,710 participants). Three independent syntheses now converge on
+      1.12-1.14 for the categorical short-sleep contrast.
+    covariates: ["varies by constituent study; adjusted data extracted"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_153_studies"
+    quote: "Data from a cumulative total of 5,172,710 participants were collected from 153 studies. Short sleep was significantly associated with the mortality outcome (RR, 1.12; 95% CI, 1.08-1.16)."
+  - outcome_domain: mortality
+    outcome_construct: dose_response_threshold_for_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: null, duration_days: null,
+               contrast_label: "meta-regression: the sleep duration below which mortality rises linearly"}
+    scale: hours
+    unit: "hours of sleep; the threshold below which the meta-regression detects a linear mortality increase"
+    value: 6.0
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      THE THRESHOLD. Meta-regression across 153 studies found a linear mortality increase only BELOW
+      SIX HOURS. No dose-response was detectable for any other health outcome. This corroborates the
+      spline evidence (yin2017 RR 1.01 at 6 h; akerstedt2017 HR 0.92 at 6 h) that 6 h is the point at
+      which risk begins, not a point at which risk is already substantial. Directly relevant: the
+      subject's weekday sleep of "5-6 h" straddles this threshold, so his exposure sits at the very
+      start of the detectable range. No CI is given for the threshold, hence se null.
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_153_studies"
+    quote: "Meta-regression analyses found a linear association between a statistically significant increase in mortality and sleep duration at less than six hours. No dose-response was identified in the other outcomes."
+  - outcome_domain: cardiovascular
+    outcome_construct: coronary_heart_disease_incidence
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "short vs normal sleep, incident coronary heart disease"}
+    scale: log_rr
+    unit: null
+    value: 0.231112
+    se: 0.045806
+    ci: [0.139762, 0.322083]
+    conversion_formula: "log_rr = ln(1.26) = 0.231112; se = (ln(1.38) - ln(1.15))/3.92 = 0.045806"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher CHD incidence. Recorded as the intermediate-outcome check on the mortality
+      pathway: the CHD effect (log 0.231) is twice the all-cause mortality effect (log 0.113), which is
+      the pattern you would expect if a real cardiovascular mechanism drives a fraction of the
+      all-cause signal. Cross-check with shard s08_cardiovascular, which holds the primary CVD records.
+    covariates: ["varies by constituent study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_153_studies"
+    quote: "Similar significant results were observed in diabetes mellitus (1.37, 1.22-1.53), hypertension (1.17, 1.09-1.26), cardiovascular diseases (1.16, 1.10-1.23), coronary heart diseases (1.26, 1.15-1.38), and obesity (1.38, 1.25-1.53)."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    Very large evidence base with meta-regression on the short-sleep threshold, which is its unique
+    contribution. Weaknesses: (1) the exposure is a binary short-vs-normal split using each study's own
+    cutpoint, so the pooled 1.12 has no dose interpretation; (2) self-report throughout; (3) 153 studies
+    across nine outcomes with heavy cohort re-use, so the effective independent sample is far smaller
+    than 5.2 million; (4) it received a published commentary (Sleep Med 2017;32:257-258) which I did not
+    retrieve; (5) abstract-only access; (6) the paper does not report the number of deaths, so I cannot
+    compute an absolute-risk anchor.
+funding: null
+notes: >
+  TARGET EXTRACTION #2, companion synthesis (the task named "Jike et al." but Itani et al. 2017 is the
+  SHORT-sleep paper from the same Japanese group and jike2018 is the LONG-sleep paper; both are recorded
+  in this shard). Key contribution: the meta-regression threshold of SIX HOURS below which mortality
+  begins to rise linearly.
+  .
+  COHORT OVERLAP WARNING: same underlying primary literature as cappuccio2010, liu2017, yin2017,
+  jike2018 and ungvari2025.
+shard: "s13_mortality"

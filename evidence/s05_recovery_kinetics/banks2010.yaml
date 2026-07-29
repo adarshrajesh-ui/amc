@@ -1,0 +1,165 @@
+study_id: banks2010
+citation: "Banks S, Van Dongen HPA, Maislin G, Dinges DF. Neurobehavioral dynamics following chronic sleep restriction: dose-response effects of one night for recovery. Sleep. 2010;33(8):1013-1026."
+doi: "10.1093/sleep/33.8.1013"
+pmid: "20815182"
+url: "https://pubmed.ncbi.nlm.nih.gov/20815182/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Neurobehavioral Dynamics Following Chronic Sleep Restriction: Dose-Response Effects of One Night for Recovery"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 159
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [22, 45]
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: tst_yield_per_hour_tib_recovery_night
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: null, duration_days: 1, contrast_label: "TST as a function of recovery TIB dose (2/4/6/8/10 h) after 5 nights of 4 h TIB"}
+    scale: per_hour_beta
+    unit: "h TST per h recovery TIB"
+    value: 0.8915
+    se: null
+    ci: null
+    conversion_formula: "OLS of reported adjusted-mean TST (1.88, 3.84, 5.74, 7.51, 8.96 h) on recovery TIB (2, 4, 6, 8, 10 h): TST = 0.237 + 0.8915*TIB, R^2 = 0.9968. Marginal yields by interval: 2->4 h 0.980; 4->6 h 0.950; 6->8 h 0.885; 8->10 h 0.725 h TST per h TIB - i.e. the repayment function is CONCAVE and saturating. se is null because this slope is fitted to five published ADJUSTED GROUP MEANS with no reported per-dose SDs for TST; the residual standard error of my own 5-point regression (0.098 h) describes only how well a straight line fits those five points and would badly understate sampling uncertainty in the underlying n = 159, so reporting it as the SE would be misleading. A linear fit is in any case the wrong model: the authors themselves report TST rising linearly but the neurobehavioral recovery functions as exponential, and the declining marginal yields above show the TST relation is mildly concave rather than straight."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Extra sleep opportunity is not converted 1:1 into sleep, and the conversion gets WORSE as TIB lengthens (0.98 at the short end, 0.725 in the 8-10 h band). This is the physiological reason debt cannot be repaid hour-for-hour."
+    covariates: ["baseline performance", "cumulative deficit during sleep restriction", "age", "sex"]
+    followup_years: null
+    cohort_family: null
+    quote: "Total sleep time was 1.88 h (0.04 h) in the 2-h TIB group, 3.84 h (0.03 h) in the 4-h TIB group, 5.74 h (0.04 h) in the 6-h TIB group, 7.51 h (0.10 h) in the 8-h TIB group, and 8.96 h (0.18 h) in 10-h TIB group."
+  - outcome_domain: recovery
+    outcome_construct: max_tst_single_recovery_night_10h_tib
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 10, duration_days: 1, contrast_label: "single recovery night, 10 h TIB, after 5 nights of 4 h TIB"}
+    scale: hours
+    unit: "h TST"
+    value: 8.96
+    se: 0.18
+    ci: null
+    conversion_formula: "Reported adjusted mean (SEM) directly. Baseline TST at the same 10 h TIB was 8.47 h, so the maximum rebound above own baseline was +0.49 h in one night."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "EMPIRICAL CEILING: given a full 10 h in bed after a 23.4 h debt, subjects slept 8.96 h - only 0.49 h more than their own 10 h TIB baseline. Nobody slept 12-16 h to repay the debt."
+    covariates: ["baseline performance", "cumulative deficit during sleep restriction", "age", "sex"]
+    followup_years: null
+    cohort_family: null
+    quote: "Figure 1A shows the expected reduction in TST from 8.47 h at baseline to 3.72 h on SR1 and 3.85 h on SR5."
+  - outcome_domain: recovery
+    outcome_construct: pct_of_sleep_debt_repaid_one_10h_night
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 10, duration_days: 1, contrast_label: "1 night of 10 h TIB after 5 nights of 4 h TIB"}
+    scale: pct_change
+    unit: "% of accumulated TST debt repaid in one maximal recovery night"
+    value: 2.09
+    se: null
+    ci: null
+    conversion_formula: "Debt = 5 nights * (8.47 h baseline TST - 3.785 h mean restricted TST) = 23.43 h, using SR1 3.72 h and SR5 3.85 h (mean 3.785 h). Repayment on the single 10 h TIB night = 8.96 - 8.47 = 0.49 h. 0.49/23.43 = 2.09%. If instead true sleep need is taken as the control group's day-8 asymptote of 7.95 h, debt = 20.82 h and repayment = 1.01 h = 4.85%."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = debt repaid. 2-5% per maximal night implies ~20-50 nights of maximal 10 h TIB sleep would be needed to clear a 5-night 4 h debt by TST accounting alone."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Analyses based on return to baseline and on estimated intersection with control condition means revealed recovery was incomplete at the 10 h TIB (8.96 h TST) for PVT performance, KSS sleepiness, and POMS fatigue."
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_residual_deficit_after_10h_recovery_night
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 10, duration_days: 1, contrast_label: "post-recovery (10 h TIB) vs own baseline, PVT lapses"}
+    scale: hedges_g
+    unit: null
+    value: 0.429
+    se: 0.149
+    ci: [0.137, 0.721]
+    conversion_formula: "Table 2, 10 h subgroup (n=27): B2 3.1 (SD 3.5), REC 5.6 (SD 7.2), p=0.008. sd_av = sqrt((3.5^2+7.2^2)/2)=5.664; d_av=(5.6-3.1)/5.664=0.441; J=1-3/(4*26-1)=0.9709; g=0.429. SE from inverting the two-sided paired t at df=26 for p=0.008 -> t=2.876; SE=|g|/t=0.149. CI = g +/- 1.96*SE."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive g = MORE lapses than baseline, i.e. WORSE vigilance still present after the single largest recovery dose tested. Full dose-response of residual deficit (g, SE): 0 h 2.233 (0.473); 2 h 1.380 (0.347); 4 h 1.395 (0.355); 6 h 1.096 (0.272); 8 h 0.560 (0.172); 10 h 0.429 (0.149). Deficit shrinks with dose but does not reach zero."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "These comparisons revealed that among the 10 h TIB recovery group, PVT lapses and KSS ratings remained elevated above baseline (P = 0.008 and P = 0.007, respectively). This was also the case for the secondary outcomes of PVT fastest 10% RTs (P = 0.005) and POMS fatigue scores (P = 0.021)."
+  - outcome_domain: cognition
+    outcome_construct: kss_sleepiness_residual_deficit_after_10h_recovery_night
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 10, duration_days: 1, contrast_label: "post-recovery (10 h TIB) vs own baseline, KSS"}
+    scale: hedges_g
+    unit: null
+    value: 0.501
+    se: 0.171
+    ci: [0.166, 0.836]
+    conversion_formula: "Table 2, 10 h subgroup (n=27): B2 3.0 (SD 1.5), REC 3.8 (SD 1.6), p=0.007. sd_av=sqrt((1.5^2+1.6^2)/2)=1.5518; d_av=0.5156; J=0.9709; g=0.501. SE from inverted t (df=26, p=0.007) t=2.929; SE=0.171."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive g = SLEEPIER than baseline after the maximal single recovery night. Dose-response (g, SE): 0 h 2.067 (0.438); 2 h 2.343 (0.590); 4 h 1.280 (0.325); 6 h 0.936 (0.233); 8 h 0.636 (0.153); 10 h 0.501 (0.171)."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "These comparisons revealed that among the 10 h TIB recovery group, PVT lapses and KSS ratings remained elevated above baseline (P = 0.008 and P = 0.007, respectively)."
+  - outcome_domain: recovery
+    outcome_construct: tib_dose_required_to_reach_control_levels_pvt_lapses
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: 10, duration_days: 1, contrast_label: "extrapolated single-night recovery TIB needed for PVT lapses to intersect non-restricted control levels"}
+    scale: hours
+    unit: "h TIB in a single recovery night"
+    value: 10.66
+    se: null
+    ci: null
+    conversion_formula: "Reported intersection point from linear fits to dose-adjusted means (Table 3). Corresponding TST intersection 10.00 h. KSS: 10.62 h TIB / 10.29 h TST. PVT fastest 10% RT: >13 h TIB (11 h TST). MWT: 15.16 h TIB (95% CI 10.41-19.90)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Exceeds the maximum dose actually delivered (10 h), so the value is an extrapolation: a SINGLE night cannot restore PVT. Authors explicitly warn the CIs are large."
+    covariates: ["baseline performance", "cumulative deficit during sleep restriction", "age", "sex"]
+    followup_years: null
+    cohort_family: null
+    quote: "While PVT lapses and KSS scores resulted in similar intersection points for TIB (10.66 h and 10.62 h, respectively) and for TST (10.00 h and 10.29 h, respectively), MWT sleep latency was projected to require much more sleep time for recovery to intersect with the control levels."
+  - outcome_domain: sleep_need
+    outcome_construct: ad_lib_tst_asymptote_in_non_restricted_controls_at_10h_tib
+    exposure: {type: descriptive, dose_h: 10, referent_h: 10, duration_days: 8, contrast_label: "control group given 10 h TIB every night for 8 nights"}
+    scale: hours
+    unit: "h TST per night at steady state"
+    value: 7.95
+    se: null
+    ci: null
+    conversion_formula: "Reported means: 8.74 h TST on baseline night B2, falling to 7.95 h by the eighth night of 10 h TIB (P = 0.02), a mean decrease of 46 min. n = 17 controls."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is the sleep-satiated asymptote: once debt is discharged, healthy adults given 10 h in bed take only ~7.95 h. Extended TIB does not produce indefinitely long sleep; it produces a decaying rebound toward ~8 h."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Subjects in the control condition slept a mean of 8.74 h of the 10 h TIB on baseline night B2, but by the eighth night of 10 h TIB (equivalent to SR5 in the sleep-restricted condition), they slept on average 7.95 h, a mean decrease of 46 min (P = 0.02)."
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "Randomized allocation to recovery dose, large n (159; 118 restricted + 17 control across dose subgroups of 13-29), objective PSG and PVT outcomes, ANCOVA controlling for baseline and cumulative deficit. Main limitations: only ONE recovery night was studied, so the study cannot speak to multi-night recovery kinetics; dose subgroups are small (n=13 for the 0 h dose); adults 22-45, not adolescents; the reported intersection extrapolations have wide CIs the authors flag themselves."
+funding: "NIH (NR004281, RR00040); Air Force Office of Scientific Research"
+notes: |
+  This is the best available data on the SHAPE of the repayment function. Three separate findings matter:
+  (1) TST yield per hour of recovery TIB is high but sub-unity and CONCAVE: 0.98 h/h at 2-4 h TIB
+      falling to 0.725 h/h at 8-10 h TIB. The saturating shape is the mechanism behind the sleep ceiling.
+  (2) Neurobehavioral recovery functions were EXPONENTIAL (saturating) for PVT and KSS, and LINEAR for MWT -
+      i.e. different outcomes recover on different schedules, and the vigilance measures saturate short of
+      baseline: "While TST, stage 2, REM sleep and NREM slow wave energy (SWE) increased linearly across
+      recovery sleep doses, best-fitting neurobehavioral recovery functions were exponential across recovery
+      sleep doses for PVT and KSS outcomes, and linear for the MWT."
+  (3) MWT sleep latency and DSST DID recover by 8-10 h TIB (MWT p=0.072 at 8 h and p=0.558 at 10 h), while
+      PVT lapses, KSS, PVT fastest RTs and POMS fatigue did NOT. Recovery is measure-specific, and the
+      measures that recover fastest are the ones a person would use to self-assess readiness.
+  Residual deficit dose-response, Hedges' g vs own baseline (from Table 2; positive = worse except MWT):
+    dose  PVT lapses   KSS      MWT      PVTf10   POMS fatigue
+    0 h   2.233        2.067   -2.437    2.161    1.155
+    2 h   1.380        2.343   -1.922    1.226    1.805
+    4 h   1.395        1.280   -1.061    0.761    1.112
+    6 h   1.096        0.936   -0.699    0.880    1.006
+    8 h   0.560        0.636   -0.402    0.902    0.742
+    10 h  0.429        0.501   -0.140    0.394    0.569
+  Sleep efficiency during recovery was 89.6% at 10 h TIB vs 84.6% at baseline and 77.2% in controls on the
+  equivalent day - efficiency rises under debt, but not enough to overcome the TIB cap.
+  SWE was elevated ABOVE baseline at 10 h TIB while PVT remained impaired, which shows that the classical
+  homeostatic marker can overshoot while behaviour has not recovered. Do not use SWE as a recovery endpoint.
+shard: "s05_recovery_kinetics"

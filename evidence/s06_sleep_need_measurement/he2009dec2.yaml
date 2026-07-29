@@ -1,0 +1,68 @@
+study_id: he2009dec2
+citation: "He Y, Jones CR, Fujiki N, Xu Y, Guo B, Holder JL Jr, Rossner MJ, Nishino S, Fu YH. The transcriptional repressor DEC2 regulates sleep length in mammals. Science. 2009;325(5942):866-870."
+doi: "10.1126/science.1174443"
+pmid: "19679812"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2884988/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "The Transcriptional Repressor DEC2 Regulates Sleep Length in Mammals"
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 2
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: dec2_carrier_minus_noncarrier_sleep_duration
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "habitual self-reported total sleep time per 24 h, DEC2 (BHLHE41) P385R carriers vs noncarriers within one family"}
+    scale: hours
+    unit: "hours (carrier minus noncarrier difference)"
+    value: -1.81
+    se: null
+    ci: null
+    conversion_formula: "verbatim: 'The habitual self-reported total sleep time per 24-hour day was much shorter in mutation carriers (average 6.25 hours) compared with the noncarriers (average 8.06 hours) in this family.' value = 6.25 - 8.06 = -1.81 h. n = 2 carriers, so no SE is meaningful."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = carriers sleep LESS. This is the archetypal familial natural short sleep (FNSS) phenotype: a mother-daughter pair habitually sleeping 6.25 h with no apparent impairment. It is the strongest published case that individual sleep need can genuinely be ~6 h."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      The habitual self-reported total sleep time per 24-hour day was much shorter in mutation carriers (average
+      6.25 hours) compared with the noncarriers (average 8.06 hours) in this family. Thus, they represent 'natural
+      short sleepers' who routinely sleep less than individuals with familial advanced sleep-phase syndrome
+      (FASPS) or general controls (Table 1). The average total sleep time for American adults on nonworkdays is
+      ~7.4 hours.
+rob:
+  tool: none
+  judgement: critical
+  notes: "n = 2 carriers, one family, ascertained BECAUSE of the extreme phenotype, and the human sleep duration is SELF-REPORTED (the mouse and fly work in this paper is experimental but the human phenotype is not). Maximal ascertainment bias. Include only to bound the plausible lower tail of sleep need, never as an effect estimate."
+funding: "NIH (paper is a PMC author manuscript)"
+notes: |
+  Verbatim (full text, retrieved from PMC): "However, these two individuals have sleep-onset times that are similar to that of
+  conventional sleepers. The habitual self-reported total sleep time per 24-hour day was much shorter in mutation carriers
+  (average 6.25 hours) compared with the noncarriers (average 8.06 hours) in this family. Thus, they represent 'natural short
+  sleepers' who routinely sleep less than individuals with familial advanced sleep-phase syndrome (FASPS) or general controls
+  (Table 1). The average total sleep time for American adults on nonworkdays is ~7.4 hours."
+  ROLE IN THIS SHARD: this is the LOWER-TAIL bound on individual sleep need. It establishes that a human sleep requirement near
+  6.25 h exists and is genetically specified. Two things stop it from widening the sleep-need prior much:
+  (1) POPULATION PENETRANCE IS ABSENT. weedon2022 tested this exact variant class in 191,929 population-sequenced people and found
+      no association with sleep duration. The 6.25 h phenotype does not generalise out of the ascertained pedigree.
+  (2) THE PHENOTYPE DOES NOT MATCH OUR SUBJECT. Genuine FNSS carriers sleep short and do NOT extend when free to (note the paper's
+      own observation that their sleep-onset times are normal, i.e. they wake early rather than going to bed late). Our subject
+      reports 7-8 h at weekends and occasional 10-11 h nights, which is a catch-up pattern and is diagnostically inconsistent with
+      FNSS.
+  Recommended use: if the modeller wants a heavy lower tail on sleep need, cap the mixture weight on a ~6.25 h component at <1%
+  and justify it from weedon2022's null rather than from this pedigree.
+  ALSO WORTH KNOWING for the sleep-need normative question, quoted from this paper: "The average total sleep time for American
+  adults on nonworkdays is ~7.4 hours."
+shard: "s06_sleep_need_measurement"

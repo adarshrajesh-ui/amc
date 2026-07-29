@@ -1,0 +1,228 @@
+study_id: akerstedt2017
+citation: "Åkerstedt T, Ghilotti F, Grotta A, Bellavia A, Lagerros YT, Bellocco R. Sleep duration, mortality and the influence of age. Eur J Epidemiol. 2017 Oct;32(10):881-891."
+doi: "10.1007/s10654-017-0297-0"
+pmid: "28856478"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5680380/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep duration, mortality and the influence of age."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 43863
+n_studies_pooled: null
+population:
+  age_mean: 50.6
+  age_range: [18, 100]
+  pct_female: 64.0
+  country: "Sweden"
+  adolescent_match: poor_midlife
+effects:
+  # ---- age modification: the closest thing in the literature to a young-adult estimate ----
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: null,
+               contrast_label: "<=5 h vs 7 h weekday sleep, participants aged <45 y at baseline"}
+    scale: log_hr
+    unit: null
+    value: 0.896088
+    se: 0.368228
+    ci: [0.173953, 1.617406]
+    conversion_formula: "log_hr = ln(2.45) = 0.896088; se = (ln(5.04) - ln(1.19))/3.92 = 0.368228"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher all-cause mortality. THE YOUNGEST STRATUM AVAILABLE ANYWHERE IN THIS
+      LITERATURE (<45 y at exposure). The association is LARGER, not smaller, in the young:
+      HR 2.45 vs 1.37 for <65 y and 1.05 for >=65 y. This directly contradicts any assumption
+      that youth protects against the short-sleep mortality association. Extremely imprecise
+      (CI 1.19-5.04) because few deaths occur before 45.
+    covariates: ["age", "sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "major diseases"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "To complement the results from the previous analysis, multivariable Cox regressions were run by stratifying on two different cut points (45 and 70 years). In both cases significant results were observed only in the category including the younger subjects. In those below 45 years the HR was 2.45 (95% CI 1.19-5.04) for short sleep (<=5 h) and 2.10 (95% CI 1.32-3.34) for long sleep."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: null,
+               contrast_label: "<=5 h vs 7 h, age <65 at baseline, multivariable adjusted"}
+    scale: log_hr
+    unit: null
+    value: 0.314811
+    se: 0.114876
+    ci: [0.086178, 0.536493]
+    conversion_formula: "log_hr = ln(1.37) = 0.314811; se = (ln(1.71) - ln(1.09))/3.92 = 0.114876"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher mortality. 98 deaths. Crude HR was 1.45 (1.19-1.77); adjustment for age, sex, BMI, smoking, alcohol, education, physical activity and major diseases removed only 15.3% of the excess log-hazard (0.3716 -> 0.3148)."
+    covariates: ["age", "sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "major diseases"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "Table 2, Age <65: <=5 h | 127 | 28,119 | 1.45 | 1.19, 1.77 | 98 | 22,409 | 1.37 | 1.09, 1.71 |"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7, duration_days: null,
+               contrast_label: "6 h vs 7 h, age <65 at baseline, multivariable adjusted"}
+    scale: log_hr
+    unit: null
+    value: -0.083382
+    se: 0.086308
+    ci: [-0.261365, 0.076961]
+    conversion_formula: "log_hr = ln(0.92) = -0.083382; se = (ln(1.08) - ln(0.77))/3.92 = 0.086308"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      negative = LOWER mortality at 6 h than at 7 h. CRITICAL FOR THIS SUBJECT, whose weekday
+      sleep is 5-6 h: there is no mortality signal at 6 h in this cohort at any age. Against a
+      7-8 h referent the 6 h estimate is significantly protective (HR 0.84, 0.72-0.98).
+    covariates: ["age", "sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "major diseases"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "Table 2, Age <65: 6 h | 262 | 96,875 | 0.99 | 0.85, 1.15 | 211 | 80,596 | 0.92 | 0.77, 1.08 |"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7.5, duration_days: null,
+               contrast_label: "6 h vs 7-8 h referent, age <65, fully adjusted (sensitivity analysis)"}
+    scale: log_hr
+    unit: null
+    value: -0.174353
+    se: 0.078648
+    ci: [-0.328504, -0.020203]
+    conversion_formula: "log_hr = ln(0.84) = -0.174353; se = (ln(0.98) - ln(0.72))/3.92 = 0.078648"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      negative = LOWER mortality. Statistically significant PROTECTIVE association for 6 h sleep
+      against a 7-8 h referent. The authors conclude the nadir in this cohort is 6 h, not 7 h.
+      This is the strongest single piece of evidence in the shard against assuming 6 h weekday
+      sleep is intrinsically lethal.
+    covariates: ["age", "sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "major diseases"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "A sensitivity analysis was also carried out to test the effect of sleep duration on mortality when using 7-8 h (646 deaths) as reference. Among subjects <65 years the results (fully adjusted) showed an increased mortality for the <=5 h category only, with an HR 1.25 (95% CI 1.01, 1.55). Sleeping 6 h showed a HR of 0.84 (95% CI 0.72-0.98) ... These results might suggest that, in the present cohort, the optimal sleep duration with respect of mortality is 6 h, rather than 7 h."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: null,
+               contrast_label: "<=5 h vs 7 h, age >=65, multivariable adjusted"}
+    scale: log_hr
+    unit: null
+    value: 0.048790
+    se: 0.077605
+    ci: [-0.105361, 0.198851]
+    conversion_formula: "log_hr = ln(1.05) = 0.048790; se = (ln(1.22) - ln(0.90))/3.92 = 0.077605"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher mortality but null. 239 deaths, well powered. The short-sleep association is absent in the elderly."
+    covariates: ["age", "sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "major diseases"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "Table 2, Age >=65: <=5 h | 359 | 12,350 | 1.02 | 0.90, 1.16 | 239 | 9162 | 1.05 | 0.90, 1.22 |"
+  # ---- reverse causation handling ----
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: null,
+               contrast_label: "<=5 h vs 7 h, age <65, EXCLUDING deaths in the first 2 years of follow-up"}
+    scale: log_hr
+    unit: null
+    value: 0.270027
+    se: 0.120208
+    ci: [0.029559, 0.500775]
+    conversion_formula: "log_hr = ln(1.31) = 0.270027; se = (ln(1.65) - ln(1.03))/3.92 = 0.120208"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality. REVERSE-CAUSATION PROBE. Excluding early deaths moves the
+      estimate from HR 1.37 to 1.31, i.e. removes only 14.2% of the excess log-hazard
+      (0.3148 -> 0.2700). A 2-year lag is a weak probe, however: subclinical disease that shortens
+      sleep can precede death by a decade.
+    covariates: ["age", "sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "major diseases"]
+    followup_years: 11.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "After excluding cases occurring in the first 2 years of follow-up, only minor changes in the results were observed. For subjects <65 years we confirmed a statistically significant association between sleep duration and mortality (for <=5 h of sleep, HR 1.31, 95% CI 1.03-1.65; for >=8 h of sleep, HR 1.23, 95% CI 1.05-1.45)."
+  # ---- months of life: the unit the downstream model needs ----
+  - outcome_domain: mortality
+    outcome_construct: percentile_difference_age_at_death_25th
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: null,
+               contrast_label: "<=5 h vs 7 h, fully adjusted, whole cohort, 25th percentile of age at death"}
+    scale: raw_units
+    unit: "months of age at death (25th percentile), difference vs 7 h referent"
+    value: -8.5
+    se: 4.1582
+    ci: [-16.7, -0.4]
+    conversion_formula: "reported directly in months; se = (-0.4 - (-16.7))/3.92 = 16.3/3.92 = 4.1582"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      negative = died earlier by this many months. 337 deaths. Age-adjusted (Model 1) value is
+      -8.8 months (-15.3, -2.3). This is a habitual-short-sleep contrast in adults, NOT the effect
+      of a bounded adolescent episode. Note that the 50th and 75th percentile differences
+      (-6.2 and -6.5 months) are no longer significant after full adjustment.
+    covariates: ["age at baseline", "sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "major diseases"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "Table 4 Model 2b: <=5 h | 337 | 31,571 | -8.5 | -16.7, -0.4 | -6.2 | -13.2, 0.9 | -6.5 | -13.4, 0.4 | ... Table 4 shows that at the 25th percentile of age at death, short and long sleepers died 8.5 (95% CI -16.7; -0.4) and 6.6 months (95% CI -12.4; -0.7) earlier, respectively."
+  - outcome_domain: mortality
+    outcome_construct: percentile_difference_age_at_death_25th
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7, duration_days: null,
+               contrast_label: "6 h vs 7 h, fully adjusted, whole cohort, 25th percentile of age at death"}
+    scale: raw_units
+    unit: "months of age at death (25th percentile), difference vs 7 h referent"
+    value: 1.4
+    se: 3.1888
+    ci: [-4.8, 7.7]
+    conversion_formula: "reported directly in months; se = (7.7 - (-4.8))/3.92 = 12.5/3.92 = 3.1888"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = died LATER. 6 h sleepers lived 1.4 months longer than 7 h sleepers (not
+      significant). 564 deaths, so this is a reasonably precise null-to-slightly-positive estimate.
+      A key anchor: the "months of life lost" figure for 6 h habitual sleep in this cohort is zero.
+    covariates: ["age at baseline", "sex", "BMI", "smoking status", "alcohol consumption", "educational level", "physical activity", "major diseases"]
+    followup_years: 13.0
+    cohort_family: "Swedish_National_March_Cohort"
+    quote: "Table 4 Model 2b: 6 h | 564 | 95,917 | 1.4 | -4.8, 7.7 | 1.7 | -4.2, 7.6 | 0.2 | -5.5, 5.8 |"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Same cohort and same core limitations as akerstedt2019: single ordinal self-reported baseline
+    exposure, volunteer recruitment, no repeat exposure measurement. Strengths: register-linked
+    mortality, 13 y follow-up, attained-age time scale, adjustment for major diseases, 2-year
+    early-death exclusion, multiple imputation, and explicit time-varying HR modelling. The <45 y
+    stratum rests on very few deaths and its HR of 2.45 has a 4.2-fold CI width; it should be treated
+    as hypothesis-generating. The authors themselves note that precursors of major disease (lipids,
+    glucose) were unmeasured and that Kurina et al.'s undiagnosed-disease critique is unresolved.
+funding: "AFA Insurance; The Lerici foundation; Italian Institute (Stockholm); Stockholm Stress Center; ICA AB; Telefonaktiebolaget LM Ericsson; Stockholm County Council-Karolinska ALF agreement"
+notes: >
+  TARGET EXTRACTION #6 (does the association differ by age at exposure?). ANSWER: yes, strongly,
+  and in the OPPOSITE direction to the one the task hypothesised. The short-sleep mortality
+  association is largest in the youngest and vanishes in the old.
+  .
+  Age gradient for <=5 h vs 7 h, fully adjusted:
+    <45 y   HR 2.45 (1.19-5.04)
+    <65 y   HR 1.37 (1.09-1.71)
+    <70 y   HR 1.38 (1.16-1.65)
+    all     HR 1.12 (0.99-1.27)
+    >=65 y  HR 1.05 (0.90-1.22)
+  Verbatim: "The HRs for both short and long sleep present a decreasing pattern with respect to age,
+  being greater than 2 in the youngest and equal to 1 or even below, in the oldest. The age span of
+  significant excessive mortality for short sleepers was 41.0-74.5 years."
+  .
+  HOW TO USE THIS, AND HOW NOT TO. The temptation is to take HR 2.45 for the under-45s and apply it
+  to a 19-year-old. That is wrong for three reasons. (1) "<45 years" in this cohort means adults with
+  a mean age in the 30s-40s who were ALREADY habitual short sleepers at baseline and were assumed to
+  remain so for 13 years; the youngest participants were 18 but they contribute almost no deaths.
+  (2) The 41.0 year lower bound of the significant age span means the data contain essentially no
+  information about mortality risk expressed before age 41. (3) A steeper HR at younger ages is partly
+  an artefact of a lower baseline hazard: the same absolute excess mortality produces a bigger ratio
+  when the denominator risk is tiny. The absolute months-of-life estimate (-8.5 months at the 25th
+  percentile) is the safer scale, and it is a whole-cohort figure.
+  .
+  Also note the internal tension: this paper finds 6 h to be the NADIR (protective vs 7-8 h,
+  HR 0.84), whereas the pooled dose-response meta-analyses put the nadir at ~7 h. The subject sleeps
+  5-6 h on weekdays, so this disagreement is directly load-bearing for the final estimate.
+  .
+  COHORT OVERLAP WARNING: same Swedish National March Cohort as akerstedt2019. Do not double-count.
+shard: "s13_mortality"

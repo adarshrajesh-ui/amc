@@ -1,0 +1,121 @@
+study_id: prather2012_hepb
+citation: "Prather AA, Hall M, Fury JM, Ross DC, Muldoon MF, Cohen S, Marsland AL. Sleep and antibody response to hepatitis B vaccination. Sleep. 2012;35(8):1063-1069."
+doi: "10.5665/sleep.1990"
+pmid: "22851802"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3397809/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep and antibody response to hepatitis B vaccination."
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 125
+n_studies_pooled: null
+population:
+  age_mean: 50.4
+  age_range: [40, 60]
+  pct_female: 55.2
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: immune
+    outcome_construct: hepatitis_b_clinical_protection_status_6mo
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "per +1 h actigraphy sleep duration, 7 days around first immunisation; outcome = anti-HBs IgG >=10 mIU/ml at 6 mo"}
+    scale: log_or
+    unit: null
+    value: 1.2613
+    se: 0.5435
+    ci: [0.1989, 2.3292]
+    conversion_formula: "OR 3.53 (1.22-10.27) for BEING PROTECTED per +1 h sleep -> log_or = ln(3.53) = 1.2613; se = (ln 10.27 - ln 1.22)/3.92 = 0.5435. For HARM framing, invert: OR 0.283 (0.097-0.820) of protection per 1 h LESS sleep, i.e. log_or = -1.2613."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = BENEFIT of longer sleep (higher odds of being clinically protected). Each additional hour of actigraphic sleep multiplied the odds of clinical protection by 3.53. Equivalently, each hour LESS sleep cut the odds of protection by ~72%."
+    covariates: ["age", "sex", "BMI"]
+    followup_years: 0.5
+    cohort_family: "Pittsburgh_HepB_vaccine"
+    quote: "Shorter sleep duration, as measured by actigraphy, was also associated with a decreased likelihood of being clinically protected, controlling for age, sex, and BMI (OR, 3.53; 95% CI, 1.22-10.27, P = 0.02)."
+  - outcome_domain: immune
+    outcome_construct: hepatitis_b_clinical_protection_status_6mo
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 7.5, duration_days: 7, contrast_label: "actigraphy <6 h/night vs >7 h/night (approximate tertiles); outcome = clinically protected at 6 mo"}
+    scale: log_or
+    unit: null
+    value: -2.4079
+    se: 1.1590
+    ci: [-4.6052, -0.0619]
+    conversion_formula: "OR 0.09 (0.01-0.94) -> log_or = ln(0.09) = -2.4079; se = (ln 0.94 - ln 0.01)/3.92 = 1.1590"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = HARM. Sleeping <6 h/night around vaccination reduced the odds of achieving clinical protection to 0.09 of the >7 h group (a ~91% reduction in the ODDS of protection). CI is extremely wide (0.01-0.94); the point estimate should not be taken literally."
+    covariates: ["age", "sex", "BMI"]
+    followup_years: 0.5
+    cohort_family: "Pittsburgh_HepB_vaccine"
+    quote: "Furthermore, using approximate tertiles of sleep duration to predict protection status, sleeping fewer than 6 hr conferred a significant risk of being unprotected as compared with sleeping more than 7 hr per night (for < 6 hr/night, OR, 0.09; 95% CI, 0.01-0.94; for 6-7 hr/night, OR, 0.36; 95% CI, 0.04-3.67; > 7 hr/night [reference]."
+  - outcome_domain: immune
+    outcome_construct: hepatitis_b_clinical_protection_status_6mo
+    exposure: {type: habitual_short_sleep, dose_h: 6.5, referent_h: 7.5, duration_days: 7, contrast_label: "actigraphy 6-7 h/night vs >7 h/night"}
+    scale: log_or
+    unit: null
+    value: -1.0217
+    se: 1.1528
+    ci: [-3.2189, 1.3002]
+    conversion_formula: "OR 0.36 (0.04-3.67) -> log_or = ln(0.36) = -1.0217; se = (ln 3.67 - ln 0.04)/3.92 = 1.1528"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NULL (CI spans 1). negative would = harm. The 6-7 h category was not significantly worse than >7 h, consistent with a threshold near 6 h rather than a smooth gradient - but the study is far too small to resolve this."
+    covariates: ["age", "sex", "BMI"]
+    followup_years: 0.5
+    cohort_family: "Pittsburgh_HepB_vaccine"
+    quote: "for 6-7 hr/night, OR, 0.36; 95% CI, 0.04-3.67; > 7 hr/night [reference]."
+  - outcome_domain: immune
+    outcome_construct: secondary_antibody_titre_anti_hbs_log
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "per +1 h actigraphy sleep duration, predicting log secondary antibody level"}
+    scale: pct_change
+    unit: "% change in secondary anti-HBs antibody level per +1 h actigraphic sleep"
+    value: 56.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly as a 56% increase in secondary antibody levels per additional hour, derived by the authors from predicted geometric means. Underlying regression: b = 0.44, SE = 0.22, P < 0.05 on the natural-log antibody scale; exp(0.44) = 1.553, i.e. +55.3%, which reproduces the authors' 56%. No CI reported for the percentage; se left null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = BENEFIT of longer sleep. Each additional hour of actigraphic sleep in the week around immunisation raised secondary antibody titre by 56%; each hour LESS lowered it by ~36% (1 - 1/1.56)."
+    covariates: ["age", "sex", "BMI", "responder status to initial dose"]
+    followup_years: null
+    cohort_family: "Pittsburgh_HepB_vaccine"
+    quote: "Estimated from predicted geometric means (model adjusted for age [mean = 50.4 yr], sex [female], BMI [mean = 25.3 kg/m2], and responder status [nonresponder]), each additional hr of sleep was associated with a 56% increase in secondary antibody levels."
+  - outcome_domain: exposure_measurement
+    outcome_construct: actigraphy_vs_diary_discordance_and_null_of_selfreport
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "diary-reported sleep duration and sleep efficiency vs antibody outcomes (all null)"}
+    scale: raw_units
+    unit: "beta on log-antibody scale for diary sleep duration"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No usable coefficient reported; effect recorded as an explicit null with value 0 and se null. Do NOT pool this as a numeric estimate; it is a qualitative null flag."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "IMPORTANT NULL / MEASUREMENT WARNING. Self-reported (diary) sleep duration and sleep efficiency were UNRELATED to secondary antibody magnitude in the very same people in whom actigraphic duration WAS related. Objective and self-reported exposure are not interchangeable here."
+    covariates: []
+    followup_years: null
+    cohort_family: "Pittsburgh_HepB_vaccine"
+    quote: "Contrary to expectation, there were no associations of actigraphy-derived sleep efficiency, diary-based sleep duration, or subjective sleep quality with magnitude of secondary antibody response."
+rob:
+  tool: ROBINS-I
+  judgement: moderate
+  notes: "Exposure objectively measured (actigraphy) and measured BEFORE the outcome, with a hard clinical endpoint (anti-HBs >=10 mIU/ml). But: observational, so confounding by health behaviours remains; actigraphy subgroup only n=104 for the exposure of interest, and protection-status models rest on a small number of unprotected participants, hence the extreme CIs (0.01-0.94). Midlife sample (mean age 50.4 y) - poor age match to an 18-year-old, and vaccine responsiveness declines with age, so the absolute effect in a young man is likely smaller. Multiple sleep metrics tested, only one significant (multiplicity)."
+funding: "NIH (HL076852/HL076858 per PMC record); first author supported by an NIH training grant"
+notes: |
+  Sample: 125 healthy midlife adults given the standard 3-dose hepatitis B series; n = 122 with
+  usable secondary antibody data after dropping one >9 SD outlier; actigraphy subgroup n = 104.
+  Tertile ns for the actigraphy categorical analysis: <6 h n = 38 (approx), 6-7 h n = 37, >7 h n = 29.
+  KEY QUALIFICATION for the downstream model: the significant effects are for the SECONDARY antibody
+  response and for clinical protection, not for the primary response. Also note the same paper found
+  the association was "slightly attenuated" after adjusting for stress, and diary-based sleep was null.
+  DURABILITY NOTE: this is one of the few immune records in this shard with a genuinely durable
+  outcome - clinical protection status measured 6 months after the final immunisation. A missed
+  seroconversion is not a transient marker change. But the exposure was only one week around each
+  vaccination, so it speaks to sleep-at-the-time-of-immunisation, not to 3 years of restriction.
+shard: "s10_immune"

@@ -1,0 +1,141 @@
+study_id: gradisar2011meta
+citation: "Gradisar M, Gardner G, Dohnt H. Recent worldwide sleep patterns and problems during adolescence: a review and meta-analysis of age, region, and sleep. Sleep Med. 2011;12(2):110-118."
+doi: "10.1016/j.sleep.2010.11.008"
+pmid: "21257344"
+url: "https://pubmed.ncbi.nlm.nih.gov/21257344/"
+verification:
+  crossref_ok: null
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Recent worldwide sleep patterns and problems during adolescence: a review and meta-analysis of age, region, and sleep."
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: null
+n_studies_pooled: 41
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "worldwide (Asia, North America, Europe)"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: circadian
+    outcome_construct: weekend_bedtime_delay_worldwide_adolescents
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: null, contrast_label: "weekend minus school-night bedtime delay, pooled across 41 worldwide adolescent surveys 1999-2010"}
+    scale: hours
+    unit: "hours later on weekends (lower bound; abstract states '2+ hours')"
+    value: 2.0
+    se: null
+    ci: null
+    conversion_formula: "The abstract states 'bedtimes 2+ hours later'; this is a lower bound, not a point estimate with dispersion. I could not obtain the full text (paywalled, no OA copy found via Unpaywall or OpenAlex), so no pooled mean, SE or CI is available. se and ci set to null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      POSITIVE = later on weekends. THE MOST IMPORTANT SINGLE FACT FOR THE LIKELIHOOD-RATIO QUESTION
+      IN THIS ENTIRE SHARD: a 2+ hour weekend bedtime delay with more weekend sleep is the WORLDWIDE
+      NORM for adolescents, replicated across 41 surveys and three continents. A feature present in
+      the great majority of the healthy population cannot have a large positive likelihood ratio for
+      any disorder. This is the arithmetic reason why "large weekday-weekend discrepancy" is close to
+      diagnostically useless on its own.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Weekend sleep data were generally consistent worldwide, with bedtimes 2+ hours later and more total sleep time obtained."
+
+  - outcome_domain: circadian
+    outcome_construct: normative_delayed_pattern_mimics_dspd
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "authors' conclusion that the normative worldwide adolescent pattern is phenotypically indistinguishable from DSPD symptoms"}
+    scale: probability
+    unit: "coded 1 = the normative pattern is consistent with DSPD symptoms"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "not an effect estimate; 1 codes the authors' stated conclusion"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      This is the authors' own framing and it is exactly the confound the task brief is worried about,
+      stated from the other direction: the population-level adolescent sleep pattern LOOKS like DSPD.
+      Consequence for the report: the weekday-short / weekend-long pattern establishes almost nothing
+      diagnostically. What discriminates is (1) sleep onset LATENCY when he tries to sleep,
+      (2) whether he can sleep at his desired time when free to choose, and (3) functional impairment.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "We note a worldwide delayed sleep-wake behavior pattern exists consistent with symptoms of Delayed Sleep Phase Disorder, which may be exacerbated by cultural factors."
+
+  - outcome_domain: circadian
+    outcome_construct: age_gradient_delay_restricts_school_night_sleep
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "direction of the age gradient in adolescent sleep timing and school-night sleep duration"}
+    scale: probability
+    unit: "coded 1 = sleep patterns delay with age and school-night sleep is restricted as a result"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "not an effect estimate; 1 codes the direction of the pooled age gradient. No coefficient is reported in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      Supports the mechanism: as adolescents get older their sleep timing delays and their school-night
+      sleep is squeezed. Our subject reports exactly this trajectory from 16 to 19. The gradient is
+      normative, so its presence does not distinguish a disorder from ordinary development.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Sleep patterns tended to delay with increasing age, restricting school-night sleep."
+
+  - outcome_domain: circadian
+    outcome_construct: regional_variation_asian_adolescents_later_bedtimes
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "regional differences: Asian vs North American/European adolescents"}
+    scale: probability
+    unit: "coded 1 = Asian adolescents had later bedtimes, less school-night sleep, more daytime sleepiness"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "not an effect estimate; 1 codes the reported direction. No pooled effect sizes are in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: |
+      Relevant as a caution about transportability of any prevalence prior: sleep timing and duration
+      in adolescents vary systematically by region, so priors drawn from Norwegian cohorts (my main
+      DSWPD sources) may not transport exactly. It also shows that the pattern responds to cultural
+      and scheduling pressure, i.e. it is partly environmental rather than purely constitutional.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Notably, Asian adolescents' bedtimes were later than peers from North America and Europe, resulting in less total sleep time on school nights and a tendency for higher rates of daytime sleepiness."
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: |
+    ABSTRACT-ONLY. I could not obtain the full text: no open-access copy exists (Unpaywall reports
+    is_oa false; OpenAlex found no repository copy), and the publisher version is paywalled. I
+    therefore have NO pooled point estimates with confidence intervals, NO forest plots, NO
+    heterogeneity statistics, and NO age-stratified weekday/weekend sleep-duration table -- which is
+    precisely the content the task brief hoped for from this paper. Everything above is taken from the
+    abstract's qualitative statements. On design grounds the review pools 41 heterogeneous
+    cross-sectional surveys with differing sleep definitions and question wording, and the authors
+    themselves flag "current methodological limitations and gaps in the literature", so a high
+    risk-of-bias rating is appropriate irrespective of my access problem.
+funding: "Not available (abstract-only retrieval)."
+notes: |
+  RECORDED BECAUSE IT SUPPLIES THE DECISIVE QUALITATIVE ARGUMENT, NOT A NUMBER. The task brief asked
+  specifically for "Gradisar's work" on DSWPD prevalence. Gradisar's 2011 meta-analysis is not a
+  prevalence study of DSWPD -- it is a meta-analysis of NORMAL adolescent sleep patterns, and its
+  central finding is that the normal pattern mimics the disorder. That is more useful to the report
+  than a prevalence figure would have been, because it explains why the subject's self-described
+  pattern cannot by itself move the posterior much.
+
+  For the DSWPD prevalence numbers the brief was after, see instead: sivertsen2021.yaml (4.7% in male
+  university students, self-reported ICSD-3 criteria), sivertsen2013.yaml (2.7% in boys aged 16-19,
+  ICSD-R criteria), saxvig2012.yaml (8.4% delayed sleep phase trait, 5.7% with impairment, ages 16-19),
+  danielsson2016.yaml (4.0% DSWPD by DSM-5, ages 16-26). Gradisar's contribution here is the
+  denominator argument, and gradisar2011rct.yaml is his contribution on the clinical phenotype and
+  treatment.
+
+  I attempted full-text retrieval via: Unpaywall API (is_oa false), Europe PMC (no PMCID), and OpenAlex
+  location list (no repository full text). Logged in screening_log.md as included at abstract tier.
+shard: "s19_sleep_disorders"

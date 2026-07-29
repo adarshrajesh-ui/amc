@@ -1,0 +1,167 @@
+study_id: fjell2023
+citation: "Fjell AM, Sorensen O, Wang Y, Amlien IK, Baare WFC, Bartres-Faz D, et al. No phenotypic or genotypic evidence for a link between sleep duration and brain atrophy. Nature Human Behaviour. 2023;7(11):2008-2022."
+doi: "10.1038/s41562-023-01707-5"
+pmid: "37798367"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10663160/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "No phenotypic or genotypic evidence for a link between sleep duration and brain atrophy"
+access_tier: full_text
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 47029
+n_studies_pooled: 8
+population:
+  age_mean: 63.4
+  age_range: [20, 89]
+  pct_female: null
+  country: "Multi-national (Norway, UK, Germany, Spain, Sweden, US)"
+  adolescent_match: poor_midlife
+effects:
+  # ---------- (1) THE LONGITUDINAL NULL: the single most decision-relevant estimate in this shard ----------
+  - outcome_domain: brain_structure
+    outcome_construct: cortical_thinning_rate_32_regions
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "self-reported habitual sleep duration, continuous, modelled as GAMM smooth vs RATE OF CHANGE in cortical thickness"}
+    scale: per_hour_beta
+    unit: "mm cortical thickness change per year per hour of sleep"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "NOT a computed point estimate. The authors report only F and FDR-adjusted P for the GAMM smooth term and state that no region reached p<0.05. Encoded as 0.0 to represent 'no detectable association'; se deliberately null because the paper publishes no numeric slope or standard error for the null. Downstream model must treat this as an informative null with n=8,153 scans, NOT as a precise zero."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no association between habitual sleep duration and RATE of cortical thinning. Harm would be negative (faster thinning in short sleepers); it was not observed in any of 32 regions."
+    covariates: ["baseline age", "sex", "scanner site", "follow-up time", "ICV"]
+    followup_years: 11.2
+    cohort_family: "Lifebrain_UKB_pooled"
+    quote: "For the 32 cortical regions, no significant relationships between sleep duration and cortical thinning, volume loss or area changes were found. As can be seen in Fig. 2 (right), for no region or metric was the P value smaller than 0.05."
+  - outcome_domain: brain_structure
+    outcome_construct: hippocampal_volume_change_rate
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "habitual sleep duration vs longitudinal hippocampal volume change, GAMM"}
+    scale: raw_units
+    unit: "F statistic for GAMM smooth term (sleep duration -> hippocampal change)"
+    value: 2.0
+    se: null
+    ci: null
+    conversion_formula: "Read directly from Table 2 (longitudinal column): F=2, e.d.f.=1.8, N=8,150, P=0.43. No slope reported."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Null. p=0.43 for any effect of sleep duration on hippocampal atrophy rate. Hippocampus is the structure most often invoked in the sleep-damage narrative."
+    covariates: ["baseline age", "sex", "scanner site", "follow-up time", "ICV"]
+    followup_years: 11.2
+    cohort_family: "Lifebrain_UKB_pooled"
+    quote: "Hippocampus | 2, 1.8, 8,150, 0.43"
+  # ---------- (2) CROSS-SECTIONAL OPTIMUM: sleep duration at MAXIMUM volume/thickness ----------
+  - outcome_domain: brain_structure
+    outcome_construct: sleep_duration_at_max_volume_and_thickness_metaanalytic
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "meta-analytic sleep duration associated with largest subcortical volume, thickest cortex, smallest ventricles (cross-sectional)"}
+    scale: hours
+    unit: "hours of self-reported sleep at the volumetric/thickness optimum"
+    value: 6.5
+    se: 0.408
+    ci: [5.7, 7.3]
+    conversion_formula: "se = (7.3 - 5.7)/3.92 = 0.408"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "This is a PEAK LOCATION, not a harm estimate. 6.5 h is the cross-sectional optimum; the subject's 5-6 h weekday sleep sits just below the lower 95% bound (5.7 h). Critically, this is BELOW current 8-10 h adolescent recommendations."
+    covariates: ["age", "sex", "site", "ICV", "SES (sensitivity)", "BMI (sensitivity)", "depressive symptoms (sensitivity)"]
+    followup_years: null
+    cohort_family: "Lifebrain_UKB_pooled"
+    quote: "A sleep duration of 6.5 hours was associated with the maximum subcortical volume, the smallest ventricles and the thickest cortex. The critical values, as defined by the 95% confidence interval (CI), were 5.7 and 7.3 hours."
+  - outcome_domain: brain_structure
+    outcome_construct: sleep_duration_at_max_hippocampal_volume
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "cross-sectional sleep duration at maximum hippocampal volume"}
+    scale: hours
+    unit: "hours"
+    value: 6.3
+    se: 0.5
+    ci: [4.7, 7.1]
+    conversion_formula: "Table 3, s.e. reported directly by authors"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Peak location. Hippocampal volume peaks at 6.3 h cross-sectionally; the CI extends down to 4.7 h."
+    covariates: ["age", "sex", "site", "ICV"]
+    followup_years: null
+    cohort_family: "Lifebrain_UKB_pooled"
+    quote: "Hippocampus | 6.3 (0.5) | 4.7, 7.1 | 0.00 | 2.96 | 51,279 | 13.72"
+  - outcome_domain: brain_structure
+    outcome_construct: sleep_duration_at_max_cerebral_white_matter_volume
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "cross-sectional sleep duration at maximum cerebral white matter volume"}
+    scale: hours
+    unit: "hours"
+    value: 4.6
+    se: 0.8
+    ci: [4.0, 6.3]
+    conversion_formula: "Table 3, s.e. reported directly"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Peak location. White matter volume peaks at 4.6 h - i.e. cross-sectionally, VERY short sleepers have the largest white matter compartments. This is biologically implausible as a causal dose-response and is the clearest signal in the dataset that these cross-sectional gradients are confounded/stable-trait, not damage."
+    covariates: ["age", "sex", "site", "ICV"]
+    followup_years: null
+    cohort_family: "Lifebrain_UKB_pooled"
+    quote: "Cerebral white matter | 4.6 (0.8) | 4.0, 6.3 | 1.2 x 10-5 | 2.29 | 51,280 | 11.25"
+  # ---------- (3) MENDELIAN RANDOMIZATION ----------
+  - outcome_domain: brain_structure
+    outcome_construct: mr_causal_effect_sleep_duration_on_any_mri_measure
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "genetically instrumented sleep duration -> MRI-derived brain measures (two-sample MR)"}
+    scale: per_hour_beta
+    unit: "SD brain measure per genetically instrumented hour of sleep"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded null. Authors report no significant causal effect surviving correction and publish no point estimate in the main text; the reverse direction (ICV -> sleep duration) WAS supported."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no genetic evidence that sleep duration causes brain structural change. Note the reverse direction was supported: larger ICV -> longer reported sleep, which is a direct demonstration of reverse causation in this literature."
+    covariates: ["BMI", "smoking", "drinking", "neuropsychiatric disorders"]
+    followup_years: null
+    cohort_family: "Lifebrain_UKB_pooled"
+    quote: "However, there was no evidence of causal effects of sleep duration on any MRI-derived brain measure. ... the MR analyses showed an effect of ICV on sleep duration, an effect that was robust after accounting for confounding factors"
+rob:
+  tool: MR-STROBE
+  judgement: low
+  notes: "Largest and best-designed study in this domain. Strengths: 8,153 longitudinal scans, 51,295 cross-sectional observations, pre-specified GAMM approach, FDR correction, MR triangulation, sensitivity analyses for SES/BMI/depression. Weaknesses for OUR question: (a) self-reported sleep duration; (b) age range 20-89, mean 63.4 - contains NO adolescents, so cannot speak to a developmental window; (c) GWAS stratification underpowered; (d) no actigraphy; (e) no quantitative head-motion measure."
+funding: "European Union Horizon 2020 (Lifebrain); Research Council of Norway; ERC; Medical Research Council; NIMH; Wellcome Trust"
+notes: |
+  KEYSTONE RECORD FOR THE PERMANENCE QUESTION. Three findings, in descending order of
+  decision-relevance for a 19-year-old worried about permanent structural damage:
+
+  1. LONGITUDINAL NULL. With 8,153 repeat scans over up to 11.2 years, habitual sleep duration
+     predicted the rate of change in NO cortical region, on NO metric (thickness, area, volume).
+     If short sleep drove progressive structural loss, this design should see it.
+
+  2. THE CROSS-SECTIONAL GRADIENT POINTS THE "WRONG" WAY. The volumetric optimum is 6.5 h
+     (95% CI 5.7-7.3), i.e. BELOW the recommended adolescent range, and cerebral white matter
+     peaks at 4.6 h. Sleeping less than recommended was associated with THICKER cortex and
+     GREATER relative volumes. Moderately long sleep looked worse than very short sleep.
+     Any narrative that reads cross-sectional volume differences as sleep damage has to explain
+     why the gradient inverts.
+
+  3. STATE-VS-TRAIT, STATED BY THE AUTHORS. They argue explicitly that cross-sectional
+     sleep-volume correlations index stable early-developmental/lifelong factors rather than
+     brain change: "inter-individual brain volumetric differences even in adults mainly reflect
+     early developmental processes... Cross-sectional sleep-volume relationships therefore
+     represent mostly stable factors, not brain changes."
+
+  TRANSPORTABILITY CAVEAT (must be applied downstream): this cohort is adults aged 20-89
+  (mean 63.4). It rules out sleep-driven ATROPHY in the adult brain. It does NOT directly test
+  whether sleep restriction perturbs an ongoing MATURATIONAL trajectory at 16-19. The
+  authors concede this: "the long-term consequences on the brain from sleep deprivation,
+  taking adaptations into account, are not known." Treat as strong evidence against the
+  degeneration mechanism and weak-to-moderate evidence against the developmental mechanism.
+
+  Additional verbatim support for the state-vs-trait reading:
+  "Sleep duration-brain correlations were seen in the cross-sectional analyses only, so it is
+  unlikely that these are caused by neurobiological events underlying morphometric changes
+  observable with MRI during adulthood."
+shard: "s15_brain_structure"

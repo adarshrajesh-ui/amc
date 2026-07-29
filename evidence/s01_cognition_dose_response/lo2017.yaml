@@ -1,0 +1,183 @@
+study_id: lo2017
+citation: "Lo JC, Lee SM, Teo LM, Lim J, Gooley JJ, Chee MWL. Neurobehavioral Impact of Successive Cycles of Sleep Restriction With and Without Naps in Adolescents. Sleep. 2017;40(2):zsw042."
+doi: "10.1093/sleep/zsw042"
+pmid: "28364507"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5806570/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Neurobehavioral Impact of Successive Cycles of Sleep Restriction With and Without Naps in Adolescents"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 83
+n_studies_pooled: null
+population:
+  age_mean: 16.6
+  age_range: [15, 19]
+  pct_female: 49.4
+  country: "Singapore"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_linear_accumulation_within_week
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 5,
+               contrast_label: "5h TIB nights M11-M15 (a simulated school week) vs 9h TIB control, adolescents"}
+    scale: raw_units
+    unit: "F statistic for the three-group x day interaction on PVT lapses"
+    value: 8.02
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: 'Changes in sustained attention, as indexed by the number
+      of PVT lapses, differed significantly among the three groups (group x day interaction:
+      F = 8.02, p < .001).' Degrees of freedom not printed in the results sentence, so no standardised
+      effect is derivable; se: null. The shape statement is what matters here: 'lapses increased in
+      the no nap group after the second night of 5-hr sleep opportunity (akin to a \"Tuesday\",
+      p < .001). The increase in lapses continued LINEARLY until the end of the first sleep
+      restriction period (like a \"Friday\").' Onset is therefore night 2 and accumulation is linear
+      across a school week - no plateau."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "larger F = stronger restriction x time effect; lapses rose linearly across nights"
+    covariates: ["baseline performance"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+  - outcome_domain: recovery
+    outcome_construct: rate_of_deterioration_faster_on_reexposure
+    exposure: {type: weekend_catchup, dose_h: 9, referent_h: 9, duration_days: 2,
+               contrast_label: "second week of 5h TIB vs first week, after 2 nights of 9h TIB catch-up"}
+    scale: raw_units
+    unit: "p-value for the week-2 vs week-1 contrast at matched protocol position"
+    value: 0.02
+    se: null
+    ci: null
+    conversion_formula: "Verbatim: 'On reexposure to sleep restriction, the number of lapses in the no
+      nap group not only increased relative to the end of the previous recovery period (i.e., \"Monday\"
+      vs \"the Sunday before,\" p < .001) but was also worse than at the end of the first sleep
+      restriction period (i.e., worse this \"Monday\" than last \"Friday,\" p = .02). Furthermore, the
+      rate of deterioration was faster during the second period of sleep restriction than the first
+      period.' Value recorded is the Monday-vs-previous-Friday p. NO effect size is printed.
+      SENTINEL FINDING FOR THE MODEL: the accumulation SLOPE itself steepens on re-exposure, so a
+      3-year exposure cannot be modelled as a fixed-slope repetition of one week."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "week 2 was worse than week 1 and deteriorated faster; catch-up sleep did not reset"
+    covariates: ["baseline performance"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+  - outcome_domain: recovery
+    outcome_construct: incomplete_recovery_after_two_catchup_nights
+    exposure: {type: recovery_sleep, dose_h: 9, referent_h: 9, duration_days: 2,
+               contrast_label: "2 nights at 9h TIB after 5 nights at 5h TIB, adolescents"}
+    scale: raw_units
+    unit: "p-value for PVT lapses at the end of recovery vs baseline"
+    value: 0.001
+    se: null
+    ci: null
+    conversion_formula: "Verbatim: 'After the first night of recovery sleep, the number of lapses in
+      the no nap group dropped significantly (p = .004) but still remained above baseline (p < .001).
+      Even a second night of recovery sleep did not offer additional benefit (p = .62). Thus, after
+      two nights of recovery sleep, simulating extended sleep on weekends, sustained attention did not
+      fully recover.' Recorded value is the p for still-above-baseline. Note the SECOND recovery night
+      added nothing (p = .62), i.e. the recovery function itself saturates fast and incompletely -
+      two weekend nights are not equivalent to two nights' worth of repayment."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "residual deficit persists; second catch-up night adds no further benefit"
+    covariates: ["baseline performance"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+  - outcome_domain: cognition
+    outcome_construct: onset_latency_by_cognitive_domain
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 5,
+               contrast_label: "nights of 5h TIB before a deficit becomes detectable, no-nap arm"}
+    scale: raw_units
+    unit: "nights of restriction to first significant deviation from baseline (PVT lapses)"
+    value: 2.0
+    se: null
+    ci: null
+    conversion_formula: "PVT lapses deviated from baseline after the SECOND restricted night in the
+      no-nap arm ('after the second night of 5-hr sleep opportunity ... p < .001'), whereas the nap
+      arm held out until the third ('the nap group only started showing an increase in lapses from
+      baseline after the third sleep restriction night, p = .004'). In the companion NFS1 sample
+      (lo2016) working memory and SART only declined after 4 nights. Vigilance is therefore the
+      earliest-onset domain, by roughly 2 nights."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "smaller = earlier onset; PVT lapses are the earliest detectable objective deficit"
+    covariates: ["baseline performance"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomised to nap vs no-nap with residential control and PSG; arms balanced on age, sex,
+    BMI, caffeine, chronotype, daytime sleepiness, chronic sleep reduction and actigraphic habitual
+    sleep. Concerns: the 9 h control arm is a HISTORICAL control carried over from NFS1 (lo2016)
+    rather than concurrently randomised, so the control contrast is quasi-experimental even though
+    the nap/no-nap contrast is randomised; the nap-vs-no-nap randomisation is not the contrast of
+    primary interest for this shard; per-arm means/SDs are not tabulated, only F and p."
+funding: "National Medical Research Council Singapore (NMRC/STaR/015/2013);
+  National Research Foundation (NRF2016-SOL002-001); Far East Organization"
+notes: |
+  NEED FOR SLEEP STUDY 2 (NFS2). The single best experimental simulation of the target subject's
+  actual weekly pattern: two consecutive simulated school weeks of 5 h TIB with weekend catch-up
+  in between, in 15-19 year olds.
+
+  DESIGN: 15-day residential protocol. 2 baseline nights at 9 h TIB, then cycle 1 = five nights at
+  5 h TIB (01:00-06:00, M11-M15) + two recovery nights at 9 h TIB (R11-R12), then cycle 2 = three
+  nights at 5 h TIB (M21-M23) + two recovery nights. Randomised to a 1-h nap at 14:00 after each
+  restricted night (n=29) or no nap (n=28); 26 participants given 9 h TIB nightly in NFS1 serve as
+  the control arm. Battery 3x/day (10:00, 15:45, 20:00).
+
+  THREE FINDINGS THE MODEL NEEDS
+  1. Within a week, PVT lapses rise LINEARLY from night 2 to night 5 - no plateau, matching
+     Van Dongen 2003 (theta=0.78) and contradicting a fast-adaptation model.
+  2. Two nights of 9 h weekend catch-up do NOT restore baseline, and the second catch-up night adds
+     nothing beyond the first (p = .62). Recovery is fast-then-flat and incomplete.
+  3. The SLOPE of deterioration is steeper in week 2 than week 1, and week 2 starts from a worse
+     level than week 1 ended. Repeated weekly cycles therefore ratchet, which is the central
+     structural question for a 3-year exposure. This must be encoded as a slowly rising offset or a
+     slope multiplier, not as an independent repetition of one week.
+
+  KEY VERBATIM QUOTES
+  Abstract: "Participants who were not allowed to nap showed progressive decline in sustained
+  attention that did not return to baseline after two nights of recovery sleep. Exposure to the second
+  period of sleep restriction increased the rate of vigilance deterioration. Similar patterns were
+  found for other neurobehavioral measures. Napping attenuated but did not eliminate performance
+  decline. These findings contrasted with the stable performance of adolescents, given 9-hr TIB each
+  night in our recent study."
+  Conclusions: "Adolescents' neurobehavioral functions may not adapt to successive cycles of sleep
+  curtailment and recovery. In sleep-restricted adolescents, weekend 'catch-up sleep,' even when
+  combined with napping during weekdays, is inferior to receiving a 9-hr sleep opportunity each night."
+  Linear accumulation and onset: "Changes in sustained attention, as indexed by the number of PVT
+  lapses, differed significantly among the three groups (group x day interaction: F = 8.02, p < .001).
+  While performance remained relatively stable for the control group, lapses increased in the no nap
+  group after the second night of 5-hr sleep opportunity (akin to a 'Tuesday,' p < .001; Figure 2A).
+  The increase in lapses continued linearly until the end of the first sleep restriction period (like
+  a 'Friday')."
+  Incomplete and saturating recovery: "After the first night of recovery sleep, the number of lapses in
+  the no nap group dropped significantly (p = .004) but still remained above baseline (p < .001). Even
+  a second night of recovery sleep did not offer additional benefit (p = .62). Thus, after two nights
+  of recovery sleep, simulating extended sleep on weekends, sustained attention did not fully recover."
+  Ratcheting across weeks: "On reexposure to sleep restriction, the number of lapses in the no nap
+  group not only increased relative to the end of the previous recovery period (i.e., 'Monday' vs 'the
+  Sunday before,' p < .001) but was also worse than at the end of the first sleep restriction period
+  (i.e., worse this 'Monday' than last 'Friday,' p = .02). Furthermore, the rate of deterioration was
+  faster during the second period of sleep restriction than the first period. Finally, although the
+  second recovery sleep period resulted in a prominent drop in the number of lapses (p < .001),
+  sustained attention did not return to baseline levels, and remained at the level observed at the
+  beginning of the second sleep restriction period (p = .57)."
+  Other domains ratchet too, and a domain can look 'recovered' yet be sensitised: "The cumulative
+  effect of repeated exposure to sleep restriction was also observed, albeit to a lesser extent, for
+  other neurobehavioral measures. ... Strikingly, although working memory/executive function (i.e., A'
+  in the 3-back performance) did return to baseline level after two nights of recovery sleep, a faster
+  rate of decline was observed upon reexposure to sleep restriction."
+  Real-world framing from the significance statement: "Simulating 2 school weeks, the present study
+  demonstrated that the negative effects of weekday sleep restriction on neurobehavioral function
+  cumulated and were incompletely reversed by weekend catch-up sleep. Deficits were compounded by a
+  second successive period of sleep restriction, indicating failure to adapt to successive cycles of
+  sleep restriction."
+shard: "s01_cognition_dose_response"

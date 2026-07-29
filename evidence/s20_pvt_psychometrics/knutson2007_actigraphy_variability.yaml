@@ -1,0 +1,205 @@
+study_id: knutson2007_actigraphy_variability
+citation: "Knutson KL, Rathouz PJ, Yan LL, Liu K, Lauderdale DS. Intra-individual daily and yearly variability in actigraphically recorded sleep measures: the CARDIA study. Sleep. 2007;30(6):793-796."
+doi: "10.1093/sleep/30.6.793"
+pmid: "17580601"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC1978344/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Intra-Individual Daily and Yearly Variability in Actigraphically Recorded Sleep Measures: the CARDIA Study"
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 669
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [38, 50]
+  pct_female: 57.0
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  # ===== THE LOAD-BEARING NUMBER FOR PART C9 =====
+  - outcome_domain: exposure_measurement
+    outcome_construct: within_person_night_to_night_sd_of_actigraphic_sleep_duration
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: null
+      contrast_label: "within-subject DAILY (night-to-night) standard deviation of actigraphic sleep duration, from a variance decomposition into between-subject / within-subject-yearly / within-subject-daily components, adjusted for age, race, sex and weekend nights"
+    scale: hours
+    unit: "hours (within-person night-to-night SD of sleep duration)"
+    value: 1.26
+    se: null
+    ci: null
+    conversion_formula: "Reported directly in Table 2 (row 'Sleep Duration (hr)', column 'Within-subject daily standard deviation'): 1.26. Coefficient of variation 0.21. No SE is given for the variance component itself, so se: null (never invent an SE)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Not a harm. This is a MEASUREMENT-NOISE parameter: the SD of one person's sleep duration across nights within a year. Larger = a single night's measurement is a worse estimate of habitual duration, and MORE nights are required."
+    covariates: ["age", "race", "sex", "weekend night indicator"]
+    followup_years: 0.93
+    cohort_family: CARDIA
+  - outcome_domain: exposure_measurement
+    outcome_construct: between_person_sd_of_actigraphic_sleep_duration
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: null
+      contrast_label: "between-subject standard deviation of actigraphic sleep duration in the same variance decomposition"
+    scale: hours
+    unit: "hours (between-person SD of sleep duration)"
+    value: 0.70
+    se: null
+    ci: null
+    conversion_formula: "Table 2, row 'Sleep Duration (hr)', column 'Between-subject standard deviation': 0.70. CV 0.12."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Not a harm. Needed as the numerator of the single-night ICC. Note it is SMALLER than the within-person daily SD (0.70 < 1.26), which is the paper's central point."
+    covariates: ["age", "race", "sex", "weekend night indicator"]
+    followup_years: 0.93
+    cohort_family: CARDIA
+  - outcome_domain: exposure_measurement
+    outcome_construct: single_night_icc_for_actigraphic_sleep_duration_derived
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: 1
+      contrast_label: "intraclass correlation of a SINGLE night of actigraphic sleep duration, derived from the reported variance components"
+    scale: raw_units
+    unit: "ICC (proportion of variance between persons)"
+    value: 0.236
+    se: null
+    ci: null
+    conversion_formula: "MY DERIVATION, not reported by the authors: ICC(1 night) = sigma_between^2 / (sigma_between^2 + sigma_within_daily^2) = 0.70^2 / (0.70^2 + 1.26^2) = 0.4900 / (0.4900 + 1.5876) = 0.4900/2.0776 = 0.2358. Uses only the two reported Table 2 SDs; ignores the within-subject YEARLY component (0.39 h), which is appropriate when the target is the person's mean within a single measurement window."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more reliable. 0.236 is POOR: about 76% of the variance in a single night's actigraphic sleep duration is within-person noise rather than stable individual signal. A one-night or even three-night estimate of habitual sleep duration is close to useless."
+    covariates: ["age", "race", "sex", "weekend night indicator"]
+    followup_years: 0.93
+    cohort_family: CARDIA
+  - outcome_domain: exposure_measurement
+    outcome_construct: nights_needed_for_icc_0_8_habitual_sleep_duration_derived
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: null
+      contrast_label: "number of nights of actigraphy required for a Spearman-Brown reliability of 0.80 for habitual sleep duration"
+    scale: raw_units
+    unit: "nights"
+    value: 13.0
+    se: null
+    ci: null
+    conversion_formula: "MY DERIVATION via Spearman-Brown, k = R(1 - r) / (r(1 - R)) with r = ICC(1 night) = 0.2358: k = 0.80*(1-0.2358) / (0.2358*(1-0.80)) = 0.61136/0.047160 = 12.96 -> 13 nights. Companion values: R=0.70 needs k = 0.70*0.7642/(0.2358*0.30) = 7.56 -> 8 nights; R=0.90 needs k = 0.90*0.7642/(0.2358*0.10) = 29.16 -> 30 nights."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more nights of monitoring needed. 13 nights for R=0.80 is the reliability-based answer for Part C9 and is the reason the protocol should run 14 nights of actigraphy, not 7."
+    covariates: []
+    followup_years: null
+    cohort_family: CARDIA
+rob:
+  tool: Newcastle-Ottawa
+  judgement: low
+  notes: "Large (n = 669), population-based CARDIA ancillary study with two measurement occasions ~1 year apart and an explicit three-way variance decomposition - this is the right design for the question and the estimates are precise. TWO IMPORTANT LIMITATIONS FOR OUR USE: (1) age 38-50 y, so adolescent_match is poor_midlife; adolescents and young adults have MORE socially-driven night-to-night variability (weekday/weekend swings), so 1.26 h is likely an UNDERESTIMATE of the night-to-night SD in an 18-year-old college student. (2) Only 3 nights per occasion (mostly Wed/Thu/Fri), so the daily variance component is estimated from a narrow, mostly-weekday window; the authors adjusted for weekend nights in the mean model but the design cannot fully characterise weekend structure."
+funding: "NIH / NHLBI (CARDIA)"
+notes: |
+  ===== PART C9: THE QUANTITATIVE BASIS FOR "HOW MANY NIGHTS OF ACTIGRAPHY?" =====
+  This is the record that makes the actigraphy-nights requirement a calculation rather than a
+  convention. Everything else in Part C9 (Acebo 1999, Aili 2017, AASM 2018) gives night COUNTS;
+  Knutson gives the VARIANCE COMPONENTS from which any night count can be derived for any target.
+
+  VERBATIM QUOTES
+  ---------------
+  Abstract:
+  "For each sleep parameter, total variance was decomposed into between-subject variance, within
+  subject variance from day to day, and within-subject variance from year to year. The standard
+  deviation was calculated from the variance. Analysis yielded a within-subject daily standard
+  deviation (SD) of 1.26 hours and a within-subject yearly SD of 0.39 hours for sleep duration."
+  "For each of the 4 sleep characteristics, nightly variability was much greater than yearly
+  variability, meaning sleep behavior changes little in one year in this cohort of early middle-aged
+  adults, despite large daily fluctuations. These results have important methodological implications,
+  including that single-day measures of sleep may not accurately reflect habitual behavior."
+
+  TABLE 2 VERBATIM (columns: Year-to-Year Correlation | Between-subject SD | Within-subject yearly SD |
+  Within-subject daily SD; all models adjust for age, race, sex, and weekend nights, n = 667):
+      Time in Bed (hr)      0.67 | 0.74 | 0.52 | 1.31   (CVs: 0.10 | 0.07 | 0.17)
+      Sleep Duration (hr)   0.76 | 0.70 | 0.39 | 1.26   (CVs: 0.12 | 0.06 | 0.21)
+      Sleep Latency (min)   0.93 | 22.2 |  6.3 | 30.7   (CVs: 0.98 | 0.28 | 1.36)
+      Sleep Efficiency (%)  0.90 |  8.1 |  2.7 |  8.4   (CVs: 0.10 | 0.03 | 0.10)
+
+  The interpretive sentence that matters most:
+  "For all the sleep variables, the largest standard deviation was for within-subject daily variance.
+  This means that the greatest amount of variance in these 3 sleep variables was explained by
+  day-to-day variability."
+  "The within-subject daily standard deviation expresses the degree to which the sleep measure varies
+  from day to day for a given subject in a given year. For example, the daily standard deviation was
+  over an hour for both sleep duration and time in bed, and it was 31 minutes for sleep latency. This
+  means that individuals differ more from day to day than they do from each other."
+
+  Recommendation:
+  "However, day-to-day variation within subjects is very large; therefore, it is recommended that
+  researchers record multiple days when measuring sleep characteristics. A single day will be a very
+  "noisy" measure and only weakly reflect the multiple-day within-subject averages, whereas a
+  multiple-day average likely reflects a true average over a longer observation window, such as one
+  year."
+
+  Weekend adjustment (important - the 1.26 h is a RESIDUAL, not a raw, night-to-night SD):
+  "In addition, as these data typically included one weekend night for each subject, which may increase
+  within-subject daily variability, we included a variable in the mean model identifying weekend days
+  to adjust for weekend effects."
+
+  Measurement protocol (a usable template):
+  "Each occasion included 3 days of wrist actigraphy (Actiwatch, Mini Mitter, Inc) and accompanying
+  sleep log. ... The Actiwatch model used has an event marker button to record specific times, and we
+  asked the participants to press this button each night when they began to try to fall asleep and
+  again when they got out of bed each morning. The subjects were instructed to wear the Actiwatches
+  from a Wednesday afternoon to a Saturday morning."
+
+  ===== ALL ARITHMETIC I PERFORMED (reproduce with these lines) =====
+  Inputs (Table 2, sleep duration): sigma_between = 0.70 h ; sigma_within_daily = 1.26 h
+
+  (A) SINGLE-NIGHT ICC
+      ICC(1) = 0.70^2 / (0.70^2 + 1.26^2) = 0.4900 / 2.0776 = 0.2358
+
+  (B) RELIABILITY ROUTE (Spearman-Brown): k = R(1-r) / (r(1-R)), r = 0.2358
+      R = 0.70 -> k =  7.56 -> 8 nights
+      R = 0.80 -> k = 12.96 -> 13 nights
+      R = 0.90 -> k = 29.16 -> 30 nights
+
+  (C) PRECISION ROUTE (standard error of THIS person's own mean): SEM(k) = 1.26/sqrt(k)
+      k =  1 -> 1.260 h = 75.6 min   (95% CI half-width 148.2 min)
+      k =  3 -> 0.727 h = 43.6 min   (95% CI half-width  85.5 min)
+      k =  5 -> 0.563 h = 33.8 min   (95% CI half-width  66.3 min)
+      k =  7 -> 0.476 h = 28.6 min   (95% CI half-width  56.0 min)
+      k = 14 -> 0.337 h = 20.2 min   (95% CI half-width  39.6 min)
+      k = 21 -> 0.275 h = 16.5 min   (95% CI half-width  32.3 min)
+      k = 28 -> 0.238 h = 14.3 min   (95% CI half-width  28.0 min)
+      Inverting: SEM <= 30 min needs k >=  6.35 ->  7 nights
+                 SEM <= 20 min needs k >= 14.29 -> 15 nights
+                 SEM <= 15 min needs k >= 25.40 -> 26 nights
+                 SEM <= 10 min needs k >= 57.15 -> 58 nights
+
+  WHICH ROUTE IS THE RIGHT ONE FOR AN N-OF-1?
+  Route (C). The reliability/ICC route (B) answers "how many nights to RANK PEOPLE reliably", which is
+  a between-person question and depends on sigma_between - a quantity that is irrelevant when there is
+  only one person. For a single subject the question is "how precisely do I know HIS mean?", which is
+  route (C) and depends only on his own night-to-night SD. Both routes are reported because the
+  published literature (Acebo, Aili, AASM) is phrased in route-(B) terms and the report needs to
+  reconcile with it. Conveniently they converge on the same practical answer: 13 nights (route B,
+  R=0.80) and 15 nights (route C, SEM <= 20 min) both round to "two full weeks".
+
+  A CAVEAT THE REPORT MUST STATE
+  The index subject has a large, SYSTEMATIC weekday/weekend split (weekday ~5-6 h, weekend ~7-8 h).
+  Knutson's 1.26 h is a weekend-ADJUSTED residual SD, so it does not include that systematic component.
+  Consequently: (a) 14 nights must be a whole number of weeks (exactly 10 weekday + 4 weekend nights)
+  so the weekday/weekend mix is balanced, and (b) weekday mean and weekend mean should be estimated
+  and reported SEPARATELY, not collapsed into one "habitual duration". With only 10 weekday nights in
+  a 14-night window, SEM(weekday mean) = 1.26/sqrt(10) = 0.398 h = 23.9 min - which is another reason
+  to prefer 28 nights (20 weekday nights, SEM 16.9 min) if the subject will tolerate it.
+shard: "s20_pvt_psychometrics"

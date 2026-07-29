@@ -1,0 +1,103 @@
+study_id: jin_ziebarth2020
+citation: "Jin L, Ziebarth NR. Sleep, health, and human capital: Evidence from daylight saving time. Journal of Economic Behavior & Organization. 2020;170:174-192."
+doi: "10.1016/j.jebo.2019.12.003"
+pmid: null
+url: "https://www.york.ac.uk/media/economics/documents/hedg/workingpapers/1527.pdf"
+verification:
+  crossref_ok: true
+  pubmed_ok: null
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep, health, and human capital: Evidence from daylight saving time"
+access_tier: full_text
+secondhand_via: "numbers read from the authors' working-paper versions (HEDG WP 15/27, University of York; IZA DP 9088); journal, volume and pages verified against Crossref for the published JEBO article"
+design: quasi_experiment
+tier: T2
+n: 3400000
+n_studies_pooled: null
+population:
+  age_mean: 45.0
+  age_range: [18, 99]
+  pct_female: null
+  country: "US and Germany"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: cardiovascular
+    outcome_construct: cardiovascular_hospital_admissions_per_million_per_day
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: null, duration_days: 4, contrast_label: "end of DST ('fall back'): one extra hour of sleep opportunity in a single night, effects measured over the following 4 days"}
+    scale: raw_units
+    unit: "cardiovascular hospital admissions per day per million population"
+    value: -10.0
+    se: null
+    ci: null
+    conversion_formula: "reported directly in the published abstract; no SE given in the abstract and I did not extract the corresponding table cell, so se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = FEWER cardiovascular admissions when people gain an hour of sleep, i.e. extra sleep is protective. Sign is beneficial for the subject."
+    covariates: ["day-of-year", "day-of-week", "year effects", "event-study specification around the transition"]
+    followup_years: null
+    cohort_family: German_hospital_census
+    quote: "First, we show that setting clocks back by one hour in the middle of the night significantly extends people's sleep duration. In addition, we find significant health benefits via sharp reductions in hospital admissions. For example, hospitalizations due to cardiovascular diseases decrease by ten per day, per one million population."
+  - outcome_domain: cardiovascular
+    outcome_construct: heart_admissions_per_100000_weekly_aggregate
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "end of DST 'fall back', average daily effect over the following week"}
+    scale: raw_units
+    unit: "heart admissions per 100,000 population per day"
+    value: -0.72
+    se: null
+    ci: null
+    conversion_formula: "reported coefficient estimate of -0.72*** in column (2) of Table 4 of the working paper (average daily effect over the week following fall DST); the authors note multiplying by 7 gives ~5 fewer admissions per 100,000 over the week. Significance stars indicate p<0.01 but the SE cell was not extracted."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = fewer heart admissions with extra sleep"
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: German_hospital_census
+    quote: "One obtains exactly the same figure when multiplying the coefficient estimate of -0.72*** in column (2) of Table 4 by 7 (days)."
+  - outcome_domain: cognition
+    outcome_construct: unintentional_daytime_sleep_episodes_probability
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: null, duration_days: 4, contrast_label: "end of DST 'fall back', self-reported outcomes days 1-4 after transition, BRFSS"}
+    scale: probability
+    unit: "direction only; magnitude not extracted"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "NO MAGNITUDE EXTRACTED. Value -1.0 is a placeholder sign indicator only (negative = fewer involuntary sleep episodes, i.e. improvement) because the schema requires a numeric value. DO NOT POOL."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "PLACEHOLDER SIGN ONLY. negative = fewer unintentional daytime sleep episodes after gaining an hour of sleep. Confirms the first stage bites on daytime function. EXCLUDE FROM POOLING."
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: BRFSS
+    quote: "We also provide direct evidence that the share of people who report having unintentionally fallen asleep during the day decreases significantly between days 1 to 4 after the time change."
+rob:
+  tool: ROBINS-I
+  judgement: low
+  notes: "Very large administrative and survey samples, daily event-study design around a sharp and universally imposed time change, placebo outcomes with weak or no sleep link tested, and asymmetric spring/fall analysis that helps distinguish sleep from other DST effects. The limitation for this shard is that the outcomes are health, not academic, and the exposure is one night."
+funding: "Not stated in retrieved working papers"
+notes: |
+  IDENTIFYING ASSUMPTION: the exact date of the DST transition is set by statute and is exogenous to
+  individual health, so comparing days just before and just after the transition (with day-of-week,
+  day-of-year and year controls) isolates the effect of a one-hour change in sleep opportunity. This is
+  HIGHLY PLAUSIBLE. The authors strengthen it by (a) running an event study that shows the effect appears
+  and disappears with a characteristic four-day window rather than drifting, (b) testing placebo outcomes
+  that should not respond to sleep, and (c) contrasting the spring and fall transitions, finding the
+  asymmetry (fall benefits large, spring harms small) that behavioural adjustment predicts.
+  WHY IT IS IN THIS SHARD DESPITE HAVING NO ACADEMIC OUTCOME: the task asked for it, and it is the best
+  available quasi-experimental demonstration that a ONE-HOUR change in sleep opportunity for the ALREADY
+  SLEEP-DEPRIVED produces measurable real-world harm within days. Our subject is chronically at 5-6 h on
+  weekdays, i.e. squarely in the population for whom Jin & Ziebarth find effects. It therefore supports the
+  premise that the marginal hour matters at the short end of the distribution, which is a load-bearing
+  assumption for the whole exercise.
+  CRITICAL LIMITATION - THE EXPOSURE IS ONE NIGHT AND THE EFFECT DECAYS IN FOUR DAYS. The finding is
+  explicitly transient: "we find that the effect persists for four days after the time shift". This is
+  evidence about acute sleep, not about three years of accumulated debt. Do not extrapolate the health
+  magnitudes to a chronic exposure.
+  ASYMMETRY FINDING WORTH RECORDING: the companion analysis finds little evidence of harm from the SPRING
+  transition ("we do not find much evidence that population health significantly decreases when clocks are
+  set forth by one hour in spring... The most likely explanation for the asymmetric effects are behavioral
+  adjustments by marginal people in spring"). So the paper is really about the benefit of sleep EXTENSION
+  for the deprived, not the harm of sleep loss.
+  POPULATION: general adult populations (up to 3.4 million BRFSS respondents; 160 million German hospital
+  admissions over a decade). Not adolescents. I record n = 3,400,000 for the BRFSS side.
+shard: "s04_academic_natural_experiments"

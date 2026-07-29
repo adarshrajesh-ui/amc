@@ -1,0 +1,93 @@
+=== OBSERVATIONAL: log-OR / log-RR ===
+zhai2015 short sleep -> depression (adults, RR)            log=+0.27003 se=0.11619 ci=[+0.03922,+0.49470]
+zhai2015 long sleep -> depression (adults, RR)             log=+0.35066 se=0.15640 ci=[+0.03922,+0.65233]
+short2020 overall mood deficit (adolescents)               log=+0.43825 se=0.03780 ci=[+0.36464,+0.51282]
+short2020 depressed mood                                   log=+0.48243 se=0.07477 ci=[+0.32208,+0.61519]
+short2020 anxiety                                          log=+0.34359 se=0.04519 ci=[+0.25464,+0.43178]
+short2020 anger                                            log=+0.60432 se=0.09014 ci=[+0.41211,+0.76547]
+short2020 positive affect                                  log=+0.70310 se=0.10238 ci=[+0.48243,+0.88377]
+short2020 experimental subgroup                            log=+0.54232 se=0.07296 ci=[+0.39204,+0.67803]
+short2020 cross-sectional subgroup                         log=+0.35066 se=0.03960 ci=[+0.27003,+0.42527]
+short2020 covariates=none                                  log=+0.51282 se=0.05692 ci=[+0.39204,+0.61519]
+short2020 covariates=others (max adjusted)                 log=+0.24686 se=0.03994 ci=[+0.16551,+0.32208]
+marino2021 disturbed sleep -> depression (youth OR)        log=+0.40547 se=0.14565 ci=[+0.12222,+0.69315]
+hertenstein2019 insomnia -> depression onset               log=+1.04028 se=0.30730 ci=[+0.43825,+1.64287]
+hertenstein2019 insomnia -> anxiety onset                  log=+1.17248 se=0.38407 ci=[+0.41871,+1.92425]
+chiu2018 suicide plan per +1 h sleep                       log=-0.11653 se=0.00573 ci=[-0.12783,-0.10536]
+gangwisch2010 late parental bedtime -> depression          log=+0.21511 se=0.09172 ci=[+0.03922,+0.39878]
+gangwisch2010 same, + sleep duration mediators             log=+0.06766 se=0.09954 ci=[-0.12783,+0.26236]
+gangwisch2010 late bedtime -> suicidal ideation            log=+0.18232 se=0.08511 ci=[+0.00995,+0.34359]
+gangwisch2010 same, + sleep duration mediators             log=+0.08618 se=0.08623 ci=[-0.08338,+0.25464]
+wang2024 insufficient sleep -> suicidal ideation aOR       log=+0.32208 se=0.03704 ci=[+0.24686,+0.39204]
+wang2024 insufficient sleep -> suicide plan aOR            log=+0.29267 se=0.04373 ci=[+0.20701,+0.37844]
+wang2024 insufficient sleep -> suicide attempt aOR         log=+0.21511 se=0.04211 ci=[+0.15700,+0.32208]
+
+=== ROBERTS 2014 BIDIRECTIONAL (same sample, both arrows) ===
+FWD short sleep WN -> major depression W2 (adj)            log=+1.32442 se=0.42058 ci=[+0.50078,+2.14943]
+REV major depression -> short sleep WN W2 (adj)            log=+1.45395 se=0.33818 ci=[+0.79299,+2.11866]
+FWD short sleep WN -> depressive symptoms W2 (adj)         log=+0.32208 se=0.15188 ci=[+0.01980,+0.61519]
+REV depressive symptoms -> short sleep WN W2 (adj)         log=+0.21511 se=0.14042 ci=[-0.06188,+0.48858]
+FWD short sleep WN/WE -> major depression W2 (adj)         log=+1.13783 se=0.35651 ci=[+0.43825,+1.83578]
+REV major depression -> short sleep WN/WE W2 (adj)         log=+0.66783 se=0.37197 ci=[-0.06188,+1.39624]
+FWD short sleep WN/WE -> dep symptoms W2 (adj)             log=+0.22314 se=0.10761 ci=[+0.00995,+0.43178]
+REV dep symptoms -> short sleep WN/WE W2 (adj)             log=+0.13103 se=0.10435 ci=[-0.07257,+0.33647]
+  reverse share of total log-OR (major depression): 0.523
+  reverse share of total log-OR (depressive symptoms): 0.400
+
+=== WINSLER 2015 per hour LESS sleep ===
+winsler hopelessness         log_or=+0.32208 se_upper_bound=0.09790 (CI not reported)
+winsler suicidal ideation    log_or=+0.35066 se_upper_bound=0.10658 (CI not reported)
+winsler suicide attempt      log_or=+0.45742 se_upper_bound=0.13903 (CI not reported)
+  risk difference 9h -> 4h: hopeless 19.2%->51.6%; ideation 8.1%->31.5%; attempt 1.8%->13.3%
+
+=== MENDELIAN RANDOMIZATION ===
+sun2022 insomnia -> MDD                                    log=+0.27003 se=0.02338 ci=[+0.22314,+0.31481]
+sun2022 MDD -> insomnia                                    log=+0.31481 se=0.09277 ci=[+0.13103,+0.49470]
+zhang2024 short sleep duration -> MDD                      log=+0.16467 se=0.03178 ci=[+0.10256,+0.22714]
+zhang2024 insomnia -> MDD                                  log=+0.20945 se=0.00807 ci=[+0.19392,+0.22554]
+zhang2024 continuous sleep duration -> MDD                 log=-0.00200 se=0.00077 ci=[-0.00401,-0.00100]
+daghlas2021 1h earlier sleep midpoint -> MDD               log=-0.26136 se=0.10208 ci=[-0.46204,-0.06188]
+cai2021 insomnia -> MDD  bxy=+0.57 se=0.07 (as reported, +/- form)
+cai2021 MDD -> insomnia  bxy=+0.16 se=0.02 (as reported)
+  cai2021 reverse share of total bxy: 0.219
+
+=== EXPERIMENTAL: within-subject d_z from Wilcoxon Z / paired t ===
+baum2014, n=50 pairs, 6.5h vs 10h TIB x 5 nights:
+  POMS Tension/Anxiety (Z=-3.25)                           d_z=0.4596 se=0.1487 ci=[+0.1682,+0.7511]
+  POMS Anger/Hostility (Z=-3.10)                           d_z=0.4384 se=0.1481 ci=[+0.1482,+0.7286]
+  POMS Fatigue/Inertia (Z=-4.78)                           d_z=0.6760 se=0.1567 ci=[+0.3688,+0.9832]
+  POMS Confusion (Z=-3.37)                                 d_z=0.4766 se=0.1492 ci=[+0.1841,+0.7691]
+  POMS Vigor loss (Z=-3.02)                                d_z=0.4271 se=0.1477 ci=[+0.1375,+0.7166]
+  self-report Emotion Regulation problems (Z=-2.71)        d_z=0.3833 se=0.1465 ci=[+0.0961,+0.6704]
+  self-report Oppositionality/Irritability (Z=-2.47)       d_z=0.3493 se=0.1457 ci=[+0.0638,+0.6348]
+  parent-report Emotion Regulation (Z=-2.40)               d_z=0.3394 se=0.1454 ci=[+0.0544,+0.6245]
+  parent-report Oppositionality/Irritability (Z=-2.22)     d_z=0.3140 se=0.1449 ci=[+0.0300,+0.5979]
+  POMS Depression/Dejection: NOT significant, p>.05 -> d_z < 2.01/sqrt(50) = 0.284
+motomura2013, n=14 pairs, 4h vs 8h TIB x 5 nights:
+  STAI-state anxiety (t=-2.74)                             d_z=0.7323 se=0.3010 ci=[+0.1424,+1.3222]
+  POMS Depression (t=-0.40, NS)                            d_z=0.1069 se=0.2680 ci=[-0.4184,+0.6322]
+  POMS Tension-Anxiety (t=-0.46, NS)                       d_z=0.1229 se=0.2683 ci=[-0.4029,+0.6487]
+  POMS Fatigue (t=-1.30, NS)                               d_z=0.3474 se=0.2752 ci=[-0.1920,+0.8868]
+  Stanford Sleepiness Scale (t=-3.51)                      d_z=0.9381 se=0.3207 ci=[+0.3095,+1.5667]
+
+=== INTERVENTION SMDs ===
+scott2021 composite mental health                          g=-0.5300 se=0.0765
+scott2021 depression (k=61)                                g=-0.6300 se=0.1020
+scott2021 depression, outliers removed                     g=-0.4700 se=0.0510
+scott2021 anxiety (k=35)                                   g=-0.5000 se=0.1327
+scott2021 suicidal ideation (k=2, NS, adverse sign)        g=+0.1000 se=1.9592
+scott2021 composite, trim-and-fill adjusted                g=-0.3500 se=0.0995
+gee2019 depression (k=49)                                  g=-0.4500 se=0.0485
+gee2019 depression, mental-health subgroup                 g=-0.8100 se=0.1633
+gebara2018 HAM-D                                           g=-1.2900 se=0.4184
+gebara2018 BDI                                             g=-0.6800 se=0.3138
+freeman2017 PHQ-9 wk10: adj diff -2.83 (-3.30,-2.35), d=0.48; se(d) from raw: 0.0806
+  arithmetic: raw diff -2.83, half-CI-width = (3.30-2.35)/2 = 0.475; se_d = d * (halfwidth/1.96) / |diff| = 0.48*0.2423/2.83
+  se_d = 0.0411
+freeman2017 GAD-7 wk10: adj diff -1.86 (-2.29,-1.43), d=0.33; se_d = 0.0389
+
+=== GAO 2018 BASUS: male-specific chronic sleep deprivation -> CESD ===
+  males: chronic 15.32 (se 1.255) vs none 14.38 (se 0.681)
+  raw diff = 0.94 CESD points, se_diff = 1.428 (independence assumption -> conservative/wide)
+  d = diff/SD(11.0) = 0.0855, se_d = 0.1298, ci=[-0.1690,+0.3399]
+  females: chronic 19.48 vs none 16.33; diff 3.15, se 1.073, d = 0.2864 (paper states Cohen's D = 0.13 adjusted, 0.20 unadjusted)

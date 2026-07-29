@@ -1,0 +1,121 @@
+study_id: cappuccio2010
+citation: "Cappuccio FP, D'Elia L, Strazzullo P, Miller MA. Sleep duration and all-cause mortality: a systematic review and meta-analysis of prospective studies. Sleep. 2010 May;33(5):585-592."
+doi: "10.1093/sleep/33.5.585"
+pmid: "20469800"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2864873/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep duration and all-cause mortality: a systematic review and meta-analysis of prospective studies."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 1382999
+n_studies_pooled: 16
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational (16 studies, 27 independent cohort samples)"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "SHORT sleep vs referent, study-specific cutpoints pooled (mostly <5 h to <7 h vs 7-8 h)"}
+    scale: log_rr
+    unit: null
+    value: 0.113329
+    se: 0.027359
+    ci: [0.058269, 0.165514]
+    conversion_formula: "log_rr = ln(1.12) = 0.113329; se = (ln(1.18) - ln(1.06))/3.92 = 0.027359"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher all-cause mortality with short sleep. Random-effects pooled RR 1.12; a 12% relative excess. No publication bias (P = 0.74) but significant heterogeneity (P = 0.02)."
+    covariates: ["varies by study; the maximally adjusted estimate was extracted per study"]
+    followup_years: 12.0
+    cohort_family: "pooled_multi_cohort_27_samples"
+    quote: "In the pooled analysis, short duration of sleep was associated with a greater risk of death (RR: 1.12; 95% CI 1.06 to 1.18; P < 0.01) with no evidence of publication bias (P = 0.74) but heterogeneity between studies (P = 0.02)."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "LONG sleep vs referent, study-specific cutpoints pooled (mostly >8 h or >9 h vs 7-8 h)"}
+    scale: log_rr
+    unit: null
+    value: 0.262364
+    se: 0.031437
+    ci: [0.198851, 0.322083]
+    conversion_formula: "log_rr = ln(1.30) = 0.262364; se = (ln(1.38) - ln(1.22))/3.92 = 0.031437"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher all-cause mortality with long sleep. The LONG-sleep RR (1.30) is 2.5x the
+      excess of the SHORT-sleep RR (1.12) on the log scale (0.2624 vs 0.1133). This asymmetry is the
+      central interpretive problem: no plausible mechanism makes voluntarily sleeping 9 h more than
+      twice as lethal as sleeping 5 h, so a large share of both estimates is likely to be illness
+      causing long sleep rather than sleep causing death.
+    covariates: ["varies by study; the maximally adjusted estimate was extracted per study"]
+    followup_years: 12.0
+    cohort_family: "pooled_multi_cohort_27_samples"
+    quote: "Long duration of sleep was also associated with a greater risk of death (1.30; [1.22 to 1.38]; P < 0.0001) with no evidence of publication bias (P = 0.18) but significant heterogeneity between studies (P < 0.0001)."
+  - outcome_domain: baseline_risk
+    outcome_construct: pooled_sample_size_and_death_count
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "whole pooled sample, all sleep strata"}
+    scale: probability
+    unit: "deaths per participant over a 4-25 year follow-up range (all sleep strata combined)"
+    value: 0.08139
+    se: null
+    ci: null
+    conversion_formula: "112566 deaths / 1382999 participants = 0.08139"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Absolute-scale anchor: ~8.1% of participants died over a 4-25 y follow-up. This is a
+      middle-aged-to-elderly death rate. For a 19-year-old male the 13-year probability of death is
+      roughly two orders of magnitude smaller, so a relative risk of 1.12 applied at age 19 buys
+      almost no absolute life-expectancy loss unless the exposure permanently alters the hazard for
+      the following 60 years.
+    covariates: []
+    followup_years: 12.0
+    cohort_family: "pooled_multi_cohort_27_samples"
+    quote: "Overall, the 16 studies analyzed provided 27 independent cohort samples. They included 1,382,999 male and female participants (followup range 4 to 25 years), and 112,566 deaths. Sleep duration was assessed by questionnaire and outcome through death certification."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    Landmark but now-superseded meta-analysis. Critical weaknesses for our purpose: (1) every
+    constituent study measured sleep by questionnaire once at baseline; (2) study-specific and
+    mutually incompatible cutpoints for "short" (<5 h in some, <7 h in others) are pooled as if they
+    denoted the same exposure, so the pooled RR of 1.12 has no dose interpretation whatsoever and
+    cannot be attached to any particular number of hours; (3) no dose-response modelling; (4) adjustment
+    sets differ across studies and residual confounding by prevalent and subclinical disease is not
+    addressed; (5) significant heterogeneity for both contrasts. Kurina et al. (2013, PMID 23622956)
+    reviewed the same literature and reached the opposite conclusion, that a consistent association
+    is not established.
+funding: null
+notes: >
+  TARGET EXTRACTION #1. The task prompt's description is accurate: authors, journal and year all match
+  (Cappuccio FP, D'Elia L, Strazzullo P, Miller MA; Sleep 2010;33(5):585-92). Numbers as requested:
+    SHORT sleep: RR 1.12 (95% CI 1.06-1.18), P < 0.01
+    LONG  sleep: RR 1.30 (95% CI 1.22-1.38), P < 0.0001
+    16 studies / 27 independent cohort samples
+    1,382,999 participants
+    112,566 deaths
+    follow-up range 4-25 years
+  .
+  WHY THIS NUMBER SHOULD NOT DRIVE THE FINAL ESTIMATE. The 1.12 is a categorical "short vs referent"
+  contrast with heterogeneous cutpoints. The later dose-response meta-analyses that model sleep
+  duration continuously (liu2017, yin2017) decompose this same literature and find that the excess
+  risk at 5-6 h is far smaller than 12%: Yin reports RR 1.04 at 5 h and 1.01 at 6 h versus a 7 h
+  referent; Liu reports 1.06 at 5 h and 1.04 at 6 h. The categorical 1.12 is inflated relative to the
+  dose-specific values because the "short" category in many constituent studies is anchored on
+  extreme sleepers (<=4-5 h) and because the pooled contrast mixes referent definitions. For a
+  subject sleeping 5-6 h the dose-response estimates are the right ones to use.
+  .
+  Population age not reported in the abstract; the constituent cohorts are predominantly midlife and
+  older adults, hence adolescent_match poor_midlife. Abstract-only access: the abstract contains every
+  number requested by the task, so full text was not required for this extraction.
+shard: "s13_mortality"

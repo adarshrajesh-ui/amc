@@ -1,0 +1,193 @@
+study_id: leproult2011
+citation: Leproult R, Van Cauter E. Effect of 1 week of sleep restriction on testosterone levels in young healthy men. JAMA.
+  2011;305(21):2173-2174.
+doi: 10.1001/jama.2011.710
+pmid: '21632481'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: Effect of 1 Week of Sleep Restriction on Testosterone Levels in Young Healthy Men
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 10
+n_studies_pooled: null
+population:
+  age_mean: 24.3
+  age_range: null
+  pct_female: 0.0
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: endocrine
+  outcome_construct: daytime_total_testosterone_0800_2200
+  exposure:
+    type: chronic_restriction
+    dose_h: 5
+    referent_h: 10
+    duration_days: 8
+    contrast_label: 8 nights 5 h TIB (00:30-05:30) vs 3 nights 10 h TIB (22:00-08:00); TST 4h48m vs 8h55m
+  scale: pct_change
+  unit: '% change in mean daytime total testosterone'
+  value: -10.33
+  se: 4.54
+  ci:
+  - -20.6
+  - -0.06
+  conversion_formula: 'value = 100*(16.5-18.4)/18.4 = -10.33%. Paired SE inferred from the reported two-sided P=.049 with
+    n=10: t(9) at p=.049 = 2.2745, so SE(diff) = 1.90/2.2745 = 0.835 nmol/L = 4.54 percentage points of the 18.4 nmol/L
+    referent; ci = value +/- t(9,.05)=2.2622 * SE.'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: Negative = LOWER testosterone under restriction (harm). Upper CI bound is -0.06%, i.e. the interval only
+    just excludes zero.
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: During waking hours common to both conditions (8 AM-10 PM), testosterone levels were lower after sleep restriction
+    than in the rested condition (16.5 [2.8] nmol/L vs 18.4 [3.8] nmol/L; P = .049).
+- outcome_domain: endocrine
+  outcome_construct: daytime_total_testosterone_0800_2200_smd
+  exposure:
+    type: chronic_restriction
+    dose_h: 5
+    referent_h: 10
+    duration_days: 8
+    contrast_label: 8 nights 5 h TIB vs 3 nights 10 h TIB
+  scale: hedges_g
+  unit: null
+  value: -0.52
+  se: 0.23
+  ci:
+  - -0.97
+  - -0.07
+  conversion_formula: SD_pooled = sqrt((3.8^2 + 2.8^2)/2) = 3.3377 nmol/L; d = -1.90/3.3377 = -0.5693; J = 1 - 3/(4*9-1)
+    = 0.9143; g = -0.5205. SE(g) = (0.835/3.3377)*0.9143 = 0.2288. ci = g +/- 1.96*SE. Between-condition SD used (conservative
+    for a paired design).
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: Negative = lower testosterone under restriction (harm).
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: During waking hours common to both conditions (8 AM-10 PM), testosterone levels were lower after sleep restriction
+    than in the rested condition (16.5 [2.8] nmol/L vs 18.4 [3.8] nmol/L; P = .049).
+- outcome_domain: endocrine
+  outcome_construct: afternoon_evening_total_testosterone_1400_2200
+  exposure:
+    type: chronic_restriction
+    dose_h: 5
+    referent_h: 10
+    duration_days: 8
+    contrast_label: 8 nights 5 h TIB vs 3 nights 10 h TIB, 14:00-22:00 window
+  scale: pct_change
+  unit: '% change in mean 14:00-22:00 total testosterone'
+  value: -13.41
+  se: 4.75
+  ci:
+  - -24.16
+  - -2.66
+  conversion_formula: 'value = 100*(15.5-17.9)/17.9 = -13.41%. SE inferred from two-sided P=.02, n=10: t(9) at p=.02 = 2.8214,
+    SE(diff) = 2.40/2.8214 = 0.851 nmol/L = 4.75 pp of 17.9; ci = value +/- 2.2622*SE.'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: Negative = lower testosterone under restriction (harm). This is the largest, most robustly significant
+    window.
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: The effect of restricted sleep was especially apparent between 2 PM and 10 PM (15.5 [3.1] nmol/L vs 17.9 [4.0]
+    nmol/L; P = .02).
+- outcome_domain: endocrine
+  outcome_construct: daytime_cortisol_profile
+  exposure:
+    type: chronic_restriction
+    dose_h: 5
+    referent_h: 10
+    duration_days: 8
+    contrast_label: 8 nights 5 h TIB vs 3 nights 10 h TIB
+  scale: pct_change
+  unit: '% change in daytime cortisol'
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'value=0 encodes a reported NULL: at 5 h TIB for 8 nights there was no cortisol signal. Contrast with
+    guyon2014/spiegel1999 at 4 h TIB, where evening cortisol rose 30-45%. Dose matters.'
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: Daytime cortisol profiles were similar under both conditions (Figure). ... This testosterone decline was associated
+    with lower vigor scores but not with increased levels of cortisol, a stress-responsive hormone that can inhibit gonadal
+    function.
+- outcome_domain: sleep_need
+  outcome_construct: stage3_plus_4_slow_wave_sleep_minutes_per_night
+  exposure:
+    type: chronic_restriction
+    dose_h: 5
+    referent_h: 10
+    duration_days: 8
+    contrast_label: each 5 h restricted night vs the 10 h rested night
+  scale: raw_units
+  unit: minutes of stage 3+4 sleep per night
+  value: 9.0
+  se: 2.53
+  ci:
+  - 3.28
+  - 14.72
+  conversion_formula: se = reported SD(8 min)/sqrt(10) = 2.530; ci = 9 +/- t(9,.05)=2.2622 * SE.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'Positive = MORE slow-wave sleep under restriction. Decisive mechanism: cutting TIB from 10 h to 5 h cost
+    165 min of stage 2 and 63 min of REM but GAINED 9 min of stage 3+4. The GH-permissive stage is protected, which is why
+    GH output survives restriction.'
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: Relative to the rested condition, during each restricted night, participants lost a total (SD) of 2 hours 45 minutes
+    (29 min) of stage-2 sleep (P = .002) and 1 hour 3 minutes (18 min) of REM sleep (P = .002) and gained 9 minutes (8 min)
+    of sleep in stages 3 + 4 (P = .01).
+- outcome_domain: sleep_need
+  outcome_construct: rem_sleep_minutes_per_night
+  exposure:
+    type: chronic_restriction
+    dose_h: 5
+    referent_h: 10
+    duration_days: 8
+    contrast_label: each 5 h restricted night vs the 10 h rested night
+  scale: raw_units
+  unit: minutes of REM sleep per night
+  value: -63.0
+  se: 5.69
+  ci:
+  - -75.88
+  - -50.12
+  conversion_formula: se = reported SD(18 min)/sqrt(10) = 5.692; ci = -63 +/- 2.2622 * SE.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Negative = REM sleep lost. REM and stage 2 absorb essentially the entire sleep debt.
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: Relative to the rested condition, during each restricted night, participants lost a total (SD) of 2 hours 45 minutes
+    (29 min) of stage-2 sleep (P = .002) and 1 hour 3 minutes (18 min) of REM sleep (P = .002) and gained 9 minutes (8 min)
+    of sleep in stages 3 + 4 (P = .01).
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: n=10 self-described convenience sample recruited by campus flyers; no randomisation of condition order (rested
+    always first, so an order/adaptation effect is not excluded); comparator is 10 h TIB, which is longer than any realistic
+    habitual sleep, so the true 8 h-referenced effect is smaller than reported
+funding: NHLBI 5R01HL72694-5; NIDDK P60DK-020595; NIH MO1-RR-00055
+notes: 'Authors'' own conversion: divide nmol/L by 0.0347 for ng/dL. Rested mean 18.4 nmol/L = 530.3 ng/dL; restricted mean
+  16.5 nmol/L = 475.5 ng/dL. Against the harmonized reference distribution for healthy nonobese men 19-39 y (travison2017:
+  2.5th 264, 5th 303, 50th 531, 95th 852 ng/dL) the RESTED mean sits at the 50th percentile (531) and the RESTRICTED mean
+  at roughly the 34th percentile (z = -0.40), still 1.80x the 2.5th-percentile hypogonadal threshold of 264 ng/dL. Authors''
+  framing: ''Daytime testosterone levels were decreased by 10% to 15% in this small convenience sample ... By comparison,
+  normal aging is associated with a decrease of testosterone levels by 1% to 2% per year.'' No participant was reported
+  to have entered the hypogonadal range.'
+shard: s11_endocrine_growth

@@ -1,0 +1,146 @@
+study_id: blattner2020
+citation: "Blattner MS, Panigrahi SK, Toedebusch CD, Hicks TJ, McLeland JS, Banks IR, Schaibley C, Ovod V, Mawuenyega KG, Bateman RJ, Holtzman DM, Landsness EC, Lucey BP. Increased cerebrospinal fluid amyloid-beta during sleep deprivation in healthy middle-aged adults is not due to stress or circadian disruption. Journal of Alzheimer's Disease. 2020;75(2):471-482."
+doi: "10.3233/JAD-191122"
+pmid: "32250301"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7477710/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Increased Cerebrospinal Fluid Amyloid-beta During Sleep Deprivation in Healthy Middle-Aged Adults Is Not Due to Stress or Circadian Disruption."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 11
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 75.0
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: overnight_csf_abeta40_change_after_one_night_total_sleep_deprivation
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: 6.9, duration_days: 1,
+               contrast_label: "one night of total sleep deprivation vs normal sleep control, randomised; 36 h of 2-hourly CSF sampling via indwelling lumbar catheter"}
+    scale: pct_change
+    unit: "% difference in overnight CSF Abeta40 concentration, sleep-deprived minus control"
+    value: 9.1
+    se: 2.9
+    ci: [3.4, 14.8]
+    conversion_formula: >
+      No conversion. The paper reports the estimated overnight difference directly as a percentage with its
+      standard error and 95% CI: +9.1%, SE 2.9, 95% CI 3.4-14.8, p=0.002. All concentrations had been
+      normalised to each participant's own 36-hour mean before analysis, so the percentage is within-person.
+      referent_h = 6.9 is the control group's polysomnography-measured total sleep time of 413.4 min
+      (413.4/60 = 6.89 h); the sleep-deprived group achieved 36.6 min.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = HIGHER CSF Abeta40 after total sleep deprivation. This is an ACUTE, SOLUBLE, REVERSIBLE
+      CONCENTRATION CHANGE MEASURED OVER HOURS. It is not plaque, not PET signal, and not a measure of
+      accumulation. Do not chain it to dementia risk without passing through the reversibility question.
+    covariates: ["within-person normalisation to each participant's own 36-h mean", "general linear mixed models"]
+    followup_years: null
+    cohort_family: null
+    quote: "In contrast to cortisol, lactate, and glucose, sleep deprivation increased overnight CSF Abeta40 and Abeta42 ~10% above baseline compared to control ( Figure 1O - R ). For Abeta40, the overnight estimated difference between sleep-deprived and control conditions was +9.1% (SE 2.9, 95% CI 3.4 - 14.8, p=0.002)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: overnight_csf_abeta42_change_after_one_night_total_sleep_deprivation
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: 6.9, duration_days: 1,
+               contrast_label: "one night of total sleep deprivation vs normal sleep control, randomised; CSF Abeta42"}
+    scale: pct_change
+    unit: "% difference in overnight CSF Abeta42 concentration, sleep-deprived minus control"
+    value: 8.6
+    se: 3.1
+    ci: [2.4, 14.9]
+    conversion_formula: >
+      Reported directly: +8.6%, SE 3.1, 95% CI 2.4-14.9, p=0.007. No conversion performed.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = HIGHER CSF Abeta42 after total sleep deprivation. NOTE THE SIGN CONVENTION TRAP IN THIS
+      LITERATURE: higher CSF Abeta42 here means MORE soluble peptide in fluid after acute deprivation,
+      whereas in Alzheimer's disease LOW CSF Abeta42 is the pathological finding because the peptide has been
+      sequestered into plaque. The acute experimental change and the chronic disease biomarker move in
+      OPPOSITE directions. A model that reads "sleep deprivation raises CSF Abeta42" as "sleep deprivation
+      moves the biomarker toward the Alzheimer's profile" has the sign backwards.
+    covariates: ["within-person normalisation to each participant's own 36-h mean", "general linear mixed models"]
+    followup_years: null
+    cohort_family: null
+    quote: "For Abeta42, the overnight estimated difference over the same period was +8.6% (SE 3.1, 95% CI 2.4 - 14.9, p=0.007)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: csf_abeta42_mesor_no_difference_between_conditions
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: 6.9, duration_days: 1,
+               contrast_label: "MESOR (36-hour midline) of CSF Abeta42, sleep-deprived vs control - the parameter that would move if deprivation shifted the overall set-point rather than the overnight peak"}
+    scale: pct_change
+    unit: "% difference in 36-h mesor of CSF Abeta42, control minus sleep-deprived"
+    value: 2.97
+    se: null
+    ci: [-15.3, 21.2]
+    conversion_formula: >
+      Table 5, Abeta42 block, Mesor row, Intervention CSF control vs CSF SD: control 80.17 (69.61-90.73),
+      SD 77.20 (66.63-87.76), estimated difference +2.97 (-15.3 to 21.2), F(1,10) = 0.13, p = 0.72.
+      value and ci taken verbatim. NOTE ON THE QUOTE: the pasted fragment is the contiguous Mesor row as it
+      appears in the flattened table; the "Abeta42" block header sits three rows above it in Table 5 and is
+      NOT part of the contiguous fragment, so it has been left out of the quote rather than spliced in.
+      se left NULL: the interval is reported for a mixed-model contrast whose degrees of freedom are 10, so
+      dividing the interval width by 3.92 would understate the SE; the paper does not print the SE for this
+      contrast and the shard will not invent one.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NULL, AND THIS NULL IS THE POINT. The overnight window moved by ~9%, but the 36-hour MESOR - the
+      midline of the whole oscillation - did not move at all (p = 0.72), and neither did the amplitude
+      (p = 0.52), acrophase (p = 0.72) or linear rise (p = 0.58) for Abeta42. Interpreted mechanistically:
+      one night of total deprivation perturbs the SHAPE of the diurnal Abeta curve during the deprived night
+      without shifting the overall level across 36 hours. That is the profile of a transient, self-correcting
+      oscillation, not of a step change in Abeta burden. It is the closest thing to within-study evidence of
+      reversibility that exists in the acute human literature - see the notes field for why it is still not
+      a direct test.
+    covariates: ["within-person normalisation to each participant's own 36-h mean", "general linear mixed models"]
+    followup_years: null
+    cohort_family: null
+    quote: "Mesor (%) | Intervention | CSF control vs. CSF SD | CSF control: 80.17 (69.61 - 90.73) CSF SD: 77.20 (66.63 - 87.76) | +2.97 (-15.3 - 21.2) | 0.13 (1,10) | 0.72"
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: >
+    Randomised allocation to sleep deprivation or normal sleep, intensive within-person sampling (2-hourly
+    over 36 h through an indwelling lumbar catheter), verified exposure by polysomnography (control total
+    sleep time 413.4 min vs sleep-deprived 36.6 min, p significant), and balanced groups on age, sex, race,
+    BMI, MMSE, baseline Abeta42:Abeta40 and pre-admission actigraphy. Serious limitations: n = 11 total
+    (8 control, 8 sleep-deprived, achieved by inviting participants to repeat the study, so the two arms are
+    partially the same people); no blinding is possible; the study is explicitly labelled exploratory and
+    reuses samples from a previous study; adverse events were common (headache in 7/8 control and 5/8
+    deprived, blood patch in 3/8 deprived), which limits how far protocols like this can be extended in
+    duration; and the population is middle-aged, not adolescent.
+funding: "NIH (see paper); Washington University Institute of Clinical and Translational Sciences"
+notes: >
+  THIRD INDEPENDENT REPLICATION of acute CSF Abeta elevation after one night of total sleep deprivation, and
+  the one that RULES OUT TWO ALTERNATIVE MECHANISMS. Chain of replication in this shard: ooms2014.yaml
+  (n = 26, CSF Abeta42), lucey2018.yaml (n = 8, kinetics), this record (n = 11, both isoforms + confounders),
+  forsberg2025.yaml (crossover replication).
+  WHAT IT ADDS BEYOND REPLICATION, VERBATIM: "One night of sleep deprivation increases the overnight
+  concentration of amyloid-beta in cerebrospinal fluid approximately 10%, but does not significantly affect
+  cortisol, lactate, or glucose concentrations in plasma or cerebrospinal fluid between the sleep-deprived and
+  control conditions." And: "These data suggest that sleep deprivation-related changes in CSF Abeta are not
+  mediated by stress or circadian disruption as measured by cortisol." The cortisol nulls are explicit -
+  plasma cortisol overnight difference +1.9% (SE 7.6, 95% CI -13.3 to 17.1, p=0.81); CSF cortisol +1.9%
+  (SE 6.98, 95% CI -12.0 to 15.8, p=0.79). So the acute Abeta rise is not a stress artefact.
+  HOW THIS RECORD BEARS ON THE SHARD'S CENTRAL QUESTION (does the acute rise reverse?). Read together with
+  lucey2018.yaml, which showed the acute rise is driven by INCREASED PRODUCTION rather than impaired
+  clearance, the mesor null here says the perturbation does not shift the 36-hour set-point. Both point the
+  same way: a transient production-side oscillation. But NEITHER is a direct reversibility test, because
+  neither re-measured Abeta after a night of recovery sleep. The honest statement is that no human study has
+  measured Abeta before deprivation, after deprivation, AND after recovery sleep in the same people. The
+  reversibility inference rests on (a) this mesor null, (b) the production-not-clearance finding in
+  lucey2018.yaml, (c) the washout-crossover design of forsberg2025.yaml in which participants returned to
+  baseline between conditions, and (d) olsson2018.yaml finding no CSF biomarker change after 5-8 nights of
+  4-hour restriction. That is an inference from four convergent indirect lines, not a demonstration.
+  MAGNITUDE ANCHOR FOR THE POOLER: ~9% overnight change in a soluble CSF peptide, in 11 middle-aged adults,
+  after ZERO hours of sleep. The subject's exposure is 5-6 h, not 0 h, chronically rather than acutely, at
+  age 16-19 rather than middle age. Every one of those four gaps is unbridged by this study.
+shard: "s14_dementia_amyloid"

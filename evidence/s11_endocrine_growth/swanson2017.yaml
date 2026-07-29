@@ -1,0 +1,90 @@
+study_id: swanson2017
+citation: 'Swanson CM, Shea SA, Wolfe P, Cain SW, Munch M, Vujovic N, Czeisler CA, Buxton OM, Orwoll ES. Bone turnover markers
+  after sleep restriction and circadian disruption: a mechanism for sleep-related bone loss in humans. J Clin Endocrinol
+  Metab. 2017;102(10):3722-3730.'
+doi: 10.1210/jc.2017-01147
+pmid: '28973223'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: 'Bone Turnover Markers After Sleep Restriction and Circadian Disruption: A Mechanism for Sleep-Related
+    Bone Loss in Humans'
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 10
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 20
+  - 65
+  pct_female: 0.0
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: endocrine
+  outcome_construct: p1np_bone_formation_marker_younger_men_20_27
+  exposure:
+    type: chronic_restriction
+    dose_h: 5.6
+    referent_h: 8
+    duration_days: 21
+    contrast_label: ~3 weeks of 5.6 h sleep/24 h WITH concurrent forced desynchrony (recurring 28-h day, dim light) vs baseline;
+      men aged 20-27 y (n=6)
+  scale: pct_change
+  unit: '% change in serum P1NP'
+  value: -28.0
+  se: null
+  ci: null
+  conversion_formula: Reported as a 28.0% decrease in younger men vs 18.2% in older men, P<0.001 for the age difference.
+    No dispersion for the younger-men percentage; se=null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Negative = LESS bone formation (harm), and worse in the young. But the exposure is sleep restriction PLUS
+    severe circadian disruption; swanson2022 and depner2021 show that sleep restriction ALONE produces no bone-turnover
+    change, so the circadian component appears to be doing the work.
+  covariates:
+  - age
+  followup_years: null
+  cohort_family: Harvard_forced_desynchrony
+  quote: P1NP levels were lower after intervention compared with baseline (P < 0.001); the decrease in P1NP was greater
+    for younger compared with older men (28.0% vs 18.2%, P < 0.001). There was no change in CTX (delta = 0.03 +/- 0.02 ng/mL,
+    P = 0.10). Sclerostin levels were higher postintervention in the younger men only (delta = 22.9% or 5.64 +/- 1.10 pmol/L,
+    P < 0.001).
+- outcome_domain: endocrine
+  outcome_construct: ctx_bone_resorption_marker
+  exposure:
+    type: chronic_restriction
+    dose_h: 5.6
+    referent_h: 8
+    duration_days: 21
+    contrast_label: ~3 weeks of 5.6 h sleep/24 h with forced desynchrony vs baseline, all 10 men
+  scale: raw_units
+  unit: ng/mL change in serum CTX
+  value: 0.03
+  se: 0.02
+  ci:
+  - -0.009
+  - 0.069
+  conversion_formula: Reported directly as delta = 0.03 +/- 0.02 ng/mL, P = 0.10; se = reported 0.02; ci = 0.03 +/- 1.96*0.02.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Positive would mean more resorption, but the interval crosses zero (P=0.10). Bone resorption was unchanged;
+    the effect was confined to formation - an uncoupling, not accelerated loss.
+  covariates: []
+  followup_years: null
+  cohort_family: Harvard_forced_desynchrony
+  quote: There was no change in CTX (delta = 0.03 +/- 0.02 ng/mL, P = 0.10). Sclerostin levels were higher postintervention
+    in the younger men only (delta = 22.9% or 5.64 +/- 1.10 pmol/L, P < 0.001).
+rob:
+  tool: RoB2
+  judgement: high
+  notes: n=10 total (only 6 in the young stratum); the intervention deliberately CONFOUNDS sleep restriction with 28-h forced
+    desynchrony, so the sleep-restriction contribution is not identifiable; no recovery arm
+funding: NIH / non-US government
+notes: 'Authors'' own conclusion names both components: ''Circadian disruption and sleep restriction may be most detrimental
+  to bone in early adulthood.'' The isolating experiments (swanson2022, depner2021) found nothing.'
+shard: s11_endocrine_growth

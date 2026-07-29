@@ -1,0 +1,139 @@
+study_id: vanleeuwen2018
+citation: "van Leeuwen WMA, Sallinen M, Virkkala J, Lindholm H, Hirvonen A, Hublin C, Porkka-Heiskanen T, Harma M. Physiological and autonomic stress responses after prolonged sleep restriction and subsequent recovery sleep in healthy young men. Sleep Biol Rhythms. 2018;16(1):45-54."
+doi: "10.1007/s41105-017-0122-x"
+pmid: "29367834"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Physiological and autonomic stress responses after prolonged sleep restriction and subsequent recovery sleep in healthy young men"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 23
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: "Finland"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: cardiovascular
+    outcome_construct: resting_heart_rate_after_restriction
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5,
+               contrast_label: "4 h TIB x 5 nights vs own 8 h baseline, healthy young men (n=15 restricted, n=8 control)"}
+    scale: raw_units
+    unit: "bpm"
+    value: 3.0
+    se: null
+    ci: null
+    conversion_formula: >
+      Computed as the difference of reported condition means: 63 bpm after sleep restriction minus
+      60 bpm at baseline = +3 bpm. The paper reports means with a dispersion term at each timepoint
+      (60 ± 1.8 at baseline, 63 ± 1.1 after SR) but NOT the SE of the within-subject difference,
+      and these are repeated measures on the same men, so the SE of the difference cannot be derived
+      without the within-subject correlation. se therefore null - not invented.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HIGHER resting heart rate after 5 nights of 4 h TIB (harm). Magnitude small (+3 bpm, a 5% increase)."
+    covariates: ["within-subject vs own baseline; parallel 8 h control group showed no change in any parameter"]
+    followup_years: null
+    cohort_family: null
+    quote: "In the control group, none of the parameters changed. In the experimental group, heart rate increased from 60 ± 1.8 beats per minute (bpm) at BL, to 63 ± 1.1 bpm after SR and further to 65 ± 1.8 bpm after REC."
+  - outcome_domain: cardiovascular
+    outcome_construct: resting_heart_rate_after_recovery_sleep
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 3,
+               contrast_label: "after 3 recovery nights of 8 h TIB following 5 nights of 4 h, vs own 8 h baseline"}
+    scale: raw_units
+    unit: "bpm"
+    value: 5.0
+    se: null
+    ci: null
+    conversion_formula: >
+      65 bpm after recovery minus 60 bpm at baseline = +5 bpm. SE of the paired difference not
+      derivable from the reported statistics; se null.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = HIGHER heart rate than baseline even AFTER three 8 h recovery nights, and higher than
+      immediately after restriction (65 vs 63 bpm). NO REVERSAL - the effect continued to worsen
+      through the recovery weekend. This is the key reversibility finding of the record.
+    covariates: ["within-subject vs own baseline; control group unchanged"]
+    followup_years: null
+    cohort_family: null
+    quote: "heart rate increased from 60 ± 1.8 beats per minute (bpm) at BL, to 63 ± 1.1 bpm after SR and further to 65 ± 1.8 bpm after REC"
+  - outcome_domain: cardiovascular
+    outcome_construct: hrv_lf_hf_ratio_sympathetic_balance
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5,
+               contrast_label: "4 h TIB x 5 nights vs own 8 h baseline; whole-day LF/HF power ratio"}
+    scale: raw_units
+    unit: "LF/HF power ratio (dimensionless)"
+    value: 1.4
+    se: null
+    ci: null
+    conversion_formula: >
+      6.0 after sleep restriction minus 4.6 at baseline = +1.4 ratio units (a 30% relative increase).
+      SE of the paired difference not derivable from the reported per-timepoint dispersion; se null.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = shift toward SYMPATHETIC dominance of cardiac autonomic control (harm). Answers the
+      sympathetic-activity component of target #4 in young men specifically, and agrees in direction
+      with Covassin's norepinephrine finding.
+    covariates: ["within-subject vs own baseline; control group unchanged"]
+    followup_years: null
+    cohort_family: null
+    quote: "In addition, whole day low-frequency to-high frequency (LF/HF) power ratio of heart rate variability increased from 4.6 ± 0.4 at BL to 6.0 ± 0.6 after SR."
+  - outcome_domain: endocrine
+    outcome_construct: salivary_cortisol_and_neuropeptide_y
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5,
+               contrast_label: "4 h TIB x 5 nights vs own 8 h baseline"}
+    scale: raw_units
+    unit: "null effect on salivary NPY and cortisol"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No effect reported; recorded as a directional null with se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      zero = NO change in salivary neuropeptide Y or cortisol. Recorded because it bounds the
+      neuroendocrine stress response: the autonomic shift was not accompanied by HPA-axis activation.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Other parameters, including salivary NPY and cortisol levels, remained unaffected."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: >
+    Well-suited design for this shard's subject - the protocol was explicitly built to mimic
+    "a busy workweek and a recovery weekend" - with a parallel 8 h control group that showed no change
+    in any parameter, which strengthens causal attribution. Concerns: small and unequal groups
+    (n=15 restricted vs n=8 control); allocation method not described in the abstract; no blinding
+    possible; the paper reports per-timepoint means with dispersion rather than differences with CIs,
+    so no SE for any effect is recoverable; 4 h TIB is more severe than the subject's 5-6 h; published
+    in a low-visibility journal.
+funding: null
+notes: >
+  Target extraction #4, young-MALE component, and the single best exposure-pattern match in the whole
+  shard: 5 consecutive nights of restriction followed by 3 recovery nights, in healthy young men only,
+  which is structurally the subject's weekday/weekend cycle.
+  THREE FINDINGS THAT MATTER:
+  (1) Heart rate rose only ~3 bpm (60 -> 63) after the restriction week - a small effect, and note
+      that Covassin 2021 found NO heart-rate change at all after 9 nights of 4 h.
+  (2) Sympathetic balance shifted (LF/HF 4.6 -> 6.0, +30%), agreeing with Covassin's norepinephrine
+      rise. So the autonomic signal replicates across the two best experimental records even though
+      the blood-pressure signal does not replicate in men.
+  (3) Recovery did NOT restore heart rate; it rose FURTHER to 65 bpm after three 8 h nights. The
+      authors do not explain this, and with n=15 it may be noise, but taken at face value it argues
+      against the assumption that weekend catch-up sleep resets cardiovascular measures.
+  The authors are appropriately cautious about clinical meaning: "To reliably interpret the clinical
+  significance of these early signs of physiological stress, a follow-up study would be needed to
+  evaluate if the stress responses escalate and lead to more unfavourable reactions, such as elevated
+  blood pressure and a subsequent elevated risk for cardiovascular health problems."
+  n = 23 = 15 restricted + 8 control. Age is described only as "healthy young men"; no mean is given
+  in the abstract, so age_mean is null and adolescent_match is good_young_adult rather than exact.
+shard: "s08_cardiovascular"

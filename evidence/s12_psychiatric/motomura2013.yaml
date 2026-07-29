@@ -1,0 +1,200 @@
+study_id: motomura2013
+citation: "Motomura Y, Kitamura S, Oba K, Terasawa Y, Enomoto M, Katayose Y, Hida A, Moriguchi Y, Higuchi S, Mishima K. Sleep debt elicits negative emotional reaction through diminished amygdala-anterior cingulate functional connectivity. PLoS One. 2013;8(2):e56578."
+doi: "10.1371/journal.pone.0056578"
+pmid: "23418586"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep Debt Elicits Negative Emotional Reaction through Diminished Amygdala-Anterior Cingulate Functional Connectivity"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 14
+n_studies_pooled: null
+population:
+  age_mean: 24.1
+  age_range: [20, 32]
+  pct_female: 0.0
+  country: "Japan"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: state_anxiety_stai_s
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5,
+               contrast_label: "4 h TIB vs 8 h TIB for 5 consecutive days, randomized crossover, 2-week washout"}
+    scale: cohens_d
+    unit: "within-subject d_z"
+    value: -0.7323
+    se: 0.3010
+    ci: [-1.3222, -0.1424]
+    conversion_formula: "Paper reports STAI-state 35.64 (6.21) -> 39.43 (4.86), paired t(13) = -2.74, p < 0.05. d_z = |t|/sqrt(n) = 2.74/sqrt(14) = 0.7323; se(d_z) = sqrt(1/14 + 0.7323^2/28) = 0.3010."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = higher state anxiety under sleep debt (harm)"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "STAI-state | 35.64 (6.21) | 39.43 (4.86) | -2.74 | <0.05 |"
+  - outcome_domain: psychiatric
+    outcome_construct: poms_depression
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5,
+               contrast_label: "4 h TIB vs 8 h TIB for 5 days"}
+    scale: cohens_d
+    unit: "within-subject d_z"
+    value: -0.1069
+    se: 0.2680
+    ci: [-0.6322, 0.4184]
+    conversion_formula: "POMS Depression 47.76 (9.00) -> 48.13 (8.71), t(13) = -0.40, N.S. d_z = 0.40/sqrt(14) = 0.1069; se = sqrt(1/14 + 0.1069^2/28) = 0.2680."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "essentially zero. Five days at 4 h TIB - a much harsher dose than the subject's - did NOT raise POMS depressed mood in young men"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "SSS and STAI-S scores for the SD session were significantly higher than those for the SC session, whereas no significant session-related differences were seen in POMS subscale scores."
+  - outcome_domain: psychiatric
+    outcome_construct: poms_tension_anxiety
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5,
+               contrast_label: "4 h TIB vs 8 h TIB for 5 days"}
+    scale: cohens_d
+    unit: "within-subject d_z"
+    value: -0.1229
+    se: 0.2683
+    ci: [-0.6487, 0.4029]
+    conversion_formula: "POMS Tension-Anxiety 46.37 (10.57) -> 47.05 (9.92), t(13) = -0.46, N.S. d_z = 0.46/sqrt(14) = 0.1229; se = 0.2683."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "near zero on POMS, despite a clear effect on STAI-S in the same participants - i.e. instrument-dependent. Do not treat 'anxiety' as a single construct across studies"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "POMS Tension-Anxiety | 46.37 (10.57) | 47.05 (9.92) | -0.46 | N.S. |"
+  - outcome_domain: brain_structure
+    outcome_construct: left_amygdala_reactivity_to_fear_faces
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5,
+               contrast_label: "4 h TIB vs 8 h TIB for 5 days; fMRI fear-vs-neutral face contrast"}
+    scale: cohens_d
+    unit: "within-subject d_z, BOLD fear-vs-neutral contrast at the left-amygdala peak (MNI x=-14, y=4, z=-18), 8 voxels"
+    value: 1.4967
+    se: 0.3891
+    ci: [0.7340, 2.2594]
+    conversion_formula: "Paper reports t(13) = 5.60 for the left-amygdala fear-vs-neutral contrast, sleep-debt vs sleep-control, FWE p<0.05 small-volume-corrected. Within-subject d_z = |t|/sqrt(n_pairs) = 5.60/sqrt(14) = 1.4967; se = sqrt(1/n + d^2/(2n)) = sqrt(1/14 + 1.4967^2/28) = 0.3891."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = INCREASED left-amygdala reactivity to fearful faces after 5 nights of 4 h TIB. This is by far the largest effect in the study: d_z = 1.50 for the neural response versus d_z = 0.73 for state anxiety and d_z = 0.11 (null) for POMS depression. The brain signal is roughly twice the size of the strongest self-reported mood signal and ~14x the depression signal."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Comparison of fear vs. neutral contrasts for the conscious condition revealed significantly greater activation of the left amygdala in the SD session than in the SC session [peak MNI coordinates x = −14, y = 4, z = −18, t (13) = −5.60, FWE p <0.05 small volume correction]"
+  - outcome_domain: brain_structure
+    outcome_construct: right_amygdala_reactivity_to_fear_faces_subthreshold
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5,
+               contrast_label: "4 h vs 8 h TIB x 5 days; RIGHT amygdala fear-vs-neutral, did not reach the study's significance threshold"}
+    scale: cohens_d
+    unit: "within-subject d_z at right-amygdala peak (MNI x=18, y=2, z=-18), 7 voxels"
+    value: 0.9114
+    se: 0.3179
+    ci: [0.2882, 1.5345]
+    conversion_formula: "t(13) = 3.41, p = 0.002, which the authors state 'did not reach the significance level set for the analysis' (FWE-corrected threshold). d_z = 3.41/sqrt(14) = 0.9114; se = sqrt(1/14 + 0.9114^2/28) = 0.3179."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = increased right-amygdala reactivity. Same direction and substantial magnitude as the left side; failed only the stringent multiple-comparison threshold. Recorded to show the effect is bilateral in direction."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Even though the activation of the right amygdala in the SD session was also higher than that in the SC session, it did not reach the significance level set for the analysis[peak MNI coordinates x = 18, y = 2, z = −18, t (13) = −3.41, p  = 0.002]."
+  - outcome_domain: brain_structure
+    outcome_construct: amygdala_specificity_happy_faces_null
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5,
+               contrast_label: "4 h vs 8 h TIB x 5 days; HAPPY-vs-neutral face contrast (valence-specificity control)"}
+    scale: cohens_d
+    unit: "within-subject d_z, left amygdala, happy vs neutral"
+    value: 0.8125
+    se: 0.3082
+    ci: [0.2083, 1.4166]
+    conversion_formula: "t(13) = 3.04 for left amygdala happy-vs-neutral; authors report 'no session-related differences in activation'. d_z = 3.04/sqrt(14) = 0.8125; se = 0.3082. NOTE: the authors call this null, but the t-statistic is large and the implied d_z is 0.81, so the claimed valence-specificity is weaker than the paper's prose suggests -- see notes."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "Reported by the authors as NO effect for positive-valence faces, supporting negative-valence specificity. My conversion shows the underlying t was nonetheless sizeable (d_z 0.81), so I flag the specificity claim as overstated rather than endorsing it."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "With regard to happy vs. neutral contrasts, the amygdala showed no session-related differences in activation [left amygdala, x = −14, y = 4, z = −14, t (13) = −3.04; right amygdala, x = 16, y = 2, z = −16, t (13) = −1.90]."
+  - outcome_domain: exposure_measurement
+    outcome_construct: achieved_tst_under_restriction
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5,
+               contrast_label: "actigraphy-measured mean sleep over the 5-day sleep-debt vs sleep-control sessions"}
+    scale: hours
+    unit: "h/night of sleep lost in the restriction condition"
+    value: 3.48
+    se: 0.54
+    ci: null
+    conversion_formula: "Reported directly: 8.09 +/- 0.35 h (control) vs 4.60 +/- 0.54 h (debt); difference 3.48 +/- 0.54 h, t(13) = 24.17, p < 0.001. se field holds the reported SD of the within-person difference, not a standard error."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "manipulation check; a 4 h TIB prescription yielded 4.60 h actual sleep"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "From the actigraph data, mean sleep time over the entire 5-day period in the SC and SD sessions was 8.09+/-0.35 h (8 h 5 min+/-21 min) and 4.60+/-0.54 h (4 h 36 min+/-32 min), with significantly fewer sleep hours (3.48+/-0.54 h, or 3 h 29 min+/-32 min) in the SD session [t (13) = 24.17, p <0.001]"
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomized crossover with 2-week washout, PSG and actigraphy verification, all-male sample of young adults - good transportability to an 18-19 year old male. But n = 14 is very small, so both the positive STAI finding and the POMS nulls are imprecise; first 3 of 5 nights were spent at home with email-alert adherence monitoring rather than in the laboratory; multiple comparisons across 6 POMS subscales without correction."
+funding: "Japanese government (Health and Labour Sciences Research Grants / intramural at National Center of Neurology and Psychiatry, per the article)"
+notes: |
+  Serves requirement 7 (emotional-regulation / amygdala mechanism) and reinforces requirement 3.
+
+  WHY THIS IS THE BEST MECHANISM STUDY FOR OUR SUBJECT, BETTER THAN YOO 2007. The named target for the
+  mechanism requirement was Yoo/Walker, whose 2007 Current Biology study used ONE NIGHT OF TOTAL SLEEP
+  DEPRIVATION. Motomura used FIVE CONSECUTIVE NIGHTS OF 4 h TIB in an all-male young-adult sample, with
+  actigraphic verification of the achieved dose (4.60 +/- 0.54 h vs 8.09 +/- 0.35 h, a real deficit of
+  3.48 h/night). Chronic partial restriction in young men is our subject's exposure; acute total
+  deprivation is not. I could not retrieve Yoo 2007 (Cell Press blocked automated PDF access with HTTP
+  403 from three routes and there is no PMC copy), so rather than record Yoo's numbers secondhand I use
+  this better-matched study as the primary mechanism record. See yoo2007.yaml for the citation-only stub.
+
+  THE EFFECT-SIZE ORDERING WITHIN THIS ONE STUDY IS THE FINDING THAT MATTERS. All from n=14 pairs:
+    left amygdala reactivity to fear faces    d_z = 1.50  (t(13) = 5.60, FWE-corrected)
+    right amygdala, same contrast             d_z = 0.91  (t(13) = 3.41, below FWE threshold)
+    Stanford Sleepiness Scale                 d_z = 0.94  (t(13) = 3.51)
+    STAI state anxiety                        d_z = 0.73  (t(13) = 2.74)
+    POMS Fatigue                              d_z = 0.35  (ns)
+    POMS Tension-Anxiety                      d_z = 0.12  (ns)
+    POMS Depression                           d_z = 0.11  (ns)
+  The NEURAL response to sleep restriction is the largest signal in the study, about twice the size of
+  the strongest self-reported mood change and an order of magnitude larger than the depressed-mood
+  change. Interpretation for the modeller: five nights of severe restriction demonstrably alters the
+  emotional-reactivity circuitry (amygdala up, amygdala-vACC connectivity down) while producing only a
+  modest conscious anxiety signal and NO depressed mood at all. The mechanism is loaded and primed
+  before it is subjectively reportable as depression.
+
+  CONVERGENCE ACROSS EXPERIMENTS -- THE CENTRAL EMPIRICAL CLAIM OF MY SHARD. Two independent
+  experiments, two age bands, two doses, and a randomized active-controlled adolescent trial all agree:
+    baum2014        adolescents, 6.5 h vs 10 h TIB x 5 nights: tension/anxiety d_z 0.46, anger 0.44,
+                    emotion regulation 0.38 SIGNIFICANT; POMS Depression/Dejection NOT significant
+    motomura2013    young men, 4 h vs 8 h TIB x 5 nights: STAI anxiety d_z 0.73 SIGNIFICANT;
+                    POMS Depression d_z 0.11 NULL
+    blake2016_sense randomized, active control, adolescents: anxiety improved; depression did not appear
+    palmer2024      meta-analysis of 50+ years of experimental sleep loss: anxiety and positive affect
+                    move reliably; depressive symptoms mixed
+  Sleep restriction causally produces ANXIETY, IRRITABILITY, ANGER, BLUNTED POSITIVE AFFECT and
+  DEGRADED EMOTIONAL REGULATION on a timescale of days. It does NOT produce depressed mood on that
+  timescale. Whatever links habitual short sleep to clinical depression in the epidemiology is either
+  slower than 5 nights, mediated by insomnia, or reverse causation.
+
+  THE VALENCE-SPECIFICITY CLAIM IS WEAKER THAN THE PAPER IMPLIES, AND I FLAG IT RATHER THAN REPEAT IT.
+  The authors state the amygdala "showed no session-related differences" for happy-vs-neutral faces,
+  which is used to argue that sleep debt selectively amplifies NEGATIVE emotional processing. But the
+  reported t(13) = 3.04 for the left amygdala on the happy contrast converts to d_z = 0.81 -- a large
+  effect that merely failed a stringent corrected threshold in a 14-person study. The honest reading is
+  that negative-valence reactivity increased MORE than positive-valence reactivity, not that positive
+  valence was unaffected. This matters because a general amplification of amygdala reactivity implies
+  emotional lability rather than a specifically depressogenic or anxiogenic shift.
+
+  ARITHMETIC. All d_z values from within-subject t on 13 df: d_z = |t|/sqrt(14),
+  se = sqrt(1/14 + d_z^2/28). Left amygdala 5.60 -> 1.4967 (se 0.3891); right amygdala 3.41 -> 0.9114
+  (se 0.3179); happy-vs-neutral left 3.04 -> 0.8125 (se 0.3082).
+shard: "s12_psychiatric"

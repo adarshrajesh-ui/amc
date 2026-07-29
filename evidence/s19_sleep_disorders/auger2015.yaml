@@ -1,0 +1,226 @@
+study_id: auger2015
+citation: "Auger RR, Burgess HJ, Emens JS, Deriy LV, Thomas SM, Sharkey KM. Clinical Practice Guideline for the Treatment of Intrinsic Circadian Rhythm Sleep-Wake Disorders: Advanced Sleep-Wake Phase Disorder (ASWPD), Delayed Sleep-Wake Phase Disorder (DSWPD), Non-24-Hour Sleep-Wake Rhythm Disorder (N24SWD), and Irregular Sleep-Wake Rhythm Disorder (ISWRD). An Update for 2015: An American Academy of Sleep Medicine Clinical Practice Guideline. J Clin Sleep Med. 2015;11(10):1199-1236."
+doi: "10.5664/jcsm.5100"
+pmid: "26414986"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4582061/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Clinical Practice Guideline for the Treatment of Intrinsic Circadian Rhythm Sleep-Wake Disorders: Advanced Sleep-Wake Phase Disorder (ASWPD), Delayed Sleep-Wake Phase Disorder (DSWPD), Non-24-Hour Sleep-Wake Rhythm Disorder (N24SWD), and Irregular Sleep-Wake Rhythm Disorder (ISWRD). An Update for 2015"
+access_tier: full_text
+secondhand_via: null
+design: guideline_consensus
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [6, 90]
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  # ---- TREATMENT EFFECT SIZES POOLED BY THE AASM TASK FORCE ----
+  - outcome_domain: circadian
+    outcome_construct: melatonin_dswpd_adolescent_sleep_onset_advance_0p15mgkg
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 6, contrast_label: "melatonin 0.15 mg/kg taken 1.5-2.0 h before habitual bedtime x 6 nights vs placebo; actigraphic sleep onset time; children 6-12 y with DSWPD"}
+    scale: raw_units
+    unit: "minutes (negative = sleep onset advanced/earlier)"
+    value: -42.77
+    se: 10.72
+    ci: [-63.78, -21.77]
+    conversion_formula: "se = (upper - lower)/3.92 = (-21.77 - -63.78)/3.92 = 42.01/3.92 = 10.72 min"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = sleep onset time moved EARLIER (therapeutic direction for DSWPD)"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Optimal results were obtained with a dose of 0.15 mg/kg, taken 1.5-2.0 hours prior to habitual bedtime, for 6 nights. ... sleep onset time favorably advanced in comparison to placebo among the 0.1 and 0.15 mg/kg groups (mean difference -33.70 minutes [CI -10.95 to -56.46] and -42.77 minutes [CI -21.77 to -63.78], respectively)"
+
+  - outcome_domain: circadian
+    outcome_construct: melatonin_dswpd_adolescent_sleep_latency_reduction_0p15mgkg
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 6, contrast_label: "melatonin 0.15 mg/kg 1.5-2.0 h before habitual bedtime x 6 nights vs placebo; actigraphic sleep latency; children 6-12 y with DSWPD"}
+    scale: raw_units
+    unit: "minutes (negative = shorter sleep latency)"
+    value: -43.80
+    se: 10.07
+    ci: [-63.54, -24.06]
+    conversion_formula: "se = (-24.06 - -63.54)/3.92 = 39.48/3.92 = 10.07 min"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = sleep onset latency shortened (benefit)"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Nevertheless, sleep latency improved among all three groups (statistical and clinically significant differences) in comparison to placebo (mean difference -38.39 minutes [CI -18.24 to -58.53], -44.24 minutes [CI -24.04 to -64.44], and -43.80 minutes [CI -24.06 to -63.54], respectively, in order of ascending dosage)."
+
+  - outcome_domain: circadian
+    outcome_construct: melatonin_dswpd_adolescent_psychiatric_comorbid_dlmo_advance
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 28, contrast_label: "fast-release melatonin 3 mg (<40 kg) or 5 mg (>40 kg) at 18:00-19:00 x 4 weeks vs placebo; DLMO; children/adolescents 6-12 y with DSWPD + ADHD; pooled n=132"}
+    scale: raw_units
+    unit: "minutes (negative = DLMO advanced/earlier)"
+    value: -54.22
+    se: 11.51
+    ci: [-76.78, -31.67]
+    conversion_formula: "se = (-31.67 - -76.78)/3.92 = 45.11/3.92 = 11.51 min"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = dim light melatonin onset (the physiological circadian phase marker) shifted EARLIER; this is direct evidence of circadian phase advance, not just behavioural change"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Combined analyses (n = 132) revealed an advance in DLMO of nearly 1 hour in comparison to placebo (mean difference -54.22 minutes [CI -31.67 to -76.78])"
+
+  - outcome_domain: circadian
+    outcome_construct: melatonin_dswpd_adolescent_psychiatric_comorbid_sleep_onset_advance
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 28, contrast_label: "fast-release melatonin 3-5 mg at 18:00-19:00 x 4 weeks vs placebo; actigraphic sleep onset; n=130"}
+    scale: raw_units
+    unit: "minutes (negative = earlier sleep onset)"
+    value: -36.57
+    se: 10.01
+    ci: [-56.18, -16.96]
+    conversion_formula: "se = (-16.96 - -56.18)/3.92 = 39.22/3.92 = 10.01 min"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = sleep onset advanced (benefit)"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Actigraphically assessed sleep-onset time (n = 130) also advanced (mean difference -36.57 minutes [CI -16.96 to -56.18])"
+
+  - outcome_domain: circadian
+    outcome_construct: melatonin_dswpd_adult_psg_total_sleep_time_gain
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 28, contrast_label: "melatonin 5 mg at 19:00-21:00 x 28 d vs placebo; PSG TST; non-depressed adult DSWPD subset, n=12"}
+    scale: raw_units
+    unit: "minutes (positive = more total sleep time)"
+    value: 56.00
+    se: 3.82
+    ci: [48.51, 63.49]
+    conversion_formula: "se = (63.49 - 48.51)/3.92 = 14.98/3.92 = 3.82 min"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = longer PSG-measured total sleep time on melatonin"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "More definitive results were obtained from an analysis of a subset of non-depressed patients from the Rahman study (Appendix, Table S2) (n = 12, TST = 56.00 minutes [CI 48.51-63.49])."
+
+  - outcome_domain: circadian
+    outcome_construct: melatonin_dswpd_adult_psg_sleep_latency_reduction
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 28, contrast_label: "melatonin 5 mg at 19:00-21:00 x 28 d vs placebo; PSG initial sleep latency; non-depressed adult DSWPD subset, n=12"}
+    scale: raw_units
+    unit: "minutes (negative = shorter latency)"
+    value: -37.70
+    se: 3.04
+    ci: [-43.65, -31.75]
+    conversion_formula: "se = (-31.75 - -43.65)/3.92 = 11.90/3.92 = 3.04 min"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = sleep onset latency shortened (benefit)"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Among the non-depressed subjects from the Rahman study (n = 12), sleep latency decreased by 37.70 minutes [CI -31.75 to -43.65]"
+
+  # ---- LIGHT THERAPY PARAMETERS (qualitative protocol, no pooled effect reported) ----
+  - outcome_domain: circadian
+    outcome_construct: light_therapy_protocol_adolescent_dswpd_recommendation_strength
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "post-awakening bright light + behavioural instructions vs no treatment, children/adolescents with DSWPD; AASM strength = WEAK FOR; evidence quality LOW"}
+    scale: probability
+    unit: "recommendation coded 1 = WEAK FOR (conditional, in favour)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "not an effect estimate; coded 1 to carry the guideline's directional endorsement through the schema. Parameters transcribed verbatim in quote field."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "AASM issues a WEAK FOR (conditional) recommendation for post-awakening light therapy plus behavioural instructions in children/adolescents with DSWPD. No pooled numeric effect size is reported for this PICO in the guideline text."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Light therapy occurred via exposure to natural sunlight (when available), or with use of a white broad spectrum lamp (~1000 lux, proximity to source not specified), for >= 0.5 hours (2 hours maximum), with the time of administration advanced by 0.5 hours daily from 'natural' wake time, until a target time of 06:00 was reached. Light therapy was subsequently discontinued, and behavioral interventions ensued."
+
+  - outcome_domain: circadian
+    outcome_construct: light_therapy_monotherapy_adult_dswpd_no_recommendation
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "post-awakening light therapy monotherapy vs no treatment, ADULT DSWPD"}
+    scale: probability
+    unit: "recommendation coded 0 = NO RECOMMENDATION (insufficient evidence)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "not an effect estimate; 0 codes 'no recommendation possible'"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "The AASM could NOT recommend light therapy as monotherapy for adults with DSWPD. This is a critical nuance: the evidence base supports light therapy in ADOLESCENTS when combined with behavioural instructions, not as a stand-alone adult treatment."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "There is insufficient evidence to support efficacy of post-awakening light therapy (monotherapy) as a treatment for DSWPD (versus no treatment). No recommendation."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "GRADE-based AASM clinical practice guideline. Underlying evidence for every DSWPD recommendation was rated LOW except the paediatric melatonin dosing study (MODERATE, single RCT, n=64 analysed, ages 6-12). All DSWPD recommendations are WEAK FOR (conditional). Major limitation for our subject: the paediatric melatonin dose-finding RCT enrolled 6-12 year olds, NOT 16-19 year olds, so the 0.15 mg/kg figure is extrapolated upward in age; the psychiatric-comorbidity studies were also 6-12 y and all had ADHD. No adolescent-specific circadian-timed (DLMO-referenced) dosing trial existed at guideline publication. Melatonin trials mostly used CLOCK-time dosing (19:00-21:00) rather than DLMO-referenced dosing, yet the guideline notes that earlier circadian timing produced larger phase advances."
+funding: "American Academy of Sleep Medicine (task force members declared no conflicts of interest)"
+notes: |
+  KEY GUIDELINE STATEMENTS RELEVANT TO OUR 18-19 YEAR OLD MALE (all verbatim):
+
+  (1) Recommendation for adolescents, no comorbidity:
+      "5.2.6.2.1a The TF suggests that clinicians treat children and adolescents with DSWPD (and no
+      comorbidities) with strategically timed melatonin (versus no treatment). [WEAK FOR]"
+      Dosing basis: "Optimal results were obtained with a dose of 0.15 mg/kg, taken 1.5-2.0 hours
+      prior to habitual bedtime, for 6 nights." For a 70 kg 19-year-old, 0.15 mg/kg = 10.5 mg, which
+      is FAR above the doses that are usually clinically effective for phase-shifting; the paediatric
+      RCT's actual mean administered dose in the 0.15 mg/kg arm was 4.4 +/- 1.0 mg in 6-12 year olds
+      (verbatim: "The three active treatment groups received melatonin at dosages of 0.05 mg/kg,
+      0.1 mg/kg, and 0.15 mg/kg, with respective mean doses of 1.6 +/- 0.4 mg (n = 16), 2.9 +/- 0.9 mg
+      (n = 19), and 4.4 +/- 1.0 mg (n = 18)."). I flag this explicitly: mg/kg scaling to adult body
+      mass is NOT supported by the source data and the report should not do it naively.
+
+  (2) Recommendation for adults:
+      "5.2.6.1a The TF suggests that clinicians treat DSWPD in adults with and without depression with
+      strategically timed melatonin (versus no treatment). [WEAK FOR]"
+      Dosing basis: "Positive results were obtained with a 5 mg dose timed between 19:00-21:00 (no
+      circadian-based timing), for a period of 28 days."
+
+  (3) Timing matters more than dose (both the adult and paediatric trials):
+      "the authors reported an inverse relationship between the timing of melatonin administration
+      (irrespective of dose) and the magnitude of DLMO phase advance, such that earlier timing of the
+      former (in relation to DLMO) resulted in greater phase advances."
+      and: "As with the previously discussed Mundey study, a positive relationship between DLMO phase
+      advances and an earlier circadian TOA was described (no relationship observed with respect to
+      clock TOA), but no differences were observed between the various melatonin dosage groups."
+
+  (4) Things the guideline explicitly could NOT recommend for DSWPD:
+      - "There is insufficient evidence to support the use of strategic avoidance of light as a
+        treatment for patients with DSWPD (versus no treatment). No recommendation."
+      - "There is insufficient evidence to support efficacy of post-awakening light therapy
+        (monotherapy) as a treatment for DSWPD (versus no treatment). No recommendation."
+      - "There is insufficient evidence to support the use of sleep-promoting medications as a
+        treatment for patients with DSWPD (versus no treatment). No recommendation."
+      - "There is no evidence to support the use of wakefulness-promoting medications as a treatment
+        for patients with DSWPD. No recommendation."
+      - "There is insufficient evidence to support the use of oral vitamin B12 (and no evidence to
+        support alternate somatic interventions) among patients with DSWPD (versus no treatment).
+        No recommendation."
+
+  (5) On DIAGNOSIS (ICSD-3 change, relevant to our measurement protocol):
+      "Other major changes include the recommendation that CRSWD diagnoses are ascertained via
+      actigraphy derived data when possible (with inclusion of both work/school and free days), to
+      provide objective longitudinal documentation of sleep-wake patterns. Consistent with this
+      emphasis on objective measures, circadian phase assessments (e.g., dim light melatonin onset,
+      or DLMO) are also recommended, if feasible."
+      Note the explicit requirement to include BOTH school days AND free days -- exactly the
+      weekday/weekend contrast our subject reports.
+
+  (6) Blue-blocking glasses: mentioned only as indirect evidence in insomnia patients, not a DSWPD
+      recommendation: "adult insomnia patients who wore 'blue blocker' (< 550 nm) glasses during the
+      3 hours prior to habitual bedtime demonstrated improved subjective sleep quality compared with
+      the placebo intervention (yellow-tinted glasses that blocked only ultraviolet light).
+      Importantly, there are no tangible risks associated with these interventions."
+
+  Full text retrieved from PubMed Central (PMC4582061) and parsed to plain text; all quotes above are
+  verbatim from that retrieval.
+shard: "s19_sleep_disorders"

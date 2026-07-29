@@ -1,0 +1,95 @@
+study_id: fernandezmendoza2019
+citation: "Fernandez-Mendoza J, He F, Vgontzas AN, Liao D, Bixler EO. Interplay of Objective Sleep Duration and Cardiovascular and Cerebrovascular Diseases on Cause-Specific Mortality. J Am Heart Assoc. 2019 Oct 15;8(20):e013043."
+doi: "10.1161/JAHA.119.013043"
+pmid: "31575322"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6818044/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Interplay of Objective Sleep Duration and Cardiovascular and Cerebrovascular Diseases on Cause-Specific Mortality."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 1654
+n_studies_pooled: null
+population:
+  age_mean: 47.5
+  age_range: [20, 74]
+  pct_female: 52.5
+  country: "US (Penn State Adult Cohort)"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_in_cardiometabolic_risk_subgroup
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: null, duration_days: 1,
+               contrast_label: "all-cause mortality risk associated with cardiometabolic risk factors (stage 2 hypertension and/or type 2 diabetes), AMONG those with POLYSOMNOGRAPHIC total sleep time <6 h"}
+    scale: log_hr
+    unit: null
+    value: 0.760806
+    se: 0.175139
+    ci: [0.418710, 1.105257]
+    conversion_formula: "log_hr = ln(2.14) = 0.760806; se = (ln(3.02) - ln(1.52))/3.92 = 0.175139"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher all-cause mortality. IMPORTANT: THIS IS NOT A SHORT-SLEEP MAIN EFFECT. It is the
+      hazard associated with having cardiometabolic risk factors, ESTIMATED WITHIN the objectively
+      short-sleeping stratum. The contrast is CMR vs no CMR among short sleepers, not short sleep vs
+      normal sleep. Objective sleep duration acted as an EFFECT MODIFIER (P < 0.05 for modification):
+      cardiometabolic risk was much more lethal in people who objectively slept <6 h.
+    covariates: ["multivariable-adjusted (list not available in abstract)"]
+    followup_years: 19.2
+    cohort_family: "Penn_State_Adult_Cohort"
+    quote: "Risk of all-cause mortality associated with CMR or CBVD was significantly modified by objective sleep duration (P<0.05), and it was significantly higher in subjects who slept <6 hours (HR, 2.14 [95% CI, 1.52-3.02] and HR, 3.17 [95% CI=2.16-4.65], respectively)."
+  - outcome_domain: exposure_measurement
+    outcome_construct: polysomnographic_short_sleep_definition
+    exposure: {type: descriptive, dose_h: 6, referent_h: null, duration_days: 1,
+               contrast_label: "definition and setting of the objective short-sleep exposure"}
+    scale: hours
+    unit: "hours of polysomnographic total sleep time defining 'objective short sleep'"
+    value: 6.0
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive. Exposure is a SINGLE NIGHT of in-laboratory polysomnography - the gold standard for
+      measurement accuracy but the worst possible instrument for habitual sleep, since one night in a
+      sleep laboratory captures neither the person's usual duration nor their usual environment.
+      19.2 years of mortality follow-up is the longest objective-exposure follow-up available.
+    covariates: []
+    followup_years: 19.2
+    cohort_family: "Penn_State_Adult_Cohort"
+    quote: "A total of 1654 adults (aged 20-74 years) from the Penn State Adult Cohort (47.5 years, 52.5% women, and 89.8% white) whose cause of death was determined after 19.2 years (5.2 years). ... Objective short sleep duration was defined as polysomnographic total sleep time <6 hours."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Strengths: polysomnography rather than actigraphy or self-report, a 19.2-year follow-up (much longer
+    than any UK Biobank accelerometer analysis), a younger mean age of 47.5 y with participants from age
+    20, and a pre-specified interaction hypothesis. Weaknesses: (1) n = 1654 with subgroup analyses, so
+    all estimates are imprecise; (2) exposure is ONE laboratory night, which correlates only moderately
+    with habitual sleep; (3) the design answers a different question from ours - it reports how
+    objective short sleep MODIFIES the lethality of existing cardiometabolic and cerebrovascular disease,
+    and the abstract does not report a simple short-sleep vs normal-sleep all-cause mortality hazard
+    ratio, so I cannot extract one; (4) abstract-only access.
+funding: null
+notes: >
+  Included as the only non-UK-Biobank objective-exposure mortality cohort I found with a long follow-up,
+  and because it makes the interaction structure explicit: OBJECTIVELY SHORT SLEEP IS DANGEROUS MAINLY IN
+  PEOPLE WHO ARE ALREADY SICK. Cardiometabolic risk factors carried HR 2.14 for all-cause mortality among
+  those sleeping <6 h objectively, and cerebrovascular disease carried HR 3.17.
+  .
+  RELEVANCE, WHICH IS INDIRECT BUT POINTED. Our subject is a healthy 19-year-old with no stage 2
+  hypertension, no type 2 diabetes, no heart disease and no stroke. He belongs to the stratum in which
+  this study found objective short sleep did NOT amplify mortality, because he has none of the conditions
+  that the amplification acts upon. This is a concrete mechanism-level reason why estimates derived from
+  40-70 year old cohorts overstate his risk: a large part of the short-sleep mortality signal in those
+  cohorts is short sleep multiplying an existing disease burden that he does not have.
+  .
+  I did NOT extract a short-sleep main effect from this paper because the abstract does not report one,
+  and inventing one from the interaction terms would be fabrication.
+shard: "s13_mortality"

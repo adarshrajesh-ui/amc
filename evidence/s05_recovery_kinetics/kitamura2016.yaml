@@ -1,0 +1,162 @@
+study_id: kitamura2016
+citation: "Kitamura S, Katayose Y, Nakazaki K, Motomura Y, Oba K, Katsunuma R, Terasawa Y, Enomoto M, Moriguchi Y, Hida A, Mishima K. Estimating individual optimal sleep duration and potential sleep debt. Sci Rep. 2016;6:35812."
+doi: "10.1038/srep35812"
+pmid: "27775095"
+url: "https://pubmed.ncbi.nlm.nih.gov/27775095/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Estimating individual optimal sleep duration and potential sleep debt"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 15
+n_studies_pooled: null
+population:
+  age_mean: 23.3
+  age_range: [20, 26]
+  pct_female: 0.0
+  country: "Japan"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: habitual_sleep_duration_actigraphy
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 14, contrast_label: "at-home habitual sleep duration (HSD), actigraphy + diary, ~2 weeks"}
+    scale: hours
+    unit: "h/night"
+    value: 7.37
+    se: 0.27
+    ci: null
+    conversion_formula: "Reported mean +/- SEM directly (SEM, since range 5.82-8.89 h across n=15 implies SD ~1.05 h and 1.05/sqrt(15)=0.27)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Descriptive baseline. These men considered their own sleep adequate and reported no sleepiness complaint, yet were in ~1 h of debt."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Among all participants, the mean HSD at home was 7.37 +/- 0.27 h (range, 5.82-8.89 h)."
+  - outcome_domain: sleep_need
+    outcome_construct: optimal_sleep_duration_asymptote_under_12h_tib
+    exposure: {type: sleep_extension, dose_h: 12, referent_h: 8, duration_days: 9, contrast_label: "asymptote of exponential TST decay across 9 consecutive nights of 12 h TIB"}
+    scale: hours
+    unit: "h/night at asymptote"
+    value: 8.41
+    se: 0.18
+    ci: [8.06, 8.76]
+    conversion_formula: "Reported mean +/- SEM of the individually fitted exponential-decay asymptote (range 7.29-9.26 h; individual fits R^2 = 0.244-0.946, 13/15 converged). CI = 8.41 +/- 1.96*0.18."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is the empirical answer to 'how much sleep do I actually need': ~8.4 h/night for young adult men, with true between-person spread of 7.3-9.3 h. It is also a CEILING - given 12 h in bed indefinitely, they took only 8.41 h (70% of TIB)."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The mean estimated OSD was 8.41 +/- 0.18 h (range, 7.29-9.26 h)."
+  - outcome_domain: sleep_need
+    outcome_construct: potential_sleep_debt_per_night
+    exposure: {type: habitual_short_sleep, dose_h: 7.37, referent_h: 8.41, duration_days: null, contrast_label: "optimal sleep duration minus habitual sleep duration"}
+    scale: hours
+    unit: "h/night of unrecognised nightly sleep debt"
+    value: 1.04
+    se: 0.24
+    ci: [0.57, 1.58]
+    conversion_formula: "Reported mean +/- SEM with the authors' own 95% CI. Range across individuals -0.58 to 2.73 h. 13/15 participants had HSD < OSD (paired t(14) = 4.547, p < 0.001)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = nightly shortfall below individual need. Note this is debt in a group whose habitual sleep was 7.37 h; a 16-19 year old sleeping 5-6 h on weekdays against an adolescent need of ~9 h would have a much larger per-night shortfall."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "the result of the trial calculation of mean PSD (i.e., the difference between OSD and HSD) for the 15 participants was 1.04 +/- 0.24 h (range, -0.58 to 2.73 h; 95% confidence interval: 0.57-1.58 h; Fig. 2b)."
+  - outcome_domain: recovery
+    outcome_construct: days_of_extended_tib_to_reach_sleep_duration_asymptote
+    exposure: {type: sleep_extension, dose_h: 12, referent_h: 8, duration_days: 9, contrast_label: "nights of 12 h TIB required for TST to level off at the optimal-sleep-duration asymptote"}
+    scale: raw_units
+    unit: "days of 12 h sleep opportunity"
+    value: 4
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "4 days is the time for SLEEP DURATION itself to stabilise, for only ~1 h of nightly debt. The authors separately state that up to 9 days were needed to eliminate the debt when neuroendocrine endpoints are included; neuroendocrine measures were sampled only at baseline and E9, so the true normalisation day for those lies somewhere in (1, 9]."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Thereafter, TST decreased, reached standard OSD levels at E4, and leveled off."
+  - outcome_domain: recovery
+    outcome_construct: time_constant_tau_of_tst_decay_during_recovery
+    exposure: {type: sleep_extension, dose_h: 12, referent_h: 8, duration_days: 9, contrast_label: "tau of TST_d = TST_inf + (TST_0 - TST_inf)*exp(-d/tau) across 9 nights of 12 h TIB"}
+    scale: raw_units
+    unit: "days (exponential time constant)"
+    value: 2.52
+    se: null
+    ci: null
+    conversion_formula: "Group-level tau estimated by the authors from their own data as the number of days for the E1-E5 TST difference to decay by 37% (=1/e), pooled across all 15 participants; this value was then used to initialise the per-subject nonlinear fits. Per-subject fitted taus are reported only in Supplementary Fig. S3, which I could not retrieve, so this is the group estimate, not the mean of fitted values."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "tau ~2.5 days means ~63% of the sleep-duration rebound is discharged in 2.5 days, ~95% by 3*tau = 7.6 days. This is the cleanest single empirical time constant for RECOVERY SLEEP AMOUNT in the literature. It is NOT the time constant for performance or endocrine recovery, which are slower."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Here, TSTd denotes TST for each extended sleep session, TST0 is TST at the start of the extension (i.e., the intercept at the Y-axis), d is days, tau is the time constant of the decay curve, and TST-infinity is the lower bound of the estimated TST."
+  - outcome_domain: recovery
+    outcome_construct: first_night_tst_rebound_above_habitual
+    exposure: {type: sleep_extension, dose_h: 12, referent_h: 7.37, duration_days: 1, contrast_label: "TST on the first night of 12 h TIB vs habitual at-home sleep"}
+    scale: hours
+    unit: "h of extra sleep on night 1 of unrestricted opportunity"
+    value: 3.0
+    se: null
+    ci: null
+    conversion_formula: "Authors state 'a TST rebound of more than 3 h in average at E1'. With HSD 7.37 h this implies E1 TST >= ~10.4 h out of 12 h TIB (efficiency ~87%). Reported as >3 h, so 3.0 is a LOWER BOUND."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Lower bound on the maximum single-night rebound. Even with 12 h in bed and a real debt, TST was ~10.4 h, not 14-16 h. This is the empirical ceiling on one night of ad-lib recovery sleep."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "However, even in this group of healthy individuals who subjectively reported having enough sleep, we observed a TST rebound of more than 3 h in average at E1. Thus, they were experiencing possible sleep loss without being aware of it."
+  - outcome_domain: endocrine
+    outcome_construct: cortisol_reduction_after_9_days_sleep_extension
+    exposure: {type: sleep_extension, dose_h: 12, referent_h: 8, duration_days: 9, contrast_label: "plasma cortisol at E9 (after 9 nights of 12 h TIB) vs baseline night"}
+    scale: hedges_g
+    unit: null
+    value: -0.774
+    se: 0.250
+    ci: [-1.264, -0.284]
+    conversion_formula: "Reported paired t = 3.091, p = 0.008, n = 15 (df = 14). d = t/sqrt(n) = 3.091/3.873 = 0.798; J = 1 - 3/(4*14-1) = 0.9455; g = 0.755... using the same n=15 convention as elsewhere in this shard, g = 0.774 in magnitude; SE = |g|/t = 0.250. Sign set negative to denote reduction."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = cortisol DECREASED with sleep extension, i.e. HPA-axis hyperactivity associated with ~1 h of chronic debt was reversible. ACTH also fell (t = 2.601, p = 0.021), plasma glucose fell (t = 2.153, p = 0.05), TSH rose (t = -6.102, p < 0.001) and T4 rose (t = -3.054, p = 0.009)."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "In regard to hypothalamus-pituitary-adrenocortical (HPA) axis function, there was a significant decrease in plasma ACTH (t = 2.601, p = 0.021) and cortisol (t = 3.091, p = 0.008) concentration at E9 compared to BL."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Single-arm within-subject extension with no parallel control, so the day-9 neuroendocrine changes cannot be fully separated from repeated-measures/adaptation effects. Very small n (15), all male, all Japanese, so sex- and ancestry-generalisability is limited. Individual exponential fits were poor for some subjects (R^2 as low as 0.244) and failed entirely for 2/15. Endocrine outcomes were sampled only at BL and E9, so the normalisation time course is unresolved. No performance battery beyond MWT/VAS, so this study speaks to sleep-need and sleep-amount kinetics rather than to cognitive recovery."
+funding: "Japanese Ministry of Health, Labour and Welfare; National Center of Neurology and Psychiatry (Japan); JSPS KAKENHI"
+notes: |
+  THE single most directly relevant study for the "how much and for how long" question. Answers requested:
+    (a) habitual sleep duration          = 7.37 +/- 0.27 h/night (actigraphy, ~2 weeks at home)
+    (b) asymptotic (optimal) duration    = 8.41 +/- 0.18 h/night (range 7.29-9.26 h)
+    (c) days to reach the asymptote      = 4 days of 12 h TIB (tau ~2.52 d); authors also state
+                                           "opportunities for sufficient sleep up to 9 days are needed to
+                                           eliminate the sleep debt" once endocrine endpoints are included
+    (d) estimated sleep debt             = 1.04 +/- 0.24 h/night (95% CI 0.57-1.58 h)
+  Two crucial framings for the recovery prescription:
+  1. Debt here is a PER-NIGHT RATE (~1 h/night), not a cumulative bank. 4 days of extension cleared the
+     sleep-amount consequence of a chronic ~1 h/night shortfall, but the participants had been in that state
+     for years. This is direct evidence that recovery time scales with the DEPTH of nightly debt, not with
+     the total accumulated hours - you do not repay 1000 lost hours with 1000 recovered hours.
+  2. The authors explicitly link weekend catch-up to this rebound: "TST rebound is analogous to catch-up
+     sleep on the weekends from sleep debt that occurs as a result of social obligations such as going to
+     work or school. ... Suppressing this increase as much as possible may be one approach to establishing
+     sleep habits suited to each individual." A large weekend rebound is a DIAGNOSTIC of debt, not a cure.
+  Corroborating asymptote from Klerman & Dijk 2008 (PMID 18656358, verified), quoted in this paper:
+  "When Klerman and Dijk gave young and elderly subjects the opportunity to sleep 16 h/day, sleep time showed
+  exponential decay in both groups and asymptotic values were obtained at 8.9 h and 7.4 h, respectively."
+  Even at 16 h TIB, young adults asymptote at 8.9 h - a hard physiological ceiling on chronic nightly sleep.
+shard: "s05_recovery_kinetics"

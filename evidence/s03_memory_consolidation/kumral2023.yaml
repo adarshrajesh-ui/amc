@@ -1,0 +1,159 @@
+study_id: kumral2023
+citation: "Kumral D, Matzerath A, Leonhart R, Schonauer M. Spindle-dependent memory consolidation in healthy adults: A meta-analysis. Neuropsychologia. 2023;189:108661."
+doi: "10.1016/j.neuropsychologia.2023.108661"
+pmid: "37597610"
+url: "https://doi.org/10.1101/2022.07.18.500433"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Spindle-dependent memory consolidation in healthy adults: A meta-analysis."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 1896
+n_studies_pooled: 53
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "DE(14) US(8) CA(7) AT(6) CH(4) UK(4) HU(4) NL(2) JP(2) IR(1) CU(1)"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: spindle_memory_association_overall
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "correlation between EEG sleep-spindle measures and memory performance; three-level random-effects model over 1427 effect sizes from 53 studies"}
+    scale: raw_units
+    unit: "pearson_r"
+    value: 0.236
+    se: 0.0375
+    ci: [0.161, 0.308]
+    conversion_formula: "Reported directly. SE on the r scale = (0.308 - 0.161)/3.92 = 0.0375. The forest plot legend gives the same estimate on the Fisher scale: 'z = 0.240, r = 0.236'."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = more spindle activity associated with better memory. THIS IS THE CEILING ON THE SPINDLE PATHWAY: r = 0.24 means spindle measures explain about 5.6% of variance in memory performance."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Using a three-level meta-analytic model, we observed that the pooled correlation between sleep spindles and memory performance was r = 0.236; CI: [0.161-0.308]; p < 0.001, reflecting a small- to moderate effect size for the spindlememory association."
+  - outcome_domain: cognition
+    outcome_construct: spindle_memory_association_consolidation_only
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "restricted to state consolidation measures (k = 1204), excluding trait-like learning-ability measures"}
+    scale: raw_units
+    unit: "pearson_r"
+    value: 0.243
+    se: 0.0385
+    ci: [0.166, 0.317]
+    conversion_formula: "Reported directly. SE = (0.317 - 0.166)/3.92 = 0.0385. Heterogeneity: Q(1203) = 2828.262, p < .001; I^2 at level 2 (within study) = 21.43%, I^2 at level 3 (between study) = 52.75%."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = more spindle activity associated with better retention. Between-study heterogeneity is moderate-to-high (I^2 level 3 = 52.75%)."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "We first tested the strength of association between sleep spindles and memory consolidation and observed a moderate correlation (r = 0.243; CI: [0.166-0.317]; p < .001; Supplementary Fig 1). There was substantial heterogeneity among effect sizes (Q(1203) = 2828.262, p < .001; I2(2) = 21.43 and I2(3) = 52.75 especially moderate to high between-study heterogeneity."
+  - outcome_domain: cognition
+    outcome_construct: spindle_memory_association_declarative
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "declarative memory tasks only, k = 812 effect sizes"}
+    scale: raw_units
+    unit: "pearson_r"
+    value: 0.210
+    se: null
+    ci: null
+    conversion_formula: "Reported directly as r = 0.210, p < .001, k = 812. No CI is given for this subgroup in the retrievable text, so se is null per the instructions' rule against inventing SEs. Memory type was a significant moderator: Qm(1) = 7.589, p = 0.006."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive. THIS IS THE RELEVANT SUBGROUP FOR SCHOOL LEARNING - declarative memory is the channel that matters for knowledge accumulation, and it shows the WEAKER of the two associations."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "We found that memory type is a significant moderator of the spindle-memory association (Qm(1) = 7.589, p = 0.006), with a stronger spindle-memory association for procedural memory (r = 0.319, p < .001, k = 392) than for declarative memory (r = 0.210, p < .001, k = 812)"
+  - outcome_domain: cognition
+    outcome_construct: spindle_memory_association_declarative_unreported_subset
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "declarative memory, effect sizes that were NOT reported in the original publications and had to be obtained by asking authors (k = 295) - the subset least exposed to selective reporting"}
+    scale: raw_units
+    unit: "pearson_r"
+    value: 0.131
+    se: null
+    ci: null
+    conversion_formula: "Reported directly as r = 0.131, k = 295, versus r = 0.254, k = 517 for effect sizes that WERE reported in the original papers; the difference is significant, Qm(1) = 6.094, p = 0.014. No CI given, so se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive but roughly HALF the headline declarative estimate. This is the closest thing in the paper to a selective-reporting-corrected estimate of the spindle-declarative-memory link, and it is r = 0.13, i.e. ~1.7% of variance."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "While in studies with declarative memory we found the effect size of reported studies (r = 0.254, k = 517) were higher than unreported ones (r = 0.131, k = 295), we found opposite pattern such that the effect size of reported results (r = 0.169, k = 276) were higher than unreported ones (r = 0.421, k = 116) in studies with assessing procedural memory."
+  - outcome_domain: cognition
+    outcome_construct: sleep_duration_moderation_of_spindle_memory_link
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep duration (continuous, mean 242.41 min, SD 169 min) as a moderator of the spindle-memory association"}
+    scale: raw_units
+    unit: "pearson_r"
+    value: 0.181
+    se: null
+    ci: null
+    conversion_formula: "Reported as a non-significant moderation: Qm(1) = 1.357, p = 0.244, k = 1204, r = 0.181. Declarative subgroup: Qm(1) = 1.032, p = 0.310, k = 812, r = 0.174. No CI given."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NOT SIGNIFICANT. Sleep duration does not moderate how strongly spindles relate to memory. Relevant because it means a short night does not make each remaining spindle more or less useful - the spindle-memory coefficient appears dose-invariant, so the exposure that matters is the total spindle count, not the sleep duration per se."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Similarly, we found no significant moderation effect of sleep duration (M = 242.41, SD =169 min) on spindle-memory association neither across all studies (Qm(1) = 1.357, p = 0.244, k = 1204, r = 0.181), nor separately in studies reporting either declarative (Qm(1) = 1.032, p = 0.310, k = 812, r = 0.174) or procedural memory (Qm(1) = 0.251, p = 0.617, k = 392, r = 0.210)."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Strengths: prespecified PRISMA search (421 titles screened, 140 full-text, 53 included), three-level random-effects model that correctly handles multiple effect sizes per sample, extensive moderator analyses, formal publication-bias testing, and an open dataset (https://osf.io/wu6d7). Serious weaknesses that limit the pooled estimate: (i) the modified Egger test detects significant publication bias (beta = 1.64, SE = 0.53, p = 0.0020); (ii) the constituent studies are tiny - mean N = 35.66 across 53 studies, falling to 18.59 and a range of 6-44 once the single large study (N = 929) is removed; (iii) the sample-size/effect-size correlation is r = -0.175, p < 0.001, the textbook small-study-effect signature; (iv) between-study heterogeneity is moderate-to-high (I^2 level 3 = 52.75%); (v) a leave-out sensitivity analysis removing one third of the estimates overturned two of the moderator conclusions; (vi) all correlational - no study manipulates spindles and observes memory, so causality is not established."
+funding: "not stated in the retrieved preprint"
+notes: |
+  WHY I ADDED THIS RECORD LATE AND WHY IT MATTERS: my architecture_under_restriction.md concluded that
+  spindle/sigma activity, not SWS minutes, is the right exposure variable for the learning-loss channel,
+  because sigma energy falls 28-40% from 10 h to 7 h TIB (campbell2021) while N3 minutes do not move at
+  all. That conclusion is only useful if the spindle-to-memory coefficient is large. This is the only
+  meta-analysis of that coefficient, and it shows the coefficient is SMALL. I have revised the
+  architecture file accordingly. Without this record the shard would have handed the modeller a
+  mechanism with an unquantified and implicitly overstated slope.
+
+  THE ARITHMETIC THE MODELLER SHOULD DO, done here explicitly. Take the strongest defensible declarative
+  estimate, r = 0.21 (headline) or r = 0.13 (unreported subset, less selection-biased). A 28-40% loss of
+  all-night sigma energy is, on campbell2021's numbers, roughly a 0.5-1.0 SD reduction in spindle
+  activity depending on the between-subject SD assumed. Multiplying through: 0.21 x 1.0 SD = 0.21 SD of
+  declarative memory at the extreme, and 0.13 x 0.5 SD = 0.065 SD at the conservative end. So the
+  spindle pathway predicts a learning-loss effect somewhere between roughly 0.07 and 0.21 SD - small,
+  and an order of magnitude below the g = -0.89 that cousins2018 measures behaviourally at the same dose.
+  Either the spindle pathway is not the main mechanism, or cousins2018 is capturing something else
+  (most plausibly an encoding-capacity deficit rather than a consolidation deficit).
+
+  THE BIAS PROBLEM IS SEVERE AND THE AUTHORS SAY SO. Three independent signals point the same way: the
+  Egger test is significant (p = 0.0020); the sample-size/effect-size correlation is -0.175 (p < 0.001);
+  and for declarative memory specifically, effect sizes that the original authors chose to publish are
+  nearly twice those that had to be requested (r = 0.254 vs r = 0.131, Qm p = 0.014). The authors also
+  report, and I quote them because it is the single most important sentence in the paper for our
+  purposes, that a PET-PEESE reanalysis of their own public dataset by another investigator
+  "reduces the correlation between sleep spindles and memory function to insignificance":
+
+    "Using our publicly available datasets in OSF (https://osf.io/wu6d7), Ujma (2022) have recently
+    computed the association between sleep spindles and memory by adjusting publication bias using a
+    non-standard multivariate implementation of the above-mentioned PET-PEESE methods. He observed that
+    correcting for publication bias in this way reduces the correlation between sleep spindles and
+    memory function to insignificance."
+
+  I could NOT independently verify the Ujma (2022) reanalysis - it returned no PubMed hits under author
+  and topic search, and I have not retrieved it. I therefore report it only as quoted by Kumral et al.,
+  not as a verified effect estimate, and I have not created a record for it. The authors dispute the
+  interpretation rather than the arithmetic.
+
+  PATTERN ACROSS THIS SHARD, worth flagging to the orchestrator: this is now the FOURTH meta-analysis in
+  my domain where formal bias correction substantially or entirely removes the sleep-memory effect -
+  alongside berres2021 (episodic, g = 0.44 falling to 0.28 after Egger correction), panrickard2015 and
+  rickard2022 (motor sequence learning, bias-corrected post-sleep gain negative). The sleep-and-memory
+  literature has a systematic small-study/selective-reporting problem, and the downstream model should
+  apply a substantial discount to any pooled sleep-memory effect that has not been bias-corrected.
+
+  POPULATION CAVEAT: healthy adults, age not a significant moderator (Qm(1) = 0.235, p = 0.628) but no
+  age distribution is given, so I set adolescent_match to fair_adult. Note that the studies feeding this
+  meta-analysis measure natural between-subject variation in spindles during normal sleep; none of them
+  restricts sleep. Applying this coefficient to a restriction-induced spindle loss is an extrapolation
+  across designs.
+shard: "s03_memory_consolidation"

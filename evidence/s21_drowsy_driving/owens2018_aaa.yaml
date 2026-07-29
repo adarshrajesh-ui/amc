@@ -1,0 +1,250 @@
+study_id: owens2018_aaa
+citation: "Owens JM, Dingus TA, Guo F, Fang Y, Perez M, McClafferty J, Tefft BC. Prevalence of Drowsy Driving Crashes: Estimates from a Large-Scale Naturalistic Driving Study (Research Brief). Washington, DC: AAA Foundation for Traffic Safety; February 2018."
+doi: null
+pmid: null
+url: "https://aaafoundation.org/research/prevalence-drowsy-driving-crashes-estimates-large-scale-naturalistic-driving-study/"
+verification:
+  crossref_ok: null
+  pubmed_ok: null
+  status: UNVERIFIED
+  resolved_title: "Prevalence of Drowsy-Driving Crashes: Estimates from a Large-Scale Naturalistic Driving Study"
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 701
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [16, 98]
+  pct_female: 54.1
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: mortality
+    outcome_construct: fraction_of_crashes_with_objectively_drowsy_driver
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "PERCLOS-measured drowsiness (eyes closed >=12% of frames) in the 3 min before crash; ALL crash severities; ALL ages"}
+    scale: probability
+    unit: "fraction of crashes in which the driver was objectively drowsy"
+    value: 0.095
+    se: 0.0121
+    ci: null
+    conversion_formula: "56/589 = 0.0951; se = sqrt(p(1-p)/n) = sqrt(0.0951*0.9049/589) = 0.01211 (binomial, computed by me; the brief reports no CI)"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = fraction of crashes involving a drowsy driver. 9.5% of all crashes. THIS IS THE NUMERATOR SIDE OF THE ORDER-OF-MAGNITUDE DISCREPANCY the task asked about: NHTSA's police-report-based figure for the same quantity is 1.4%, so the objective measure is ~6.8x higher."
+    covariates: []
+    followup_years: null
+    cohort_family: "SHRP2_NDS"
+    quote: >
+      drowsiness was identified in 8.8%-9.5% of all crashes examined and 10.6%-10.8% of crashes that resulted in
+      significant property damage, airbag deployment, or injury.
+  - outcome_domain: mortality
+    outcome_construct: fraction_of_crashes_with_objectively_drowsy_driver
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "PERCLOS drowsiness before POLICE-REPORTABLE (severe + moderate) crashes only, 3 min window"}
+    scale: probability
+    unit: "fraction of police-reportable crashes with a drowsy driver"
+    value: 0.108
+    se: 0.0228
+    ci: null
+    conversion_formula: "20/186 = 0.1075; se = sqrt(0.1075*0.8925/186) = 0.02275 (binomial, computed by me)"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = harm fraction. 10.8% of police-reportable crashes, i.e. drowsiness is MORE prevalent as severity rises (9.5% -> 10.8%). Against NHTSA's 2.0% for injury crashes and 2.4% for fatal crashes, this is a 4.5-5.4x discrepancy."
+    covariates: []
+    followup_years: null
+    cohort_family: "SHRP2_NDS"
+    quote: >
+      Total Police-Reportable c 186 20 (10.8)
+  - outcome_domain: mortality
+    outcome_construct: fraction_of_crashes_with_objectively_drowsy_driver
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "PERCLOS drowsiness, drivers aged 16-19 ONLY, 3 min window"}
+    scale: probability
+    unit: "fraction of crashes with a drowsy driver, age 16-19"
+    value: 0.0886
+    se: 0.0226
+    ci: null
+    conversion_formula: "14/158 = 0.08861; se = sqrt(0.08861*0.91139/158) = 0.02261 (binomial, computed by me)"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = harm fraction. 8.9% for 16-19 y olds — THE EXACT AGE BAND OF THE SUBJECT, measured
+      objectively. NOTE THIS IS NOT ELEVATED versus the all-age 9.5%; the brief states variation by age
+      was not statistically significant (P > 0.20). So the claim "teenagers' crashes are more often
+      drowsy crashes" is NOT supported by the only objective data available. What IS true is that
+      teenagers crash much more often overall (see tefft2017_aaa), so the same drowsy FRACTION applied
+      to a much larger crash rate yields more drowsy crashes per person-year.
+    covariates: []
+    followup_years: null
+    cohort_family: "SHRP2_NDS"
+    quote: >
+      Driver Age 16 to 19 158 14 (8.9) 20 to 24 160 18 (11.3)
+  - outcome_domain: mortality
+    outcome_construct: fraction_of_crashes_with_objectively_drowsy_driver
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "PERCLOS drowsiness, drivers aged 20-24 ONLY, 3 min window"}
+    scale: probability
+    unit: "fraction of crashes with a drowsy driver, age 20-24"
+    value: 0.1125
+    se: 0.0250
+    ci: null
+    conversion_formula: "18/160 = 0.1125; se = sqrt(0.1125*0.8875/160) = 0.02499 (binomial, computed by me)"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = harm fraction. 11.3% for 20-24 y olds, the highest of the young bands but not significantly different from any other age group (P > 0.20). Relevant to the subject's forward trajectory into college years."
+    covariates: []
+    followup_years: null
+    cohort_family: "SHRP2_NDS"
+    quote: >
+      Driver Age 16 to 19 158 14 (8.9) 20 to 24 160 18 (11.3)
+  - outcome_domain: mortality
+    outcome_construct: drowsy_crash_fraction_dark_vs_daylight
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "crashes in DARKNESS (19.0%, 29/153) vs DAYLIGHT (6.1%, 25/408): ratio of drowsy fractions"}
+    scale: log_rr
+    unit: null
+    value: 1.129245
+    se: 0.255922
+    ci: [0.627638, 1.630852]
+    conversion_formula: >
+      Computed by me from the brief's published cell counts (the brief reports no CI).
+      p_dark = 29/153 = 0.189542; p_daylight = 25/408 = 0.061275; RR = 3.093239;
+      log_rr = ln(3.093239) = 1.129245.
+      se(log RR) = sqrt(1/a - 1/n1 + 1/c - 1/n2) = sqrt(1/29 - 1/153 + 1/25 - 1/408)
+                 = sqrt(0.0344828 - 0.0065359 + 0.0400000 - 0.0024510) = sqrt(0.0654959) = 0.255922.
+      ci = 1.129245 +/- 1.96 * 0.255922 = [0.627638, 1.630852].
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = HARM from darkness. Crashes in darkness were ~3.1x as likely to involve a drowsy driver
+      as daylight crashes (P < 0.001, Fisher's exact, the ONLY covariate in this study that reached
+      significance). MECHANISTICALLY DECISIVE FOR THE SUBJECT: whether he drives at night matters far
+      more than his habitual sleep duration does. "more than half of all crashes that involved
+      drowsiness occurred in darkness."
+    covariates: []
+    followup_years: null
+    cohort_family: "SHRP2_NDS"
+    quote: >
+      Lighting Conditions Daylight 408 25 (6.1) Dawn/Dusk 28 2 (7.1) Dark 153 29 (19.0)
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    This is the ONLY study in existence that measures pre-crash driver drowsiness OBJECTIVELY in a
+    general-population sample, so it is uniquely valuable and uniquely unreplicated.
+    Strengths: (1) exposure is PERCLOS (percentage of eyelid closure) coded frame-by-frame from
+    in-vehicle video of the final 1-3 minutes before each crash, by trained reductionists — no
+    self-report, no post-hoc attribution, no police judgement; (2) 3,593 drivers monitored continuously
+    for months in their own vehicles (SHRP2 NDS, Oct 2010-Dec 2013); (3) crash severity classified on an
+    objective scale (delta-V, airbag deployment, property damage); (4) the sample was "generally
+    representative of the driving public" apart from deliberate over-sampling of young and old drivers.
+    Weaknesses: (1) NO FATAL CRASHES OCCURRED IN THE SHRP2 NDS, so the headline 9.5% CANNOT be
+    extrapolated to fatal crashes — the authors say so explicitly, and this is the central limitation
+    for our purposes because our outcome is death; (2) only 701 of 905 crashes were codable (23% excluded
+    because the driver's eyes were not visible for >=75% of the window); (3) the 12%-of-frames PERCLOS
+    threshold is a validated but arbitrary dichotomy, and the brief notes that a separate subjective
+    6-second assessment identified additional drowsy drivers who did not meet it, so 9.5% is a floor for
+    the PERCLOS-detectable phenomenon; (4) volunteers who consented to in-car cameras may not behave
+    like the general population; (5) drowsiness at the moment of the crash does not establish that the
+    drowsiness CAUSED the crash — this is a prevalence study with no control window, so it yields NO
+    relative risk and NO odds ratio for drowsiness itself. That is the single most important thing to
+    understand about it: it quantifies HOW COMMON drowsiness is in crashes, not HOW MUCH drowsiness
+    RAISES crash risk.
+funding: "AAA Foundation for Traffic Safety. Underlying SHRP2 NDS data collection federally funded via the Transportation Research Board / National Academy of Sciences."
+notes: >
+  REQUIRED EXTRACTION #4(b): the independent naturalistic-driving estimate that differs from NHTSA's
+  counted figure by roughly an order of magnitude. Also supplies REQUIRED EXTRACTION #2's objective
+  age-specific numbers.
+  .
+  VERIFICATION STATUS: agency research brief, no DOI, no PMID; Crossref/PubMed verification impossible,
+  so status is UNVERIFIED. NOT secondhand — full text retrieved directly (HTTP 200) and stored at
+  src/owens2018_aaa_brief.txt, sha256
+  243f17585cde482717b4bbc1a19c9779a367cc73d9388f06cd55883cc2ae0c66. The work was presented at the 97th
+  TRB Annual Meeting as an extended abstract (Owens et al. 2018) but I found no peer-reviewed journal
+  version, so no VERIFIED substitute exists for these numbers.
+  .
+  WHY tier T4 AND design prospective_cohort_objective: drivers were enrolled and monitored prospectively
+  with an OBJECTIVE exposure measure (video-derived PERCLOS). The estimand is a prevalence proportion
+  rather than a hazard, which is why the effects are recorded on the `probability` scale with binomial
+  SEs I computed myself from the published cell counts (arithmetic shown in each conversion_formula).
+  .
+  THE ORDER-OF-MAGNITUDE DISCREPANCY, IN THE BRIEF'S OWN WORDS AND NUMBERS:
+    objective PERCLOS, all crashes            8.8% - 9.5%
+    objective PERCLOS, police-reportable      10.6% - 10.8%
+    NHTSA police reports, all crashes         1.4%
+    NHTSA police reports, injury crashes      2.0%
+    NHTSA police reports, fatal crashes       2.4%
+  Ratio at comparable severity: 10.7 / 2.0 = 5.4x. Headline press ratio ("8 times") comes from
+  comparing 10.8% with the 1.4% all-crash figure, which is not a like-for-like comparison. I use 5-7x as
+  the honest range.
+  .
+  WHY THE TWO SOURCES DISAGREE — the brief's own explanation, which I accept: "Unlike impairment by
+  substances such as alcohol, there is no test analogous to a breathalyzer that the police can
+  administer at the roadside to assess a driver's level of drowsiness at or shortly after the time of a
+  crash. Moreover, a driver who was drowsy before a crash may appear fully alert afterward and may be
+  reluctant to volunteer to the police that he or she was drowsy. In the case of a driver who was not
+  actually asleep at the time of the crash but was operating at a reduced level of alertness, the driver
+  may not even recognize that he or she was drowsy nor that drowsiness may have contributed to the
+  crash. In extreme cases, all relevant information about the driver's pre-crash state is lost if the
+  driver is deceased and there are no passengers able to provide information about the driver's pre-crash
+  state." The last sentence is critical: the undercount is WORST precisely for fatal crashes, which is
+  our outcome.
+  .
+  CONVERGENT INDEPENDENT ESTIMATES CITED IN THE BRIEF (all model-based, none from this dataset):
+  Masten et al. (2006) ~15% of drivers in fatal crashes drowsy; Tefft (2012) 7% of all reported crashes,
+  13% of severe-injury crashes, 16.5% of fatal crashes. These bracket the AAA 2024 model estimate of
+  17.6% of fatal crashes (see tefft2024_aaa) and Connor 2002's measured 19% PAR.
+  .
+  VERBATIM QUOTES:
+  HEADLINE: "Using this measure, drowsiness was identified in 8.8%-9.5% of all crashes examined and
+  10.6%-10.8% of crashes that resulted in significant property damage, airbag deployment, or injury."
+  AGE TABLE (3-min PERCLOS, Table 2): "Total 589 56 (9.5) Driver Age 16 to 19 158 14 (8.9) 20 to 24 160
+  18 (11.3) 25 to 34 63 5 (7.9) 35 to 49 35 4 (11.4) 50 to 64 59 1 (1.7) 65 to 74 39 5 (12.8) 75+ 75 9
+  (12.0) Gender Male 266 26 (9.8) Female 323 30 (9.3) Lighting Conditions Daylight 408 25 (6.1)
+  Dawn/Dusk 28 2 (7.1) Dark 153 29 (19.0) Crash Severity b Severe 76 5 (6.6) Moderate 110 15 (13.6)
+  Total Police-Reportable c 186 20 (10.8) Minor 403 36 (8.9)"
+  NON-SIGNIFICANCE BY AGE: "The proportion of crashes that involved drowsiness varied significantly in
+  relation to lighting conditions (P < 0.001; Fisher's exact test), with drowsiness evident in over three
+  times the proportion of crashes in darkness as in daylight. Also of note, more than half of all crashes
+  that involved drowsiness occurred in darkness. Variation by age, sex, and crash severity was not
+  statistically significant (all P > 0.20)."
+  NO FATAL CRASHES: "The SHRP 2 NDS involved few crashes that resulted in severe injuries and no fatal
+  crashes ... No fatal crashes occurred in the SHRP 2 NDS, so the results of the current study cannot be
+  generalized directly to fatal crashes."
+  WHY IT STILL BEARS ON FATAL CRASHES: "Of note, however, is the fact that crashes that occurred in
+  darkness were more than three times as likely as those that occurred during daylight to involve
+  drowsiness. While the proportion of crashes that occurred in darkness in the current study was similar
+  to the corresponding proportion among all police-reported crashes nationwide (26%), the proportion of
+  fatal crashes that occur in darkness is much higher, at 48% (NHTSA, 2017)."
+  PERCLOS THRESHOLD IS A FLOOR: "Finally, it is possible that some drivers who did not meet the current
+  study's criteria for classification as drowsy (i.e., eyes closed for 12 percent or more of the one- or
+  three-minute coding window) may have nonetheless been drowsy at the times of crashes. In a more
+  subjective assessment of drowsiness not included in the current study, data reductionists viewed only
+  the final six seconds of video prior to each crash and coded drowsiness based only on obvious signs
+  (e.g., yawning, rubbing eyes, slack musculature, etc.). In this more subjective assessment, a small
+  number of additional drivers who did not meet the objective PERCLOS-based criteria for drowsiness were
+  judged to have been drowsy at the times of crashes."
+  YOUNG-DRIVER OVER-REPRESENTATION: "Drivers under age 25 accounted for more than half of all
+  crash-involved drivers in the current study, compared with 23% of all crashes nationwide (NHTSA, 2017).
+  However, the proportion of crashes found to involve drowsiness did not vary significantly by age in the
+  current study; thus, the over representation of young drivers should not itself significantly influence
+  the overall results."
+  .
+  DARK-VS-DAYLIGHT ARITHMETIC NOTE: the brief prints counts and percentages but no CI or test statistic
+  other than "P < 0.001, Fisher's exact test". The recorded log risk ratio and its SE are MY OWN
+  computation from the published cell counts (29/153 vs 25/408) using the standard delta-method formula
+  for a log risk ratio from two independent binomials. Every input to that arithmetic is a number printed
+  in the brief; nothing is imputed. The authors used Fisher's exact test rather than a normal
+  approximation, so my normal-approximation interval is an approximation to their inference, not a
+  reproduction of it.
+  .
+  NOTE ON AUTHORSHIP CONFUSION: the first author here is Justin M. OWENS (Virginia Tech Transportation
+  Institute, naturalistic driving). This is a DIFFERENT PERSON from Judith A. OWENS (Boston Children's
+  Hospital, paediatric sleep), who is first author of `owens2019` and a co-author of `binhasan2020` in
+  this same shard. Do not merge them.
+  .
+  pct_female 54.1 = 379/701 from the 1-minute table (Male 322, Female 379).
+shard: "s21_drowsy_driving"

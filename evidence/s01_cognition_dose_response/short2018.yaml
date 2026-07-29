@@ -1,0 +1,206 @@
+study_id: short2018
+citation: "Short MA, Weber N, Reynolds C, Coussens S, Carskadon MA. Estimating adolescent sleep need using dose-response modeling. Sleep. 2018;41(4):zsy011."
+doi: "10.1093/sleep/zsy011"
+pmid: "29325109"
+url: "https://pubmed.ncbi.nlm.nih.gov/29325109/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Estimating adolescent sleep need using dose-response modeling"
+access_tier: abstract_only
+secondhand_via: "One quantitative datum (533 min TST at 10h TIB) and the 9.35h model estimate are
+  independently corroborated in the full text of Campbell IG et al., Sleep 2018;41(12):zsy177 (PMID
+  30169721), which this shard retrieved in full. See the two quotes in the effects below."
+design: rct_parallel
+tier: T1
+n: 34
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [15, 17]
+  pct_female: null
+  country: "Australia"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: modelled_sleep_duration_required_for_optimal_pvt_performance
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 10, duration_days: 5,
+               contrast_label: "dose-response model fitted to PVT lapse data across 5h / 7.5h / 10h TIB for 5 nights, ages 15-17"}
+    scale: hours
+    unit: "hours of SLEEP (not TIB) per night required to maintain optimal sustained attention"
+    value: 9.35
+    se: null
+    ci: null
+    conversion_formula: "Reported directly by the authors as the output of their dose-response model fitted
+      to PVT lapse data. No uncertainty interval is given in the abstract and the full text is behind
+      Cloudflare at OUP (bronze OA per Unpaywall but the PDF endpoint returns HTTP 403; no green copy in
+      Europe PMC, PMC, OpenAlex or Semantic Scholar), so se is null.
+      THIS IS THE SINGLE MOST TRANSPORTABLE NUMBER IN THE WHOLE SHARD, because the sample is 15-17 year
+      olds - the only >=3-dose chronic-restriction experiment whose age band actually contains our
+      18-year-old subject - and because it is expressed as a requirement rather than as a contrast, so it
+      can be used directly as the reference point of a dose-response spline.
+      ARITHMETIC THE MODELLER WILL WANT: relative to this 9.35h optimum, our subject's weekday sleep of
+      5-6h is a deficit of 3.35-4.35 h/night, and his 7-8h weekend sleep is STILL a deficit of 1.35-2.35
+      h/night. Note also that the conventional 8h referent used throughout the adult literature is itself
+      1.35h BELOW the adolescent optimum estimated here, so effects expressed 'per hour below 8h' from
+      adult studies systematically understate the deficit for an adolescent."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more sleep required. 9.35h is a REQUIREMENT, not an effect; sleeping less than
+      this produced measurably more PVT lapses in this sample."
+    covariates: ["fixed 10h TIB baseline and recovery nights", "in-laboratory schedule control", "PVT administered every 3 h across wake"]
+    followup_years: null
+    cohort_family: Short_Carskadon_Adelaide
+    quote: "Sleep need estimated from 10-hour TIB sleep opportunities was approximately 9 hours, while
+      modeling PVT lapse data suggested that 9.35 hours of sleep is needed to maintain optimal sustained
+      attention performance."
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_dose_dependent_across_three_tib_levels
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 10, duration_days: 5,
+               contrast_label: "5h TIB vs 7.5h TIB vs 10h TIB, 5 consecutive nights, parallel arms, ages 15-17"}
+    scale: raw_units
+    unit: "1 = monotone dose-dependent worsening of PVT lapses confirmed across all three arms"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Directional encoding of the reported dose-dependency. Per-arm lapse means, SDs and
+      per-day trajectories are in the paywalled full text and figures, so no magnitude and no se could be
+      extracted; this record therefore contributes the SHAPE of the adolescent dose-response, not its slope.
+      WHY IT STILL MATTERS: this is the only experiment that puts a 5h arm, a 7.5h arm and a 10h control in
+      the same adolescent sample for >=5 consecutive nights, i.e. it is the closest existing analogue of our
+      subject's actual weekday/weekend split. It confirms the ordering 5h worse than 7.5h worse than 10h for
+      BOTH lapses of attention and subjective sleepiness, and adds a third, usually-ignored axis -
+      circadian phase delay - that also moved dose-dependently."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = less TIB produced more lapses of attention. Monotone across the three doses, with
+      no plateau reported between 10h and 5h."
+    covariates: ["parallel-arm allocation to one of three doses", "2 baseline nights and 2 recovery nights at 10h TIB", "PVT lapse threshold 500 ms"]
+    followup_years: null
+    cohort_family: Short_Carskadon_Adelaide
+    quote: "Dose-dependent deficits to sleep duration, circadian phase timing, lapses of attention, and
+      subjective sleepiness occurred. Less TIB resulted in less sleep, more lapses of attention, greater
+      subjective sleepiness, and larger circadian phase delays."
+  - outcome_domain: sleep_need
+    outcome_construct: total_sleep_time_achieved_on_a_10h_tib_opportunity_ages_15_17
+    exposure: {type: sleep_extension, dose_h: 10, referent_h: null, duration_days: 5,
+               contrast_label: "TST obtained by 15-17 year olds given a 10h TIB opportunity"}
+    scale: hours
+    unit: "hours of total sleep time per night"
+    value: 8.88
+    se: null
+    ci: null
+    conversion_formula: "533 min / 60 = 8.883 h, rounded to 8.88. The 533 min figure is quoted from the
+      full text of Campbell 2018 (PMID 30169721), which retrieved it from Short et al. in order to compare
+      cohorts - so this value is SECONDHAND but comes from a source this shard holds in full text, and it
+      agrees with Short's own abstract statement that 'sleep need estimated from 10-hour TIB sleep
+      opportunities was approximately 9 hours'. Two independent routes to the same number.
+      USE: this is the empirical ceiling on adolescent sleep under a generous opportunity, and it is the
+      quantity that anchors the upper end of a dose-response spline. It also cross-validates against
+      Campbell's own 10h TIB condition (530 min) in a completely separate US cohort - a 3-minute
+      discrepancy across two laboratories, which is unusually tight agreement for this literature."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more sleep obtained. Not a harm estimate; this is the reference/ceiling value."
+    covariates: ["10h time in bed opportunity", "polysomnographically measured"]
+    followup_years: null
+    cohort_family: Short_Carskadon_Adelaide
+    quote: "The 530 minutes sleep duration that we report for the 10 hours TIB condition is very similar to
+      the 533 minutes mean for 15- to 17-year-old participants on a 10 hours TIB schedule in Short et al.'s
+      study and is similar to the values reported by Carskadon et al. in 1983. Both Short et al. and
+      Carskadon et al. viewed the sleep duration obtained with 10 hours TIB as an indicator of the required
+      sleep duration for this age group."
+  - outcome_domain: circadian
+    outcome_construct: circadian_phase_delay_scales_with_restriction_dose
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 10, duration_days: 4,
+               contrast_label: "salivary DLMO after 4 nights at each dose vs baseline, 5h vs 7.5h vs 10h TIB"}
+    scale: raw_units
+    unit: "1 = larger phase delay at lower TIB doses"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Directional encoding; magnitudes in hours of DLMO shift are in the paywalled full
+      text, so se is null.
+      WHY THIS IS HERE AND NOT ONLY IN A CIRCADIAN SHARD: it identifies a MECHANISM BY WHICH RESTRICTION IS
+      SELF-PERPETUATING in an adolescent, which no other study in this shard supplies. Restricting TIB by
+      delaying bedtime does not merely subtract sleep, it pushes the circadian pacemaker later, which makes
+      the next night's early bedtime harder to achieve. For a subject with a fixed school rise time over
+      three years this is a positive feedback loop, and it means the exposure should not be modelled as an
+      externally imposed constant - the exposure partly maintains itself. Campbell 2018 flags the same
+      confound as an untested limitation of its own design ('It remains possible that shortening TIB by
+      delaying bedtime produced a circadian phase delay'); Short et al. measured it and found it."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = shorter TIB produced larger circadian phase delays, i.e. harm compounds"
+    covariates: ["salivary dim-light melatonin onset measured at baseline and after 4 nights of each dose"]
+    followup_years: null
+    cohort_family: Short_Carskadon_Adelaide
+    quote: "Salivary dim-light melatonin onset was calculated at baseline and after four nights of each
+      sleep dose to estimate circadian phase. [...] Less TIB resulted in less sleep, more lapses of
+      attention, greater subjective sleepiness, and larger circadian phase delays. [...] Sleep restriction
+      perturbs homeostatic and circadian systems, leading to dose-dependent deficits to sustained attention
+      and sleepiness."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "STRENGTHS, and they are the reason this record exists despite abstract-only access: the age band
+    (15-17) is the closest match to our subject anywhere in this shard; there are THREE dose levels
+    (5 / 7.5 / 10 h TIB) which is what point 5 of the brief asks for; the restriction ran 5 consecutive
+    nights, satisfying the >=5-night criterion; the protocol was fully in-laboratory for 10 days and 9
+    nights with PSG, so exposure measurement error is near zero; baseline and recovery were standardised at
+    10h TIB; and the PVT was administered every 3h across wake so the time-of-day confound is controllable.
+    CONCERNS: (1) allocation was to PARALLEL arms, so with n=34 split three ways each arm holds only ~11
+    participants and between-person differences in vulnerability - which Van Dongen 2004 shows are large and
+    trait-like - are not removed by design, unlike the within-subject Lo and Campbell studies; (2) small
+    per-arm n makes the fitted 9.35h estimate imprecise, and no interval is reported in the abstract; (3)
+    the sleep-need estimate is model-derived, so it inherits the functional form the authors chose, which
+    the abstract does not specify; (4) ACCESS IS THE BINDING LIMITATION - the full text is bronze OA at OUP
+    but every retrieval route returns HTTP 403 (direct PDF, DOI redirect, article landing page, all with
+    browser user-agents), and there is no PMC, Europe PMC, OpenAlex or Semantic Scholar green copy, so the
+    per-arm and per-day lapse data that the brief explicitly asks for could not be recovered from this
+    study. Two of its numbers were rescued secondhand from Campbell 2018's full text."
+funding: "Not stated in the retrieved abstract."
+notes: |
+  WHY THIS RECORD IS RANKED FIRST FOR TRANSPORTABILITY. Every other >=3-dose chronic restriction experiment
+  in this shard is either in adults (Van Dongen 2003, ages 21-38; Belenky 2003, mean ~28 but a military
+  sample; Banks 2010) or in younger adolescents (Campbell's 9.9-16.2 range). Short et al. studied 15-17 year
+  olds, which brackets the age at which our subject's exposure began (16). It is also the only study to put
+  a MODERATE dose (7.5h TIB) between a severe dose (5h) and a generous control (10h) in this age group, and
+  7.5h TIB is close to what our subject gets on weekends.
+
+  THE HEADLINE NUMBER AND WHY IT REFRAMES THE WHOLE EXPOSURE. The model estimate is 9.35 h of SLEEP needed
+  for optimal sustained attention. Three consequences the downstream model should not miss:
+
+    1. The referent matters more than usual. Almost all adult dose-response work in this shard is expressed
+       against an 8h TIB control, and 8h TIB yields well under 8h of sleep. If the adolescent optimum is
+       9.35h of sleep, then an 8h-TIB adult "control" arm is itself restricted by adolescent standards, and
+       every "per hour below 8h" effect size in this shard is measured from a point already on the
+       descending limb. Effects transported to an adolescent will be BIASED TOWARD ZERO for that reason.
+    2. Our subject is never at the optimum. Weekdays at 5-6h are 3.35-4.35h/night short. Weekends at 7-8h
+       are still 1.35-2.35h/night short. There is no part of his week that constitutes recovery to optimum,
+       which is the quantitative version of the qualitative point Smith 2021 makes about weekend recovery
+       failing to restore vigilance.
+    3. The 9.35h estimate is corroborated from two directions. Short's own behavioural criterion gives
+       9.35h; the ad-libitum ceiling under a 10h opportunity gives ~8.9h (533 min); and Campbell's
+       independent US cohort gives 530 min on the same 10h TIB schedule. Behavioural need therefore appears
+       to sit slightly ABOVE what adolescents actually sleep even when given 10h in bed, which is a coherent
+       and slightly uncomfortable finding: a 10h opportunity may not fully suffice.
+
+  THE FOURTH EFFECT IS THE ONE MOST LIKELY TO BE OVERLOOKED. Restriction produced dose-dependent CIRCADIAN
+  PHASE DELAYS. In a 3-year exposure with a fixed school rise time, this converts the exposure from
+  externally imposed into partly self-sustaining: shorter TIB delays the pacemaker, the delayed pacemaker
+  makes an earlier bedtime harder, and weekday TIB shortens further. A model that treats weekday sleep as an
+  exogenous constant over three years will therefore miss a compounding term. This is also the cleanest
+  available warning against interpreting a 5h-TIB arm as a pure homeostatic manipulation.
+
+  ACCESS. Full text could not be obtained. Routes attempted and their outcomes: OUP article-pdf endpoint
+  (403, Cloudflare interstitial, retried with Chrome/Safari/Firefox user-agents plus Referer and
+  Accept headers); doi.org redirect (403); OUP article landing page (403); Europe PMC fullTextXML (no PMCID);
+  NCBI efetch db=pmc (no PMCID); Unpaywall (reports is_oa true, BRONZE, but the only location is the blocked
+  OUP endpoint); OpenAlex (same single location); Semantic Scholar openAccessPdf (same URL). Recorded as
+  abstract_only rather than guessing at figure values. IF THE ORCHESTRATOR CAN OBTAIN THIS PDF, it is the
+  highest-value single retrieval remaining in this domain: it would supply per-arm, per-day PVT lapse
+  trajectories in 15-17 year olds at 5 / 7.5 / 10 h TIB, which is precisely the raw material the brief asks
+  for and which currently has to be approximated from adult data.
+shard: "s01_cognition_dose_response"

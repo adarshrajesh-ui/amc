@@ -1,0 +1,86 @@
+study_id: dewald_kaufmann2013
+citation: "Dewald-Kaufmann JF, Oort FJ, Meijer AM. The effects of sleep extension on sleep and cognitive performance in adolescents with chronic sleep reduction: an experimental study. Sleep Medicine. 2013;14(6):510-517."
+doi: "10.1016/j.sleep.2013.01.012"
+pmid: "23523432"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "The effects of sleep extension on sleep and cognitive performance in adolescents with chronic sleep reduction: an experimental study."
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 55
+n_studies_pooled: null
+population:
+  age_mean: 15.44
+  age_range: [13, 18]
+  pct_female: 85.5
+  country: "Netherlands"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: first_stage_actigraphy_sleep_extension_success
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 14, contrast_label: "gradual sleep extension by advancing bedtime 5 min per night for 2 weeks vs no-instruction control; actigraphy"}
+    scale: raw_units
+    unit: "direction only; magnitude not available from abstract"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "NO MAGNITUDE AVAILABLE from the abstract, which reports only that the extension group 'spent more time in bed, and slept longer' significantly. Value 1.0 is a placeholder success indicator. DO NOT POOL."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "PLACEHOLDER ONLY. positive = randomized extension successfully lengthened actigraphy-measured sleep. EXCLUDE FROM POOLING."
+    covariates: []
+    followup_years: null
+    cohort_family: Amsterdam_sleep_extension
+    quote: "During the last week of the experiment, adolescents in the sleep extension group had earlier bedtimes, earlier sleep onsets, spent more time in bed, and slept longer than adolescents in the control group. These results indicate that the experimental manipulation was successful"
+  - outcome_domain: cognition
+    outcome_construct: visuospatial_processing_after_sleep_extension
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 14, contrast_label: "randomized gradual sleep extension vs control, in adolescents WITH pre-existing chronic sleep reduction"}
+    scale: raw_units
+    unit: "direction only; magnitude not available from abstract"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "NO MAGNITUDE AVAILABLE. Abstract reports only that 'some aspects of cognitive performance, especially visuospatial processing, significantly changed in the sleep extension group'. Value 1.0 is a placeholder sign indicator (positive = improvement). DO NOT POOL."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "PLACEHOLDER SIGN ONLY. positive = extending sleep improved some cognitive performance in chronically sleep-reduced adolescents. Partial/selective benefit only. EXCLUDE FROM POOLING."
+    covariates: []
+    followup_years: null
+    cohort_family: Amsterdam_sleep_extension
+    quote: "Furthermore some aspects of cognitive performance, especially visuospatial processing, significantly changed in the sleep extension group."
+rob:
+  tool: RoB2
+  judgement: high
+  notes: "Randomized, actigraphy-verified, and uniquely tests EXTENSION in adolescents who are already chronically sleep-reduced (the correct direction of the counterfactual for our subject). But: n = 55, 85.5% female, no-instruction control so no blinding or attention control, outcome reported as 'some aspects... especially visuospatial processing' which is a strong signal of selective reporting across a multi-test battery without evident multiplicity control."
+funding: "Not known - abstract only"
+notes: |
+  THIS IS THE CLOSEST THING TO THE STUDY THE TASK ASKED FOR IN ITEM 5 - a randomized sleep-EXTENSION trial
+  in adolescents with a cognitive outcome - and its weakness is itself the finding worth transmitting: the
+  literature has essentially no well-powered randomized sleep-extension trial in adolescents or college
+  students with an ACADEMIC (grade or test-score) outcome. This trial has cognitive tests but no academic
+  outcome, n = 55, and a heavily female sample.
+  WHY THE DESIGN DIRECTION MATTERS: almost all T1 evidence at this age is RESTRICTION (Lo et al. 2016
+  randomized well-rested adolescents down to 5 h). Our subject's relevant counterfactual is the reverse -
+  taking a chronically restricted adolescent and giving him more sleep. This trial does exactly that, in
+  adolescents selected for "symptoms of chronic sleep reduction (loss of energy, shortness of sleep,
+  sleepiness, and irritation)", which describes our subject's likely state. The result was a PARTIAL,
+  SELECTIVE cognitive benefit, not a broad restoration.
+  Combined with Bessone et al. 2021 (a much larger randomized extension in adults that found nothing on
+  cognition), the extension evidence is materially weaker than the restriction evidence. The asymmetry
+  should make the downstream model less confident that our subject's deficit is fully reversible, and less
+  confident that the large restriction effect sizes (Lo et al.'s f2 of 0.6-1.5) translate into equally
+  large recoverable academic gains.
+  ACCESS LIMITATION: abstract_only. Both effect entries are placeholder sign indicators explicitly flagged
+  as non-poolable. DOI 10.1016/j.sleep.2013.01.012 taken from PubMed's own record for PMID 23523432 and
+  independently confirmed against Crossref as Sleep Medicine 14:510-517 with the matching title.
+  A companion trial by the same group (Dewald-Kaufmann JF, Oort FJ, Meijer AM, J Child Psychol Psychiatry
+  2014;55(3):273-283, PMID 24252173) applied sleep extension plus sleep hygiene advice and measured
+  DEPRESSIVE SYMPTOMS rather than cognition or grades; it is logged as screened-and-excluded from this
+  shard because the outcome is out of domain.
+shard: "s04_academic_natural_experiments"

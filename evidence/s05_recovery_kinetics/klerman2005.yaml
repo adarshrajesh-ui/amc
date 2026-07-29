@@ -1,0 +1,85 @@
+study_id: klerman2005
+citation: "Klerman EB, Dijk DJ. Interindividual variation in sleep duration and its association with sleep debt in young adults. Sleep. 2005;28(10):1253-1259."
+doi: "10.1093/sleep/28.10.1253"
+pmid: "16295210"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1351048/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Interindividual variation in sleep duration and its association with sleep debt in young adults."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 17
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [18, 32]
+  pct_female: 58.8
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: day1_sleep_rebound_under_16h_opportunity
+    exposure: {type: sleep_extension, dose_h: 16, referent_h: null, duration_days: 3, contrast_label: "day 1 of a 16 h/24 h sleep opportunity (12 h night + 4 h midday), total sleep time vs habitual bedrest duration"}
+    scale: hours
+    unit: "h increase in total sleep time on day 1 vs habitual"
+    value: 4.9
+    se: null
+    ci: null
+    conversion_formula: "Quoted verbatim from the abstract: 'the average increase in total sleep time was 4.9 hours (P = 0.001)'. No SD or SE is reported for this mean in the abstract and the PMC deposit for this article (PMC1351048) contains ONLY the structured abstract, not the full text or tables, so no SE is derivable and se is null. AMBIGUITY I COULD NOT RESOLVE WITHOUT THE FULL TEXT: the sentence reads 'the total sleep time of all individuals was greater than their habitual bedrest duration; the average increase in total sleep time was 4.9 hours', which leaves it unclear whether 4.9 h is measured against habitual BEDREST duration (time in bed) or against habitual total SLEEP time. If against habitual TST (~7.5 h) it implies a day-1 TST of ~12.4 h per 24 h; if against habitual TIB (~8.3 h) it implies ~13.2 h. Both are attainable within a 16 h opportunity but they are not the same number, so this value must be treated as the magnitude of the day-1 rebound rather than as a precise TST."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = more sleep obtained than habitually. This is the single largest one-day sleep rebound measured anywhere in this shard, and it is the empirical upper bound on how much extra sleep a debt-laden young adult can take in a day when opportunity is effectively unlimited (16 h). It establishes that (a) habitual sleep in healthy young adults is well below capacity, and (b) the acute rebound is large but bounded - and critically, it is NOT SUSTAINED: the increase declined significantly across just 3 days (P = 0.003 for trend), and the same laboratory's asymptote for young adults is 8.9 h/24 h (klerman2008.yaml)."
+    covariates: []
+    followup_years: null
+    cohort_family: BWH_Klerman_bedrest_extension
+    quote: "On the first day of extended sleep opportunity, the total sleep time of all individuals was greater than their habitual bedrest duration; the average increase in total sleep time was 4.9 hours (P = 0.001). The increase in total sleep time declined across the 3 day bedrest-extension protocol (P = 0.003 for trend)."
+  - outcome_domain: sleep_need
+    outcome_construct: shorter_habitual_sleepers_carry_larger_debt
+    exposure: {type: habitual_short_sleep, dose_h: 6.1, referent_h: 10.3, duration_days: 3, contrast_label: "association between habitual bedrest duration (observed range 6.1-10.3 h) and total sleep time on day 3 of a 16 h/24 h sleep opportunity"}
+    scale: probability
+    unit: "1 = shorter habitual sleepers demonstrably carried a larger sleep debt"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Direction indicator. The abstract reports the sign and significance of the association (negative, P = 0.005) but no regression coefficient, correlation, or dispersion, and the PMC deposit is abstract-only, so no per-hour beta or SE is derivable. se is null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = the key inference is supported: habitual short sleep reflects SELF-IMPOSED RESTRICTION carrying a real physiological debt, not a constitutionally smaller sleep need. Short habitual sleepers fell asleep faster and more often on the MSLT, and on day 3 of extended opportunity they were STILL sleeping more than long habitual sleepers - i.e. their debt had not finished discharging after 3 days of a 16 h opportunity."
+    covariates: []
+    followup_years: null
+    cohort_family: BWH_Klerman_bedrest_extension
+    quote: "During the third day of increased sleep opportunity, the total sleep time was negatively associated with habitual bedrest duration (P = 0.005); individuals with shorter habitual bedrest duration continued to sleep more than those with longer habitual bedrest duration. ... Those individuals with shorter habitual sleep durations carry a higher sleep debt than do those with longer habitual sleep duration. Interindividual variation in sleep duration may primarily reflect variation in self-selected sleep restriction or wake extension."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Well-controlled inpatient protocol with 2 weeks of outpatient actigraphy plus diary to establish habitual schedule, a scheduled pre-admission week to standardize entry, and polysomnographic sleep recording throughout. Concerns specific to my use of it: (a) ACCESS IS ABSTRACT-ONLY - PMC1351048 deposits only the structured abstract, so I cannot check the 4.9 h figure against a table, cannot resolve whether the comparator is habitual TIB or habitual TST, and cannot obtain any dispersion; (b) n = 17 is small; (c) extension lasted only 3 days, which the companion paper (klerman2008.yaml) shows is too short for young adults to reach asymptote (~5 days), so this study necessarily observed the debt still discharging; (d) no age mean reported in the abstract, only the 18-32 y range."
+funding: "Not stated in the abstract; not retrievable without full text. The companion 2008 paper from the same protocol was funded by NIH P01-AG09975, K02-HD045459 and NCRR-GCRC-M01-RR02635."
+notes: |
+  ROLE: this is the DAY-1 REBOUND number that its own companion paper does not quantify. Together the
+  two Klerman & Dijk papers bracket the recovery-sleep envelope in young adults from both ends:
+    day 1 of a 16 h/24 h opportunity:  +4.9 h above habitual   (this record)
+    asymptote after ~5 days:           8.9 h/24 h              (klerman2008.yaml, full text)
+  So the acute rebound is large - a debt-laden young adult really will sleep several extra hours the
+  first time they are allowed to - but it collapses toward the ceiling within days. The trend across
+  only 3 days was already significant (P = 0.003). Any recovery plan built on the day-1 experience
+  will overestimate sustainable nightly sleep by hours.
+
+  DE-DUPLICATION: cohort_family BWH_Klerman_bedrest_extension is shared with klerman2008.yaml. Same
+  laboratory, same 16 h/24 h (12 h night + 4 h midday) bedrest-extension protocol, overlapping years,
+  and the 2005 sample's habitual range (6.1-10.3 h) is IDENTICAL to the young-subject range reported
+  in the 2008 paper (6.1-10.3 h), which is strong evidence that the 17 subjects here are a subset of
+  the 35 young subjects there. These two records MUST NOT be pooled as independent evidence. Use
+  klerman2008 for the asymptote and ceiling; use this record only for the day-1 rebound magnitude and
+  the short-sleeper/debt association.
+
+  WHY THE SECOND EFFECT MATTERS FOR THE TARGET SUBJECT: the alternative explanation for the subject's
+  3 years of 5-6 h weekday sleep is that he is a constitutional short sleeper with a genuinely small
+  sleep need, in which case there is no debt and no recovery is owed. This study tests exactly that
+  and rejects it: across a 6.1-10.3 h range of habitual sleep, the shorter sleepers had HIGHER daytime
+  sleep propensity on the MSLT and were still sleeping more than long sleepers on day 3 of a 16 h
+  opportunity. Short habitual sleep behaved like debt, not like low need.
+shard: "s05_recovery_kinetics"

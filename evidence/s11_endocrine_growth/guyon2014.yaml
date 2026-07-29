@@ -1,0 +1,184 @@
+study_id: guyon2014
+citation: Guyon A, Balbo M, Morselli LL, Tasali E, Leproult R, L'Hermite-Baleriaux M, Van Cauter E, Spiegel K. Adverse effects
+  of two nights of sleep restriction on the hypothalamic-pituitary-adrenal axis in healthy men. J Clin Endocrinol Metab.
+  2014;99(8):2861-2868.
+doi: 10.1210/jc.2013-4254
+pmid: '24823456'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: Adverse Effects of Two Nights of Sleep Restriction on the Hypothalamic-Pituitary-Adrenal Axis in Healthy
+    Men
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 13
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: endocrine
+  outcome_construct: evening_total_cortisol
+  exposure:
+    type: chronic_restriction
+    dose_h: 4
+    referent_h: 10
+    duration_days: 2
+    contrast_label: 2 nights 4 h TIB vs 2 nights 10 h TIB, randomised crossover; evening window
+  scale: pct_change
+  unit: '% change in evening total cortisol'
+  value: 30.0
+  se: 12.19
+  ci:
+  - 3.4
+  - 56.6
+  conversion_formula: 'Reported as +30% with P<.03. Using the boundary p=.03 and df=12: t=2.4607, so SE <= 30/2.4607 = 12.19
+    pp (a conservative upper bound on SE); ci = 30 +/- t(12,.05)=2.1788 * SE.'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: Positive = higher evening cortisol under restriction (harm).
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: Sleep restriction was associated with a 19% increase in overall ACTH levels (P < .03) that was correlated with
+    the individual amount of sleep loss (rSp = 0.63, P < .02). Overall total cortisol levels were also elevated (+21%; P
+    = .10). Pulse frequency was unchanged for both ACTH and cortisol. Morning levels of ACTH were higher after sleep restriction
+    (P < .04) without concomitant elevation of cortisol. In contrast, evening ACTH levels were unchanged while total and
+    free cortisol increased by, respectively, 30% (P < .03) and 200% (P < .04). Thus, the amplitude of the circadian cortisol
+    decline was dampened by sleep restriction (-21%; P < .05).
+- outcome_domain: endocrine
+  outcome_construct: evening_free_salivary_cortisol
+  exposure:
+    type: chronic_restriction
+    dose_h: 4
+    referent_h: 10
+    duration_days: 2
+    contrast_label: 2 nights 4 h TIB vs 10 h TIB; salivary free cortisol, evening
+  scale: pct_change
+  unit: '% change in evening free (salivary) cortisol'
+  value: 200.0
+  se: 86.85
+  ci:
+  - 10.8
+  - 389.2
+  conversion_formula: 'Reported as +200% with P<.04. Boundary p=.04, df=12: t=2.3027, SE <= 200/2.3027 = 86.85 pp; ci =
+    200 +/- 2.1788*SE.'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: Positive = higher evening free cortisol (harm). The huge percentage reflects a very low evening baseline
+    denominator, not a large absolute excursion.
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: Sleep restriction was associated with a 19% increase in overall ACTH levels (P < .03) that was correlated with
+    the individual amount of sleep loss (rSp = 0.63, P < .02). Overall total cortisol levels were also elevated (+21%; P
+    = .10). Pulse frequency was unchanged for both ACTH and cortisol. Morning levels of ACTH were higher after sleep restriction
+    (P < .04) without concomitant elevation of cortisol. In contrast, evening ACTH levels were unchanged while total and
+    free cortisol increased by, respectively, 30% (P < .03) and 200% (P < .04). Thus, the amplitude of the circadian cortisol
+    decline was dampened by sleep restriction (-21%; P < .05).
+- outcome_domain: endocrine
+  outcome_construct: amplitude_of_circadian_cortisol_decline
+  exposure:
+    type: chronic_restriction
+    dose_h: 4
+    referent_h: 10
+    duration_days: 2
+    contrast_label: 2 nights 4 h TIB vs 10 h TIB; amplitude of the diurnal cortisol decline
+  scale: pct_change
+  unit: '% change in the amplitude of the circadian cortisol decline'
+  value: -21.0
+  se: 9.64
+  ci:
+  - -42.0
+  - 0.0
+  conversion_formula: 'Reported as -21% with P<.05. Boundary p=.05, df=12: t=2.1788, SE <= 21/2.1788 = 9.64 pp; ci = -21
+    +/- 2.1788*SE.'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: 'Negative = FLATTER diurnal cortisol slope (harm). This is the most mechanistically interpretable HPA
+    outcome: loss of rhythm amplitude, not chronic hypercortisolaemia.'
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: Sleep restriction was associated with a 19% increase in overall ACTH levels (P < .03) that was correlated with
+    the individual amount of sleep loss (rSp = 0.63, P < .02). Overall total cortisol levels were also elevated (+21%; P
+    = .10). Pulse frequency was unchanged for both ACTH and cortisol. Morning levels of ACTH were higher after sleep restriction
+    (P < .04) without concomitant elevation of cortisol. In contrast, evening ACTH levels were unchanged while total and
+    free cortisol increased by, respectively, 30% (P < .03) and 200% (P < .04). Thus, the amplitude of the circadian cortisol
+    decline was dampened by sleep restriction (-21%; P < .05).
+- outcome_domain: endocrine
+  outcome_construct: overall_24h_total_cortisol
+  exposure:
+    type: chronic_restriction
+    dose_h: 4
+    referent_h: 10
+    duration_days: 2
+    contrast_label: 2 nights 4 h TIB vs 10 h TIB; overall total cortisol
+  scale: pct_change
+  unit: '% change in overall total cortisol'
+  value: 21.0
+  se: 11.78
+  ci:
+  - -4.7
+  - 46.7
+  conversion_formula: 'Reported as +21% with P=.10 (non-significant). df=12: t at p=.10 = 1.7823, SE = 21/1.7823 = 11.78
+    pp; ci = 21 +/- 2.1788*SE, which includes zero as expected.'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: Positive = higher overall cortisol, but NOT statistically significant. Overall daily glucocorticoid exposure
+    is not clearly raised; the effect is confined to the evening.
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: Sleep restriction was associated with a 19% increase in overall ACTH levels (P < .03) that was correlated with
+    the individual amount of sleep loss (rSp = 0.63, P < .02). Overall total cortisol levels were also elevated (+21%; P
+    = .10). Pulse frequency was unchanged for both ACTH and cortisol. Morning levels of ACTH were higher after sleep restriction
+    (P < .04) without concomitant elevation of cortisol. In contrast, evening ACTH levels were unchanged while total and
+    free cortisol increased by, respectively, 30% (P < .03) and 200% (P < .04). Thus, the amplitude of the circadian cortisol
+    decline was dampened by sleep restriction (-21%; P < .05).
+- outcome_domain: endocrine
+  outcome_construct: overall_acth
+  exposure:
+    type: chronic_restriction
+    dose_h: 4
+    referent_h: 10
+    duration_days: 2
+    contrast_label: 2 nights 4 h TIB vs 10 h TIB; overall ACTH
+  scale: pct_change
+  unit: '% change in overall ACTH'
+  value: 19.0
+  se: 7.72
+  ci:
+  - 2.2
+  - 35.8
+  conversion_formula: 'Reported as +19% with P<.03. Boundary p=.03, df=12: t=2.4607, SE <= 19/2.4607 = 7.72 pp; ci = 19
+    +/- 2.1788*SE.'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: Positive = higher ACTH under restriction, dose-dependent on the individual amount of sleep lost (rSp=0.63).
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: Sleep restriction was associated with a 19% increase in overall ACTH levels (P < .03) that was correlated with
+    the individual amount of sleep loss (rSp = 0.63, P < .02). Overall total cortisol levels were also elevated (+21%; P
+    = .10). Pulse frequency was unchanged for both ACTH and cortisol. Morning levels of ACTH were higher after sleep restriction
+    (P < .04) without concomitant elevation of cortisol. In contrast, evening ACTH levels were unchanged while total and
+    free cortisol increased by, respectively, 30% (P < .03) and 200% (P < .04). Thus, the amplitude of the circadian cortisol
+    decline was dampened by sleep restriction (-21%; P < .05).
+rob:
+  tool: RoB2
+  judgement: low
+  notes: randomised crossover, polysomnography-verified, 20-min sampling; but only 2 nights of restriction (acute, not chronic)
+    and a 10 h TIB comparator. SEs are upper bounds derived from reported p-value inequalities.
+funding: NIH / non-US government
+notes: 'Important negative: ''Sleep restriction was not associated with higher perceived stress but resulted in an increase
+  in appetite that was correlated with the increase in total cortisol.'' The HPA change is a circadian-amplitude change,
+  not a stress response. Also note the exposure is ACUTE (2 nights); killick2015 shows no residual morning cortisol signal
+  in men chronically restricted for years, implying adaptation.'
+shard: s11_endocrine_growth

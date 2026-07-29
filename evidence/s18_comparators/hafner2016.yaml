@@ -1,0 +1,128 @@
+study_id: hafner2016
+citation: 'Hafner M, Stepanek M, Taylor J, Troxel WM, van Stolk C. Why sleep matters - the economic costs
+  of insufficient sleep: a cross-country comparative analysis. Santa Monica, CA: RAND Corporation; 2016.
+  RR-1791-VH. Also published as: Rand Health Q. 2017;6(4):11.'
+doi: 10.7249/RR1791
+pmid: '28983434'
+url: https://www.rand.org/pubs/research_reports/RR1791.html
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Why sleep matters -- the economic costs of insufficient sleep: A cross-country comparative
+    analysis'
+access_tier: abstract_only
+secondhand_via: Numbers quoted from the 'Key Takeaways' section of the RAND publication page for RR-1791
+  (https://www.rand.org/pubs/research_reports/RR1791.html), which is RAND's own first-party summary of
+  the report. RAND blocks programmatic download of the report PDF (HTTP 403) and PubMed Central holds
+  only the abstract for the Rand Health Q version, so the report body itself was not retrieved.
+design: normative_descriptive
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: US, UK, Canada, Germany, Japan
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: comparator
+  outcome_construct: gdp_loss_from_insufficient_sleep_us_pct
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: population-level insufficient sleep, United States, annual GDP loss
+  scale: pct_change
+  unit: percent of GDP lost per year
+  value: -2.28
+  se: null
+  ci:
+  - -2.28
+  - -1.56
+  conversion_formula: Reported as a RANGE of 1.56% to 2.28% of US GDP. The upper end (2.28%) is recorded
+    as the value and the full published range in ci, signed negative for loss. This is a scenario range,
+    NOT a confidence interval; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = GDP LOST (harm). NOT A HEALTH OUTCOME AND NOT CONVERTIBLE TO LIFE EXPECTANCY
+    OR QALYs. Cannot enter the comparator table.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: However, the relative numbers show that the estimated loss for Japan is actually higher than
+    for the US (between 1.56 to 2.28 per cent for the US and 1.86 per cent to 2.92 per cent for Japan,
+    respectively), with the UK (1.36 per cent to 1.86 per cent), Germany (1.02 per cent to 1.56 per cent)
+    and Canada (0.85 per cent to 1.56 per cent) following behind.
+- outcome_domain: comparator
+  outcome_construct: mortality_risk_sleeping_under_6h_vs_7_9h
+  exposure:
+    type: habitual_short_sleep
+    dose_h: 6.0
+    referent_h: 8.0
+    duration_days: null
+    contrast_label: habitually sleeping <6 h/night vs 7-9 h/night
+  scale: log_hr
+  unit: log relative risk
+  value: 0.09531
+  se: null
+  ci: null
+  conversion_formula: 'RR 1.10 stated as a round figure with no interval in the RAND summary; se null.
+    log_rr = ln(1.10) = 0.095310. THIS IS NOT AN INDEPENDENT ESTIMATE: it is a model INPUT that RAND took
+    from the published short-sleep mortality meta-analysis literature (cf. cappuccio2010, RR 1.12). Do
+    NOT pool it with cappuccio2010 - that would double-count.'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = ELEVATED mortality with short sleep (harm). Recorded to document what RAND
+    actually assumed, not as evidence.
+  covariates: []
+  followup_years: null
+  cohort_family: RAND_input_from_meta_analysis
+  quote: An individual that sleeps on average less than six hours per night has a ten per cent higher
+    mortality risk than someone sleeping between seven and nine hours. An individual sleeping between
+    six to seven hours per day still has a four per cent higher mortality risk.
+- outcome_domain: comparator
+  outcome_construct: mortality_risk_sleeping_6_to_7h_vs_7_9h
+  exposure:
+    type: habitual_short_sleep
+    dose_h: 6.5
+    referent_h: 8.0
+    duration_days: null
+    contrast_label: habitually sleeping 6-7 h/night vs 7-9 h/night
+  scale: log_hr
+  unit: log relative risk
+  value: 0.039221
+  se: null
+  ci: null
+  conversion_formula: 'RR 1.04, round figure, no interval; se null. log_rr = ln(1.04) = 0.039221. Same
+    caveat: a RAND model input, not independent evidence.'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'positive = ELEVATED mortality (harm). Gives RAND''s implicit dose-response: the log-hazard
+    roughly doubles going from the 6-7 h band to the <6 h band.'
+  covariates: []
+  followup_years: null
+  cohort_family: RAND_input_from_meta_analysis
+  quote: An individual that sleeps on average less than six hours per night has a ten per cent higher
+    mortality risk than someone sleeping between seven and nine hours. An individual sleeping between
+    six to seven hours per day still has a four per cent higher mortality risk.
+rob:
+  tool: none
+  judgement: high
+  notes: 'A commissioned economic modelling report (client: Vitality Health), peer reviewed within RAND''s
+    process but not in a journal. Its outputs are GDP and working days, not health. Its mortality inputs
+    are borrowed from the observational short-sleep literature and inherit all of its confounding; RAND
+    then treats them as causal in a macroeconomic model. Attempting to convert its $411 bn to a per-person
+    life expectancy or QALY figure would require assumptions RAND does not supply and I do not make.'
+funding: Vitality Health (commissioned); research conducted by RAND Europe
+notes: 'THE ANSWER TO TASK ITEM 6 IS LARGELY NEGATIVE. RAND is the most-cited attempt to price insufficient
+  sleep and it does NOT put sleep on a life-expectancy or QALY scale at all - it prices lost GDP and lost
+  working days. The most-quoted figures are: ''The US sustains by far the highest economic losses (up
+  to $411 billion a year)'' and ''On an annual basis, the US loses an equivalent of about 1.23 million
+  working days due to insufficient sleep.'' Neither is commensurable with years of life. The only health
+  quantity RAND uses is a borrowed mortality RR. See li2024sleep for the closest thing to a genuine sleep
+  life-expectancy estimate, and welter2026 for the fact that GBD omits sleep entirely.'
+shard: s18_comparators

@@ -1,0 +1,94 @@
+study_id: ooms2014
+citation: "Ooms S, Overeem S, Besse K, Rikkert MO, Verbeek M, Claassen JA. Effect of 1 night of total sleep deprivation on cerebrospinal fluid beta-amyloid 42 in healthy middle-aged men: a randomized clinical trial. JAMA Neurology. 2014 Aug;71(8):971-977."
+doi: "10.1001/jamaneurol.2014.1173"
+pmid: "24887018"
+url: "https://pubmed.ncbi.nlm.nih.gov/24887018/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 0.881
+  resolved_title: "Effect of 1 night of total sleep deprivation on cerebrospinal fluid β-amyloid 42 in healthy middle-aged men: a randomized clinical trial."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 26
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [40, 60]
+  pct_female: 0.0
+  country: "Netherlands"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: overnight_evening_to_morning_change_in_CSF_ab42_unrestricted_sleep_arm
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: null, duration_days: 1,
+               contrast_label: "one night of unrestricted sleep (n = 13): evening vs morning CSF Ab42, within-arm"}
+    scale: raw_units
+    unit: "pg/mL decrease in CSF Ab42 across a night of normal sleep"
+    value: 25.3
+    se: 12.413
+    ci: [0.94, 49.6]
+    conversion_formula: >
+      Published as "a 6% decrease in Aβ42 levels of 25.3 pg/mL (95% CI [0.94, 49.6], P = .04)".
+      SE = (49.6 - 0.94)/3.92 = 48.66/3.92 = 12.413.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE value = CSF Ab42 FELL by that many pg/mL across a night of normal sleep. This is the
+      physiological overnight decline, i.e. the benchmark against which sleep deprivation is judged. Note
+      the direction of interest: the finding is that normal sleep LOWERS Ab42, and deprivation "counteracted
+      this decrease" - it is a blocked decline, not an added accumulation.
+    covariates: []
+    followup_years: null
+    cohort_family: "AWAKE_Radboud"
+    quote: "RESULTS: A night of unrestricted sleep led to a 6% decrease in Aβ42 levels of 25.3 pg/mL (95% CI [0.94, 49.6], P = .04), whereas sleep deprivation counteracted this decrease."
+  - outcome_domain: neurodegeneration
+    outcome_construct: between_arm_difference_in_CSF_ab42_trajectory
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1,
+               contrast_label: "one night of total sleep deprivation (24 h wakefulness, n = 13) vs one night of unrestricted sleep (n = 13), randomized"}
+    scale: raw_units
+    unit: "pg/mL difference in CSF Ab42 between deprivation and sleep arms"
+    value: 75.8
+    se: 36.99
+    ci: [3.4, 148.4]
+    conversion_formula: >
+      Published as "a difference of 75.8 pg/mL of Aβ42 was shown between the unrestricted sleep and sleep
+      deprivation group (95% CI [3.4, 148.4], P = .04)". SE = (148.4 - 3.4)/3.92 = 145.0/3.92 = 36.99.
+      The CI nearly touches zero; the estimate is barely distinguishable from null.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = HIGHER CSF Ab42 in the sleep-deprived arm, i.e. harm on the biomarker. Scope limits: one
+      night, TOTAL deprivation, n = 13 per arm, middle-aged men only, CSF concentration rather than brain
+      burden, and no follow-up sampling on a subsequent night, so this study says nothing about persistence.
+    covariates: ["randomized allocation", "individual Ab42 trajectory over time modelled"]
+    followup_years: null
+    cohort_family: "AWAKE_Radboud"
+    quote: "When accounting for the individual trajectories of Aβ42 over time, a difference of 75.8 pg/mL of Aβ42 was shown between the unrestricted sleep and sleep deprivation group (95% CI [3.4, 148.4], P = .04). The individual trajectories of evening and morning Aβ42 concentrations differed between the unrestricted sleep and sleep deprivation groups (P = .04) in contrast to stable Aβ40, tau, and total protein levels."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: >
+    Genuinely randomized with polysomnographic verification and an indwelling intrathecal catheter, which
+    is methodologically strong for the question asked. Concerns: n = 13 per arm; healthy middle-aged men
+    only, so no women and no young adults; both reported CIs are wide and nearly cross the null (lower
+    bound 0.94 pg/mL and 3.4 pg/mL respectively) with P = .04 for both; a single primary isoform was
+    positive while Ab40, tau and total protein were flat, which the authors treat as specificity but which
+    could equally be a multiple-comparison artefact; and there is no post-recovery sampling.
+funding: "See paper; trial registered as clinicaltrials.gov NCT01194713"
+notes: >
+  MECHANISM LINK 2 (supporting, human CSF). Retrieved as ABSTRACT ONLY - the JAMA Neurology full text is
+  paywalled and no PMC deposit exists (checked). Every number above is quoted verbatim from the
+  structured abstract; no figure or table values were used and none were inferred beyond the two SEs
+  derived from the published CIs by the standard formula.
+  IMPORTANT FRAMING, and the authors' own extrapolation is explicitly a hypothesis, not a finding:
+  "CONCLUSIONS AND RELEVANCE: Sleep deprivation, or prolonged wakefulness, interferes with a physiological
+  morning decrease in Aβ42. We hypothesize that chronic sleep deprivation increases cerebral Aβ42 levels,
+  which elevates the risk of Alzheimer disease." The jump from "one night blocked a 6% overnight dip" to
+  "chronic restriction raises Alzheimer's risk" is labelled by the authors themselves with the word
+  "hypothesize". It is not evidence. See olsson2018.yaml, in which the same style of protocol run for
+  five consecutive nights of 4 h sleep produced NO change in CSF amyloid biomarkers.
+shard: "s14_dementia_amyloid"

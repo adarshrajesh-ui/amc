@@ -1,0 +1,95 @@
+study_id: hansen2023
+citation: "Hansen M, Simon KR, Strack J, He X, Noble KG, Merz EC. Socioeconomic disparities in sleep duration are associated with cortical thickness in children. Brain and Behavior. 2023;13(2):e2859."
+doi: "10.1002/brb3.2859"
+pmid: "36575851"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9927856/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Socioeconomic disparities in sleep duration are associated with cortical thickness in children"
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 94
+n_studies_pooled: null
+population:
+  age_mean: 7.0
+  age_range: [5, 9]
+  pct_female: 61.0
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: cortical_thickness_vs_weekday_sleep_duration_with_ses_upstream
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "shorter parent-reported weekday sleep duration vs cortical thickness in left middle temporal, right postcentral, right superior frontal cortices"}
+    scale: raw_units
+    unit: "direction of association (qualitative; no magnitude in retrievable abstract)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded -1 = significant association in the harm direction (shorter sleep, reduced thickness). No coefficients, CIs or cluster statistics in the abstract. se null - not invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = shorter weekday sleep associated with REDUCED cortical thickness. Recorded here NOT as evidence of a sleep effect but as evidence that the association is downstream of socioeconomic status."
+    covariates: ["age", "sex", "and covariates not enumerated in abstract"]
+    followup_years: null
+    cohort_family: "Merz_SES_child_MRI"
+    quote: "Shorter weekday sleep duration was significantly associated with reduced thickness in the left middle temporal, right postcentral, and right superior frontal cortices and smaller basolateral but not centromedial amygdala volume."
+  - outcome_domain: exposure_measurement
+    outcome_construct: ses_predicts_sleep_duration_mediated_by_family_routines
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "family income-to-needs ratio and parental education -> child weekday sleep duration, mediated by family routines"}
+    scale: raw_units
+    unit: "direction of association (qualitative)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded +1 = significant positive association plus significant mediation. No coefficients published in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive = HIGHER socioeconomic status predicts LONGER child sleep, and family routines statistically mediate the pathway. This is the confounding structure made explicit: SES -> routines -> sleep duration, while SES independently predicts cortical thickness through many other channels."
+    covariates: ["family routines (mediator)", "sleep environment"]
+    followup_years: null
+    cohort_family: "Merz_SES_child_MRI"
+    quote: "Results indicated that lower family income-to-needs ratio and parental education were significantly associated with shorter weekday sleep duration in children. ... Family routines significantly mediated the associations of family income-to-needs ratio and parental education with weekday sleep duration in children."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "Cross-sectional, n=94, ages 5-9, parent-reported sleep, multiple cortical and subcortical regions tested. Grossly underpowered for the imaging claims taken on their own. Recorded in this shard for its CONFOUNDING STRUCTURE rather than for its effect estimates, which should not be pooled."
+funding: "NIMH; NCATS; NCRR (NIH); non-US government support"
+notes: |
+  THE CONFOUNDING RECORD. Included specifically to make the socioeconomic pathway explicit and
+  quantify why the whole cross-sectional literature is hard to interpret.
+
+  THE CAUSAL DIAGRAM THIS PAPER DOCUMENTS:
+      socioeconomic status -> family routines -> child sleep duration
+      socioeconomic status -> cortical thickness (via nutrition, stress, environment,
+                                                 cognitive stimulation, prenatal factors, ...)
+  Any study that regresses cortical thickness on sleep duration WITHOUT full adjustment for SES
+  is picking up the second arrow and labelling it the first. The authors frame their own finding
+  in exactly these terms: sleep is a "potential factor underlying socioeconomic differences in
+  brain morphometry."
+
+  WHY THIS BITES ON THE OTHER RECORDS. cheng2021 (n=11,067) adjusts for parental income and
+  education, which is better than most - but income and education are crude proxies that leave
+  substantial residual confounding, and cheng2021 does NOT adjust for screen use even though the
+  same paper shows screen time correlates with sleep duration. urrila2017, lapidaire2021 and
+  taki2012 report no SES adjustment at all. To the extent that the pooled adolescent
+  cross-sectional signal is real, SES remains a live alternative explanation for most of it.
+
+  ONE IMPORTANT COUNTERPOINT THAT I WILL NOT SUPPRESS: fjell2023 explicitly tested SES as a
+  covariate and an interaction term in the far larger cross-sectional sample and reported
+  "Controlling for the effects of SES, BMI and depression symptoms as covariates had no notable
+  effects on the results, and no significant interaction effects with these variables were found."
+  So in adults, SES does not appear to generate the cross-sectional sleep-volume gradient. The
+  confounding argument is strongest for the paediatric studies, where SES effects on brain
+  development are largest and adjustment is weakest.
+
+  RELEVANCE TO THE SUBJECT: he is a college student, which selects for higher SES and education.
+  The direction of any residual SES confounding in these cohorts would, if anything, place him at
+  the favourable end.
+shard: "s15_brain_structure"

@@ -1,0 +1,103 @@
+study_id: limasantos2025
+citation: "Lima Santos JP, Soehner AM, Ladouceur CD, Versace A. The Impact of Insufficient Sleep on White Matter Development in Late Childhood and Early Adolescence. Journal of Adolescent Health. 2025;76(2):220-227."
+doi: "10.1016/j.jadohealth.2024.10.007"
+pmid: "39580729"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "The Impact of Insufficient Sleep on White Matter Development in Late Childhood and Early Adolescence"
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 1016
+n_studies_pooled: null
+population:
+  age_mean: 9.96
+  age_range: [9, 13]
+  pct_female: 47.44
+  country: "US"
+  adolescent_match: mixed
+effects:
+  # ---------- THE FA NULL: directly answers the task's request for FA per hour of sleep ----------
+  - outcome_domain: brain_structure
+    outcome_construct: fractional_anisotropy_change_vs_insufficient_sleep
+    exposure: {type: habitual_short_sleep, dose_h: 9.0, referent_h: 9.0, duration_days: null,
+               contrast_label: "insufficient sleep (<9 h, n=569) vs sufficient sleep (>9 h, n=447), longitudinal latent class, vs CHANGE in fractional anisotropy from age 9.96 to 11.94"}
+    scale: smd
+    unit: "SD change in FA"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded null. Authors state explicitly that no metric other than ODI was affected (p > .050) and publish no point estimate for FA. se null - not invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no effect of insufficient sleep on FA development. This is the direct answer to the request for 'fractional anisotropy differences per hour of sleep' in a LONGITUDINAL adolescent design: the best-powered such test is NULL for FA."
+    covariates: ["age", "sex", "and covariates not enumerated in abstract"]
+    followup_years: 2.0
+    cohort_family: "ABCD"
+    quote: "Insufficient sleep was associated with worsening fiber coherence (greater ODI) in most tracts ... These effects were focal, particularly in the frontal portions of the tracts. No other metric was affected (p > .050)."
+  - outcome_domain: brain_structure
+    outcome_construct: orientation_dispersion_index_cingulum_change_vs_insufficient_sleep
+    exposure: {type: habitual_short_sleep, dose_h: 9.0, referent_h: 9.0, duration_days: null,
+               contrast_label: "insufficient (<9 h) vs sufficient (>9 h) sleep class vs CHANGE in cingulum bundle orientation dispersion index"}
+    scale: raw_units
+    unit: "F statistic, F(1,982)"
+    value: 9.22
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: F(1,982) = 9.22, p = .002, Q = 0.009. No standardized effect size or CI published, so se null. Rough conversion: partial eta-squared = F/(F+df_error) = 9.22/(9.22+982) = 0.0093, i.e. under 1% of variance - recorded here as context, not as the extracted value."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive F with greater ODI in the insufficient-sleep group = LESS coherent fibre orientation. Conventionally read as harm, but ODI is not a simple integrity measure - increased ODI can reflect greater fibre fanning/crossing complexity as well as disorganisation."
+    covariates: ["age", "sex"]
+    followup_years: 2.0
+    cohort_family: "ABCD"
+    quote: "Insufficient sleep was associated with worsening fiber coherence (greater ODI) in most tracts, including cingulum bundle (F(1,982) = 9.22, p = .002, Q = 0.009), forceps minor (F(1,982) = 5.30, p = .021, Q = 0.026), and superior longitudinal fasciculus (F(1,982) = 7.41, p = .007, Q = 0.015)."
+  - outcome_domain: psychiatric
+    outcome_construct: anxious_depressed_problems_vs_cingulum_odi
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "cingulum bundle ODI vs anxious/depressed CBCL problems"}
+    scale: smd
+    unit: "standardized beta"
+    value: 0.10
+    se: null
+    ci: null
+    conversion_formula: "Reported as beta = 0.10, p = .012, Q = 0.036. No SE or CI published; a p-value-based back-calculation would require the exact t and df for this specific model, which are not given, so se is left null rather than approximated."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive = greater ODI associated with more anxious/depressed problems. This is the only link in the paper between the imaging finding and anything a person would notice, and it is beta = 0.10 (1% of variance)."
+    covariates: ["age", "sex"]
+    followup_years: 2.0
+    cohort_family: "ABCD"
+    quote: "In addition, greater ODI in the cingulum bundle was associated with more anxious/depressed problems (beta = 0.10, p = .012, Q = 0.036)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Genuinely longitudinal diffusion imaging (two scans, ~2 y apart) with n=1,016 - among the strongest designs available. Weaknesses: exposure is a latent class derived from a parent-report Sleep Disturbance Scale item, dichotomised at 9 h, so no dose-response and substantial measurement error; the <9 h group is not remotely comparable to 5-6 h; no reported adjustment for SES, screen use, BMI or pubertal status in the abstract; ODI is the only affected metric out of several tested, which raises the question of why the more established FA and NDI metrics showed nothing."
+funding: "Not stated in the retrievable record (no grant list in PubMed)"
+notes: |
+  THIS RECORD DOES DOUBLE DUTY.
+
+  (1) IT IS THE BEST LONGITUDINAL WHITE MATTER TEST AVAILABLE, and its answer for the metric the
+      task asked about - fractional anisotropy - is NULL. "No other metric was affected
+      (p > .050)." Neither FA nor neurite density index changed differently in the
+      insufficient-sleep group. Only orientation dispersion index moved.
+
+  (2) IT ILLUSTRATES THE INTERPRETATION PROBLEM AT THE HEART OF THIS DOMAIN. One metric out of
+      several moved, by under 1% of variance (partial eta-squared about 0.009), in a direction
+      whose biological meaning is genuinely ambiguous, and it links to symptoms at beta = 0.10.
+      The paper's title says 'Impact' and its discussion says 'insufficient sleep during this
+      sensitive period affects white matter development'. The data support 'a small difference
+      in one diffusion metric was observed'.
+
+  EXPOSURE MISMATCH IS SEVERE FOR OUR PURPOSE. The 'insufficient' group is children sleeping
+  under 9 h at ages 10-12, where 9-11 h is recommended. Most of that group is probably sleeping
+  8-9 h. Nothing here characterises 5-6 h at 16-19.
+
+  COHORT OVERLAP: ABCD. Shares participants with cheng2021, yang2022, chen2026 - must not be
+  pooled as independent.
+shard: "s15_brain_structure"

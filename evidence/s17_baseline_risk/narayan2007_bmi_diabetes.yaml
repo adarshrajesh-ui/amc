@@ -1,0 +1,114 @@
+study_id: narayan2007_bmi_diabetes
+citation: Narayan KMV, Boyle JP, Thompson TJ, Gregg EW, Williamson DF. Effect of BMI on lifetime risk
+  for diabetes in the U.S. Diabetes Care. 2007;30(6):1562-1566.
+doi: 10.2337/dc06-2544
+pmid: '17372155'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Effect of BMI on lifetime risk for diabetes in the U.S.
+access_tier: abstract_only
+design: normative_descriptive
+n: 780694
+population:
+  age_mean: null
+  age_range:
+  - 18
+  - 80
+  pct_female: null
+  country: US
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_diabetes_at_age_18_male_underweight
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: probability of ever being diagnosed with diabetes, from exact age 18
+  value: 0.076
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. Lower anchor of the BMI gradient at exactly the subject's index
+    age.
+  covariates: []
+  followup_years: null
+  cohort_family: NHIS_linked_mortality
+  quote: Lifetime diabetes risk at 18 years of age increased from 7.6 to 70.3% between underweight and
+    very obese men and from 12.2 to 74.4% for women.
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_diabetes_at_age_18_male_very_obese
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: probability of ever being diagnosed with diabetes, from exact age 18
+  value: 0.703
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. Upper anchor of the BMI gradient. The 9.2-fold spread across
+    BMI at age 18 is the lever a sleep->BMI model should move the subject along, INSTEAD of applying a
+    diabetes hazard ratio to a population-average lifetime risk.
+  covariates: []
+  followup_years: null
+  cohort_family: NHIS_linked_mortality
+  quote: Lifetime diabetes risk at 18 years of age increased from 7.6 to 70.3% between underweight and
+    very obese men and from 12.2 to 74.4% for women.
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_difference_diabetes_at_age_65_male_very_obese_vs_normal
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: risk DIFFERENCE in probability points versus normal weight, assessed at exact age 65 (not an absolute
+    risk)
+  value: 0.239
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'positive = excess lifetime risk attributable to very obese BMI. CRITICAL CONTRAST WITH
+    THE AGE-18 ROWS: the BMI spread is 62.7 points at age 18 but only 23.9 points at age 65, i.e. the
+    same BMI shift buys about 2.6x less diabetes risk when it happens in later life. This is the quantitative
+    argument that an exposure acting at ages 16-19 is worth more than the same exposure acting at 65,
+    and it is why this shard''s risks are indexed by age of assessment at all.'
+  covariates: []
+  followup_years: null
+  cohort_family: NHIS_linked_mortality
+  quote: At 65 years of age, compared with normal-weight male subjects, lifetime risk differences (percent)
+    increased from 3.7 to 23.9 percentage points between overweight and very obese men and from 8.7 to
+    26.7 percentage points for women.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Only the extreme BMI categories are recoverable from the abstract; full text is paywalled (diabetesjournals.org
+    returns HTTP 403 and no PMC copy exists), so normal-weight, overweight and obese values are NOT recorded
+    rather than interpolated. Self-reported diagnosed diabetes; BMI self-reported in NHIS.
+funding: US federal (CDC)
+notes: 'MOST TRANSPORTABLE DIABETES RECORD IN THIS SHARD: index age 18 exactly matches the subject, and
+  the stratifier is the mediator that short sleep is most reliably shown to move. Downstream use: combine
+  with the sleep->BMI effect from shard s09 and Ward 2017''s persistence coefficient rather than with
+  a diabetes HR.'
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

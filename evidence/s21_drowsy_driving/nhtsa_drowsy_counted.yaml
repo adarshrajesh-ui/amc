@@ -1,0 +1,216 @@
+study_id: nhtsa_drowsy_counted
+citation: "National Center for Statistics and Analysis, National Highway Traffic Safety Administration. Police-reported drowsy-driving crash, injury and fatality counts, United States (Traffic Safety Facts / FARS tabulations for 2011-2015 and 2023). As quoted verbatim in AAA Foundation and Governors Highway Safety Association reports."
+doi: null
+pmid: null
+url: "https://www.nhtsa.gov/risky-driving/drowsy-driving"
+verification:
+  crossref_ok: null
+  pubmed_ok: null
+  status: UNVERIFIED
+  resolved_title: null
+access_tier: secondhand
+secondhand_via: "owens2018_aaa (AAA Foundation Research Brief, Feb 2018, quoting National Center for Statistics & Analysis 2017); tefft2024_aaa (AAA Foundation Research Brief, 2024, quoting NHTSA); ghsa2026 (Governors Highway Safety Association, Wake Up Call update, quoting FARS 2023 and NHTSA)"
+design: normative_descriptive
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: police_reported_drowsy_driver_share_of_fatal_crashes
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "OFFICIAL POLICE-REPORTED share of US crashes resulting in a death in which driver drowsiness was recorded, 2011-2015"}
+    scale: probability
+    unit: "proportion of fatal crashes"
+    value: 0.024000
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported as a point figure with no interval: 2.4% of crashes that resulted in a death, years
+      2011-2015. This is a CENSUS TABULATION of a coded field, not an estimate, so no sampling interval
+      exists; se is null and inventing one would misrepresent the quantity.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive. THIS IS THE LOW TERM IN THE ORDER-OF-MAGNITUDE COMPARISON THE TASK ASKED FOR.
+      2.4% here versus 16.5% (tefft2012) and 17.6% (tefft2024_aaa) — a ratio of about 7x. THE LOW NUMBER
+      SHOULD NOT BE READ AS A COMPETING ESTIMATE OF THE TRUTH. It is a count of how often a police officer
+      wrote "drowsy" on a form, in a system where the officer never observed the driver before the crash,
+      where 45% of drivers' drowsiness status is coded unknown (tefft2012), where unknown is effectively
+      treated as not-drowsy, and where reporting policy varies by state. Every one of those features biases
+      it DOWNWARD.
+    covariates: []
+    followup_years: null
+    cohort_family: "FARS_CRSS_police_reported"
+    quote: >
+      driver drowsiness was involved in an estimated 1.4% of all police reported crashes nationwide, 2.0% of
+      crashes that resulted in injuries and 2.4% of crashes that resulted in a death in years 2011-2015 (National
+      Center for Statistics & Analysis, 2017)
+  - outcome_domain: baseline_risk
+    outcome_construct: police_reported_drowsy_driver_share_of_injury_crashes
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "OFFICIAL police-reported share of US crashes resulting in injuries involving driver drowsiness, 2011-2015"}
+    scale: probability
+    unit: "proportion of injury crashes"
+    value: 0.020000
+    se: null
+    ci: null
+    conversion_formula: "Reported as 2.0%. Census tabulation; no interval exists; se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive. REQUIRED EXTRACTION #5 (non-fatal serious outcomes), official version. Compare
+      tefft2012's imputed 13.1% for hospital-admission crashes: a 6.6x gap in the injury-crash category,
+      the same magnitude as the gap in the fatal category.
+    covariates: []
+    followup_years: null
+    cohort_family: "FARS_CRSS_police_reported"
+    quote: >
+      driver drowsiness was involved in an estimated 1.4% of all police reported crashes nationwide, 2.0% of
+      crashes that resulted in injuries and 2.4% of crashes that resulted in a death in years 2011-2015 (National
+      Center for Statistics & Analysis, 2017)
+  - outcome_domain: baseline_risk
+    outcome_construct: police_reported_drowsy_driver_share_of_all_crashes
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "OFFICIAL police-reported share of ALL US police-reported crashes involving driver drowsiness, 2011-2015"}
+    scale: probability
+    unit: "proportion of all police-reported crashes"
+    value: 0.014000
+    se: null
+    ci: null
+    conversion_formula: "Reported as 1.4%. Census tabulation; no interval exists; se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive. Compare tefft2012's imputed 7.0% (4.6-9.3) and owens2018_aaa's directly OBSERVED
+      8.8-9.5% from pre-crash video. The observational and video-based estimates agree with each other and
+      both disagree with 1.4% by a factor of 5-7.
+    covariates: []
+    followup_years: null
+    cohort_family: "FARS_CRSS_police_reported"
+    quote: >
+      driver drowsiness was involved in an estimated 1.4% of all police reported crashes nationwide, 2.0% of
+      crashes that resulted in injuries and 2.4% of crashes that resulted in a death in years 2011-2015 (National
+      Center for Statistics & Analysis, 2017)
+  - outcome_domain: baseline_risk
+    outcome_construct: police_reported_annual_us_drowsy_driving_deaths
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "NHTSA's counted number of people killed in drowsy-driving crashes, United States, 2023 (FARS)"}
+    scale: raw_units
+    unit: "deaths per year"
+    value: 633.000000
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported directly: "Using these data, NHTSA reported that 633 people were killed in drowsy driving
+      crashes in 2023." Census count; se null.
+      NHTSA's longer-run headline figure, quoted separately in tefft2024_aaa, is "91,000 police-reported
+      crashes resulting in 50,000 injuries and 800 fatalities annually".
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive count. THE HEADLINE COMPARISON THE TASK ASKED FOR, IN ONE LINE: NHTSA counts 633 US
+      drowsy-driving deaths in 2023; applying the AAA model to the same year gives 6,326. The Governors
+      Highway Safety Association states the ratio explicitly: "This is ten times more than the raw FARS
+      data reported by NHTSA."
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "FARS_CRSS_police_reported"
+    quote: >
+      In 2023 (the most recent year for which data are available), FARS indicated that 1.5% of fatal crashes
+      involved a drowsy driver and 1.8% of drivers in fatal crashes were either 'drowsy, asleep, fatigued, ill or
+      black[ed] out.' Using these data, NHTSA reported that 633 people were killed in drowsy driving crashes in
+      2023.
+  - outcome_domain: baseline_risk
+    outcome_construct: police_reported_drowsy_driver_share_of_fatal_crashes_2023
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "FARS 2023: share of fatal crashes involving a drowsy driver (1.5%), and share of drivers in fatal crashes coded 'drowsy, asleep, fatigued, ill or blacked out' (1.8%)"}
+    scale: probability
+    unit: "proportion of fatal crashes"
+    value: 0.015000
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported as 1.5% of fatal crashes (with the broader driver-level composite field at 1.8%). Census
+      tabulation; se null.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive. NOTE THE DRIFT DOWNWARD over time in the official series: 2.4% for 2011-2015, 1.5% for
+      2023. Over the same period the model-based estimate stayed flat (16.5% for 1999-2008, 17.6% for
+      2017-2021, with tefft2024_aaa stating the percentage "remained approximately constant"). A coded
+      field that falls while the modelled reality is flat is evidence of DETERIORATING REPORTING, not of a
+      shrinking problem. This is why I do not use the official series for anything except a floor.
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "FARS_CRSS_police_reported"
+    quote: >
+      In 2023 (the most recent year for which data are available), FARS indicated that 1.5% of fatal crashes
+      involved a drowsy driver and 1.8% of drivers in fatal crashes were either 'drowsy, asleep, fatigued, ill or
+      black[ed] out.' Using these data, NHTSA reported that 633 people were killed in drowsy driving crashes in
+      2023.
+rob:
+  tool: none
+  judgement: na
+  notes: >
+    THIS RECORD IS SECONDHAND AND I AM MARKING IT AS SUCH RATHER THAN PRETENDING OTHERWISE.
+    I attempted direct retrieval from nhtsa.gov (HTTP 403, blocked) and from
+    crashstats.nhtsa.dot.gov/Api/Public/ViewPublication (HTTP 404 for the publication ID I tried). I could
+    not obtain an NHTSA-published document. Every number in this record is therefore a VERBATIM QUOTATION
+    OF NHTSA FIGURES AS PRINTED IN THREE INDEPENDENT SECONDARY SOURCES that I did retrieve directly
+    (owens2018_aaa, tefft2024_aaa, ghsa2026). Two of those three are AAA Foundation documents arguing that
+    the NHTSA figures are too low — i.e. they have an interest in quoting them accurately and low, and they
+    agree with the GHSA, a different organisation. I judge the transcription reliable. But the primary
+    source is unverified and `access_tier: secondhand` reflects that.
+    The substantive point is not a bias in the counting: it is that a COUNT OF A CODED FIELD is not an
+    ESTIMATE OF A PREVALENCE when 45% of the field is missing.
+funding: "US Department of Transportation (NHTSA). Secondary sources: AAA Foundation for Traffic Safety; Governors Highway Safety Association."
+notes: >
+  REQUIRED EXTRACTION #4, second bullet — the task said "NHTSA's counted figure and the independent
+  naturalistic-driving estimates differ by roughly an order of magnitude - report BOTH and explain why."
+  This record is the "counted figure" half. The other half is in tefft2012, tefft2024_aaa and
+  owens2018_aaa. THE TASK'S CHARACTERISATION IS CORRECT: the ratio is 7x on the share of fatal crashes
+  (2.4% vs 17.6%) and 9.4x on the annual death count (633 vs 5,967 to 6,326).
+  .
+  VERBATIM QUOTES, WITH THEIR SOURCES:
+  FROM owens2018_aaa (src/owens2018_aaa_brief.txt): "The results of this study stand in stark contrast to
+  official statistics published by the National Highway Traffic Safety Administration (NHTSA), which report
+  that driver drowsiness was involved in an estimated 1.4% of all police reported crashes nationwide, 2.0%
+  of crashes that resulted in injuries and 2.4% of crashes that resulted in a death in years 2011-2015
+  (National Center for Statistics & Analysis, 2017)."
+  FROM tefft2024_aaa (src/tefft2024_aaa_drowsy_fatal.txt): "The National Highway Traffic Safety
+  Administration (NHTSA) states that 91,000 police-reported crashes resulting in 50,000 injuries and 800
+  fatalities annually—amounting to approximately 1%-2% of all crashes, injuries, and deaths—involve drowsy
+  driving; however, the contribution of drowsy driving in motor vehicle crashes is difficult to measure.
+  Although reports by police officers who investigate crashes sometimes indicate that a driver was drowsy,
+  data derived from these reports are widely regarded as substantial underestimates of the true scope of the
+  problem."
+  FROM ghsa2026 (src/ghsa2026_wakeupcall.txt): "In 2023 (the most recent year for which data are
+  available), FARS indicated that 1.5% of fatal crashes involved a drowsy driver and 1.8% of drivers in
+  fatal crashes were either 'drowsy, asleep, fatigued, ill or black[ed] out.' Using these data, NHTSA
+  reported that 633 people were killed in drowsy driving crashes in 2023."
+  AND: "Police reports, from which the FARS data are derived, substantially underestimate drowsy driving
+  because officers have no direct observation of drivers before they crash and states and localities have
+  different policies on how to report suspected drowsy driving. As a result, the national raw FARS numbers
+  are a substantial undercount of the total prevalence of drowsy driving among all traffic fatalities."
+  AND THE ARITHMETIC OF THE GAP, ALSO FROM ghsa2026: "Applying this estimate to the FARS fatality totals
+  for 2017-2021 yields an annual drowsy driving fatality average of 5,967. ... Assuming the same proportion
+  of fatalities in 2023 involved drowsy driving, there would have been 6,326 roadway deaths in 2023 caused
+  by drowsy driving. This is ten times more than the raw FARS data reported by NHTSA."
+  .
+  WHICH NUMBER I USE, AND WHY. I use the model-based share (17.6%, with 7-13% as lower anchors from
+  all-crash and injury-crash data) in injury_channel.md, and I report 1.5-2.4% only as an explicit FLOOR
+  scenario. The reason is not that the higher number is more convenient — it is that the low number is
+  arithmetically incapable of being a prevalence estimate. tefft2012 shows within a single dataset that
+  the identical data give 3.6% when unknowns are coded as not-drowsy and 16.5% when they are imputed, and
+  45% of drivers were unknown. If I used 2.4% I would be asserting that essentially none of the 45%
+  unknown drivers were drowsy, which nothing supports.
+  HOW MUCH THIS CHOICE MOVES THE ANSWER: in Route 2 of injury_channel.md, substituting 2.4% for 17.6%
+  reduces the life-expectancy loss from about 0.034 months to about 0.005 months, i.e. by a factor of 7.
+  That single choice is the largest discrete fork in the whole calculation and I have reported both ends.
+shard: "s21_drowsy_driving"

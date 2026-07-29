@@ -1,0 +1,78 @@
+study_id: benjafield2019
+citation: "Benjafield AV, Ayas NT, Eastwood PR, Heinzer R, Ip MSM, Morrell MJ, et al. Estimation of the global prevalence and burden of obstructive sleep apnoea: a literature-based analysis. Lancet Respir Med. 2019;7(8):687-698."
+doi: "10.1016/S2213-2600(19)30198-5"
+pmid: "31300334"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Estimation of the global prevalence and burden of obstructive sleep apnoea: a literature-based analysis."
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: null
+n_studies_pooled: 17
+population:
+  age_mean: null
+  age_range: [30, 69]
+  pct_female: null
+  country: "16 countries (global extrapolation)"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: global_absolute_burden_osa_ahi_ge5_ages_30_to_69
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "mild-to-severe OSA (AHI >= 5, AASM 2012 criteria), global count, adults aged 30-69 ONLY"}
+    scale: raw_units
+    unit: "millions of adults aged 30-69 worldwide"
+    value: 936.0
+    se: 17.09
+    ci: [903.0, 970.0]
+    conversion_formula: "'we estimated that 936 million (95% CI 903-970) adults aged 30-69 years (men and women) have mild to severe obstructive sleep apnoea' verbatim. se = (970 - 903)/3.92 = 17.09 million."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "absolute burden, higher = more disease. RECORDED FOR SCALE ONLY. IT CANNOT BE CONVERTED INTO A PREVALENCE FOR OUR SUBJECT: the paper's own primary outcome is explicitly restricted to ages 30-69 'as this age group generally had available data in the published studies', and the abstract gives no denominators by age band, sex or BMI. Any attempt to turn 936 million into a probability for a lean 19-year-old male would be fabrication."
+    covariates: ["age", "sex", "country"]
+    followup_years: null
+    cohort_family: null
+    quote: "Using AASM 2012 diagnostic criteria and AHI threshold values of five or more events per h and 15 or more events per h, we estimated that 936 million (95% CI 903-970) adults aged 30-69 years (men and women) have mild to severe obstructive sleep apnoea and 425 million (399-450) adults aged 30-69 years have moderate to severe obstructive sleep apnoea globally."
+  - outcome_domain: baseline_risk
+    outcome_construct: global_absolute_burden_osa_ahi_ge15_ages_30_to_69
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "moderate-to-severe OSA (AHI >= 15, AASM 2012 criteria), global count, adults aged 30-69 ONLY"}
+    scale: raw_units
+    unit: "millions of adults aged 30-69 worldwide"
+    value: 425.0
+    se: 13.01
+    ci: [399.0, 450.0]
+    conversion_formula: "'425 million (399-450) adults aged 30-69 years have moderate to severe obstructive sleep apnoea globally' verbatim. se = (450 - 399)/3.92 = 13.01 million."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "absolute burden. Same restriction: ages 30-69 only. Recorded so the downstream model can see that the largest and most-cited global OSA estimate contains NO information about 18-25 year olds."
+    covariates: ["age", "sex", "country"]
+    followup_years: null
+    cohort_family: null
+    quote: "we estimated that 936 million (95% CI 903-970) adults aged 30-69 years (men and women) have mild to severe obstructive sleep apnoea and 425 million (399-450) adults aged 30-69 years have moderate to severe obstructive sleep apnoea globally."
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: "Systematic PubMed/Embase search for objectively-tested OSA prevalence, but the synthesis is a modelled global extrapolation with substantial and acknowledged fragility: reliable prevalence data existed for only 16 countries from 17 studies, all other countries were IMPUTED by matching to a 'similar country' on population BMI, race and geographical proximity; a newly developed conversion algorithm was applied to harmonize non-AASM-2012 scoring criteria; and, decisively for this shard, 'The presence of symptoms was not specifically analysed because of scarce information about symptoms in the reference studies' - so these are ANATOMICAL prevalence figures with no symptom requirement, which is not the quantity that drives management. Funded by ResMed, a manufacturer of CPAP devices, which is a direct commercial interest in a large prevalence estimate. Age restricted to 30-69. Abstract-only access on my side."
+funding: "ResMed (declared in the abstract's Funding section)"
+notes: |
+  ACCESS: abstract only. Unpaywall/Europe PMC show a green PMC deposit (PMC7007763) but Europe PMC returned no
+  full-text XML for it, and the pmc.ncbi.nlm.nih.gov route began returning reCAPTCHA challenges partway through this
+  shard's work, so I did not obtain the tables. All numbers above are verbatim from the PubMed abstract.
+  THE HONEST FINDING IS A NEGATIVE ONE, AND THE TASK ASKED ME TO REPORT REALITY: the two papers the seed named as the
+  sources for OSA prevalence in our subject - Peppard 2013 (Wisconsin) and Benjafield 2019 (global) - between them
+  contain no data on anyone under 30 years old. Peppard's youngest stratum is 30-49; Benjafield's primary outcome is
+  explicitly 30-69. There is therefore NO directly applicable published OSA prevalence for a lean 18-25 year old male
+  from either source, and the report must say so rather than quoting "1 billion people have OSA" as if it bore on this
+  subject.
+  WHAT I USED INSTEAD, IN ORDER OF PREFERENCE:
+    1. peppard2013 Tables 2-5, lean-male 30-49 stratum, extrapolated DOWN in age (see that record for the arithmetic).
+    2. chan2019, a 10-year community-based follow-up in which participants were re-polysomnographed at mean age 20.2 -
+       the only retrievable OBJECTIVE sleep-study data at our subject's actual age - though its cohort was assembled
+       from an OSA prevalence study and so is enriched for cases.
+  THE ResMed FUNDING IS NOT A REASON TO DISCARD THE PAPER but it is a reason to prefer the unfunded, PSG-based,
+  stratified Wisconsin estimates for a probability statement about an individual, which is what I have done.
+shard: "s19_sleep_disorders"

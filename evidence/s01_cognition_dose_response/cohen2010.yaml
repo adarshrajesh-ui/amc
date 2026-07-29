@@ -1,0 +1,219 @@
+study_id: cohen2010
+citation: "Cohen DA, Wang W, Wyatt JK, Kronauer RE, Dijk DJ, Czeisler CA, Klerman EB. Uncovering residual effects of chronic sleep loss on human performance. Science Translational Medicine. 2010;2(14):14ra3."
+doi: "10.1126/scitranslmed.3000458"
+pmid: "20371466"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2892834/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Uncovering residual effects of chronic sleep loss on human performance."
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 17
+n_studies_pooled: null
+population:
+  age_mean: 27.0
+  age_range: [18, 34]
+  pct_female: 23.5
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: pvt_slope_ms_per_hour_awake_week2_vs_week1
+    exposure: {type: chronic_restriction, dose_h: 5.6, referent_h: 8, duration_days: 14,
+               contrast_label: "chronic sleep loss equivalent to 5.6h/24h, week 2 vs week 1: rate of within-day performance decline"}
+    scale: raw_units
+    unit: "milliseconds of PVT median RT added per additional hour awake"
+    value: 45.0
+    se: null
+    ci: null
+    conversion_formula: "69 - 24 = 45 ms per hour awake, computed from the two reported linear-model
+      slopes (week 1 = 24 ms/h, week 2 = 69 ms/h, week 3 = 65 ms/h). The between-week difference was
+      tested and reported significant at p < 0.0001, but no SE for either slope is published, so no SE is
+      recorded here. Ratio form: 69/24 = 2.88, i.e. chronic sleep loss made performance deteriorate
+      almost three times faster per waking hour by the second week, and that faster rate then held steady
+      into week 3 (65 ms/h)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = steeper within-day decline = worse. The DAMAGE FROM CHRONIC RESTRICTION
+      SHOWS UP AS A SLOPE, NOT A LEVEL: it changes how fast you fall apart across a day, not how you
+      start the day."
+    covariates: ["circadian phase (forced desynchrony averaged across all phases)", "sleep inertia excluded by testing from 2h after wake"]
+    followup_years: null
+    cohort_family: null
+    quote: "When the chronic sleep loss data were fit with a linear model, there was no significant
+      difference across weeks of the protocol in the y-intercept, which reflects the theoretical effect of
+      acute homeostatic sleep pressure at awakening, ignoring the impact of sleep inertia (10). This is
+      not consistent with the single homeostatic process predictions. However, there was a marked increase
+      in slope after the first week, reflecting slower reaction times with increasing hours awake
+      (1st week: slope = 24 msec/hour awake; 2nd week: slope = 69 msec/hour awake; 3rd week:
+      slope = 65 msec/hour awake). The differences in slope between the 1st and 2nd weeks were
+      significant (p<0.0001)."
+  - outcome_domain: cognition
+    outcome_construct: pvt_median_rt_early_in_wake_episode_is_preserved
+    exposure: {type: chronic_restriction, dose_h: 5.6, referent_h: 8, duration_days: 21,
+               contrast_label: "median RT at 2h after waking, week 3 of chronic sleep loss vs baseline"}
+    scale: pct_change
+    unit: "percent increase in PVT median RT at 2 hours awake, week 3 vs 2 baseline days"
+    value: 13.7
+    se: null
+    ci: null
+    conversion_formula: "291/256 - 1 = 13.7%. Computed from the reported medians: baseline 256 ms,
+      week 1 256 ms, week 2 278 ms, week 3 291 ms. The comparison against the adequately slept control
+      group was explicitly NOT significant (p = 0.42), and control values were actually numerically worse
+      (270, 305, 309 ms). So after three weeks of a 5.6 h-equivalent dose, morning performance was
+      statistically indistinguishable from rested. NO SE is published for these medians."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = slower, but the effect is small and not significant versus control:
+      chronic restriction is nearly INVISIBLE if you only test people shortly after they wake up"
+    covariates: ["circadian phase averaged", "sleep inertia excluded"]
+    followup_years: null
+    cohort_family: null
+    quote: "When comparing the first PVT results at 2 hours awake, performance was near baseline levels
+      across all three weeks of chronic sleep loss (two baseline days: median RT = 256msec; 1st week:
+      median RT =256msec; 2nd week: median RT = 278msec; and 3rd week: median RT = 291msec), and not
+      significantly different from the control data with a 1:2 sleep:wake ratio (1st week: 270msec;
+      2nd week: 305msec; 3rd week: 309msec; p=0.42)."
+  - outcome_domain: cognition
+    outcome_construct: pvt_median_rt_late_in_wake_episode_week2_vs_week1
+    exposure: {type: chronic_restriction, dose_h: 5.6, referent_h: 8, duration_days: 14,
+               contrast_label: "median RT at 30 consecutive hours awake, week 2 vs week 1 of chronic sleep loss"}
+    scale: pct_change
+    unit: "percent increase in PVT median RT at 30 hours awake, week 2 vs week 1"
+    value: 193.0
+    se: null
+    ci: null
+    conversion_formula: "1954/667 - 1 = 193% (a 2.93-fold increase). Reported medians at 30 h awake:
+      week 1 = 667 ms, week 2 = 1,954 ms, week 3 = 2,013 ms. Contrast this with the +13.7% at 2 h awake
+      from the same subjects in the same weeks - a factor of 14 difference in apparent effect size
+      depending purely on WHEN IN THE DAY you test. No SEs published."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = slower. Same dose, same subjects, same weeks: the deficit is enormous
+      late in the waking day and near-absent early in it."
+    covariates: ["circadian phase averaged across all phases"]
+    followup_years: null
+    cohort_family: null
+    quote: "In contrast, when comparing the last performance test of each wake episode, which was
+      administered at 30 consecutive hours awake, there was a dramatic increase in median RT between the
+      first and second weeks on the chronic sleep loss protocol (1st week: median RT = 667ms; 2nd week:
+      median RT = 1,954msec; 3rd week: median RT = 2,013msec)."
+  - outcome_domain: cognition
+    outcome_construct: pvt_has_no_appreciable_practice_effect
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "test-retest / practice characteristics of the PVT under repeated administration"}
+    scale: raw_units
+    unit: "1 = authors state the PVT shows no appreciable practice effect"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Binary encoding of an explicit methodological statement, recorded because the
+      shard brief asks specifically about practice effects that could confound a multi-day trajectory.
+      Note this is an assertion supported by the authors' cited reference rather than a quantity measured
+      in this paper, so it is weak on its own. The strong empirical version is in vandongen2003.yaml:
+      the 8 h TIB control arm, tested 9 times a day for 14 days, drifted only +2.6 lapses, while on the
+      same schedule DSST correct responses improved by +9.6 and serial-addition throughput by +2.8.
+      That is the actual measurement of differential practice sensitivity, and it says the PVT is
+      near-practice-free while throughput tasks are heavily practice-contaminated."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = practice does not confound the PVT trajectory, so multi-day PVT accumulation
+      curves can be read as dose effects rather than learning artefacts"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The PVT does not display appreciable practice effects (34), making it an ideal test to
+      compare performance across protocols that have different frequencies of exposure to the task."
+  - outcome_domain: circadian
+    outcome_construct: chronic_loss_amplifies_the_circadian_by_time_awake_interaction
+    exposure: {type: chronic_restriction, dose_h: 5.6, referent_h: 8, duration_days: 21,
+               contrast_label: "circadian amplitude of PVT performance, chronic sleep loss vs adequate sleep"}
+    scale: raw_units
+    unit: "milliseconds of peak-to-trough circadian variation in the CONTROL group, averaged over 26h awake"
+    value: 116.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly for the control group as a reference magnitude. The chronic
+      sleep loss group's amplitude is not given as a single number, but the authors state it was so much
+      larger that the control group's 116 ms swing 'is not apparent at this scale' in Figure 3.
+      MECHANISM: 'Chronic sleep loss alone therefore is not sufficient to appreciably increase the
+      circadian amplitude; rather it intensifies the interaction between acute sleep loss and circadian
+      phase.' Worst performance occurred at circadian phases 0-60 degrees, i.e. roughly 03:00-07:00."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "the recorded value is the CONTROL amplitude (a floor); chronic restriction
+      multiplies it, so the same nightly dose costs far more at some clock times than others"
+    covariates: ["melatonin-referenced circadian phase in 60-degree bins"]
+    followup_years: null
+    cohort_family: null
+    quote: "In the control group, the 116msec average peak-to-trough difference in the circadian
+      performance rhythm (averaged across 26 hours awake) is not apparent at this scale."
+rob:
+  tool: RoB2
+  judgement: high
+  notes: "Very small (n = 9 restricted, n = 8 control) and NOT randomised: the control group is a
+    previously published, separately conducted cohort (reference 8), differently constituted (8/8 male
+    versus 4 female / 5 male in the restricted arm, and ages 18-30 versus 21-34), tested on a different
+    PVT schedule (every 2 h versus every 4 h) and pre-loaded with 8 h rather than 10 h time in bed at
+    home. The authors acknowledge the sex-distribution problem explicitly. THE LARGER ISSUE FOR THIS
+    SHARD IS EXPOSURE STRUCTURE: this is a 42.85-hour forced-desynchrony protocol with 32.85-hour wake
+    episodes and 10-hour sleep episodes. It is 'chronic sleep loss' only in the ratio sense (1:3.3,
+    described by the authors as 'comparable to 5.6 hours sleep every 24 hours'); nobody ever had a 5.6 h
+    night. The design deliberately confounds nothing circadian, which is its great strength, but it means
+    the exposure is NOT a nightly-restriction schedule and the dose cannot be entered into a nightly
+    dose-response spline. Primary outcome was median RT, which the authors chose as deliberately
+    conservative and which Basner & Dinges 2011 rank as one of the least sensitive PVT metrics; the
+    reported effects are therefore likely underestimates. No SEs are published for any of the reported
+    medians or slopes."
+funding: "NIH grants R01-HL077453, R01-HL080978, K24-HL105664, T32-HL07901, M01-RR02635, F32-HL078652;
+  National Space Biomedical Research Institute (HFP01601, HFP01001, PF02101); NIH National Center for
+  Research Resources"
+notes: |
+  THIS RECORD ANSWERS A QUESTION NO OTHER STUDY IN THE SHARD CAN. Every other chronic-restriction
+  experiment here tests performance at a fixed few times of day, so it cannot separate "chronic
+  restriction lowers your whole performance curve" from "chronic restriction makes your curve fall away
+  faster as the day goes on". By spreading testing across all circadian phases and across 33-hour wake
+  episodes, this study separates them, and the answer is unambiguous: THE INTERCEPT IS PRESERVED AND THE
+  SLOPE ROUGHLY TRIPLES.
+
+    performance at 2h awake:   256 -> 256 -> 278 -> 291 ms  (baseline, wk1, wk2, wk3), p = 0.42 vs control
+    slope across the day:       --  ->  24 ->  69 ->  65 ms per hour awake, wk1 vs wk2 p < 0.0001
+    performance at 30h awake:   --  -> 667 -> 1954 -> 2013 ms
+
+  Note also that the slope stabilised between week 2 and week 3 (69 then 65 ms/h). Read together with
+  McCauley 2009's bifurcation, that is what convergence to a dose-dependent plateau looks like: the
+  deficit stopped growing, but it stopped growing at a badly impaired level, and it took two weeks to
+  get there.
+
+  WHY THIS MATTERS SO MUCH FOR OUR SUBJECT SPECIFICALLY. A chronically restricted 18-year-old will look
+  essentially normal on a morning test and severely impaired on an evening or late-night test - and
+  late-evening is exactly when a college student studies, drives home, and takes on cognitive load. Any
+  estimate of his functional impairment that is calibrated on morning testing (which is how most school
+  and clinic assessment happens) will understate the real-world cost by a large factor. The authors put
+  the same point in terms of what stays hidden: the impairment "may be somewhat mitigated if the
+  individual were to have adequate sleep for weeks prior", and conversely, when "pre-loaded with fatigue
+  due to chronic sleep loss, the deterioration in performance during the biological night induced by
+  acute sleep loss dwarfed the impairment induced by acute sleep loss alone in people who were not
+  chronically sleep restricted."
+
+  A DIRECT WARNING ABOUT PRE-EXAM ALL-NIGHTERS. This is the study that quantifies the INTERACTION our
+  subject's schedule actually contains: he is chronically restricted AND occasionally pulls a 3-4 h night
+  before an exam. Cohen shows those two exposures multiply rather than add. In week 1 (before chronic
+  loss had accumulated) 30 hours awake cost 667 ms; in week 2 (chronically loaded) the identical 30 hours
+  awake cost 1,954 ms. The same acute insult was three times more damaging once a chronic deficit was in
+  place. For calibration against everyday risk the authors note that 19 hours awake is equivalent to a
+  blood alcohol concentration of 0.05% and 24 hours awake to 0.10% in a rested person - and that in this
+  study those already substantial acute deficits "appear indistinguishable from baseline when presented
+  at the same scale as the chronic sleep loss condition."
+
+  ONE MORE STRUCTURAL FINDING: the paper argues for TWO homeostatic processes, a fast one fully
+  dischargeable by a single 10 h sleep opportunity, and a slow one that is not, and that acts by
+  steepening the within-day decline. That is a different functional form from both Van Dongen's
+  excess-wakefulness accumulator and McCauley's bifurcating two-compartment model, because it makes the
+  chronic term multiply the acute term rather than add to it. It is recorded in notes_for_modeller.md as
+  a third candidate structure.
+shard: "s01_cognition_dose_response"

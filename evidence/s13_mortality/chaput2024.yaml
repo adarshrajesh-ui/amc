@@ -1,0 +1,109 @@
+study_id: chaput2024
+citation: "Chaput JP, Biswas RK, Ahmadi M, Cistulli PA, Rajaratnam SMW, Hamer M, Stamatakis E. Device-measured weekend catch-up sleep, mortality, and cardiovascular disease incidence in adults. Sleep. 2024 Nov 8;47(11):zsae135."
+doi: "10.1093/sleep/zsae135"
+pmid: "38895883"
+url: "https://doi.org/10.1093/sleep/zsae135"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Device-measured weekend catch-up sleep, mortality, and cardiovascular disease incidence in adults."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 73513
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [40, 79]
+  pct_female: null
+  country: "UK"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_weekend_catchup
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "accelerometer-derived weekend catch-up sleep >=2 h longer on weekends than weekdays vs NO weekend catch-up (referent), multivariable-adjusted"}
+    scale: log_hr
+    unit: null
+    value: 0.157004
+    se: 0.095421
+    ci: [-0.030459, 0.343590]
+    conversion_formula: "HR 1.17 (0.97-1.41); value=ln(1.17)=0.15700; se=(ln1.41-ln0.97)/3.92=0.09542"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = HIGHER all-cause mortality with >=2 h of weekend catch-up sleep. The point estimate is
+      in the HARMFUL direction and the interval excludes any large benefit: the lower bound is 0.97, so
+      the data are incompatible with weekend catch-up cutting mortality by more than about 3% in this
+      cohort. This DIRECTLY CONTRADICTS the protective reading of akerstedt2019 and li2026.
+    covariates: ["potential confounders (multivariable-adjusted; full list not in abstract)"]
+    followup_years: 8.0
+    cohort_family: "UK_Biobank"
+    quote: "In multivariable-adjusted models, weekend catch-up sleep was not associated with mortality (>= 2 hours group: hazard ratio [HR], 1.17 [95% CI: 0.97 to 1.41]) or incident CVD (HR, 1.05 [95% CI, 0.94 to 1.18])."
+  - outcome_domain: cardiovascular
+    outcome_construct: incident_cvd_weekend_catchup
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "accelerometer-derived weekend catch-up sleep >=2 h vs none, incident CVD, n=70518"}
+    scale: log_hr
+    unit: null
+    value: 0.048790
+    se: 0.058008
+    ci: [-0.061875, 0.165514]
+    conversion_formula: "HR 1.05 (0.94-1.18); value=ln(1.05); se=(ln1.18-ln0.94)/3.92"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = higher incident CVD; null, and tightly null (0.94-1.18)"
+    covariates: ["multivariable-adjusted"]
+    followup_years: 8.0
+    cohort_family: "UK_Biobank"
+    quote: "weekend catch-up sleep was not associated with mortality (>= 2 hours group: hazard ratio [HR], 1.17 [95% CI: 0.97 to 1.41]) or incident CVD (HR, 1.05 [95% CI, 0.94 to 1.18])"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Strong design for the question: objective 7-day wrist accelerometry, 73 513 people, prespecified
+    dose-response in four catch-up bands, and a prespecified subgroup restricted to adults sleeping
+    <6 h on weekdays at baseline - which is the subgroup that matters for our subject and which the
+    authors state agreed with the null main finding. Weaknesses: (1) abstract-only access, so I have the
+    >=2 h cell and the two intermediate bands' existence but not their point estimates; (2) 7 days of
+    wear generates ~2 weekend nights, a thin basis for classifying a habitual pattern; (3) UK Biobank
+    accelerometer subsample is a healthy-volunteer subset of an already healthy-volunteer cohort;
+    (4) age 40-79, i.e. an age band in which "catch-up sleep" has a different behavioural meaning than
+    in a student with a fixed 8am class; (5) a published commentary exists (Sleep 2024;47(11):zsae159)
+    which I did not retrieve; (6) 8-year follow-up limits deaths.
+funding: null
+notes: >
+  I INCLUDED THIS SPECIFICALLY BECAUSE IT CONTRADICTS THE RECORD I WAS MOST EXCITED ABOUT, AND THE
+  CONTRADICTION IS NOT RESOLVABLE FROM THE PUBLISHED EVIDENCE.
+  .
+  THE PROBLEM IN ONE PARAGRAPH. li2026 (Nat Commun 2026) reports, in UK Biobank accelerometer data,
+  that severe sleep restriction WITHOUT rebound carries HR 1.42 (1.24-1.63) while the same restriction
+  WITH rebound carries HR 1.13 (0.95-1.36) - i.e. rebound sleep removes roughly two thirds of the
+  excess log hazard. chaput2024 uses the SAME COHORT, THE SAME DEVICE, essentially the SAME OUTCOME and
+  an overlapping period, defines catch-up sleep as longer average weekend than weekday sleep, and finds
+  HR 1.17 (0.97-1.41) - nominally harmful - with the null holding in dose-response analyses and in
+  adults sleeping <6 h on weekdays. Two analyses of one dataset, opposite conclusions about the
+  intervention our subject is actually doing.
+  .
+  WHY THEY DIFFER (my reading, not the papers'): the two papers do not define the same exposure.
+  chaput2024 contrasts people WHO CATCH UP against people WHO DO NOT, across the whole sleep-duration
+  distribution, so the comparison is partly "irregular sleepers vs regular sleepers" - and
+  windred2024, again in the same cohort, shows irregularity itself predicts mortality better than
+  duration does. li2026 conditions on being sleep-restricted and then asks whether rebound follows, so
+  its comparison is "restricted-and-recovers vs restricted-and-does-not". Those are different
+  contrasts, and only the second one is the subject's counterfactual. That is the most favourable
+  reading available to the subject, and I want to be explicit that it is a reading, not a result.
+  .
+  WHAT THE DOWNSTREAM MODEL SHOULD DO WITH THIS: do NOT pool this with li2026 - they are the same
+  cohort_family (UK_Biobank) and would be double-counted, and they point in opposite directions, so
+  averaging them manufactures a fake precise null. Treat the weekend-catch-up protective effect as
+  SIGN-UNSTABLE ACROSS DEFENSIBLE SPECIFICATIONS, which is a grade D on model dependence in the
+  gates.md confidence ledger, i.e. a GUESS. The honest summary is: weekend catch-up sleep has NOT been
+  shown to remove the mortality risk of weekday short sleep, and has not been shown not to.
+  .
+  COHORT OVERLAP WARNING: UK_Biobank accelerometer subsample. Overlaps li2026, chaput2026,
+  saintmaurice2024, liang2023, windred2024. Note that chaput2024 and chaput2026 share a first author
+  and the same cohort and are NOT independent.
+shard: "s13_mortality"

@@ -1,0 +1,65 @@
+study_id: dressle2022
+citation: 'Dressle RJ, Feige B, Spiegelhalder K, Schmucker C, Benz F, Mey NC, Riemann D. HPA axis activity in patients with
+  chronic insomnia: A systematic review and meta-analysis of case-control studies. Sleep Med Rev. 2022;62:101588.'
+doi: 10.1016/j.smrv.2022.101588
+pmid: '35091194'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: 'HPA axis activity in patients with chronic insomnia: A systematic review and meta-analysis of case-control
+    studies.'
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 806
+n_studies_pooled: 20
+population:
+  age_mean: null
+  age_range:
+  - 18
+  - 70
+  pct_female: null
+  country: multiple
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: endocrine
+  outcome_construct: cortisol_in_chronic_insomnia_vs_good_sleepers
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: chronic insomnia disorder (449 patients) vs good sleeper controls (357), any cortisol measure
+  scale: smd
+  unit: null
+  value: 0.5
+  se: 0.1505
+  ci:
+  - 0.21
+  - 0.8
+  conversion_formula: se = (0.80 - 0.21)/3.92 = 0.1505, from the reported 95% CI.
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: 'Positive = higher cortisol in chronic poor sleepers (harm). CEILING ESTIMATE for a chronic HPA effect:
+    even years of clinically diagnosed insomnia yields only SMD ~0.5. EXPOSURE MISMATCH: insomnia disorder involves hyperarousal
+    and distress, which behaviourally-chosen short sleep in a healthy student does not; the association is also bidirectional.'
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: 'Twenty studies (449 patients with insomnia, limited to ages 18-70 not taking any medications; 357 GSC) met the
+    inclusion criteria. ... Results suggest that patients with insomnia show moderately increased cortisol levels (SMD =
+    0.50, 95% CI: [0.21-0.80]). Higher effect sizes were found by including only studies using blood samples in the analysis
+    (SMD = 0.67, 95% CI: [0.15-1.18]). Furthermore, a positive, but insignificant association was found between the extent
+    of objective sleep loss in insomnia patients and group differences in cortisol levels.'
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: case-control designs only, so direction of causation unresolved; heterogeneous cortisol matrices; authors note
+    the association with objective sleep loss was itself non-significant
+funding: null
+notes: The only quantitative meta-analysis available for chronic HPA activity and disturbed sleep. Critically, the association
+  between the EXTENT of objective sleep loss and the cortisol difference was NOT significant, which argues that the cortisol
+  elevation in insomnia is driven by hyperarousal rather than by short sleep duration per se.
+shard: s11_endocrine_growth

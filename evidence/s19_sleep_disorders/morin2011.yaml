@@ -1,0 +1,197 @@
+study_id: morin2011
+citation: "Morin CM, Belleville G, Belanger L, Ivers H. The Insomnia Severity Index: psychometric indicators to detect insomnia cases and evaluate treatment response. Sleep. 2011;34(5):601-608."
+doi: "10.1093/sleep/34.5.601"
+pmid: "21532953"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3079939/"
+verification:
+  crossref_ok: null
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "The Insomnia Severity Index: psychometric indicators to detect insomnia cases and evaluate treatment response."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 1204
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "Canada"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: isi_optimal_cutoff_community_case_detection
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "ROC-optimal ISI cut-off for detecting insomnia cases in a population-based community sample (n=959)"}
+    scale: raw_units
+    unit: "ISI points (0-28); score >= 10 = screen positive"
+    value: 10.0
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "HIGHER ISI = more severe insomnia. This is a genuine ROC-derived cut-off against interview-validated insomnia status, unlike the ESS >10 threshold which is a normal-range boundary. Note this is the COMMUNITY cut-off; a higher threshold (13) is conventionally used in clinical samples, but that figure is not in this abstract and I have not extracted it."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "A cutoff score of 10 was optimal (86.1% sensitivity and 87.7% specificity) for detecting insomnia cases in the community sample."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: isi_sensitivity_at_cutoff_10
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sensitivity of ISI >= 10 for interview-validated insomnia, community sample"}
+    scale: probability
+    unit: "proportion (sensitivity)"
+    value: 0.861
+    se: null
+    ci: null
+    conversion_formula: "reported directly as 86.1%. No CI is given in the abstract and the number of true cases in the community sample is not stated, so I cannot compute an SE -- se left null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Sensitivity. Combined with specificity 0.877 this yields LR+ = 0.861/(1-0.877) = 7.00 and LR- = (1-0.861)/0.877 = 0.159. Those two LRs are MY arithmetic from the reported sensitivity/specificity pair, and are the numbers the report should use to update on an ISI result."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "A cutoff score of 10 was optimal (86.1% sensitivity and 87.7% specificity) for detecting insomnia cases in the community sample."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: isi_specificity_at_cutoff_10
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "specificity of ISI >= 10 for interview-validated insomnia, community sample"}
+    scale: probability
+    unit: "proportion (specificity)"
+    value: 0.877
+    se: null
+    ci: null
+    conversion_formula: "reported directly as 87.7%; no CI or cell counts in the abstract, so no SE derivable"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Specificity. See the LR arithmetic in the sensitivity record above."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "A cutoff score of 10 was optimal (86.1% sensitivity and 87.7% specificity) for detecting insomnia cases in the community sample."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: isi_likelihood_ratio_positive_derived
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "LR+ for ISI >= 10, derived from the reported sensitivity/specificity pair"}
+    scale: raw_units
+    unit: "likelihood ratio (positive)"
+    value: 7.00
+    se: null
+    ci: null
+    conversion_formula: "LR+ = sensitivity/(1 - specificity) = 0.861/(1 - 0.877) = 0.861/0.123 = 7.00. THIS IS MY ARITHMETIC, not a number reported by the paper."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "LR+ = 7.0 means a positive ISI screen multiplies the pre-test odds of insomnia by 7. Applied to a male young-adult insomnia prior of ~0.22 (see sivertsen2019.yaml), pre-test odds 0.282 -> post-test odds 1.97 -> posterior 0.664."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "A cutoff score of 10 was optimal (86.1% sensitivity and 87.7% specificity) for detecting insomnia cases in the community sample."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: isi_likelihood_ratio_negative_derived
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "LR- for ISI < 10, derived from the reported sensitivity/specificity pair"}
+    scale: raw_units
+    unit: "likelihood ratio (negative)"
+    value: 0.159
+    se: null
+    ci: null
+    conversion_formula: "LR- = (1 - sensitivity)/specificity = (1 - 0.861)/0.877 = 0.139/0.877 = 0.1585. THIS IS MY ARITHMETIC, not reported by the paper."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "LR- = 0.16 means a negative ISI screen divides the odds of insomnia by ~6.3. Applied to a prior of 0.22: pre-test odds 0.282 -> 0.0447 -> posterior 0.043. A negative ISI is therefore strong evidence AGAINST insomnia disorder, which is how the report should use it: as a rule-out."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "A cutoff score of 10 was optimal (86.1% sensitivity and 87.7% specificity) for detecting insomnia cases in the community sample."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: isi_internal_consistency_alpha
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "Cronbach alpha, community and clinical samples"}
+    scale: raw_units
+    unit: "Cronbach alpha (community sample value; clinical sample 0.91)"
+    value: 0.90
+    se: null
+    ci: [0.90, 0.91]
+    conversion_formula: "two alphas reported (0.90 and 0.91 for the two samples); ci field carries both values, not a confidence interval"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = better internal consistency; 0.90-0.91 is excellent."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "ISI internal consistency was excellent for both samples (Cronbach alpha of 0.90 and 0.91)."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: isi_minimally_important_change
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "ISI change score corresponding to moderate improvement rated by an independent assessor, clinical sample"}
+    scale: raw_units
+    unit: "ISI points (negative = improvement)"
+    value: -8.4
+    se: 0.587
+    ci: [-9.4, -7.1]
+    conversion_formula: "se = (upper - lower)/3.92 = (-7.1 - -9.4)/3.92 = 2.3/3.92 = 0.587 points"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = ISI fell = insomnia improved. Gives the report a responder threshold if it recommends treatment monitoring: a drop of ~8 points corresponds to moderate clinician-rated improvement."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "In the clinical sample, a change score of -8.4 points (95% CI: -7.1, -9.4) was associated with moderate improvement as rated by an independent assessor after treatment."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: isi_item_discrimination_limitation
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "item response theory: number of the 7 ISI items with adequate discriminatory capacity"}
+    scale: raw_units
+    unit: "count of items (out of 7)"
+    value: 5.0
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Only 5 of 7 items discriminated adequately; the abstract does not say which two failed. A limitation on treating the total score as uniformly informative, but not enough to change how the cut-off is used."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Item response analyses revealed adequate discriminatory capacity for 5 of 7 items."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: low
+  notes: |
+    Strong design for a psychometric paper: population-based community sample (n=959) for case
+    detection plus an independent clinical sample (183 treatment-seekers + 62 non-insomnia controls)
+    with sleep diaries, POLYSOMNOGRAPHY and diagnostic interviews to validate insomnia status, and an
+    independent assessor for the treatment-response anchor. Cut-off derived by ROC rather than
+    asserted. LIMITATIONS FOR OUR USE: (a) ABSTRACT-ONLY retrieval, so I have no ROC curve, no CIs on
+    sensitivity/specificity, no cell counts and no age-stratified analysis; (b) adult Canadian sample
+    with no stated age range in the abstract, so the cut-off's performance in 18-19 year olds is
+    assumed, not demonstrated; (c) cut-offs derived in one population do not transport perfectly, and
+    the community cut-off of 10 will over-call in a low-prevalence setting.
+funding: "Not available (abstract-only retrieval)."
+notes: |
+  n field = 1,204 = 959 (community) + 183 (clinical insomnia) + 62 (clinical controls), summed from the
+  abstract: "Participants were 959 individuals selected from the community for an epidemiological study
+  of insomnia (Community sample) and 183 individuals evaluated for insomnia treatment and 62 controls
+  without insomnia (Clinical sample)." The cut-off of 10 was derived in the 959-person community
+  subsample only.
+
+  THIS IS THE BEST-EVIDENCED INSTRUMENT IN MY WHOLE SET. Unlike the ESS >10 threshold (a normal-range
+  boundary from an occupational survey) and unlike the absent adolescent ESS cut-off, the ISI >= 10
+  cut-off has a real ROC derivation against interview-validated caseness, and it yields usable
+  likelihood ratios (LR+ 7.0, LR- 0.16 -- my arithmetic, shown above).
+
+  There is a separate Iranian adolescent ISI psychometrics paper (PMID 34381573, Sleep Sci 2021,
+  "Psychometric properties of insomnia severity index in Iranian adolescents") that I found in
+  screening but did not extract: it is a translation/factor-structure study in a different
+  population and would not change the cut-off used here. Logged as excluded in screening_log.md.
+
+  HOW THE REPORT SHOULD USE THIS: the ISI is the rule-OUT instrument in the protocol. Our subject's
+  differential turns on whether he has trouble INITIATING sleep when he tries. An ISI below 10,
+  combined with a short sleep-onset latency on free nights, argues against both insomnia disorder and
+  DSWPD and towards behaviourally induced insufficient sleep. An ISI of 10+ with long sleep-onset
+  latency on weekday nights but SHORT latency on free nights points to DSWPD rather than insomnia --
+  the ISI alone cannot make that distinction, which is why it must be paired with the sleep diary.
+shard: "s19_sleep_disorders"

@@ -1,0 +1,192 @@
+study_id: cohen2010_residual_recovery
+citation: "Cohen DA, Wang W, Wyatt JK, Kronauer RE, Dijk DJ, Czeisler CA, Klerman EB. Uncovering residual effects of chronic sleep loss on human performance. Science Translational Medicine. 2010;2(14):14ra3."
+doi: "10.1126/scitranslmed.3000458"
+pmid: "20371466"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2892834/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Uncovering Residual Effects of Chronic Sleep Loss on Human Performance"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 17
+n_studies_pooled: null
+population:
+  age_mean: 27.0
+  age_range: [18, 34]
+  pct_female: 23.5
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  # ---- EFFECT 1: performance at 2 h awake is INDISTINGUISHABLE from baseline
+  #      after 3 weeks of chronic sleep loss => the subject's self-check will read "fine"
+  - outcome_domain: recovery
+    outcome_construct: pvt_median_rt_at_2h_awake_after_3wk_chronic_loss
+    exposure:
+      type: chronic_restriction
+      dose_h: 10.0
+      referent_h: 10.0
+      duration_days: 21
+      contrast_label: "PVT median RT at 2 h awake, week 3 of 1:3.3 sleep:wake forced desynchrony (10 h sleep / 32.85 h wake) vs 2 entrained baseline days (10 h TIB); same subjects"
+    scale: raw_units
+    unit: "ms (PVT median reaction time)"
+    value: 35.0
+    se: null
+    ci: null
+    conversion_formula: "291 ms (3rd week, 2 h awake) - 256 ms (baseline, 2 h awake) = +35 ms; = +13.7% of baseline. No SD/SE reported per cell in text; se left null per instructions (never invent an SE)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = slower (worse). Magnitude is SMALL and non-significant vs control (p=0.42): early-in-the-day performance LOOKS recovered even after 3 weeks of substantial chronic sleep loss. This is the false-reassurance effect."
+    covariates: ["circadian phase (averaged across all phases)", "hours awake (fixed at 2 h)"]
+    followup_years: null
+    cohort_family: BWH_GCRC_forced_desynchrony
+  # ---- EFFECT 2: the SAME subjects at 30 h awake show a 2.9x blow-up between wk1 and wk2
+  - outcome_domain: recovery
+    outcome_construct: pvt_median_rt_at_30h_awake_week2_vs_week1
+    exposure:
+      type: chronic_restriction
+      dose_h: 10.0
+      referent_h: 10.0
+      duration_days: 14
+      contrast_label: "PVT median RT at 30 consecutive hours awake, week 2 vs week 1 of chronic sleep loss protocol"
+    scale: raw_units
+    unit: "ms (PVT median reaction time)"
+    value: 1287.0
+    se: null
+    ci: null
+    conversion_formula: "1954 ms (2nd week at 30 h awake) - 667 ms (1st week at 30 h awake) = +1287 ms; ratio = 1954/667 = 2.93x. Week 3 = 2013 ms (ratio 3.02x vs week 1)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = slower (worse). The accumulated chronic debt is INVISIBLE at 2 h awake but produces a ~3-fold RT inflation by 30 h awake in the same people."
+    covariates: ["circadian phase (averaged across all phases)"]
+    followup_years: null
+    cohort_family: BWH_GCRC_forced_desynchrony
+  # ---- EFFECT 3: the slope (rate of within-day deterioration) is what carries the chronic debt
+  - outcome_domain: recovery
+    outcome_construct: pvt_median_rt_slope_per_hour_awake_week2_vs_week1
+    exposure:
+      type: chronic_restriction
+      dose_h: 10.0
+      referent_h: 10.0
+      duration_days: 14
+      contrast_label: "slope of PVT median RT on consecutive hours awake, week 2 vs week 1 of chronic sleep loss"
+    scale: per_hour_beta
+    unit: "ms of median RT per additional hour awake"
+    value: 45.0
+    se: null
+    ci: null
+    conversion_formula: "69 ms/h (2nd week) - 24 ms/h (1st week) = +45 ms/h; ratio 69/24 = 2.88x. Week 3 slope = 65 ms/h. Reported p<0.0001 for the week1-vs-week2 slope difference; no SE given, so se: null and inferred_from_ci: false."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = performance decays faster across the waking day. Chronic sleep debt manifests as an increased RATE of within-day decay, not as a raised morning intercept."
+    covariates: ["circadian phase", "group", "week", "subject random effect"]
+    followup_years: null
+    cohort_family: BWH_GCRC_forced_desynchrony
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Small n (9 chronic, 8 control). Groups not randomized to sleep:wake ratio; control group is a previously reported historical comparison and is all-male (8M) vs 4F/5M in the chronic group. Forced desynchrony with 32.85 h wake episodes is a strong, artificial exposure - it is NOT a model of weekday/weekend restriction. Median RT deliberately chosen as the LEAST sensitive PVT metric, so effects are conservative. Within-subject week-on-week comparison is the strong part of the design."
+funding: "NIH / NSBRI (see paper); Brigham & Women's Hospital GCRC"
+notes: |
+  ===== WHY THIS RECORD MATTERS FOR PART B7 (can the subject detect his own recovery?) =====
+  This is the single best mechanistic answer to "he will conclude he is fine after two good nights."
+  Cohen et al. show performance measured EARLY in the waking day returns to ~baseline even after
+  3 weeks of severe chronic sleep loss, while the SAME individuals are catastrophically impaired
+  later in the same waking day. A self-administered morning PVT is therefore the WORST possible
+  time to test for residual chronic debt.
+
+  VERBATIM QUOTES
+  ---------------
+  Abstract framing of the folk belief being tested:
+  "Sleep loss leads to profound performance decrements. Yet many individuals believe they adapt to
+  chronic sleep loss or that recovery requires only a single extended sleep episode."
+
+  The early-in-day null (EFFECT 1):
+  "When comparing the first PVT results at 2 hours awake, performance was near baseline levels
+  across all three weeks of chronic sleep loss (two baseline days: median RT = 256msec; 1st week:
+  median RT =256msec; 2nd week: median RT = 278msec; and 3rd week: median RT = 291msec), and not
+  significantly different from the control data with a 1:2 sleep:wake ratio (1st week: 270msec;
+  2nd week: 305msec; 3rd week: 309msec; p=0.42)."
+
+  The late-in-day blow-up (EFFECT 2):
+  "In contrast, when comparing the last performance test of each wake episode, which was
+  administered at 30 consecutive hours awake, there was a dramatic increase in median RT between
+  the first and second weeks on the chronic sleep loss protocol (1st week: median RT = 667ms;
+  2nd week: median RT = 1,954msec; 3rd week: median RT = 2,013msec)."
+
+  The slope result (EFFECT 3):
+  "However, there was a marked increase in slope after the first week, reflecting slower reaction
+  times with increasing hours awake (1st week: slope = 24 msec/hour awake; 2nd week: slope = 69
+  msec/hour awake; 3rd week: slope = 65 msec/hour awake). The differences in slope between the 1st
+  and 2nd weeks were significant (p<0.0001)."
+
+  Intercept unchanged - i.e. the morning test is uninformative about chronic debt:
+  "When the chronic sleep loss data were fit with a linear model, there was no significant
+  difference across weeks of the protocol in the y-intercept, which reflects the theoretical effect
+  of acute homeostatic sleep pressure at awakening, ignoring the impact of sleep inertia."
+
+  THE DIRECT STATEMENT OF THE FALSE-RECOVERY ILLUSION (quote this in the report):
+  "Data from this experiment reveal that individuals can develop a chronic sleep debt in the face of
+  apparent full recovery from acute sleep loss. It is common for individuals to have relatively long
+  sleep bouts on weekends or holidays but short sleep episodes on work or school days. Under such
+  conditions, a chronically sleep-restricted individual may have a false sense of recovery from
+  their prior sleep debt as a result of performing well for the first several hours of a usual
+  waking day. In addition, during circadian phases typically corresponding to afternoon/early
+  evening, the circadian system has the remarkable capacity to override the deleterious effects of
+  prior sleep loss (Fig. 2B). Thus, the short-term restorative properties of recent extended sleep
+  combined with the alerting properties of the normally timed circadian rhythm can mask the effects
+  of chronic sleep loss during a typical waking day."
+
+  Generalisation across PVT metrics (so this is not a median-RT artifact):
+  "Other PVT measures showed this pattern as well, including the mean RT, 5th percentile RT, and
+  95th percentile RT (see Supplementary Material)."
+  "Other PVT measures also showed this significant four-way interaction, including the mean RT,
+  PVT lapses (trials with RT>0.5 sec), 5th percentile RT, and 95th percentile RT (p<0.0001)."
+
+  Where in the RT distribution the damage appears (supports lapse/slow-tail metrics over mean RT):
+  "Acute and chronic sleep loss and adverse circadian phases generally increased the probability of
+  slow RTs within this 10-minute PVT, but the fastest possible reaction times were relatively
+  preserved (see Supplemental Materials). This shift in the rightward tail of the response
+  distribution has been interpreted to reflect an impairment of attention rather than primary
+  visual or motor processes."
+
+  PRACTICE-EFFECT CORROBORATION (relevant to Part A3):
+  "The PVT does not display appreciable practice effects, making it an ideal test to compare
+  performance across protocols that have different frequencies of exposure to the task."
+
+  TEST-TIMING PROTOCOL DETAIL worth copying into the n-of-1 protocol:
+  "Participants were tested using 25-minute test batteries every two hours, starting two hours
+  after waking to allow the dissipation of sleep inertia, which is the cognitive impairment observed
+  immediately upon waking." -> the self-experiment must (a) wait >=2 h after waking, and
+  (b) fix clock time of testing, and (c) prefer a LATE-DAY test slot to expose chronic debt.
+
+  PVT ADMINISTRATION DETAILS (Cohen used the classic 10-min PVT):
+  "The inter-stimulus interval involves a high signal rate, randomly varying between 2 and 10
+  seconds. Participants sat 57cm from a monitor screen, measured prior to each test administration,
+  to ensure a consistent visual angle for all testing. Responses were made with the dominant thumb
+  on a response button, and visual feedback of each RT was provided." ... "Each administration of
+  the PVT lasted 10 minutes."
+
+  POPULATION DETAIL
+  "Nine healthy volunteers were studied (4 female, 5 male) in the chronic sleep loss protocol.
+  Participants were 21-34 years old (mean 27)..." ; "The eight control participants studied in the
+  FD with 1:2 sleep:wake ratio were male (ages 18-30 years)."
+  n recorded as 17 = 9 chronic + 8 control. pct_female = 4/17 = 23.5%. age_range spans both groups.
+  age_mean 27 is the chronic group mean (control group mean not reported).
+
+  SATIATION RUN-IN used by Cohen (relevant to the ad-lib / Part C10 design):
+  "The protocol began with a 12-hour overnight sleep opportunity and a 4-hour daytime nap
+  opportunity for the first three days, to minimize any residual sleep loss."
+  -> 3 days x (12 h night + 4 h nap) = 16 h/day sleep opportunity as a debt-clearing run-in.
+  Note this is the same 16 h/day structure independently used by Klerman & Dijk 2005.
+
+  CAVEAT / WHAT THIS RECORD DOES *NOT* SHOW
+  Cohen et al. did not report subjective sleepiness ratings alongside these PVT data in the main
+  text, so this record establishes the OBJECTIVE half of the recovery-detection problem (morning
+  performance looks normal while debt persists) but not the subjective half. For the subjective
+  half see pejovic2013_recovery_dissociation.yaml (SSS and MSLT normalise, PVT does not).
+shard: "s20_pvt_psychometrics"

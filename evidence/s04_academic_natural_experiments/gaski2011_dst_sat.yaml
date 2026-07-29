@@ -1,0 +1,63 @@
+study_id: gaski2011_dst_sat
+citation: "Gaski JF, Sagarin J. Detrimental effects of daylight-saving time on SAT scores. Journal of Neuroscience, Psychology, and Economics. 2011;4(1):44-53."
+doi: "10.1037/a0020118"
+pmid: null
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: null
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Detrimental effects of daylight-saving time on SAT scores."
+access_tier: secondhand
+secondhand_via: "Herber SP, Quis JS, Heineck G. Does the transition into daylight saving time affect students' performance? (working-paper version of Economics of Education Review 2017;61:130-139), literature-review section. I verified the Gaski & Sagarin DOI, journal, volume and pages against Crossref but did not retrieve the article full text."
+design: quasi_experiment
+tier: T2
+n: null
+n_studies_pooled: null
+population:
+  age_mean: 17.0
+  age_range: [16, 18]
+  pct_female: null
+  country: "US (Indiana)"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: academic
+    outcome_construct: sat_score_sd_dst_counties
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "residing in an Indiana county that observed daylight saving time vs a county that did not (long-run DST-regime comparison)"}
+    scale: raw_units
+    unit: "SD of SAT score"
+    value: -0.16
+    se: null
+    ci: null
+    conversion_formula: "reported secondhand as '16% of a standard deviation lower SAT scores in DST-adopting counties'. No SE available from the secondhand source."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = lower SAT scores in DST-observing counties, interpreted by the original authors as a circadian/sleep-misalignment harm"
+    covariates: ["unknown - not described in the secondhand source"]
+    followup_years: null
+    cohort_family: Indiana_DST
+    quote: "16% of a standard deviation lower SAT scores in DST-adopting counties. Yet, we doubt"
+rob:
+  tool: ROBINS-I
+  judgement: critical
+  notes: "County-level cross-sectional comparison of DST-observing vs non-observing Indiana counties. Not a discontinuity, not a panel, no within-county variation exploited in what the secondhand source describes. DST adoption in Indiana was correlated with proximity to Chicago/Louisville metro areas and hence with income, urbanicity and school quality. Very high risk of confounding."
+funding: "Not known"
+notes: |
+  IDENTIFYING ASSUMPTION: that Indiana counties which historically observed DST are comparable to those
+  which did not, apart from the clock regime. This is NOT PLAUSIBLE. Indiana's pre-2006 patchwork of DST
+  observance tracked commuting ties to the Chicago and Louisville metropolitan areas, so DST-observing
+  counties differ systematically in income, urbanization, industry mix and school resources - all strong
+  predictors of SAT scores. This is EXACTLY the kind of study the task warned about: an observational
+  cross-sectional comparison presented as a natural experiment.
+  I include it only because the task explicitly asked for DST/test-score work, and because the contrast
+  with Herber et al. is instructive: the well-identified DST regression discontinuity finds ~0.01-0.06 SD
+  and no significance, while the poorly-identified DST cross-section finds 0.16 SD. The gap between those
+  two numbers is a direct, within-topic measurement of confounding bias in this literature.
+  RECOMMENDATION TO THE MODELLER: EXCLUDE from any pooled estimate, or include only with a very large
+  downweight. The authors of the best DST paper in the field say of it, verbatim, "Yet, we doubt" - Herber
+  et al. proceed to explain that they do not consider the Gaski & Sagarin identification credible.
+  ACCESS: secondhand. I verified the identifier resolves to the correct paper (Journal of Neuroscience,
+  Psychology, and Economics 2011;4(1):44-53) but did not obtain the full text, so n, covariates and SEs are
+  unknown and recorded as null rather than guessed.
+shard: "s04_academic_natural_experiments"

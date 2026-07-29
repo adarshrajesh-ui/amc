@@ -1,0 +1,96 @@
+study_id: khan2018_bmi_cvd_lifetime
+citation: Khan SS, Ning H, Wilkins JT, Allen N, Carnethon M, Berry JD, Sweis RN, Lloyd-Jones DM. Association
+  of Body Mass Index With Lifetime Risk of Cardiovascular Disease and Compression of Morbidity. JAMA Cardiol.
+  2018;3(4):280-287.
+doi: 10.1001/jamacardio.2018.0022
+pmid: '29490333'
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5875319/
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Association of Body Mass Index With Lifetime Risk of Cardiovascular Disease and Compression
+    of Morbidity.
+access_tier: abstract_only
+design: meta_analysis_observational
+n: 190672
+n_studies_pooled: 10
+population:
+  age_mean: 46.0
+  age_range:
+  - 20
+  - 79
+  pct_female: 73.9
+  country: US
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: log_competing_hr_total_cvd_overweight_vs_normal_bmi_middle_aged_men
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: log_hr
+  unit: log competing hazard ratio, BMI 25.0-29.9 vs 18.5-24.9, middle-aged men
+  value: 0.1906203596086497
+  se: 0.02954893253191883
+  ci:
+  - 0.131028262406404
+  - 0.2468600779315258
+  conversion_formula: log_hr = ln(1.21) = 0.1906; se = (ln(1.28) - ln(1.14))/3.92 = 0.02962
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = elevated CVD risk with higher BMI. Supplied so the sleep->BMI->CVD path can
+    be evaluated on the same competing-risk scale as the absolute lifetime risks.
+  covariates:
+  - age
+  - sex
+  - cohort
+  followup_years: null
+  cohort_family: pooled_10_US_cohorts
+  quote: Compared with normal weight, among middle-aged men and women, competing hazard ratios for incident
+    CVD were 1.21 (95% CI, 1.14-1.28) and 1.32 (95% CI, 1.24-1.40), respectively, for overweight (BMI,
+    25.0-29.9), 1.67 (95% CI, 1.55-1.79) and 1.85 (95% CI, 1.72-1.99) for obesity (BMI, 30.0-39.9), and
+    3.14 (95% CI, 2.48-3.97) and 2.53 (95% CI, 2.20-2.91) for morbid obesity (BMI, >=40.0).
+- outcome_domain: baseline_risk
+  outcome_construct: log_competing_hr_total_cvd_obese_vs_normal_bmi_middle_aged_men
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: log_hr
+  unit: log competing hazard ratio, BMI 30.0-39.9 vs 18.5-24.9, middle-aged men
+  value: 0.5128236264286637
+  se: 0.036724665541201115
+  ci:
+  - 0.4382549309311553
+  - 0.5822156198526637
+  conversion_formula: log_hr = ln(1.67) = 0.5128; se = (ln(1.79) - ln(1.55))/3.92 = 0.03664
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = elevated CVD risk with obesity.
+  covariates:
+  - age
+  - sex
+  - cohort
+  followup_years: null
+  cohort_family: pooled_10_US_cohorts
+  quote: '... 1.67 (95% CI, 1.55-1.79) and 1.85 (95% CI, 1.72-1.99) for obesity (BMI, 30.0-39.9) ...'
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: 73.9% female overall and mean age 46 for men, so this is a midlife estimate. These are COMPETING
+    (cause-specific Cox) hazard ratios, not Fine-Gray subdistribution hazard ratios, so they cannot be
+    read directly as multipliers on absolute risk. Cohort overlap with wilkins2012.
+funding: NIH
+notes: Included in a baseline-risk shard because it is the conversion coefficient between a BMI shift
+  and a CVD hazard shift, which is what lets the model use the well-identified sleep->BMI literature instead
+  of the poorly identified sleep->CVD literature.
+shard: s17_baseline_risk
+secondhand_via: null
+tier: TX

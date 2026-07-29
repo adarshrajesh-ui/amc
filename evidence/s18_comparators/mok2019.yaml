@@ -1,0 +1,121 @@
+study_id: mok2019
+citation: 'Mok A, Khaw KT, Luben R, Wareham N, Brage S. Physical activity trajectories and mortality:
+  population based cohort study. BMJ. 2019;365:l2323.'
+doi: 10.1136/bmj.l2323
+pmid: '31243014'
+url: https://www.bmj.com/content/365/bmj.l2323
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Physical activity trajectories and mortality: population based cohort study'
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 14599
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 40
+  - 79
+  pct_female: null
+  country: UK
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: comparator
+  outcome_construct: all_cause_mortality_per_1kJ_kg_day_per_year_increase_in_pa
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: +1 kJ/kg/day per year rise in physical activity energy expenditure, adjusted for BASELINE
+      activity
+  scale: log_hr
+  unit: log hazard ratio
+  value: -0.274437
+  se: 0.036745
+  ci:
+  - -0.34249
+  - -0.198451
+  conversion_formula: HR 0.76 (95% CI 0.71-0.82). log_hr = ln(0.76) = -0.274437. se = (ln(0.82)-ln(0.71))/3.919928
+    = 0.036752.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'negative = LOWER mortality from BECOMING more active (benefit). REVERSIBILITY EVIDENCE:
+    the benefit is present after adjustment for baseline activity, i.e. it does not matter much how inactive
+    you previously were.'
+  covariates:
+  - age
+  - sex
+  - sociodemographics
+  - baseline PAEE
+  - changes in medical history
+  - diet quality
+  - BMI
+  - blood pressure
+  - triglycerides
+  - cholesterol
+  followup_years: 12.5
+  cohort_family: EPIC_Norfolk
+  quote: 'For each 1 kJ/kg/day per year increase in PAEE (equivalent to a trajectory of being inactive
+    at baseline and gradually, over five years, meeting the World Health Organization minimum physical
+    activity guidelines of 150 minutes/week of moderate-intensity physical activity), hazard ratios were:
+    0.76 (95% confidence interval 0.71 to 0.82) for all cause mortality, 0.71 (0.62 to 0.82) for cardiovascular
+    disease mortality, and 0.89 (0.79 to 0.99) for cancer mortality, adjusted for baseline PAEE, and established
+    risk factors.'
+- outcome_domain: comparator
+  outcome_construct: all_cause_mortality_increasing_pa_trajectory_from_low_baseline
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: increasing activity trajectory from a LOW baseline vs consistently inactive
+  scale: log_hr
+  unit: log hazard ratio
+  value: -0.274437
+  se: 0.077284
+  ci:
+  - -0.430783
+  - -0.127833
+  conversion_formula: HR 0.76 (95% CI 0.65-0.88) for an increasing trajectory at LOW baseline activity
+    vs consistently inactive. log_hr = ln(0.76) = -0.274437. se = (ln(0.88)-ln(0.65))/3.919928 = 0.077315.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = LOWER mortality (benefit) from starting to move, even from the worst starting
+    point. Direct support for treating physical inactivity as a LARGELY REVERSIBLE exposure on cessation.
+  covariates:
+  - age
+  - sex
+  - sociodemographics
+  - baseline PAEE
+  - changes in medical history
+  - diet quality
+  - BMI
+  - blood pressure
+  - triglycerides
+  - cholesterol
+  followup_years: 12.5
+  cohort_family: EPIC_Norfolk
+  quote: Joint analyses with baseline and trajectories of physical activity show that, compared with consistently
+    inactive individuals, those with increasing physical activity trajectories over time experienced lower
+    risks of mortality from all causes, with hazard ratios of 0.76 (0.65 to 0.88), 0.62 (0.53 to 0.72),
+    and 0.58 (0.43 to 0.78) at low, medium, and high baseline physical activity, respectively.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: 'Repeated exposure assessment calibrated against combined heart-rate and movement sensing is
+    a real strength and is the reason this is the best reversibility evidence for activity. But activity
+    change is not randomised: people who become more active are people who became able to, so reverse
+    causation and healthy-adopter bias remain. Ages 40-79 only.'
+funding: UK Medical Research Council and Cancer Research UK (per report)
+notes: 'The physical-inactivity analogue of the smoking-cessation evidence. It is the best available answer
+  to ''is inactivity reversible?'' and the answer is largely yes. NOTE THE ASYMMETRY WITH SMOKING: for
+  smoking we have direct evidence on quitting YOUNG (Pirie 2013, quit at 25-34); for inactivity the reversibility
+  evidence is entirely from people aged 40-79, so applying it to a 19-year-old is an extrapolation, albeit
+  a conservative one (recovery should be easier at 19).'
+shard: s18_comparators

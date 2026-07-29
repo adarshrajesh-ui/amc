@@ -1,0 +1,125 @@
+study_id: martinezalbert2025_infection
+citation: "Martinez-Albert E, Bless JJ, Besedovsky L. Individual associations of self-reported sleep duration, sleep quality, chronotype and social jet lag with infectious disease risk. Philosophical Transactions of the Royal Society B: Biological Sciences. 2025;380(1918):20230472."
+doi: "10.1098/rstb.2023.0472"
+pmid: "39842484"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11753884/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Individual associations of self-reported sleep duration, sleep quality, chronotype and social jet lag with infectious disease risk."
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 642
+n_studies_pooled: null
+population:
+  age_mean: 27.29
+  age_range: [18, 40]
+  pct_female: 55.45
+  country: "Germany, Spain"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: immune
+    outcome_construct: self_reported_cold_past_30d
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7.5, duration_days: null, contrast_label: "self-reported <=6 h/night vs 7-8 h; cold in the past 30 days"}
+    scale: log_or
+    unit: null
+    value: 0.6043
+    se: 0.2104
+    ci: [0.1906, 1.0152]
+    conversion_formula: "OR 1.83 (1.21-2.76) -> log_or = ln(1.83) = 0.6043; se = (ln 2.76 - ln 1.21)/3.92 = 0.2104"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. Robust to further adjustment for sleep quality (OR 1.86, 1.20-2.88) and chronotype (OR 1.75, 1.16-2.65), so this is not just poor sleepers being sick. NOTE the cut-point is <=6 h, which INCLUDES 6 h - unlike pratherleung2016_nhanes where 6 h alone was null."
+    covariates: ["age", "sex", "country", "season"]
+    followup_years: 0.082
+    cohort_family: "LMU_Munich_Besedovsky_survey"
+    quote: "Compared with participants who reported sleeping 7-8 h per night, both short sleepers (<= 6 h of sleep per night) and long sleepers (>= 9 h of sleep per night) were significantly more likely to report a cold in the past 30 days, independently of age, sex, survey season and country (OR = 1.83, 95% CI 1.21-2.76 for short sleepers; OR = 3.6, 95% CI 1.52-8.57 for long sleepers)."
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_rate_cold_past_30d_by_sleep_category_young_adults
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7.5, duration_days: null, contrast_label: "ABSOLUTE 30-day cold rate, <=6 h vs 7-8 h, in a sample that is 57% aged 18-25"}
+    scale: probability
+    unit: "absolute risk difference, proportion reporting a cold in past 30 days"
+    value: 0.107
+    se: 0.0416
+    ci: [0.0255, 0.1885]
+    conversion_formula: "From Table 2 raw cell counts: short sleepers 61/164 = 37.2%; average sleepers 120/453 = 26.5%; long sleepers 14/25 = 56.0%. ARD = 37.2 - 26.5 = 10.7 percentage points. se of the difference = sqrt(p1(1-p1)/164 + p2(1-p2)/453) = sqrt(0.372*0.628/164 + 0.265*0.735/453) = 0.0416. UNADJUSTED."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. THE BEST ABSOLUTE NUMBER FOR A YOUNG-ADULT POPULATION in my evidence set: 26.5% of 7-8 h sleepers vs 37.2% of <=6 h sleepers reported a cold in the past 30 days - about 11 percentage points, or roughly 1 extra cold-month per 9 short sleepers per month. Much larger than the 3.5-point gap in the older NHANES sample, but this is a small convenience sample and unadjusted."
+    covariates: []
+    followup_years: 0.082
+    cohort_family: "LMU_Munich_Besedovsky_survey"
+    quote: "sleep duration: short sleepers (<= 6 h) 61 (37.2) 1.83(1.21-2.76) 0.004 ... average sleepers (7-8 h) 120 (26.5) 1 [Ref.] ... long sleepers (>= 9 h) 14 (56) 3.6(1.52-8.57) 0.004"
+  - outcome_domain: immune
+    outcome_construct: self_reported_cold_past_30d_long_sleepers
+    exposure: {type: other, dose_h: 9, referent_h: 7.5, duration_days: null, contrast_label: "self-reported >=9 h/night vs 7-8 h; cold in the past 30 days (LONG sleep arm)"}
+    scale: log_or
+    unit: null
+    value: 1.2809
+    se: 0.4412
+    ci: [0.4187, 2.1483]
+    conversion_formula: "OR 3.60 (1.52-8.57) -> log_or = ln(3.60) = 1.2809; se = (ln 8.57 - ln 1.52)/3.92 = 0.4412"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NON-LINEARITY EVIDENCE, AND IT MATTERS FOR CAUSAL INTERPRETATION. positive = HARM. The LONG-sleep association (OR 3.60, absolute 56%) is about TWICE as strong as the short-sleep one. Long sleep is not plausibly immunosuppressive; the obvious reading is reverse causation - being ill makes you sleep more (and, at the other end, a cold fragments sleep). This U-shape should make the downstream model discount cross-sectional short-sleep-and-infection associations generally. n in this cell is only 25."
+    covariates: ["age", "sex", "country", "season"]
+    followup_years: 0.082
+    cohort_family: "LMU_Munich_Besedovsky_survey"
+    quote: "long sleepers (>= 9 h) 14 (56) 3.6(1.52-8.57) 0.004"
+  - outcome_domain: immune
+    outcome_construct: other_infections_than_cold_null
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7.5, duration_days: null, contrast_label: "all sleep variables vs infections OTHER than colds, past 30 days and past 12 months"}
+    scale: raw_units
+    unit: "qualitative null flag (0 = no association found)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Explicit blanket null reported without per-category estimates in the passage I quoted. Flag only; se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "IMPORTANT NULL. No sleep variable - not duration, quality, chronotype or social jet lag - predicted non-cold infections at either time horizon. So even within this study the signal is confined to the mildest, most recall-prone, most self-diagnosable outcome. That pattern is what you would expect from reporting bias as much as from real immune impairment."
+    covariates: ["age", "sex", "country", "season"]
+    followup_years: 1.0
+    cohort_family: "LMU_Munich_Besedovsky_survey"
+    quote: "None of the sleep variables studied were associated with the likelihood of reporting an infection other than a cold, neither in the past 30 days nor the past 12 months"
+  - outcome_domain: circadian
+    outcome_construct: social_jetlag_and_cold_past_12mo
+    exposure: {type: social_jetlag, dose_h: 1, referent_h: 0, duration_days: null, contrast_label: "social jet lag >60 min vs 0-15 min; cold in the past 12 months (subsample n = 274)"}
+    scale: log_or
+    unit: null
+    value: 1.4540
+    se: 0.5349
+    ci: [0.4055, 2.5023]
+    conversion_formula: "OR 4.28 (1.50-12.21) -> log_or = ln(4.28) = 1.4540; se = (ln 12.21 - ln 1.50)/3.92 = 0.5349"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM, and HIGHLY RELEVANT TO THIS SUBJECT. Social jet lag (the weekday/weekend sleep-timing mismatch) was dose-dependently associated with colds over 12 months: 16-60 min OR 3.11 (1.14-8.50), >60 min OR 4.28 (1.50-12.21) - INDEPENDENT of sleep duration, quality and chronotype. A student sleeping 5-6 h on weekdays and 7-8 h (sometimes 10-11 h) on weekends has large social jet lag by construction, so this may be the more relevant exposure axis for him than duration alone. Caveat: absolute rates in these cells are very high (70-90%) and cell sizes small (24 in the referent)."
+    covariates: ["age", "sex", "season", "sleep duration", "sleep quality", "chronotype (model 4)"]
+    followup_years: 1.0
+    cohort_family: "LMU_Munich_Besedovsky_survey"
+    quote: "However, participants with a social jet lag of 16-60 min were more likely to report a cold in the past 12 months compared with participants without social jet lag (OR = 3.11, 95% CI 1.14-8.50). This association was even more pronounced for participants with > 60 min of social jet lag (OR = 4.28, 95% CI 1.50-12.21) (figure 1). These effects were still evident after adjusting for sleep duration (OR = 3.08, 95% CI 1.13-8.42 and OR = 4.22, 95% CI 1.48-12.06, respectively, for those with 16-60 min and > 60 min of social jetlag)"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "TIER TX - CONTEXT ONLY. Cross-sectional online survey: exposure and outcome self-reported at the same moment, so reverse causation is unresolvable, and the stronger LONG-sleep association is direct evidence that reverse causation is operating. Outcome is self-reported 'cold', unverified. Convenience sample recruited in Germany and Spain, 642 adults, with only 25 long sleepers and 34 people in the social-jet-lag referent cell - hence very wide CIs. Multiple sleep dimensions x 2 outcomes x 2 time windows x 4 models tested; no multiplicity correction stated. Retained for two reasons only: it is my youngest observational sample, and it isolates SOCIAL JET LAG independently of duration, which no other record does."
+funding: "not extracted"
+notes: |
+  AGE MATCH - the reason this record is kept despite being TX: "age (years) 18-25 369 57.48 |
+  26-40 207 32.24 | > 40 66 10.28", mean +/- s.d. 27.29 +/- 10.15 years. This is the only
+  observational infection dataset in my set where the majority of participants are the target
+  subject's age. Every other one (NHANES mean 46 y, Nurses' Health Study 37-57 y, Forthun general
+  practice) is middle-aged.
+  Exposure distribution: short sleepers (<=6 h) 164 (25.55%), average (7-8 h) 453 (70.56%),
+  long (>=9 h) 25 (3.89%).
+  From the same group as besedovsky2019_review (Besedovsky is senior author on both).
+  THREE THINGS THIS RECORD ADDS THAT NOTHING ELSE DOES:
+  1. Absolute 30-day cold rates in young adults (26.5% -> 37.2%).
+  2. A social-jet-lag effect independent of duration - the single best-matched exposure construct for
+     a student with a weekday/weekend split schedule.
+  3. A clean internal demonstration that these cross-sectional associations are contaminated: long
+     sleep looked twice as "harmful" as short sleep.
+shard: "s10_immune"

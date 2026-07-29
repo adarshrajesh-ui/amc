@@ -1,0 +1,350 @@
+study_id: rabat2016
+citation: "Rabat A, Gomez-Merino D, Roca-Paixao L, Bougard C, Van Beers P, Dispersyn G, Guillard M, Bourrilhon C, Drogou C, Arnal PJ, Sauvet F, Leger D, Chennaoui M. Differential Kinetics in Alteration and Recovery of Cognitive Processes from a Chronic Sleep Restriction in Young Healthy Men. Frontiers in Behavioral Neuroscience. 2016;10:95."
+doi: "10.3389/fnbeh.2016.00095"
+pmid: "27242464"
+url: "https://europepmc.org/articles/PMC4876616"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Differential Kinetics in Alteration and Recovery of Cognitive Processes from a Chronic Sleep Restriction in Young Healthy Men"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 12
+n_studies_pooled: null
+population:
+  age_mean: 29.3
+  age_range: [20, 37]
+  pct_female: 0.0
+  country: "France"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: subjective_sleepiness_kss_plateaus_between_day_4_and_day_7
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 7,
+               contrast_label: "KSS after 7 nights at 4h TIB vs 8h TIB baseline (B2), and the day-4-to-day-7 increment"}
+    scale: hedges_g
+    unit: null
+    value: 1.123
+    se: 0.374
+    ci: [0.390, 1.856]
+    conversion_formula: "COMPUTED BY THIS SHARD from Table 1 (means +/- SEM, n = 12).
+      KSS daily score: B2 = 3.22 +/- 0.31, SR7 = 4.73 +/- 0.43 (### p < 0.001 vs B2).
+      SD = SEM x sqrt(n) = SEM x 3.46410:  SD_B2 = 1.07387, SD_SR7 = 1.48956.
+      SD_pooled = sqrt((1.07387^2 + 1.48956^2)/2) = sqrt((1.15320 + 2.21878)/2) = sqrt(1.68599) = 1.29845.
+      d_av = (4.73 - 3.22)/1.29845 = 1.51/1.29845 = 1.16292.
+      Hedges correction J = 1 - 3/(4 x df - 1) with df = 2n-2 = 22: J = 1 - 3/87 = 0.96552.
+      g = 1.16292 x 0.96552 = 1.12281 -> 1.123.
+      SE: r between repeated measures is NOT reported, so SE(d) = sqrt(2(1-r)/n + d^2/(2n)) evaluated at an
+      assumed r = 0.5 (typical for repeated subjective measures) = sqrt(0.08333 + 0.05636) = 0.37375.
+      SENSITIVITY TO THAT ASSUMPTION: SE = 0.4722 at r = 0, 0.3737 at r = 0.5, 0.3261 at r = 0.7. The choice
+      of r changes the SE by about +/-25% and never changes the sign or significance. CI = g +/- 1.96 x SE.
+      THE PLATEAU, WHICH IS THE POINT OF THIS EFFECT AND THE DIRECT ANSWER TO THE BRIEF'S HABITUATION
+      QUESTION. Comparing what the subjective channel did in days 1-4 with what it did in days 4-7:
+        KSS daily:   B2 3.22 -> SR4 4.66 (+1.44) -> SR7 4.73 (+0.07). The day-4-to-day-7 increment is
+                     +4.9% of the day-0-to-day-4 increment. Effectively flat.
+        KSS morning: B2 3.33 -> SR4 5.38 -> SR7 5.38. EXACTLY ZERO further change.
+        KSS evening: B2 3.25 -> SR4 4.17 -> SR7 4.00. Moved -0.17, i.e. the WRONG WAY, and never reached
+                     significance at any timepoint (p > 0.28 at SR4, p > 0.06 at SR7).
+      On the standardised scale the subjective effect actually SHRANK from day 4 to day 7 (d 1.341 -> 1.163)
+      because the between-subject spread widened while the mean did not move. The authors state the ceiling
+      explicitly and unprompted: 'this subjective complaint seems to rapidly ceil at a score of 5' on a
+      9-point scale - subjects stopped short of even the upper-middle of the available range."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = sleepier (worse). Large effect versus baseline, but FLAT from day 4 onward;
+      the plateau, not the magnitude, is what this record contributes."
+    covariates: ["within-subject repeated measures vs own B2 baseline", "morning (10:00) and evening (16:00) sessions analysed separately", "significant restriction x time-of-day interaction F(5,110) = 2.38, p < 0.05"]
+    followup_years: null
+    cohort_family: Rabat_IRBA_CSR
+    quote: "We observed a significant effect of the sleep restriction period (F(5,55) = 8.58; p < 10-5). KSS
+      scores were significantly higher after 4 and 7 days of sleep restriction compared to baseline's one
+      (D: p < 0.001 and p < 0.001 respectively for SR4 and SR7 compared to B2; Table 1). [...] Under such
+      sleep restriction conditions, we observed that subjects felt sleepy from the 4th day until the last day
+      and this subjective complaint seems to rapidly ceil at a score of 5."
+  - outcome_domain: cognition
+    outcome_construct: objective_wake_maintenance_mwt_keeps_degrading_after_the_subjective_plateau
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 7,
+               contrast_label: "MWT sleep latency after 7 nights at 4h TIB vs 8h TIB baseline (B2), and the day-4-to-day-7 decrement"}
+    scale: hedges_g
+    unit: null
+    value: -1.142
+    se: 0.376
+    ci: [-1.879, -0.405]
+    conversion_formula: "COMPUTED BY THIS SHARD from Table 1 (means +/- SEM, n = 12).
+      MWT daily latency (min): B2 = 38.80 +/- 0.73, SR7 = 28.78 +/- 3.38 (# p < 0.05 vs B2).
+      SD_B2 = 0.73 x 3.46410 = 2.52879 ; SD_SR7 = 3.38 x 3.46410 = 11.70866.
+      SD_pooled = sqrt((6.39478 + 137.09271)/2) = sqrt(71.74374) = 8.47017.
+      d_av = (28.78 - 38.80)/8.47017 = -10.02/8.47017 = -1.18297.
+      g = -1.18297 x J(0.96552) = -1.14219 -> -1.142.
+      SE at assumed r = 0.5 = sqrt(2(0.5)/12 + 1.18297^2/24) = sqrt(0.08333 + 0.05831) = 0.37635.
+      Sensitivity: SE = 0.4743 at r = 0, 0.3764 at r = 0.5, 0.3291 at r = 0.7. CI = g +/- 1.96 x SE.
+      THIS IS THE OBJECTIVE HALF OF THE DISSOCIATION, MEASURED IN THE SAME 12 MEN ON THE SAME DAYS AS THE KSS
+      ABOVE, AND IT DOES THE OPPOSITE THING:
+        MWT daily:  B2 38.80 -> SR4 34.29 (-4.51) -> SR7 28.78 (-5.51 further).
+        The day-4-to-day-7 decrement is 122% of the day-0-to-day-4 decrement. The objective measure
+        deteriorated MORE in the second half of the week than in the first half.
+        On the standardised scale, d nearly doubled: -0.647 at SR4 -> -1.183 at SR7.
+      SIDE BY SIDE, days 4 to 7, one sample, one protocol, measurements minutes apart:
+        SUBJECTIVE (KSS daily):   +0.07 points   ( +4.9% of its own first-half change; d fell 1.341 -> 1.163)
+        OBJECTIVE  (MWT latency): -5.51 minutes  (+122% of its own first-half change; d rose 0.647 -> 1.183)
+      By day 7 subjects could resist sleep for only 74.2% as long as at baseline - a 25.8% loss of wake
+      maintenance capacity - while reporting no more sleepiness than they had reported three days earlier.
+      This is the single cleanest quantification of the habituation phenomenon in this shard, because it does
+      not require comparing across studies, scales, or timepoints: both channels are in one table.
+      SUPPORTING TIME-COURSE DETAIL: the MWT was NOT significantly reduced after ONE night ('not after one
+      night of sleep restriction'), became significant after ~4 nights, and worsened further by 7. So the
+      objective deficit is genuinely CUMULATIVE across nights rather than an acute single-night effect - and
+      the accumulation continued past the point where self-report had stopped moving."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NEGATIVE = shorter latency to fall asleep = worse wake-maintenance capacity = harm.
+      Deteriorated MORE between day 4 and day 7 than between day 0 and day 4."
+    covariates: ["within-subject repeated measures vs own B2 baseline", "morning and evening sessions", "four sessions per day (10:00, 12:00, 14:00, 16:00)"]
+    followup_years: null
+    cohort_family: Rabat_IRBA_CSR
+    quote: "A significant time of experiment effect was observed for daily latencies to fall asleep
+      (chi(12,5)2 = 21.03, p < 0.001). These daily sleep latencies (latency to the first sleep epochs after
+      light off) were significantly shorter during the sleep restriction period and more precisely after
+      almost four nights of sleep restriction and not after one night of sleep restriction or during recovery
+      nights (RN3 and RN13, Table 1)."
+  - outcome_domain: cognition
+    outcome_construct: sustained_attention_and_executive_inhibition_have_different_recovery_kinetics
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 4, duration_days: 3,
+               contrast_label: "which deficits persist after 2-3 nights of 8h recovery TIB following 7 nights at 4h: SRTT lapses vs Go-NoGo commission errors"}
+    scale: raw_units
+    unit: "number of recovery nights at 8h TIB still showing a significant deficit vs baseline (attention = 2, executive inhibition = 3)"
+    value: 3.0
+    se: null
+    ci: null
+    conversion_formula: "Encoding of the recovery timepoint at which each deficit ceased to differ from
+      baseline. No effect sizes are printed for the Figure 3 panels (values are in figures only, and this
+      record does not digitise them), so se is null.
+      THE ORDERING, WHICH IS THE FINDING:
+        SUSTAINED ATTENTION (SRTT lapses): significantly elevated throughout restriction AND after TWO
+          recovery nights (p < 0.01), but 'No significant differences were observed after the third night of
+          sleep recovery.' -> recovered by R3.
+        EXECUTIVE INHIBITION (Go-NoGo commission errors): significantly elevated throughout restriction and
+          'stayed significantly higher during the 2nd and the 3rd night of sleep recovery in comparison with
+          baseline values (p < 0.01)' -> STILL impaired at R3.
+        SENSORY-MOTOR DECISION-MAKING (Simon task errors): no significant restriction effect at all
+          (F(6,66) = 1.63, p > 0.15), nor for compatible or incompatible trials separately.
+        VISUO-MOTOR PURSUIT: no significant effect (F(6,66) = 0.767, p > 0.59).
+      SO THE HIERARCHY IS NOT MONOTONE IN THE WAY THE SHARD'S OTHER RECORDS IMPLY. Vigilance degrades
+      FASTEST (SRTT speed was already significant on SR1) but also recovers FASTEST (by R3). Executive
+      inhibition degrades and then LINGERS LONGER. Higher-order decision-making was not measurably affected
+      at all at this dose. That is a genuinely different structure from a single latent 'impairment' factor
+      scaled by sensitivity: the fast-failing measure is not the slow-recovering one.
+      WHY THIS MATTERS FOR A THREE-YEAR EXPOSURE WITH WEEKEND RECOVERY. Our subject's schedule is a repeating
+      cycle of ~5 restricted nights followed by ~2 longer nights. On this evidence a 2-night recovery window
+      is enough to clear neither deficit (both SRTT lapses and Go-NoGo errors were still significant at R2),
+      and is long enough to clear vigilance only if it extends to a third night. Executive inhibition would
+      not clear even then. That predicts SELECTIVE ACCUMULATION across weeks: the vigilance deficit resets
+      partially every weekend while the inhibitory-control deficit does not - which is a mechanistic account
+      of the 'ratcheting' Koa 2024 observed and of why Smith 2021 found six weekends insufficient.
+      CAUTION ON THE UPSIDE: the paper also reports that response SPEED on the Go-NoGo and Simon tasks
+      INCREASED at R2, R3 and R13 relative to baseline, which is almost certainly a practice effect on those
+      tasks and not a benefit of recovery. It is a useful reminder that non-PVT tasks in repeated-measures
+      protocols carry learning gains that can mask deficits - the confound the brief asks about, visible here
+      in the same dataset in which the PVT-like SRTT shows no such gain."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = deficit persisted through more recovery nights. Executive inhibition (3) is
+      SLOWER to recover than sustained attention (2), despite attention failing sooner."
+    covariates: ["7 nights at 4h TIB", "recovery nights R1-R3 at 8h TIB plus R12-R13 eight days later", "morning (08:30) and evening (18:30) test sessions"]
+    followup_years: null
+    cohort_family: Rabat_IRBA_CSR
+    quote: "the number of lapses [...] was significantly modified by the sleep restriction/recovery
+      experiment (chi(12,6)2 = 24.39, p < 0.001) with a significant increase of the number of lapses during
+      the sleep restriction period in comparison with baseline values (p < 0.01 compared to B2, Figure 3A)
+      and after two nights of sleep recovery (p < 0.01, Figure 3A). No significant differences were observed
+      after the third night of sleep recovery. [...] In the executive Go-NoGo task, we observed a significant
+      sleep restriction effect on the number of errors (commission errors with no-go responses;
+      chi(12,6)2 = 35.56, p < 10-5). During the sleep restriction period, there was a significant increase of
+      errors that stayed significantly higher during the 2nd and the 3rd night of sleep recovery in
+      comparison with baseline values (p < 0.01, Figure 3C)."
+  - outcome_domain: recovery
+    outcome_construct: both_subjective_and_objective_sleepiness_fully_normalise_by_recovery_night_13
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 4, duration_days: 13,
+               contrast_label: "KSS and MWT at recovery night 13 (8h TIB) vs baseline B2, after 7 nights at 4h TIB"}
+    scale: hedges_g
+    unit: null
+    value: -0.105
+    se: 0.290
+    ci: [-0.673, 0.463]
+    conversion_formula: "COMPUTED BY THIS SHARD for the MWT daily latency at R13 vs B2, from Table 1:
+      B2 = 38.80 +/- 0.73, R13 = 38.52 +/- 0.75 (no significance marker, i.e. p > 0.05).
+      SD_B2 = 2.52879 ; SD_R13 = 2.59808 ; SD_pooled = sqrt((6.39478 + 6.75)/2) = sqrt(6.57239) = 2.56367.
+      d_av = (38.52 - 38.80)/2.56367 = -0.28/2.56367 = -0.10921 ; g = -0.10921 x 0.96552 = -0.10544 -> -0.105.
+      SE at r = 0.5 = sqrt(0.08333 + 0.10921^2/24) = sqrt(0.08333 + 0.00050) = 0.28954. CI = g +/- 1.96 x SE.
+      COMPANION VALUES, same derivation: MWT at R3 g = -0.430 (SE 0.303) - still about a third of a standard
+      deviation below baseline though not statistically significant with n = 12; KSS daily at R13
+      g = -0.234, i.e. very slightly BELOW (better than) baseline.
+      WHY THIS RECORD REPORTS A NULL, AND WHY THE NULL IS IMPORTANT RATHER THAN EMPTY. Several records in
+      this shard establish that vigilance deficits persist after recovery sleep: yamazaki2021 (deficits after
+      4 nights of 12h TIB), banks2010 (incomplete recovery even at 10h TIB), smith2021 (six weekends
+      insufficient), koa2024 (ratcheting across two weeks). THIS study, with a 4h x 7-night exposure at least
+      as severe, found that BOTH sleepiness channels were back to baseline by the 13th recovery day, and the
+      SRTT lapse deficit had already cleared by the 3rd. Reporting only the persistence studies would
+      overstate the case.
+      THE RECONCILIATION, WHICH IS SPECIFIC AND TESTABLE: the discriminating variable is not exposure
+      severity but RECOVERY DOSE AND DURATION. Here recovery was 8h TIB for 3 consecutive nights and then a
+      further 8 days of unrestricted living before R12-R13 - roughly TWELVE recovery nights before the final
+      measurement. Yamazaki gave 4 nights, Banks gave 1 night, Smith gave 2-night weekends embedded in
+      continuing restriction, and Koa gave weekends that never interrupted the cycle. So the evidence is
+      consistent with: vigilance recovers, but needs more than a weekend; a fortnight of adequate sleep
+      appears to suffice. FOR OUR SUBJECT THAT IS THE UNFAVOURABLE READING - across three years he never got
+      a fortnight, because his weekends were 2 nights and his holidays were at 7-8h rather than 8h+.
+      LIMITATIONS ON THIS NULL: n = 12, so it is underpowered to exclude a small residual deficit - the R3
+      MWT g of -0.430 would need roughly n = 45 to reach significance. And the Go-NoGo executive deficit was
+      still significant at R3, so 'full recovery' applies to the sleepiness and vigilance channels, NOT to
+      inhibitory control, which was not re-tested at R13 in a way this record could extract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Near zero = recovered. Negative sign here means marginally shorter latency than
+      baseline, but the effect is negligible and non-significant. NOT evidence of harm at R13."
+    covariates: ["3 consecutive recovery nights at 8h TIB followed by 8 days of unrestricted living before R12-R13"]
+    followup_years: null
+    cohort_family: Rabat_IRBA_CSR
+    quote: "Daily latencies | 38.80 +/- 0.73 | 39.39 +/- 0.58 | 34.29 +/- 2.75# | 28.78 +/- 3.38# |
+      36.73 +/- 1.75 | 38.52 +/- 0.75 [Table 1 columns: B2, SR1, SR4, SR7, R3, R13. KSS score and MWT
+      latencies are represented as the mean (+/- SEM) in daily (all sessions) [...] for the 12 subjects.
+      Significant differences compared to baseline value (B2): #p < 0.05; ###p < 0.001.]"
+  - outcome_domain: sleep_need
+    outcome_construct: slow_wave_sleep_is_preferentially_protected_when_total_sleep_is_halved
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 7,
+               contrast_label: "N3 (slow-wave) sleep minutes and share of TST across 7 nights at 4h TIB vs 8h TIB baseline"}
+    scale: pct_change
+    unit: "% reduction in N3 minutes when total sleep time is cut roughly in half"
+    value: -13.2
+    se: null
+    ci: null
+    conversion_formula: "(136 - 118)/136 = 0.1324 -> a 13.2% reduction in N3 minutes (mean 118 min across the
+      seven restriction nights vs 136 min at B2), i.e. a factor of 1.15. Meanwhile TIB fell from 480 +/- 0 min
+      to 239.9 +/- 0.11 min and TST fell by roughly a factor of two, and the other stages fell by much larger
+      factors: N1 by 3.75, N2 by 2.8, REM by 2.5 (all reported by the authors). N3's SHARE of total sleep
+      therefore rose from 32.4% to 53.1%, a factor of 1.64. se is null - the paper reports these as means
+      without dispersion for the derived percentages.
+      WHY A SLEEP-ARCHITECTURE NUMBER EARNS A PLACE IN A COGNITION SHARD. It identifies the compensatory
+      mechanism that makes chronic restriction survivable, and simultaneously explains why the compensation
+      is incomplete. When sleep is halved, the system sacrifices light and REM sleep almost proportionally
+      while defending slow-wave sleep almost entirely. If N3 carries the restorative process that Feinberg
+      and Campbell's synaptic-elimination account attributes to it, then a subject on 4-5h TIB retains most
+      of his slow-wave 'core' - which is why the observed deficits are moderate rather than catastrophic,
+      and why the deficit SATURATES rather than growing without bound (converging on the tau_LA = 7 d
+      saturation in ramakrishnan2016).
+      THE COST IS PAID ELSEWHERE, AND IT LANDS ON OUR SUBJECT'S AGE GROUP SPECIFICALLY. REM fell by a factor
+      of 2.5 and N2 by 2.8. Sleep spindles live in N2 and REM is implicated in emotional and procedural
+      consolidation, so the stages being sacrificed are the ones tied to memory consolidation and affect
+      rather than to basic vigilance - which is consistent with this study finding NO effect on
+      decision-making but clear effects on vigilance and inhibition, and with the adolescent spindle
+      literature surfaced in screening (PMID 36916319). A model that treats 'hours of sleep lost' as a single
+      exposure will therefore mis-attribute WHICH functions are harmed: the hours removed are
+      disproportionately REM and N2, not N3.
+      ONE HONEST CAVEAT: this is a 4h TIB protocol in adults aged 20-37. Adolescents have far more slow-wave
+      activity to begin with (NREM delta power declines >60% between ages 12 and 16.5 per Campbell's
+      programme), so the size of the protective reserve almost certainly differs by age, in an unknown
+      direction. No study in this shard measures the N3-preservation fraction in adolescents."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NEGATIVE = reduction in N3 minutes, but the point is that it is a SMALL reduction
+      relative to the ~50% cut in total sleep - i.e. this is a protective/compensatory finding, not a harm."
+    covariates: ["all-night polysomnography on every night", "AASM scoring", "N3 share computed as % of TST"]
+    followup_years: null
+    cohort_family: Rabat_IRBA_CSR
+    quote: "Despite the fact that total amount of sleep is reduced by a factor of two during the sleep
+      restriction period, amounts of N3 sleep stage were only reduced by a factor of 1.15 (a mean of 118 min
+      across the seven nights of sleep restriction compared to 136 min at B2) whereas amounts of other sleep
+      stages were reduced by a higher factor (3.75 for N1, 2.8 for N2 and 2.5 for REM sleep). As a logical
+      consequence, there was a significant sleep restriction/recovery effect on the proportion (% of TST) of
+      N3 sleep (F(13,143) = 23.55; p < 10-6), that was significantly higher during all the nights of the
+      sleep restriction period (a mean proportion of 53.1% instead of 32.4% at B2; Figure 2F)"
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "STRENGTHS, and they are why this small study earns five effects: a 14-day fully in-laboratory
+    protocol with all-night PSG on EVERY night (2 baseline at 8h TIB, 7 restriction at 4h TIB, 3 recovery at
+    8h, plus 2 more recovery nights 8 days later), so exposure verification is essentially perfect - achieved
+    TIB was 239.9 +/- 0.11 min against a prescribed 240; four MWT and KSS sessions per day at fixed clock
+    times, allowing the morning/evening dissociation to be resolved; a cognitive battery spanning FOUR
+    distinct process levels (sustained attention, motor inhibition, sensory-motor decision-making,
+    visuo-motor pursuit) tested at matched morning and evening slots, which is what makes the differential-
+    kinetics finding possible; and an unusually long follow-up to R12-R13, giving roughly twelve recovery
+    nights - longer than any other recovery arm in this shard. Numeric means with SEM are tabulated for the
+    KSS and MWT, which is why those two effects carry computed g values while the Figure-3 cognitive
+    outcomes do not.
+    CONCERNS: (1) n = 12, which is the binding limitation - all effects are imprecise (SEs around 0.30-0.42
+    on the g scale) and the recovery nulls are underpowered, e.g. the R3 MWT g of -0.430 would need roughly
+    n = 45 to reach significance, so 'recovered' should be read as 'not detectably impaired' rather than
+    'demonstrably normal'. (2) ALL MALE (12 men), so no sex generalisation. (3) Age 29.3 +/- 1.37 (SEM),
+    range 20-37 - adult, not adolescent; adolescent_match is fair_adult and the N3-preservation result in
+    particular is unlikely to transport, since adolescent slow-wave activity is far higher and falling
+    steeply with age. (4) SINGLE DOSE ARM (4h TIB only) - this study contributes nothing to the dose-response
+    shape and is used here purely for KINETICS, i.e. the shape in TIME. (5) No randomisation and no control
+    arm: every subject underwent the same fixed sequence baseline -> restriction -> recovery, so time,
+    order and practice are perfectly confounded with condition. That confound is DEMONSTRABLY ACTIVE here -
+    response speed on the Go-NoGo and Simon tasks was FASTER at R2, R3 and R13 than at baseline, which is a
+    practice effect, not a recovery benefit. Deficits measured against a first-week baseline in a design
+    like this are therefore biased toward zero for any task with a learning curve, and the vigilance-type
+    measures (SRTT lapses, MWT) are the ones least affected. (6) Multiplicity: many outcomes, many
+    timepoints, no stated correction, so individual p-values around 0.01-0.05 should be discounted."
+funding: "Not extracted from the retrieved text; the protocol is registered as ClinicalTrials NCT01989741 and was conducted at IRBA (French Armed Forces Biomedical Research Institute)."
+notes: |
+  THIS RECORD'S PRIMARY CONTRIBUTION IS THE HABITUATION QUANTIFICATION THE BRIEF ASKS FOR, and it is the only
+  place in the shard where both channels come from a single published table so no cross-study scaling is
+  needed. Days 4 to 7 of 4h TIB, same 12 men, measurements minutes apart:
+
+      SUBJECTIVE (KSS daily):   4.66 -> 4.73   ( +0.07 points; +4.9% of its own day-0-to-day-4 change )
+      SUBJECTIVE (KSS morning): 5.38 -> 5.38   ( exactly zero )
+      SUBJECTIVE (KSS evening): 4.17 -> 4.00   ( moved the wrong way; never significant at any timepoint )
+      OBJECTIVE  (MWT latency): 34.29 -> 28.78 ( -5.51 min; +122% of its own day-0-to-day-4 change )
+
+  On standardised scales the subjective effect SHRANK (d 1.341 -> 1.163, because variance widened while the
+  mean stood still) while the objective effect nearly DOUBLED (d -0.647 -> -1.183). By day 7 these men could
+  resist sleep for only 74% as long as at baseline while reporting no more sleepiness than three days
+  earlier. The authors name the ceiling themselves: the subjective complaint 'seems to rapidly ceil at a
+  score of 5' on a 9-point scale - self-report saturated near the middle of its range.
+
+  A SECOND, INDEPENDENT DISSOCIATION IN THE SAME DATA - BY TIME OF DAY. The restriction x time-of-day
+  interaction was significant (F(5,110) = 2.38, p < 0.05): MORNING KSS rose significantly (3.33 -> 5.38,
+  p < 0.001) while EVENING KSS did not move significantly at any point (3.25 -> 4.00, p > 0.06). So whether a
+  restricted person reports feeling impaired depends on when you ask, and asking in the evening - when a
+  student would most plausibly self-assess - detects nothing. This compounds the plateau problem: the
+  subjective signal is both bounded and phase-dependent.
+
+  THE OTHER MAJOR CONTRIBUTION IS THAT THE COGNITIVE HIERARCHY IS NOT ONE-DIMENSIONAL. Five other records in
+  this shard converge on an ordering by SENSITIVITY (vigilance > executive > working memory). This study adds
+  an orthogonal axis - RECOVERY RATE - and the two do not line up:
+      sustained attention (SRTT): fails FIRST (speed significant on SR1) and recovers FIRST (clear by R3)
+      executive inhibition (Go-NoGo): fails during restriction and is STILL impaired at R3
+      sensory-motor decision-making (Simon): never significantly affected at this dose
+      visuo-motor pursuit: never significantly affected
+  So the fastest-failing measure is not the slowest-recovering one. A model with a single latent impairment
+  state scaled per-outcome cannot produce this pattern; at minimum two processes with different time
+  constants are needed.
+
+  WHY THAT IS THE MOST DECISION-RELEVANT THING HERE FOR A WEEKDAY/WEEKEND CYCLE. Our subject's schedule is
+  ~5 short nights then ~2 longer ones, repeated for three years. On this evidence a 2-night recovery clears
+  NEITHER deficit (SRTT lapses and Go-NoGo errors were both still significant at R2); vigilance clears only
+  by the third night; inhibitory control had not cleared even then. That predicts SELECTIVE ACCUMULATION -
+  the vigilance deficit partially resets each weekend while the inhibitory-control deficit carries over -
+  which is a mechanism for the ratcheting Koa 2024 measured and for Smith 2021's finding that six weekends
+  failed to restore vigilance.
+
+  AND A COUNTERWEIGHT THAT SHOULD NOT BE SUPPRESSED. By recovery night 13, after roughly twelve nights of
+  adequate sleep, both KSS (g = -0.234) and MWT (g = -0.105) were indistinguishable from baseline. Several
+  other records here emphasise incomplete recovery; this one shows complete recovery of the sleepiness and
+  vigilance channels given ENOUGH time. Read together with banks2010 (1 night, incomplete), yamazaki2021
+  (4 nights, incomplete) and smith2021 (weekends, incomplete), the discriminating variable looks like
+  recovery DURATION rather than exposure severity: more than a weekend, less than a fortnight. Our subject
+  never received a fortnight, which is why this reassuring finding does not transfer to him - but it does
+  bound the harm as reversible in principle, which matters for prognosis.
+
+  FINALLY, A PRACTICE-EFFECT WARNING VISIBLE INSIDE THIS DATASET. Go-NoGo and Simon response speeds were
+  FASTER at R2, R3 and R13 than at baseline - learning, not recovery - while the PVT-like SRTT showed no such
+  gain. This is the confound the brief asks about, demonstrated in one sample: vigilance measures are
+  practice-stable, higher-order tasks are not, and uncorrected pre-post designs will understate harm on
+  exactly the tasks where learning is strongest.
+shard: "s01_cognition_dose_response"

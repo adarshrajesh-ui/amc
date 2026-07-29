@@ -1,0 +1,125 @@
+study_id: vanleeuwen2009_recovery
+citation: "van Leeuwen WMA, Lehto M, Karisola P, Lindholm H, Luukkonen R, Sallinen M, Harma M, Porkka-Heiskanen T, Alenius H. Sleep restriction increases the risk of developing cardiovascular diseases by augmenting proinflammatory responses through IL-17 and CRP. PLoS ONE. 2009;4(2):e4589."
+doi: "10.1371/journal.pone.0004589"
+pmid: "19240794"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2643002/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep restriction increases the risk of developing cardiovascular diseases by augmenting proinflammatory responses through IL-17 and CRP."
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 19
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [19, 29]
+  pct_female: 0.0
+  country: "Finland"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: immune
+    outcome_construct: serum_crp_after_restriction
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5, contrast_label: "4 h TIB x 5 nights ('working week') vs own 8 h baseline; serum CRP"}
+    scale: pct_change
+    unit: "% of baseline serum CRP"
+    value: 45.0
+    se: null
+    ci: null
+    conversion_formula: "Reported as '145% of BL; p <0.05', i.e. a +45% change from baseline. No SD/SE published for the ratio, so se is null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. Five nights at 4 h TIB raised serum CRP by 45% over the same men's baseline."
+    covariates: []
+    followup_years: null
+    cohort_family: "Helsinki_vanLeeuwen_restriction"
+    quote: "CRP was increased after SR (145% of BL; p <0.05), and continued to increase after REC (231% of BL; p <0.05)."
+  - outcome_domain: recovery
+    outcome_construct: serum_crp_after_2_nights_recovery
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 2, contrast_label: "AFTER 2 recovery nights of 8 h TIB ('recovery weekend'), serum CRP vs own pre-restriction baseline"}
+    scale: pct_change
+    unit: "% of baseline serum CRP"
+    value: 131.0
+    se: null
+    ci: null
+    conversion_formula: "Reported as '231% of BL; p <0.05' after recovery, i.e. a +131% change from baseline. No SE published; se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "STRIKING ANTI-REVERSIBILITY RESULT. positive = HARM PERSISTING. CRP did not merely fail to normalise after a recovery weekend - it was HIGHER after recovery (231% of baseline) than it had been at the end of the restriction week (145%). Caution: CRP is a slow acute-phase reactant with a lag of days, so this pattern is at least as consistent with delayed kinetics from the restriction week as with damage accruing during recovery. Either way, two nights of 8 h did not clear it."
+    covariates: []
+    followup_years: null
+    cohort_family: "Helsinki_vanLeeuwen_restriction"
+    quote: "CRP was increased after SR (145% of BL; p <0.05), and continued to increase after REC (231% of BL; p <0.05). Heart rate was increased after REC (108% of BL; p <0.05)."
+  - outcome_domain: recovery
+    outcome_construct: pbmc_cytokine_mrna_incomplete_recovery
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 2, contrast_label: "IL-6, IL-1beta, TNF-alpha in stimulated PBMC after 2 recovery nights vs baseline"}
+    scale: raw_units
+    unit: "qualitative flag (+1 = did not return to baseline after recovery)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "The paper states these markers 'did not return to baseline levels completely' without giving the residual percentages in text; magnitudes are in Figure 3, which I did not digitise. Flag only; se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM PERSISTING. Cytokine production by stimulated PBMC was still off baseline after the recovery weekend. Note the authors' own hedge - 'not completely' - this is incomplete recovery, not absence of recovery."
+    covariates: []
+    followup_years: null
+    cohort_family: "Helsinki_vanLeeuwen_restriction"
+    quote: "After recovery sleep, concentrations of IL-6, IL-1beta and TNF-alpha did not return to baseline levels completely. IL-17 showed significantly increased expression at mRNA level after sleep restriction (138% [p <0.05] of baseline levels) and at protein level after subsequent recovery sleep (119% [p <0.05] of baseline levels)."
+  - outcome_domain: recovery
+    outcome_construct: nk_and_b_cell_counts_recovered
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 2, contrast_label: "circulating NK-cell and B-cell counts after 2 recovery nights vs baseline"}
+    scale: raw_units
+    unit: "qualitative flag (0 = returned to baseline)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Qualitative flag: 'recovered almost completely during REC'. During restriction NK cells fell to 65% of baseline (p<0.005) and B cells rose to 121% (p<0.005). se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "REVERSIBILITY, POSITIVE CASE. Cell TRAFFICKING changes (NK down 35%, B cells up 21% during restriction) recovered almost completely over two nights. So within one study, different immune compartments recover at different speeds: cell counts yes, cytokine/CRP no. This is the sharpest available evidence that 'is it reversible?' has no single answer - it depends which marker."
+    covariates: []
+    followup_years: null
+    cohort_family: "Helsinki_vanLeeuwen_restriction"
+    quote: "The amount of circulating NK-cells decreased (65% of BL; p <0.005) and the amount of B-cells increased (121% of BL; p <0.005) after SR, but these cell numbers recovered almost completely during REC."
+  - outcome_domain: immune
+    outcome_construct: tnf_alpha_protein_decreased_under_restriction
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5, contrast_label: "TNF-alpha protein in stimulated PBMC after 5 nights at 4 h TIB vs baseline"}
+    scale: pct_change
+    unit: "% of baseline TNF-alpha protein"
+    value: -20.0
+    se: null
+    ci: null
+    conversion_formula: "Reported as decreasing 'to 80% [p <0.05] of baseline levels', i.e. -20%. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "DIRECTION-CONTRADICTING FINDING. negative here = TNF-alpha went DOWN under restriction, the opposite of the standard 'sleep loss raises pro-inflammatory cytokines' claim. Consistent with the null-and-negative TNF-alpha pooled estimate in ballesio2026_experimental_meta (d = -0.34). The inflammatory response to sleep loss is marker-specific, not a uniform upregulation."
+    covariates: []
+    followup_years: null
+    cohort_family: "Helsinki_vanLeeuwen_restriction"
+    quote: "IL-1beta and IL-6 increased significantly at the mRNA level (to 137% [p <0.05] and 163% [p <0.05] of baseline levels, respectively) whereas TNF-alpha decreased at the protein level after sleep restriction (to 80% [p <0.05] of baseline levels; Figure 3)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Lab protocol with a parallel control arm (6 men kept at 8 h TIB throughout) whose markers stayed at baseline at all timepoints - that internal control substantially strengthens the causal reading. Weaknesses: 13 restricted + 6 controls is very small and unbalanced; single-sex; percentages-of-baseline are reported without dispersion, so no effect size or SE is recoverable for most outcomes; many markers tested at three timepoints with no stated multiplicity correction; the title's causal claim about cardiovascular disease far outruns what a 9-day study can show."
+funding: "not extracted"
+notes: |
+  PROTOCOL, verbatim: "After 2 baseline nights of 8 hours time in bed (TIB), 13 healthy young men had
+  only 4 hours TIB per night for 5 nights, followed by 2 recovery nights with 8 hours TIB. 6 control
+  subjects had 8 hours TIB per night throughout the experiment."
+  n recorded as 19 = 13 restricted + 6 control.
+  This is one of THREE independent experiments in this shard addressing recovery, and it lands on the
+  pessimistic side, agreeing with simpson2016_repeated_recovery and disagreeing with
+  pejovic2013_recovery. The authors' own conclusion is the strongest durability claim in my evidence
+  set: "Therefore, long-term sleep restriction may lead to persistent changes in the immune system."
+  I flag that as an EXTRAPOLATION by the authors from a 9-day study, not a demonstrated durable
+  effect: nothing here was measured beyond two recovery nights, so "persistent" means "still abnormal
+  after 48 hours", not "permanent".
+  KEY MECHANISTIC READ: the study separates (a) cell trafficking, which reverses fast, from
+  (b) acute-phase/cytokine responses, which do not reverse within two nights. For the downstream
+  model, the reversibility prior should be marker-specific.
+shard: "s10_immune"

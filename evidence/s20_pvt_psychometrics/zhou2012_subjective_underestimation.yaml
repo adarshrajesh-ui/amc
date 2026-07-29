@@ -1,0 +1,117 @@
+study_id: zhou2012_subjective_underestimation
+citation: "Zhou X, Ferguson SA, Matthews RW, Sargent C, Darwent D, Kennaway DJ, Roach GD. Mismatch between subjective alertness and objective performance under sleep restriction is greatest during the biological night. Journal of Sleep Research. 2012;21(1):40-49."
+doi: "10.1111/j.1365-2869.2011.00924.x"
+pmid: "21564364"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Mismatch between subjective alertness and objective performance under sleep restriction is greatest during the biological night"
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 27
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: "AU"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: subjective_objective_zscore_mismatch_under_sleep_restriction
+    exposure:
+      type: chronic_restriction
+      dose_h: 4.67
+      referent_h: 9.33
+      duration_days: null
+      contrast_label: "sleep-restricted forced desynchrony (4.67 h TIB per 28 h day, n = 14) vs standard forced desynchrony (9.33 h TIB per 28 h day, n = 13); PVT z-score deviation from own baseline compared with visual-analogue alertness z-score deviation from own baseline"
+    scale: raw_units
+    unit: "direction of within-person z-score discrepancy (no magnitude reported in abstract)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "The abstract reports the DIRECTION and CONDITIONALITY of the discrepancy but gives no z-score magnitudes, no correlation coefficients, and no test statistics. value: -1.0 is a sign-only placeholder encoding 'objective deviation exceeds subjective deviation'. se: null. NOT a poolable magnitude - full text was not retrieved (Unpaywall reports is_oa true but supplies no PDF URL; no PMC deposit)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NEGATIVE = the objective (PVT) deviation from personal baseline EXCEEDED the subjective (VAS alertness) deviation from personal baseline, i.e. the subject under-reports his own impairment. Under the NON-restricted protocol the two deviated to a SIMILAR extent, so the mismatch is specific to sleep restriction."
+    covariates: ["prior wake duration", "circadian phase"]
+    followup_years: null
+    cohort_family: UniSA_forced_desynchrony
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Between-protocol comparison (n = 14 restricted vs n = 13 standard) rather than within-subject crossover, so the mismatch contrast is partly between-groups. Males only, so no evidence about females. Forced desynchrony on a 28 h day is a strong artificial circadian manipulation. Crucially, the within-person z-standardisation against each subject's own baseline mean and SD is exactly the right analysis for the question and is the reason this study is quotable at all. ABSTRACT ONLY - no magnitudes extracted."
+funding: "Not stated in abstract"
+notes: |
+  ===== PART B6: DIRECT EVIDENCE OF UNDERESTIMATION, IN YOUNG MALES =====
+  This is the cleanest published statement that sleep-restricted people under-estimate their own
+  impairment, and it is in 27 young healthy MALES - the closest population match in my shard to an
+  18-year-old male. Its analytic design is also the one the n-of-1 protocol should copy: both the
+  subjective and the objective measure were converted to z-scores against EACH SUBJECT'S OWN rested
+  baseline mean and SD, which makes the two directly comparable on a common within-person scale.
+
+  ACCESS LIMITATION - STATED PLAINLY: abstract only. Unpaywall reports is_oa = true for this DOI but
+  returns no usable PDF location, and there is no PMC deposit. I therefore have the DIRECTION and the
+  MODERATOR (circadian phase) but NOT the z-score magnitudes or any correlation coefficient. The
+  single effect in this record is a sign-only placeholder and must not be pooled as a magnitude.
+
+  VERBATIM QUOTES
+  ---------------
+  Question and design:
+  "Subjective alertness may provide some insight into reduced performance capacity under conditions
+  suboptimal to neurobehavioural functioning, yet the accuracy of this insight remains unclear. We
+  therefore investigated whether subjective alertness reflects the full extent of neurobehavioural
+  impairment during the biological night when sleep is restricted. Twenty-seven young healthy males
+  were assigned to a standard forced desynchrony (FD) protocol (n = 13; 9.33 h in bed/28 h day) or a
+  sleep-restricted FD protocol (n = 14; 4.67 h in bed/28 h day)."
+
+  THE ANALYTIC TRICK WORTH COPYING (within-person z-scoring):
+  "For both protocols, subjective alertness and neurobehavioural performance were measured using a
+  visual analogue scale (VAS) and the psychomotor vigilance task (PVT), respectively; both measures
+  were given at various combinations of prior wake and circadian phase (biological night versus
+  biological day). Scores on both measures were standardized within individuals against their
+  respective baseline average and standard deviation."
+
+  THE RESULT:
+  "We found that PVT performance and VAS rating deviated from their respective baseline to a similar
+  extent during the standard protocol, yet a greater deviation was observed for PVT performance than
+  VAS rating during the sleep-restricted protocol. The discrepancy between the two measures during the
+  sleep-restricted protocol was particularly prominent during the biological night compared with the
+  biological day."
+
+  THE CONCLUSION (quote this):
+  "Thus, subjective alertness did not reflect the full extent of performance impairment when sleep was
+  restricted, particularly during the biological night. Given that subjective alertness is often the
+  only available information upon which performance capacity is assessed, our results suggest that
+  sleep-restricted individuals are likely to under-estimate neurobehavioural impairment, particularly
+  during the biological night."
+
+  WHY THE MODERATOR MATTERS FOR THE PROTOCOL
+  ------------------------------------------
+  The mismatch is largest during the BIOLOGICAL NIGHT. For a college student, the biological night
+  includes the late-evening and small-hours study window in which he is most likely to be working and
+  most likely to be judging himself as "fine". The protocol implication is the same one Cohen 2010
+  gives from the objective side: schedule at least one fixed LATE test slot, not just a morning one,
+  and record a subjective rating at the same instants as the PVT so the individual mismatch can be
+  quantified for this subject rather than assumed.
+
+  NOTE ON DIRECTIONAL CONSISTENCY WITH THE REST OF THE SHARD
+  ---------------------------------------------------------
+  Zhou 2012 (subjective deviation SMALLER than objective) is consistent with:
+    * vandongen2003_subjective_plateau.yaml - subjective response saturates (theta = 0.24) while PVT
+      impairment accumulates near-linearly (theta = 0.78) in the same subjects;
+    * pejovic2013_recovery_dissociation.yaml - after 2 recovery nights the subjective signal switches
+      off while the PVT deficit persists;
+    * kitamura2016_adlib_sleep_debt.yaml - subjects with a mean 3.2 h first-night sleep rebound
+      reported no awareness of sleep loss at all.
+  Note the apparent tension with Pejovic 2013, where the SSS effect of restriction (|d_z| = 0.97) was
+  LARGER than the PVT lapse effect (|d_z| = 0.33). These are not contradictory: subjective sleepiness
+  is a sensitive detector of a CHANGE in sleep, but a badly calibrated and quickly-resetting indicator
+  of the accumulated PERFORMANCE deficit. The report should make this distinction explicitly instead
+  of claiming that subjective ratings are simply insensitive.
+shard: "s20_pvt_psychometrics"

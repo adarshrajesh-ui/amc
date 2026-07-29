@@ -1,0 +1,100 @@
+study_id: spiegel2004
+citation: 'Spiegel K, Tasali E, Penev P, Van Cauter E. Brief communication: Sleep curtailment in healthy young men is associated with decreased leptin levels, elevated ghrelin levels, and increased hunger and appetite. Annals of Internal Medicine. 2004;141(11):846-850.'
+doi: 10.7326/0003-4819-141-11-200412070-00008
+pmid: '15583226'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Brief communication: Sleep curtailment in healthy young men is associated with decreased leptin levels, elevated ghrelin levels, and increased hunger and appetite.'
+access_tier: abstract_only
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 12
+n_studies_pooled: null
+population:
+  age_mean: 22.0
+  age_range: null
+  pct_female: 0.0
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: endocrine
+  outcome_construct: leptin_pct_change
+  exposure:
+    type: chronic_restriction
+    dose_h: 4.0
+    referent_h: 10.0
+    duration_days: 2
+    contrast_label: 2 days of 4 h TIB (restriction) vs 2 days of 10 h TIB (extension), controlled caloric intake
+  scale: pct_change
+  unit: percent change in daytime plasma leptin
+  value: -18.0
+  se: 7.732
+  ci:
+  - -33.2
+  - -2.8
+  conversion_formula: 'se backed out from reported P: two-sided p = 0.04, df = 11 -> t = 2.3281, so se = 18/2.3281 = 7.73. ci = -18 +/- 1.96*7.73.'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: negative = leptin (the satiety signal) FELL under restriction, which should promote eating (harm)
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Sleep restriction was associated with average reductions in the anorexigenic hormone leptin (decrease, 18%; P = 0.04), elevations in the orexigenic factor ghrelin (increase, 28%; P < 0.04), and increased hunger (increase, 24%; P < 0.01) and appetite (increase, 23%; P = 0.01), especially for calorie-dense foods with high carbohydrate content (increase, 33% to 45%; P = 0.02).
+- outcome_domain: endocrine
+  outcome_construct: ghrelin_pct_change
+  exposure:
+    type: chronic_restriction
+    dose_h: 4.0
+    referent_h: 10.0
+    duration_days: 2
+    contrast_label: 2 days 4 h TIB vs 2 days 10 h TIB, daytime plasma ghrelin
+  scale: pct_change
+  unit: percent change in daytime plasma ghrelin
+  value: 28.0
+  se: 12.027
+  ci:
+  - 4.4
+  - 51.6
+  conversion_formula: se backed out conservatively using p = 0.04 (paper reports P < 0.04), df = 11 -> t = 2.3281, se = 28/2.3281 = 12.03. True se is smaller than this. ci = 28 +/- 1.96*12.03.
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: positive = ghrelin (the hunger signal) ROSE under restriction (harm)
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Sleep restriction was associated with average reductions in the anorexigenic hormone leptin (decrease, 18%; P = 0.04), elevations in the orexigenic factor ghrelin (increase, 28%; P < 0.04), and increased hunger (increase, 24%; P < 0.01) and appetite (increase, 23%; P = 0.01), especially for calorie-dense foods with high carbohydrate content (increase, 33% to 45%; P = 0.02).
+- outcome_domain: endocrine
+  outcome_construct: subjective_hunger_pct_change
+  exposure:
+    type: chronic_restriction
+    dose_h: 4.0
+    referent_h: 10.0
+    duration_days: 2
+    contrast_label: 2 days 4 h TIB vs 2 days 10 h TIB, subjective hunger rating
+  scale: pct_change
+  unit: percent change in subjective hunger rating
+  value: 24.0
+  se: 7.728
+  ci:
+  - 8.9
+  - 39.1
+  conversion_formula: 'se backed out from reported P: two-sided p = 0.01, df = 11 -> t = 3.1058, se = 24/3.1058 = 7.73. ci = 24 +/- 1.96*7.73.'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: positive = hungrier under restriction (harm)
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: and increased hunger (increase, 24%; P < 0.01) and appetite (increase, 23%; P = 0.01), especially for calorie-dense foods with high carbohydrate content (increase, 33% to 45%; P = 0.02).
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: Randomised crossover, tightly controlled caloric intake and activity - a genuine mechanistic experiment. But n=12 young men only, ONLY 2 DAYS per condition, and the comparator is sleep EXTENSION (10 h) rather than normal sleep, which widens the contrast to 6 h and inflates the apparent effect. Authors note they did not measure energy expenditure.
+funding: not stated in abstract
+notes: 'BEST AGE MATCH for the hormone question (mean age 22 +/- 2 y, BMI 23.6 +/- 2.0, all male - closely matches our subject). BUT: the 4 h vs 10 h contrast is much larger than our subject''s exposure, the protocol is only 2 days, and nedeltcheva2009 failed to replicate the leptin/ghrelin changes over 14 days. Treat the 18%/28% figures as an acute upper bound, not a chronic steady state.'
+shard: s09_obesity_bmi

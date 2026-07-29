@@ -1,0 +1,130 @@
+study_id: guldner2023
+citation: "Guldner S, Sarvasmaa AS, Lemaitre H, Massicotte J, Vulser H, Miranda R, et al. Longitudinal associations between adolescent catch-up sleep, white-matter maturation and internalizing problems. Developmental Cognitive Neuroscience. 2023;59:101193."
+doi: "10.1016/j.dcn.2022.101193"
+pmid: "36610292"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9841167/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Longitudinal associations between adolescent catch-up sleep, white-matter maturation and internalizing problems"
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 111
+n_studies_pooled: null
+population:
+  age_mean: 14.5
+  age_range: [14, 20]
+  pct_female: 53.2
+  country: "France"
+  adolescent_match: exact_16_19
+effects:
+  # ---------- THE DIRECTLY RELEVANT NULL: weekday sleep duration change -> FA change, ages 14 to 19.8 ----------
+  - outcome_domain: brain_structure
+    outcome_construct: fa_change_vs_weekday_time_in_bed_change
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "5-year CHANGE in weekday time in bed (age 14.5 -> 19.8) vs CHANGE in white matter fractional anisotropy, whole-brain TBSS"}
+    scale: per_hour_beta
+    unit: "delta FA per hour change in weekday time in bed"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded null. Authors report no significant clusters; no point estimate or SE published for the null. se null - not invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no association. Harm would be negative (declining weekday sleep -> less FA gain). NOT observed anywhere in the brain at p<0.05 FWE, in the best age-matched longitudinal diffusion dataset available."
+    covariates: ["age at baseline", "sex", "scan interval", "scanner site", "change in AUDIT (alcohol)"]
+    followup_years: 5.3
+    cohort_family: "IMAGEN"
+    quote: "There were no significant association with delta-TIB during the weekdays and FA development."
+  # ---------- WEEKEND CATCH-UP SLEEP LOOKS PROTECTIVE ----------
+  - outcome_domain: brain_structure
+    outcome_construct: fa_change_vs_weekend_time_in_bed_change
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "5-year INCREASE in weekend time in bed vs INCREASE in FA (5 significant clusters, TBSS p<0.05 FWE)"}
+    scale: raw_units
+    unit: "direction of association (qualitative; TBSS cluster-level, peak coordinates only)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded +1 = significant POSITIVE association. TBSS reports peak-voxel coordinates and cluster extents, not interpretable per-hour slopes; no numeric slope published."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive = MORE weekend catch-up sleep associated with GREATER increase in FA (i.e. faster/more normative white matter maturation). This is a PROTECTIVE direction and is directly relevant to a subject who does obtain 7-8 h at weekends plus occasional 10-11 h nights."
+    covariates: ["age at baseline", "sex", "scan interval", "scanner site", "change in AUDIT"]
+    followup_years: 5.3
+    cohort_family: "IMAGEN"
+    quote: "Our results imply that spending more time in bed on weekends compared to weeknights (an increase in TIB-variability and TIB on weekends), as well as spending more time in bed on weekends from early to late adolescence, might have favourable effects on white matter development in these tracts"
+  - outcome_domain: psychiatric
+    outcome_construct: internalizing_symptom_change_vs_weekend_time_in_bed_change
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "increase in weekend time in bed (14->19.8 y) vs change in internalizing symptoms"}
+    scale: smd
+    unit: "standardized regression coefficient (beta)"
+    value: -0.23
+    se: 0.0865
+    ci: [-0.40, -0.06]
+    conversion_formula: "beta = -0.23 with t(107) = -2.66 reported. se = |beta|/|t| = 0.23/2.66 = 0.0865. ci = beta +/- 1.96*se = [-0.400, -0.060]."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = MORE weekend catch-up sleep predicts a DECREASE in internalizing symptoms. Protective direction."
+    covariates: ["sex", "age", "change in AUDIT", "baseline internalizing symptoms"]
+    followup_years: 5.3
+    cohort_family: "IMAGEN"
+    quote: "An increase in both delta-TIB-variability (beta = -.26, t(107) = -3.09, p < .01), and delta-TIB on weekends (beta = -.23, t(107) = -2.66, p < .01) significantly predicted a decrease in delta-internalizing symptoms from early to late adolescence, while controlling for internalizing symptoms at baseline."
+  - outcome_domain: brain_structure
+    outcome_construct: mediation_left_slf_fa_change_weekend_tib_to_internalizing
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "indirect (mediated) effect of increased weekend time in bed on internalizing symptoms via left SLF FA change"}
+    scale: smd
+    unit: "mediation point estimate (standardized)"
+    value: -0.09
+    se: 0.0459
+    ci: [-0.19, -0.01]
+    conversion_formula: "Table 3, delta-TIB on weekends, L SLF: mediation effect -.09 (95% CI -.19 to -.01). se = (-0.01 - (-0.19))/3.92 = 0.18/3.92 = 0.0459. Proportion mediated 41%."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "Negative = white matter maturation in left superior longitudinal fasciculus carries part of the protective effect of weekend catch-up sleep on internalizing symptoms (41% of the total effect)."
+    covariates: ["age at baseline", "sex", "scan interval", "change in AUDIT"]
+    followup_years: 5.3
+    cohort_family: "IMAGEN"
+    quote: "L SLF-.09 *(-.19 to -.01)-.13(-.35 to .07)-.22 *(-.43 to -.03)41 *"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Genuine longitudinal design with two diffusion scans 5.3 years apart, spanning exactly the subject's exposure window (14.5 -> 19.8 y), and change-on-change modelling. Weaknesses: n=111 after 34 exclusions; self-reported bed/wake times only (no actigraphy); whole-brain TBSS across multiple sleep metrics with no correction across metrics (4 sleep variables x whole brain); FA is non-specific (axon diameter, fibre density, myelination, crossing fibres all contribute); two scanner sites handled by a dummy variable; observational, so reverse causation and residual confounding remain."
+funding: "European Union FP6 IMAGEN; Medical Research Council; Medical Research Foundation; NIH"
+notes: |
+  BEST-MATCHED LONGITUDINAL STUDY IN THE SHARD. IMAGEN French subset scanned at mean 14.5 y
+  and again at mean 19.8 y - i.e. the follow-up scan is at the subject's current age, and the
+  interval covers his entire claimed exposure window.
+
+  TWO FINDINGS THAT POINT AWAY FROM DURABLE DURATION-DRIVEN HARM:
+
+  1. Change in WEEKDAY time in bed - the exposure closest to "chronic weekday sleep
+     restriction from 16 to 19" - predicted FA development NOWHERE in the brain. This is the
+     single most on-target longitudinal null available.
+
+  2. Increasing WEEKEND time in bed (catch-up sleep) was associated with GREATER FA increases
+     and FEWER internalizing symptoms, with the white matter change statistically mediating
+     41% of the symptom benefit. The authors interpret catch-up sleep as a resilience factor:
+     "it can therefore be speculated that the ability to catch up sleep on weekends represents
+     the ability of the individual to recover from sleep loss, and emerge as a resilience
+     factor during adolescent development."
+
+     This matters because the subject DOES catch up (7-8 h weekends, occasional 10-11 h). On
+     the only age-appropriate longitudinal white matter evidence available, that pattern is
+     associated with the FAVOURABLE end of the distribution, not the harmful end.
+
+  CONTRAST WITH telzer2015 (the other adolescent longitudinal DTI study), which found
+  day-to-day sleep-duration VARIABILITY predicted LOWER FA 1.5 years later while average
+  duration was null. Guldner's authors address the apparent conflict directly:
+  "In a previous study by Telzer et al., irregularity of sleep patterns on a day-to-day basis
+  predicted decreases in white matter FA 1.5 years later, but, in contrast to the present
+  findings, weekday to weekend sleep duration variability was not found to have any effect."
+  Both studies agree on the point that matters here: average/weekday sleep DURATION was not
+  the driver in either one.
+shard: "s15_brain_structure"

@@ -1,0 +1,119 @@
+study_id: jaakallio2026
+citation: "Jaakallio P, Kuula L, Partonen T, Pesonen AK. Continuity and Change of Delayed Sleep Phase From Adolescence to Early Adulthood. Pediatrics. 2026;157(1):e2025071832."
+doi: "10.1542/peds.2025-071832"
+pmid: "41371273"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Continuity and Change of Delayed Sleep Phase From Adolescence to Early Adulthood"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 1374
+n_studies_pooled: null
+population:
+  age_mean: 16.8
+  age_range: [16, 19]
+  pct_female: 66.0
+  country: "Finland"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: circadian
+    outcome_construct: dsp_stability_late_adolescence_to_early_adulthood
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "proportion of adolescents with delayed sleep phase at T1 (mean age 16.8 y) who still had DSP at follow-up 19 months later"}
+    scale: probability
+    unit: "proportion remaining DSP-positive (persistence/stability)"
+    value: 0.70
+    se: null
+    ci: null
+    conversion_formula: "Reported as '70%' with no CI in the abstract. I could NOT compute a CI because the abstract does not state which denominator the 70% applies to (the DSP-weighted subsample was N = 315 at T2 and N = 207 at T3, and it is not stated whether 70% refers to T1->T2, T1->T3, or a pooled/modelled figure). Inventing a denominator to manufacture a CI would be fabrication, so se and ci are null. Full text is paywalled (Unpaywall: is_oa = false, oa_status = closed); no OA copy located."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "higher = DSP more persistent, i.e. LESS likely to resolve spontaneously with maturation"
+    covariates: []
+    followup_years: 1.58
+    cohort_family: "SleepHelsinki"
+    quote: "The stability of DSP was 70%, such that poor self-control, attention-deficit hyperactivity disorder symptoms, and alcohol use together accounted for 18%."
+  - outcome_domain: circadian
+    outcome_construct: dsp_behavioural_vs_physiological_determinants
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "proportion of DSP persistence explained by behavioural factors (poor self-control + ADHD symptoms + alcohol use) vs by circadian thermoregulation or physical activity"}
+    scale: pct_change
+    unit: "percent of variance in DSP continuity accounted for by the behavioural block"
+    value: 18.0
+    se: null
+    ci: null
+    conversion_formula: "reported directly as 'accounted for 18%'; no dispersion reported in the abstract and full text not obtainable"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more of DSP persistence is behaviourally explained. Note the complement: 82% of DSP continuity was NOT explained by these behavioural factors, so this does not license a purely behavioural reading either. The paper's own emphasis is behavioural because the PHYSIOLOGICAL measures they tested (skin-temperature circadian thermoregulation, actigraphic physical activity volume/intensity) showed NO association with DSP continuity."
+    covariates: ["self-control", "ADHD symptoms", "alcohol use"]
+    followup_years: 1.58
+    cohort_family: "SleepHelsinki"
+    quote: "Circadian thermoregulation or the duration or intensity of PA did not associate with the continuity of DSP. ... The outcomes emphasize behavioral over the potential physiological components of DSP measured in this study and give clear directions to develop new interventional targets to overcome DSP."
+  - outcome_domain: circadian
+    outcome_construct: dsp_incident_emergence_explained_by_behaviour
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "proportion of NEW-ONSET DSP over follow-up accounted for by alcohol use and poor self-control"}
+    scale: pct_change
+    unit: "percent of variance in DSP emergence accounted for"
+    value: 16.0
+    se: null
+    ci: null
+    conversion_formula: "reported directly as 'accounted for 16%'; no dispersion available"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "DSP can also newly EMERGE during late adolescence/early adulthood, partly on behavioural grounds. Relevant to our subject because it means a delayed pattern appearing at 17-19 y is not necessarily long-standing."
+    covariates: ["alcohol use", "self-control"]
+    followup_years: 1.58
+    cohort_family: "SleepHelsinki"
+    quote: "Alcohol use and poor self-control accounted for 16% of the emergence of DSP over time."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: |
+    Strengths: population-based sampling frame, exactly our age band (mean 16.8 y at baseline,
+    followed into early adulthood), 8 nights of GENEActiv actigraphy plus 3 nights of iButton
+    skin-temperature recording at both follow-ups - i.e. genuinely objective sleep and circadian
+    proxy measures, which is rare in this literature.
+    Concerns: (1) DSP at T1 was SELF-REPORTED, so the exposure that defines the cohort is
+    subjective; (2) the follow-up sample was deliberately DSP-WEIGHTED (N = 315 at T2, N = 207 at
+    T3 out of 1374), so the 70% stability figure applies to an enriched sample and is not a
+    population transition probability; (3) attrition from 315 to 207 between T2 and T3 is
+    substantial and differential attrition is not characterised in the abstract; (4) 66% girls,
+    whereas our subject is male, and DSP prevalence and correlates are sex-patterned;
+    (5) ABSTRACT ONLY - the full text is paywalled and I could not verify the analysis, the
+    DSP operationalisation at follow-up, or obtain any confidence intervals.
+funding: "Not stated in the abstract; full text not accessible. Crossref returned no funder records."
+notes: |
+  WHY I ADDED THIS RECORD LATE: it surfaced on a re-run of my DSWPD prevalence search and it is
+  directly decision-relevant, so I extracted it rather than logging it as a near-miss.
+
+  IT ANSWERS A QUESTION THE REST OF MY EVIDENCE COULD NOT: every other prevalence source in this
+  shard is cross-sectional, so none of them can say whether a delayed pattern in a 16-19 y old
+  resolves on its own. This one can, and the answer is mostly no - 70% of DSP-positive
+  adolescents were still DSP-positive 19 months later. The practical consequence for the report
+  is that "he will grow out of it" is not a safe default: if the subject really is phase-delayed,
+  waiting is more likely than not to leave him delayed through the college years, which is
+  exactly the window in which the academic cost lands.
+
+  IT ALSO CUTS THE OTHER WAY, AND I WANT THAT ON THE RECORD. The authors' own conclusion is that
+  BEHAVIOURAL factors (self-control, ADHD symptoms, alcohol) rather than the physiological
+  circadian markers they measured explained DSP trajectories, and their measured physiological
+  variables (skin-temperature rhythm, physical activity) showed NO association with DSP
+  continuity. So this paper is evidence AGAINST a purely physiological-circadian framing of
+  adolescent DSP, and it partially supports the behavioural reading that our subject himself
+  offers. It should temper, not inflate, the DSWPD posterior. Two caveats keep it from settling
+  the question: the behavioural block explained only 18% (82% unexplained), and absence of
+  association with a skin-temperature proxy is weak evidence about the underlying circadian
+  pacemaker, since skin temperature is a noisy surrogate for melatonin phase (DLMO).
+
+  ARITHMETIC I DID NOT DO: I deliberately did not compute a CI on the 70% figure. The abstract
+  gives two candidate denominators (315 and 207) and does not say which applies; picking one
+  would have produced a fake interval. Downstream should treat 0.70 as a point estimate with
+  unquantified uncertainty from a DSP-enriched sample.
+
+  IMPORTANT: DSP here is the delayed sleep phase TRAIT/pattern, not the ICSD-3 DISORDER. The
+  abstract never states that clinical impairment criteria were applied. Do not merge this
+  70% persistence figure with disorder-level prevalence estimates.
+shard: "s19_sleep_disorders"

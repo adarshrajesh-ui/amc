@@ -1,0 +1,118 @@
+study_id: edwards2012
+citation: "Edwards F. Early to rise? The effect of daily start times on academic performance. Economics of Education Review. 2012;31(6):970-983."
+doi: "10.1016/j.econedurev.2012.07.006"
+pmid: null
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: null
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Early to rise? The effect of daily start times on academic performance"
+access_tier: full_text
+secondhand_via: null
+design: quasi_experiment
+tier: T2
+n: 100680
+n_studies_pooled: null
+population:
+  age_mean: 12.5
+  age_range: [11, 16]
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: academic
+    outcome_construct: math_test_score_sd
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "1 hour later school start time, school fixed effects"}
+    scale: per_hour_beta
+    unit: "SD of math test score per hour later start"
+    value: 0.056
+    se: 0.011
+    ci: [0.034, 0.078]
+    conversion_formula: "reported 2.236 percentile points (SE 0.436), Table 6 column 1 (school FE). Percentile points -> SD via the local derivative of the probit transform at the median: dSD/dpctile = 1/phi(0) = sqrt(2*pi) = 2.5066 per unit proportion, so SD = 2.5066*(2.236/100) = 0.0561; SE = 2.5066*(0.436/100) = 0.0109."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = later start raises math score; implies early start / short sleep is harmful"
+    covariates: ["school fixed effects", "year effects", "grade effects", "individual demographics", "school characteristics"]
+    followup_years: null
+    cohort_family: WakeCounty_NC
+    quote: "The effect of a 1 h later start time is a 2.2 percentile point increase in math test scores and a 1.6 percentile point increase in reading test scores."
+  - outcome_domain: academic
+    outcome_construct: reading_test_score_sd
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "1 hour later school start time, school fixed effects"}
+    scale: per_hour_beta
+    unit: "SD of reading test score per hour later start"
+    value: 0.040
+    se: 0.011
+    ci: [0.018, 0.062]
+    conversion_formula: "reported 1.599 percentile points (SE 0.445), Table 6 column 2 (school FE); SD = 2.5066*(1.599/100) = 0.0401; SE = 2.5066*(0.445/100) = 0.0112."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = later start raises reading score"
+    covariates: ["school fixed effects", "year effects", "grade effects", "individual demographics", "school characteristics"]
+    followup_years: null
+    cohort_family: WakeCounty_NC
+    quote: "The effect of a 1 h later start time is a 2.2 percentile point increase in math test scores and a 1.6 percentile point increase in reading test scores."
+  - outcome_domain: academic
+    outcome_construct: math_test_score_sd_student_school_fe
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "1 hour later start, student-school fixed effects (most demanding specification)"}
+    scale: per_hour_beta
+    unit: "SD of math test score per hour later start"
+    value: 0.045
+    se: 0.008
+    ci: [0.029, 0.060]
+    conversion_formula: "reported 1.778 percentile points (SE 0.300), Table 6 column 3 (student-school FE); SD = 2.5066*(1.778/100) = 0.0446; SE = 2.5066*(0.300/100) = 0.0075."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = later start raises math score"
+    covariates: ["student-school fixed effects", "year effects", "grade effects"]
+    followup_years: null
+    cohort_family: WakeCounty_NC
+    quote: "The effect of a 1 h later start time is 1.8 and 1.0 percentile points for math and reading, respectively."
+  - outcome_domain: academic
+    outcome_construct: grade10_comprehensive_math_sd_persistence
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "1 hour later 8th-grade start time, outcome measured on grade-10 exam"}
+    scale: per_hour_beta
+    unit: "SD of grade-10 math score per hour later 8th-grade start"
+    value: 0.051
+    se: 0.017
+    ci: [0.018, 0.084]
+    conversion_formula: "reported 2.033 percentile points (SE 0.671), Table 9; SD = 2.5066*(2.033/100) = 0.0510; SE = 2.5066*(0.671/100) = 0.0168."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = later start in 8th grade still raises scores two years later; sleep-driven learning deficits do not fully wash out"
+    covariates: ["school fixed effects"]
+    followup_years: 2.0
+    cohort_family: WakeCounty_NC
+    quote: "A 1 h later start time in eighth grade increases test scores on the high school comprehensive exam by 2.0 percentile points for math and 1.6 percentile points for reading."
+rob:
+  tool: ROBINS-I
+  judgement: moderate
+  notes: "Large administrative panel (all Wake County NC middle schoolers 1999-2006); identification uses within-school and within-student variation in bell times driven by bus scheduling. Sleep is not directly measured. Residual concern that bus-schedule-driven start-time changes correlate with commute length and other school-level shocks."
+funding: "Not stated in retrieved text"
+notes: |
+  IDENTIFYING ASSUMPTION: changes in a school's start time are driven by the district's bus-routing
+  problem as enrollment grows, and are therefore uncorrelated with unobserved school or student
+  quality shocks. Edwards defends this with (a) school fixed effects, (b) student-school fixed
+  effects that use only students who stay put while their bell time moves, and (c) placebo tests
+  showing no relationship between start-time changes and per-grade enrollment or the share of
+  returning students. This is a CREDIBLE quasi-experiment, though weaker than Carrell's randomization.
+  Note the naive cross-sectional coefficient is 9.5 percentile points/hour and collapses to ~2-3 once
+  demographics are controlled - direct evidence that the observational literature on sleep and grades
+  is heavily confounded by socioeconomic sorting. This is a useful confounding-magnitude calibration
+  for the downstream model: the naive estimate is roughly 4x the quasi-experimental one.
+  SLEEP FIRST STAGE: Edwards presents supporting (not primary) evidence that sleep is the mechanism -
+  he finds the effect is concentrated in older/post-pubertal students and reports time-use evidence -
+  but he does NOT estimate minutes of extra sleep in this sample. Do not treat these coefficients as
+  per-hour-of-sleep effects without importing an external first stage (see morgenthaler2016 and
+  groen_pabilonia2019 records: ~19-36 min extra sleep per hour later start).
+  PERCENTILE->SD CONVERSION: I used the derivative of the inverse normal CDF at the median
+  (1 SD = 39.9 percentile points at the median, i.e. 2.5066 SD per unit proportion). This is
+  conservative relative to the commonly used "1 SD = 34 percentile points" rule of thumb
+  (which would give 0.066 rather than 0.056 SD for the math effect).
+  POPULATION MISMATCH: grades 6-8 (roughly ages 11-14), not 16-19. The grade-10 persistence result
+  is the closest to our subject's age. Edwards himself finds a slightly LARGER effect at grade 10
+  (3.3 percentile points math), consistent with the effect growing through puberty (see
+  heissel_norris2018), so extrapolating up to age 16-19 is defensible but uncertain.
+shard: "s04_academic_natural_experiments"

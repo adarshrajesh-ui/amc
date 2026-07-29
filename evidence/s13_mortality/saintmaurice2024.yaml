@@ -1,0 +1,139 @@
+study_id: saintmaurice2024
+citation: "Saint-Maurice PF, Freeman JR, Russ D, Almeida JS, Shams-White MM, Patel S, Wolff-Hughes DL, Watts EL, Loftfield E, Hong HG, Moore SC, Matthews CE. Associations between actigraphy-measured sleep duration, continuity, and timing with mortality in the UK Biobank. Sleep. 2024 Mar 11;47(3):zsad312."
+doi: "10.1093/sleep/zsad312"
+pmid: "38066693"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10925955/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Associations between actigraphy-measured sleep duration, continuity, and timing with mortality in the UK Biobank."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 88282
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [40, 69]
+  pct_female: null
+  country: "UK"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: 7,
+               contrast_label: "5 h/d vs 7.0 h/d of wrist-accelerometer-measured sleep duration"}
+    scale: log_hr
+    unit: null
+    value: 0.254642
+    se: 0.084830
+    ci: [0.086178, 0.418710]
+    conversion_formula: "log_hr = ln(1.29) = 0.254642; se = (ln(1.52) - ln(1.09))/3.92 = 0.084830"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher all-cause mortality at objectively measured 5 h vs 7 h. HR 1.29 - roughly
+      6x the excess log-risk that the self-report dose-response meta-analyses give at 5 h
+      (yin2017 log 0.039; liu2017 log 0.058; here log 0.255). Independent confirmation of the
+      chaput2026 finding that objective measurement gives a LARGER estimate, in an overlapping
+      UK Biobank sample.
+    covariates: ["demographics", "lifestyle factors", "medical conditions"]
+    followup_years: 6.8
+    cohort_family: "UK_Biobank"
+    quote: "Over an average of 6.8 years 2973 deaths occurred (1700 cancer, 586 CVD deaths). Overall sleep duration was significantly associated with risk for all-cause (p < 0.01), cancer (p < 0.01), and CVD (p = 0.03) mortality. For example, when compared to sleep durations of 7.0 hrs/d, durations of 5 hrs/d were associated with a 29% higher risk for all-cause mortality (HR: 1.29 [1.09, 1.52])."
+  - outcome_domain: mortality
+    outcome_construct: sleep_fragmentation_and_mortality_null
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "wake after sleep onset (WASO) and number of 5-minute awakenings vs mortality"}
+    scale: log_hr
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No effect size reported; the paper states these exposures were not associated with mortality. Value set to 0 (null) with se null because no number is derivable. Do NOT treat this as a measured zero."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Recorded as a NULL FINDING, not a measured effect. Sleep continuity measures were unrelated to
+      mortality in this analysis. This matters because it partly undercuts the "device measures capture
+      pathology" reading of chaput2026 - if fragmentation were the pathology channel, WASO should
+      predict. But chaput2026 found sleep PERIOD time (which contains WASO) out-predicted total sleep
+      time, so the two papers are in tension on this point.
+    covariates: ["demographics", "lifestyle factors", "medical conditions"]
+    followup_years: 6.8
+    cohort_family: "UK_Biobank"
+    quote: "WASO and number of awakenings were not associated with mortality."
+  - outcome_domain: mortality
+    outcome_construct: sleep_timing_and_mortality
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "L5 (least-active 5 hours) midpoint <2:30 or >=3:30 vs intermediate midpoint"}
+    scale: log_hr
+    unit: null
+    value: 0.182322
+    se: null
+    ci: null
+    conversion_formula: "log_hr = ln(1.20) = 0.182322 from the reported '~20% higher risk'. No CI is given in the abstract for this contrast, so se is null - it must not be invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = higher mortality with early OR late sleep timing. Approximately the same magnitude as
+      the 5 h duration effect. Directly relevant framing: sleep TIMING, which a college student
+      manipulates constantly, predicts mortality about as strongly as sleep DURATION does, which makes
+      it hard to attribute any of this to sleep debt per se.
+    covariates: ["demographics", "lifestyle factors", "medical conditions"]
+    followup_years: 6.8
+    cohort_family: "UK_Biobank"
+    quote: "Individuals with L5 early or late midpoints (<2:30 or >= 3:30) had a ~20% higher risk for all-cause mortality, compared to those with intermediate L5 midpoints"
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_death_rate_in_accelerometer_subsample
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "whole accelerometer subsample, all sleep durations"}
+    scale: probability
+    unit: "deaths per participant over a mean 6.8 years, ages 40-69 at baseline"
+    value: 0.03367
+    se: null
+    ci: null
+    conversion_formula: "2973 deaths / 88282 participants = 0.03367"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Absolute anchor: 3.37% died over 6.8 y at ages 40-69. Applying HR 1.29 to this baseline gives an
+      absolute excess of about 1 death per 100 people over 6.8 years. At age 19-26 the 7-year
+      probability of death for a UK male is on the order of 0.3%, so the same HR would produce an
+      absolute excess about 30x smaller. The relative scale is deeply misleading here.
+    covariates: []
+    followup_years: 6.8
+    cohort_family: "UK_Biobank"
+    quote: "Data were from a cohort of 88 282 adults (40-69 years) in UK Biobank that wore a wrist-worn triaxial accelerometer for 7 days ... Over an average of 6.8 years 2973 deaths occurred (1700 cancer, 586 CVD deaths)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Objective exposure (T4) is the main strength, plus a large sample and register-linked mortality.
+    Weaknesses: (1) mean follow-up of only 6.8 years in 40-69 year olds means a substantial share of
+    deaths are from disease already present at accelerometry, and the abstract reports no early-death
+    exclusion or lag analysis; (2) 7 days of wear treated as a stable trait; (3) adjustment for
+    "medical conditions" is unspecified and cannot handle subclinical disease; (4) accelerometer
+    subsample is a healthy-volunteer subset; (5) the paper attracted a published commentary
+    (Sleep 2024;47(3):zsae009), which I did not retrieve. Abstract-only access.
+funding: "US National Institutes of Health / National Cancer Institute (intramural)"
+notes: >
+  TARGET EXTRACTION #3, objective-measurement component. Second independent confirmation that
+  actigraphy does not weaken the short-sleep mortality association in midlife/older adults:
+  HR 1.29 (1.09-1.52) at objectively measured 5 h vs 7 h.
+  .
+  Note the internal contradiction with the pathology explanation: if objectively short sleep were
+  simply a marker of disturbed, fragmented, pathological sleep, then WASO and awakenings should also
+  predict mortality. They did not ("WASO and number of awakenings were not associated with
+  mortality"). Against that, the observation that sleep TIMING predicts mortality about as strongly as
+  duration (~20% for early or late L5 midpoint) suggests that what these accelerometer measures are
+  really capturing is a general "disordered life / disordered physiology" latent variable rather than
+  sleep debt specifically.
+  .
+  COHORT OVERLAP WARNING: UK_Biobank accelerometer subsample - overlaps chaput2026 (76,811),
+  liang2023 (90,398), windred2024 (60,977) and li2026 (85,618) very heavily. These are five analyses
+  of essentially ONE dataset of roughly 90,000 people and about 3,000 deaths. They are NOT five
+  independent studies and must not be pooled as such.
+shard: "s13_mortality"

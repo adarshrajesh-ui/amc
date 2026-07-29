@@ -1,0 +1,83 @@
+study_id: brandenberger2004
+citation: 'Brandenberger G, Weibel L. The 24-h growth hormone rhythm in men: sleep and circadian influences questioned.
+  J Sleep Res. 2004;13(3):251-255.'
+doi: 10.1111/j.1365-2869.2004.00415.x
+pmid: '15339260'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: 'The 24-h growth hormone rhythm in men: sleep and circadian influences questioned'
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 21
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: FR
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: endocrine
+  outcome_construct: sleep_related_gh_pulse_as_pct_of_24h_gh_production
+  exposure:
+    type: descriptive
+    dose_h: 8
+    referent_h: null
+    duration_days: null
+    contrast_label: day-active men, habitual 23:00-07:00 sleep, 10-min sampling over 24 h (n=10)
+  scale: pct_change
+  unit: '% of 24-h GH production'
+  value: 52.8
+  se: 3.5
+  ci:
+  - 45.9
+  - 59.7
+  conversion_formula: se = reported SEM (3.5); ci = 52.8 +/- 1.96*3.5. Implied SD = 3.5*sqrt(10) = 11.07.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Positive = share of 24-h GH production attributable to the sleep-onset pulse. This is the EXPOSED FRACTION,
+    not a harm.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: In day-active subjects, melatonin and GH showed the well-known 24-h profiles, with a major sleep-related GH pulse
+    accounting for 52.8 +/- 3.5% of the 24-h GH production and the onset of the melatonin surge occurring at 21:53 hours
+    +/- 18 min.
+- outcome_domain: endocrine
+  outcome_construct: total_24h_gh_secretion_under_displaced_sleep
+  exposure:
+    type: other
+    dose_h: 8
+    referent_h: 8
+    duration_days: null
+    contrast_label: night workers sleeping 07:00-15:00 (n=11) vs day-active men (n=10)
+  scale: pct_change
+  unit: '% change in 24-h GH production'
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: value=0 encodes the authors' finding of NO net change in 24-h GH output ('constant') despite a blunted
+    sleep-onset pulse. Negative would mean genuine loss. No dispersion reported, so se=null; treat as a qualitative null.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: The sleep-related GH pulse was lowered, but the reduction was compensated for by the emergence of large individual
+    pulses occurring unpredictably during waking periods, so that the total amount of GH secreted during the 24 h was constant.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: small n; night workers vs day workers is a between-group comparison with self-selection; 10-min sampling over 24
+    h is a strong exposure measure
+funding: null
+notes: 'THE decisive study for the redistribution-vs-loss question. Sleep displacement blunts the sleep-onset GH pulse but
+  24-h total GH is preserved by compensatory waking pulses. Authors generalise this explicitly to sleep deprivation: ''the
+  blunting of the sleep-related GH pulse is counteracted, as in sleep-deprived persons, by a compensatory mechanism promoting
+  GH pulses during wakefulness.'''
+shard: s11_endocrine_growth

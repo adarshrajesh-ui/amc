@@ -1,0 +1,56 @@
+study_id: fatima2015
+citation: 'Fatima Y, Doi SA, Mamun AA. Longitudinal impact of sleep on overweight and obesity in children and adolescents: a systematic review and bias-adjusted meta-analysis. Obesity Reviews. 2015;16(2):137-149.'
+doi: 10.1111/obr.12245
+pmid: '25589359'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Longitudinal impact of sleep on overweight and obesity in children and adolescents: a systematic review and bias-adjusted meta-analysis.'
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 24821
+n_studies_pooled: 11
+population:
+  age_mean: null
+  age_range:
+  - 2
+  - 20
+  pct_female: null
+  country: multinational
+  adolescent_match: mixed
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: incident_overweight_or_obesity_short_vs_long_sleep
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: short vs long sleep duration (Sleep Health Foundation age-referenced cut-offs)
+  scale: log_or
+  unit: null
+  value: 0.7655
+  se: 0.1374
+  ci:
+  - 0.4947
+  - 1.0332
+  conversion_formula: log_or = ln(2.15); se = (ln(2.81) - ln(1.64))/3.92 = 0.1374
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = short sleep predicts HIGHER odds of future overweight/obesity (harm)
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_11_longitudinal_cohorts
+  quote: 'Meta-analysis of 11 longitudinal studies, comprising 24,821 participants, revealed that subjects sleeping for short duration had twice the risk of being overweight/obese, compared with subjects sleeping for long duration (odds ratio 2.15; 95% confidence interval: 1.64-2.81).'
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: Longitudinal (prospective) design, so temporality is respected, but exposure is self-/parent-reported and the contrast is short vs LONG (not short vs recommended), which inflates the odds ratio relative to a short-vs-normal contrast. Bias-adjusted (inverse-variance heterogeneity) model used.
+funding: not stated in abstract
+notes: 22 longitudinal studies reviewed, 11 pooled. Contrast is short vs LONG sleep, not short vs recommended sleep - this is the single biggest reason this OR (2.15) exceeds Miller 2018's adolescent RR (1.30). Age range covers childhood and adolescence; the adolescent-only subset is not separately reported in the abstract.
+shard: s09_obesity_bmi

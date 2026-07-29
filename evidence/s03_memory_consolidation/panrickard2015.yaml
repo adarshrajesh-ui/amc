@@ -1,0 +1,98 @@
+study_id: panrickard2015
+citation: "Pan SC, Rickard TC. Sleep and motor learning: Is there room for consolidation? Psychological Bulletin. 2015;141(4):812-834."
+doi: "10.1037/bul0000009"
+pmid: "25822130"
+url: "https://doi.org/10.1037/bul0000009"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep and motor learning: Is there room for consolidation?"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: 1296
+n_studies_pooled: 34
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: cognition
+    outcome_construct: motor_sequence_relative_sleep_gain_uncorrected
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep vs wake post-delay gain, 23 matched sleep-wake pairs, before moderator adjustment"}
+    scale: cohens_d
+    unit: null
+    value: 0.44
+    se: 0.179
+    ci: [0.09, 0.79]
+    conversion_formula: "se = (0.79 - 0.09)/3.92 = 0.1786"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = better motor-sequence performance after sleep than after wake. This is the UNCORRECTED estimate."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The estimated weighted mean of drelative over the 23 sleep-wake pairs, based on the same random effects meta analytical method that was used for the primary meta-analyses, was 0.44, p = .018, CI: 0.09, 0.79."
+  - outcome_domain: cognition
+    outcome_construct: motor_sequence_sleep_status_effect_moderator_adjusted
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep-status effect in the final working model, after adjusting for gain-score averaging, reactive inhibition, time of testing, training duration and elderly status"}
+    scale: cohens_d
+    unit: null
+    value: 0.29
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = residual sleep advantage after confound adjustment. The authors read this as possible STABILISATION, explicitly not enhancement."
+    covariates: ["gain-score averaging", "reactive inhibition build-up", "time of testing", "training duration", "elderly status"]
+    followup_years: null
+    cohort_family: null
+    quote: "That effect is somewhat larger than the relative gain effect in the final working model (i.e., the sleep status effect; d = 0.29), and it can be viewed as a more veridical estimate of the effect."
+  - outcome_domain: cognition
+    outcome_construct: motor_sequence_postdelay_gain_sleep_groups
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "within-group post-delay gain, sleep groups (full night + nap combined)"}
+    scale: cohens_d
+    unit: null
+    value: 1.0
+    se: 0.128
+    ci: [0.75, 1.25]
+    conversion_formula: "se = (1.25 - 0.75)/3.92 = 0.1276"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = improvement across the delay. Wake groups gained d = 0.36 on the same measure; the raw sleep-wake contrast is what the enhancement literature reports and what this paper argues is confounded."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "For sleep groups (combined full night and nap) there was a large and highly significant post-sleep gain (d = 1.0, df = 19.0, p < 0.0001, CI: 0.75, 1.25), whereas for waking groups there was a much smaller but still significant gain (d = 0.36 ...)"
+rob:
+  tool: AMSTAR-2
+  judgement: low
+  notes: "34 articles / 88 experimental groups / 1,296 subjects; random-effects meta-regression with pre-specified moderators. This is a critical/deflationary meta-analysis whose whole point is that the naive pooled effect is confounded; the authors' own preferred conclusion is the null."
+funding: "not stated in retrieved text"
+notes: |
+  THIS RECORD EXISTS TO CONSTRAIN, NOT TO SUPPORT, THE PROCEDURAL-LEARNING-LOSS CHANNEL.
+  Verbatim conclusion: "With those variables accounted for, there was no evidence that sleep enhances
+  learning. Thus, the literature speaks against, rather than for, the enhancement hypothesis. Overall
+  there was relatively better performance after sleep than after wakefulness, suggesting that sleep
+  may stabilize memory. That effect, however, was not consistent across different experimental
+  designs. We conclude that sleep does not enhance motor learning and that the role of sleep in the
+  stabilization of memory cannot be conclusively determined based on the literature to date."
+
+  Aggregated post-delay gain across wake and sleep groups combined was d = 0.83, p < .0001,
+  95% CI [0.61, 1.05]; the wake-minus-sleep contrast on that measure was d = -0.64.
+
+  The downstream model should NOT treat procedural/motor consolidation loss as an established channel
+  of the same standing as declarative loss. Pair this record with rickard2022 (PET/PEESE reanalysis of
+  these same 88 effect sizes, which drives the corrected post-sleep gain negative) and with schmid2020
+  (an independent meta-analysis that reaches the opposite headline, g = 0.43 [0.31, 0.55]). Three
+  meta-analyses of overlapping literatures disagree about sign and significance; that disagreement is
+  itself the honest input.
+
+  Full text of the accepted manuscript retrieved from psycnet.apa.org (2015-13570-001.pdf); all quoted
+  statistics read from that document. Identifiers verified via Crossref and PubMed.
+shard: "s03_memory_consolidation"

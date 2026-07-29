@@ -1,0 +1,170 @@
+study_id: haghayegh2019
+citation: "Haghayegh S, Khoshnevis S, Smolensky MH, Diller KR, Castriotta RJ. Accuracy of Wristband Fitbit Models in Assessing Sleep: Systematic Review and Meta-Analysis. J Med Internet Res. 2019;21(11):e16273."
+doi: "10.2196/16273"
+pmid: "31778122"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Accuracy of Wristband Fitbit Models in Assessing Sleep: Systematic Review and Meta-Analysis"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 22
+n_studies_pooled: 8
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: tst_bias_current_generation_sleep_staging_fitbit_vs_psg
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "SLEEP-STAGING (current-generation, heart-rate-variability + accelerometer) Fitbit models minus PSG, total sleep time, 3 comparisons"}
+    scale: hedges_g
+    unit: "Hedges g in SD units of the PSG value; POSITIVE = Fitbit reports LOWER value than PSG (authors' sign convention)"
+    value: -0.15
+    se: 0.1429
+    ci: [-0.43, 0.13]
+    conversion_formula: "se = (upper - lower)/3.92 = (0.13 - -0.43)/3.92 = 0.56/3.92 = 0.1429. Random-effects model, I^2 = 0% (P = .98)."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NEGATIVE = device OVERestimates TST relative to PSG, under the authors' stated convention ('A positive effect size infers lower values derived by Fitbit relative to those derived by PSG'). The CI crosses zero: current-generation sleep-staging Fitbits show NO statistically significant TST bias (P = .29). Absolute bias was under 12 min in all 3 comparisons."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The pooled estimate of effect size (see Figures 2 - 5 ) revealed a significant underestimation of SOL (N=3 comparisons; effect size=0.32, 95% CI 0.04 to 0.60; P =.03) and a nonsignificant difference in estimation of WASO (N=3 comparisons; effect size=0.16, 95% CI -0.12 to 0.44; P =.25), TST (N=3 comparisons; effect size=-0.15, 95% CI -0.43 to 0.13; P =.29), and SE (N=1 comparison; effect size=-0.27, 95% CI -0.65 to 0.13; P =.19) by sleep-staging Fitbit models versus PSG."
+  - outcome_domain: exposure_measurement
+    outcome_construct: sol_bias_current_generation_sleep_staging_fitbit_vs_psg
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "SLEEP-STAGING (current-generation) Fitbit models minus PSG, SLEEP ONSET LATENCY, 3 comparisons"}
+    scale: hedges_g
+    unit: "Hedges g in SD units of the PSG value; POSITIVE = Fitbit reports LOWER (shorter) latency than PSG"
+    value: 0.32
+    se: 0.1429
+    ci: [0.04, 0.60]
+    conversion_formula: "se = (0.60 - 0.04)/3.92 = 0.56/3.92 = 0.1429. Random-effects, I^2 = 0% (P = .66), P = .03 for the pooled effect."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE and statistically significant = current-generation Fitbits systematically report SHORTER sleep onset latency than PSG. THIS IS THE MOST IMPORTANT NUMBER IN THIS RECORD FOR OUR PURPOSE - see notes. The bias runs in the falsely-reassuring direction for a DSWPD workup."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The pooled estimate of effect size (see Figures 2 - 5 ) revealed a significant underestimation of SOL (N=3 comparisons; effect size=0.32, 95% CI 0.04 to 0.60; P =.03)"
+  - outcome_domain: exposure_measurement
+    outcome_construct: tst_bias_older_nonsleep_staging_fitbit_vs_psg
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "NON-SLEEP-STAGING (older, movement-only) Fitbit models minus PSG, total sleep time, 7 comparisons"}
+    scale: hedges_g
+    unit: "Hedges g; POSITIVE = Fitbit reports LOWER value than PSG"
+    value: -0.51
+    se: 0.1046
+    ci: [-0.71, -0.30]
+    conversion_formula: "se = (-0.30 - -0.71)/3.92 = 0.41/3.92 = 0.1046. Random-effects, I^2 = 8.8% (P = .36), P < .001."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NEGATIVE and significant = older movement-only Fitbits substantially OVERestimate total sleep time. Absolute overestimation ranged from ~7 to ~67 min across studies."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "In reference to polysomnography (PSG), nonsleep-staging Fitbit models tended to overestimate total sleep time (TST; range from approximately 7 to 67 mins; effect size=-0.51, P <.001; heterogenicity: I 2 =8.8%, P =.36)"
+  - outcome_domain: exposure_measurement
+    outcome_construct: waso_bias_older_nonsleep_staging_fitbit_vs_psg
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "NON-SLEEP-STAGING Fitbit models minus PSG, wake after sleep onset, 5 comparisons"}
+    scale: hedges_g
+    unit: "Hedges g; POSITIVE = Fitbit reports LOWER value than PSG"
+    value: 0.60
+    se: 0.1148
+    ci: [0.38, 0.83]
+    conversion_formula: "se = (0.83 - 0.38)/3.92 = 0.45/3.92 = 0.1148. I^2 = 0% (P = .92), P < .001."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = older devices UNDERestimate time awake after sleep onset by ~6-44 min, i.e. they miss wakefulness. Same underlying failure as the low wake specificity below."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "and underestimate wake after sleep onset (WASO; range from approximately 6 to 44 mins; effect size=0.60, P <.001; heterogenicity: I 2 =0%, P =.92)"
+  - outcome_domain: exposure_measurement
+    outcome_construct: wake_detection_specificity_current_vs_older_fitbit
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "epoch-by-epoch SPECIFICITY for detecting wake, current-generation sleep-staging Fitbit models (range across studies)"}
+    scale: probability
+    unit: "specificity (proportion of true wake epochs correctly classified); ci carries the RANGE across studies, not a confidence interval"
+    value: 0.635
+    se: null
+    ci: [0.58, 0.69]
+    conversion_formula: "value = midpoint of the reported 0.58-0.69 range. Older non-sleep-staging models were far worse at 0.10-0.52 (that range is recorded in the quote). No pooled estimate or CI was reported, so se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = better at recognising wake. Even current-generation devices misclassify roughly a third of true wake epochs as sleep, while sensitivity for SLEEP is 0.95-0.96. This asymmetry (excellent at calling sleep, poor at calling wake) is the mechanism behind both the TST overestimation and the SOL underestimation."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "In reference to PSG, nonsleep-staging Fitbit models correctly identified sleep epochs with accuracy values between 0.81 and 0.91, sensitivity values between 0.87 and 0.99, and specificity values between 0.10 and 0.52. ... Sleep-staging Fitbit models showed higher sensitivity (0.95-0.96) and specificity (0.58-0.69) values in detecting sleep epochs than nonsleep-staging models and those reported in the literature for regular wrist actigraphy."
+  - outcome_domain: exposure_measurement
+    outcome_construct: current_generation_absolute_tst_bias_minutes
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "absolute (unsigned) TST bias of new-generation Fitbit models vs PSG, upper bound across the 3 available comparisons"}
+    scale: raw_units
+    unit: "minutes (upper bound on absolute bias)"
+    value: 12.0
+    se: null
+    ci: null
+    conversion_formula: "reported as 'less than 12 minutes in the three comparisons in which TST was determined'; this is an upper bound, not a point estimate, so se and ci are null"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is the number to quote for 'how accurate is a current-generation wearable for sleep DURATION': under 12 min absolute bias, which the authors call clinically negligible. It does NOT license using the device for latency or wake."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Overall, the amount of bias in estimating the majority of these sleep parameters by new-generation Fitbit models in reference to PSG was clinically negligible: less than 12 minutes in the three comparisons in which TST was determined, 1.98% in the single comparison in which SE was assessed [ 26 ], and less than 7 minutes in the three comparisons"
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: |
+    Strengths: PRISMA-adherent, 7 databases, 3085 records screened to 22 studies with 8 contributing
+    quantitative data; random-effects models; heterogeneity essentially absent for every pooled
+    parameter (I^2 = 0-24%); the authors report prediction intervals as well as CIs; and critically
+    they STRATIFY by device generation, which is the analysis that makes the literature coherent.
+    Concerns: (1) only 3 comparisons underpin every current-generation estimate, so these are
+    fragile and the CIs are wide relative to their point estimates; (2) SE for sleep-staging models
+    rests on a SINGLE comparison; (3) Fitbit only - does not cover Oura, Apple Watch, Garmin,
+    Whoop or Samsung, so it cannot be read as a statement about consumer wearables generally;
+    (4) 2019 vintage, so "current generation" means Fitbit Charge 2 / Alta HR era hardware, not
+    2025 devices; (5) validation samples were adults, largely not adolescents, and mostly single
+    laboratory nights with normal time in bed - accuracy on the short and irregular nights that
+    characterise our subject is not established here; (6) effect sizes are standardised by the
+    PSG SD, which varies across samples, so pooled g values are less interpretable than the raw
+    minute biases (I extracted both).
+funding: "Not stated in the retrieved full text; no funder records in Crossref and no grant records in the PubMed entry."
+notes: |
+  WHY I ADDED THIS THIRD WEARABLE RECORD: it resolves an apparent contradiction between my other
+  two sources, and it changes a protocol recommendation.
+
+  RECONCILIATION. Chinoy 2021 found Fitbit Alta HR TST bias of only +2.6 min; Lee 2025 pooled
+  across many consumer devices and found -16.9 min. Those look inconsistent. Haghayegh's
+  stratification explains it: DEVICE GENERATION is the moderator. Movement-only devices
+  overestimate TST substantially (g = -0.51, 95% CI -0.71 to -0.30; +7 to +67 min), whereas
+  devices that add heart-rate variability to staging show no significant TST bias (g = -0.15,
+  95% CI -0.43 to 0.13; absolute bias < 12 min). So the honest answer to the task's question
+  "how accurate are CURRENT-generation wearables for total sleep time" is: bias under ~12 min,
+  which is acceptable for estimating habitual sleep duration.
+
+  THE FINDING THAT MATTERS MORE, AND IT IS A WARNING. Current-generation Fitbits SIGNIFICANTLY
+  UNDERESTIMATE SLEEP ONSET LATENCY (g = 0.32, 95% CI 0.04 to 0.60, P = .03). Sleep onset latency
+  is the single most decision-relevant measurement in my entire shard - it carries LR 0.21 (fast
+  onset) to 3.4 (>90 min) for DSWPD, far more information than any other one-question item. A
+  device that systematically shortens the measured latency biases that test in the FALSELY
+  REASSURING direction: it will tend to make a phase-delayed subject look like he falls asleep
+  promptly, pushing the DSWPD posterior down when it should go up. The mechanism is visible in the
+  same paper - specificity for wake is only 0.58-0.69 even in current devices, so quiet wakeful
+  lying-in-bed before sleep onset is scored as sleep.
+
+  PROTOCOL CONSEQUENCE: do not take sleep onset latency from a wearable. Take it from the sleep
+  diary, and use the wearable only for sleep duration and timing. This is consistent with the AASM
+  actigraphy guideline (smith2018.yaml), which covers FDA-cleared actigraphs and explicitly does
+  not extend to consumer devices.
+
+  DEVICE-GENERATION CAVEAT: "current generation" in a 2019 review means the Charge 2 / Alta HR
+  era. Whether 2025-2026 hardware has closed the wake-specificity gap is not answered by this
+  record, and Lee 2025 (newer, broader) still found a significant pooled TST underestimate across
+  brands, so I would not assume the problem has been solved.
+shard: "s19_sleep_disorders"

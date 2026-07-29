@@ -1,0 +1,106 @@
+study_id: bernardi2016
+citation: "Bernardi G, Cecchetti L, Siclari F, Buchmann A, Yu X, Handjaras G, et al. Sleep reverts changes in human gray and white matter caused by wake-dependent training. NeuroImage. 2016;129:367-377."
+doi: "10.1016/j.neuroimage.2016.01.020"
+pmid: "26812659"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4803519/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep reverts changes in human gray and white matter caused by wake-dependent training"
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 16
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: cortical_mean_diffusivity_after_prolonged_wake
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1,
+               contrast_label: "24 h intense task practice combined with sleep deprivation vs baseline wake"}
+    scale: raw_units
+    unit: "direction of change in cortical mean diffusivity (qualitative; magnitudes reported only in figures/full text)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded as -1 = significant DECREASE. Abstract reports direction and significance but no numeric effect size; full text behind access. se null because no numeric estimate retrieved. DO NOT pool this magnitude; use only for the qualitative state-vs-trait inference."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = decrease in cortical mean diffusivity with extended wake/deprivation. Direction of 'harm' is undefined here - the point of this record is that the measure MOVES ACUTELY and then REVERTS."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Compared to baseline wake, 12 h of training led to a decline in cortical mean diffusivity. The decrease became even more significant after 24 h of task practice combined with sleep deprivation."
+  - outcome_domain: brain_structure
+    outcome_construct: subcortical_gm_wm_volume_and_ventricular_volume_after_prolonged_wake
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1,
+               contrast_label: "prolonged task practice + sleep deprivation vs baseline"}
+    scale: raw_units
+    unit: "direction of change (qualitative)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded as +1 = significant INCREASE in GM and WM subcortical volumes (with decreased ventricular volume). No numeric magnitude in abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive = volumes INCREASED after prolonged wake/deprivation. Note the sign: acute sleep loss made gray and white matter volumes LARGER, the opposite of the 'sleep loss shrinks the brain' story."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Prolonged practice also resulted in decreased ventricular volume and increased GM and WM subcortical volumes."
+  # ---------- THE REVERSIBILITY EFFECT ----------
+  - outcome_domain: recovery
+    outcome_construct: reversal_of_structural_mri_changes_after_recovery_sleep
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: null, duration_days: 1,
+               contrast_label: "post-training recovery sleep vs post-deprivation state"}
+    scale: probability
+    unit: "proportion of measured structural changes that reverted after one night of recovery sleep"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Authors state ALL changes reverted; encoded as proportion 1.0. No per-metric numeric reversal magnitudes given in abstract, hence se null. With n=16 the upper bound on a true non-reversal rate is wide (exact 95% CI for 0/k events is not derivable without k)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1.0 = complete reversal. This is the empirical anchor for the state-versus-trait argument: MRI-visible gray and white matter changes induced by ~24 h of wake are fully undone by a single night of sleep."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "All changes reverted after recovery sleep."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Within-subject design across the physiological sleep/wake cycle, so each participant is their own control - strong for detecting acute state effects. Concerns: n=16; no blinding possible; sleep deprivation is confounded with 24 h of intense task practice by design, so the acute structural change cannot be attributed to sleep loss alone; multiple imaging modalities and timepoints raise multiplicity; no numeric effect sizes retrievable from the abstract."
+funding: "NIH (NICHD, NIMH); non-US government support"
+notes: |
+  STATE-VERSUS-TRAIT KEYSTONE. This is the single most important methodological record in the
+  shard, because it undermines the interpretation of every cross-sectional volume difference
+  reported elsewhere.
+
+  The chain of inference it supports:
+  (a) MRI-derived gray matter volume, white matter volume, ventricular volume and cortical
+      mean diffusivity change measurably within 12-24 h of extended wakefulness.
+  (b) Those changes fully REVERT after one night of recovery sleep.
+  (c) Therefore a cross-sectional scan of a habitually short sleeper cannot distinguish
+      "durable structural damage" from "the transient state of being under-slept on the day
+      of the scan." Almost no observational study in this literature controls the participant's
+      sleep on the night before the scan.
+
+  This also reframes the acute-deprivation VBM literature (liu2014, sun2020, elvsashagen2017):
+  those studies are measuring a reversible physiological state, plausibly involving fluid
+  shifts, extracellular space and CSF production, not neural loss. The authors say as much:
+  "they may be linked to its role in promoting the production of cerebrospinal fluid and the
+  decrease in synapse size and strength, as well as to its recently discovered ability to
+  enhance the extracellular space and the clearance of brain metabolites."
+
+  ACCESS LIMITATION, STATED PLAINLY: only the abstract was retrievable. Directions and
+  significance are quoted verbatim; magnitudes are NOT extracted and must not be invented.
+  The qualitative reversal claim is what this record contributes.
+shard: "s15_brain_structure"

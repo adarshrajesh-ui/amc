@@ -1,0 +1,91 @@
+study_id: canessa2011
+citation: "Canessa N, Castronovo V, Cappa SF, Aloia MS, Marelli S, Falini A, Alemanno F, Ferini-Strambi L. Obstructive sleep apnea: brain structural changes and neurocognitive function before and after treatment. American Journal of Respiratory and Critical Care Medicine. 2011;183(10):1419-1426."
+doi: "10.1164/rccm.201005-0693OC"
+pmid: "21037021"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Obstructive Sleep Apnea: Brain Structural Changes and Neurocognitive Function before and after Treatment"
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 32
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "Italy"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: hippocampal_and_frontal_gm_volume_before_vs_after_3mo_treatment
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: null, duration_days: 90,
+               contrast_label: "3 months of treatment for obstructive sleep apnea, pre- vs post-treatment VBM in the same 17 patients"}
+    scale: raw_units
+    unit: "direction of change in regional grey matter volume (qualitative; no magnitude in retrievable abstract)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded +1 = significant INCREASE in grey matter volume after treatment. The abstract reports direction and significance only - no cluster statistics, no percentage, no CI. se null - not invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive = grey matter volume INCREASED in hippocampal and frontal structures after 3 months of treatment, in the same regions that had been reduced before treatment. This is the reversal direction."
+    covariates: []
+    followup_years: 0.25
+    cohort_family: "Milan_OSA"
+    quote: "After treatment, we observed significant improvements involving memory, attention, and executive-functioning that paralleled gray-matter volume increases in hippocampal and frontal structures."
+  - outcome_domain: brain_structure
+    outcome_construct: baseline_gm_reductions_in_untreated_osa
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "17 treatment-naive OSA patients vs 15 age-matched healthy controls, cross-sectional VBM at baseline"}
+    scale: raw_units
+    unit: "direction of group difference (qualitative)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded -1 = focal grey matter volume REDUCTIONS in patients vs controls. No magnitudes in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = smaller grey matter volume in untreated OSA in left hippocampus (entorhinal cortex), left posterior parietal cortex, right superior frontal gyrus."
+    covariates: ["age (matched)"]
+    followup_years: null
+    cohort_family: "Milan_OSA"
+    quote: "These impairments were associated with focal reductions of gray-matter volume in the left hippocampus (entorhinal cortex), left posterior parietal cortex, and right superior frontal gyrus."
+rob:
+  tool: RoB2
+  judgement: high
+  notes: "Uncontrolled pre-post design for the treatment arm - there is no untreated OSA comparison group followed over the same 3 months, so regression to the mean, scanner drift, practice effects on the cognitive tests, and repeat-scan segmentation effects are all uncontrolled. n=17 treated. Tier is recorded as T1 because the exposure (treatment) was deliberately administered and each patient serves as their own control, but the absence of a parallel control arm means it functions closer to a quasi-experiment; ROBINS-I judgement would also be serious. No effect magnitudes retrievable."
+funding: "Non-US government support (Italy)"
+notes: |
+  THE MOST-CITED EVIDENCE THAT SLEEP-DISORDER-RELATED STRUCTURAL DEFICITS ARE REVERSIBLE, AND
+  THE BEST AVAILABLE HUMAN MODEL OF STRUCTURAL RECOVERY AFTER CHRONIC SLEEP DISRUPTION.
+
+  WHAT IT SUPPORTS: grey matter volume reductions in hippocampal and frontal regions, present in
+  untreated OSA, PARTIALLY OR FULLY REVERSED within 3 months of treatment, alongside cognitive
+  improvement. Structural MRI differences of the kind reported in observational sleep studies are
+  therefore not necessarily fixed.
+
+  THREE REASONS THIS TRANSPORTS ONLY PARTIALLY TO THE SUBJECT, AND ALL THREE MATTER:
+
+  1. OSA IS NOT SLEEP RESTRICTION. Its defining insult is repetitive nocturnal intermittent
+     HYPOXAEMIA plus arousal-driven sleep fragmentation. The authors name both mechanisms:
+     "may be secondary to sleep deprivation and repetitive nocturnal intermittent hypoxemia."
+     Hypoxaemia is a plausible route to real tissue injury; voluntarily going to bed at 1am is not.
+     If anything, OSA should OVERSTATE the structural harm attributable to short sleep - so the
+     fact that even OSA's deficits reverse is the stronger form of the reversibility argument.
+
+  2. ADULTS, NOT ADOLESCENTS. Nothing here addresses a maturational trajectory.
+
+  3. UNCONTROLLED PRE-POST. With n=17 and no untreated comparison arm, part of the apparent
+     recovery could be measurement artefact.
+
+  HOW I USE IT IN THE VERDICT: as convergent support - alongside bernardi2016 (acute changes fully
+  revert after one night) and xu2025 (randomised CPAP moves cortical thickness) - for the
+  proposition that sleep-related structural MRI differences are DYNAMIC rather than fixed scars.
+  That is the direct counter to a claim of permanence.
+shard: "s15_brain_structure"

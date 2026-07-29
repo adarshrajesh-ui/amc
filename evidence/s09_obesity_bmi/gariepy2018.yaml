@@ -1,0 +1,82 @@
+study_id: gariepy2018
+citation: Gariepy G, Janssen I, Sentenac M, Elgar FJ. School Start Time and the Healthy Weight of Adolescents. Journal of Adolescent Health. 2018;63(1):69-73.
+doi: 10.1016/j.jadohealth.2018.01.009
+pmid: '30060859'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: School Start Time and the Healthy Weight of Adolescents.
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 29635
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 10
+  - 18
+  pct_female: null
+  country: Canada
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: bmi_z_per_10min_later_school_start
+  exposure:
+    type: sleep_extension
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: every 10-minute delay in school start time (362 schools, 2013/2014 Canadian HBSC) -> BMI z-score
+  scale: raw_units
+  unit: BMI z-score per 10 minutes of later school start
+  value: -0.02
+  se: 0.0102
+  ci:
+  - -0.04
+  - 0.0
+  conversion_formula: 'Reported as a 0.02 SMALLER BMI z-score per 10-min delay, 95% CI (0.00, 0.04); sign flipped to negative for a ''more sleep opportunity -> lower BMI-z'' convention. se = (0.04 - 0.00)/3.92 = 0.0102. Scaled to one hour: -0.12 BMI-z per hour (se 0.0612).'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = later start (more sleep opportunity) associated with lower BMI z-score. CI touches zero. Note the implied per-hour effect (-0.12 BMI-z) is 4x LARGER than Miller 2018's prospective per-hour BMI-z estimate (-0.03), which is the expected cross-sectional inflation.
+  covariates:
+  - grade
+  - family affluence
+  - school rurality
+  - latitude
+  - province
+  followup_years: null
+  cohort_family: HBSC_Canada
+  quote: Every 10-minute delay in school start time corresponded with a .02 (95% confidence interval .00, .04) smaller BMI z-score.
+- outcome_domain: anthropometric
+  outcome_construct: overweight_obesity_null_school_start_time
+  exposure:
+    type: sleep_extension
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: school start time -> overweight or obesity (binary)
+  scale: log_or
+  unit: null
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: Authors report no significant relation and give no estimate; value encoded as 0 to represent the reported null, se null because not derivable.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NULL for the CLINICAL endpoint even though the continuous BMI-z endpoint was borderline positive. Pattern consistent with a small shift in the whole distribution rather than a change in obesity prevalence.
+  covariates: []
+  followup_years: null
+  cohort_family: HBSC_Canada
+  quote: School start time was not significantly related to overweight or obesity.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Large, nationally representative, multilevel-modelled, and the exposure (school start time) is exogenous to the individual, which reduces reverse-causation concern. But CROSS-SECTIONAL, BMI is estimated rather than measured ('We estimated body mass indices'), and school start time is only a proxy for sleep duration.
+funding: not stated in abstract
+notes: Useful because the exposure is quasi-exogenous, but the finding is borderline (CI touches zero) and the clinical endpoint is null. Compare directly with widome2023, which tested the SAME exposure LONGITUDINALLY with measured BMI and found nothing. The contrast between these two records is a clean illustration of cross-sectional inflation in this literature.
+shard: s09_obesity_bmi

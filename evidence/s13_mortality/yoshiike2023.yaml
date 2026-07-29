@@ -1,0 +1,246 @@
+study_id: yoshiike2023
+citation: "Yoshiike T, Kawamura A, Utsumi T, Matsui K, Kuriyama K. A prospective study of the association of weekend catch-up sleep and sleep duration with mortality in middle-aged adults. Sleep Biol Rhythms. 2023 May 5;21(4):409-418."
+doi: "10.1007/s41105-023-00460-6"
+pmid: "38468822"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10900010/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "A prospective study of the association of weekend catch-up sleep and sleep duration with mortality in middle-aged adults."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 3128
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [40, 64]
+  pct_female: null
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  # ===== PRIMARY CUTOFF (n=3128), Model 2 fully adjusted, referent = No CUS + normal PSG TST (>=360 min) =====
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_catchup_x_objective_sleep
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "1 h weekend catch-up sleep AND normal PSG total sleep time (>=360 min) vs NO catch-up AND normal PSG TST (referent), Model 2"}
+    scale: log_hr
+    unit: null
+    value: -0.733969
+    se: 0.286481
+    ci: [-1.309333, -0.186330]
+    conversion_formula: "HR 0.48 (0.27-0.83); value=ln(0.48)=-0.73397; se=(ln0.83-ln0.27)/3.92=0.28648"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NEGATIVE = LOWER all-cause mortality. This is the most favourable weekend-catch-up estimate in the
+      entire literature (52% lower mortality) and I do not believe it at face value: one hour of weekend
+      lie-in cannot halve mortality. Read it as a marker of a healthy, unstressed, non-ill phenotype -
+      people who sleep adequately AND can extend a little at weekends. It is recorded because it is the
+      cell most similar in structure to our subject's pattern, and because its implausibility is itself
+      informative about how much healthy-participant selection contaminates this literature.
+    covariates: ["age", "sex", "race", "BMI", "smoking", "hypertension", "diabetes", "AHI with 4% desaturation",
+                 "stroke", "myocardial infarction", "self-reported weekday sleep duration", "social jetlag (midsleep difference)",
+                 "naps per week", "nap duration", "Epworth Sleepiness Scale", "antidepressant or benzodiazepine use",
+                 "insomnia or poor sleep", "REM sleep percentage"]
+    followup_years: 12.3
+    cohort_family: "SHHS"
+    quote: "Normal TST (>= 360 min) No CUS 68/1,022 (6.7) Ref Ref Ref Ref Short CUS (1 h) 17/583 (2.9) 0.43 (0.25-0.74) 0.50 (0.29-0.88) 0.49 (0.28-0.86) 0.48 (0.27-0.83)"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_catchup_x_objective_sleep
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "1 h weekend catch-up AND SHORT PSG TST (<360 min) vs no catch-up + normal PSG TST, Model 2 - THE CELL THAT TESTS RESCUE"}
+    scale: log_hr
+    unit: null
+    value: 0.364643
+    se: 0.216922
+    ci: [-0.061875, 0.788457]
+    conversion_formula: "HR 1.44 (0.94-2.20); value=ln(1.44)=0.36464; se=(ln2.20-ln0.94)/3.92=0.21692"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = HIGHER all-cause mortality. THIS IS THE KEY NEGATIVE RESULT FOR THE CATCH-UP HYPOTHESIS.
+      Among people whose objective sleep really is short, adding 1 h of weekend catch-up did NOT lower
+      mortality relative to the healthy referent (HR 1.44) and was numerically WORSE than short sleepers
+      with no catch-up at all (HR 1.17). Catch-up sleep did not rescue the objectively short sleepers.
+    covariates: ["as above (Model 2)"]
+    followup_years: 12.3
+    cohort_family: "SHHS"
+    quote: "Short TST (< 360 min) No CUS 71/688 (10.3) 1.52 (1.09-2.13) 1.43 (1.02-2.00) 1.21 (0.86-1.70) 1.17 (0.82-1.66) Short CUS (1 h) 36/363 (9.9) 1.49 (0.99-2.24) 1.52 (1.01-2.29) 1.53 (1.01-2.31) 1.44 (0.94-2.20)"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_catchup_x_objective_sleep
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: 1,
+               contrast_label: "SHORT PSG TST (<360 min) with NO weekend catch-up vs normal PSG TST with no catch-up, Model 2"}
+    scale: log_hr
+    unit: null
+    value: 0.157004
+    se: 0.179915
+    ci: [-0.198451, 0.506818]
+    conversion_formula: "HR 1.17 (0.82-1.66); value=ln(1.17)=0.15700; se=(ln1.66-ln0.82)/3.92=0.17992"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = higher mortality; NULL once fully adjusted. Note the attenuation across the four nested
+      models for this same cell: 1.52 unadjusted -> 1.43 age/sex -> 1.21 Model 1 -> 1.17 Model 2.
+      Surviving fraction of the crude log hazard = ln(1.17)/ln(1.52) = 0.15700/0.41871 = 37%.
+    covariates: ["as above (Model 2)"]
+    followup_years: 12.3
+    cohort_family: "SHHS"
+    quote: "Short TST (< 360 min) No CUS 71/688 (10.3) 1.52 (1.09-2.13) 1.43 (1.02-2.00) 1.21 (0.86-1.70) 1.17 (0.82-1.66)"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_catchup_x_objective_sleep
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: ">=2 h weekend catch-up AND normal PSG TST vs no catch-up + normal PSG TST, Model 2 - IS MORE CATCH-UP BETTER?"}
+    scale: log_hr
+    unit: null
+    value: 0.139762
+    se: 0.293016
+    ci: [-0.430783, 0.717840]
+    conversion_formula: "HR 1.15 (0.65-2.05); value=ln(1.15)=0.13976; se=(ln2.05-ln0.65)/3.92=0.29302"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = higher mortality; null. CRUCIAL SHAPE FINDING: the benefit is NOT monotone in catch-up.
+      1 h of catch-up gave 0.48, but >=2 h of catch-up gave 1.15 - i.e. nothing. Our subject's pattern is
+      5-6 h weekdays to 7-8 h weekends, a 2 h swing, which lands in THIS cell, not in the 0.48 cell.
+      If anyone wants to use yoshiike2023 to argue the subject's weekend catch-up protects him, this is
+      the cell they must use, and it is null.
+    covariates: ["as above (Model 2)"]
+    followup_years: 12.3
+    cohort_family: "SHHS"
+    quote: "Long CUS (2 h or more) 19/276 (6.9) 0.97 (0.57-1.66) 1.23 (0.72-2.11) 1.24 (0.72-2.15) 1.15 (0.65-2.05)"
+  # ===== SECONDARY (STRICTER) CUTOFFS, n=2028 =====
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_catchup_x_objective_sleep_strict
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "1 h catch-up AND SHORT PSG TST (<330 min) vs no catch-up + normal PSG TST (>=390 min), Model 2, stricter cutoffs"}
+    scale: log_hr
+    unit: null
+    value: 0.609766
+    se: 0.272261
+    ci: [0.076961, 1.144223]
+    conversion_formula: "HR 1.84 (1.08-3.14); value=ln(1.84)=0.60977; se=(ln3.14-ln1.08)/3.92=0.27226"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = higher all-cause mortality, significant. With stricter definitions, catch-up sleep in
+      truly short objective sleepers was associated with 84% higher mortality - the authors call this
+      "the harmful effect of short CUS with short sleep duration". Whatever weekend catch-up does, it
+      does not neutralise genuinely curtailed sleep in middle age.
+    covariates: ["as above (Model 2)"]
+    followup_years: 12.3
+    cohort_family: "SHHS"
+    quote: "Short TST (< 330 min) No CUS 51/425 (12.0) 1.97 (1.30-2.99) 1.84 (1.21-2.80) 1.49 (0.97-2.30) 1.51 (0.96-2.37) Short CUS (1 h) 25/211 (11.8) 2.04 (1.23-3.37) 2.04 (1.23-3.39) 2.05 (1.23-3.41) 1.84 (1.08-3.14)"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_catchup_x_objective_sleep_strict
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: 7,
+               contrast_label: "1 h catch-up AND normal PSG TST (>=390 min) vs no catch-up + normal PSG TST, Model 2, stricter cutoffs"}
+    scale: log_hr
+    unit: null
+    value: -1.021651
+    se: 0.388647
+    ci: [-1.771957, -0.248461]
+    conversion_formula: "HR 0.36 (0.17-0.78); value=ln(0.36)=-1.02165; se=(ln0.78-ln0.17)/3.92=0.38865"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      negative = lower mortality. A 64% mortality reduction attributed to one hour of weekend lie-in.
+      This is not credible as a causal effect and I flag it as such. Its real message is the size of the
+      healthy-participant selection available in this design - which is the same selection that inflates
+      protective catch-up estimates elsewhere (li2026).
+    covariates: ["as above (Model 2)"]
+    followup_years: 12.3
+    cohort_family: "SHHS"
+    quote: "Normal TST (>= 390 min) No CUS 40/683 (5.9) Ref Ref Ref Ref Short CUS (1 h) 9/390 (2.3) 0.36 (0.17-0.77) 0.42 (0.20-0.91) 0.39 (0.18-0.84) 0.36 (0.17-0.78)"
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_objective_short_sleep_main_effect
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 6.5, duration_days: 1,
+               contrast_label: "PSG total sleep time <330 min vs >=390 min (main effect, stricter cutoffs), fully adjusted"}
+    scale: log_hr
+    unit: null
+    value: 0.698135
+    se: 0.174171
+    ci: [0.371564, 1.054312]
+    conversion_formula: "HR 2.01 (1.45-2.87); value=ln(2.01)=0.69814; se=(ln2.87-ln1.45)/3.92=0.17417"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = higher all-cause mortality. The main effect of OBJECTIVE short sleep in middle-aged
+      adults, independent of catch-up: HR 1.45 (1.10-1.91) at the <360 min cutoff and 2.01 (1.45-2.87) at
+      the <330 min cutoff. Consistent with zhao2023 in the same cohort and with the whole objective
+      literature: measured short sleep in midlife/older adults is a strong mortality marker.
+    covariates: ["fully adjusted (Model 2 covariate set)"]
+    followup_years: 12.3
+    cohort_family: "SHHS"
+    quote: "The regression analysis of TST showed that compared to normal sleep duration, short sleep duration was consistently associated with higher mortality (fully adjusted HR, 1.45; 95% CI 1.10-1.91; Supplementary Table S1), which was also the case when the secondary cutoffs were applied (fully adjusted HR, 2.01; 95% CI 1.45-2.87; Supplementary Table S1)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Best-designed weekend-catch-up mortality analysis I found: it cross-classifies self-reported catch-up
+    against OBJECTIVE (PSG) sleep ability, adjusts Model 2 for weekday sleep duration, social jetlag,
+    napping, sleepiness, hypnotics, insomnia and REM percentage, restricts to middle-aged adults (40-64,
+    the youngest of any catch-up study), and runs an early-death sensitivity analysis. BUT THE DECISIVE
+    WEAKNESS IS SAMPLE SIZE: 232 deaths spread over six cells, so several cells rest on 9-21 deaths
+    (the celebrated 0.36 cell has NINE deaths). AND, critically, THE INTERACTION TESTS ARE NULL:
+    P = 0.67 and P = 0.63 for the interaction between continuous TST and CUS. The authors' headline
+    story - that the effect of catch-up depends on sleep ability - is NOT supported by a formal
+    interaction test in their own data. Additional issues: single-night PSG as a measure of habitual
+    sleep ability; catch-up derived from two self-reported numbers; SHHS is enriched for sleep-disordered
+    breathing; multiple comparisons across 12 reported cells with no correction.
+funding: "Ministry of Health, Labour and Welfare (Japan), grants 21FA1002, 22FA2001"
+notes: >
+  THIS IS THE CLOSEST ANY PUBLISHED STUDY COMES TO THE SUBJECT'S EXACT PATTERN, AND ITS ANSWER IS
+  CONDITIONAL, UNDERPOWERED, AND NOT SUPPORTED BY ITS OWN INTERACTION TEST.
+  .
+  FULL TABLE 2, ALL-CAUSE MORTALITY, MODEL 2 (fully adjusted), referent = no catch-up + normal PSG TST:
+    PRIMARY CUTOFFS (n=3128, 232 deaths, median 12.3 y)
+      short PSG TST (<360 min), no catch-up        1.17 (0.82-1.66)   71/688 deaths
+      short PSG TST, 1 h catch-up                  1.44 (0.94-2.20)   36/363
+      short PSG TST, >=2 h catch-up                1.29 (0.73-2.27)   21/196
+      normal PSG TST (>=360 min), no catch-up      1.00 (referent)    68/1022
+      normal PSG TST, 1 h catch-up                 0.48 (0.27-0.83)   17/583
+      normal PSG TST, >=2 h catch-up               1.15 (0.65-2.05)   19/276
+    SECONDARY (STRICTER) CUTOFFS (n=2028)
+      short PSG TST (<330 min), no catch-up        1.51 (0.96-2.37)   51/425
+      short PSG TST, 1 h catch-up                  1.84 (1.08-3.14)   25/211
+      short PSG TST, >=2 h catch-up                1.47 (0.73-2.98)   15/126
+      normal PSG TST (>=390 min), no catch-up      1.00 (referent)    40/683
+      normal PSG TST, 1 h catch-up                 0.36 (0.17-0.78)    9/390
+      normal PSG TST, >=2 h catch-up               0.87 (0.39-1.96)   10/193
+    Interaction between continuous TST and CUS: P = 0.67 (primary), P = 0.63 (secondary). NOT SIGNIFICANT.
+  .
+  THE THREE THINGS THAT MATTER FOR OUR SUBJECT:
+  1. THE BENEFIT IS NOT MONOTONE IN CATCH-UP, AND HIS SWING IS THE WRONG SIZE. 1 h of catch-up with
+     adequate underlying sleep gave 0.48; >=2 h of catch-up with adequate underlying sleep gave 1.15,
+     i.e. nothing. The subject goes from 5-6 h to 7-8 h, a ~2 h swing. On this table that is the null
+     cell. Any argument that his weekend recovery is protective cannot be sourced from here.
+  2. CATCH-UP DID NOT RESCUE OBJECTIVELY SHORT SLEEPERS. In both cutoff schemes, catch-up in the short-TST
+     stratum was associated with HIGHER mortality than no catch-up in the same stratum (1.44 vs 1.17;
+     1.84 vs 1.51). If the sleep debt is real, a weekend lie-in did not pay it off in this dataset.
+  3. THE PROTECTIVE CELLS ARE NOT CREDIBLE AS CAUSAL EFFECTS. 0.48 and 0.36 mean 52% and 64% mortality
+     reductions from one hour of weekend sleep, off 17 and 9 deaths. Nothing in sleep physiology delivers
+     that. What delivers that is selection: being able to sleep well and extend slightly at weekends is
+     a proxy for not being sick, not being a shift worker, not being poor and not being depressed.
+  .
+  WHERE THIS LEAVES THE WEEKEND-CATCH-UP QUESTION, WITH FOUR STUDIES NOW EXTRACTED:
+    akerstedt2019 (self-report, Swedish March Cohort, <65 y): short weekday + long weekend HR 1.09
+                  (0.77-1.54) vs 1.65 (1.22-2.23) for consistent short sleep -> catch-up looks protective
+    li2026        (objective, UK Biobank): restriction WITHOUT rebound 1.42 (1.24-1.63) vs WITH rebound
+                  1.13 (0.95-1.36) -> catch-up looks protective
+    chaput2024    (objective, UK Biobank, same cohort as li2026): >=2 h catch-up 1.17 (0.97-1.41),
+                  dose-response null, null in the <6 h weekday subgroup -> catch-up NOT protective
+    yoshiike2023  (this record, PSG + self-report, SHHS): protective ONLY at 1 h of catch-up AND ONLY with
+                  adequate objective sleep, null at >=2 h, harmful in short objective sleepers, and the
+                  interaction test is null -> catch-up NOT reliably protective at the subject's dose
+  Two say yes, two say no, and the two that say no include the two that are objectively measured and the
+  one that formally tested the interaction. I therefore grade the weekend-catch-up protective effect as
+  SIGN-UNSTABLE (grade D on model dependence per gates.md) and instruct the downstream model NOT to apply
+  a protective multiplier for weekend recovery as if it were established.
+  .
+  COHORT OVERLAP WARNING: cohort_family SHHS - OVERLAPS zhao2023 DIRECTLY (both are SHHS; zhao2023 uses
+  5027 participants aged 63.9 mean, yoshiike2023 uses the 3128 aged 40-64, so the samples intersect
+  substantially). Do not pool them. Also note SHHS constituent cohorts feed several of the meta-analyses.
+shard: "s13_mortality"

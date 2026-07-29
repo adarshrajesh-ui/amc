@@ -1,0 +1,121 @@
+study_id: guo2024_stroke_mr
+citation: "Guo C, Harshfield EL, Markus HS. Sleep Characteristics and Risk of Stroke and Dementia: An Observational and Mendelian Randomization Study. Neurology. 2024 Mar 12;102(5):e209141."
+doi: "10.1212/WNL.0000000000209141"
+pmid: "38350061"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep Characteristics and Risk of Stroke and Dementia: An Observational and Mendelian Randomization Study"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 502383
+n_studies_pooled: null
+population:
+  age_mean: 56.5
+  age_range: [40, 69]
+  pct_female: 54.4
+  country: "UK (UK Biobank) + GIGASTROKE Consortium"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: cardiovascular
+    outcome_construct: stroke_mr_sleep_duration_null
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "two-sample MR, genetically predicted sleep duration (GWAS N=446118, 78 loci) -> all stroke / ischaemic stroke"}
+    scale: log_or
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      No estimate is reported for sleep duration on stroke. The paper's MR results name only insomnia
+      (significant after FDR), napping and dozing (nominal, lost after FDR) - sleep duration is absent
+      from the reported MR stroke findings, and the abstract states MR supported insomnia only.
+      Recorded as a directional null with se null rather than inventing a number.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      zero = NO MR support for a causal effect of sleep DURATION on stroke, in the best-powered MR
+      available for this outcome (UK Biobank + GIGASTROKE). Converges with zhao2025_mr. This is the
+      principal disconfirming record for the short-sleep -> stroke claim carried by Cappuccio 2011
+      (RR 1.15) and Wang 2022 (RR 1.33).
+    covariates: ["MR; sensitivity analyses included weighted median, mode-based estimators, MR-Egger, MR-PRESSO; FDR correction at 0.05"]
+    followup_years: null
+    cohort_family: "UK_Biobank_GIGASTROKE"
+    quote: "MR analyses supported a causal link between genetically predicted insomnia and increased stroke risk (OR 1.31, 95% CI 1.13-1.51, p = 0.00072), but not with dementia or SVD markers."
+  - outcome_domain: cardiovascular
+    outcome_construct: all_stroke_mr_insomnia_comparator
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "two-sample MR, genetically elevated INSOMNIA (not duration) -> all stroke; GWAS of 2365010 individuals, 554 loci"}
+    scale: log_or
+    unit: null
+    value: 0.23902
+    se: 0.07397
+    ci: [0.09531, 0.38526]
+    conversion_formula: "log_or = ln(1.27) = 0.23902; se = (ln(1.47) - ln(1.10))/3.92 = 0.07397"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = elevated stroke odds with genetic liability to INSOMNIA (OR 1.27; ischaemic stroke
+      OR 1.31, 1.13-1.51). Included as the active comparator that makes the duration null
+      interpretable: this MR framework CAN detect a sleep-stroke causal effect - it simply does not
+      detect one for duration. The subject's exposure is volitional restriction, not insomnia, so this
+      estimate is NOT transportable to him; it is diagnostic, not applicable.
+    covariates: ["MR, FDR-corrected; no reverse causality detected (p = 0.56 all stroke, 0.19 ischaemic)"]
+    followup_years: null
+    cohort_family: "UK_Biobank_GIGASTROKE"
+    quote: "Genetically elevated levels of insomnia were associated with increased risk of AS (OR 1.27 [1.10-1.47], p = 0.00072) and AIS (OR 1.31 [1.13-1.51], p = 0.0003) after FDR correction."
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_stroke_and_dementia_counts_midlife
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "whole UK Biobank analytic cohort, mean age 56.5 y"}
+    scale: probability
+    unit: "cumulative incidence of stroke over UK Biobank follow-up (all sleep strata)"
+    value: 0.02057
+    se: null
+    ci: null
+    conversion_formula: "10334 strokes / 502383 participants = 0.02057. Dementia: 7668/502383 = 0.01526."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      ABSOLUTE ANCHOR for stroke: ~2.1% of a cohort with mean age 56.5 had a stroke during follow-up.
+      Even if the disputed stroke RR of 1.15-1.33 were causal and transportable, the absolute excess at
+      age 19 would be negligible: stroke incidence in males aged 19 is on the order of a few per
+      100 000 per year, so a 15-33% relative increase is well under one event per 100 000 person-years.
+    covariates: []
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "Among 502,383 participants (mean [SD] age, 56.5 [8.1] years; 54.4% female), there were 7,668 cases of all-cause dementia and 10,334 strokes."
+rob:
+  tool: MR-STROBE
+  judgement: low
+  notes: >
+    Well-conducted: very large observational arm, MR with the largest available insomnia GWAS
+    (2.37 M individuals, 554 loci) and the GIGASTROKE outcome consortium, five pleiotropy-robust
+    sensitivity estimators, FDR correction, and explicit reverse-MR checks. Limitations the authors
+    state: sleep measures are self-reported and refer only to the last 4 weeks, so they may not capture
+    long-term exposure; partial UK Biobank overlap between exposure and outcome GWAS (GIGASTROKE
+    included 12% UKB cases for all stroke) risks weak-instrument bias; and critically for this shard,
+    "if the relationships are U-shaped, as was suggested for sleep duration and SVD traits, these may
+    not be detected by MR" - a linear-instrument MR can miss a genuinely U-shaped duration effect. The
+    duration null should be read with that caveat rather than as proof of no effect.
+funding: "The authors report no relevant disclosures."
+notes: >
+  Target extraction #5, stroke component, and a major confounding datapoint for target #7.
+  TWO FINDINGS:
+  (1) In the observational arm, "we found multiple observational associations, but many of these were no
+      longer significant after controlling for cardiovascular risk factors." Only insomnia (HR 1.05,
+      1.01-1.11), daytime napping (HR 1.09, 1.05-1.14) and dozing (HR 1.19, 1.08-1.32) survived
+      adjustment for stroke - sleep duration did not appear among the survivors.
+  (2) In the MR arm, only insomnia was causal for stroke. Sleep duration was not.
+  Note how small the surviving adjusted observational HRs are (1.05-1.19) even for the sleep traits
+  that DID survive - a useful calibration on how much of any raw sleep-stroke association is
+  attributable to vascular-risk-factor confounding.
+  The authors' own framing is the honest summary for this shard: "This suggests possible confounding or
+  reverse causation, implying caution before proposing sleep disorder modifications" - written about
+  dementia but applying with equal force to the duration-stroke literature.
+  I record the duration result as a null rather than omitting the study, because a well-powered
+  non-finding is evidence and the downstream model must see it.
+shard: "s08_cardiovascular"

@@ -1,0 +1,194 @@
+study_id: chaput2026
+citation: "Chaput JP, Biswas RK, Ahmadi M, Cistulli PA, Bian W, Stamatakis E. Dose-Response Associations Between Sleep Duration and Health Outcomes in Adults: Comparison Between Self-Reported and Device-Based Measures. Sleep. 2026 Jul 15:zsag193. Online ahead of print."
+doi: "10.1093/sleep/zsag193"
+pmid: "42454954"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Dose-Response Associations Between Sleep Duration and Health Outcomes in Adults: Comparison Between Self-Reported and Device-Based Measures."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 76811
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [40, 69]
+  pct_female: null
+  country: "UK"
+  adolescent_match: poor_midlife
+effects:
+  # ---- THE HEAD-TO-HEAD COMPARISON, same people, same outcome, three exposure measurements ----
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_device_sleep_period_time
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: 7,
+               contrast_label: "5 h vs 7 h of ACCELEROMETER-derived sleep period time (SPT); inverted from the published 7-h-vs-5-h contrast"}
+    scale: log_hr
+    unit: null
+    value: 0.356675
+    se: 0.065963
+    ci: [0.235722, 0.494296]
+    conversion_formula: "Published as HR 0.70 (0.61-0.79) for 7 h vs a 5 h reference. Inverted to the conventional short-vs-normal direction: HR = 1/0.70 = 1.4286, log_hr = -ln(0.70) = +0.356675; CI = [1/0.79, 1/0.61] = [1.266, 1.639]; se = (ln(0.79) - ln(0.61))/3.92 = 0.065963 (unchanged by inversion)."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality at 5 h than 7 h. DEVICE-BASED SLEEP PERIOD TIME gives HR 1.43 -
+      the LARGEST short-sleep mortality estimate anywhere in this shard's self-report literature.
+      This CONTRADICTS the hypothesis that objective measurement weakens the association.
+    covariates: ["multiple covariates (not enumerated in abstract)"]
+    followup_years: 8.0
+    cohort_family: "UK_Biobank"
+    quote: "For example, a sleep period time of 7 hours was associated with a 30% lower risk of mortality relative to the 5-hour reference value (HR: 0.70; 95% CI: 0.61-0.79). In comparison, a total sleep time and a self-reported sleep duration of 7 hours were associated with 17% (HR: 0.83; 95% CI: 0.78-0.89) and 14% (HR: 0.86; 95% CI: 0.74-1.00) lower mortality risk relative to the 5-hour reference value, respectively."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_device_total_sleep_time
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: 7,
+               contrast_label: "5 h vs 7 h of ACCELEROMETER-derived total sleep time (TST); inverted"}
+    scale: log_hr
+    unit: null
+    value: 0.186330
+    se: 0.033655
+    ci: [0.116534, 0.248461]
+    conversion_formula: "Published as HR 0.83 (0.78-0.89) for 7 h vs 5 h reference. Inverted: HR = 1/0.83 = 1.2048; log_hr = -ln(0.83) = +0.186330; se = (ln(0.89) - ln(0.78))/3.92 = 0.033655."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality at 5 h. Device TST gives HR 1.20, intermediate between device SPT
+      (1.43) and self-report (1.16). TST excludes wake-after-sleep-onset; SPT includes it and is
+      closer to time in bed.
+    covariates: ["multiple covariates (not enumerated in abstract)"]
+    followup_years: 8.0
+    cohort_family: "UK_Biobank"
+    quote: "a total sleep time and a self-reported sleep duration of 7 hours were associated with 17% (HR: 0.83; 95% CI: 0.78-0.89) and 14% (HR: 0.86; 95% CI: 0.74-1.00) lower mortality risk relative to the 5-hour reference value, respectively."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_selfreported
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: null,
+               contrast_label: "5 h vs 7 h of SELF-REPORTED sleep duration, same participants; inverted"}
+    scale: log_hr
+    unit: null
+    value: 0.150823
+    se: 0.076813
+    ci: [0.000000, 0.301105]
+    conversion_formula: "Published as HR 0.86 (0.74-1.00) for 7 h vs 5 h reference. Inverted: HR = 1/0.86 = 1.1628; log_hr = -ln(0.86) = +0.150823; se = (ln(1.00) - ln(0.74))/3.92 = 0.076813."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality at 5 h. SELF-REPORT gives HR 1.16 and is only borderline
+      significant (upper CI touches 1.00 in the published direction). THE KEY CONTRAST:
+      within the SAME 76,811 people and the SAME deaths, the device-based SPT effect
+      (log 0.3567) is 2.4x the self-report effect (log 0.1508), and device TST (log 0.1863) is 1.2x it.
+    covariates: ["multiple covariates (not enumerated in abstract)"]
+    followup_years: 8.0
+    cohort_family: "UK_Biobank"
+    quote: "a self-reported sleep duration of 7 hours [was] associated with ... 14% (HR: 0.86; 95% CI: 0.74-1.00) lower mortality risk relative to the 5-hour reference value"
+  - outcome_domain: mortality
+    outcome_construct: nadir_location_selfreported
+    exposure: {type: descriptive, dose_h: 7.2, referent_h: null, duration_days: null,
+               contrast_label: "sleep duration of lowest estimated risk, SELF-REPORTED"}
+    scale: hours
+    unit: "hours of self-reported sleep"
+    value: 7.2
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Nadir for self-reported sleep. No CI reported, so se null."
+    covariates: []
+    followup_years: 8.0
+    cohort_family: "UK_Biobank"
+    quote: "The lowest estimated risk across outcomes occurred at approximately 7.2 hours for self-reported sleep, 7.7 hours for sleep period time, and between 6.8 and 9.3 hours for total sleep time."
+  - outcome_domain: mortality
+    outcome_construct: nadir_location_device_sleep_period_time
+    exposure: {type: descriptive, dose_h: 7.7, referent_h: null, duration_days: 7,
+               contrast_label: "sleep duration of lowest estimated risk, DEVICE sleep period time"}
+    scale: hours
+    unit: "hours of accelerometer-derived sleep period time"
+    value: 7.7
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Nadir for device SPT = 7.7 h, i.e. HIGHER than the self-report nadir of 7.2 h. Device total
+      sleep time gives a very wide flat optimum of 6.8-9.3 h - meaning that on the measure closest to
+      actual sleep obtained, anything from 6.8 h upward is indistinguishably optimal.
+    covariates: []
+    followup_years: 8.0
+    cohort_family: "UK_Biobank"
+    quote: "The lowest estimated risk across outcomes occurred at approximately 7.2 hours for self-reported sleep, 7.7 hours for sleep period time, and between 6.8 and 9.3 hours for total sleep time."
+  - outcome_domain: mortality
+    outcome_construct: shape_of_dose_response_curve
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "curve shape, device and self-report"}
+    scale: hours
+    unit: "hours (descriptive placeholder; the finding is the shape, see direction_note)"
+    value: 7.7
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      SHAPE = inverse J-shaped for all-cause mortality across all three measurement methods,
+      "particularly for device-based measures". Inverse-J here means the risk rises more steeply
+      towards SHORT sleep than towards long sleep - the OPPOSITE asymmetry to liu2017 and yin2017,
+      which found the long arm steeper. The difference is that this cohort has objective exposure and
+      only 8 years of follow-up in 40-69 year olds.
+    covariates: []
+    followup_years: 8.0
+    cohort_family: "UK_Biobank"
+    quote: "Across all sleep measurement methods, adjusted dose-response curves showed a similar inverse J-shaped pattern (particularly for device-based measures), and a U-shaped association for incident depression. Associations were stronger for sleep period time than for the other sleep metrics."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    The best available design for the objective-vs-self-report question: the same participants, the
+    same deaths, three exposure measurements, one model family. Weaknesses: (1) the UK Biobank
+    accelerometer subsample is a healthy-volunteer subset of an already-selected cohort, so absolute
+    rates are not generalisable; (2) 7 days of accelerometry is treated as a stable trait exposure and
+    is itself subject to short-term variation; (3) only 8.0 years of follow-up, so deaths are
+    concentrated in people who were already ill - reverse causation is if anything MORE of a problem
+    with a short follow-up in 40-69 year olds, and the paper reports no early-death exclusion in the
+    abstract; (4) the 5 h reference category is unusual and means the reported HRs are protective
+    effects of normal sleep rather than harmful effects of short sleep, requiring inversion;
+    (5) abstract-only access, so I could not check the covariate list or whether sensitivity analyses
+    excluding prevalent disease attenuate the device-based estimates. Given (3), the fact that the
+    device estimate is LARGER than the self-report estimate may itself be a reverse-causation signature
+    rather than evidence of a stronger causal effect.
+funding: null
+notes: >
+  TARGET EXTRACTION #3, first component (objective vs self-report). THE TASK'S PRIOR IS NOT SUPPORTED.
+  The task stated "Objective measurement usually WEAKENS the short-sleep association, which is a
+  crucial finding". In the largest and most recent head-to-head test available, objective measurement
+  STRENGTHENS it:
+    device sleep period time  5 h vs 7 h  HR 1.43 (1.27-1.64)   log 0.3567
+    device total sleep time   5 h vs 7 h  HR 1.20 (1.12-1.28)   log 0.1863
+    self-report               5 h vs 7 h  HR 1.16 (1.00-1.35)   log 0.1508
+  Ratio device-SPT : self-report = 2.37. Ratio device-TST : self-report = 1.24.
+  .
+  HOW TO INTERPRET THIS HONESTLY. Two readings compete and I cannot adjudicate between them from the
+  abstract alone:
+  (a) Measurement-error reading: UK Biobank self-report is a single coarse integer question, so it is
+      heavily diluted by measurement error; the device measure is less diluted, so the larger device
+      estimate is the truer estimate of the association. Under this reading the self-report
+      meta-analytic RRs (1.04-1.06 at 5 h) are attenuated and the real association is bigger.
+  (b) Pathology reading: objectively short sleep in a 40-69 year old is a symptom, not a behaviour.
+      It is produced by sleep apnoea, insomnia, pain, nocturia, cardiac and pulmonary disease and
+      polypharmacy. An accelerometer measures those conditions more faithfully than a questionnaire
+      does, so a larger device-based HR is a larger CONFOUNDING signal, not a larger causal effect.
+      The fact that sleep period time (which includes wake after sleep onset, i.e. fragmentation)
+      out-predicts total sleep time supports this reading: the strongest predictor is the measure most
+      contaminated by disturbed sleep.
+  For a healthy 19-year-old whose short sleep is behaviourally and socially imposed rather than
+  pathological, reading (b) implies that NONE of the device-based excess transports to him. I regard
+  (b) as more likely than (a) but flag this as the largest unresolved interpretive question in the
+  shard.
+  .
+  COHORT OVERLAP WARNING: UK_Biobank, and overlaps saintmaurice2024, liang2023, windred2024, li2026,
+  zhang2025. Six of this shard's records draw on UK Biobank. At most one may enter the pooler per
+  outcome without robust variance estimation.
+shard: "s13_mortality"

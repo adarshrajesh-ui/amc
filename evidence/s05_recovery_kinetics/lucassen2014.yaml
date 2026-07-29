@@ -1,0 +1,110 @@
+study_id: lucassen2014
+citation: "Lucassen EA, Piaggi P, Dsurney J, de Jonge L, Zhao XC, Mattingly MS, Ramer A, Gershengorn J, Csako G, Cizza G; Sleep Extension Study Group. Sleep extension improves neurocognitive functions in chronically sleep-deprived obese individuals. PLoS One. 2014;9(1):e84832."
+doi: "10.1371/journal.pone.0084832"
+pmid: "24482677"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3903365/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep extension improves neurocognitive functions in chronically sleep-deprived obese individuals."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 121
+n_studies_pooled: null
+population:
+  age_mean: 41.1
+  age_range: [18, 50]
+  pct_female: 76.0
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: recovery
+    outcome_construct: global_cognitive_function_after_15_months_sleep_extension
+    exposure: {type: sleep_extension, dose_h: null, referent_h: 5.93, duration_days: 468, contrast_label: "sleep extension counselling plus lifestyle modification for 468 +/- 88 days in adults habitually sleeping <6.5 h/night; Global Deficit Score at final vs baseline evaluation"}
+    scale: pct_change
+    unit: "% improvement in Global Deficit Score"
+    value: 7.0
+    se: null
+    ci: null
+    conversion_formula: "Quoted verbatim: 'Global cognitive function and attention improved by 7% and 10%, respectively (both p = 0.001)'. The paper reports percentage change with a p-value but no SD/SE for the change and states that deficit-score distributions were skewed so means and SDs are deliberately not shown ('Mean and SD for deficit scores are not shown, because these variables exhibited a skewed distribution'). No SE is therefore derivable from the percentage, and se is null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = cognitive improvement after prolonged sleep extension. But note the framing the authors themselves use: deficits were 'PARTIALLY reversible'. After approximately 15 months, global cognition improved 7% and attention 10%, while memory and executive function only 'tended to improve' (p = 0.07 and p = 0.06) and motor skills did not change at all. Baseline impairment prevalence was high (44% impaired global deficit score; executive function impaired in 51%), so a 7% improvement leaves most of the deficit in place."
+    covariates: ["group allocation", "follow-up time", "age", "education", "race", "gender (in t-score derivation)"]
+    followup_years: 1.282
+    cohort_family: NIDDK_Sleep_Extension_Study
+    quote: "The following changes were observed: the GDS improved by approximately 7%; attention improved by 10%; memory and executive functions tended to improve by 7% and 5%, respectively, whereas motor skills did not change."
+  - outcome_domain: recovery
+    outcome_construct: actual_sleep_gained_from_15_months_of_extension_counselling
+    exposure: {type: sleep_extension, dose_h: null, referent_h: 6.42, duration_days: 468, contrast_label: "self-reported sleep duration by 2-week diaries, final vs baseline, after 468 +/- 88 days of sleep extension counselling"}
+    scale: pct_change
+    unit: "% increase in diary-reported sleep duration"
+    value: 4.0
+    se: null
+    ci: null
+    conversion_formula: "Quoted verbatim: 'self-reported sleep duration increased by 11% by questionnaires (p<0.001) and by 4% by diaries (p = 0.04)'. I take the DIARY figure (4%) as the primary estimate because diaries are the more concrete instrument of the two self-reports; the 11% PSQI figure is a global questionnaire item and is the more inflated of the two. Applying 4% to the reported baseline diary value of 385 +/- 48 min/night gives 0.04 x 385 = 15.4 min = 0.257 h/night of additional sleep. No SD for the CHANGE is reported, so se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = more sleep obtained, but the magnitude is the point: roughly 15 minutes per night after fifteen months of active clinical intervention. THIS IS THE MOST SOBERING FEASIBILITY NUMBER IN THE SHARD. Note also that the paper reports NO actigraphic follow-up value despite collecting actigraphy at baseline (356 +/- 49 min/night), so even this 15 min is self-report and plausibly optimistic."
+    covariates: ["group allocation", "follow-up time"]
+    followup_years: 1.282
+    cohort_family: NIDDK_Sleep_Extension_Study
+    quote: "Subjective sleep quality improved by 24%, self-reported sleep duration increased by 11% by PSQI and by 4% by diaries, respectively, and sleepiness tended to improve."
+  - outcome_domain: cognition
+    outcome_construct: baseline_impairment_prevalence_in_chronic_short_sleepers
+    exposure: {type: habitual_short_sleep, dose_h: 5.93, referent_h: null, duration_days: null, contrast_label: "prevalence of impaired neurocognitive domain scores (t-score < 40) at baseline in adults habitually sleeping <6.5 h/night"}
+    scale: probability
+    unit: "proportion with impaired executive function at baseline"
+    value: 0.51
+    se: 0.0455
+    ci: [0.421, 0.599]
+    conversion_formula: "Reported: 'Memory was impaired in 33%; attention in 35%; motor skills in 42%; and executive function in 51% of individuals' at baseline, n = 121. I record the executive-function figure as the largest. SE of a proportion = sqrt(p(1-p)/n) = sqrt(0.51*0.49/121) = sqrt(0.0020653) = 0.04545. CI = p +/- 1.96*SE = 0.421-0.599 (normal approximation, valid here since np and n(1-p) both exceed 60)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "HIGHER = more impairment. Roughly half of chronically short-sleeping adults met a clinical impairment threshold on executive function before any intervention, against a normative expectation of ~16% below a t-score of 40. This is cross-sectional and heavily confounded (see rob), so it is context for how large the standing deficit may be, NOT a causal estimate of sleep's contribution."
+    covariates: ["age, education, race and gender incorporated into t-score normalization"]
+    followup_years: null
+    cohort_family: NIDDK_Sleep_Extension_Study
+    quote: "At baseline, 44% of the individuals had an impaired global deficit score (t-score 0-39). ... Memory was impaired in 33%; attention in 35%; motor skills in 42%; and executive function in 51% of individuals."
+rob:
+  tool: RoB2
+  judgement: high
+  notes: "Rated HIGH for this shard's purposes. (a) POPULATION MISMATCH is severe: mean age 41.1 +/- 7.0 y, 76% women, all obese (BMI 38.6 +/- 6.4), 26% with metabolic syndrome, 13% hypertensive - a clinical midlife cohort, not young healthy adults, and obesity itself impairs cognition and sleep quality (undiagnosed sleep-disordered breathing is a likely uncontrolled confounder even though RDI was screened). (b) The randomized comparison COLLAPSED: 'Because there were no significant differences in neuropsychological functions between the Comparison and the Intervention Groups either at the initial or at the final evaluation, results from the two groups were combined together.' The analysis actually reported is therefore an uncontrolled within-subject before/after over 15 months, so practice effects on repeated neuropsychological testing and regression to the mean are not excluded - and practice effects would BIAS THE 7% IMPROVEMENT UPWARD, i.e. the true cognitive gain may be smaller still. (c) 39% attrition (74 of 121 completed), though completers and non-completers were similar on group allocation and deficit category. (d) The exposure was 'sleep extension WITH LIFE-STYLE MODIFICATIONS', so cognitive gains cannot be attributed to sleep alone. (e) Follow-up sleep duration is SELF-REPORTED ONLY; baseline actigraphy (356 +/- 49 min/night) was collected but no follow-up actigraphic value is reported, which is the single most important missing number in the paper."
+funding: "NIDDK intramural (protocol 06-DK-0036); ClinicalTrials.gov NCT00261898."
+notes: |
+  WHY IT IS HERE: this is the LONGEST sleep-extension follow-up I located anywhere - 468 +/- 88 days
+  (median 436, IQR 412-496) - and the task explicitly asks for multi-week extension in habitually
+  short sleepers. Nothing else in the literature I screened follows extension beyond ~6 weeks
+  (Leproult 2015) or 4 weeks (Al Khatib 2018, Tasali 2022).
+
+  THE TWO NUMBERS THAT MATTER, AND THEY POINT IN OPPOSITE DIRECTIONS:
+    1. Cognitive deficits in chronic short sleepers ARE partially reversible. Global cognition +7%,
+       attention +10% (both p = 0.001) after ~15 months. Reversibility is real.
+    2. The intervention barely moved sleep. Diary-reported duration rose 4%, i.e. ~15 min/night, from
+       a baseline of 385 +/- 48 min (6 h 25 min) by diary and 356 +/- 49 min (5 h 56 min) by
+       actigraphy. Fifteen months of clinical contact bought about a quarter of an hour a night.
+  So the honest reading is that partial cognitive recovery accompanied a very small sleep gain, over a
+  very long time, in a confounded design - and that the binding constraint on real-world recovery is
+  ADHERENCE, not physiology.
+
+  CONVERGENT FREE-LIVING EXTENSION YIELDS (all self-report or actigraphy, all outpatient):
+    Lucassen 2014  ~15 months counselling + lifestyle   +0.26 h/night  (diary; this record)
+    Al Khatib 2018 4 weeks, 1 counselling session       +0.35 h/night  (actigraphy)
+    Leproult 2015  6 weeks, 1 h TIB target              +0.73 h/night  (actigraphy, weekdays)
+    Tasali 2022    2 weeks, 8.5 h TIB target            +1.20 h/night  (actigraphy)
+  The pattern is that yields are LOW and, strikingly, do not improve with longer intervention - the
+  two shortest, most intensively specified protocols (Tasali, Leproult) produced the LARGEST gains,
+  while the 15-month lifestyle-counselling approach produced the smallest. This argues for a
+  prescription that specifies a concrete time-in-bed schedule over one that offers general advice to
+  sleep more, and it argues against assuming that a long intervention period compensates for a vague
+  one.
+
+  DO NOT USE the baseline impairment prevalence (44% global, 51% executive) as a causal estimate of
+  what 3 years of restriction does to an 18-year-old. It is cross-sectional, in obese midlife adults,
+  and confounded by obesity, metabolic syndrome and probable sleep-disordered breathing. It is recorded
+  only as context for the possible scale of a standing deficit, and the downstream model should treat
+  it as such.
+shard: "s05_recovery_kinetics"

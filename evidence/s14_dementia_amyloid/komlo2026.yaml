@@ -1,0 +1,116 @@
+study_id: komlo2026
+citation: "Komlo R, Sengupta K, Strus E, Naidoo N. Chronic short sleep in early life accelerates cognitive decline via disrupted proteostasis. bioRxiv [Preprint]. 2026 Mar 30:2026.03.26.714554."
+doi: "10.64898/2026.03.26.714554"
+pmid: "41959309"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13060091/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Chronic short sleep in early life accelerates cognitive decline via disrupted proteostasis."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: cognition
+    outcome_construct: hippocampal_dependent_memory_deficit_after_chronic_short_sleep_from_young_adulthood_MOUSE
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 365,
+               contrast_label: "chronic short sleep begun in young adult wild-type MICE and maintained across one year; cognition assessed longitudinally"}
+    scale: probability
+    unit: "sign indicator: 1 = deficit reported, no magnitude available"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: >
+      NO EFFECT SIZE IS EXTRACTABLE. The retrieved record is the bioRxiv abstract only; the preprint landing
+      page carries no results tables, no group sizes, no test statistics and no effect magnitudes for any
+      outcome. value = 1.0 is a SIGN INDICATOR meaning "the authors report a deficit in the exposed group",
+      and se is null. THIS RECORD MUST NOT CONTRIBUTE A MAGNITUDE TO ANY POOLED ESTIMATE. It is included
+      because it is the closest thing in the retrievable literature to the shard's critical age question, and
+      because its limitations are themselves the answer.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      1 = harm reported (impaired hippocampal-dependent memory in chronically short-sleeping mice by 28 weeks
+      of age). SPECIES IS MOUSE. Outcome is rodent memory behaviour, NOT dementia, NOT amyloid, NOT tau. The
+      exposure begins in YOUNG ADULT mice, which the authors motivate by reference to adolescence in humans but
+      do not themselves claim to model. One year in a mouse is most of its adult life; the human question is
+      three years of restriction followed by FIVE DECADES of normal sleep, which this design does not contain
+      because the exposure is never withdrawn.
+    covariates: []
+    followup_years: 1.0
+    cohort_family: null
+    quote: "Mice exposed to CSS displayed impaired cognition in hippocampal dependent tasks by 28 weeks of age, indicating emerging memory deficits."
+  - outcome_domain: neurodegeneration
+    outcome_construct: hippocampal_proteostasis_and_er_stress_pathway_disruption_MOUSE
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 365,
+               contrast_label: "chronic short sleep in mice: hippocampal proteostasis, ER stress / unfolded protein response, BiP chaperone, neuroinflammation markers"}
+    scale: probability
+    unit: "sign indicator: 1 = disruption reported, no magnitude available"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: >
+      Sign indicator only, for the same reason as above. No magnitudes, no n, no variance in the retrieved
+      abstract.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      1 = disruption reported. CRITICAL FOR THE SHARD'S MECHANISTIC CHAIN: THE PATHWAY HERE IS NOT THE
+      GLYMPHATIC / AMYLOID-CLEARANCE PATHWAY. The reported mechanism is proteostasis failure, endoplasmic
+      reticulum stress, the unfolded protein response, loss of the chaperone BiP, and neuroinflammation.
+      AMYLOID IS NOT MENTIONED ANYWHERE IN THIS ABSTRACT, and neither is tau or glymphatic clearance. So the
+      single most age-relevant experimental study the shard could find, in the direction of harm, does NOT
+      support the amyloid-clearance mechanism this shard was asked to evaluate - it proposes a different one.
+      That matters: it means the mechanistic literature is not converging on one causal story that adolescent
+      restriction would feed into, it is offering several unlinked candidate stories in rodents.
+    covariates: []
+    followup_years: 1.0
+    cohort_family: null
+    quote: "At the molecular level, CSS disrupted hippocampal proteostasis-particularly protein folding processes-and triggered ER stress and activation of the unfolded protein response (UPR). Importantly, disrupted proteostasis preceded the behavioral decline, with diminution of the key chaperone and UPR regulator BiP occurring at 20-22 weeks of age."
+rob:
+  tool: none
+  judgement: high
+  notes: >
+    UNPEER-REVIEWED PREPRINT, mouse model, abstract-only access, no group sizes, no effect magnitudes, no
+    variance estimates, no blinding information, no randomisation information. There is no basis for a
+    quantitative risk-of-bias judgement, and "high" here means "cannot be assessed and must not be relied
+    upon quantitatively" rather than a specific identified flaw. Additional design limitation relevant to the
+    shard's question: the exposure is continuous for the whole observation period, so the study cannot address
+    whether a TIME-LIMITED early exposure followed by normal sleep leaves a durable trace - which is precisely
+    the subject's situation.
+funding: "not stated in the retrieved abstract"
+notes: >
+  THIS IS THE ONLY RECORD IN THE SHARD WHOSE STATED FRAMING IS EARLY-LIFE CHRONIC SHORT SLEEP AND LONG-RUN
+  NEURODEGENERATIVE OUTCOME, AND IT IS A MOUSE PREPRINT WITH NO EXTRACTABLE NUMBERS. That sentence is the
+  honest summary of the state of evidence on the shard's critical age question.
+  THE AUTHORS' OWN MOTIVATION EXPLICITLY INVOKES ADOLESCENCE, verbatim: "Chronic short sleep (CSS) is an
+  emerging public health issue that frequently begins in adolescence and is common among healthcare
+  professionals and others engaged in shift work. Epidemiological studies associate CSS and sleep disruption
+  with metabolic disorders, cardiovascular disease, cognitive decline, and heightened Alzheimer's disease
+  risk." Note carefully that the adolescent framing is in the MOTIVATION, and the experiment is in YOUNG ADULT
+  MICE. The paper does not claim to have modelled adolescent exposure, and the shard must not upgrade its
+  motivation into its design.
+  CONCLUSION AS STATED, verbatim: "Together, these results indicate that both chronic short sleep and age
+  compromise proteostasis and promote neuroinflammation, contributing to progressive cognitive dysfunction."
+  ONE FINDING WORTH FLAGGING FOR OTHER SHARDS: the authors report that ageing alone produced the same
+  molecular signature as chronic short sleep - verbatim: "Age also seemed to be a cellular stressor, causing a
+  longitudinal increase in UPR, ISR, and neuroinflammation markers." When an exposure and normal ageing
+  produce the same markers, marker changes cannot by themselves establish that the exposure accelerates
+  ageing; that requires showing the marker trajectory is shifted or steepened, which cannot be assessed from
+  this abstract.
+  HOW THIS RECORD SHOULD BE USED. As the citation demonstrating that the adolescent-exposure question is being
+  asked and is currently answered only in rodents, with a non-amyloid mechanism, in a preprint. NOT as evidence
+  of a human risk magnitude. Any numeric dementia-risk delta for a 19-year-old that leans on this record is
+  extrapolating from mouse hippocampal chaperone expression to human dementia incidence sixty years later.
+shard: "s14_dementia_amyloid"

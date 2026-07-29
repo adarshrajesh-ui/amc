@@ -1,0 +1,104 @@
+study_id: xiao2019
+citation: "Xiao Q, Blot WJ, Matthews CE. Weekday and weekend sleep duration and mortality among middle-to-older aged White and Black adults in a low-income southern US cohort. Sleep Health. 2019 Oct;5(5):521-527."
+doi: "10.1016/j.sleh.2019.04.008"
+pmid: "31204307"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6801047/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Weekday and weekend sleep duration and mortality among middle-to-older aged White and Black adults in a low-income southern US cohort."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 55375
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [40, 79]
+  pct_female: null
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_short_sleep_white
+    exposure: {type: habitual_short_sleep, dose_h: 4.5, referent_h: 8.0, duration_days: null,
+               contrast_label: "self-reported sleep <5 h vs 8 h referent, WHITE participants, weekday or weekend (abstract reports both arms together)"}
+    scale: log_rr
+    unit: null
+    value: 0.223144
+    se: null
+    ci: null
+    conversion_formula: "The abstract reports an approximate magnitude, not a point estimate with CI: 'Risks for all-cause mortality were significantly elevated by about 25% among Whites'. value=ln(1.25)=0.22314. se MUST stay null - no interval is quotable and I will not manufacture one."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = higher all-cause mortality. NOTE THE REFERENT IS 8 H, NOT 7 H. Every other large study
+      finds the nadir at 7 h (svensson2021, yin2017, liu2017, kripke2002), so an 8 h referent inflates
+      this estimate relative to the rest of the literature. Also note the exposure floor is <5 h, i.e.
+      BELOW the subject's 5-6 h weekday habit.
+    covariates: ["multiple covariates (full list not in abstract)"]
+    followup_years: null
+    cohort_family: "Southern_Community_Cohort_Study"
+    quote: "We found U-shaped relationships between weekday and weekend sleep duration and all-cause mortality, with the effects stronger in Whites than Blacks. Risks for all-cause mortality were significantly elevated by about 25% among Whites and about 10% among Blacks reporting either less than 5 hours or more than 9 hours of sleep compared with those reporting 8 hours of sleep."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_short_sleep_black
+    exposure: {type: habitual_short_sleep, dose_h: 4.5, referent_h: 8.0, duration_days: null,
+               contrast_label: "self-reported sleep <5 h vs 8 h referent, BLACK participants (~2/3 of the cohort)"}
+    scale: log_rr
+    unit: null
+    value: 0.095310
+    se: null
+    ci: null
+    conversion_formula: "'about 10% among Blacks'; value=ln(1.10)=0.09531; se null for the same reason as above."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = higher all-cause mortality. The same exposure, measured the same way, in the same study,
+      carries less than half the log hazard in Black participants (0.0953) as in White participants
+      (0.2231). A biological effect of lost sleep should not be race-patterned like that. What IS
+      race-patterned is the meaning of reporting short sleep: in a low-income Southern cohort where
+      short sleep is normative among Black participants, the people who report it are less selected for
+      illness and disadvantage than in the White stratum. THIS IS EFFECT MODIFICATION BY BASE RATE,
+      which is a confounding signature, and it is directly relevant to a college student for whom 5-6 h
+      weekday sleep is normative rather than deviant among his peers.
+    covariates: ["multiple covariates"]
+    followup_years: null
+    cohort_family: "Southern_Community_Cohort_Study"
+    quote: "Risks for all-cause mortality were significantly elevated by about 25% among Whites and about 10% among Blacks reporting either less than 5 hours or more than 9 hours of sleep compared with those reporting 8 hours of sleep. ... Our results suggest that short and long sleep durations may be weaker predictors of total and cardiovascular mortality in Blacks than in Whites."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Large (55 375), and one of only three studies I found that asked about WEEKDAY AND WEEKEND sleep
+    separately (the others being akerstedt2019 and zhao2023). Weaknesses: (1) abstract-only access, so
+    the weekday-by-weekend cross-classification - the cell that would actually answer our question -
+    is not extractable, and the abstract collapses the two arms into one statement; (2) the abstract
+    reports "about 25%" and "about 10%" with no CIs, so no SEs are derivable and none are recorded;
+    (3) 8 h referent, which is not the nadir; (4) short category is <5 h, below the subject's dose;
+    (5) age 40-79, low-income Southern US, high comorbidity burden; (6) no follow-up duration in the
+    abstract.
+funding: null
+notes: >
+  INCLUDED FOR TWO REASONS.
+  .
+  1. IT IS ONE OF ONLY THREE STUDIES THAT SEPARATE WEEKDAY FROM WEEKEND SLEEP, and it reproduces the
+     qualitative U-shape in both. Unfortunately the abstract does not give the weekday-x-weekend joint
+     classification, so it cannot corroborate or refute the akerstedt2019 catch-up cell. I checked; it
+     is not in the abstract, and I did not have full-text access. That is a real gap, not an omission.
+  2. THE RACE STRATIFICATION IS A NATURAL EXPERIMENT IN CONFOUNDING. The same reported exposure carries
+     ln(1.25)=0.223 in Whites and ln(1.10)=0.095 in Blacks - a 57% difference in log hazard for an
+     identical questionnaire item. Sleep physiology does not vary by race that much. Selection into the
+     short-sleep category does. This supports the general argument that the short-sleep mortality
+     coefficient is substantially a measure of WHO reports short sleep in a given population, and it
+     transfers to our subject: among US college students, 5-6 h weekday sleep is close to modal, so the
+     selection that drives the coefficient in a 55-year-old cohort is largely absent.
+  .
+  TRANSPORTABILITY: poor_midlife, and additionally exposure-mismatched (<5 h category, 8 h referent).
+  I would not enter the point estimates into a mortality pool for this subject; the record's value is
+  the race contrast, not the magnitudes.
+  .
+  COHORT OVERLAP WARNING: cohort_family Southern_Community_Cohort_Study. No overlap with the meta-analyses
+  I extracted (post-dates cappuccio2010; not listed in the others' constituent studies that I could check).
+shard: "s13_mortality"

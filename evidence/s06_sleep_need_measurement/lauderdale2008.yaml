@@ -1,0 +1,146 @@
+study_id: lauderdale2008
+citation: "Lauderdale DS, Knutson KL, Yan LL, Liu K, Rathouz PJ. Self-reported and measured sleep duration: how similar are they? Epidemiology. 2008;19(6):838-845."
+doi: "10.1097/EDE.0b013e318187a7b0"
+pmid: "18854708"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2785092/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Self-Reported and Measured Sleep Duration"
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 647
+n_studies_pooled: null
+population:
+  age_mean: 42.9
+  age_range: [37, 51]
+  pct_female: 58.0
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: selfreport_minus_actigraphy_mean_bias
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 3, contrast_label: "self-reported habitual sleep minus 3-day weighted actigraphy mean, at 6 h measured sleep"}
+    scale: hours
+    unit: "hours (positive = self-report longer than actigraphy)"
+    value: 0.80
+    se: 0.0434
+    ci: [0.71, 0.88]
+    conversion_formula: "value = regression intercept reported at the sample mean of 6 h measured sleep; se = (0.88-0.71)/3.92 = 0.0434"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = self-report OVERSTATES sleep; using self-report therefore UNDERSTATES sleep debt"
+    covariates: []
+    followup_years: null
+    cohort_family: "CARDIA"
+    quote: |
+      For habitual sleep in wave 1, the bias at the mean of 6 hours measured sleep was 0.80 hours (48 minutes),
+      with subjective reports longer than measured sleep (table 2).
+  - outcome_domain: exposure_measurement
+    outcome_construct: selfreport_minus_actigraphy_between_person_sd
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 3, contrast_label: "between-person SD of (self-report - actigraphy) difference; derived"}
+    scale: hours
+    unit: "hours"
+    value: 1.191
+    se: null
+    ci: [-1.565, 3.105]
+    conversion_formula: "SD_diff = sqrt(SD_self^2 + SD_obj^2 - 2*r*SD_self*SD_obj) = sqrt(1.11^2 + 1.16^2 - 2*0.45*1.11*1.16) = sqrt(1.41886) = 1.191 h. ci field holds the derived 95% Bland-Altman limits of agreement = mean_diff (6.83-6.06=0.77) +/- 1.96*1.191 = (-1.565, +3.105) h. Paper reports no LoA directly."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "spread only; a single person's self-report can be ~1.6 h BELOW or ~3.1 h ABOVE true actigraphic sleep"
+    covariates: []
+    followup_years: null
+    cohort_family: "CARDIA"
+    quote: |
+      Table 1: Mean objective sleep duration in hours | 6.06 (1.16); Mean subjective sleep duration in hours |
+      6.83 (1.11). Abstract: Overall, there was a correlation of 0.45 between reported and measured sleep
+      duration.
+  - outcome_domain: exposure_measurement
+    outcome_construct: correlation_selfreport_actigraphy
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 3, contrast_label: "Pearson r, self-report vs actigraphy habitual sleep"}
+    scale: raw_units
+    unit: "correlation coefficient"
+    value: 0.45
+    se: null
+    ci: [0.33, 0.55]
+    conversion_formula: "paper reports r=0.45 in abstract and r^2=0.20 (95% CI 0.11, 0.30) in Table 2; ci = sqrt of the r^2 CI = (0.33, 0.55)"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "higher = better agreement; 0.45 means actigraphy explains 20% of variance in self-report"
+    covariates: []
+    followup_years: null
+    cohort_family: "CARDIA"
+    quote: |
+      Mean measured sleep explained 20 percent of the variation (r2 = 0.20) in reported [habitual sleep].
+      Abstract: Overall, there was a correlation of 0.45 between reported and measured sleep duration.
+  - outcome_domain: exposure_measurement
+    outcome_construct: calibration_slope_report_on_truth
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 3, contrast_label: "d(self-reported h) / d(actigraphy h), errors-in-variables regression"}
+    scale: per_hour_beta
+    unit: "hours reported per hour of actigraphic sleep"
+    value: 0.51
+    se: 0.0816
+    ci: [0.35, 0.67]
+    conversion_formula: "se = (0.67-0.35)/3.92 = 0.0816. Implied duration-dependence of the BIAS: d(bias)/d(true) = beta - 1 = -0.49 h per h (95% CI -0.65 to -0.33)"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "slope << 1 means short sleepers over-report MORE than long sleepers: differential (duration-dependent) measurement error"
+    covariates: []
+    followup_years: null
+    cohort_family: "CARDIA"
+    quote: |
+      The calibration, represented by the beta coefficient, was substantially less than one: for each additional
+      hour of mean sleep recorded, report of habitual sleep increased, on average, by 31 minutes.
+  - outcome_domain: exposure_measurement
+    outcome_construct: bias_at_5h_true_sleep
+    exposure: {type: descriptive, dose_h: 5, referent_h: 7, duration_days: 3, contrast_label: "over-report at 5 h vs 7 h of actigraphic sleep"}
+    scale: hours
+    unit: "hours of over-reporting"
+    value: 1.3
+    se: null
+    ci: null
+    conversion_formula: "quoted from abstract; Table 2 full-sample predicted reported sleep = 6.29 h at 5 h measured and 7.31 h at 7 h measured, i.e. over-report of 1.29 h and 0.31 h"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "at 5 h true sleep the over-report is 1.3 h; at 7 h it is only 0.3 h. Sign of the correction depends on true duration."
+    covariates: []
+    followup_years: null
+    cohort_family: "CARDIA"
+    quote: |
+      Our model suggests that persons sleeping 5 and 7 hours over-reported, on average, by 1.3 and 0.3 hours
+      respectively.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "single-site (Chicago) CARDIA sub-study, 82% participation; only 3 nights of actigraphy standing in for a 30-day habitual average (reliability coefficient 0.70), handled by errors-in-variables regression; no internal actigraphy-vs-PSG validation; age 37-51 so transportability to a 16-19 year old is weak."
+funding: "NIH (CARDIA contracts); paper acknowledges NHLBI support"
+notes: |
+  KEY SOURCE for the exposure-measurement prior. Verbatim support:
+  (1) "Mean measured sleep duration was 6.06 hours. Mean self-reported habitual sleep was 6.83 hours, and only 17 percent
+      reported less than the measured mean. For habitual sleep in wave 1, the bias at the mean of 6 hours measured sleep
+      was 0.80 hours (48 minutes), with subjective reports longer than measured sleep (table 2). The calibration,
+      represented by the beta coefficient, was substantially less than one: for each additional hour of mean sleep
+      recorded, report of habitual sleep increased, on average, by 31 minutes. Mean measured sleep explained 20 percent
+      of the variation (r2 = 0.20) in reported [habitual sleep]."
+  (2) Abstract: "subjective reports averaged 0.80 hours longer than measured sleep. Subjective reports were not well
+      calibrated, increasing on average by 31 minutes for each additional hour of measured sleep. Our model suggests that
+      persons sleeping 5 and 7 hours over-reported, on average, by 1.3 and 0.3 hours respectively. Overall, there was a
+      correlation of 0.45 between reported and measured sleep duration."
+  (3) Table 1: "Mean objective sleep duration in hours | 6.06 (1.16)"; "Mean subjective sleep duration in hours | 6.83 (1.11)".
+  (4) Table 2 Full Sample (n=647): Reliability 0.70 | Intercept 0.80 (0.71, 0.88) | Beta 0.51 (0.35, 0.67) | r2 0.20
+      (0.11, 0.30) | predicted reported sleep 6.29 h at 5 h measured, 7.31 h at 7 h measured.
+  (5) ROUNDING / HEAPING evidence: "when pressed to give a response on a survey tend to answer what they believe to be
+      how much adults in general sleep - our modal answers were 7 hours for weeknights and 8 hours for weekends. Since
+      most actually sleep less than that, it is generally an overestimate, but it is less of an overestimate for people
+      who sleep more and more of an overestimate for people who sleep less."
+  (6) Sleep-efficiency moderation of calibration: "An additional hour of measured sleep corresponded to 47 minutes more
+      of reported sleep for those with higher sleep efficiency, but 25 minutes more of reported sleep for those with low
+      sleep efficiency."
+  CRITICAL MODELLING WARNING: this is a regression of REPORT on TRUTH. Algebraically inverting it to get truth from a
+  report is invalid and produces absurd answers at the low end (a report of 5.5 h inverts to 3.45 h of true sleep, far
+  outside the observed data). For report -> truth the modeller needs the reverse regression; see cespedes2016hchs.yaml
+  and white2026ffcws.yaml.
+shard: "s06_sleep_need_measurement"

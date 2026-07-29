@@ -1,0 +1,106 @@
+study_id: kim2011
+citation: Kim SJ, Lee YJ, Cho SJ, Cho IH, Lim W, Lim W. Relationship between weekend catch-up sleep and
+  poor performance on attention tasks in Korean adolescents. Archives of Pediatrics and Adolescent Medicine.
+  2011;165(9):806-812.
+doi: 10.1001/archpediatrics.2011.128
+pmid: '21893646'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Relationship between weekend catch-up sleep and poor performance on attention tasks
+    in Korean adolescents.
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 2638
+n_studies_pooled: null
+population:
+  age_mean: 17.3
+  age_range:
+  - 14
+  - 19
+  pct_female: 57.8
+  country: KR
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: cognition
+  outcome_construct: sustained_and_divided_attention_errors
+  exposure:
+    type: weekend_catchup
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: more weekend catch-up sleep -> omission and commission errors on computerized attention
+      tasks, ADJUSTED FOR WEEKDAY SLEEP DURATION
+  scale: raw_units
+  unit: error count
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'Direction is HARM: greater weekend catch-up predicted MORE errors on sustained attention
+    (omission P<.001, commission P=.03) and divided attention (P=.01, P=.04), AFTER adjusting for weekday
+    sleep duration, age, sex, depressed mood and snoring. No coefficients in the abstract, so value=0.0/se=null;
+    DO NOT POOL as a magnitude.'
+  covariates:
+  - age
+  - sex
+  - depressed_mood
+  - habitual_snoring
+  - weekday_sleep_duration
+  followup_years: null
+  cohort_family: Korean_high_school_survey
+  quote: After adjusting for age, sex, depressed mood (Beck Depression Inventory score, >=10), habitual
+    snoring, and weekday sleep duration, increased weekend catch-up sleep was significantly associated
+    with more omission and commission errors on sustained attention tasks (P < .001 and P = .03, respectively)
+    and on divided attention tasks (P = .01 and P = .04, respectively).
+- outcome_domain: exposure_measurement
+  outcome_construct: observed_sleep_pattern_matched_to_subject
+  exposure:
+    type: weekend_catchup
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: mean weekday TST, weekend TST and catch-up in Korean high-school students, mean age
+      17.3
+  scale: hours
+  unit: h catch-up
+  value: 2.7
+  se: 0.0331
+  ci: null
+  conversion_formula: weekday 5 h 42 min = 5.70 h; weekend 8 h 24 min = 8.40 h; catch-up 2 h 42 min =
+    2.70 h (SD 1 h 42 min = 1.70 h); se of the mean = 1.70/sqrt(2638) = 0.0331
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'NOT a harm estimate. THE CLOSEST POPULATION MATCH TO OUR SUBJECT ANYWHERE IN THIS SHARD:
+    mean weekday 5.70 h, weekend 8.40 h, catch-up 2.70 h, at mean age 17.3. Use it to judge how typical
+    his pattern is.'
+  covariates: []
+  followup_years: null
+  cohort_family: Korean_high_school_survey
+  quote: The mean (SD) sleep duration on weekdays was 5 hours 42 minutes (1 hour 0 minutes) per day and
+    on weekends was 8 hours 24 minutes (1 hour 36 minutes) per day. The mean (SD) weekend catch-up sleep
+    was 2 hours 42 minutes (1 hour 42 minutes) per day.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Objective computerized attention outcomes rather than self-report, decent size, and adjusted
+    for weekday sleep duration and depressed mood. Cross-sectional; catch-up sleep is explicitly interpreted
+    by the authors as a MARKER of weekday insufficiency rather than as a causal exposure, so the harm
+    may be residual confounding by sleep debt.
+funding: null
+notes: 'DOUBLY VALUABLE. First, it supplies the normative anchor that matches our subject almost exactly
+  (weekday 5.70 h, weekend 8.40 h, catch-up 2.70 h, age 17.3), letting me say his pattern is TYPICAL of
+  a Korean high-school student rather than extreme. Second, it is harmful-column evidence for COGNITION
+  specifically, and it survives adjustment for weekday sleep duration. INTERPRETIVE CAUTION the authors
+  themselves raise: ''Increased weekend catch-up sleep as an indicator of insufficient weekday sleep is
+  associated with poor performance''. They read catch-up as a PROXY for sleep debt, not as a cause of
+  the deficit. The modeller should not double-count this against a separate weekday-restriction cognitive
+  effect.'
+shard: s16_social_jetlag

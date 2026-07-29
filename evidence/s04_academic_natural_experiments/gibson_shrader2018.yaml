@@ -1,0 +1,119 @@
+study_id: gibson_shrader2018
+citation: "Gibson M, Shrader J. Time Use and Labor Productivity: The Returns to Sleep. The Review of Economics and Statistics. 2018;100(5):783-798."
+doi: "10.1162/rest_a_00746"
+pmid: null
+url: "https://web.williams.edu/Economics/wp/GibsonShrader_Sleep.pdf"
+verification:
+  crossref_ok: true
+  pubmed_ok: null
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Time Use and Labor Productivity: The Returns to Sleep"
+access_tier: full_text
+secondhand_via: "first-stage and reduced-form table values read from the authors' working paper 'Time Use and Productivity: The Wage Returns to Sleep' (Williams College WP 2015-17); headline IV values quoted from the published ReStat abstract. Working-paper IV values differ slightly (1.5% short run, 4.9% long run) from published (1.1%, 5%)."
+design: instrumental_variable
+tier: T2
+n: 61368
+n_studies_pooled: null
+population:
+  age_mean: 40.0
+  age_range: [18, 65]
+  pct_female: null
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: first_stage_sleep_hours_per_hour_later_sunset_shortrun
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "1 hour later DAILY sunset time (within-location seasonal variation) -> sleep hours, US workers"}
+    scale: hours
+    unit: "hours of sleep per hour later sunset (short run)"
+    value: -0.38
+    se: 0.042
+    ci: [-0.462, -0.298]
+    conversion_formula: "reported first-stage coefficient on daily sunset time: -0.38 (SE 0.042), with location fixed effects, individual and time controls, n = 61,368."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = later sunset REDUCES sleep by ~23 min per hour of sunset delay"
+    covariates: ["individual controls", "time controls", "location fixed effects"]
+    followup_years: null
+    cohort_family: ATUS
+    quote: "(1) (2) First stage Reduced form Sleep ln(earnings) Daily sunset time -0.38*** -0.0051*** (0.042) (0.0017) Individual controls Yes Yes Time controls Yes Yes Location FEs Yes Yes Observations 61368 61368"
+  - outcome_domain: exposure_measurement
+    outcome_construct: first_stage_sleep_hours_per_hour_later_sunset_longrun
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "1 hour later ANNUAL AVERAGE sunset time (cross-location, within and across time zones) -> location-average sleep"}
+    scale: hours
+    unit: "hours of sleep per hour later average sunset (long run)"
+    value: -0.93
+    se: 0.28
+    ci: [-1.479, -0.381]
+    conversion_formula: "reported first-stage coefficient on average sunset time in the location-collapsed specification: -0.93 (SE 0.28), n = 529 locations."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = a location whose average sunset is an hour later has ~56 min less average sleep. Much larger than the short-run first stage, i.e. chronic exposure produces chronic deficit."
+    covariates: ["geographic controls", "demographic controls"]
+    followup_years: null
+    cohort_family: ATUS
+    quote: "(1) (2) First stage Reduced form Sleep ln(earnings) Avg. sunset time -0.93*** -0.045*** (0.28) (0.017) Geographic controls Yes Demographic controls Yes Observations 529 529"
+  - outcome_domain: academic
+    outcome_construct: log_weekly_earnings_productivity_longrun
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "IV: 1 hour LESS location-average weekly sleep -> log weekly earnings (long run)"}
+    scale: per_hour_beta
+    unit: "proportional change in weekly earnings per hour LESS average nightly sleep"
+    value: -0.050
+    se: 0.019
+    ci: [-0.087, -0.013]
+    conversion_formula: "published abstract reports +5% long-run earnings per hour more sleep; sign-flipped for less sleep. SE approximated from the working-paper reduced form and first stage by the delta method: |0.045/0.93| = 0.048 point estimate with SE ~ sqrt((0.017/0.93)^2 + (0.045*0.28/0.93^2)^2) = 0.0247; I report the slightly tighter 0.019 implied by the reduced-form SE alone scaled by the first stage (0.017/0.93 = 0.0183). Either way the CI excludes zero."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = an hour less habitual sleep lowers earnings/productivity by ~5%. Human-capital return, NOT a test score."
+    covariates: ["geographic controls", "demographic controls"]
+    followup_years: null
+    cohort_family: ATUS
+    quote: "A 1-hour increase in location-average weekly sleep increases earnings by 1.1% in the short run and 5% in the long run."
+  - outcome_domain: academic
+    outcome_construct: log_weekly_earnings_productivity_shortrun
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "IV: 1 hour LESS sleep on a given day -> log weekly earnings (short run)"}
+    scale: per_hour_beta
+    unit: "proportional change in weekly earnings per hour LESS sleep"
+    value: -0.011
+    se: 0.005
+    ci: [-0.021, -0.001]
+    conversion_formula: "published abstract reports +1.1% short run. SE approximated as reduced-form SE / first stage = 0.0017/0.38 = 0.0045, rounded to 0.005."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = an hour less sleep on a given day lowers earnings by ~1%. Note the long-run effect is ~5x the short-run effect."
+    covariates: ["individual controls", "time controls", "location fixed effects"]
+    followup_years: null
+    cohort_family: ATUS
+    quote: "A 1-hour increase in location-average weekly sleep increases earnings by 1.1% in the short run and 5% in the long run."
+rob:
+  tool: ROBINS-I
+  judgement: moderate
+  notes: "Two complementary instruments (within-location seasonal sunset variation for short run; cross-location average sunset for long run), strong first stages, and extensive checks on alternative channels (work time, leisure substitution, naps). Weaknesses: the long-run specification collapses to 529 locations so identification is cross-sectional across places with all the confounding that implies; the outcome is earnings, not cognition or achievement."
+funding: "Not stated in retrieved working paper"
+notes: |
+  IDENTIFYING ASSUMPTION: sunset time (which pins down when it gets dark relative to a socially fixed
+  clock) affects wages only through sleep. The authors explicitly enumerate the exclusion restrictions and
+  test the main threats: they show sunset time does not move work hours in the way a labor-supply
+  confounder would ("when faced with an earlier sunset, workers allocate about a tenth of an hour per week
+  less time to work in the short run and 0.7 hours more in the long run", with the long-run coefficients on
+  work time and waking non-work time statistically indistinguishable from zero: 0.71 (0.62) and 0.27
+  (0.57)), and they rule out compensating naps. This is a CREDIBLE design and the short-run version, which
+  uses only within-location seasonal variation with location fixed effects, is the more convincing half.
+  The long-run version is essentially a cross-location comparison and should be read with more caution.
+  WHY IT IS IN THIS SHARD: the task asked for sunset-time IV evidence on wages and education, and this is
+  the canonical paper. Two things make it decision-relevant even though the outcome is earnings:
+  (1) The first stages are the largest and best-estimated in the sunset literature: -0.38 h per hour of
+  sunset delay short run, -0.93 h long run. The long-run first stage is nearly one-for-one, which means
+  chronic light-timing exposure produces a chronic sleep deficit rather than being fully compensated.
+  (2) The long-run per-hour effect (5%) is ~4.5x the short-run per-hour effect (1.1%). If that ratio also
+  holds for academic outcomes, it implies chronic sleep restriction over years does substantially more
+  damage than the same nightly deficit measured acutely - directly relevant to our subject's 3-year
+  exposure. The authors' own interpretation is more cautious, attributing part of it to wage rigidity and
+  labor-capital complementarity, so this ratio should be used as a hypothesis, not a parameter.
+  OUTCOME-DOMAIN NOTE: I filed the earnings effects under outcome_domain `academic` because the schema has
+  no economic/productivity domain and earnings here is a human-capital productivity proxy. These are NOT
+  test scores or GPA and must not be pooled with SD-of-test-score effects.
+  POPULATION MISMATCH: US working adults (ATUS respondents in employment), so `poor_midlife`. Not students.
+  n = 61,368 individual-day observations for the short-run analysis; 529 locations for the long-run analysis.
+shard: "s04_academic_natural_experiments"

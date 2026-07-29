@@ -1,0 +1,236 @@
+study_id: yin2017
+citation: "Yin J, Jin X, Shan Z, Li S, Huang H, Li P, Peng X, Peng Z, Yu K, Bao W, Yang W, Chen X, Liu L. Relationship of Sleep Duration With All-Cause Mortality and Cardiovascular Events: A Systematic Review and Dose-Response Meta-Analysis of Prospective Cohort Studies. J Am Heart Assoc. 2017 Sep 9;6(9):e005947."
+doi: "10.1161/JAHA.117.005947"
+pmid: "28889101"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Relationship of Sleep Duration With All‐Cause Mortality and Cardiovascular Events: A Systematic Review and Dose‐Response Meta‐Analysis of Prospective Cohort Studies"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: dose_response_meta_analysis
+tier: T5
+n: 3582016
+n_studies_pooled: 67
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational (Europe n=22, US n=16, Asia n=27, Australia n=2)"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: cardiovascular
+    outcome_construct: total_cvd_at_6h_vs_7h
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7, duration_days: null,
+               contrast_label: "6 h/day vs 7 h/day referent, restricted cubic spline (4 knots)"}
+    scale: log_rr
+    unit: null
+    value: 0.01980
+    se: 0.00754
+    ci: [0.0, 0.02956]
+    conversion_formula: "log_rr = ln(1.02) = 0.01980; se = (ln(1.03) - ln(1.00))/3.92 = 0.00754"
+    from_figure: true
+    inferred_from_ci: true
+    direction_note: "positive = elevated total-CVD risk at 6 h vs 7 h. Effect is essentially nil: RR 1.02 with lower CI bound at exactly 1.00. HEADLINE NUMBER for a 6 h sleeper."
+    covariates: ["maximally adjusted model extracted from each contributing study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_26_estimates"
+    quote: "6 h 1.01 (1.00-1.01) 1.02 (1.00-1.03) 1.05 (1.03-1.08) 0.99 (0.96-1.03)"
+  - outcome_domain: cardiovascular
+    outcome_construct: total_cvd_at_5h_vs_7h
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: null,
+               contrast_label: "5 h/day vs 7 h/day referent, restricted cubic spline"}
+    scale: log_rr
+    unit: null
+    value: 0.04879
+    se: 0.01209
+    ci: [0.02956, 0.07696]
+    conversion_formula: "log_rr = ln(1.05) = 0.04879; se = (ln(1.08) - ln(1.03))/3.92 = 0.01209"
+    from_figure: true
+    inferred_from_ci: true
+    direction_note: "positive = elevated total-CVD risk at 5 h vs 7 h (RR 1.05). HEADLINE NUMBER for a 5 h sleeper."
+    covariates: ["maximally adjusted model extracted from each contributing study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_26_estimates"
+    quote: "5 h 1.04 (1.03-1.05) 1.05 (1.03-1.08) 1.11 (1.06-1.16) 1.02 (0.96-1.08)"
+  - outcome_domain: cardiovascular
+    outcome_construct: chd_at_6h_vs_7h
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7, duration_days: null,
+               contrast_label: "6 h/day vs 7 h/day referent, restricted cubic spline"}
+    scale: log_rr
+    unit: null
+    value: 0.04879
+    se: 0.01209
+    ci: [0.02956, 0.07696]
+    conversion_formula: "log_rr = ln(1.05) = 0.04879; se = (ln(1.08) - ln(1.03))/3.92 = 0.01209"
+    from_figure: true
+    inferred_from_ci: true
+    direction_note: "positive = elevated CHD risk at 6 h vs 7 h (RR 1.05)"
+    covariates: ["maximally adjusted model extracted from each contributing study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_20_estimates"
+    quote: "6 h 1.01 (1.00-1.01) 1.02 (1.00-1.03) 1.05 (1.03-1.08) 0.99 (0.96-1.03)"
+  - outcome_domain: cardiovascular
+    outcome_construct: chd_at_5h_vs_7h
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: null,
+               contrast_label: "5 h/day vs 7 h/day referent, restricted cubic spline"}
+    scale: log_rr
+    unit: null
+    value: 0.10436
+    se: 0.02300
+    ci: [0.05827, 0.14842]
+    conversion_formula: "log_rr = ln(1.11) = 0.10436; se = (ln(1.16) - ln(1.06))/3.92 = 0.02300"
+    from_figure: true
+    inferred_from_ci: true
+    direction_note: "positive = elevated CHD risk at 5 h vs 7 h (RR 1.11). CHD is the most sleep-sensitive CVD endpoint in this analysis."
+    covariates: ["maximally adjusted model extracted from each contributing study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_20_estimates"
+    quote: "5 h 1.04 (1.03-1.05) 1.05 (1.03-1.08) 1.11 (1.06-1.16) 1.02 (0.96-1.08)"
+  - outcome_domain: cardiovascular
+    outcome_construct: stroke_at_6h_vs_7h
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7, duration_days: null,
+               contrast_label: "6 h/day vs 7 h/day referent, restricted cubic spline"}
+    scale: log_rr
+    unit: null
+    value: -0.01005
+    se: 0.01795
+    ci: [-0.04082, 0.02956]
+    conversion_formula: "log_rr = ln(0.99) = -0.01005; se = (ln(1.03) - ln(0.96))/3.92 = 0.01795"
+    from_figure: true
+    inferred_from_ci: true
+    direction_note: "NEGATIVE point estimate = slightly LOWER stroke risk at 6 h than at 7 h (RR 0.99). Null; CI spans 1.0. The stroke nadir in this analysis is ~6-7 h, not 7-8 h."
+    covariates: ["maximally adjusted model extracted from each contributing study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_17_estimates"
+    quote: "An approximate U-shape curvilinear association was observed, with the lowest risk of stroke at a sleep duration of ≈6 to 7 hours per day"
+  - outcome_domain: cardiovascular
+    outcome_construct: stroke_at_5h_vs_7h
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: null,
+               contrast_label: "5 h/day vs 7 h/day referent, restricted cubic spline"}
+    scale: log_rr
+    unit: null
+    value: 0.01980
+    se: 0.03005
+    ci: [-0.04082, 0.07696]
+    conversion_formula: "log_rr = ln(1.02) = 0.01980; se = (ln(1.08) - ln(0.96))/3.92 = 0.03005"
+    from_figure: true
+    inferred_from_ci: true
+    direction_note: "positive = elevated stroke risk at 5 h, but null (RR 1.02, CI 0.96-1.08). Contradicts Cappuccio 2011 (1.15) and Wang 2022 (1.33) for stroke."
+    covariates: ["maximally adjusted model extracted from each contributing study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_17_estimates"
+    quote: "5 h 1.04 (1.03-1.05) 1.05 (1.03-1.08) 1.11 (1.06-1.16) 1.02 (0.96-1.08)"
+  - outcome_domain: cardiovascular
+    outcome_construct: total_cvd_per_hour_less_below_7h
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: 7, duration_days: null,
+               contrast_label: "per 1 h reduction in sleep duration, below the 7 h inflection"}
+    scale: log_rr
+    unit: "per 1 h less sleep"
+    value: 0.05827
+    se: 0.01209
+    ci: [0.02956, 0.07696]
+    conversion_formula: "log_rr = ln(1.06) = 0.05827; se = (ln(1.08) - ln(1.03))/3.92 = 0.01209"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = each hour of sleep lost below 7 h multiplies total-CVD risk by 1.06. THE per-hour slope requested. I2 = 52.0%; drops to 1.04 (1.02-1.06) when 1 report excluded."
+    covariates: ["maximally adjusted model extracted from each contributing study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_26_estimates"
+    quote: "We found no evidence of nonlinear association between short sleep duration and total CVD (P=0.19), and the pooled RR was 1.06 (95% CI, 1.03-1.08) per 1-hour reduction of sleep duration, with moderate heterogeneity (I2=52.0%, P<0.01; Figure 4 A)."
+  - outcome_domain: cardiovascular
+    outcome_construct: chd_per_hour_less_below_7h
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: 7, duration_days: null,
+               contrast_label: "per 1 h reduction in sleep duration, below the 7 h inflection"}
+    scale: log_rr
+    unit: "per 1 h less sleep"
+    value: 0.06766
+    se: 0.02137
+    ci: [0.02956, 0.11333]
+    conversion_formula: "log_rr = ln(1.07) = 0.06766; se = (ln(1.12) - ln(1.03))/3.92 = 0.02137"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = each hour of sleep lost below 7 h multiplies CHD risk by 1.07. I2 = 59.3%; attenuates to 1.04 (1.01-1.08) after excluding 2 reports."
+    covariates: ["maximally adjusted model extracted from each contributing study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_20_estimates"
+    quote: "the pooled RR was 1.07 (95% CI, 1.03-1.12) per 1-hour reduction of sleep duration, with moderate to high heterogeneity (I 2 =59.3%, P<0.01) (Figure 5 A). 4 The heterogeneity was reduced when we excluded 2 reports 13 , 66 (I 2 =23.2%, P=0.19), and the association remained similar (pooled RR: 1.04; 95% CI, 1.01-1.08)."
+  - outcome_domain: cardiovascular
+    outcome_construct: stroke_per_hour_less_below_7h
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: 7, duration_days: null,
+               contrast_label: "per 1 h reduction in sleep duration, below the 7 h inflection"}
+    scale: log_rr
+    unit: "per 1 h less sleep"
+    value: 0.04879
+    se: 0.01945
+    ci: [0.00995, 0.08618]
+    conversion_formula: "log_rr = ln(1.05) = 0.04879; se = (ln(1.09) - ln(1.01))/3.92 = 0.01945"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = each hour of sleep lost below 7 h multiplies stroke risk by 1.05. I2 = 0.0% (no heterogeneity)."
+    covariates: ["maximally adjusted model extracted from each contributing study"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_17_estimates"
+    quote: "the pooled RR for stroke was 1.05 (95% CI, 1.01-1.09) per 1-hour reduction of sleep duration, with no significant heterogeneity (I 2 =0.0%, P=0.55)"
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_case_counts_pooled
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "whole pooled sample, all sleep strata"}
+    scale: probability
+    unit: "cases per participant over 2.3-34 y follow-up (all sleep strata combined)"
+    value: 0.01645
+    se: null
+    ci: null
+    conversion_formula: "total CVD: 58919/3582016 = 0.01645. Also CHD 22511/3582016 = 0.00629; stroke 15476/3582016 = 0.00432; all-cause death 241107/3582016 = 0.06731. Denominator is whole pooled sample; stratum-specific absolute rates are not reported."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "absolute anchor: ~1.6% total-CVD, ~0.6% CHD, ~0.4% stroke cumulative incidence in predominantly midlife/older adults. Applying the RR of 1.02-1.05 to a 19-year-old's baseline (orders of magnitude lower) yields a negligible absolute excess."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_67_articles"
+    quote: "The sample sizes ranged from 724 to 1 116 936, with a total of 3 582 016 participants, including 241 107 cases of all-cause mortality, 58 919 cases of total CVD, 22 511 cases of CHD, and 15 476 cases of stroke. The follow-up periods ranged from 2.3 to 34 years."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: >
+    Largest and most methodologically appropriate dose-response synthesis for this shard's question:
+    restricted cubic splines with 4 knots, Greenland-Longnecker piecewise linear trends, maximally
+    adjusted per-study estimates, NOS quality 6.9-7.1/9. Key internal caveats that reduce confidence
+    in a causal reading: (a) exposure is self-reported in 48/67 studies and interview-based in 19,
+    with zero objective (actigraphy/PSG) measurement; (b) when restricted to studies reporting CVD
+    INCIDENCE rather than mortality, "there was no significantly increased risk of total CVD at the
+    extreme sleep duration" - i.e. the U-shape is driven by mortality studies, which is the pattern
+    expected under reverse causation; (c) the authors explicitly declined to stratify by age.
+funding: null
+notes: >
+  Target extraction #2. This is the single most decision-relevant record in the shard because it
+  supplies the requested per-hour slope AND the absolute RR at 5 h and 6 h from the nonlinear spline
+  (Table 2), which is what the subject's exposure actually is.
+  THE DOSE-RESPONSE CURVE (RR vs 7 h referent), read from Table 2:
+    sleep h : all-cause mortality : total CVD : CHD : stroke
+      3 h   : 1.12 (1.10-1.14) : 1.14 (1.09-1.19) : (not est.) : (not est.)
+      4 h   : 1.08 (1.06-1.09) : 1.09 (1.06-1.13) : 1.16 (1.09-1.23) : 1.05 (0.96-1.15)
+      5 h   : 1.04 (1.03-1.05) : 1.05 (1.03-1.08) : 1.11 (1.06-1.16) : 1.02 (0.96-1.08)
+      6 h   : 1.01 (1.00-1.01) : 1.02 (1.00-1.03) : 1.05 (1.03-1.08) : 0.99 (0.96-1.03)
+      7 h   : 1.00 (ref)       : 1.00 (ref)       : 1.00 (ref)       : 1.00 (ref)
+      8 h   : 1.04 (1.04-1.05) : 1.03 (1.02-1.05) : 1.01 (0.99-1.03) : 1.08 (1.06-1.11)
+      9 h   : 1.15 (1.14-1.16) : 1.16 (1.13-1.19) : 1.14 (1.08-1.20) : 1.30 (1.24-1.37)
+     10 h   : 1.32 (1.29-1.35) : 1.37 (1.29-1.45) : 1.34 (1.20-1.50) : 1.64 (1.47-1.82)
+     11 h   : 1.53 (1.47-1.59) : (not est.)       : (not est.)       : (not est.)
+  n of risk estimates per column: 40 (mortality), 26 (CVD), 20 (CHD), 17 (stroke).
+  DIRECTLY RELEVANT TO THE SUBJECT: the curve is markedly ASYMMETRIC. At 6 h - the middle of the
+  subject's weekday range - total CVD is 1.02 and stroke is 0.99, i.e. indistinguishable from the
+  7 h referent. At 5 h the largest effect is CHD at 1.11. The long-sleep arm is much steeper than
+  the short-sleep arm (10 h: CVD 1.37, stroke 1.64), which is hard to explain by a sleep-toxicity
+  mechanism and is the signature of confounding by prevalent illness. The subject's occasional
+  10-11 h weekend nights sit on the steeper limb but are recovery sleep, not habitual long sleep,
+  so this arm is not transportable to him.
+  This paper explicitly contradicts Cappuccio 2011 on total CVD ("short duration of sleep was not
+  significantly associated with a greater risk of total CVD, possibly because of limited included
+  studies") and supersedes it (19 further cohorts, 26 further reports).
+  On AGE: the discussion states "several studies found a stronger U-shaped association between
+  sleep duration and CVDs in older adults compared with younger adults (cutoff at age 65 years)",
+  i.e. the direction of the age interaction for hard CVD endpoints is the OPPOSITE of that reported
+  for hypertension - weaker, not stronger, in the young. No age-stratified pooled estimate is given.
+shard: "s08_cardiovascular"

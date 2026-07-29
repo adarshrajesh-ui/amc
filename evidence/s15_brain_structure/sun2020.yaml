@@ -1,0 +1,92 @@
+study_id: sun2020
+citation: "Sun J, Zhao R, Yang X, Deng H, Zhu Y, Chen Y, Yuan K, Xi Y, Yin H, Qin W. Alteration of Brain Gray Matter Density After 24 h of Sleep Deprivation in Healthy Adults. Frontiers in Neuroscience. 2020;14:754."
+doi: "10.3389/fnins.2020.00754"
+pmid: "32903801"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7438917/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Alteration of Brain Gray Matter Density After 24 h of Sleep Deprivation in Healthy Adults"
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 23
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "China"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: frontal_gray_matter_density_after_24h_deprivation
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1,
+               contrast_label: "24 h total sleep deprivation vs resting wakefulness after normal sleep, both scanned at 08:00, paired within-subject VBM (FSL-VBM)"}
+    scale: raw_units
+    unit: "direction of change in gray matter density (qualitative; no magnitude in retrievable abstract)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded +1 = significant INCREASE in gray matter density. Abstract reports direction and significance only; no cluster statistics or percentages. se null - not invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive = gray matter density INCREASED in right frontal pole, right superior frontal gyrus and right middle frontal gyrus after 24 h of sleep deprivation. NOTE THE SIGN: sleep loss made frontal gray matter density LARGER, which is the opposite of what the observational literature reports for short sleepers."
+    covariates: []
+    followup_years: null
+    cohort_family: "Xian_sleep_deprivation"
+    quote: "Our results showed that the GMD in the right frontal pole (FP), right superior frontal gyrus (SFG), and right middle frontal gyrus significantly increased and GMV and CT in the right temporal pole (TP) significantly decreased after 24 h of acute SD."
+  - outcome_domain: brain_structure
+    outcome_construct: gmd_change_correlates_with_subjective_sleepiness
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1,
+               contrast_label: "change in right middle frontal gyrus gray matter density vs change in Karolinska Sleepiness Scale score after 24 h deprivation"}
+    scale: raw_units
+    unit: "Spearman correlation coefficient"
+    value: 0.625
+    se: 0.137
+    ci: [0.287, 0.824]
+    conversion_formula: "Reported directly: Spearman r = 0.625, p = 0.0014, surviving Bonferroni correction at p<0.05/25. CI and se are MY OWN computation via the Fisher z transform, not published: z = atanh(0.625) = 0.7332; se_z = 1/sqrt(n-3) = 1/sqrt(20) = 0.2236; z CI = 0.7332 +/- 1.96*0.2236 = [0.2949, 1.1715]; back-transformed r CI = [tanh(0.2949), tanh(1.1715)] = [0.287, 0.824]; se on the r scale = (0.824-0.287)/3.92 = 0.137."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "Positive = LARGER increase in frontal gray matter density accompanied GREATER subjective sleepiness. This ties the acute structural change to a transient STATE (sleepiness), not to a durable trait."
+    covariates: []
+    followup_years: null
+    cohort_family: "Xian_sleep_deprivation"
+    quote: "SD-induced changes in GMD in the right middle frontal gyrus were positively correlated with the changes of KSS scores (Spearman's correlation r = 0.625, p = 0.0014, Bonferroni correction with p < 0.05/25)."
+rob:
+  tool: RoB2
+  judgement: high
+  notes: "n=23, paired within-subject with no non-deprived control arm, so repeat-scan and time-of-day drift are uncontrolled (though both scans were at 08:00, which handles the diurnal confound better than most). Twenty-five comparisons with Bonferroni correction applied to the correlation but the primary VBM contrasts are whole-brain. Three different morphometric pipelines (FSL-VBM for density, FreeSurfer for volume and thickness) yielding partially discordant results across regions. No recovery scan, so reversibility untested here."
+funding: "Not stated in the retrievable record"
+notes: |
+  RECORDED BECAUSE THE DIRECTION OF THE EFFECT IS THE POINT.
+
+  Twenty-four hours of total sleep deprivation INCREASED gray matter density in three frontal
+  regions. The frontal cortex is precisely where the adolescent cross-sectional literature reports
+  SMALLER volumes in short sleepers (urrila2017: left superior/middle frontal gyrus; cheng2021:
+  superior and middle frontal gyrus, orbitofrontal cortex; hansen2023: right superior frontal).
+
+  So: acute sleep loss makes frontal gray matter measurements go UP, while habitual short sleep is
+  cross-sectionally associated with frontal gray matter being DOWN. These cannot both be the same
+  mechanism operating on different timescales without further argument, and nobody has supplied
+  that argument. The most economical reading is that the acute effect is a physiological state
+  change (fluid, perfusion, extracellular space) with no bearing on the cross-sectional gradient,
+  and that the cross-sectional gradient is confounded or constitutional.
+
+  THE SLEEPINESS CORRELATION SEALS THE STATE INTERPRETATION. The magnitude of the structural
+  change tracked the magnitude of subjective sleepiness (r = 0.625). The imaging signal is
+  behaving like a marker of current sleep pressure, which is by definition transient.
+
+  SE CAVEAT, STATED PLAINLY: the correlation's standard error is my own approximation via the
+  Fisher z transform for n=23, not a published quantity, and is flagged inferred_from_ci: true.
+  The paper publishes no CI. Do not treat it as a reported precision.
+
+  Note also the internally discordant result within this single paper: gray matter DENSITY rose in
+  frontal regions while gray matter VOLUME and cortical THICKNESS fell in the temporal pole. Three
+  morphometric measures of the same brains after the same intervention disagreed in sign by region.
+  That is a useful calibration on how much interpretive weight any single morphometric finding in
+  this field can bear.
+shard: "s15_brain_structure"

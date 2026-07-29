@@ -1,0 +1,175 @@
+study_id: martiniuk2013
+citation: "Martiniuk AL, Senserrick T, Lo S, Williamson A, Du W, Grunstein RR, Woodward M, Glozier N, Stevenson M, Norton R, Ivers RQ. Sleep-deprived young drivers and the risk for crash: the DRIVE prospective cohort study. JAMA Pediatr. 2013 Jul;167(7):647-55."
+doi: "10.1001/jamapediatrics.2013.1429"
+pmid: "23689363"
+url: "https://doi.org/10.1001/jamapediatrics.2013.1429"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Sleep-deprived young drivers and the risk for crash: the DRIVE prospective cohort study."
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 19327
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [17, 24]
+  pct_female: null
+  country: "Australia"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: mortality
+    outcome_construct: police_reported_crash_any
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7.5, duration_days: null,
+               contrast_label: "habitually sleeping <=6 h per night vs >6 h per night; outcome = any police-reported crash over ~2 y of provisional licensure"}
+    scale: log_rr
+    unit: null
+    value: 0.190620
+    se: 0.077645
+    ci: [0.039221, 0.343590]
+    conversion_formula: "log_rr = ln(1.21) = 0.190620; se = (ln(1.41) - ln(1.04))/3.92 = 0.077645"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = HARM. RR 1.21. THIS IS THE SINGLE MOST TRANSPORTABLE EFFECT ESTIMATE IN THE ENTIRE
+      SHARD: it is (a) prospective, (b) in 17-24 year olds, (c) for HABITUAL rather than acute short
+      sleep, (d) at essentially the subject's dose (<=6 h vs >6 h), and (e) against an
+      externally-recorded (police/licensing-linked) crash outcome rather than self-report. It is also
+      MUCH SMALLER than the acute case-control estimates: 1.21, not 1.9 or 2.7. When the exposure is
+      changed from "slept 5 h last night" to "usually sleeps <=6 h" and the design from case-control to
+      prospective cohort, the effect shrinks by roughly 4-9x on the excess-risk scale.
+    covariates: ["not specified in abstract; multivariable Poisson regression"]
+    followup_years: 2.0
+    cohort_family: "DRIVE_NSW"
+    quote: >
+      those who reported sleeping 6 or fewer hours per night had an increased risk for crash compared with those
+      who reported sleeping more than 6 hours (relative risk [RR], 1.21; 95% CI, 1.04-1.41)
+  - outcome_domain: mortality
+    outcome_construct: run_off_road_crash
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "less sleep on WEEKEND nights; outcome = run-off-road crash"}
+    scale: log_rr
+    unit: null
+    value: 0.438255
+    se: 0.128196
+    ci: [0.190620, 0.693147]
+    conversion_formula: "log_rr = ln(1.55) = 0.438255; se = (ln(2.00) - ln(1.21))/3.92 = 0.128196"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = HARM. RR 1.55 for the drowsy-crash SIGNATURE outcome (run-off-road) specifically, and
+      driven by WEEKEND rather than weekday sleep. DIRECTLY RELEVANT AND FAVOURABLE TO THE SUBJECT: the
+      subject sleeps 7-8 h at weekends, i.e. he is in the referent group for this exposure. The same
+      pattern appears in s13_mortality's akerstedt2019, where short WEEKEND sleep (not short weekday
+      sleep) carried the mortality signal. Two independent literatures agree that short sleep on the
+      free day, not on the constrained day, is the harmful phenotype.
+    covariates: ["not specified in abstract"]
+    followup_years: 2.0
+    cohort_family: "DRIVE_NSW"
+    quote: >
+      Less weekend sleep was significantly associated with an increased risk for run-off-road crashes (RR, 1.55;
+      95% CI, 1.21-2.00).
+  - outcome_domain: mortality
+    outcome_construct: crash_occurring_0000_0559
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7.5, duration_days: null,
+               contrast_label: "less sleep per night (average and weekend); outcome = crash occurring midnight-05:59 vs other hours"}
+    scale: log_rr
+    unit: null
+    value: 0.620576
+    se: 0.264457
+    ci: [0.104360, 1.141033]
+    conversion_formula: "log_rr = ln(1.86) = 0.620576; se = (ln(3.13) - ln(1.11))/3.92 = 0.264457"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = HARM. RR 1.86. Short-sleeping young drivers crash disproportionately in the circadian
+      trough. IMPORTANT CONFOUNDING READ: this is exactly the pattern you expect if short sleepers are
+      short sleepers BECAUSE they are out late, in which case the crash is caused by the night driving
+      (and by whatever they were doing at night) rather than by the sleep debt. The study cannot
+      separate these, and the abstract does not report adjustment for night-time driving exposure.
+    covariates: ["not specified in abstract"]
+    followup_years: 2.0
+    cohort_family: "DRIVE_NSW"
+    quote: >
+      Crashes for individuals who had less sleep per night (on average and on weekends) were significantly more
+      likely to occur between 8 pm and 6 am (RR, 1.86; 95% CI, 1.11-3.13, for midnight to 5:59 am
+  - outcome_domain: mortality
+    outcome_construct: crash_occurring_2000_2359
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7.5, duration_days: null,
+               contrast_label: "less sleep per night; outcome = crash occurring 20:00-23:59"}
+    scale: log_rr
+    unit: null
+    value: 0.506818
+    se: 0.186615
+    ci: [0.139762, 0.871293]
+    conversion_formula: "log_rr = ln(1.66) = 0.506818; se = (ln(2.39) - ln(1.15))/3.92 = 0.186615"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = HARM. RR 1.66 for evening crashes. Same interpretation caveat as the midnight-05:59 estimate."
+    covariates: ["not specified in abstract"]
+    followup_years: 2.0
+    cohort_family: "DRIVE_NSW"
+    quote: >
+      RR, 1.66; 95% CI, 1.15-2.39, for 8:00 pm to 11:59 pm
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Strengths: (1) genuinely PROSPECTIVE — exposure measured by questionnaire at first-stage provisional
+    licensure, before any of the outcome crashes occurred, which removes the reverse-attribution problem
+    that afflicts every case-control study in this shard; (2) very large (20,822 recruited, 19,327
+    analysed) and in exactly the target age band (17-24); (3) outcome is POLICE-REPORTED crash obtained
+    by record linkage to licensing and police crash databases, not self-report; (4) ~2 years of
+    follow-up, i.e. the same duration as the subject's remaining exposure window.
+    Weaknesses: (1) exposure is a single baseline self-report of usual sleep, dichotomised at 6 h, so
+    there is no dose-response and substantial regression dilution — this biases the RR TOWARD 1, so 1.21
+    is if anything conservative; (2) the abstract does not list the covariate set, so I cannot verify
+    whether driving exposure (km driven, night-driving frequency), alcohol, risk-taking or
+    socioeconomic status were adjusted for; residual confounding by the young-male risk-taking cluster
+    is likely and would bias AWAY from 1; (3) newly licensed provisional drivers in New South Wales
+    operate under graduated licensing restrictions including night-driving and passenger limits that
+    differ from US state law, so absolute crash rates do not transport even though relative effects
+    probably do; (4) outcome is ANY police-reported crash, overwhelmingly non-injury, so this RR is not
+    a fatality RR and should not be assumed to equal one; (5) no sex-specific estimate in the abstract.
+funding: "Not stated in abstract. The DRIVE study was funded by the Australian National Health and Medical Research Council and NSW Roads and Traffic Authority (not verified from retrieved text)."
+notes: >
+  REQUIRED EXTRACTION #2 (young drivers specifically) — this is the best study that exists for it.
+  .
+  WHY THIS RECORD SHOULD DOMINATE THE DOWNSTREAM MODEL: every other crash-risk estimate in this shard
+  is either (a) acute rather than habitual, (b) case-control rather than prospective, (c) middle-aged or
+  elderly, or (d) a two-county ecological comparison. This one is prospective, habitual, and 17-24 y.
+  Its answer is RR 1.21 (1.04-1.41) for <=6 h vs >6 h. That is the number I use as the central estimate
+  in injury_channel.md, not the 1.9 or 2.7 from the case-control literature.
+  .
+  THE STUDY DESIGN'S HONEST LIMIT: RR 1.21 is for ANY police-reported crash. To convert it to a FATAL
+  crash RR I would have to assume the sleep effect is equal across severities. That assumption is
+  probably wrong in the direction of UNDERSTATING harm, because (i) tefft2018 shows the sleep effect is
+  concentrated in single-vehicle crashes, which are disproportionately fatal, and (ii) owens2018_aaa
+  shows drowsiness is somewhat more prevalent in police-reportable (10.6-10.8%) than in all
+  (8.8-9.5%) crashes. I flag the assumption explicitly rather than silently importing it.
+  .
+  VERBATIM QUOTE (abstract, PMID 23689363): "PARTICIPANTS: Questionnaire responses were obtained from
+  20,822 newly licensed drivers aged 17 to 24 years. Participants held a first-stage provisional license
+  between June 2003 and December 2004 prospectively linked to licensing and police-reported crash data,
+  with an average of 2 years of follow-up. Analyses were conducted on a subsample of 19,327 participants
+  for which there was full information. EXPOSURE: Sleeping 6 or fewer hours per night. MAIN OUTCOMES AND
+  MEASURES: The main outcome variable was police-reported crash. Multivariable Poisson regression models
+  were used to investigate the role of sleep duration on the risk for crash. RESULTS: On average, those
+  who reported sleeping 6 or fewer hours per night had an increased risk for crash compared with those
+  who reported sleeping more than 6 hours (relative risk [RR], 1.21; 95% CI, 1.04-1.41). Less weekend
+  sleep was significantly associated with an increased risk for run-off-road crashes (RR, 1.55; 95% CI,
+  1.21-2.00). Crashes for individuals who had less sleep per night (on average and on weekends) were
+  significantly more likely to occur between 8 pm and 6 am (RR, 1.86; 95% CI, 1.11-3.13, for midnight to
+  5:59 am and RR, 1.66; 95% CI, 1.15-2.39, for 8:00 pm to 11:59 pm). CONCLUSIONS AND RELEVANCE: Less
+  sleep per night significantly increased the risk for crash for young drivers."
+  .
+  ACCESS: abstract_only. JAMA Pediatrics full text is paywalled and not available via Europe PMC or
+  NCBI. Every number above appears verbatim in the quoted abstract. The covariate list, the sex-specific
+  estimates and any dose-response detail could NOT be retrieved and are recorded as unknown rather than
+  guessed.
+  .
+  n = 19,327 (analysed subsample with full information), not 20,822 (recruited).
+shard: "s21_drowsy_driving"

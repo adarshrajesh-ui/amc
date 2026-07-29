@@ -1,0 +1,54 @@
+study_id: itani2017
+citation: 'Itani O, Jike M, Watanabe N, Kaneita Y. Short sleep duration and health outcomes: a systematic review, meta-analysis, and meta-regression. Sleep Medicine. 2017;32:246-256.'
+doi: 10.1016/j.sleep.2016.08.006
+pmid: '27743803'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Short sleep duration and health outcomes: a systematic review, meta-analysis, and meta-regression.'
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 5172710
+n_studies_pooled: 153
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: multinational
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: incident_obesity_short_vs_normal_sleep
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: short sleepers vs normal sleepers at baseline, prospective cohorts, follow-up >=1 y
+  scale: log_rr
+  unit: null
+  value: 0.3221
+  se: 0.0516
+  ci:
+  - 0.2231
+  - 0.4253
+  conversion_formula: log_rr = ln(1.38); se = (ln(1.53) - ln(1.25))/3.92 = 0.0516
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = short sleep predicts HIGHER incident obesity (harm)
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_153_cohorts_mixed
+  quote: Similar significant results were observed in diabetes mellitus (1.37, 1.22-1.53), hypertension (1.17, 1.09-1.26), cardiovascular diseases (1.16, 1.10-1.23), coronary heart diseases (1.26, 1.15-1.38), and obesity (1.38, 1.25-1.53).
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: Very large prospective evidence base, but 'short sleep' is defined heterogeneously across studies and the exposure is self-reported. Meta-regression found NO dose-response for obesity (only for mortality).
+funding: not stated in abstract
+notes: 'Important negative detail: ''Meta-regression analyses found a linear association between a statistically significant increase in mortality and sleep duration at less than six hours. No dose-response was identified in the other outcomes.'' i.e. this large synthesis did NOT find an obesity dose-response, in contrast to Zhou 2019. Total n = 5,172,710 across ALL outcomes, not obesity alone.'
+shard: s09_obesity_bmi

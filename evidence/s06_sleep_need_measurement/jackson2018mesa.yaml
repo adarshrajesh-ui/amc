@@ -1,0 +1,100 @@
+study_id: jackson2018mesa
+citation: "Jackson CL, Patel SR, Jackson WB 2nd, Lutsey PL, Redline S. Agreement between self-reported and objectively measured sleep duration among white, black, Hispanic, and Chinese adults in the United States: Multi-Ethnic Study of Atherosclerosis. Sleep. 2018;41(6):zsy057."
+doi: "10.1093/sleep/zsy057"
+pmid: "29701831"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5995218/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Agreement between self-reported and objectively measured sleep duration among white, black, Hispanic, and Chinese adults in the United States: Multi-Ethnic Study of Atherosclerosis"
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 1910
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [54, 93]
+  pct_female: null
+  country: "US"
+  adolescent_match: poor_elderly
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: selfreport_minus_actigraphy_mean_bias
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "self-reported habitual sleep minus 7-day wrist actigraphy TST, white participants"}
+    scale: hours
+    unit: "hours (positive = self-report longer)"
+    value: 1.10
+    se: 0.0425
+    ci: [1.017, 1.183]
+    conversion_formula: "abstract: 66 min (95% CI 61-71) for whites -> 66/60 = 1.10 h; ci = 61/60 to 71/60 = 1.017 to 1.183; se = (1.183-1.017)/3.92 = 0.0425"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = self-report OVERSTATES actigraphy sleep"
+    covariates: []
+    followup_years: null
+    cohort_family: "MESA"
+    quote: |
+      Self-reporting bias for total sleep time compared with wrist actigraphy was 66 min (95% confidence interval
+      [CI]: 61-71) for whites, 58 min (95% CI: 48-69) for blacks, 66 min (95% CI: 57-74) for Hispanics, and 60 min
+      (95% CI: 49-70) for Chinese adults.
+  - outcome_domain: exposure_measurement
+    outcome_construct: selfreport_minus_psg_mean_bias
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 1, contrast_label: "self-reported habitual sleep minus single-night in-home PSG TST, white participants"}
+    scale: hours
+    unit: "hours (positive = self-report longer)"
+    value: 1.217
+    se: 0.0510
+    ci: [1.117, 1.317]
+    conversion_formula: "abstract: 73 min (95% CI 67-79) for whites -> 73/60 = 1.217 h; se = ((79-67)/3.92)/60 = 0.0510"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = self-report OVERSTATES PSG sleep. PSG bias (1.22 h) > actigraphy bias (1.10 h) because actigraphy itself over-scores sleep relative to PSG."
+    covariates: []
+    followup_years: null
+    cohort_family: "MESA"
+    quote: |
+      Compared with PSG, self-reporting bias in whites at 73 min (95% CI: 67-79) was higher than in blacks (54 min
+      [95% CI: 42-65]) and Chinese (49 min [95% CI: 37-61]) but not different from Hispanics (67 min [95% CI:
+      56-78]).
+  - outcome_domain: exposure_measurement
+    outcome_construct: correlation_selfreport_objective
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "Spearman rho, white participants"}
+    scale: raw_units
+    unit: "correlation coefficient"
+    value: 0.45
+    se: null
+    ci: null
+    conversion_formula: "reported directly (whites rho = 0.45; blacks rho = 0.28, significantly lower)"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "higher = better agreement"
+    covariates: []
+    followup_years: null
+    cohort_family: "MESA"
+    quote: |
+      Compared with whites (rho = 0.45), correlations were significantly lower only in blacks (rho = 0.28).
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "large multi-ethnic cohort with BOTH 7-day actigraphy and in-home PSG, which is why it is worth including despite the elderly age; self-report derived from bed/wake times so it approximates time in bed; single PSG night subject to first-night effect; abstract-only access."
+funding: "NIH/NHLBI (MESA); NIEHS intramural"
+notes: |
+  Included specifically because it is the only retrieved study giving the self-report bias against BOTH actigraphy and PSG
+  in the same people, which lets the modeller separate the two reference standards.
+  Verbatim (abstract): "Among 1910 adults, self-reported sleep duration, determined by differences between bed and wake
+  times, was overestimated in all racial groups compared with PSG and actigraphy. Compared with whites (rho = 0.45),
+  correlations were significantly lower only in blacks (rho = 0.28). Self-reporting bias for total sleep time compared
+  with wrist actigraphy was 66 min (95% confidence interval [CI]: 61-71) for whites, 58 min (95% CI: 48-69) for blacks,
+  66 min (95% CI: 57-74) for Hispanics, and 60 min (95% CI: 49-70) for Chinese adults. Compared with PSG, self-reporting
+  bias in whites at 73 min (95% CI: 67-79) was higher than in blacks (54 min [95% CI: 42-65]) and Chinese (49 min [95%
+  CI: 37-61]) but not different from Hispanics (67 min [95% CI: 56-78]). Slight agreement/concordance was observed between
+  self-reported and actigraphy-based total sleep time (k = 0.14 for whites, 0.10 for blacks, 0.17 for Hispanics, and 0.11
+  for Chinese) and PSG (wk = 0.08 for whites, 0.04 for blacks, 0.05 for Hispanics, and 0.01 for Chinese) across
+  race/ethnicity."
+  Range of the actigraphy bias across the four groups: 58-66 min (0.97-1.10 h) - remarkably stable, and consistent with
+  cespedes2016hchs (1.11 h) and lauderdale2008 (0.80 h at 6 h). Age here is ~54-93 (MESA exam 5), so downweight heavily
+  for a 16-19 year old; it is the ADULT anchor, not the adolescent one.
+shard: "s06_sleep_need_measurement"

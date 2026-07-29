@@ -1,0 +1,103 @@
+study_id: li2018lifestyle
+citation: Li Y, Pan A, Wang DD, Liu X, Dhana K, Franco OH, Kaptoge S, Di Angelantonio E, Stampfer M, Willett
+  WC, Hu FB. Impact of healthy lifestyle factors on life expectancies in the US population. Circulation.
+  2018;138(4):345-355.
+doi: 10.1161/CIRCULATIONAHA.117.032047
+pmid: '29712712'
+url: https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.117.032047
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Impact of Healthy Lifestyle Factors on Life Expectancies in the US Population
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 123219
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 64.0
+  country: US
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_at_50_five_vs_zero_low_risk_lifestyle_factors_men
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: 5 vs 0 low-risk lifestyle factors (never smoking, BMI 18.5-24.9, >=30 min/d moderate-vigorous
+      activity, moderate alcohol, top-40% diet quality), life expectancy at age 50, MEN
+  scale: years
+  unit: years of life expectancy at age 50 gained
+  value: 12.2
+  se: 1.045938
+  ci:
+  - 10.1
+  - 14.2
+  conversion_formula: 12.2 y (95% CI 10.1-14.2) for men. se on the YEARS scale = (14.2-10.1)/3.919928
+    = 1.045937.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'positive = life expectancy GAINED at 50 from all five behaviours. THE JOINT CEILING:
+    all five of my comparator exposures combined and sustained are worth ~12 y for a man. Any single-comparator
+    estimate that approaches 12 y on its own is therefore internally inconsistent with this and should
+    be distrusted - which is a specific argument against fadnes2022''s 13 y for diet ALONE.'
+  covariates:
+  - age
+  - and multivariable covariates per report
+  followup_years: 34.0
+  cohort_family: NHS_HPFS
+  quote: The projected life expectancy at age 50 years was on average 14.0 years (95% CI, 11.8-16.2) longer
+    among female Americans with 5 low-risk factors compared with those with zero low-risk factors; for
+    men, the difference was 12.2 years (95% CI, 10.1-14.2).
+- outcome_domain: comparator
+  outcome_construct: all_cause_mortality_five_vs_zero_low_risk_lifestyle_factors
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: 5 vs 0 low-risk lifestyle factors, all-cause mortality
+  scale: log_hr
+  unit: log hazard ratio
+  value: -1.347074
+  se: 0.087488
+  ci:
+  - -1.514128
+  - -1.171183
+  conversion_formula: HR 0.26 (95% CI 0.22-0.31). log_hr = ln(0.26) = -1.347074. se = (ln(0.31)-ln(0.22))/3.919928
+    = 0.087486. Inverted, the worst-lifestyle group has HR 3.85. Applying 10.85*ln(HR) gives 14.6 y, against
+    the paper's own life-table figure of 12.2 y for men - a 20% discrepancy that quantifies how HOT the
+    naive HR-to-years rule runs (see convert.py calibration).
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = LOWER mortality with all five healthy behaviours (benefit).
+  covariates:
+  - age
+  - and multivariable covariates per report
+  followup_years: 34.0
+  cohort_family: NHS_HPFS
+  quote: The multivariable-adjusted hazard ratios for mortality in adults with 5 compared with zero low-risk
+    factors were 0.26 (95% confidence interval [CI], 0.22-0.31) for all-cause mortality, 0.35 (95% CI,
+    0.27-0.45) for cancer mortality, and 0.18 (95% CI, 0.12-0.26) for cardiovascular disease mortality.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Health professionals, 90%+ white, all self-reported exposures - a highly selected and unrepresentative
+    population, so the absolute life expectancies do not transport. The zero-low-risk-factor group is
+    small and multiply disadvantaged, which inflates the contrast. Life expectancy is projected by life
+    table from a 30-year follow-up, not observed.
+funding: US National Institutes of Health (per report)
+notes: 'Screened in as an INTERNAL CONSISTENCY CHECK rather than as a comparator in its own right. It
+  is the only source that prices SEVERAL of my comparators jointly, and it caps the whole set at ~12 y
+  for a man. It also cross-validates my HR-to-years conversion: its own life-table answer (12.2 y) is
+  ~20% smaller than what 10.85*ln(HR) predicts from its own HR, which is the same ~18-20% overshoot the
+  convert.py calibration found against four other published anchors. That agreement is why I recommend
+  a 0.80 correction factor on life-table-derived YLL.'
+shard: s18_comparators

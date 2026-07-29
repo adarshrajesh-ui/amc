@@ -1,0 +1,212 @@
+study_id: lowe2017
+citation: "Lowe CJ, Safati A, Hall PA. The neurocognitive consequences of sleep restriction: A meta-analytic review. Neuroscience & Biobehavioral Reviews. 2017;80:586-604."
+doi: "10.1016/j.neubiorev.2017.07.010"
+pmid: "28757454"
+url: "https://pubmed.ncbi.nlm.nih.gov/28757454/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "The neurocognitive consequences of sleep restriction: A meta-analytic review."
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: null
+n_studies_pooled: 61
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: null
+  adolescent_match: mixed
+effects:
+  - outcome_domain: cognition
+    outcome_construct: overall_neurocognitive_performance_pooled_across_domains
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "experimentally manipulated sleep restriction vs adequate sleep, 61 studies / 71 populations"}
+    scale: hedges_g
+    unit: null
+    value: -0.383
+    se: 0.1164
+    ci: [-0.611, -0.155]
+    conversion_formula: "g reported directly; no CI or SE is given in the abstract and the full text is
+      paywalled (Unpaywall: is_oa = false), so the SE is an UPPER BOUND backed out of the reported
+      significance: p < 0.001 two-sided implies |z| > 3.2905, hence SE < 0.383/3.2905 = 0.1164. The CI
+      shown is the widest CI compatible with that bound (value +/- 1.96*SE). Using the bound as the SE
+      is deliberately conservative - it gives this pooled estimate LESS weight than it deserves rather
+      than more."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = worse cognitive performance under restriction; random-effects model"
+    covariates: ["random-effects pooling across studies"]
+    followup_years: null
+    cohort_family: null
+    quote: "Based on a sample of 61 studies, from 71 different populations, findings revealed a
+      significant negative effect of sleep restriction on cognitive processing across cognitive domains
+      (g=-0.383, p<0.001)."
+  - outcome_domain: cognition
+    outcome_construct: sustained_attention_pooled
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "sleep restriction vs adequate sleep, sustained-attention domain (PVT-type tasks)"}
+    scale: hedges_g
+    unit: null
+    value: -0.409
+    se: 0.1243
+    ci: [-0.653, -0.165]
+    conversion_formula: "g reported directly; SE is an upper bound from p < 0.001: SE < 0.409/3.2905 =
+      0.1243. CI = value +/- 1.96*SE. SUSTAINED ATTENTION IS THE LARGEST OF THE THREE DOMAINS THAT
+      SURVIVED POOLING, which independently corroborates the domain hierarchy that Lim & Dinges 2010
+      found for total deprivation and that Van Dongen 2003 found within a single experiment
+      (PVT accumulation exponent 0.78 vs 0.59 for DSST and 0.45 for serial addition)."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = worse sustained attention (more lapses / slower responding)"
+    covariates: ["random-effects pooling"]
+    followup_years: null
+    cohort_family: null
+    quote: "This effect held for executive functioning (g=-0.324, p<0.001), sustained attention
+      (g=-0.409, p<0.001), and long-term memory (g=-0.192, p=0.002)."
+  - outcome_domain: cognition
+    outcome_construct: executive_functioning_pooled
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "sleep restriction vs adequate sleep, executive-function domain"}
+    scale: hedges_g
+    unit: null
+    value: -0.324
+    se: 0.0985
+    ci: [-0.517, -0.131]
+    conversion_formula: "g reported directly; SE upper bound from p < 0.001: SE < 0.324/3.2905 = 0.0985.
+      CI = value +/- 1.96*SE."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = worse executive function under restriction"
+    covariates: ["random-effects pooling"]
+    followup_years: null
+    cohort_family: null
+    quote: "This effect held for executive functioning (g=-0.324, p<0.001), sustained attention
+      (g=-0.409, p<0.001), and long-term memory (g=-0.192, p=0.002)."
+  - outcome_domain: cognition
+    outcome_construct: long_term_memory_pooled
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "sleep restriction vs adequate sleep, long-term memory domain"}
+    scale: hedges_g
+    unit: null
+    value: -0.192
+    se: 0.0621
+    ci: [-0.314, -0.070]
+    conversion_formula: "g reported directly. Here the EXACT p (0.002) is given, so the SE is
+      identified rather than merely bounded: two-sided p = 0.002 -> |z| = 3.0902, SE = 0.192/3.0902 =
+      0.0621. CI = value +/- 1.96*SE = [-0.314, -0.070]. This is the only Lowe 2017 estimate whose SE is
+      not an upper bound, so it is the one that can be pooled without a conservatism penalty."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = worse long-term memory; smallest of the three surviving domains,
+      roughly half the sustained-attention effect"
+    covariates: ["random-effects pooling"]
+    followup_years: null
+    cohort_family: null
+    quote: "This effect held for executive functioning (g=-0.324, p<0.001), sustained attention
+      (g=-0.409, p<0.001), and long-term memory (g=-0.192, p=0.002)."
+  - outcome_domain: cognition
+    outcome_construct: domains_with_insufficient_evidence_of_an_effect
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "domains where pooling did NOT detect an effect of restriction"}
+    scale: raw_units
+    unit: "count of cognitive domains with insufficient evidence to detect an effect"
+    value: 4.0
+    se: null
+    ci: null
+    conversion_formula: "Counted from the reported sentence: attention, multitask, impulsive
+      decision-making, intelligence. NOT a null result in the strong sense - the authors say
+      'insufficient evidence to detect an effect', i.e. too few studies, not evidence of no effect.
+      Recorded so the downstream model does not silently assume uniform impairment across all cognition.
+      In particular INTELLIGENCE showed no detectable restriction effect, which bears directly on any
+      attempt to translate this shard's deficits into an IQ-like or academic-attainment metric."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "not an effect size; count of domains where the pooled evidence was inadequate"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "There was insufficient evidence to detect an effect within the domains of attention,
+      multitask, impulsive decision-making or intelligence."
+  - outcome_domain: cognition
+    outcome_construct: significant_moderators_of_the_restriction_effect
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "moderator analysis: which study features change the size of the effect"}
+    scale: raw_units
+    unit: "count of tested moderators that were statistically significant (of 7 tested)"
+    value: 6.0
+    se: null
+    ci: null
+    conversion_formula: "Counted from the reported list. Tested: age, time of day, age-adjusted sleep
+      deficit, cumulative days of restricted sleep, sleep latency, subjective sleepiness, biological sex
+      (7 moderators). Significant: age group, time of day, cumulative days of restricted sleep, sleep
+      latency, subjective sleepiness, biological sex (6). The one NOT listed as significant is
+      age-adjusted sleep deficit.
+      TWO CONSEQUENCES FOR THIS SHARD, both important:
+      (1) 'cumulative days of restricted sleep' being a significant moderator is independent
+          meta-analytic confirmation, across 61 studies, that the deficit ACCUMULATES with duration
+          rather than saturating immediately - the same conclusion Van Dongen 2003, Dinges 1997 and
+          Lo 2016 reach within single experiments.
+      (2) 'age group' being a significant moderator means a single pooled g CANNOT be transported to a
+          16-19 year old without adjustment. The abstract does not print the direction or magnitude of
+          the age moderation and the full text is paywalled, so the adjustment cannot be quantified from
+          this source. Lo 2016's direct adolescent-vs-adult comparison (18.3 lapses in teens at 5h TIB
+          vs ~10 in adults at the harsher 4h TIB) is the only quantitative handle available."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "not an effect size; flags that the pooled g is heterogeneous by age, time of day
+      and exposure duration, so pooling without those covariates understates uncertainty"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Age, time of day, age-adjusted sleep deficit, cumulative days of restricted sleep, sleep
+      latency, subjective sleepiness, and biological sex were examined as potential moderators of the
+      effect. ... Age group, time of day, cumulative days of restricted sleep, sleep latency, subjective
+      sleepiness, and biological sex were all significant moderators of the overall effect."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Cannot be graded properly from the abstract alone. Random-effects pooling of 61 experimental
+    studies / 71 populations with a pre-specified moderator set is methodologically appropriate, and
+    restricting inclusion to EXPERIMENTALLY manipulated restriction keeps the pooled estimate within
+    Tier 1. Unassessable from the abstract: search strategy and databases, whether a protocol was
+    registered, duplicate screening/extraction, risk-of-bias assessment of included studies, publication-
+    bias testing, and the heterogeneity statistics. Substantive limitations that ARE visible: no dose
+    axis is reported (no per-hour or per-arm breakdown), so the pooled g cannot be converted into a
+    dose-response slope; and the pooled g collapses across doses from mild to severe and durations from
+    one night to two weeks, so it is best read as an average over the literature's exposure mix rather
+    than as an estimate for any particular dose. Because the full text is paywalled, five of the six
+    SEs recorded here are upper bounds rather than reported values."
+funding: "Not stated in the retrieved abstract"
+notes: |
+  WHY THIS IS THE MOST IMPORTANT POOLED ESTIMATE IN THE SHARD. It is, as far as I could establish, the
+  only meta-analysis restricted to experimental sleep RESTRICTION rather than total deprivation. The two
+  other meta-analyses screened here - Lim & Dinges 2010 (short-term total deprivation, <48 h) and
+  Pilcher & Huffcutt 1996 (mostly total deprivation, pre-1996) - both answer a different exposure
+  question. So Lowe 2017 is the correct pooled anchor for our subject's exposure type, and the three
+  primary experiments in this shard (Van Dongen 2003, Belenky 2003, Lo 2016) are the correct sources for
+  the dose SLOPE that Lowe does not provide.
+
+  THE HEADLINE NUMBERS
+    overall across domains     g = -0.383   (SE <= 0.116)
+    sustained attention        g = -0.409   (SE <= 0.124)
+    executive functioning      g = -0.324   (SE <= 0.099)
+    long-term memory           g = -0.192   (SE  = 0.062, exact)
+    attention / multitask / impulsive decision-making / intelligence: insufficient evidence
+
+  A SANITY CHECK AGAINST THIS SHARD'S PRIMARIES, AND A WARNING. Lowe's pooled sustained-attention effect
+  (|g| = 0.41) is far SMALLER than the per-arm effects computed in this shard from the primaries:
+  Van Dongen 2003 4h vs 8h at day 14 gives |g| = 1.44, Belenky 2003 3h vs 9h at day 7 gives |g| = 2.00 for
+  PVT speed, and Lo 2016 5h vs 9h in adolescents gives |g| = 1.79 at night 5 rising to 2.40 at night 7.
+  Magnitudes only - the sign convention differs between records because the constructs differ. The gap is not
+  a contradiction; it is a dose-and-duration artefact. Lowe pools across studies whose exposures include
+  single mild restriction nights, whereas the primaries here are the severe, multi-week end of the
+  distribution. Anyone who applies g = -0.383 to a three-year 5-6 h weekday schedule will understate the
+  effect substantially, and anyone who applies g = -2.0 will overstate it. The dose-response function
+  from the primaries - not either pooled number - is what should carry the inference; Lowe's value is
+  useful mainly as a lower bound and as external evidence that the effect is real and that duration and
+  age moderate it.
+shard: "s01_cognition_dose_response"

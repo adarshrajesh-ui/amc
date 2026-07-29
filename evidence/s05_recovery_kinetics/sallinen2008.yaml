@@ -1,0 +1,86 @@
+study_id: sallinen2008
+citation: "Sallinen M, Holm J, Hirvonen K, Harma M, Koskelo J, Letonsaari M, Luukkonen R, Virkkala J, Muller K. Recovery of cognitive performance from sleep debt: do a short rest pause and a single recovery night help? Chronobiol Int. 2008;25(2-3):279-296."
+doi: "10.1080/07420520802107106"
+pmid: "18533327"
+url: "https://doi.org/10.1080/07420520802107106"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Recovery of cognitive performance from sleep debt: do a short rest pause and a single recovery night help?"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 16
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [19, 22]
+  pct_female: 0.0
+  country: "FI"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: recovery
+    outcome_construct: multitask_performance_incomplete_after_one_8h_recovery_night
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 1, contrast_label: "one 8 h recovery night after a single 2 h night, vs the normal-sleep control condition (two successive 8 h nights); 19-22 year old men"}
+    scale: probability
+    unit: "1 = significant residual deficit vs control after the full 8 h recovery night"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Direction indicator. The abstract states that post-recovery values differed significantly from control (p < .001-.05) but gives no means, SDs, or test statistics per measure, and Chronobiology International 2008 is paywalled with no free PMC deposit (the PMC elink returns only citing articles). No effect size or SE is derivable, so se is null rather than invented. NOTE: the abstract as indexed contains two evident typographical inversions of the inequality sign - 'impaired by the sleep debt ( p > .001)' and 'improved performance and subjective sleepiness ... ( p > .01-.05)' - which in context must read p < .001 and p < .01-.05. I have not relied on either of those two statements for this record; the statement I do rely on is printed with the correct direction ('p < .001-.05')."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = RECOVERY WAS INCOMPLETE. All outcome measures - multitask performance, physiological sleepiness from continuous EEG/EOG, and subjective sleepiness - improved markedly after a full 8 h recovery night (p < .001) but still 'failed to reach the levels observed in the control condition' (p < .001-.05). One full night of normal-length sleep did not restore function even after only ONE short night of sleep debt."
+    covariates: []
+    followup_years: null
+    cohort_family: FIOH_Sallinen_multitask
+    quote: "Results showed that multitask performance and physiological and subjective sleepiness were impaired by the sleep debt ( p > .001). The rest pause improved performance and subjective sleepiness for about 15 min, regardless of the amount of prior sleep ( p > .01-.05). Following recovery sleep, all outcome measures showed marked improvement ( p < .001), but they failed to reach the levels observed in the control condition ( p < .001-.05)."
+  - outcome_domain: recovery
+    outcome_construct: rest_pause_benefit_duration
+    exposure: {type: other, dose_h: 0.167, referent_h: 0, duration_days: 1, contrast_label: "10 min rest pause with light neck-shoulder exercise embedded in a 70 min multitask session, vs no pause"}
+    scale: hours
+    unit: "h for which the benefit of a 10 min rest pause persisted"
+    value: 0.25
+    se: null
+    ci: null
+    conversion_formula: "Quoted verbatim: 'The rest pause improved performance and subjective sleepiness for about 15 min'. 15 min = 0.25 h. The authors give 'about', report no dispersion, and the paper is paywalled, so se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = duration of benefit. A 10-minute break bought roughly 15 minutes of improved performance and lower subjective sleepiness, and did so 'regardless of the amount of prior sleep' - i.e. the pause is a brief symptomatic palliative that works equally whether or not you are in debt, and is NOT a substitute for sleep. Recorded because short breaks are among the most commonly self-prescribed countermeasures by students, and this quantifies how little they achieve."
+    covariates: []
+    followup_years: null
+    cohort_family: FIOH_Sallinen_multitask
+    quote: "The rest pause improved performance and subjective sleepiness for about 15 min, regardless of the amount of prior sleep ( p > .01-.05)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Within-subject crossover with a proper normal-sleep control condition, continuous EEG/EOG for objective sleepiness, and task difficulty individually calibrated to each participant's ability - all methodological strengths. Concerns: (a) n = 16 and all male, so no sex generalization; (b) the sleep-debt manipulation was a SINGLE 2 h night, i.e. acute partial deprivation, NOT chronic restriction - this is the main limitation for transporting the finding to a 3-year exposure, and it cuts in a conservative direction (see notes); (c) ACCESS IS ABSTRACT-ONLY, so both effects are direction/duration indicators with se: null and no magnitudes; (d) the indexed abstract contains two inverted inequality signs (documented in the conversion_formula), which lowers my confidence in the abstract's transcription generally even though the sentence I rely on is printed correctly."
+funding: "Not stated in the abstract; not retrievable without full text. The senior authorship is at the Finnish Institute of Occupational Health."
+notes: |
+  WHY THIS SMALL STUDY IS WORTH A RECORD: the age range is 19-22 years and the target subject is an
+  18-year-old male entering his second year of college. This is one of only three records in the shard
+  with adolescent_match exact_16_19 (the others being short2018 in 15-17 year olds and lo2022 plus
+  bei2014 in 15-19 year olds), and it is the only one of those that tests a FULL-LENGTH single recovery
+  night against a proper normal-sleep control in that age band.
+
+  THE ARGUMENT IT MAKES, AND WHY THE ACUTE DESIGN STRENGTHENS RATHER THAN WEAKENS IT: the sleep debt
+  here was tiny - ONE 2 h night, roughly 6 h of acute deficit, against the target subject's cumulative
+  exposure of ~3 years. The recovery opportunity was a full, normal 8 h night. Even so, performance and
+  both subjective and EEG-derived physiological sleepiness remained significantly below the control
+  condition. If a single 8 h night cannot repay a single short night in a 19-22 year old, then the
+  common assumption that a weekend repays a week is quantitatively hopeless. The acute design makes
+  this a LOWER BOUND on the recovery problem, not an overstatement of it.
+
+  MECHANISM, consistent with the rest of the shard: an 8 h recovery opportunity in a young adult yields
+  only ~7.4-7.7 h of actual sleep (Belenky/Balkin measured 6.19-6.58 h at 8 h TIB in CMV drivers;
+  Rupp 2009 measured 7.75 h at 8 h TIB under maximal sleep pressure), against a young-adult sleep need
+  of ~8.4-8.9 h (Kitamura 2016; Klerman 2008). An 8 h night is therefore AT OR BELOW need and generates
+  little or no surplus - so it cannot repay debt, only stop it growing. This is the same structural
+  point as smith2021.yaml (weekend TIB equal to need repays 0%) arrived at from a different direction.
+
+  THE REST-PAUSE FINDING IS A USEFUL NEGATIVE for the prescription: 10 minutes of break with light
+  exercise improved performance and sleepiness for only about 15 minutes, and identically whether or not
+  the person was sleep-deprived. Breaks do not touch the debt.
+shard: "s05_recovery_kinetics"

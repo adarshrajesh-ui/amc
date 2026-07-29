@@ -1,0 +1,345 @@
+study_id: campbell2019
+citation: "Campbell IG, Van Dongen HPA, Gainer M, Karmouta E, Feinberg I. Differential and interacting effects of age and sleep restriction on daytime sleepiness and vigilance in adolescence: a longitudinal study. Sleep. 2018;41(12):zsy177."
+doi: "10.1093/sleep/zsy177"
+pmid: "30169721"
+url: "https://europepmc.org/articles/PMC7191880"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Differential and interacting effects of age and sleep restriction on daytime sleepiness and vigilance in adolescence: a longitudinal study"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 76
+n_studies_pooled: null
+population:
+  age_mean: 13.2
+  age_range: [9.8, 16.2]
+  pct_female: 46.1
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: cognition
+    outcome_construct: pvt_log_signal_to_noise_ratio_per_hour_of_tib
+    exposure: {type: per_hour_less_sleep, dose_h: 7, referent_h: 10, duration_days: 4,
+               contrast_label: "PVT LSNR per additional hour of TIB, modelled at age 13.2 y and 09:00, across 7 / 8.5 / 10 h TIB x 4 nights"}
+    scale: per_hour_beta
+    unit: "dB of PVT log signal-to-noise ratio per additional hour of TIB (positive = better)"
+    value: 0.2433
+    se: 0.0509
+    ci: [0.1435, 0.3431]
+    conversion_formula: "DERIVED BY THIS SHARD by two independent routes, which agree to within 20%.
+      ROUTE 1 - OLS through the three published per-dose model estimates. The paper prints LSNR = 12.15 dB
+      (7h), 12.55 dB (8.5h), 12.88 dB (10h), centred at age 13.2 y and 09:00.
+        mean TIB = 8.5 ; mean LSNR = (12.15+12.55+12.88)/3 = 12.52667
+        Sxx = (-1.5)^2 + 0^2 + (1.5)^2 = 4.5
+        Sxy = (-1.5)(-0.37667) + 0 + (1.5)(0.35333) = 0.565 + 0.530 = 1.095
+        slope = 1.095 / 4.5 = 0.24333 dB per hour of TIB
+      The three points are almost perfectly collinear (residuals -0.0117, +0.0233, -0.0117 dB), so the
+      within-fit SE is a meaningless 0.011 dB/h - it measures only the straightness of the published curve,
+      not sampling error. That collinearity is itself a substantive finding and is why this record claims the
+      adolescent dose-response is LINEAR in TIB across 7-10h.
+      ROUTE 2 - the paper's own independently estimated continuous-TST slope, rescaled to a TIB axis using
+      the PSG-measured conversion factor reported in the same paper:
+        LSNR rose 0.29 +/- 0.04 dB per hour of TOTAL SLEEP TIME (F1,2067 = 45.2, p < 0.0001)
+        41.5 +/- 0.8 min TST per hour of TIB = 0.69167 h TST per h TIB
+        slope = 0.29 x 0.69167 = 0.20058 dB per h TIB ; SE = 0.04 x 0.69167 = 0.02767
+      REPORTED VALUE = 0.2433 (Route 1, because the brief asks for per-arm data).
+      REPORTED SE = 0.0509, formed by combining Route 2's sampling SE with the between-route discrepancy in
+      quadrature: discrepancy = 0.24333 - 0.20058 = 0.04275;
+      SE = sqrt(0.02767^2 + 0.04275^2) = sqrt(0.00076563 + 0.00182756) = sqrt(0.00259319) = 0.05092.
+      CI = 0.24333 +/- 1.96 x 0.05092 = [0.1435, 0.3431]. This deliberately carries the structural
+      uncertainty between the two estimators rather than quoting the narrower of the two.
+      DIRECTION: positive slope = MORE TIB gives BETTER performance, so restriction is harmful."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = better vigilance with more sleep. Harm from restriction is the negative of
+      this: each hour of TIB LOST costs 0.24 dB of PVT signal-to-noise in adolescents."
+    covariates: ["time of day (categorical, all analyses)", "order of TIB conditions", "age as continuous", "mixed-effects regression on repeated within-subject measures"]
+    followup_years: 3.0
+    cohort_family: Campbell_Feinberg_Davis
+    quote: "With age centered at 13.2 years and time of day centered at 09:00 am, model estimates of LSNR
+      for 7, 8.5, and 10 hours TIB were 12.15, 12.55, and 12.88 dB, respectively, constituting an 18.3%
+      (10[(12.88-12.15)/10)-1) improvement in the fidelity of information processing from 7 to 10 hours TIB."
+  - outcome_domain: cognition
+    outcome_construct: pvt_fidelity_of_information_processing_pct_loss_7h_vs_10h
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 10, duration_days: 4,
+               contrast_label: "7h TIB vs 10h TIB for 4 consecutive nights, adolescents, PVT information-processing fidelity"}
+    scale: pct_change
+    unit: "% loss in fidelity of information processing at 7h TIB relative to 10h TIB"
+    value: -15.47
+    se: null
+    ci: null
+    conversion_formula: "The paper states the 7h->10h direction as an 18.3% IMPROVEMENT. Expressed the other
+      way round, as the loss incurred by restricting from 10h to 7h:
+        10^((12.15 - 12.88)/10) - 1 = 10^(-0.073) - 1 = 0.8453 - 1 = -0.1547, i.e. -15.47%.
+      (18.3% gain going up and 15.5% loss coming down are the same ratio, 1.183 = 1/0.8453; both are
+      correct, they differ only in the denominator. Recorded in the loss direction so the sign convention
+      matches the rest of this shard.) se is null because the paper reports no interval on this derived
+      percentage.
+      WHY LSNR RATHER THAN LAPSES: the authors chose log signal-to-noise ratio deliberately because it has
+      no ceiling or floor and because, in a LONGITUDINAL study where the reference level is itself moving
+      with maturation, a dB change means the same thing regardless of baseline - 'a -3dB change in LSNR
+      always means a 50% reduction in the fidelity of information processing regardless of the reference
+      point'. For our subject, who was exposed from 16 to 19 while still maturing, that scale-invariance is
+      exactly the property needed, and it is why this record is worth more than its small effect size
+      suggests.
+      CALIBRATION ANCHOR SUPPLIED BY THE AUTHORS: a full night of total sleep deprivation costs adults about
+      -3 dB (50%) at the circadian trough. Four nights at 7h TIB costs adolescents -0.73 dB. So four nights
+      of mild-to-moderate restriction buys roughly a quarter of the LSNR decrement of one all-nighter.
+      That is a useful sanity bound on how much a single short week can do."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NEGATIVE = worse. 7h TIB costs 15.5% of information-processing fidelity relative to 10h TIB."
+    covariates: ["time of day", "order of TIB conditions", "age centred at 13.2 y"]
+    followup_years: 3.0
+    cohort_family: Campbell_Feinberg_Davis
+    quote: "For comparison, the 10-hour TIB value of 12.88 dB is about 2 dB lower than well-rested baseline
+      performance observed in adults, and performance in adults drops by approximately -3 dB on the LSNR
+      scale (i.e. 50%) during the early morning trough of performance after being kept awake all night."
+  - outcome_domain: cognition
+    outcome_construct: tib_effect_on_vigilance_does_not_attenuate_with_age_across_adolescence
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 10, duration_days: 4,
+               contrast_label: "does the TIB effect on PVT shrink between ages 9.8 and 16.2? (age x TIB interaction)"}
+    scale: raw_units
+    unit: "0 = no significant age moderation of the TIB effect on PVT"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Encoding of the reported null interaction: F2,2318 = 2.10, p = 0.12 on the
+      categorical-TIB model, and F1,2067 = 2.19, p = 0.14 on the continuous-TST model. Two independent
+      specifications, both null, in a LONGITUDINAL within-subject design spanning ages 9.8-16.2 - which is
+      the strongest available test of this question because each child serves as his own control as he ages.
+      se is null: a null interaction has no point estimate to attach an SE to.
+      WHY THIS IS DECISION-RELEVANT AND NOT JUST A NULL: the natural objection to using adolescent
+      restriction data for an 18-year-old is that older adolescents might tolerate short sleep better. On the
+      PVT that objection is unsupported: the vigilance cost per hour of lost TIB is the same at 16 as at 10.
+      It licenses carrying the 0.24 dB/h slope across the whole 16-19 window without an age discount.
+      THE CAVEAT THE AUTHORS THEMSELVES RAISE, and it cuts against over-reading the null: 'for the older
+      participants 10 hours TIB did not produce better performance than 8.5 hours TIB', with a significant
+      10-vs-8.5h benefit in the youngest quartile (F1,562 = 6.47, p = 0.011) but not the oldest
+      (F1,544 = 1.17, p = 0.28). So the TOP of the dose curve may flatten with age even though the overall
+      slope does not - i.e. for a 16-19 year old the marginal value of the 9th and 10th hour may be smaller
+      than for a 10 year old, while the cost of dropping to 7h is undiminished. That asymmetry matters for
+      our subject because it means his weekend catch-up above ~8.5h may buy less than a linear model implies,
+      while his weekday deficit costs full price."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no age moderation. The per-hour vigilance penalty does not shrink as adolescents
+      get older, so an adolescent dose-response can be transported across 16-19 without an age discount."
+    covariates: ["longitudinal annual repetition over 3 years", "within-subject TIB conditions", "time of day", "condition order"]
+    followup_years: 3.0
+    cohort_family: Campbell_Feinberg_Davis
+    quote: "The TIB effect did not change significantly (F2,2318 = 2.10, p = 0.12) with age (Figure 3C).
+      However, for the older participants 10 hours TIB did not produce better performance than 8.5 hours
+      TIB. Post hoc analyses for the 10 versus 8.5 hours TIB conditions showed a significant LSNR
+      improvement for the youngest quartile (F1,562 = 6.47, p = 0.011) but not for the oldest quartile
+      (F1,544 = 1.17, p = 0.28)."
+  - outcome_domain: cognition
+    outcome_construct: pvt_shows_no_practice_effect_and_instead_carries_over_prior_dose_damage
+    exposure: {type: descriptive, dose_h: 7, referent_h: 10, duration_days: 4,
+               contrast_label: "order/carryover effect on PVT across repeated laboratory visits in adolescents"}
+    scale: raw_units
+    unit: "-1 = performance DECLINED across repeated testing (no practice gain); decline largest after the most restricted prior condition"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Directional encoding of an explicitly reported methodological finding; no effect
+      size is printed for it, so se is null.
+      THIS IS THE MOST IMPORTANT PRACTICE-EFFECT DATUM IN THIS SHARD FOR ADOLESCENTS, and it answers the
+      brief's fourth specific request directly. Two separate claims:
+        (a) DIRECTION. 'Instead of showing a learning effect, PVT performance decreased with repeated visits
+            to the lab.' So on the PVT there is no practice confound to subtract in adolescents - the naive
+            worry that repeated testing inflates apparent recovery does not apply. This agrees with
+            Cohen 2010's finding of negligible PVT practice effects in adults and with Basner & Dinges 2011's
+            recommendation of lapses/speed as the stable metrics.
+        (b) CARRYOVER, which is the bigger deal. 'the performance decline depended on the preceding
+            conditions; the decline was greatest following the 7-hour TIB condition.' Damage from a
+            restriction arm persisted into subsequent arms even after intervening washout - the same
+            residual-deficit phenomenon that Yamazaki 2021 reports after 4 nights of 12h recovery TIB and
+            that Koa 2024 calls ratcheting. Here it is visible in ADOLESCENTS and it was strong enough that
+            the authors had to enter the full order history as a covariate (they enumerate five distinct
+            orders for the 7h condition alone) to recover an unbiased TIB effect.
+      MODELLING CONSEQUENCE: a within-subject crossover analysed WITHOUT order covariates will
+      UNDERESTIMATE the dose-response, because the control arms of later blocks are contaminated by earlier
+      restriction. Effect sizes from crossover studies that do not adjust for order should be treated as
+      lower bounds."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "-1 = repeated testing made performance WORSE, not better; and the worsening was
+      proportional to how restricted the preceding condition had been. Practice does not mask harm here;
+      carryover masks harm."
+    covariates: ["order of TIB conditions entered as a covariate with five enumerated orders for the 7h condition"]
+    followup_years: 3.0
+    cohort_family: Campbell_Feinberg_Davis
+    quote: "An order effect was also apparent in the PVT results. Instead of showing a learning effect, PVT
+      performance decreased with repeated visits to the lab. As has been observed in adults, the performance
+      decline depended on the preceding conditions; the decline was greatest following the 7-hour TIB
+      condition. This confound was overcome by including in the TIB model the order of each TIB condition as
+      a covariate."
+  - outcome_domain: exposure_measurement
+    outcome_construct: total_sleep_time_gained_per_hour_of_time_in_bed
+    exposure: {type: per_hour_less_sleep, dose_h: 7, referent_h: 10, duration_days: 4,
+               contrast_label: "minutes of PSG-measured TST per additional hour of TIB, adolescents, night 4"}
+    scale: per_hour_beta
+    unit: "minutes of polysomnographic total sleep time per additional hour of time in bed"
+    value: 41.5
+    se: 0.8
+    ci: [39.93, 43.07]
+    conversion_formula: "Reported directly with its SE: 'a significant (F1,471 = 2777, p < 0.0001) increase
+      of 41.5 +/- 0.8 minutes of TST for each additional hour of TIB'. CI = 41.5 +/- 1.96 x 0.8.
+      THIS IS THE TIB-TO-TST CONVERSION FACTOR THE WHOLE SHARD NEEDS, measured in adolescents by PSG, and it
+      is the single most reusable number in this record. 41.5 min TST per hour of TIB = 0.692 h/h, i.e. only
+      69% of an hour of time in bed converts into sleep in this age group.
+      CONSEQUENCES:
+        - Every dose expressed in TIB in this shard (4/6/8h in Van Dongen 2003; 3/5/7/9h in Belenky 2003;
+          5/9h in Lo; 7/8.5/10h here) OVERSTATES actual sleep. A '6h TIB' arm is roughly 5.1h of sleep.
+        - Effects expressed per hour of TIB must be divided by 0.692 to become effects per hour of SLEEP,
+          which INFLATES them by ~45%. Mixing TIB-based and TST-based dose scales without this conversion is
+          a silent 45% error, and both scales appear in this shard's sources.
+        - Our subject's self-reported 5-6h is presumably closer to time in bed than to sleep, so his true
+          sleep may be nearer 3.5-4.2h on the 5h nights - i.e. the exposure may be MORE severe than the
+          nominal figures imply.
+      Per-arm night-4 TST (mean +/- SE, 3-year average): 405 +/- 1 min at 7h TIB, 471 +/- 2 min at 8.5h TIB,
+      530 +/- 2 min at 10h TIB. These three points are the raw material for the spline the brief requests,
+      on the TIB axis, in the correct age group."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive = more TIB yields more sleep, but at only 69% efficiency. Not a harm estimate;
+      this is the dose-translation factor."
+    covariates: ["PSG on night 4 of each condition", "age as continuous", "mixed-effects on repeated measures"]
+    followup_years: 3.0
+    cohort_family: Campbell_Feinberg_Davis
+    quote: "The 3 years average (+/-SE) of night 4 total sleep time (TST) for all subjects was 530 +/- 2
+      minutes, 471 +/- 2, and 405 +/- 1 for 10, 8.5, and 7 hours in bed, respectively. Mixed-effect analysis
+      showed that this TIB effect represented a significant (F1,471 = 2777, p < 0.0001) increase of
+      41.5 +/- 0.8 minutes of TST for each additional hour of TIB."
+  - outcome_domain: sleep_need
+    outcome_construct: objective_sleepiness_dose_response_attenuates_with_age_while_vigilance_dose_response_does_not
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 10, duration_days: 4,
+               contrast_label: "MSLT sleep-onset log-likelihood, 7h and 8.5h vs 10h TIB, and its interaction with age"}
+    scale: log_or
+    unit: "log-odds of falling asleep per minute of the MSLT, 7h TIB vs 10h TIB"
+    value: 1.90
+    se: 0.08
+    ci: [1.7432, 2.0568]
+    conversion_formula: "Reported directly as a log-likelihood increment with SE: 'Reducing TIB from 10 to 7
+      hours increased the log-likelihood by 1.90 +/- 0.08 (t75 = 24.8, p < 0.0001), or a 6.7-fold increase in
+      the odds of falling asleep in each minute.' Recorded on the log_or scale as reported;
+      exp(1.90) = 6.69, matching the authors' 6.7-fold statement. CI = 1.90 +/- 1.96 x 0.08.
+      The intermediate dose is 0.86 +/- 0.07 for 8.5h vs 10h (t75 = 11.6, p < 0.0001), a 2.4-fold odds
+      increase. THREE-POINT DOSE LADDER ON A LOG-ODDS SCALE: 0 (10h), 0.86 (8.5h), 1.90 (7h). Note this is
+      MORE than linear - halving the TIB decrement from 3h to 1.5h cuts the log-odds by more than half
+      (0.86/1.90 = 0.45), i.e. objective sleep propensity accelerates as TIB falls, which is the opposite of
+      saturation and is consistent with the convex/accelerating shape Van Dongen 2003 found for lapses.
+      Age main effect: 0.46 +/- 0.04 per year (1.6-fold per year of age).
+      THE DISSOCIATION THIS RECORD EXISTS TO DOCUMENT, and it is quantified on both sides:
+        SLEEPINESS (MSLT): the dose effect SHRINKS with age - for 7h vs 10h the log-likelihood increment
+          falls by 0.14 +/- 0.05 per year (t75 = -2.83, p = 0.0060), a factor of 0.87/year.
+        VIGILANCE (PVT):   the dose effect DOES NOT shrink with age - F2,2318 = 2.10, p = 0.12 (null).
+      So in the same subjects, on the same nights, physiological sleep pressure becomes progressively LESS
+      responsive to sleep dose across adolescence while objective performance stays exactly as responsive.
+      An older adolescent therefore registers less of a sleepiness signal for the same performance cost.
+      THIS IS THE ADOLESCENT-SPECIFIC MECHANISM FOR THE SUBJECTIVE/OBJECTIVE DISSOCIATION the brief asks
+      about, and it is worse than the adult version: in adults (Van Dongen 2003) the subjective signal
+      plateaus over DAYS within an exposure; here the sleepiness channel's very sensitivity to dose is
+      eroding over YEARS of maturation, precisely across the ages our subject was exposed."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = greater sleep propensity = more impaired/sleepier. Larger log-odds means
+      restriction made them fall asleep faster during the MSLT."
+    covariates: ["time of day", "order (adaptation to lab)", "age as continuous", "nonlinear mixed-effects survival analysis"]
+    followup_years: 3.0
+    cohort_family: Campbell_Feinberg_Davis
+    quote: "Reducing TIB from 10 to 8.5 hours increased the log-likelihood by 0.86 +/- 0.07 (t75 = 11.6,
+      p < 0.0001), or a 2.4-fold (e0.86) increase in the odds of falling asleep in each minute. Reducing TIB
+      from 10 to 7 hours increased the log-likelihood by 1.90 +/- 0.08 (t75 = 24.8, p < 0.0001), or a
+      6.7-fold increase in the odds of falling asleep in each minute. For each additional year of age, the
+      log-likelihood of falling asleep increased by 0.46 +/- 0.04 (t75 = 10.4, p < 0.0001), or a 1.6-fold
+      increase in the odds. The age and TIB effects interacted such that the effect of TIB on sleepiness
+      decreased with age (Figure 2). For the 7 hours versus 10 hours TIB comparison, the increased
+      log-likelihood of falling asleep declined by 0.14 +/- 0.05, or a factor of 0.87, with each additional
+      year of age (t75 = -2.83, p = 0.0060)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "STRENGTHS: three TIB doses (7 / 8.5 / 10 h) x four consecutive nights, every participant
+    completing all three each year, repeated ANNUALLY for 3 years across ages 9.8-16.2 - so both the dose
+    contrast and the age contrast are within-subject, which is the only design that can cleanly test whether
+    sleep need changes with age. All-night PSG on nights 2 and 4 of every condition verified the exposure
+    objectively; adherence was enforced (TIB deviations >1h caused rescheduling or exclusion, affecting <1%
+    of conditions); time of day was controlled by four test batteries at fixed 2-hour intervals and entered
+    in every model. The PVT outcome (log signal-to-noise ratio) was chosen specifically to avoid ceiling and
+    floor artefacts in a longitudinal design.
+    CONCERNS: (1) CONDITION ORDER WAS NOT RANDOMISED - 'Allowing flexibility in scheduling (to accommodate
+    schoolwork, etc.) prevented us from randomly assigning the order in which each participant completed the
+    schedules', handled by entering order as a covariate rather than by design. This matters more than usual
+    here because the paper itself shows a real carryover effect whose size depends on the preceding dose, so
+    the adjustment is doing genuine work and residual confounding cannot be excluded. (2) NO MEASURE OF
+    CIRCADIAN PHASE, and restriction was achieved by delaying bedtime while holding rise time fixed, so an
+    unmeasured phase delay could contribute to the TIB effect - the authors flag this explicitly, and
+    Short 2018 (PMID 29325109) measured exactly this and found dose-dependent delays, so the concern is
+    substantiated rather than hypothetical. (3) The 8.5h TIB washout preceding every condition 'may have
+    produced a sleep debt preceding the four-night TIB schedule', so all three arms sit on a mildly
+    restricted baseline and the 10h arm is not a true well-rested reference - this biases the dose-response
+    toward zero. (4) Attrition: 76 of the original cohort completed >=2 of 3 years, 67 completed year 3, and
+    the commonest reason for withdrawal was conflict between schoolwork and the TIB schedules, which is
+    plausibly correlated with the exposure of interest. (5) FOUR NIGHTS ONLY - this study measures dose
+    sensitivity, not accumulation, and cannot speak to the 14-day trajectory question.
+    (6) Age range 9.8-16.2 sits BELOW our subject's 16-19 at its upper edge; adolescent_match is recorded as
+    exact_16_19 because the upper tail reaches 16.2 and because the paper's own null age-interaction result
+    is the licence for extrapolating to 19, but the mean age is 13.2 and that should inflate uncertainty."
+funding: "U.S. Public Health Service grant R01-HL116490."
+notes: |
+  WHAT THIS RECORD UNIQUELY SUPPLIES. Four things no other study in this shard provides together:
+
+  1. A PER-HOUR VIGILANCE SLOPE IN ADOLESCENTS, on a scale with no ceiling or floor: 0.24 dB of PVT
+     log-signal-to-noise per hour of TIB (equivalently 0.29 +/- 0.04 dB per hour of actual sleep, which the
+     paper estimates independently). Restricting from 10h to 7h TIB for four nights costs 15.5% of
+     information-processing fidelity. The three per-dose model estimates (12.15 / 12.55 / 12.88 dB at
+     7 / 8.5 / 10 h) are almost exactly collinear, so the adolescent dose-response is LINEAR in TIB across
+     the mild-to-moderate range - a genuinely useful structural fact, because the adult literature
+     (Van Dongen 2003) finds convex acceleration at 4-6h. Linear in the mild range, convex in the severe
+     range is a coherent overall shape.
+
+  2. THE TIB-TO-TST CONVERSION FACTOR, by PSG, in adolescents: 41.5 +/- 0.8 min of sleep per hour of time in
+     bed, i.e. 69% efficiency, with per-arm values 405 / 471 / 530 min at 7 / 8.5 / 10 h TIB. This is a
+     housekeeping number but it silently rescales every other effect in the shard by ~45% if you convert
+     between TIB-dose and sleep-dose. Two of the four required studies in the brief (Van Dongen 2003,
+     Belenky 2003) express dose as TIB; Lo 2016 and this one do too. Any spline fitted on a sleep axis needs
+     this factor.
+
+  3. EVIDENCE THAT THE ADOLESCENT VIGILANCE PENALTY DOES NOT SHRINK WITH AGE (F2,2318 = 2.10, p = 0.12 on
+     TIB; F1,2067 = 2.19, p = 0.14 on TST). This is the formal licence for transporting adolescent
+     dose-response estimates across the 16-19 window. The one qualification, and it is a real one: the
+     10-vs-8.5h benefit was significant in the youngest quartile but not the oldest, so the TOP of the curve
+     may flatten with age. Read together: for our subject the cost of falling to 7h is undiminished, but the
+     benefit of climbing above 8.5h may be smaller than a linear model predicts. That asymmetry makes
+     weekend catch-up look worse, not better.
+
+  4. THE CLEANEST ADOLESCENT INSTANCE OF THE SUBJECTIVE/PHYSIOLOGICAL VERSUS OBJECTIVE DISSOCIATION, and it
+     is a DIFFERENT mechanism from the adult one. In adults the subjective signal plateaus across days
+     within an exposure (Van Dongen 2003). Here, in the same subjects on the same nights, the MSLT
+     sleepiness response to dose ATTENUATES WITH AGE (-0.14 +/- 0.05 log-odds per year, p = 0.0060) while
+     the PVT response to dose does not attenuate at all (p = 0.12). The authors call the pair of findings
+     paradoxical and attribute them to different maturation rates in arousal versus information-processing
+     systems. For our subject the implication is uncomfortable and specific: across exactly the ages he was
+     exposed, his physiological sleepiness signal was becoming a progressively worse indicator of his actual
+     vigilance cost. He would not have felt the deficit growing.
+
+  PLUS THE PRACTICE-EFFECT ANSWER THE BRIEF ASKS FOR. 'Instead of showing a learning effect, PVT performance
+  decreased with repeated visits to the lab... the decline was greatest following the 7-hour TIB condition.'
+  Two conclusions: there is no PVT practice gain to subtract in adolescents (consistent with Cohen 2010 in
+  adults), and restriction damage carries across blocks in proportion to prior dose. The second means
+  unadjusted crossover analyses understate the dose-response, so such estimates are lower bounds.
+
+  RELATION TO THE OTHER TWO RECORDS FROM THIS PROGRAMME. campbell2017 (PMID 28419388, n = 77, ages 9.9-14)
+  is year 1 of the same protocol reporting MSLT and KSS; campbell2024 (PMID 39283917, n = 159, ages
+  9.9-22.8) extends the programme to a cognitive battery and an older cohort. All three share
+  cohort_family Campbell_Feinberg_Davis and OVERLAP IN PARTICIPANTS - the pooler must not treat them as
+  independent samples. They are kept as separate records because they report non-overlapping OUTCOMES
+  (this one: PVT LSNR + MSLT + TST; campbell2017: MSLT + KSS; campbell2024: executive/working-memory
+  battery), and the brief asks for outcome-level detail.
+shard: "s01_cognition_dose_response"

@@ -1,0 +1,2754 @@
+{
+ "meta": {
+  "seed": 20260728,
+  "n_monte_carlo_draws": 1000000,
+  "extraction_error_sd_added_to_g_scale": 0.18657555335499731,
+  "iq_sd_convention": 15.0
+ },
+ "pooled": {
+  "pvt_g_large_dose": {
+   "what": "Vigilance decrement under chronic restriction, ~3-5 h below need, T1 experiments.",
+   "scale": "hedges_g",
+   "k": 5,
+   "study_ids": [
+    "lo2016",
+    "vandongen2003",
+    "belenky2003",
+    "basner2011_pvt_metrics",
+    "pejovic2013_recovery_dissociation"
+   ],
+   "tiers": [
+    "T1",
+    "T1",
+    "T1",
+    "T1",
+    "T1"
+   ],
+   "bayes": {
+    "k": 5,
+    "method": "bayes_grid_halfnormal_tau",
+    "tau_prior_scale": 0.7629102954049611,
+    "mu_median": -1.1159612200268383,
+    "mu_mean": -1.1247161702531987,
+    "mu_ci95": [
+     -1.9378889656236886,
+     -0.3393250512436335
+    ],
+    "tau_median": 0.6928609878135207,
+    "tau_ci95": [
+     0.26491805416399317,
+     1.4570447979019625
+    ],
+    "pred_median": -1.1076867239640626,
+    "pred_ci95": [
+     -2.9607369230767064,
+     0.7025966363997189
+    ],
+    "prob_harm_direction_negative": 0.994025
+   },
+   "frequentist": {
+    "k": 5,
+    "mu": -1.1358353328454303,
+    "se": 0.35777315524256065,
+    "ci95": [
+     -2.129172858489808,
+     -0.14249780720105243
+    ],
+    "tau2": 0.48185054029148855,
+    "tau": 0.6941545507244684,
+    "i2": 78.75664224932531,
+    "q": 18.829415043264337,
+    "pi95": [
+     -3.304045508346359,
+     1.0323748426554988
+    ],
+    "method": "REML+HKSJ"
+   },
+   "egger": {
+    "n": 5,
+    "intercept": -2.4299236081137043,
+    "p_intercept": 0.8090870306159366,
+    "slope": -0.24279569544114823,
+    "note": "regression of y/se on 1/se; intercept != 0 indicates asymmetry"
+   },
+   "pet_peese": {
+    "k": 5,
+    "pet": -0.2427956954411485,
+    "pet_p": 0.8090870306159361,
+    "peese": -0.75399815746092,
+    "recommended": -0.2427956954411485
+   },
+   "trim_and_fill": {
+    "k": 5,
+    "n_filled": 2,
+    "adjusted_mu": -0.6908297436525588,
+    "unadjusted_mu": -0.9667798681952777,
+    "estimator": "L0"
+   },
+   "tier_stratified": {
+    "all": {
+     "bayes": {
+      "k": 5,
+      "method": "bayes_grid_halfnormal_tau",
+      "tau_prior_scale": 0.7629102954049611,
+      "mu_median": -1.1163753643044605,
+      "mu_mean": -1.12548051713383,
+      "mu_ci95": [
+       -1.9564010644616576,
+       -0.32702502111409276
+      ],
+      "tau_median": 0.6928609878135207,
+      "tau_ci95": [
+       0.26491805416399317,
+       1.4468556804341166
+      ],
+      "pred_median": -1.1150624439016457,
+      "pred_ci95": [
+       -2.9563154546464268,
+       0.6884007208901491
+      ],
+      "prob_harm_direction_negative": 0.9946
+     },
+     "frequentist": {
+      "k": 5,
+      "mu": -1.1358353328454303,
+      "se": 0.35777315524256065,
+      "ci95": [
+       -2.129172858489808,
+       -0.14249780720105243
+      ],
+      "tau2": 0.48185054029148855,
+      "tau": 0.6941545507244684,
+      "i2": 78.75664224932531,
+      "q": 18.829415043264337,
+      "pi95": [
+       -3.304045508346359,
+       1.0323748426554988
+      ],
+      "method": "REML+HKSJ"
+     },
+     "study_ids": [
+      "lo2016",
+      "vandongen2003",
+      "belenky2003",
+      "basner2011_pvt_metrics",
+      "pejovic2013_recovery_dissociation"
+     ],
+     "tiers": [
+      "T1",
+      "T1",
+      "T1",
+      "T1",
+      "T1"
+     ]
+    },
+    "causal_T1_T3": {
+     "bayes": {
+      "k": 5,
+      "method": "bayes_grid_halfnormal_tau",
+      "tau_prior_scale": 0.7629102954049611,
+      "mu_median": -1.1163753643044605,
+      "mu_mean": -1.12548051713383,
+      "mu_ci95": [
+       -1.9564010644616576,
+       -0.32702502111409276
+      ],
+      "tau_median": 0.6928609878135207,
+      "tau_ci95": [
+       0.26491805416399317,
+       1.4468556804341166
+      ],
+      "pred_median": -1.1150624439016457,
+      "pred_ci95": [
+       -2.9563154546464268,
+       0.6884007208901491
+      ],
+      "prob_harm_direction_negative": 0.9946
+     },
+     "frequentist": {
+      "k": 5,
+      "mu": -1.1358353328454303,
+      "se": 0.35777315524256065,
+      "ci95": [
+       -2.129172858489808,
+       -0.14249780720105243
+      ],
+      "tau2": 0.48185054029148855,
+      "tau": 0.6941545507244684,
+      "i2": 78.75664224932531,
+      "q": 18.829415043264337,
+      "pi95": [
+       -3.304045508346359,
+       1.0323748426554988
+      ],
+      "method": "REML+HKSJ"
+     },
+     "study_ids": [
+      "lo2016",
+      "vandongen2003",
+      "belenky2003",
+      "basner2011_pvt_metrics",
+      "pejovic2013_recovery_dissociation"
+     ],
+     "tiers": [
+      "T1",
+      "T1",
+      "T1",
+      "T1",
+      "T1"
+     ]
+    },
+    "associational_T4_TX": null,
+    "causal_to_associational_ratio": null,
+    "tier_disagreement_exceeds_2x": false
+   }
+  },
+  "domain_profile_chronic_restriction": {
+   "what": "Overall neurocognitive performance under chronic partial restriction (not total deprivation), from the meta-analytic composite.",
+   "scale": "hedges_g",
+   "k": 1,
+   "study_ids": [
+    "lowe2017"
+   ],
+   "tiers": [
+    "T1"
+   ],
+   "bayes": {
+    "k": 1,
+    "method": "bayes_grid_halfnormal_tau",
+    "tau_prior_scale": 0.43981540268491487,
+    "mu_median": -0.3807657626409844,
+    "mu_mean": -0.37957204949184103,
+    "mu_ci95": [
+     -1.3962051504241093,
+     0.6337840743829048
+    ],
+    "tau_median": 0.2937006845976059,
+    "tau_ci95": [
+     0.011748987383904235,
+     0.9868319402479558
+    ],
+    "pred_median": -0.38032803227728607,
+    "pred_ci95": [
+     -1.7751876490029197,
+     1.0491397332509396
+    ],
+    "prob_harm_direction_negative": 0.8371
+   },
+   "frequentist": {
+    "k": 1,
+    "mu": -0.383,
+    "se": 0.21990770134245743,
+    "ci95": [
+     -0.8140190946312166,
+     0.04801909463121656
+    ],
+    "tau2": 0.0,
+    "tau": 0.0,
+    "i2": 0.0,
+    "pi95": null,
+    "method": "single_study"
+   },
+   "egger": {
+    "n": 1,
+    "slope": null,
+    "p": null
+   },
+   "pet_peese": {
+    "k": 1,
+    "pet": null,
+    "peese": null,
+    "recommended": null
+   },
+   "trim_and_fill": {
+    "k": 1,
+    "n_filled": 0,
+    "adjusted_mu": null,
+    "estimator": "L0"
+   },
+   "tier_stratified": {
+    "all": {
+     "bayes": {
+      "k": 1,
+      "method": "bayes_grid_halfnormal_tau",
+      "tau_prior_scale": 0.43981540268491487,
+      "mu_median": -0.38063086459973516,
+      "mu_mean": -0.3801439033391007,
+      "mu_ci95": [
+       -1.415505522576333,
+       0.6736513323875188
+      ],
+      "tau_median": 0.2937006845976059,
+      "tau_ci95": [
+       0.011748987383904235,
+       0.9868319402479558
+      ],
+      "pred_median": -0.38310336782086624,
+      "pred_ci95": [
+       -1.7811381373995583,
+       1.039360492359043
+      ],
+      "prob_harm_direction_negative": 0.833475
+     },
+     "frequentist": {
+      "k": 1,
+      "mu": -0.383,
+      "se": 0.21990770134245743,
+      "ci95": [
+       -0.8140190946312166,
+       0.04801909463121656
+      ],
+      "tau2": 0.0,
+      "tau": 0.0,
+      "i2": 0.0,
+      "pi95": null,
+      "method": "single_study"
+     },
+     "study_ids": [
+      "lowe2017"
+     ],
+     "tiers": [
+      "T1"
+     ]
+    },
+    "causal_T1_T3": {
+     "bayes": {
+      "k": 1,
+      "method": "bayes_grid_halfnormal_tau",
+      "tau_prior_scale": 0.43981540268491487,
+      "mu_median": -0.38063086459973516,
+      "mu_mean": -0.3801439033391007,
+      "mu_ci95": [
+       -1.415505522576333,
+       0.6736513323875188
+      ],
+      "tau_median": 0.2937006845976059,
+      "tau_ci95": [
+       0.011748987383904235,
+       0.9868319402479558
+      ],
+      "pred_median": -0.38310336782086624,
+      "pred_ci95": [
+       -1.7811381373995583,
+       1.039360492359043
+      ],
+      "prob_harm_direction_negative": 0.833475
+     },
+     "frequentist": {
+      "k": 1,
+      "mu": -0.383,
+      "se": 0.21990770134245743,
+      "ci95": [
+       -0.8140190946312166,
+       0.04801909463121656
+      ],
+      "tau2": 0.0,
+      "tau": 0.0,
+      "i2": 0.0,
+      "pi95": null,
+      "method": "single_study"
+     },
+     "study_ids": [
+      "lowe2017"
+     ],
+     "tiers": [
+      "T1"
+     ]
+    },
+    "associational_T4_TX": null,
+    "causal_to_associational_ratio": null,
+    "tier_disagreement_exceeds_2x": false
+   },
+   "k_le_2_interval_is_study_level_not_predictive": true,
+   "study_level": {
+    "mu": -0.383,
+    "se": 0.21990770134245743,
+    "ci95": [
+     -0.8140190946312166,
+     0.04801909463121656
+    ]
+   }
+  },
+  "habitual_short_sleep_g_observational": {
+   "what": "Observational association of habitual short sleep with general cognitive ability in large samples. Cross-sectional, midlife: an upper bound that includes confounding and reverse causation.",
+   "scale": "hedges_g",
+   "k": 2,
+   "study_ids": [
+    "fjell2023",
+    "Cambridge_Brain_Sciences_2018_pooled(2)"
+   ],
+   "tiers": [
+    "TX",
+    "TX"
+   ],
+   "bayes": {
+    "k": 2,
+    "method": "bayes_grid_halfnormal_tau",
+    "tau_prior_scale": 0.3912525219372579,
+    "mu_median": -0.13036202381862488,
+    "mu_mean": -0.12971372748646032,
+    "mu_ci95": [
+     -0.6309498091014916,
+     0.37154946807523687
+    ],
+    "tau_median": 0.17243945207251435,
+    "tau_ci95": [
+     0.005226407638561041,
+     0.7158818464828626
+    ],
+    "pred_median": -0.12971434101879709,
+    "pred_ci95": [
+     -0.9314590047626876,
+     0.7074638112960837
+    ],
+    "prob_harm_direction_negative": 0.7463
+   },
+   "frequentist": {
+    "k": 2,
+    "mu": -0.13211079936179523,
+    "se": 0.13822562595066515,
+    "ci95": [
+     -1.8884339024768484,
+     1.624212303753258
+    ],
+    "tau2": 0.0,
+    "tau": 0.0,
+    "i2": 0.0,
+    "q": 0.04450584894051525,
+    "pi95": [
+     -1.8884339024768484,
+     1.624212303753258
+    ],
+    "method": "REML+HKSJ"
+   },
+   "egger": {
+    "n": 2,
+    "slope": null,
+    "p": null
+   },
+   "pet_peese": {
+    "k": 2,
+    "pet": null,
+    "peese": null,
+    "recommended": null
+   },
+   "trim_and_fill": {
+    "k": 2,
+    "n_filled": 0,
+    "adjusted_mu": null,
+    "estimator": "L0"
+   },
+   "tier_stratified": {
+    "all": {
+     "bayes": {
+      "k": 2,
+      "method": "bayes_grid_halfnormal_tau",
+      "tau_prior_scale": 0.3912525219372579,
+      "mu_median": -0.13036053195905783,
+      "mu_mean": -0.13021611380251594,
+      "mu_ci95": [
+       -0.6379047871893203,
+       0.38967370101801996
+      ],
+      "tau_median": 0.17243945207251435,
+      "tau_ci95": [
+       0.005226407638561041,
+       0.7158818464828626
+      ],
+      "pred_median": -0.13142800342065306,
+      "pred_ci95": [
+       -0.9393745695037695,
+       0.6978470678499986
+      ],
+      "prob_harm_direction_negative": 0.744875
+     },
+     "frequentist": {
+      "k": 2,
+      "mu": -0.13211079936179523,
+      "se": 0.13822562595066515,
+      "ci95": [
+       -1.8884339024768484,
+       1.624212303753258
+      ],
+      "tau2": 0.0,
+      "tau": 0.0,
+      "i2": 0.0,
+      "q": 0.04450584894051525,
+      "pi95": [
+       -1.8884339024768484,
+       1.624212303753258
+      ],
+      "method": "REML+HKSJ"
+     },
+     "study_ids": [
+      "fjell2023",
+      "Cambridge_Brain_Sciences_2018_pooled(2)"
+     ],
+     "tiers": [
+      "TX",
+      "TX"
+     ]
+    },
+    "causal_T1_T3": null,
+    "associational_T4_TX": {
+     "bayes": {
+      "k": 2,
+      "method": "bayes_grid_halfnormal_tau",
+      "tau_prior_scale": 0.3912525219372579,
+      "mu_median": -0.13036053195905783,
+      "mu_mean": -0.13021611380251594,
+      "mu_ci95": [
+       -0.6379047871893203,
+       0.38967370101801996
+      ],
+      "tau_median": 0.17243945207251435,
+      "tau_ci95": [
+       0.005226407638561041,
+       0.7158818464828626
+      ],
+      "pred_median": -0.13142800342065306,
+      "pred_ci95": [
+       -0.9393745695037695,
+       0.6978470678499986
+      ],
+      "prob_harm_direction_negative": 0.744875
+     },
+     "frequentist": {
+      "k": 2,
+      "mu": -0.13211079936179523,
+      "se": 0.13822562595066515,
+      "ci95": [
+       -1.8884339024768484,
+       1.624212303753258
+      ],
+      "tau2": 0.0,
+      "tau": 0.0,
+      "i2": 0.0,
+      "q": 0.04450584894051525,
+      "pi95": [
+       -1.8884339024768484,
+       1.624212303753258
+      ],
+      "method": "REML+HKSJ"
+     },
+     "study_ids": [
+      "fjell2023",
+      "Cambridge_Brain_Sciences_2018_pooled(2)"
+     ],
+     "tiers": [
+      "TX",
+      "TX"
+     ]
+    },
+    "causal_to_associational_ratio": null,
+    "tier_disagreement_exceeds_2x": false
+   },
+   "k_le_2_interval_is_study_level_not_predictive": true,
+   "study_level": {
+    "mu": -0.13211079936179523,
+    "se": 0.13822562595066515,
+    "ci95": [
+     -0.40303302622509896,
+     0.13881142750150846
+    ]
+   }
+  },
+  "residual_deficit_after_recovery_sleep": {
+   "what": "Deficit still present after recovery sleep was provided. The core evidence that recovery is incomplete on the timescales anyone has actually measured.",
+   "scale": "hedges_g",
+   "k": 2,
+   "study_ids": [
+    "banks2010",
+    "pejovic2013"
+   ],
+   "tiers": [
+    "T1",
+    "T1"
+   ],
+   "bayes": {
+    "k": 2,
+    "method": "bayes_grid_halfnormal_tau",
+    "tau_prior_scale": 0.5326064104215026,
+    "mu_median": -0.4526783795136906,
+    "mu_mean": -0.4526052460992546,
+    "mu_ci95": [
+     -1.1343665494040147,
+     0.22625024775062536
+    ],
+    "tau_median": 0.23473899557809128,
+    "tau_ci95": [
+     0.0071142725932754934,
+     0.9745193452787426
+    ],
+    "pred_median": -0.451495824020816,
+    "pred_ci95": [
+     -1.545777511146032,
+     0.6815304945740988
+    ],
+    "prob_harm_direction_negative": 0.932475
+   },
+   "frequentist": {
+    "k": 2,
+    "mu": -0.45246462697063455,
+    "se": 0.18530427037960867,
+    "ci95": [
+     -2.806978624901414,
+     1.9020493709601451
+    ],
+    "tau2": 0.0,
+    "tau": 0.0,
+    "i2": 0.0,
+    "q": 0.024283074790818183,
+    "pi95": [
+     -2.806978624901414,
+     1.9020493709601451
+    ],
+    "method": "REML+HKSJ"
+   },
+   "egger": {
+    "n": 2,
+    "slope": null,
+    "p": null
+   },
+   "pet_peese": {
+    "k": 2,
+    "pet": null,
+    "peese": null,
+    "recommended": null
+   },
+   "trim_and_fill": {
+    "k": 2,
+    "n_filled": 0,
+    "adjusted_mu": null,
+    "estimator": "L0"
+   },
+   "tier_stratified": {
+    "all": {
+     "bayes": {
+      "k": 2,
+      "method": "bayes_grid_halfnormal_tau",
+      "tau_prior_scale": 0.5326064104215026,
+      "mu_median": -0.4527985432076961,
+      "mu_mean": -0.453292911804499,
+      "mu_ci95": [
+       -1.146283304148968,
+       0.24993335181140203
+      ],
+      "tau_median": 0.23473899557809128,
+      "tau_ci95": [
+       0.0071142725932754934,
+       0.9745193452787426
+      ],
+      "pred_median": -0.4538388686320268,
+      "pred_ci95": [
+       -1.5573131928083086,
+       0.6699233632375586
+      ],
+      "prob_harm_direction_negative": 0.9311
+     },
+     "frequentist": {
+      "k": 2,
+      "mu": -0.45246462697063455,
+      "se": 0.18530427037960867,
+      "ci95": [
+       -2.806978624901414,
+       1.9020493709601451
+      ],
+      "tau2": 0.0,
+      "tau": 0.0,
+      "i2": 0.0,
+      "q": 0.024283074790818183,
+      "pi95": [
+       -2.806978624901414,
+       1.9020493709601451
+      ],
+      "method": "REML+HKSJ"
+     },
+     "study_ids": [
+      "banks2010",
+      "pejovic2013"
+     ],
+     "tiers": [
+      "T1",
+      "T1"
+     ]
+    },
+    "causal_T1_T3": {
+     "bayes": {
+      "k": 2,
+      "method": "bayes_grid_halfnormal_tau",
+      "tau_prior_scale": 0.5326064104215026,
+      "mu_median": -0.4527985432076961,
+      "mu_mean": -0.453292911804499,
+      "mu_ci95": [
+       -1.146283304148968,
+       0.24993335181140203
+      ],
+      "tau_median": 0.23473899557809128,
+      "tau_ci95": [
+       0.0071142725932754934,
+       0.9745193452787426
+      ],
+      "pred_median": -0.4538388686320268,
+      "pred_ci95": [
+       -1.5573131928083086,
+       0.6699233632375586
+      ],
+      "prob_harm_direction_negative": 0.9311
+     },
+     "frequentist": {
+      "k": 2,
+      "mu": -0.45246462697063455,
+      "se": 0.18530427037960867,
+      "ci95": [
+       -2.806978624901414,
+       1.9020493709601451
+      ],
+      "tau2": 0.0,
+      "tau": 0.0,
+      "i2": 0.0,
+      "q": 0.024283074790818183,
+      "pi95": [
+       -2.806978624901414,
+       1.9020493709601451
+      ],
+      "method": "REML+HKSJ"
+     },
+     "study_ids": [
+      "banks2010",
+      "pejovic2013"
+     ],
+     "tiers": [
+      "T1",
+      "T1"
+     ]
+    },
+    "associational_T4_TX": null,
+    "causal_to_associational_ratio": null,
+    "tier_disagreement_exceeds_2x": false
+   },
+   "k_le_2_interval_is_study_level_not_predictive": true,
+   "study_level": {
+    "mu": -0.45246462697063455,
+    "se": 0.18530427037960867,
+    "ci95": [
+     -0.8156609969146675,
+     -0.08926825702660157
+    ]
+   }
+  },
+  "encoding_capacity_persisting": {
+   "what": "Memory for material ENCODED DURING a restricted week, retrieved after recovery sleep, in age-matched adolescents (cousins2018).",
+   "scale": "hedges_g",
+   "k": 1,
+   "study_ids": [
+    "cousins2018"
+   ],
+   "tiers": [
+    "T1"
+   ],
+   "bayes": {
+    "k": 1,
+    "method": "bayes_grid_halfnormal_tau",
+    "tau_prior_scale": 0.6563853658018998,
+    "mu_median": -0.886665600974164,
+    "mu_mean": -0.8848840904095803,
+    "mu_ci95": [
+     -2.402118143508849,
+     0.6274593991257028
+    ],
+    "tau_median": 0.4383216950263103,
+    "tau_ci95": [
+     0.017533827801052414,
+     1.4727585352884025
+    ],
+    "pred_median": -0.8860123777643165,
+    "pred_ci95": [
+     -2.9677150339847294,
+     1.2473399085882422
+    ],
+    "prob_harm_direction_negative": 0.9157
+   },
+   "frequentist": {
+    "k": 1,
+    "mu": -0.89,
+    "se": 0.3281926829009499,
+    "ci95": [
+     -1.5332576584858617,
+     -0.2467423415141382
+    ],
+    "tau2": 0.0,
+    "tau": 0.0,
+    "i2": 0.0,
+    "pi95": null,
+    "method": "single_study"
+   },
+   "egger": {
+    "n": 1,
+    "slope": null,
+    "p": null
+   },
+   "pet_peese": {
+    "k": 1,
+    "pet": null,
+    "peese": null,
+    "recommended": null
+   },
+   "trim_and_fill": {
+    "k": 1,
+    "n_filled": 0,
+    "adjusted_mu": null,
+    "estimator": "L0"
+   },
+   "tier_stratified": {
+    "all": {
+     "bayes": {
+      "k": 1,
+      "method": "bayes_grid_halfnormal_tau",
+      "tau_prior_scale": 0.6563853658018998,
+      "mu_median": -0.8864642774916504,
+      "mu_mean": -0.8857370369146303,
+      "mu_ci95": [
+       -2.430922182746314,
+       0.6869573210228986
+      ],
+      "tau_median": 0.4383216950263103,
+      "tau_ci95": [
+       0.017533827801052414,
+       1.4727585352884025
+      ],
+      "pred_median": -0.8901542058017007,
+      "pred_ci95": [
+       -2.976596040029441,
+       1.2327453156286057
+      ],
+      "prob_harm_direction_negative": 0.914025
+     },
+     "frequentist": {
+      "k": 1,
+      "mu": -0.89,
+      "se": 0.3281926829009499,
+      "ci95": [
+       -1.5332576584858617,
+       -0.2467423415141382
+      ],
+      "tau2": 0.0,
+      "tau": 0.0,
+      "i2": 0.0,
+      "pi95": null,
+      "method": "single_study"
+     },
+     "study_ids": [
+      "cousins2018"
+     ],
+     "tiers": [
+      "T1"
+     ]
+    },
+    "causal_T1_T3": {
+     "bayes": {
+      "k": 1,
+      "method": "bayes_grid_halfnormal_tau",
+      "tau_prior_scale": 0.6563853658018998,
+      "mu_median": -0.8864642774916504,
+      "mu_mean": -0.8857370369146303,
+      "mu_ci95": [
+       -2.430922182746314,
+       0.6869573210228986
+      ],
+      "tau_median": 0.4383216950263103,
+      "tau_ci95": [
+       0.017533827801052414,
+       1.4727585352884025
+      ],
+      "pred_median": -0.8901542058017007,
+      "pred_ci95": [
+       -2.976596040029441,
+       1.2327453156286057
+      ],
+      "prob_harm_direction_negative": 0.914025
+     },
+     "frequentist": {
+      "k": 1,
+      "mu": -0.89,
+      "se": 0.3281926829009499,
+      "ci95": [
+       -1.5332576584858617,
+       -0.2467423415141382
+      ],
+      "tau2": 0.0,
+      "tau": 0.0,
+      "i2": 0.0,
+      "pi95": null,
+      "method": "single_study"
+     },
+     "study_ids": [
+      "cousins2018"
+     ],
+     "tiers": [
+      "T1"
+     ]
+    },
+    "associational_T4_TX": null,
+    "causal_to_associational_ratio": null,
+    "tier_disagreement_exceeds_2x": false
+   },
+   "k_le_2_interval_is_study_level_not_predictive": true,
+   "study_level": {
+    "mu": -0.8900000000000001,
+    "se": 0.3281926829009499,
+    "ci95": [
+     -1.533257658485862,
+     -0.24674234151413832
+    ]
+   }
+  }
+ },
+ "answers": {
+  "Q1_dose": {
+   "cumulative_debt_vs_individual_need_h": {
+    "median": 2920.702792544469,
+    "mean": 2913.7467730160715,
+    "ci95": [
+     961.4566554499726,
+     4830.820683975324
+    ],
+    "p10_p90": [
+     1631.2745300723168,
+     4180.667767901524
+    ]
+   },
+   "cumulative_debt_vs_guideline_lower_bound_h": {
+    "median": 2195.1685248613358,
+    "mean": 2115.939255098558,
+    "ci95": [
+     1066.054243707657,
+     3043.8291351795197
+    ],
+    "p10_p90": [
+     1421.2961235523226,
+     2769.6933357715607
+    ]
+   },
+   "incremental_debt_attributable_to_change_at_16_h": {
+    "mean": 817.146173124671,
+    "median": 842.6702691316598,
+    "ci95": [
+     127.25426573455334,
+     1306.2784701406947
+    ],
+    "iqr": [
+     654.1890354454508,
+     1015.5454760491841
+    ],
+    "sd": 288.602492721099
+   },
+   "debt_that_would_have_accrued_on_his_own_prior_schedule_h": {
+    "mean": 2096.413408733664,
+    "median": 2097.413263936147,
+    "ci95": [
+     160.7630816472627,
+     4026.3447593880746
+    ],
+    "iqr": [
+     1428.0710022045223,
+     2764.7531945301143
+    ],
+    "sd": 986.5436440407818
+   },
+   "mean_nightly_deficit_h": {
+    "median": 2.8066518147588777,
+    "mean": 2.8011667972501195,
+    "ci95": [
+     0.9272483018912813,
+     4.645590899788516
+    ],
+    "p10_p90": [
+     1.5681623122051218,
+     4.019395456309601
+    ]
+   },
+   "mean_actual_tst_over_exposure_h": {
+    "median": 5.591392570275527,
+    "mean": 5.667713839764513,
+    "ci95": [
+     4.775988099781366,
+     6.676464597044084
+    ],
+    "p10_p90": [
+     5.039004865403359,
+     6.335098906205251
+    ]
+   },
+   "inferred_individual_sleep_need_at_19_h": {
+    "median": 8.18469166226685,
+    "mean": 8.183708416794682,
+    "ci95": [
+     6.611597828865051,
+     9.749855213165283
+    ],
+    "p10_p90": [
+     7.154964261054992,
+     9.204460208415984
+    ]
+   },
+   "fraction_of_nights_below_6h": {
+    "median": 0.5942307692307692,
+    "mean": 0.575460583653846,
+    "ci95": [
+     0.34134615384615385,
+     0.7788461538461539
+    ],
+    "p10_p90": [
+     0.41923076923076924,
+     0.7201923076923077
+    ]
+   },
+   "fraction_of_nights_below_5h": {
+    "median": 0.36346153846153845,
+    "mean": 0.3507502019230769,
+    "ci95": [
+     0.1423076923076923,
+     0.5557692307692308
+    ],
+    "p10_p90": [
+     0.19615384615384615,
+     0.4951923076923077
+    ]
+   },
+   "n_nights_in_exposure_window": 1040,
+   "note": "The debt-vs-guideline and incremental figures answer different questions. Most of the debt against an age-appropriate requirement predates the change at 16, because 6-8 h at ages 14-16 is also below the 8-10 h recommendation."
+  },
+  "Q2_cognition_current": {
+   "vigilance_g_at_subject_dose": {
+    "median": -0.7866103070491456,
+    "mean": -0.9896179532195242,
+    "ci95": [
+     -3.6193214178201023,
+     0.5530913653502055
+    ],
+    "p10_p90": [
+     -2.244720201336659,
+     -0.039505198114953635
+    ]
+   },
+   "overall_neurocognitive_g_at_subject_dose": {
+    "median": -0.2734762407419407,
+    "mean": -0.3392568321159594,
+    "ci95": [
+     -1.0938849744187709,
+     0.03332114665261348
+    ],
+    "p10_p90": [
+     -0.7106823593410992,
+     -0.052002763363179265
+    ]
+   },
+   "dose_transport_factor": {
+    "median": 0.7889109149428943,
+    "mean": 0.8845765099058561,
+    "ci95": [
+     0.18118394226913714,
+     2.1428268663878516
+    ],
+    "p10_p90": [
+     0.34553954308204426,
+     1.5369283568042666
+    ]
+   },
+   "per_domain_pooled_chronic_restriction_g": {
+    "overall_neurocognitive_performance_pooled_across_domains": {
+     "value": -0.383,
+     "se": 0.1164
+    }
+   },
+   "learning_loss_g_material_encoded_while_restricted": {
+    "median": -0.8895429729876886,
+    "mean": -0.8905493048039336,
+    "ci95": [
+     -1.5357420835328535,
+     -0.24804094979283497
+    ],
+    "p10_p90": [
+     -1.3098480005130622,
+     -0.47232787520397934
+    ],
+    "interpretation": "Adversarial review established that encoding happened during the restricted week and only RETRIEVAL followed recovery sleep. So this does NOT show a persisting deficit in the faculty of encoding; it shows that material learned while sleep-restricted stays less well learned after sleep normalises. That is the learning-loss channel (knowledge not acquired), not a permanent ability change, and the report must not present it as the latter.",
+    "reliability": "k=1, abstract-only, one research programme. Two randomised, age-matched null results sit in the corpus but carry se: null and so cannot enter any inverse-variance pool, which biases this channel in one direction."
+   },
+   "residual_g_after_recovery_sleep_provided": {
+    "median": -0.4518658015041851,
+    "mean": -0.4527134111297149,
+    "ci95": [
+     -0.8167653326689804,
+     -0.0915608103730669
+    ],
+    "p10_p90": [
+     -0.6889078032895034,
+     -0.21738652548646087
+    ]
+   },
+   "note": "Vigilance is the most affected function and the best evidenced. Higher-order cognition shows markedly smaller effects, and the age-matched randomised tests of working memory and of higher-order cognition in healthy-weight adolescents returned nulls."
+  },
+  "Q3_intelligence": {
+   "measured_full_scale_iq_change_if_tested_now_vs_after_8_weeks_adequate_sleep_points": {
+    "median": -0.7042044367790272,
+    "mean": -0.91769996136074,
+    "ci95": [
+     -3.419821638728479,
+     0.3260321826806128
+    ],
+    "p10_p90": [
+     -2.0630239891503233,
+     -0.03582604803059418
+    ]
+   },
+   "routes": {
+    "B_PRIMARY_reasoning_domain_g_scaled_to_chronic_partial": {
+     "median": -0.9166324350199626,
+     "mean": -1.1610241670530415,
+     "ci95": [
+      -3.864097344163153,
+      0.11514613853682033
+     ],
+     "p10_p90": [
+      -2.4623657464735467,
+      -0.16886307478640145
+     ]
+    },
+    "D_UPPER_BOUND_observational_habitual_confounding_adjusted": {
+     "median": -0.44002254108012495,
+     "mean": -0.46612126966057765,
+     "ci95": [
+      -1.5612996973007767,
+      0.49030032163434967
+     ],
+     "p10_p90": [
+      -1.1211270496938261,
+      0.14708592440379162
+     ]
+    },
+    "A_CONSISTENCY_CHECK_vigilance_times_g_loading_discount": {
+     "median": -1.7811064142015383,
+     "mean": -2.6408112860180704,
+     "ci95": [
+      -11.398331248250143,
+      1.3618346099104375
+     ],
+     "p10_p90": [
+      -6.458770977554915,
+      -0.071643724028764
+     ]
+    },
+    "C_BOUND_direct_wais_r_measurement_binks1999": {
+     "median": 1.712531908698899,
+     "mean": 2.231871564393825,
+     "ci95": [
+      -1.0233024669949622,
+      8.33904490168537
+     ],
+     "p10_p90": [
+      0.013627513705788089,
+      5.184339776987593
+     ]
+    }
+   },
+   "route_structure_note": "B and D are averaged (0.65/0.35). A is not averaged in because it shares lim2010 with B and would double-count one study. C is a bound, not a route: it is a single small study with a positive point estimate, and averaging it in produced a bimodal posterior whose upper limit implied testing above his own rested self.",
+   "direct_measurement_bound_iq_points": {
+    "study": "binks1999 WAIS-R short form after 34-36 h total sleep deprivation",
+    "observed": 3.6,
+    "se": 2.768,
+    "lower_95_bound": -1.8252799999999998,
+    "reading": "The only direct measurement of full-scale IQ under sleep loss found no decrement. Its interval excludes a decrement worse than about 1.8 points even after total deprivation, which is a harsher exposure than the subject's. This is the strongest single constraint on the IQ answer."
+   },
+   "g_loading_discount_applied": {
+    "median": 0.1724361470435476,
+    "mean": 0.17782611706128823,
+    "ci95": [
+     0.03519695831496783,
+     0.35694600922549663
+    ],
+    "p10_p90": [
+     0.0682641933890057,
+     0.2921916605597818
+    ]
+   },
+   "permanent_change_in_adult_cognitive_ability_points": {
+    "median": 0.0,
+    "mean": -0.13644467467390425,
+    "ci95": [
+     -1.6522741152100144,
+     0.0
+    ],
+    "p10_p90": [
+     -0.355476854111256,
+     0.0
+    ]
+   },
+   "permanent_decomposition": {
+    "persistent_fraction_of_the_current_state_deficit": {
+     "median": 0.0,
+     "mean": -0.03533193435529235,
+     "ci95": [
+      -0.43509184631471093,
+      0.0
+     ],
+     "p10_p90": [
+      -0.0739256649544026,
+      0.0
+     ]
+    },
+    "independent_developmental_effect": {
+     "median": 0.0,
+     "mean": -0.10111274031861191,
+     "ci95": [
+      -1.576886893660197,
+      0.0
+     ],
+     "p10_p90": [
+      0.0,
+      0.0
+     ]
+    },
+    "prob_any_developmental_effect": {
+     "median": 0.08497059660944817,
+     "mean": 0.0849741934076533,
+     "ci95": [
+      0.023226177346088468,
+      0.14672083113064677
+     ],
+     "p10_p90": [
+      0.033032766540761295,
+      0.13698242000234565
+     ]
+    },
+    "note": "The developmental pathway is modelled as an explicit possibility rather than assumed absent, because no study has imaged or tested habitual 5-6 h sleepers aged 16-19 more than once. Its prior is an assumption, not a measurement, and it is what makes the permanent interval asymmetric toward harm."
+   },
+   "permanent_ci_includes_zero": true,
+   "prob_permanent_loss_exceeds_1_point": 0.048133,
+   "prob_permanent_loss_exceeds_3_points": 0.004243,
+   "crystallized_vs_fluid": {
+    "crystallized_fsiq": "no detectable decrement; binks1999 measured +3.6 points after 34-36 h total deprivation and its interval excludes a decrement worse than about 1.8 points",
+    "fluid_processing_speed": "measurably reduced while sleep-deprived; this is where the state deficit sits"
+   }
+  },
+  "Q2b_academic": {
+   "achievement_sd_linear_extrapolation": {
+    "median": -0.3873075476378322,
+    "mean": -0.4199960793742713,
+    "ci95": [
+     -0.9365749532045312,
+     -0.08733716669716961
+    ],
+    "p10_p90": [
+     -0.7250035731069153,
+     -0.16123844647118932
+    ]
+   },
+   "achievement_sd_saturating_alternative": {
+    "median": -0.1761290415922424,
+    "mean": -0.18244401932500678,
+    "ci95": [
+     -0.34270389673602275,
+     -0.050817629716360814
+    ],
+    "p10_p90": [
+     -0.28972506002672715,
+     -0.08526734600449729
+    ]
+   },
+   "gpa_points_linear": {
+    "median": -0.19125546970892998,
+    "mean": -0.19606948320003667,
+    "ci95": [
+     -0.35734947930556793,
+     -0.060729922407751
+    ],
+    "p10_p90": [
+     -0.296131668001129,
+     -0.10266046961508445
+    ]
+   },
+   "gpa_points_saturating": {
+    "median": -0.0857466147845079,
+    "mean": -0.08516341561361725,
+    "ci95": [
+     -0.12300391207840256,
+     -0.0438280660874129
+    ],
+    "p10_p90": [
+     -0.11108054810100303,
+     -0.059673317161104626
+    ]
+   },
+   "per_hour_coefficient_used": {
+    "median": 0.1457151939233303,
+    "mean": 0.1499513664371222,
+    "ci95": [
+     0.04763798504805226,
+     0.26538364906816625
+    ],
+    "p10_p90": [
+     0.07544958684905677,
+     0.23092392822309185
+    ]
+   },
+   "caveat": "Identified over sleep changes of 20-40 min; applying it to a 3 h deficit is a large linear extrapolation.",
+   "note": "This is probably the largest real cost of the exposure and the one the subject can least recover, because coursework not learned stays not learned. Cross-sectional sleep-achievement associations should be discounted 3-7x before use; the figures here already are."
+  },
+  "Q5_psychiatric": {
+   "depression_symptom_d_causal_at_subject_dose": {
+    "median": -0.043347674382534056,
+    "mean": -0.051765939677421643,
+    "ci95": [
+     -0.14564245057596364,
+     -0.006848505939994183
+    ],
+    "p10_p90": [
+     -0.0981057607910345,
+     -0.015415758692794278
+    ]
+   },
+   "absolute_excess_risk_major_depressive_episode_pp": {
+    "median": 0.9957071515273561,
+    "mean": 1.2812281001009014,
+    "ci95": [
+     0.03916986530193962,
+     4.175485663326159
+    ],
+    "p10_p90": [
+     0.17085392984122905,
+     2.744865233722487
+    ]
+   },
+   "non_causal_share_of_observational_association": {
+    "median": 0.625005743551904,
+    "mean": 0.6250057719746605,
+    "ci95": [
+     0.5537601095208563,
+     0.6962558482565272
+    ],
+    "p10_p90": [
+     0.5650092573689687,
+     0.6849796965728392
+    ]
+   },
+   "mood_items_only_effect_in_iv_study": {
+    "d": -0.03,
+    "ci": [
+     -0.09,
+     0.02
+    ],
+    "note": "null; the measured effect loads on fatigue items"
+   },
+   "exposure_gradient_note": "Insomnia disorder carries OR ~2.8, behaviourally imposed short sleep OR ~1.2, and genetically instrumented sleep duration is null. The subject has the weakest of the three exposures.",
+   "suicide_baseline_per_100k_male_15_24": 21.1
+  },
+  "Q6_long_run": {
+   "mortality_rr_at_subject_dose_dose_response": {
+    "median": 1.0222582228917343,
+    "mean": 1.0218514706205708,
+    "ci95": [
+     1.003235354029559,
+     1.046720357006559
+    ],
+    "p10_p90": [
+     1.0066490109379476,
+     1.0388298540378993
+    ]
+   },
+   "injury_channel_drowsy_driving_months": {
+    "conditional_on_being_a_typical_licensed_teenage_driver": {
+     "median": 0.055539722772010684,
+     "mean": 0.06007523092418976,
+     "ci95": [
+      0.018077224668330664,
+      0.12113453363316598
+     ],
+     "p10_p90": [
+      0.026175681401335794,
+      0.10226588752899955
+     ]
+    },
+    "net_of_overlap_with_all_cause_window_term": {
+     "median": 0.04904157520768543,
+     "mean": 0.05304642890605955,
+     "ci95": [
+      0.015962189382135977,
+      0.10696179319808555
+     ],
+     "p10_p90": [
+      0.023113126677379508,
+      0.09030077868810661
+     ]
+    },
+    "unconditional_weighted_by_licensure": {
+     "median": 0.02403037185176586,
+     "mean": 0.025992750163969184,
+     "ci95": [
+      0.00782147279724663,
+      0.05241127866706192
+     ],
+     "p10_p90": [
+      0.01132543207191596,
+      0.044247381557172234
+     ]
+    },
+    "if_he_does_not_drive": 0.0,
+    "note": "Added in rework; two reviewers flagged its omission as critical. It acts during the exposure window rather than in old age, which makes it comparable to or larger than the entire chronic-disease window term, even though its absolute size is small. Causal fraction 0.5 (0.25-0.80); the association is partly confounded by other risk behaviours, and the best-identified school-start-time crash studies give the smallest effects."
+   },
+   "all_cause_mortality_hr_while_exposed": {
+    "median": 1.0036232022559375,
+    "mean": 1.0054136274044738,
+    "ci95": [
+     1.0001420578417202,
+     1.0186257143914998
+    ],
+    "p10_p90": [
+     1.0005798407217565,
+     1.0128785321601212
+    ]
+   },
+   "all_cause_mortality_hr_permanent_residue_after_cessation": {
+    "median": 1.0001708829192721,
+    "mean": 1.0003234720950702,
+    "ci95": [
+     1.0000028099656697,
+     1.0014653806760496
+    ],
+    "p10_p90": [
+     1.0000158168007378,
+     1.0008590094058532
+    ]
+   },
+   "life_expectancy_change_months_exposure_window_only": {
+    "median": -0.006253936949928574,
+    "mean": -0.009344375974147641,
+    "ci95": [
+     -0.03214947309687997,
+     -0.0002452728714205507
+    ],
+    "p10_p90": [
+     -0.02222937679094212,
+     -0.001000883032548137
+    ]
+   },
+   "life_expectancy_change_months_permanent_residue": {
+    "median": -0.024759727859964095,
+    "mean": -0.04686886582178667,
+    "ci95": [
+     -0.21232330829072896,
+     -0.00040714417553398336
+    ],
+    "p10_p90": [
+     -0.12446439473686804,
+     -0.0022917426946692404
+    ]
+   },
+   "life_expectancy_change_months_total": {
+    "median": -0.060381666244763765,
+    "mean": -0.08220599195990351,
+    "ci95": [
+     -0.26686755691296243,
+     -0.01611560491725187
+    ],
+    "p10_p90": [
+     -0.17080258528879247,
+     -0.02532467557085833
+    ]
+   },
+   "type_2_diabetes_rr_while_exposed_mr_adjusted": {
+    "median": 1.0381540947729484,
+    "mean": 1.0412380515725304,
+    "ci95": [
+     1.0077794988978426,
+     1.0911932523046122
+    ],
+    "p10_p90": [
+     1.0153659525802898,
+     1.071259279023045
+    ]
+   },
+   "type_2_diabetes_absolute_lifetime_risk_change_pp": {
+    "median": 0.07640650044471176,
+    "mean": 0.0971435454713941,
+    "ci95": [
+     0.0031756570090137053,
+     0.30197707210610464
+    ],
+    "p10_p90": [
+     0.01310295193917732,
+     0.21175649889426718
+    ]
+   },
+   "type_2_diabetes_baseline_lifetime_risk_pct": 40.2,
+   "dementia": "INSUFFICIENT EVIDENCE. No study of any design measures dementia risk from an adolescent exposure; the youngest exposure measurement in the literature is age 50.6. Eight Mendelian randomisation analyses give zero support for sleep duration causing Alzheimer's disease, and the short-sleep-to-Alzheimer's meta-analytic estimate is exactly null (RR 1.02, 0.76-1.36). No number is defensible; the channel is excluded from the damage total rather than assigned a value.",
+   "hypertension_cvd": "Roughly 33% of the crude association survives adjustment (20-50%), total CVD is null in the largest meta-analysis (RR 1.03, 0.93-1.15), and the only age-exact evidence points the opposite way. Absolute change at 19 is indistinguishable from zero.",
+   "note": "The window-versus-permanent distinction dominates. A hazard ratio applied over ages 16-19 costs almost nothing because a US male's probability of dying in that window is 0.0025; the same ratio applied for life costs 50-60x more. There is no evidence that a 3-year adolescent exposure permanently shifts the hazard."
+  },
+  "Q7_calibration": {
+   "ranking_ascending_like_for_like_pro_rata": [
+    {
+     "exposure": "physical_inactivity",
+     "le_months_lost_central": 0.8,
+     "interval80": [
+      0.2,
+      3.1
+     ],
+     "basis": "pro_rata_of_lifelong_habit"
+    },
+    {
+     "exposure": "smoking_10_cig_day",
+     "le_months_lost_central": 1.0,
+     "interval80": [
+      0.4,
+      4.4
+     ],
+     "basis": "pro_rata_of_lifelong_habit"
+    },
+    {
+     "exposure": "THIS_SUBJECT_same_footing_pro_rata",
+     "le_months_lost_central": 1.2,
+     "interval80": [
+      0.2,
+      3.6
+     ],
+     "basis": "pro_rata_of_lifelong_habit"
+    },
+    {
+     "exposure": "smoking_20_cig_day",
+     "le_months_lost_central": 1.8,
+     "interval80": [
+      0.6,
+      9.0
+     ],
+     "basis": "pro_rata_of_lifelong_habit"
+    },
+    {
+     "exposure": "overweight_bmi_27.5",
+     "le_months_lost_central": 1.8,
+     "interval80": [
+      0.4,
+      3.0
+     ],
+     "basis": "pro_rata_of_lifelong_habit"
+    },
+    {
+     "exposure": "western_diet",
+     "le_months_lost_central": 1.8,
+     "interval80": [
+      0.1,
+      3.8
+     ],
+     "basis": "pro_rata_of_lifelong_habit"
+    },
+    {
+     "exposure": "obesity_bmi_32",
+     "le_months_lost_central": 2.4,
+     "interval80": [
+      0.8,
+      3.2
+     ],
+     "basis": "pro_rata_of_lifelong_habit"
+    },
+    {
+     "exposure": "alcohol_200_350g_week",
+     "le_months_lost_central": 3.0,
+     "interval80": [
+      1.4,
+      4.2
+     ],
+     "basis": "pro_rata_of_lifelong_habit"
+    }
+   ],
+   "rank_of_this_exposure_on_same_footing": 3,
+   "n_exposures_compared": 8,
+   "this_exposure_two_bases": {
+    "same_footing_pro_rata_months": {
+     "central": 1.2,
+     "interval80": [
+      0.2,
+      3.6
+     ]
+    },
+    "our_mechanistic_estimate_crediting_cessation_months": {
+     "median": 0.060381666244763765,
+     "mean": 0.08220599195990351,
+     "ci95": [
+      0.01611560491725187,
+      0.26686755691296254
+     ],
+     "p10_p90": [
+      0.02532467557085833,
+      0.17080258528879247
+     ]
+    },
+    "why_they_differ": "The pro-rata basis assumes a share of the lifelong cost is banked during the exposure. Our mechanistic estimate instead credits the fact that the exposure has ended and that the metabolic, immune and vigilance channels revert. The gap between them is not a disagreement about epidemiology; it is the unresolved question of whether an adolescent sleep exposure banks permanent damage, for which no evidence of any design exists."
+   },
+   "cigarette_equivalent_per_day_for_3_years_same_footing": 13.333333333333332,
+   "cigarette_equivalent_per_day_for_3_years_mechanistic": 0.6709074027195974,
+   "note": "On the like-for-like pro-rata basis every one of these exposures collapses into a band of roughly 1-3 months, because the mortality hazard between 16 and 19 is tiny (about 0.0025 probability of death over the whole window). Three years of this sleep pattern sits in the middle of that band, not at either end. The cigarette-equivalent figures should be read as order-of-magnitude framing, not as measurements; they are sensitive to the basis chosen."
+  },
+  "Q8_Q9_recovery_and_prescription": {
+   "maintenance_dose_time_in_bed_h": {
+    "median": 8.914965409160796,
+    "mean": 8.913862497806706,
+    "ci95": [
+     7.150418203998936,
+     10.670617176853936
+    ],
+    "p10_p90": [
+     7.759915043247328,
+     10.058844877639915
+    ]
+   },
+   "reachability_check": {
+    "max_sustainable_nocturnal_tst_h": 7.9,
+    "max_sustainable_tst_with_a_nap_h": 8.9,
+    "prob_need_exceeds_nocturnal_ceiling": 0.638812,
+    "note": "Habitual nocturnal sleep saturates near 7.9 h; the 8.9 h figure often quoted was obtained with a daytime nap opportunity. If his individual need is above 7.9 h he cannot meet it by night-time sleep alone, and the residual has to come from a scheduled nap. This is why the prescription is stated as a time-in-bed target plus an optional nap rather than a single sleep number."
+   },
+   "maintenance_dose_note": "This is TIME IN BED, not sleep. Sleep efficiency is ~87.5%, so obtaining the required sleep needs roughly 45-60 min more time in bed than the sleep target itself.",
+   "recovery_time_constant_days": {
+    "median": 16.007742175531934,
+    "mean": 18.597220550329308,
+    "ci95": [
+     5.44697873673912,
+     46.94009275914744
+    ],
+    "p10_p90": [
+     7.908854156129063,
+     32.36909056604521
+    ]
+   },
+   "non_recovering_residual_fraction": {
+    "median": 0.07806109980028449,
+    "mean": 0.09783957494173635,
+    "ci95": [
+     0.005552456425732831,
+     0.2975795971983155
+    ],
+    "p10_p90": [
+     0.01712825381021276,
+     0.2064954093474032
+    ]
+   },
+   "policies": {
+    "status_quo_5.5h_weekday": {
+     "sustained_tst_weekday_h": 5.14025,
+     "sustained_tst_weekend_h": 6.9232499999999995,
+     "mean_nightly_balance_vs_need_h": {
+      "median": -2.5350130908382784,
+      "mean": -2.5340298453661063,
+      "ci95": [
+       -4.100176641736711,
+       -0.9619192574364792
+      ],
+      "p10_p90": [
+       -3.554781636987413,
+       -1.5052856896264206
+      ]
+     },
+     "pct_of_recoverable_deficit_recovered": {
+      "week_0": {
+       "median": 0.0,
+       "mean": -6.937336004385702e-19,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "p10_p90": [
+        0.0,
+        0.0
+       ]
+      },
+      "week_1": {
+       "median": 10.171146535783773,
+       "mean": 11.238840306185514,
+       "ci95": [
+        3.6261356463557433,
+        24.986586450473762
+       ],
+       "p10_p90": [
+        5.256431301426085,
+        18.502652793396535
+       ]
+      },
+      "week_2": {
+       "median": 16.548287169453737,
+       "mean": 17.56622427338625,
+       "ci95": [
+        6.7032596298613285,
+        34.795682453933345
+       ],
+       "p10_p90": [
+        9.404005302064578,
+        26.750235296035864
+       ]
+      },
+      "week_4": {
+       "median": 22.814435720696867,
+       "mean": 23.882629916057734,
+       "ci95": [
+        11.479950673560861,
+        43.12524011095268
+       ],
+       "p10_p90": [
+        15.12545696069314,
+        33.64383066548302
+       ]
+      },
+      "week_12": {
+       "median": 27.601308259243595,
+       "mean": 29.215502069316095,
+       "ci95": [
+        18.650644312226326,
+        49.82557213284412
+       ],
+       "p10_p90": [
+        21.197715096312148,
+        39.07060070542044
+       ]
+      },
+      "week_26": {
+       "median": 28.21838690400647,
+       "mean": 29.898694840916605,
+       "ci95": [
+        19.476739335894013,
+        50.852146401538164
+       ],
+       "p10_p90": [
+        21.876374567419155,
+        39.827666586169705
+       ]
+      },
+      "week_52": {
+       "median": 28.27435608682102,
+       "mean": 29.958162279433044,
+       "ci95": [
+        19.524554179373336,
+        50.94548120292541
+       ],
+       "p10_p90": [
+        21.92673488746672,
+        39.900263073215825
+       ]
+      }
+     }
+    },
+    "7h_every_night": {
+     "sustained_tst_weekday_h": 6.4775,
+     "sustained_tst_weekend_h": 6.4775,
+     "mean_nightly_balance_vs_need_h": {
+      "median": -1.7071916622668502,
+      "mean": -1.7062084167946792,
+      "ci95": [
+       -3.272355213165283,
+       -0.13409782886505095
+      ],
+      "p10_p90": [
+       -2.7269602084159845,
+       -0.6774642610549924
+      ]
+     },
+     "pct_of_recoverable_deficit_recovered": {
+      "week_0": {
+       "median": 0.0,
+       "mean": -1.8319483858280203e-18,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "p10_p90": [
+        0.0,
+        0.0
+       ]
+      },
+      "week_1": {
+       "median": 13.364694144694269,
+       "mean": 15.23328845641577,
+       "ci95": [
+        4.551043052643781,
+        37.15465225819434
+       ],
+       "p10_p90": [
+        6.680553442011477,
+        25.988832138745074
+       ]
+      },
+      "week_2": {
+       "median": 21.609109104709695,
+       "mean": 23.8100387564262,
+       "ci95": [
+        8.385910663969062,
+        53.521820564566084
+       ],
+       "p10_p90": [
+        11.888454909990932,
+        38.2460407966761
+       ]
+      },
+      "week_4": {
+       "median": 29.669739464095898,
+       "mean": 32.372170783653964,
+       "ci95": [
+        14.250268400638003,
+        68.44487383712809
+       ],
+       "p10_p90": [
+        18.90589190812663,
+        49.19641569155151
+       ]
+      },
+      "week_12": {
+       "median": 36.025166531067015,
+       "mean": 39.60111655205929,
+       "ci95": [
+        22.340140257487516,
+        81.14437168915978
+       ],
+       "p10_p90": [
+        25.93487722453728,
+        58.21051735485794
+       ]
+      },
+      "week_26": {
+       "median": 36.84346108863894,
+       "mean": 40.52721659247525,
+       "ci95": [
+        23.23623570556415,
+        83.03517403741098
+       ],
+       "p10_p90": [
+        26.730220939143052,
+        59.41955052318113
+       ]
+      },
+      "week_52": {
+       "median": 36.915085263670264,
+       "mean": 40.60783778271073,
+       "ci95": [
+        23.28901699826401,
+        83.19886302858161
+       ],
+       "p10_p90": [
+        26.78986928553257,
+        59.528583644063396
+       ]
+      }
+     }
+    },
+    "8h_every_night": {
+     "sustained_tst_weekday_h": 7.369,
+     "sustained_tst_weekend_h": 7.369,
+     "mean_nightly_balance_vs_need_h": {
+      "median": -0.8156916622668504,
+      "mean": -0.814708416794679,
+      "ci95": [
+       -2.380855213165283,
+       0.7574021711349488
+      ],
+      "p10_p90": [
+       -1.835460208415985,
+       0.21403573894500738
+      ]
+     },
+     "pct_of_recoverable_deficit_recovered": {
+      "week_0": {
+       "median": 0.0,
+       "mean": 1.8790535040483323e-18,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "p10_p90": [
+        0.0,
+        0.0
+       ]
+      },
+      "week_1": {
+       "median": 19.540557686505025,
+       "mean": 22.23085435657005,
+       "ci95": [
+        6.180592651374068,
+        53.18730674173733
+       ],
+       "p10_p90": [
+        9.269013456424663,
+        39.059589402592174
+       ]
+      },
+      "week_2": {
+       "median": 31.579174314027526,
+       "mean": 34.7468716476019,
+       "ci95": [
+        11.312763973086545,
+        73.95671551845095
+       ],
+       "p10_p90": [
+        16.373653348591045,
+        58.360299720879425
+       ]
+      },
+      "week_4": {
+       "median": 43.66089470589902,
+       "mean": 47.24098630391594,
+       "ci95": [
+        18.945605089682505,
+        88.41099073933039
+       ],
+       "p10_p90": [
+        25.536191425780043,
+        75.79951114594797
+       ]
+      },
+      "week_12": {
+       "median": 53.613520305017836,
+       "mean": 57.78838876759023,
+       "ci95": [
+        28.33393438930103,
+        96.37157887273511
+       ],
+       "p10_p90": [
+        34.124307606412884,
+        89.27879804945795
+       ]
+      },
+      "week_26": {
+       "median": 54.874421467844286,
+       "mean": 59.139053735637255,
+       "ci95": [
+        29.330356387564947,
+        97.38948305770586
+       ],
+       "p10_p90": [
+        35.119491082462,
+        91.1546692081285
+       ]
+      },
+      "week_52": {
+       "median": 54.98289794592075,
+       "mean": 59.25653626833747,
+       "ci95": [
+        29.39188956118892,
+        97.51913418490902
+       ],
+       "p10_p90": [
+        35.19685658386214,
+        91.33921128028413
+       ]
+      }
+     }
+    },
+    "9h_every_night": {
+     "sustained_tst_weekday_h": 7.9,
+     "sustained_tst_weekend_h": 7.9,
+     "mean_nightly_balance_vs_need_h": {
+      "median": -0.2846916622668507,
+      "mean": -0.2837084167946794,
+      "ci95": [
+       -1.8498552131652835,
+       1.2884021711349485
+      ],
+      "p10_p90": [
+       -1.3044602084159853,
+       0.7450357389450071
+      ]
+     },
+     "pct_of_recoverable_deficit_recovered": {
+      "week_0": {
+       "median": 0.0,
+       "mean": 2.460898752763506e-18,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "p10_p90": [
+        0.0,
+        0.0
+       ]
+      },
+      "week_1": {
+       "median": 24.445295100265092,
+       "mean": 26.91830443229258,
+       "ci95": [
+        7.678099597500009,
+        59.62117696041221
+       ],
+       "p10_p90": [
+        11.659908081774544,
+        45.79790772636405
+       ]
+      },
+      "week_2": {
+       "median": 39.93147707700709,
+       "mean": 42.072230505517844,
+       "ci95": [
+        14.003320857136057,
+        80.23727615378702
+       ],
+       "p10_p90": [
+        20.54048621411509,
+        67.21001174454102
+       ]
+      },
+      "week_4": {
+       "median": 56.55510418294192,
+       "mean": 57.1987431780805,
+       "ci95": [
+        23.22525683287789,
+        92.3055655214474
+       ],
+       "p10_p90": [
+        31.75291617556332,
+        84.12480470640594
+       ]
+      },
+      "week_12": {
+       "median": 72.39409171561199,
+       "mean": 69.96809305405417,
+       "ci95": [
+        33.65456312792771,
+        97.95361554612249
+       ],
+       "p10_p90": [
+        42.01187141131772,
+        94.46832117803694
+       ]
+      },
+      "week_26": {
+       "median": 74.50152328535557,
+       "mean": 71.60358805558596,
+       "ci95": [
+        34.759690403871545,
+        98.64378062163688
+       ],
+       "p10_p90": [
+        43.18938011280899,
+        95.81502473064604
+       ]
+      },
+      "week_52": {
+       "median": 74.67361885058315,
+       "mean": 71.74589100082996,
+       "ci95": [
+        34.82816012895906,
+        98.74304746831434
+       ],
+       "p10_p90": [
+        43.27959785770662,
+        95.97768683105124
+       ]
+      }
+     }
+    },
+    "8h_plus_scheduled_nap": {
+     "sustained_tst_weekday_h": 7.869,
+     "sustained_tst_weekend_h": 7.869,
+     "mean_nightly_balance_vs_need_h": {
+      "median": -0.3156916622668504,
+      "mean": -0.3147084167946791,
+      "ci95": [
+       -1.8808552131652831,
+       1.2574021711349488
+      ],
+      "p10_p90": [
+       -1.335460208415985,
+       0.7140357389450074
+      ]
+     },
+     "pct_of_recoverable_deficit_recovered": {
+      "week_0": {
+       "median": 0.0,
+       "mean": 9.456213217156858e-19,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "p10_p90": [
+        0.0,
+        0.0
+       ]
+      },
+      "week_1": {
+       "median": 24.17456363633236,
+       "mean": 26.661252791927815,
+       "ci95": [
+        7.5780825952680075,
+        59.331990722111335
+       ],
+       "p10_p90": [
+        11.501193576169708,
+        45.47055968410453
+       ]
+      },
+      "week_2": {
+       "median": 39.456240182266946,
+       "mean": 41.6705452460179,
+       "ci95": [
+        13.825211761132092,
+        79.9554336613256
+       ],
+       "p10_p90": [
+        20.261964162596023,
+        66.79592801417729
+       ]
+      },
+      "week_4": {
+       "median": 55.8019565721099,
+       "mean": 56.65273711516093,
+       "ci95": [
+        22.938259777492487,
+        92.16206217108193
+       ],
+       "p10_p90": [
+        31.327894116681016,
+        83.79811807832442
+       ]
+      },
+      "week_12": {
+       "median": 71.27574405999465,
+       "mean": 69.30023739390069,
+       "ci95": [
+        33.29062289528546,
+        97.90033624509574
+       ],
+       "p10_p90": [
+        41.45425221816098,
+        94.30067643766951
+       ]
+      },
+      "week_26": {
+       "median": 73.32166680097711,
+       "mean": 70.92009048148903,
+       "ci95": [
+        34.38840537967356,
+        98.60431305494654
+       ],
+       "p10_p90": [
+        42.61824292297243,
+        95.6688577785611
+       ]
+      },
+      "week_52": {
+       "median": 73.48630624909251,
+       "mean": 71.0610269263136,
+       "ci95": [
+        34.4562132185034,
+        98.70261127664028
+       ],
+       "p10_p90": [
+        42.706788645251955,
+        95.831848595771
+       ]
+      }
+     }
+    },
+    "weekday_5.5h_weekend_10h_catchup": {
+     "sustained_tst_weekday_h": 5.14025,
+     "sustained_tst_weekend_h": 7.9,
+     "mean_nightly_balance_vs_need_h": {
+      "median": -2.2559416622668502,
+      "mean": -2.254958416794678,
+      "ci95": [
+       -3.821105213165283,
+       -0.682847828865051
+      ],
+      "p10_p90": [
+       -3.2757102084159846,
+       -1.2262142610549924
+      ]
+     },
+     "pct_of_recoverable_deficit_recovered": {
+      "week_0": {
+       "median": 0.0,
+       "mean": -2.6757494593788907e-19,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "p10_p90": [
+        0.0,
+        0.0
+       ]
+      },
+      "week_1": {
+       "median": 11.06705113402437,
+       "mean": 12.351386145762255,
+       "ci95": [
+        3.8966566521015893,
+        28.288936051792742
+       ],
+       "p10_p90": [
+        5.667465060398132,
+        20.511599484790967
+       ]
+      },
+      "week_2": {
+       "median": 17.972792688980924,
+       "mean": 19.305229344879336,
+       "ci95": [
+        7.194142184900005,
+        39.83608867943583
+       ],
+       "p10_p90": [
+        10.1228581332691,
+        29.776485314703365
+       ]
+      },
+      "week_4": {
+       "median": 24.73749448912443,
+       "mean": 26.2470955566297,
+       "ci95": [
+        12.298182334996424,
+        49.82022689106953
+       ],
+       "p10_p90": [
+        16.226911650635866,
+        37.66977468254973
+       ]
+      },
+      "week_12": {
+       "median": 29.96240576180469,
+       "mean": 32.10818112122996,
+       "ci95": [
+        19.750304642414612,
+        58.01640339990442
+       ],
+       "p10_p90": [
+        22.591062185815883,
+        43.949254802198155
+       ]
+      },
+      "week_26": {
+       "median": 30.636128194378664,
+       "mean": 32.85909237053233,
+       "ci95": [
+        20.600488082743528,
+        59.25682450647406
+       ],
+       "p10_p90": [
+        23.303848684996364,
+        44.81815903985609
+       ]
+      },
+      "week_52": {
+       "median": 30.69673505819751,
+       "mean": 32.92445645794623,
+       "ci95": [
+        20.649952507512747,
+        59.36792420521151
+       ],
+       "p10_p90": [
+        23.35607106094242,
+        44.899742841859435
+       ]
+      }
+     }
+    },
+    "9.5h_in_bed_every_night": {
+     "sustained_tst_weekday_h": 7.9,
+     "sustained_tst_weekend_h": 7.9,
+     "mean_nightly_balance_vs_need_h": {
+      "median": -0.2846916622668507,
+      "mean": -0.2837084167946794,
+      "ci95": [
+       -1.8498552131652835,
+       1.2884021711349485
+      ],
+      "p10_p90": [
+       -1.3044602084159853,
+       0.7450357389450071
+      ]
+     },
+     "pct_of_recoverable_deficit_recovered": {
+      "week_0": {
+       "median": 0.0,
+       "mean": 2.460898752763506e-18,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "p10_p90": [
+        0.0,
+        0.0
+       ]
+      },
+      "week_1": {
+       "median": 24.445295100265092,
+       "mean": 26.91830443229258,
+       "ci95": [
+        7.678099597500009,
+        59.62117696041221
+       ],
+       "p10_p90": [
+        11.659908081774544,
+        45.79790772636405
+       ]
+      },
+      "week_2": {
+       "median": 39.93147707700709,
+       "mean": 42.072230505517844,
+       "ci95": [
+        14.003320857136057,
+        80.23727615378702
+       ],
+       "p10_p90": [
+        20.54048621411509,
+        67.21001174454102
+       ]
+      },
+      "week_4": {
+       "median": 56.55510418294192,
+       "mean": 57.1987431780805,
+       "ci95": [
+        23.22525683287789,
+        92.3055655214474
+       ],
+       "p10_p90": [
+        31.75291617556332,
+        84.12480470640594
+       ]
+      },
+      "week_12": {
+       "median": 72.39409171561199,
+       "mean": 69.96809305405417,
+       "ci95": [
+        33.65456312792771,
+        97.95361554612249
+       ],
+       "p10_p90": [
+        42.01187141131772,
+        94.46832117803694
+       ]
+      },
+      "week_26": {
+       "median": 74.50152328535557,
+       "mean": 71.60358805558596,
+       "ci95": [
+        34.759690403871545,
+        98.64378062163688
+       ],
+       "p10_p90": [
+        43.18938011280899,
+        95.81502473064604
+       ]
+      },
+      "week_52": {
+       "median": 74.67361885058315,
+       "mean": 71.74589100082996,
+       "ci95": [
+        34.82816012895906,
+        98.74304746831434
+       ],
+       "p10_p90": [
+        43.27959785770662,
+        95.97768683105124
+       ]
+      }
+     }
+    },
+    "9h_in_bed_plus_45min_nap": {
+     "sustained_tst_weekday_h": 8.65,
+     "sustained_tst_weekend_h": 8.65,
+     "mean_nightly_balance_vs_need_h": {
+      "median": 0.46530833773315017,
+      "mean": 0.46629158320532144,
+      "ci95": [
+       -1.0998552131652826,
+       2.0384021711349494
+      ],
+      "p10_p90": [
+       -0.5544602084159843,
+       1.495035738945008
+      ]
+     },
+     "pct_of_recoverable_deficit_recovered": {
+      "week_0": {
+       "median": 0.0,
+       "mean": -3.949432537293209e-18,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "p10_p90": [
+        0.0,
+        0.0
+       ]
+      },
+      "week_1": {
+       "median": 29.60020614493179,
+       "mean": 31.676984816094034,
+       "ci95": [
+        10.314379041431126,
+        64.38222420165515
+       ],
+       "p10_p90": [
+        15.24785370650256,
+        51.192553423512955
+       ]
+      },
+      "week_2": {
+       "median": 48.64495051902877,
+       "mean": 49.509080182698014,
+       "ci95": [
+        18.920778633184643,
+        84.25155895594459
+       ],
+       "p10_p90": [
+        27.188831762675857,
+        73.40867805113047
+       ]
+      },
+      "week_4": {
+       "median": 69.12444738277824,
+       "mean": 67.30834376039327,
+       "ci95": [
+        31.506572816802542,
+        94.47018407049161
+       ],
+       "p10_p90": [
+        43.20079103318039,
+        88.72783459993667
+       ]
+      },
+      "week_12": {
+       "median": 86.54651330631286,
+       "mean": 82.33355153845,
+       "ci95": [
+        45.61482753888987,
+        98.70213465679394
+       ],
+       "p10_p90": [
+        60.669358172266115,
+        96.63731500956126
+       ]
+      },
+      "week_26": {
+       "median": 88.8279791000113,
+       "mean": 84.25796171377219,
+       "ci95": [
+        46.990404694614746,
+        99.19647907116851
+       ],
+       "p10_p90": [
+        62.74802051516442,
+        97.6211333043857
+       ]
+      },
+      "week_52": {
+       "median": 89.03338396134968,
+       "mean": 84.4254191903323,
+       "ci95": [
+        47.076176261776105,
+        99.27128655173692
+       ],
+       "p10_p90": [
+        62.88531780286397,
+        97.75043149241787
+       ]
+      }
+     }
+    }
+   },
+   "weekend_catchup_alone": {
+    "weekly_weekday_deficit_h": 14.033259073794389,
+    "max_available_weekend_surplus_h": 4.030616675466298,
+    "fraction_repayable": 0.28721886015722775,
+    "required_sleep_per_weekend_night_h": 15.201321199164045,
+    "physiologically_possible": false
+   },
+   "ledger_is_not_a_schedule": {
+    "arithmetic_debt_h": 2920.702792544469,
+    "max_nightly_surplus_h": 0.7153083377331502,
+    "nights_to_repay_arithmetically": 4067.659308696007,
+    "why_this_is_the_wrong_question": "Nightly sleep is bounded near 8.5-8.9 h sustained, so the maximum surplus over requirement is a fraction of an hour and the ledger would take years to clear. Function recovers on a time constant of days to weeks largely independently of how many ledger hours accumulated. The ledger measures the size of the historical exposure, not the length of the repayment."
+   },
+   "banking_sleep_in_advance": "Prophylactic sleep extension before a restriction period does measurably buffer subsequent impairment (rupp2009), so banking works in the forward direction even though repayment is inefficient in the backward direction."
+  },
+  "Q4_structure_and_physiology": {
+   "final_adult_height_cm": {
+    "value": 0.0,
+    "interval": [
+     0.0,
+     0.7
+    ],
+    "arithmetic_ceiling": 3.65,
+    "source": "evidence/s11_endocrine_growth/endocrine_summary.md"
+   },
+   "growth_hormone": {
+    "pct_change_24h_output": 0.0,
+    "interval": [
+     -32,
+     32
+    ],
+    "verdict": "redistributed, not lost. The sleep-onset pulse is blunted but compensatory waking pulses hold the 24-hour total constant, and slow-wave sleep is preserved (indeed slightly increased) under restriction while stage 2 and REM absorb the loss."
+   },
+   "testosterone": {
+    "value": -10.3,
+    "ci95": [
+     -20.6,
+     -0.06
+    ],
+    "source": "evidence/s11_endocrine_growth/endocrine_summary.md (leproult2011)",
+    "reversible": true,
+    "reversal_days": 3
+   },
+   "insulin_sensitivity": {
+    "acute_change": "reduced during restriction (HOMA-IR +0.30 at 6.2 h over 6 weeks); reverses within days to ~2 weeks at adequate sleep dose",
+    "irreversible_probability": 0.05
+   },
+   "inflammation_crp_il6": {
+    "verdict": "null for short sleep duration in meta-analysis (CRP 0.08, -0.01 to 0.16; IL-6 0.08, -0.02 to 0.18)",
+    "irreversible_probability": 0.02
+   },
+   "immune_infection": {
+    "verdict": "real while exposed and reversible: actigraphic <5 h vs >7 h gave OR 4.50 for developing a cold on viral challenge (39.7% vs 12.8% absolute), but every marker normalised given adequate recovery sleep",
+    "irreversible_probability": 0.02
+   },
+   "brain_structure": {
+    "value": 0.03,
+    "interval": [
+     0.01,
+     0.1
+    ],
+    "durable_neurobiological_change_any_kind": 0.25,
+    "source": "evidence/s15_brain_structure/structure_summary.md"
+   },
+   "glymphatic_amyloid": {
+    "verdict": "one night of total deprivation raises brain amyloid-beta about 5%, but isotope kinetics attribute this to increased production rather than impaired clearance, 5-8 nights of 4 h sleep changed no amyloid or tau biomarker, and the 36-hour mesor is unchanged, implying reversal",
+    "irreversible_probability": 0.03
+   },
+   "amyloid_note": "The popular chain from a mouse glymphatic finding, to a 20-person PET study after one sleepless night, to a hazard ratio in 50-70 year olds, is not a causal chain. Two of its links are contradicted in humans."
+  },
+  "screenable_disorder": {
+   "value": 0.21,
+   "interval": [
+    0.12,
+    0.32
+   ],
+   "components": {
+    "insomnia": 0.184,
+    "dswpd": 0.019,
+    "osa": 0.008
+   },
+   "source": "evidence/s19_sleep_disorders/screening_priors.md"
+  },
+  "social_jetlag": {
+   "value": 1.75,
+   "interval": [
+    1.0,
+    2.75
+   ],
+   "percentile_for_age": 45,
+   "source": "evidence/s16_social_jetlag/jetlag_summary.md",
+   "depression_threshold_h": 2.0
+  },
+  "bias_analysis": {
+   "e_value_mortality_rr_1.12": 1.4866060555964675,
+   "e_value_t2d_rr_1.09_per_hour": 1.4032091952673167,
+   "e_value_dementia_hr_1.22": 1.7380733538795448,
+   "interpretation": "An unmeasured confounder associated with both short sleep and the outcome by a risk ratio of roughly 1.5 would explain away the mortality association entirely. Depression, socioeconomic position, shift work, physical inactivity and undiagnosed illness are all plausible at that strength, which is why the residual causal fraction is modelled at 0.25 rather than 1.0."
+  }
+ },
+ "gates": {
+  "G5_envelope_vs_simulation": {
+   "envelope_total_debt_h": 3100.5811607142864,
+   "simulation_median_total_debt_h": 2920.702792544469,
+   "divergence_pct": 5.801440402494687,
+   "passes_within_20pct": true
+  }
+ },
+ "multiverse": {
+  "branches": [
+   {
+    "interpretation": "tst",
+    "calibration": "naive",
+    "need_referent": "capacity_based",
+    "median_debt_h": 3735.9096043205777,
+    "median_mean_tst_h": 5.270284072940166,
+    "median_nightly_deficit_h": 3.592220773385171
+   },
+   {
+    "interpretation": "tst",
+    "calibration": "naive",
+    "need_referent": "guideline_midpoint",
+    "median_debt_h": 3327.9170923424813,
+    "median_mean_tst_h": 5.270284072940166,
+    "median_nightly_deficit_h": 3.1999202810985397
+   },
+   {
+    "interpretation": "tst",
+    "calibration": "naive",
+    "need_referent": "nocturnal_floor",
+    "median_debt_h": 2597.247929668514,
+    "median_mean_tst_h": 5.270284072940166,
+    "median_nightly_deficit_h": 2.4973537785274176
+   },
+   {
+    "interpretation": "tst",
+    "calibration": "reverse",
+    "need_referent": "capacity_based",
+    "median_debt_h": 2927.4352606630837,
+    "median_mean_tst_h": 6.136375798227695,
+    "median_nightly_deficit_h": 2.8148415967914264
+   },
+   {
+    "interpretation": "tst",
+    "calibration": "reverse",
+    "need_referent": "guideline_midpoint",
+    "median_debt_h": 2519.442748684988,
+    "median_mean_tst_h": 6.136375798227695,
+    "median_nightly_deficit_h": 2.422541104504796
+   },
+   {
+    "interpretation": "tst",
+    "calibration": "reverse",
+    "need_referent": "nocturnal_floor",
+    "median_debt_h": 1788.7735860110201,
+    "median_mean_tst_h": 6.136375798227695,
+    "median_nightly_deficit_h": 1.7199746019336732
+   },
+   {
+    "interpretation": "tst",
+    "calibration": "none",
+    "need_referent": "capacity_based",
+    "median_debt_h": 2708.608550617746,
+    "median_mean_tst_h": 6.266528432988204,
+    "median_nightly_deficit_h": 2.6044312986709093
+   },
+   {
+    "interpretation": "tst",
+    "calibration": "none",
+    "need_referent": "guideline_midpoint",
+    "median_debt_h": 2300.6160386396496,
+    "median_mean_tst_h": 6.266528432988204,
+    "median_nightly_deficit_h": 2.2121308063842786
+   },
+   {
+    "interpretation": "tst",
+    "calibration": "none",
+    "need_referent": "nocturnal_floor",
+    "median_debt_h": 1569.946875965682,
+    "median_mean_tst_h": 6.266528432988204,
+    "median_nightly_deficit_h": 1.5095643038131557
+   },
+   {
+    "interpretation": "tib",
+    "calibration": "naive",
+    "need_referent": "capacity_based",
+    "median_debt_h": 3514.972096869997,
+    "median_mean_tst_h": 5.493235235317395,
+    "median_nightly_deficit_h": 3.3797808623749974
+   },
+   {
+    "interpretation": "tib",
+    "calibration": "naive",
+    "need_referent": "guideline_midpoint",
+    "median_debt_h": 3106.9795848919002,
+    "median_mean_tst_h": 5.493235235317395,
+    "median_nightly_deficit_h": 2.987480370088366
+   },
+   {
+    "interpretation": "tib",
+    "calibration": "naive",
+    "need_referent": "nocturnal_floor",
+    "median_debt_h": 2376.310422217933,
+    "median_mean_tst_h": 5.493235235317395,
+    "median_nightly_deficit_h": 2.2849138675172433
+   },
+   {
+    "interpretation": "tib",
+    "calibration": "reverse",
+    "need_referent": "capacity_based",
+    "median_debt_h": 3514.972096869997,
+    "median_mean_tst_h": 5.493235235317395,
+    "median_nightly_deficit_h": 3.3797808623749974
+   },
+   {
+    "interpretation": "tib",
+    "calibration": "reverse",
+    "need_referent": "guideline_midpoint",
+    "median_debt_h": 3106.9795848919002,
+    "median_mean_tst_h": 5.493235235317395,
+    "median_nightly_deficit_h": 2.987480370088366
+   },
+   {
+    "interpretation": "tib",
+    "calibration": "reverse",
+    "need_referent": "nocturnal_floor",
+    "median_debt_h": 2376.310422217933,
+    "median_mean_tst_h": 5.493235235317395,
+    "median_nightly_deficit_h": 2.2849138675172433
+   },
+   {
+    "interpretation": "tib",
+    "calibration": "none",
+    "need_referent": "capacity_based",
+    "median_debt_h": 3514.972096869997,
+    "median_mean_tst_h": 5.493235235317395,
+    "median_nightly_deficit_h": 3.3797808623749974
+   },
+   {
+    "interpretation": "tib",
+    "calibration": "none",
+    "need_referent": "guideline_midpoint",
+    "median_debt_h": 3106.9795848919002,
+    "median_mean_tst_h": 5.493235235317395,
+    "median_nightly_deficit_h": 2.987480370088366
+   },
+   {
+    "interpretation": "tib",
+    "calibration": "none",
+    "need_referent": "nocturnal_floor",
+    "median_debt_h": 2376.310422217933,
+    "median_mean_tst_h": 5.493235235317395,
+    "median_nightly_deficit_h": 2.2849138675172433
+   }
+  ],
+  "n_branches": 18,
+  "axes": {
+   "report_interpretation": 2,
+   "self_report_calibration": 3,
+   "need_referent": 3
+  },
+  "debt_h_min": 1569.946875965682,
+  "debt_h_max": 3735.9096043205777,
+  "debt_h_spread_ratio": 2.3796407773496164,
+  "nightly_deficit_h_min": 1.5095643038131557,
+  "nightly_deficit_h_max": 3.592220773385171,
+  "sign_stable_across_multiverse": true,
+  "note": "The sleep-need referent was added as a third axis after adversarial review pointed out that it is the most influential single parameter and was previously held fixed. Every one of the 18 branches still yields a positive deficit, so the sign is robust, but the magnitude varies by roughly a factor of three across defensible choices. The calibration choice and the need referent contribute comparably; neither alone determines the answer."
+ },
+ "value_of_information": {
+  "output_1_measured_iq_deficit": {
+   "base_variance": 5.93361589026506,
+   "fractional_variance_attributable": {
+    "pooled_experimental_effect_and_heterogeneity": 0.6681,
+    "g_loading_discount_vigilance_to_iq": 0.4061,
+    "exposure_calibration_and_reported_hours": 0.2417,
+    "dose_transport_curvature": 0.0078,
+    "individual_sleep_need": 0.0,
+    "residual_causal_fraction_for_mortality": 0.0
+   },
+   "highest_value_measurement": "pooled_experimental_effect_and_heterogeneity",
+   "interpretation": "Between-person heterogeneity in the experimental response dominates. Trait-like vulnerability to sleep loss has an ICC of about 0.675 and is stable over years, so the population effect size is a poor guide to any one person. This is the entire justification for measuring his own response rather than reading a number off the literature."
+  },
+  "output_2_maintenance_sleep_dose": {
+   "base_variance": 0.805210659419319,
+   "variance_removed_by_measuring_individual_need": 1.0,
+   "highest_value_measurement": "individual_sleep_need",
+   "interpretation": "The maintenance dose is a deterministic function of individual sleep need, which is currently a population prior with an SD of 0.70 h resting on 15 subjects. An ad-lib sleep protocol would collapse this interval almost entirely."
+  },
+  "overall_recommendation": "Two measurements, in this order: an ad-lib sleep protocol to fix his own sleep need, and a repeated within-person vigilance test to fix his own sensitivity. Together they remove most of the width in every number in this report.",
+  "note": "Shares need not sum to one; inputs interact multiplicatively. Individual sleep need registers as zero for output 1 because it is absorbed into the exposure-deficit term upstream, not because it is unimportant."
+ },
+ "figures": [
+  "/workspace/figures/cumulative_debt.png",
+  "/workspace/figures/forest_vigilance.png",
+  "/workspace/figures/recovery_trajectories.png",
+  "/workspace/figures/multiverse.png",
+  "/workspace/figures/value_of_information.png",
+  "/workspace/figures/comparators.png"
+ ]
+}

@@ -1,0 +1,162 @@
+study_id: lundahl2015
+citation: "Lundahl A, Kidwell KM, Van Dyk TR, Nelson TD. A meta-analysis of the effect of experimental sleep restriction on youth's attention and hyperactivity. Developmental Neuropsychology. 2015;40(3):104-121."
+doi: "10.1080/87565641.2014.939183"
+pmid: "26151610"
+url: "https://doi.org/10.1080/87565641.2014.939183"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "A Meta-Analysis of the Effect of Experimental Sleep Restriction on Youth's Attention and Hyperactivity"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: 547
+n_studies_pooled: 19
+population:
+  age_mean: 10.6
+  age_range: [8.4, 15.2]
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: cognition
+    outcome_construct: attention_pooled_across_tasks
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null, contrast_label: "experimentally restricted sleep vs each child's own baseline/normal sleep"}
+    scale: hedges_g
+    unit: null
+    value: -0.19
+    se: 0.0791
+    ci: [-0.34, -0.03]
+    conversion_formula: "Reported directly as a random-effects Hedges' g with a 95% CI. SE = (−0.03 − (−0.34))/3.92 = 0.0791. k = 13 samples, N = 268. Heterogeneity Q(13) = 21.98, p = .04, I2 = 45.40%."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse attention under sleep restriction than under the child's normal sleep"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "A total of 13 samples (N = 268) examined the difference in youth's attention performance between baseline (control) sleep and restricted sleep. The overall effect size of −0.19 was significant (95% CI: −0.34−0.03; p = .02); Q(13) = 21.98, p = .04, I2 = 45.40%"
+  - outcome_domain: cognition
+    outcome_construct: attention_pooled_across_tasks_trim_and_fill_adjusted
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null, contrast_label: "restricted vs baseline sleep, corrected for publication bias by trim-and-fill"}
+    scale: hedges_g
+    unit: null
+    value: -0.14
+    se: 0.0918
+    ci: [-0.32, 0.04]
+    conversion_formula: "Trim-and-fill adjusted estimate: one unmatched study to the left of the mean, counterpart imputed to the right. SE = (0.04 − (−0.32))/3.92 = 0.0918. THE ADJUSTED ESTIMATE IS NOT SIGNIFICANT. This is the honest estimate for the restricted-vs-baseline contrast and it is 26% smaller than the unadjusted one."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse attention under restriction; CI includes zero after bias correction"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "One study to the left of the mean was unmatched. The counterpart of this study was imputed to the right of the mean, resulting in a non-significant and small adjusted effect size of −0.14 (95% CI: −0.32–.04)."
+  - outcome_domain: cognition
+    outcome_construct: attention_pooled_across_tasks_extension_vs_restriction
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: null, contrast_label: "experimentally EXTENDED sleep vs experimentally RESTRICTED sleep (the full manipulation range)"}
+    scale: hedges_g
+    unit: null
+    value: -0.37
+    se: 0.0918
+    ci: [-0.55, -0.19]
+    conversion_formula: "Reported directly: k = 6 samples, N = 279, g = -0.37, 95% CI -0.55 to -0.19, p < .0001. SE = (−0.19 − (−0.55))/3.92 = 0.0918. Q(5) = 15.29, p = .009, I2 = 67.30%. THIS IS THE CONTRAST THE DOWNSTREAM MODEL SHOULD PREFER for the youth attention parameter, because it spans the full experimental range rather than comparing restriction against an unconstrained and possibly already-insufficient habitual baseline."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = restricted sleep worse than extended sleep on attention"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Six samples (N = 279) examined the difference in attention between extended sleep (sleep extension) and sleep restriction. The overall effect size of −0.37 was significant (95% CI: −0.55 to ... −0.19, p < .0001) and represents a small to medium effect size (Lipsey & Wilson, 2001), though this effect was heterogeneous between studies Q(5) = 15.29, p = .009, I2 = 67.30%"
+  - outcome_domain: cognition
+    outcome_construct: attention_extension_vs_restriction_trim_and_fill_adjusted
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: null, contrast_label: "extended vs restricted sleep, corrected for publication bias"}
+    scale: hedges_g
+    unit: null
+    value: -0.26
+    se: 0.1046
+    ci: [-0.46, -0.05]
+    conversion_formula: "Trim-and-fill adjusted: two unmatched studies to the left of the mean. SE = (−0.05 − (−0.46))/3.92 = 0.1046. Unlike the baseline contrast this one REMAINS SIGNIFICANT after bias correction, which is why I recommend it as the primary youth attention estimate. Bias shrank it by 30% (-0.37 to -0.26)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = restricted worse than extended; survives publication-bias correction"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Based on trim-and-fill analyses, asymmetry was also present for attention outcomes between restricted and extended sleep, with two studies to the left of the mean unmatched, resulting in a significant adjusted effect size of −0.26 (95% CI: −0.46 to −0.05)"
+  - outcome_domain: psychiatric
+    outcome_construct: hyperactivity_pooled_extension_vs_restriction
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: null, contrast_label: "extended vs restricted sleep, hyperactivity ratings"}
+    scale: hedges_g
+    unit: null
+    value: -0.35
+    se: 0.1813
+    ci: [-0.71, -0.003]
+    conversion_formula: "Reported g = -0.35, 95% CI -0.71 to -0.003, p = .04. SE = (−0.003 − (−0.71))/3.92 = 0.1803 (I record 0.1813 from the symmetric-CI average). Q(4) = 44.42, p < .001, I2 = 90.99% - extreme heterogeneity. Trim-and-fill adjusted to a NON-significant -0.20 (95% CI -0.58 to 0.17), so this outcome does not survive bias correction and should be treated as unestablished."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = more hyperactivity under restriction than extension"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "−0.35 was small to medium in size and significant (95% CI: −0.71 to −0.003, p = .04; Q(4) = 44.42, p < .001, I2 = 90.99%"
+  - outcome_domain: cognition
+    outcome_construct: age_moderator_on_attention_effect
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: null, contrast_label: "moderator: change in the extension-vs-restriction attention g per MONTH of sample mean age"}
+    scale: hedges_g
+    unit: "change in g per month of mean sample age"
+    value: -0.01
+    se: null
+    ci: null
+    conversion_formula: "Table 2 moderator analysis on the extension-vs-restriction attention subset: b = -0.01 per month of mean age, Q(1) = 9.75, p < .01, k = 5. NO SE IS PUBLISHED for b, only the Q test, so se is null. DO NOT EXTRAPOLATE THIS SLOPE - see notes. Sex was also significant (b = -0.03 per unit proportion male, p < .05)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = older samples showed LARGER (more negative) attention deficits from sleep restriction"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Mean age ... k b Q-regression ... 6 5 6 6 5 −0.85 −0.01** −0.03* ... Q(1) = 9.75"
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Genuine meta-analysis of EXPERIMENTAL manipulations only (this is its main strength: every included effect is from a sleep restriction or extension protocol, not a correlation), random-effects pooling, funnel-plot and trim-and-fill bias assessment for every cell, moderator analyses pre-specified in a coding manual. Weaknesses: very small k (13 and 6 samples), extreme heterogeneity in the hyperactivity cell (I2 = 91%), publication bias detected in EVERY cell examined, one included study sampled children with diagnosed ADHD (Gruber et al. 2011) which is a different population, and 'attention' is a heterogeneous composite pooling continuous-performance tasks, PVT-like measures, and rating scales that differ substantially in g-loading. No risk-of-bias assessment of the constituent trials is reported."
+funding: "Not stated in the retrieved text."
+notes: |
+  THE ONLY PUBLISHED META-ANALYSIS OF EXPERIMENTAL sleep restriction restricted to youth, so it is the natural source for the
+  youth attention parameter. My recommendation to the pooler, in order of preference:
+
+  1. USE g = -0.26 (95% CI -0.46 to -0.05), the trim-and-fill-adjusted extension-vs-restriction estimate. It spans the full
+     manipulated range and it is the only cell that stays significant after bias correction.
+  2. The unadjusted -0.37 is the headline number but publication bias was detected and shrank it by 30%.
+  3. The restricted-vs-baseline contrast (-0.19 unadjusted, -0.14 adjusted, CI crossing zero) is the WEAKER design because the
+     comparator is habitual sleep, which in adolescents is itself frequently insufficient. Using habitual sleep as a "control"
+     biases the estimate toward zero. That is exactly the bias structure that matters for the target subject, whose "normal" is
+     5-6 h: relative to a genuinely rested state, his deficit is larger than any baseline-referenced study would show.
+
+  THE AGE MODERATOR IS THE MOST TEMPTING AND MOST DANGEROUS NUMBER IN THIS PAPER. b = -0.01 per month of mean sample age
+  (Q(1) = 9.75, p < .01) says older youth are MORE impaired, not less. Taken literally, with the subset's mean age at about 127
+  months, an 18-year-old (216 months) would have g = -0.37 + (-0.01)(216 - 127) = -1.26. THAT IS NOT CREDIBLE: it exceeds the
+  pooled effect of full 24-48 h TOTAL sleep deprivation on lapses of attention in adults (lim2010, g = -0.762) for a
+  manipulation of one or two hours. The slope is fit on k = 5 studies spanning mean ages of only 100.68 to 182.40 months and it
+  is confounded with era, task battery, and restriction dose across those five studies. I record the moderator because its SIGN
+  is decision-relevant - it is direct evidence AGAINST the common assumption that adolescents tolerate sleep loss better than
+  children - but I explicitly refuse the linear extrapolation to age 18 and the pooler must not perform it either. The
+  independent and much better-powered test of the same question is campbell2024, which found NO TIB-by-age interaction from 9.9
+  to 22.8 y (p > .48 for all executive indices, p = .34 for PVT). Between a k = 5 meta-regression and a within-subject
+  dose-response study covering the actual target age, prefer Campbell: the honest reading is that the sleep-loss effect is
+  approximately AGE-INVARIANT across 9-23 y, with weak and unreliable evidence for amplification with age.
+
+  A SEX MODERATOR was also significant (b = -0.03 per proportion male, p < .05) in the same underpowered k = 5 subset,
+  suggesting larger deficits in samples with more males. Same caveats; the target subject is male, so if anything this points
+  the same direction as the age moderator, but I would not weight it.
+
+  RELATION TO OTHER RECORDS IN THIS SHARD: this meta-analysis subsumes sadeh2003 and vriend2013 as primary studies, so the
+  pooler MUST NOT count lundahl2015 alongside sadeh2003 as independent evidence. I wrote sadeh2003 as a separate record only
+  because it carries the "2 years of development" benchmark statement that the meta-analysis does not reproduce. If forced to
+  pick one, take lundahl2015 for the effect size and sadeh2003 for the developmental-equivalence framing.
+
+  n = 547 in the header is the sum of the two attention cells (268 + 279), which double-counts children who contributed to
+  both contrasts. n_studies_pooled = 19 is likewise the sum of samples across cells (13 + 6). Both are upper bounds; the paper
+  does not report a single unduplicated total.
+shard: "s02_cognition_meta"

@@ -1,0 +1,115 @@
+study_id: lloydjones2006_cvd_lifetime
+citation: Lloyd-Jones DM, Leip EP, Larson MG, D'Agostino RB, Beiser A, Wilson PW, Wolf PA, Levy D. Prediction
+  of lifetime risk for cardiovascular disease by risk factor burden at 50 years of age. Circulation. 2006;113(6):791-798.
+doi: 10.1161/CIRCULATIONAHA.105.548206
+pmid: '16461820'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Prediction of lifetime risk for cardiovascular disease by risk factor burden at 50 years
+    of age.
+access_tier: abstract_only
+design: prospective_cohort_objective
+n: 3564
+population:
+  age_mean: 50.0
+  age_range:
+  - 50
+  - 95
+  pct_female: 0.0
+  country: US
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_cvd_from_age_50_male
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: probability of first atherosclerotic CVD event from exact age 50 to age 95
+  value: 0.517
+  se: 0.012500000000000011
+  ci:
+  - 0.493
+  - 0.542
+  conversion_formula: se = (0.542 - 0.493)/3.92 = 0.0125 on the probability scale
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. Death free of CVD treated as a competing event.
+  covariates:
+  - blood pressure
+  - total cholesterol
+  - diabetes
+  - smoking
+  followup_years: null
+  cohort_family: Framingham
+  quote: At 50 years of age, lifetime risks were 51.7% (95% CI, 49.3 to 54.2) for men and 39.2% (95% CI,
+    37.0 to 41.4) for women, with median survivals of 30 and 36 years, respectively.
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_cvd_from_age_50_male_all_risk_factors_optimal
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: probability of first CVD event from age 50, men with all-optimal risk factors
+  value: 0.052
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. LOWER end of a 13-fold gradient. No CI reported for the strata,
+    so se is null.
+  covariates: []
+  followup_years: null
+  cohort_family: Framingham
+  quote: Compared with participants with > or =2 major risk factors, those with optimal levels had substantially
+    lower lifetime risks (5.2% versus 68.9% in men, 8.2% versus 50.2% in women) and markedly longer median
+    survivals (>39 versus 28 years in men, >39 versus 31 years in women).
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_cvd_from_age_50_male_two_or_more_major_risk_factors
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: probability of first CVD event from age 50, men with >=2 major risk factors
+  value: 0.689
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'higher = more disease. UPPER end of the gradient. THE KEY RECORD FOR MODELLING SLEEP
+    THROUGH MEDIATORS: chronic sleep restriction is hypothesised to move blood pressure, glucose and adiposity,
+    so a partial shift along the 5.2%-to-68.9% gradient is a better-identified construction than applying
+    a CVD hazard ratio to the 51.7% population average, and it automatically respects risk-ratio compression
+    near a saturated baseline.'
+  covariates: []
+  followup_years: null
+  cohort_family: Framingham
+  quote: Compared with participants with > or =2 major risk factors, those with optimal levels had substantially
+    lower lifetime risks (5.2% versus 68.9% in men, 8.2% versus 50.2% in women) and markedly longer median
+    survivals (>39 versus 28 years in men, >39 versus 31 years in women).
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Framingham; index age 50 conditional on being CVD-free at 50, i.e. selected survivors. Risk-factor
+    strata are observational, so the 5.2%-vs-68.9% contrast is confounded and must not be read as the
+    causal effect of changing risk factors.
+funding: NIH/NHLBI
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

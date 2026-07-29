@@ -1,0 +1,93 @@
+study_id: hartescu2022
+citation: "Hartescu I, Stensel DJ, Thackray AE, King JA, Dorling JL, Rogers EN, Sherry AP, Davies MJ, Yates T, Morgan K. Sleep extension and metabolic health in male overweight/obese short sleepers: a randomised controlled trial. J Sleep Res. 2022 Apr;31(2):e13469."
+doi: "10.1111/jsr.13469"
+pmid: "34459060"
+url: "https://pubmed.ncbi.nlm.nih.gov/34459060/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep extension and metabolic health in male overweight/obese short sleepers: A randomised controlled trial."
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 18
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: "UK"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: recovery
+    outcome_construct: homa_ir_change_after_6_week_sleep_extension_between_group
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 42, contrast_label: "6-week CBT-based sleep-extension programme (n=10) vs no-intervention control (n=8), free-living male overweight/obese short sleepers"}
+    scale: raw_units
+    unit: "HOMA-IR units, between-group difference in 6-week change (extension minus control)"
+    value: -0.79
+    se: 0.3445
+    ci: [-1.465, -0.115]
+    conversion_formula: "Published as within-group 6-week changes: extension -0.51 (95% CI -0.98, -0.03); control +0.28 (95% CI -0.20, 0.76). Within-group SEs: (-0.03+0.98)/3.92 = 0.2423 and (0.76+0.20)/3.92 = 0.2449. BETWEEN-GROUP difference = -0.51 - 0.28 = -0.79; se = sqrt(0.2423^2 + 0.2449^2) = 0.3445; CI = -0.79 +/- 1.96*0.3445 = (-1.465, -0.115). The between-group contrast is MY derivation - the paper reports only the two within-group changes side by side."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = BENEFIT / RECOVERY (HOMA-IR fell in the extension group and rose in controls). Derived between-group CI excludes zero, but see rob - this is an 18-person trial."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Change in the sleep-extension and control groups respectively also showed: lower fasting insulin (-11.03 [95% CI -22.70, 0.65] versus 7.07 [95% CI -4.60, 18.74] pmol/L); ... and improved HOMA-IR (-0.51 [95% CI -0.98, -0.03] versus 0.28 [95% CI -0.20, 0.76])."
+  - outcome_domain: recovery
+    outcome_construct: total_sleep_time_gained_from_6_week_extension_programme
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 42, contrast_label: "6-week change in actigraphic total sleep time, extension (n=10) vs control (n=8)"}
+    scale: raw_units
+    unit: "minutes of additional actigraphic total sleep time per night at 6 weeks"
+    value: 79.0
+    se: 4.885
+    ci: [68.90, 88.05]
+    conversion_formula: "Published directly: 79 min (95% CI 68.90, 88.05) in the extension group versus 6 min (95% CI -4.43, 16.99) in controls. se = (88.05-68.90)/3.92 = 4.885 min."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more sleep achieved. Establishes that a behavioural programme can add ~1.3 h/night in FREE-LIVING conditions - directly relevant to whether the subject could realistically implement a fix."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Baseline to 6-week change in TST was greater in the sleep-extension group, at 79 (95% confidence interval [CI] 68.90, 88.05) versus 6 (95% CI -4.43, 16.99) min."
+rob:
+  tool: RoB2
+  judgement: high
+  notes: "Genuinely randomised and, uniquely in this shard, conducted in FREE-LIVING conditions over 6 weeks with actigraphic verification - so it tests a real-world intervention rather than a laboratory manipulation. But n=18 total (10 vs 8) is very small for a parallel-group design, the control arm received no intervention so there is no attention/placebo control, blinding is impossible, and the several within-group CIs that only just exclude zero in a trial this size are fragile. The between-group HOMA-IR contrast is my derivation and assumes independence of the two arms' change estimates. Judged high risk of bias."
+funding: "Not retrievable from the abstract (Loughborough University / University of Leicester authorship; funder left unstated rather than guessed)."
+notes: |
+  ROLE IN THIS SHARD: the only RANDOMISED, FREE-LIVING, MULTI-WEEK test of whether ADDING sleep
+  improves insulin resistance. Every other reversibility record here (killick2015, ness2019,
+  buxton2012_fd) is an inpatient laboratory protocol lasting days. This one runs 6 weeks in
+  participants' own homes, which is the setting in which our subject would actually attempt a fix.
+
+  WHAT IT ADDS TO THE REVERSIBILITY PICTURE: a behavioural sleep-extension programme added 79 min of
+  actigraphic sleep per night and improved HOMA-IR by -0.51 units against a control drift of +0.28
+  (derived between-group difference -0.79, 95% CI -1.465 to -0.115). Direction and rough magnitude
+  agree with killick2015's 45% inpatient improvement. So the reversibility signal survives the move
+  from laboratory to real life, at least in this small trial.
+
+  DISTANCE FROM OUR SUBJECT'S EXPOSURE - THIS IS THE WORST POPULATION MATCH IN THE SHARD:
+  * The participants were OVERWEIGHT/OBESE males already flagged as at increased risk of type 2
+    diabetes (BMI around 30 kg/m2 per the abstract fragment). Our subject is an 18-year-old whose BMI
+    is not known to this shard but who is not described as obese or at elevated diabetes risk.
+  * Baseline HOMA-IR in an overweight, insulin-resistant middle-aged group is far higher than in a
+    lean 18-year-old, so there is much more room for improvement. An absolute change of -0.51 HOMA-IR
+    units will NOT transport to our subject in absolute terms, and probably not proportionally either.
+    Use this record for DIRECTION and FEASIBILITY, not for magnitude.
+  * Age is not reported in the abstract, so age_mean/age_range are null; the population is described
+    as overweight/obese adult men at increased T2D risk, hence poor_midlife.
+  * Sex: all male, matching the subject - the one clean match.
+  * The intervention is sleep EXTENSION from habitual short sleep, which is precisely the
+    counterfactual the subject faces on entering his second year of college. So its practical
+    relevance is high even though its population is wrong.
+
+  FEASIBILITY POINT WORTH CARRYING TO THE REPORT: the achievable free-living gain was 79 min/night
+  (95% CI 69-88), i.e. about 1.3 h. That is roughly the size of the subject's weekday deficit against
+  a 7-8 h target, so a comparable intervention would plausibly close most of his gap - but note it
+  took a structured 6-week cognitive-behavioural programme to achieve it, not merely an intention.
+shard: "s07_metabolic"

@@ -1,0 +1,107 @@
+study_id: roenneberg2012
+citation: Roenneberg T, Allebrandt KV, Merrow M, Vetter C. Social jetlag and obesity. Current Biology.
+  2012;22(10):939-943.
+doi: 10.1016/j.cub.2012.03.038
+pmid: '22578422'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Social jetlag and obesity.
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 64043
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: DE/CH/AT
+  adolescent_match: mixed
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: overweight_obese_bmi_ge_25
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: SJL as continuous predictor of BMI>=25 vs BMI<25; UNITS OF SJL NOT STATED
+  scale: log_or
+  unit: null
+  value: 1.1939
+  se: 0.1391
+  ci:
+  - 0.9211
+  - 1.4665
+  conversion_formula: 'Table 1 reports OR=3.300 (95% CI 2.512-4.334), B=1.194, SE=0.139. log_or = B =
+    1.1939 as printed; se = 0.139 as printed; independently checked: exp(1.194 +/- 1.96*0.139) = 2.513
+    to 4.334, reproducing the printed CI exactly.'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'POSITIVE = more social jetlag predicts higher odds of being in the overweight/obese
+    group. HARM. WARNING: the per-unit scaling of SJL in this model is NOT reported; in the same model
+    Age has OR=69.9, which is impossible per year, so the predictors are evidently rescaled. DO NOT read
+    this as ''per hour''.'
+  covariates:
+  - sex
+  - age
+  - chronotype_MSFsc
+  - average_sleep_duration
+  followup_years: null
+  cohort_family: MCTQ_database
+  quote: Predictor variables B SE OR 95% CI ... Social jetlag ... 1.194 ... 0.139 ... 3.300 ... 2.512
+    to 4.334
+- outcome_domain: anthropometric
+  outcome_construct: bmi_within_normal_weight_subgroup_null
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: SJL -> BMI among BMI<25 participants (n=43,308)
+  scale: per_hour_beta
+  unit: kg/m2 per h (not reported)
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'NULL result: SJL did not predict BMI in normal-weight participants. value=0.0 encodes
+    the authors'' stated null, NOT a digitized point estimate; se=null. Critically limits transportability
+    to a subject of unknown/normal BMI.'
+  covariates:
+  - age
+  - sex
+  - average_sleep_duration
+  - chronotype
+  followup_years: null
+  cohort_family: MCTQ_database
+  quote: 'Although social jetlag does not explain the variance in weight in the normal BMI group [Table
+    S1A, model summary: F(5,43302) = 1267,68, p < 0.000], it is positively associated with weight increase
+    in the overweight group [Figure 2 and Table S1B, model summary: F(5,20729) = 72,38, p < 0.000].'
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: Cross-sectional; self-reported sleep and self-reported height/weight; no clinical measurement;
+    SJL predictor scaling not documented; a formal Erratum exists (see notes).
+funding: null
+notes: 'THE PAPER THE TASK ASKED FOR, BUT ITS REAL CONTENT DIFFERS FROM THE TASK''S FRAMING. The task
+  asked for ''the BMI effect per hour of social jetlag with CI and sample size''. That per-hour coefficient
+  is NOT in the main text: the per-unit BMI regression lives in Supplementary Table S1B, which I could
+  not retrieve. What the main text does give is the logistic OR above with undocumented predictor scaling.
+  SECOND AND MORE IMPORTANT DEVIATION: the SJL-BMI association is confined to participants who are ALREADY
+  overweight (BMI>=25); it is null in the normal-BMI majority (n=43,308). The famous ''social jetlag causes
+  obesity'' headline therefore does not straightforwardly apply to a lean or normal-weight 18-year-old.
+  A formal ERRATUM exists (DOI 10.1016/j.cub.2013.04.011, Curr Biol 2013;23(8):737, Crossref-verified
+  as update-to 10.1016/j.cub.2012.03.038). I could NOT retrieve the erratum''s content (Cell Press blocked
+  the PDF), so I cannot confirm whether it touches Table 1. Treat these numbers as provisional. Arithmetic
+  note on text extraction: the PDF renders the Unicode minus sign as ''2'', verified by ''r = 20.082''
+  for a partial correlation that must be negative; I reconstructed signs accordingly and cross-checked
+  every B against its printed OR via exp(B).'
+shard: s16_social_jetlag

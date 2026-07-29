@@ -1,0 +1,103 @@
+study_id: bessone2021
+citation: "Bessone P, Rao G, Schilbach F, Schofield H, Toma M. The Economic Consequences of Increasing Sleep Among the Urban Poor. The Quarterly Journal of Economics. 2021;136(3):1887-1941."
+doi: "10.1093/qje/qjab013"
+pmid: null
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: null
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "The Economic Consequences of Increasing Sleep Among the Urban Poor"
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 452
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [18, 65]
+  pct_female: null
+  country: "India"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: first_stage_nighttime_sleep_minutes_gained
+    exposure: {type: sleep_extension, dose_h: null, referent_h: 5.5, duration_days: 21, contrast_label: "3-week randomized night-sleep treatment (home sleep environment improvements + information + encouragement, some with financial incentives) vs control; actigraphy"}
+    scale: raw_units
+    unit: "minutes of additional nighttime sleep per night"
+    value: 27.0
+    se: 3.0
+    ci: [21.1, 32.9]
+    conversion_formula: "reported: 27 minutes (std. err. = 3 minutes); CI = value +/- 1.96*SE. Incentives arm 33 min, encouragement arm 20 min. Driven entirely by +38 min (SE 4) additional time in bed, with no improvement in sleep efficiency."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = successful randomized sleep EXTENSION. This is the cleanest randomized first stage for a field sleep-extension intervention."
+    covariates: ["randomization strata", "cross-randomized nap treatment"]
+    followup_years: null
+    cohort_family: Chennai_sleep_RCT
+    quote: "The night sleep treatments on average increased nighttime sleep by 27 minutes a night (std. err. = 3 minutes), with larger effects for the incentives (33 minutes) than for the encouragement treatment (20 minutes). The increased sleep duration was entirely driven by additional time in bed - on average 38 minutes a night (std. err. = 4 minutes) - rather than higher sleep efficiency."
+  - outcome_domain: cognition
+    outcome_construct: overall_outcome_index_night_sleep_treatment
+    exposure: {type: sleep_extension, dose_h: null, referent_h: 5.5, duration_days: 21, contrast_label: "pooled randomized night-sleep treatment (+27 min/night for 3 weeks) vs control; overall index across work, well-being, cognition, preferences"}
+    scale: smd
+    unit: "standard deviations of the pre-specified overall outcome index"
+    value: -0.01
+    se: 0.04
+    ci: [-0.088, 0.068]
+    conversion_formula: "reported: -0.01 std. dev., std. err. = 0.04; CI = value +/- 1.96*SE."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "PRECISE NULL. Extending nighttime sleep by 27 min for 3 weeks produced no detectable improvement in cognition, productivity, decision making or well-being. The CI excludes benefits larger than ~0.07 SD."
+    covariates: ["randomization strata", "cross-randomized nap treatment"]
+    followup_years: null
+    cohort_family: Chennai_sleep_RCT
+    quote: "In the pooled analysis, we find no significant effect of increased night sleep on the overall index (-0.01 std. dev., std. err. = 0.04), or on summary indices corresponding to four families of outcomes: work, well-being, cognition, and economic preferences. In fact, the pooled night sleep treatment had no significant positive effect on any outcome other than sleep itself."
+  - outcome_domain: cognition
+    outcome_construct: overall_outcome_index_nap_treatment_contrast
+    exposure: {type: recovery_sleep, dose_h: 0.5, referent_h: null, duration_days: 21, contrast_label: "randomized 30-minute afternoon workplace nap opportunity vs control"}
+    scale: smd
+    unit: "standard deviations of the pre-specified overall outcome index"
+    value: 0.12
+    se: 0.04
+    ci: [0.042, 0.198]
+    conversion_formula: "reported: 0.12 std. dev. (std. err. = 0.04, p = .00); CI = value +/- 1.96*SE. Component indices: well-being 0.08 (p = .03), cognition 0.10 (p = .08)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = naps IMPROVED outcomes including cognition, in the same sample and time frame where night-sleep extension did nothing. The night-vs-nap difference on the overall index is statistically significant (p = .02)."
+    covariates: ["randomization strata", "cross-randomized night sleep treatment"]
+    followup_years: null
+    cohort_family: Chennai_sleep_RCT
+    quote: "In contrast to night sleep, naps significantly improved a range of outcomes. The nap treatment significantly increased the overall summary index by 0.12 std. dev. (std. err. = 0.04, p = .00), as well as the index variables corresponding to well-being (0.08 std. dev., p = .03), and cognition (0.10 std. dev., p = .08)."
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "Well-powered field RCT with actigraphy-verified exposure, pre-specified index outcomes with multiple-testing correction (Anderson sharpened q-values), a real measured first stage, and a within-study active comparator (naps). Main limitations for our purposes: the population is low-income middle-aged Indian adults with pathologically fragmented sleep, and the extension achieved is small (27 min)."
+funding: "Not extracted from retrieved text"
+notes: |
+  WHY A STUDY OF CHENNAI ADULTS IS DECISION-RELEVANT FOR A US 18-YEAR-OLD: it is the strongest existing
+  counter-evidence to the assumption that extending habitual sleep mechanically improves cognitive and
+  economic outcomes. Any model that converts our subject's sleep deficit into an academic loss is implicitly
+  assuming the reverse experiment would work. Here it did not: a randomized +27 min of nighttime sleep for
+  three weeks moved the overall outcome index by -0.01 SD (SE 0.04), against a pre-registered expert
+  prediction of a 7% productivity gain which the authors formally reject.
+  HOW TO RECONCILE IT WITH THE POSITIVE EVIDENCE - three reasons not to over-update:
+  (1) DOSE. +27 min is far smaller than our subject's 2-3 h deficit, and smaller than the 4 h contrast in
+      Lo et al.'s adolescent RCT. A null at 27 min is compatible with large effects at 2-3 h.
+  (2) SLEEP QUALITY, NOT QUANTITY, WAS THE BINDING CONSTRAINT. These participants slept 5.5 h despite 8 h in
+      bed, with "sleep efficiency - sleep per time in bed - comparable to those with disorders such as sleep
+      apnea or insomnia." The extension came entirely from more time in bed, not better sleep. Our subject's
+      problem is the opposite: too little time in bed with presumably normal efficiency.
+  (3) THE NAP RESULT SHOWS THE OUTCOMES WERE NOT INSENSITIVE. In the same sample, over the same weeks, with
+      the same instruments, a 30-minute nap improved the overall index by 0.12 SD and cognition by 0.10 SD.
+      So the null on night sleep is a real finding about night sleep in this population, not a failure of
+      measurement. The authors can "reject equal per minute effects of naps and nighttime sleep on the
+      summary index (p < .01)".
+  POPULATION MISMATCH IS SEVERE: low-income adults in Chennai, not adolescents or students, and the outcome
+  is data-entry productivity plus cognitive/preference batteries, not academic achievement.
+  DIRECTIONAL LESSON FOR THE MODELLER: this study argues that the mapping from sleep hours to cognitive
+  output is NOT a simple linear function of duration - fragmentation, timing and nap availability matter -
+  and it justifies substantial downweighting of any purely duration-based dose-response curve. It should
+  widen the lower tail of the posterior on our subject's academic damage.
+shard: "s04_academic_natural_experiments"

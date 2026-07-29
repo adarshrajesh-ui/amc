@@ -1,0 +1,112 @@
+study_id: pilcher1996
+citation: "Pilcher JJ, Huffcutt AI. Effects of sleep deprivation on performance: a meta-analysis. Sleep. 1996;19(4):318-326."
+doi: "10.1093/sleep/19.4.318"
+pmid: "8776790"
+url: "https://pubmed.ncbi.nlm.nih.gov/8776790/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Effects of sleep deprivation on performance: a meta-analysis."
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: 1932
+n_studies_pooled: 19
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: null
+  adolescent_match: mixed
+effects:
+  - outcome_domain: cognition
+    outcome_construct: partial_sleep_deprivation_worse_than_total_deprivation
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "pooled effect of PARTIAL sleep deprivation vs pooled effect of long-term and short-term TOTAL deprivation"}
+    scale: raw_units
+    unit: "1 = partial deprivation produced the LARGER pooled impairment; 0 = it did not"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Binary encoding of the authors' headline moderator finding, because the abstract
+      gives the DIRECTION and the significance of the comparison but not the three pooled effect sizes
+      themselves. The full text could not be retrieved: the OUP PDF at the Unpaywall-listed bronze-OA
+      location is served behind Cloudflare and returned an HTML challenge page rather than a PDF, and no
+      repository or archive copy was located. I have therefore NOT recorded any numeric pooled g for
+      this study; doing so would require inventing it. This record exists for the direction of the
+      moderator effect only."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = partial (i.e. chronic restriction-type) deprivation is MORE damaging in pooled
+      analysis than total deprivation. This is the single most decision-relevant claim in the paper for
+      this shard, because our subject's exposure is partial, and because it is the opposite of the naive
+      intuition that an all-nighter is the worse insult."
+    covariates: ["moderator analysis across 143 study coefficients"]
+    followup_years: null
+    cohort_family: null
+    quote: "Results of our analysis of 143 study coefficients and a total sample size of 1.932 suggest
+      that overall sleep deprivation strongly impairs human functioning. Moreover, we found that mood is
+      more affected by sleep deprivation than either cognitive or motor performance and that partial
+      sleep deprivation has a more profound effect on functioning than either long-term or short-term
+      sleep deprivation. In general, these results indicate that the effects of sleep deprivation may be
+      underestimated in some narrative reviews, particularly those concerning the effects of partial
+      sleep deprivation."
+  - outcome_domain: psychiatric
+    outcome_construct: mood_more_affected_than_cognitive_or_motor_performance
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "pooled mood effect vs pooled cognitive and motor performance effects"}
+    scale: raw_units
+    unit: "1 = mood showed the largest pooled impairment of the three outcome classes"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Binary encoding of the reported ordering; no pooled magnitudes are available in
+      the abstract and the full text was not retrievable, so no numeric effect is recorded.
+      CROSS-SHARD FLAG: if mood is the most sleep-loss-sensitive outcome class, the psychiatric shard
+      should not be treated as downstream of or smaller than the cognitive shard. Dinges 1997 supports
+      this within a single 5 h x 7 night experiment, where POMS subscales for fatigue, confusion,
+      tension and total mood disturbance all moved significantly (p = 0.009 to 0.0001)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = mood > cognitive and motor; relevant to s-shards covering psychiatric outcomes"
+    covariates: ["moderator analysis"]
+    followup_years: null
+    cohort_family: null
+    quote: "we found that mood is more affected by sleep deprivation than either cognitive or motor
+      performance"
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: "Thirty years old and superseded on every axis that matters here. Only 19 studies (against 61 in
+    Lowe 2017 and 70 in Lim & Dinges 2010), literature ending before 1996 - which means it predates ALL
+    of the modern dose-controlled chronic-restriction experiments: Dinges 1997, Van Dongen 2003,
+    Belenky 2003 and the entire Lo adolescent series are all later than its search. Its 'partial sleep
+    deprivation' category is heterogeneous and, in the mid-1990s literature, would have been dominated by
+    single-night or few-night protocols rather than sustained multi-week restriction. Mood, cognitive and
+    motor outcomes were aggregated into coarse classes. No per-dose or per-duration breakdown.
+    Abstract-only access here, so its methods cannot be independently assessed. I include it for exactly
+    one thing - its explicit partial-versus-total moderator finding, which later work has not overturned
+    and which the modern primaries corroborate - and I would give it near-zero weight on anything else."
+funding: "Not stated in the retrieved abstract"
+notes: |
+  WHY A 1996 META-ANALYSIS IS STILL WORTH A RECORD. It is the earliest quantitative source for the claim
+  that chronic PARTIAL restriction is more damaging than acute TOTAL deprivation, and it is the claim
+  that justifies treating this shard - rather than the total-deprivation literature - as the causal
+  backbone for a subject who has never had a single catastrophic night but has had roughly a thousand
+  mildly insufficient ones.
+
+  The authors also warned, in 1996, that "the effects of sleep deprivation may be underestimated in some
+  narrative reviews, particularly those concerning the effects of partial sleep deprivation". Everything
+  extracted in this shard since - Van Dongen's 14-night accumulation with no plateau, Belenky's residual
+  deficit after three recovery nights, Lo's adolescent lapse rates at 5 h TIB exceeding adult rates at
+  4 h TIB - has borne that warning out.
+
+  WHAT I DELIBERATELY DID NOT DO. Several secondary sources quote specific pooled d values from this
+  paper. I could not retrieve the full text, so I have not transcribed any of them; a number remembered
+  or copied from a third party is exactly the kind of defect the extraction rules forbid. The two effects
+  above are recorded as binary direction flags with the verbatim abstract sentence attached, and carry
+  se: null. If the pipeline later obtains the PDF, the pooled partial-SD effect size is the one number
+  worth adding.
+shard: "s01_cognition_dose_response"

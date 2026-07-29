@@ -1,0 +1,99 @@
+study_id: jackson2025
+citation: 'Jackson SE, Jarvis MJ, West R. The price of a cigarette: 20 minutes of life? Addiction. 2025;120(5):810-812.'
+doi: 10.1111/add.16757
+pmid: null
+url: https://onlinelibrary.wiley.com/doi/10.1111/add.16757
+verification:
+  crossref_ok: true
+  pubmed_ok: false
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'The price of a cigarette: 20 minutes of life?'
+access_tier: full_text
+secondhand_via: null
+design: life_table
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 17
+  - 71
+  pct_female: null
+  country: UK
+  adolescent_match: mixed
+effects:
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_lost_per_cigarette_men
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: one cigarette smoked, British male smoker who does not quit
+  scale: years
+  unit: years of life expectancy lost per cigarette
+  value: -3.2321849570309526e-05
+  se: null
+  ci: null
+  conversion_formula: '17 minutes / (60*24*365.25) = 3.2320e-05 years per cigarette. Authors'' own derivation:
+    11 min * 10/6.5, i.e. the Shaw 2000 figure rescaled from a 6.5 y to a 10 y male life-expectancy deficit
+    (Doll 2004). No CI published; se null.'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = life expectancy LOST per cigarette. MALE figure, matching our subject's sex.
+  covariates:
+  - socioeconomic position (in the underlying mortality studies)
+  followup_years: null
+  cohort_family: British_Doctors_Study
+  quote: 'Britain has some of the best data available worldwide to estimate the average loss of life per
+    cigarette smoked, which is approximately 20 minutes: 17 for men and 22 for women.'
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_lost_per_year_at_10_cig_per_day
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: 365.0
+    contrast_label: one year of smoking 10 cigarettes/day, sex-averaged 20 min/cigarette
+  scale: years
+  unit: years of life expectancy lost per year of exposure
+  value: -0.13689253935660506
+  se: null
+  ci: null
+  conversion_formula: 'Authors state 50 days of life avoided over one calendar year at 10 cig/day. 50/365.25
+    = 0.1369 y per exposure-year. Arithmetic check: 10 cig/d * 365 d * 20 min = 73,000 min = 50.7 d, so
+    the 50-day figure uses the SEX-AVERAGED 20 min. Using the MALE 17 min gives 10*365.25*17/(60*24*365.25)
+    = 0.1180 y = 43.1 days per exposure-year. No CI published; se null.'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'negative = life expectancy LOST per YEAR OF EXPOSURE. THE key commensurability number
+    for this shard: it is already denominated per year of exposure, so it can be multiplied by 3 without
+    any further assumption beyond the authors'' own linearity.'
+  covariates:
+  - socioeconomic position (in the underlying mortality studies)
+  followup_years: null
+  cohort_family: British_Doctors_Study
+  quote: Thus, a person smoking 10 cigarettes per day who quits smoking on the 1st of January 2025 could
+    prevent loss of a full day of life by the 8th of January, a week of life by the 20th of February,
+    and a month by the 5th of August. By the end of the year, they could have avoided losing 50 days of
+    life.
+rob:
+  tool: none
+  judgement: moderate
+  notes: 'Peer-reviewed Addiction article but analytically a short re-derivation, not new data. The central
+    weakness for OUR purpose: dividing a lifetime life-expectancy deficit by a lifetime cigarette count
+    IMPOSES linearity in cumulative dose. Real smoking hazards are strongly super-linear in DURATION (Doll/Peto:
+    lung-cancer incidence scales roughly with duration to the 4th-5th power), so an equal-share attribution
+    OVERSTATES the harm of the FIRST 3 years of a career and understates the last. Also UK-specific and
+    does not credit cessation-related recovery.'
+funding: Cancer Research UK; analysis commissioned by the UK Department of Health and Social Care (per
+  paper)
+notes: 'THE most useful smoking record in this shard, because it is the only one denominated per unit
+  of exposure. Downstream (convert.py): 3 years at 20 cig/day for a MALE = 20*365.25*3 cigarettes * 17
+  min = 0.708 y (8.5 months); at 10 cig/day = 0.354 y (4.3 months). Compare with the cessation-based estimate
+  from Pirie 2013 (~0.3 y for a WHOLE young-adult career) - the two disagree by a factor of ~2, and that
+  disagreement IS the cumulative-versus-reversible tension this shard exists to expose. Not in PubMed
+  at time of extraction; identifier verified by Crossref only.'
+shard: s18_comparators

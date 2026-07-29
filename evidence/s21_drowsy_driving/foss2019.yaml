@@ -1,0 +1,217 @@
+study_id: foss2019
+citation: "Foss RD, Smith RL, O'Brien NP. School start times and teenage driver motor vehicle crashes. Accid Anal Prev. 2019;126:54-63."
+doi: "10.1016/j.aap.2018.03.031"
+pmid: "29706226"
+url: "https://doi.org/10.1016/j.aap.2018.03.031"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "School start times and teenage driver motor vehicle crashes."
+access_tier: abstract_only
+secondhand_via: null
+design: quasi_experiment
+tier: T2
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [16, 17]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: mortality
+    outcome_construct: teen_driver_crash_rate_level_shift_after_start_time_delay
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "AFTER a 75-min delay in high-school start time (07:30 -> 08:45, all public high schools in one North Carolina county) vs BEFORE; ARIMA interrupted time series; crashes of 16-17 y drivers on school-session days"}
+    scale: log_rr
+    unit: null
+    value: -0.150823
+    se: 0.085000
+    ci: [-0.317423, 0.015778]
+    conversion_formula: >
+      The paper reports "a 14% downward shift in the time-series ... (p = .076)" and does not print a CI.
+      log_rr = ln(0.86) = -0.150823.
+      SE backed out from the reported two-sided p-value: z = |Phi^-1(0.076/2)| = 1.7744;
+      se = |log_rr| / z = 0.150823 / 1.7744 = 0.085000.
+      ci = -0.150823 +/- 1.96 * 0.085000 = [-0.317423, +0.015778], i.e. RR 0.73 to 1.02.
+      This is an INFERRED SE, not a published one.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      NEGATIVE = BENEFIT from the later start (fewer crashes). Equivalently, the earlier start time
+      carried RR 1/0.86 = 1.16 relative to the later one. NOT statistically significant at 0.05
+      (p = .076); the CI includes no effect.
+    covariates: ["3 matched comparison counties with comparable urban-rural population distribution", "restricted to days when school was in session", "ARIMA modelling of trend, seasonality and autocorrelation"]
+    followup_years: null
+    cohort_family: "NC_SST_Foss"
+    quote: >
+      In the intervention county, there was a 14% downward shift in the time-series following the 75 min delay in
+      school start times (p = .076). There was no change approaching statistical significance in any of the other
+      three counties.
+  - outcome_domain: mortality
+    outcome_construct: teen_driver_crash_rate_by_clock_hour_after_start_time_delay
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "07:00-07:59 crashes AFTER vs BEFORE the 75-min delay: -25%"}
+    scale: log_rr
+    unit: null
+    value: -0.287682
+    se: 0.108475
+    ci: [-0.500292, -0.075072]
+    conversion_formula: >
+      log_rr = ln(0.75) = -0.287682. p = .008 -> z = 2.6521; se = 0.287682/2.6521 = 0.108475.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      NEGATIVE = fewer crashes in the 07:00 hour after the delay. THIS IS NOT A DROWSINESS EFFECT.
+      It is EXPOSURE DISPLACEMENT: teens stopped driving to school at 07:00 and started driving at 08:00
+      instead. See the companion effect below, which is almost exactly equal and opposite.
+    covariates: []
+    followup_years: null
+    cohort_family: "NC_SST_Foss"
+    quote: >
+      Crashes from 7 to 7:59 am decreased sharply (-25%, p = .008), but increased similarly from 8 to 8:59 am
+      (21%, p = .004).
+  - outcome_domain: mortality
+    outcome_construct: teen_driver_crash_rate_by_clock_hour_after_start_time_delay
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "08:00-08:59 crashes AFTER vs BEFORE the 75-min delay: +21%"}
+    scale: log_rr
+    unit: null
+    value: 0.190620
+    se: 0.066230
+    ci: [0.060810, 0.320431]
+    conversion_formula: >
+      log_rr = ln(1.21) = 0.190620. p = .004 -> z = 2.8782; se = 0.190620/2.8782 = 0.066230.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = MORE crashes in the 08:00 hour after the delay. Crashes MOVED with the commute; they
+      were not eliminated. -25% at 07:00 and +21% at 08:00 nearly cancel. THIS IS THE SINGLE MOST
+      IMPORTANT NUMBER IN THE WHOLE SCHOOL-START-TIME LITERATURE FOR OUR PURPOSE, because it shows the
+      mechanism is largely traffic-exposure timing, not sleep.
+    covariates: []
+    followup_years: null
+    cohort_family: "NC_SST_Foss"
+    quote: >
+      Crashes from 7 to 7:59 am decreased sharply (-25%, p = .008), but increased similarly from 8 to 8:59 am
+      (21%, p = .004).
+  - outcome_domain: mortality
+    outcome_construct: teen_driver_crash_rate_by_clock_hour_after_start_time_delay
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "14:00-14:59 crashes AFTER vs BEFORE the 75-min delay: -48%"}
+    scale: log_rr
+    unit: null
+    value: -0.653926
+    se: 0.187869
+    ci: [-1.022150, -0.285703]
+    conversion_formula: >
+      log_rr = ln(0.52) = -0.653926. Paper reports "p = .000"; I used p = .0005 as a conservative
+      stand-in (a smaller assumed p would give a SMALLER se, so this choice widens the interval rather
+      than narrowing it). z = 3.4808; se = 0.653926/3.4808 = 0.187869.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      NEGATIVE = far fewer crashes in the 14:00 hour after the delay. Again exposure displacement: the
+      afternoon dismissal moved to 15:00, where crashes rose +32% (p = .024). The AFTERNOON pattern
+      cannot be a sleep-restriction effect at all — nobody is more rested at 15:00 because school
+      started at 08:45 rather than 07:30 that same morning by any mechanism other than sleep, and the
+      crashes simply relocated by one hour.
+    covariates: []
+    followup_years: null
+    cohort_family: "NC_SST_Foss"
+    quote: >
+      Crashes from 2 to 2:59 pm declined dramatically (-48%, p = .000), then increased to a lesser degree from 3
+      to 3:59 pm (32%, p = .024) and non-significantly from 4 to 4:59 (19%, p = .102).
+  - outcome_domain: mortality
+    outcome_construct: teen_driver_night_and_early_morning_crash_rate_after_delay
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "EARLY-MORNING and NIGHT-TIME crashes AFTER vs BEFORE the delay — the hours where a drowsiness mechanism predicts the largest effect"}
+    scale: log_rr
+    unit: null
+    value: 0.000000
+    se: null
+    ci: null
+    conversion_formula: >
+      NO NUMBER IS PUBLISHED. The abstract states only "There was no meaningful change in early morning
+      or nighttime crashes, when drowsiness-induced crashes might have been expected to be most common."
+      I have recorded value 0 with se: null to represent a reported NULL, and I have NOT invented an SE.
+      A downstream model must treat this as qualitative, not as a precise zero.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      REPORTED NULL. This is a FALSIFICATION TEST OF THE DROWSINESS MECHANISM AND THE MECHANISM FAILED
+      IT in the best-designed study available. If later start times reduced crashes by reducing sleep
+      debt, the benefit should show up in the drowsiness-dense hours (night and 03:00-06:59). It did not.
+    covariates: []
+    followup_years: null
+    cohort_family: "NC_SST_Foss"
+    quote: >
+      There was no meaningful change in early morning or nighttime crashes, when drowsiness-induced crashes might
+      have been expected to be most common.
+rob:
+  tool: ROBINS-I
+  judgement: moderate
+  notes: >
+    THIS IS THE BEST-IDENTIFIED SCHOOL-START-TIME CRASH STUDY IN EXISTENCE and it is the only one in
+    this shard I am willing to call `quasi_experiment` / T2.
+    STRENGTHS: (1) a real, sharp, county-wide intervention (07:30 -> 08:45, 75 min, all public high
+    schools at once); (2) ARIMA INTERRUPTED TIME SERIES rather than a two-group cross-section, so
+    pre-existing level and trend are modelled explicitly; (3) THREE matched comparison counties, none
+    of which showed any change approaching significance — a genuine placebo test that passed;
+    (4) analysis restricted to 16-17 y drivers on school-session days, which is the population and the
+    days where the intervention can act; (5) the authors ran the hour-by-hour decomposition that
+    distinguishes the two candidate mechanisms, and reported the answer that undercuts their own
+    headline.
+    LIMITATIONS: (1) the headline effect is NOT significant (14%, p = .076) — with one treated cluster
+    the effective n for the intervention is 1; (2) sleep was never measured, so even the 14% is not tied
+    to sleep; (3) crash counts, not injury or death counts — the severity mix could differ;
+    (4) a single county in one state, so external validity to a national teen is unestablished;
+    (5) the inferred SEs in this record come from published p-values, not published intervals.
+funding: "Not stated in the retrievable abstract."
+notes: >
+  REQUIRED EXTRACTION #3, and the record that should DOMINATE how the downstream model reads that
+  requirement. The task said "several of these are weak two-county comparisons and you should say so".
+  This one is NOT that; it is the one with real identification. And what it finds is a small, borderline
+  reduction whose hour-by-hour signature points at TRAFFIC-EXPOSURE DISPLACEMENT rather than at sleep.
+  .
+  THE AUTHORS' OWN INTERPRETATION, VERBATIM (abstract, PMID 29706226): "Further analysis indicated
+  marked, statistically significant shifts in hourly crash rates in the intervention county, reflecting
+  effects of the change in school start time on young driver exposure. Crashes from 7 to 7:59 am
+  decreased sharply (-25%, p = .008), but increased similarly from 8 to 8:59 am (21%, p = .004). Crashes
+  from 2 to 2:59 pm declined dramatically (-48%, p = .000), then increased to a lesser degree from 3 to
+  3:59 pm (32%, p = .024) and non-significantly from 4 to 4:59 (19%, p = .102). There was no meaningful
+  change in early morning or nighttime crashes, when drowsiness-induced crashes might have been expected
+  to be most common."
+  AND THE HEADLINE, VERBATIM: "In the intervention county, there was a 14% downward shift in the
+  time-series following the 75 min delay in school start times (p = .076). There was no change
+  approaching statistical significance in any of the other three counties."
+  AND THE AUTHORS' OWN CONCLUSION, VERBATIM: "Later high school start times (>8:30 am) appear to be
+  associated with lower adolescent driver crash rates, but additional research is needed to confirm this
+  and to identify the mechanism by which this occurs (reduced drowsiness or reduced exposure)."
+  AND ON THE PRIOR LITERATURE, VERBATIM: "All these studies, including the present one, have
+  limitations, but the similar findings suggest that crashes and school start times are indeed related,
+  with earlier start times equating to more crashes."
+  .
+  WHY THIS MATTERS FOR THE CAUSAL FRACTION IN injury_channel.md. The school-start-time literature is
+  the ONLY quasi-experimental leverage anyone has on this question. If the best-identified member of
+  that literature finds (a) a non-significant total effect and (b) an hour-by-hour pattern consistent
+  with exposure displacement and INCONSISTENT with drowsiness, then the school-start-time evidence
+  cannot be used to argue that the observational sleep-crash associations are mostly causal. I use this
+  record as the primary reason to hold the causal fraction near 0.5 rather than near 1.0.
+  .
+  A CAVEAT IN THE OTHER DIRECTION, STATED FAIRLY: the null in night/early-morning hours is a null over
+  small counts in one county, so it is weak evidence of absence rather than strong. And a start-time
+  delay is a poor instrument for our exposure: it moves sleep by perhaps 20-30 min on school nights,
+  not by the 1.5-2.5 h that separates this subject from a 7-8 h sleeper. A small, noisy effect from a
+  small dose shift is not evidence against a larger effect from a larger dose shift. What it does rule
+  out is the strong claim that most teen crashes are sleep-driven.
+  .
+  ACCESS: abstract_only. Elsevier full text is paywalled; I retrieved the complete structured abstract
+  from PubMed (efetch) and every number in this record is quoted verbatim above from it. I did not see
+  the ARIMA tables, so I cannot report model coefficients or exact CIs, only the percentages and
+  p-values the abstract prints.
+  .
+  n: NOT REPORTED in the abstract as a count of drivers or crashes; set to null rather than guessed.
+shard: "s21_drowsy_driving"

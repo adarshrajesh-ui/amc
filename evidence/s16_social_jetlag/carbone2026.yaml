@@ -1,0 +1,99 @@
+study_id: carbone2026
+citation: 'Carbone JT, Casement MD. Weekend catch-up sleep and depressive symptoms in late adolescence
+  and young adulthood: Results from the National Health and Nutrition Examination Survey. Journal of Affective
+  Disorders. 2026;394(Pt B):120613.'
+doi: 10.1016/j.jad.2025.120613
+pmid: '41192734'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Weekend catch-up sleep and depressive symptoms in late adolescence and young adulthood:
+    Results from the National Health and Nutrition Examination Survey.'
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 1087
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 16
+  - 24
+  pct_female: null
+  country: US
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: psychiatric
+  outcome_construct: daily_depressive_symptoms
+  exposure:
+    type: weekend_catchup
+    dose_h: 0.5
+    referent_h: 0.0
+    duration_days: null
+    contrast_label: any weekend catch-up sleep (>0 h) vs none (<=0 h), ages 16-24
+  scale: log_or
+  unit: null
+  value: -0.5276
+  se: null
+  ci: null
+  conversion_formula: '''41 % lower odds'' -> OR = 1 - 0.41 = 0.59; log_or = ln(0.59) = -0.5276. NO CI
+    OR SE IS REPORTED in the abstract, so se=null; the abstract gives only the percentage reduction.'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NEGATIVE = weekend catch-up sleep was associated with 41% LOWER odds of daily depressive
+    symptoms. PROTECTIVE. Crucially, the model covaried for WEEKDAY SLEEP DURATION AND MIDPOINT, so this
+    is not simply the benefit of more total sleep or of a better schedule.
+  covariates:
+  - weekday_sleep_duration
+  - weekday_sleep_midpoint
+  - body_mass_index
+  - age
+  - sex
+  - race_ethnicity
+  followup_years: null
+  cohort_family: NHANES_2021_2023
+  quote: Late adolescents and young adults with WCS had 41 % lower odds of daily depressive symptoms compared
+    to those without WCS, with similar results from causal inference and traditional multivariate regression
+    models.
+- outcome_domain: psychiatric
+  outcome_construct: consistent_optimal_weekday_sleep_is_twice_as_good
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: healthy weekday sleep duration at an optimal time vs weekend catch-up sleep
+  scale: log_or
+  unit: null
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'COMPARATIVE RANKING, not a point estimate: getting healthy weekday sleep at a good
+    time was worth about TWICE as much as weekend catch-up. Catch-up is a partial substitute, not an equivalent.
+    value=0.0/se=null encodes the ranking only.'
+  covariates: []
+  followup_years: null
+  cohort_family: NHANES_2021_2023
+  quote: Healthy weekday sleep duration at an optimal time each had twice the benefit for depressive symptoms.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Nationally representative and EXACTLY age-matched (16-24), with inverse-probability-weighted
+    causal-inference estimation and adjustment for weekday sleep duration AND midpoint. But cross-sectional,
+    so reverse causation is fully open; the depression outcome is a SINGLE self-report item ('sad or depressed'
+    daily), which is a crude measure; and no CI is given in the abstract.
+funding: null
+notes: 'THE BEST AGE-MATCHED EVIDENCE THAT CATCH-UP IS PROTECTIVE FOR MOOD, and the most transportable
+  single record in the protective column: the sample IS late adolescents and young adults, and the analysis
+  adjusts for exactly the confounders that would otherwise explain the effect (weekday duration and weekday
+  midpoint). se=null because the abstract reports only ''41 % lower odds'' with no interval. The single-item
+  depression outcome and cross-sectional design mean this should not outweigh the experimental metabolic
+  evidence; it applies to a DIFFERENT outcome domain, which is precisely how I resolve the tension.'
+shard: s16_social_jetlag

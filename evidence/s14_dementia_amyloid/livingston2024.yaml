@@ -1,0 +1,127 @@
+study_id: livingston2024
+citation: "Livingston G, Huntley J, Liu KY, Costafreda SG, Selbaek G, Alladi S, Ames D, Banerjee S, Burns A, Brayne C, Fox NC, Ferri CP, Gitlin LN, Howard R, Kales HC, Kivimaki M, Larson EB, Nakasujja N, Rockwood K, Samus Q, Shirai K, Singh-Manoux A, Schneider LS, Walsh S, Yao Y, Sommerlad A, Mukadam N. Dementia prevention, intervention, and care: 2024 report of the Lancet standing Commission. Lancet. 2024 Aug 10;404(10452):572-628."
+doi: "10.1016/S0140-6736(24)01296-0"
+pmid: "39096926"
+url: "https://discovery.ucl.ac.uk/10196488/1/Livingston_Lancet%20Commission%20accepted%20version.pdf"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Dementia prevention, intervention, and care: 2024 report of the Lancet standing Commission."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: guideline_consensus
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "international"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: expert_commission_verdict_sleep_excluded_from_modifiable_risk_factors
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "the 2024 Lancet standing Commission's own adjudication of whether short sleep qualifies as a modifiable dementia risk factor"}
+    scale: probability
+    unit: "binary inclusion decision: 0 = NOT included among the Commission's modifiable risk factors"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      Not an effect size. Coded as 0 to carry a single machine-readable fact: after formal review, the most
+      authoritative dementia-prevention body in the field placed short sleep in the "insufficient evidence"
+      bin and issued NO population attributable fraction for it. There is no SE because there is no estimate
+      to have an SE - that absence is the datum.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      0 = EXCLUDED. The Commission enumerates 14 modifiable risk factors with population attributable
+      fractions; sleep is NOT one of them, and is named explicitly in the rejected set. Any downstream model
+      that assigns a nonzero dementia PAF to short sleep is going beyond the 2024 Lancet Commission.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Potential risk factors considered with insufficient evidence to include. We know there are other potentially modifiable risk factors and there are several others we considered but on balance currently we judged that there is not enough consistent evidence to meet our high bar of being included as modifiable risk factors. These include too little sleep, an unhealthy diet, infections, and mental health conditions."
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_dementia_short_sleep_under_7h_million_women_study
+    exposure: {type: habitual_short_sleep, dose_h: 6.5, referent_h: 7.5, duration_days: null,
+               contrast_label: "self-reported sleep <7 h/night vs referent, women mean age 60 y at baseline, 17-y follow-up; n = 830,716"}
+    scale: log_rr
+    unit: null
+    value: 0.076961
+    se: 0.018905
+    ci: [0.039221, 0.113329]
+    conversion_formula: >
+      RR = 1.08, 95% CI 1.04-1.12 as reported by the Commission. log_rr = ln(1.08) = 0.076961;
+      se = (ln(1.12) - ln(1.04))/3.92 = (0.113329 - 0.039221)/3.92 = 0.018905.
+      dose_h/referent_h are the extraction shard's midpoint reading of "<7 hours"; the Commission does not
+      print category midpoints.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = higher dementia risk with short sleep. THIS IS THE LARGEST SHORT-SLEEP DEMENTIA STUDY IN
+      EXISTENCE (830,716 women, 17-y follow-up) AND IT IS ALSO THE SMALLEST EFFECT: RR 1.08. Note the
+      Commission's own qualifier - the excess was seen in those reporting "shorter but not very short" sleep,
+      i.e. the dose-response is NOT monotonic even here. Secondhand via the Commission text; the shard did
+      not retrieve the primary Million Women Study paper, so access_tier for this specific effect is
+      secondhand and the identifier belongs to the Commission, not the primary study.
+    covariates: []
+    followup_years: 17.0
+    cohort_family: "Million_Women_Study"
+    quote: "In the million-woman study of 830,716 women (mean age 60 years at baseline) with a 17-year follow-up, there was a slightly higher risk of dementia (RR 1.08, 1.04-1.12) among those who reported shorter but not very short sleep duration (<7 hours)."
+rob:
+  tool: AMSTAR-2
+  judgement: low
+  notes: >
+    A standing Commission of 27 authors with an explicit, pre-stated inclusion bar ("our high bar"), which
+    is precisely why its exclusion of sleep is informative rather than merely absent. The relevant risk of
+    bias is not methodological but interpretive: the Commission is a narrative synthesis, not a pooled
+    quantitative analysis, so its verdict is expert adjudication of a literature rather than an independent
+    estimate. Retrieved as the author-accepted manuscript deposited in UCL Discovery (open access via
+    Unpaywall); the publisher's typeset version is paywalled and page numbers of quotes therefore refer to
+    the accepted version.
+funding: "Alzheimer's Society, Alzheimer's Society UK, UK Research and Innovation (per declaration of interests)"
+notes: >
+  THE MOST DECISION-RELEVANT CONTEXT RECORD IN THIS SHARD. The 2024 Lancet standing Commission is the
+  reference synthesis for dementia prevention, and it reviewed exactly the question this shard was asked and
+  declined to answer it in the affirmative.
+  ITS FULL DECISION PARAGRAPH, VERBATIM: "Decision Since the last commission, further evidence indicates
+  that prolonged sleep is not a risk factor for dementia, although dementia and its prodrome may cause
+  prolonged sleep. People should not curtail their sleep to reduce dementia risk. Benzodiazepines do not
+  appear to cause dementia. Overall, current evidence appears to indicate that short sleep duration may be
+  associated with a small, increased risk of dementia but there is a lack of evidence about the
+  characterisation of short sleep, and no information on sleep quality or circadian rhythm disturbance which
+  may be the factors associated with increased risk of developing dementia rather than length of sleep.
+  Therefore, the evidence about short sleep has not yet been clarified enough to be sure of causation. We are
+  unable to make recommendations on sleep as a risk factor."
+  Three separate things in that paragraph matter for the pooler. (1) "may be associated with a small,
+  increased risk" is the Commission's ceiling on the short-sleep effect - small, not large. (2) "not yet been
+  clarified enough to be sure of causation" is an explicit refusal to treat the association as causal.
+  (3) "People should not curtail their sleep to reduce dementia risk" is the Commission pre-empting the
+  inverse error, and is the closest thing in the literature to an authoritative statement that the direction
+  of the advice is right even though the magnitude is unquantified.
+  ON REVERSE CAUSATION the Commission cites two lag-analysis results that both go the same way, both for
+  LONG sleep: "In a Swedish cohort of 28,775 individuals aged 65 years and older, the association between
+  long sleep duration and dementia over a 13-year follow-up was completely attenuated after cases occurring
+  in the first 5 years of follow-up were excluded from the analysis, highlighting the role of reverse
+  causation bias.(300) Similarly, in the US million woman study there was no association between long sleep
+  duration (>8 hours) or daytime napping and dementia on longer term follow-up after the first five years."
+  It also flags the key structural gap in the whole literature: "Some studies are noteworthy because of
+  longer follow-up but no studies reported those who developed dementia soon after sleep duration
+  ascertainment separately from those who developed it after longer periods."
+  ON THE GLYMPHATIC MECHANISM the Commission raises the same objection this shard reached independently -
+  that the slow-wave window is short and defended: "Biological mechanisms include neuroinflammation,(312)
+  atherosclerosis,(313) alpha-synucleinopathies (dementia with Lewy bodies and Parkinson disease
+  dementia),(314) and impaired amyloid-beta clearance.(315) However, this usually occurs during deep sleep at
+  the beginning of the night, which lasts one to two hours so is unlikely to be affected in those reporting
+  sleep disturbances." That is a direct authoritative endorsement of the argument that partial restriction
+  spares the mechanistically relevant sleep stage - see skorucak2021.yaml, ju2017.yaml and olsson2018.yaml.
+  It also states the reverse-direction mechanism as the better-supported one: "Amyloid plaque build-up
+  contributes to poor sleep in older adults through its direct impact on sleep-wake regulator brain regions."
+  NOTHING IN THIS REPORT ADDRESSES ADOLESCENT SLEEP. The Commission's life-course framing has early-life
+  education as the childhood-window risk factor; sleep appears only in the midlife/late-life sections.
+shard: "s14_dementia_amyloid"

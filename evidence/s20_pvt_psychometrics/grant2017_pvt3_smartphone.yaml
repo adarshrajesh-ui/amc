@@ -1,0 +1,93 @@
+study_id: grant2017_pvt3_smartphone
+citation: "Grant DA, Honn KA, Layton ME, Riedy SM, Van Dongen HPA. 3-minute smartphone-based and tablet-based psychomotor vigilance tests for the assessment of reduced alertness due to sleep deprivation. Behav Res Methods. 2017;49(3):1020-1029."
+doi: "10.3758/s13428-016-0763-8"
+pmid: "27325169"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "3-minute smartphone-based and tablet-based psychomotor vigilance tests for the assessment of reduced alertness due to sleep deprivation"
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 16
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [22, 40]
+  pct_female: 56.3
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvt3_smartphone_vs_laptop10min_lapse_correlation
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.58, contrast_label: "3-min smartphone PVT and 3-min tablet PVT vs 10-min laptop PVT, every 3 h across a practice day, baseline day, 38 h TSD and a recovery day"}
+    scale: raw_units
+    unit: "qualitative: statistically significant positive correlation of lapse counts (r not reported in the abstract)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "The abstract states the correlation was statistically significant but does NOT give the coefficient, and I could not retrieve the full text (Springer paywall, not in PMC). value 1.0 encodes 'significant positive association, magnitude not extracted'. DO NOT POOL THIS AS A CORRELATION."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive = more lapses on the short device-based PVT go with more lapses on the 10-min laptop PVT. This is the closest verified answer to the task's request for 'the correlation' between a 3-min and a 10-min PVT; the exact r remains unextracted."
+    covariates: []
+    followup_years: null
+    cohort_family: "WSU_Van_Dongen_TSD"
+    quote: "The number of lapses on the laptop was significantly correlated with the numbers of lapses on the smartphone and tablet."
+  - outcome_domain: cognition
+    outcome_construct: pvt3_vs_pvt10_effect_size_class_across_tsd
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.58, contrast_label: "38 h total sleep deprivation; lapse-count effect size, 10-min laptop PVT vs 3-min smartphone/tablet PVT"}
+    scale: raw_units
+    unit: "qualitative Cohen effect-size class (large for the 10-min laptop PVT, medium for the 3-min smartphone and tablet PVTs)"
+    value: 0.5
+    se: null
+    ci: null
+    conversion_formula: "The abstract reports only the qualitative classes ('large' for laptop, 'medium' for the 3-min versions); numeric effect sizes are in the paywalled full text. I record 0.5, the lower boundary of Cohen's 'medium' band, as an explicit LOWER BOUND for the 3-min versions - not a point estimate."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more sensitive. Independently reproduces basner2011_pvtb's central finding: shortening the PVT to 3 min costs sensitivity (large -> medium), and the loss can be partly recovered by lowering the lapse threshold."
+    covariates: []
+    followup_years: null
+    cohort_family: "WSU_Van_Dongen_TSD"
+    quote: "For the number of lapses, the effect sizes across 38 h of TSD were large for the laptop PVT and medium for the smartphone and tablet PVTs. These results indicate that the 3-min smartphone and tablet PVTs are valid instruments for measuring reduced alertness due to sleep deprivation and restored alertness following recovery sleep. The results also indicate that the loss of sensitivity on the 3-min PVTs may be mitigated by modifying the threshold defining lapses."
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvt3_device_rt_offset_vs_laptop
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "mean RT on smartphone and tablet PVTs vs the laptop PVT"}
+    scale: raw_units
+    unit: "qualitative: RTs systematically faster on smartphone/tablet than laptop (magnitude not reported in abstract)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Direction only; magnitude in the paywalled full text. value -1.0 encodes 'faster on the handheld devices'. DO NOT POOL."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = faster. Reproduces Basner's PVT-B finding of a device/duration-driven speed shift. Consequence: absolute PVT scores are NOT portable across devices; only within-device change is interpretable, so the protocol must fix one device for all 4 weeks."
+    covariates: []
+    followup_years: null
+    cohort_family: "WSU_Van_Dongen_TSD"
+    quote: "The mean RTs were generally faster on the smartphone and tablet than on the laptop. All three versions of the PVT exhibited a time-on-task effect in RTs, modulated by time awake and time of day."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Small (n=16), no blinding possible, healthy screened adults 22-40 so adolescent_match fair_adult. Abstract-only access, so all four extracted quantities are directional or bounded rather than point estimates - this is the weakest-quantified record in my shard and I have marked every value accordingly. Validation was against ACUTE TOTAL sleep deprivation (38 h), not against the chronic 1-2 h restriction this protocol targets, so sensitivity in the target dose range is extrapolated. Design strength: it did include a dedicated PRACTICE DAY before the baseline day."
+funding: "Not extracted."
+notes: |
+  PART A5 ANSWER, part 3 of 3, and the closest available answer to the task's PVT-B "correlation"
+  request. Included because it is the only verified validation of a 3-min PVT running on ordinary
+  consumer smartphone/tablet hardware against a conventional 10-min PVT, and because it covers the
+  RECOVERY direction as well as the deprivation direction ("valid instruments for measuring reduced
+  alertness due to sleep deprivation and restored alertness following recovery sleep"), which the
+  protocol needs for its recovery arm.
+
+  Design feature worth copying verbatim into the protocol: the study "included a practice and a
+  baseline day" before the deprivation period, and testing occurred "every 3 h". A practice day is
+  the empirical implementation of the run-in requirement.
+
+  Reinforces two hard constraints already established elsewhere in this shard:
+    - fix the device (RTs differ systematically between smartphone, tablet and laptop);
+    - fix the clock time (time-on-task effects were "modulated by time awake and time of day").
+shard: "s20_pvt_psychometrics"

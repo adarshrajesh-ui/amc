@@ -1,0 +1,129 @@
+study_id: spiegel1999
+citation: "Spiegel K, Leproult R, Van Cauter E. Impact of sleep debt on metabolic and endocrine function. Lancet. 1999 Oct 23;354(9188):1435-9."
+doi: "10.1016/S0140-6736(99)01376-8"
+pmid: "10543671"
+url: "https://pubmed.ncbi.nlm.nih.gov/10543671/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Impact of sleep debt on metabolic and endocrine function."
+access_tier: secondhand
+secondhand_via: "Numeric magnitudes (40% / 30%) taken from two independently retrieved open-access sources that describe this study: (a) Sharma S, Kavuru M. Sleep and metabolism: an overview. Int J Endocrinol. 2010, PMC2929498; (b) Buxton OM et al. Diabetes 2010;59:2126-33, PMC2927933, Discussion. Design, n and p-values are first-hand from the publisher abstract via PubMed. The Lancet full text is paywalled (unpaywall is_oa=false, no PMC deposit)."
+design: lab_restriction_within_subject
+tier: T1
+n: 11
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: glucose_tolerance_kg_ivgtt
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 12, duration_days: 6, contrast_label: "4 h TIB x 6 nights vs end of 12 h TIB recovery x 6 nights (NOT vs 8 h)"}
+    scale: pct_change
+    unit: "% change in rate of glucose clearance vs fully-rested condition"
+    value: -40.0
+    se: null
+    ci: null
+    conversion_formula: "Reported as a round percentage in secondhand sources; no SD/SE/CI published for the magnitude. Primary abstract gives only p<0.02. SE not derivable because neither SD nor an exact p is available -> se left null per instructions."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = HARM (slower glucose clearance = worse glucose tolerance) under sleep debt"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Sleep deprivation resulted in reduced glucose tolerance (rate of glucose clearance) by 40%. [PMC2929498] // Primary abstract: 'Glucose tolerance was lower in the sleep-debt condition than in the fully rested condition (p<0.02)'"
+  - outcome_domain: metabolic
+    outcome_construct: glucose_effectiveness_sg
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 12, duration_days: 6, contrast_label: "4 h TIB x 6 nights vs 12 h TIB recovery"}
+    scale: pct_change
+    unit: "% change in glucose effectiveness (non-insulin-dependent glucose disposal)"
+    value: -30.0
+    se: null
+    ci: null
+    conversion_formula: "Round percentage from secondhand sources; no dispersion published."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = HARM (less non-insulin-dependent glucose disposal)"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Glucose effectiveness, a measure of noninsulin dependent glucose disposal, was 30% reduced along with a reduction in insulin response to glucose [20]. [PMC2929498]"
+  - outcome_domain: metabolic
+    outcome_construct: acute_insulin_response_to_glucose
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 12, duration_days: 6, contrast_label: "4 h TIB x 6 nights vs 12 h TIB recovery"}
+    scale: pct_change
+    unit: "% change in acute insulin response to glucose"
+    value: -30.0
+    se: null
+    ci: null
+    conversion_formula: "Buxton 2010 Discussion describes '30-40% reductions in glucose tolerance, glucose effectiveness, and acute insulin response to glucose'; the lower bound of that range (30%) is used for AIRg. Genuine imprecision - treat as -30 to -40%."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = HARM (blunted first-phase insulin secretion)"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "They found that the sleep debt condition led to impaired glucose metabolism characterized by 30-40% reductions in glucose tolerance, glucose effectiveness, and acute insulin response to glucose but a nonsignificant reduction in insulin sensitivity. [Buxton 2010, PMC2927933]"
+  - outcome_domain: endocrine
+    outcome_construct: evening_cortisol
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 12, duration_days: 6, contrast_label: "4 h TIB x 6 nights vs 12 h TIB recovery"}
+    scale: pct_change
+    unit: "direction only; magnitude not extractable"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "PLACEHOLDER DIRECTION FLAG ONLY (value=+1 means 'raised'); the paper reports only p=0.0001 in the abstract and no magnitude was recoverable. Do NOT pool this as a magnitude."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM (raised evening cortisol). Magnitude unknown - use for direction/consistency only."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Evening cortisol concentrations were raised (p=0.0001) and activity of the sympathetic nervous system was increased in the sleep-debt condition (p<0.02)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Within-subject, no blinding possible, n=11, single site, men only. CRITICAL DESIGN ISSUE: the comparator is the END of a 6-night 12 h-TIB sleep-EXTENSION period, not habitual or 8 h sleep. The contrast is therefore 4 h vs 12 h (an 8 h/night gap), which inflates the apparent effect of 'short sleep' relative to any 8 h referent. Order was fixed (debt then recovery), not randomised, so period/order effects are not controlled."
+funding: "NIH (National Institutes of Health); University of Chicago"
+notes: |
+  DISTANCE FROM OUR SUBJECT'S EXPOSURE - do not over-extrapolate:
+  * Dose: study 4 h TIB. Subject ~5-6 h on weekdays. Study dose is 1-2 h/night MORE severe.
+  * Referent: study referent is 12 h TIB (deliberate sleep extension / "fully rested"). Subject's
+    own comparator is a normal 7-9 h adolescent requirement. The published 4-vs-12 h contrast spans
+    ~8 h/night; the subject's weekday-vs-requirement gap is ~2-3 h/night. On a linear-in-dose
+    reading this study's contrast is roughly 3-4x the subject's, so the 40% figure must NOT be
+    transported directly.
+  * Duration: 6 consecutive nights, no weekend recovery. Subject had 2 recovery nights every 7 for
+    3 years. This study cannot speak to the weekday/weekend cycling pattern at all.
+  * Setting: inpatient, constant recumbency, controlled diet (a fixed carbohydrate diet was used),
+    which removes the appetite/intake pathway that operates in the subject's real life.
+  * AGE: the retrievable text says only "11 young men" - no mean age and no age range are given in
+    the abstract, and the full text is paywalled, so age_mean and age_range are left null rather
+    than guessed. "Young men" is why adolescent_match is good_young_adult rather than fair_adult,
+    but the downstream model should NOT age-weight this record on a numeric age.
+  * DIRECTION OF THE INSULIN-SENSITIVITY EFFECT: this study did NOT show a significant fall in
+    insulin sensitivity (SI). Buxton 2010 states the SI reduction was "nonsignificant". The 1999
+    result is primarily a glucose-tolerance / glucose-effectiveness / insulin-secretion finding.
+    Downstream models must not label Spiegel 1999 as evidence of reduced insulin sensitivity.
+  * RECOVERY PHASE (task item 1 asks for the 12 h values explicitly): the design is 4 h TIB x 6
+    nights, then 12 h TIB x 6 nights, and the paper's published comparison IS debt-versus-recovery.
+    Verbatim from the abstract: "We compared the sleep-debt condition with measurements taken at the
+    end of a sleep-recovery period when participants were allowed 12 h in bed per night for 6
+    nights." So there are no separately reported "recovery values" to extract - the recovery
+    condition is the REFERENT against which every effect in this record is measured, and the
+    fully-rested state is by construction the zero point. What the study therefore establishes is
+    that the carbohydrate-metabolism abnormalities are ABSENT after 6 nights of 12 h TIB, i.e. they
+    are reversible on a roughly one-week timescale given a very large recovery dose. Two limits on
+    that inference: (a) the recovery dose (12 h/night for 6 nights) is far larger than anything the
+    subject ever obtained, and (b) because recovery was measured only at the END of the 6 nights,
+    the study gives NO information about how quickly within that week the reversal occurred. For
+    resolved recovery time-courses use ness2019 (2 nights of 10 h: lipids recover, disposition index
+    does NOT), depner2019 (weekend recovery insufficient), and buxton2012_fd (9 days: full
+    normalisation).
+shard: "s07_metabolic"

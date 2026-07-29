@@ -1,0 +1,79 @@
+study_id: krueger2015
+citation: 'Krueger PM, Reither EN, Peppard PE, Burger AE, Hale L. Cumulative exposure to short sleep and body mass outcomes: a prospective study. Journal of Sleep Research. 2015;24(6):629-638.'
+doi: 10.1111/jsr.12327
+pmid: '26211809'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Cumulative exposure to short sleep and body mass outcomes: a prospective study.'
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 14800
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 12
+  - 32
+  pct_female: null
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: obesity_odds_after_4_of_4_waves_short_sleep
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: short sleep (<= -0.50 SD of age- and sex-specific mean) at ALL FOUR Add Health waves vs never short, 1994-2009
+  scale: log_or
+  unit: null
+  value: 0.3716
+  se: 0.1743
+  ci:
+  - 0.0296
+  - 0.7129
+  conversion_formula: log_or = ln(1.45) = 0.3716; se = (ln(2.04) - ln(1.03))/3.92 = 0.1743
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = SUSTAINED, cumulative short sleep across adolescence and young adulthood raises obesity odds 45% (harm). The dose-response over cumulative waves is the most relevant structure for a 3-year exposure, but note the CI lower bound is 1.03 - only just excluding the null after four waves of exposure.
+  covariates: []
+  followup_years: 15.0
+  cohort_family: Add_Health
+  quote: 'Relative to respondents with no instances of short sleep, those who slept -0.50 standard deviations or less than the age and sex-specific average sleep hours in all four waves had 1.45 [95% confidence interval (CI): 1.03, 2.04] times the odds of being obese and 1.45 (95% CI: 1.02, 2.06) times the odds of having an elevated waist circumference.'
+- outcome_domain: anthropometric
+  outcome_construct: elevated_waist_circumference_after_4_of_4_waves
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: short sleep at all four Add Health waves vs never short -> elevated waist circumference
+  scale: log_or
+  unit: null
+  value: 0.3716
+  se: 0.1795
+  ci:
+  - 0.0198
+  - 0.7229
+  conversion_formula: log_or = ln(1.45) = 0.3716; se = (ln(2.06) - ln(1.02))/3.92 = 0.1795
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = harm. Same magnitude as the obesity estimate, consistent with central adiposity accumulation.
+  covariates: []
+  followup_years: 15.0
+  cohort_family: Add_Health
+  quote: 'those who slept -0.50 standard deviations or less than the age and sex-specific average sleep hours in all four waves had 1.45 [95% confidence interval (CI): 1.03, 2.04] times the odds of being obese and 1.45 (95% CI: 1.02, 2.06) times the odds of having an elevated waist circumference.'
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: The only record that explicitly models CUMULATIVE exposure, which is the right structure for a multi-year exposure. But the 'short sleep' definition is distributional (-0.50 SD from age/sex mean) rather than absolute hours, so the dose cannot be translated into hours for our subject. Self-reported sleep. Same cohort as suglia2014 and sokol2020.
+funding: not stated in abstract
+notes: 'Directly addresses the DOSE structure (''3 years of exposure''): ''Cumulative exposure to short sleep exhibits dose-response associations with obesity and elevated waist circumference.'' Note that even FOUR waves of sustained short sleep across 15 years produced only OR 1.45 with a lower bound of 1.03. IMPORTANT: this study says NOTHING about what happens after sleep normalises - it measures accumulation, not reversal.'
+shard: s09_obesity_bmi

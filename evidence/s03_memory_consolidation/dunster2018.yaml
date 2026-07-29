@@ -1,0 +1,109 @@
+study_id: dunster2018
+citation: "Dunster GP, de la Iglesia L, Ben-Hamo M, Nave C, Fleischer JG, Panda S, de la Iglesia HO. Sleepmore in Seattle: Later school start times are associated with more sleep and better performance in high school students. Science Advances. 2018;4(12):eaau6200."
+doi: "10.1126/sciadv.aau6200"
+pmid: "30547089"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6291308/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleepmore in Seattle: Later school start times are associated with more sleep and better performance in high school students."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: quasi_experiment
+tier: T2
+n: 178
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [15, 17]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: academic
+    outcome_construct: second_semester_science_grade_median
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 210, contrast_label: "pre/post district-wide 55 min school start delay (07:50 -> 08:45); spring 2016 vs spring 2017, independent samples of 10th graders in the same classes and schools; the delay produced +34 min/night of actigraphy-measured school-day sleep"}
+    scale: raw_units
+    unit: "percentage_points_of_course_grade"
+    value: 4.5
+    se: null
+    ci: null
+    conversion_formula: "Difference of the two reported medians: 82% (2017) - 77.5% (2016) = 4.5 percentage points, which matches the authors' own '4.5% increase'. Relative to the 2016 baseline this is 5.8%. NO SE IS DERIVABLE - see direction_note and notes; the authors explicitly declined to compute an effect size."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = higher grades after the start-time delay. SE IS NULL BY NECESSITY, NOT BY OVERSIGHT: the authors state that there is no consensus on effect sizes for their generalized linear model and report only medians for non-normal data. Only the P value (0.0261) is available. The modeller must either treat this as an unweighted directional corroboration of james2023 or impute an SE."
+    covariates: ["school", "mood_BDI_II", "chronotype", "sleepiness_ESS", "weekday_sleep_offset"]
+    followup_years: 1.0
+    cohort_family: "Seattle_SchoolStart_2016_2017"
+    quote: "The final, best-fitting model included school, school day sleep offset, academic performance, mood, chronotype, and sleepiness, with sleep offset (P = 2.8 x 10-5; median2016 = 06:24 a.m., median2017 = 07:08 a.m.), performance (P = 0.0261; median2016 = 77.5%, median2017 = 82%), and sleepiness (P = 0.0370; median2016 = 7.0, median2017 = 6.0), emerging as significant factors between years (Fig. 3)."
+  - outcome_domain: exposure_measurement
+    outcome_construct: school_day_sleep_duration_gain
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 210, contrast_label: "median actigraphy-measured school-day sleep duration, 2017 (post-delay) vs 2016 (pre-delay)"}
+    scale: raw_units
+    unit: "minutes_of_night_sleep"
+    value: 34.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly in the abstract as a median increase. No dispersion given for the difference; the paper reports medians with interquartile ranges in Fig. 2B only, so no SE is derivable."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more school-day sleep after the delay. Wilcoxon signed-rank P = 0.0007. Note this is 34 min gained from a 55 min schedule relief, i.e. about 0.62 h of sleep per hour of relief."
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "Seattle_SchoolStart_2016_2017"
+    quote: "The Seattle School District delayed the secondary school start time by nearly an hour. We carried out a pre-/post-research study and show that there was an increase in the daily median sleep duration of 34 min, associated with a 4.5% increase in the median grades of the students and an improvement in attendance."
+  - outcome_domain: circadian
+    outcome_construct: social_jetlag_reduction
+    exposure: {type: social_jetlag, dose_h: null, referent_h: null, duration_days: 210, contrast_label: "social jetlag (school-day vs non-school-day sleep timing difference), 2017 vs 2016"}
+    scale: raw_units
+    unit: "hours_of_social_jetlag"
+    value: -0.35
+    se: null
+    ci: null
+    conversion_formula: "Difference of reported medians: 1.25 h (2017, n = 76) - 1.60 h (2016, n = 81) = -0.35 h. Wilcoxon signed-rank P = 0.0118 with a reported effect size of 0.616 (the authors do not state which effect-size statistic this is, so I have not converted it)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = less social jetlag, i.e. weekday sleep timing moved back into alignment with the circadian system. Included because our subject's weekday-5-6 h / weekend-7-8 h pattern IS social jetlag, and this shows the two are the same underlying constraint."
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "Seattle_SchoolStart_2016_2017"
+    quote: "After controlling for oversleep during nonschool days, because of the accumulated sleep debt during the school days (see Materials and Methods), we observed a significant decrease in social jet lag in students from 2017 (median = 1.25, n = 76) as compared to 2016 (median = 1.60, n = 81; Wilcoxon signed-rank test, P = 0.0118, effect size = 0.616)."
+rob:
+  tool: ROBINS-I
+  judgement: high
+  notes: "Objective actigraphy for the exposure is a real strength and the classes, schools and instructors were held constant across years. But the design has no control group at all - the authors concede this: 'The nature of our pre-/post-study prevents us from having a control group.' The two cohorts are INDEPENDENT samples of different students in different years, so year effects (cohort ability, curriculum, grading drift) are fully confounded with the policy. Grades were 'absolute (not normalized)' and were supplied by the very teachers who partnered on the study, and the authors flag that these 'could carry an implicit bias from teachers who could have been for or against the school time change'. n for grades is small (~178 across both years) and drawn from a single science course. Attendance improved in only one of the two schools. No effect size or SE is reported for any outcome."
+funding: "not stated in retrieved full text"
+notes: |
+  ROLE: independent-cohort corroboration of james2023 on a different city, different policy
+  implementation and different outcome metric. Two independent natural experiments both find that giving
+  adolescents ~35-43 min more sleep raises measured academic performance, which is the best causal
+  support available for the learning-accumulation channel this shard supplies. That convergence is the
+  value of this record; its own internal validity is weak.
+
+  WHY I GRADED IT HIGH RISK OF BIAS DESPITE THE HEADLINE: this is the most-cited study of its kind and it
+  is much weaker than its citation count suggests. There is no comparison group, the pre and post samples
+  are different students, and the grades were assigned by teachers who knew about the intervention and
+  had opinions about it. james2023 - which does have concurrent comparison schools, a real
+  difference-in-differences estimator, administrative-record outcomes and 2153 students - should dominate
+  this record in any weighting. Notably, james2023's own literature review classifies dunster2018 among
+  the studies whose findings are inconsistent with the more rigorous designs, citing it on BOTH sides of
+  the attendance question.
+
+  NO SE IS AVAILABLE, AND I DID NOT INVENT ONE. The authors state: "There is no consensus on how to
+  calculate the effect size for each variable that emerges as significant with generalized linear models;
+  instead, we present the medians for each year, as the data were not normally distributed." A median
+  difference with a P value from a multivariable GLM cannot be turned into a defensible SE without the
+  underlying distribution, so se is null on all three effects per the instructions' rule against
+  inventing SEs. If the pooler needs a weight, the honest options are to enter this record with a
+  deliberately wide prior or to use it qualitatively only.
+
+  UNIT WARNING FOR THE MODELLER: the "4.5%" in the abstract is 4.5 PERCENTAGE POINTS on a 0-100 course
+  grade (77.5 -> 82), not a 4.5% relative increase; relative to baseline it is 5.8%. It is also a single
+  science course grade, not a GPA, so it is not directly commensurable with the 0.07-0.17 GPA points in
+  james2023. Rescaling by the 34 min sleep gain gives ~7.9 percentage points per hour, but that Wald
+  estimate inherits every weakness above plus the exclusion restriction, and I would not carry it forward.
+
+  COHORT OVERLAP: cohort_family = Seattle_SchoolStart_2016_2017, independent of START_LEARN_Minnesota
+  (james2023, widome2020). These are genuinely separate cohorts and may be treated as two studies.
+shard: "s03_memory_consolidation"

@@ -1,0 +1,93 @@
+study_id: lu2026
+citation: 'Lu YA, Tsai PS. Associations of Social Jetlag With Depression and Anxiety in Adolescents and
+  Young People: A Systematic Review and Meta-Analysis. Depression and Anxiety. 2026;2026:5542425.'
+doi: 10.1155/da/5542425
+pmid: '41550113'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Associations of Social Jetlag With Depression and Anxiety in Adolescents and Young
+    People: A Systematic Review and Meta-Analysis.'
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 164529
+n_studies_pooled: 14
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: multi
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: psychiatric
+  outcome_construct: depression
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: SJL -> odds of depression, adolescents and young people
+  scale: log_or
+  unit: null
+  value: 0.1133
+  se: 0.0341
+  ci:
+  - 0.0488
+  - 0.1823
+  conversion_formula: OR 1.12 (95% CI 1.05-1.20); log_or = ln(1.12) = 0.1133; se = (ln(1.20)-ln(1.05))/3.92
+    = 0.0341
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = more SJL, higher odds of depression. HARM. GRADE certainty rated VERY LOW
+    by the authors.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_14_studies
+  quote: SJL was significantly and positively associated with depression significantly associated with
+    increased odds of depression, with odds ratios of 1.12 (95% CI = 1.05-1.20) and 1.87 (95% CI = 1.73-2.02),
+    respectively.
+- outcome_domain: psychiatric
+  outcome_construct: anxiety
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: SJL -> odds of anxiety, adolescents and young people
+  scale: log_or
+  unit: null
+  value: 0.6259
+  se: 0.0395
+  ci:
+  - 0.5481
+  - 0.7031
+  conversion_formula: OR 1.87 (95% CI 1.73-2.02); log_or = ln(1.87) = 0.6259; se = (ln(2.02)-ln(1.73))/3.92
+    = 0.0395
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = more SJL, higher odds of anxiety. HARM. Much larger than the depression OR;
+    treat sceptically, see notes.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_14_studies
+  quote: with odds ratios of 1.12 (95% CI = 1.05-1.20) and 1.87 (95% CI = 1.73-2.02), respectively.
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: Age-matched and large, but the authors themselves rate GRADE certainty as VERY LOW and the constituent
+    studies are cross-sectional.
+funding: null
+notes: 'AGE-MATCHED SYNTHESIS (adolescents and young people, 14 studies, n=164,529). TWO CAUTIONS. (1)
+  The published abstract sentence is garbled (''SJL was significantly and positively associated with depression
+  significantly associated with increased odds of depression, with odds ratios of 1.12 ... and 1.87 ...,
+  respectively''); the attribution of 1.12 to depression and 1.87 to anxiety follows the title and the
+  stated order, but I could not confirm it against the full text, so treat the anxiety assignment as probable
+  rather than certain. (2) The anxiety OR of 1.87 is far larger than ravenhall2026''s pooled SJL-anxiety
+  correlation (r=0.06) in the same population, which is hard to reconcile; prefer ravenhall2026 for anxiety
+  effect magnitude. Authors'' own GRADE: very low.'
+shard: s16_social_jetlag

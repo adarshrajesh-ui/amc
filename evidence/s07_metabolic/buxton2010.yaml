@@ -1,0 +1,107 @@
+study_id: buxton2010
+citation: "Buxton OM, Pavlova M, Reid EW, Wang W, Simonson DC, Adler GK. Sleep restriction for 1 week reduces insulin sensitivity in healthy men. Diabetes. 2010 Sep;59(9):2126-33."
+doi: "10.2337/db09-0699"
+pmid: "20585000"
+url: "https://europepmc.org/articles/PMC2927933"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep restriction for 1 week reduces insulin sensitivity in healthy men."
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 20
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [20, 35]
+  pct_female: 0.0
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: insulin_sensitivity_si_ivgtt_minimal_model
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 10, duration_days: 7, contrast_label: "5 h TIB x 7 nights vs 10 h TIB baseline"}
+    scale: pct_change
+    unit: "% change in SI (IVGTT minimal model) vs sleep-replete baseline"
+    value: -20.0
+    se: 5.13
+    ci: null
+    conversion_formula: "Paper reports 'mean decrease of 20 +/- 24%' with F(1,18)=15.18, P=0.001, n=19 analysed. SE derived two concordant ways: (a) t=sqrt(F)=sqrt(15.18)=3.8962; SE=20/3.8962=5.13 pct-points. (b) treating 24% as the SD across n=19: SE=24/sqrt(19)=5.51 pct-points. SE=5.13 recorded (F-based, the more direct route). NOTE the abstract labels 20 +/- 24% as 'means +/- SD' while the Results section labels the clamp figure as 'mean +/- SE'; the F statistics confirm 24% is an SD for SI and 5.5% is an SE for the clamp."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = HARM (lower insulin sensitivity) under 5 h restriction"
+    covariates: ["modafinil vs placebo randomisation (no significant drug effect)"]
+    followup_years: null
+    cohort_family: null
+    quote: "Fifteen out of nineteen subjects had a decrease in S I with sleep restriction, with a mean decrease of 20 +/- 24% ( F 1, 18 = 15.18; P = 0.001) ( Table 1 and Fig. 4 E and F)."
+  - outcome_domain: metabolic
+    outcome_construct: insulin_sensitivity_m_euglycemic_hyperinsulinemic_clamp
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 10, duration_days: 7, contrast_label: "5 h TIB x 7 nights vs 10 h TIB baseline"}
+    scale: pct_change
+    unit: "% change in clamp M (dextrose infusion rate, last 60 min) vs sleep-replete baseline"
+    value: -11.0
+    se: 5.5
+    ci: null
+    conversion_formula: "Reported directly as 'mean +/- SE decrease for all subjects was 11 +/- 5.5%' with F(1,18)=4.64, P=0.045. Cross-check: t=sqrt(4.64)=2.1541, SE=11/2.1541=5.11 pct-points, concordant with the stated 5.5. SE=5.5 recorded as published."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = HARM (less glucose disposal needed to hold euglycaemia = insulin resistance). This is the GOLD-STANDARD measure and the effect is roughly half the size of the IVGTT-derived one."
+    covariates: ["modafinil vs placebo randomisation (no significant drug effect)"]
+    followup_years: null
+    cohort_family: null
+    quote: "Ninety percent of subjects had a decrease in M with sleep restriction. The mean +/- SE decrease for all subjects was 11 +/- 5.5% ( F 1. 18 = 4.64; P = 0.045) relative to the baseline sleep replete condition ( Fig. 4 )."
+  - outcome_domain: endocrine
+    outcome_construct: salivary_cortisol_afternoon_evening
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 10, duration_days: 7, contrast_label: "5 h TIB x 7 nights vs 10 h TIB baseline"}
+    scale: pct_change
+    unit: "% increase in salivary cortisol"
+    value: 51.0
+    se: 8.0
+    ci: null
+    conversion_formula: "Reported directly as 'increase of 51 +/- 8% with sleep restriction, P < 0.02'. Dispersion label (SD vs SE) is not stated for this figure; recorded as given."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM (raised cortisol). NOTE the paper found this did NOT correlate with the insulin-sensitivity change, so cortisol is not the mediator here."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Changes in insulin sensitivity did not correlate with changes in salivary cortisol (increase of 51 +/- 8% with sleep restriction, P < 0.02), urinary catecholamines, or slow wave sleep."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomised only for modafinil vs placebo, not for the sleep manipulation: the sleep contrast is a fixed-order within-subject comparison (baseline 10 h then restriction 5 h) with NO parallel control group held at 10 h. The authors state this limitation explicitly. Small n, healthy non-obese men only. Two concordant measurement methods (clamp + IVGTT, r=0.53, P=0.02) is a strength. Circadian phase not measured directly (modelled at <9 min drift)."
+funding: "NIH; Brigham and Women's Hospital General Clinical Research Center (per PMC record)"
+notes: |
+  This is the strongest single-study estimate of the ACUTE, MECHANISTIC insulin-sensitivity effect
+  because it is the only one using the gold-standard euglycaemic-hyperinsulinaemic clamp AND an
+  IVGTT in the same subjects.
+
+  DISTANCE FROM OUR SUBJECT'S EXPOSURE:
+  * Dose: 5 h TIB. This is the CLOSEST dose match of any classic lab protocol to the subject's
+    weekday 5-6 h. Good transportability on dose.
+  * Referent: 10 h TIB baseline, i.e. deliberate sleep repletion, not habitual sleep. The published
+    contrast is 5 vs 10 h (a 5 h/night gap); the subject's weekday deficit against an adolescent
+    requirement of ~8-9 h is ~2-3.5 h/night. So the contrast is still roughly 1.5-2x the subject's.
+    A crude linear-in-dose rescaling of the clamp effect to a 2.5 h/night deficit gives
+    -11% x (2.5/5) = about -5.5%; to a 3 h/night deficit about -6.6%. Flagging this as a
+    rescaling the modeller may use, NOT as a published number.
+  * Duration: 7 consecutive nights with no recovery night interposed. The subject never went more
+    than 5 weekday nights before a recovery opportunity, so this over-states the consecutive-night
+    accumulation the subject experienced.
+  * Diet/activity: controlled and isocaloric, and the authors note that "the control of food intake
+    may have dampened the full effects" - so this figure may if anything UNDER-state a free-living
+    effect via the appetite pathway.
+  * Sex: all male, matching the subject. Age 20-35 is close to but above 18; adolescents may have
+    different insulin sensitivity trajectories (puberty transiently lowers insulin sensitivity),
+    so treat as good_young_adult, not exact.
+  * NOT a reversibility study: only a single 10 h recovery night before discharge, with no post-
+    recovery metabolic testing. Use ness2019 / depner2019 / killick2015 for reversibility.
+
+  Also note: Buxton 2010 found NO compensatory rise in insulin secretion (acute insulin response
+  unaffected), which differs from spiegel1999 where insulin secretion FELL. The two classic studies
+  disagree on mechanism while agreeing on the direction of net glucose-metabolic harm.
+shard: "s07_metabolic"

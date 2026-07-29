@@ -1,0 +1,87 @@
+study_id: killick2015
+citation: Killick R, Hoyos CM, Melehan KL, Dungan GC, Poh J, Liu PY. Metabolic and hormonal effects of 'catch-up' sleep
+  in men with chronic, repetitive, lifestyle-driven sleep restriction. Clin Endocrinol (Oxf). 2015;83(4):498-507.
+doi: 10.1111/cen.12747
+pmid: '25683266'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: Metabolic and hormonal effects of 'catch-up' sleep in men with chronic, repetitive, lifestyle-driven sleep
+    restriction
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 19
+n_studies_pooled: null
+population:
+  age_mean: 28.6
+  age_range:
+  - 19
+  - 49
+  pct_female: 0.0
+  country: AU
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: recovery
+  outcome_construct: morning_total_testosterone_after_3_nights_catchup_sleep
+  exposure:
+    type: recovery_sleep
+    dose_h: 10
+    referent_h: 6
+    duration_days: 3
+    contrast_label: 3 weekend nights of 10 h TIB vs 3 weekend nights of 6 h TIB, in men with 5.1 y of habitual weekday restriction
+  scale: raw_units
+  unit: nmol/L morning total testosterone
+  value: 2.2
+  se: 1.02
+  ci:
+  - 0.2
+  - 4.2
+  conversion_formula: se = (4.2 - 0.2)/3.92 = 1.0204 nmol/L, from the reported 95% CI. +2.2 nmol/L = +63.4 ng/dL (using
+    1 nmol/L = 28.8 ng/dL).
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: Positive = testosterone RECOVERS (rises) with catch-up sleep. Three nights of extended sleep restored
+    morning testosterone in men with a 5-year history of exactly this weekday-restriction/weekend-catch-up pattern. Effect
+    present in the whole analysed subset (n=8) and in the younger subgroup alone (n=5). This is the reversibility evidence.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Fasting morning testosterone levels were significantly higher following 10 h compared to 6 h (2.2 nM (0.2, 4.2);
+    P = 0.03) in both the group as a whole ( n = 8) and in the younger group alone ( n = 5).
+- outcome_domain: recovery
+  outcome_construct: morning_cortisol_after_3_nights_catchup_sleep
+  exposure:
+    type: recovery_sleep
+    dose_h: 10
+    referent_h: 6
+    duration_days: 3
+    contrast_label: 3 weekend nights of 10 h TIB vs 6 h TIB
+  scale: pct_change
+  unit: '% change in morning cortisol (null)'
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'value=0 encodes a NULL: morning cortisol did not differ between chronic 6 h and 10 h catch-up. In chronically
+    (not acutely) restricted men habituated to 6 h, there was no residual HPA signal to reverse.'
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: '''Catch-up'' sleep increased morning testosterone and did not change morning cortisol.'
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: randomised crossover but each man completed only 2 of 3 conditions, so the testosterone comparison rests on n=8;
+    morning fasting single samples rather than 24-h profiles
+funding: NIH / non-US government
+notes: 'BEST EXPOSURE MATCH IN THE SHARD. Screening characteristics (Table 1): ''Age (years) 28.6 +/- 2.0 [range] 19-49;
+  Midweek sleep 6 h 12 min +/- 7 min [range] 5 h 18 min-6 h 54 min; Weekend sleep 8 h 30 min +/- 9 min [range] 6 h 59 min-9
+  h 39 min; ... Duration of catch-up sleep patterns (years) 5.1 +/- 0.9 [range] 0.5-15.'' That is the subject''s pattern
+  almost exactly: weekday 5-6 h, weekend 7-8 h, sustained for years. In these men the testosterone deficit was still fully
+  reversible within 3 nights, and cortisol was already normal.'
+shard: s11_endocrine_growth

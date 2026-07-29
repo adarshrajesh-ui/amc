@@ -1,0 +1,121 @@
+study_id: beals2026
+citation: "Beals JW, Smith GI, Farabi SS, Patterson BW, Lucey BP, Broussard JL, Wright KP Jr, Klein S. Sleep extension improves sleep health but not insulin sensitivity in people with overweight or obesity who maintain habitual short sleep schedules. Diabetes Care. 2026;49(5):740-745."
+doi: "10.2337/dc25-2083"
+pmid: "41564347"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13094871/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep Extension Improves Sleep Health but Not Insulin Sensitivity in People With Overweight or Obesity Who Maintain Habitual Short Sleep Schedules."
+access_tier: abstract_only
+secondhand_via: "Full text XML returned empty (0 bytes) from Europe PMC for PMC13094871. All numbers below are first-hand from the publisher's structured abstract retrieved via PubMed efetch. The abstract reports the achieved sleep changes with SDs but reports the primary metabolic outcome only as an absence of between-group difference, with no point estimates - see rob.notes."
+design: rct_parallel
+tier: T1
+n: 29
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: multiorgan_insulin_sensitivity_clamp_after_sleep_extension_null
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 42, contrast_label: "~6 weeks of sleep EXTENSION (achieved +1.1 h/night of sleep) vs habitual sleep control, in adults with overweight/obesity, insulin resistance, and habitual short sleep <7 h/night; parallel RCT; hyperinsulinemic-euglycemic clamp with tracer infusions"}
+    scale: pct_change
+    unit: "% change in clamp-measured multiorgan (whole-body/muscle, hepatic, adipose) insulin sensitivity; 0 registers an explicit null"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "The abstract states there were no between-group differences in multiorgan insulin sensitivity or glycemic control and publishes NO point estimate, SE, CI, or p-value for those outcomes; the full text is inaccessible. Recorded as value 0 with se null to register an explicit NULL. Do NOT read 0 as a precise zero, and do NOT pool this as a zero-variance estimate - it is a reported non-significance whose confidence interval is unknown."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL. Extending sleep by about 1 h/night for about 6 weeks did NOT improve insulin sensitivity in ANY tissue compartment (whole-body/muscle, hepatic, or adipose) despite improving sleep health and sleep regularity. THIS IS THE STRONGEST-MEASURED EXTENSION TRIAL IN THE SHARD AND IT IS NEGATIVE, which directly contradicts killick2015 (+45%), dutil2024 (+20%), and hartescu2022 (HOMA-IR -0.51)."
+    covariates: ["randomised parallel allocation to extended sleep (n=14) or habitual sleep (n=15)", "clamp with stable-isotope tracer infusions to partition whole-body, hepatic, and adipose-tissue insulin sensitivity", "24-h serial plasma glucose and insulin during wakefulness for glycemic control"]
+    followup_years: null
+    cohort_family: "WashU_Colorado_sleep_extension_RCT"
+    quote: "Day-to-day variability in sleep and subjective measures of sleep health improved more in the ES than HS group, without differences in multiorgan insulin sensitivity or glycemic control between groups."
+  - outcome_domain: exposure_measurement
+    outcome_construct: achieved_sleep_gain_in_6_week_extension_rct
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 42, contrast_label: "achieved change in actigraphic sleep duration, extended-sleep group vs habitual-sleep control, over ~6 weeks free-living"}
+    scale: hours
+    unit: "hours/night of sleep gained, extension group minus control group"
+    value: 1.1
+    se: 0.16889
+    ci: [0.769, 1.431]
+    conversion_formula: "Abstract: sleep duration increased by 1.1 +/- 0.5 h/night in the ES group (n=14) and 0.0 +/- 0.4 h/night in the HS group (n=15). Between-group difference = 1.1 - 0.0 = 1.1 h/night. Treating the reported +/- values as SDs, se = sqrt(0.5^2/14 + 0.4^2/15) = sqrt(0.017857 + 0.010667) = 0.16889 h. ci = 1.1 +/- 1.96*0.16889 = 0.769 to 1.431. CAVEAT: the paper does not state whether +/- denotes SD or SEM; SD is assumed, which is the conservative reading (if they are SEMs the true SE is smaller). Time in bed rose 1.3 +/- 0.6 vs 0.3 +/- 0.8 h/night, so the TIB-to-sleep yield in the extension arm was 1.1/1.3 = 85%."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = sleep gained. IMPORTANT: this confirms the intervention WORKED as an exposure manipulation - about 1.1 h/night of real additional sleep was delivered and verified over 6 weeks. The metabolic null is therefore NOT explained by failure to change sleep, which is the usual escape hatch for null sleep-extension trials. That makes this null considerably harder to dismiss."
+    covariates: []
+    followup_years: null
+    cohort_family: "WashU_Colorado_sleep_extension_RCT"
+    quote: "Time in bed and sleep duration increased more in the ES group (1.3 +/- 0.6 and 1.1 +/- 0.5 h/night) than in the HS group (0.3 +/- 0.8 and 0.0 +/- 0.4 h/night)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Best measurement technology in the shard's extension literature: hyperinsulinemic-euglycemic clamp WITH stable-isotope tracer infusions, which partitions insulin sensitivity into whole-body (primarily muscle), hepatic, and adipose-tissue components, plus 24-h serial glucose and insulin sampling for glycemic control. Randomised parallel design, and the exposure manipulation demonstrably succeeded (+1.1 h/night sustained ~6 weeks). Author group is strong (Klein, Wright, Broussard, Lucey). Concerns: (1) n=29 total, 14 vs 15 per arm - SMALL for a parallel (not crossover) design, so the null carries limited power and the absence of any published CI makes it impossible to bound what effect sizes were excluded. This is the dominant concern and it is why the judgement is not 'low'; (2) NO point estimates, SEs, or p-values are published for the primary metabolic outcomes in the retrievable abstract, which is a reporting deficiency that prevents quantitative pooling; (3) open-label, unavoidable; (4) participants had overweight/obesity AND prevalent insulin resistance, so a ceiling/floor question arises - established insulin resistance driven by adiposity may simply not be reversible by sleep alone on a 6-week timescale; (5) age, sex distribution, and funding are not recoverable from the abstract, so those fields are null rather than guessed."
+funding: "Not recoverable from the retrievable abstract (a duality-of-interest statement is present: S.K. serves on scientific advisory boards for AbbVie and Verdiva Bio and receives investigator-initiated research funding from Merck; no other conflicts reported). Funding left unstated rather than guessed."
+notes: |
+  *** THIS RECORD IS THE MOST IMPORTANT COUNTERWEIGHT IN THE SHARD'S REVERSIBILITY SECTION. It is the
+  best-measured sleep-extension trial available and it is NULL. Any summary of section (a) that
+  reports only killick2015's +45% would be seriously misleading. ***
+
+  THE EXTENSION / REVERSIBILITY EVIDENCE DOES NOT AGREE WITH ITSELF. Laid out honestly:
+    killick2015   3 nights of 10 h catch-up, chronically restricted men (n=19), IVGTT -> +45%
+    dutil2024     7 nights +1 h, adolescents with obesity (n=36), OGTT Matsuda       -> +20%
+    hartescu2022  6 weeks behavioural extension, short-sleeping men (n=18), HOMA-IR  -> -0.51 units
+                  within the extension arm; between-group difference vs control -0.79 (se 0.3445)
+    beals2026     ~6 weeks +1.1 h, overweight/obese short sleepers (n=29), CLAMP + TRACERS -> NULL
+  The three positive trials used IVGTT, OGTT-derived Matsuda, and HOMA-IR respectively. The one null
+  trial used the gold-standard clamp with tracers. That ordering is exactly what nedeltcheva2012
+  warns about: the less direct the measurement, the larger the apparent sleep effect. Combined with
+  buxton2010 (IVGTT -20% but clamp only -11% in the same participants) and sondrup2022 (clamp-measured
+  WHOLE-BODY effect real, PERIPHERAL effect absent), the pattern across the shard is consistent and
+  worth stating plainly: surrogate indices systematically overstate the insulin-sensitivity response
+  to changes in sleep relative to clamp measurement.
+  DEFENSIBLE POSITION FOR THE MODELLER: reversibility of insulin sensitivity by sleep extension is
+  REAL BUT SMALLER AND LESS CERTAIN than the surrogate-index literature implies, and may be absent
+  altogether in people whose insulin resistance is driven by established adiposity. Grade the
+  recovery magnitude no better than C on model dependence: the sign is stable across the three
+  positive trials but flips to null in the best-measured one.
+
+  DISTANCE FROM OUR SUBJECT'S EXPOSURE:
+  * Direction: this is an EXTENSION (recovery) trial, not a restriction trial. It speaks to whether
+    the subject can undo accumulated damage, not to whether the damage occurred.
+  * Dose of recovery: +1.1 h/night sustained ~6 weeks. That is a realistic and highly relevant
+    recovery prescription for the subject - roughly what moving from 5.5-6 h to 7 h would mean.
+  * Duration: ~6 weeks, tied with zuraikat2024 and hartescu2022 for the longest protocols in the shard.
+  * POPULATION IS THE CRITICAL MISMATCH AND IT PLAUSIBLY EXPLAINS THE NULL: participants had
+    overweight or obesity AND prevalent insulin resistance. Our subject is an 18-year-old not
+    described as obese or insulin resistant. In an adipose-driven insulin-resistant state, sleep is
+    only one of several inputs and probably not the rate-limiting one, so a null is unsurprising. In a
+    lean adolescent whose insulin resistance (if any) is sleep-attributable rather than
+    adiposity-attributable, extension has a more plausible path to benefit. dutil2024 is the record
+    that speaks to the subject's age, and it was positive - though in adolescents at the 99.9th BMI
+    percentile, which muddies even that comparison. Scored poor_midlife because no age data are
+    recoverable and the sample is an overweight/insulin-resistant adult clinical population.
+  * Age and sex are simply not recoverable from the abstract, so both fields are null. The downstream
+    model must not age-weight this record numerically.
+
+  WHY THE NULL IS HARDER TO DISMISS THAN MOST NULLS: the exposure manipulation verifiably worked
+  (+1.1 h/night of actual sleep, not just time in bed, sustained over 6 weeks, with day-to-day sleep
+  variability and subjective sleep health both improving). So this is not a failed-adherence null. The
+  legitimate remaining objections are power (n=14 vs 15) and population selection, not exposure
+  failure. Because no CI is published, the range of effects this trial can exclude is unknown, which
+  is the single biggest obstacle to using it quantitatively.
+
+  A SEPARATE AND USEFUL SIGNAL: sleep extension improved DAY-TO-DAY VARIABILITY in sleep as well as
+  duration. cheung2026 found sleep VARIABILITY caused roughly 2.5x worse glucose deterioration than
+  stable short sleep at identical total sleep, and morales-ghinaglia-type adolescent work points the
+  same way. Yet here, improving both duration AND regularity still produced no clamp-detectable
+  metabolic benefit. That tension is unresolved and should be flagged to the red-team station rather
+  than smoothed over.
+
+  There is an invited commentary on this trial in the same issue (Diabetes Care 2026;49(5):711-714,
+  doi 10.2337/dci26-0011) which I did not retrieve; a later station wanting the authors' own framing
+  of the null should pull it.
+shard: "s07_metabolic"

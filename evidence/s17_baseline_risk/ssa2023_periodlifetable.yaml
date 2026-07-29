@@ -1,0 +1,111 @@
+study_id: ssa2023_periodlifetable
+citation: 'U.S. Social Security Administration, Office of the Chief Actuary. Actuarial Life Table: Period
+  Life Table, 2023, as used in the 2026 Trustees Report. Baltimore, MD: Social Security Administration;
+  2026.'
+doi: null
+pmid: null
+url: https://www.ssa.gov/oact/STATS/table4c6.html
+verification:
+  crossref_ok: null
+  pubmed_ok: null
+  title_similarity: null
+  status: UNVERIFIED
+  resolved_title: null
+access_tier: full_text
+design: life_table
+n: null
+population:
+  age_mean: null
+  age_range:
+  - 0
+  - 119
+  pct_female: 0.0
+  country: US
+  adolescent_match: mixed
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: life_expectancy_at_age_19_male_years
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: years
+  unit: years of remaining life expectancy at exact age 19
+  value: 57.62
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'higher = longer remaining life. INDEPENDENT cross-check on the NCHS value of 57.6565:
+    agreement to 0.04 y, far inside the 0.3 y gate.'
+  covariates: []
+  followup_years: null
+  cohort_family: SSA_area_population_2023
+  quote: '| 19 | 0.001138 | 98,822 | 57.62 | 0.000410 | 99,151 | 62.72 |'
+- outcome_domain: baseline_risk
+  outcome_construct: life_expectancy_at_birth_male_years
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: years
+  unit: years of life expectancy at birth
+  value: 75.79
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = longer life. Independent cross-check on NCHS 75.8178.
+  covariates: []
+  followup_years: null
+  cohort_family: SSA_area_population_2023
+  quote: '| 0 | 0.006015 | 100,000 | 75.79 | 0.005125 | 100,000 | 81.06 |'
+- outcome_domain: baseline_risk
+  outcome_construct: probability_of_death_between_110_and_111_male
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: one-year probability of death (qx) at exact age 110
+  value: 0.597297
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more death. Supplies the single-year tail qx for ages 100-119 that NCHS does
+    not publish.
+  covariates: []
+  followup_years: null
+  cohort_family: SSA_area_population_2023
+  quote: '| 110 | 0.597297 | 2 | 1.13 | 0.597297 | 7 | 1.13 |'
+rob:
+  tool: none
+  judgement: na
+  notes: 'Official actuarial table. Population is the ''Social Security area'' population, which includes
+    Puerto Rico, other territories, federal employees abroad and insured non-citizens abroad, so it is
+    NOT the US resident population NCHS uses. qx for young adults differs from NCHS by up to about 7%
+    in relative terms (q19: SSA 0.001138 vs NCHS 0.001061), though the absolute difference is 7.7e-5.'
+funding: US federal (SSA)
+notes: 'VERIFICATION STATUS IS UNVERIFIED BY CONSTRUCTION, NOT BY FAILURE. SSA actuarial tables carry
+  no DOI and are not indexed in PubMed, so neither Crossref nor PubMed can resolve them and both identifier
+  fields are correctly null rather than guessed. Retrieval evidence: www.ssa.gov returns HTTP 403 to automated
+  clients (Akamai), so the page was fetched through a text-extraction proxy (r.jina.ai) and parsed programmatically,
+  with the parsed values cross-checked against a second independent fetch of the same URL. THIS IS NOT
+  A PRIMARY-MODEL RECORD for gate G2 purposes: it supplies only qx above age 99, which contributes T(100)/l(0)
+  = 0.0215 years (0.26 months) to e0 and 0.0218 years to e19. Setting the whole tail to qx=1 at age 100
+  would change e19 by 0.02 y. The two values reported here that ARE model-relevant (e0, e19) are corroborated
+  to within 0.04 y by the fully verified NCHS record.'
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

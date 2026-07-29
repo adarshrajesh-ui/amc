@@ -1,0 +1,106 @@
+study_id: blake2016_sense
+citation: "Blake M, Waloszek JM, Schwartz O, Raniti M, Simmons JG, Blake L, Murray G, Dahl RE, Bootzin R, Dudgeon P, Trinder J, Allen NB. The SENSE study: Post intervention effects of a randomized controlled trial of a cognitive-behavioral and mindfulness-based group sleep improvement intervention among at-risk adolescents. J Consult Clin Psychol. 2016 Dec;84(12):1039-1051."
+doi: "10.1037/ccp0000142"
+pmid: "27775416"
+url: "https://escholarship.org/uc/item/64x2x6bk"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "The SENSE study: Post intervention effects of a randomized controlled trial of a cognitive-behavioral and mindfulness-based group sleep improvement intervention among at-risk adolescents."
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 123
+n_studies_pooled: null
+population:
+  age_mean: 14.48
+  age_range: [12, 17]
+  pct_female: 60.0
+  country: "Australia"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: anxiety_symptoms
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 49, contrast_label: "7-session CBT+mindfulness group sleep intervention vs ACTIVE control ('study skills'), 7 weeks; anxious sleep-disturbed adolescents with no past or current depressive disorder"}
+    scale: cohens_d
+    unit: null
+    value: -0.2
+    se: null
+    ci: null
+    conversion_formula: "NO NUMERIC EFFECT SIZE IS QUOTABLE. The abstract reports only the verbal descriptor 'a small effect size' for anxiety. I have entered -0.2 as the conventional numeric reading of 'small' (Cohen), which is an INTERPRETATION, not an extracted number, and set se: null accordingly. Article text is paywalled (APA); the sole Unpaywall OA location (escholarship submittedVersion) was not retrievable. Treat as directional evidence with an approximate magnitude, and do not pool as if measured."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = LESS anxiety in the sleep-intervention arm than in the active control arm. Randomized with an ACTIVE control, which makes this the most bias-resistant adolescent mood result in my shard."
+    covariates: []
+    followup_years: 0.13
+    cohort_family: "SENSE_trial"
+    quote: "The sleep intervention condition was associated with significantly greater improvements in subjective sleep (global sleep quality [with a medium effect size], sleep onset latency, daytime sleepiness [with small effect sizes]), objective sleep (sleep onset latency [with a medium effect size]), and anxiety (with a small effect size) compared with the control intervention condition."
+  - outcome_domain: psychiatric
+    outcome_construct: depression_symptoms_absent_from_reported_benefits
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 49, contrast_label: "same trial; DEPRESSION is conspicuously absent from the list of outcomes that improved"}
+    scale: probability
+    unit: "outcome not reported as improved (0 = no benefit demonstrated)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Encodes an ABSENCE from the abstract's list of significant improvements, not a reported null. This is an inference from silence and is weaker than a reported null result. Not poolable."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no depression benefit reported. The trial deliberately EXCLUDED adolescents with past or current depressive disorder, so a depression benefit was close to impossible to detect: there was no depression to remove."
+    covariates: []
+    followup_years: 0.13
+    cohort_family: "SENSE_trial"
+    quote: "One hundred forty-four adolescents (aged 12-17 years) with high levels of anxiety and sleeping difficulties, but without past or current depressive disorder, were randomized into either a sleep improvement intervention or an active control 'study skills' intervention."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Genuine strengths: randomized, ACTIVE control (study skills, matched for 7 x 90-min group contact), objective actigraphy alongside self-report, and prospective registration in a school setting. Weaknesses: small (123 of 144 randomized began the intervention, so ~15% did not start); self-reported mood in unblinded adolescents; post-intervention timepoint only in this report; and effect sizes are reported only as verbal descriptors in the abstract, which is why every value in this record has se: null."
+funding: null
+notes: |
+  THIS IS THE CLEANEST RANDOMIZED ADOLESCENT DESIGN I FOUND, AND ITS PATTERN OF RESULTS IS EXACTLY
+  WHAT THE REST OF MY SHARD PREDICTS.
+
+  The design controls the two things that inflate most of this literature. It uses an ACTIVE control
+  (a study-skills group matched on 7 x 90 minutes of group contact), so non-specific attention and
+  expectancy are subtracted out -- unlike freeman2017, whose control was usual practice. And it
+  measures sleep objectively by actigraphy alongside self-report.
+
+  WHAT MOVED: anxiety (small effect), global sleep quality (medium), subjective and objective sleep
+  onset latency (small/medium), daytime sleepiness (small).
+  WHAT DID NOT APPEAR IN THE LIST: depression.
+
+  That dissociation is the single most consistent finding across my entire shard, and it now appears
+  in a randomized adolescent trial with an active control:
+    - baum2014 (experimental restriction, adolescents): tension/anxiety d_z 0.46, anger/hostility 0.44,
+      emotion regulation 0.38 all significant, but POMS Depression/Dejection NOT significant
+    - motomura2013 (experimental restriction, young men): STAI state anxiety d_z 0.73 significant,
+      POMS Depression d_z 0.11 null
+    - palmer2024 (meta-analysis of 50+ years of experimental sleep loss): anxiety and positive affect
+      move reliably, depressive symptoms mixed
+    - blake2016_sense (randomized, active control, adolescents): anxiety improves, depression does not
+  Short-term manipulation of sleep in either direction moves ANXIETY, IRRITABILITY, ANGER, and
+  POSITIVE AFFECT. It does not reliably move DEPRESSED MOOD. Depressed mood in the observational
+  literature is where the reverse-causation contamination is heaviest, and it is precisely the outcome
+  that experimental and active-controlled randomized designs fail to reproduce.
+
+  IMPLICATION FOR OUR SUBJECT. The best-supported prediction for an 18-year-old carrying a chronic
+  ~2 h weeknight deficit is elevated anxiety, irritability, low positive affect, and blunted emotional
+  regulation -- not major depressive disorder. That is a materially different and less severe
+  prognosis than the observational depression literature implies, and it is also a more treatable and
+  more reversible one.
+
+  WHY THE MISSING DEPRESSION EFFECT HERE IS WEAK EVIDENCE, STATED HONESTLY. The trial excluded
+  adolescents with past or current depressive disorder by design. With no depressive illness in the
+  sample there was minimal room for a depression benefit, so its absence is close to uninformative
+  about whether sleep affects depression in general. I have coded this as an inference from silence and
+  set se: null. It is the internal consistency across four differently designed studies, not this
+  trial alone, that carries the argument.
+
+  ALL EFFECT SIZES IN THIS RECORD ARE UNQUANTIFIED IN THE SOURCE I could retrieve. The abstract gives
+  verbal descriptors ("medium effect size", "small effect sizes") and no numbers, CIs, or p-values.
+  The -0.2 for anxiety is my conventional rendering of "small" and is labelled as such; it must not be
+  treated as an extracted value. Obtaining the numeric table from the article text is the top-priority
+  gap for this record.
+shard: "s12_psychiatric"

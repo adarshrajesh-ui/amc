@@ -1,0 +1,158 @@
+study_id: jha2013
+citation: Jha P, Ramasundarahettige C, Landsman V, Rostron B, Thun M, Anderson RN, McAfee T, Peto R. 21st-century
+  hazards of smoking and benefits of cessation in the United States. N Engl J Med. 2013;368(4):341-350.
+doi: 10.1056/NEJMsa1211128
+pmid: '23343063'
+url: https://www.nejm.org/doi/10.1056/NEJMsa1211128
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 21st-Century Hazards of Smoking and Benefits of Cessation in the United States
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 202248
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 25
+  - 79
+  pct_female: 56.2
+  country: US
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: comparator
+  outcome_construct: all_cause_mortality_current_smoker_vs_never_men
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: current smoker vs never smoker, men aged 25-79
+  scale: log_hr
+  unit: log hazard ratio
+  value: 1.029619
+  se: 0.04968
+  ci:
+  - 0.875469
+  - 1.131402
+  conversion_formula: HR 2.8 (99% CI 2.4-3.1). log_hr = ln(2.8) = 1.029651. se = (ln(3.1)-ln(2.4))/(2*2.575829)
+    = 0.049656. NOTE 99% CI, so z=2.576 not 1.96.
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: positive = ELEVATED mortality in smokers (harm).
+  covariates:
+  - age
+  - educational level
+  - adiposity
+  - alcohol consumption
+  followup_years: null
+  cohort_family: NHIS_US
+  quote: For participants who were 25 to 79 years of age, the rate of death from any cause among current
+    smokers was about three times that among those who had never smoked (hazard ratio for women, 3.0;
+    99% confidence interval [CI], 2.7 to 3.3; hazard ratio for men, 2.8; 99% CI, 2.4 to 3.1).
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_lost_current_smoker
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: current smoker vs never smoker, sustained exposure
+  scale: years
+  unit: years of life expectancy lost
+  value: -10.0
+  se: null
+  ci: null
+  conversion_formula: Reported as 'more than 10 years' / 'at least one decade'; recorded as a LOWER bound
+    of 10. No CI published; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = life expectancy LOST. This is a floor, not a point estimate.
+  covariates:
+  - age
+  - educational level
+  - adiposity
+  - alcohol consumption
+  followup_years: 9.5
+  cohort_family: NHIS_US
+  quote: Life expectancy was shortened by more than 10 years among the current smokers, as compared with
+    those who had never smoked. Adults who had quit smoking at 25 to 34, 35 to 44, or 45 to 54 years of
+    age gained about 10, 9, and 6 years of life, respectively, as compared with those who continued to
+    smoke.
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_gained_by_cessation_at_25_34
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: quit smoking at age 25-34 vs continued smoking
+  scale: years
+  unit: years of life expectancy gained
+  value: 10.0
+  se: null
+  ci: null
+  conversion_formula: Reported directly ('about 10 ... years of life'). No CI published; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'positive = life expectancy REGAINED. THE most decision-relevant comparator effect in
+    this shard: our subject also stops an exposure young. Quitting at 25-34 recovers essentially the whole
+    10-year deficit.'
+  covariates:
+  - age
+  - educational level
+  - adiposity
+  - alcohol consumption
+  followup_years: 9.5
+  cohort_family: NHIS_US
+  quote: Life expectancy was shortened by more than 10 years among the current smokers, as compared with
+    those who had never smoked. Adults who had quit smoking at 25 to 34, 35 to 44, or 45 to 54 years of
+    age gained about 10, 9, and 6 years of life, respectively, as compared with those who continued to
+    smoke.
+- outcome_domain: comparator
+  outcome_construct: pct_of_smoking_excess_mortality_avoided_by_cessation_before_40
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: cessation before age 40 vs continued smoking
+  scale: pct_change
+  unit: percent of the excess death risk removed
+  value: -90.0
+  se: null
+  ci: null
+  conversion_formula: Reported as 'about 90%'. No CI published; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = RISK REMOVED (benefit). Implies a residual of ~10% of the ~10-year deficit,
+    i.e. ~1 year, for a whole young-adult smoking career of 15-20 years.
+  covariates:
+  - age
+  - educational level
+  - adiposity
+  - alcohol consumption
+  followup_years: 9.5
+  cohort_family: NHIS_US
+  quote: Smokers lose at least one decade of life expectancy, as compared with those who have never smoked.
+    Cessation before the age of 40 years reduces the risk of death associated with continued smoking by
+    about 90%.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: low
+  notes: Nationally representative US sample with National Death Index linkage; adjusted for adiposity
+    and alcohol, which most smoking cohorts do not do. Self-reported smoking histories; quit-age groups
+    are recalled and therefore subject to misclassification and to sick-quitter bias, which would bias
+    the cessation benefit DOWNWARD, not upward.
+funding: US National Cancer Institute; Canadian Institutes of Health Research (per report)
+notes: 'The single most transportable smoking record for our purpose, because it prices CESSATION AT A
+  YOUNG AGE rather than lifetime exposure. Downstream arithmetic (see convert.py): 90% avoidance applied
+  to a 10-year deficit leaves ~1.0 y as the ceiling for a smoker who smoked from ~17 to <40 and then quit.
+  Three years of exposure is a small fraction of that career, so the realised cost of a 3-year adolescent
+  smoking exposure is BELOW 1 y.'
+shard: s18_comparators

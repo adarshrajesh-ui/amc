@@ -1,0 +1,75 @@
+study_id: alkhatib2017
+citation: 'Al Khatib HK, Harding SV, Darzi J, Pot GK. The effects of partial sleep deprivation on energy balance: a systematic review and meta-analysis. European Journal of Clinical Nutrition. 2017;71(5):614-624.'
+doi: 10.1038/ejcn.2016.201
+pmid: '27804960'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'The effects of partial sleep deprivation on energy balance: a systematic review and meta-analysis.'
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: 172
+n_studies_pooled: 11
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: multinational
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: metabolic
+  outcome_construct: energy_intake_kcal_per_day
+  exposure:
+    type: chronic_restriction
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: partial sleep deprivation vs control sleep (pooled across 11 trials)
+  scale: raw_units
+  unit: kcal/day
+  value: 385.0
+  se: 67.602
+  ci:
+  - 252.0
+  - 517.0
+  conversion_formula: se = (517 - 252)/3.92 = 67.60
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = sleep-restricted people EAT MORE (harm). THE HEADLINE POOLED kcal/day NUMBER.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: 'EI was significantly increased by 385 kcal (95% confidence interval: 252, 517; P<0.00001) following PSD compared with the control condition.'
+- outcome_domain: metabolic
+  outcome_construct: total_energy_expenditure_change
+  exposure:
+    type: chronic_restriction
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: partial sleep deprivation vs control sleep; total EE and RMR
+  scale: raw_units
+  unit: kcal/day
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: No point estimate given in the abstract for total EE; the authors report NO significant change. Value encoded as 0 to represent the reported null; se null because not derivable from the abstract.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: ZERO = no compensatory rise in energy expenditure was detected, so the 385 kcal/day intake increase is NOT offset. This CONTRADICTS Markwald 2013's +5% TDEE finding.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: We found no significant change in total EE or resting metabolic rate as a result of PSD.
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: Pools short (1-14 night) laboratory trials with ad libitum feeding; no trial measured durable weight change. Small n (172 in meta-analysis), heterogeneous restriction doses, and mostly non-adolescent adults.
+funding: not stated in abstract
+notes: 'MOST DECISION-RELEVANT ENERGY-INTAKE NUMBER: +385 kcal/day (252-517). Authors'' own caveat is explicit: ''which in the long term may contribute to weight gain'' - i.e. the durable weight consequence is extrapolated, not measured. 17 studies (n=496) in the systematic review; 11 studies (n=172) in the meta-analysis.'
+shard: s09_obesity_bmi

@@ -1,0 +1,148 @@
+study_id: talbot2010
+citation: "Talbot LS, McGlinchey EL, Kaplan KA, Dahl RE, Harvey AG. Sleep deprivation in adolescents and adults: changes in affect. Emotion. 2010 Dec;10(6):831-841."
+doi: "10.1037/a0020138"
+pmid: "21058849"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3163498/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Sleep deprivation in adolescents and adults: changes in affect."
+access_tier: full_text
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 64
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [10, 60]
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: positive_affect_panas_c
+    exposure: {type: chronic_restriction, dose_h: 2.0, referent_h: 8.0, duration_days: 2, contrast_label: "2 nights: max 6.5 h TST night 1 then max 2 h TST night 2, vs rested condition (~7-8 h x 2 nights); within-subject crossover, order counterbalanced ~1 week apart"}
+    scale: cohens_d
+    unit: "d_z (within-subject)"
+    value: 0.7669
+    se: 0.14937
+    ci: [0.4741, 1.0596]
+    conversion_formula: "F(1,55)=34.11 for the Sleep Condition main effect, eta_p^2 printed as 0.38. I verified the df by recomputing eta_p^2 = F/(F+df_err) = 34.11/(34.11+55) = 0.3828, which matches the printed 0.38. t=sqrt(F)=5.8404; N=df_err+3 groups=58; d_z=t/sqrt(N)=5.8404/7.6158=0.7669; se=sqrt(1/N + d_z^2/(2N))=sqrt(1/58 + 0.5881/116)=0.14937."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE value = WORSE, i.e. sleep deprivation REDUCED positive affect. Large effect. Held for 9 of 12 individual positive-affect items, and there was no Sleep Condition x Age Group interaction, so it applied equally to adolescents and adults."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "There was a main effect of Sleep Condition, F (1, 55) = 34.11, eta p 2 = 0.38, p < .001, such that participants reported less positive affect when sleep deprived, compared to rested. There was no main effect of Age Group, F (2, 55) < 1, ns, and there was no Sleep Condition x Age Group interaction, F (2, 55) < 1, ns."
+  - outcome_domain: psychiatric
+    outcome_construct: negative_affect_panas_c_NULL
+    exposure: {type: chronic_restriction, dose_h: 2.0, referent_h: 8.0, duration_days: 2, contrast_label: "same 2-night deprivation vs rested contrast; NEGATIVE affect composite (sad, miserable, blue, gloomy, lonely, afraid, nervous, jittery, scared, upset, mad, disgusted, ashamed, guilty, frightened)"}
+    scale: cohens_d
+    unit: "d_z, UPPER BOUND ONLY"
+    value: 0.0
+    se: null
+    ci: [-0.1313, 0.1313]
+    conversion_formula: "Reported as F(1,55) < 1, ns, with no point estimate given. F<1 implies t<1, hence |d_z| < 1/sqrt(58) = 0.1313. I therefore record value 0.0 with the bound as the CI and se: null, because no SE is derivable from an 'F < 1' statement. THE VALUE 0.0 IS A BOUND-CENTRED PLACEHOLDER, NOT A MEASURED POINT ESTIMATE."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NULL, and the null is the finding. Two nights of severe sleep deprivation (including one night of only 2 h) did NOT increase self-reported negative affect - not sadness, not misery, not gloom - in either adolescents or adults, with the effect bounded below |d_z| 0.13."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "There was no main effect of Sleep Condition, F (1, 55) < 1, ns, or Age Group F (2, 55) < 1, ns, or a Sleep Condition x Age Group interaction, F (2, 55) = 1.35, ns."
+  - outcome_domain: psychiatric
+    outcome_construct: anxiety_increase_during_catastrophising
+    exposure: {type: chronic_restriction, dose_h: 2.0, referent_h: 8.0, duration_days: 2, contrast_label: "same contrast; pre-to-post change in state anxiety (0-100) across a standardised catastrophising interview about the participant's own worst worry"}
+    scale: cohens_d
+    unit: "d_z"
+    value: 0.3262
+    se: 0.13475
+    ci: [0.0620, 0.5903]
+    conversion_formula: "F=6.17 with printed eta_p^2 = 0.10. The paper prints the df for this test as (1,67), which is internally impossible: eta_p^2 = 6.17/(6.17+67) = 0.084, not 0.10, and the between-subjects factor in the SAME analysis is reported as F(2,57). Solving 6.17/(6.17+x)=0.10 gives x=55.5, so the true df_err is ~55 and '67' is a typographical error. Using df_err=55: t=sqrt(6.17)=2.4839, N=58, d_z=2.4839/7.6158=0.3262, se=sqrt(1/58+0.1064/116)=0.13475."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = WORSE: anxiety rose more during the catastrophising task when sleep deprived. Small-to-moderate. No interaction with age group. This is an AROUSAL/ANXIETY effect, in contrast to the null on negative affect."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "There was a main effect of Sleep Condition, F (1, 67) = 6.17, eta p 2 = 0.10, p < .05, such that participants experienced a greater increase in anxiety during the task in the sleep-deprived, compared to rested, condition."
+  - outcome_domain: psychiatric
+    outcome_construct: catastrophe_likelihood_rating
+    exposure: {type: chronic_restriction, dose_h: 2.0, referent_h: 8.0, duration_days: 2, contrast_label: "same contrast; rated 0-100 likelihood that each generated catastrophe would actually occur"}
+    scale: cohens_d
+    unit: "d_z"
+    value: 0.2700
+    se: 0.14118
+    ci: [-0.0067, 0.5467]
+    conversion_formula: "F(1,49)=3.79, printed eta_p^2=0.07; check 3.79/(3.79+49)=0.0718, consistent. t=1.9468, N=52, d_z=1.9468/7.2111=0.2700, se=sqrt(1/52+0.0729/104)=0.14118. NOTE the normal-approximation CI marginally includes 0 (-0.007) even though the paper reports p<.05; the discrepancy is an artefact of the d_z SE approximation versus the ANOVA error term, and I have not adjusted the CI to hide it."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = WORSE: sleep-deprived participants judged their feared catastrophes MORE likely to come true. A cognitive-bias/catastrophising effect rather than a mood effect."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "There was a main effect of Sleep Condition, F (1, 49) = 3.79, eta p 2 = 0.07, p < .05, with participants rating the average likelihood of each catastrophe coming true as higher in the sleep-deprived, compared to rested, condition."
+  - outcome_domain: psychiatric
+    outcome_construct: threat_appraisal_of_worst_worry
+    exposure: {type: chronic_restriction, dose_h: 2.0, referent_h: 8.0, duration_days: 2, contrast_label: "same contrast; 0-100 rating of how threatening the participant's single most threatening worry felt"}
+    scale: cohens_d
+    unit: "d_z"
+    value: 0.2841
+    se: 0.13880
+    ci: [0.0121, 0.5562]
+    conversion_formula: "F(1,51)=4.36, printed eta_p^2=0.08; check 4.36/(4.36+51)=0.0788, consistent. t=2.0881, N=54, d_z=2.0881/7.3485=0.2841, se=sqrt(1/54+0.0807/108)=0.13880."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = WORSE: the same worry felt more threatening when sleep deprived. There was also an Age Group x Sleep Condition interaction, F(2,51)=4.47, eta_p^2=0.15, driven by the EARLY adolescents (age 10-13), t(14)=3.44, p<.01 - the youngest group, not the group matching our subject."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "There was a main effect of Sleep Condition, F (1, 51) = 4.36, eta p 2 = 0.08, p < .05, such that the most threatening worry was appraised as more threatening when sleep de[prived]"
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Genuine strengths: within-subject crossover with counterbalanced order, so each participant is their own control; rigorous screening (no past or current Axis I disorder, no sleep disorder, no medical conditions, no head trauma) so the sample is clean of the insomnia and depression confounding that wrecks the observational literature; manipulation verified by actigraphy in 66% of participants plus diaries, and confirmed by a large sleepiness effect, F(1,51)=95.70, p<.001. Weaknesses: (1) n=64 total split across three age bands, so the per-group n is ~20 and the age-interaction tests are badly underpowered - the absence of Sleep x Age interactions should not be read as established equivalence across development; (2) no blinding is possible; (3) the CONTROL condition failed its own manipulation - participants were asked to extend to 8.5 h and did not comply, so the contrast is deprivation versus habitual sleep rather than deprivation versus extended sleep, which the authors concede: 'we shifted our original c[onceptualisation]'; (4) the paper contains at least one df typo, F(1,67) where eta_p^2 implies df_err~55, which lowers my confidence in its statistical reporting generally; (5) multiple outcomes tested with no correction, and three of the five effects I extracted are in the p .01-.05 band."
+funding: "NIH (NIHMS318624 indicates NIH-funded author manuscript deposit); exact grant not in the retrieved text"
+notes: |
+  WHY THIS STUDY WAS REQUESTED AND WHAT IT ACTUALLY SHOWS. This is the Talbot study named in my task, and
+  Dahl is a co-author, so it discharges two of the seed names at once. Its exposure is severe acute
+  deprivation, not chronic restriction: night 1 max 6.5 h then night 2 max 2 h. That is not the subject's
+  exposure and I weight it accordingly.
+
+  ITS VALUE IS THE DISSOCIATION, WHICH IS STARK AND WHICH REPLICATES THE PATTERN I FOUND EVERYWHERE ELSE:
+    POSITIVE affect  d_z = 0.767 (0.474, 1.060)   LARGE, p<.001, held on 9 of 12 items
+    NEGATIVE affect  |d_z| < 0.131                NULL, F<1
+    anxiety during catastrophising  d_z = 0.326   small-moderate
+    catastrophe likelihood          d_z = 0.270   small
+    threat appraisal of worst worry d_z = 0.284   small
+  Sleep loss flattened positive affect substantially and did not touch sadness at all. Depression requires
+  either depressed mood or anhedonia; this experiment moved the anhedonia/low-energy axis hard and left the
+  dysphoria axis untouched. Everything that did move on the negative side was ANXIETY and THREAT
+  APPRAISAL - arousal phenomena, consistent with motomura2013's amygdala hyper-reactivity and with
+  blake2016_sense, where an adolescent sleep intervention improved anxiety but not depression.
+
+  THE AUTHORS INDEPENDENTLY IDENTIFY THE CRITERION-CONTAMINATION PROBLEM, and this is why I flag this record
+  for the modeller alongside sadikova2024. Explaining why their PANAS null conflicts with older POMS-based
+  studies, they write: "The POMS may indicate greater mood disturbance in part because some of its scales
+  overlap with sleepiness, such as fatigue and vigor." That is exactly what sadikova2024's item-level
+  decomposition of a real policy experiment demonstrated quantitatively fourteen years later: the depression
+  scale moves because its fatigue and sleep items move. An experimental affect study and an instrumental
+  variable policy study, with nothing in common methodologically, arrive at the same warning: MUCH OF THE
+  MEASURED "DEPRESSION" EFFECT OF SLEEP LOSS IS THE SLEEP LOSS BEING RE-MEASURED BY THE DEPRESSION
+  INSTRUMENT.
+
+  A COMPETING EXPLANATION I SHOULD NOT SUPPRESS. The authors also offer a floor effect: "the apparent floor
+  effect of responses to the PANAS-C negative affect items across conditions (see Table 3) may suggest that
+  the PANAS does not assess the type of negative affect experienced when sleep deprived", and they note
+  Franzen et al. found increased negative affect on a visual analogue scale but not on the PANAS. So the
+  negative-affect null may be partly instrument insensitivity in healthy screened volunteers rather than a
+  true absence of effect. I record the null as a bound, not as proof of no effect.
+
+  TRANSPORTABILITY IS THE WEAKEST POINT. The age bands are 10-13, 13-16 and 30-60. NOBODY IN THIS STUDY IS
+  THE SUBJECT'S AGE. The 18-19 year old window falls in the gap between the midadolescent and adult bands.
+  I set adolescent_match: mixed rather than good, and for the subject's age the better-matched experimental
+  records are baum2014 (14-17, chronic restriction), short2015 and vandyk2017.
+shard: "s12_psychiatric"

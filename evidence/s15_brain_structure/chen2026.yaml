@@ -1,0 +1,108 @@
+study_id: chen2026
+citation: "Chen Y, Li M, Zhao Z, Xu X, Huang Y, Chen R, Zhao R, Wang G, Jiang F, Wu D. Neuroimaging subtypes of adolescent sleep insufficiency stratify natural short sleepers from comorbidity or environment driven insufficiency. Nature Communications. 2026;17(1)."
+doi: "10.1038/s41467-026-70135-6"
+pmid: "41794771"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13096203/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Neuroimaging subtypes of adolescent sleep insufficiency stratify natural short sleepers from comorbidity or environment driven insufficiency"
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [9, 14]
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: postcentral_subtype_phenotypically_normal_natural_short_sleepers
+    exposure: {type: habitual_short_sleep, dose_h: 8.0, referent_h: 8.0, duration_days: null,
+               contrast_label: "insufficient sleep (<8 h for adolescents) vs sufficient sleep, SuStaIn disease-progression modelling of cortical thickness in ABCD; postcentral-onset subtype"}
+    scale: raw_units
+    unit: "subtype identification (qualitative)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded +1 = subtype identified and characterised. This is a clustering/staging analysis, not an effect-size estimate; no pooled magnitude exists. Sample size for the imaging analysis not recoverable from the abstract, so n is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Direction is the whole point of this record: one of the three reduced-cortical-thickness subtypes of insufficient sleep was PHENOTYPICALLY NORMAL - indistinguishable from sufficient sleepers in sleep behaviour and environment, with NO psychiatric comorbidity - and carried a GENETIC predisposition to short sleep. Reduced cortical thickness in that subtype is therefore a constitutional trait, not damage."
+    covariates: ["sleep environment", "sleep behaviour", "psychiatric comorbidity", "polygenic score for sleep duration"]
+    followup_years: null
+    cohort_family: "ABCD"
+    quote: "The postcentral subtype mirrored the controls of sufficient sleep in sleep behavior and sleep environment and showed no psychiatric comorbidities, which aligned with natural short sleepers (phenotypically normal despite short sleep). Notably, this subtype displayed significantly advanced brain age, and polygenetic score analysis revealed a genetic predisposition for short sleep."
+  - outcome_domain: brain_structure
+    outcome_construct: entorhinal_subtype_psychiatric_driven_heterogeneity
+    exposure: {type: habitual_short_sleep, dose_h: 8.0, referent_h: 8.0, duration_days: null,
+               contrast_label: "entorhinal-onset subtype of adolescent insufficient sleep vs other subtypes"}
+    scale: raw_units
+    unit: "subtype identification (qualitative)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded +1 = subtype identified. No effect magnitude published."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This subtype showed ELEVATED PSYCHIATRIC RISK and YOUNGER brain age, and mapped onto psychosis-related neurotransmitter systems. Note that its brain-age deviation runs OPPOSITE to the postcentral subtype's. Two groups of short sleepers, opposite structural signatures - which is direct evidence that 'short sleep' is not a single biological exposure."
+    covariates: ["psychiatric risk measures", "neurotransmitter system spatial maps"]
+    followup_years: null
+    cohort_family: "ABCD"
+    quote: "The entorhinal subtype showed elevated psychiatric risk, younger brain age, and larger spatial correlations with psychosis-related neurotransmitter systems."
+  - outcome_domain: brain_structure
+    outcome_construct: pericalcarine_subtype_environmentally_driven_cortical_thinning
+    exposure: {type: habitual_short_sleep, dose_h: 8.0, referent_h: 8.0, duration_days: null,
+               contrast_label: "pericalcarine-onset subtype; environmental exposures (light and noise pollution) with sleep duration as mediator of cortical thinning"}
+    scale: raw_units
+    unit: "mediation identified (qualitative)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded +1 = significant mediation reported. No mediation coefficient published in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Here sleep duration MEDIATES an environmental exposure's effect on cortical thinning, i.e. the upstream cause is light/noise pollution. Attributing the thinning to 'sleep' alone would misplace the causal locus - and would misattribute an environmental/neighbourhood exposure to a behavioural choice."
+    covariates: ["light pollution", "noise pollution"]
+    followup_years: null
+    cohort_family: "ABCD"
+    quote: "The pericalcarine subtype was linked to environmental factors (e.g., light/noise pollution), with sleep duration mediating environmental effects on cortical thinning."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "Cross-sectional; SuStaIn is a data-driven staging model borrowed from neurodegeneration research and its application to a non-degenerative behavioural exposure assumes a monotonic progression that is not established here; subtype solutions from unsupervised clustering require out-of-sample validation which is not described in the abstract; imaging sample size not recoverable; ABCD ages 9-14, not 16-19. Despite these limits the heterogeneity finding is conceptually important and is corroborated by independent genetic evidence (polygenic scores)."
+funding: "Chinese Ministry of Science and Technology; National Natural Science Foundation of China; Shanghai Municipal Health Bureau"
+notes: |
+  THE CONFOUNDING-AND-REVERSE-CAUSATION RECORD, AND THE MOST DIRECT REFUTATION OF THE INFERENCE
+  'THIS ADOLESCENT SLEEPS LITTLE AND HAS A THINNER CORTEX, THEREFORE THE SLEEP THINNED THE CORTEX'.
+
+  Three structurally distinct subtypes sit underneath the single label 'insufficient sleep' in
+  adolescents, and they have DIFFERENT CAUSES:
+    - postcentral subtype: genetically predisposed NATURAL SHORT SLEEPERS. Reduced cortical
+      thickness, but behaviourally and psychiatrically normal, with polygenic evidence for short
+      sleep. The structure is constitutional. Advanced brain age.
+    - entorhinal subtype: driven by PSYCHIATRIC RISK. Younger brain age - the opposite deviation.
+    - pericalcarine subtype: driven by ENVIRONMENTAL exposure (light and noise pollution), with
+      sleep merely mediating.
+
+  WHAT THIS DOES TO THE OBSERVATIONAL LITERATURE. Every cross-sectional study in this shard
+  (cheng2021, urrila2017, taki2012, lapidaire2021) pools these subtypes into one 'short sleeper'
+  group and reports the average structural difference. That average is a mixture of a genetic
+  trait, a psychiatric confound, and a neighbourhood environmental exposure. None of those three
+  is 'chronic voluntary sleep restriction damaged this brain'. The tiny pooled effects reported
+  elsewhere are therefore not merely small - they are of substantially unknown provenance.
+
+  DIRECTLY RELEVANT TO THE SUBJECT'S SITUATION. He is a college student whose short sleep is
+  behaviourally driven (coursework, exams, schedule), without stated psychiatric comorbidity. He
+  does not obviously belong to any of the three subtypes as characterised, and in particular the
+  subtype that most resembles 'short sleep with no other problems' - the postcentral, natural
+  short sleeper group - is the one the authors describe as PHENOTYPICALLY NORMAL.
+
+  ABCD cohort - overlaps cheng2021, yang2022, limasantos2025. Do not pool as independent.
+shard: "s15_brain_structure"

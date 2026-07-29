@@ -1,0 +1,82 @@
+study_id: swanson2022
+citation: Swanson CM, Shanbhag P, Tussey EJ, Rynders CA, Wright KP, Kohrt WM. Bone turnover markers after six nights of
+  insufficient sleep and subsequent recovery sleep in healthy men. Calcif Tissue Int. 2022;110(6):712-722.
+doi: 10.1007/s00223-022-00950-8
+pmid: '35133471'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: Bone Turnover Markers After Six Nights of Insufficient Sleep and Subsequent Recovery Sleep in Healthy
+    Men
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 12
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: endocrine
+  outcome_construct: bone_turnover_markers_after_isolated_sleep_restriction
+  exposure:
+    type: chronic_restriction
+    dose_h: 5
+    referent_h: 8
+    duration_days: 6
+    contrast_label: 6 nights of 5 h/night vs baseline 8 h/night, WITHOUT circadian disruption; diet, activity and posture
+      controlled
+  scale: pct_change
+  unit: '% change in PINP/osteocalcin/beta-CTX (null)'
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: Authors report no statistically or clinically significant change (PINP p=0.53, osteocalcin p=0.66,
+    beta-CTX p=0.10). value=0 encodes the null; no point estimates given.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: value=0 encodes a NULL. Isolating sleep restriction from circadian disruption abolishes the swanson2017
+    bone signal. Direct evidence that 5 h/night for a week does not perturb bone metabolism in young men.
+  covariates: []
+  followup_years: null
+  cohort_family: Colorado_sleep_bone
+  quote: There was no statistically or clinically significant change in PINP (p = 0.53), osteocalcin (p = 0.66), or beta-CTX
+    (p = 0.10) in response to six nights of insufficient sleep.
+- outcome_domain: recovery
+  outcome_construct: bone_turnover_markers_through_3_weeks_of_recovery
+  exposure:
+    type: recovery_sleep
+    dose_h: null
+    referent_h: 8
+    duration_days: 21
+    contrast_label: fasted samples daily inpatient plus 5 times over 3 weeks after discharge
+  scale: pct_change
+  unit: '% change in bone turnover markers during recovery (null)'
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: All p >= 0.63. value=0 encodes the null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: value=0 = no residual bone-turnover abnormality at up to 3 weeks after the restriction ended. Nothing
+    to recover from.
+  covariates: []
+  followup_years: 0.058
+  cohort_family: Colorado_sleep_bone
+  quote: 'There were no significant changes in BTMs from the inpatient stay through 3 weeks of recovery sleep (all p [Formula:
+    see text] 0.63). On average, body weight was stable during the inpatient stay (delta weight = - 0.55 +/- 0.91 kg, p
+    = 0.06).'
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: n=12, single-arm before/after with no concurrent control; strength is tight control of diet, activity, posture
+    and weight, which isolates the sleep exposure; registered NCT03733483
+funding: NIH
+notes: 'The cleanest available test of the subject''s actual exposure (5 h/night) on bone. Result: nothing, and nothing
+  lingering at 3 weeks.'
+shard: s11_endocrine_growth

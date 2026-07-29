@@ -1,0 +1,198 @@
+study_id: tefft2012
+citation: "Tefft BC. Prevalence of motor vehicle crashes involving drowsy drivers, United States, 1999-2008. Accid Anal Prev. 2012;45:180-186."
+doi: "10.1016/j.aap.2011.05.028"
+pmid: "22269499"
+url: "https://doi.org/10.1016/j.aap.2011.05.028"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Prevalence of motor vehicle crashes involving drowsy drivers, United States, 1999-2008."
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: 47597
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: drowsy_driver_share_of_fatal_crashes_imputed
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "share of US FATAL crashes involving a drowsy driver, AFTER multiple imputation of the 45% of drivers whose drowsiness status was unknown, 1999-2008"}
+    scale: probability
+    unit: "proportion of fatal crashes"
+    value: 0.165000
+    se: 0.020663
+    ci: [0.125000, 0.206000]
+    conversion_formula: >
+      Reported directly: 16.5% (95% CI 12.5%, 20.6%).
+      value 0.165; se = (0.206 - 0.125)/3.92 = 0.020663.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive prevalence, not an effect. HIGHER = more of the fatal-crash burden is drowsiness-related.
+      THIS IS THE UPPER TERM IN THE ORDER-OF-MAGNITUDE DISCREPANCY THE TASK ASKED ABOUT: 16.5% here versus
+      NHTSA's police-reported 2.4% (see nhtsa_drowsy_counted), a ratio of 6.9x. The author states the point
+      explicitly: "the prevalence of fatal crashes that involve a drowsy driver is over 350% greater than
+      has been reported previously."
+    covariates: ["multiple imputation model for driver drowsiness conditional on observed crash characteristics"]
+    followup_years: null
+    cohort_family: "NASS_GES_CDS_FARS_1999_2008"
+    quote: >
+      In the imputed data, an estimated 7.0% of all crashes (95% confidence interval: 4.6%, 9.3%), 13.1% of
+      non-fatal crashes that resulted in hospital admission (95% confidence interval: 8.8%, 17.3%), and 16.5% of
+      fatal crashes (95% confidence interval: 12.5%, 20.6%) involved a drowsy driver.
+  - outcome_domain: baseline_risk
+    outcome_construct: drowsy_driver_share_of_hospital_admission_crashes_imputed
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "share of NON-FATAL crashes resulting in HOSPITAL ADMISSION that involved a drowsy driver, imputed"}
+    scale: probability
+    unit: "proportion of hospital-admission crashes"
+    value: 0.131000
+    se: 0.021684
+    ci: [0.088000, 0.173000]
+    conversion_formula: >
+      Reported directly: 13.1% (95% CI 8.8%, 17.3%). se = (0.173 - 0.088)/3.92 = 0.021684.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive. REQUIRED EXTRACTION #5 (non-fatal but serious outcomes). Serious-injury crashes carry a
+      drowsy share (13.1%) almost as high as fatal crashes (16.5%) and about double the all-crash share
+      (7.0%), i.e. DROWSY CRASHES ARE MORE SEVERE THAN AVERAGE. That is mechanistically expected — a driver
+      who is asleep does not brake or steer — and it means the mortality channel is larger, relative to the
+      crash channel, than a naive severity-blind calculation would give.
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: "NASS_GES_CDS_FARS_1999_2008"
+    quote: >
+      In the imputed data, an estimated 7.0% of all crashes (95% confidence interval: 4.6%, 9.3%), 13.1% of
+      non-fatal crashes that resulted in hospital admission (95% confidence interval: 8.8%, 17.3%), and 16.5% of
+      fatal crashes (95% confidence interval: 12.5%, 20.6%) involved a drowsy driver.
+  - outcome_domain: baseline_risk
+    outcome_construct: drowsy_driver_share_of_all_towaway_crashes_imputed
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "share of ALL crashes (passenger vehicle towed from scene) involving a drowsy driver, imputed"}
+    scale: probability
+    unit: "proportion of all crashes"
+    value: 0.070000
+    se: 0.011990
+    ci: [0.046000, 0.093000]
+    conversion_formula: >
+      Reported directly: 7.0% (95% CI 4.6%, 9.3%). se = (0.093 - 0.046)/3.92 = 0.011990.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive. INDEPENDENT CORROBORATION WORTH NOTING: owens2018_aaa, using PERCLOS eyelid-closure
+      video from the SHRP2 naturalistic driving study — a completely different method with no imputation
+      model and no police reports — found 8.8-9.5% of all crashes involved a drowsy driver. 7.0% (4.6-9.3)
+      and 8.8-9.5% overlap. Two unrelated methods agreeing at roughly 7-10% of all crashes is the
+      strongest evidence in this shard that the police-reported 1.4% figure is simply wrong.
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: "NASS_GES_CDS_FARS_1999_2008"
+    quote: >
+      In the imputed data, an estimated 7.0% of all crashes (95% confidence interval: 4.6%, 9.3%), 13.1% of
+      non-fatal crashes that resulted in hospital admission (95% confidence interval: 8.8%, 17.3%), and 16.5% of
+      fatal crashes (95% confidence interval: 12.5%, 20.6%) involved a drowsy driver.
+  - outcome_domain: baseline_risk
+    outcome_construct: drowsy_driver_share_of_fatal_crashes_before_imputation
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "SAME DATA, NO IMPUTATION: share of fatal crashes with a driver CODED drowsy, when 45% of drivers' drowsiness status was unknown"}
+    scale: probability
+    unit: "proportion of fatal crashes"
+    value: 0.036000
+    se: null
+    ci: null
+    conversion_formula: >
+      Reported directly as 3.6% in the original (non-imputed) data. No CI published for the non-imputed
+      figures; se null, not invented.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive. RECORDED SPECIFICALLY SO THE DISCREPANCY CAN BE AUDITED WITHIN A SINGLE PAPER. The SAME
+      dataset gives 3.6% before imputation and 16.5% after, a 4.6x difference, entirely because 45% of
+      drivers had UNKNOWN drowsiness status and the non-imputed figure implicitly codes all of them as
+      not-drowsy. THIS IS THE WHOLE EXPLANATION OF THE ORDER-OF-MAGNITUDE PUZZLE, visible in one study:
+      it is not that two research groups disagree about the world, it is that one number treats "unknown"
+      as "no" and the other does not.
+    covariates: []
+    followup_years: null
+    cohort_family: "NASS_GES_CDS_FARS_1999_2008"
+    quote: >
+      In the original (non-imputed) data, 3.9% of all crashes, 7.7% of non-fatal crashes that resulted in hospital
+      admission, and 3.6% of fatal crashes involved a driver coded as drowsy; however, the drowsiness status of
+      45% of drivers was unknown.
+rob:
+  tool: none
+  judgement: na
+  notes: >
+    A PREVALENCE ESTIMATION EXERCISE, not a study of an exposure-outcome relation, so RoB tools do not
+    apply; `tool: none` / `judgement: na`.
+    THE CENTRAL METHODOLOGICAL QUESTION is whether the multiple-imputation model is right, and that cannot
+    be checked from the abstract. The imputation assumes drowsiness is missing-at-random CONDITIONAL ON
+    OBSERVED CRASH CHARACTERISTICS (time of day, crash configuration, road type, and so on). If drivers
+    with unknown status are systematically LESS drowsy than the observed pattern predicts, 16.5% is too
+    high. If they are systematically MORE drowsy — which is the more plausible direction, because the
+    commonest reason drowsiness is unknown in a fatal crash is that the driver died and no witness survived,
+    and single-occupant run-off-road-at-night crashes are exactly the drowsy signature — then 16.5% is too
+    LOW. I judge the residual bias to point UPWARD but I cannot quantify it.
+    SUPPORTING EXTERNAL VALIDATION, which is why I take the imputed figure seriously: an entirely
+    independent method (PERCLOS video, owens2018_aaa) gives 8.8-9.5% for ALL crashes against this paper's
+    7.0%, and a later application of the same imputation family to 2017-2021 FARS (tefft2024_aaa) gives
+    17.6% for fatal crashes against this paper's 16.5%.
+    Limitation for our purpose: NO AGE STRATIFICATION is reported in the abstract, so this record cannot
+    tell us whether the drowsy share is higher for 16-19-year-olds. tefft2024_aaa says qualitatively that
+    it is highest at 16-20.
+funding: "AAA Foundation for Traffic Safety (author affiliation). Data from NHTSA (NASS GES, NASS CDS, FARS)."
+notes: >
+  REQUIRED EXTRACTION #4, second bullet, AND REQUIRED EXTRACTION #5. This is the single most important
+  record for the "report BOTH and explain why" instruction, because the explanation is INSIDE THIS ONE
+  PAPER rather than being a dispute between two camps.
+  .
+  VERBATIM QUOTE (abstract, PMID 22269499): "The proportion of motor vehicle crashes that involve a drowsy
+  driver likely is greater than existing crash databases reflect, due to the possibility that some drivers
+  whose pre-crash state of attention was unknown may have been drowsy. This study estimated the proportion
+  of crashes that involved a drowsy driver in a representative sample of 47,597 crashes in the United
+  States from 1999 through 2008 that involved a passenger vehicle that was towed from the scene. Multiple
+  imputation was used to address missing data on driver drowsiness. In the original (non-imputed) data,
+  3.9% of all crashes, 7.7% of non-fatal crashes that resulted in hospital admission, and 3.6% of fatal
+  crashes involved a driver coded as drowsy; however, the drowsiness status of 45% of drivers was unknown.
+  In the imputed data, an estimated 7.0% of all crashes (95% confidence interval: 4.6%, 9.3%), 13.1% of
+  non-fatal crashes that resulted in hospital admission (95% confidence interval: 8.8%, 17.3%), and 16.5%
+  of fatal crashes (95% confidence interval: 12.5%, 20.6%) involved a drowsy driver. Results suggest that
+  the prevalence of fatal crashes that involve a drowsy driver is over 350% greater than has been reported
+  previously."
+  .
+  THE ORDER-OF-MAGNITUDE EXPLANATION, WRITTEN OUT, SINCE THE TASK ASKED FOR IT EXPLICITLY.
+  There are FOUR distinct reasons the police-reported figure (1.4-2.4%) and the research figures
+  (7-17.6%) differ, and only the first is about statistics:
+  (1) MISSING-DATA CODING. 45% of drivers in this sample had UNKNOWN drowsiness. Official statistics
+      effectively code unknown as not-drowsy. Fixing only that raises fatal-crash prevalence from 3.6% to
+      16.5%. This is most of the gap.
+  (2) NO ROADSIDE TEST EXISTS. Alcohol has a breathalyzer; drowsiness has nothing. owens2018_aaa puts it
+      exactly: "there is no test analogous to a breathalyzer that the police can administer at the
+      roadside to assess a driver's level of drowsiness at or shortly after the time of a crash."
+  (3) THE EVIDENCE DESTROYS ITSELF. A driver who was drowsy before the crash is fully awake after it, and
+      may not recognise or may not volunteer that he was drowsy. In a fatal single-occupant crash there is
+      no one left to ask.
+  (4) REPORTING POLICY VARIES BY STATE AND AGENCY (stated in the GHSA report, ghsa2026), so the national
+      FARS number is an aggregate of inconsistent local practice.
+  NONE of these four is a reason to prefer the low number. All four bias the police figure DOWNWARD.
+  I therefore use the research-based share (with the naturalistic estimate as a lower anchor) in
+  injury_channel.md, and I report the police figure only as a floor.
+  .
+  n = 47,597, the number of crashes in the representative sample, quoted from the abstract.
+  .
+  DE-DUPLICATION: cohort_family NASS_GES_CDS_FARS_1999_2008. Overlaps in spirit but not in sample with
+  tefft2024_aaa (CISS + FARS 2017-2021) and tefft2016_aaa / tefft2018 (NMVCCS 2005-2007). Same author,
+  three different NHTSA sampling systems, three different periods. They are methodologically related and
+  should not be treated as fully independent replications.
+  .
+  ACCESS: abstract_only (Elsevier paywall). Every number above is verbatim from PubMed.
+shard: "s21_drowsy_driving"

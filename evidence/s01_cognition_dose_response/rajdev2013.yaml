@@ -1,0 +1,149 @@
+study_id: rajdev2013
+citation: "Rajdev P, Thorsley D, Rajaraman S, Rupp TL, Wesensten NJ, Balkin TJ, Reifman J. A unified mathematical model to quantify performance impairment for both chronic sleep restriction and total sleep deprivation. Journal of Theoretical Biology. 2013;331:66-77."
+doi: "10.1016/j.jtbi.2013.04.013"
+pmid: "23623949"
+url: "https://pubmed.ncbi.nlm.nih.gov/23623949/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "A unified mathematical model to quantify performance impairment for both chronic sleep restriction and total sleep deprivation"
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: null
+n_studies_pooled: 3
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: recent_sleep_wake_history_weighted_more_heavily_than_remote_history
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "functional form: sleep debt as a recency-weighted function of sleep/wake history"}
+    scale: raw_units
+    unit: "1 = the model weights recent sleep/wake history more heavily than remote history"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Structural encoding of the model's defining assumption. No parameters could be
+      extracted: the paper is paywalled at Elsevier, is not in PMC, and Unpaywall lists no OA copy, so only
+      the abstract was retrievable. I have NOT transcribed any equations or coefficients for this model, and
+      none should be attributed to it.
+      WHY THE RECENCY WEIGHTING IS THE DECISION-RELEVANT PART: it is a third position on the question that
+      divides Van Dongen 2003 from McCauley 2009. Van Dongen's excess-wakefulness model weights ALL past
+      sleep loss equally (Sigma is an unweighted cumulative sum). McCauley's model weights only the PRESENT
+      state ('past amounts of sleep and wake have no further impact beyond the present'). Rajdev's model sits
+      between them: history matters, but with an exponential-style decay so recent weeks dominate.
+      FOR OUR SUBJECT THIS IS THE DIFFERENCE BETWEEN THREE MODELS OF A THREE-YEAR EXPOSURE: unweighted
+      accumulation implies the deficit reflects all 1,000+ short nights; pure state-dependence implies only
+      the last few nights matter; recency weighting implies the deficit reflects roughly the last few weeks.
+      These give very different answers and the literature does not settle between them."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = recency-weighted. Not an effect size; a structural claim about the exposure metric."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "To better quantify performance during both CSR and TSD, we developed a unified mathematical model
+      that incorporates extant sleep debt as a function of a known sleep/wake history, with recent history
+      exerting greater influence. This incorporation of sleep/wake history into the classical two-process
+      model captures an individual's capacity to recover during sleep as a function of sleep debt and
+      naturally bridges the continuum from CSR to TSD by reducing to the classical two-process model in the
+      case of TSD."
+  - outcome_domain: recovery
+    outcome_construct: model_accounts_for_slow_recovery_and_for_sleep_banking
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "does the functional form reproduce slow CSR recovery and the sleep-banking benefit?"}
+    scale: raw_units
+    unit: "count of empirical phenomena the model reproduces that its predecessors did not"
+    value: 2.0
+    se: null
+    ci: null
+    conversion_formula: "Counted from the reported claim: (1) the slow recovery process characteristic of
+      chronic sleep restriction, and (2) the enhanced performance resulting from sleep banking.
+      BOTH PHENOMENA ARE INDEPENDENTLY DOCUMENTED IN THIS SHARD, which is why the claim is worth recording:
+      slow recovery in Banks 2010, Belenky 2003, Axelsson 2008, Yamazaki 2021 and Smith 2021; the banking
+      benefit in Rupp 2009 (whose data this model was partly fitted to - Rupp, Wesensten and Balkin are
+      co-authors on both papers, so the banking fit is NOT independent validation and should not be counted
+      as such). The model was validated on PVT data from three prior studies covering TSD, CSR and sleep
+      extension, and reportedly outperformed two published predecessors on within-study and across-study
+      prediction."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "higher = the form reproduces more of the observed recovery behaviour. Note the overlap
+      of authorship with the banking experiment it reproduces."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "We validated the proposed unified model using psychomotor vigilance task data from three prior
+      studies involving TSD, CSR, and sleep extension. We compared and contrasted the fits, within-study
+      predictions, and across-study predictions from the unified model against predictions generated by two
+      previously published models, and found that the unified model more accurately represented multiple
+      experimental studies and consistently predicted sleep restriction scenarios better than the existing
+      models. ... Furthermore, this model better accounted for the relatively slow recovery process that is
+      known to characterize CSR, as well as the enhanced performance that has been shown to result from sleep
+      banking."
+rob:
+  tool: none
+  judgement: na
+  notes: "Theoretical paper contributing no new observations; all data are re-used from three prior
+    experiments. Included solely as a candidate functional form. Two specific reasons to discount it relative
+    to McCauley 2009: first, ACCESS - only the abstract was retrievable (Elsevier paywall, not in PMC,
+    Unpaywall reports no OA location), so unlike McCauley 2009 I could not extract a single equation or
+    coefficient, and this record therefore cannot be used to implement anything; second, INDEPENDENCE - the
+    author group overlaps with the sleep-banking experiment (Rupp 2009) that the model is credited with
+    reproducing, so that particular success is a fit rather than a validation. The claim of superiority over
+    'two previously published models' also cannot be checked without the full text, and the identity of those
+    comparators is not stated in the abstract. Treat as a pointer, not as a usable model - and follow the
+    pointer to ramakrishnan2016, the same group's successor paper, which was retrieved in full and does carry
+    the equations and fitted parameters this record lacks."
+funding: "US Army Medical Research and Materiel Command / Telemedicine and Advanced Technology Research Center
+  (per the author affiliations; not restated in the retrieved abstract)"
+notes: |
+  RECORDED FOR ONE REASON: it is the third distinct published answer to the question of how sleep/wake
+  history should enter a dose-response function, and the three answers have materially different implications
+  for a three-year exposure.
+
+    Van Dongen 2003 (excess wakefulness)  Sigma = unweighted cumulative sum of excess wake hours.
+                                          All history counts equally. No recovery term at all.
+    McCauley 2009 (bifurcation)           State-dependent. "Sleep/wake history is fully represented by the
+                                          current performance level ... and the current level of the
+                                          asymptote ... past amounts of sleep and wake have no further impact
+                                          beyond the present."
+    Rajdev 2013 (unified)                 Recency-weighted: "incorporates extant sleep debt as a function of
+                                          a known sleep/wake history, with recent history exerting greater
+                                          influence."
+
+  For our subject the practical difference is large. Under the unweighted form, three years of weekday
+  restriction has been integrating since age 16 and his deficit should be far larger than a two-week
+  laboratory subject's. Under the state-dependent form, only his current wake/sleep ratio matters and his
+  deficit should look like any short-sleeping person's regardless of how long they have done it. Under the
+  recency-weighted form, roughly his last few weeks dominate, so his deficit tracks his current term's
+  schedule rather than his cumulative three-year history. NO EXPERIMENT IN THIS SHARD RUNS LONG ENOUGH TO
+  DISCRIMINATE BETWEEN THESE - the longest is Smith 2021 at six weeks - so this is irreducible structural
+  uncertainty and the largest single reason the downstream model should carry wide intervals on any
+  three-year extrapolation.
+
+  READ THIS RECORD TOGETHER WITH ramakrishnan2016, WHICH SUPERSEDES IT. A successor paper from the same group
+  - Ramakrishnan S, Wesensten NJ, Balkin TJ, Reifman J. "A Unified Model of Performance: Validation of its
+  Predictions across Different Sleep/Wake Schedules." Sleep 2016;39(1):249-262, PMID 26518594 - was retrieved
+  in full text and has its own record in this shard, carrying the complete UMP equation set, all eight fitted
+  parameters with standard errors, and an out-of-sample validation across 14 conditions in 5 studies. The
+  recency-weighted form described here is therefore IMPLEMENTABLE after all, just not from this paper. The
+  single parameter that matters most for our subject, tau_LA = 7.00 +/- 1.67 days, comes from that record and
+  quantifies how fast the recency weighting decays; it is what turns the qualitative claim below ("recent
+  history exerting greater influence") into a number. Use ramakrishnan2016, not this record, to implement
+  anything - but keep this one for the structural taxonomy above and because it is the earlier statement of
+  the idea.
+
+  All extractable functional forms - Van Dongen's two, Belenky's verbal asymptotic form, McCauley's ODE system
+  with its full parameter set, Cohen's slope-multiplier form, Banks 2010's exponential recovery function, and
+  the fully parameterised UMP from ramakrishnan2016 - are reproduced verbatim in notes_for_modeller.md. This
+  paper's own equations are the ones I could NOT retrieve (Elsevier paywall, no OA copy), and that absence is
+  recorded there too; the successor closes the gap.
+shard: "s01_cognition_dose_response"

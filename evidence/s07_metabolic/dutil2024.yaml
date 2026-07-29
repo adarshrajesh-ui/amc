@@ -1,0 +1,137 @@
+study_id: dutil2024
+citation: "Dutil C, Podinic I, Featherstone RB, Eaton A, Sadler CM, Goldfield GS, Hadjiyannakis S, Gruber R, Tremblay MS, Prud'homme D, Chaput JP. Sleep and insulin sensitivity in adolescents at risk of type 2 diabetes: the Sleep Manipulation in Adolescents at Risk of Type 2 Diabetes randomized crossover study. Sleep. 2024;47(5):zsad313."
+doi: "10.1093/sleep/zsad313"
+pmid: "38070132"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11082473/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep and insulin sensitivity in adolescents at risk of type 2 diabetes: the Sleep Manipulation in Adolescents at Risk of Type 2 Diabetes randomized crossover study."
+access_tier: abstract_only
+secondhand_via: "Full text XML/PDF is blocked by the publisher (Oxford University Press) at both Europe PMC and NCBI PMC; the NCBI record carries the note 'The publisher of this article does not allow downloading of the full text in XML form.' All numbers below are first-hand from the publisher abstract retrieved via PubMed efetch and from the structured abstract in the NCBI front-matter XML. The identification of the insulin-sensitivity index as the Matsuda index, and the cohort descriptors, are corroborated by the invited commentary in the same issue (Taheri S, 'Waking up to sleep extension for cardiometabolic health', Sleep 2024;47(5):zsae016, PMID 38243378, PMC11082457), which I retrieved in full."
+design: rct_crossover
+tier: T1
+n: 36
+n_studies_pooled: null
+population:
+  age_mean: 15.1
+  age_range: [13, 18]
+  pct_female: 52.8
+  country: "Canada"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: matsuda_insulin_sensitivity_index_sleep_extension
+    exposure: {type: sleep_extension, dose_h: 8.55, referent_h: 7.52, duration_days: 7, contrast_label: "sleep EXTENSION week (+1 h 02 min actigraphic TST, reaching 8 h 33 min) vs habitual week (7 h 31 min) and vs decreased week; time in bed raised by 1 h 30 min for 7 nights, free-living"}
+    scale: pct_change
+    unit: "% change in Matsuda index (whole-body insulin sensitivity from 2-h 75 g OGTT)"
+    value: 20.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly as a percentage in the abstract: IS 20% higher after the IN week than after the HB and DE weeks. The abstract states 'a significant effect of sleep week on IS with a large effect size' but publishes NO numeric effect size, SE, CI, or p-value, and the full text is publisher-blocked. se therefore left null per the hard rule against inventing an SE. The commentary independently confirms the magnitude: 'The Matsuda index ... increased by about 20% with sleep extension compared to habitual or decreased sleep.'"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = BENEFIT. Insulin sensitivity IMPROVED by 20% when sleep was extended by about 1 h/night for one week. This is the reversibility/benefit direction, measured in exactly the subject's age band."
+    covariates: ["randomised 1:1 and sex-stratified crossover order (HBINDE n=18, HBDEIN n=18)", "one washout week between conditions", "participants advised to avoid daytime napping"]
+    followup_years: null
+    cohort_family: "SMART2D_CHEO"
+    quote: "We found a significant effect of sleep week on IS with a large effect size. Following the IN sleep week, IS was 20% higher compared to after the HB and DE sleep weeks, but there was no significant difference in IS following HB versus DE sleep weeks."
+  - outcome_domain: metabolic
+    outcome_construct: matsuda_insulin_sensitivity_index_sleep_restriction_null
+    exposure: {type: chronic_restriction, dose_h: 6.2, referent_h: 7.52, duration_days: 7, contrast_label: "sleep RESTRICTION week (-1 h 19 min actigraphic TST, reaching 6 h 12 min) vs habitual week (7 h 31 min); time in bed cut by 1 h 30 min for 7 nights, free-living"}
+    scale: pct_change
+    unit: "% change in Matsuda index; recorded as 0 to register an explicit null"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "The abstract reports 'no significant difference in IS following HB versus DE sleep weeks' and gives no point estimate, SE, or p-value for that contrast. Recorded as value 0 with se null to register an explicit NULL rather than omitting the contrast. Do NOT read the 0 as a precise zero - it is a reported non-significance with no published magnitude. DE-week actigraphic TST computed as 7 h 31 min - 1 h 19 min = 6 h 12 min = 6.20 h."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL. One week of restriction to about 6.2 h of actigraphic sleep did NOT significantly reduce insulin sensitivity in these adolescents, even though extension improved it. This asymmetry is the single most important finding in the record for calibrating the subject's exposure and it pushes AGAINST large acute harm at realistic weekday doses."
+    covariates: ["same crossover design and washout as the extension contrast"]
+    followup_years: null
+    cohort_family: "SMART2D_CHEO"
+    quote: "there was no significant difference in IS following HB versus DE sleep weeks"
+  - outcome_domain: exposure_measurement
+    outcome_construct: achieved_tst_change_per_90min_tib_manipulation
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "actigraphic TST actually achieved when time in bed was manipulated by +/-1 h 30 min/night for 7 nights in free-living adolescents"}
+    scale: hours
+    unit: "hours of actigraphic TST gained per 1 h 30 min of extra time in bed"
+    value: 1.033
+    se: null
+    ci: null
+    conversion_formula: "Abstract: TIB was increased and decreased by 1 h 30 min/night; achieved TST was 1 h 02 min/night higher in the IN week (= 1.033 h) and 1 h 19 min/night lower in the DE week (= 1.317 h). So 90 min of extra TIB bought 62 min of extra sleep (69% yield), whereas 90 min less TIB cost 79 min of sleep (88% yield). No dispersion published; se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = sleep gained. FEASIBILITY / DOSE-TRANSLATION parameter: extending time in bed is a lossier intervention than restricting it. Useful for the modeller when converting any behavioural recommendation for the subject into an actual TST change."
+    covariates: []
+    followup_years: null
+    cohort_family: "SMART2D_CHEO"
+    quote: "On average, during the HB week, participants slept 7 hours 31 min/night; sleep duration was 1 hour 02 min/night higher during the IN week and 1 hour 19 min/night lower during the DE week."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Registered randomised crossover (NCT03754036), 1:1 sex-stratified allocation, counterbalanced order, washout week, actigraphy-verified exposure, prespecified primary outcome (insulin sensitivity from 2-h OGTT), and good retention (36/43 = 84%). Concerns: (1) open-label by necessity - participants and staff knew the condition; (2) free-living rather than inpatient, so diet, activity, and screen use were not controlled and could co-vary with the sleep manipulation (the commentary notes 97.2% failed to meet physical-activity guidelines and mean screen time exceeded 3 h/day); (3) the restriction contrast is UNDERPOWERED for a null - the paper reports non-significance for HB vs DE without publishing an effect size or CI, so absence of evidence cannot be read as evidence of absence; (4) no numeric effect size, SE, or p-value is available for the primary outcome in any retrievable text, which is a reporting deficiency; (5) selected population (obesity at the 99.9th BMI percentile, at risk for T2D), so baseline insulin resistance is high and the results may not transport to a lean adolescent."
+funding: "Canadian Institutes of Health Research (grant 425587)."
+notes: |
+  *** THIS IS THE BEST AGE-MATCHED EXPERIMENTAL RECORD IN THE SHARD AND THE ONLY RANDOMISED
+  SLEEP-MANIPULATION TRIAL WITH A GLYCAEMIC PRIMARY OUTCOME CONDUCTED IN ADOLESCENTS. It fills the
+  gap that klingenberg2013 only partly covers, and it does so at a REALISTIC dose. ***
+
+  DISTANCE FROM OUR SUBJECT'S EXPOSURE - unusually small, which is why this record matters:
+  * Age: 13-18 y, mean 15.1. The subject was 16-19 across his exposure window. This is the closest
+    age match available anywhere in the shard's experimental set. Scored exact_16_19.
+  * Dose: the restriction arm reached 6 h 12 min of ACTIGRAPHIC TST. The subject slept ~5-6 h on
+    weekdays (self-reported, so probably less by actigraphy - see matthews2012). The study dose is
+    therefore roughly the subject's weekday dose, possibly a touch milder. Contrast this with
+    spiegel1999 (4 h TIB vs 12 h TIB) and klingenberg2013 (4 h TIB), which are 2-3x more severe.
+  * Duration: 7 nights per condition. The subject's exposure ran 3 years. This study cannot address
+    cumulative or chronic effects, and it does not test the weekday/weekend alternation.
+  * Setting: FREE-LIVING with actigraphy, not inpatient. Ecological validity is much better than the
+    lab studies; internal control is worse.
+  * Population mismatch that must not be ignored: these adolescents had obesity at the 99.9th BMI
+    percentile and other T2D risk factors. The subject is not described as obese. Baseline insulin
+    resistance in this sample is high, which usually AMPLIFIES the measurable response to sleep
+    change, so the +20% extension benefit is probably an upper bound for a lean adolescent.
+
+  WHY THE ASYMMETRY IS THE HEADLINE, AND HOW TO READ IT WITHOUT OVERREACHING:
+  Extension (+1 h) improved insulin sensitivity by 20%. Restriction (-1.3 h) did not significantly
+  worsen it. Three readings are defensible and the modeller should carry all three:
+    (i) Genuine asymmetry / floor effect - these adolescents were already habitually short sleepers
+        (screened at >=6.5 to <9 h per the commentary), so they may already sit on the flat part of
+        the dose-response curve, with headroom only in the upward direction. If that is right, it
+        implies the subject's 3 years of weekday restriction had ALREADY produced whatever glycaemic
+        cost is available, and further restriction adds little, but RECOVERY still buys a real gain.
+    (ii) Power - n=36 in a free-living crossover, with no published CI for the null. A 5-10% fall in
+        Matsuda would very plausibly be missed. This is the most likely explanation and the record
+        must not be cited as proof that restriction is harmless.
+    (iii) Duration - one week may be too short for restriction effects to accumulate at this mild
+        dose, whereas extension acts faster.
+  Reading (i) plus (ii) together is the honest position: no detectable acute harm from one week at
+  6.2 h in adolescents, and a clear, clinically meaningful benefit from one week of +1 h.
+
+  CONVERGENCE WITH THE ADULT EVIDENCE AT THE SAME DOSE - this is a striking and useful coincidence:
+    dutil2024    adolescents, 7 d,  TST 6.2 h  ->  insulin sensitivity NOT significantly changed
+    zuraikat2024 women, 6 WEEKS,    TST 6.2 h  ->  HOMA-IR +0.30 units (P=0.016), fasting insulin up
+  Same achieved sleep duration, different duration of exposure, and the effect appears with 6 weeks
+  but not 1 week. That pairing is the shard's best evidence that at REALISTIC doses the glycaemic
+  cost accumulates over weeks rather than days - quite unlike the 4 h protocols, where measurable
+  damage appears within 3-6 nights (klingenberg2013, spiegel1999, broussard2012).
+
+  DIRECTION-OF-EFFECT NOTE FOR THE POOLER: effect 1 is signed POSITIVE for a BENEFIT (sensitivity
+  improved). Most other metabolic effects in this shard are signed negative for harm. Do not flip
+  signs mechanically; read direction_note on each effect.
+
+  RECOVERY / REVERSIBILITY RELEVANCE: this is a sleep-EXTENSION result and therefore belongs with
+  killick2015 (+45% insulin sensitivity after 3 nights of 10 h catch-up in chronically restricted
+  men) and hartescu2022 (HOMA-IR -0.51 after 6 weeks of behavioural extension in short-sleeping
+  overweight men) in summary section (a). Those three are the shard's only prospective evidence that
+  giving sleep BACK improves glucose metabolism, and dutil2024 is the only one of them in
+  adolescents. Together they show that about 1 h/night of extra sleep, sustained for 1-6 weeks, is
+  enough to move insulin sensitivity measurably in the favourable direction.
+
+  n = 36 completers of 43 recruited (84%). 52.8% female; 56% White per the commentary; BMI at the
+  99.9th percentile; order HBINDE = 18, HBDEIN = 18.
+shard: "s07_metabolic"

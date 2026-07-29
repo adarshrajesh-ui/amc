@@ -1,0 +1,121 @@
+study_id: guo2024
+citation: "Guo Y, Zhang Y, Chen S, Chen X, Bhattacharya S, Wang Y, Markus HS, et al. Sleep Characteristics and Risk of Stroke and Dementia: An Observational and Mendelian Randomization Study. Neurology. 2024 Mar 12;102(5):e209141."
+doi: "10.1212/WNL.0000000000209141"
+pmid: "38350061"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10963997/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 0.675
+  resolved_title: "Sleep Characteristics and Risk of Stroke and Dementia: An Observational and Mendelian Randomization Study."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 502383
+n_studies_pooled: null
+population:
+  age_mean: 56.5
+  age_range: [37, 73]
+  pct_female: 54.4
+  country: "UK"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: dementia_and_alzheimers_risk_from_genetically_instrumented_sleep_characteristics
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "genetically instrumented sleep duration, insomnia, chronotype, napping, dozing, snoring -> all-cause dementia, Alzheimer disease, vascular dementia, FTD"}
+    scale: log_or
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      A DELIBERATE NULL. "MR analyses supported a causal link between genetically predicted insomnia and
+      increased stroke risk (OR 1.31, 95% CI 1.13-1.51, p = 0.00072), but not with dementia or SVD markers."
+      No numeric dementia MR estimate is printed in the abstract or in the retrievable running text (they
+      are in the paper's tables and figures). Point estimate coded 0 on the log-odds scale; se null.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      ZERO = no MR support for a causal effect of any sleep characteristic on dementia, including
+      Alzheimer's, in the largest single-cohort study to attempt both designs side by side (502,383
+      participants, 7,668 dementia cases).
+    covariates: ["MR: genetic instruments; observational arm additionally adjusted for age, sex, ethnicity and vascular risk factors"]
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "MR analyses supported a causal link between genetically predicted insomnia and increased stroke risk (OR 1.31, 95% CI 1.13–1.51, p = 0.00072), but not with dementia or SVD markers."
+  - outcome_domain: cardiovascular
+    outcome_construct: stroke_risk_from_genetically_instrumented_insomnia_POSITIVE_CONTROL
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "genetically instrumented insomnia -> any stroke, two-sample MR"}
+    scale: log_or
+    unit: null
+    value: 0.27003
+    se: 0.07395
+    ci: [0.12222, 0.41211]
+    conversion_formula: >
+      OR = 1.31, 95% CI 1.13-1.51. log_or = ln(1.31) = 0.27003;
+      se = (ln(1.51) - ln(1.13))/3.92 = (0.41211 - 0.12222)/3.92 = 0.07395.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = harm. Recorded as a POSITIVE CONTROL, not as a dementia effect. It demonstrates that these
+      MR instruments and this dataset CAN detect a causal sleep effect when one is present - insomnia
+      really does appear to cause stroke. The dementia null in the same analysis is therefore not simply a
+      power failure. (Stroke is s08's domain, not this shard's; recorded here only for that inferential
+      purpose.)
+    covariates: ["MR instruments"]
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "MR analyses supported a causal link between genetically predicted insomnia and increased stroke risk (OR 1.31, 95% CI 1.13–1.51, p = 0.00072), but not with dementia or SVD markers."
+  - outcome_domain: neurodegeneration
+    outcome_construct: observational_association_of_sleep_measures_with_incident_dementia_before_and_after_vascular_adjustment
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "self-reported sleep measures -> incident all-cause dementia, 502,383 participants, 7,668 dementia cases; effect of adjusting for cardiovascular risk factors"}
+    scale: log_hr
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: >
+      A QUALITATIVE ATTENUATION FINDING, coded as 0 because the paper reports that the observational
+      associations "were attenuated after controlling for cardiovascular risk factors" without printing
+      the specific dementia HRs for sleep duration in the abstract or retrievable text. The abstract does
+      state "Almost all sleep measures were associated with dementia risk (all p < 0.001, except insomnia)"
+      BEFORE full adjustment. se null. Do not pool.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      ZERO here encodes "attenuated toward null on vascular adjustment", not a measured effect of zero. The
+      pattern is the important part: nearly every sleep measure predicted dementia in crude models, the
+      associations shrank when cardiovascular risk factors were controlled, and they vanished entirely under
+      MR. That is the classic signature of confounding plus reverse causation rather than causation.
+    covariates: ["age", "sex", "ethnicity", "plus additional vascular risk factors in the fully adjusted models"]
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "We found that multiple sleep measures predicted future risk of stroke and dementia, but these associations were attenuated after controlling for cardiovascular risk factors and were absent in MR analyses for Alzheimer disease. This suggests possible confounding or reverse causation, implying caution before proposing sleep disorder modifications for dementia treatment."
+rob:
+  tool: MR-STROBE
+  judgement: some_concerns
+  notes: >
+    Unusually informative because it runs the observational and MR analyses on the same population with the
+    same exposure definitions, so the attenuation across designs is interpretable rather than confounded by
+    differing samples. Very large (502,383 participants, 7,668 dementia cases, 10,334 strokes). Concerns:
+    (1) UK Biobank is a healthy-volunteer cohort with <5 % response, so selection bias affects both arms;
+    (2) self-reported single-item sleep measures; (3) dementia ascertainment by record linkage in a cohort
+    with mean baseline age 56.5 y means many cases are yet to occur, limiting power; (4) many sleep traits
+    and many outcomes tested; (5) the MR null for dementia does not exclude small effects.
+funding: "See paper"
+notes: >
+  THE CLEANEST WITHIN-STUDY DEMONSTRATION OF THE ATTENUATION GRADIENT, and the authors state the policy
+  implication in words this shard should adopt: "This suggests possible confounding or reverse causation,
+  implying caution before proposing sleep disorder modifications for dementia treatment."
+  Sample and case counts, verbatim: "Among 502,383 participants (mean [SD] age, 56.5 [8.1] years; 54.4%
+  female), there were 7,668 cases of all-cause dementia and 10,334 strokes."
+  Note on verification: the Crossref record stores only the main title ("Sleep Characteristics and Risk of
+  Stroke and Dementia") without the subtitle, so raw title similarity to PubMed was 0.675. The Crossref
+  title is an exact prefix of the PubMed title and the PubMed-registered DOI matches, so this is VERIFIED
+  under the prefix rule in verify.py, not a mismatch.
+shard: "s14_dementia_amyloid"

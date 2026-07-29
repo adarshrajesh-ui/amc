@@ -1,0 +1,123 @@
+study_id: banks2010_recovery_dose
+citation: "Banks S, Van Dongen HP, Maislin G, Dinges DF. Neurobehavioral dynamics following chronic sleep restriction: dose-response effects of one night for recovery. Sleep. 2010;33(8):1013-1026."
+doi: "10.1093/sleep/33.8.1013"
+pmid: "20815182"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2910531/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Neurobehavioral Dynamics Following Chronic Sleep Restriction: Dose-Response Effects of One Night for Recovery"
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 159
+n_studies_pooled: null
+population:
+  age_mean: 29.0
+  age_range: [22, 45]
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: pvt_lapses_incomplete_recovery_at_max_recovery_dose
+    exposure:
+      type: recovery_sleep
+      dose_h: 10.0
+      referent_h: 10.0
+      duration_days: 1
+      contrast_label: "1 night of 10 h TIB (8.96 h TST) recovery following 5 nights of 4 h TIB, vs 10 h TIB control condition throughout"
+    scale: raw_units
+    unit: "qualitative - deficit remained; no residual magnitude reported in abstract"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No residual effect magnitude is given in the abstract. value: 0.0 encodes 'deficit still present at the maximum recovery dose'. se: null. This is a DIRECTIONAL record, not a poolable point estimate."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "ZERO = incomplete recovery. Even the largest single recovery night tested (10 h TIB, 8.96 h TST) failed to return PVT lapses, KSS sleepiness or POMS fatigue to baseline / control levels."
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_Dinges_sleep_restriction
+  - outcome_domain: recovery
+    outcome_construct: recovery_function_shape_pvt_and_kss_exponential_mwt_linear
+    exposure:
+      type: recovery_sleep
+      dose_h: null
+      referent_h: 4.0
+      duration_days: 1
+      contrast_label: "shape of the recovery function across recovery sleep doses of 0, 2, 4, 6, 8, 10 h TIB after 5 nights of 4 h TIB"
+    scale: raw_units
+    unit: "functional form (exponential vs linear)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No parameter values in abstract. Recorded to carry the qualitative structural finding that PVT and KSS recover EXPONENTIALLY (steep early gains, flattening) while MWT recovers LINEARLY across recovery dose."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Not a magnitude. Encodes that PVT lapse and KSS recovery saturate with recovery-sleep dose, so the last increments of recovery sleep buy progressively less performance improvement."
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_Dinges_sleep_restriction
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "Randomized allocation to one of 6 recovery doses (intent-to-treat), 12 days of controlled laboratory residence, n = 159 - among the strongest designs in this literature. No blinding is possible. The unbalanced control arm (n = 17 vs n = 142 restricted) limits precision of the control comparison. ABSTRACT ONLY: I did not retrieve the full text, so the numeric recovery functions and the per-dose means are NOT in this record."
+funding: "NIH (see paper); University of Pennsylvania"
+notes: |
+  ===== PART B7 SUPPORTING RECORD: ONE NIGHT IS NOT ENOUGH, AT ANY DOSE =====
+  ACCESS LIMITATION: abstract only. Both the DOI (Crossref) and the PMID (PubMed) resolve to the
+  correct title. All quotes below are verbatim from the PubMed abstract; I did not retrieve the full
+  text, so the numeric per-dose recovery functions are NOT in this record.
+
+  VERBATIM QUOTES
+  ---------------
+  Design (this is the best-powered recovery-dose experiment in the field):
+  "Intent-to-treat design in which subjects were randomized to 1 of 6 recovery sleep doses (0, 2, 4,
+  6, 8, or 10 h TIB) for 1 night following 5 nights of sleep restriction to 4 h TIB."
+  "N = 159 healthy adults (aged 22-45 y), median = 29 y)."
+  "Following a week of home monitoring with actigraphy and 2 baseline nights of 10 h TIB, subjects
+  were randomized to either sleep restriction to 4 h TIB per night for 5 nights followed by
+  randomization to 1 of 6 nocturnal acute recovery sleep conditions (N = 142), or to a control
+  condition involving 10 h TIB on all nights (N = 17)."
+
+  THE KEY RESULT:
+  "Analyses based on return to baseline and on estimated intersection with control condition means
+  revealed recovery was incomplete at the 10 h TIB (8.96 h TST) for PVT performance, KSS sleepiness,
+  and POMS fatigue. Both TST and SWE were elevated above baseline at the maximum recovery dose of 10 h
+  TIB."
+  "Neurobehavioral deficits induced by 5 nights of sleep restricted to 4 h improved monotonically as
+  acute recovery sleep dose increased, but some deficits remained after 10 h TIB for recovery.
+  Complete recovery from such sleep restriction may require a longer sleep period during 1 night,
+  and/or multiple nights of recovery sleep."
+
+  FUNCTIONAL FORM (why "one big weekend lie-in" underperforms expectations):
+  "While TST, stage 2, REM sleep and NREM slow wave energy (SWE) increased linearly across recovery
+  sleep doses, best-fitting neurobehavioral recovery functions were exponential across recovery sleep
+  doses for PVT and KSS outcomes, and linear for the MWT."
+
+  A NOTE ON THE SUBJECTIVE MEASURE, WHICH CUTS THE OTHER WAY FROM PEJOVIC 2013
+  ---------------------------------------------------------------------------
+  Here KSS subjective sleepiness was ALSO still impaired at the 10 h recovery dose, i.e. subjective
+  and objective measures agreed. Pejovic 2013 found SSS fully normalised (indeed over-normalised)
+  while PVT did not. The difference is the recovery DOSE and DURATION: Banks gave ONE recovery night,
+  Pejovic gave TWO nights of 10 h. The honest synthesis for the report is:
+    * after ONE recovery night, both subjective and objective measures are still impaired, so the
+      subject would correctly feel bad;
+    * after TWO nights of extended sleep, the SUBJECTIVE signal switches off (and even overshoots)
+      while the OBJECTIVE deficit persists.
+  That is precisely the window in which the index subject will wrongly conclude he is fine. This
+  nuance should be stated rather than smoothed over.
+
+  ALSO RELEVANT TO PART C9 (habitual-sleep measurement):
+  "Following a week of home monitoring with actigraphy..." -> 7 nights of actigraphy is the de facto
+  standard run-in in the Dinges lab protocols.
+
+  ALSO RELEVANT TO PART C10 (baseline satiation):
+  "2 baseline nights of 10 h TIB" -> the standard debt-clearing baseline before a restriction
+  challenge in this lab is 2 nights at 10 h TIB, which Klerman 2005 and Kitamura 2016 both show is
+  NOT enough to reach the ad-lib asymptote. The n-of-1 protocol should use a longer satiation run-in.
+shard: "s20_pvt_psychometrics"

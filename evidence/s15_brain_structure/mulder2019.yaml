@@ -1,0 +1,99 @@
+study_id: mulder2019
+citation: "Mulder TA, Kocevska D, Muetzel RL, Koopman-Verhoeff ME, Hillegers MH, White T, Tiemeier H. Childhood sleep disturbances and white matter microstructure in preadolescence. Journal of Child Psychology and Psychiatry. 2019;60(11):1242-1250."
+doi: "10.1111/jcpp.13085"
+pmid: "31240728"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Childhood sleep disturbances and white matter microstructure in preadolescence"
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 2449
+n_studies_pooled: null
+population:
+  age_mean: 10.0
+  age_range: [10, 10]
+  pct_female: null
+  country: "Netherlands"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: global_fractional_anisotropy_vs_sleep_problems
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "per 1 SD maternal-reported childhood sleep problems (ages 1.5-6 y) vs global FA at age 10"}
+    scale: smd
+    unit: "SD of global FA per 1 SD sleep problems"
+    value: -0.05
+    se: null
+    ci: null
+    conversion_formula: "Abstract reports 'approximately 0.05 SD lower global FA score per 1-SD sleep problems' without a CI for the global estimate, so no se is derivable for this specific figure. Tract-specific estimates below DO have CIs and should be preferred for pooling."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = MORE sleep problems associated with LOWER global FA (conventionally read as less white matter microstructural integrity). Magnitude 0.05 SD is very small."
+    covariates: ["age at MRI", "sex", "and cohort covariates not enumerated in abstract"]
+    followup_years: 8.5
+    cohort_family: "Generation_R"
+    quote: "Childhood sleep problems at 1.5, 2, and 6 years of age were associated with less WM microstructural integrity (approximately 0.05 SD lower global FA score per 1-SD sleep problems)."
+  - outcome_domain: brain_structure
+    outcome_construct: corticospinal_tract_fa_vs_sleep_problems
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "per 1 SD baseline sleep problems vs corticospinal tract FA at age 10, repeated-measures analysis"}
+    scale: smd
+    unit: "SD of tract FA per 1 SD sleep problems"
+    value: -0.12
+    se: 0.0383
+    ci: [-0.20, -0.05]
+    conversion_formula: "Reported directly: -0.12 SD (95% CI -0.20, -0.05). se = (-0.05 - (-0.20))/3.92 = 0.15/3.92 = 0.0383."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = harm direction (lower FA with more sleep problems)."
+    covariates: ["age at MRI", "sex"]
+    followup_years: 8.5
+    cohort_family: "Generation_R"
+    quote: "children with more sleep problems (per 1-SD) at baseline had lower FA values at age 10 in particular in the corticospinal tract (-0.12 SD, 95% CI:-0.20;-0.05), the uncinate fasciculus (-0.12 SD, 95% CI:-0.19;-0.05), and the forceps major (-0.11 SD, 95% CI:-0.18;-0.03)"
+  - outcome_domain: brain_structure
+    outcome_construct: uncinate_fasciculus_fa_vs_sleep_problems
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "per 1 SD baseline sleep problems vs uncinate fasciculus FA at age 10"}
+    scale: smd
+    unit: "SD of tract FA per 1 SD sleep problems"
+    value: -0.12
+    se: 0.0357
+    ci: [-0.19, -0.05]
+    conversion_formula: "se = (-0.05 - (-0.19))/3.92 = 0.14/3.92 = 0.0357."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = harm direction."
+    covariates: ["age at MRI", "sex"]
+    followup_years: 8.5
+    cohort_family: "Generation_R"
+    quote: "the uncinate fasciculus (-0.12 SD, 95% CI:-0.19;-0.05)"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Large sample with prospectively repeated exposure measurement, but a SINGLE diffusion scan at age 10 - so again exposure-prospective, outcome-cross-sectional; cannot identify change. Exposure is maternal-reported sleep PROBLEMS (CBCL items), not duration. Authors explicitly disclaim causality. Effect estimates are homogeneous across tracts, which the authors note ('effect estimates across the tracts did not differ substantially') - a pattern more consistent with a global confounder than with tract-specific sleep effects."
+funding: "Netherlands Organization for Health Research and Development (ZonMw); Erasmus MC; European Research Council"
+notes: |
+  THE BEST-QUANTIFIED WHITE MATTER EFFECT IN THE PAEDIATRIC LITERATURE: about -0.05 SD global FA
+  and -0.11 to -0.12 SD in specific tracts, per SD of sleep problems.
+
+  PUT THAT NUMBER IN CONTEXT. -0.12 SD is a small effect by any convention. The tracts implicated
+  (corticospinal, uncinate, forceps major) are functionally unrelated to each other, and the
+  authors observe that the estimates are essentially flat across tracts. A uniform small
+  decrement across anatomically and functionally unrelated tracts is the signature you expect
+  from a global nuisance variable (head motion, SES, general psychopathology, image quality)
+  rather than from a targeted biological effect of sleep.
+
+  WRONG EXPOSURE, WRONG AGE, ONE SCAN - the same three limits as kocevska2017 (same cohort,
+  overlapping authorship; cohort_family Generation_R must be used to avoid double-counting
+  these two records as independent).
+
+  The authors' own bottom line is appropriately hedged: "This study cannot demonstrate causality
+  but suggests that preventive interventions addressing sleep problems should be further
+  explored".
+shard: "s15_brain_structure"

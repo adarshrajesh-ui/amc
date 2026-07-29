@@ -1,0 +1,92 @@
+study_id: buxton2012
+citation: Buxton OM, Cain SW, O'Connor SP, Porter JH, Duffy JF, Wang W, Czeisler CA, Shea SA. Adverse
+  metabolic consequences in humans of prolonged sleep restriction combined with circadian disruption.
+  Science Translational Medicine. 2012;4(129):129ra43.
+doi: 10.1126/scitranslmed.3003200
+pmid: '22496545'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Adverse metabolic consequences in humans of prolonged sleep restriction combined with
+    circadian disruption.
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 21
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: US
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: metabolic
+  outcome_construct: postprandial_glucose_and_insulin_secretion
+  exposure:
+    type: chronic_restriction
+    dose_h: 5.6
+    referent_h: null
+    duration_days: 21
+    contrast_label: 3 weeks of 5.6 h sleep per 24 h WITH concurrent circadian disruption, measured at
+      the same circadian phase
+  scale: pct_change
+  unit: percent
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Direction is HARM (glucose rose after meals because pancreatic insulin secretion was
+    inadequate) but the abstract gives NO numeric magnitude and the sentence describing the protocol is
+    truncated in the PubMed record. value=0.0/se=null placeholder; DO NOT POOL as a magnitude.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Exposure to prolonged sleep restriction with concurrent circadian disruption, with measurements
+    taken at the same circadian phase, decreased the participants' resting metabolic rate and increased
+    plasma glucose concentrations after a meal, an effect resulting from inadequate pancreatic insulin
+    secretion.
+- outcome_domain: recovery
+  outcome_construct: full_normalisation_after_9_days_recovery
+  exposure:
+    type: recovery_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: 9
+    contrast_label: 9 days of recovery sleep with stable circadian re-entrainment
+  scale: pct_change
+  unit: percent
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'RECOVERY, not harm: the metabolic derangements NORMALISED after 9 days of adequate
+    sleep plus stable re-entrainment. Highly decision-relevant because it bounds the persistence of misalignment
+    harm. value=0.0/se=null encodes the stated normalisation; do not pool.'
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: These parameters normalized during the 9 days of recovery sleep and stable circadian re-entrainment.
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: Over 5 weeks of continuous inpatient control, the longest such protocol available, with measurement
+    at matched circadian phase. But small; and by design it CONFOUNDS restriction with disruption, so
+    unlike leproult2014 it cannot separate the two.
+funding: null
+notes: 'IMPORTANT LIMITATION TO STATE PLAINLY: despite being the study most often cited for ''misalignment
+  harms metabolism'', this protocol applied restriction AND disruption TOGETHER with no restriction-only
+  arm, so it CANNOT isolate the independent effect of misalignment. For that, leproult2014 is the correct
+  citation. Its distinctive contribution is the RECOVERY result: 9 days of adequate sleep with stable
+  re-entrainment normalised the metabolic measures. n=21 is taken from ''Healthy adults'' reported in
+  the abstract; the abstract text is partly truncated in the PubMed record and I did not retrieve the
+  full text, hence no magnitudes.'
+shard: s16_social_jetlag

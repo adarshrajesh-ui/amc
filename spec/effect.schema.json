@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "effect.schema.json",
+  "title": "Evidence record: one study contributing one or more effect estimates",
+  "type": "object",
+  "required": ["study_id", "citation", "design", "tier", "n", "population", "access_tier", "effects", "rob"],
+  "additionalProperties": false,
+  "properties": {
+    "study_id": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+    "citation": {"type": "string", "minLength": 20},
+    "doi": {"type": ["string", "null"]},
+    "pmid": {"type": ["string", "integer", "null"]},
+    "url": {"type": ["string", "null"]},
+    "verification": {
+      "type": "object",
+      "properties": {
+        "crossref_ok": {"type": ["boolean", "null"]},
+        "pubmed_ok": {"type": ["boolean", "null"]},
+        "title_similarity": {"type": ["number", "null"]},
+        "status": {"enum": ["VERIFIED", "UNVERIFIED", "NOT_CHECKED"]},
+        "resolved_title": {"type": ["string", "null"]}
+      }
+    },
+    "access_tier": {"enum": ["full_text", "abstract_only", "secondhand"]},
+    "secondhand_via": {"type": ["string", "null"]},
+    "design": {
+      "enum": [
+        "rct_parallel", "rct_crossover", "lab_restriction_within_subject",
+        "quasi_experiment", "instrumental_variable", "mendelian_randomization",
+        "prospective_cohort_objective", "prospective_cohort_selfreport",
+        "cross_sectional", "meta_analysis_of_trials", "meta_analysis_observational",
+        "dose_response_meta_analysis", "life_table", "guideline_consensus", "normative_descriptive"
+      ]
+    },
+    "tier": {"enum": ["T1", "T2", "T3", "T4", "T5", "TX"]},
+    "n": {"type": ["integer", "null"], "minimum": 1},
+    "n_studies_pooled": {"type": ["integer", "null"]},
+    "population": {
+      "type": "object",
+      "required": ["adolescent_match"],
+      "properties": {
+        "age_mean": {"type": ["number", "null"]},
+        "age_range": {"type": ["array", "null"], "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+        "pct_female": {"type": ["number", "null"]},
+        "country": {"type": ["string", "null"]},
+        "adolescent_match": {
+          "enum": ["exact_16_19", "good_young_adult", "fair_adult", "poor_midlife", "poor_elderly", "mixed"],
+          "description": "transportability of this population to a 16-19 year old"
+        }
+      }
+    },
+    "effects": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["outcome_domain", "outcome_construct", "exposure", "scale", "value", "se"],
+        "properties": {
+          "outcome_domain": {
+            "enum": ["cognition", "brain_structure", "neurodegeneration", "metabolic", "cardiovascular",
+                     "anthropometric", "immune", "endocrine", "psychiatric", "mortality", "academic",
+                     "sleep_need", "recovery", "circadian", "exposure_measurement", "baseline_risk", "comparator"]
+          },
+          "outcome_construct": {"type": "string"},
+          "exposure": {
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+              "type": {"enum": ["chronic_restriction", "total_deprivation", "habitual_short_sleep",
+                                "per_hour_less_sleep", "social_jetlag", "weekend_catchup", "recovery_sleep",
+                                "sleep_extension", "descriptive", "other"]},
+              "dose_h": {"type": ["number", "null"], "description": "time in bed or TST at exposure level"},
+              "referent_h": {"type": ["number", "null"]},
+              "duration_days": {"type": ["number", "null"]},
+              "contrast_label": {"type": ["string", "null"]}
+            }
+          },
+          "scale": {"enum": ["hedges_g", "cohens_d", "smd", "log_rr", "log_hr", "log_or",
+                             "raw_units", "pct_change", "per_hour_beta", "probability", "years", "hours"]},
+          "unit": {"type": ["string", "null"]},
+          "value": {"type": "number"},
+          "se": {"type": ["number", "null"]},
+          "ci": {"type": ["array", "null"], "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+          "conversion_formula": {"type": ["string", "null"]},
+          "from_figure": {"type": "boolean", "default": false},
+          "inferred_from_ci": {"type": "boolean", "default": false},
+          "direction_note": {"type": ["string", "null"], "description": "what sign means; harm must be explicit"},
+          "covariates": {"type": ["array", "null"], "items": {"type": "string"}},
+          "followup_years": {"type": ["number", "null"]},
+          "cohort_family": {"type": ["string", "null"], "description": "e.g. UK_Biobank, Whitehall_II; used to de-duplicate correlated effects"}
+        }
+      }
+    },
+    "rob": {
+      "type": "object",
+      "required": ["tool", "judgement"],
+      "properties": {
+        "tool": {"enum": ["RoB2", "ROBINS-I", "Newcastle-Ottawa", "AMSTAR-2", "MR-STROBE", "none"]},
+        "judgement": {"enum": ["low", "some_concerns", "moderate", "high", "critical", "na"]},
+        "notes": {"type": ["string", "null"]}
+      }
+    },
+    "funding": {"type": ["string", "null"]},
+    "notes": {"type": ["string", "null"]},
+    "shard": {"type": ["string", "null"]}
+  }
+}

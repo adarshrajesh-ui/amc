@@ -1,0 +1,106 @@
+study_id: kocevska2017
+citation: "Kocevska D, Muetzel RL, Luik AI, Luijk MP, Jaddoe VW, Verhulst FC, White T, Tiemeier H. The Developmental Course of Sleep Disturbances Across Childhood Relates to Brain Morphology at Age 7: The Generation R Study. Sleep. 2017;40(1):zsw022."
+doi: "10.1093/sleep/zsw022"
+pmid: "28364462"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "The Developmental Course of Sleep Disturbances Across Childhood Relates to Brain Morphology at Age 7: The Generation R Study"
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 720
+n_studies_pooled: null
+population:
+  age_mean: 7.0
+  age_range: [7, 7]
+  pct_female: null
+  country: "Netherlands"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: total_grey_matter_volume_vs_sleep_disturbance_age6
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "per 1 SD parent-reported sleep disturbance at age 6 y (one frequent symptom or two less frequent symptoms) vs total grey matter volume at age 7 y"}
+    scale: raw_units
+    unit: "cm3 grey matter volume per 1 SD sleep disturbance"
+    value: -7.3
+    se: 2.423
+    ci: [-12.1, -2.6]
+    conversion_formula: "Reported directly: -7.3 (95% CI -12.1 to -2.6), p=0.01. se = (upper - lower)/3.92 = (-2.6 - (-12.1))/3.92 = 9.5/3.92 = 2.423."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = MORE sleep disturbance associated with SMALLER grey matter volume. This is the harm direction. Magnitude context: total GM volume at this age is roughly 700-800 cm3, so -7.3 cm3 is on the order of 1% per SD of sleep disturbance."
+    covariates: ["age at MRI", "sex", "and additional cohort covariates (not enumerated in abstract)"]
+    followup_years: 1.0
+    cohort_family: "Generation_R"
+    quote: "Sleep disturbances at age 6 years were associated with global brain morphology (grey matter: -7.3 (-12.1 to -2.6), p value = .01)."
+  - outcome_domain: brain_structure
+    outcome_construct: total_grey_matter_volume_vs_sleep_disturbance_age2
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "per 1 SD sleep disturbance at age 2 y vs total grey matter volume at age 7 y"}
+    scale: raw_units
+    unit: "cm3 grey matter volume per 1 SD sleep disturbance"
+    value: -6.3
+    se: 2.781
+    ci: [-11.7, -0.8]
+    conversion_formula: "Reported directly: -6.3 (-11.7 to -0.8). se = (-0.8 - (-11.7))/3.92 = 10.9/3.92 = 2.781."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = harm direction. Note the CI nearly touches zero."
+    covariates: ["age at MRI", "sex"]
+    followup_years: 5.0
+    cohort_family: "Generation_R"
+    quote: "Per SD sleep disturbances (one frequent symptom or two less frequent symptoms) at 2 and 3 years of age, children had -6.3 (-11.7 to -0.8) cm3 and -6.4 (-11.7 to -1.7) cm3 smaller grey matter volumes, respectively."
+  - outcome_domain: brain_structure
+    outcome_construct: total_grey_matter_volume_vs_infant_sleep
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "sleep disturbance at age 2 MONTHS vs total grey matter volume at age 7 y"}
+    scale: raw_units
+    unit: "cm3 grey matter volume per 1 SD sleep disturbance"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded null. Authors state infant sleep was not associated with brain morphology at age 7; no numeric estimate published for the null in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no association. Relevant to the sensitive-period question: the EARLIEST exposure window showed nothing, and associations only appeared from age 2 onwards."
+    covariates: ["age at MRI", "sex"]
+    followup_years: 6.8
+    cohort_family: "Generation_R"
+    quote: "Infant sleep was not associated with brain morphology at age 7."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Prospective repeated exposure measurement (5 waves from 2 months to 6 years) is a real strength, but the brain outcome is measured ONCE at age 7, so this is exposure-prospective / outcome-cross-sectional and cannot identify structural CHANGE. Exposure is maternal-report sleep DISTURBANCE (symptom count), not sleep DURATION - a different construct that overlaps with child temperament and psychopathology. Covariate list not fully retrievable from the abstract. Reverse causation is plausible: a child whose brain development differs may sleep differently."
+funding: "Erasmus MC, Netherlands Organization for Health Research and Development (ZonMw); Generation R core funding"
+notes: |
+  THE ONLY STUDY IN THIS SHARD THAT REPORTS AN INTERPRETABLE VOLUMETRIC MAGNITUDE IN cm3.
+  Roughly -7 cm3 of total grey matter per SD of sleep disturbance, i.e. about 1% of total GM.
+
+  FOUR REASONS IT TRANSPORTS POORLY TO A 19-YEAR-OLD, ALL OF WHICH MUST BE CARRIED DOWNSTREAM:
+
+  1. WRONG EXPOSURE. The predictor is sleep DISTURBANCE (symptom counts: difficulty falling
+     asleep, night waking), not chronic voluntary sleep RESTRICTION. A 17-year-old who stays up
+     doing coursework and a 3-year-old with night wakings are not the same exposure.
+
+  2. WRONG AGE. Exposure ages 2 months to 6 years; brain measured at 7 years. This is early
+     childhood, an entirely different phase of cortical development. adolescent_match is set to
+     poor_midlife only because the schema has no 'poor_early_childhood' category - the mismatch
+     is if anything worse than that label implies.
+
+  3. ONE SCAN. No structural change is measured, so 'affects brain maturation' is an inference,
+     not a finding.
+
+  4. THE CIs ARE WIDE AND NEARLY INCLUDE ZERO for the age-2 and age-3 exposures (-11.7 to -0.8
+     and -11.7 to -1.7).
+
+  WHAT IT DOES USEFULLY ESTABLISH: an upper bound on the plausible scale of a chronic-sleep-
+  related grey matter difference in a well-powered developmental cohort - about 1% per SD of a
+  fairly severe exposure. Even taken fully at face value and transported, effects of this size
+  have no established mapping to any functional outcome in an individual.
+shard: "s15_brain_structure"

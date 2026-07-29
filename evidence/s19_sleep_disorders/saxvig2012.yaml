@@ -1,0 +1,74 @@
+study_id: saxvig2012
+citation: "Saxvig IW, Pallesen S, Wilhelmsen-Langeland A, Molde H, Bjorvatn B. Prevalence and correlates of delayed sleep phase in high school students. Sleep Med. 2012;13(2):193-199."
+doi: "10.1016/j.sleep.2011.10.024"
+pmid: "22153780"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Prevalence and correlates of delayed sleep phase in high school students."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 1285
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [16, 19]
+  pct_female: null
+  country: "Norway"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: circadian
+    outcome_construct: prevalence_delayed_sleep_phase_trait
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "delayed sleep phase = cannot fall asleep before 02:00 on >=3 nights/week PLUS much/very much difficulty waking, ages 16-19"}
+    scale: probability
+    unit: "proportion of high school students"
+    value: 0.084
+    se: 0.00774
+    ci: [0.0688, 0.0992]
+    conversion_formula: "8.4% verbatim from abstract. se = sqrt(0.084*0.916/1285) = 0.00774; Wald 95% CI = 0.084 +/- 1.96*se = [0.0688, 0.0992]. My construction; the paper reports no CI."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive. THIS IS THE 'DELAYED CHRONOTYPE / TRAIT' NUMBER THE TASK ASKED FOR, AS DISTINCT FROM THE DISORDER. The operationalization is deliberately loose (two symptom items, no impairment requirement, no 3-month duration requirement, no exclusion of other causes), which is exactly why it is 2-3x the ICSD-3 disorder prevalence."
+    covariates: []
+    followup_years: null
+    cohort_family: "Hordaland_HS_2005"
+    quote: "Delayed sleep phase was operationalized as difficulties falling asleep before 2 a.m. at least three nights per week together with much or very much difficulty waking up in the morning. ... The results show a prevalence of delayed sleep phase of 8.4%."
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_delayed_sleep_phase_with_impairment
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "delayed sleep phase PLUS inability to advance sleep PLUS >=1 daytime consequence, ages 16-19"}
+    scale: probability
+    unit: "proportion of high school students"
+    value: 0.057
+    se: 0.00647
+    ci: [0.0443, 0.0697]
+    conversion_formula: "'68% of these students (5.7% of the total sample)' verbatim from abstract. se = sqrt(0.057*0.943/1285) = 0.00647; Wald 95% CI = [0.0443, 0.0697]. My construction."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive. THE TRAIT-TO-DISORDER ATTRITION IS THE POINT: adding the two clinically decisive requirements (cannot advance the sleep period; at least one daytime consequence) removes only 32% of cases, 8.4% -> 5.7%. So among 16-19 year olds with a delayed phase, TWO THIRDS already carry impairment. This is the strongest argument in the shard for actually screening rather than assuming benign lateness."
+    covariates: []
+    followup_years: null
+    cohort_family: "Hordaland_HS_2005"
+    quote: "In all, 68% of these students (5.7% of the total sample) also reported problems advancing their sleep period as well as one daytime consequence (oversleeping at least two days a week or experiencing much/very much sleepiness at school)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "Randomized sample of 1,285 Norwegian high-school students aged 16-19 - the best age match in the whole shard - but everything is self-report via an internet questionnaire, the delayed-sleep-phase definition is a two-item symptom rule that does not attempt ICSD criteria, and no response rate is given in the abstract. The 02:00 sleep-onset threshold is an arbitrary clock time rather than a phase measure, so it will misclassify anyone whose social schedule is itself late. Abstract-only access (Unpaywall is_oa = false), so I could not audit the item wording, the response rate, or the sex breakdown."
+funding: "Not stated in the abstract"
+notes: |
+  ACCESS: abstract only. Unpaywall reports is_oa = false for 10.1016/j.sleep.2011.10.024.
+  SAME COHORT AS pallesen2011: both are the n=1285 Hordaland high-school internet survey (16-19 y) by the same
+  Bergen group. pallesen2011 reports BIISS = 10.4% in that identical sample and saxvig2012 reports delayed sleep
+  phase = 8.4% in it. cohort_family Hordaland_HS_2005 is set on both so the pooler does not treat them as
+  independent. THAT OVERLAP IS ITSELF A FINDING: in one sample of 1,285 late adolescents, ~8% screen positive for
+  a delayed phase and ~10% screen positive for behaviourally induced insufficient sleep, and the paper does not
+  report how many are the same people. The two hypotheses in our subject's differential are NOT rare-versus-common;
+  they are both roughly one-in-ten phenomena in this age band.
+  WHY I RECORDED BOTH THE 8.4% AND THE 5.7%. The task explicitly asked for the prevalence of a delayed chronotype
+  as distinct from the disorder. 8.4% is the trait-ish figure and 5.7% is the closest this paper gets to a
+  disorder-level figure. Neither is an ICSD-3 diagnosis. The ICSD-3-anchored numbers come from sivertsen2021
+  (4.7% males) and danielsson2016 (4.0% DSM-5 DSPD).
+shard: "s19_sleep_disorders"

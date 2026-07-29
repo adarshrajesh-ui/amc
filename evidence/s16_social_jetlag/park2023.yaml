@@ -1,0 +1,124 @@
+study_id: park2023
+citation: 'Park GR, Kim J. Short sleep duration and adolescent health: does weekend catch-up sleep work
+  and for whom? Public Health. 2023;214:91-95.'
+doi: 10.1016/j.puhe.2022.11.008
+pmid: '36521277'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Short sleep duration and adolescent health: does weekend catch-up sleep work and for
+    whom?'
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 6633
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 13
+  - 18
+  pct_female: null
+  country: KR
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: bmi_per_hour_weekend_catchup_within_person
+  exposure:
+    type: weekend_catchup
+    dose_h: 1.0
+    referent_h: null
+    duration_days: null
+    contrast_label: per 1 h more weekend catch-up sleep, WITHIN-PERSON fixed-effects across 6 waves
+  scale: per_hour_beta
+  unit: BMI kg/m2 per h catch-up
+  value: 0.021
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'POSITIVE = more weekend catch-up predicted HIGHER BMI once individual heterogeneity
+    was differenced out. HARM. The authors report that controlling for individual heterogeneity CHANGED
+    THE SIGN of this coefficient, i.e. the cross-sectional protective association was confounded. se=null:
+    no CI or SE in the abstract.'
+  covariates:
+  - individual_fixed_effects
+  - wave
+  followup_years: 5.0
+  cohort_family: KCYPS_2011_2016
+  quote: Controlling for individual heterogeneity, however, changed the sign of the WCS duration coefficient,
+    suggesting that a longer WCS duration is positively associated with BMI (b = 0.021). No such patterns
+    were found for SRH.
+- outcome_domain: anthropometric
+  outcome_construct: bmi_short_weekday_sleep_within_person
+  exposure:
+    type: habitual_short_sleep
+    dose_h: 6.0
+    referent_h: null
+    duration_days: null
+    contrast_label: weekday sleep <6 h, within-person fixed effects
+  scale: per_hour_beta
+  unit: BMI kg/m2
+  value: 0.203
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'POSITIVE = sleeping <6 h on weekdays raised BMI by 0.203 units within the same adolescent
+    over time. HARM from DURATION, and roughly 10x the catch-up coefficient, so duration dominates. se=null:
+    no CI in the abstract.'
+  covariates:
+  - individual_fixed_effects
+  - wave
+  followup_years: 5.0
+  cohort_family: KCYPS_2011_2016
+  quote: Sleeping less than 6 h increased BMI by 0.203 and the probability of reporting poor SRH by about
+    2 percentage points.
+- outcome_domain: anthropometric
+  outcome_construct: confounding_share_removed_by_fixed_effects
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: proportion of the short-sleep/BMI association due to unobserved individual heterogeneity
+  scale: probability
+  unit: null
+  value: 0.62
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 62% of the cross-sectional short-sleep-BMI association, and 30% of the poor-self-rated-health
+    association, was confounding by stable individual characteristics. A direct quantification of how
+    much the cross-sectional literature in this shard overstates itself.
+  covariates: []
+  followup_years: 5.0
+  cohort_family: KCYPS_2011_2016
+  quote: Fixed effects estimates suggest that part of the associations between short sleep duration and
+    adolescent health are confounded by unobserved individual heterogeneity (62% for BMI and 30% for poor
+    SRH), although the associations remain statistically significant.
+rob:
+  tool: ROBINS-I
+  judgement: moderate
+  notes: 'The strongest observational design in this shard for the catch-up question: 6 waves of panel
+    data with INDIVIDUAL FIXED EFFECTS, which removes all stable confounding. Remaining concerns: self-reported
+    sleep and BMI, time-varying confounding not addressed, and no CIs reported in the abstract.'
+funding: null
+notes: 'THE MOST IMPORTANT RECORD FOR ADJUDICATING THE CATCH-UP TENSION, because it applies within-person
+  identification to the exact question. Its result is that the protective cross-sectional association
+  for catch-up REVERSES SIGN when stable individual differences are removed, and it quantifies the confounding
+  in the wider literature at 62% for BMI. That is strong evidence that the many Korean cross-sectional
+  ''catch-up protects against obesity'' findings (lee2025, choi2023) are substantially confounded. The
+  authors'' own nuanced conclusion, which is the position I adopt: ''WCS duration is protective only for
+  those who are most sleep deprived.'' Note also the magnitudes: weekday short sleep moves BMI by 0.203,
+  catch-up by 0.021, so the duration effect is about an order of magnitude larger than the catch-up effect
+  in either direction.'
+shard: s16_social_jetlag

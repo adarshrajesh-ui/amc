@@ -1,0 +1,72 @@
+study_id: chaput2022_years_of_life
+citation: Chaput JP, Carrier J, Bastien C, Gariepy G, Janssen I. Years of life gained when meeting sleep
+  duration recommendations in Canada. Sleep Med. 2022;100:85-88.
+doi: 10.1016/j.sleep.2022.08.006
+pmid: '36029755'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Years of life gained when meeting sleep duration recommendations in Canada.
+access_tier: abstract_only
+design: life_table
+n: null
+population:
+  age_mean: null
+  age_range:
+  - 20
+  - 100
+  pct_female: null
+  country: Canada
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: life_expectancy_at_20_lost_by_short_sleepers
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: habitual short sleep vs meeting national sleep duration recommendations, sustained
+      from age 20
+  scale: years
+  unit: years of life expectancy at age 20 lost by short vs recommended sleepers
+  value: -1.2
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'negative = life lost by short sleepers. THE SINGLE MOST USEFUL EXTERNAL CROSS-CHECK
+    IN THIS SHARD: it is a published answer, at index age 20, to almost exactly the question this project
+    asks, computed with exactly the machinery documented in competing_risk_method.md. No CI reported,
+    so se is null.'
+  covariates: []
+  followup_years: null
+  cohort_family: Canadian_national_life_tables
+  quote: Adults who meet the sleep duration recommendations have an estimated life expectancy at age 20
+    years that is 1.2 years longer than short sleepers and 2.6 years longer than long sleepers. Differences
+    between men and women were minimal.
+rob:
+  tool: ROBINS-I
+  judgement: high
+  notes: The life-table arithmetic is sound; the causal input is not. The all-cause mortality relative
+    risks are imported from observational meta-analyses of self-reported habitual sleep duration, which
+    carry reverse causation (illness shortens and lengthens sleep), residual confounding by shift work,
+    depression, obesity and socioeconomic position, and measurement error. Canadian life tables and Canadian
+    sleep prevalence, not US. No adolescents. Applies a single lifelong RR from age 20, which is the OPPOSITE
+    of this project's 3-year adolescent exposure, so 1.2 years is an UPPER BOUND on the mortality-channel
+    cost of 3 years of restriction unless the exposure permanently reprograms risk. Life-years only, no
+    QALY weighting.
+funding: null
+notes: 'REPRODUCED BY THIS SHARD: feeding an all-cause mortality hazard ratio of 1.10-1.13 lifelong from
+  age 20 through the NCHS 2023 US male life table gives -1.15 to -1.48 years at age 20 (hr_to_life_expectancy.py
+  section G). The published 1.2-year figure sits inside that band. Two different life tables and two independent
+  implementations agree, which validates the conversion machinery. This is the end-to-end calibration
+  target in competing_risk_method.md section 4.'
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

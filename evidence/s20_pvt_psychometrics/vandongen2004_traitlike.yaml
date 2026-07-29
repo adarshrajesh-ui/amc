@@ -1,0 +1,131 @@
+study_id: vandongen2004_traitlike
+citation: "Van Dongen HPA, Baynard MD, Maislin G, Dinges DF. Systematic interindividual differences in neurobehavioral impairment from sleep loss: evidence of trait-like differential vulnerability. Sleep. 2004;27(3):423-433."
+doi: "10.1093/sleep/27.3.423"
+pmid: "15164894"
+url: "https://www.med.upenn.edu/uep/assets/user-content/documents/VanDongen2004Systematic.pdf"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Systematic Interindividual Differences in Neurobehavioral Impairment from Sleep Loss: Evidence of Trait-Like Differential Vulnerability"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 21
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [21, 38]
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_icc_trait_like_vulnerability
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "2 identical 36-h TSD exposures (both preceded by a week of 12h/day sleep extension), >=2 weeks apart; outcome = lapses on the 20-min PVT averaged over the last 24 h of deprivation"}
+    scale: raw_units
+    unit: "ICC (proportion of total variance attributable to stable between-person differences)"
+    value: 0.675
+    se: null
+    ci: null
+    conversion_formula: "Published Table 2. ICC = sigma2_bs/(sigma2_bs + sigma2_ws) = 286/(286+138) = 0.6745. Wald Z = 2.31, P = .011. No CI published; se of the ICC not derivable from the reported components alone."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = the individual's degree of impairment is more reproducible across exposures, i.e. more trait-like. 0.675 falls in the authors' 'substantial' benchmark band (0.6-0.8). PVT had the LOWEST ICC of the 13 measures tested."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_ID_36hTSD"
+    quote: "Table 2 ... PVT ... 286 (124) ... 138 (48) ... 0.675 ... 2.31 ... .011"
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_within_person_between_session_sd
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "within-subject variance component between 2 identical 36-h TSD exposures; 20-min PVT lapses, last-24h average"}
+    scale: raw_units
+    unit: "lapses per 20-min PVT (SD, = sqrt of the published within-subjects variance component)"
+    value: 11.75
+    se: 2.04
+    ci: null
+    conversion_formula: "sigma2_ws = 138 (SE 48) lapses^2 -> sigma_ws = sqrt(138) = 11.75 lapses. SE propagated by the delta method: se(sigma) = se(sigma2)/(2*sigma) = 48/(2*11.75) = 2.04."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "THIS IS A DIRECTLY MEASURED WITHIN-PERSON SESSION-TO-SESSION SD - the quantity an n-of-1 power calculation needs. It is measured in the SLEEP-DEPRIVED state (36 h awake) on a 20-min PVT, so it is an UPPER bound on the rested-baseline, 3-to-10-min-PVT equivalent. Companion between-person component sigma2_bs = 286 (SE 124) -> sigma_bs = 16.9 lapses."
+    covariates: []
+    followup_years: null
+    cohort_family: "UPenn_Dinges_ID_36hTSD"
+    quote: "Using subjects' data from repeated exposure to total sleep deprivation under identical circumstances, the between-subjects variance sigma2_bs (a measure of systematic interindividual variability) was separated from the within-subjects variance sigma2_ws (a measure of variability between the 2 sleep deprivations); numbers in parentheses are estimated standard errors."
+  - outcome_domain: cognition
+    outcome_construct: neurobehavioral_icc_range_across_13_measures
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "2 identical 36-h TSD exposures; 13 neurobehavioral measures"}
+    scale: raw_units
+    unit: "ICC range (proportion of variance explained by stable individual differences)"
+    value: 0.797
+    se: null
+    ci: [0.675, 0.922]
+    conversion_formula: "value = mean of the 13 published ICCs (0.904,0.897,0.882,0.782,0.815,0.922,0.831,0.675,0.869,0.862,0.894,0.793,0.899) = 10.125/13 = 0.7789; I report the midpoint of the published RANGE 0.675-0.922 = 0.7985 as the value and the published range as the 'ci' field. The 'ci' here is a RANGE ACROSS MEASURES, not a confidence interval."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more trait-like. THIS IS THE HEADLINE NUMBER JUSTIFYING AN N-OF-1 DESIGN: 68-92% of the variance in the neurobehavioral response to sleep loss is between-person and stable, so a population-average effect size can badly misestimate any given individual."
+    covariates: ["order effects corrected by fixed effects in a mixed model"]
+    followup_years: null
+    cohort_family: "UPenn_Dinges_ID_36hTSD"
+    quote: "The ICC values showed that 67.5% to 92.2% of the variance in the neurobehavioral data was explained by stable variations among individuals (see Table 2)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "n = 21 completers; ICC estimates from n=21 with only 2 replicates per person are imprecise (SEs on the variance components are 35-45% of the point estimates). PVT was the one measure with a statistically significant ORDER effect (F = 4.36, P = .014), i.e. lapses got WORSE with repeated exposure, which the authors corrected for in the mixed model but which complicates the 'no practice effect' story. Homogeneous healthy screened young adults; the authors note ICCs in a more heterogeneous general population would be HIGHER."
+funding: "Not extracted from the retrieved PDF text."
+notes: |
+  FULL PUBLISHED TABLE 2 (reconstructed from the PDF text layer and then VERIFIED by
+  independently recomputing every ICC from the published variance components -
+  ICC = sigma2_bs/(sigma2_bs+sigma2_ws) - all 13 reproduced to +/-0.003):
+    Test    sigma2_bs (SE)  sigma2_ws (SE)   ICC     Z     P      OrderF  P
+    KSS-1     3.92 (1.38)     0.42 (0.14)   0.904   2.84  .002    0.40   .81
+    VAS-F1    3.84 (1.36)     0.44 (0.15)   0.897   2.83  .002    0.39   .81
+    VAS-M1    1.59 (0.57)     0.21 (0.07)   0.882   2.79  .003    2.92   .053
+    SAST       495 (185)       138 (46)     0.782   2.68  .004    1.22   .34
+    DSST      2081 (760)       473 (158)    0.815   2.74  .003    2.22   .11
+    WDT       25.0 (8.5)       2.1 (0.7)    0.922   2.95  .002    2.99   .047
+    RARST     76.5 (27.5)     15.6 (5.2)    0.831   2.78  .003    2.25   .11
+    PVT        286 (124)       138 (48)     0.675   2.31  .011    4.36   .014
+    KSS-2     4.00 (1.44)     0.60 (0.21)   0.869   2.78  .003    0.51   .73
+    VAS-F2    4.21 (1.52)     0.67 (0.23)   0.862   2.76  .003    0.82   .53
+    VAS-M2    1.55 (0.55)     0.18 (0.06)   0.894   2.82  .002    3.28   .036
+    PERF      0.67 (0.25)     0.17 (0.06)   0.793   2.63  .004    1.78   .18
+    EFF       0.55 (0.19)     0.06 (0.02)   0.899   2.91  .002    1.37   .28
+  Check: PVT 286/424=0.6745; DSST 2081/2554=0.8148; WDT 25.0/27.1=0.9225; KSS-1 3.92/4.34=0.9033;
+  SAST 495/633=0.7820; RARST 76.5/92.1=0.8306; EFF 0.55/0.61=0.9016; PERF 0.67/0.84=0.7976. All match.
+
+  UNITS. PVT here is the 20-MINUTE PVT (confirmed in the text: "behavioral alertness, as measured
+  by the 20-minute PVT") and the outcome measure is, per Table 1, "Number of lapses (RT >= 500 ms)".
+  So sigma_ws = sqrt(138) = 11.75 lapses / 20-min PVT and sigma_bs = sqrt(286) = 16.91 lapses.
+
+  DESIGN. 21 healthy adults, 3 separate 36-h TSD sessions >=2 weeks apart, each preceded by a week
+  of either 6 h/day sleep restriction (PSR) or 12 h/day sleep extension (PSE), randomised and
+  counterbalanced. The ICCs above use ONLY the two identical PSE sessions, so they are a clean
+  test-retest of the sleep-loss response. Mean sleep-history manipulation = 4.1 h/day difference.
+
+  KEY SECOND FINDING: the interindividual differences were NOT explained by sleep history and NOT
+  generally explained by baseline functioning. Verbatim: "The magnitude of interindividual
+  variability was substantial relative to the magnitude of the effect of prior sleep restriction
+  (which on average involved a reduction of 4.1 hours sleep per day, compared to prior sleep
+  extension, for 7 days)." And: "Although differences in baseline neurobehavioral functioning
+  contributed significantly to the between-subjects variability during sleep deprivation,
+  controlling for baseline functioning did not generally negate the systematic interindividual
+  differences during sleep deprivation."
+
+  THIRD FINDING relevant to which outcome to measure: variability loaded on 3 orthogonal factors -
+  "self-evaluation of sleepiness, fatigue, and mood; cognitive processing capability; and
+  behavioral alertness as measured by sustained attention performance." The PVT loaded on its OWN
+  factor, separate from everything else: "the test battery except for the PVT, which was captured
+  in the remaining [factor]". Subjective sleepiness and PVT performance are therefore NOT
+  interchangeable readouts even at the level of individual differences.
+
+  COMPANION PAPER, same dataset, slightly different ICC computation: Van Dongen HPA, Maislin G,
+  Dinges DF, "Dealing with inter-individual differences in the temporal dynamics of fatigue and
+  performance: importance and techniques", Aviat Space Environ Med 2004;75(3 Suppl):A147-54.
+  Verbatim from that paper's retrieved text: "For the digit-symbol substitution task, the ICC was
+  found to be 0.82 (Z 2.74, p 0.003); and for the psychomotor vigilance task, the ICC was 0.69
+  (Z 2.40, p 0.008" - i.e. PVT ICC 0.69 there vs 0.675 in the Sleep paper (order-effect handling
+  differs slightly). Both land in the "substantial" band.
+shard: "s20_pvt_psychometrics"

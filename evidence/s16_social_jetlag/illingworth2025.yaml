@@ -1,0 +1,87 @@
+study_id: illingworth2025
+citation: 'Illingworth G, Manchanda T, Skripkauskaite S, Fazel M, Waite F. Social jetlag and sleep habits
+  in children and adolescents: Associations with autonomy (bedtime setting and electronics curfew) and
+  electronic media use before sleep. Chronobiology International. 2025;42(1):46-57.'
+doi: 10.1080/07420528.2024.2444675
+pmid: '39760865'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Social jetlag and sleep habits in children and adolescents: Associations with autonomy
+    (bedtime setting and electronics curfew) and electronic media use before sleep.'
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: 19760
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 9
+  - 18
+  pct_female: 55.0
+  country: GB
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: circadian
+  outcome_construct: mean_social_jetlag_school_aged
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: whole-sample mean SJL, ages 9-18
+  scale: hours
+  unit: h
+  value: 1.883
+  se: 0.00797
+  ci:
+  - 1.868
+  - 1.899
+  conversion_formula: 1 h 53 min = 1 + 53/60 = 1.883 h; SD 1 h 7 min = 1.117 h; se = SD/sqrt(n) = 1.117/sqrt(19760)
+    = 0.00795
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = larger misalignment. NORMATIVE REFERENCE VALUE, not a harm estimate.
+  covariates:
+  - age
+  - gender
+  followup_years: null
+  cohort_family: OxWell_2021
+  quote: The mean SJL was 1 h 53 min (SD = 1 h 7 min) and peaked at 2 h 7 min at age 15.
+- outcome_domain: circadian
+  outcome_construct: peak_mean_social_jetlag_by_age
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: population mean SJL at its age-15 maximum
+  scale: hours
+  unit: h
+  value: 2.117
+  se: null
+  ci: null
+  conversion_formula: 2 h 7 min = 2 + 7/60 = 2.117 h
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = larger misalignment. Second independent age-specific normative anchor.
+  covariates: []
+  followup_years: null
+  cohort_family: OxWell_2021
+  quote: The mean SJL was 1 h 53 min (SD = 1 h 7 min) and peaked at 2 h 7 min at age 15.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Large school-based survey but cross-sectional and self-reported sleep timing; English schools
+    only. SD available so the population distribution is usable.
+funding: null
+notes: SECOND NORMATIVE ANCHOR, and the one with a usable SD (1.117 h), which lets the modeller place
+  an individual as a z-score. Reports the SJL peak ~2.1 h at age 15, i.e. ~1.2 h LOWER than randler2019's
+  3.30 h peak at age 16. The two studies used different populations and self-report instruments; I report
+  both rather than choosing.
+shard: s16_social_jetlag

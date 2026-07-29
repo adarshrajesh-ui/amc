@@ -1,0 +1,81 @@
+study_id: lee2025
+citation: Lee MR, Hwangbo Y, Kim JH, Yang KI, Hong SB. The association between weekend catch-up sleep and the reduction of obesity and overweight risk in adolescents with insufficient weekday sleep. Sleep and Breathing. 2025;29(2):184.
+doi: 10.1007/s11325-025-03349-5
+pmid: '40366483'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: The association between weekend catch-up sleep and the reduction of obesity and overweight risk in adolescents with insufficient weekday sleep.
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 12434
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 15
+  - 18
+  pct_female: null
+  country: South Korea
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: overweight_obesity_odds_with_3h_or_more_weekend_catchup_sleep
+  exposure:
+    type: weekend_catchup
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: '>=3 h weekend catch-up sleep vs no catch-up sleep, Korean high school students'
+  scale: log_or
+  unit: null
+  value: -0.4005
+  se: 0.0865
+  ci:
+  - -0.5621
+  - -0.2231
+  conversion_formula: log_or = ln(0.67) = -0.4005; se = (ln(0.80) - ln(0.57))/3.92 = 0.0864
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NEGATIVE = >=3 h of weekend catch-up sleep associated with 33% LOWER odds of overweight/obesity. Protective direction, and the authors report it persisted in the subgroup reporting insufficient weekday sleep - i.e. exactly our subject's pattern. CROSS-SECTIONAL, so causality is not established and reverse causation (heavier adolescents catching up less) is fully consistent with the data.
+  covariates:
+  - age
+  - sex
+  - covariates per paper
+  followup_years: null
+  cohort_family: Korea_high_school_survey
+  quote: 'Students with 3 or more h of CUS had lower odds of being overweight/obesity (odds ratio = 0.67, 95% confidence interval: 0.57-0.80) compared to those with non-CUS.'
+- outcome_domain: anthropometric
+  outcome_construct: bmi_z_with_3h_or_more_weekend_catchup_sleep
+  exposure:
+    type: weekend_catchup
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: '>=3 h weekend catch-up sleep vs no catch-up sleep; BMI z-score'
+  scale: raw_units
+  unit: BMI z-score
+  value: -0.18
+  se: null
+  ci: null
+  conversion_formula: beta = -0.18 as reported with p < 0.001; no CI or SE reported in the abstract, so se is null. Corresponding estimate in the perceived-insufficient-sleep subgroup was beta = -0.16 (p = 0.003).
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'negative = catch-up sleep associated with lower BMI z-score, dose-dependently. For scale, -0.18 BMI-z is roughly -0.7 kg/m2 at this age. Compare with Miller 2018''s prospective -0.03 BMI-z per hour: this cross-sectional estimate is several times larger, as expected.'
+  covariates:
+  - covariates per paper
+  followup_years: null
+  cohort_family: Korea_high_school_survey
+  quote: Furthermore, students with 3 or more h of CUS had significantly lower BMI z-scores (beta = -0.18, p < 0.001), an association that was also observed in those with perceived insufficient sleep (beta = -0.16, p = 0.003). The analysis showed a dose-dependent pattern, with greater weekend CUS being associated with a stepwise reduction in BMI z-scores.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: 'Very large (n = 12,434) and in exactly the target age band, but CROSS-SECTIONAL with self-reported sleep and calculated (not measured) BMI. Reverse causation is not excludable and is arguably the more likely explanation: adolescents with obesity sleep worse and catch up less.'
+funding: authors declare no competing financial interests
+notes: 'LARGEST AVAILABLE DATASET ON THE EXACT EXPOSURE PATTERN (short weekdays + weekend catch-up) IN THE EXACT AGE BAND. Corroborates choi2023 in direction and size. Both are cross-sectional and both conflict with depner2019''s randomised laboratory finding that weekend recovery sleep did not prevent weight gain. Authors'' framing: ''Weekend CUS may serve as an important compensatory mechanism for adolescents to reduce the risk of being overweight or obese.'''
+shard: s09_obesity_bmi

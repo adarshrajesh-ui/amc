@@ -1,0 +1,176 @@
+study_id: freeman2017
+citation: "Freeman D, Sheaves B, Goodwin GM, Yu LM, Nickless A, Harrison PJ, Emsley R, Luik AI, Foster RG, Wadekar V, Hinds C, Gumley A, Jones R, Lightman S, Jones S, Bentall R, Kinderman P, Rowse G, Brugha T, Blagrove M, Gregory AM, Fleming L, Walklet E, Glazebrook C, Davies EB, Hollis C, Haddock G, John B, Coulson M, Fowler D, Pugh K, Cape J, Moseley P, Brown G, Hughes C, Obonsawin M, Coker S, Watkins E, Schwannauer M, MacMahon K, Siriwardena AN, Espie CA. The effects of improving sleep on mental health (OASIS): a randomised controlled trial with mediation analysis. Lancet Psychiatry. 2017 Oct;4(10):749-758."
+doi: "10.1016/S2215-0366(17)30328-0"
+pmid: "28888927"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5614772/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "The effects of improving sleep on mental health (OASIS): a randomised controlled trial with mediation analysis."
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 3755
+n_studies_pooled: null
+population:
+  age_mean: 24.7
+  age_range: null
+  pct_female: 71.5
+  country: "UK"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: depression_symptoms_phq9
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 70, contrast_label: "digital CBT-I (Sleepio) vs usual practice, 10 weeks; treating insomnia not extending sleep"}
+    scale: cohens_d
+    unit: "PHQ-9 points"
+    value: -0.48
+    se: 0.0411
+    ci: [-0.5606, -0.3994]
+    conversion_formula: "d reported directly by authors (0.48). SE(d) scaled from the raw adjusted difference: raw diff -2.83, 95% CI (-3.30,-2.35) -> half-width 0.475 -> se_raw = 0.475/1.96 = 0.2423 -> se_d = 0.48 * 0.2423/2.83 = 0.0411"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = FEWER depressive symptoms in the group whose sleep was improved; i.e. improving sleep reduces depression. Sign flipped from the paper's convention (paper reports d=0.48 as a positive benefit)."
+    covariates: ["gender", "student status", "week", "week x randomisation interaction", "random effect for student within university"]
+    followup_years: 0.19
+    cohort_family: "OASIS_trial"
+    quote: "Depression (PHQ-9) | Week 10 | 11·27 (6·72) | 8·44 (6·16) | −2·83 (−3·30 to −2·35), 0·48 | <0·0001"
+  - outcome_domain: psychiatric
+    outcome_construct: depression_symptoms_phq9_week22
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 154, contrast_label: "digital CBT-I vs usual practice, 22 weeks (12 weeks post-treatment)"}
+    scale: cohens_d
+    unit: "PHQ-9 points"
+    value: -0.42
+    se: 0.0444
+    ci: [-0.5070, -0.3330]
+    conversion_formula: "se_d = 0.42 * ((2.95-1.94)/2/1.96)/2.44 = 0.42*0.2577/2.44 = 0.0444"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = fewer depressive symptoms with sleep treatment; effect decays only modestly from 0.48 to 0.42 by 12 weeks after treatment ended"
+    covariates: ["gender", "student status", "week", "week x randomisation interaction"]
+    followup_years: 0.42
+    cohort_family: "OASIS_trial"
+    quote: "Week 22 | 10·34 (6·79) | 8·00 (6·54) | −2·44 (−2·95 to −1·94), 0·42 | <0·0001"
+  - outcome_domain: psychiatric
+    outcome_construct: anxiety_symptoms_gad7
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 70, contrast_label: "digital CBT-I vs usual practice, 10 weeks"}
+    scale: cohens_d
+    unit: "GAD-7 points"
+    value: -0.33
+    se: 0.0389
+    ci: [-0.4062, -0.2538]
+    conversion_formula: "se_d = 0.33 * ((2.29-1.43)/2/1.96)/1.86 = 0.33*0.2194/1.86 = 0.0389"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = less anxiety with sleep treatment"
+    covariates: ["gender", "student status", "week", "week x randomisation interaction"]
+    followup_years: 0.19
+    cohort_family: "OASIS_trial"
+    quote: "Anxiety (GAD-7) | Week 10 | 8·35 (6·06) | 6·53 (5·40) | −1·86 (−2·29 to −1·43), 0·33 | <0·0001"
+  - outcome_domain: psychiatric
+    outcome_construct: probable_depressive_disorder_phq9_ge10
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 70, contrast_label: "digital CBT-I vs usual practice, 10 weeks; dichotomous caseness"}
+    scale: log_or
+    unit: null
+    value: -1.5606
+    se: 0.2107
+    ci: [-1.9661, -1.1394]
+    conversion_formula: "OR 0.21 (0.14-0.32); log(0.21) = -1.5606; se = (log(0.32)-log(0.14))/3.92 = 0.2107"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative log-OR = LOWER odds of meeting probable depressive-disorder threshold in the arm whose sleep was improved. This is the strongest single randomized demonstration that sleep -> depression is a real causal arrow in young adults."
+    covariates: ["gender", "student status", "week", "week x randomisation interaction"]
+    followup_years: 0.19
+    cohort_family: "OASIS_trial"
+    quote: "Depressive disorder (PHQ-9) | Week 10 | 0·21 (0·14 to 0·32) | <0·0001"
+  - outcome_domain: psychiatric
+    outcome_construct: probable_anxiety_disorder_gad7_ge10
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 70, contrast_label: "digital CBT-I vs usual practice, 10 weeks; dichotomous caseness"}
+    scale: log_or
+    unit: null
+    value: -1.1394
+    se: 0.2107
+    ci: [-1.5606, -0.7340]
+    conversion_formula: "OR 0.32 (0.21-0.48); log(0.32) = -1.1394; se = (log(0.48)-log(0.21))/3.92 = 0.2107"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = lower odds of probable anxiety disorder with sleep treatment"
+    covariates: ["gender", "student status", "week", "week x randomisation interaction"]
+    followup_years: 0.19
+    cohort_family: "OASIS_trial"
+    quote: "Anxiety disorder (GAD-7) | Week 10 | 0·32 (0·21 to 0·48) | <0·0001"
+  - outcome_domain: exposure_measurement
+    outcome_construct: insomnia_severity_index_change_achieved
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 70, contrast_label: "digital CBT-I vs usual practice, 10 weeks -- how much the mediator actually moved"}
+    scale: cohens_d
+    unit: "ISI points"
+    value: -0.94
+    se: 0.0553
+    ci: [-1.0484, -0.8316]
+    conversion_formula: "se_d = 0.94*((4.16-3.29)/2/1.96)/3.72 = 0.94*0.2219/3.72 = 0.0553"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = less insomnia. Needed to compute the implied per-unit-of-sleep-improvement effect: depression benefit d=0.48 was bought with an insomnia improvement of d=0.94, i.e. ratio 0.51 depression-SD per insomnia-SD."
+    covariates: ["gender", "student status", "week", "week x randomisation interaction"]
+    followup_years: 0.19
+    cohort_family: "OASIS_trial"
+    quote: "Insomnia (ISI) | Week 10 | 12·95 (5·27) | 9·23 (5·18) | −3·72 (−4·16 to −3·29), 0·94 | <0·0001"
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Large, properly randomised, pre-registered, ITT with mixed models; but (a) usual-practice control means no attention/placebo control, so expectancy effects on self-reported mood are uncontrolled; (b) all outcomes self-reported by unblinded participants; (c) substantial differential attrition (week-10 outcome data on 1142/1864 control vs 733/1891 treatment) and missing-data analysis showed the missing groups had HIGHER PHQ-9, so the observed effect may be modestly inflated; (d) treatment programme supplied free by Sleepio/Big Health, with author financial interests declared."
+funding: "Wellcome Trust (098461/Z/12/Z). Sleep treatment programme provided free by Sleepio/Big Health Ltd."
+notes: |
+  WHAT THIS IS. The largest randomized test of the sleep -> mental-health arrow ever run in a
+  student/young-adult population (n=3755, mean age ~24.7, UK universities). Because sleep was
+  randomized (via a treatment for it) and depression was measured downstream, reverse causation
+  cannot generate these estimates. This is therefore the single best anchor for the direction of
+  the arrow in the subject's age band.
+
+  KEY NUMBERS (all verbatim from Table 4 / Table 5 of the paper):
+    - Insomnia (ISI) week 10: adjusted difference -3.72 (-4.16 to -3.29), d = 0.94
+    - Depression (PHQ-9) week 10: -2.83 (-3.30 to -2.35), d = 0.48
+    - Depression (PHQ-9) week 22: -2.44 (-2.95 to -1.94), d = 0.42
+    - Anxiety (GAD-7) week 10: -1.86 (-2.29 to -1.43), d = 0.33
+    - Probable depressive disorder (PHQ-9 >= 10) week 10: OR 0.21 (0.14-0.32)
+    - Probable anxiety disorder (GAD-7 >= 10) week 10: OR 0.32 (0.21-0.48)
+
+  CRITICAL TRANSPORTABILITY CAVEAT FOR OUR SUBJECT. This trial did NOT extend sleep in people who
+  were voluntarily curtailing it. Eligibility required insomnia: participants had baseline ISI
+  ~12.9 and baseline PHQ-9 ~12.9 (already above the depression-caseness cut-off of 10). The
+  intervention was CBT-I, whose active ingredients are sleep restriction therapy, stimulus
+  control, and cognitive restructuring of sleep-related worry -- i.e. it treats the inability to
+  sleep, not the decision not to. Our subject has the opposite problem: adequate sleep ability,
+  insufficient opportunity. CBT-I in a person with no insomnia would have little room to improve
+  the mediator, so the d=0.48 depression benefit is an upper bound on what "fixing his sleep"
+  buys, and probably a substantial overestimate.
+
+  A DEFENSIBLE RESCALING FOR THE MODELLER. The trial bought d=0.48 of depression improvement with
+  d=0.94 of insomnia improvement, a transfer ratio of ~0.51 depression-SD per insomnia-SD. If one
+  is willing to treat "sleep quality/insufficiency" as a single latent axis, then any intervention
+  that moves the subject's sleep by delta SD would be expected to move his depression by ~0.5*delta
+  SD. This is the arithmetic the downstream model should use rather than importing d=0.48 wholesale.
+
+  MEDIATION EVIDENCE ON DIRECTION. The paper's formal mediation analysis was run for the primary
+  psychotic-experience outcomes, not for depression, so I do NOT have a mediated fraction for
+  depression from this trial. But the directional asymmetry the authors report is quotable and
+  relevant: "Change in sleep over 3 weeks explained 21% of the intervention effect on
+  hallucinations at 10 weeks, with change in sleep over 10 weeks accounting for 39% of the
+  intervention effect on hallucinations." and "In comparison, parallel analyses in the opposite
+  direction indicated that changes in psychotic experiences explained a much smaller percentage of
+  variation in improvements in sleep." The authors also concede the limit: "the mediation analyses
+  in this trial based on week 10 outcomes cannot fully capture the temporal order of changes or
+  rule out reverse causation."
+
+  ADVERSE/UNEXPECTED SIGNAL WORTH CARRYING FORWARD. Mania (Altman) got WORSE in the sleep-treated
+  arm: adjusted difference +0.93 (0.67 to 1.19), d = -0.31, and dichotomous OR 2.01 (1.48-2.73).
+  Almost certainly an artefact of CBT-I's sleep-restriction component acutely curtailing sleep, but
+  it is a real randomized demonstration that acute sleep curtailment moves an activation/irritability
+  dimension upward -- consistent with the experimental irritability findings in baum2014.
+
+  NO EFFECT on service contact (OR 1.19, 0.70-2.04), diagnosis received (1.33, 0.75-2.37), or
+  psychiatric medication (0.77, 0.47-1.26): the benefit is on symptom scales, not on hard
+  health-service endpoints.
+shard: "s12_psychiatric"

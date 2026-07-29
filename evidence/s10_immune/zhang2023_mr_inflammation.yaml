@@ -1,0 +1,92 @@
+study_id: zhang2023_mr_inflammation
+citation: "Zhang Y, Zhao W, Liu K, Chen Z, Fei Q, Ahmad N, Yi M. The causal associations of altered inflammatory proteins with sleep duration, insomnia and daytime sleepiness. Sleep. 2023;46(10):zsad207."
+doi: "10.1093/sleep/zsad207"
+pmid: "37535878"
+url: "https://pubmed.ncbi.nlm.nih.gov/37535878/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "The causal associations of altered inflammatory proteins with sleep duration, insomnia and daytime sleepiness."
+access_tier: abstract_only
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 51879
+n_studies_pooled: 44
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multiple (GWAS consortia)"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: immune
+    outcome_construct: u_or_j_shaped_association_crp_il6_with_sleep_duration
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "meta-analytic (non-MR) comparison of CRP and IL-6 across short (<7 h), normal (7-9 h) and long (>=9 h) sleep duration; 44 publications, 51,879 participants"}
+    scale: raw_units
+    unit: "qualitative shape flag (1 = U/J-shaped rather than monotonic)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Shape descriptor, not a magnitude; the abstract states the shape without giving the per-category standardised differences. Flag only; se null. NOT POOLABLE."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NON-LINEARITY, INDEPENDENTLY CONFIRMED IN A SECOND LARGE SYNTHESIS. CRP and IL-6 show a U/J shape across sleep duration - elevated at BOTH extremes, not a monotonic decline with hours slept. Any downstream model that fits a linear per-hour inflammatory effect will misstate both the sign at the long end and the magnitude at the short end. Converges with irwin2016_inflammation_meta (long sleep, not short, associated with CRP), patel2012_pneumonia, martinezalbert2025_infection, forthun2023_gp_infection and stager2023_adolescent_crp."
+    covariates: []
+    followup_years: null
+    cohort_family: "GWAS_consortia_plus_44_study_meta"
+    quote: "A total of 44 publications with 51 879 participants were included in the quantitative analysis. Our results showed that the levels of CRP, interleukin-1beta (IL-1beta), IL-6, and TNF-alpha were higher from 0.36 to 0.58 (after standardization) in insomnia compared with controls, while there was no significant difference between participants with EDS and controls. Besides, there was a U/J-shaped expression of CRP and IL-6 with sleep durations."
+  - outcome_domain: immune
+    outcome_construct: mr_causal_effect_of_crp_on_sleep_duration_reverse_direction
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "two-sample Mendelian randomization: genetically predicted CRP -> sleep duration (i.e. the REVERSE of the usual causal claim)"}
+    scale: raw_units
+    unit: "MR estimate, genetically predicted CRP on sleep duration (units per the source GWAS)"
+    value: 0.017
+    se: 0.00714
+    ci: [0.003, 0.031]
+    conversion_formula: "Reported estimate 0.017 (95% CI 0.003-0.031); se = (0.031 - 0.003)/3.92 = 0.00714."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "CAUSAL DIRECTION EVIDENCE, AND IT POINTS THE OTHER WAY. positive = higher genetically predicted CRP causes LONGER sleep duration. The MR analysis found inflammation -> sleep, and specifically found CRP causally associated with LONGER sleep (0.017) and negatively with SHORT sleep (-0.006, 95% CI -0.011 to -0.001), plus IL-6 -> long sleep (0.006, 95% CI 0.000-0.013). The authors' own conclusion is that 'elevated CRP and IL-6 have causal effects on longer sleep duration' - not that short sleep causes inflammation. This is the single strongest reason to discount the observational short-sleep-to-inflammation literature as substantially reverse-caused/confounded."
+    covariates: ["inverse-variance weighted primary, with sensitivity analyses"]
+    followup_years: null
+    cohort_family: "GWAS_consortia_plus_44_study_meta"
+    quote: "In MR analysis, the primary results demonstrated the causal effects of CRP on sleep duration (estimate: 0.017; 95% confidence intervals [CI], [0.003, 0.031]) and short sleep duration (estimate: -0.006; 95% CI, [-0.011, -0.001]). Also, IL-6 was found to be associated with long sleep duration (estimate: 0.006; 95% CI, [0.000, 0.013]). These results were consistent in sensitivity analyses. ... There are high inflammatory profiles in insomnia and extremes of sleep duration. Meanwhile, elevated CRP and IL-6 have causal effects on longer sleep duration."
+  - outcome_domain: immune
+    outcome_construct: insomnia_vs_sleep_duration_inflammatory_contrast
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "insomnia vs controls, standardised differences in CRP, IL-1beta, IL-6, TNF-alpha; and excessive daytime sleepiness vs controls"}
+    scale: smd
+    unit: null
+    value: 0.47
+    se: null
+    ci: null
+    conversion_formula: "The abstract reports a RANGE across four markers ('higher from 0.36 to 0.58 (after standardization)') rather than a single pooled value per marker. I have recorded the midpoint of that range (0.47) as an indicative magnitude and left se null, because no CI is given and the four markers are not separately quantified in the abstract. DO NOT treat 0.47 as a specific pooled estimate for any one marker."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM, for INSOMNIA - not for short sleep duration. Insomnia raised all four markers by 0.36-0.58 SD, while excessive daytime sleepiness showed no difference. Third independent replication (with irwin2016_inflammation_meta and pratherleung2016_nhanes) of the finding that sleep DISTURBANCE, not sleep DURATION, carries the inflammatory signal."
+    covariates: []
+    followup_years: null
+    cohort_family: "GWAS_consortia_plus_44_study_meta"
+    quote: "Our results showed that the levels of CRP, interleukin-1beta (IL-1beta), IL-6, and TNF-alpha were higher from 0.36 to 0.58 (after standardization) in insomnia compared with controls, while there was no significant difference between participants with EDS and controls."
+rob:
+  tool: MR-STROBE
+  judgement: moderate
+  notes: "Two-sample MR with inverse-variance-weighted primary analysis plus multiple sensitivity analyses reported as consistent - the appropriate design for asking about causal direction, and MR is the only tool here that can. Weaknesses: MR estimates are on genetically-predicted lifetime exposure scales that do not translate into 'hours of sleep' or 'mg/L of CRP', so the coefficients (0.017, -0.006, 0.006) are NOT interpretable as clinical magnitudes and I have deliberately not converted them; the CIs are extremely tight against zero (IL-6 lower bound 0.000), so these are marginal findings; the accompanying quantitative synthesis of 44 publications is a separate observational meta-analysis subject to all the usual confounding; horizontal pleiotropy cannot be fully excluded; abstract-only access. There is also a published Comment on this paper (Sleep 2023;46(10):zsad223) which I did not retrieve."
+funding: "not stated in the abstract"
+notes: |
+  ACCESS: abstract only (Sleep 2023, paywalled). All numbers from the PubMed abstract.
+  THIS IS THE ONLY TIER-3 (MENDELIAN RANDOMIZATION) RECORD IN MY SHARD, and it is included precisely
+  because it addresses the question no observational study can: which way does the arrow point?
+  The answer it gives is uncomfortable for the standard story. The MR arm found evidence that
+  inflammation causes altered sleep duration, not the reverse - and that higher CRP causes LONGER
+  sleep and LESS short sleep.
+  A CAVEAT I WANT ON THE RECORD, because it would be easy to overclaim in the other direction: absence
+  of an MR effect of short sleep on inflammation was not, per the abstract, formally tested in the
+  reported direction with the same rigour; the abstract reports the inflammation->sleep direction. So
+  this record supports "the observational association is substantially reverse-caused" more strongly
+  than it supports "short sleep has no causal inflammatory effect". Those are different claims.
+  A published Comment exists on this paper (doi 10.1093/sleep/zsad223) which may qualify these
+  conclusions; I did not retrieve it and flag that as a known gap in my reading.
+shard: "s10_immune"

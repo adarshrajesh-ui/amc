@@ -1,0 +1,65 @@
+study_id: patel2019
+citation: 'Patel P, Shiff B, Kohn TP, Ramasamy R. Impaired sleep is associated with low testosterone in US adult males:
+  results from the National Health and Nutrition Examination Survey. World J Urol. 2019;37(7):1449-1453.'
+doi: 10.1007/s00345-018-2485-2
+pmid: '30225799'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: 'Impaired sleep is associated with low testosterone in US adult males: results from the National Health
+    and Nutrition Examination Survey'
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 2295
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 16
+  - 80
+  pct_female: 0.0
+  country: US
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: endocrine
+  outcome_construct: serum_total_testosterone_per_hour_less_sleep
+  exposure:
+    type: per_hour_less_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: each 1 h less self-reported habitual sleep, men aged 16-80 (median 46 y)
+  scale: per_hour_beta
+  unit: ng/dL total testosterone per hour of sleep lost
+  value: -5.85
+  se: null
+  ci: null
+  conversion_formula: Only 'p < 0.01' is reported, an inequality, so no defensible SE can be back-calculated; se=null per
+    instructions.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'Negative = less sleep associated with lower testosterone. MAGNITUDE IS THE POINT: at the subject''s ~2.5
+    h/night weekday deficit this predicts 2.5 x 5.85 = 14.6 ng/dL, i.e. 3.9% of the cohort median of 377 ng/dL - roughly
+    one third of the effect attributed to a single year of normal ageing (0.49 ng/dL/y x 30 y = 14.7 ng/dL).'
+  covariates:
+  - age
+  - BMI
+  - comorbidities
+  - demographics
+  followup_years: null
+  cohort_family: NHANES
+  quote: On multivariate linear regression, we found serum testosterone decreased by 0.49 ng/dL per year of age (p = 0.04),
+    5.85 ng/dL per hour loss of sleep (p < 0.01) and 6.18 ng/dL per unit of body mass index (BMI) increase (p < 0.01).
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: cross-sectional, self-reported sleep, median age 46 y so poorly transportable to 18; no CI reported
+funding: null
+notes: 'Verbatim context: ''Median serum testosterone level was 377 ng/dL (IQR: 279-492 ng/dL). Median number of hours slept
+  was 7 h (IQR: 6-8 h).'' ''On multivariate linear regression, we found serum testosterone decreased by 0.49 ng/dL per year
+  of age (p = 0.04), 5.85 ng/dL per hour loss of sleep (p < 0.01) and 6.18 ng/dL per unit of body mass index (BMI) increase
+  (p < 0.01).'' Note the BMI coefficient exceeds the sleep coefficient: one BMI unit outweighs one hour of sleep.'
+shard: s11_endocrine_growth

@@ -1,0 +1,1411 @@
+# =====================================================================================
+# baseline_risks.yaml -- ABSOLUTE baseline risks for a US MALE, the denominators that
+# every hazard ratio and risk ratio in this project must be multiplied against.
+#
+# Produced by shard s17_baseline_risk. Companion files:
+#   /workspace/data/lifetable_us_male.csv        ages 19-110, qx/lx/ex
+#   /workspace/data/lifetable_us_male_full.csv   ages 0-120, all life table columns
+#   /workspace/evidence/s17_baseline_risk/competing_risk_method.md
+#   /workspace/evidence/s17_baseline_risk/hr_to_life_expectancy.py
+#
+# HARD RULES FOR CONSUMERS OF THIS FILE
+#   1. Do NOT multiply a hazard ratio by a lifetime risk. See competing_risk_method.md
+#      section 3. Use  CI_exposed = 1 - (1 - CI_baseline)^HR  at minimum, and prefer
+#      re-running the incidence schedule through the competing-risk recursion.
+#   2. Every `verification.status` field must be read. Records marked
+#      DERIVED_BOUNDS or UNVERIFIED are not published point estimates; they carry the
+#      widest defensible range and must be given wide priors.
+#   3. `definition` is load-bearing. "Diabetes" in Gregg 2014 is self-reported
+#      diagnosed diabetes of any type; "hypertension" in Vasan 2002 is >=140/90
+#      (JNC-VI) while the 2024 NHANES figure uses >=130/80 (2017 ACC/AHA). These are
+#      NOT interchangeable.
+#   4. `competing_risk_adjusted` tells you whether the number already accounts for
+#      death from other causes. Mixing adjusted and unadjusted estimates is the single
+#      most common way to inflate an absolute risk by 3-5x.
+#
+# Field schema for every entry under `risks`:
+#   id                        unique snake_case key
+#   outcome                   disease/condition
+#   metric                    what kind of quantity this is (see `metric_vocabulary`)
+#   value                     point estimate
+#   unit                      percent | per_100k_per_year | years | probability | ratio
+#   ci                        [lower, upper] 95% interval, or null
+#   se                        standard error if the source reports one, else null
+#   age_at_assessment         exact age (or [lo, hi] band) at which risk is assessed
+#   age_horizon               age to which the risk accumulates, or null
+#   sex                       male | female | both
+#   competing_risk_adjusted   true | false | null (unknown/not applicable)
+#   definition                verbatim-grounded case definition
+#   source                    short citation
+#   doi_or_url
+#   year                      publication year
+#   data_years                years of the underlying data
+#   population                cohort / survey
+#   quote                     verbatim supporting sentence from the retrieved source
+#   verification              {status, doi_resolves, pmid}
+#   notes                     caveats, transportability to a 19-year-old US male
+# =====================================================================================
+
+meta:
+  shard: s17_baseline_risk
+  subject: "US male, exact age 19"
+  generated_for: "sleep-restriction damage model; supplies absolute-risk denominators"
+  metric_vocabulary:
+    lifetime_risk: "cumulative probability of first event from index age to end of life,
+      death from other causes treated as a competing event (Aalen-Johansen / CIF)"
+    residual_lifetime_risk_unadjusted: "cumulative incidence from index age, NOT adjusted
+      for competing mortality (1 - Kaplan-Meier). Systematically LARGER than lifetime_risk."
+    morbid_risk: "projected cumulative lifetime risk to a stated age (usually 75) in
+      survey data, estimated from age-of-onset curves; larger than observed
+      lifetime prevalence because young respondents are still at risk"
+    lifetime_prevalence: "proportion of a cross-section who have EVER met criteria; a
+      downward-biased estimate of lifetime risk for young people"
+    period_prevalence: "proportion currently affected in a stated window (e.g. past 12 months)"
+    cross_sectional_prevalence: "proportion affected at survey time in an age band;
+      NOT a cumulative incidence (survivor bias, cohort effects)"
+    incidence_rate: "events per person-time"
+    survival_probability: "life-table probability of surviving between two exact ages"
+
+# -------------------------------------------------------------------------------------
+# 0. THE MORTALITY DENOMINATOR (from the life table this shard built)
+# -------------------------------------------------------------------------------------
+mortality_baseline:
+  source: "Arias E, Xu JQ, Kochanek K. United States life tables, 2023. Natl Vital Stat
+    Rep. 2025 Jul 15;74(6):1-63."
+  doi_or_url: "https://doi.org/10.15620/cdc/174591"
+  year: 2025
+  data_years: "2023"
+  sex: male
+  table: "Table 2. Life table for males: United States, 2023"
+  published_life_expectancy:
+    e0_years: 75.8
+    e0_years_full_precision: 75.8178
+    e19_years: 57.7
+    e19_years_full_precision: 57.6565
+    e19_months: 691.88
+    e65_years_full_precision: 18.1943
+    quote: "Between 2022 and 2023, life expectancy at birth increased by 1.0 year for
+      males (from 74.8 to 75.8) and by 0.9 year for females (80.2 to 81.1)."
+  independent_cross_check_ssa:
+    source: "U.S. Social Security Administration, Office of the Chief Actuary. Period
+      Life Table, 2023, as used in the 2026 Trustees Report."
+    doi_or_url: "https://www.ssa.gov/oact/STATS/table4c6.html"
+    e0_years: 75.79
+    e19_years: 57.62
+    note: "Differs from NCHS by 0.03-0.04 y because the Social Security area population
+      is not the US resident population. Agreement well inside the 0.3 y gate G10."
+  # recomputed from the CSV this shard wrote; reproducible via hr_to_life_expectancy.py
+  survival_probabilities_from_age_19:
+    to_25: 0.9920
+    to_30: 0.9831
+    to_40: 0.9583
+    to_50: 0.9216
+    to_55: 0.8943
+    to_65: 0.7996
+    to_70: 0.7274
+    to_75: 0.6362
+    to_80: 0.5168
+    to_85: 0.3628
+    to_90: 0.1948
+  qx_at_19: 0.001061
+  note: "A 19-year-old US male has only a 51.7% chance of reaching 80 and a 79.96%
+    chance of reaching 65 under 2023 mortality. Any lifetime risk quoted WITHOUT
+    competing mortality is therefore inflated by roughly this much."
+
+risks:
+
+  # -----------------------------------------------------------------------------------
+  # 1. TYPE 2 DIABETES
+  # -----------------------------------------------------------------------------------
+  - id: diabetes_lifetime_risk_from_age20_male_2000_2011
+    outcome: diabetes_any_diagnosed
+    metric: lifetime_risk
+    value: 40.2
+    unit: percent
+    ci: [39.2, 41.3]
+    se: null
+    age_at_assessment: 20
+    age_horizon: null
+    sex: male
+    competing_risk_adjusted: true
+    definition: "Self-reported diagnosed diabetes, any type, excluding gestational
+      diabetes. Markov chain model with mortality as a competing state."
+    source: "Gregg EW, Zhuo X, Cheng YJ, Albright AL, Narayan KMV, Thompson TJ. Trends in
+      lifetime risk and years of life lost due to diabetes in the USA, 1985-2011: a
+      modelling study. Lancet Diabetes Endocrinol. 2014;2(11):867-874."
+    doi_or_url: "10.1016/S2213-8587(14)70161-5"
+    year: 2014
+    data_years: "2000-2011"
+    population: "National Health Interview Survey linked mortality, 598,216 adults"
+    quote: "On the basis of 2000-11 data, lifetime risk of diagnosed diabetes from age 20
+      years was 40.2% (95% CI 39.2-41.3) for men and 39.6% (38.6-40.5) for women,
+      representing increases of 20 percentage points and 13 percentage points,
+      respectively, since 1985-89."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "25128274"}
+    notes: "This is the seed figure the task named and it is real. BUT it is superseded
+      for currency by Koyama 2022 below, which uses the same NHIS data source through
+      2018 and finds a LOWER lifetime risk (32.8%) because diagnosed-diabetes incidence
+      fell after 2009. Use 40.2% as the upper end of the plausible range for a male, not
+      as the central estimate. `diabetes_any_diagnosed` is not the same construct as
+      incident type 2 diabetes; type 1 is a small but nonzero share."
+
+  - id: diabetes_lifetime_risk_from_age20_both_2015_2018
+    outcome: diabetes_any_diagnosed
+    metric: lifetime_risk
+    value: 32.8
+    unit: percent
+    ci: [32.4, 33.2]
+    se: null
+    age_at_assessment: 20
+    age_horizon: 84
+    sex: both
+    competing_risk_adjusted: true
+    definition: "Self-reported diagnosed diabetes; multistate difference equation
+      accounting for competing risks; lifetime risk accumulated to age 84."
+    source: "Koyama AK, Cheng YJ, Brinks R, Xie H, Gregg EW, Hoyer A, Pavkov ME,
+      Imperatore G. Trends in lifetime risk and years of potential life lost from
+      diabetes in the United States, 1997-2018. PLoS One. 2022;17(5):e0268805."
+    doi_or_url: "10.1371/journal.pone.0268805"
+    year: 2022
+    data_years: "2015-2018"
+    population: "National Health Interview Survey, 653,811 adults aged >=18"
+    quote: "LR for adults at age 20 increased from 31.7% (95% CI: 31.2-32.1%) in 1997-1999
+      to 40.7% (40.2-41.1%) in 2005-2009, then decreased to 32.8% (32.4-33.2%) in
+      2015-2018."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "35609056"}
+    notes: "MOST CURRENT lifetime-risk estimate. Not sex-specific: the paper reports LR
+      for adults overall, not for men separately. Male-specific LR is likely close to the
+      overall figure (Gregg 2014 found men 40.2% vs women 39.6%, i.e. near-identical).
+      RECOMMENDED CENTRAL ESTIMATE for a 19-year-old US male: 33-40%, with 32.8% as the
+      contemporary anchor and 40.2% as the male 2000-2011 anchor.
+      Horizon is 84, not end of life, so this slightly understates true lifetime risk."
+
+  - id: diabetes_lifetime_risk_from_birth_male_2000_cohort
+    outcome: diabetes_any_diagnosed
+    metric: lifetime_risk
+    value: 32.8
+    unit: percent
+    ci: null
+    se: null
+    age_at_assessment: 0
+    age_horizon: 80
+    sex: male
+    competing_risk_adjusted: true
+    definition: "Residual lifetime risk of diagnosed diabetes from birth to 80, Markov
+      model with diabetes-specific and non-diabetes mortality."
+    source: "Narayan KMV, Boyle JP, Thompson TJ, Sorensen SW, Williamson DF. Lifetime risk
+      for diabetes mellitus in the United States. JAMA. 2003;290(14):1884-1890."
+    doi_or_url: "10.1001/jama.290.14.1884"
+    year: 2003
+    data_years: "1984-2000"
+    population: "National Health Interview Survey; cohort born in 2000"
+    quote: "The estimated lifetime risk of developing diabetes for individuals born in
+      2000 is 32.8% for males and 38.5% for females."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "14532317"}
+    notes: "Historical anchor. Coincidentally the same number as Koyama 2022 for a
+      different index age; do not conflate."
+
+  - id: diabetes_lifetime_risk_at_age18_male_by_bmi
+    outcome: diabetes_any_diagnosed
+    metric: lifetime_risk
+    value: null
+    unit: percent
+    ci: null
+    se: null
+    age_at_assessment: 18
+    age_horizon: null
+    sex: male
+    competing_risk_adjusted: true
+    definition: "Lifetime risk of diagnosed diabetes at age 18 by BMI category (Markov
+      model). Only the extremes of the range are in the retrievable abstract."
+    value_by_bmi:
+      underweight: 7.6
+      very_obese: 70.3
+      normal_weight: null
+      overweight: null
+      obese: null
+    # Published as DIFFERENCES vs normal weight, not levels, so they are kept separate
+    # from value_by_bmi to prevent a consumer reading them as absolute risks.
+    risk_difference_pct_points_vs_normal_weight_at_age_65_male:
+      overweight: 3.7
+      very_obese: 23.9
+      note: "The abstract reports only the two ends of this range; obese_30_39_9 is
+        bracketed between them but not published, so it is omitted rather than guessed."
+    source: "Narayan KMV, Boyle JP, Thompson TJ, Gregg EW, Williamson DF. Effect of BMI
+      on lifetime risk for diabetes in the U.S. Diabetes Care. 2007;30(6):1562-1566."
+    doi_or_url: "10.2337/dc06-2544"
+    year: 2007
+    data_years: "1997-2004"
+    population: "National Health Interview Survey, n = 780,694"
+    quote: "Lifetime diabetes risk at 18 years of age increased from 7.6 to 70.3% between
+      underweight and very obese men and from 12.2 to 74.4% for women. ... At 65 years of
+      age, compared with normal-weight male subjects, lifetime risk differences (percent)
+      increased from 3.7 to 23.9 percentage points between overweight and very obese men."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "17372155"}
+    notes: "THE MOST DECISION-RELEVANT DIABETES RECORD IN THIS FILE for a sleep model,
+      because it is indexed at exactly age 18 and it is stratified by the mediator that
+      short sleep actually moves (BMI). A 9.2-fold spread in lifetime diabetes risk
+      across BMI at age 18 means the sleep -> BMI -> diabetes path can be modelled by
+      shifting the subject along this gradient rather than by applying a diabetes HR.
+      Only the extreme categories are quotable; full text is paywalled (diabetesjournals.org
+      returns HTTP 403 to automated clients and a Cloudflare challenge through a text proxy),
+      so the intermediate categories are marked null rather than guessed.
+      The age-65 block also shows the effect SHRINKING with age (a 23.9-point spread at 65
+      versus a 62.7-point spread at 18), which is the quantitative case for why an exposure
+      acting at ages 16-19 matters more than the same exposure acting in later life.
+      access_tier: abstract_only."
+
+  - id: diabetes_total_prevalence_us_male_age20plus
+    outcome: diabetes_total_including_undiagnosed
+    metric: cross_sectional_prevalence
+    value: 18.0
+    unit: percent
+    ci: [15.7, 20.4]
+    se: 1.1
+    age_at_assessment: [20, 999]
+    age_horizon: null
+    sex: male
+    competing_risk_adjusted: false
+    definition: "Total diabetes = self-reported diagnosed diabetes OR fasting plasma
+      glucose >=126 mg/dL OR HbA1c >=6.5% with no prior diagnosis."
+    source: "Gwira JA, Fryar CD, Gu Q. Prevalence of Total, Diagnosed, and Undiagnosed
+      Diabetes in Adults: United States, August 2021-August 2023. NCHS Data Brief No.
+      516. Hyattsville, MD: National Center for Health Statistics; 2024."
+    doi_or_url: "10.15620/cdc/165794"
+    year: 2024
+    data_years: "August 2021-August 2023"
+    population: "NHANES, n = 2,938 fasting subsample (men n = 1,306)"
+    quote: "Men . . . 18.0 (15.7-20.4)"
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "40085919"}
+    notes: "Diagnosed only, men: 12.9% (11.0-15.0). Undiagnosed, men: 5.1% (3.6-6.9).
+      The 5.1 pp undiagnosed fraction means the Gregg/Koyama lifetime risks, which are
+      built on DIAGNOSED diabetes, UNDERSTATE the lifetime risk of the biological
+      disease by roughly the diagnosed:total ratio 12.9/18.0 = 0.717. A defensible
+      lifetime risk of TOTAL diabetes for a US male is therefore ~33-40% / 0.717 =
+      46-56%, but no publication states this directly, so treat it as a sensitivity
+      scenario, not a point estimate."
+
+  - id: diabetes_total_prevalence_by_age_both_sexes
+    outcome: diabetes_total_including_undiagnosed
+    metric: cross_sectional_prevalence
+    value: null
+    unit: percent
+    ci: null
+    se: null
+    age_at_assessment: null
+    age_horizon: null
+    sex: both
+    competing_risk_adjusted: false
+    definition: "Total diabetes prevalence by age band, NHANES Aug 2021-Aug 2023."
+    value_by_age_band:
+      "20_39": {total: 3.6, total_ci: [2.0, 5.9], diagnosed: 2.2, diagnosed_ci: [1.1, 4.0]}
+      "40_59": {total: 17.7, total_ci: [14.7, 21.0], diagnosed: 12.1, diagnosed_ci: [10.0, 14.5]}
+      "60_plus": {total: 27.3, total_ci: [23.0, 31.9], diagnosed: 20.5, diagnosed_ci: [16.2, 25.3]}
+    source: "Gwira JA, Fryar CD, Gu Q. NCHS Data Brief No. 516; 2024."
+    doi_or_url: "10.15620/cdc/165794"
+    year: 2024
+    data_years: "August 2021-August 2023"
+    population: "NHANES"
+    quote: "Total 20-39 . . . 688 3.6 (2.0-5.9) 0.9 / 40-59 . . . 861 17.7 (14.7-21.0)
+      1.4 / 60 and older . . . 1,389 27.3 (23.0-31.9) 2.0"
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "40085919"}
+    notes: "Both sexes; age bands are 20-year, not the 50/65/80 cutpoints requested."
+
+  - id: diabetes_cumulative_incidence_by_age_50_65_80_male
+    outcome: diabetes_any_diagnosed
+    metric: lifetime_risk
+    value: null
+    unit: percent
+    ci: null
+    se: null
+    age_at_assessment: 20
+    age_horizon: null
+    sex: male
+    competing_risk_adjusted: true
+    definition: "Cumulative incidence of DIAGNOSED diabetes from age 20 by ages 50, 65
+      and 80, competing mortality accounted for."
+    bounds_by_horizon:
+      by_age_50: {lower: 8, upper: 16, basis: "lower = NHANES diagnosed prevalence in
+        ages 40-59 (12.1%) discounted toward the younger half of that band;
+        upper = same prevalence plus the undiagnosed-then-diagnosed flow"}
+      by_age_65: {lower: 18, upper: 28, basis: "lower = NHANES diagnosed prevalence at
+        60+ (20.5%) minus post-65 accrual; upper = published lifetime risk minus the
+        post-65 share of incidence"}
+      by_age_80: {lower: 28, upper: 40, basis: "approaches the published lifetime risk
+        from age 20 (32.8-40.2%), since diagnosed-diabetes incidence above 80 is small
+        relative to the accumulated risk"}
+    source: "NOT DIRECTLY PUBLISHED. Bounds constructed from Gwira 2024 (NCHS DB516)
+      age-specific prevalence and Gregg 2014 / Koyama 2022 lifetime risk from age 20."
+    doi_or_url: null
+    year: null
+    data_years: "2000-2023"
+    population: "NHIS + NHANES, US adults"
+    quote: null
+    verification:
+      status: DERIVED_BOUNDS
+      doi_resolves: null
+      pmid: null
+    notes: "FLAGGED. No retrieved publication reports cumulative incidence of diabetes
+      from age 20 at exactly ages 50, 65 and 80 for US males. Koyama 2022 Figure 1 shows
+      lifetime risk by BASELINE age (18-60), which is the complement of what was asked
+      (risk remaining, not risk accrued), and I could not extract the figure's underlying
+      values. The bounds above are WIDE ON PURPOSE. The model must not treat them as
+      published point estimates. RECOMMENDED HANDLING: do not use these bounds directly.
+      Instead take the published lifetime risk from age 20 (32.8-40.2%) and distribute it
+      over age using the NHANES age-specific prevalence shape, propagating the full width
+      of the bounds as uncertainty."
+
+  # -----------------------------------------------------------------------------------
+  # 2. HYPERTENSION
+  # -----------------------------------------------------------------------------------
+  - id: hypertension_residual_lifetime_risk_age55_65
+    outcome: hypertension
+    metric: residual_lifetime_risk_unadjusted
+    value: 90
+    unit: percent
+    ci: null
+    se: null
+    age_at_assessment: [55, 65]
+    age_horizon: null
+    sex: both
+    competing_risk_adjusted: false
+    definition: "Blood pressure >=140/90 mm Hg or use of antihypertensive medication
+      (JNC-VI era definition). Residual lifetime risk explicitly NOT adjusted for
+      competing causes of mortality."
+    source: "Vasan RS, Beiser A, Seshadri S, Larson MG, Kannel WB, D'Agostino RB, Levy D.
+      Residual lifetime risk for developing hypertension in middle-aged women and men:
+      The Framingham Heart Study. JAMA. 2002;287(8):1003-1010."
+    doi_or_url: "10.1001/jama.287.8.1003"
+    year: 2002
+    data_years: "1976-1998"
+    population: "Framingham Heart Study, 1,298 participants aged 55-65 free of
+      hypertension at baseline"
+    quote: "The residual lifetime risks for developing hypertension and stage 1 high blood
+      pressure or higher (greater-than-or-equal to 140/90 mm Hg regardless of treatment)
+      were 90% in both 55- and 65-year-old participants."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "11866648"}
+    notes: "CRITICAL CAVEAT. The paper states in MAIN OUTCOME MEASURES: 'Residual lifetime
+      risk (lifetime cumulative incidence not adjusted for competing causes of mortality)
+      for hypertension'. This 90% is therefore a 1-Kaplan-Meier quantity and is NOT
+      comparable to the competing-risk-adjusted lifetime risks elsewhere in this file.
+      It is also not indexed at 19: it is the risk remaining for someone who reached 55
+      still normotensive, i.e. a selected survivor. A 90% baseline also means hypertension
+      is nearly SATURATED: applying any HR > 1 to a 90% risk is arithmetically almost
+      inert (see hr_to_life_expectancy.py section E: HR 1.20 on a 0.90 baseline moves the
+      risk only to 0.937, while naive multiplication gives an impossible 1.08). For a
+      sleep model the informative hypertension outcome is AGE AT ONSET or blood pressure
+      level, not lifetime incidence.
+      The paper's other reported figure: lifetime probability of receiving
+      antihypertensive medication = 60%."
+
+  - id: hypertension_prevalence_us_male_by_age_2021_2023
+    outcome: hypertension
+    metric: cross_sectional_prevalence
+    value: null
+    unit: percent
+    ci: null
+    se: null
+    age_at_assessment: null
+    age_horizon: null
+    sex: male
+    competing_risk_adjusted: false
+    definition: "Systolic BP >=130 mm Hg OR diastolic BP >=80 mm Hg OR currently taking
+      medication to lower blood pressure (2017 ACC/AHA definition)."
+    value_by_age_band:
+      "18_39": {value: 30.0, ci: [26.2, 34.1], se: 1.8}
+      "40_59": {value: 55.9, ci: [50.6, 61.1], se: 2.4}
+      "60_plus": {value: 72.7, ci: [68.8, 76.4], se: 1.7}
+      "18_plus_crude": {value: 50.8, ci: [48.4, 53.2], se: 1.1}
+      "18_plus_age_adjusted": {value: 48.8, ci: [46.2, 51.4], se: 1.2}
+    source: "Fryar CD, Kit B, Carroll MD, Afful J. Hypertension Prevalence, Awareness,
+      Treatment, and Control Among Adults Age 18 and Older: United States, August
+      2021-August 2023. NCHS Data Brief No. 511. National Center for Health Statistics;
+      2024."
+    doi_or_url: "https://www.cdc.gov/nchs/data/databriefs/db511.pdf"
+    year: 2024
+    data_years: "August 2021-August 2023"
+    population: "NHANES, men n = 2,776"
+    quote: "Men 18 and older (age adjusted). . . 2,776 48.8 (46.2-51.4) 1.2 / 18 and older
+      (crude) . . . 2,776 50.8 (48.4-53.2) 1.1 / 18-39 . . . 787 30.0 (26.2-34.1) 1.8 /
+      40-59 . . . 752 55.9 (50.6-61.1) 2.4 / 60 and older . . . 1,237 72.7 (68.8-76.4) 1.7"
+    verification: {status: VERIFIED, doi_resolves: null, pmid: "40085792"}
+    notes: "CONTEMPORARY, US-representative, and the 18-39 band overlaps the subject's own
+      age. Note the definition change: >=130/80 here versus >=140/90 in Vasan 2002. The
+      2017 ACC/AHA threshold roughly doubles measured prevalence in young adults, so
+      30.0% for men 18-39 is NOT comparable to older literature.
+      This data brief has no registered DOI; cited by stable CDC URL."
+
+  # -----------------------------------------------------------------------------------
+  # 3. CARDIOVASCULAR DISEASE / MACE
+  # -----------------------------------------------------------------------------------
+  - id: chd_lifetime_risk_age40_male
+    outcome: coronary_heart_disease
+    metric: lifetime_risk
+    value: 48.6
+    unit: percent
+    ci: [45.8, 51.3]
+    se: null
+    age_at_assessment: 40
+    age_horizon: null
+    sex: male
+    competing_risk_adjusted: true
+    definition: "Angina pectoris, coronary insufficiency, myocardial infarction, or death
+      from coronary heart disease. Multiple-decrement life-table method (competing risk
+      of non-CHD death handled explicitly)."
+    source: "Lloyd-Jones DM, Larson MG, Beiser A, Levy D. Lifetime risk of developing
+      coronary heart disease. Lancet. 1999;353(9147):89-92."
+    doi_or_url: "10.1016/S0140-6736(98)10279-9"
+    year: 1999
+    data_years: "1971-1996"
+    population: "Framingham Heart Study, 7,733 participants aged 40-94"
+    quote: "Lifetime risk of coronary heart disease at age 40 years was 48.6% (95% CI
+      45.8-51.3) for men and 31.7% (29.2-34.2) for women."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "10023892"}
+    notes: "Excluding isolated angina as the initial event, lifetime risk at 40 was 42.4%
+      for men. This is the CLOSEST published index age to the subject's own age for a
+      hard-CHD endpoint. Framingham is white, largely middle-class New England, mid-20th
+      century mortality; risk transportability to a 2026 19-year-old is only fair."
+
+  - id: cvd_total_lifetime_risk_age45_male
+    outcome: cardiovascular_disease_total
+    metric: lifetime_risk
+    value: 60.3
+    unit: percent
+    ci: [59.3, 61.2]
+    se: null
+    age_at_assessment: 45
+    age_horizon: 95
+    sex: male
+    competing_risk_adjusted: true
+    definition: "Any total CVD event: fatal and nonfatal coronary heart disease, all forms
+      of stroke, congestive heart failure, and other CVD deaths. Pooled survival analysis
+      with non-CVD death as a competing event."
+    source: "Wilkins JT, Ning H, Berry J, Zhao L, Dyer AR, Lloyd-Jones DM. Lifetime risk
+      and years lived free of total cardiovascular disease. JAMA. 2012;308(17):1795-1801."
+    doi_or_url: "10.1001/jama.2012.14312"
+    year: 2012
+    data_years: "1964-2008"
+    population: "5 pooled NHLBI cohorts (Framingham, Framingham Offspring, ARIC, CHA,
+      CHS); up to 905,115 person-years"
+    quote: "At an index age of 45 years, overall lifetime risk for total CVD was 60.3%
+      (95% CI, 59.3%-61.2%) for men and 55.6% (95% CI, 54.5%-56.7%) for women."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "23117780"}
+    notes: "PREFERRED CENTRAL ESTIMATE for total CVD / MACE lifetime risk in a US male,
+      because it pools 5 cohorts and uses the broadest MACE-like definition. Index age 45
+      not 19-40, so a model conditioning at 19 must first multiply by P(survive 19->45)
+      and then add CVD incidence between 19 and 45 (small but nonzero)."
+
+  - id: cvd_lifetime_risk_age50_male_by_risk_factor_burden
+    outcome: cardiovascular_disease_atherosclerotic
+    metric: lifetime_risk
+    value: 51.7
+    unit: percent
+    ci: [49.3, 54.2]
+    se: null
+    age_at_assessment: 50
+    age_horizon: 95
+    sex: male
+    competing_risk_adjusted: true
+    definition: "Myocardial infarction, coronary insufficiency, angina, stroke,
+      claudication, with death free of CVD as a competing event."
+    value_by_risk_factor_burden:
+      all_optimal: 5.2
+      two_or_more_major_risk_factors: 68.9
+      median_survival_years_optimal: ">39"
+      median_survival_years_two_plus_rf: 28
+    source: "Lloyd-Jones DM, Leip EP, Larson MG, D'Agostino RB, Beiser A, Wilson PW, Wolf
+      PA, Levy D. Prediction of lifetime risk for cardiovascular disease by risk factor
+      burden at 50 years of age. Circulation. 2006;113(6):791-798."
+    doi_or_url: "10.1161/CIRCULATIONAHA.105.548206"
+    year: 2006
+    data_years: "Framingham, 111,777 person-years"
+    population: "Framingham Heart Study, 3,564 men free of CVD at age 50"
+    quote: "At 50 years of age, lifetime risks were 51.7% (95% CI, 49.3 to 54.2) for men
+      and 39.2% (95% CI, 37.0 to 41.4) for women, with median survivals of 30 and 36
+      years, respectively. . . . Compared with participants with > or =2 major risk
+      factors, those with optimal levels had substantially lower lifetime risks (5.2%
+      versus 68.9% in men, 8.2% versus 50.2% in women) and markedly longer median
+      survivals (>39 versus 28 years in men, >39 versus 31 years in women)."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "16461820"}
+    notes: "THE MOST USEFUL CVD RECORD FOR A SLEEP MODEL. The 5.2% vs 68.9% spread across
+      risk-factor burden at age 50 is a 13-fold range in absolute lifetime risk driven by
+      blood pressure, cholesterol, glucose and smoking. Chronic sleep restriction is
+      hypothesised to shift exactly those mediators. Modelling the exposure as a partial
+      shift along this gradient is far better identified than applying a CVD hazard ratio
+      to a population-average lifetime risk, and it automatically respects the
+      compression of risk ratios near a saturated baseline."
+
+  - id: cvd_competing_hazard_ratio_by_bmi_middle_aged_men
+    outcome: cardiovascular_disease_total
+    metric: ratio
+    value: null
+    unit: ratio
+    ci: null
+    se: null
+    age_at_assessment: [40, 59]
+    age_horizon: null
+    sex: male
+    competing_risk_adjusted: true
+    definition: "Competing-risk (Cox) hazard ratio for incident total CVD versus normal
+      BMI 18.5-24.9, in middle-aged men."
+    value_by_bmi_category:
+      overweight_25_29_9: {value: 1.21, ci: [1.14, 1.28]}
+      obese_30_39_9: {value: 1.67, ci: [1.55, 1.79]}
+      morbidly_obese_40_plus: {value: 3.14, ci: [2.48, 3.97]}
+    source: "Khan SS, Ning H, Wilkins JT, Allen N, Carnethon M, Berry JD, Sweis RN,
+      Lloyd-Jones DM. Association of Body Mass Index With Lifetime Risk of Cardiovascular
+      Disease and Compression of Morbidity. JAMA Cardiol. 2018;3(4):280-287."
+    doi_or_url: "10.1001/jamacardio.2018.0022"
+    year: 2018
+    data_years: "1964-2015"
+    population: "10 pooled US cohorts, 3.2 million person-years, 190,672 examinations"
+    quote: "Compared with normal weight, among middle-aged men and women, competing hazard
+      ratios for incident CVD were 1.21 (95% CI, 1.14-1.28) and 1.32 (95% CI, 1.24-1.40),
+      respectively, for overweight (BMI, 25.0-29.9), 1.67 (95% CI, 1.55-1.79) and 1.85
+      (95% CI, 1.72-1.99) for obesity (BMI, 30.0-39.9), and 3.14 (95% CI, 2.48-3.97) and
+      2.53 (95% CI, 2.20-2.91) for morbid obesity (BMI, >=40.0)."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "29490333"}
+    notes: "Supplied so the sleep -> BMI -> CVD path can be evaluated on the same
+      competing-risk scale as the lifetime risks above. These are HRs, not absolute
+      risks; they belong in this file only as the conversion coefficient between a BMI
+      shift and a CVD hazard shift."
+
+  - id: aha_statistical_update_cvd_lifetime_risk
+    outcome: cardiovascular_disease_total
+    metric: not_extracted
+    value: null
+    ci: null
+    age_at_assessment: null
+    sex: null
+    source: "Palaniappan LP, Allen NB, ... Khan SS; American Heart Association Council on
+      Epidemiology and Prevention Statistics Committee and Stroke Statistics Committee.
+      2026 Heart Disease and Stroke Statistics: A Report of US and Global Data From the
+      American Heart Association. Circulation. 2026;153(9):e275-e906."
+    doi_or_url: "10.1161/CIR.0000000000001412"
+    year: 2026
+    verification: {status: SOURCE_VERIFIED_CONTENT_NOT_RETRIEVABLE, doi_resolves: true,
+      pmid: "41562125"}
+    why_no_number: "The AHA Statistical Update was explicitly requested by the task brief.
+      Its existence, DOI, PMID and pagination are all verified, and the 2026 edition is the
+      current one (superseding the 2025 edition, PMID 39866113, DOI
+      10.1161/CIR.0000000000001303). But no number is extracted from it, for two reasons.
+      (1) NOT RETRIEVABLE: ahajournals.org returns HTTP 403 to automated clients for both
+      the HTML and the reader view, there is no PubMed Central copy, and the PubMed
+      abstract is a scope statement containing no statistics. Hard rule 2 of
+      EXTRACTION_INSTRUCTIONS.md forbids extracting a number that cannot be quoted, so
+      nothing is recorded rather than recalled. (2) DERIVATIVE ANYWAY: the Statistical
+      Update does not compute lifetime risk itself; its lifetime-risk statements are
+      citations to the primary analyses that this file already carries at first hand --
+      Lloyd-Jones 1999 (PMID 10023892), Lloyd-Jones 2006 (PMID 16461820) and Wilkins 2012
+      (PMID 23117780). Extracting it would therefore have double-counted the Framingham
+      cohort rather than added information."
+    notes: "ACTION FOR A HUMAN OPERATOR: if institutional access to Circulation is
+      available, the CVD prevalence and incidence chapters would supply more recent
+      denominators than the 2006-2012 Framingham papers used here, though the lifetime-risk
+      figures themselves would still trace back to those same papers. This is the only
+      task-named source this shard could not open."
+
+  # -----------------------------------------------------------------------------------
+  # 4. DEMENTIA / ALZHEIMER'S DISEASE
+  # -----------------------------------------------------------------------------------
+  - id: dementia_lifetime_risk_age45_male_framingham
+    outcome: dementia_all_cause
+    metric: lifetime_risk
+    value: 13.8
+    unit: percent
+    ci: [12.2, 15.3]
+    se: null
+    age_at_assessment: 45
+    age_horizon: null
+    sex: male
+    competing_risk_adjusted: true
+    definition: "Prospectively ascertained clinical dementia; competing-mortality-adjusted
+      cumulative incidence (CM-ACI) over the remaining lifespan."
+    source: "Chene G, Beiser A, Au R, Preis SR, Wolf PA, Dufouil C, Seshadri S. Gender and
+      incidence of dementia in the Framingham Heart Study from mid-adult life. Alzheimers
+      Dement. 2015;11(3):310-320."
+    doi_or_url: "10.1016/j.jalz.2013.10.005"
+    year: 2015
+    data_years: "136,266 person-years of Framingham follow-up"
+    population: "Framingham Heart Study, 7,901 participants (3,568 men), index age 45"
+    quote: "Lifetime risk | 507 | 270 | 76.5 [60.9-92.2] | 61.0 [50.4-71.5] | 0.11 | 22.7
+      [20.9-24.5] | 13.8 [12.2-15.3] | <0.001  (Table 2, index age 45: women then men,
+      competing-mortality-unadjusted then competing-mortality-adjusted cumulative
+      incidence). Supporting text: 'LTR of dementia/AD at age 45 was 1 in 5 in women and
+      1 in 10 in men.'"
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "24418058"}
+    companion_values:
+      alzheimer_disease_lifetime_risk_age45_male: {value: 10.3, ci: [8.9, 11.8]}
+      dementia_lifetime_risk_age65_male: {value: 15.5, ci: [13.7, 17.2]}
+      alzheimer_disease_lifetime_risk_age65_male: {value: 11.6, ci: [10.0, 13.2]}
+      dementia_NOT_competing_adjusted_age45_male: {value: 61.0, ci: [50.4, 71.5]}
+      dementia_NOT_competing_adjusted_age65_male: {value: 60.7, ci: [50.0, 71.4]}
+    notes: "THE CANONICAL DEMONSTRATION of why competing mortality cannot be ignored:
+      the SAME men, SAME cohort, SAME endpoint give 13.8% adjusted versus 61.0%
+      unadjusted, a factor of 4.42. Any downstream model that reports a dementia
+      lifetime risk must state which of these two it is using."
+
+  - id: dementia_lifetime_risk_after_age55_male_aric
+    outcome: dementia_all_cause
+    metric: lifetime_risk
+    value: 35
+    unit: percent
+    ci: [33, 36]
+    se: null
+    age_at_assessment: 55
+    age_horizon: 95
+    sex: male
+    competing_risk_adjusted: true
+    definition: "Dementia ascertained by in-person cognitive assessment, informant
+      interview, hospitalisation and death records, plus Medicare claims; cumulative
+      incidence with mortality as a competing event."
+    source: "Fang M, Hu J, Weiss J, Knopman DS, Albert M, Windham BG, Walker KA, Sharrett
+      AR, Gottesman RF, Lutsey PL, Mosley T, Selvin E, Coresh J. Lifetime risk and
+      projected burden of dementia. Nat Med. 2025;31(3):772-776."
+    doi_or_url: "10.1038/s41591-024-03340-9"
+    year: 2025
+    data_years: "ARIC, 1987-2020"
+    population: "Atherosclerosis Risk in Communities, n = 15,043; 26.9% Black, 55.1% women"
+    quote: "There was a higher lifetime risk of dementia in women versus men (48% (95% CI:
+      46-50) versus 35% (95% CI: 33-36)). . . . The lifetime risk of dementia after age 55
+      years was 42% (95% confidence interval: 41-43)."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "39806070"}
+    companion_values:
+      both_sexes_after_55: {value: 42, ci: [41, 43]}
+      white_men_apoe_0_alleles: {value: 31, ci: [29, 34]}
+      white_men_apoe_1_allele: {value: 40, ci: [37, 44]}
+      white_men_apoe_2_alleles: {value: 60, ci: [49, 70]}
+      black_men_apoe_0_alleles: {value: 34, ci: [29, 38]}
+    notes: "MOST RECENT AND MOST COMPLETE ASCERTAINMENT, and it CONTRADICTS Framingham by
+      a factor of about 2.5 (35% versus 13.8% for men). Fang et al. address this
+      explicitly: 'Previous studies suggest that 11-14% of men and 19-23% of women in the
+      United States will develop dementia during their lives' and 'In the Framingham Heart
+      Study, 14% of men and 23% of women developed dementia from age 45-105 years'. The
+      gap is ascertainment completeness (ARIC actively surveils and links claims;
+      Framingham relies on clinical diagnosis), not competing-risk method -- both adjust.
+      DOWNSTREAM HANDLING: carry BOTH. Male dementia lifetime risk is 14% to 35%; that
+      2.5-fold spread is the largest single denominator uncertainty in this shard and it
+      must not be collapsed to a point estimate."
+
+  - id: dementia_remaining_lifetime_risk_age65_male_1997
+    outcome: dementia_all_cause
+    metric: lifetime_risk
+    value: 10.9
+    unit: percent
+    ci: [8.0, 13.8]
+    se: null
+    age_at_assessment: 65
+    age_horizon: null
+    sex: male
+    competing_risk_adjusted: true
+    definition: "Remaining lifetime risk of any dementing illness, modified survival
+      analysis accounting for competing mortality."
+    source: "Seshadri S, Wolf PA, Beiser A, Au R, McNulty K, White R, D'Agostino RB.
+      Lifetime risk of dementia and Alzheimer's disease. The impact of mortality on risk
+      estimates in the Framingham Study. Neurology. 1997;49(6):1498-1504."
+    doi_or_url: "10.1212/wnl.49.6.1498"
+    year: 1997
+    data_years: "20-year Framingham follow-up"
+    population: "Framingham, 2,611 cognitively intact subjects (1,061 men), mean age 66"
+    quote: "In a 65-year-old man, the remaining lifetime risk of AD was 6.3% (95% CI, 3.9
+      to 8.7) and the remaining lifetime risk of developing any dementing illness was
+      10.9% (95% CI, 8.0 to 13.8); corresponding risks for a 65-year-old woman were 12%
+      (95% CI, 9.2 to 14.8) and 19% (95% CI, 17.2 to 22.5). The cumulative incidence
+      between age 65 and 100 years was much higher: for AD, 25.5% in men and 28.1% in
+      women; for dementia, 32.8% in men and 45% in women."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "9409336"}
+    companion_values:
+      alzheimer_remaining_lifetime_risk_age65_male: {value: 6.3, ci: [3.9, 8.7]}
+      dementia_cumulative_incidence_65_to_100_male_NOT_adjusted: 32.8
+      alzheimer_cumulative_incidence_65_to_100_male_NOT_adjusted: 25.5
+    notes: "Second published demonstration of the competing-risk bias, in men: 10.9%
+      remaining lifetime risk versus 32.8% naive cumulative incidence to age 100, a factor
+      of 3.01. The paper's own framing: 'Conventional estimates of cumulative incidence
+      overestimate the risk when there is a substantial probability of mortality due to
+      competing causes.'"
+
+  - id: dementia_probability_before_death_given_survival_to_70_us
+    outcome: dementia_all_cause
+    metric: conditional_probability_at_death
+    value: 41.3
+    unit: percent
+    ci: [39.3, 43.2]
+    se: 0.995
+    age_at_assessment: 70
+    age_horizon: death
+    sex: both
+    competing_risk_adjusted: true
+    definition: "P(dementia present six months before death | died after age 70). NOT a
+      lifetime risk from a young index age: it conditions on surviving to 70."
+    source: "Hudomiet P, Hurd MD, Rohwedder S. Inequalities in the Duration and Lifetime
+      Risk of Dementia in the United States. Demography. 2025;62(4):1389-1412."
+    doi_or_url: "10.1215/00703370-12175489"
+    year: 2025
+    data_years: "Health and Retirement Study waves 2000-2016, decedents aged 70+"
+    population: "8,814 HRS decedents aged 70+, 45.0% male (weighted)"
+    quote: "We found a higher lifetime risk of dementia than found in earlier U.S. studies:
+      41.3% (CI: 39.3% to 43.2%) of those who died after age 70 had dementia assessed at six
+      months before death. Further, 38.7% (CI: 36.8% to 40.5%), 33.6% (CI: 31.8% to 35.4%),
+      and 20.1% (CI: 18.6% to 21.5%) had dementia one, two, and five years before death,
+      respectively."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "40739976"}
+    by_duration_before_death:
+      six_months: {value: 41.3, ci: [39.3, 43.2]}
+      one_year: {value: 38.7, ci: [36.8, 40.5]}
+      two_years: {value: 33.6, ci: [31.8, 35.4]}
+      five_years: {value: 20.1, ci: [18.6, 21.5]}
+    sex_difference_women_minus_men_pct_points:
+      six_months: {value: 6.4, ci: [3.3, 9.5]}
+      five_years: {value: 5.7, ci: [3.3, 8.1]}
+      note: "Covariate-adjusted OLS coefficients from their Table 2. The paper does NOT
+        publish the male level directly; see derived_male_estimate below."
+    derived_male_estimate:
+      value: 37.8
+      derivation: "41.3 - 0.55 * 6.4, i.e. the published marginal minus the female share
+        (55.0% weighted) of the 6.4-point female excess. Approximate because the 6.4 points
+        is covariate-adjusted, not marginal."
+      verification: {status: DERIVED_BY_THIS_SHARD, doi_resolves: null, pmid: null}
+    notes: "DURATION MATTERS FOR ANY QALY CALCULATION: 41.3% ever have dementia before
+      death but only 20.1% live with it for five years or more, so about half of all
+      dementia here is a terminal-phase phenomenon of under five years. Multiplying a 41%
+      lifetime risk by a multi-year disability weight would roughly double the true QALY
+      loss."
+
+  - id: dementia_denominator_reconciliation
+    outcome: dementia_all_cause
+    metric: reconciliation_not_an_estimate
+    value: null
+    sex: male
+    verification: {status: DERIVED_BY_THIS_SHARD, doi_resolves: null, pmid: null}
+    problem: "Published US male dementia lifetime risk spans a factor of 3.6 across the five
+      estimates in this file. Part of the spread is an artefact of DIFFERENT INDEX AGES,
+      which this shard can remove, and the rest is ascertainment, which it cannot."
+    method: "Each published estimate is conditional on being alive at its own index age.
+      Multiplying by S(19 -> index), taken from lifetable_us_male_full.csv, puts them all on
+      one unconditional-from-age-19 scale. This is the section 2 competing-mortality
+      correction in competing_risk_method.md, applied to the literature instead of to a
+      single incidence schedule. It IGNORES dementia arising before the index age, which is
+      negligible for index ages 45+."
+    survival_from_19_used:
+      to_45: 0.9418
+      to_55: 0.8943
+      to_65: 0.7996
+      to_70: 0.7274
+    estimates_on_common_scale:
+      - {study: "Chene 2015 (Framingham, men, clinical diagnosis)", index_age: 45,
+         as_published_pct: 13.8, survival_factor: 0.9418, unconditional_from_19_pct: 13.0,
+         pmid: "24418058"}
+      - {study: "Seshadri 1997 (Framingham, men, remaining lifetime risk)", index_age: 65,
+         as_published_pct: 10.9, survival_factor: 0.7996, unconditional_from_19_pct: 8.7,
+         pmid: "9409336"}
+      - {study: "Fishman 2017 (men, as cited by Hudomiet 2025, not retrieved first-hand)",
+         index_age: 70, as_published_pct: 24.0, survival_factor: 0.7274,
+         unconditional_from_19_pct: 17.5, pmid: null}
+      - {study: "Hudomiet 2025 (HRS, men, derived from published female excess)",
+         index_age: 70, as_published_pct: 37.8, survival_factor: 0.7274,
+         unconditional_from_19_pct: 27.5, pmid: "40739976"}
+      - {study: "Fang 2025 (ARIC, OVERALL not male-specific, active surveillance)",
+         index_age: 55, as_published_pct: 35.0, survival_factor: 0.8943,
+         unconditional_from_19_pct: 31.3, pmid: "39806070"}
+    finding: "Putting them on a common index age narrows the range only from 3.6x to 3.6x
+      (8.7% to 31.3%) - it does NOT resolve the disagreement. Index age is therefore NOT the
+      main driver; ascertainment is."
+    why_ascertainment_dominates: "Hudomiet et al. 2025 diagnose the mechanisms explicitly in
+      their discussion, and every one of them biases DOWNWARD: (1) claims-based
+      ascertainment misses undiagnosed dementia; (2) the widely used calibrated cutoff method
+      underpredicts dementia prevalence at ages 85+ by 4.8 percentage points, validated
+      against the ADAMS clinical substudy where their own model matched almost exactly
+      (0.359 vs 0.358 observed, versus 0.310 for the cutoff method); (3) estimates based on
+      status measured some months before death miss progression in the final months; and
+      (4) older cohorts such as Framingham had LOWER life expectancy, so relatively more
+      members died young at ages where dementia risk is low."
+    recommendation: "Because all four identified biases point the same way, the low end of
+      this range is more likely to be wrong than the high end. Use 20-30% as the central
+      band for unconditional male dementia risk from age 19, and carry the full 9-31% as
+      the uncertainty range rather than treating Chene's 13.8% as the point estimate. A
+      neurodegeneration conclusion that flips sign or materially changes across that band
+      is not a conclusion. NOTE: the survival multiplications and the male-level derivation
+      in this block are THIS SHARD'S ARITHMETIC on published inputs, not published values."
+
+  # -----------------------------------------------------------------------------------
+  # 5. OBESITY
+  # -----------------------------------------------------------------------------------
+  - id: obesity_prevalence_us_male_by_age_2021_2023
+    outcome: obesity_bmi_30_plus
+    metric: cross_sectional_prevalence
+    value: 45.4
+    unit: percent
+    ci: null
+    se: 1.9
+    age_at_assessment: [40, 59]
+    age_horizon: null
+    sex: male
+    competing_risk_adjusted: false
+    definition: "BMI >=30 kg/m2, measured height and weight."
+    value_by_age_band:
+      "20_39": {value: 34.3, se: 2.8}
+      "40_59": {value: 45.4, se: 1.9}
+      "60_plus": {value: 38.0, se: 2.3}
+      "20_plus_crude": {value: 39.2, se: 1.9}
+      "20_plus_age_adjusted": {value: 39.3, se: 1.9}
+    source: "Emmerich SD, Fryar CD, Stierman B, Ogden CL. Obesity and Severe Obesity
+      Prevalence in Adults: United States, August 2021-August 2023. NCHS Data Brief No.
+      508. National Center for Health Statistics; 2024."
+    doi_or_url: "10.15620/cdc/159281"
+    year: 2024
+    data_years: "August 2021-August 2023"
+    population: "NHANES, men n = 2,680"
+    quote: "Men 20 and older. . . 2,680 39.2 1.9 39.3 1.9 / 20-39. . . 672 34.3 2.8 /
+      40-59. . . 762 45.4 1.9 / 60 and older. . . 1,246 38.0 2.3"
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "39808758"}
+    notes: "ANSWER TO 'probability of becoming obese by midlife for a US male', read as a
+      period prevalence: 45.4% (SE 1.9) of US men aged 40-59 are currently obese. This is
+      a PREVALENCE, not a cumulative incidence: it understates the fraction who are EVER
+      obese by midlife (some regress below BMI 30) and is subject to cohort effects."
+
+  - id: obesity_projected_at_age35_current_us_children
+    outcome: obesity_bmi_30_plus
+    metric: lifetime_risk
+    value: 57.3
+    unit: percent
+    ci: [55.2, 60.0]
+    se: null
+    age_at_assessment: [2, 19]
+    age_horizon: 35
+    sex: both
+    competing_risk_adjusted: false
+    definition: "Simulated probability of BMI >=30 at exact age 35, for the 2016 US
+      population of children aged 0-19, from pooled growth trajectories."
+    source: "Ward ZJ, Long MW, Resch SC, Giles CM, Cradock AL, Gortmaker SL. Simulation of
+      Growth Trajectories of Childhood Obesity into Adulthood. N Engl J Med.
+      2017;377(22):2145-2153."
+    doi_or_url: "10.1056/NEJMoa1703860"
+    year: 2017
+    data_years: "5 longitudinal studies, 176,720 observations from 41,567 individuals"
+    population: "1,000 virtual populations of 1 million US children, representative of 2016"
+    quote: "Given the current level of childhood obesity, the models predicted that a
+      majority of today's children (57.3%; 95% uncertainly interval [UI], 55.2 to 60.0)
+      will be obese at the age of 35 years, and roughly half of the projected prevalence
+      will occur during childhood."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "29171811"}
+    companion_values:
+      rr_adult_obesity_for_19yo_with_severe_obesity: {value: 3.10, ci: [2.43, 3.65]}
+      p_no_longer_obese_at_35_if_severely_obese_at_19: {value: 6.1, ci: [2.1, 9.9]}
+    quote_companion: "Our simulations indicated that the relative risk of adult obesity
+      increased with age and BMI, from 1.17 (95% UI, 1.09 to 1.29) for overweight
+      2-year-olds to 3.10 (95% UI, 2.43 to 3.65) for 19-year-olds with severe obesity. For
+      children with severe obesity, the chance they will no longer be obese at the age of
+      35 years fell from 21.0% (95% UI, 7.3 to 47.3) at the age of 2 years to 6.1% (95%
+      UI, 2.1 to 9.9) at the age of 19 years."
+    verification_companion: {status: VERIFIED, doi_resolves: true, pmid: "29171811"}
+    notes: "BEST AVAILABLE FORWARD-LOOKING obesity denominator for a cohort that includes
+      today's 19-year-olds: 57.3% obese by age 35, i.e. HIGHER than the current 40-59
+      prevalence of 45.4% because of cohort effects. Both sexes combined. Also gives the
+      persistence coefficient the model needs: BMI status at 19 is close to absorbing --
+      a severely obese 19-year-old has only a 6.1% chance of not being obese at 35, so a
+      sleep-driven BMI shift occurring at ages 16-19 should be modelled as largely
+      PERMANENT, not transient."
+
+  # -----------------------------------------------------------------------------------
+  # 6. MAJOR DEPRESSIVE DISORDER
+  # -----------------------------------------------------------------------------------
+  - id: mde_past_year_us_male_18_25_nsduh2024
+    outcome: major_depressive_episode
+    metric: period_prevalence
+    value: 12.4
+    unit: percent
+    ci: [11.26, 13.54]
+    se: 0.58
+    age_at_assessment: [18, 25]
+    age_horizon: null
+    sex: male
+    competing_risk_adjusted: null
+    definition: "Past-year major depressive episode, DSM-5 aligned (>=2 weeks of depressed
+      mood or loss of interest plus >=4 additional symptoms)."
+    source: "Substance Abuse and Mental Health Services Administration, Center for
+      Behavioral Health Statistics and Quality. 2024 National Survey on Drug Use and
+      Health Detailed Tables, Table 6.39B (percentages) and Table 6.39D (standard errors)."
+    doi_or_url: "https://www.samhsa.gov/data/report/2024-nsduh-detailed-tables"
+    year: 2025
+    data_years: "2024"
+    population: "NSDUH, US civilian noninstitutionalized population aged 18+"
+    quote: "Table 6.39B - Major Depressive Episode in Past Year: Among People Aged 18 or
+      Older; by Sex and Detailed Age Category, Percentages, 2023 and 2024 ...
+      18-25 | 17.5a | 15.9 | 12.8 | 12.4 | 22.2b | 19.3
+      (columns: Total 2023, Total 2024, Male 2023, Male 2024, Female 2023, Female 2024)
+      Table 6.39D standard errors, row 18-25: 0.51 | 0.48 | 0.65 | 0.58 | 0.72 | 0.71"
+    verification:
+      status: VERIFIED
+      doi_resolves: null
+      pmid: null
+      note: "Retrieved as the official SAMHSA detailed-tables ZIP
+        (2024-nsduh-detailed-tables-072325.zip) and parsed programmatically; no DOI
+        exists for NSDUH detailed tables."
+    companion_values:
+      male_18_20_2024: {value: 11.2, se: 0.92}
+      male_21_25_2024: {value: 13.1, se: 0.74}
+      male_18_25_2023: {value: 12.8, se: 0.65}
+      male_18_plus_2024: {value: 6.4, se: 0.26}
+      female_18_25_2024: {value: 19.3, se: 0.71}
+    notes: "EXACT AGE MATCH for the subject: males 18-20 have an 11.2% (SE 0.92) past-year
+      MDE prevalence. CI computed as value +/- 1.96*SE from the published SE; SAMHSA does
+      not print CIs in these tables. NSDUH 2024 had 47.9% adult non-response and used
+      multimode collection, so SAMHSA itself warns that comparisons across years must be
+      made with caution. NSDUH measures MDE (an episode), not MDD (the disorder);
+      MDE excludes the bipolar exclusion criterion."
+
+  - id: mdd_lifetime_prevalence_us_male_nesarc3
+    outcome: major_depressive_disorder
+    metric: lifetime_prevalence
+    value: 14.7
+    unit: percent
+    ci: [13.92, 15.48]
+    se: 0.40
+    age_at_assessment: [18, 999]
+    age_horizon: null
+    sex: male
+    competing_risk_adjusted: null
+    definition: "DSM-5 major depressive disorder, ever in life, AUDADIS-5 interview."
+    source: "Hasin DS, Sarvet AL, Meyers JL, Saha TD, Ruan WJ, Stohl M, Grant BF.
+      Epidemiology of Adult DSM-5 Major Depressive Disorder and Its Specifiers in the
+      United States. JAMA Psychiatry. 2018;75(4):336-346."
+    doi_or_url: "10.1001/jamapsychiatry.2017.4602"
+    year: 2018
+    data_years: "2012-2013"
+    population: "NESARC-III, n = 36,309 US adults"
+    quote: "Male | 7.2 (0.26) | 0.5 (0.46-0.55) | 14.7 (0.40) | 0.5 (0.46-0.53)
+      (Table 1 columns: 12-month prevalence % (SE), 12-month OR, lifetime prevalence %
+      (SE), lifetime OR). Text: 'Of the 36 309 adult participants in NESARC-III, 12-month
+      and lifetime prevalences of MDD were 10.4% and 20.6%, respectively.'"
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "29450462"}
+    companion_values:
+      male_12_month: {value: 7.2, se: 0.26}
+      both_sexes_lifetime: {value: 20.6, se: 0.37}
+      both_sexes_12_month: {value: 10.4, se: 0.25}
+      age_18_29_lifetime: {value: 20.2, se: 0.55}
+      age_18_29_12_month: {value: 12.9, se: 0.47}
+    notes: "CI computed as value +/- 1.96*SE from the published SE. Lifetime PREVALENCE in
+      an all-ages male cross-section understates a 19-year-old's lifetime RISK, because
+      most respondents contributing to the 14.7% have not finished passing through the
+      risk period either. Use morbid risk (next record) for the forward-looking number."
+
+  - id: mdd_morbid_risk_by_age75_male_wmh
+    outcome: major_depressive_disorder
+    metric: morbid_risk
+    value: 20.1
+    unit: percent
+    ci: [19.2, 20.9]
+    se: null
+    age_at_assessment: 0
+    age_horizon: 75
+    sex: male
+    competing_risk_adjusted: false
+    definition: "Projected cumulative lifetime risk (morbid risk) of DSM-IV major
+      depressive disorder by age 75, from age-of-onset curves; per 100 participants."
+    source: "McGrath JJ, Al-Hamzawi A, Alonso J, et al.; WHO World Mental Health Survey
+      Collaborators. Age of onset and cumulative risk of mental disorders: a cross-national
+      analysis of population surveys from 29 countries. Lancet Psychiatry.
+      2023;10(9):668-681."
+    doi_or_url: "10.1016/S2215-0366(23)00193-1"
+    year: 2023
+    data_years: "2001-2022"
+    population: "WHO World Mental Health surveys, 156,331 respondents, 32 surveys,
+      29 countries (71,023 male)"
+    quote: "Major depressive disorder | 20.1 | (19.2-20.9) | 34.0 | (33.2-34.9) | 2.7 |
+      (2.6-2.8) | 2.5 | (2.4-2.5)  (Morbid risk per 100 participants at age 75: male then
+      female, then the ratio of morbid risk to lifetime prevalence for each sex).
+      Supporting text: 'Morbid risk of any mental disorder by age 75 years was 46.4%
+      (44.9-47.8) for male respondents'; 'Conditional probabilities of first onset peaked
+      at approximately age 15 years, with a median age of onset of 19 years (IQR 14-32)
+      for male respondents'."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "37531964"}
+    companion_values:
+      any_mood_disorder_male_morbid_risk: {value: 24.5, ci: [23.5, 25.4]}
+      any_mental_disorder_male_morbid_risk: {value: 46.4, ci: [44.9, 47.8]}
+      male_lifetime_prevalence_any_disorder: {value: 28.6, ci: [27.9, 29.2]}
+      median_age_of_onset_male_any_disorder_years: 19
+    notes: "RECOMMENDED FORWARD-LOOKING MDD DENOMINATOR for a 19-year-old male: roughly
+      20% will develop MDD by age 75. Cross-national, NOT US-specific, so transportability
+      is only fair; the US contributes only part of the sample and US rates are generally
+      at or above the cross-national mean (compare NCS-R lifetime 16.2% and NESARC-III
+      lifetime 20.6% for both sexes). Note the striking coincidence for this project: the
+      median age of first onset of any mental disorder in males is exactly 19, so the
+      exposure window and the peak-hazard window overlap completely."
+
+  - id: mdd_lifetime_and_12month_ncsr
+    outcome: major_depressive_disorder
+    metric: lifetime_prevalence
+    value: 16.2
+    unit: percent
+    ci: [15.1, 17.3]
+    se: null
+    age_at_assessment: [18, 999]
+    age_horizon: null
+    sex: both
+    competing_risk_adjusted: null
+    definition: "DSM-IV major depressive disorder assessed with the WHO CIDI."
+    source: "Kessler RC, Berglund P, Demler O, Jin R, Koretz D, Merikangas KR, Rush AJ,
+      Walters EE, Wang PS. The epidemiology of major depressive disorder: results from the
+      National Comorbidity Survey Replication (NCS-R). JAMA. 2003;289(23):3095-3105."
+    doi_or_url: "10.1001/jama.289.23.3095"
+    year: 2003
+    data_years: "2001-2002"
+    population: "NCS-R, N = 9,090 US household residents aged 18+"
+    quote: "The prevalence of CIDI MDD for lifetime was 16.2% (95% confidence interval
+      [CI], 15.1-17.3) (32.6-35.1 million US adults) and for 12-month was 6.6% (95% CI,
+      5.9-7.3) (13.1-14.2 million US adults)."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "12813115"}
+    companion_values:
+      twelve_month_both_sexes: {value: 6.6, ci: [5.9, 7.3]}
+      mean_episode_duration_weeks: {value: 16, ci: [15.1, 17.3]}
+      pct_12month_cases_severe_or_very_severe: 50.9
+    notes: "The NCS-R paper the task named. It does NOT report a sex-by-age-band breakdown
+      in the retrievable abstract, so the male 18-25 figure comes from NSDUH above and the
+      male lifetime figure from NESARC-III above. Kessler 2005 (Arch Gen Psychiatry
+      62:593, PMID 15939837) gives lifetime prevalence of any mood disorder 20.8%, median
+      age of onset for mood disorders 30 years, and 'Half of all lifetime cases start by
+      age 14 years and three fourths by age 24 years' -- directly relevant to whether the
+      exposure window precedes onset."
+
+  # -----------------------------------------------------------------------------------
+  # 7. SUICIDE
+  # -----------------------------------------------------------------------------------
+  - id: suicide_rate_us_male_15_24
+    outcome: suicide
+    metric: incidence_rate
+    value: 21.1
+    unit: per_100k_per_year
+    ci: null
+    se: null
+    age_at_assessment: [15, 24]
+    age_horizon: null
+    sex: male
+    competing_risk_adjusted: null
+    definition: "Suicide deaths, ICD-10 underlying cause-of-death codes U03, X60-X84,
+      Y87.0. Crude rate per 100,000 population in the age-sex group."
+    source: "Garnett MF, Curtin SC. Suicide Mortality in the United States, 2002-2022.
+      NCHS Data Brief No. 509. National Center for Health Statistics; 2024."
+    doi_or_url: "10.15620/cdc/160504"
+    year: 2024
+    data_years: "2022"
+    population: "US resident population, National Vital Statistics System, complete count"
+    quote: "Between 2020 and 2022, rates decreased for males ages 10-14 (3.6 deaths per
+      100,000 population to 2.8) and 15-24 (22.4 to 21.1), while rates increased for males
+      age 25 and older. Data table for Figure 3, 2022 row: 303 2.8 | 4,779 21.1 | 13,390
+      29.6 | 12,075 29.5 | 4,320 27.2 | 4,395 43.9 (age groups 10-14, 15-24, 25-44, 45-64,
+      65-74, 75+; number of deaths then rate per 100,000)."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "39392858"}
+    time_series_males_15_24_per_100k:
+      "2018": 22.7
+      "2019": 22.0
+      "2020": 22.4
+      "2021": 23.8
+      "2022": 21.1
+    deaths_2022_males_15_24: 4779
+    annual_probability_2022: 0.000211
+    secondary_estimate_2023:
+      value: 21.2
+      source: "National Institute of Mental Health, Suicide statistics page, Figure 2
+        (crude rates of suicide within sex and age categories, 2023), sourced to CDC
+        WISQARS / NVSS."
+      doi_or_url: "https://www.nimh.nih.gov/health/statistics/suicide"
+      verification: {status: VERIFIED, doi_resolves: null, pmid: null}
+      note: "Secondary/aggregator source. 2023 final NVSS rate for males 15-24 is 21.2 per
+        100,000, i.e. essentially unchanged from 2022. Age-adjusted total male suicide rate
+        2023 = 22.8 per 100,000."
+    age_gradient_within_15_24_both_sexes:
+      rate_15_19_2021: 11.8
+      rate_20_24_2021: 19.4
+      ratio_20_24_over_15_19: 1.64
+      sex: both
+      source: "Curtin SC, Garnett MF. Suicide and Homicide Death Rates Among Youth and
+        Young Adults Aged 10-24: United States, 2001-2021. NCHS Data Brief No. 471.
+        National Center for Health Statistics; 2023."
+      doi_or_url: "https://www.cdc.gov/nchs/data/databriefs/db471.pdf"
+      verification: {status: VERIFIED, doi_resolves: null, pmid: "37367034"}
+      quote: "The suicide rate for people aged 15-19 did not change significantly from 2001
+        through 2009, then increased 57% from 2009 through 2017 (from 7.5 deaths per 100,000
+        to 11.8). From 2017 through 2021, the trend did not change significantly. ... The
+        suicide rate for people aged 20-24 increased 63% from 2001 through 2021 (from 11.9
+        deaths per 100,000 to 19.4)."
+      why_this_matters: "THE HEADLINE 21.1 PER 100,000 IS A 15-24 AVERAGE AND THE SUBJECT
+        SITS EXACTLY ON THE SEAM. These both-sexes rates show the 20-24 band runs about
+        1.64x the 15-19 band, so suicide hazard is rising steeply across precisely the ages
+        18-22 that this project models. A model that applies the flat 15-24 male rate will
+        understate risk at 20-22 and overstate it at 16-18. Use the 1.64 ratio to shape the
+        male-specific rate across the window; do NOT use 11.8 or 19.4 as male rates, since
+        they pool both sexes and male rates run roughly 4x female in this age range."
+    notes: "SCALE CHECK the model should use: at 21.1 per 100,000 per year, suicide is
+      about 19.9% of ALL-CAUSE male mortality at age 19 (all-cause q19 = 0.001061 in the
+      life table this shard built). Because a suicide death at 19 destroys the entire
+      57.66-year remaining life expectancy, suicide is the single highest-leverage
+      mortality pathway in the whole model for this subject: a 10% relative increase in
+      suicide hazard confined to ages 19-22 costs about 0.006 years, but a 10% increase
+      in suicide hazard sustained to age 35 costs roughly 10x that. Compute it with
+      hr_to_life_expectancy.delta_ex(hr, age_from, age_to, cause_fraction=0.199)."
+
+# -------------------------------------------------------------------------------------
+# 8. PUBLISHED LIFE-EXPECTANCY / QALY ESTIMATES FOR SHORT SLEEP (external cross-checks)
+#    These are NOT baseline risks. They are independent published answers to
+#    approximately the question this project is asking, retained so the model's own
+#    calculation can be sanity-checked against them.
+# -------------------------------------------------------------------------------------
+sleep_life_expectancy_cross_checks:
+
+  - id: chaput2022_years_of_life_gained_canada
+    claim: "Life expectancy at age 20 is 1.2 years longer for adults meeting sleep
+      duration recommendations than for SHORT sleepers (and 2.6 years longer than for long
+      sleepers). Differences between men and women were minimal."
+    value_years: 1.2
+    sign_convention: "positive = years LOST by short sleepers relative to recommended sleep"
+    ci: null
+    age_at_assessment: 20
+    sex: both
+    source: "Chaput JP, Carrier J, Bastien C, Gariepy G, Janssen I. Years of life gained
+      when meeting sleep duration recommendations in Canada. Sleep Med. 2022;100:85-88."
+    doi_or_url: "10.1016/j.sleep.2022.08.006"
+    year: 2022
+    quote: "Adults who meet the sleep duration recommendations have an estimated life
+      expectancy at age 20 years that is 1.2 years longer than short sleepers and 2.6 years
+      longer than long sleepers. Differences between men and women were minimal."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "36029755"}
+    methodology: "Exactly the machinery this shard documents: (i) prevalence of short,
+      recommended and long sleep from national survey data; (ii) all-cause mortality
+      relative risks for sleep duration taken from published meta-analyses;
+      (iii) age-specific probabilities of death from national life tables; then a
+      hazard-modified life table. Index age 20 is nearly the subject's age."
+    weaknesses:
+      - "Canadian life tables and Canadian sleep prevalence, not US."
+      - "Inherits ALL the confounding in the observational sleep-mortality meta-analyses:
+        reverse causation (illness shortens sleep), residual confounding by shift work,
+        depression, obesity and socioeconomic status. The RR is not causal."
+      - "Self-reported habitual sleep duration in adults; no actigraphy, no adolescents."
+      - "Applies a single lifelong RR from age 20 to death. This is the OPPOSITE of our
+        exposure structure, which is 3 years of restriction at ages 16-19 followed by
+        unknown persistence. Their 1.2 years is therefore an UPPER BOUND on what 3 years
+        of adolescent restriction could cost via the mortality channel unless the
+        exposure permanently reprograms risk."
+      - "No QALY weighting; life-years only."
+    reproduction_by_this_shard: "Applying an all-cause mortality hazard ratio of 1.10-1.13
+      lifelong from age 20 to the NCHS 2023 US male life table gives -1.15 to -1.48 years
+      at age 20 (hr_to_life_expectancy.py section G). The published 1.2-year figure sits
+      inside that band, so the two methods agree. This is a genuine external validation of
+      the conversion machinery, not a coincidence."
+
+  - id: li2024_life_expectancy_at_30_by_sleep_pattern
+    claim: "US men with all 5 low-risk sleep factors had life expectancy at age 30 that
+      was 4.7 years greater than men with 0-1 low-risk sleep factors."
+    value_years: 4.7
+    sign_convention: "positive = years GAINED by the healthy-sleep group"
+    ci: [2.7, 6.7]
+    age_at_assessment: 30
+    sex: male
+    source: "Li H, Qian F, Han L, Feng W, Zheng D, Guo X, Zhang H. Association of healthy
+      sleep patterns with risk of mortality and life expectancy at age of 30 years: a
+      population-based cohort study. QJM. 2024;117(3):177-186."
+    doi_or_url: "10.1093/qjmed/hcad237"
+    year: 2024
+    quote: "When compared to those with 0-1 low-risk sleep factors, life expectancy at the
+      age of 30 years for individuals with all five low-risk sleep factors was 4.7 (95% CI:
+      2.7-6.7) years greater for men and 2.4 (95% CI: 0.4-4.4) years greater for women.
+      . . . The adjusted hazard ratios (95% confidence intervals [CI]) of participants with
+      five vs. 0-1 low-risk sleep factors for all-cause, cardiovascular, and cancer
+      mortality were 0.70 (0.63-0.77), 0.79 (0.67-0.93) and 0.81 (0.66-0.98),
+      respectively. Nearly 8% (population attributable fraction 7.9%, 95% CI: 5.5-10.4) of
+      mortality in this cohort could be attributed to suboptimal sleep patterns."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "37831896"}
+    methodology: "US National Health Interview Survey 2013-18, n = 172,321, linked to
+      National Death Index through 2019. Flexible parametric survival model, life
+      expectancy at 30 by count of low-risk sleep factors (7-8 h duration, no difficulty
+      falling asleep, no difficulty staying asleep, no sleep medication, feeling rested)."
+    weaknesses:
+      - "MUCH LARGER than Chaput's 1.2 years because the contrast is a 5-factor composite
+        (duration + insomnia + medication + restedness), not sleep duration alone.
+        Attributing all 4.7 years to short sleep duration would be a category error."
+      - "Median follow-up only 4.3 years with 8,681 deaths, so life expectancy at 30 is
+        extrapolated far beyond the observed data by the parametric model. The CI (2.7-6.7)
+        understates that extrapolation uncertainty."
+      - "Self-reported sleep; mean age 47, so almost no adolescent or young-adult exposure."
+      - "Reverse causation is severe for the insomnia/restedness components: people dying
+        within 4.3 years were often already ill."
+      - "HR 0.70 for all-cause mortality implies HR 1.43 for the poor-sleep group, which
+        by the machinery in this shard would cost about 4.5 years at age 30 -- internally
+        consistent with their 4.7, but the causal interpretation is the weak link."
+
+  - id: huang2023_cvd_free_life_expectancy
+    claim: "Male poor sleepers lost 2.31 CVD-free years relative to healthy sleepers;
+      intermediate sleepers lost 0.55 years."
+    value_years: 2.31
+    sign_convention: "positive = CVD-free years LOST by poor sleepers"
+    ci: [1.46, 3.29]
+    age_at_assessment: 40
+    sex: male
+    source: "Huang BH, Del Pozo Cruz B, Teixeira-Pinto A, Cistulli PA, Stamatakis E.
+      Influence of poor sleep on cardiovascular disease-free life expectancy: a
+      multi-resource-based population cohort study. BMC Med. 2023;21(1):75."
+    doi_or_url: "10.1186/s12916-023-02732-x"
+    year: 2023
+    quote: "We observed a gradual loss in CVD-free life expectancy toward poor sleep such
+      as, compared with healthy sleepers, poor sleepers lost 1.80 [95% CI 0.96-2.75] and
+      2.31 [1.46-3.29] CVD-free years in females and males, respectively, while
+      intermediate sleepers lost 0.48 [0.41-0.55] and 0.55 [0.49-0.61] years. Among men,
+      those with clinical insomnia or sleep-related breathing disorders lost CVD-free life
+      by 3.84 [0.61-8.59] or 6.73 [5.31-8.48] years, respectively."
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "36859313"}
+    methodology: "UK Biobank, 308,683 middle-aged adults, three-state Markov model
+      (healthy -> CVD -> death) conditioning on survival at age 40. Composite sleep score
+      from chronotype, duration, insomnia complaints, snoring and daytime sleepiness."
+    weaknesses:
+      - "CVD-FREE life expectancy, not total life expectancy; not directly comparable to
+        the two records above."
+      - "UK Biobank is a healthy-volunteer cohort with ~5% response, middle-aged at
+        baseline; no adolescents."
+      - "The composite sleep score conflates duration with insomnia, snoring and
+        chronotype. The INTERMEDIATE-sleeper estimate (0.55 y for men, CI 0.49-0.61) is
+        the more relevant contrast for mild-to-moderate restriction and is 4x smaller."
+      - "Self-reported exposure at a single time point."
+
+  - id: ma2023_le8_sleep_life_expectancy
+    claim: "A high LE8 sleep health score was associated with 5.0 more years of life
+      expectancy at age 50 than a low one. This is the LARGEST published sleep
+      life-expectancy figure found, and it is NOT mutually adjusted for the other seven
+      cardiovascular-health components, so it is a ceiling, not an estimate."
+    value_years: 5.0
+    sign_convention: "positive = years LOST by the low-sleep-health group"
+    ci: [3.2, 6.7]
+    se: 0.893
+    age_at_assessment: 50
+    sex: both
+    source: "Ma H, Wang X, Xue Q, Li X, Liang Z, Heianza Y, Franco OH, Qi L. Cardiovascular
+      Health and Life Expectancy Among Adults in the United States. Circulation.
+      2023;147(15):1137-1146."
+    doi_or_url: "10.1161/CIRCULATIONAHA.122.062457"
+    year: 2023
+    data_years: "NHANES 2005-2018, mortality through 2019-12-31"
+    population: "23,003 non-pregnant, non-institutionalised US adults aged 20-79, free of
+      self-reported CVD at baseline; 1,359 deaths (328 CVD) over median 7.8 y"
+    quote: "The new component for CVH--high sleep health score was significantly associated
+      with a longer life expectancy at age 50 by 5.0 (95% CI, 3.2-6.7) years for all
+      participants."
+    supporting_values:
+      total_le8_high_vs_low_all: {value: 8.9, ci: [6.2, 11.5]}
+      total_le8_high_vs_low_male: {value: 8.1, ci: [4.2, 12.0]}
+      tobacco_component_high_vs_low: {value: 7.4, ci: [5.7, 9.1]}
+      per_10_point_le8: {value: 2.2, ci: [1.0, 3.2]}
+      life_expectancy_at_50_by_cvh:
+        low_le8_under_50: {value: 27.3, ci: [26.1, 28.4]}
+        moderate_le8_50_to_79: {value: 32.9, ci: [32.3, 33.4]}
+        high_le8_80_plus: {value: 36.2, ci: [34.2, 38.2]}
+      pct_of_gain_attributable_to_reduced_cvd_death: 42.6
+    verification: {status: VERIFIED, doi_resolves: true, pmid: "37036905"}
+    methodology: "NHANES 2005-2018 linked to the National Death Index. Life-table method
+      applied to mortality rates by CVH stratum, extrapolating survival from age 50 to 100.
+      LE8 sleep health scores 7 to <9 h as 100 and penalises shorter durations, so the
+      'low sleep health' group is dominated by short sleepers."
+    weaknesses:
+      - "DECISIVE: the single-component estimates are marginal high-vs-low contrasts, NOT
+        adjusted for the other seven components. The paper's own arithmetic proves they
+        overlap: tobacco alone (7.4 y) plus sleep alone (5.0 y) = 12.4 y, which already
+        EXCEEDS the entire high-vs-low total LE8 contrast of 8.9 y before the remaining six
+        components are counted. The 5.0 years therefore contains most of the smoking, diet,
+        BMI, glucose and blood-pressure effect and cannot be attributed to sleep."
+      - "Confirming the correlation: mean sleep health score is 68.2 in the low-CVH stratum
+        versus 93.2 in the high-CVH stratum, so sleep score is a proxy for overall CVH."
+      - "The component analysis adjusts only for age, sex and race/ethnicity -- not for
+        socioeconomic position, the dominant confounder of both sleep and mortality."
+      - "Indexed at age 50, so it conditions on surviving to 50 and says nothing about
+        exposure at ages 16-19."
+      - "1,359 deaths over a median 7.8 years support extrapolation of survival to age 100."
+      - "Sleep duration self-reported at a single NHANES interview."
+    reconciliation: "The four published anchors span 1.2 to 5.0 years and order themselves
+      exactly by how much non-sleep lifestyle each contrast absorbs: Chaput 2022 (1.2 y,
+      sleep duration alone via meta-analytic RR) < Huang 2023 (2.31 CVD-free y, 5-item
+      sleep composite) < Li 2024 (4.7 y, 5-factor sleep composite) < Ma 2023 (5.0 y,
+      unadjusted single component of an 8-part lifestyle score). Allocating Ma's male total
+      of 8.1 y equally across the 8 components gives about 1.0 y for sleep, which agrees
+      with Chaput's 1.2 y and with this shard's life table under a lifelong all-cause
+      HR of 1.10-1.13. THE 1.0-YEAR EQUAL-SHARE FIGURE IS THIS SHARD'S ARITHMETIC, NOT
+      PUBLISHED. Recommended prior for the pure mortality channel: 1.0-1.5 years of e19
+      lost for a LIFELONG short-sleep habit, and far less for a 3-year window (see
+      competing_risk_method.md section 3)."
+
+  - id: hafner2017_rand_economic_cost
+    claim: "RAND Europe's cross-country analysis found <6 h sleep associated with a 13%
+      higher mortality risk than 7-9 h, and estimated the US economic cost of insufficient
+      sleep at $280-411 billion per year (1.56-2.28% of GDP)."
+    value_years: null
+    mortality_risk_increase_pct:
+      lt_6h_vs_7_9h: 13
+      6_to_7h_vs_7_9h: 7
+    us_annual_cost_usd_billions_2015_prices: [280, 411]
+    us_annual_cost_pct_gdp: [1.56, 2.28]
+    us_working_days_lost_millions_per_year: 1.23
+    age_at_assessment: null
+    sex: both
+    source: "Hafner M, Stepanek M, Taylor J, Troxel WM, van Stolk C. Why Sleep Matters -
+      The Economic Costs of Insufficient Sleep: A Cross-Country Comparative Analysis. Rand
+      Health Q. 2017;6(4):11. (RAND research report RR-1791.)"
+    doi_or_url: "https://www.rand.org/pubs/research_reports/RR1791.html"
+    year: 2017
+    quote: "Insufficient Sleep Increases Mortality Risk by up to 13 Per Cent Investigating
+      the link between sleep duration and mortality we find that at any given point in
+      time, an individual that sleeps on average less than six hours per night has a 13 per
+      cent higher mortality risk than an individual sleeping between seven and nine hours,
+      which is considered as the healthy amount of sleep. Furthermore, an individual
+      sleeping between six and seven hours per night has a 7 per cent higher mortality
+      risk. . . . [The U.S.] sustains by far the highest annual economic loss (between $280
+      billion and $411 billion currently, depending on the scenario) due to the size of its
+      economy, followed by Japan (between $88 billion and $138 billion)."
+    verification:
+      status: VERIFIED
+      doi_resolves: null
+      pmid: "28983434"
+      note: "rand.org blocks automated retrieval (HTTP 403); text retrieved from the
+        PubMed Central copy of the Rand Health Q reprint, PMC5627640."
+    methodology: "Macroeconomic (OECD-style, five countries) model. Mortality channel uses
+      hazard ratios for short sleep taken from the published observational
+      meta-analysis literature; productivity channel uses absenteeism and presenteeism
+      from an employer survey. Output is GDP, not life expectancy."
+    weaknesses:
+      - "RAND DOES NOT PUBLISH A LIFE-EXPECTANCY OR QALY ESTIMATE. Its outputs are GDP,
+        working days and employment. Anyone citing RAND for 'years of life lost to short
+        sleep' is misciting it. Its only usable quantity for this project is the 13%
+        (<6 h) and 7% (6-7 h) mortality risk elevation, which it imports from prior
+        observational meta-analyses rather than estimating."
+      - "The 13% figure is an association from adult cohorts, treated as causal in the
+        macro model with no sensitivity analysis for reverse causation."
+      - "Costs are for the whole adult working population, so they cannot be attributed to
+        an individual, and productivity loss is not a health outcome."
+      - "No adolescent or young-adult stratum at all."
+    usefulness_here: "Use ONLY as an independent anchor on the size of the all-cause
+      mortality hazard ratio for habitual short sleep: HR ~1.13 for <6 h, ~1.07 for 6-7 h.
+      Fed through this shard's life table those imply -1.49 y and -0.82 y of e19
+      respectively IF sustained for life from age 19 (hr_to_life_expectancy.py section A),
+      and only -0.026 y and -0.014 y if confined to a 3-year window at ages 19-21
+      (section B). The 57-fold gap between those two readings is the single most important
+      modelling decision in the mortality channel."
+
+  - id: qaly_estimate_for_short_sleep
+    claim: "NO published QALY estimate specific to short sleep duration was found."
+    value_years: null
+    verification: {status: NOT_FOUND, doi_resolves: null, pmid: null}
+    searches_run:
+      - "PubMed: short sleep duration quality-adjusted life years lost"
+      - "PubMed: sleep duration life expectancy years of life lost modelling population"
+      - "PubMed: sleep duration mortality life expectancy years gained"
+      - "PubMed: healthy sleep habits gain in life expectancy"
+      - "PubMed: sleep patterns life expectancy men women low-risk sleep factors"
+    what_exists_instead:
+      - "Life-years (not QALYs) for sleep duration: Chaput 2022 (above)."
+      - "Life-years for a sleep composite: Li 2024 (above)."
+      - "CVD-free life-years (a health-expectancy quantity, closer to QALYs than plain
+        life-years but not utility-weighted): Huang 2023 (above)."
+      - "QALYs lost to DIABETES if diagnosed at 40: 18.6 QALYs in men (Narayan 2003,
+        PMID 14532317). Usable only as a downstream multiplier once the model has an
+        absolute diabetes-incidence effect, never as a sleep effect."
+      - "One QALY-and-sleep paper exists but is off-population: Impact of Sleep Duration on
+        Mortality and Quality of Life in Chronic Kidney Disease, KNHANES
+        (PMID 33957617) -- excluded, CKD patients in Korea."
+    notes: "If the pipeline reports a QALY figure for this subject it will be the FIRST
+      such estimate, and it must be labelled as novel and uncalibrated, because there is
+      no published QALY number to validate it against."

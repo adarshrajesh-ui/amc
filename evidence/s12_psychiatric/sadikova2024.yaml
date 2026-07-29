@@ -1,0 +1,179 @@
+study_id: sadikova2024
+citation: "Sadikova E, Widome R, Robinson E, Aris IM, Tiemeier H. Delaying high school start times impacts depressed mood among students: evidence from a natural experiment. Soc Psychiatry Psychiatr Epidemiol. 2024 Nov;59(11):2073-2082."
+doi: "10.1007/s00127-024-02694-2"
+pmid: "38847813"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11846681/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Delaying high school start times impacts depressed mood among students: evidence from a natural experiment."
+access_tier: full_text
+secondhand_via: null
+design: instrumental_variable
+tier: T2
+n: 2134
+n_studies_pooled: null
+population:
+  age_mean: 15.16
+  age_range: [14, 17]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: depression_symptoms_total_kandel_davies
+    exposure: {type: sleep_extension, dose_h: 7.7, referent_h: 7.2, duration_days: 730, contrast_label: "INSTRUMENTAL VARIABLE estimate: a SUSTAINED +30 min/night weekday sleep gain over 2 years, instrumented by the school-start-time delay policy"}
+    scale: raw_units
+    unit: "points on the 6-item Kandel-Davies depression scale (range 10-30, pooled baseline SD 5.00)"
+    value: -0.78
+    se: 0.26531
+    ci: [-1.32, -0.28]
+    conversion_formula: "reported directly. se=(hi-lo)/3.92=(-0.28-(-1.32))/3.92=0.26531. Standardised: d = -0.78/5.0040 = -0.1559, where pooled baseline SD = sqrt((4.8^2+5.2^2)/2) = 5.0040 from the two arms' baseline means 15.9 (SD 4.8) and 17.0 (SD 5.2). My d reproduces the authors' own statement of '15.6% of a standard deviation' to three decimals, which validates the SD I used."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NEGATIVE = FEWER depression symptoms when sleep is extended, i.e. sleep loss is harmful. This is the causal direction of interest and it is supported. Magnitude d = -0.156 for +30 min/night sustained 2 years."
+    covariates: ["sex", "Hispanic ethnicity", "race", "one-parent household", "parental education", "commute time", "BMI", "weight-loss goal", "exercise", "physical activity days", "uncontrollable eating", "caffeine intake", "free/reduced lunch eligibility", "stabilised inverse probability of censoring weights", "inverse probability of treatment weights"]
+    followup_years: 2.0
+    cohort_family: "START"
+    quote: "We used the policy change as an instrumental variable to estimate the impact of a sustained 30-minute sleep gain - as approximately expected following the school start time delay - for overall and fatigue symptoms, which were homogeneously impacted by the delay. We estimated a reduction in overall depression symptoms by 0.78, 95%CI (-1.32,-0.28) points over 2 years and a more pronounced impact on fatigue (-1.36 points, 95% CI (-2.19-0.69)), which likely drives the reductions in overall symptoms."
+  - outcome_domain: psychiatric
+    outcome_construct: fatigue_and_sleep_symptom_cluster
+    exposure: {type: sleep_extension, dose_h: 7.7, referent_h: 7.2, duration_days: 730, contrast_label: "IV estimate, same sustained +30 min/night gain; FATIGUE subscale (items: 'feeling too tired to do things', 'trouble going to sleep or staying asleep')"}
+    scale: raw_units
+    unit: "points on the Kandel-Davies fatigue cluster, same 10-30 metric"
+    value: -1.36
+    se: 0.38265
+    ci: [-2.19, -0.69]
+    conversion_formula: "reported directly. se=(hi-lo)/3.92=(-0.69-(-2.19))/3.92=0.38265. Standardised on the same pooled SD 5.0040: d = -1.36/5.0040 = -0.2718. NOTE the printed CI '(-2.19-0.69)' omits the minus sign on the upper bound; the sign is unambiguous from the point estimate and from Table 2's 2-year fatigue estimate -0.91 (-1.45,-0.38)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NEGATIVE = less fatigue with more sleep. This effect is LARGER than the total-score effect (d -0.272 vs -0.156), which is the paper's own explanation for the total-score effect: it is driven by the fatigue items."
+    covariates: ["as above"]
+    followup_years: 2.0
+    cohort_family: "START"
+    quote: "a more pronounced impact on fatigue (-1.36 points, 95% CI (-2.19-0.69)), which likely drives the reductions in overall symptoms."
+  - outcome_domain: psychiatric
+    outcome_construct: mood_cluster_low_mood_item_NULL
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 730, contrast_label: "INTENTION-TO-TREAT policy effect (delayed vs early start schedule) at 2 years, MOOD symptom cluster only"}
+    scale: raw_units
+    unit: "points, Kandel-Davies mood cluster"
+    value: -0.03
+    se: 0.02806
+    ci: [-0.09, 0.02]
+    conversion_formula: "Table 2, 2-years post-baseline, 'Mood' row: -0.03 (-0.09, 0.02). se=(0.02-(-0.09))/3.92=0.02806. d = -0.03/5.0040 = -0.0060."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL. Crosses zero. The mood items - feeling unhappy/sad/depressed, hopelessness, worry - did NOT improve when sleep was extended, at either follow-up. THIS IS THE MOST IMPORTANT SINGLE NUMBER IN MY SHARD for the subject's question."
+    covariates: ["as above"]
+    followup_years: 2.0
+    cohort_family: "START"
+    quote: "While symptoms of low mood, hopelessness, and worry were not affected by the policy on average, older students with greater daily screen use and higher BMI experienced greater improvements in mood symptoms than would be expected on average, signaling heterogeneity."
+  - outcome_domain: psychiatric
+    outcome_construct: mood_cluster_1_year_NULL
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 365, contrast_label: "ITT policy effect at 1 year, MOOD symptom cluster"}
+    scale: raw_units
+    unit: "points, Kandel-Davies mood cluster"
+    value: -0.04
+    se: 0.21429
+    ci: [-0.46, 0.38]
+    conversion_formula: "Table 2, 1-year post-baseline, 'Mood' row: -0.04 (-0.46, 0.38). se=(0.38-(-0.46))/3.92=0.21429."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL at 1 year as well. NOTE an internal oddity: the 1-year mood CI is ~8x wider than the 2-year mood CI (+/-0.42 vs +/-0.055) despite similar point estimates, which I cannot explain from the text and which makes me distrust the precision of the mood-cluster estimates specifically. The DIRECTION of the finding (no mood benefit) is stated in the abstract, Results and Conclusion and is robust; the exact SEs are not."
+    covariates: ["as above"]
+    followup_years: 1.0
+    cohort_family: "START"
+    quote: "Mood | -0.04(-0.46,0.38) | -0.03(-0.09,0.02) |"
+  - outcome_domain: exposure_measurement
+    outcome_construct: weekday_sleep_duration_gain_from_policy
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 365, contrast_label: "ITT effect of the start-time delay on weekday sleep duration, 1 year (delay of ~50-65 min in start time)"}
+    scale: hours
+    unit: "hours per weeknight"
+    value: 0.53
+    se: 0.09694
+    ci: [0.34, 0.72]
+    conversion_formula: "Table 2, 1-year, 'Weekday sleep duration' row: 0.53 (0.34, 0.72). se=(0.72-0.34)/3.92=0.09694. At 2 years the estimate is 0.45 (0.23,0.66), i.e. the gain partially decays."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more sleep obtained. This is the FIRST STAGE of the instrument and it is strong: a ~1 h institutional delay in start time bought ~0.5 h of actual extra sleep, roughly a 50% pass-through."
+    covariates: ["as above"]
+    followup_years: 1.0
+    cohort_family: "START"
+    quote: "Weekday sleep duration | 0.53(0.34,0.72) | 0.45(0.23,0.66) |"
+  - outcome_domain: psychiatric
+    outcome_construct: depression_symptoms_total_ITT_2y
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 730, contrast_label: "ITT policy effect at 2 years, TOTAL depression score"}
+    scale: raw_units
+    unit: "points, Kandel-Davies total"
+    value: -0.26
+    se: 0.12245
+    ci: [-0.50, -0.02]
+    conversion_formula: "Table 2, 2-years, 'Overall' row: -0.26 (-0.50, -0.02). se=(-0.02-(-0.50))/3.92=0.12245. d = -0.26/5.0040 = -0.0520."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = fewer symptoms under the delayed schedule. The ITT effect is small (d -0.05) because only ~half the intended sleep gain was realised; the IV estimate above rescales it to the achieved sleep gain."
+    covariates: ["as above"]
+    followup_years: 2.0
+    cohort_family: "START"
+    quote: "Overall | -0.13(-0.17,-0.08) | -0.26(-0.50,-0.02) |"
+rob:
+  tool: ROBINS-I
+  judgement: moderate
+  notes: "Strengths, and they are considerable: a real policy-driven natural experiment; a pre-registered cohort (START) with baseline measurement while ALL schools still started early; n=2,134 with modest attrition (1,917 contributing follow-up data); doubly-robust hierarchical TMLE; inverse-probability-of-treatment weighting for non-random policy assignment; stabilised IPC weights for informative censoring; bootstrapped SEs. Weaknesses the authors state themselves, verbatim: 'the school start time delay was not randomly assigned'; 'loss to follow-up depended on baseline student characteristics'; 'unmeasured school-district level characteristics such as average household income were not well-accounted for and may have been drivers in the school districts' decisions to delay start times.' Baseline imbalance is visible and runs in the favourable direction for the treated group (policy schools had LOWER baseline depression, 15.9 vs 17.0, and slightly longer baseline sleep, 7.2 vs 7.1 h), and differential attrition removed the higher-depression/shorter-sleep students preferentially. Exposure is self-reported bed/wake times binned to 15 min, not actigraphy. The instrument is strong (first stage +0.53 h, CI excludes 0 comfortably) so weak-instrument bias is not a concern, but the exclusion restriction is only approximately true: a later start time also changes morning light exposure, breakfast, commuting and class scheduling, any of which could affect mood independently of sleep duration. That biases the IV estimate AWAY from zero, so the true sleep-duration effect is if anything smaller than -0.78 points."
+funding: "not stated in the retrieved text"
+notes: |
+  THIS IS THE SINGLE MOST DECISION-RELEVANT RECORD IN MY SHARD, and it is worth being explicit about why.
+
+  The subject's sleep restriction is imposed from outside by workload. It is not insomnia and it is not a
+  depressive prodrome. Almost the entire epidemiological literature in my domain is unable to speak to that
+  exposure, because its exposure variable is either self-reported habitual short sleep (confounded with
+  insomnia and with depression itself) or insomnia diagnosis (which the subject does not have). This study
+  has the right exposure: an EXTERNAL INSTITUTIONAL CONSTRAINT on sleep opportunity, moved by a policy, in
+  adolescents, with the resulting change in actual sleep measured, and depression symptoms tracked for two
+  years. It is the closest thing to a randomised trial of the subject's actual exposure that exists.
+
+  WHAT IT FINDS, AND THE DECOMPOSITION THAT MATTERS.
+    first stage:  a ~1 h delay in school start time -> +0.53 h (0.34, 0.72) actual weeknight sleep at 1 y,
+                  decaying to +0.45 h (0.23, 0.66) at 2 y
+    IV estimate:  a SUSTAINED +30 min/night -> depression total -0.78 points (-1.32, -0.28) = d -0.156
+    and then the part that changes the interpretation completely:
+        TOTAL score   ITT: -0.13 (-0.17,-0.08) at 1 y;  -0.26 (-0.50,-0.02) at 2 y   SIGNIFICANT
+        FATIGUE items ITT: -0.54 (-0.73,-0.35) at 1 y;  -0.91 (-1.45,-0.38) at 2 y   SIGNIFICANT, LARGER
+        MOOD items    ITT: -0.04 (-0.46, 0.38) at 1 y;  -0.03 (-0.09, 0.02) at 2 y   NULL AT BOTH POINTS
+
+  The Kandel-Davies scale has six items. Two of them are "feeling too tired to do things" and "having
+  trouble going to sleep or staying asleep". Those two items carry the entire treatment effect. The items
+  that actually constitute depressed mood -- "feeling unhappy, sad, or depressed", "feeling hopeless about
+  the future", "feeling nervous or tense", "worrying too much about things" -- did not move.
+
+  So a genuine, causally identified, two-year increase in adolescent sleep duration reduced the DEPRESSION
+  SCALE SCORE by making the adolescents less tired, and did not detectably reduce sadness, hopelessness or
+  worry. This is criterion contamination, and the authors saw it coming: "changes in sleep patterns and
+  reductions in motivation due to fatigue are two of the minimally five diagnostic criteria required for a
+  diagnosis of a major depressive episode. As such, does increasing sleep prospectively predict lower
+  depression symptoms overall or does it simply ameliorate" [the sleep and fatigue criteria themselves].
+
+  THIS REPLICATES INDEPENDENTLY IN THE SAME COHORT BY A DIFFERENT ESTIMATOR. See berger2026_start, a
+  difference-in-differences analysis of the same START data: "These differences were primarily driven by the
+  items in the scale related to fatigue." Same conclusion, different method, same data. And it converges
+  with a completely independent design: talbot2010, an experimental sleep-deprivation study, found a large
+  drop in POSITIVE affect (d_z 0.77) with NO change in negative affect (|d_z| < 0.13), and its authors
+  proposed the same explanation for why older studies using the POMS looked worse -- "The POMS may indicate
+  greater mood disturbance in part because some of its scales overlap with sleepiness, such as fatigue and
+  vigor."
+
+  CONSEQUENCE FOR THE SUBJECT, STATED PLAINLY. The best-identified causal estimate of the effect of
+  externally imposed short sleep on adolescent depression scale scores is d ~ -0.16 per 30 min, but the
+  effect is concentrated in tiredness rather than in mood, and the mood component is null. For a subject
+  whose deficit is roughly 2 h/night on weekdays, naive linear extrapolation of the total-score effect would
+  give d ~ 0.6, which I do NOT endorse: the IV was estimated at a 30-min contrast, linearity across a 4-fold
+  larger contrast is untested, and the component that scales is fatigue, which is real but is not
+  depression. The defensible reading is that the subject is very likely accumulating a substantial,
+  measurable, reversible fatigue burden that will score as "depression symptoms" on any instrument
+  containing sleep and energy items, and that the evidence for an effect on genuine depressed mood from this
+  exposure route is weak to null.
+
+  CO-COHORT WARNING FOR THE POOLER. cohort_family: START. berger2026_start uses the SAME 2,134 students.
+  Do not treat them as independent. If only one is used, use this one, because it reports numbers.
+shard: "s12_psychiatric"

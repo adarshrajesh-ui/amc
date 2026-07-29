@@ -1,0 +1,99 @@
+study_id: kocevska2021norms
+citation: "Kocevska D, Lysen TS, Dotinga A, Koopman-Verhoeff ME, Luijk MPCM, Antypa N, et al. Sleep characteristics across the lifespan in 1.1 million people from the Netherlands, United Kingdom and United States: a systematic review and meta-analysis. Nat Hum Behav. 2021;5(1):113-122."
+doi: "10.1038/s41562-020-00965-x"
+pmid: "33199855"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Sleep characteristics across the lifespan in 1.1 million people from the Netherlands, United Kingdom and United States: a systematic review and meta-analysis."
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 1081734
+n_studies_pooled: 36
+population:
+  age_mean: null
+  age_range: [1, 100]
+  pct_female: 55.0
+  country: "Netherlands, UK, US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: prevalence_teenagers_below_recommended_8_to_10h
+    exposure: {type: descriptive, dose_h: 8, referent_h: null, duration_days: null, contrast_label: "proportion of teenagers self-reporting total sleep time below the recommended 8-10 h"}
+    scale: probability
+    unit: "proportion of teenagers"
+    value: 0.515
+    se: null
+    ci: null
+    conversion_formula: "Abstract: '51.5% reported total sleep times (TST) of less than the recommended 8-10 h'. value = 0.515. No CI in the abstract; n for the teenage subgroup is not separately reported in the abstract, so se is null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive prevalence. CRITICAL FRAMING NUMBER: falling short of the guideline is the MAJORITY condition among teenagers, not a deviant one. Our subject is not unusual for being below 8 h; he is unusual for the DEPTH of the shortfall (see wheaton2018yrbs for the sub-7 h and sub-6 h tails)."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Among teenagers, 51.5% reported total sleep times (TST) of less than the recommended 8-10 h and 18% report daytime sleepiness."
+  - outcome_domain: sleep_need
+    outcome_construct: prevalence_below_age_specific_recommendation_all_ages
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "proportion sleeping less than age-specific recommendations vs proportion outside the 'acceptable' range, all ages"}
+    scale: probability
+    unit: "proportion of the whole 1.1 million sample"
+    value: 0.25
+    se: null
+    ci: null
+    conversion_formula: "Abstract: 'One in four people slept less than age-specific recommendations, but only 5.8% slept outside of the acceptable sleep duration.' value = 0.25 for the first quantity; the 0.058 figure for the 'outside acceptable' quantity is recorded in the direction_note and in notes rather than as a separate effect because the two are nested statements about the same sample."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive. THE GAP BETWEEN 25% AND 5.8% IS THE POINT: which threshold you adopt changes the 'affected' population by more than fourfold. 'Below recommended' and 'not recommended' are very different statements, exactly as hirshkowitz2015nsf's three-band structure implies. The downstream model must state WHICH threshold it is scoring the subject against."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "One in four people slept less than age-specific recommendations, but only 5.8% slept outside of the 'acceptable' sleep duration."
+  - outcome_domain: exposure_measurement
+    outcome_construct: selfreport_versus_actigraphy_sex_difference_sign_reversal
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "direction of the female-minus-male sleep difference, self-report versus actigraphy, ages 41+"}
+    scale: raw_units
+    unit: "sign of the sex difference (qualitative, no magnitude reported in the abstract)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "No numeric magnitude is given in the abstract. Coded as -1 to denote that the self-reported and actigraphic estimates of the SAME sex contrast point in OPPOSITE directions. No arithmetic performed."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "A SIGN REVERSAL, not a magnitude. Women report sleeping SHORTER and less efficiently than men, but actigraphy says they sleep LONGER and more efficiently. This is the strongest available demonstration that self-report bias is not random noise but a systematic, subgroup-varying distortion large enough to flip the sign of a real contrast. It is the reason the shard treats measurement error as structural rather than as additive noise."
+    covariates: ["sex", "age"]
+    followup_years: null
+    cohort_family: null
+    quote: "Women (>= 41 years) reported sleeping shorter times or slightly less efficiently than men, whereas with actigraphy they were estimated to sleep longer and more efficiently than man."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Very large individual-participant-data meta-analysis (36 Dutch studies plus UK Biobank plus US data), systematic search of Embase/Medline/Web of Science, prespecified inclusion (published 2000-2017, >= 100 participants, general population). Key weakness for this shard: the sleep-duration reference charts are built from QUESTIONNAIRE data ('data on sleep assessed with questionnaires'), i.e. from exactly the self-report instrument this shard is trying to calibrate, so the charts inherit the over-reporting bias documented in lauderdale2008 and white2026ffcws. Three countries only. Abstract-only access on my side."
+funding: "Not stated in the abstract"
+notes: |
+  ACCESS: abstract only. Unpaywall reports is_oa = false for 10.1038/s41562-020-00965-x, Europe PMC reports
+  isOpenAccess = 'N' with no PMC id, and there is no accepted-manuscript deposit I could find. All numbers above are
+  verbatim from the PubMed abstract.
+  WHAT THE TASK ASKED FOR AND WHAT I COULD ACTUALLY GET. The task asked for "means and SDs by age band, from OBJECTIVE
+  measurement where possible" from this paper. The abstract states that the paper "provides age- and sex-specific population
+  reference charts for sleep duration and efficiency", but those charts are figures in the paywalled full text and the
+  abstract reports NO age-band means and NO SDs. I therefore did not extract any mean or SD from this paper, and I did not
+  reconstruct any from the figures. The age-banded normative role in this shard is instead filled by galland2018 (actigraphy,
+  pooled mean 7.4 h for 15-18 y), white2026ffcws (actigraphy, 7.57 h weekday at mean age 15.4 y) and mitterling2015 (PSG,
+  6.89 h median at <= 30 y). Recording this openly because the seed task named this paper as a primary source for the
+  normative distribution and it could not serve that role.
+  THE PART OF THIS PAPER THAT IS STILL DECISION-RELEVANT: the prevalence framing. Among teenagers 51.5% are below the
+  recommended 8-10 h. Combined with wheaton2018yrbs (US high-school students: 74.6% below 8 h, 20.0% below 6 h) this places
+  our subject's reported 5-6 h weekday sleep in the lower tail but NOT at an extreme that would strain credibility. A
+  self-report of 5-6 h on school nights is a common report, which is relevant to how much prior weight the model should put
+  on the report being roughly honest as opposed to being a rounded stereotype.
+  THE SEX SIGN-REVERSAL IS THE MOST USEFUL SINGLE SENTENCE. Self-report and actigraphy disagree about the DIRECTION of the
+  female-vs-male sleep-duration contrast in the same people. A modeller tempted to treat self-report as truth-plus-noise
+  should read that sentence first: noise cannot reverse a sign, only bias that correlates with the covariate of interest can.
+  Our subject is male, and cespedes2016hchs and guedes2016 both find male self-report agrees WORSE with actigraphy, so the
+  relevant sex is the one with the weaker report.
+shard: "s06_sleep_need_measurement"

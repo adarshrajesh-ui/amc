@@ -1,0 +1,117 @@
+study_id: morgenthaler2016
+citation: "Morgenthaler TI, Hashmi S, Croft JB, Dort L, Heald JL, Mullington J. High School Start Times and the Impact on High School Students: What We Know, and What We Hope to Learn. Journal of Clinical Sleep Medicine. 2016;12(12):1681-1689."
+doi: "10.5664/jcsm.6358"
+pmid: "27855730"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "High School Start Times and the Impact on High School Students: What We Know, and What We Hope to Learn."
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_observational
+tier: T2
+n: null
+n_studies_pooled: 6
+population:
+  age_mean: 16.0
+  age_range: [13, 19]
+  pct_female: null
+  country: "Multiple (mostly US)"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: first_stage_total_sleep_time_minutes_delay_le60min
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "later vs earlier high school start time, delay <= 60 minutes; pooled across 5 studies"}
+    scale: raw_units
+    unit: "minutes of additional school-night total sleep time"
+    value: 18.65
+    se: 5.36
+    ci: [8.13, 29.16]
+    conversion_formula: "reported pooled estimate with 95% CI (8.13 to 29.16); SE = (29.16 - 8.13)/3.92 = 5.36."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = later start yields MORE total sleep time. This is the pooled FIRST STAGE for the school-start-time literature."
+    covariates: []
+    followup_years: null
+    cohort_family: AASM_start_time_review
+    quote: "For the five studies in which early and later school start times differed by less than or equal to 60 min, school-night sleep times increased by an average of 18.65 min (95% CI 8.13 to 29.16)"
+  - outcome_domain: exposure_measurement
+    outcome_construct: first_stage_total_sleep_time_minutes_delay_gt60min
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "later vs earlier high school start time, delay > 60 minutes; pooled across 2 studies"}
+    scale: raw_units
+    unit: "minutes of additional school-night total sleep time"
+    value: 52.56
+    se: 7.05
+    ci: [38.74, 66.37]
+    conversion_formula: "reported pooled estimate with 95% CI (38.74 to 66.37); SE = (66.37 - 38.74)/3.92 = 7.05."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = later start yields MORE total sleep time; larger delays buy proportionally more sleep"
+    covariates: []
+    followup_years: null
+    cohort_family: AASM_start_time_review
+    quote: "When the delayed school start time differed from the early start time by more than 60 min, TST was 52.56 min (95% CI: 38.74 to 66.37) longer with the later start time"
+  - outcome_domain: exposure_measurement
+    outcome_construct: weekend_catchup_social_jetlag_reduction_minutes
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: null, contrast_label: "reduction in school-night to non-school-night sleep gap, delay <= 60 min, 3 studies"}
+    scale: raw_units
+    unit: "minutes reduction in weekend-weekday sleep difference"
+    value: -28.08
+    se: 8.94
+    ci: [-45.61, -10.55]
+    conversion_formula: "reported as a decline of 28.08 min (95% CI 10.55 to 45.61); sign set negative because the school-to-nonschool sleep GAP shrinks. SE = (45.61 - 10.55)/3.92 = 8.94."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = the weekend catch-up gap (a proxy for accumulated weekday debt) SHRINKS with later start times, i.e. less sleep debt"
+    covariates: []
+    followup_years: null
+    cohort_family: AASM_start_time_review
+    quote: "Among studies where start times differed by 60 min or less, a school night to a nonschool night's sleep difference declined by 28.08 min (95% CI: 10.55 to 45.61)."
+  - outcome_domain: sleep_need
+    outcome_construct: school_vs_nonschool_night_sleep_minutes_descriptive
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "observed non-school-night minus school-night sleep duration in adolescents"}
+    scale: raw_units
+    unit: "minutes of sleep (non-school night vs school night)"
+    value: 105.9
+    se: null
+    ci: null
+    conversion_formula: "564.6 min (non-school nights) - 458.7 min (school nights) = 105.9 min = 1.77 h. Reported SDs are 86.9 and 74.3 min respectively, but these are between-study/between-subject SDs, not SEs of the difference, so no SE is given."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = adolescents sleep ~1.8 h MORE on non-school nights, quantifying revealed unmet sleep need under early school schedules"
+    covariates: []
+    followup_years: null
+    cohort_family: AASM_start_time_review
+    quote: "The estimated average duration of sleep on nonschool nights was 564.6 +/- 86.9 min, compared to school night averages of 458.7 +/- 74.3 min (based on data from five studies and nine studies, respectively)."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Systematic critical review with a small number of poolable studies (6 of 38 reviewed supplied poolable data). The constituent studies are mostly uncontrolled pre/post or cross-sectional comparisons, so the pooled first stage inherits their bias. The authors explicitly grade the academic-performance evidence as weak."
+funding: "American Academy of Sleep Medicine"
+notes: |
+  IDENTIFYING ASSUMPTION: none of its own - this is a review that pools the first stages of the
+  underlying start-time studies, most of which are pre/post or cross-school comparisons rather than
+  designs with credible exogeneity. So the pooled sleep gains should be read as descriptive of what
+  bell-time delays actually deliver, not as a clean causal parameter.
+  WHY IT IS IN THIS SHARD ANYWAY: it supplies the single most important number for interpreting every
+  school-start-time reduced form, namely the FIRST STAGE. A delay of <= 60 min buys only ~19 min of
+  extra sleep; a delay of > 60 min buys ~53 min. Both imply a first-stage slope well below 1: roughly
+  0.3-0.9 minutes of sleep per minute of bell delay, consistent with Dunster's actigraphy (0.62) and
+  Groen & Pabilonia's diaries (0.60).
+  IMPLICATION THE MODELLER MUST NOT MISS: because the first stage is only ~0.3-0.6, dividing the
+  typical reduced-form estimate (~0.06-0.10 SD per hour of bell delay) by the first stage produces
+  per-hour-of-sleep effects of roughly 0.10-0.30 SD. That is the key T2 arithmetic of this shard, and it
+  means the school-start-time literature implies a MUCH larger per-hour-of-sleep effect than its own
+  headline reduced forms suggest.
+  IMPORTANT NEGATIVE FINDING FROM THE SAME REVIEW: the authors judged the academic-performance evidence
+  much weaker than the sleep evidence, and one long-run prospective evaluation found the sleep gain
+  fully decayed: "in one prospective long-term evaluation the TST initially increased with a move toward
+  later start times, but TSTs had returned to baseline at subsequent evaluation 9 mo after the change."
+  That is direct evidence for adaptation/decay of a bell-time-induced sleep gain, and should widen the
+  downstream uncertainty on any long-run sleep-extension effect.
+  Also reported: "Two of these studies demonstrated a 22% improvement (95% CI: 11% to 33%) in measures
+  of sleepiness during school day."
+shard: "s04_academic_natural_experiments"

@@ -1,0 +1,169 @@
+study_id: winsler2015
+citation: "Winsler A, Deutsch A, Vorona RD, Payne PA, Szklo-Coxe M. Sleepless in Fairfax: the difference one more hour of sleep can make for teen hopelessness, suicidal ideation, and substance use. J Youth Adolesc. 2015 Feb;44(2):362-378."
+doi: "10.1007/s10964-014-0170-3"
+pmid: "25178930"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleepless in Fairfax: The Difference One More Hour of Sleep Can Make for Teen Hopelessness, Suicidal Ideation, and Substance Use"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 27939
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [13, 18]
+  pct_female: 51.2
+  country: "US (Fairfax County, Virginia; 2009 Fairfax County Youth Survey; 8th, 10th, 12th grade)"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: hopelessness_sad_or_hopeless
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "each 1 h LESS weekday sleep, continuous, among students reporting <=9 h"}
+    scale: log_or
+    unit: "per 1 h less sleep"
+    value: 0.32208
+    se: null
+    ci: null
+    conversion_formula: "log_or = ln(1.38) = 0.32208. No CI or SE is reported in the paper (Table 2 gives ORs with significance asterisks only). p < .001 implies |z| > 3.29, hence se < 0.32208/3.29 = 0.0979 as an upper bound; with N ~ 22,000 the true SE is likely far smaller."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = each hour LESS sleep raises odds of feeling sad/hopeless (harm)"
+    covariates: ["gender", "ethnicity", "grade/school type", "single-parent home"]
+    followup_years: null
+    cohort_family: "Fairfax_County_Youth_Survey_2009"
+    quote: "The significant odds ratio of 1.38 for sleep in Step 2 indicated that for each hour less sleep youth obtain, the odds of them feeling sad and hopeless increased by 38 %, controlling for other background"
+  - outcome_domain: psychiatric
+    outcome_construct: suicidal_ideation_seriously_considered
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "each 1 h LESS weekday sleep, continuous"}
+    scale: log_or
+    unit: "per 1 h less sleep"
+    value: 0.35066
+    se: null
+    ci: null
+    conversion_formula: "log_or = ln(1.42) = 0.35066. No CI/SE reported; p < .001 implies se < 0.35066/3.29 = 0.1066 (upper bound only)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = each hour LESS sleep raises odds of seriously considering suicide (harm)"
+    covariates: ["gender", "ethnicity", "grade/school type", "single-parent home"]
+    followup_years: null
+    cohort_family: "Fairfax_County_Youth_Survey_2009"
+    quote: "Controlling for other variables, each hour less of sleep was associated with a 42 % increase in the odds of seriously considering suicide."
+  - outcome_domain: psychiatric
+    outcome_construct: suicide_attempt_lifetime
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "each 1 h LESS weekday sleep, continuous"}
+    scale: log_or
+    unit: "per 1 h less sleep"
+    value: 0.45742
+    se: null
+    ci: null
+    conversion_formula: "log_or = ln(1.58) = 0.45742. No CI/SE reported; p < .001 implies se < 0.45742/3.29 = 0.1390 (upper bound only)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = each hour LESS sleep raises odds of having attempted suicide (harm); LARGEST of the three mental-health outcomes"
+    covariates: ["gender", "ethnicity", "grade/school type", "single-parent home"]
+    followup_years: null
+    cohort_family: "Fairfax_County_Youth_Survey_2009"
+    quote: "Each hour less of sleep reported per night was associated with 58 % greater odds of attempted suicide."
+  - outcome_domain: psychiatric
+    outcome_construct: sex_moderation_suicidal_ideation
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "female x sleep interaction term for suicidal ideation (Step 3)"}
+    scale: log_or
+    unit: "interaction, per 1 h less sleep in females vs males"
+    value: -0.16252
+    se: null
+    ci: null
+    conversion_formula: "log_or = ln(0.85) = -0.16252. Reported as an interaction OR with significance asterisks only (p < .01); no CI."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = the per-hour sleep effect on suicidal ideation is WEAKER in females, i.e. STRONGER IN MALES. Directly relevant: the subject is male, so this study's per-hour estimates for suicidality understate his stratum-specific association"
+    covariates: ["gender", "ethnicity", "grade/school type", "single-parent home"]
+    followup_years: null
+    cohort_family: "Fairfax_County_Youth_Survey_2009"
+    quote: "Step 3 Female 9 sleep Ethnic 9 sleep 0.94* 0.85** 0.98"
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_prevalence_by_sleep_hour_9h
+    exposure: {type: descriptive, dose_h: 9, referent_h: null, duration_days: null,
+               contrast_label: "students reporting 9 h weekday sleep: absolute prevalence of each outcome"}
+    scale: probability
+    unit: "proportion with suicidal ideation among 9 h sleepers"
+    value: 0.081
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "ABSOLUTE reference risk at the recommended sleep duration; hopelessness 19.2%, ideation 8.1%, attempt 1.8%"
+    covariates: []
+    followup_years: null
+    cohort_family: "Fairfax_County_Youth_Survey_2009"
+    quote: "For students obtaining the recommended 9 h of sleep a night, only 19.2 % felt hopeless, 8.1 % considered suicide, and 1.8 % attempted to kill themselves"
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_prevalence_by_sleep_hour_4h
+    exposure: {type: descriptive, dose_h: 4, referent_h: 9, duration_days: null,
+               contrast_label: "students reporting 4 h weekday sleep: absolute prevalence of each outcome"}
+    scale: probability
+    unit: "proportion with suicidal ideation among 4 h sleepers"
+    value: 0.315
+    se: null
+    ci: null
+    conversion_formula: "risk difference vs 9 h referent: ideation 31.5% - 8.1% = 23.4 pp; hopelessness 51.6% - 19.2% = 32.4 pp; attempt 13.3% - 1.8% = 11.5 pp"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "ABSOLUTE risk at the most extreme short-sleep category. These are raw, unadjusted, cross-sectional prevalences and are heavily confounded - do NOT treat the 23.4 pp difference as a causal risk difference"
+    covariates: []
+    followup_years: null
+    cohort_family: "Fairfax_County_Youth_Survey_2009"
+    quote: "but these figures rose fairly linearly to 51.6 % being hopeless, 31.5 % having considered suicide, and 13.3 % having already attempted suicide for those attaining only 4 h of sleep a night."
+  - outcome_domain: exposure_measurement
+    outcome_construct: high_school_weeknight_sleep_mean
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "mean self-reported weekday sleep, high-school students (10th + 12th grade)"}
+    scale: hours
+    unit: "h/night"
+    value: 6.53
+    se: null
+    ci: null
+    conversion_formula: "reported as M (SD) = 6.53 (1.29) for high school; overall sample 6.88 (1.36)"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "exposure-distribution context: the subject's ~5-6 h weekday sleep sits roughly 0.5-1.2 SD below this high-school mean"
+    covariates: []
+    followup_years: null
+    cohort_family: "Fairfax_County_Youth_Survey_2009"
+    quote: "M (SD) 6.88 (1.36) 7.50 (1.26) 6.53 (1.29)"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "CROSS-SECTIONAL. Self-report sleep and self-report outcomes in the same anonymous survey (shared-method variance). No adjustment for prior mental health, so reverse causation and confounding by depression are entirely unaddressed. No confidence intervals reported anywhere in the paper. Very large N, population-level coverage, and a genuinely continuous sleep measure are the strengths."
+funding: null
+notes: |
+  Requirement 2 asked for ORs AND absolute prevalences; both are here.
+  Per-hour-less-sleep ORs: hopelessness 1.38, suicidal ideation 1.42, suicide attempt 1.58.
+  Absolute prevalences (unadjusted, by exact reported sleep hour):
+    9 h: 19.2% hopeless / 8.1% ideation / 1.8% attempt
+    4 h: 51.6% hopeless / 31.5% ideation / 13.3% attempt
+  Whole-sample prevalences: hopelessness 28.3%, considered suicide 14.2%, attempted 3.5%.
+  Sleep distribution (overall): <=4 h 5.8%, 5 h 10%, 6 h 20.7%, 7 h 28.9%, 8 h 25.1%, 9 h 7.2%, >=10 h 2.3%.
+  High-school-only distribution: <=4 h 7.4%, 5 h 13.3%, 6 h 26%, 7 h 30.6%, 8 h 18%, 9 h 3.4%, >=10 h 1.2%.
+  IMPORTANT CAVEAT for the pipeline: because this is cross-sectional with no adjustment for prior
+  depression, the per-hour ORs here are an UPPER bound on any causal per-hour effect. Compare with
+  Roberts 2014, where the equivalent forward arrow is adjusted for baseline depression, and with
+  Short 2020, where maximal covariate adjustment halves the log-OR.
+  Also note the paper reports increased risk at >=10 h as well, i.e. the relationship is U-shaped at
+  the long end: "The relatively small group of students who reported sleeping 10 or more hours of
+  sleep a night on the weekdays noted an increased risk for all three of these negative outcomes
+  compared to those who receive the recommended 9 h."
+  Access route: publisher full text is paywalled and not in PMC or any OA repository (Unpaywall:
+  is_oa false, no locations). Numbers above were read from a third-party mirror of the publisher PDF.
+  Cross-check: the mirrored text's descriptive statistics (6.5 h high-school mean, 20% <=5 h, 3% at
+  9 h, N = 27,939, 51.2% female) match the PubMed abstract exactly, which is independent corroboration
+  that the mirror is the genuine article.
+shard: "s12_psychiatric"

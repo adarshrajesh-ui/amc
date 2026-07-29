@@ -1,0 +1,103 @@
+study_id: vancauter1992
+citation: 'Van Cauter E, Kerkhofs M, Caufriez A, Van Onderbergen A, Thorner MO, Copinschi G. A quantitative estimation of
+  growth hormone secretion in normal man: reproducibility and relation to sleep and time of day. J Clin Endocrinol Metab.
+  1992;74(6):1441-1450.'
+doi: 10.1210/jcem.74.6.1592892
+pmid: '1592892'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: 'A quantitative estimation of growth hormone secretion in normal man: reproducibility and relation to
+    sleep and time of day.'
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 8
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: BE
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: endocrine
+  outcome_construct: gh_secretory_rate_multiple_during_sleep_vs_waking
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: sleep (including sleep delayed to 04:00) vs normal waking hours, deconvolution of 15-min sampling
+  scale: raw_units
+  unit: fold-change in GH secretory rate vs normal waking hours
+  value: 3.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Positive = GH secretory rate is 3x higher during sleep than during normal waking hours; crucially this
+    holds even when sleep is DELAYED to 04:00, so the driver is sleep itself, not clock time. No dispersion reported.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: During normal waking hours, the GH secretory rate was similar in the evening and the morning. This secretory rate
+    was doubled during wakefulness at times of habitual sleep and tripled during sleep, even when sleep was delayed until
+    0400 h.
+- outcome_domain: endocrine
+  outcome_construct: pct_of_sleep_gh_pulses_associated_with_slow_wave_stages
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: GH pulses during sleep, 8 men x 6 sessions
+  scale: pct_change
+  unit: '% of sleep GH pulses that are SW-associated'
+  value: 68.7
+  se: null
+  ci:
+  - 57.8
+  - 78.2
+  conversion_formula: value = 57/83 = 68.67%; ci = exact binomial (Wilson) 95% interval for 57/83 computed as [0.578, 0.782].
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: Positive = share of sleep GH pulses coupled to slow-wave stages. Exposed-fraction quantity, not a harm.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Almost 70% (57 of 83) of the pulses occurring during sleep were associated with slow wave (SW) stages.
+- outcome_domain: exposure_measurement
+  outcome_construct: within_vs_between_subject_variability_of_24h_gh_output
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: coefficient of variation of total GH secreted, within-subject vs across-subject
+  scale: pct_change
+  unit: CV %
+  value: 32.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Positive = within-subject CV of total GH secreted (32%) vs across-subject CV (65%). Total GH output varies
+    10-fold between men; this is the measurement-noise floor against which any sleep-restriction GH effect must be judged.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: The total amount of GH secreted varied 10-fold across individual studies, but the within-subject variability (32%)
+    was less than half the across-subject variability (65%).
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: n=8 healthy men; 6 sessions each; no blinding possible
+funding: Non-US government / US PHS
+notes: Also reports that IGF-I levels 'did not correlate with the amount of GH secreted' - relevant because IGF-I, not GH
+  pulse amplitude, is the growth-relevant downstream signal.
+shard: s11_endocrine_growth

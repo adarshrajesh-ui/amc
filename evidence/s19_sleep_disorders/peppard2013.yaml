@@ -1,0 +1,116 @@
+study_id: peppard2013
+citation: "Peppard PE, Young T, Barnet JH, Palta M, Hagen EW, Hla KM. Increased prevalence of sleep-disordered breathing in adults. Am J Epidemiol. 2013;177(9):1006-1014."
+doi: "10.1093/aje/kws342"
+pmid: "23589584"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3639722/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Increased prevalence of sleep-disordered breathing in adults."
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_objective
+tier: TX
+n: 1520
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [30, 70]
+  pct_female: 44.9
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_ahi_ge5_lean_men_youngest_stratum
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "mild-to-severe sleep-disordered breathing (AHI >= 5 events/h) by PSG, MEN aged 30-49 with BMI < 25"}
+    scale: probability
+    unit: "proportion of lean men aged 30-49"
+    value: 0.070
+    se: 0.01097
+    ci: [0.050, 0.093]
+    conversion_formula: "Table 2, Men / 30-49 / BMI <25 row: 7.0% (95% CI 5.0, 9.3). se back-calculated from the published CI on the log-odds scale then transformed: se = (0.093 - 0.050)/3.92 = 0.01097. Independently reproduced from the published Table 2 model coefficients: logit = -10.3 + 0.41*23.0 - 0.003*23.0^2 = -2.457, p = 0.0789, against the tabulated 0.070 - agreement to within rounding of the printed coefficients, which validates my parse of the table."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive prevalence, higher = more disease. THE CLOSEST AVAILABLE STRATUM TO OUR SUBJECT (male, lean) AND IT IS STILL 11 YEARS TOO OLD AT THE YOUNG END. Age is a strong positive predictor of sleep-disordered breathing within this cohort (the same lean-male stratum rises from 7.0% at 30-49 to 18.9% at 50-70), so 7.0% is an UPPER BOUND for a lean 19-year-old, not an estimate for him."
+    covariates: ["age", "sex", "BMI"]
+    followup_years: null
+    cohort_family: "Wisconsin_Sleep_Cohort"
+    quote: "Men   30-49    <25   7.0   5.0, 9.3    25-29.9   18.3   15.2, 21.6    30-39.9   44.6   48.7, 50.2    >=40   79.5   71.1, 86.2"
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_ahi_ge15_lean_men_youngest_stratum
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "moderate-to-severe sleep-disordered breathing (AHI >= 15 events/h) by PSG, MEN aged 30-49 with BMI < 25"}
+    scale: probability
+    unit: "proportion of lean men aged 30-49"
+    value: 0.0093
+    se: 0.00281
+    ci: [0.0049, 0.0159]
+    conversion_formula: "Table 3, Men / 30-49 / BMI <25 row: 0.93% (95% CI 0.49, 1.59). se = (0.0159 - 0.0049)/3.92 = 0.00281. Independently reproduced from the Table 3 coefficients: logit = -15.2 + 0.58*23.0 - 0.005*23.0^2 = -4.505, p = 0.0109 vs the tabulated 0.0093 - agreement to within coefficient rounding, validating the parse."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive prevalence. THE ANSWER TO THE TASK'S QUESTION 'give the actual number': moderate-to-severe obstructive sleep apnoea in a LEAN MALE is UNDER 1% even at ages 30-49. NOTE A STRUCTURAL FEATURE OF THE PUBLISHED MODEL: its age term is coded '0-49 years of age = 0', so the model as printed returns this same 0.93% for a 19-year-old with BMI 23. That is a coding convenience, not evidence - the cohort contains no one under 30, and within-band age gradients mean the true figure for 19 is very likely LOWER. I therefore carry 0.0093 as an upper bound and set the recommended prior in screening_priors.md below it."
+    covariates: ["age", "sex", "BMI"]
+    followup_years: null
+    cohort_family: "Wisconsin_Sleep_Cohort"
+    quote: "Men   30-49    <25   0.93   0.49, 1.59    25-29.9   3.8   2.5, 5.3    30-39.9   16.6   12.5, 21.7    >=40   55.0   41.8, 69.2"
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_symptomatic_osa_ahi_ge5_plus_ess_over_10_lean_men
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "AHI >= 5 AND Epworth Sleepiness Scale score > 10 (i.e. SYMPTOMATIC sleep-disordered breathing), MEN aged 30-49 with BMI < 25"}
+    scale: probability
+    unit: "proportion of lean men aged 30-49"
+    value: 0.027
+    se: 0.00689
+    ci: [0.015, 0.042]
+    conversion_formula: "Table 4, Men / 30-49 / BMI <25 row: 2.7% (95% CI 1.5, 4.2). se = (0.042 - 0.015)/3.92 = 0.00689. Reproduced from the Table 4 coefficients: logit = -9.9 + 0.33*23.0 - 0.002*23.0^2 = -3.368, p = 0.0333 vs tabulated 0.027 - agreement to within coefficient rounding."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive prevalence. THIS IS THE CLINICALLY ACTIONABLE DEFINITION - apnoea plus daytime sleepiness - and it is the one the report should quote, because asymptomatic AHI >= 5 in a lean young man does not change management. 2.7% at ages 30-49; the corresponding AHI >= 15 plus ESS > 10 figure is 0.39% (95% CI 0.10, 0.87) from Table 5. Both are upper bounds for a 19-year-old."
+    covariates: ["age", "sex", "BMI"]
+    followup_years: null
+    cohort_family: "Wisconsin_Sleep_Cohort"
+    quote: "Men   30-49    <25   2.7   1.5, 4.2    25-29.9   6.8   4.7, 9.1    30-39.9   18.9   14.3, 24.0    >=40   52.9   39.3, 66.6"
+  - outcome_domain: exposure_measurement
+    outcome_construct: ess_over_10_used_as_the_operational_sleepiness_threshold
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "the Epworth Sleepiness Scale cut-off used to define daytime sleepiness in a major PSG epidemiology cohort"}
+    scale: raw_units
+    unit: "ESS points (threshold, exclusive)"
+    value: 10.0
+    se: null
+    ci: null
+    conversion_formula: "Verbatim from Methods: SDB definitions 3 and 4 are 'AHI >=5 and Epworth Sleepiness Scale score >10' and 'AHI >=15 and Epworth Sleepiness Scale score >10'. value = 10 as the threshold. Not a statistical estimate, so no se."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Not an effect - external corroboration of the instrument cut-off. THE ESS > 10 THRESHOLD IS NOT JUST JOHNS'S ORIGINAL PROPOSAL; it is what a major PSG-based epidemiological cohort actually operationalized 20 years later. That converging usage is why instruments.md sets the referral-relevant ESS threshold at > 10 rather than at some other value."
+    covariates: []
+    followup_years: null
+    cohort_family: "Wisconsin_Sleep_Cohort"
+    quote: "The 4 SDB outcome definitions are: 1) mild to severe SDB (AHI >=5); 2) moderate to severe SDB (AHI >=15); 3) mild to severe SDB with daytime sleepiness (AHI >=5 and Epworth Sleepiness Scale score >10); and 4) moderate to severe SDB with daytime sleepiness (AHI >=15 and Epworth Sleepiness Scale score >10)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: low
+  notes: "The strongest design in this shard for its purpose: a community-based cohort randomly selected from an employed population, 1,520 participants contributing 4,563 in-laboratory POLYSOMNOGRAMS over 1988-2011, with prevalence modelled on age, sex, BMI and BMI-squared and then standardized to NHANES BMI distributions. The critical limitation for us is not internal validity but TRANSPORTABILITY: the cohort was 30-60 years old at enrolment and the youngest analytic stratum is 30-49, so there is NO observation below age 30 and every number must be extrapolated downward in age. Secondary limitations: 96% non-Hispanic white; an employed population, which excludes the most severely affected; and treated cases were classified as AHI > 15, which inflates the severe categories slightly. Also note the printed Table 2 row for men 30-49 with BMI 30-39.9 gives '44.6  48.7, 50.2', where the point estimate falls outside its own stated interval - an evident typographical error in the source. It does not affect the BMI < 25 row I use, but I flag it because it shows the tables were not perfectly proofed."
+funding: "NIA NIH HHS; NCATS NIH HHS; NICHD NIH HHS; NHLBI NIH HHS; NCRR NIH HHS"
+notes: |
+  THE TASK ASKED FOR OSA PREVALENCE IN MALES AGED 18-25 WITH NORMAL BMI AND THAT NUMBER DOES NOT EXIST IN THIS PAPER
+  OR IN benjafield2019. Both are restricted to adults 30 and over (Peppard 30-70, Benjafield 30-69). REPORTING REALITY,
+  as the extraction instructions require: the best available evidence is a downward age extrapolation from the lean-male
+  30-49 stratum, and the honest statement is an upper bound rather than a point estimate.
+  WHAT I DID GET, AND IT IS BETTER THAN EXPECTED: the full BMI-by-age-by-sex stratified tables, including the lean
+  (BMI < 25) male rows for all four SDB definitions, PLUS the fitted logistic coefficients. I reproduced all three of
+  the tabulated lean-male estimates from the coefficients to within coefficient-rounding error (0.0789 vs 0.070;
+  0.0109 vs 0.0093; 0.0333 vs 0.027), which is my verification that I parsed the tables correctly rather than
+  misreading a column.
+  FULL LEAN-MALE PICTURE, AGES 30-49, BMI < 25:
+    AHI >= 5                         7.0%  (95% CI 5.0, 9.3)
+    AHI >= 15                        0.93% (95% CI 0.49, 1.59)
+    AHI >= 5  AND ESS > 10           2.7%  (95% CI 1.5, 4.2)
+    AHI >= 15 AND ESS > 10           0.39% (95% CI 0.10, 0.87)
+  AGE GRADIENT IN THE SAME LEAN-MALE STRATUM (30-49 -> 50-70): AHI>=5 7.0% -> 18.9%; AHI>=15 0.93% -> 3.6%;
+  AHI>=5+ESS>10 2.7% -> 7.7%. Roughly a 2.7-3.9x rise across two decades of age. Extrapolating the same log-linear
+  gradient DOWNWARD by the ~1.1 decades from 39.5 (the 30-49 midpoint) to 19 would divide these by roughly 1.8-2.2,
+  which is the basis for the ~1% symptomatic-OSA prior in screening_priors.md. THAT DOWNWARD EXTRAPOLATION IS MY
+  JUDGEMENT, NOT THE PAPER'S, and it is flagged as such wherever it is used.
+  ONE PIECE OF GOOD NEWS FOR THE SUBJECT: sivertsen2013 found BMI identical in DSPS and non-DSPS adolescents (22.2 vs
+  22.2, Cohen's d = 0.00), so a normal BMI does not argue against a circadian diagnosis while it argues strongly
+  against sleep-disordered breathing. The two hypotheses are separated by BMI in opposite ways.
+shard: "s19_sleep_disorders"

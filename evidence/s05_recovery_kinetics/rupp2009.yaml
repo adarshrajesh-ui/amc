@@ -1,0 +1,134 @@
+study_id: rupp2009
+citation: "Rupp TL, Wesensten NJ, Bliese PD, Balkin TJ. Banking sleep: realization of benefits during subsequent sleep restriction and recovery. Sleep. 2009;32(3):311-321."
+doi: "10.1093/sleep/32.3.311"
+pmid: "19294951"
+url: "https://pubmed.ncbi.nlm.nih.gov/19294951/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Banking Sleep: Realization of Benefits During Subsequent Sleep Restriction and Recovery"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 24
+n_studies_pooled: null
+population:
+  age_mean: 25.0
+  age_range: [18, 39]
+  pct_female: 54.2
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_restriction_slope_group_difference
+    exposure: {type: sleep_extension, dose_h: 10, referent_h: 7.09, duration_days: 7, contrast_label: "prophylactic 10 h TIB x 7 nights (Extended) vs habitual TIB (Habitual), then 7 nights of 3 h TIB restriction"}
+    scale: per_hour_beta
+    unit: "additional PVT lapses per day of restriction, Habitual vs Extended"
+    value: 0.40
+    se: 0.17
+    ci: [0.067, 0.733]
+    conversion_formula: "RESTRICT x Group interaction from the discontinuous growth model (Table 5a): estimate 0.40, SE 0.17, t(273) = 2.35, P = 0.01 (one-tailed). Main restriction slope was 2.70 lapses/day (SE 0.40, t = 6.80). CI = 0.40 +/- 1.96*0.17."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = the Habitual (non-banked) group deteriorated FASTER, accumulating 0.40 extra lapses per restricted day on top of the common 2.70/day slope - a ~15% steeper degradation. Sleep banking buffered restriction."
+    covariates: ["age"]
+    followup_years: null
+    cohort_family: null
+    quote: "Psychomotor vigilance task (PVT) lapses were more frequent and modified maintenance of wakefulness (MWT) sleep latency was shorter in the Habitual group than in the Extended group across the sleep restriction phase."
+  - outcome_domain: recovery
+    outcome_construct: pvt_lapses_recovery_slope_group_difference
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 5, contrast_label: "5 recovery nights at 8 h TIB, Habitual vs Extended prior-sleep group"}
+    scale: per_hour_beta
+    unit: "PVT lapses per recovery day, Habitual vs Extended"
+    value: -0.75
+    se: 0.39
+    ci: [-1.515, 0.015]
+    conversion_formula: "RECOV x Group interaction (Table 5a): estimate -0.75, SE 0.39, t(273) = -1.94, P = 0.03 (one-tailed). Main recovery slope -3.14 lapses/day (SE 0.88); transition drop TRANS = -15.33 lapses (SE 2.70)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = the Habitual group was still on a downward (improving) trajectory across all 5 recovery days, i.e. had NOT plateaued, whereas the Extended group jumped to its plateau after night 1. A continuing slope at the end of the recovery window is direct evidence that recovery was not finished."
+    covariates: ["age"]
+    followup_years: null
+    cohort_family: null
+    quote: "Specifically, the Extended group recovered significantly after one night and maintained a stable level of improved performance, while the Habitual group gradually improved across the 5 Recovery days."
+  - outcome_domain: recovery
+    outcome_construct: recovery_nights_at_8h_tib_insufficient_for_habitual_sleepers
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 5, contrast_label: "5 nights of 8 h TIB recovery after 7 nights of 3 h TIB, habitual-sleep group"}
+    scale: raw_units
+    unit: "nights of 8 h TIB recovery that failed to close the gap to the sleep-banked group"
+    value: 5
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "5 = five consecutive 8 h TIB recovery nights were given and the habitual-sleep group still had not reached the banked group's performance. This is the longest recovery window in the classical banking literature and it was still not enough. Highest-relevance finding for a habitually short-sleeping subject."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "In contrast, the Habitual group showed continuing improvement (i.e., reductions in PVT lapses) across the 5 recovery days, and performance in this group failed to improve to same extent as that of the Extended group, even after 5 nights of recovery sleep."
+  - outcome_domain: recovery
+    outcome_construct: tst_yield_of_prophylactic_extension
+    exposure: {type: sleep_extension, dose_h: 10, referent_h: 7.09, duration_days: 7, contrast_label: "actigraphic TST during the 1-week extension phase, Extended (10 h TIB) vs Habitual (~7.09 h TIB)"}
+    scale: per_hour_beta
+    unit: "h TST gained per h TIB added"
+    value: 0.667
+    se: null
+    ci: null
+    conversion_formula: "Extended TST 479.5 (SD 71.5) min = 7.99 h; Habitual TST 363.2 (SD 63.9) min = 6.05 h; difference 1.94 h. TIB difference 10 - 7.09 = 2.91 h. Yield = 1.94/2.91 = 0.667 h TST per h TIB. Group main effect F(1,21) = 49.12, P < 0.001."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Adding ~2.9 h of nightly TIB in a semi-free-living week bought only ~1.9 h of actual sleep (67% conversion). Even in a supervised extension protocol, opportunity does not convert 1:1 into sleep."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "With the start of randomization to Extended v. Habitual groups, actigraphically estimated TST differed between groups (mean [SD] TST minutes collapsed across nights = 479.5 (71.5) for Extended and 363.2 (63.9) for Habitual; Group main effect F1,21 = 49.12, P < 0.001)."
+  - outcome_domain: cognition
+    outcome_construct: mwt_sleep_latency_restriction_slope_group_difference
+    exposure: {type: sleep_extension, dose_h: 10, referent_h: 7.09, duration_days: 7, contrast_label: "MWT sleep latency degradation slope during 3 h TIB restriction, Habitual vs Extended"}
+    scale: per_hour_beta
+    unit: "min of MWT sleep latency per restricted day, Habitual vs Extended"
+    value: 0.68
+    se: 0.20
+    ci: [0.288, 1.072]
+    conversion_formula: "RESTRICT x Group interaction (Table 6): estimate 0.68, SE 0.20, t(276) = 3.32, P = 0.00 (one-tailed). Main restriction slope -0.91 min/day (SE 0.48). Group main effect -3.56 min (SE 1.13, P = 0.00), Extended more alert."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "The Extended group lost physiological alertness faster in slope terms but started from a much higher (more alert) level; the group main effect (-3.56 min favouring Extended) is the net protective benefit. Banking raised the whole alertness trajectory."
+    covariates: ["age"]
+    followup_years: null
+    cohort_family: null
+    quote: "Psychomotor vigilance task (PVT) lapses were more frequent and modified maintenance of wakefulness (MWT) sleep latency was shorter in the Habitual group than in the Extended group across the sleep restriction phase."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomized parallel groups but very small (n=12/group), no blinding, and the Extended group's baseline was measured AFTER a week of 10 h TIB, so their 'baseline' is a sleep-satiated reference while the Habitual group's is a mildly debt-laden one. This asymmetry means 'failure to return to baseline' means different things in the two arms - the authors say so explicitly. Recovery TIB was capped at 8 h by design, which the authors flag as possibly critical. Restriction was severe (3 h TIB), more extreme than the target subject's exposure. Age range spans 18-39 with a mean of ~25, and age strongly moderated every slope."
+funding: "US Army Medical Research and Materiel Command; Military Operational Medicine Research Program"
+notes: |
+  Answers the 'does banking help' question in the affirmative, and answers the 'does prior sleep history
+  change recovery speed' question in a way that is directly bad news for a chronically restricted subject:
+    - Extended (banked) group: PVT lapses recovered after ONE night of 8 h TIB, then plateaued.
+    - Habitual group: still improving on recovery night 5, and never caught up to the Extended group.
+  The recovery-slope-by-group interaction (-0.75 lapses/day, SE 0.39, P = 0.03) is the quantitative version
+  of "a habitual short sleeper recovers more slowly". Our target subject has 3 years of habitual restriction,
+  so he sits at the Habitual-group end of this contrast, or worse.
+  Important interpretive caveat the authors raise themselves: the Extended group's response speed also
+  "failed to recover to baseline level", but only because their baseline was set after a 10 h TIB week and
+  recovery was 8 h TIB - "one night of recovery sleep in the Extended group restored mean response speed to
+  a stable level that was comparable to that exhibited by the Habitual group at baseline." This is a clean
+  demonstration that the measured "recovery deficit" depends entirely on which baseline you choose, and that
+  8 h TIB produces 8 h-TIB-level performance, not 10 h-TIB-level performance.
+  Author-stated limitation, quoted because it constrains every 8 h-TIB recovery study in this shard:
+  "One important, and perhaps critical, aspect of the present study that should be taken into consideration
+  is that 'recovery sleep' was restricted to 8 h TIB. It is likely that recovery would have been faster in
+  both groups had they been afforded a longer nightly recovery sleep opportunity."
+  Age moderation was strong and consistent: "For both PVT variables, younger individuals showed a steeper
+  slope of performance deterioration during sleep restriction and steeper slopes of improvement during the
+  transition from sleep restriction to recovery and during recovery compared to older individuals." For an
+  18-year-old this cuts both ways - faster degradation but also faster recovery once sleep is restored.
+  Companion paper: Rupp TL, Wesensten NJ, Balkin TJ. Sleep history affects task acquisition during subsequent
+  sleep restriction and recovery. J Sleep Res. 2010 (DOI 10.1111/j.1365-2869.2009.00800.x, PMID 20050993,
+  both verified) - same cohort, learning outcomes; not extracted separately to avoid double-counting.
+shard: "s05_recovery_kinetics"

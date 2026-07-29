@@ -1,0 +1,132 @@
+study_id: belenky2003_recovery
+citation: "Belenky G, Wesensten NJ, Thorne DR, Thomas ML, Sing HC, Redmond DP, Russo MB, Balkin TJ. Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study. Journal of Sleep Research. 2003;12(1):1-12."
+doi: "10.1046/j.1365-2869.2003.00337.x"
+pmid: "12603781"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study"
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 66
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: pvt_speed_no_recovery_after_3_nights_8h_tib_following_7h_and_5h_restriction
+    exposure:
+      type: recovery_sleep
+      dose_h: 8.0
+      referent_h: 8.0
+      duration_days: 3
+      contrast_label: "3 nights of 8 h TIB recovery following 7 nights at 7 h or 5 h TIB; PVT speed relative to the reduced plateau reached during restriction"
+    scale: raw_units
+    unit: "qualitative - no quantitative change reported in abstract"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No numeric value is given in the abstract for the recovery-phase change; the authors report the absence of recovery. value: 0.0 encodes 'no change from the restricted plateau', se: null because no dispersion is reported. DO NOT pool this as a precise zero - it is a directional/qualitative finding."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "ZERO = no recovery. After 7 nights at 7 h or 5 h TIB, three consecutive nights of 8 h TIB produced NO measurable improvement in PVT speed (and no improvement in lapses in the 5 h group); performance stayed at the reduced plateau."
+    covariates: []
+    followup_years: null
+    cohort_family: WRAIR_sleep_dose_response
+  - outcome_domain: recovery
+    outcome_construct: pvt_incomplete_recovery_after_3h_tib_restriction
+    exposure:
+      type: recovery_sleep
+      dose_h: 8.0
+      referent_h: 8.0
+      duration_days: 3
+      contrast_label: "3 nights of 8 h TIB recovery following 7 nights at 3 h TIB"
+    scale: raw_units
+    unit: "qualitative - no quantitative change reported in abstract"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Qualitative finding from the abstract: rapid partial recovery after night 1 then a plateau at the same reduced level as the 5 h and 7 h groups. No numbers in abstract; full text not obtained (paywalled, no OA copy found via Unpaywall)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "ZERO = the 3 h group recovered quickly but INCOMPLETELY, stabilising at the same impaired level as the milder restriction groups rather than returning to baseline."
+    covariates: []
+    followup_years: null
+    cohort_family: WRAIR_sleep_dose_response
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Parallel-group dose assignment (3/5/7/9 h TIB) with n = 16-18 per arm, so between-group comparisons are underpowered for individual-level inference; no blinding possible. Age and sex distribution not reported in the abstract and full text not retrieved, so population fields are null and adolescent_match is set conservatively to fair_adult. Effects here are QUALITATIVE (absence of recovery) - I could not extract dispersion, so they must not be pooled as precise zeros."
+funding: "US Army Medical Research and Materiel Command (Walter Reed Army Institute of Research)"
+notes: |
+  ===== PART B7: THE 3-NIGHT RECOVERY NULL =====
+  Belenky 2003 is the canonical demonstration that PVT deficits from mild-to-moderate chronic
+  restriction do NOT resolve over three nights of normal (8 h) sleep. It is the necessary complement
+  to Pejovic 2013 (which used 10 h recovery nights and found the same non-recovery of PVT while
+  subjective and physiological sleepiness normalised).
+
+  ACCESS LIMITATION - STATED PLAINLY: this record is ABSTRACT ONLY. The J Sleep Res full text is
+  paywalled; Unpaywall reports is_oa = False and no repository copy was found. All numbers below are
+  verbatim from the PubMed abstract. No effect sizes, SDs, or CIs are available, so both effects are
+  recorded as qualitative nulls with se: null.
+
+  VERBATIM QUOTES
+  ---------------
+  Design:
+  "Sixty-six normal volunteers spent either 3 (n = 18), 5 (n= 16), 7 (n = 16), or 9 h (n = 16) daily
+  time in bed (TIB) for 7 days (restriction/augmentation) followed by 3 days with 8 h daily TIB
+  (recovery)."
+
+  Restriction phase - the adaptation/plateau pattern that makes self-assessment unreliable:
+  "In the 3-h group, speed (mean and fastest 10% of responses) on the psychomotor vigilance task (PVT)
+  declined, and PVT lapses (reaction times greater than 500 ms) increased steadily across the 7 days
+  of sleep restriction. In the 7- and 5-h groups speed initially declined, then appeared to stabilize
+  at a reduced level; lapses were increased only in the 5-h group. In the 9-h group, speed and lapses
+  remained at baseline levels."
+
+  THE RECOVERY NULL (the key sentence for the report):
+  "During recovery, PVT speed in the 7- and 5-h groups (and lapses in the 5-h group) remained at the
+  stable, but reduced levels seen during the last days of the experimental phase, with no evidence of
+  recovery. Speed and lapses in the 3-h group recovered rapidly following the first night of recovery
+  sleep; however, recovery was incomplete with speed and lapses stabilizing at a level comparable
+  with the 7- and 5-h groups. Performance in the 9-h group remained at baseline levels during the
+  recovery phase."
+
+  Authors' interpretation - directly relevant to the "you cannot tell" claim:
+  "These results suggest that the brain adapts to chronic sleep restriction. In mild to moderate sleep
+  restriction this adaptation is sufficient to stabilize performance, although at a reduced level.
+  These adaptive changes are hypothesized to restrict brain operational capacity and to persist for
+  several days after normal sleep duration is restored, delaying recovery."
+
+  WHY THIS MATTERS FOR THE N-OF-1 PROTOCOL DESIGN (Part C)
+  -------------------------------------------------------
+  This is the single most important CARRYOVER result in my shard. In a crossover n-of-1 design,
+  Belenky implies that a restriction period contaminates the FOLLOWING period for at least 3 nights,
+  and possibly longer, because 3 nights of 8 h TIB did not restore performance. Consequences:
+    * A washout of 3 nights at 8 h TIB is DEMONSTRABLY INSUFFICIENT.
+    * The design must therefore either (a) use long washouts (>= 5-7 nights at the subject's ad-lib
+      duration, per Kitamura 2016's 4-day-to-asymptote result for only ~1 h of debt), or
+    * (b) abandon the assumption of no carryover and instead FIT period/carryover terms explicitly
+      (CENT 2015 checklist item 12c requires exactly this), or
+    * (c) counterbalance order so that carryover is orthogonal to condition.
+  It also means the 9 h TIB arm is the only arm that stayed at baseline, which supports using an
+  EXTENSION arm rather than a "normal" arm as the comparator.
+
+  RELATION TO THE OTHER RECOVERY RECORDS
+  --------------------------------------
+    Belenky 2003 : 3 nights x 8 h TIB      -> no recovery of PVT speed (5 h and 7 h arms)
+    Pejovic 2013 : 2 nights x 10 h TIB     -> no recovery of PVT lapses; SSS and MSLT over-recover
+    Banks 2010   : 1 night x up to 10 h TIB -> recovery incomplete even at the maximum dose
+    Cohen 2010   : 10 h sleep every cycle  -> morning performance looks normal, late-day does not
+    Kitamura 2016: 12 h TIB x 9 days       -> ~1 h of debt needs ~4 days of extended sleep to clear
+  Four independent labs, four different recovery doses, same conclusion.
+shard: "s20_pvt_psychometrics"

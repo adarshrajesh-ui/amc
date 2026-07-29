@@ -1,0 +1,138 @@
+study_id: short2018_adolescent_sleep_need
+citation: "Short MA, Weber N, Reynolds C, Coussens S, Carskadon MA. Estimating adolescent sleep need using dose-response modeling. Sleep. 2018;41(4):zsy011."
+doi: "10.1093/sleep/zsy011"
+pmid: "29325109"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Estimating adolescent sleep need using dose-response modeling"
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 34
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [15, 17]
+  pct_female: null
+  country: "AU"
+  adolescent_match: exact_16_19
+effects:
+  # ===== THE ADOLESCENT SLEEP-NEED NUMBER, DERIVED FROM PVT PERFORMANCE =====
+  - outcome_domain: sleep_need
+    outcome_construct: adolescent_sleep_need_from_pvt_lapse_dose_response_model
+    exposure:
+      type: chronic_restriction
+      dose_h: null
+      referent_h: 10.0
+      duration_days: 5
+      contrast_label: "sleep duration required to maintain optimal sustained attention, estimated by dose-response modelling of 10-min PVT lapse data across 5-h / 7.5-h / 10-h TIB for 5 nights in 15-17 year olds"
+    scale: hours
+    unit: "hours of sleep per night required to maintain optimal sustained-attention performance"
+    value: 9.35
+    se: null
+    ci: null
+    conversion_formula: "Reported directly in the abstract: 'modeling PVT lapse data suggested that 9.35 hours of sleep is needed to maintain optimal sustained attention performance'. No SE or CI is given in the abstract and I did not obtain the full text (OUP blocks the PDF; no PMC deposit, no Wayback snapshot), so se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Not a harm - this is the TARGET quantity, and it is the single most age-appropriate sleep-need estimate in my shard. Compare the adult performance-derived figure of 8.16 h from Van Dongen 2003 (vandongen2003_subjective_plateau): adolescents need roughly 1.2 h MORE sleep than adults to hold PVT performance at optimum."
+    covariates: []
+    followup_years: null
+    cohort_family: Flinders_Adelaide_adolescent_dose_response
+  - outcome_domain: sleep_need
+    outcome_construct: adolescent_sleep_need_from_10h_tib_ad_lib_opportunity
+    exposure:
+      type: sleep_extension
+      dose_h: 10.0
+      referent_h: null
+      duration_days: 5
+      contrast_label: "sleep obtained when adolescents aged 15-17 were given 10-h TIB sleep opportunities in the laboratory"
+    scale: hours
+    unit: "hours of sleep per night obtained under a 10-h TIB opportunity"
+    value: 9.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly as an approximation in the abstract: 'Sleep need estimated from 10-hour TIB sleep opportunities was approximately 9 hours'. Recorded as 9.0 with the 'approximately' flagged; se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Not a harm. An OPPORTUNITY-BASED (ad-libitum) sleep-need estimate that converges with the independent PERFORMANCE-BASED estimate of 9.35 h from the same subjects. Two different methods, same answer to within ~20 min - which is the strongest form of evidence for a sleep-need figure."
+    covariates: []
+    followup_years: null
+    cohort_family: Flinders_Adelaide_adolescent_dose_response
+  - outcome_domain: cognition
+    outcome_construct: dose_dependent_pvt_lapses_and_subjective_sleepiness_adolescents
+    exposure:
+      type: chronic_restriction
+      dose_h: 7.5
+      referent_h: 10.0
+      duration_days: 5
+      contrast_label: "5 nights of 7.5-h TIB (moderate restriction) or 5-h TIB (severe restriction) vs 10-h TIB control, between two 10-h baseline and two 10-h recovery nights; 10-min PVT (500 ms lapse) and KSS every 3 h across wake"
+    scale: raw_units
+    unit: "qualitative: direction and monotonicity of the TIB dose-response (no numeric effect size available from the abstract)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "NO NUMERIC EFFECT SIZE IS AVAILABLE. The abstract states only the direction and monotonicity; the per-condition means and effect sizes are in the paywalled full text which I could not retrieve. value 1.0 encodes 'monotonic dose-dependent worsening confirmed' and MUST NOT be pooled or treated as an effect magnitude."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Less TIB -> less sleep, more PVT lapses, greater subjective sleepiness, larger circadian phase delay. The 7.5-h vs 10-h arm is a 2.5 h/night TIB contrast sustained for 5 nights, which is the closest published match IN THE RIGHT AGE GROUP to the 2-3 h contrast the n-of-1 protocol will use. Unfortunately the magnitude needed for the power calculation is not in the abstract."
+    covariates: []
+    followup_years: null
+    cohort_family: Flinders_Adelaide_adolescent_dose_response
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Strong design for the question: 34 adolescents, 10 days / 9 nights inpatient, three parallel TIB doses (5 h / 7.5 h / 10 h) flanked by two 10-h baseline and two 10-h recovery nights, PVT and KSS every 3 h, plus salivary dim-light melatonin onset for circadian phase. No blinding is possible. Per-arm n is only ~11, so the dose-response model borrows strength across arms. ABSTRACT-ONLY ACCESS is the material limitation for this shard: I could not obtain the per-condition PVT means, SDs or effect sizes, which is exactly what a power calculation needs from the right age group. OUP blocks the PDF, there is no PMC deposit and no Wayback snapshot; Unpaywall lists only the blocked publisher link (bronze OA)."
+funding: "Not extracted (abstract-only access)."
+notes: |
+  ===== THE BEST AGE MATCH IN MY SHARD, AND THE MOST FRUSTRATING ACCESS FAILURE =====
+  Only three records in this shard are adolescent_match exact_16_19: acebo1999_actigraphy_nights (actigraphy
+  night counts), wilson2010_pvt5_adolescent (PVT reliability in a classroom) and this one. Critically, EVERY
+  record that contributes to the effect size or the within-person SD used in the power calculation is in
+  adults - Pejovic mean age 24.7 is the closest, then Basner 22-45, Thompson 20-63, Knutson 38-50. Short
+  et al. 2018 is 15-17 year olds, i.e. the right band for a subject who was 16-19 across the exposure window,
+  and it is methodologically the adolescent replication of Van Dongen 2003: a dose-response model fitted to
+  PVT lapse data to back out the sleep duration that keeps performance at optimum.
+
+  FULL ABSTRACT, VERBATIM (this is the entirety of what I hold firsthand):
+  "This study will (1) estimate the nightly sleep need of human adolescents, (2) determine the time
+  course and severity of sleep-related deficits when sleep is reduced below this optimal quantity, and
+  (3) determine whether sleep restriction perturbs the circadian system as well as the sleep homeostat.
+  Thirty-four adolescents aged 15 to 17 years spent 10 days and nine nights in the sleep laboratory.
+  Between two baseline nights and two recovery nights with 10 hours' time in bed (TIB) per night,
+  participants experienced either severe sleep restriction (5-hour TIB), moderate sleep restriction
+  (7.5-hour TIB), or no sleep restriction (10-hour TIB) for five nights. A 10-minute psychomotor
+  vigilance task (PVT; lapse = response after 500 ms) and the Karolinska Sleepiness Scale were
+  administered every 3 hours during wake. Salivary dim-light melatonin onset was calculated at baseline
+  and after four nights of each sleep dose to estimate circadian phase. Dose-dependent deficits to sleep
+  duration, circadian phase timing, lapses of attention, and subjective sleepiness occurred. Less TIB
+  resulted in less sleep, more lapses of attention, greater subjective sleepiness, and larger circadian
+  phase delays. Sleep restriction perturbs homeostatic and circadian systems, leading to dose-dependent
+  deficits to sustained attention and sleepiness. Adolescents require more sleep for optimal functioning
+  than typically obtained."
+
+  THE TWO SLEEP-NEED CONVERGENCES, AND WHY THEY MATTER FOR THE PROTOCOL
+  --------------------------------------------------------------------
+  Within this study:      opportunity-based ~9.0 h   vs   PVT-performance-based 9.35 h
+  Across studies (adults): Kitamura 2016 ad-lib asymptote 8.41 +/- 0.18 h  vs  Van Dongen 2003
+                           PVT-derived 8.16 h (24 - 15.84 h critical wake duration)
+  The two methods agree within each age band, and the adolescent figures sit ~0.9-1.2 h ABOVE the adult
+  figures. Practical consequence for protocol_basis.md section 10: the "extension" arm's target TIB must
+  be set from the SUBJECT'S OWN measured asymptote, and the prior for an 18-19 year old should be ~8.5-9 h
+  rather than the ~8.4 h adult figure, because he sits between the Short (15-17 y) and Kitamura (20-26 y)
+  bands. Using an 8.0 h extension arm would risk making the "rested" condition itself mildly restricted,
+  which would attenuate the contrast and bias the whole experiment toward a null.
+
+  WHAT I WANTED FROM THIS PAPER AND COULD NOT GET
+  ----------------------------------------------
+  The 7.5-h vs 10-h TIB arm is a 2.5 h/night contrast for 5 nights in 15-17 year olds - almost exactly
+  the manipulation the n-of-1 protocol will run, in almost exactly the right age group. The per-condition
+  PVT lapse means, SDs and effect sizes from that contrast would be the single best calibration anchor
+  available for the power calculation, replacing my current reliance on Pejovic 2013 (adults, 2 h/night)
+  plus a Basner/Van Dongen dose linearisation. They are in the paywalled full text. This is recorded as
+  the top-priority full-text retrieval in station_report.md.
+shard: "s20_pvt_psychometrics"

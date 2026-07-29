@@ -1,0 +1,163 @@
+study_id: astill2012
+citation: "Astill RG, Van der Heijden KB, Van IJzendoorn MH, Van Someren EJW. Sleep, cognition, and behavioral problems in school-age children: A century of research meta-analyzed. Psychological Bulletin. 2012;138(6):1109-1138."
+doi: "10.1037/a0028204"
+pmid: "22545685"
+url: "https://schoolstarttime.org/wp-content/uploads/2011/03/astill-et-al-sleep-cognition-and-behavioral-problems-in-school-age-children-a-century-of-research-meta-analyzed.pdf"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep, cognition, and behavioral problems in school-age children: A century of research meta-analyzed."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 35936
+n_studies_pooled: 86
+population:
+  age_mean: null
+  age_range: [5, 12]
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: cognition
+    outcome_construct: intelligence_subdomain
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "correlation of habitual sleep DURATION with measured intelligence in healthy 5-12 year olds"}
+    scale: raw_units
+    unit: "Pearson r"
+    value: 0.10
+    se: 0.05557
+    ci: [-0.0089, 0.2089]
+    conversion_formula: "Table 2, sleep duration column, Intelligence row: k = 6, n = 787, r = .10, 85% CI [.02, .18], Q = 21.02. THE PAPER USES 85% CONFIDENCE INTERVALS, not 95% - see Results: 'r .08, 85% confidence interval [85% CI] [.06, .10]'. SE = (0.18 - 0.02)/(2 x 1.4395) = 0.05557. VALIDATION: that SE implies a two-sided p of 0.072, matching the Discussion's 'r .10, p .08' almost exactly, which confirms the z = 1.4395 reading. The 95% CI I report above is my own widening of the published 85% interval and it crosses zero. ci field therefore holds a 95% interval, NOT the published 85% interval."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive r = longer sleep associated with higher intelligence; the 95% CI crosses zero so there is no detectable association"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Intelligence. Consistent with a recent meta-analysis in adults (Lim & Dinges, 2010), the present meta-analysis found no association of intelligence with sleep duration (r .10, p .08)."
+  - outcome_domain: cognition
+    outcome_construct: overall_cognitive_performance
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "correlation of habitual sleep DURATION with any cognitive outcome in healthy 5-12 year olds"}
+    scale: raw_units
+    unit: "Pearson r"
+    value: 0.08
+    se: 0.01389
+    ci: [0.0528, 0.1072]
+    conversion_formula: "Table 2: k = 52, n = 24,454, r = .08, 85% CI [.06, .10], Q(51) = 122.58, p < .01. SE = (0.10-0.06)/2.879 = 0.01389; the ci field is my derived 95% interval. Trim-and-fill adjusted for publication bias: r = .06, 85% CI [.03, .09] - so about a quarter of the pooled association is attributable to publication bias."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive r = longer sleep associated with better cognition"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The combined effect size for the relation between cognition and sleep duration revealed a significant positive association (r .08, 85% confidence interval [85% CI] [.06, .10]) in a heterogeneous set (as indicated by the significant Q value) of 52 studies: total number of participants (N) 24,454, Q(51) 122.58, p .01"
+  - outcome_domain: cognition
+    outcome_construct: sustained_attention_subdomain
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "correlation of habitual sleep DURATION with sustained attention in healthy 5-12 year olds"}
+    scale: raw_units
+    unit: "Pearson r"
+    value: 0.02
+    se: 0.04515
+    ci: [-0.0685, 0.1085]
+    conversion_formula: "Table 2: k = 15, n = 996, r = .02, 85% CI [-.05, .08], Q = 7.94. SE = (0.08 - (-0.05))/2.879 = 0.04515. THE MOST SURPRISING CELL IN THE CHILD LITERATURE: sustained attention, the single most sleep-sensitive domain in adults (lim2010 g = -0.762), is the LEAST associated with habitual sleep duration in children."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive r = longer sleep associated with better sustained attention; effectively zero here"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Quite unlike typical findings in adults, sleep duration was not associated with sustained attention and memory."
+  - outcome_domain: cognition
+    outcome_construct: executive_functioning_subdomain
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "correlation of habitual sleep DURATION with executive functioning in healthy 5-12 year olds"}
+    scale: raw_units
+    unit: "Pearson r"
+    value: 0.07
+    se: 0.03821
+    ci: [-0.0049, 0.1449]
+    conversion_formula: "Table 2: k = 14, n = 2,390, r = .07, 85% CI [.02, .13], Q = 16.68. SE = (0.13-0.02)/2.879 = 0.03821. Significant at the paper's 85% level but the derived 95% CI just crosses zero (implied p = 0.067)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive r = longer sleep associated with better executive functioning"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The in-depth analysis of cognitive subdomains revealed significant associations of sleep duration with executive functioning (number of studies [k] 14, r .07, 85% CI [.02, .13]), multiple-domain cognitive functioning (k 11, r .10, 85% CI [.05, .16]), and school performance (k 20, r .09, 85% CI [.06, .12])."
+  - outcome_domain: academic
+    outcome_construct: school_performance_subdomain
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "correlation of habitual sleep DURATION with school performance in healthy 5-12 year olds"}
+    scale: raw_units
+    unit: "Pearson r"
+    value: 0.09
+    se: 0.02084
+    ci: [0.0492, 0.1308]
+    conversion_formula: "Table 2: k = 20, n = 21,157, r = .09, 85% CI [.06, .12], Q = 84.66. SE = (0.12-0.06)/2.879 = 0.02084. This is the largest and best-powered cell and it agrees closely with the independent dewald2010 estimate for the same construct (r = 0.069, k = 17, n = 15,199), which is reassuring given the two meta-analyses draw on overlapping primary literature."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive r = longer sleep associated with better school performance"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Of considerable interest from an applied point of view is the fact that the present meta-analysis found sleep curtailment to be most strongly associated with compromised school performance in children (r .09)."
+  - outcome_domain: cognition
+    outcome_construct: multiple_domain_cognitive_functioning_subdomain
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "correlation of habitual sleep DURATION with tasks spanning multiple cognitive domains, 5-12 year olds"}
+    scale: raw_units
+    unit: "Pearson r"
+    value: 0.10
+    se: 0.03821
+    ci: [0.0251, 0.1749]
+    conversion_formula: "Table 2: k = 11, n = 3,066, r = .10, 85% CI [.05, .16], Q = 33.08. SE = (0.16-0.05)/2.879 = 0.03821. Recorded because a multiple-domain composite is the closest thing in this meta-analysis to a general-ability measure, and its point estimate (.10) is identical to the intelligence cell's (.10) - the difference in significance is entirely a matter of k (11 vs 6) and n (3,066 vs 787)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive r = longer sleep associated with better multi-domain cognitive performance"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The in-depth analysis of cognitive subdomains revealed significant associations of sleep duration with executive functioning (number of studies [k] 14, r .07, 85% CI [.02, .13]), multiple-domain cognitive functioning (k 11, r .10, 85% CI [.05, .16]), and school performance (k 20, r .09, 85% CI [.06, .12])."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Large, systematic, century-spanning search with dual independent coding (92% agreement), hierarchical within-study meta-analyses to enforce independence of effect sizes, explicit outlier screening and Winsorization, and trim-and-fill publication-bias adjustment. Serious limitations for our purpose: (1) the constituent studies are overwhelmingly cross-sectional and observational, so nothing here is causal - the authors say so explicitly; (2) 85% rather than 95% CIs are used throughout, which makes the paper's own significance calls more permissive than conventional and is easy to misread; (3) studies reporting only 'nonsignificant' with no statistics were assigned a conservative null at p = .50, which biases pooled estimates toward zero; (4) the subdomain cells that matter most for us (intelligence k = 6, n = 787) are small; (5) age range 5-12 excludes adolescents entirely."
+funding: "Netherlands Organization for Scientific Research (NWO) and the European Research Council; full statement in the paper."
+notes: |
+  THIS IS THE STRONGEST CHILD-SPECIFIC EVIDENCE THAT SLEEP DURATION IS NOT ASSOCIATED WITH MEASURED INTELLIGENCE, and it
+  matters for the IQ conversion because it is the one place where a large child literature was pooled with intelligence as
+  its own subdomain. But the null must be read honestly and I want to be precise about what it does and does not say:
+
+  The intelligence point estimate is r = .10, which is the JOINT LARGEST of all eight cognitive subdomains - tied with
+  multiple-domain cognition and above executive functioning (.07) and school performance (.09). It fails conventional
+  significance only because k = 6 and n = 787. So this is an UNDERPOWERED NEAR-MISS (p = .08), not a demonstrated absence
+  of association. Anyone citing "sleep duration is not related to intelligence in children" from this paper is
+  over-reading it. What the paper does license is the weaker and still useful claim that the intelligence association is
+  NOT LARGER than the associations for other domains, and that r = .10 is the upper end of what a cross-sectional child
+  literature supports.
+
+  Converted to the shard's IQ scale, r = .10 across the observed range of child sleep durations is small. If one crudely
+  treats r as a standardized slope per SD of sleep duration and takes a child-sleep SD of roughly 0.8-1.0 h, then a 1 h
+  sleep difference corresponds to about 0.10 SD of intelligence = 1.5 IQ points, with a 95% CI spanning roughly -0.1 to
+  +3.1 points. That is a cross-sectional gradient, not a causal effect, and it should be treated as an upper bound.
+
+  THE OTHER FINDING THE POOLER MUST NOT MISS: sustained attention, which is the most sleep-sensitive domain in adults by a
+  wide margin (lim2010 g = -0.762), is essentially UNRELATED to habitual sleep duration in children (r = .02, k = 15).
+  The authors flag this reversal themselves and it is the reason the adult vigilance literature cannot be transported to a
+  young sample without an explicit discount: "Quite unlike typical findings in adults, sleep duration was not associated
+  with sustained attention and memory. Methodological issues and brain developmental immaturities are proposed to underlie
+  the marked differences."
+
+  NO SUBDOMAIN DIFFERED SIGNIFICANTLY FROM ANY OTHER: "The 85% CIs overlapped; thus, no significant difference between
+  cognitive subdomains' relation with sleep could be concluded." So this meta-analysis cannot establish a domain gradient
+  in children; it can only fail to find one.
+
+  Publication bias was material for the overall cognition cell: unadjusted r = .08 fell to r = .06 after trim-and-fill.
+  The subdomain cells were not separately trim-and-fill adjusted, so the intelligence estimate of .10 is unadjusted and is
+  probably optimistic.
+
+  adolescent_match is mixed rather than poor because although the age band (5-12) sits below the target, this is a
+  developmental sample rather than a midlife one, and the relevant direction of bias is stated by the authors: effects in
+  children may be attenuated by "brain developmental immaturities", implying a young ADULT would if anything be more
+  affected than these children. That cuts against transporting the null downward in age but for the target subject at 18
+  it means this record should be weighted lightly relative to lo2016 and campbell2024.
+shard: "s02_cognition_meta"

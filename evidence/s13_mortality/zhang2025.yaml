@@ -1,0 +1,148 @@
+study_id: zhang2025
+citation: "Zhang J, Yu H, Jiao L, Wang D, Gu Y, Meng G, Wu H, Wu X, Zhu D, Chen Y, Wang D, Wang Y, Geng H, Huang T, Niu K. Causal Association of Sleep Traits with All-Cause and Cause-Specific Mortality: A Prospective Cohort and Mendelian Randomization Study. Rejuvenation Res. 2025 Jun;28(3):136-145."
+doi: "10.1089/rej.2024.0058"
+pmid: "39883542"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Causal Association of Sleep Traits with All-Cause and Cause-Specific Mortality: A Prospective Cohort and Mendelian Randomization Study."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 451420
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [40, 69]
+  pct_female: null
+  country: "UK (European ancestry), MR replicated in FinnGen"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_observational
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "self-reported SHORT sleep vs normal sleep, OBSERVATIONAL multivariable-adjusted Cox model in UK Biobank"}
+    scale: log_hr
+    unit: null
+    value: 0.219938
+    se: 0.021091
+    ci: [0.178146, 0.260825]
+    conversion_formula: "log_hr = ln(1.246) = 0.219938; se = (ln(1.298) - ln(1.195))/3.92 = 0.021091"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher all-cause mortality. THE OBSERVATIONAL HALF of the key MR contrast: short sleep
+      HR 1.246 (1.195-1.298) in 451,420 people with 34,397 deaths over a median 12.68 y. This is a
+      LARGER observational estimate than the meta-analytic 1.12-1.14, probably because it uses a single
+      large cohort with a broad short-sleep definition and no dose modelling.
+    covariates: ["multivariable-adjusted (covariate list not available in abstract)"]
+    followup_years: 12.68
+    cohort_family: "UK_Biobank"
+    quote: "During a median follow-up period of 12.68 years, 34,397 individuals died. Observational analyses showed the multivariate-adjusted hazard ratio (HR) and 95% confidence intervals (CIs) for short sleep, long sleep, early chronotype, daytime sleepiness, daytime napping, and insomnia with mortality, 1.246 (1.195, 1.298), 1.735 (1.643, 1.831), 0.931 (0.909, 0.953), 1.276 (1.212, 1.344), 1.299 (1.254, 1.346), and 1.117 (1.091, 1.142) (All p < 0.0001)."
+  - outcome_domain: mortality
+    outcome_construct: all_cause_mortality_observational
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "self-reported LONG sleep vs normal sleep, OBSERVATIONAL, UK Biobank"}
+    scale: log_hr
+    unit: null
+    value: 0.551007
+    se: 0.027637
+    ci: [0.496524, 0.604862]
+    conversion_formula: "log_hr = ln(1.735) = 0.551007; se = (ln(1.831) - ln(1.643))/3.92 = 0.027637"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality with long sleep. HR 1.735 - 2.5x the excess log-hazard of short sleep
+      (0.551 vs 0.220) in the very same people. The largest short/long asymmetry in this shard, and the
+      clearest single confounding signal: long sleep tracks illness.
+    covariates: ["multivariable-adjusted (covariate list not available in abstract)"]
+    followup_years: 12.68
+    cohort_family: "UK_Biobank"
+    quote: "the multivariate-adjusted hazard ratio (HR) and 95% confidence intervals (CIs) for short sleep, long sleep, ... with mortality, 1.246 (1.195, 1.298), 1.735 (1.643, 1.831) ... (All p < 0.0001)"
+  - outcome_domain: mortality
+    outcome_construct: mr_daytime_napping_on_all_cause_mortality
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "genetically predicted daytime napping on all-cause mortality, IVW MR"}
+    scale: log_or
+    unit: null
+    value: 0.198031
+    se: 0.065957
+    ci: [0.068593, 0.327143]
+    conversion_formula: "log_or = ln(1.219) = 0.198031; se = (ln(1.387) - ln(1.071))/3.92 = 0.065957"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher mortality odds. The ONLY sleep trait for which this study's MR found a causal
+      signal. Recorded because it is the comparator that makes the sleep-duration null interpretable:
+      the MR design HAD power to detect something, and what it detected was napping (a marker of
+      illness and of long total sleep), not sleep duration.
+    covariates: ["MR assumptions"]
+    followup_years: null
+    cohort_family: "UK_Biobank_plus_FinnGen"
+    quote: "Based on UK Biobank, MR analysis indicated the association between daytime napping and an increased risk of all-cause mortality (odd ratio [OR]: 1.219, 95% CI: 1.071-1.387, p = 0.003), which may be largely attributable to cancer disease mortality (OR: 1.188, 95% CI: 1.009-1.399, p = 0.039)."
+  - outcome_domain: mortality
+    outcome_construct: mr_sleep_duration_on_mortality_null
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "genetically predicted sleep duration / short sleep / long sleep on all-cause mortality, IVW MR - NULL"}
+    scale: log_or
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No effect size or CI is reported in the abstract for the null MR estimates; the full text is paywalled and not in PMC or Europe PMC. Value is set to 0 to denote 'no causal association found' and se is deliberately null. This is NOT a measured zero and must not be entered into a meta-analysis as one."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NULL FINDING, no derivable magnitude. Directly contradicts wu2024, which found a strong causal
+      effect of genetically predicted short sleep on lifespan. The two MR studies differ in outcome
+      (all-cause mortality in the participants themselves here, versus parental lifespan in wu2024), in
+      instrument selection, and in exposure parameterisation. Given the disagreement, MR cannot be said
+      to establish either the existence or the size of a causal short-sleep mortality effect.
+    covariates: ["MR assumptions; directionally replicated in FinnGen"]
+    followup_years: null
+    cohort_family: "UK_Biobank_plus_FinnGen"
+    quote: "We found no causal association between sleep duration, short sleep, long sleep, chronotype, daytime sleepiness, insomnia, and mortality risk. The causal associations between sleep traits and all-cause mortality risk were directionally replicated in FinnGen."
+rob:
+  tool: MR-STROBE
+  judgement: moderate
+  notes: >
+    Strengths: very large single-cohort observational arm with a long 12.68 y median follow-up, an MR
+    arm on the same population, and directional replication in an independent biobank (FinnGen), which
+    is more than most sleep-MR papers do. Weaknesses: (1) one-sample MR in UK Biobank suffers from
+    winner's-curse and weak-instrument bias towards the observational estimate, so a null here is
+    conservative but the design is not clean; (2) the abstract reports no instrument counts, F
+    statistics, pleiotropy tests or effect sizes for the null estimates, so I cannot assess whether the
+    null reflects genuine absence of effect or simple lack of power - this is the central unresolved
+    problem with this record; (3) abstract-only access (paywalled, no PMC deposit), so the covariate
+    list, the MR sensitivity analyses and the numeric nulls are all unavailable; (4) short and long
+    sleep are binary self-reported categories.
+funding: null
+notes: >
+  TARGET EXTRACTION #3, Mendelian randomization component - the NULL MR result, and the most
+  informative single comparison in the shard for the causality question because BOTH analyses were run
+  in the SAME 451,420 people:
+  .
+    OBSERVATIONAL short sleep   HR 1.246 (1.195-1.298)    log 0.2199    p < 0.0001
+    MR             short sleep   no causal association     (no numbers reported)
+    OBSERVATIONAL long sleep    HR 1.735 (1.643-1.831)    log 0.5510    p < 0.0001
+    MR             long sleep    no causal association
+    MR             napping       OR 1.219 (1.071-1.387)   log 0.1980    p = 0.003
+  .
+  READ THIS CAREFULLY. A strong, highly significant observational association that vanishes under MR in
+  the same sample is the classic signature of confounding or reverse causation. It is NOT proof of
+  absence - one-sample MR in UK Biobank is underpowered for modest effects and the paper does not report
+  the confidence intervals that would let us bound how large a true effect it could have missed. But
+  combined with wu2024's own internal inconsistency (binary short-sleep instrument significant,
+  continuous sleep-duration instrument null), the fair summary is that GENETIC EVIDENCE DOES NOT
+  CONFIRM A CAUSAL SHORT-SLEEP MORTALITY EFFECT OF THE SIZE SEEN IN OBSERVATIONAL STUDIES.
+  .
+  I could not obtain numeric nulls because the article is paywalled and absent from PMC and Europe PMC
+  (checked both: pmcid None, isOpenAccess N, inEPMC N). I have therefore set se to null rather than
+  invent a confidence interval.
+  .
+  COHORT OVERLAP WARNING: UK_Biobank. Overlaps chaput2026, saintmaurice2024, liang2023, windred2024,
+  li2026 and (through the lifespan GWAS) wu2024.
+shard: "s13_mortality"

@@ -1,0 +1,83 @@
+study_id: narayan2003_diabetes_lifetime
+citation: Narayan KMV, Boyle JP, Thompson TJ, Sorensen SW, Williamson DF. Lifetime risk for diabetes mellitus
+  in the United States. JAMA. 2003;290(14):1884-1890.
+doi: 10.1001/jama.290.14.1884
+pmid: '14532317'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Lifetime risk for diabetes mellitus in the United States.
+access_tier: abstract_only
+design: normative_descriptive
+n: null
+population:
+  age_mean: null
+  age_range:
+  - 0
+  - 80
+  pct_female: null
+  country: US
+  adolescent_match: mixed
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_diagnosed_diabetes_from_birth_male
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: probability of diagnosis between birth and age 80, males born in 2000
+  value: 0.328
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. No CI reported, so se is null.
+  covariates: []
+  followup_years: null
+  cohort_family: NHIS_linked_mortality
+  quote: The estimated lifetime risk of developing diabetes for individuals born in 2000 is 32.8% for
+    males and 38.5% for females.
+- outcome_domain: baseline_risk
+  outcome_construct: qaly_lost_if_diabetes_diagnosed_at_40_male
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: years
+  unit: quality-adjusted life-years lost, men diagnosed at 40
+  value: -18.6
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = QALYs lost. THE ONLY QALY QUANTITY THIS SHARD FOUND anywhere in its domain.
+    Use only as a downstream multiplier on an absolute diabetes-incidence effect; it is not a sleep effect.
+  covariates: []
+  followup_years: null
+  cohort_family: NHIS_linked_mortality
+  quote: For example, we estimate that if an individual is diagnosed at age 40 years, men will lose 11.6
+    life-years and 18.6 quality-adjusted life-years and women will lose 14.3 life-years and 22.0 quality-adjusted
+    life-years.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: 2003 vintage; the 11.6 life-years lost at diagnosis age 40 is roughly double Gregg 2014's 5.8
+    for the same contrast, because diabetes mortality fell sharply between the two analyses. Prefer Gregg/Koyama
+    for the mortality consequence and use this record only for the QALY ratio 18.6/11.6 = 1.60 QALYs lost
+    per life-year lost.
+funding: US federal (CDC)
+notes: Historical anchor; superseded by Gregg 2014 and Koyama 2022.
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

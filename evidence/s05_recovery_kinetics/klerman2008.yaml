@@ -1,0 +1,177 @@
+study_id: klerman2008
+citation: "Klerman EB, Dijk DJ. Age-related reduction in the maximal capacity for sleep - implications for insomnia. Curr Biol. 2008;18(15):1118-1123."
+doi: "10.1016/j.cub.2008.06.047"
+pmid: "18656358"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2582347/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Age-Related Reduction in the Maximal Capacity for Sleep-Implications for Insomnia"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 53
+n_studies_pooled: null
+population:
+  age_mean: 21.9
+  age_range: [18, 32]
+  pct_female: 51.4
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: maximal_sleep_capacity_asymptote_young_adults
+    exposure: {type: sleep_extension, dose_h: 16, referent_h: 8.5, duration_days: 7, contrast_label: "asymptotic TST per 24 h under a 16 h/24 h sleep opportunity (12 h night + 4 h afternoon) for 3-7 days; young adults 18-32 y"}
+    scale: hours
+    unit: "h TST per 24 h at asymptote"
+    value: 8.9
+    se: 0.4
+    ci: [8.1, 9.7]
+    conversion_formula: "Read directly from Table 3 ('Younger All HSD' column, 'Per 24 hours / Total Sleep Time'): 8.9 (0.4), where the parenthetical is the standard error of the asymptote from the fitted exponential Sleep Measure = Asymptote + b*exp(-(time constant)*day). The 95% CI 8.1-9.7 is quoted verbatim from the Results text and equals 8.9 +/- 2*0.4, confirming the parenthetical is an SE."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is the HARD PHYSIOLOGICAL CEILING on chronic daily sleep in young adults. Given 16 h in bed per 24 h - twice any realistic recovery prescription - they settle at 8.9 h/24 h, leaving 7.0 h of wake IN BED. Sleep efficiency at asymptote is therefore only 8.9/16 = 55.6%. It is the strongest direct refutation of the idea that a large accumulated debt can be discharged by simply sleeping very long for many nights: the capacity is not there."
+    covariates: []
+    followup_years: null
+    cohort_family: BWH_Klerman_bedrest_extension
+    quote: "The asymptotic value for TST for younger subjects was 8.9 hours (C.I. 8.1-9.7 hours) (p=0.009 vs. older) and was not achieved until approximately the fifth 24-hour of extended sleep opportunity."
+  - outcome_domain: recovery
+    outcome_construct: days_to_asymptotic_sleep_duration_young_adults
+    exposure: {type: sleep_extension, dose_h: 16, referent_h: 8.5, duration_days: 7, contrast_label: "number of days of 16 h/24 h sleep opportunity required for TST to reach its asymptote, young adults vs older adults"}
+    scale: years
+    unit: "days of extended sleep opportunity to reach asymptotic TST"
+    value: 5.0
+    se: null
+    ci: [4.0, 7.0]
+    conversion_formula: "Quoted verbatim: young asymptote 'was not achieved until approximately the fifth 24-hour of extended sleep opportunity'; older asymptote 'was achieved during the second 24 hours'. The authors give the word 'approximately' and no SE, so se is null. The CI [4, 7] is my stated plausible bracket, NOT a computed interval: lower bound 4 because randomization arms were 3, 4 or 7 days and an asymptote at day 5 must exceed the 4-day arm; upper bound 7 because that was the longest arm and the asymptote was reached within it. Flagged inferred_from_ci: true because the interval is reasoned from protocol structure rather than fitted. NOTE the scale enum has no 'days' option; 'years' is used as the numeric-duration scale and the unit field states days explicitly."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "LARGER = slower recovery of sleep duration itself. ~5 days for young adults vs ~2 days for older adults. This is the recovery time constant for SLEEP DURATION only - it is the time for the sleep-debt rebound to dissipate, NOT the time for performance to normalize, which the same paper shows is longer still (PVT did not improve at all after the first extended night)."
+    covariates: []
+    followup_years: null
+    cohort_family: BWH_Klerman_bedrest_extension
+    quote: "The asymptotic level for TST for older subjects was 7.4 hours (95% C.I. 6.6-8.3 hours) and was achieved during the second 24 hours of extended sleep opportunity. The asymptotic value for TST for younger subjects was 8.9 hours (C.I. 8.1-9.7 hours) (p=0.009 vs. older) and was not achieved until approximately the fifth 24-hour of extended sleep opportunity."
+  - outcome_domain: sleep_need
+    outcome_construct: asymptote_young_adults_matched_habitual_sleep_range
+    exposure: {type: sleep_extension, dose_h: 16, referent_h: 8.5, duration_days: 7, contrast_label: "asymptotic TST per 24 h, young adults restricted to the subset whose habitual sleep duration was 7.0-9.0 h (matching the older group's range)"}
+    scale: hours
+    unit: "h TST per 24 h at asymptote"
+    value: 9.2
+    se: 0.4
+    ci: [8.3, 10.1]
+    conversion_formula: "Table 3, 'Younger Matched HSD range' column, Per 24 hours / Total Sleep Time: 9.2 (0.4). CI 8.3-10.1 quoted verbatim from Results."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "HIGHER = greater sleep capacity. Restricting the young sample to conventional habitual sleepers (7-9 h, i.e. excluding the 13 long sleepers with HSD > 9 h and 4 short sleepers with HSD < 7 h) RAISES the asymptote from 8.9 to 9.2 h. So 8.9 h is not an artefact of including long sleepers - if anything the typical young adult's ceiling is slightly higher."
+    covariates: ["habitual sleep duration restricted to 7.0-9.0 h"]
+    followup_years: null
+    cohort_family: BWH_Klerman_bedrest_extension
+    quote: "For younger subjects with HSD of the same ranges as the older subjects, the asymptote was 9.2 hours (C.I. 8.3-10.1 hours) (p=0.005 vs. older)"
+  - outcome_domain: sleep_need
+    outcome_construct: nocturnal_only_asymptote_12h_opportunity
+    exposure: {type: sleep_extension, dose_h: 12, referent_h: 8.5, duration_days: 7, contrast_label: "asymptotic TST within the 12 h NIGHTTIME sleep opportunity alone, young adults"}
+    scale: hours
+    unit: "h TST per night at asymptote, 12 h nocturnal opportunity"
+    value: 7.9
+    se: 0.2
+    ci: [7.5, 8.3]
+    conversion_formula: "Table 3, 'Younger All HSD' column, 'Nighttime (12-hour) only / Total Sleep Time': 7.9 (0.2). CI computed as 7.9 +/- 2*0.2 = 7.5-8.3, consistent with the authors' own CI-from-SE convention demonstrated for the per-24-h value (8.9 +/- 2*0.4 = 8.1-9.7 as printed in the text)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "CRITICAL FOR THE PRESCRIPTION. Young adults given a 12 h NOCTURNAL opportunity asymptote at only 7.9 h of nocturnal sleep. The extra 1.0 h that brings their total to 8.9 h/24 h is obtained in the AFTERNOON, not at night. A night-only prescription therefore cannot reach 8.9 h: a nocturnal ceiling of ~7.9-8.1 h applies no matter how much time in bed is offered at night, and the remainder must come from daytime sleep. Compare: Banks 2010 controls asymptoted at 7.95 h under 10 h nocturnal TIB - essentially identical."
+    covariates: []
+    followup_years: null
+    cohort_family: BWH_Klerman_bedrest_extension
+    quote: "Nighttime (12-hour) only / Total Sleep Time (hr) / Older All HSD 6.4 (0.3) / Younger All HSD 7.9 (0.2)*** / Younger Matched HSD range 8.1(0.3)***"
+  - outcome_domain: recovery
+    outcome_construct: pvt_fails_to_improve_after_first_extended_night
+    exposure: {type: recovery_sleep, dose_h: 12, referent_h: 8.5, duration_days: 1, contrast_label: "change after the FIRST 12 h nighttime sleep episode: PVT lapses and median RT vs subjective alertness and DSST/calculation throughput"}
+    scale: probability
+    unit: "1 = dissociation confirmed (subjective and throughput measures improved, PVT did not)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Direction/null indicator. The paper reports the PVT null as 'no changes ... (data not shown)', giving no means, SDs or test statistics for the PVT, so no effect size or SE is derivable. Encoded as a dissociation indicator with se: null rather than fabricating a magnitude."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = a genuine dissociation. After ONE 12 h night, subjective alertness ('Alert' p=0.0001, 'Fresh' p=0.0001, KSS p<0.0001), calculation throughput (p<0.0001) and DSST (p<0.0001) all improved significantly, but PVT lapses and PVT median reaction time did NOT change. Vigilance is the slowest-recovering measure even under a very large 16 h/24 h sleep opportunity. Anyone judging their own recovery by how alert they feel, or by throughput-type tasks, will conclude they have recovered while vigilance is still impaired."
+    covariates: []
+    followup_years: null
+    cohort_family: BWH_Klerman_bedrest_extension
+    quote: "After the first nighttime 12-hour sleep episode, there were increases in self-report of \"Alert\" (p=0.0001) and \"Fresh\" (p=0.0001) and decreases in the Karolinska Sleepiness Scale (p<0.0001) in younger and older subjects. For objective measures, there was significant and similar improvement in older and younger subjects after the first nighttime 12 hour sleep episode on two performance tasks: increased number of calculations attempted (p<0.0001) and scores on the Digit Symbol Substitution Test (p<0.0001), but no changes in lapses in attention or median reaction time on the Psychomotor Vigilance Test or other mood ratings (data not shown)."
+  - outcome_domain: sleep_need
+    outcome_construct: habitual_sleep_shortfall_vs_asymptote_young_adults
+    exposure: {type: habitual_short_sleep, dose_h: 8.5, referent_h: 8.9, duration_days: null, contrast_label: "habitual sleep duration (time in bed) at home vs asymptotic sleep need, young adults"}
+    scale: hours
+    unit: "h/night shortfall of habitual TIME IN BED below asymptotic TST need"
+    value: -0.4
+    se: null
+    ci: null
+    conversion_formula: "Habitual Sleep Duration (defined by the authors as TIME IN BED, wake included) for young subjects = 8.5 +/- 1.0 h SD. Asymptotic TST need = 8.9 h. Shortfall = 8.5 - 8.9 = -0.4 h. se is null because this differences a mean-of-TIB (SD 1.0, n=35) against a fitted asymptote (SE 0.4) whose covariance with the TIB mean is unknown; combining them would require an assumption I cannot justify. THE TRUE SHORTFALL IS LARGER THAN 0.4 h because 8.5 h is TIME IN BED whereas 8.9 h is SLEEP TIME - at a realistic 90-93% nocturnal sleep efficiency, 8.5 h TIB yields only ~7.7-7.9 h TST, i.e. a real shortfall of ~1.0-1.2 h/night. The authors make exactly this point for the older group."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NEGATIVE = habitual sleep opportunity falls SHORT of physiological sleep need. Healthy young adults with no sleep complaints, not selected for short sleep, already carry a chronic nightly deficit of roughly 0.4 h of TIB and ~1 h of actual sleep. IMPORTANT BASELINE-CONTAMINATION IMPLICATION: the 'baseline' in essentially every restriction study in this shard is itself debt-laden, so all reported restriction effects are measured from an already-impaired starting point and all 'return to baseline' criteria are set too low."
+    covariates: []
+    followup_years: null
+    cohort_family: BWH_Klerman_bedrest_extension
+    quote: "There was no significant difference in mean HSD between the groups: 8.1 +/- 0.6 hours for older subjects and 8.5 +/- 1.0 hours for younger subjects. ... Because the reported time spent in bed (HSD) while living in their normal environment was 8.5 hours in the young individuals, it follows that young subjects do not allow themselves enough time to meet their asymptotic sleep need."
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "UPGRADED FROM secondhand TO full_text IN THIS SESSION: I located PMC2582347 via elink and retrieved the complete author manuscript, so every number in this record is now read directly from the paper's own Results text and Table 3 rather than quoted through Kitamura 2016. Design strengths: inpatient polysomnography throughout, 16 h/24 h bedrest covering two-thirds of the circadian cycle in darkness without time-of-day cues, subjects screened for sleep disorders and substance use, habitual schedule verified by actigraphy plus time-stamped call-ins for 2 weeks before admission, and asymptotes estimated by mixed-model exponential regression rather than eyeballed. Concerns: (a) duration of extended opportunity was randomized to 3, 4 or 7 days, so only 9 of 35 young subjects contributed data at days 5-7 - precisely the window in which the young asymptote is claimed to be reached, making 'approximately the fifth 24-hour' the least well-supported number in the record; (b) the PVT null is reported as 'data not shown', so it cannot be independently checked; (c) no adolescents - youngest was 18 y, mean 21.9 y - though this is the closest age match among all ceiling studies in the shard."
+funding: "National Institutes of Health P01-AG09975, K02-HD045459 (EBK), NCRR-GCRC-M01-RR02635 (BWH GCRC); DJD supported by BBSRC and Wellcome Trust."
+notes: |
+  THE CEILING STUDY. This is the single best evidence in the shard on the physiological upper bound of
+  recovery sleep, and it now comes firsthand. n = 53 (35 young 18-32 y, 21.9 +/- 3.3, 18 female;
+  18 older 60-76 y, 67.8 +/- 4.3). Protocol: 16 h bedrest per 24 h (12 h centred on habitual night
+  + 4 h centred 12 h opposite) for 3-7 days, randomized: 3 days (9 young, 4 older), 4 days (17 young,
+  10 older), 7 days (9 young, 4 older).
+
+  WHY THE 16 h OPPORTUNITY MATTERS SO MUCH. The task brief asks whether a person could sleep 16 h to
+  repay 8 h of debt. This study literally offered 16 h of bedrest per 24 h, for up to a week, in
+  darkness, with no clock cues, and the answer is no: young adults asymptote at 8.9 h of sleep per
+  24 h and spend the other 7.0 h AWAKE IN BED. Sleep efficiency at asymptote is 8.9/16 = 55.6%. The
+  ceiling is a property of the sleep system, not of opportunity.
+
+  THREE NUMBERS THAT ANCHOR THE WHOLE RECOVERY PRESCRIPTION:
+    1. Chronic ceiling per 24 h, young adults:            8.9 h (95% CI 8.1-9.7); matched-HSD subset 9.2 h
+    2. Chronic ceiling for NOCTURNAL sleep alone (12 h):  7.9 h (SE 0.2); matched subset 8.1 h
+    3. Days of extended opportunity to reach asymptote:   ~5 days young vs ~2 days older
+  Number 2 is the one most often missed and it is decisive for a real prescription: a night-only
+  schedule cannot deliver 8.9 h however long the night, because nocturnal sleep saturates near
+  7.9-8.1 h. The last ~1 h of the young adult's 8.9 h capacity was obtained in the AFTERNOON. This
+  independently supports Lo 2022's finding that daytime naps add recovery value in adolescents, and
+  it means an afternoon nap is not a crutch but a structural component of reaching full capacity.
+
+  CONVERGENT CEILING ESTIMATES ACROSS SIX INDEPENDENT STUDIES (nocturnal unless noted):
+    Banks 2010    controls, 10 h TIB x 8 nights, asymptote       7.95 h
+    Klerman 2008  young adults, 12 h night only, asymptote       7.9 h   (this record)
+    Kitamura 2016 young men, 12 h TIB x 9 nights, asymptote      8.41 h
+    Rupp 2009     extension week, 10 h TIB x 7 nights           8.68 h
+    Klerman 2008  young adults, 16 h/24 h incl. afternoon        8.9 h   (this record)
+    Short 2018    adolescents, 10 h TIB, modelled sleep need     ~9.0-9.35 h
+  Single-night maxima are higher and also converge on ~10.2-10.4 h (Depner 2019 men at 12.1 h TIB;
+  Kitamura 2016 night 1 at 12 h TIB; Yamazaki 2021 night 1 at 12 h TIB), and 8.96 h at 10 h TIB
+  (Banks 2010). So: ~10.4 h for one night, ~8.4-8.9 h sustained.
+
+  AGE GRADIENT AS A TRANSPORT ARGUMENT: capacity falls with age (8.9 h at 21.9 y vs 7.4 h at 67.8 y,
+  p=0.009). Extrapolating the gradient downward, a 16-19 year old's ceiling should be at or above
+  8.9 h, which is consistent with Short 2018's modelled adolescent sleep need of ~9.0-9.35 h. The
+  ceiling therefore does not bite as hard for the target subject as for a 60-year-old, but 16 h of
+  opportunity still cannot be converted into 16 h of sleep.
+
+  BASELINE CONTAMINATION - a caveat that propagates to every other record in this shard. Healthy
+  young adults NOT selected for short sleep, with no sleep complaints, habitually spent 8.5 h in bed
+  against an 8.9 h sleep need, and slept measurably more when given the chance. Their 'normal'
+  baseline was already debt-laden. Every restriction study's 'return to baseline' criterion is
+  therefore anchored to an impaired reference, which biases all recovery estimates in this shard
+  toward optimism - incomplete recovery is being under-detected, not over-detected.
+
+  SEE ALSO klerman2005.yaml (Klerman & Dijk, Sleep 2005;28(10):1253-9, PMID 16295210) - the earlier
+  companion using the same 16 h/24 h protocol in 17 young adults, which reports the DAY-1 rebound
+  magnitude (+4.9 h above habitual) that this paper does not quantify. cohort_family is set to
+  BWH_Klerman_bedrest_extension on both; the samples may overlap and they must not be pooled as
+  independent.
+shard: "s05_recovery_kinetics"

@@ -1,0 +1,99 @@
+study_id: tuan2019
+citation: "Tuan LH, Lee LJ. Microglia-mediated synaptic pruning is impaired in sleep-deprived adolescent mice. Neurobiology of Disease. 2019;130:104517."
+doi: "10.1016/j.nbd.2019.104517"
+pmid: "31229687"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Microglia-mediated synaptic pruning is impaired in sleep-deprived adolescent mice"
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "Taiwan"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: excitatory_synapse_density_dentate_gyrus_adolescent_mice
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 3,
+               contrast_label: "72 h paradoxical (REM) sleep deprivation by modified multiple-platform method in 5-week-old mice vs normal-sleep littermate controls"}
+    scale: raw_units
+    unit: "direction of change in excitatory synapse density (qualitative; no magnitude in retrievable abstract)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded +1 = significant INCREASE in excitatory synapse density in dentate gyrus granule cells. Abstract gives direction and significance only; no counts, percentages or CIs. se null - not invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Positive = MORE excitatory synapses after sleep deprivation in adolescent mice. Note the sign: sleep loss INCREASED synapse density (failure to prune), it did not destroy synapses. Adult mice showed no such change."
+    covariates: []
+    followup_years: null
+    cohort_family: "animal_mouse"
+    quote: "Compared with normal-sleep controls, sleep-deprived adolescent mice had an increased density of excitatory synapses in the granule cells of the dentate gyrus, but no such pattern was observed in the adult group."
+  - outcome_domain: brain_structure
+    outcome_construct: microglial_engulfment_of_postsynaptic_components_pruning
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 3,
+               contrast_label: "72 h paradoxical sleep deprivation, adolescent (5 wk) vs adult (~12 wk) mice, microglial phagocytosis of postsynaptic material"}
+    scale: raw_units
+    unit: "direction of change in microglial engulfment (qualitative)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded -1 = significant REDUCTION in microglial engulfment of postsynaptic components in adolescents only. No magnitude published in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = LESS microglial pruning activity after sleep deprivation, specifically in adolescents. Accompanied by decreases in CX3CR1, CD11b and P2Y12, the molecular machinery of microglial synaptic phagocytosis. This is the most direct evidence anywhere in the shard that sleep loss can perturb synaptic pruning during an adolescent window."
+    covariates: []
+    followup_years: null
+    cohort_family: "animal_mouse"
+    quote: "The engulfment of postsynaptic components within the microglia after SD was reduced in adolescents but not in adults, suggesting an impaired microglia-mediated synaptic pruning in adolescent SD mice. Possible contributing factors included the decreases in CX3CR1, CD11b and P2Y12, closely associated with the synaptic pruning via microglial phagocytosis."
+rob:
+  tool: none
+  judgement: na
+  notes: "ANIMAL STUDY - risk-of-bias tools for human studies do not apply; tool recorded as none. Design-specific concerns: the modified multiple-platform method for REM deprivation imposes substantial confounding stress and forced immobility/water-proximity, which independently affect microglia and hippocampal synapses; group sizes not recoverable from the abstract (recorded as n: null rather than guessed); no recovery-sleep arm, so it is unknown whether the pruning deficit persists or normalises; single brain region for the synaptic measure."
+funding: "Non-US government support (Taiwan)"
+notes: |
+  THIS IS THE STRONGEST MECHANISTIC EVIDENCE IN THE SHARD FOR AN ADOLESCENT-SPECIFIC EFFECT ON
+  PRUNING, AND IT IS ALSO WHERE THE TRANSLATION PROBLEM IS MOST ACUTE. Both must be stated.
+
+  WHAT IT SHOWS. 72 h of REM sleep deprivation in 5-week-old (adolescent) mice reduced microglial
+  engulfment of postsynaptic material and left an EXCESS of excitatory synapses in the dentate
+  gyrus. Adult mice, given identical treatment, showed neither effect. There is therefore a real,
+  age-gated biological mechanism by which sleep loss can interfere with synaptic pruning.
+
+  THE EXPOSURE TRANSLATION PROBLEM, STATED EXPLICITLY AS THE TASK REQUIRES:
+
+  1. SPECIES AND METHOD. Mus musculus, REM-deprived by the multiple-platform method - animals
+     stand on small platforms over water and fall/wake whenever muscle atonia begins. This is
+     total REM abolition plus chronic restraint stress plus thermal and hydric stress. It is not
+     a model of a teenager going to bed at 1am and getting 5-6 h.
+
+  2. DOSE. 72 h of continuous REM elimination. The subject's exposure is a partial reduction of
+     total sleep - he still obtains 5-6 h nightly, which preserves a substantial and
+     REM-enriched proportion of the night (REM is concentrated in the final third of sleep, so
+     truncating sleep does reduce REM disproportionately - this is the one respect in which the
+     model is not entirely inapposite - but reduction is not abolition).
+
+  3. TIMESCALE MAPPING IS NOT ESTABLISHED. P35 mouse to human 16-19 y is an approximate
+     correspondence at best, and 72 h in a mouse has no defensible conversion to 3 years in a human.
+
+  4. THE DIRECTION IS THE OPPOSITE OF 'DAMAGE' AS USUALLY IMAGINED. Sleep loss produced MORE
+     synapses, not fewer - a pruning delay, not a loss of tissue. Any translation to human MRI
+     would predict LARGER, not smaller, regional volumes. This is worth noting because the human
+     cross-sectional literature reports smaller volumes in short sleepers. The animal mechanism
+     and the human correlation point in opposite directions.
+
+  5. NO RECOVERY ARM. Whether the pruning deficit persists after normal sleep resumes was not
+     tested here, and that is precisely the question the permanence verdict turns on. See
+     howard2019 for the only adolescent-exposure study in this shard that includes a recovery
+     interval - and note it measured behaviour, not synapses.
+shard: "s15_brain_structure"

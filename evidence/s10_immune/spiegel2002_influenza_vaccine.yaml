@@ -1,0 +1,80 @@
+study_id: spiegel2002_influenza_vaccine
+citation: "Spiegel K, Sheridan JF, Van Cauter E. Effect of sleep deprivation on response to immunization. JAMA. 2002;288(12):1471-1472."
+doi: "10.1001/jama.288.12.1471-a"
+pmid: "12243633"
+url: "https://pubmed.ncbi.nlm.nih.gov/12243633/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 0.991
+  status: VERIFIED
+  resolved_title: "Effect of sleep deprivation on response to immunization."
+access_tier: secondhand
+secondhand_via: "Full text is a paywalled JAMA research letter with NO abstract in PubMed and no PMC deposit; every number below is quoted from three independent sources that had access, each of which I verified via Crossref: (1) Spiegel K et al., Curr Biol 2023;33:998-1005, doi 10.1016/j.cub.2023.02.017, PMID 36917932 - the meta-analysis led by the same first author, which lists this study in its Table 1 and describes it in the introduction; (2) Besedovsky L, Lange T, Haack M, Physiol Rev 2019;99:1325-1380, doi 10.1152/physrev.00010.2018, PMID 30920354, reference 522; (3) Kim ES, Oh CE. Sleep and vaccine administration time as factors influencing vaccine immunogenicity. Kosin Med J. 2022;37(1):27-36, doi 10.7180/kmj.22.014 (Crossref verified: title, journal, vol 37 issue 1, pages 27-36, 2022)."
+design: rct_parallel
+tier: T1
+n: 25
+n_studies_pooled: null
+population:
+  age_mean: 23.0
+  age_range: [18, 27]
+  pct_female: 0.0
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: immune
+    outcome_construct: influenza_antibody_titre_igg_day10
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 6, contrast_label: "4 h in bed x 4 nights before + 2 nights after trivalent influenza vaccination vs 8 h in bed; antibody at day 10"}
+    scale: pct_change
+    unit: "% of control-group antibody titre at day 10 post-vaccination"
+    value: -50.0
+    se: null
+    ci: null
+    conversion_formula: "Sources state the restricted group's titre was 'less than half' (Spiegel 2023) and that control titres were 'more than doubled' (Besedovsky 2019) relative to the restricted group. Recorded as a <=-50% change; the exact point estimate and its SE are NOT recoverable from the sources I could retrieve, so se is null rather than invented. Do not treat -50 as a precise estimate."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = HARM. Ten days after influenza vaccination, the sleep-restricted group had less than half the antibody titre of the normally-rested group."
+    covariates: []
+    followup_years: 0.027
+    cohort_family: "Chicago_Spiegel_restriction"
+    quote: "An early study in 25 healthy young men showing that six days of sleep restriction in the days surrounding influenza vaccination showed that immunoglobulin (IgG) antibody titers 10days after inoculation were less than half of those measured in control subjects. [Spiegel et al., Curr Biol 2023, introduction]"
+  - outcome_domain: immune
+    outcome_construct: influenza_antibody_titre_igg_day21_to_30
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 6, contrast_label: "same contrast, antibody re-measured at 21-30 days (3-4 weeks) post-vaccination"}
+    scale: pct_change
+    unit: "% difference in antibody titre between groups at 3-4 weeks"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Explicit null; no numeric estimate published in a source I could retrieve. Value 0 / se null is a qualitative null FLAG, not a poolable estimate."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "CRITICAL NULL FOR THE TRANSIENT-VS-DURABLE DISTINCTION. The between-group antibody difference had disappeared by 3-4 weeks: after 7 nights of 12 h recovery sleep the restricted group's titres caught up. This is the single clearest piece of evidence in this shard that the vaccine-response deficit reflects a delay in antibody kinetics rather than a permanent failure of immunological memory in young men."
+    covariates: []
+    followup_years: 0.08
+    cohort_family: "Chicago_Spiegel_restriction"
+    quote: "In the antibody titer measurement 10 days after vaccination, in which the antibody increased logarithmically, the average antibody titer of the sleep-deprived group was less than half of that of the normal sleep group. However, there was no significant difference in the antibody titers between the two groups 3-4 weeks after vaccination. [Kim ES & Oh CE, Kosin Med J 2022;37:27-36, describing Spiegel et al. 2002]"
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomised parallel-group lab restriction protocol with an objectively enforced sleep schedule and a hard immunological endpoint - the strongest design available in this domain. BUT: n = 25 total (11 restricted vs 14 control per one secondary source), all male, single site, and I could not read the primary report, so I cannot check allocation concealment, whether antibody assays were blinded, or the exact group means. The design also confounds restriction with subsequent 12 h recovery sleep in the restricted arm, which is precisely why the 3-4 week null is informative but not cleanly attributable."
+funding: "not verifiable from the sources I could retrieve"
+notes: |
+  ACCESS LIMITATION, stated plainly: this is the single most-cited study in the sleep-and-vaccination
+  literature and I could NOT retrieve its full text. It is a two-page JAMA research letter, paywalled,
+  with no PubMed abstract and no PMC copy; a WebFetch of the JAMA page timed out. Everything above is
+  secondhand from two sources that had the paper, one of which (Curr Biol 2023) is by the same first
+  author and obtained individual-participant data from her own study. I have therefore set
+  access_tier: secondhand and se: null throughout. The downstream model should widen uncertainty
+  accordingly and should NOT treat "-50%" as a measured effect size.
+  PROTOCOL as described in Spiegel 2023 Table 1: "|25|18-27|25/0|4 nights of PSD (4h in bed) before
+  vaccination followed by 2 nights of PSD and 7 nights of 12h in bed vs. 8h in bed|Influenza,
+  trivalent types A and B|1|Anti-influenza Ab (IgG)|0, 10 and 21-30days|*t= 10days and overall|"
+  A second secondary source (Kim & Oh, Kosin Med J 2022) gives group sizes as 11 restricted vs 14
+  control and mean age 23 y, verbatim: "In 25 young men with an average age of 23 years, one group of
+  11 participants slept only 4 hours during the first 6 days, and the other group of 14 participants
+  slept 7.5-8.5 hours as usual. Influenza vaccine was administered on the morning of the 4th day."
+  This study's individual effect size is one of the four experimental studies pooled in
+  spiegel2023_vaccine_meta (objective pooled ES 0.79, 95% CI 0.40-1.18), so the downstream pooler
+  should use the meta-analytic record rather than double-counting this one.
+shard: "s10_immune"

@@ -1,0 +1,86 @@
+study_id: giuntella_mazzonna2019
+citation: "Giuntella O, Mazzonna F. Sunset time and the economic effects of social jetlag: evidence from US time zone borders. Journal of Health Economics. 2019;65:210-226."
+doi: "10.1016/j.jhealeco.2019.03.007"
+pmid: null
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: null
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sunset time and the economic effects of social jetlag: evidence from US time zone borders"
+access_tier: full_text
+secondhand_via: "effect magnitudes read from the authors' working-paper version ('Sunset Time and the Health Effects of Social Jetlag: Evidence from US Time Zone Borders', draft 25 Aug 2016); journal, volume and pages verified against Crossref for the published article"
+design: instrumental_variable
+tier: T2
+n: 18639
+n_studies_pooled: null
+population:
+  age_mean: 38.0
+  age_range: [18, 55]
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: first_stage_sleep_minutes_late_sunset_side_of_border
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "living on the LATE sunset side of a US time zone border vs the neighbouring early-sunset county (spatial RD)"}
+    scale: raw_units
+    unit: "minutes of sleep per night"
+    value: -19.0
+    se: null
+    ci: null
+    conversion_formula: "reported as 'approximately 19 minutes' in Table 1 discussion; the sentence does not give the SE and I did not extract the table cell, so se is null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = late-sunset side sleeps LESS. This is the sunset-time first stage in a US adult population."
+    covariates: ["socio-demographics", "geographic controls", "interview characteristics", "distance to border polynomial"]
+    followup_years: null
+    cohort_family: ATUS
+    quote: "the estimated effect of being on the late sunset side of the boundary (\"late sunset border\") is approximately 19 minutes, reducing sleep duration"
+  - outcome_domain: cognition
+    outcome_construct: any_cognitive_impairment_probability
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "living on the late sunset side of a time zone border (i.e. ~19 min less habitual sleep)"}
+    scale: probability
+    unit: "change in probability of reporting any cognitive impairment"
+    value: 0.0035
+    se: null
+    ci: null
+    conversion_formula: "point estimate is the midpoint of the 0.002-0.005 range the authors report across specifications for the discontinuity in self-reported cognitive impairment. No SE derivable from the range, so null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = MORE cognitive impairment on the late-sunset (less sleep) side; this is HARM"
+    covariates: ["socio-demographics", "geographic controls", "distance to border polynomial"]
+    followup_years: null
+    cohort_family: BRFSS
+    quote: "we find significant discontinuities in weight, diabetes and cognitive impairment with individuals living in"
+rob:
+  tool: ROBINS-I
+  judgement: moderate
+  notes: "Spatial regression discontinuity at US time zone borders with a genuine, if small, measured first stage from ATUS time diaries. Weaknesses: self-reported cognitive impairment is a crude binary outcome; the first stage of ~19 min is small so the implied IV scaling is very sensitive; residential sorting across a time zone border and cross-border commuting are plausible violations, although the authors argue counties adjacent to a border are otherwise similar."
+funding: "Not stated in retrieved working paper"
+notes: |
+  IDENTIFYING ASSUMPTION: counties immediately either side of a US time zone border are comparable on
+  everything except the timing of natural light relative to clock time and hence relative to socially
+  fixed school/work schedules. Sunset time therefore affects health and cognition only through the
+  resulting circadian misalignment and sleep loss. This is a STANDARD AND WIDELY ACCEPTED design in
+  economics (the same border-discontinuity logic that Gibson & Shrader use), and the assumption is
+  reasonably PLAUSIBLE at short distances from the border. Residual concerns are cross-border commuting,
+  economic discontinuities at borders (borders often follow rivers/state lines), and selective residence.
+  WHAT IT CONTRIBUTES AND WHAT IT DOES NOT: this is the canonical sunset-time IV paper the task asked
+  for, and its value here is the FIRST STAGE - about 19 minutes less sleep per hour of later sunset for
+  employed adults, with the authors emphasising the effect is "considerably larger among individuals
+  with early working schedules" (exactly the mechanism that makes early school start times bind on
+  adolescents). It does NOT provide an academic outcome, and its cognitive outcome is a self-reported
+  impairment dummy, not a test score. So it should inform the exposure model and the direction of the
+  cognitive effect, not the magnitude of an academic effect.
+  POPULATION MISMATCH: employed US adults aged 18-55 (sample restricted to this range to avoid
+  age confounds), so `fair_adult`. Not adolescents.
+  Sample: ATUS 2003-2013 with CPS county matching; after restrictions 18,639 individuals of whom 16,557
+  were employed. The health/cognition outcomes come from BRFSS, a different (larger) dataset.
+  Authors' own summary of the mechanism, verbatim: "individuals living on the late sunset side of a time
+  zone boundary tend to go to bed later than do individuals living in the neighboring counties on the
+  opposite side of the time zone border. Because working schedules and school start times are less
+  flexible than bedtimes, individuals on the late sunset side of the border do not fully compensate by
+  waking up later in the morning."
+shard: "s04_academic_natural_experiments"

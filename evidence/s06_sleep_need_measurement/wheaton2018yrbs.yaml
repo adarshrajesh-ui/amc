@@ -1,0 +1,153 @@
+study_id: wheaton2018yrbs
+citation: "Wheaton AG, Jones SE, Cooper AC, Croft JB. Short Sleep Duration Among Middle School and High School Students - United States, 2015. MMWR Morbidity and Mortality Weekly Report. 2018;67(3):85-90."
+doi: "10.15585/mmwr.mm6703a1"
+pmid: "29370154"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5812312/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Short Sleep Duration Among Middle School and High School Students - United States, 2015"
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 14471
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [13, 18]
+  pct_female: 50.1
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_under_7h_school_night_high_school
+    exposure: {type: habitual_short_sleep, dose_h: 7, referent_h: null, duration_days: null, contrast_label: "prevalence of self-reported <7 h of sleep on an average school night, US high school students, 2015 YRBS"}
+    scale: probability
+    unit: "proportion sleeping under 7 h on an average school night"
+    value: 0.430
+    se: null
+    ci: null
+    conversion_formula: "DERIVED by summing the reported whole-hour distribution for high school students: 7.5% (<=4 h) + 12.6% (5 h) + 22.9% (6 h) = 43.0%. The paper does not publish a <7 h category or its CI (its own cutoff is <8 h), so se: null. Because responses are whole hours, '6 hours' means the 6-hour option was selected, so this sum is exactly the proportion choosing 6 h or less."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "THE ANSWER TO 'where does our subject sit in the distribution'. 43% of US high schoolers report <7 h on school nights, so his reported 5-6 h weekday sleep is common rather than exceptional: roughly the 20th-43rd percentile of the reported distribution."
+    covariates: []
+    followup_years: null
+    cohort_family: "YRBS"
+    quote: |
+      At the high school level, nationwide, the prevalence of short sleep duration was 72.7% (Table 2). The
+      distribution of sleep duration was 7.5% for <=4 hours, 12.6% for 5 hours, 22.9% for 6 hours, 29.7% for 7
+      hours, 20.6% for 8 hours, 5.0% for 9 hours, and 1.7% for >=10 hours.
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_5h_or_less_school_night_high_school
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: null, duration_days: null, contrast_label: "prevalence of self-reported <=5 h of sleep on an average school night, US high school students"}
+    scale: probability
+    unit: "proportion sleeping 5 h or less on an average school night"
+    value: 0.201
+    se: null
+    ci: null
+    conversion_formula: "DERIVED: 7.5% (<=4 h) + 12.6% (5 h) = 20.1%. se: null as above."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 in 5 US high schoolers report 5 h or less. If our subject's '5-6 h' is taken at its lower bound he sits around the 20th percentile of REPORTED sleep, not in a rare tail."
+    covariates: []
+    followup_years: null
+    cohort_family: "YRBS"
+    quote: |
+      At the high school level, nationwide, the prevalence of short sleep duration was 72.7% (Table 2). The
+      distribution of sleep duration was 7.5% for <=4 hours, 12.6% for 5 hours, 22.9% for 6 hours, 29.7% for 7
+      hours, 20.6% for 8 hours, 5.0% for 9 hours, and 1.7% for >=10 hours.
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_short_sleep_under_8h_high_school
+    exposure: {type: habitual_short_sleep, dose_h: 8, referent_h: null, duration_days: null, contrast_label: "prevalence of <8 h on an average school night (the paper's own short-sleep definition for ages 13-18)"}
+    scale: probability
+    unit: "proportion sleeping under 8 h on an average school night"
+    value: 0.727
+    se: 0.01148
+    ci: [0.704, 0.749]
+    conversion_formula: "quoted from Table 2: 'National survey | 14,471 | 72.7 (70.4-74.9)'. se = (0.749-0.704)/3.92 = 0.01148"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "the guideline-referenced short-sleep prevalence. Nearly three quarters of US high schoolers fall below the AASM/NSF 8 h lower bound on school nights, which makes 'insufficient sleep' the statistical norm for this population and matters for choosing the comparator in a counterfactual analysis."
+    covariates: []
+    followup_years: null
+    cohort_family: "YRBS"
+    quote: |
+      At the high school level, nationwide, the prevalence of short sleep duration was 72.7% (Table 2). The
+      distribution of sleep duration was 7.5% for <=4 hours, 12.6% for 5 hours, 22.9% for 6 hours, 29.7% for 7
+      hours, 20.6% for 8 hours, 5.0% for 9 hours, and 1.7% for >=10 hours. Table 2: National survey | 14,471 |
+      72.7 (70.4-74.9)
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_short_sleep_male_and_grade12
+    exposure: {type: habitual_short_sleep, dose_h: 8, referent_h: null, duration_days: null, contrast_label: "prevalence of <8 h on an average school night, MALE high school students"}
+    scale: probability
+    unit: "proportion of male high school students sleeping under 8 h"
+    value: 0.699
+    se: 0.01480
+    ci: [0.669, 0.727]
+    conversion_formula: "quoted from Table 2: 'Male | 7,165 | 69.9 (66.9-72.7)'. se = (0.727-0.669)/3.92 = 0.0148. For reference the grade-12 figure is 77.6% (74.7-80.2) and grade 11 is 77.1% (73.5-80.3)."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "sex- and grade-specific anchor for our subject. Males 69.9%; by grade 12 the figure rises to 77.6%, consistent with sleep restriction intensifying across the exact 16-18 window in question."
+    covariates: []
+    followup_years: null
+    cohort_family: "YRBS"
+    quote: |
+      The prevalence of short sleep duration was higher among female students (75.6%) than among male students
+      (69.9%), lower among students in grade 9 (65.6%) than in other grades (71.7%-77.6%). Table 2: Male | 7,165 |
+      69.9 (66.9-72.7); 12 | 3,426 | 77.6 (74.7-80.2)
+  - outcome_domain: exposure_measurement
+    outcome_construct: instrument_response_granularity_whole_hours
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "granularity of the YRBS sleep-duration response options"}
+    scale: hours
+    unit: "hours (width of the response grid)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "no arithmetic; value = 1.0 h encodes the response-option spacing. The instrument offers only whole-hour categories, so any reported duration from this survey family is discretised to 1 h with censoring at both ends (<=4 and >=10)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "RECALL-ROUNDING evidence: the national instrument that generates the headline adolescent sleep statistics cannot record anything finer than one hour. Reported adolescent sleep durations are therefore rounded by construction, not merely by cognitive habit."
+    covariates: []
+    followup_years: null
+    cohort_family: "YRBS"
+    quote: |
+      All students in the national, state, and large urban school district surveys were asked to respond to this
+      question about sleep duration: 'On an average school night, how many hours of sleep do you get?' Possible
+      responses were 4 or less hours, 5 hours, 6 hours, 7 hours, 8 hours, 9 hours, and 10 or more hours.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "nationally representative probability sample with weighting for complex design (a strength for prevalence). Fatal weakness for our purposes: the exposure is a SINGLE self-reported whole-hour item, i.e. exactly the instrument this shard's Part B shows to be biased by ~0.5-1.6 h in adolescents and correlated with actigraphy at only rho ~0.18. These are prevalences of REPORTED sleep, not of true sleep."
+funding: "CDC"
+notes: |
+  VERBATIM instrument wording (this is the rounding evidence): "All students in the national, state, and large urban school
+  district surveys were asked to respond to this question about sleep duration: 'On an average school night, how many hours of
+  sleep do you get?' Possible responses were 4 or less hours, 5 hours, 6 hours, 7 hours, 8 hours, 9 hours, and 10 or more hours.
+  Short sleep duration was defined as <9 hours for students aged 6-12 years and <8 hours for those aged 13-18 years."
+  VERBATIM high school distribution: "At the high school level, nationwide, the prevalence of short sleep duration was 72.7%
+  (Table 2). The distribution of sleep duration was 7.5% for <=4 hours, 12.6% for 5 hours, 22.9% for 6 hours, 29.7% for 7 hours,
+  20.6% for 8 hours, 5.0% for 9 hours, and 1.7% for >=10 hours. The prevalence of short sleep duration was higher among female
+  students (75.6%) than among male students (69.9%), lower among students in grade 9 (65.6%) than in other grades (71.7%-77.6%),
+  and higher among black (76.5%) and Asian (79.3%) students than white (72.0%) and Hispanic (70.2%) students. State-level
+  estimates of short sleep duration for the 30 states ranged from 61.8% (South Dakota) to 82.5% (West Virginia)."
+  VERBATIM Table 2 rows used above: "National survey | 14,471 | 72.7 (70.4-74.9)"; "Female | 7,250 | 75.6 (73.3-77.7)";
+  "Male | 7,165 | 69.9 (66.9-72.7)"; "9 | 3,673 | 65.6 (62.6-68.5)"; "10 | 3,593 | 71.7 (69.2-74.0)";
+  "11 | 3,695 | 77.1 (73.5-80.3)"; "12 | 3,426 | 77.6 (74.7-80.2)".
+  VERBATIM guideline framing: "children aged 6-12 years should regularly sleep 9-12 hours per 24 hours and teens aged 13-18 years
+  should sleep 8-10 hours per 24 hours".
+  DERIVED CUMULATIVE DISTRIBUTION OF REPORTED SCHOOL-NIGHT SLEEP (my arithmetic from the quoted percentages; US high school, 2015):
+    <=4 h  7.5%    cumulative  7.5%
+     5 h  12.6%    cumulative 20.1%
+     6 h  22.9%    cumulative 43.0%
+     7 h  29.7%    cumulative 72.7%   <- matches the published 72.7% <8 h, an internal consistency check that my sum is right
+     8 h  20.6%    cumulative 93.3%
+     9 h   5.0%    cumulative 98.3%
+    >=10 h 1.7%    cumulative 100.0%
+  The fact that my cumulative sum through 7 h reproduces the independently published 72.7% confirms the derived <7 h figure of
+  43.0% is arithmetically sound.
+  CAUTION ON DOUBLE-COUNTING: cohort_family is YRBS. Any other shard using CDC YRBS or MMWR adolescent sleep prevalence is using
+  the same underlying survey; do not pool.
+shard: "s06_sleep_need_measurement"

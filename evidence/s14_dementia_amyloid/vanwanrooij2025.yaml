@@ -1,0 +1,90 @@
+study_id: vanwanrooij2025
+citation: "van Wanrooij LL, Borsboom G, Rijnhart JJM, Huisman M, Claassen JAHR, van Charante EPM, van Gool WA. The effect of sleep disturbances on the incidence of dementia for varying lag times. The Journal of Prevention of Alzheimer's Disease. 2025;12(2):100024."
+doi: "10.1016/j.tjpad.2024.100024"
+pmid: "39863328"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11846583/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "The effect of sleep disturbances on the incidence of dementia for varying lag times."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 2218
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [55, 85]
+  pct_female: null
+  country: "Netherlands"
+  adolescent_match: poor_elderly
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_dementia_short_sleep_by_lag_time_direction_of_gradient
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7.5, duration_days: null,
+               contrast_label: "self-reported sleep <=6 h/night vs 7-8 h referent, at lag times from 2.2 to 23.8 years"}
+    scale: raw_units
+    unit: "direction of the lag-time gradient in the short-sleep association (positive = association strengthens with longer lag)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: >
+      The paper reports seven separate logistic regressions (one per lag time, 3 to 23 years) plus Cox
+      sensitivity analyses; the individual odds ratios are in Tables 4-6, which could not be parsed as
+      numeric values from the retrieved PMC HTML (the table cells render as bare numbers without row
+      labels). Only the qualitative pattern is quotable verbatim, so the value is coded as a sign
+      indicator (+1 = association strengthens with longer lag) and se is null. Do not pool this record;
+      it is a DIRECTIONAL FINDING that contradicts howard2024.yaml.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = the short-sleep/dementia association gets STRONGER, not weaker, as the gap between
+      measuring sleep and diagnosing dementia lengthens beyond 15 years. If correct, this is the OPPOSITE
+      of Howard 2024's finding and argues AGAINST the short-sleep association being purely prodromal.
+      Note the reciprocal finding for LONG sleep: sleeping >=9 h was associated with dementia only at a
+      SHORT (3-year) lag, which the authors attribute to reverse causation.
+    covariates: ["age", "sex", "education", "CES-D depressive symptoms", "physical activity (LAPAQ MET)", "alcohol", "smoking", "BMI", "diabetes", "hypertension", "cardiovascular disease"]
+    followup_years: 23.8
+    cohort_family: "LASA"
+    quote: "Of 2,218 participants, 237 (11%) developed dementia in the period 1992/3 to 2015/6. Participants ≥70 years more often reported sleep disturbances compared to those <70. Only for a short lag time (3 years), sleeping ≥ 9 h was associated with incident dementia. Sleeping ≤6 h, interrupted sleep and waking up early were associated with incident dementia, particularly for lag times ≥ 15 years."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Design strength: a single well-characterised cohort (Longitudinal Aging Study Amsterdam, nationally
+    representative at baseline) followed to 23.8 years with sleep measured repeatedly, allowing the lag
+    time to be varied within one dataset rather than across heterogeneous studies. That is a cleaner test
+    than Howard 2024's between-study stratification. Serious concerns: (1) dementia was ascertained
+    largely from MMSE/telephone-MMSE/IQCODE plus interviewer comments and GP data rather than from
+    specialist diagnosis, so outcome misclassification is likely; (2) the long-lag analyses are tiny -
+    "the number of observations varies from 7753 with a lag time of 3 years to 333 with a lag time of 23
+    years" - so the >=15 year estimates on which the headline conclusion rests are the least precise in
+    the paper; (3) participants contribute to multiple lag-time analyses with clustered standard errors,
+    so the seven regressions are not independent; (4) the proportional hazards assumption was violated,
+    which the authors interpret as evidence of reverse causality but which also complicates the Cox
+    sensitivity analysis; (5) baseline age 55-85 y means even the long-lag analyses involve elderly people.
+funding: "See paper (LASA is funded by the Netherlands Ministry of Health, Welfare and Sport)"
+notes: >
+  THE DIRECT COUNTERWEIGHT TO HOWARD 2024, and the reason this shard reports the reverse-causation
+  question as UNRESOLVED rather than settled in either direction.
+  The authors' interpretation, verbatim: "We found that the association of sleep disturbances with
+  incident dementia becomes stronger with longer lag times (particularly ≥ 15 years). Studies with lag
+  times <15 years may suffer from reverse causation due to the changes in sleep patterns caused by the
+  prodromal phase of neurodegenerative disease. The association of sleeping ≥9 h and the incidence of
+  dementia in analyses with a short lag time seem to be the result of reverse causation."
+  On why 15 years is the relevant threshold, verbatim: "Years prior to the clinical onset of dementia,
+  pathological changes occur in the brain. For a 70-year-old, the preclinical and prodromal phase of
+  Alzheimer's Disease (AD) was estimated to be 17 years [ 8 ]. Therefore, the results of studies with a
+  short follow-up that link poor sleep to an increased risk of dementia are likely to be affected by
+  reverse causation."
+  The authors also note the primary literature is contradictory even among long-follow-up studies:
+  "The few studies with follow-up periods of more than 15 years have focused mostly on the association of
+  hours of sleep with dementia. The results from these studies are contradictory, with some studies
+  finding an association of sleeping ≤6 h [ 9 , 10 ] and others ≥ 9 h [ 11 , 12 ] with an increased
+  incidence of dementia."
+  EVEN IF THIS PAPER IS RIGHT, note what it does and does not license: a 15-23 year lag from an exposure
+  measured at age 55-85 reaches back at most to age 40. It provides NO information about exposure at 16-19.
+shard: "s14_dementia_amyloid"

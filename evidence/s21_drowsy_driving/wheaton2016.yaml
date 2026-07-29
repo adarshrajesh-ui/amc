@@ -1,0 +1,209 @@
+study_id: wheaton2016
+citation: "Wheaton AG, Olsen EO, Miller GF, Croft JB. Sleep Duration and Injury-Related Risk Behaviors Among High School Students--United States, 2007-2013. MMWR Morb Mortal Wkly Rep. 2016;65(13):337-341."
+doi: "10.15585/mmwr.mm6513a1"
+pmid: "27054407"
+url: "https://doi.org/10.15585/mmwr.mm6513a1"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Sleep Duration and Injury-Related Risk Behaviors Among High School Students--United States, 2007-2013."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 50370
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [14, 18]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: mortality
+    outcome_construct: drinking_and_driving_among_short_sleeping_students
+    exposure: {type: habitual_short_sleep, dose_h: 6.5, referent_h: 9.0, duration_days: null,
+               contrast_label: "SCHOOL-NIGHT sleep <= 7 h vs 9 h; outcome = DRINKING AND DRIVING. Direction and significance reported; NO EFFECT SIZE PUBLISHED IN THE ABSTRACT."}
+    scale: log_or
+    unit: null
+    value: 0.000000
+    se: null
+    ci: null
+    conversion_formula: >
+      NO NUMBER IS AVAILABLE. The abstract states only that "The likelihood of each of the five risk
+      behaviors was significantly higher for students who reported sleeping <=7 hours on an average school
+      night" and does not print the prevalence ratios. I have set value 0 and se null to record a
+      DIRECTION-AND-SIGNIFICANCE-ONLY finding, and under hard rule #2 I have not extracted a magnitude I
+      cannot quote. THE MMWR full text contains the prevalence ratios in a table; I could not retrieve it
+      (Europe PMC returned no body for this record).
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      DIRECTION: SHORT SLEEPERS DRINK AND DRIVE MORE. THIS RECORD IS IN THE SHARD AS A CONFOUNDING RECORD,
+      NOT AS A HARM ESTIMATE, and the sign convention that matters is the sign of the CONFOUNDING, not of a
+      causal effect. It documents that the US high-school students who sleep <= 7 h on school nights are the
+      same students who drink and drive.
+    covariates: []
+    followup_years: null
+    cohort_family: "YRBS_2007_2013"
+    quote: >
+      The likelihood of each of the five risk behaviors was significantly higher for students who reported
+      sleeping <=7 hours on an average school night
+  - outcome_domain: mortality
+    outcome_construct: infrequent_seatbelt_use_among_short_sleeping_students
+    exposure: {type: habitual_short_sleep, dose_h: 6.5, referent_h: 9.0, duration_days: null,
+               contrast_label: "school-night sleep <= 7 h vs 9 h; outcome = INFREQUENT SEATBELT USE. Direction and significance only."}
+    scale: log_or
+    unit: null
+    value: 0.000000
+    se: null
+    ci: null
+    conversion_formula: "As above — significance reported, magnitude not printed in the abstract. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      DIRECTION: SHORT SLEEPERS WEAR SEATBELTS LESS. THIS IS THE MOST DAMAGING SINGLE FACT FOR THE
+      INTERPRETATION OF THIS WHOLE CHANNEL, and it cuts in a specific and underappreciated way. Seatbelt
+      non-use does not change the probability of CRASHING; it changes the probability of DYING GIVEN A CRASH.
+      So a study that finds short sleepers have more fatal crashes cannot distinguish "sleep loss caused the
+      crash" from "the kind of teenager who sleeps 6 h is the kind who does not belt up, so his crashes kill
+      him more often". IIHS reports belt use among fatally injured 16-19-year-old drivers is well below
+      universal, so there is ample room for this pathway to operate.
+    covariates: []
+    followup_years: null
+    cohort_family: "YRBS_2007_2013"
+    quote: >
+      The likelihood of each of the five risk behaviors was significantly higher for students who reported
+      sleeping <=7 hours on an average school night
+  - outcome_domain: mortality
+    outcome_construct: riding_with_a_drinking_driver_among_short_sleeping_students
+    exposure: {type: habitual_short_sleep, dose_h: 6.5, referent_h: 9.0, duration_days: null,
+               contrast_label: "school-night sleep <= 7 h vs 9 h; outcome = RIDING WITH A DRIVER WHO HAD BEEN DRINKING. Direction and significance only."}
+    scale: log_or
+    unit: null
+    value: 0.000000
+    se: null
+    ci: null
+    conversion_formula: "As above. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      DIRECTION: SHORT SLEEPERS RIDE WITH DRINKING DRIVERS MORE. Relevant because it shows the association
+      extends to a behaviour in which THE SUBJECT IS NOT DRIVING AT ALL. A "sleep effect" that shows up in
+      passenger deaths as well as driver deaths cannot be a vigilance effect; it must be at least partly a
+      lifestyle/selection effect. That is a direct, quantitative-in-principle handle on the causal fraction.
+    covariates: []
+    followup_years: null
+    cohort_family: "YRBS_2007_2013"
+    quote: >
+      The likelihood of each of the five risk behaviors was significantly higher for students who reported
+      sleeping <=7 hours on an average school night
+  - outcome_domain: mortality
+    outcome_construct: texting_while_driving_among_short_sleeping_students
+    exposure: {type: habitual_short_sleep, dose_h: 6.5, referent_h: 9.0, duration_days: null,
+               contrast_label: "school-night sleep <= 7 h vs 9 h; outcome = TEXTING WHILE DRIVING. Direction and significance only."}
+    scale: log_or
+    unit: null
+    value: 0.000000
+    se: null
+    ci: null
+    conversion_formula: "As above. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      DIRECTION: SHORT SLEEPERS TEXT AND DRIVE MORE. Note how well this dovetails with binhasan2020, where
+      the crash subtype that responded most strongly to the school start-time delay was the DISTRACTION
+      subtype. Either sleep loss causes distraction (a genuine causal route, and a plausible one — attention
+      is the first thing sleep restriction degrades), or short sleep and phone use are both markers of the
+      same underlying behavioural profile. The two possibilities have very different implications and
+      neither this record nor binhasan2020 can separate them.
+    covariates: []
+    followup_years: null
+    cohort_family: "YRBS_2007_2013"
+    quote: >
+      The likelihood of each of the five risk behaviors was significantly higher for students who reported
+      sleeping <=7 hours on an average school night
+  - outcome_domain: mortality
+    outcome_construct: risk_behaviours_among_LONG_sleeping_students
+    exposure: {type: other, dose_h: 10.0, referent_h: 9.0, duration_days: null,
+               contrast_label: "school-night sleep >= 10 h vs 9 h; outcomes = infrequent seatbelt use, riding with a drinking driver, drinking and driving"}
+    scale: log_or
+    unit: null
+    value: 0.000000
+    se: null
+    ci: null
+    conversion_formula: "Direction and significance only; magnitudes not printed. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      DIRECTION: LONG SLEEPERS ALSO SHOW MORE OF THESE RISK BEHAVIOURS. RECORDED SPECIFICALLY BECAUSE IT IS
+      A NEGATIVE-CONTROL-SHAPED RESULT AND IT FAILS. Students sleeping >= 10 h — the OPPOSITE of the exposure
+      of interest — also had more infrequent seatbelt use, more riding with drinking drivers and more
+      drinking and driving than 9-h sleepers. A U-shaped association with RISK BEHAVIOUR is the classic
+      signature of confounding by an unmeasured third factor (household chaos, depression, substance use,
+      truancy) rather than of a dose-dependent physiological effect of sleep duration. If short sleep caused
+      these behaviours through sleepiness, long sleep should not cause them too.
+    covariates: []
+    followup_years: null
+    cohort_family: "YRBS_2007_2013"
+    quote: >
+      infrequent seatbelt use, riding with a drinking driver, and drinking and driving were also more likely for
+      students who reported sleeping >=10 hours compared with 9 hours on an average school night
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: >
+    (1) CROSS-SECTIONAL, SELF-REPORTED EXPOSURE AND SELF-REPORTED OUTCOMES in the same questionnaire, so
+        common-method variance is guaranteed. tier TX.
+    (2) THE OUTCOMES ARE NOT CRASHES. They are self-reported risk BEHAVIOURS. This record contributes
+        nothing to the magnitude of the mortality effect and everything to its interpretation.
+    (3) NO EFFECT SIZES RETRIEVABLE. The abstract reports direction and significance only; the MMWR tables
+        contain the prevalence ratios and I could not obtain them. Every effect here therefore has
+        value 0 / se null, which is a deliberate representation of "direction known, magnitude not".
+        A downstream model must NOT treat these as zero effects.
+    (4) STRENGTH THAT JUSTIFIES KEEPING IT: n = 50,370 across four national YRBS waves, i.e. this is the
+        nationally representative US high-school picture, which is exactly the population of interest, and
+        the associations are consistent across all five behaviours and four survey years.
+    (5) The U-shape in the >= 10 h group (see above) is itself evidence about the causal structure and is
+        the single most useful thing in the record.
+funding: "US Centers for Disease Control and Prevention (MMWR is a CDC publication)."
+notes: >
+  THIS RECORD EXISTS TO DISCHARGE THE TASK'S CRITICAL HONESTY REQUIREMENT: "Most drowsy-driving evidence is
+  confounded: people who sleep less also drive more at night, drink more, and are younger. State how much of
+  the association you think is causal and why." IT IS THE QUANTITATIVE BASIS, IN THE RIGHT POPULATION, FOR
+  THAT CONCERN — and the CDC's own authors say so.
+  .
+  VERBATIM QUOTE (abstract, PMID 27054407): "To evaluate the association between self-reported sleep duration
+  on an average school night and several injury-related risk behaviors (infrequent bicycle helmet use,
+  infrequent seatbelt use, riding with a driver who had been drinking, drinking and driving, and texting
+  while driving) among U.S. high school students, CDC analyzed data from 50,370 high school students (grades
+  9-12) who participated in the national Youth Risk Behavior Surveys (YRBSs) in 2007, 2009, 2011, or 2013.
+  The likelihood of each of the five risk behaviors was significantly higher for students who reported
+  sleeping <=7 hours on an average school night; infrequent seatbelt use, riding with a drinking driver, and
+  drinking and driving were also more likely for students who reported sleeping >=10 hours compared with 9
+  hours on an average school night."
+  THE AUTHORS' OWN CAUSAL STATEMENT, VERBATIM AND EXACTLY ON POINT: "Although insufficient sleep directly
+  contributes to injury risk, some of the increased risk associated with insufficient sleep might be caused
+  by engaging in injury-related risk behaviors."
+  .
+  HOW THIS SHAPES MY CAUSAL FRACTION, EXPLICITLY. Three separate things in this record argue for a causal
+  fraction meaningfully below 1:
+  (a) THE BUNDLE. Short-sleeping US high-school students drink and drive, ride with drinking drivers, skip
+      seatbelts and text while driving, all significantly, all in a nationally representative sample. Some of
+      the observed crash-mortality association in studies like tefft2016_aaa and pizza2010 must be these
+      behaviours rather than vigilance.
+  (b) THE SEATBELT CHANNEL IS ABOUT CASE-FATALITY, NOT CRASH RISK. It inflates the FATAL-crash association
+      specifically, which is precisely the outcome this shard is pricing.
+  (c) THE U-SHAPE FAILS THE NEGATIVE CONTROL. Long sleepers show the same risk behaviours. Physiological
+      sleepiness cannot explain that; a third factor can.
+  AGAINST all three, and the reason I do not push the causal fraction below about 0.3: gottlieb2018 adjusts
+  for MILES DRIVEN and the association survives; martiniuk2013 adjusts for risky driving behaviour, substance
+  use, psychological distress and hours driven per week and the RR only falls from 1.42 to 1.37 for its own
+  exposure; and the mechanism has direct lab support in the vigilance literature plus direct observational
+  support in PERCLOS video of eyes closing before crashes. So the association is not all confounding. I
+  settle on 0.5 (0.25-0.8) and show the sensitivity.
+  .
+  ACCESS: abstract_only. n = 50,370 quoted from the abstract. age_range [14, 18] is the standard grade 9-12
+  range and is inferred by me; the abstract prints grades, not ages, and I have not invented an age_mean.
+shard: "s21_drowsy_driving"

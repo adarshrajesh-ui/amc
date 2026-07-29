@@ -1,0 +1,112 @@
+study_id: javaheri2011
+citation: "Javaheri S, Storfer-Isser A, Rosen CL, Redline S. Association of short and long sleep durations with insulin sensitivity in adolescents. J Pediatr. 2011 Apr;158(4):617-23."
+doi: "10.1016/j.jpeds.2010.09.080"
+pmid: "21146189"
+url: "https://pubmed.ncbi.nlm.nih.gov/21146189/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Association of short and long sleep durations with insulin sensitivity in adolescents."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 387
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: homa_at_5h_vs_optimal_7_75h_actigraphy
+    exposure: {type: habitual_short_sleep, dose_h: 5.0, referent_h: 7.75, duration_days: null, contrast_label: "actigraphy-measured 5.0 h/night vs the model-predicted optimum of 7.75 h/night, from a quadratic model"}
+    scale: pct_change
+    unit: "% higher predicted HOMA at 5.0 h vs 7.75 h"
+    value: 20.4
+    se: null
+    ci: null
+    conversion_formula: "Derived from the two published model-predicted HOMA values: 2.36 (95% CI 1.94-2.86) at 5.0 h and 1.96 (95% CI 1.82-2.10) at 7.75 h. Ratio = 2.36/1.96 = 1.2041, i.e. +20.4%, matching the paper's own statement of 'approximately 20% higher'. SE is NOT derivable because the two predictions come from the SAME fitted quadratic and are therefore strongly correlated - naively combining their CIs would understate the variance. se left null per instructions."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM (higher HOMA = lower insulin sensitivity) at 5 h relative to the 7.75 h optimum"
+    covariates: ["age", "sex", "race", "preterm status", "physical activity"]
+    followup_years: null
+    cohort_family: "Cleveland_Childrens_Sleep_and_Health"
+    quote: "When adjusted for age, sex, race, preterm status, and activity, adolescents who slept 7.75 hours had the lowest predicted HOMA (1.96, 95% confidence interval [CI], 1.82-2.10), and adolescents who slept 5.0 hours or 10.5 hours had HOMA indices that were approximately 20% higher (2.36; 95% CI, 1.94-2.86; and 2.41; 95% CI, 1.93-3.01, respectively)."
+  - outcome_domain: metabolic
+    outcome_construct: homa_at_10_5h_vs_optimal_7_75h_actigraphy
+    exposure: {type: habitual_short_sleep, dose_h: 10.5, referent_h: 7.75, duration_days: null, contrast_label: "actigraphy-measured 10.5 h/night vs the model-predicted optimum of 7.75 h/night"}
+    scale: pct_change
+    unit: "% higher predicted HOMA at 10.5 h vs 7.75 h"
+    value: 23.0
+    se: null
+    ci: null
+    conversion_formula: "Derived from published predictions: 2.41 (95% CI 1.93-3.01) at 10.5 h vs 1.96 (1.82-2.10) at 7.75 h. Ratio = 2.41/1.96 = 1.2296, i.e. +23.0%. Same correlated-prediction problem, so se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM at the LONG end too. Relevant to the subject's occasional 10-11 h weekend nights - and note the long-end effect here is slightly LARGER than the short-end effect."
+    covariates: ["age", "sex", "race", "preterm status", "physical activity"]
+    followup_years: null
+    cohort_family: "Cleveland_Childrens_Sleep_and_Health"
+    quote: "adolescents who slept 5.0 hours or 10.5 hours had HOMA indices that were approximately 20% higher (2.36; 95% CI, 1.94-2.86; and 2.41; 95% CI, 1.93-3.01, respectively)"
+  - outcome_domain: metabolic
+    outcome_construct: short_sleep_homa_association_after_adiposity_adjustment
+    exposure: {type: habitual_short_sleep, dose_h: 5.0, referent_h: 7.75, duration_days: null, contrast_label: "same 5.0 h vs 7.75 h contrast, AFTER additional adjustment for adiposity"}
+    scale: pct_change
+    unit: "% residual association after adiposity adjustment (attenuated, magnitude not published)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Recorded as 0 to register substantial attenuation. The abstract states the short-sleep association was 'appreciably attenuated' after adjusting for adiposity but does not publish the residual estimate, so no magnitude is available. NOTE 'appreciably attenuated' is weaker than bos2019's 'disappeared' - this is not necessarily a complete null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "attenuation toward zero. The SHORT-sleep signal was largely explained by adiposity; the LONG-sleep signal was NOT (it persisted independent of obesity). The asymmetry matters."
+    covariates: ["age", "sex", "race", "preterm status", "physical activity", "adiposity"]
+    followup_years: null
+    cohort_family: "Cleveland_Childrens_Sleep_and_Health"
+    quote: "After adjusting for adiposity, the association between shorter sleep and HOMA was appreciably attenuated, but the association with longer sleep persisted. ... Although the association between shorter sleep duration with insulin sensitivity likely is explained by the association between short sleep duration and obesity, the association between longer sleep and insulin sensitivity is independent of obesity."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "CROSS-SECTIONAL (the authors describe it as a cross-sectional analysis of two examinations within a cohort), so tier TX. Reverse causation unaddressed. The quadratic-model predictions at the extremes (5.0 h, 10.5 h) sit in the sparse tails of the sleep distribution, so those CIs are wide and the point estimates are model-dependent rather than empirical cell means. Strengths: objective actigraphy exposure, good size for this age band (n=387), 43% minorities, and a genuinely age-appropriate optimum estimated from the data rather than imposed."
+funding: "Not retrievable from the abstract (Cleveland Children's Sleep and Health Cohort; funder left unstated rather than guessed)."
+notes: |
+  *** THE MOST DIRECTLY TRANSPORTABLE OBSERVATIONAL RECORD IN THE SHARD - AND IT SUPPLIES THE
+  AGE-APPROPRIATE OPTIMUM. *** This is the "Cleveland cohort" named in the task brief. Its key
+  contribution is not the effect size but the SHAPE and the LOCATION OF THE NADIR in adolescents:
+  7.75 h of actigraphy-measured sleep, estimated directly in this age group rather than borrowed
+  from adults. Note that this is close to but slightly above the 7-8 h adult nadir from shan2015.
+
+  QUANTITATIVE ANCHOR FOR THE SUBJECT: at 5.0 h/night - his weekday exposure, and measured by
+  actigraphy rather than self-report - predicted HOMA was about 20% higher than at the 7.75 h
+  optimum (2.36 vs 1.96). That is the single most age-and-dose-matched observational effect estimate
+  available. Compare it with the age-matched EXPERIMENTAL estimate from klingenberg2013, where 3
+  nights of 4 h raised HOMA-IR by 65%. The observational cross-sectional figure (+20% at habitual
+  5 h) is roughly a third of the acute experimental figure (+65% at 4 h for 3 nights), which is the
+  expected ordering if habitual short sleepers partially adapt, if self-selection is limited, and if
+  the acute protocol dose is more extreme.
+
+  *** THE ADIPOSITY FINDING IS THE MOST IMPORTANT CAVEAT. *** After adjusting for adiposity the
+  short-sleep/HOMA association was "appreciably attenuated", and the authors' own conclusion is that
+  it "likely is explained by the association between short sleep duration and obesity." This is the
+  same pattern as bos2019 in midlife, now replicated in the target age band. The identical mediator-
+  versus-confounder ambiguity applies: if short sleep causes adiposity in adolescents, then adjusting
+  for adiposity removes a real causal pathway rather than a confounder. COORDINATE WITH THE OBESITY
+  SHARD (s09_obesity_bmi) - whether adiposity is a mediator or a confounder is the single question
+  that most changes this shard's bottom line, and it cannot be settled inside this shard.
+
+  U-SHAPE IN ADOLESCENTS - UNRESOLVED. This study found a quadratic "u-shape" with the long limb
+  (10.5 h, +23%) at least as large as the short limb and, unlike the short limb, INDEPENDENT of
+  obesity. matthews2012, the other age-matched actigraphy study, found NO long-sleep association at
+  all. The subject has occasional 10-11 h weekend nights, so this disagreement is directly relevant
+  and should be carried as genuine uncertainty rather than resolved in either direction.
+
+  POPULATION: n=387, 43% minorities, Cleveland Children's Sleep and Health Cohort. Numeric ages are
+  not given in the abstract so age_mean/age_range are null; the cohort is adolescent, hence
+  exact_16_19. pct_female not reported in the abstract -> null.
+shard: "s07_metabolic"

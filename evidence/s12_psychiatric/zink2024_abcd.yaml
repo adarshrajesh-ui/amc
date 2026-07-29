@@ -1,0 +1,107 @@
+study_id: zink2024_abcd
+citation: "Zink J, O'Connor SG, Blachman-Demner DR, Wolff-Hughes DL, Berrigan D. Examining the Bidirectional Associations Between Sleep Duration, Screen Time, and Internalizing Symptoms in the ABCD Study. J Adolesc Health. 2024 Mar;74(3):496-503."
+doi: "10.1016/j.jadohealth.2023.09.001"
+pmid: "37855753"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10872986/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Examining the Bidirectional Associations Between Sleep Duration, Screen Time, and Internalizing Symptoms in the ABCD Study"
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 10828
+n_studies_pooled: null
+population:
+  age_mean: 9.9
+  age_range: [9, 11]
+  pct_female: 47.8
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: withdrawn_depressed_symptoms_females
+    exposure: {type: habitual_short_sleep, dose_h: 9.0, referent_h: null, duration_days: null, contrast_label: "caregiver-reported sleep duration 9-11 h/night (meeting guidelines) vs <9 h/night at baseline -> borderline-clinical withdrawn/depressed CBCL t-score >=65 one year later; FEMALES ONLY"}
+    scale: log_or
+    unit: null
+    value: -0.51083
+    se: 0.17679
+    ci: [-0.91629, -0.22314]
+    conversion_formula: "OR 0.6 (0.4-0.8) for LONGER sleep as protective; log(0.6) = -0.51083; se = (log(0.8)-log(0.4))/3.92 = 0.17679. INVERTING to the short-sleep direction for comparability with my other records: OR 1/0.6 = 1.67, log_or = +0.511, i.e. short sleep is associated with 1.67x the odds of withdrawn/depressed symptoms in girls."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NEGATIVE as recorded = LONGER sleep is PROTECTIVE against withdrawn/depressed symptoms one year later, in FEMALES. Equivalent to short sleep raising the odds ~1.67x."
+    covariates: ["not specified in the abstract; analyses were gender-stratified"]
+    followup_years: 1.0
+    cohort_family: "ABCD"
+    quote: "In females, longer baseline sleep duration was protective against withdrawn/depressed symptoms (odds ratio [OR] 0.6, 95% confidence interval [CI] 0.4-0.8) and somatic complaints (OR 0.8, 95% CI 0.6-0.97) one year later."
+  - outcome_domain: psychiatric
+    outcome_construct: somatic_complaints_females
+    exposure: {type: habitual_short_sleep, dose_h: 9.0, referent_h: null, duration_days: null, contrast_label: "same sleep contrast -> borderline-clinical CBCL somatic-symptom t-score one year later; FEMALES ONLY"}
+    scale: log_or
+    unit: null
+    value: -0.22314
+    se: 0.11897
+    ci: [-0.51083, -0.03046]
+    conversion_formula: "OR 0.8 (0.6-0.97); log(0.8) = -0.22314; se = (log(0.97)-log(0.6))/3.92 = 0.11897. Barely excludes 1.0 (upper bound 0.97)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NEGATIVE = longer sleep protective against SOMATIC complaints in girls. Note that this is the somatic subscale - aches, tiredness, physical complaints - the same fatigue-flavoured construct that carries the effect in sadikova2024."
+    covariates: ["gender-stratified"]
+    followup_years: 1.0
+    cohort_family: "ABCD"
+    quote: "In females, longer baseline sleep duration was protective against withdrawn/depressed symptoms (odds ratio [OR] 0.6, 95% confidence interval [CI] 0.4-0.8) and somatic complaints (OR 0.8, 95% CI 0.6-0.97) one year later."
+  - outcome_domain: psychiatric
+    outcome_construct: all_associations_in_males_NULL
+    exposure: {type: habitual_short_sleep, dose_h: 9.0, referent_h: null, duration_days: null, contrast_label: "same sleep contrast, MALES; and the REVERSE direction (internalizing symptoms -> later sleep duration) in BOTH sexes"}
+    scale: log_or
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "The paper states 'No other significant associations were observed' and prints no estimates for the null cells, so no point estimate or SE is recoverable. value 0.0 encodes 'not distinguishable from null'; IT IS NOT A MEASURED ESTIMATE."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL. In MALES, baseline sleep duration did not predict any internalizing outcome. And the REVERSE arrow - internalizing symptoms predicting later sleep duration - was null in BOTH sexes, which is why the authors describe the associations as unidirectional."
+    covariates: ["gender-stratified"]
+    followup_years: 1.0
+    cohort_family: "ABCD"
+    quote: "Longitudinal associations between sleep duration, weekend screen time, and internalizing symptoms were unidirectional (behavior preceding internalizing symptoms), among females only, and specific to withdrawn/depressed and somatic symptoms."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Strengths: very large (n=10,828), nationally distributed US cohort, prospective with a genuine one-year lag, both directions tested in the same sample, gender-stratified a priori, validated CBCL outcome. Weaknesses: (1) AGE IS WRONG FOR US - baseline mean 9.9 years, follow-up 10.9 years. These are children, not late adolescents, and the sleep-depression relationship is developmentally non-stationary (marino2022_qlscd finds the coupling present at 10-12 and absent after 13), so extrapolating this to an 18-year-old is unsafe. (2) Both exposure and outcome are CAREGIVER-reported (sleep duration and CBCL), inflating shared-reporter correlation, while screen time was youth-reported. (3) Exposure dichotomised at the guideline threshold (<9 vs 9-11 h), discarding dose information and precluding any dose-response statement. (4) Outcome dichotomised at t>=65, again discarding information. (5) Only a single one-year lag, so 'bidirectional' is tested across one interval only. (6) Covariate adjustment is not described in the abstract and I could not retrieve the full text, so I cannot judge confounding control. (7) The somatic-complaints estimate barely excludes the null (upper CI 0.97)."
+funding: "authors are NIH/NCI staff; ABCD is NIH-funded"
+notes: |
+  I INCLUDED THIS DESPITE THE AGE MISMATCH FOR TWO REASONS, both about direction rather than magnitude.
+
+  REASON 1: IT IS A THIRD INDEPENDENT MALE-SPECIFIC NULL. The pattern in my shard is now hard to dismiss:
+      conklin2018_basus  chronic short sleep predicted depression in young WOMEN (adj Cohen's D 0.13),
+                         NOT in young men
+      short2015          after total sleep deprivation, depressed mood and anxiety worsened in FEMALE
+                         participants only
+      wang2024_yrbs      insufficient-sleep/suicidality associations stronger in girls; male trends
+                         non-significant
+      zink2024_abcd      'among females only'; nothing in males, n=10,828
+  Four studies, four designs (prospective cohort, lab experiment, national cross-sectional survey, large
+  prospective cohort), same direction of moderation. Our subject is male. This is one of the few places where
+  the literature offers a systematic reason to revise his risk DOWNWARD relative to the headline numbers, and
+  it is not a subgroup I went looking for - it kept appearing. The dissent is marino2022_qlscd, whose global
+  invariance test found no sex moderation.
+
+  REASON 2: THE REVERSE ARROW WAS NULL HERE, WHICH CUTS AGAINST MY OTHER REVERSE-CAUSATION ESTIMATES. In this
+  sample the authors explicitly describe the relationship as 'unidirectional (behavior preceding internalizing
+  symptoms)'. So this is a data point AGAINST a large reverse-causation share, and I am recording it as such
+  rather than only banking the studies that support the ~50% figure. It is a weak data point - one 1-year lag
+  at age 10, caregiver-reported outcomes, and nulls in both sexes for the reverse arrow could be power - but a
+  shard that only reports the estimates supporting its own synthesis is a broken shard.
+
+  ALSO NOTE which outcomes moved: WITHDRAWN/DEPRESSED and SOMATIC. Not anxious/depressed. The somatic subscale
+  is tiredness and physical complaints. That is the same fatigue-shaped signal that carries the causal effect
+  in sadikova2024 and berger2026_start, and the same low-positive-affect/withdrawal shape that talbot2010
+  found experimentally. The convergence across four unrelated designs on 'sleep loss produces withdrawal,
+  low energy and somatic complaints rather than dysphoria' is, to me, the most robust qualitative finding in
+  this whole shard.
+shard: "s12_psychiatric"

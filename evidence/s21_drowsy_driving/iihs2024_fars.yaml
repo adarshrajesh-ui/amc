@@ -1,0 +1,372 @@
+study_id: iihs2024_fars
+citation: "Insurance Institute for Highway Safety. Fatality Facts 2024: Teenagers. Arlington, VA: IIHS; posted June 2026. Analysis of the US Department of Transportation Fatality Analysis Reporting System (FARS). Companion page: Fatality Facts 2023: Males and females."
+doi: null
+pmid: null
+url: "https://www.iihs.org/topics/fatality-statistics/detail/teenagers"
+verification:
+  crossref_ok: null
+  pubmed_ok: null
+  status: UNVERIFIED
+  resolved_title: "Fatality Facts 2024: Teenagers"
+access_tier: full_text
+secondhand_via: null
+design: life_table
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [16, 24]
+  pct_female: 0.0
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  # ============================================================================
+  # BLOCK A — THE DENOMINATOR THE WHOLE SHARD RESTS ON.
+  # Deaths of MALE PASSENGER-VEHICLE DRIVERS per 100,000 population, by single
+  # year of age, 2024. These are the numbers used in injury_channel.md Step 1.
+  # ============================================================================
+  - outcome_domain: baseline_risk
+    outcome_construct: male_passenger_vehicle_driver_death_rate_per_100k_population_age16
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "US males aged 16, 2024: 123 passenger-vehicle DRIVER deaths in a population of 2,322,582"}
+    scale: raw_units
+    unit: "deaths per 100,000 population per year"
+    value: 5.300000
+    se: 0.477850
+    ci: [4.363414, 6.236586]
+    conversion_formula: >
+      Rate printed directly by IIHS as 5.3. Cross-check: 123 / 2,322,582 * 100,000 = 5.295.
+      se computed by me as a Poisson SE on the numerator: sqrt(123)/2,322,582 * 100,000 = 0.47785.
+      ci = 5.3 +/- 1.96 * 0.47785. THIS SE REFLECTS ONLY SAMPLING NOISE IN A SINGLE YEAR'S DEATH COUNT.
+      FARS is a CENSUS of fatal crashes, so the "real" uncertainty here is not sampling error at all — it
+      is year-to-year variation and the question of which year to use. The Poisson SE is a reasonable
+      stand-in for the latter (2020-2024 rates for teens moved between 17.0 and 19.9 per 100,000 overall).
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive baseline hazard, not an exposure effect. Higher = more deaths.
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "FARS"
+    quote: >
+      "| 16 | 2,322,582 | 123 | 5.3 | 71 | 3.1 | ..."
+  - outcome_domain: baseline_risk
+    outcome_construct: male_passenger_vehicle_driver_death_rate_per_100k_population_age17
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "US males aged 17, 2024: 175 driver deaths / 2,326,541 population"}
+    scale: raw_units
+    unit: "deaths per 100,000 population per year"
+    value: 7.500000
+    se: 0.568600
+    ci: [6.385544, 8.614456]
+    conversion_formula: >
+      IIHS prints 7.5. Cross-check: 175 / 2,326,541 * 100,000 = 7.521.
+      se = sqrt(175)/2,326,541 * 100,000 = 0.56860.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Descriptive baseline hazard. Higher = more deaths."
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "FARS"
+    quote: >
+      "| 17 | 2,326,541 | 175 | 7.5 | 101 | 4.3 | ..."
+  - outcome_domain: baseline_risk
+    outcome_construct: male_passenger_vehicle_driver_death_rate_per_100k_population_age18
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "US males aged 18, 2024: 242 driver deaths / 2,296,205 population — THE SUBJECT'S CURRENT AGE"}
+    scale: raw_units
+    unit: "deaths per 100,000 population per year"
+    value: 10.500000
+    se: 0.677400
+    ci: [9.172296, 11.827704]
+    conversion_formula: >
+      IIHS prints 10.5. Cross-check: 242 / 2,296,205 * 100,000 = 10.539.
+      se = sqrt(242)/2,296,205 * 100,000 = 0.67740.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Descriptive baseline hazard. Higher = more deaths."
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "FARS"
+    quote: >
+      "| 18 | 2,296,205 | 242 | 10.5 | 109 | 4.7 | ..."
+  - outcome_domain: baseline_risk
+    outcome_construct: male_passenger_vehicle_driver_death_rate_per_100k_population_age19
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "US males aged 19, 2024: 313 driver deaths / 2,282,142 population — THE PEAK OF THE ENTIRE LIFE COURSE"}
+    scale: raw_units
+    unit: "deaths per 100,000 population per year"
+    value: 13.700000
+    se: 0.775100
+    ci: [12.180804, 15.219196]
+    conversion_formula: >
+      IIHS prints 13.7 and states in text that this is the lifetime peak for male drivers.
+      Cross-check: 313 / 2,282,142 * 100,000 = 13.716. se = sqrt(313)/2,282,142 * 100,000 = 0.77510.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive baseline hazard. HIGHER THAN ANY OTHER AGE, INCLUDING 85+ MALE DRIVERS (11.0). This is
+      why the shard exists: the exposure window sits exactly on the lifetime maximum of driver mortality.
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "FARS"
+    quote: >
+      "| 19 | 2,282,142 | 313 | 13.7 | 100 | 4.4 | ..." "| 20-24 | 11,451,815 | 1,360 | 11.9 | 377 | 3.3 | ..."
+      and the text: "The rate of deaths per 100,000 people in 2024 peaked at age 19 for male drivers (13.7)
+  - outcome_domain: baseline_risk
+    outcome_construct: male_passenger_vehicle_driver_death_rate_per_100k_population_age20_24
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "US males aged 20-24, 2024: 1,360 driver deaths / 11,451,815 population"}
+    scale: raw_units
+    unit: "deaths per 100,000 population per year"
+    value: 11.900000
+    se: 0.322700
+    ci: [11.267508, 12.532492]
+    conversion_formula: >
+      IIHS prints 11.9. Cross-check: 1,360 / 11,451,815 * 100,000 = 11.876.
+      se = sqrt(1360)/11,451,815 * 100,000 = 0.32210 (printed 0.3227 using the rounded rate).
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive. REQUESTED EXPLICITLY BY THE TASK for the 20-24 male band. Note it is LOWER than the
+      age-19 rate, so the "20-24" band is already past the peak.
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "FARS"
+    quote: >
+      "| 20-24 | 11,451,815 | 1,360 | 11.9 | 377 | 3.3 | ..."
+  # ============================================================================
+  # BLOCK B — ALL-SEATING-POSITION OCCUPANT RATES (2023), which is what the task
+  # literally asked for ("annual motor-vehicle death rate per 100,000 for US
+  # males aged 16-19 and 20-24"). Reported for completeness; NOT used as the
+  # denominator, because only DRIVER deaths are exposed to the subject's own sleep.
+  # ============================================================================
+  - outcome_domain: baseline_risk
+    outcome_construct: male_passenger_vehicle_occupant_death_rate_per_100k_16_19
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "US males 16-19, 2023: 1,317 passenger-vehicle OCCUPANT deaths (drivers + passengers) / 9,006,150 population"}
+    scale: raw_units
+    unit: "deaths per 100,000 population per year"
+    value: 14.600000
+    se: 0.402400
+    ci: [13.811296, 15.388704]
+    conversion_formula: >
+      IIHS "Fatality Facts 2023: Males and females" prints 14.6.
+      Cross-check: 1,317 / 9,006,150 * 100,000 = 14.624. se = sqrt(1317)/9,006,150 * 100,000 = 0.40290.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive. THE NUMBER THE TASK ASKED FOR, for males 16-19. It is roughly DOUBLE the female rate
+      of 7.4. NOTE THE SCOPE LIMITS: passenger-vehicle occupants only — it EXCLUDES motorcyclists,
+      pedestrians, bicyclists and large-truck occupants, so it is NOT the all-motor-vehicle death rate.
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "FARS"
+    quote: >
+      "| 16-19 | 9,006,150 | 1,317 | 14.6 | 8,596,938 | 632 | 7.4 | 17,603,088 | 1,950 | 11.1 |"
+  - outcome_domain: baseline_risk
+    outcome_construct: male_passenger_vehicle_occupant_death_rate_per_100k_20_24
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "US males 20-24, 2023: 1,937 occupant deaths / 11,126,811 population"}
+    scale: raw_units
+    unit: "deaths per 100,000 population per year"
+    value: 17.400000
+    se: 0.395500
+    ci: [16.624820, 18.175180]
+    conversion_formula: >
+      IIHS prints 17.4. Cross-check: 1,937 / 11,126,811 * 100,000 = 17.409.
+      se = sqrt(1937)/11,126,811 * 100,000 = 0.39560.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive. THE NUMBER THE TASK ASKED FOR, for males 20-24. Note the ordering: OCCUPANT death rates
+      are higher at 20-24 (17.4) than at 16-19 (14.6), whereas DRIVER death rates peak at 19 and fall
+      thereafter. The difference is that 20-24-year-olds do more of the driving and carry more passengers.
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "FARS"
+    quote: >
+      "| 20-24 | 11,126,811 | 1,937 | 17.4 | 10,684,361 | 826 | 7.7 | 21,811,172 | 2,765 | 12.7 |"
+  # ============================================================================
+  # BLOCK C — EXPOSURE-DENOMINATED RATES AND THE TIMING/DAY STRUCTURE USED TO
+  # COMPUTE THE "FRACTION OF RISK INCURRED WHILE SLEEP-RESTRICTED" IN STEP 3.
+  # ============================================================================
+  - outcome_domain: baseline_risk
+    outcome_construct: male_fatal_crash_involvement_rate_per_100m_vehicle_miles_16_19
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "US male drivers 16-19, 2022: 2,268 fatal passenger-vehicle crash involvements / 24,773,280,873 miles"}
+    scale: raw_units
+    unit: "fatal crash involvements per 100 million vehicle miles travelled"
+    value: 9.200000
+    se: 0.193200
+    ci: [8.821368, 9.578632]
+    conversion_formula: >
+      IIHS prints 9.2. Cross-check: 2,268 / 24,773,280,873 * 100,000,000 = 9.154.
+      se = sqrt(2268)/24,773,280,873 * 100,000,000 = 0.19220. Mileage from the National Household Travel
+      Survey, so the denominator itself carries survey error that this SE does not include.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive, PER MILE. Male 16-19 = 9.2 vs male 30-59 = 2.2, i.e. 4.2x per mile driven. This matters
+      for the shard because it means teen crash risk is NOT mostly an exposure artefact: teens drive less
+      than adults yet crash far more per mile.
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "FARS"
+    quote: >
+      "| 16-19 | 2,268 | 24,773,280,873 | 9.2 | 931 | 17,958,953,050 | 5.2 | 3,202 | 42,732,233,923 | 7.5 |"
+  - outcome_domain: baseline_risk
+    outcome_construct: teen_crash_death_share_monday_to_friday
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "share of all 2024 US teenage (13-19) motor-vehicle crash deaths occurring MONDAY-FRIDAY: (377+353+324+375+419)/2,899"}
+    scale: probability
+    unit: "proportion of teen crash deaths"
+    value: 0.637461
+    se: 0.008926
+    ci: [0.619966, 0.654956]
+    conversion_formula: >
+      Computed by me from the published day-of-week table: Mon 377 + Tue 353 + Wed 324 + Thu 375 + Fri 419
+      = 1,848; total = 2,899; 1,848/2,899 = 0.637461.
+      se = sqrt(p(1-p)/n) = sqrt(0.637461*0.362539/2899) = 0.008926.
+      Cross-check against the IIHS text: "Fifty-one percent of motor vehicle crash deaths among teenagers
+      in 2024 occurred on Friday, Saturday or Sunday" -> (419+549+502)/2899 = 50.7%. Consistent.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive. USED IN STEP 3 OF injury_channel.md. Monday-Friday is 5/7 = 71.4% of days but only
+      63.7% of teen crash deaths, so weekdays carry 0.637/0.714 = 0.89x the average per-day death risk.
+      Since the subject's sleep restriction is a WEEKDAY exposure, this scales his exposed share of risk
+      DOWN, not up.
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "FARS"
+    quote: >
+      "| Sunday | 502 | 17 | | Monday | 377 | 13 | | Tuesday | 353 | 12 | | Wednesday | 324 | 11 | | Thursday |
+      375 | 13 | | Friday | 419 | 15 | | Saturday | 549 | 19 | | Total | 2,899 | 100 |"
+  - outcome_domain: baseline_risk
+    outcome_construct: teen_crash_death_share_june_july_august
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "share of 2024 US teenage crash deaths occurring in JUNE, JULY, AUGUST (out of school): (300+286+273)/2,899"}
+    scale: probability
+    unit: "proportion of teen crash deaths"
+    value: 0.296309
+    se: 0.008482
+    ci: [0.279684, 0.312934]
+    conversion_formula: >
+      Computed by me from the published month table: Jun 300 + Jul 286 + Aug 273 = 859; 859/2,899 =
+      0.296309. se = sqrt(0.296309*0.703691/2899) = 0.008482.
+      IIHS text confirms the peak: "In 2024, teenage crash deaths peaked in June."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive. USED IN STEP 3. The three summer months are 25.2% of days but 29.6% of teen crash
+      deaths, i.e. 1.18x average risk per day — and they are months in which the subject sleeps 7-8 h and
+      is therefore UNEXPOSED. This is the second reason the exposed share of his risk is well below the
+      naive 5/7.
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "FARS"
+    quote: >
+      "In 2024, teenage crash deaths peaked in June." with "| June | 300 | 10 | | July | 286 | 10 | | August | 273
+      | 9 |"
+  - outcome_domain: baseline_risk
+    outcome_construct: teen_single_vehicle_share_of_fatal_crashes_16_19
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "share of passenger-vehicle drivers aged 16-19 in 2024 fatal crashes that were SINGLE-VEHICLE crashes: 1,256/3,057"}
+    scale: probability
+    unit: "proportion"
+    value: 0.410860
+    se: 0.008898
+    ci: [0.393420, 0.428300]
+    conversion_formula: >
+      IIHS prints 41% and the counts 1,256 single-vehicle of 3,057 total. 1256/3057 = 0.410860.
+      se = sqrt(0.41086*0.58914/3057) = 0.008898.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive. RELEVANT TO MECHANISM: IIHS states this is "the highest of any age group". Falling
+      asleep at the wheel produces single-vehicle run-off-road crashes, so a high single-vehicle share is
+      weakly consistent with a drowsiness contribution — but it is equally consistent with speed,
+      inexperience and alcohol, and IIHS does not attribute it.
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "FARS"
+    quote: >
+      "Among passenger vehicle drivers ages 16-19 involved in fatal crashes in 2024, 41% were involved in
+      single-vehicle crashes. This was the highest of any age group."
+rob:
+  tool: none
+  judgement: na
+  notes: >
+    THIS IS A CENSUS, NOT A STUDY, so risk-of-bias tools do not apply and `tool: none` / `judgement: na`
+    is the honest entry. FARS records every US crash involving a death on a public road within 30 days;
+    IIHS tabulates it. The numerators are close to complete. What IS uncertain:
+    (a) DENOMINATOR MISMATCH. All rates in Blocks A and B are PER HEAD OF POPULATION, not per licensed
+        driver and not per mile. Roughly half of 16-18-year-olds are not licensed, so the per-DRIVER rate
+        is about twice the per-population rate. injury_channel.md Step 2 makes that conversion explicit
+        using FHWA licensed-driver counts, and that conversion is the single largest source of arithmetic
+        uncertainty in the whole calculation.
+    (b) SCOPE. "Passenger vehicle" excludes motorcycles, large trucks, buses. US male 16-19 motorcyclist
+        deaths are real and drowsiness applies to them too, so Block A UNDERSTATES all-vehicle operator
+        deaths. Direction of bias: DOWNWARD.
+    (c) YEAR CHOICE. Block A is 2024, Block B is 2023, Block C mileage is 2022 (the latest NHTS-based
+        year IIHS publishes). Mixing years introduces a small inconsistency; teen rates moved from 19.9
+        per 100,000 in 2021 to 17.0 in 2024, so year choice can shift the baseline by ~15%.
+    (d) NO DOI, NO PMID, so verification `status` is UNVERIFIED. It is NOT secondhand: I retrieved the
+        IIHS pages directly from iihs.org (HTTP 200) and stored the extracted text.
+funding: "Insurance Institute for Highway Safety / Highway Loss Data Institute, funded by US auto insurers. Underlying data collected by NHTSA (FARS)."
+notes: >
+  REQUIRED EXTRACTION #4, first bullet. This record supplies the DENOMINATOR for the entire calculation.
+  .
+  VERIFICATION AND PROVENANCE. No DOI or PMID exists for an IIHS Fatality Facts page, so Crossref and
+  PubMed checks are impossible and `status` is UNVERIFIED rather than VERIFIED. Retrieved directly from
+  the publisher: src/iihs2024_teenagers.txt (Fatality Facts 2024: Teenagers, posted June 2026, Blocks A
+  and C), src/iihs2023_males_females.txt (Fatality Facts 2023: Males and females, Block B), and
+  src/iihs2024_pax_occupants.txt. All three are extracted text of live iihs.org pages.
+  .
+  VERBATIM QUOTES SUPPORTING BLOCK A (Fatality Facts 2024: Teenagers, table "Deaths in passenger vehicles
+  per 100,000 people by seating position, age and sex, 2024"):
+  "| 16 | 2,322,582 | 123 | 5.3 | 71 | 3.1 | ..."
+  "| 17 | 2,326,541 | 175 | 7.5 | 101 | 4.3 | ..."
+  "| 18 | 2,296,205 | 242 | 10.5 | 109 | 4.7 | ..."
+  "| 19 | 2,282,142 | 313 | 13.7 | 100 | 4.4 | ..."
+  "| 20-24 | 11,451,815 | 1,360 | 11.9 | 377 | 3.3 | ..."
+  and the text: "The rate of deaths per 100,000 people in 2024 peaked at age 19 for male drivers (13.7)
+  and at age 18 for male passengers (4.7). Death rates peaked at ages 20-24 for female drivers (4.2) and
+  at age 18 for female passengers (3.9)."
+  .
+  VERBATIM QUOTES SUPPORTING BLOCK B (Fatality Facts 2023: Males and females, table "Passenger vehicle
+  occupant deaths per 100,000 people by age and sex, 2023"):
+  "| 16-19 | 9,006,150 | 1,317 | 14.6 | 8,596,938 | 632 | 7.4 | 17,603,088 | 1,950 | 11.1 |"
+  "| 20-24 | 11,126,811 | 1,937 | 17.4 | 10,684,361 | 826 | 7.7 | 21,811,172 | 2,765 | 12.7 |"
+  and: "In 2023, the rates of passenger vehicle occupant deaths per 100,000 people were much higher among
+  males than among females for every age group."
+  .
+  VERBATIM QUOTES SUPPORTING BLOCK C:
+  "| 16-19 | 2,268 | 24,773,280,873 | 9.2 | 931 | 17,958,953,050 | 5.2 | 3,202 | 42,732,233,923 | 7.5 |"
+  "Using data from the National Household Travel Survey, the fatal crash rate per miles driven for 16-19
+  year-olds is just over 3 times the rate for drivers ages 20 and over. Risk is highest at ages 16-17."
+  "A total of 2,899 teenagers ages 13-19 died in motor vehicle crashes in 2024. This is 67% fewer than in
+  1975. About 3 of every 4 teenagers killed in crashes in 2024 were males."
+  "Fifty-one percent of motor vehicle crash deaths among teenagers in 2024 occurred on Friday, Saturday or
+  Sunday." with the table "| Sunday | 502 | 17 | | Monday | 377 | 13 | | Tuesday | 353 | 12 | | Wednesday
+  | 324 | 11 | | Thursday | 375 | 13 | | Friday | 419 | 15 | | Saturday | 549 | 19 | | Total | 2,899 | 100 |"
+  "In 2024, teenage crash deaths peaked in June." with "| June | 300 | 10 | | July | 286 | 10 | | August |
+  273 | 9 |" and "| Total | 2,899 | 100 |"
+  "Teenage motor vehicle crash deaths in 2024 occurred most frequently from 9 p.m. to midnight (18%),
+  followed by the time between 6 p.m. and 9 p.m. (18%) and between midnight and 3 a.m. (17%)."
+  "Among passenger vehicle drivers ages 16-19 involved in fatal crashes in 2024, 41% were involved in
+  single-vehicle crashes. This was the highest of any age group." with "| 16-19 | 1,256 | 41 | 1,801 | 59 |
+  3,057 | 100 |"
+  "In 2024, 63% of deaths among passenger vehicle occupants ages 16-19 were drivers."
+  .
+  ONE MORE NUMBER WORTH RECORDING IN PROSE RATHER THAN AS AN EFFECT, because it bears on the timing
+  argument: 17% of teen crash deaths occur between midnight and 3 a.m. and 18% between 9 p.m. and
+  midnight, i.e. 35% of teen crash deaths happen between 21:00 and 03:00. Those are the hours in which a
+  sleep-restricted adolescent is at his worst AND the hours NMVCCS excluded (see tefft2016_aaa), which is
+  the strongest structural reason to think the Tefft odds ratios understate the effect for a teenager.
+  .
+  pct_female is set to 0.0 because Blocks A and C effects are male-specific; Block B reports both sexes
+  and I have extracted only the male values. `age_range: [16, 24]` spans the extracted rows.
+shard: "s21_drowsy_driving"

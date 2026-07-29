@@ -1,0 +1,133 @@
+study_id: smith2018
+citation: "Smith MT, McCrae CS, Cheung J, Martin JL, Harrod CG, Heald JL, Carden KA. Use of Actigraphy for the Evaluation of Sleep Disorders and Circadian Rhythm Sleep-Wake Disorders: An American Academy of Sleep Medicine Clinical Practice Guideline. J Clin Sleep Med. 2018;14(7):1231-1237."
+doi: "10.5664/jcsm.7230"
+pmid: "29991437"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6040804/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Use of Actigraphy for the Evaluation of Sleep Disorders and Circadian Rhythm Sleep-Wake Disorders: An American Academy of Sleep Medicine Clinical Practice Guideline"
+access_tier: full_text
+secondhand_via: null
+design: guideline_consensus
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: actigraphy_recommended_recording_duration_days_min
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "AASM-recommended minimum consecutive actigraphy recording duration"}
+    scale: raw_units
+    unit: "days (consecutive)"
+    value: 3.0
+    se: null
+    ci: [3.0, 14.0]
+    conversion_formula: "72 hours = 3.0 days; ci field used here to carry the recommended RANGE (3 to 14 consecutive days), not a confidence interval"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is the guideline's stated floor. NOTE: it is a minimum tied to CPT billing code 95803, not a statement that 3 days is psychometrically sufficient for circadian phenotyping. For a weekday/weekend discrepancy question you need at least 2 full weekends, i.e. >=14 days, which is the top of the permitted range."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The recommended duration of actigraphy recording is a minimum of 72 hours to 14 consecutive days, in accordance with the Current Procedural Terminology (CPT) coding requirements."
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: actigraphy_recommendation_crswd_pediatric
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "actigraphy in assessment of paediatric patients with circadian rhythm sleep-wake disorder"}
+    scale: probability
+    unit: "recommendation coded 1 = CONDITIONAL FOR ('We suggest')"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "not an effect estimate; 1 codes a conditional recommendation in favour"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "AASM conditionally recommends actigraphy for CRSWD assessment in both adults and paediatric patients. Directly supports the report's proposal to actigraph our subject before assuming behavioural causation."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "We suggest that clinicians use actigraphy in the assessment of pediatric patients with circadian rhythm sleep-wake disorder. (Conditional)"
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: actigraphy_recommendation_insufficient_sleep_syndrome
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "actigraphy to estimate total sleep time in adults with suspected insufficient sleep syndrome"}
+    scale: probability
+    unit: "recommendation coded 1 = CONDITIONAL FOR ('We suggest')"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "not an effect estimate; 1 codes a conditional recommendation in favour"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is the single most directly applicable recommendation in the guideline for our subject: actigraphy is the AASM-endorsed way to confirm or refute insufficient sleep syndrome, i.e. to distinguish it from a circadian disorder."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "We suggest that clinicians use actigraphy to estimate total sleep time in adult patients with suspected insufficient sleep syndrome. (Conditional)"
+
+  - outcome_domain: exposure_measurement
+    outcome_construct: actigraphy_duration_pre_mslt_days
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "actigraphy duration prior to PSG/MSLT to assure adequate sleep time"}
+    scale: raw_units
+    unit: "days"
+    value: 10.5
+    se: null
+    ci: [7.0, 14.0]
+    conversion_formula: "midpoint of the guideline's stated 7-14 day window = (7+14)/2 = 10.5 d; ci field carries the stated range, not a confidence interval"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is the guideline's own 7-14 day figure -- the source of the '7-14 days' number in the task brief. It is stated as a Remark under Recommendation 6 (pre-MSLT), and is where the 7-14 day convention originates rather than a general CRSWD requirement."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Actigraphy can be used for 7-14 days prior to the PSG/Multiple Sleep Latency Test (MSLT) to assure adequate sleep time leading up to the testing. Actigraphy can also be used to establish habitual sleep-wake timing. Actigraphy does not replace PSG prior to the MSLT."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "GRADE-based AASM clinical practice guideline; every one of the seven recommendations is CONDITIONAL, none is STRONG. Only FDA-approved devices are within scope, which explicitly excludes consumer wearables (verbatim: 'only apply to the use of FDA-approved devices'). The 72-hour floor is driven by CPT billing convention rather than by measurement science, which is a real limitation when the clinical question is a weekday-vs-weekend contrast."
+funding: "American Academy of Sleep Medicine"
+notes: |
+  ALL SEVEN RECOMMENDATIONS, VERBATIM (every one is Conditional / 'We suggest'):
+   1. "We suggest that clinicians use actigraphy to estimate sleep parameters in adult patients with
+      insomnia disorder. (Conditional)"
+   2. "We suggest that clinicians use actigraphy in the assessment of pediatric patients with insomnia
+      disorder. (Conditional)"
+   3. "We suggest that clinicians use actigraphy in the assessment of adult patients with circadian
+      rhythm sleep-wake disorder. (Conditional)"
+   4. "We suggest that clinicians use actigraphy in the assessment of pediatric patients with circadian
+      rhythm sleep-wake disorder. (Conditional)"
+   5. "We suggest that clinicians use actigraphy integrated with home sleep apnea test devices to
+      estimate total sleep time during recording (in the absence of alternative objective measurements
+      of total sleep time) in adult patients suspected of sleep-disordered breathing. (Conditional)"
+   6. "We suggest that clinicians use actigraphy to monitor total sleep time prior to testing with the
+      Multiple Sleep Latency Test in adult and pediatric patients with suspected central disorders of
+      hypersomnolence. (Conditional)"
+   7. "We suggest that clinicians use actigraphy to estimate total sleep time in adult patients with
+      suspected insufficient sleep syndrome. (Conditional)"
+
+  SCOPE LIMITATION (important for the report's measurement protocol -- consumer wearables are OUT OF
+  SCOPE of this guideline):
+      "The following recommendations are intended as a guide for clinicians using actigraphy in
+      evaluating patients with sleep disorders and circadian rhythm sleep-wake disorders, and only
+      apply to the use of FDA-approved devices."
+
+  BILLING/DURATION CONSTRAINT:
+      "as noted by the descriptor for actigraphy, a minimum of 72 hours (with a maximum of 14 days) of
+      consecutive recording is required, and the code cannot be used concurrently with HSAT or PSG
+      codes."
+
+  MY READ ON THE DURATION QUESTION (flagged as judgement, not from the source): the guideline's floor
+  is 72 h, and the only place a 7-14 day figure appears is the pre-MSLT remark. Because the clinical
+  question here is specifically the size of the weekday-weekend sleep discrepancy, a 72-hour recording
+  can easily contain zero or one free day and is therefore inadequate for this indication. I recommend
+  14 consecutive days (2 weekends) as the protocol length; that is the top of the AASM-permitted range
+  and is consistent with the Auger 2015 requirement to include "both work/school and free days".
+shard: "s19_sleep_disorders"

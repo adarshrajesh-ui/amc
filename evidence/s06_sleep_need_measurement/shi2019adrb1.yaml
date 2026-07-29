@@ -1,0 +1,89 @@
+study_id: shi2019adrb1
+citation: "Shi G, Xing L, Wu D, Bhattacharyya BJ, Jones CR, McMahon T, Chong SYC, Chen JA, Coppola G, Geschwind D, Krystal A, Ptacek LJ, Fu YH. A Rare Mutation of beta1-Adrenergic Receptor Affects Sleep/Wake Behaviors. Neuron. 2019;103(6):1044-1055.e7."
+doi: "10.1016/j.neuron.2019.07.026"
+pmid: "31473062"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6763376/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "A Rare Mutation of beta(1)-Adrenergic Receptor Affects Sleep/Wake Behaviors"
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 50
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: fnss_phenotype_defining_threshold
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep requirement defining the familial natural short sleep (FNSS) phenotype across >50 ascertained families"}
+    scale: hours
+    unit: "hours per night (upper bound of the FNSS phenotype)"
+    value: 6.5
+    se: null
+    ci: null
+    conversion_formula: "verbatim: 'The >50 FNSS families identified to date have a sufficiently strong phenotype (lifelong requirement of <6.5 hours per/night) so that we have enriched for single mutations of large effect.' value = 6.5 h is the phenotype threshold, not a mean. n=50 recorded as the number of FAMILIES, not individuals."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "requirement. Defines the extreme lower tail of human sleep need as a LIFELONG requirement below 6.5 h. Note the word 'lifelong': FNSS is not a state you enter at 16 because of homework."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      The >50 FNSS families identified to date have a sufficiently strong phenotype (lifelong requirement of <6.5
+      hours per/night) so that we have enriched for single mutations of large effect.
+  - outcome_domain: sleep_need
+    outcome_construct: within_family_variability_of_fnss_expression
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "authors' statement on variability of FNSS expression among affected individuals within the same family"}
+    scale: probability
+    unit: "flag: 1 = the authors report substantial variability in phenotype expression even within families carrying the same allele"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "no arithmetic; encodes a verbatim qualitative statement. 'Still, there is variability in the expression of FNSS among affected individuals, even within the same family.'"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "even a large-effect single mutation does not fix sleep need at a value; genetic background modifies it. Supports treating sleep need as continuously distributed rather than as discrete phenotypic classes."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      It is likely that 'required sleep time' is a genetic trait resulting from contributions of many variants in
+      many genes. ... Still, there is variability in the expression of FNSS among affected individuals, even
+      within the same family. Taken together, these observations suggest that FNSS is caused by alleles of strong
+      effect and that the phenotype is modified by the genetic background of each [individual].
+rob:
+  tool: none
+  judgement: critical
+  notes: "family-ascertained rare-variant discovery study; the human phenotyping is observational and the causal work is done in mice. Ascertainment is deliberately extreme. Include only as a bound on the lower tail of sleep need, never as a population effect estimate."
+funding: "NIH (PMC author manuscript)"
+notes: |
+  Verbatim (full text, retrieved from PMC): "It is likely that 'required sleep time' is a genetic trait resulting from
+  contributions of many variants in many genes. The >50 FNSS families identified to date have a sufficiently strong phenotype
+  (lifelong requirement of <6.5 hours per/night) so that we have enriched for single mutations of large effect. Still, there is
+  variability in the expression of FNSS among affected individuals, even within the same family. Taken together, these
+  observations suggest that FNSS is caused by alleles of strong effect and that the phenotype is modified by the genetic
+  background of each [individual]."
+  Verbatim (abstract/summary): "A rare variant of ADRB1 was found in humans who sleep fewer hours than most. Using mouse
+  modeling and calcium imaging experiments, Shi et al demonstrated that dorsal pons ADRB1+ neurons activity is increased in the
+  mutant, correlating with increased wakefulness."
+  TWO USES IN THIS SHARD:
+  (1) The phrase "required sleep time is a genetic trait resulting from contributions of many variants in many genes" is the
+      polygenic framing that justifies modelling sleep need as an approximately NORMAL latent variable rather than as a mixture
+      of discrete phenotypes. That is the functional form recommended in exposure_priors.md section (iv).
+  (2) The <6.5 h "lifelong requirement" threshold bounds how low a genuine requirement plausibly goes. Combined with
+      he2009dec2's 6.25 h carriers, the documented floor of human sleep need is roughly 6.0-6.5 h, and it is rare. Since our
+      subject reports sleeping 5-6 h on weekdays, even the most extreme documented natural-short-sleeper requirement would leave
+      him in deficit on his worst nights - though that inference should lean on weedon2022's population null, which shows these
+      variants are not penetrant outside ascertained pedigrees, rather than on these pedigrees themselves.
+  n field: the schema requires an integer; I recorded 50 to represent the ">50 FNSS families" the authors reference, which is the
+  only countable denominator in the quoted passage. It is a count of FAMILIES, not of phenotyped individuals, and the ADRB1
+  discovery pedigree itself is a single family. Do not use this n for weighting.
+shard: "s06_sleep_need_measurement"

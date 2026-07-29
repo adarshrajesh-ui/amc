@@ -1,0 +1,115 @@
+study_id: morris2015
+citation: Morris CJ, Yang JN, Garcia JI, Myers S, Bozzi I, Wang W, Buxton OM, Shea SA, Scheer FA. Endogenous
+  circadian system and circadian misalignment impact glucose tolerance via separate mechanisms in humans.
+  Proceedings of the National Academy of Sciences USA. 2015;112(17):E2225-E2234.
+doi: 10.1073/pnas.1418955112
+pmid: '25870289'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Endogenous circadian system and circadian misalignment impact glucose tolerance via
+    separate mechanisms in humans.
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 14
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: US
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: metabolic
+  outcome_construct: postprandial_glucose_misalignment_component
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: 8
+    contrast_label: 12 h behavioural cycle inversion (circadian misalignment) vs aligned, same circadian
+      phase
+  scale: pct_change
+  unit: percent
+  value: 6.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = misalignment itself RAISED postprandial glucose by 6%. HARM. This is the
+    misalignment component after the endogenous circadian phase effect has been separated out.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Second, circadian misalignment itself (12-h behavioral cycle inversion) increased postprandial
+    glucose by 6%.
+- outcome_domain: metabolic
+  outcome_construct: postprandial_glucose_endogenous_phase_component
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: 8
+    contrast_label: biological evening vs biological morning, behaviour held constant
+  scale: pct_change
+  unit: percent
+  value: 17.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'POSITIVE = glucose tolerance is intrinsically WORSE in the biological evening (+17%
+    postprandial glucose), independent of misalignment. Provides the essential BENCHMARK: the endogenous
+    phase effect is roughly 3x the misalignment effect.'
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: First, postprandial glucose was 17% higher
+- outcome_domain: metabolic
+  outcome_construct: distinct_mechanisms
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: 'mechanism separation: beta-cell function vs insulin sensitivity'
+  scale: pct_change
+  unit: percent late-phase insulin
+  value: 14.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = during misalignment, late-phase insulin was 14% HIGHER yet glucose still
+    rose, implying reduced INSULIN SENSITIVITY; whereas the biological-evening effect ran through reduced
+    beta-cell function (27% lower early-phase insulin). Mechanistically corroborates leproult2014's insulin-sensitivity
+    finding.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: during the biological evening by decreased pancreatic beta-cell function (27% lower early-phase
+    insulin) and during circadian misalignment presumably by decreased insulin sensitivity (elevated postprandial
+    glucose despite 14% higher late-phase insulin) without change in early-phase insulin.
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: Two rigorously controlled 8-day inpatient protocols that successfully dissociate circadian phase
+    from behavioural cycle from misalignment. Small (n=14 across protocols) and again a 12 h inversion,
+    far larger than social jetlag.
+funding: null
+notes: 'THE MOST USEFUL CALIBRATION RECORD IN THIS SHARD. It puts the misalignment effect in proportion:
+  a full 12 h behavioural inversion raised postprandial glucose by only 6%, while simply eating in the
+  biological evening raised it 17%. So even MAXIMAL misalignment produces a smaller glycaemic effect than
+  ordinary circadian phase variation, which argues strongly against attributing a large independent metabolic
+  burden to our subject''s ~1.75 h of social jetlag. TASK-DESCRIPTION CORRECTION: the task placed this
+  paper at ''approx 2016''; it is PNAS 2015, 112(17):E2225-E2234. No dispersion measures in the abstract,
+  so all se=null.'
+shard: s16_social_jetlag

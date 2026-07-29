@@ -1,0 +1,251 @@
+study_id: lo2022
+citation: "Lo JC, Leong RLF, Ng ASC, Jamaluddin SA, Ong JL, Ghorbani S, Lau T, Chee NIYN, Gooley JJ, Chee MWL. Staying vigilant during recurrent sleep restriction: dose-response effects of time-in-bed and benefits of daytime napping. Sleep. 2022;45(4):zsac023."
+doi: "10.1093/sleep/zsac023"
+pmid: "35089345"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8996029/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Staying vigilant during recurrent sleep restriction: dose-response effects of time-in-bed and benefits of daytime napping"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 194
+n_studies_pooled: null
+population:
+  age_mean: 16.8
+  age_range: [15, 19]
+  pct_female: 49.5
+  country: "Singapore"
+  adolescent_match: exact_16_19
+effects:
+  # ------------------------------------- 4-level dose-response in adolescents
+  - outcome_domain: cognition
+    outcome_construct: pvt_time_on_task_lapse_decrement_dose_response
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 8,
+               contrast_label: "5h vs 6.5h vs 8h vs 9h nocturnal TIB across 2 simulated school weeks, adolescents"}
+    scale: raw_units
+    unit: "F statistic for the group x day interaction on the time-on-task increase in PVT lapses"
+    value: 2.43
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: 'For the number of PVT lapses, the group x day interaction
+      was statistically significant (F = 2.43, p < .001), indicating that ToT effects were exacerbated
+      with shorter TIBs.' Degrees of freedom are not printed, so no effect size can be back-derived;
+      se: null. Recorded because this is the ONLY 4-dose-level chronic restriction experiment ever run
+      in adolescents (n = 194), and because the ordering of the four arms is the key structural fact:
+      9h and 8h indistinguishable from baseline throughout, 6.5h and 5h both deteriorate, and 5h
+      separates from 6.5h only after the FIFTH restricted night."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "larger F = stronger dose x time interaction; shorter TIB = worse"
+    covariates: ["time-on-task effect from the evening PVT on day B1"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+  - outcome_domain: cognition
+    outcome_construct: dose_threshold_for_stable_vigilance_in_adolescents
+    exposure: {type: chronic_restriction, dose_h: 8, referent_h: 9, duration_days: 8,
+               contrast_label: "highest restricted dose at which adolescent vigilance stays at baseline"}
+    scale: hours
+    unit: "hours nocturnal TIB per night"
+    value: 8.0
+    se: null
+    ci: null
+    conversion_formula: "From the paper: 'The two groups with TIB within the age-specific recommended
+      range of 8 to 10 h evidenced a stable ToT effect throughout the protocol (relative to baseline,
+      9 h group: p > 0.34; 8 h group: p > 0.30) ... In fact, ToT effects did not differ between the
+      8 h and the 9 h groups throughout the protocol (p > .22).' 8 h TIB is therefore the lowest dose
+      tested that produced NO measurable deterioration over two simulated school weeks; 6.5 h TIB was
+      already harmful ('the ToT effect was accentuated after the second manipulation night (6.5 h
+      group: p = .02)'). The harm threshold in adolescents thus lies between 6.5 and 8 h TIB, i.e.
+      between roughly 6.0 and 7.4 h of actual sleep."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "doses at or above this value showed no accumulation; below it, accumulation occurred"
+    covariates: ["baseline time-on-task effect"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+  # --------------------------------------------- TIB -> TST mapping, adolescents
+  - outcome_domain: exposure_measurement
+    outcome_construct: psg_tst_by_tib_dose_adolescents
+    exposure: {type: descriptive, dose_h: 5, referent_h: 9, duration_days: 8,
+               contrast_label: "PSG total sleep time obtained at each nocturnal TIB dose, ages 15-19"}
+    scale: hours
+    unit: "hours PSG-verified TST per night at 5 h TIB"
+    value: 4.64
+    se: null
+    ci: null
+    conversion_formula: "Verbatim: 'During the sleep manipulation periods (M11 to M15 and M21 to M23),
+      nocturnal TST decreased from 479-491 min in the 9 h group to 431-450 min in the 8 h group,
+      345-371 min in the two groups with 6.5 h of nocturnal TIB, and further to 267-290 min in the
+      three groups with 5 h of nocturnal TIB.' Converting midpoints to hours:
+        9   h TIB -> 8.08 h TST (479-491 min)   sleep efficiency ~90%
+        8   h TIB -> 7.34 h TST (431-450 min)   ~92%
+        6.5 h TIB -> 5.97 h TST (345-371 min)   ~92%
+        5   h TIB -> 4.64 h TST (267-290 min)   ~93%
+      Baseline night B2 at 9 h TIB gave 484-503 min (8.07-8.38 h) across all seven groups.
+      Recorded value is the 5 h midpoint. THIS IS THE CONVERSION TABLE THE MODEL NEEDS to move
+      between a TIB dose axis and the subject's self-reported/actigraphic sleep duration."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive exposure calibration in an exactly age-matched sample"
+    covariates: []
+    followup_years: null
+    cohort_family: NFS_Singapore
+  # ------------------------------------- second week worse than first (no adaptation)
+  - outcome_domain: recovery
+    outcome_construct: second_restriction_week_worse_than_first
+    exposure: {type: weekend_catchup, dose_h: 9, referent_h: 9, duration_days: 2,
+               contrast_label: "matched restricted nights in week 2 vs week 1, after 2 weekend recovery nights at 9h TIB"}
+    scale: raw_units
+    unit: "p-values for within-arm week-2-vs-week-1 contrasts on matched restricted nights"
+    value: 0.006
+    se: null
+    ci: null
+    conversion_formula: "Verbatim: 'The ToT-effect was larger during the second sleep restriction
+      period compared to the first for both the 6.5 h group (M11 vs. M21 and M12 vs. M22: p < .006,
+      except for M13 vs. M23: p = .47) and the 5 h group (all three days: p < .01).' Value recorded is
+      the 6.5 h arm threshold p; no effect size is printed. Also: 'ToT did not return to baseline after
+      two nights of recovery sleep (p < .04 relative to baseline).' DIRECTLY RELEVANT TO THE TARGET
+      SUBJECT, whose exposure is exactly this pattern - short weekday sleep, longer weekend sleep,
+      repeated for ~3 years. Two weekend nights of 9 h TIB did not reset the deficit, and the second
+      week started from a worse position and deteriorated faster."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "smaller p = stronger evidence that weekend catch-up does not prevent carry-over;
+      the direction is unambiguous - week 2 was worse than week 1"
+    covariates: ["baseline time-on-task effect"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+  - outcome_domain: cognition
+    outcome_construct: dose_separation_latency_5h_vs_6_5h
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 6.5, duration_days: 5,
+               contrast_label: "nights of restriction before 5h TIB separates from 6.5h TIB"}
+    scale: raw_units
+    unit: "nights of consecutive restriction required for the two doses to diverge"
+    value: 5.0
+    se: null
+    ci: null
+    conversion_formula: "Verbatim: 'compared with the 6.5 h group, the 5 h group showed a greater
+      ToT-related increase in the number of lapses after the fifth night of sleep restriction
+      (p = .04). This group difference did not persist through the first recovery period (p > .22),
+      but became apparent again on re-exposure to sleep restriction (M22: p = .03 and M23: p = .09).'
+      MODELLING CONSEQUENCE: dose contrasts within the moderate range are not identifiable from short
+      protocols - any study of <5 nights will understate the 5h-vs-6.5h gap. Cross-checks the same
+      pattern in adults: Van Dongen 2003's 4h and 6h SSS arms never separated at all, and Belenky's
+      5h and 3h arms only diverged from the third night."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "larger = longer protocols needed to resolve adjacent doses"
+    covariates: ["baseline time-on-task effect"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+  # ------------------------------------------------------------------- napping
+  - outcome_domain: recovery
+    outcome_construct: split_sleep_nap_restores_stability
+    exposure: {type: chronic_restriction, dose_h: 8, referent_h: 9, duration_days: 8,
+               contrast_label: "6.5h nocturnal TIB + 1.5h afternoon nap (8h total/24h) vs 6.5h alone"}
+    scale: raw_units
+    unit: "p-value for deviation from baseline in the 6.5h + 1.5h nap arm across the whole protocol"
+    value: 0.26
+    se: null
+    ci: null
+    conversion_formula: "Verbatim: 'Although ToT effects were still apparent in the 6.5 + 1.5 h group
+      (Figure 2C; left panel), napping consistently attenuated ToT effects (Figure 2C; right panel)
+      and, in fact, maintained it at baseline levels throughout the study (p > .26).' The mechanistic
+      reading the authors give: what matters is TOTAL TIB per 24 h reaching the age-recommended range,
+      not whether it is consolidated. Nap TST: 1 h opportunities yielded 49-55 min, 1.5 h opportunities
+      71-79 min."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "p > 0.26 means no detectable deviation from baseline, i.e. total 24h TIB of 8h
+      protected adolescents even when split"
+    covariates: ["baseline time-on-task effect"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Largest experimental adolescent sleep-restriction dataset in existence (n = 194, four
+    nocturnal dose levels plus three nap arms), residential, PSG-verified, registered
+    (NCT02838095, NCT03333512, NCT04044885), baseline performance covaried. Concerns: the seven arms
+    were assembled from four separate protocols run over several years rather than a single
+    simultaneous randomisation, and the 9 h control arm followed a 14-day rather than 15-day protocol;
+    some screening-stage sleep differences existed between arms (though actigraphic TST did not
+    differ, p = .47); the outcome reported here is the time-on-task decrement (last 2-min bin minus
+    first 2-min bin) rather than whole-session lapses, so it is not numerically interchangeable with
+    the Van Dongen / Belenky / Lo 2016 lapse counts; means and SDs per arm per day are not tabulated
+    in the main text, so only F and p values are extractable."
+funding: "National Medical Research Council Singapore (NMRC/STaR/0004/2008, NMRC/STaR/015/2013);
+  National Research Foundation (NRF2016-SOL002-001); Far East Organization"
+notes: |
+  THE ONLY MULTI-DOSE (>=3 LEVEL) CHRONIC RESTRICTION EXPERIMENT IN ADOLESCENTS. Four nocturnal
+  TIB levels - 9 h, 8 h, 6.5 h, 5 h - in 194 participants aged 15-19, across two simulated school
+  weeks with intervening weekend recovery. This is the study whose design most closely mirrors the
+  target subject's actual exposure pattern (short weekday sleep, longer weekend sleep, repeated).
+
+  DESIGN: pooled Need for Sleep series. 2 baseline nights at 9 h TIB, then cycle 1 = 5 manipulation
+  nights (M11-M15) + 2 recovery nights at 9 h TIB (R11-R12), then cycle 2 = 3 manipulation nights
+  (M21-M23) + 2 recovery nights (R21-R22). Arms: 9 h (n=26), 8 h (n=29), 6.5 h (n=29), 5 h (n=28),
+  5 h + 1 h nap (n=29), 5 h + 1.5 h nap (n=29), 6.5 h + 1.5 h nap (n=24). PVT 3x/day
+  (10:00, ~15:00-16:15, 20:00). Outcome = increase in lapses from the first to the fifth 2-min bin
+  of the 10-min PVT, averaged over the three daily tests.
+
+  DOSE ORDERING (the structural result, no per-arm numbers are printed):
+    9 h TIB  - flat at baseline for the entire fortnight (p > 0.34)
+    8 h TIB  - flat at baseline, indistinguishable from 9 h throughout (p > 0.22)
+    6.5 h TIB - deterioration from the 2nd restricted night (p = 0.02), progressive thereafter
+    5 h TIB  - deterioration from the 2nd restricted night (p < 0.001), progressive, and worse than
+               6.5 h from the 5th restricted night (p = 0.04)
+  So in adolescents the harm threshold sits between 6.5 and 8 h TIB. The subject's ~5-6 h weekday
+  sleep is below the 6.5 h TIB arm's ACTUAL sleep (5.97 h TST) and close to the 5 h TIB arm's.
+
+  TIB -> TST CONVERSION (PSG, ages 15-19) - the most useful single table in this shard:
+    baseline 9 h TIB : 484-503 min (8.07-8.38 h)
+    9   h TIB        : 479-491 min (7.98-8.18 h)
+    8   h TIB        : 431-450 min (7.18-7.50 h)
+    6.5 h TIB        : 345-371 min (5.75-6.18 h)
+    5   h TIB        : 267-290 min (4.45-4.83 h)
+    1   h nap        : 49-55 min
+    1.5 h nap        : 71-79 min
+
+  KEY VERBATIM QUOTES
+  Dose-response: "For the number of PVT lapses, the group x day interaction was statistically
+  significant (F = 2.43, p < .001), indicating that ToT effects were exacerbated with shorter TIBs.
+  The two groups with TIB within the age-specific recommended range of 8 to 10 h evidenced a stable
+  ToT effect throughout the protocol (relative to baseline, 9 h group: p > 0.34; 8 h group: p > 0.30),
+  consistent with the expectation in participants with adequate nocturnal sleep. In fact, ToT effects
+  did not differ between the 8 h and the 9 h groups throughout the protocol (p > .22). In contrast,
+  for the two sleep-restricted groups, the ToT effect was accentuated after the second manipulation
+  night (6.5 h group: p = .02; 5 h group: p < .001), and increased further on additional successive
+  nights of sleep restriction."
+  Weekend catch-up insufficient, week 2 worse: "ToT did not return to baseline after two nights of
+  recovery sleep (p < .04 relative to baseline). The ToT-effect was larger during the second sleep
+  restriction period compared to the first for both the 6.5 h group (M11 vs. M21 and M12 vs. M22:
+  p < .006, except for M13 vs. M23: p = .47) and the 5 h group (all three days: p < .01)."
+  Adjacent doses need 5 nights to separate: "compared with the 6.5 h group, the 5 h group showed a
+  greater ToT-related increase in the number of lapses after the fifth night of sleep restriction
+  (p = .04). This group difference did not persist through the first recovery period (p > .22), but
+  became apparent again on re-exposure to sleep restriction (M22: p = .03 and M23: p = .09)."
+  Repeated testing did not degrade motivation (relevant to practice-effect confounding): "The
+  stability of this small ToT effect demonstrated by the 8 h and 9 h TIB groups over the entire
+  fortnight indicates the adequacy of the amount of nocturnal sleep obtained - in line with the
+  age-specific sleep duration recommendations, and that repeated testing was not associated with
+  reduced motivation to perform."
+  Total 24h TIB is what matters: "for a milder degree of nocturnal sleep restriction (i.e. 6.5 h TIB
+  on week nights), a 1.5-h nap, that helped to bring the total TIB across 24 h (i.e. 8 h) to the
+  recommended range, could maintain ToT-related decrement at baseline levels."
+  Cumulative framing: "Reducing TIB beyond the recommended duration significantly increases
+  ToT-associated vigilance impairment, particularly during recurrent periods of sleep restriction."
+  Interpretation warning the authors themselves give: "These findings should not be taken to encourage
+  the already sleep-restricted individuals to curtail their sleep further because of the limited
+  increment in impairment associated with a much shorter TIB. Rather, the more rapid deterioration in
+  performance in the second week of 5-h TIB, relative to 6.5 h, as shown by all the three PVT metrics
+  should be emphasized."
+  Homeostatic mechanism: "higher slow-wave activity and shorter N2 sleep latency during the sleep
+  restriction nights point to an elevation in homeostatic sleep pressure as a result of extended
+  wakefulness, which could also have magnified the deficits induced by ToT in sleep-restricted
+  individuals."
+shard: "s01_cognition_dose_response"

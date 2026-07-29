@@ -1,0 +1,95 @@
+study_id: boulos2019
+citation: "Boulos MI, Jairam T, Kendzerska T, Im J, Mekhael A, Murray BJ. Normal polysomnography parameters in healthy adults: a systematic review and meta-analysis. Lancet Respir Med. 2019;7(6):533-543."
+doi: "10.1016/S2213-2600(19)30057-8"
+pmid: "31006560"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Normal polysomnography parameters in healthy adults: a systematic review and meta-analysis"
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 5273
+n_studies_pooled: 169
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: psg_sleep_efficiency_change_per_decade_of_age
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 1, contrast_label: "change in PSG sleep efficiency per additional decade of age, meta-regression"}
+    scale: per_hour_beta
+    unit: "percentage points of sleep efficiency per decade of age"
+    value: -2.1
+    se: 0.2806
+    ci: [-2.6, -1.5]
+    conversion_formula: "Abstract: 'sleep efficiency decreased by 2.1% (1.5 to 2.6)' per decade. Sign made explicit as negative (the abstract states 'decreased'). se = (2.6-1.5)/3.92 = 0.2806."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = sleep efficiency falls with age. USE: this is the age-adjustment term for borrowing a sleep-efficiency norm measured in an older sample down to a 16-19 year old. It also means our subject sits at the TOP of the adult efficiency distribution, so an efficiency prior estimated in midlife adults would UNDERSTATE his efficiency and hence OVERSTATE his sleep debt in the TIB -> TST conversion."
+    covariates: ["age", "sex"]
+    followup_years: null
+    cohort_family: null
+    quote: "For each decade of age, total sleep time decreased by 10.1 min (95% CI 7.5 to 12.8), sleep efficiency decreased by 2.1% (1.5 to 2.6), wake after sleep onset increased by 9.7 min (6.9 to 12.4), sleep onset latency increased by 1.1 min (0.3 to 1.9)"
+  - outcome_domain: sleep_need
+    outcome_construct: psg_total_sleep_time_change_per_decade_of_age
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 1, contrast_label: "change in PSG total sleep time per additional decade of age, meta-regression"}
+    scale: per_hour_beta
+    unit: "minutes of total sleep time per decade of age"
+    value: -10.1
+    se: 1.3520
+    ci: [-12.8, -7.5]
+    conversion_formula: "Abstract: 'total sleep time decreased by 10.1 min (95% CI 7.5 to 12.8)' per decade. se = (12.8-7.5)/3.92 = 1.3520."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = less sleep at older ages. Magnitude is SMALL: 10 min per decade means only ~0.17 h between an 18-year-old and a 28-year-old, i.e. the age gradient in laboratory sleep across young adulthood is negligible compared with the 1.5 h measurement-error SD. This licenses pooling the 18-25 and 25-30 bands."
+    covariates: ["age", "sex"]
+    followup_years: null
+    cohort_family: null
+    quote: "For each decade of age, total sleep time decreased by 10.1 min (95% CI 7.5 to 12.8), sleep efficiency decreased by 2.1% (1.5 to 2.6)"
+  - outcome_domain: exposure_measurement
+    outcome_construct: psg_wake_after_sleep_onset_change_per_decade
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 1, contrast_label: "change in PSG wake after sleep onset per decade of age"}
+    scale: per_hour_beta
+    unit: "minutes of WASO per decade of age"
+    value: 9.7
+    se: 1.4031
+    ci: [6.9, 12.4]
+    conversion_formula: "Abstract: 'wake after sleep onset increased by 9.7 min (6.9 to 12.4)' per decade. se = (12.4-6.9)/3.92 = 1.4031."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = more fragmented sleep at older ages. Note this nearly accounts for the whole TST decline (9.7 min more WASO vs 10.1 min less TST), i.e. across adulthood the TIB stays similar and the sleep is progressively eaten by wake. Our 16-19 year old is at the low-WASO end."
+    covariates: ["age", "sex"]
+    followup_years: null
+    cohort_family: null
+    quote: "wake after sleep onset increased by 9.7 min (6.9 to 12.4), sleep onset latency increased by 1.1 min (0.3 to 1.9), arousal index increased by 2.1 events per h (1.5 to 2.6)"
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Large, PROSPERO-registered (CRD42017074319), restricted to level-1 in-laboratory PSG scored to AASM 2007/2012 criteria, random-effects pooling with multivariate mixed-effects meta-regression on age and sex. Weaknesses: 'healthy controls' recruited as comparison groups for other studies rather than as a population sample, so healthy-volunteer selection is likely; English-language only; single laboratory nights with first-night effects; adults only, so nothing below 18 y; I could only access the abstract, so I could not read the pooled INTERCEPT for sleep efficiency (see notes)."
+funding: "None (stated in the abstract)"
+notes: |
+  ACCESS: abstract only. Unpaywall reports is_oa = false for 10.1016/S2213-2600(19)30057-8 and there is no PMC deposit
+  (elink returns only pubmed_pmc_refs). Every number above is verbatim from the PubMed abstract.
+  WHAT I WANTED AND COULD NOT GET: the abstract says "We report normative data stratified by age and sex" but the actual
+  stratified table (which would give the pooled sleep-efficiency MEAN and SD for the youngest adult stratum, the single most
+  useful number for shard task 8) is in the paywalled full text. I therefore use this paper only for the age SLOPES and take
+  the sleep-efficiency LEVEL from mitterling2015 (0.870 at <= 30 y) and meredithjones2024 (0.891 at ages 8-16), both of which
+  I did retrieve. This is the one place in the shard where a better-accessed source would materially tighten a prior.
+  HOW THE SLOPE IS USED IN exposure_priors.md section (iii): sleep efficiency falls 2.1 points per decade in adults. Working
+  from the Mitterling <= 30 y median of 87.0% (a stratum whose mean age is unknown but is bounded above by 30), an 18-19 year
+  old should sit at or slightly ABOVE 87%. Working down from the Meredith-Jones 8-16 y mean of 89.1%, he should sit at or
+  slightly BELOW 89.1%. The two bracket 0.87-0.89 and the slope is consistent with the direction of the bracket, so I take
+  0.88 as the central value.
+  CONSISTENCY CHECK against the older meta-analysis: Ohayon 2004 fitted an exponential age equation for sleep efficiency in
+  in-laboratory recordings with b = -0.003 per year and 63% of variance explained (its Table 4), which over a decade implies a
+  relative decline of about 1 - exp(-0.03) = 3.0%, i.e. roughly 2.6 percentage points from a base of 87%. That is closely
+  consistent with the 2.1 points per decade found here from a completely different and much larger study set 15 years later.
+  Two independent meta-analyses agreeing on the age slope is one of the better-supported quantities in this shard.
+shard: "s06_sleep_need_measurement"

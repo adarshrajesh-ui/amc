@@ -1,0 +1,176 @@
+study_id: sabia2021
+citation: "Sabia S, Fayosse A, Dumurgier J, van Hees VT, Paquet C, Sommerlad A, Kivimaki M, Dugravot A, Singh-Manoux A. Association of sleep duration in middle and old age with incidence of dementia. Nature Communications. 2021 Apr 20;12(1):2289."
+doi: "10.1038/s41467-021-22354-2"
+pmid: "33879784"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8058077/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Association of sleep duration in middle and old age with incidence of dementia."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 7959
+n_studies_pooled: null
+population:
+  age_mean: 50.6
+  age_range: [45, 55]
+  pct_female: null
+  country: "UK"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_all_cause_dementia_short_sleep_at_age_50
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7, duration_days: null,
+               contrast_label: "self-reported sleep <=6 h/night at mean age 50.6 y vs 7 h/night referent"}
+    scale: log_hr
+    unit: null
+    value: 0.19885
+    se: 0.09747
+    ci: [0.00995, 0.39204]
+    conversion_formula: >
+      HR = 1.22, 95% CI 1.01-1.48. log_hr = ln(1.22) = 0.19885;
+      se = (ln(1.48) - ln(1.01))/3.92 = (0.39204 - 0.00995)/3.92 = 0.09747.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = HIGHER dementia hazard with short sleep, i.e. harm. EXPOSURE AGE IS 50, NOT 19. The lower
+      confidence bound is 1.01, so this is a bare-threshold result after full adjustment.
+    covariates: ["age (timescale)", "sex", "ethnicity", "education", "marital status", "alcohol", "physical activity", "smoking", "fruit and vegetable consumption", "BMI", "hypertension", "diabetes", "cardiovascular disease", "GHQ depression", "CNS medications"]
+    followup_years: 24.6
+    cohort_family: "Whitehall_II"
+    quote: "Further adjustment for health behaviours and cardiometabolic and mental health factors attenuated associations, but there remained an association for short sleep at 50 (hazard ratio (HR) = 1.22, 95% confidence interval (CI) = 1.01–1.48) and 60 years (HR = 1.37, 95% CI = 1.10–1.72). There was no clear evidence of an association between long sleep duration and incident dementia."
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_all_cause_dementia_short_sleep_at_age_60
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7, duration_days: null,
+               contrast_label: "self-reported sleep <=6 h/night at age 60 vs 7 h/night referent"}
+    scale: log_hr
+    unit: null
+    value: 0.31481
+    se: 0.11403
+    ci: [0.09531, 0.54232]
+    conversion_formula: >
+      HR = 1.37, 95% CI 1.10-1.72. log_hr = ln(1.37) = 0.31481;
+      se = (ln(1.72) - ln(1.10))/3.92 = (0.54232 - 0.09531)/3.92 = 0.11403.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = harm. EXPOSURE AGE 60, mean follow-up 14.8 y. Note the pattern: the association is
+      LARGEST when sleep is measured CLOSEST to the age at which dementia is diagnosed (mean age at
+      diagnosis 77.1 y). That gradient is exactly what reverse causation predicts, and it is also what a
+      genuine late-life-window causal effect would predict. This study cannot distinguish the two.
+    covariates: ["age (timescale)", "sex", "ethnicity", "education", "marital status", "alcohol", "physical activity", "smoking", "fruit and vegetable consumption", "BMI", "hypertension", "diabetes", "cardiovascular disease", "GHQ depression", "CNS medications"]
+    followup_years: 14.8
+    cohort_family: "Whitehall_II"
+    quote: "Further adjustment for health behaviours and cardiometabolic and mental health factors attenuated associations, but there remained an association for short sleep at 50 (hazard ratio (HR) = 1.22, 95% confidence interval (CI) = 1.01–1.48) and 60 years (HR = 1.37, 95% CI = 1.10–1.72)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_all_cause_dementia_short_sleep_at_age_70
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7, duration_days: null,
+               contrast_label: "self-reported sleep <=6 h/night at age 70 vs 7 h/night referent"}
+    scale: log_hr
+    unit: null
+    value: 0.21511
+    se: 0.12022
+    ci: [-0.02020, 0.45108]
+    conversion_formula: >
+      HR = 1.24, 95% CI 0.98-1.57. log_hr = ln(1.24) = 0.21511;
+      se = (ln(1.57) - ln(0.98))/3.92 = (0.45108 - (-0.02020))/3.92 = 0.12022.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE point estimate but the CI CROSSES THE NULL. The paper's own abstract calls this
+      "imprecisely estimated". Mean follow-up only 7.5 y at this exposure age.
+    covariates: ["age (timescale)", "sex", "ethnicity", "education", "marital status", "alcohol", "physical activity", "smoking", "fruit and vegetable consumption", "BMI", "hypertension", "diabetes", "cardiovascular disease", "GHQ depression", "CNS medications"]
+    followup_years: 7.5
+    cohort_family: "Whitehall_II"
+    quote: "Here we report higher dementia risk associated with a sleep duration of six hours or less at age 50 and 60, compared with a normal (7 h) sleep duration, although this was imprecisely estimated for sleep duration at age 70 (hazard ratios (HR) 1.22 (95% confidence interval 1.01–1.48), 1.37 (1.10–1.72), and 1.24 (0.98–1.57), respectively)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_all_cause_dementia_persistent_short_sleep_trajectory
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7, duration_days: null,
+               contrast_label: "persistent short sleep at ages 50, 60 AND 70 vs persistent normal sleep; n = 6875, 426 cases"}
+    scale: log_hr
+    unit: null
+    value: 0.26236
+    se: 0.13386
+    ci: [0.0, 0.52473]
+    conversion_formula: >
+      HR = 1.30, 95% CI 1.00-1.69. log_hr = ln(1.30) = 0.26236;
+      se = (ln(1.69) - ln(1.00))/3.92 = 0.52473/3.92 = 0.13386.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = harm. THE LOWER BOUND IS EXACTLY 1.00: two decades of persistently short sleep across
+      ages 50, 60 and 70 produced an association whose confidence interval touches the null. This is the
+      most exposure-relevant estimate in the paper (sustained rather than one-off short sleep) and it is
+      the one people quote as "30% higher risk" without the interval.
+    covariates: ["age (timescale)", "sex", "ethnicity", "education", "marital status", "alcohol", "physical activity", "smoking", "fruit and vegetable consumption", "BMI", "hypertension", "diabetes", "cardiovascular disease", "GHQ depression", "CNS medications"]
+    followup_years: 7.4
+    cohort_family: "Whitehall_II"
+    quote: "Persistent short sleep duration was associated with an increased risk of dementia (HR = 1.30, 95% CI = 1.00–1.69) compared to those with persistent normal sleep duration (Table 4 )."
+  - outcome_domain: neurodegeneration
+    outcome_construct: incident_all_cause_dementia_accelerometer_lowest_tertile_of_sleep_duration
+    exposure: {type: habitual_short_sleep, dose_h: 5.8, referent_h: 6.6, duration_days: null,
+               contrast_label: "accelerometer-measured sleep 1 h 16 min - 6 h 13 min (tertile 1) vs 6 h 14 min - 7 h (tertile 2); n = 3888, 111 cases"}
+    scale: log_hr
+    unit: null
+    value: 0.48858
+    se: 0.23079
+    ci: [0.03922, 0.94391]
+    conversion_formula: >
+      HR = 1.63, 95% CI 1.04-2.57. log_hr = ln(1.63) = 0.48858;
+      se = (ln(2.57) - ln(1.04))/3.92 = (0.94391 - 0.03922)/3.92 = 0.23079.
+      dose_h and referent_h entered as tertile midpoints of the printed ranges.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = harm. This is the only OBJECTIVELY measured (accelerometer) estimate in the paper and is
+      therefore tier-T4-quality within a T5 study - but note that it is also the SHORTEST follow-up (mean
+      6.4 y) in the oldest participants, so it is the estimate MOST exposed to reverse causation. It has
+      the largest point estimate in the paper. That combination should reduce, not increase, confidence in
+      a causal reading. Also note the questionnaire-accelerometer correlation was only 0.41, so the
+      self-report estimates and this estimate are not measuring the same thing.
+    covariates: ["age (timescale)", "sex", "ethnicity", "education", "marital status", "alcohol", "physical activity", "smoking", "fruit and vegetable consumption", "BMI", "hypertension", "diabetes", "cardiovascular disease", "GHQ depression", "CNS medications"]
+    followup_years: 6.4
+    cohort_family: "Whitehall_II"
+    quote: "The analysis of these data using tertiles, with the second tertile as the reference (6 h 14 min–7 h per night), showed sleep duration in the first tertile (1 h 16 min–6 h 13 min) to be associated with an increased risk of dementia (HR = 1.63, 95% CI = 1.04–2.57), while there was no association with dementia in the highest tertile (7 h 1 min–10 h 6 min), Table 6 ."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Among the strongest cohort studies available for this question: 25-year follow-up, repeated sleep
+    measures at three ages, dementia ascertained by linkage to national hospital, mental health and
+    mortality registers, an accelerometer sub-study, and inverse-probability weighting for missing data.
+    Remaining concerns that bear directly on interpretation: (1) exposure is self-reported for the main
+    analyses and correlates only r = 0.41 with accelerometry in the same people; (2) the cohort is British
+    civil servants, not a general population; (3) 521 cases across many strata means several key
+    subgroup CIs touch the null; (4) the study CANNOT rule out reverse causation for the age-60 and age-70
+    exposures because mean age at diagnosis was 77.1 y and the prodrome of dementia is estimated at 15-20
+    years; (5) residual confounding by an unmeasured common cause of short sleep and dementia is
+    untestable here.
+funding: "UK Medical Research Council, British Heart Foundation, US NIA (see paper)"
+notes: >
+  THE HEADLINE EPIDEMIOLOGICAL STUDY, and the anchor for the "short sleep in midlife raises dementia risk"
+  claim. Key facts for the pooler: 7959 participants, 521 diagnosed dementia cases, mean follow-up 24.6
+  (SD 7.0) years from age 50. Verbatim: "Among these participants, 521 developed dementia over a mean
+  follow-up period of 24.6 (SD = 7.0) years, the follow-up being 25.7 (SD = 5.1) years in dementia cases
+  and 24.6 (SD = 7.1) years in non-cases. ... Mean age at diagnosis was 77.1 (SD = 5.6; range =
+  53.4–87.6) years."
+  EXPOSURE AGE 50-70. NOTHING IN THIS STUDY MEASURES SLEEP BEFORE AGE 45. The youngest exposure
+  assessment is at mean age 50.6 y (SD 2.6), i.e. more than three decades older than the subject.
+  ON REVERSE CAUSATION, the authors are explicit that it is the central threat and that they addressed it
+  by exposure timing rather than by excluding early cases. Verbatim: "Dementia at older ages is
+  characterized by a long preclinical period 9 , 20 , and studies with a follow-up of 10 years are likely
+  to be subject to reverse causation bias, whereby the putative risk factor is affected by the disease
+  process in dementia." And on a specific prior cohort: "In a large-scale Swedish cohort of 28,775
+  individuals aged 65 years and older, the association between long sleep duration and dementia over a
+  13-year follow-up was completely attenuated after cases occurring in the first 5 years of follow-up were
+  excluded from the analysis, highlighting the role of reverse causation bias 15 ."
+  CRITICALLY: Sabia 2021 does NOT report a lag analysis that excludes early cases for its own SHORT sleep
+  estimates. Its sensitivity analyses were inverse-probability weighting for missing data, APOE
+  adjustment, and an Alzheimer's-proxy outcome definition - none of which addresses reverse causation.
+  The prodromal question for short sleep is therefore left open by this paper and must be answered from
+  howard2024.yaml and vanwanrooij2025.yaml, which disagree with each other.
+shard: "s14_dementia_amyloid"

@@ -1,0 +1,217 @@
+study_id: klerman2005_adlib_sleep_need
+citation: "Klerman EB, Dijk DJ. Interindividual variation in sleep duration and its association with sleep debt in young adults. Sleep. 2005;28(10):1253-1259."
+doi: "10.1093/sleep/28.10.1253"
+pmid: "16295210"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC1351048/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Interindividual Variation in Sleep Duration and Its Association With Sleep Debt in Young Adults"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 17
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [18, 32]
+  pct_female: 58.8
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  # ===== THE HEADLINE: EVERY SUBJECT SLEPT MORE THAN HIS/HER HABITUAL DURATION ON NIGHT 1 =====
+  - outcome_domain: sleep_need
+    outcome_construct: first_night_tst_increase_under_16h_sleep_opportunity
+    exposure:
+      type: sleep_extension
+      dose_h: 16.0
+      referent_h: null
+      duration_days: 1
+      contrast_label: "total sleep time on day 1 of a 16 h/day sleep opportunity (12 h nocturnal + 4 h midday) minus the subject's own habitual bedrest duration measured over the preceding week"
+    scale: hours
+    unit: "hours of additional total sleep time"
+    value: 4.9
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: 'On the first day of extended sleep opportunity, the total sleep time of all individuals was greater than their habitual bedrest duration; the average increase in total sleep time was 4.9 hours (P = 0.001).' No SD or SE is reported for the mean increase, so se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = slept this many hours MORE than habitual. A 4.9 h first-night rebound in healthy 18-32 year olds who were NOT complaining of sleepiness is the magnitude of the latent sleep debt these young adults were carrying."
+    covariates: []
+    followup_years: null
+    cohort_family: BWH_bedrest_extension
+  - outcome_domain: sleep_need
+    outcome_construct: tst_on_third_day_of_16h_sleep_opportunity
+    exposure:
+      type: sleep_extension
+      dose_h: 16.0
+      referent_h: null
+      duration_days: 3
+      contrast_label: "average total sleep time on the THIRD (last) day of the 16 h/day bedrest-extension protocol"
+    scale: hours
+    unit: "hours of total sleep time per 24 h"
+    value: 10.2
+    se: null
+    ci: null
+    conversion_formula: "Reported directly in the Discussion: 'On average, volunteers slept 10.2 hours on the third day of bedrest extension in this protocol.' No dispersion reported, se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Still 10.2 h at day 3, i.e. STILL WELL ABOVE any plausible steady-state sleep need. This is the key protocol-design number: 3 days of ad-lib sleep is NOT long enough to reach the asymptote, so 3 days cannot be used to measure sleep need."
+    covariates: []
+    followup_years: null
+    cohort_family: BWH_bedrest_extension
+  - outcome_domain: sleep_need
+    outcome_construct: habitual_bedrest_duration_range_in_young_adults
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: 7
+      contrast_label: "range of habitual bedrest duration across 17 healthy 18-32 year olds, from 1 week of diary + time-stamped call-ins + wrist actigraphy"
+    scale: hours
+    unit: "hours (range of habitual bedrest duration)"
+    value: 4.2
+    se: null
+    ci: [6.1, 10.3]
+    conversion_formula: "Reported directly: 'The habitual bedrest duration varied from 6.1 to 10.3 hours.' value = 10.3 - 6.1 = 4.2 h span; the ci field carries the reported MIN and MAX (not a confidence interval - flagged because the schema has no range field)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Descriptive spread, not a harm. A 4.2 h spread in habitual duration among healthy young adults is why sleep need must be measured for THIS subject rather than assumed from a population mean."
+    covariates: []
+    followup_years: null
+    cohort_family: BWH_bedrest_extension
+  - outcome_domain: sleep_need
+    outcome_construct: mslt_short_latency_prevalence_in_healthy_young_adults
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: null
+      contrast_label: "proportion of healthy young adults with at least one MSLT sleep latency under 5 minutes on their habitual sleep schedule"
+    scale: probability
+    unit: "proportion of subjects"
+    value: 0.824
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: '14 of the 17 volunteers had at least one sleep latency (out of five possible opportunities) less than 5 minutes'. 14/17 = 0.8235."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more pathologically sleepy. 82% of healthy, non-complaining 18-32 year olds on their OWN habitual schedule fell asleep in under 5 minutes at least once - a level conventionally read as severe sleepiness. Objective evidence that the normal young-adult baseline is already sleep-deprived."
+    covariates: []
+    followup_years: null
+    cohort_family: BWH_bedrest_extension
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Small n (17), single-arm within-subject extension with no control condition, no blinding (impossible). Habitual bedrest duration was derived partly from SELF-REPORT (diary + time-stamped phone call-ins) corroborated by wrist actigraphy, not from PSG, so the habitual reference is measured less precisely than the inpatient TST. One protocol deviation is disclosed by the authors (one subject with HBD 6.8 h was given 7.4 h on the first inpatient night in error). The 3-day extension is too short to identify the asymptote, which the authors acknowledge; that limitation is itself the finding I extract. Age 18-32 y with 10/17 women is a good young-adult match but not a male-adolescent match."
+funding: "NIH; Brigham and Women's Hospital General Clinical Research Center (see paper)"
+notes: |
+  ===== PART C10: THE AD-LIBITUM / BEDREST-EXTENSION PROTOCOL, SPECIFIED =====
+  Full text from PMC1351048. This is the best age-matched ad-lib protocol in my set (18-32 y) and the
+  one whose METHODS section is detailed enough to copy verbatim into a protocol. Its main limitation is
+  that 3 days is too short; Kitamura 2016 (9 days at 12 h TIB) supplies the missing asymptote.
+
+  THE PROTOCOL, VERBATIM - THIS IS THE SPECIFICATION
+  --------------------------------------------------
+  Pre-study washout of confounders:
+  "For three weeks prior to admission, study volunteers were instructed to abstain from the use of all
+  medication, health food supplements, caffeine, tobacco and alcohol. Volunteers were tested for the
+  presence of these prohibited substances at least once during screening and again at inpatient
+  admission."
+
+  How habitual duration was established (Part C9 relevance - note it is 2 weeks, then a 1-week
+  stabilisation at the derived schedule):
+  "Volunteers were not instructed to change their sleep-wake habits. For two weeks, all self-selected
+  sleep-wake times were reported in a daily diary and telephone call-in times to a time-stamped machine
+  at every sleep time and at every wake time. Very few naps were reported, and they were included in
+  further calculations. These self-selected sleep-wake times were averaged to produce the schedule for
+  the following week, which was also the week before admission. This last-week schedule included only
+  nocturnal sleep episodes. The actual sleep and wake times, as determined by self-report, telephone
+  call-in times, and wrist actigraphy, during this last week were used to compute habitual bedrest
+  duration (HBD) and also to schedule the timing and duration of the first nocturnal sleep episode after
+  admission."
+
+  The compliance criterion (a usable, quantitative adherence rule):
+  "To be eligible for the inpatient portion of the study, volunteers needed to maintain the scheduled
+  sleep time and wake time within 30 minutes; volunteers were allowed a maximum of two minor deviations
+  (out of a total of 14 sleep and wake times) from this schedule, and no naps."
+
+  The extension protocol itself:
+  "All inpatient events were scheduled relative to the volunteer's habitual sleep and wake time. All
+  volunteers received a sleep opportunity at the same time and of a duration equal to their HBD for
+  their first inpatient night..."
+  "On the second inpatient day, volunteers underwent a Multiple Sleep Latency Test (MSLT) protocol
+  beginning two hours after awakening. During each of five tests scheduled two hours apart, a volunteer
+  is instructed to lie quietly with eyes closed and try to fall asleep: latency to any stage of sleep is
+  reported. The volunteer is awakened when specific sleep criteria are met. If the volunteer is still
+  awake after 20 minutes, the test is terminated."
+  "For the next three 24-hr days, the volunteers were placed on a bedrest extension protocol with 16
+  hours of sleep opportunity: 12 hours centered at mid-habitual nocturnal sleep episode and 4 hours
+  centered 12 hours opposite this. Beginning with the second inpatient day, volunteers were exposed to
+  15 lux of light when awake and <0.01 lux when asleep."
+
+  THE RESULTS
+  -----------
+  "The habitual bedrest duration varied from 6.1 to 10.3 hours."
+  "On the first day of bedrest extension, the average (across all volunteers) measures of sleep were
+  higher than for the first sleep episode: TST increased 4.9 hours (p=0.001), REM increased 1.2 hours
+  (p=0.001), and SWS increased 0.5 hours (p=0.001). The TST of every volunteer was higher than their HBD
+  during the first day of bedrest extension."
+  "The average amounts of TST decreased across the first three days of the bedrest extension protocol"
+  and, from the abstract, "The increase in total sleep time declined across the 3 day bedrest-extension
+  protocol (P = 0.003 for trend)."
+  "The individual values were not related to HBD for the first two days; only during the third day of
+  bedrest extension were there significant regressions between HBD and Sleep Efficiency (p=0.004), TST
+  (p=0.005) and Wake (p=0.004)."
+  "During this 3rd day of bedrest extension, volunteers with HBD less than 9 hours continued to have TST
+  more than their HBD, whereas those volunteers with HBD greater than ~9.5 hours had TST less than their
+  HBD. Four of the volunteers with HBD < 9 hours had TST of over 11 hours on the 3rd day of bedrest
+  extension."
+  "Even after three days of extended sleep opportunities, TST was considerably longer than the HBD in
+  many of the volunteers, with two volunteers with HBD less than 7 hours sleeping more than 11 hours on
+  this third day."
+  MSLT: "All volunteers whose HBD was less than 9.3 hours fell asleep on all five sleep opportunities
+  within the MSLT... 14 of the 17 volunteers had at least one sleep latency (out of five possible
+  opportunities) less than 5 minutes... There were significant negative regression relationships between
+  HBD and the number of times a volunteer fell asleep (p=0.02, R2 = 0.31) and between HBD and the number
+  of times a volunteer fell asleep in less than 5 minutes (p=0.0004, R2 =0.58). There was a significant
+  positive regression relationship between HBD and the median sleep latency of the five sleep
+  opportunities within the MSLT (p=0.04, R2 = 0.24)."
+
+  THE AUTHORS' CONCLUSION - directly relevant to the report's core claim:
+  "HBD appears to be an inaccurate reflection of sleep need in young adults."
+  "This finding further illustrates that shorter HBDs provide inadequate TST for most individuals in this
+  age-group. Wehr et al. reported an asymptotic sleep duration of 8.2 hours, whereas Rajaratnam et al, in
+  a study in which volunteers were given consecutive 16-hr sleep opportunity, reported an asymptotic
+  sleep duration of 8.7 hours."
+  "The extant sleep debt of incoming volunteers should be considered in sleep deprivation and other
+  experiments concerning timing, quantity and quality of sleep."
+
+  PART B6 BONUS - the paper's own citation of self-assessment failure in short sleepers:
+  "In a study of HBD and sleepiness, individuals with HBD <6 hours had significantly shorter MSLT
+  latencies than those with HBD > 9 hours. The two groups also differed in the relationship between MSLT
+  latencies and subjective sleepiness: the MSLT latencies of individuals with HBD < 6 hours were not
+  correlated with their subjective ratings on the Epworth Sleepiness Scale, while the latencies of those
+  with HBD > 9 hours were inversely correlated with subjective ratings on the Epworth Sleepiness Scale.
+  This suggests that individuals with short HBD may not accurately self-assess their sleepiness."
+  NOTE: this is Klerman & Dijk describing SOMEONE ELSE'S study (their reference 23) - it is SECONDHAND
+  and I have not verified the primary source, so it must be cited as reported-by-Klerman or dropped. It
+  is nonetheless the most on-target statement I found for the specific sub-claim that HABITUALLY SHORT
+  SLEEPERS - which is exactly what the index subject is - lose the correlation between how sleepy they
+  feel and how sleepy they are.
+
+  ASYMPTOTIC SLEEP-NEED ESTIMATES ASSEMBLED ACROSS SOURCES (for the report's sleep-need number)
+  --------------------------------------------------------------------------------------------
+    Klerman & Dijk 2005, 16 h/day x 3 days, ages 18-32 : still 10.2 h at day 3, NO asymptote reached
+    Kitamura 2016, 12 h TIB x 9 days, ages 20-26       : asymptote (OSD) 8.41 +/- 0.18 h, range 7.29-9.26
+    Wehr et al. (as cited by Klerman & Dijk)           : asymptote 8.2 h
+    Rajaratnam et al. (as cited by Klerman & Dijk)     : asymptote 8.7 h
+    Klerman & Dijk as cited by Kitamura 2016           : young 8.9 h, elderly 7.4 h
+    Van Dongen 2003 (my vandongen2003 record)          : 8.16 h implied by PVT dose-response
+  Only the first two are firsthand in my shard; the Wehr and Rajaratnam figures are secondhand via
+  Klerman & Dijk and must be labelled as such. The convergence on roughly 8.2-8.9 h for young adults is
+  nonetheless striking, and the protocol should treat ~8.5 h as the prior and MEASURE the subject's own.
+shard: "s20_pvt_psychometrics"

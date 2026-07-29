@@ -1,0 +1,92 @@
+study_id: lovato2014
+citation: "Lovato N, Gradisar M. A meta-analysis and model of the relationship between sleep and depression in adolescents: recommendations for future research and clinical practice. Sleep Med Rev. 2014 Dec;18(6):521-529."
+doi: "10.1016/j.smrv.2014.03.006"
+pmid: "24857255"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "A meta-analysis and model of the relationship between sleep and depression in adolescents: recommendations for future research and clinical practice."
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: null
+n_studies_pooled: 23
+population:
+  age_mean: null
+  age_range: [12, 20]
+  pct_female: null
+  country: "multinational"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: direction_of_sleep_depression_arrow_qualitative
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep DISTURBANCE (not duration) as precursor of depression vs depression as precursor of sleep disturbance, 23 adolescent studies (12-20 y)"}
+    scale: probability
+    unit: "vote-count direction, not a pooled effect size"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "NO numeric pooled effect size is recoverable from the abstract. Value 1.0 is a placeholder encoding 'forward arrow favoured' so the record can be schema-valid; it MUST NOT be pooled as an effect size. se: null because none is derivable."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "The review concluded the forward arrow (sleep disturbance -> depression) is supported and the reverse arrow (depressive symptoms -> sleep disturbance) is NOT well supported. This is the opposite conclusion to alvaro2013 and to roberts2014's own data, so it should be treated as one vote, not as settled."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple_cohorts"
+    quote: "Overall effect sizes from longitudinal and treatment studies suggest sleep disturbance acts as a precursor to the development of depression. ... Little support was found for a predictive role of depressive symptoms in the development of sleep disturbance."
+  - outcome_domain: psychiatric
+    outcome_construct: sleep_architecture_in_depressed_adolescents
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "depressed adolescents vs non-clinical or remitted adolescents, PSG and subjective sleep variables"}
+    scale: probability
+    unit: "qualitative direction; magnitudes not extractable from abstract"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "None. Abstract reports statistical significance and direction but no weighted mean differences with CIs; the article text contains them but is paywalled and no OA copy was located."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Depressed adolescents show MORE wakefulness in bed and LIGHTER sleep -- i.e. depression degrades sleep CONTINUITY and ARCHITECTURE, not sleep OPPORTUNITY. This is the single most important qualitative fact in this record for our subject; see notes."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple_cohorts"
+    quote: "Adolescents with depression experienced significantly more wakefulness in bed (sleep onset latency, wake after sleep onset, number of awakenings and sleep efficiency), lighter sleep (more stage 1), and reported more subjective sleep disturbance."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Narrative-plus-quantitative hybrid; only 7 studies addressed the forward prospective arrow and only 3 the reverse arrow, so the asymmetric conclusion ('little support' for the reverse arrow) rests on very few studies and is likely underpowered rather than genuinely null. Vote-counting logic. Exposure is sleep DISTURBANCE/architecture, largely not sleep DURATION."
+funding: null
+notes: |
+  THIS RECORD CONTRIBUTES NO POOLABLE EFFECT SIZE. I could not retrieve the article text (Elsevier
+  paywall; Unpaywall found no OA location), and the abstract reports significance and direction
+  without weighted mean differences or CIs. Per the extraction rules I have therefore set se: null
+  and used placeholder values that are explicitly flagged as non-poolable in conversion_formula. I am
+  including the record anyway because it is a named target and because its two qualitative findings
+  bear directly on the reverse-causation question, which is this shard's central task.
+
+  WHY THIS PAPER IS THE WRONG EXPOSURE FOR OUR SUBJECT -- THE CENTRAL DISTINCTION.
+  Every sleep variable that distinguishes depressed from non-depressed adolescents in this
+  meta-analysis is a measure of sleep CONTINUITY or DEPTH, not sleep OPPORTUNITY: sleep onset
+  latency, wake after sleep onset, number of awakenings, sleep efficiency, and percentage stage 1.
+  These are the signature of insomnia. Our subject's exposure is the opposite construct: he has a
+  short time IN BED because of workload, with (as far as we know) normal sleep efficiency and short
+  latency -- in fact chronically sleep-restricted adolescents typically show SHORTER latency and
+  HIGHER efficiency than normal, because they are homeostatically loaded. So the adolescent whose
+  profile this meta-analysis describes is, on the sleep-architecture axis, close to our subject's
+  mirror image. Importing this literature's association wholesale into a risk estimate for him would
+  be an exposure-misclassification error, and it would push the estimate upward.
+
+  THE 23-STUDY SPLIT, WHICH IS ITSELF THE EVIDENCE OF ASYMMETRIC ATTENTION:
+    - 13 studies: cross-sectional association between depression and sleep disturbance
+    -  7 studies: prospective sleep disturbance -> depression
+    -  3 studies: prospective depression -> sleep disturbance
+  The reverse arrow was tested in 3 studies. The review's conclusion that there is "little support"
+  for it should therefore be read as "little evidence was gathered about it," not as evidence of
+  absence. Contrast with alvaro2013 (a systematic review specifically designed to test
+  bidirectionality) and roberts2014 (both arrows in the SAME adolescent sample, where the reverse
+  arrow for major depression was actually the LARGER of the two: OR 4.28 reverse vs OR 3.76 forward).
+  I weight roberts2014 far above lovato2014 on the direction question because it avoids the
+  literature-selection asymmetry entirely.
+shard: "s12_psychiatric"

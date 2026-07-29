@@ -1,0 +1,120 @@
+study_id: you2024
+citation: "You J, Guo Y, Wang YJ, Zhang Y, Wang HF, Wang LB, Kang JJ, Feng JF, Yu JT, Cheng W. Clinical trajectories preceding incident dementia up to 15 years before diagnosis: a large prospective cohort study. Molecular Psychiatry. 2024 Oct;29(10):3097-3105."
+doi: "10.1038/s41380-024-02570-0"
+pmid: "38678085"
+url: "https://pubmed.ncbi.nlm.nih.gov/38678085/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Clinical trajectories preceding incident dementia up to 15 years before diagnosis: a large prospective cohort study."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 7620
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [40, 69]
+  pct_female: null
+  country: "UK"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: sleep_duration_association_with_dementia_confined_to_3_to_5_years_before_diagnosis
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "sleep duration (drowsiness domain) as a PREDICTOR measured 3-5 years before dementia diagnosis; cases matched 1:10 to controls"}
+    scale: log_or
+    unit: null
+    value: 0.122218
+    se: 0.044870
+    ci: [0.039221, 0.215111]
+    conversion_formula: >
+      OR = 1.13, 95% CI 1.04-1.24. log_or = ln(1.13) = 0.122218;
+      se = (ln(1.24) - ln(1.04))/3.92 = (0.215111 - 0.039221)/3.92 = 0.044870.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = sleep duration discriminates future dementia cases from controls, BUT ONLY INSIDE A 3-5 YEAR
+      PRE-DIAGNOSIS WINDOW. THE TIME-STRUCTURE IS THE FINDING, NOT THE MAGNITUDE. This analysis screened 400
+      candidate predictors against consecutive pre-diagnosis timeframes out to 15 years in 7,620 incident
+      dementia cases. Grip strength, lung function, kidney function, coronary heart disease, stroke, diabetes
+      and multiple mental disorders were all detectable at 15 years. Sleep duration was NOT. It appeared only
+      at 3-5 years, in the same late bin as weight loss and inactivity - the classic terminal-prodrome
+      cluster. Interpreted as a risk factor this is a small OR; interpreted as a biomarker timing experiment
+      it is direct evidence that the sleep-dementia signal in a half-million-person cohort is a LATE
+      PRODROMAL PHENOMENON, not a decades-long causal exposure.
+    covariates: ["matched 1:10 case-control within cohort", "adjusted ORs with FDR correction across 400 predictors"]
+    followup_years: 13.7
+    cohort_family: "UK_Biobank"
+    quote: "Inadequate activity (3-5 year, overall time of activity, OR 0.82 [0.73-0.92]), drowsiness (3-5 year, sleep duration, OR 1.13 [1.04-1.24]) and weight loss (0-5 year, weight, OR 0.9 [0.83-0.98]) only exhibited associations within five years before the diagnosis."
+  - outcome_domain: neurodegeneration
+    outcome_construct: comparator_grip_strength_detectable_15_years_before_diagnosis
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "hand grip strength measured up to 15 years before dementia diagnosis - included as the CALIBRATION comparator for what a genuine 15-year-lead signal looks like in this dataset"}
+    scale: log_or
+    unit: null
+    value: -0.430783
+    se: 0.015704
+    ci: [-0.462035, -0.400478]
+    conversion_formula: >
+      OR = 0.65, 95% CI 0.63-0.67. log_or = ln(0.65) = -0.430783;
+      se = (ln(0.67) - ln(0.63))/3.92 = (-0.400478 - (-0.462035))/3.92 = 0.015704.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NEGATIVE = weaker grip predicts dementia. NOT A SLEEP EFFECT. Carried purely as the yardstick: in the
+      same cohort, same method, same 15-year window, grip strength gives log_or = -0.43 with an SE of 0.016,
+      while sleep duration gives nothing at all at 15 years and log_or = +0.12 at 3-5 years. The study was
+      abundantly powered to detect a 15-year sleep signal and did not find one. Do not pool this effect into
+      any sleep estimate.
+    covariates: ["matched 1:10 case-control within cohort", "adjusted ORs with FDR correction across 400 predictors"]
+    followup_years: 13.7
+    cohort_family: "UK_Biobank"
+    quote: "Associations up to 15 years preceding the diagnosis comprised declined physical strength (hand grip strength, OR 0.65 [0.63-0.67]), lung dysfunction (peak expiratory flow, OR 0.78 [0.76-0.81]) and kidney dysfunction (cystatin C, OR 1.13 [1.11-1.16])"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Very large (UK Biobank, 7,620 incident dementia cases, median 13.7 y follow-up), prespecified 400-predictor
+    screen with FDR correction and explicit consecutive-timeframe design, which is exactly the design needed
+    to date a prodromal signal. Concerns: (1) ABSTRACT ONLY - the shard could not retrieve the full text, so
+    the per-timeframe sleep-duration estimates outside the 3-5 y bin are not in hand and the null at 5-15
+    years is inferred from the authors' summary word "only" rather than from a printed non-significant
+    estimate; (2) UK Biobank is a volunteer cohort with well-documented healthy-selection bias; (3) sleep
+    duration is a single self-reported touchscreen item; (4) 400 predictors invites multiplicity even with
+    FDR, though this biases toward finding MORE signals, not fewer, which strengthens the null;
+    (5) the maximum lookback is 15 years, so this study cannot speak to windows beyond 15 years and therefore
+    cannot exonerate or implicate adolescent exposure.
+funding: "see paper (National Natural Science Foundation of China; Shanghai Municipal Science and Technology)"
+notes: >
+  THE CLEANEST AVAILABLE QUANTIFICATION OF THE REVERSE-CAUSATION WINDOW, and the reason this shard treats the
+  prodromal explanation as the leading one rather than as a caveat.
+  DESIGN, VERBATIM: "Dementia has a long prodromal stage with various pathophysiological manifestations;
+  however, the progression of pre-diagnostic changes remains unclear. We aimed to determine the evolutional
+  trajectories of multiple-domain clinical assessments and health conditions up to 15 years before the
+  diagnosis of dementia." And: "Each demented subject was matched with 10 healthy controls. We performed
+  logistic regressions on 400 predictors covering a comprehensive range of clinical assessments or health
+  conditions. Their evolutional trajectories were quantified using adjusted odds ratios (ORs) and
+  FDR-corrected p-values under consecutive timeframes preceding the diagnosis of dementia."
+  CASES AND FOLLOW-UP, VERBATIM: "During a median follow-up of 13.7 [Interquartile range, IQR 12.9-14.2]
+  years until July 2022, 7620 subjects were diagnosed with dementia."
+  WHY THIS MATTERS MORE THAN ITS EFFECT SIZE. Sabia 2021 could not separate causation from prodrome because
+  it had no lag analysis for short sleep. Howard 2024 and van Wanrooij 2025 attempted the separation with
+  follow-up stratification and reached OPPOSITE conclusions. You 2024 attacks it a third way - by dating each
+  signal's first appearance in a single large cohort - and places sleep duration in the terminal 3-5 year bin
+  alongside weight loss, while hard peripheral markers appear at 15 years. Three methods, and the one with the
+  most direct temporal resolution says the sleep signal is late.
+  IMPORTANT LIMIT ON HOW FAR THIS CAN BE PUSHED: a 15-year lookback in a cohort recruited at ages 40-69
+  cannot address whether sleep at age 19 matters. A null at 5-15 years pre-diagnosis is evidence against a
+  late-midlife causal window; it is silent about a 50-year window. It reduces the plausibility of the
+  epidemiological link being causal at all, which indirectly reduces the plausibility of an adolescent
+  version of it, but it is not direct evidence on adolescence.
+  ONE DATA-QUALITY FLAG FOR THE POOLER: the abstract prints the stroke result as "stroke (OR 2.34
+  [2.1-1.37])", which is an impossible interval (upper bound below lower bound and below the point estimate) -
+  evidently a typesetting error for something like [2.1-2.61]. That effect was NOT extracted. It is recorded
+  here only so the pooler knows this abstract contains at least one corrupted interval and does not silently
+  ingest it from another shard.
+shard: "s14_dementia_amyloid"

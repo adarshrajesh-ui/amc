@@ -1,0 +1,155 @@
+study_id: shan2015
+citation: "Shan Z, Ma H, Xie M, Yan P, Guo Y, Bao W, Rong Y, Jackson CL, Hu FB, Liu L. Sleep duration and risk of type 2 diabetes: a meta-analysis of prospective studies. Diabetes Care. 2015 Mar;38(3):529-37."
+doi: "10.2337/dc14-2073"
+pmid: "25715415"
+url: "https://pubmed.ncbi.nlm.nih.gov/25715415/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep duration and risk of type 2 diabetes: a meta-analysis of prospective studies."
+access_tier: abstract_only
+secondhand_via: null
+design: dose_response_meta_analysis
+tier: T5
+n: 482502
+n_studies_pooled: 10
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational (pooled prospective cohorts)"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: incident_type_2_diabetes_per_hour_shorter_sleep_below_7h
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: 7, duration_days: null, contrast_label: "each 1 h shorter sleep duration among individuals sleeping <7 h/day, referent 7 h/day"}
+    scale: log_rr
+    unit: "log RR per 1 h shorter sleep below 7 h/day"
+    value: 0.086178
+    se: 0.025648
+    ci: [0.035907, 0.136449]
+    conversion_formula: "Published RR 1.09 (95% CI 1.04-1.15). log_rr = ln(1.09) = 0.086178. se = (ln(1.15) - ln(1.04))/3.92 = (0.139762 - 0.039221)/3.92 = 0.025648. Back-check: exp(0.086178 +/- 1.96*0.025648) = 1.037 to 1.146, reproducing the published CI. ci field is on the LOG scale."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM (higher incident T2D risk per hour of sleep lost below 7 h)"
+    covariates: ["adjusted estimates from contributing cohorts pooled; the specific covariate sets are not retrievable from the abstract"]
+    followup_years: null
+    cohort_family: "pooled_multiple"
+    quote: "Compared with 7-h sleep duration per day, the pooled relative risks for type 2 diabetes were 1.09 (95% CI 1.04-1.15) for each 1-h shorter sleep duration among individuals who slept <7 h per day and 1.14 (1.03-1.26) for each 1-h increment of sleep duration among individuals with longer sleep duration."
+  - outcome_domain: metabolic
+    outcome_construct: incident_type_2_diabetes_at_6h_vs_7h_DERIVED
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7, duration_days: null, contrast_label: "6 h/day vs 7 h/day (DERIVED from the published per-hour RR, k=1)"}
+    scale: log_rr
+    unit: "log RR, 6 h vs 7 h"
+    value: 0.086178
+    se: 0.025648
+    ci: [0.035907, 0.136449]
+    conversion_formula: "DERIVED, NOT DIRECTLY PUBLISHED. k=1 hour below the 7 h referent, so log_rr = 1 x ln(1.09) = 0.086178, se = 1 x 0.025648. RR = 1.09, 95% CI 1.037-1.146. This is trivially equal to the per-hour estimate; it is recorded separately only so the pooler has an explicit 6 h contrast."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. RR 1.09 (1.04-1.15) at 6 h vs 7 h."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple"
+    quote: "the pooled relative risks for type 2 diabetes were 1.09 (95% CI 1.04-1.15) for each 1-h shorter sleep duration among individuals who slept <7 h per day"
+  - outcome_domain: metabolic
+    outcome_construct: incident_type_2_diabetes_at_5h_vs_7h_DERIVED
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: null, contrast_label: "5 h/day vs 7 h/day (DERIVED by log-linear extrapolation of the published per-hour RR, k=2)"}
+    scale: log_rr
+    unit: "log RR, 5 h vs 7 h"
+    value: 0.172355
+    se: 0.051297
+    ci: [0.071814, 0.272897]
+    conversion_formula: "DERIVED, NOT DIRECTLY PUBLISHED. Assumes the reported per-hour effect is log-linear below 7 h: log_rr = 2 x ln(1.09) = 0.172355; se = 2 x 0.025648 = 0.051297 (perfectly correlated increments, so the SE scales linearly - this is the CONSERVATIVE choice; if increments were independent the SE would be sqrt(2)x smaller). Implied RR = 1.09^2 = 1.188, 95% CI 1.074-1.314. ci field is on the LOG scale."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = HARM. Derived RR 1.19 (1.07-1.31) at 5 h vs 7 h."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple"
+    quote: "the pooled relative risks for type 2 diabetes were 1.09 (95% CI 1.04-1.15) for each 1-h shorter sleep duration among individuals who slept <7 h per day"
+  - outcome_domain: metabolic
+    outcome_construct: incident_type_2_diabetes_per_hour_longer_sleep_above_optimum
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: 7, duration_days: null, contrast_label: "each 1 h INCREMENT of sleep among long sleepers, referent 7 h/day"}
+    scale: log_rr
+    unit: "log RR per 1 h longer sleep among long sleepers"
+    value: 0.131028
+    se: 0.051417
+    ci: [0.030459, 0.231597]
+    conversion_formula: "Published RR 1.14 (1.03-1.26). log_rr = ln(1.14) = 0.131028; se = (ln(1.26)-ln(1.03))/3.92 = 0.051417. Back-check: exp gives 1.031-1.261, reproducing the published CI."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM at the LONG end. Included because it defines the U-shape and because the subject's occasional 10-11 h weekend nights sit on this limb."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple"
+    quote: "1.14 (1.03-1.26) for each 1-h increment of sleep duration among individuals with longer sleep duration."
+  - outcome_domain: metabolic
+    outcome_construct: optimal_sleep_duration_nadir_of_u_shaped_curve
+    exposure: {type: descriptive, dose_h: 7.5, referent_h: null, duration_days: null, contrast_label: "sleep duration category with the lowest observed T2D risk"}
+    scale: hours
+    unit: "hours per day at the nadir of the risk curve"
+    value: 7.5
+    se: null
+    ci: [7, 8]
+    conversion_formula: "The paper reports the nadir as the 7-8 h/day CATEGORY. 7.5 recorded as the midpoint of that published category; the ci field holds the published category bounds [7,8], NOT a confidence interval."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive optimum. Defines the referent against which the subject's weekday 5-6 h and weekend 7-8 h should be scored - note his WEEKEND sleep is already at the optimum."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple"
+    quote: "A U-shaped dose-response relationship was observed between sleep duration and risk of type 2 diabetes, with the lowest risk observed at a sleep duration category of 7-8 h per day."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Well-conducted dose-response meta-analysis using both semiparametric and parametric methods, published in a top diabetes journal, restricted to PROSPECTIVE studies (so reverse causation from prevalent diabetes is limited). Fundamental limitations that cap its causal weight: (1) exposure is SELF-REPORTED sleep duration in essentially all contributing cohorts, which biases toward the null and misclassifies heavily; (2) it pools adjusted estimates with heterogeneous and incomplete covariate sets, so residual confounding by BMI, physical activity, depression, socioeconomic position and undiagnosed sleep apnoea is unaddressed; (3) no individual-participant data, so no ability to check the shape at the extremes or to stratify by age. Only 10 articles / 11 reports."
+funding: "Not retrievable from the abstract (Huazhong University of Science and Technology / Harvard School of Public Health authorship; funder left unstated rather than guessed)."
+notes: |
+  *** THIS IS THE PRIMARY LONG-RUN RISK ANCHOR FOR THE SHARD. *** It is the dose-response
+  meta-analysis the task asked for, and the seed author list was essentially correct (Shan, Ma, Xie,
+  ... Hu, Liu - note the third-position author is Xie and the fourth is Yan, not Kong; "Kong" does
+  not appear in the author list).
+
+  SCALE OF THE EVIDENCE: 10 articles / 11 reports; 18,443 incident T2D cases among 482,502
+  participants; follow-up 2.5-16 years.
+
+  SHAPE: U-shaped, nadir at 7-8 h/day. Both limbs are significant. The short limb is 1.09 per hour
+  and the long limb is 1.14 per hour, so on a per-hour basis LONG sleep carries the slightly steeper
+  slope - a point that is usually lost in popular summaries.
+
+  *** THE 5 h AND 6 h POINT ESTIMATES ARE MY DERIVATIONS, NOT PUBLISHED NUMBERS. *** The abstract
+  reports only the per-hour slope; the category-specific RRs live in the paper's figures/tables and
+  the full text is paywalled (unpaywall is_oa=false, no PMC deposit, Diabetes Care 2015). I therefore
+  extrapolated log-linearly from the published per-hour RR and labelled both derived records
+  explicitly. The 6 h value is a 1-hour step and is safe. The 5 h value assumes log-linearity two
+  hours below the referent, which the paper's own semiparametric (U-shaped) modelling suggests may
+  UNDERSTATE risk if the curve steepens at the extreme. Treat RR(5h) = 1.19 (1.07-1.31) as an
+  approximation with an unknown, probably downward, bias.
+
+  *** AGE TRANSPORTABILITY IS THE CENTRAL WEAKNESS FOR OUR SUBJECT. *** These are adult cohorts
+  followed for incident T2D over 2.5-16 years, with typical baseline ages in midlife; the abstract
+  reports no age distribution and none of the contributing cohorts enrolled adolescents. Population
+  is therefore scored poor_midlife. Applying an RR estimated in 40-60 year olds to an 18-year-old
+  requires assuming the hazard ratio is age-invariant, which is NOT established and which liu2025
+  actively contradicts (it found the association STRONGEST at ages 30-39 and attenuating thereafter,
+  with no data below 30). The direction of that age gradient suggests the RR could be as large or
+  larger in youth, but nobody has measured it.
+
+  *** WHAT THIS RR DOES AND DOES NOT MEAN FOR THE SUBJECT. *** A relative risk is not a risk. An
+  18-year-old male's absolute short-horizon T2D risk is very low, so multiplying it by ~1.19 moves
+  the absolute probability very little over the next decade. The exposure also does not persist by
+  assumption: these cohorts measured habitual sleep ONCE at baseline and treated it as permanent
+  (see cappuccio2010's own critique: "A single measure of exposure may not fully capture the
+  sustained effects"). The subject's 3 years of exposure is a transient episode, not a lifetime
+  phenotype, so applying the full cohort RR to him assumes he will keep sleeping 5-6 h for decades.
+  That assumption, not the RR itself, dominates any lifetime-risk calculation.
+
+  *** ALSO NOTE: his weekend sleep of 7-8 h sits exactly at the observed nadir. *** Averaged over a
+  week, 5 x 5.5 h + 2 x 7.5 h = 6.07 h/day, which is only about 1 h below the referent, implying an
+  averaged RR near 1.09 rather than 1.19. Whether the correct exposure metric is the weekly average
+  or the weekday value is unresolved and materially changes the answer; cheung2026 suggests
+  variability itself is harmful, which argues against simple averaging.
+shard: "s07_metabolic"

@@ -1,0 +1,127 @@
+study_id: zitting2018
+citation: "Zitting KM, Munch MY, Cain SW, Wang W, Wong A, Ronda JM, Aeschbach D, Czeisler CA, Duffy JF. Young adults are more vulnerable to chronic sleep deficiency and recurrent circadian disruption than older adults. Sci Rep. 2018;8(1):11052."
+doi: "10.1038/s41598-018-29358-x"
+pmid: "30038272"
+url: "https://doi.org/10.1038/s41598-018-29358-x"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Young adults are more vulnerable to chronic sleep deficiency and recurrent circadian disruption than older adults."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 24
+n_studies_pooled: null
+population:
+  age_mean: 22.42
+  age_range: [18, 27]
+  pct_female: 50.0
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: age_moderation_slow_eye_movements_during_pvt
+    exposure: {type: chronic_restriction, dose_h: 5.6, referent_h: 10, duration_days: 21, contrast_label: "young adults (18-27 y, n=12) vs older adults (55-70 y, n=11), 3 weeks of 5.6 h sleep/24 h with forced desynchrony"}
+    scale: hedges_g
+    unit: null
+    value: 1.024
+    se: 0.402
+    ci: [0.236, 1.812]
+    conversion_formula: "Reported: young 5.0 +/- 0.9 SEM epochs/h (N=12) vs older 2.5 +/- 1.1 (N=11), p = 0.0188 two-tailed. The paper does not state whether '+/-' here is SD or s.e.m.; its figure legends use s.e.m., and neither reading reproduces p = 0.0188 exactly (SD reading gives p ~ 6e-6, s.e.m. reading gives p ~ 0.09), so I derived g from the REPORTED p-value instead of from the ambiguous dispersion: t(21) for two-sided p = 0.0188 is 2.5462; g = t*sqrt(1/n1 + 1/n2)*J, J = 1 - 3/(4*21-1) = 0.96386; g = 2.5462*0.41739*0.96386 = 1.0244; SE = g/t = 0.4023; CI = g +/- 1.96*SE."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = young adults are WORSE (more slow eye movements, i.e. more objective sleepiness intrusion during the vigilance task) than older adults under identical chronic restriction. This is a vulnerability MODIFIER, not a restriction effect: it says the same sleep debt costs an 18-27 year old roughly one standard deviation more objective sleepiness than it costs a 55-70 year old."
+    covariates: ["forced desynchrony cycle", "circadian phase", "time awake"]
+    followup_years: null
+    cohort_family: BWH_Czeisler_CSR_FD
+    quote: "Young participants had significantly more SEMs during the 10-min PVTs (N = 12, SEM epochs per hour = 5.0 +/- 0.9) than older participants (N = 11, SEM epochs per hour = 2.5 +/- 1.1; p = 0.0188 two-tailed)."
+  - outcome_domain: recovery
+    outcome_construct: age_moderation_inadvertent_sleep_during_pvt
+    exposure: {type: chronic_restriction, dose_h: 5.6, referent_h: 10, duration_days: 21, contrast_label: "young vs older, probability of >=1 inadvertent sleep episode during PVT over 3 weeks of 5.6 h/24 h"}
+    scale: hedges_g
+    unit: null
+    value: 1.079
+    se: 0.433
+    ci: [0.231, 1.927]
+    conversion_formula: "Reported chi-square(1, N=23) = 5.49, p = 0.0191. Standard chi-square-to-d transform for a 2x2 table: r = sqrt(chi2/N) = sqrt(5.49/23) = 0.48856; d = 2r/sqrt(1-r^2) = 0.97713/0.87253 = 1.11988; J = 1 - 3/(4*21-1) = 0.96386 -> g = 1.0794. SE_d = sqrt((n1+n2)/(n1*n2) + d^2/(2*(n1+n2))) = sqrt(23/132 + 1.11988^2/46) = sqrt(0.174242 + 0.027261) = 0.44889; SE_g = 0.44889*0.96386 = 0.4327. CI = g +/- 1.96*SE_g. INDEPENDENT CROSS-CHECK from the reported p-value: t(21) for two-sided p = 0.0191 is 2.5389, giving g = t*sqrt(1/12+1/11)*J = 1.0215, SE = 0.4023 - agreement to within 0.06 g units, so the conversion is stable. I report the chi-square route since chi-square is the statistic the authors actually computed."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = young adults are WORSE (more likely to fall asleep involuntarily during a 10-minute vigilance task). Most older participants had NO inadvertent sleeps at all during PVTs, so the young-adult excess is near-categorical."
+    covariates: ["forced desynchrony cycle", "circadian phase", "time awake"]
+    followup_years: null
+    cohort_family: BWH_Czeisler_CSR_FD
+    quote: "Young participants were also significantly more likely to have at least one inadvertent sleep during their PVTs than were older participants [chi-square (1, N = 23) = 5.49, p = 0.0191]."
+  - outcome_domain: recovery
+    outcome_construct: subjective_sleepiness_fails_to_track_objective_impairment
+    exposure: {type: chronic_restriction, dose_h: 5.6, referent_h: 10, duration_days: 21, contrast_label: "young vs older, KSS subjective sleepiness across 3 weeks of chronic restriction"}
+    scale: probability
+    unit: "1 = null age difference in SUBJECTIVE sleepiness despite large objective differences"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Direction/null indicator. The paper reports no significant main effect of AGE on KSS and no significant post-hoc age differences at any time-awake bin; F statistics for the null are not usable as an effect size and no means/SDs for the age contrast are given, so se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = a genuine DISSOCIATION was observed: young and older adults rated themselves EQUALLY sleepy while young adults were objectively far more impaired. Subjective sleepiness therefore systematically UNDER-reports objective impairment in young adults specifically."
+    covariates: ["forced desynchrony cycle", "circadian phase", "time awake"]
+    followup_years: null
+    cohort_family: BWH_Czeisler_CSR_FD
+    quote: "We found that while young and older adults reported similar levels of subjective sleepiness, objective measures of sleepiness revealed that young adults were more vulnerable and had more attentional failures than the older adults."
+  - outcome_domain: sleep_need
+    outcome_construct: sleep_extension_16h_tib_protocol_ceiling
+    exposure: {type: sleep_extension, dose_h: 16, referent_h: 10, duration_days: 3, contrast_label: "3 days at 16 h TIB/day (12 h nocturnal + 4 h daytime) as a pre-study debt-clearing manipulation"}
+    scale: hours
+    unit: "h TIB per 24 h offered during the sleep-satiation phase"
+    value: 16.0
+    se: null
+    ci: null
+    conversion_formula: "Protocol descriptor, not an estimate: TIB offered, read verbatim from the Figure 1 legend and Methods. The corresponding TST achieved under this 16 h opportunity is NOT reported in the text or tables I retrieved, so the actual sleep ceiling cannot be extracted from this paper. se: null because no estimate is being made."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Descriptive/context. Recorded because this is the extreme end of sleep-opportunity manipulation - 16 h TIB per 24 h - and because it is the same laboratory and protocol design underlying Klerman & Dijk 2008, which reported a maximal sleep capacity of ~8.9 h/night for young adults under an equivalent 16 h opportunity (see klerman2008.yaml). Together they bound the ad-lib recovery ceiling from above."
+    covariates: []
+    followup_years: null
+    cohort_family: BWH_Czeisler_CSR_FD
+    quote: "The first segment of the inpatient study was a sleep extension segment during which participants spent 16 hours in bed/day (12 hours each night and 4 hours each day, indicated by grey bars) for three days, followed by 3 baseline 24-hour days with 10 hours in bed/night."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Rigorous inpatient forced-desynchrony design that cleanly separates homeostatic, circadian and cumulative-debt influences - the strongest available protocol for isolating an age-vulnerability modifier. Concerns: (a) very small cells (n = 12 young, n = 11-12 older) so the age-moderation effect sizes are imprecise (CI lower bounds near 0.1-0.2); (b) restriction was CONFOUNDED WITH CIRCADIAN DISRUPTION by design (28-h days), so the age effect is for combined sleep-and-circadian challenge, not pure sleep restriction - this actually improves relevance to a college student with irregular schedules but weakens attribution to sleep loss alone; (c) the '+/-' dispersion for the key SEM comparison is not defined as SD or s.e.m. in the text, forcing p-value-based effect-size derivation; (d) youngest participant was 18 y and mean was 22.4 y, so the cohort brackets but does not centre on the target age."
+funding: "NIH (NIA/NHLBI) and NSBRI (per journal record; funding statement not separately extracted)"
+notes: |
+  ROLE IN THIS SHARD: this record does not measure recovery kinetics directly - it supplies the AGE
+  VULNERABILITY MODIFIER that the downstream model needs in order to transport the recovery evidence
+  onto an 18-year-old. Almost every good recovery-kinetics study in this shard used adults older than
+  the target (Belenky 2003 mean age 24-62 CMV drivers; Smith 2021 mean 38.5 y; Rabat 2016 mean 29.3 y;
+  Yamazaki 2021 mean 34.7 y). This paper shows the direction of that bias: under IDENTICAL chronic
+  restriction, 18-27 year olds were objectively MORE impaired than 55-70 year olds
+  (g ~ 1.0 for both slow eye movements during the PVT and probability of involuntary sleep onset).
+  So adult-cohort recovery estimates are more likely to UNDERSTATE than overstate the deficit in an
+  18-year-old, and the downstream model should not shrink these effects toward zero on age grounds.
+
+  THE DANGEROUS DISSOCIATION: young and older adults reported the SAME subjective sleepiness (no
+  significant main effect of AGE on KSS, no significant post-hoc differences at any time-awake bin)
+  while young adults were objectively far worse. This is the single most prescription-relevant point
+  in the record, and it converges with Jones 2024 (mood restored but vigilance not), Ochab 2021 (KSS
+  recovered by day 7, ERPs and power spectra did not) and Pejovic 2013 (subjective sleepiness and
+  IL-6 recovered, PVT did not). A young person's self-assessment of sleepiness is not a valid
+  instrument for deciding whether recovery is complete.
+
+  A MISSED OPPORTUNITY WORTH FLAGGING: the protocol included a 10-DAY RECOVERY SEGMENT at 10 h TIB
+  per night after the three weeks of restriction ("After the three weeks of CSR-FD, there was a
+  10-day recovery segment with a 10-hour sleep opportunity each night"). This would be one of the
+  longest controlled inpatient recovery observations in existence and would directly answer this
+  shard's central question about the recovery time constant. However, NO recovery-segment outcome
+  data are reported in this paper - all reported results concern baseline and the three forced-
+  desynchrony cycles. The recovery data appear to have been collected but not published here. I
+  searched the retrieved full text for recovery-phase results and found none. This is logged in
+  station_report.md as a concrete, high-value evidence gap.
+
+  ALSO NOTE the 3-day, 16 h/24 h sleep-extension satiation phase that PRECEDED baseline. Its purpose
+  was to clear pre-existing sleep debt so that baseline was debt-free - itself indirect evidence that
+  investigators in this field assume habitual sleep carries a debt requiring several days of extended
+  opportunity to discharge. TST under that 16 h opportunity is not reported here; Klerman & Dijk 2008
+  (same laboratory, equivalent manipulation) reports ~8.9 h/night maximal capacity in young adults.
+shard: "s05_recovery_kinetics"

@@ -1,0 +1,77 @@
+study_id: stonge2011
+citation: St-Onge MP, Roberts AL, Chen J, Kelleman M, O'Keeffe M, RoyChoudhury A, Jones PJ. Short sleep duration increases energy intakes but does not change energy expenditure in normal-weight individuals. American Journal of Clinical Nutrition. 2011;94(2):410-416.
+doi: 10.3945/ajcn.111.013904
+pmid: '21715510'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Short sleep duration increases energy intakes but does not change energy expenditure in normal-weight individuals.
+access_tier: abstract_only
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 30
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 30
+  - 49
+  pct_female: 50.0
+  country: US
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: metabolic
+  outcome_construct: energy_intake_kcal_per_day
+  exposure:
+    type: chronic_restriction
+    dose_h: 4.0
+    referent_h: 9.0
+    duration_days: 5
+    contrast_label: 4 h/night vs 9 h/night for 5 nights each, intake measured on day 5
+  scale: raw_units
+  unit: kcal/day
+  value: 295.9
+  se: 123.253
+  ci:
+  - 54.3
+  - 537.5
+  conversion_formula: 'difference = 2813.6 - 2517.7 = 295.9 kcal. se backed out from the reported P: two-sided p = 0.023, df = 29 -> t = 2.4008, so se = 295.9/2.4008 = 123.25. ci = 295.9 +/- 1.96*123.25.'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: positive = short sleep increased intake by ~296 kcal/day (harm)
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Participants consumed more energy on day 5 during short sleep (2813.6 +/- 593.0 kcal) than during habitual sleep (2517.7 +/- 593.0 kcal; P = 0.023).
+- outcome_domain: metabolic
+  outcome_construct: total_energy_expenditure_kcal_per_day
+  exposure:
+    type: chronic_restriction
+    dose_h: 4.0
+    referent_h: 9.0
+    duration_days: 5
+    contrast_label: total EE by doubly labelled water, 4 h vs 9 h conditions
+  scale: raw_units
+  unit: kcal/day
+  value: -21.9
+  se: null
+  ci: null
+  conversion_formula: difference = 2589.2 - 2611.1 = -21.9 kcal/d, P = 0.832. se not derivable from a non-significant p without more information; se null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NEGATIVE/NULL = energy expenditure did NOT rise (in fact trivially fell). Directly contradicts Markwald 2013's +111 kcal/d. Under this study's numbers there is NO expenditure offset, so the full ~296 kcal/d intake surplus accrues.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: 'Resting metabolic rate (short sleep: 1455.4 +/- 129.0 kcal/d; habitual sleep: 1486.5 +/- 129.5 kcal/d; P = 0.136) and total energy expenditure (short sleep: 2589.2 +/- 526.5 kcal/d; habitual sleep: 2611.1 +/- 529.0 kcal/d; P = 0.832) did not differ significantly between sleep phases.'
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: Randomised crossover with objective DLW expenditure - a strength. But intake measured on a SINGLE day (day 5), participants aged 30-49 y (poor match to an 18-year-old), and only 5 nights per condition.
+funding: not stated in abstract; registered NCT00935402
+notes: 'Authors'' own conditional framing is important for the reversibility question: ''If sustained, as observed, and not compensated by increased energy expenditure, the dietary intakes of individuals undergoing short sleep predispose to obesity.'' Both conditions of that ''if'' are unverified over months-to-years timescales.'
+shard: s09_obesity_bmi

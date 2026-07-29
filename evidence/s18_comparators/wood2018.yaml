@@ -1,0 +1,166 @@
+study_id: wood2018
+citation: 'Wood AM, Kaptoge S, Butterworth AS, et al; Emerging Risk Factors Collaboration/EPIC-CVD/UK
+  Biobank Alcohol Study Group. Risk thresholds for alcohol consumption: combined analysis of individual-participant
+  data for 599 912 current drinkers in 83 prospective studies. Lancet. 2018;391(10129):1513-1523.'
+doi: 10.1016/S0140-6736(18)30134-X
+pmid: '29676281'
+url: https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(18)30134-X/fulltext
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Risk thresholds for alcohol consumption: combined analysis of individual-participant
+    data for 599 912 current drinkers in 83 prospective studies'
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 599912
+n_studies_pooled: 83
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: 19 high-income countries
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_lost_at_40_drinking_100_200_g_per_week
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: '>100-<=200 g alcohol/week vs >0-<=100 g/week, sustained from age 40'
+  scale: years
+  unit: years of life expectancy lost at age 40
+  value: -0.5
+  se: null
+  ci: null
+  conversion_formula: Reported as 'approximately 6 months' = -0.5 y. No CI published for the life-expectancy
+    figures; se null. 100-200 g/week is roughly 7-14 US standard drinks (14 g each) or 12.5-25 UK units.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = life expectancy LOST at age 40 relative to light drinking. Referent is LIGHT
+    DRINKING, not abstention.
+  covariates:
+  - study or centre
+  - age
+  - sex
+  - smoking
+  - diabetes
+  followup_years: 9.0
+  cohort_family: ERFC_EPIC_CVD_UKB
+  quote: In comparison to those who reported drinking >0-<=100 g per week, those who reported drinking
+    >100-<=200 g per week, >200-<=350 g per week, or >350 g per week had lower life expectancy at age
+    40 years of approximately 6 months, 1-2 years, or 4-5 years, respectively.
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_lost_at_40_drinking_200_350_g_per_week
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: '>200-<=350 g alcohol/week vs >0-<=100 g/week, sustained from age 40'
+  scale: years
+  unit: years of life expectancy lost at age 40
+  value: -1.5
+  se: null
+  ci: null
+  conversion_formula: Reported as '1-2 years'; midpoint -1.5 recorded. Rounded range, not a CI; ci and
+    se null. Modellers wanting an interval should use [-2, -1].
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = life expectancy LOST at age 40. ~14-25 US standard drinks/week.
+  covariates:
+  - study or centre
+  - age
+  - sex
+  - smoking
+  - diabetes
+  followup_years: 9.0
+  cohort_family: ERFC_EPIC_CVD_UKB
+  quote: In comparison to those who reported drinking >0-<=100 g per week, those who reported drinking
+    >100-<=200 g per week, >200-<=350 g per week, or >350 g per week had lower life expectancy at age
+    40 years of approximately 6 months, 1-2 years, or 4-5 years, respectively.
+- outcome_domain: comparator
+  outcome_construct: life_expectancy_lost_at_40_drinking_over_350_g_per_week
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: '>350 g alcohol/week vs >0-<=100 g/week, sustained from age 40'
+  scale: years
+  unit: years of life expectancy lost at age 40
+  value: -4.5
+  se: null
+  ci: null
+  conversion_formula: Reported as '4-5 years'; midpoint -4.5 recorded. Rounded range, not a CI; ci and
+    se null. Modellers wanting an interval should use [-5, -4]. >350 g/week is >25 US standard drinks
+    or >35 UK units.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = life expectancy LOST at age 40. Comparable in magnitude to grade-1 obesity
+    sustained from midlife.
+  covariates:
+  - study or centre
+  - age
+  - sex
+  - smoking
+  - diabetes
+  followup_years: 9.0
+  cohort_family: ERFC_EPIC_CVD_UKB
+  quote: In comparison to those who reported drinking >0-<=100 g per week, those who reported drinking
+    >100-<=200 g per week, >200-<=350 g per week, or >350 g per week had lower life expectancy at age
+    40 years of approximately 6 months, 1-2 years, or 4-5 years, respectively.
+- outcome_domain: comparator
+  outcome_construct: stroke_risk_per_100g_per_week_higher_alcohol
+  exposure:
+    type: other
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: +100 g alcohol/week (12.5 UK units/week)
+  scale: log_hr
+  unit: log hazard ratio per 100 g/week
+  value: 0.131028
+  se: 0.015738
+  ci:
+  - 0.09531
+  - 0.157004
+  conversion_formula: HR 1.14 (95% CI 1.10-1.17) per 100 g/week for stroke. log_hr = ln(1.14) = 0.131028.
+    se = (ln(1.17)-ln(1.10))/3.919928 = 0.016043. Corrected by the authors for long-term variability in
+    intake using 152 640 serial assessments.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = ELEVATED stroke risk per unit intake (harm). Included as the cleanest PER-UNIT-DOSE
+    alcohol effect, since the life-expectancy figures are categorical.
+  covariates:
+  - study or centre
+  - age
+  - sex
+  - smoking
+  - diabetes
+  followup_years: 9.0
+  cohort_family: ERFC_EPIC_CVD_UKB
+  quote: Alcohol consumption was roughly linearly associated with a higher risk of stroke (HR per 100
+    g per week higher consumption 1.14, 95% CI, 1.10-1.17), coronary disease excluding myocardial infarction
+    (1.06, 1.00-1.11), heart failure (1.09, 1.03-1.15), fatal hypertensive disease (1.24, 1.15-1.33);
+    and fatal aortic aneurysm (1.15, 1.03-1.28).
+rob:
+  tool: AMSTAR-2
+  judgement: low
+  notes: 'Exceptionally strong on exposure measurement error: intake was corrected for long-term variability
+    using 152 640 repeat assessments, which most alcohol studies do not do. CURRENT DRINKERS ONLY, so
+    sick-quitter bias is designed out. Two limitations for us: the referent is light drinking rather than
+    abstention, and the analysis is of chronic disease in middle-aged and older adults, so it captures
+    essentially NONE of the acute injury mortality that dominates alcohol harm at ages 16-24.'
+funding: UK Medical Research Council, British Heart Foundation, National Institute for Health Research,
+  European Union Framework 7, European Research Council
+notes: 'The requested years-of-life-lost-by-drinking-category record, and the only comparator in this
+  shard whose published output is ALREADY a life expectancy at a known starting age (40). Pro-rata over
+  e(40)=38.6: 100-200 g/wk = 0.039 y per 3 years; 200-350 g/wk = 0.117 y; >350 g/wk = 0.350 y. BUT for
+  a 16-19 year old this UNDERSTATES the risk badly because it omits the injury channel - see gbd2016alcohol.'
+shard: s18_comparators

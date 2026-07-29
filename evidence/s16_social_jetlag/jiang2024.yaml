@@ -1,0 +1,95 @@
+study_id: jiang2024
+citation: Jiang Y, Yu T, Fan J, Guo X, Hua H, Xu D, Wang Y, Yan CH, Xu J. Longitudinal associations of
+  social jetlag with obesity indicators among adolescents - Shanghai adolescent cohort. Sleep Medicine.
+  2024;121:171-178.
+doi: 10.1016/j.sleep.2024.07.001
+pmid: '38991425'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Longitudinal associations of social jetlag with obesity indicators among adolescents
+    - Shanghai adolescent cohort.
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 609
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 11
+  - 15
+  pct_female: null
+  country: CN
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: bmi_z_and_body_fat_trajectory
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: 1460
+    contrast_label: high-level vs low-level 4-year SJL trajectory
+  scale: raw_units
+  unit: BMI z-score / body fat percentage
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Direction is HARM (high-SJL trajectory gained more adiposity) but ONLY IN GIRLS. In
+    BOYS the association was NULL. value=0.0 with se=null encodes 'no usable numeric estimate extractable
+    from the abstract'; do not pool as a point estimate.
+  covariates:
+  - sex
+  - baseline_cortisol
+  - baseline_progesterone
+  followup_years: 4.0
+  cohort_family: Shanghai_Adolescent_Cohort
+  quote: Compared with the low-level SJL trajectory, the high-level SJL trajectory was associated with
+    greater differences in body-mass-index Z-scores and waist-to-height ratios across 4 years, higher
+    levels of body-fat-percentage and fat-mass-index in grade 9 (P-values<0.05), and such associations
+    were stronger among girls and under moderate-to-high (vs. low) baseline cortisol and progesterone
+    levels. However, no significant associations among boys were observed.
+- outcome_domain: circadian
+  outcome_construct: prevalence_sjl_at_least_1h_grades_6_to_9
+  exposure:
+    type: social_jetlag
+    dose_h: 1.0
+    referent_h: null
+    duration_days: null
+    contrast_label: proportion with SJL >= 1 h
+  scale: probability
+  unit: null
+  value: 0.4175
+  se: null
+  ci: null
+  conversion_formula: range 39.00%-44.50% across grades 6-9; midpoint (0.3900+0.4450)/2 = 0.4175
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NOT a harm estimate. Chinese adolescent base rate for SJL >= 1 h, notably lower than
+    the >80% reported for Brazilian adolescents (martins2025).
+  covariates: []
+  followup_years: null
+  cohort_family: Shanghai_Adolescent_Cohort
+  quote: In grades 6-9, 39.00%-44.50 % of adolescents experienced at least 1 h of SJL.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Genuinely LONGITUDINAL (4 years, 3 assessments) with measured anthropometry and body composition,
+    which is rare in this literature. Small (n=609); self-reported SJL; trajectory classes derived post
+    hoc by latent class mixture modelling.
+funding: null
+notes: 'THE ONLY PROSPECTIVE ADOLESCENT SJL-ADIPOSITY EVIDENCE I FOUND, and it is DIRECTLY RELEVANT AND
+  DEFLATIONARY FOR OUR SUBJECT: our subject is MALE, and the abstract states ''no significant associations
+  among boys were observed''. Combined with zhou2026 (paediatric associations vanish after quality adjustment),
+  the adolescent-specific, sex-specific evidence for an SJL-adiposity effect in a teenage BOY is weak.
+  No numeric betas or CIs are given in the abstract and the full text is paywalled, so I recorded the
+  adiposity effect as a direction-only placeholder with se=null rather than invent an estimate.'
+shard: s16_social_jetlag

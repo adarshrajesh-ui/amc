@@ -1,0 +1,107 @@
+study_id: ju2017
+citation: "Ju YS, Ooms SJ, Sutphen C, Macauley SL, Zangrilli MA, Jerome G, Fagan AM, Mignot E, Zempel JM, Claassen JAHR, Holtzman DM. Slow wave sleep disruption increases cerebrospinal fluid amyloid-beta levels. Brain. 2017 Aug 1;140(8):2104-2111."
+doi: "10.1093/brain/awx148"
+pmid: "28899014"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5790144/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Slow wave sleep disruption increases cerebrospinal fluid amyloid-β levels."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 17
+n_studies_pooled: null
+population:
+  age_mean: 54.1
+  age_range: [35, 65]
+  pct_female: 65.0
+  country: "US / Netherlands"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: correlation_between_degree_of_slow_wave_activity_disruption_and_overnight_csf_ab40_increase
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 1,
+               contrast_label: "acoustically targeted slow wave activity disruption during one polysomnogram vs sham on a separate night >=28 days apart, randomized order, participant-blinded"}
+    scale: raw_units
+    unit: "Pearson r between magnitude of SWA disruption and change in CSF Ab40"
+    value: 0.610
+    se: 0.20460
+    ci: null
+    conversion_formula: >
+      Reported as "Specific disruption of slow wave activity correlated with an increase in amyloid-β 40
+      ( r = 0.610, P = 0.009)". Recorded as the raw Pearson r rather than converted, to avoid losing
+      information. SE of r approximated by the large-sample formula SE_r = sqrt((1 - r^2)/(n - 2)) =
+      sqrt((1 - 0.3721)/15) = sqrt(0.041863) = 0.20460; via Fisher's z, SE_z = 1/sqrt(n - 3) = 1/sqrt(14) =
+      0.2673 which back-transforms to a slightly asymmetric interval. The value 0.20460 recorded is the
+      large-sample SE_r; flagged as inferred, not published.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = more slow wave activity disruption associated with a LARGER overnight rise in CSF Ab40,
+      i.e. harm. CRITICAL SPECIFICITY FINDING, and it cuts against sleep DURATION being the relevant
+      exposure: "This effect was specific for slow wave activity, and not for sleep duration or efficiency."
+      The active ingredient in this literature is slow wave activity, not hours of sleep - and slow wave
+      activity is precisely what is PRESERVED under partial restriction (see olsson2018.yaml and
+      skorucak2021.yaml).
+    covariates: ["within-subject crossover, sham-controlled, participants blinded, analyses blinded to condition"]
+    followup_years: null
+    cohort_family: "WashU_SWA_disruption"
+    quote: "Specific disruption of slow wave activity correlated with an increase in amyloid-β 40 ( r = 0.610, P = 0.009). This effect was specific for slow wave activity, and not for sleep duration or efficiency. This effect was also specific to amyloid-β, and not total protein, tau, YKL-40, or hypocretin."
+  - outcome_domain: neurodegeneration
+    outcome_construct: correlation_between_home_sleep_efficiency_over_6_nights_and_csf_tau
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 6,
+               contrast_label: "actigraphic sleep efficiency over the six nights preceding lumbar puncture (observational within the trial), vs CSF tau"}
+    scale: raw_units
+    unit: "Pearson r between worse home sleep quality and higher CSF tau"
+    value: 0.543
+    se: 0.21682
+    ci: null
+    conversion_formula: >
+      Reported as "worse home sleep quality, as measured by sleep efficiency by actigraphy in the six nights
+      preceding lumbar punctures, was associated with higher tau ( r = 0.543, P = 0.045)". SE_r =
+      sqrt((1 - 0.294849)/15) = sqrt(0.047010) = 0.21682. Inferred, not published.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = worse home sleep associated with higher CSF tau. NOTE THIS IS AN OBSERVATIONAL CORRELATION
+      NESTED INSIDE A TRIAL, not a randomized contrast, with n = 17 and P = 0.045. It is the only
+      sub-acute (multi-night) signal in the paper and it is fragile: with 17 people and multiple biomarkers
+      tested, a single r = 0.54 at P = 0.045 is roughly what multiplicity alone would produce.
+    covariates: []
+    followup_years: null
+    cohort_family: "WashU_SWA_disruption"
+    quote: "Additionally, worse home sleep quality, as measured by sleep efficiency by actigraphy in the six nights preceding lumbar punctures, was associated with higher tau ( r = 0.543, P = 0.045). Slow wave activity disruption increases amyloid-β levels acutely, and poorer sleep quality over several days increases tau."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: >
+    Excellent design: randomized order, sham-controlled, participant-blinded, analyst-blinded, >=28 days
+    between conditions, targeted acoustic SWA disruption rather than gross deprivation. Concerns: n = 17
+    after 5 of 22 completed participants were excluded on predefined criteria; middle-aged (54.1 +/- 6.7 y)
+    only; the primary result is a within-condition CORRELATION between disruption magnitude and Ab change
+    rather than a simple randomized between-condition contrast, which is more vulnerable to influential
+    points at this n; multiple biomarkers assessed (Ab40, Ab42, tau, total protein, YKL-40, hypocretin) with
+    two nominally significant results reported.
+funding: "NIH; see paper"
+notes: >
+  MECHANISM LINK 2, and THE MOST IMPORTANT SPECIFICITY RESULT IN THE SHARD. The authors set out to identify
+  which aspect of sleep modulates amyloid, and the answer was SLOW WAVE ACTIVITY, explicitly NOT SLEEP
+  DURATION. Verbatim: "This effect was specific for slow wave activity, and not for sleep duration or
+  efficiency."
+  That finding, combined with two others, forms the central argument of this shard's mechanistic section:
+  (a) slow wave activity is what matters (Ju 2017, Lucey 2019, Winer 2020);
+  (b) slow wave activity is PRESERVED under chronic partial sleep restriction in adolescents specifically
+      (skorucak2021.yaml: homeostatic response intact at 5 h/night for five nights);
+  (c) accordingly, five to eight nights of 4 h sleep in healthy young adults produced NO change in CSF
+      amyloid biomarkers (olsson2018.yaml).
+  The mechanism is real, it is reasonably well localised, and the subject's exposure does not obviously
+  engage it. That is a much more defensible summary than either "sleep loss causes Alzheimer's" or "there is
+  nothing here".
+  The authors' own interpretation of the mechanism is production-side, consistent with Lucey 2018: "These
+  effects are specific to neuronally-derived proteins, which suggests they are likely driven by changes in
+  neuronal activity during disrupted sleep."
+shard: "s14_dementia_amyloid"

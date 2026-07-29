@@ -1,0 +1,133 @@
+study_id: ritchie2018
+citation: "Ritchie SJ, Tucker-Drob EM. How much does education improve intelligence? A meta-analysis. Psychological Science. 2018;29(8):1358-1369."
+doi: "10.1177/0956797618774253"
+pmid: "29911926"
+url: "https://europepmc.org/articles/PMC6088505"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "How Much Does Education Improve Intelligence? A Meta-Analysis."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T2
+n: 615812
+n_studies_pooled: 42
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: comparator
+    outcome_construct: iq_points_per_additional_year_of_education_control_prior_intelligence
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "one additional year of education, quasi-experimental designs controlling for earlier measured intelligence"}
+    scale: raw_units
+    unit: "full-scale IQ points (SD = 15) per year of education"
+    value: 1.197
+    se: 0.203
+    ci: [0.799, 1.595]
+    conversion_formula: "Reported directly: 1.197 IQ points, SE = 0.203, p = 3.84e-09, random-effects unconditional model for the 'control prior intelligence' design. CI = 1.197 +/- 1.96*0.203. THIS IS THE DESIGN MOST COMPARABLE TO A SLEEP-EXPOSURE ESTIMATE because it conditions on prior ability, so it isolates the increment attributable to the additional schooling rather than to selection."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more education raises measured intelligence; this is a BENCHMARK for scaling sleep effects, not a sleep effect"
+    covariates: ["earlier measured intelligence"]
+    followup_years: null
+    cohort_family: null
+    quote: "For control prior intelligence, the effect was 1.197 IQ points (SE = 0.203, p = 3.84x10-09); for policy change, it was 2.056 IQ points (SE = 0.583, p = 4.23x10-04); and for school-age cutoff, it was 5.229 IQ points (SE = 0.530, p = 6.33x10-23)."
+  - outcome_domain: comparator
+    outcome_construct: iq_points_per_additional_year_of_education_instrumental_variable
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "one additional year of education, instrumented by compulsory-schooling policy changes (exposure type is 'other' because the schema's exposure enum has no education/IV option; the study DESIGN is instrumental-variable)"}
+    scale: raw_units
+    unit: "full-scale IQ points (SD = 15) per year of education"
+    value: 2.056
+    se: 0.583
+    ci: [0.913, 3.199]
+    conversion_formula: "Reported directly: 2.056 IQ points, SE = 0.583, p = 4.23e-04. Recorded because compulsory-schooling IV is the design with the cleanest causal identification in the set, and it lands between the conditional-on-prior-IQ estimate (1.197) and the school-entry-cutoff estimate (5.229)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more education raises measured intelligence"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "for policy change, it was 2.056 IQ points (SE = 0.583, p = 4.23x10-04)"
+  - outcome_domain: comparator
+    outcome_construct: iq_points_per_additional_year_of_education_all_designs_pooled
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "one additional year of education, all three quasi-experimental designs pooled"}
+    scale: raw_units
+    unit: "full-scale IQ points (SD = 15) per year of education"
+    value: 3.394
+    se: 0.503
+    ci: [2.408, 4.380]
+    conversion_formula: "Reported directly: 3.394 IQ points, SE = 0.503, p = 1.55e-11, overall model across all three designs. I record this but recommend the 1.197 figure for benchmarking (see notes) because the pooled value is dominated by the school-age-cutoff design (5.229 points), which measures a partly artefactual age-at-test contrast rather than a durable ability gain."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more education raises measured intelligence"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "An overall model including all estimates from all three designs found an average effect size of 3.394 IQ points for 1 year of education (SE = 0.503, p = 1.55x10-11)."
+  - outcome_domain: comparator
+    outcome_construct: age_moderator_of_the_education_iq_effect
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "change in the education-IQ effect per year of age at the earlier test"}
+    scale: raw_units
+    unit: "change in IQ points per year of earlier-test age"
+    value: -0.024
+    se: 0.064
+    ci: [-0.149, 0.101]
+    conversion_formula: "Metaregression on age at earlier test: -0.024 IQ points per year, SE = 0.064, p = .706 - i.e. FLAT. The model implies 1.243 points per year of education at earlier-test age 10 and 1.099 points at age 16. RELEVANT TO THE TARGET SUBJECT because it establishes that the education-to-IQ exchange rate is essentially constant across the adolescent range, so using it as a benchmark at age 18 is licensed."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "effectively zero: the education-IQ effect does not depend on age at earlier test across 10-16 y"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "was not significantly related to the effect size (-0.024 IQ points per year, SE = 0.064, p = .706). For the youngest early-test age (10 years), the metaregression model indicated that the effect size of 1 additional year of education was 1.243 IQ points; for the oldest (16 years), the effect size was 1.099 IQ points."
+rob:
+  tool: ROBINS-I
+  judgement: low
+  notes: "Meta-analysis restricted to QUASI-EXPERIMENTAL designs with plausible causal identification - control-for-prior-intelligence, compulsory-schooling instrumental variables, and school-entry regression discontinuity - rather than raw correlations, across 142 effect sizes from 42 datasets and over 600,000 participants. Pre-registered analysis plan, published and unpublished sources both included (86:22 published:unpublished), moderator analyses for age, time lag, outcome type, and design. Main residual concerns: (1) the three designs disagree by more than fourfold (1.197 vs 2.056 vs 5.229 points), which the authors themselves show is statistically significant, so the 'true' exchange rate depends on which design you believe; (2) the school-age-cutoff design partly measures test-timing rather than durable ability; (3) this is a COMPARATOR record for scaling, not sleep evidence, so its risk of bias matters only for the benchmark's credibility."
+funding: "See the article; Ritchie was supported by a UK Medical Research Council grant and Tucker-Drob by NIH."
+notes: |
+  THIS RECORD CONTAINS NO SLEEP EVIDENCE. It is here as a CALIBRATION BENCHMARK so that the downstream model, and any human
+  reading its output, can tell whether an IQ-point estimate is large or small. Without a benchmark, "2.4 IQ points" is an
+  uninterpretable number.
+
+  THE EXCHANGE RATE: one additional year of education is worth about 1.2 IQ points when prior intelligence is controlled
+  (SE 0.203), about 2.1 points when instrumented by compulsory-schooling reforms, and about 3.4 points pooling all designs. I
+  recommend the pooler use 1.2 points per year of education as the benchmark, because (a) that design conditions on prior
+  ability and so isolates the schooling increment in the same way an ideal sleep study would isolate the sleep increment, and
+  (b) the pooled 3.4-point figure is inflated by the school-entry-cutoff design (5.2 points), which compares children tested at
+  the same age but with different amounts of schooling and therefore captures test-timing and practice effects along with real
+  ability gains.
+
+  WHAT THIS MEANS FOR THE SLEEP ESTIMATES IN THIS SHARD. Using 1.2 IQ points per school year:
+
+    fjell2023 habitual short sleep, -2.4 to -2.9 IQ points   ~ 2.0 to 2.4 years of schooling
+    wild2018 reasoning at 4 h vs optimum, -2.4 IQ points     ~ 2.0 years of schooling
+    acute total SD, 1.5 to 4.0 IQ points (iq_conversion_basis) ~ 1.3 to 3.3 years of schooling
+    the target subject's plausible chronic effect, 2-3 points ~ 1.7 to 2.5 years of schooling
+
+  So the honest headline for a downstream report is that three years of habitual 5-6 h sleep plausibly costs, in
+  IQ-equivalent terms, something on the order of TWO YEARS OF SCHOOLING. That is a substantial number and it does NOT depend on
+  the vigilance-to-IQ conversion being generous - it comes from the direct general-ability measurements in fjell2023 and
+  wild2018, which need no discount at all.
+
+  THE SYMMETRY IS WORTH STATING EXPLICITLY BECAUSE IT IS UNCOMFORTABLE: the subject is, during these three years, receiving
+  education, which raises measured intelligence by roughly 1.2 points per year. If chronic short sleep costs 2-3 points over
+  the same period, then sleep restriction is offsetting roughly two of the three years of cognitive benefit that the schooling
+  itself is delivering. That framing is the most decision-relevant thing this comparator enables, and it is also the framing
+  most likely to be over-claimed, so I want the caveat attached: the fjell2023 and wild2018 numbers are CROSS-SECTIONAL
+  associations in adults, not causal estimates in adolescents, whereas the 1.2-point education figure IS quasi-experimental.
+  The two sides of the comparison are not of equal evidential quality, and the sleep side is the weaker one.
+
+  ONE MORE USE: the age moderator (-0.024 IQ points per year of earlier-test age, p = .706, flat from age 10 to 16) confirms the
+  benchmark is age-stable across adolescence, so applying it at 18 is not an extrapolation of a moving target.
+
+  n = 615,812 is the figure the paper states directly ("three designs was 615,812"), consistent with the abstract's "over
+  600,000 participants". The paper notes that Ns for datasets contributing multiple effect sizes were averaged across effect
+  sizes and rounded, so it is approximate and should not be used as an analytic weight. n_studies_pooled = 42 is the number of
+  DATASETS; there were 142 effect sizes.
+shard: "s02_cognition_meta"

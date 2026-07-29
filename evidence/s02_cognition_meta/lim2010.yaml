@@ -1,0 +1,251 @@
+study_id: lim2010
+citation: "Lim J, Dinges DF. A meta-analysis of the impact of short-term sleep deprivation on cognitive variables. Psychological Bulletin. 2010;136(3):375-389."
+doi: "10.1037/a0018883"
+pmid: "20438143"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3290659/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "A meta-analysis of the impact of short-term sleep deprivation on cognitive variables."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: 1533
+n_studies_pooled: 70
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: good_young_adult
+  # age_range is null rather than [18, null] because the schema requires two numbers and the
+  # published inclusion criterion is open-ended: "healthy adults aged 18 years and older", with
+  # no mean or upper bound reported. Lower bound 18 y, upper bound unknown.
+effects:
+  - outcome_domain: cognition
+    outcome_construct: simple_attention_lapses
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "24-48 h total SD vs rested control"}
+    scale: hedges_g
+    unit: null
+    value: -0.762
+    se: 0.095
+    ci: [-0.948, -0.576]
+    conversion_formula: "Table 2 as published (random-effects, study-quality weighted). SE reported directly (0.095); CI-implied SE = (0.948-0.576)/3.92 = 0.0949, consistent. k = df+1 = 17 aggregated effect sizes."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse (more lapses) under sleep deprivation"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Simple attention |  | Lapses | -0.762** | 0.009 | 0.095 | -0.948 | -0.576 | 112.18 | 16 | 61.6"
+  - outcome_domain: cognition
+    outcome_construct: simple_attention_reaction_time
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "24-48 h total SD vs rested control"}
+    scale: hedges_g
+    unit: null
+    value: -0.732
+    se: 0.072
+    ci: [-0.874, -0.590]
+    conversion_formula: "Table 2 as published. k = df+1 = 26 aggregated effect sizes; I2 = 54.1%."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = slower reaction time under sleep deprivation"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Reaction time | -0.732** | 0.005 | 0.072 | -0.874 | -0.590 | 97.04 | 25 | 54.1"
+  - outcome_domain: cognition
+    outcome_construct: complex_attention_accuracy
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "24-48 h total SD vs rested control"}
+    scale: hedges_g
+    unit: null
+    value: -0.479
+    se: 0.082
+    ci: [-0.640, -0.318]
+    conversion_formula: "Table 2 as published. k = df+1 = 25; I2 = 31.7%."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse accuracy under sleep deprivation"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Complex attention |  | Accuracy | -0.479** | 0.007 | 0.082 | -0.640 | -0.318 | 56.79 | 24 | 31.7"
+  - outcome_domain: cognition
+    outcome_construct: complex_attention_reaction_time
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "24-48 h total SD vs rested control"}
+    scale: hedges_g
+    unit: null
+    value: -0.312
+    se: 0.059
+    ci: [-0.429, -0.197]
+    conversion_formula: "Table 2 as published. k = df+1 = 37; I2 = 53.5%."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = slower reaction time under sleep deprivation"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Reaction time | -0.312** | 0.003 | 0.059 | -0.429 | -0.197 | 192.57 | 36 | 53.5"
+  - outcome_domain: cognition
+    outcome_construct: working_memory_accuracy
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "24-48 h total SD vs rested control"}
+    scale: hedges_g
+    unit: null
+    value: -0.555
+    se: 0.095
+    ci: [-0.741, -0.368]
+    conversion_formula: "Table 2 as published. k = df+1 = 26; I2 = 55.4%."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse working-memory accuracy under sleep deprivation"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Working memory |  | Accuracy | -0.555** | 0.009 | 0.095 | -0.741 | -0.368 | 113.79 | 25 | 55.4"
+  - outcome_domain: cognition
+    outcome_construct: working_memory_reaction_time
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "24-48 h total SD vs rested control"}
+    scale: hedges_g
+    unit: null
+    value: -0.515
+    se: 0.097
+    ci: [-0.704, -0.326]
+    conversion_formula: "Table 2 as published. k = df+1 = 17; I2 = 66.3% (highest heterogeneity of any cell)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = slower working-memory responses under sleep deprivation"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Reaction time | -0.515** | 0.009 | 0.097 | -0.704 | -0.326 | 92.95 | 16 | 66.3"
+  - outcome_domain: cognition
+    outcome_construct: processing_speed_accuracy
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "24-48 h total SD vs rested control"}
+    scale: hedges_g
+    unit: null
+    value: -0.245
+    se: 0.130
+    ci: [-0.500, 0.010]
+    conversion_formula: "Table 2 as published; NOT statistically significant (p = .06 per Results). k = df+1 = 12; I2 = 52.1%."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse accuracy under sleep deprivation; CI crosses zero"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Processing speed |  | Accuracy | -0.245 | 0.017 | 0.130 | -0.500 | 0.010 | 72.99 | 11 | 52.1"
+  - outcome_domain: cognition
+    outcome_construct: processing_speed_reaction_time
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "24-48 h total SD vs rested control"}
+    scale: hedges_g
+    unit: null
+    value: -0.302
+    se: 0.083
+    ci: [-0.464, -0.140]
+    conversion_formula: "Table 2 as published. k = df+1 = 20; I2 = 62.4%."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = slower cognitive throughput under sleep deprivation"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Reaction time | -0.302** | 0.007 | 0.083 | -0.464 | -0.140 | 194.77 | 19 | 62.4"
+  - outcome_domain: cognition
+    outcome_construct: short_term_memory_recall
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "24-48 h total SD vs rested control"}
+    scale: hedges_g
+    unit: null
+    value: -0.383
+    se: 0.135
+    ci: [-0.647, -0.118]
+    conversion_formula: "Table 2 as published (p < .01). k = df+1 = 12; I2 = 55.1%."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse recall under sleep deprivation"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Short-term memory |  | Recall | -0.383* | 0.018 | 0.135 | -0.647 | -0.118 | 37.85 | 11 | 55.1"
+  - outcome_domain: cognition
+    outcome_construct: short_term_memory_recognition
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "24-48 h total SD vs rested control"}
+    scale: hedges_g
+    unit: null
+    value: -0.378
+    se: 0.125
+    ci: [-0.624, -0.132]
+    conversion_formula: "Table 2 as published (p < .01). k = df+1 = 5; I2 = 13.9%."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse recognition memory under sleep deprivation"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Recognition | -0.378* | 0.016 | 0.125 | -0.624 | -0.132 | 13.91 | 4 | 13.9"
+  - outcome_domain: cognition
+    outcome_construct: reasoning_and_crystallized_intelligence_accuracy
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "24-48 h total SD vs rested control"}
+    scale: hedges_g
+    unit: null
+    value: -0.125
+    se: 0.072
+    ci: [-0.268, 0.016]
+    conversion_formula: "Table 2 as published; NOT statistically significant (p = .08 per Results). k = df+1 = 12; I2 = 5.4% (lowest heterogeneity of any cell). THIS IS THE MOST IQ-RELEVANT CELL IN THE META-ANALYSIS."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse reasoning accuracy under sleep deprivation; CI crosses zero, i.e. no detectable effect"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Reasoning |  | Accuracy | -0.125 | 0.005 | 0.072 | -0.268 | 0.016 | 14.59 | 11 | 5.4"
+  - outcome_domain: cognition
+    outcome_construct: ratio_reasoning_to_simple_attention_g
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "reasoning-accuracy g divided by simple-attention-lapse g, same meta-analysis"}
+    scale: raw_units
+    unit: "ratio (dimensionless)"
+    value: 0.164
+    se: 0.097
+    ci: [-0.025, 0.354]
+    conversion_formula: "R = g_reasoning / g_lapses = 0.125/0.762 = 0.1640. Delta method assuming independence: SE(R) = R*sqrt((0.072/0.125)^2 + (0.095/0.762)^2) = 0.0967. Using the mean of the two simple-attention cells (lapses -0.762, RT -0.732) instead gives R = 0.167. This ratio is the WITHIN-META-ANALYSIS empirical discount for converting a vigilance effect size into a reasoning/IQ-loaded effect size, and is independent of any external g-loading estimate."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "value < 1 means the IQ-loaded (reasoning/crystallized) domain is affected much LESS than vigilance by the same sleep-loss exposure; the ratio is the fraction retained"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "We failed to find significant effects in two of the categories tested. First, there was no effect of SD on accuracy measures in tests of reasoning and crystallized intelligence. Crystallized abilities (e.g., the retrieval of domain-specific knowledge) are thought to be highly stable over a range of cognitive states, and are even of use in assessing premorbid functioning following neurological insult or the onset of dementia"
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Systematic search of 4 databases through Dec 2008 plus hand searches of Sleep and J Sleep Res 1988-2008 plus solicitation of unpublished data from 8 laboratories; dual independent coding with ICC = .798 for study quality; random-effects weighting. Weaknesses: effect sizes were weighted by a study-quality index for which the authors concede there is no gold standard; no funnel plot / Egger test reported; effect sizes not disattenuated for test-retest reliability, so absolute magnitudes are conservative relative to Philibert 2005; only ONE laboratory supplied unpublished data, so publication bias cannot be ruled out."
+funding: "Air Force Office of Scientific Research FA9550-05-1-0293 (Lim); NIH NR004281 and NSBRI/NASA NCC 9-58-159 (Dinges)"
+notes: |
+  Exposure is ACUTE TOTAL sleep deprivation of 24-48 h, not chronic restriction: "A total SD period of 24-48 hr had a
+  significant effect in reducing performance for outcomes in all cognitive domains, except for accuracy measures in tasks of
+  processing speed (p = .06), as well as accuracy measures on tests of reasoning and crystallized intelligence (p = .08)."
+  Directly relevant to the subject's occasional 3-4 h pre-exam nights, and it is the reference standard for the RELATIVE
+  ordering of domain sensitivity, but it does NOT speak to the 5-6 h chronic exposure (use lowe2017 / lo2016 / campbell2024
+  for that).
+
+  Sample: "The total sample size for the analysis was 1,533, with an average of 21.3 (SD = 11.1) subjects in each study."
+  Coverage: "In total, 70 articles and 147 data sets met inclusion criteria... Altogether, 209 aggregated effect sizes and
+  5,104 individual effect sizes were calculated from these data sets." The 11 domain x outcome cells recorded above have
+  df totalling 209 aggregated effect sizes exactly (17+26+25+37+12+20+26+17+12+5+12 = 209), confirming the k = df+1 reading.
+  Inclusion required "healthy adults aged 18 years and older"; no mean age is reported, so adolescent_match is set to
+  good_young_adult on the basis that laboratory total-SD protocols are dominated by 18-30 y volunteers, but the downstream
+  model should inflate uncertainty on the age match.
+
+  DISCREPANCY TO REPORT: the abstract of the same paper gives "lapses in simple attention: g = -0.776, 95% CI [-0.96,
+  -0.60]" whereas Table 2 gives -0.762 [-0.948, -0.576]. I have used the Table 2 values throughout because they carry the
+  variance, SE, Q, df and I2 needed downstream. The 0.014 discrepancy is presumably a late revision that was not carried
+  into the abstract; it is immaterial at the precision the pooler needs but the pooler should not double-enter both.
+
+  Domain ordering (accuracy/lapses side, most to least affected): simple attention -0.762 > working memory -0.555 >
+  complex attention -0.479 > short-term memory recall -0.383 / recognition -0.378 > processing speed -0.245 (ns) >
+  reasoning/crystallized -0.125 (ns). Author summary of the gradient: "Overall, average effect sizes appear to fall along a
+  continuum, with tasks of greater complexity affected relatively less after total SD."
+  Moderators: only hours awake (homeostatic pressure) predicted heterogeneity, and only for accuracy measures
+  (b = -0.22, t(98) = -2.43, p = .02; model R2 = .176).
+shard: "s02_cognition_meta"

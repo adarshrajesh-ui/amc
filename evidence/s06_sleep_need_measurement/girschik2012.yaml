@@ -1,0 +1,90 @@
+study_id: girschik2012
+citation: "Girschik J, Fritschi L, Heyworth J, Waters F. Validation of self-reported sleep against actigraphy. Journal of Epidemiology. 2012;22(5):462-468."
+doi: "10.2188/jea.JE20120012"
+pmid: "22850546"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3798642/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Validation of Self-Reported Sleep Against Actigraphy"
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 56
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [18, 80]
+  pct_female: 100.0
+  country: "Australia"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: duration_dependent_bias_direction_at_short_reports
+    exposure: {type: descriptive, dose_h: 6, referent_h: 8, duration_days: 7, contrast_label: "sign of (self-report - actigraphy) among those self-reporting <=6 h vs >=8 h"}
+    scale: probability
+    unit: "proportion of participants reporting <=6 h whose actigraphic sleep exceeded 6 h"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "no arithmetic: the paper states that ALL participants self-reporting <=6 h had actigraphic mean sleep >6 h, i.e. proportion = 1.0. The paper gives no denominator for this subgroup ('group numbers were small'), so se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "CRITICAL SIGN REVERSAL. Among SHORT self-reporters the bias runs the OTHER WAY: they UNDER-stated their sleep relative to actigraphy. Only those reporting >=8 h over-stated. A blanket 'subtract ~1 h from any self-report' rule is therefore wrong at the low end of the reported distribution, which is exactly where our subject sits."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      In particular, all participants who self-reported a usual sleep duration of 6 hours or less recorded an
+      objective mean sleep duration of greater than 6 hours. In contrast, participants who self-reported sleeping
+      8 hours or more tended to overestimate their sleep as compared with objective measures, although group
+      numbers were small.
+  - outcome_domain: exposure_measurement
+    outcome_construct: modal_versus_mean_night_reporting
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "agreement of self-report with MODAL vs MEAN actigraphic sleep duration"}
+    scale: probability
+    unit: "qualitative: 1 = modal actigraphy agreed better than mean actigraphy"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "no arithmetic; encodes the paper's direction-of-finding as a flag. Verbatim: 'we found that the use of modal data improved correlations with estimates of sleep duration, when compared with mean sleep.'"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "people answering 'how much do you usually sleep' report a TYPICAL (modal) night, not the 7-day arithmetic mean. For our subject, whose nights are strongly multi-modal (5-6 h school, 7-8 h weekend, 3-4 h pre-exam, 10-11 h occasional), his '5-6 h' should be read as the MODE of school nights, not the average of all nights."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      We also examined modal sleep duration in addition to mean duration, because participants may estimate their
+      usual sleep by using a typical night rather than by averaging sleep across nights. Unlike Mullington et al,
+      we found that the use of modal data improved correlations with estimates of sleep duration, when compared
+      with mean sleep. However, the overall results still failed to show strong agreement with actigraphy data.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "n=56, women only, age 18-80, and the key duration-dependence finding is explicitly caveated by the authors as based on small subgroups with no numbers given. Include for DIRECTION of the differential error and for the modal-vs-mean insight, NOT for magnitude."
+funding: "not stated in retrieved text"
+notes: |
+  Two findings, both about the SHAPE rather than the size of the measurement error.
+  (1) DUPLICATE-DIRECTION EVIDENCE ON DIFFERENTIAL ERROR (verbatim): "In particular, all participants who self-reported a
+      usual sleep duration of 6 hours or less recorded an objective mean sleep duration of greater than 6 hours. In
+      contrast, participants who self-reported sleeping 8 hours or more tended to overestimate their sleep as compared with
+      objective measures, although group numbers were small."
+      This is the empirical face of the same phenomenon that lauderdale2008 captures parametrically with a calibration
+      slope of 0.51: reported and true sleep regress toward each other. Lauderdale's slope says short sleepers over-report
+      MORE when you condition on TRUE sleep; Girschik's observation says short REPORTERS under-report when you condition on
+      the REPORT. Both are true simultaneously and they are not contradictory - they are the forward and reverse regression
+      of the same joint distribution. The exposure model must condition on the REPORT (that is all we observe for our
+      subject), which means Girschik's direction is the operative one.
+  (2) RECALL BEHAVIOUR (verbatim): "We also examined modal sleep duration in addition to mean duration, because
+      participants may estimate their usual sleep by using a typical night rather than by averaging sleep across nights.
+      Unlike Mullington et al, we found that the use of modal data improved correlations with estimates of sleep duration,
+      when compared with mean sleep. However, the overall results still failed to show strong agreement with actigraphy data."
+  (3) Overall conclusion (verbatim): "This study found that self-reported usual sleep duration on workdays and non-workdays
+      did not agree with actigraphically recorded actual sleep."
+  Population is a poor match (adult women, wide age range). Downweight the magnitude entirely; keep the two structural
+  findings, which are the reason exposure_priors.md section (ii) recommends a reverse-regression calibration rather than a
+  fixed additive bias correction.
+shard: "s06_sleep_need_measurement"

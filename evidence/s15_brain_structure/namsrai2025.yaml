@@ -1,0 +1,88 @@
+study_id: namsrai2025
+citation: "Namsrai T, Northey JM, Ambikairajah A, Ahmed O, Alateeq K, Espinoza Oyarce DA, Burns R, Rattray B, Cherbuin N. Sleep characteristics and brain structure: A systematic review with meta-analysis. Sleep Medicine. 2025;129:316-329."
+doi: "10.1016/j.sleep.2025.02.028"
+pmid: "40086297"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep characteristics and brain structure: A systematic review with meta-analysis"
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 108364
+n_studies_pooled: 106
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "Multi-national"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: proportion_of_studies_finding_lower_brain_volumes_with_poor_sleep
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "any sleep characteristic or disorder (short, long, poor quality) vs any brain volumetric measure; vote-count across 106 studies in healthy adults"}
+    scale: probability
+    unit: "proportion of included studies reporting predominantly lower brain volumes"
+    value: 0.731
+    se: null
+    ci: null
+    conversion_formula: "Reported directly as 73.1% of studies. This is a VOTE COUNT, not a pooled effect size. se is left null because the proportion-of-significant-studies statistic has no meaningful standard error as an effect estimate and is severely inflated by publication bias."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more studies reporting lower volumes with worse sleep. NOT an effect magnitude. Note the internal split reported by the authors: 51.9% of cross-sectional studies and only 45.5% of LONGITUDINAL studies found associations - i.e. among longitudinal designs, fewer than half found anything, which is close to what publication-biased noise would produce."
+    covariates: ["age", "sex", "head size (inclusion requirement)"]
+    followup_years: null
+    cohort_family: null
+    quote: "Most studies (73.1%) found sleep characteristics and disorders to be associated with predominantly lower brain volumes (cross-sectional: 51.9% of all cross-sectional; longitudinal: 45.5% of longitudinal)."
+  - outcome_domain: brain_structure
+    outcome_construct: only_pooled_vbm_result_rem_sleep_behaviour_disorder
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "REM sleep behaviour disorder vs controls, seed-based spatial meta-analysis of 45 VBM studies"}
+    scale: raw_units
+    unit: "z-score, right frontal gyrus grey matter volume (68 voxels)"
+    value: -3.617
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: z = -3.617, 68 voxels, p<0.001. No CI published. This is a spatial-convergence z-score, not a standardized mean difference, and cannot be converted to one."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Negative = lower grey matter volume. CRITICALLY: the only surviving pooled VBM finding across 45 studies concerns REM SLEEP BEHAVIOUR DISORDER - a prodromal alpha-synucleinopathy of older adults - NOT short sleep duration and NOT adolescents."
+    covariates: ["age", "sex", "head size"]
+    followup_years: null
+    cohort_family: null
+    quote: "In VBM studies, REM sleep behaviour disorder was linked to lower grey matter volume in the right frontal gyrus (z-score = -3.617, 68 voxels, p-value = <0 0.001)."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Comprehensive search across 5 databases, 105 articles, and an inclusion requirement that studies adjust for age, sex and head size - a real quality filter. But the synthesis is largely a VOTE COUNT rather than a quantitative pooling of effect sizes, which is the weakest form of evidence synthesis and is dominated by publication bias; only ONE pooled VBM result survived and it concerns a neurodegenerative parasomnia; the review is framed around ageing and dementia risk in ADULTS and reports no adolescent stratum; heterogeneity of exposure definitions (duration, quality, disorders all combined) is extreme."
+funding: "Non-US government support (Australia); Australian National University / NHMRC-type support per journal record"
+notes: |
+  THE TOP OF THE EVIDENCE HIERARCHY FOR THIS DOMAIN, AND WHAT IT REVEALS IS HOW THIN THE DOMAIN IS.
+
+  With 106 studies and 108,364 participants, this systematic review with meta-analysis produced
+  exactly ONE pooled voxel-based finding - and it was for REM sleep behaviour disorder, a
+  prodromal neurodegenerative condition of older adults, in a 68-voxel cluster. There is no pooled
+  per-hour volumetric estimate for sleep DURATION in this review. If a defensible
+  cubic-millimetres-per-hour figure existed in this literature, this is the paper that would have
+  produced it. It does not exist.
+
+  THE VOTE COUNT IS THE HEADLINE AND IT IS ALSO THE TELL. '73.1% of studies found lower volumes'
+  is a statement about the publication record, not about biology. The authors' own stratification
+  is the more informative number: among LONGITUDINAL studies only 45.5% found any association -
+  fewer than half. For a real and consistent biological effect you would expect longitudinal
+  designs, which are better suited to detecting change, to have a HIGHER hit rate than
+  cross-sectional ones. They have a lower one. That pattern is what you see when cross-sectional
+  associations reflect stable confounded differences rather than progressive change, exactly as
+  fjell2023 argues from primary data.
+
+  TRANSPORTABILITY: this review is explicitly about ageing and neurodegeneration in healthy
+  ADULTS. It contains no adolescent analysis and its framing ("As the global population ages...")
+  is orthogonal to a 19-year-old's question. Its conclusion that inadequate sleep "might
+  contribute to neurodegeneration" is a hypothesis stated in the discussion, not a result of the
+  meta-analysis.
+shard: "s15_brain_structure"

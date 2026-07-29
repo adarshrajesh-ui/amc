@@ -1,0 +1,120 @@
+study_id: fang2025_dementia_lifetime
+citation: Fang M, Hu J, Weiss J, Knopman DS, Albert M, Windham BG, Walker KA, Sharrett AR, Gottesman RF,
+  Lutsey PL, Mosley T, Selvin E, Coresh J. Lifetime risk and projected burden of dementia. Nat Med. 2025;31(3):772-776.
+doi: 10.1038/s41591-024-03340-9
+pmid: '39806070'
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12305800/
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Lifetime risk and projected burden of dementia.
+access_tier: full_text
+design: prospective_cohort_objective
+n: 15043
+population:
+  age_mean: null
+  age_range:
+  - 55
+  - 95
+  pct_female: 55.1
+  country: US
+  adolescent_match: poor_elderly
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_dementia_after_age_55_male
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: lifetime risk of dementia in men from age 55 to age 95
+  value: 0.35
+  se: 0.007653061224489789
+  ci:
+  - 0.33
+  - 0.36
+  conversion_formula: se = (0.36 - 0.33)/3.92 = 0.00765 on the probability scale
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. Competing risk of death accounted for. CONTRADICTS Framingham
+    by about 2.5x (35% vs 13.8% for men); the authors attribute the gap to ascertainment completeness,
+    not method.
+  covariates:
+  - sex
+  - race
+  - APOE e4
+  followup_years: null
+  cohort_family: ARIC
+  quote: 'There was a higher lifetime risk of dementia in women versus men (48% (95% CI: 46-50) versus
+    35% (95% CI: 33-36)) and Black versus White adults (44% (95% CI: 41-46) versus 41% (95% CI: 40-43)).'
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_dementia_after_age_55_both_sexes
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: lifetime risk of dementia, both sexes, from age 55
+  value: 0.42
+  se: 0.005102040816326535
+  ci:
+  - 0.41
+  - 0.43
+  conversion_formula: se = (0.43 - 0.41)/3.92 = 0.0051
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease.
+  covariates: []
+  followup_years: null
+  cohort_family: ARIC
+  quote: 'The lifetime risk of dementia after age 55 years was 42% (95% confidence interval: 41-43).'
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_dementia_white_men_apoe_e4_homozygous
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: lifetime risk of dementia, White men with two APOE e4 alleles, from 55
+  value: 0.6
+  se: 0.05357142857142856
+  ci:
+  - 0.49
+  - 0.7
+  conversion_formula: se = (0.70 - 0.49)/3.92 = 0.0536
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. Genotype spread in White men is 31% (0 alleles) to 60% (2 alleles),
+    which is LARGER than any plausible sleep effect and must be carried as effect-modification uncertainty.
+  covariates: []
+  followup_years: null
+  cohort_family: ARIC
+  quote: sex and race APOE e4 status Difference (2 alleles - 0 alleles) 0 alleles 1 allele 2 alleles White
+    Women 45 (42, 48) 56 (51, 60) 64 (52, 73) 19 White Men 31 (29, 34) 40 (37, 44) 60 (49, 70) 29 Black
+    Women 44 (39, 48) 53 (48, 58) 67 (56, 76) 23 Black Men 34 (29, 38) 38 (33, 43) 39 (26, 51) 5 ... Estimates
+    are reported as percentages and indicate the cumulative incidence at the age of last observation (up
+    to age 95 years) after accounting for the competing risk of death.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: low
+  notes: 'Best available US ascertainment: in-person cognitive assessment, informant interview, hospitalisation
+    and death records, plus Medicare claims. Four US communities, so not nationally representative. Index
+    age 55. COHORT-FAMILY OVERLAP with wilkins2012 (both include ARIC).'
+funding: NIH (NHLBI, NIA, NINDS)
+notes: 'THE LARGEST SINGLE DENOMINATOR UNCERTAINTY IN THIS SHARD. Fang et al. note the discrepancy themselves:
+  ''Previous studies suggest that 11-14% of men and 19-23% of women in the United States will develop
+  dementia during their lives'' and ''In the Framingham Heart Study, 14% of men and 23% of women developed
+  dementia from age 45-105 years''. Male dementia lifetime risk is therefore 14%-35%. Carry both; do not
+  collapse.'
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

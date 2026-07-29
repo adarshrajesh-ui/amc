@@ -1,0 +1,112 @@
+study_id: gwira2024_diabetes_prevalence
+citation: 'Gwira JA, Fryar CD, Gu Q. Prevalence of Total, Diagnosed, and Undiagnosed Diabetes in Adults:
+  United States, August 2021-August 2023. NCHS Data Brief No. 516. Hyattsville, MD: National Center for
+  Health Statistics; 2024.'
+doi: 10.15620/cdc/165794
+pmid: '40085919'
+url: https://www.cdc.gov/nchs/data/databriefs/db516.pdf
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Prevalence of Total, Diagnosed, and Undiagnosed Diabetes in Adults: United States,
+    August 2021-August 2023.'
+access_tier: full_text
+design: cross_sectional
+n: 2938
+population:
+  age_mean: null
+  age_range:
+  - 20
+  - 999
+  pct_female: null
+  country: US
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: total_diabetes_prevalence_us_male_age20plus
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: prevalence of total (diagnosed + undiagnosed) diabetes, men 20+
+  value: 0.18
+  se: 0.011989795918367343
+  ci:
+  - 0.157
+  - 0.204
+  conversion_formula: se = (0.204 - 0.157)/3.92 = 0.0120; NCHS also publishes SE = 1.1 percentage points
+    = 0.011, so the two agree
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. Cross-sectional prevalence, NOT lifetime risk.
+  covariates: []
+  followup_years: null
+  cohort_family: NHANES
+  quote: Men  . . . 1,306 18.0 (15.7-20.4) 1.1
+- outcome_domain: baseline_risk
+  outcome_construct: undiagnosed_diabetes_prevalence_us_male_age20plus
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: prevalence of undiagnosed diabetes, men 20+
+  value: 0.051
+  se: 0.008418367346938778
+  ci:
+  - 0.036
+  - 0.069
+  conversion_formula: se = (0.069 - 0.036)/3.92 = 0.00842
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'higher = more missed disease. CRITICAL CORRECTION FACTOR: the diagnosed:total ratio
+    in men is 12.9/18.0 = 0.717, so lifetime risks built on DIAGNOSED diabetes (Gregg, Koyama, Narayan)
+    understate the lifetime risk of the biological disease by about 1/0.717 = 1.40x.'
+  covariates: []
+  followup_years: null
+  cohort_family: NHANES
+  quote: Undiagnosed . . . 2,938 4.5 (3.3-5.9) 0.6 / Men  . . . 1,306 5.1 (3.6-6.9) 0.8
+- outcome_domain: baseline_risk
+  outcome_construct: total_diabetes_prevalence_age_40_59_both_sexes
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: prevalence of total diabetes, adults 40-59, both sexes
+  value: 0.177
+  se: 0.016071428571428573
+  ci:
+  - 0.147
+  - 0.21
+  conversion_formula: se = (0.210 - 0.147)/3.92 = 0.0161
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. Supplies the age SHAPE for distributing a lifetime risk over
+    attained age. Prevalence at 20-39 is 3.6% and at 60+ is 27.3%.
+  covariates: []
+  followup_years: null
+  cohort_family: NHANES
+  quote: Total 20-39. . . 688 3.6 (2.0-5.9) 0.9 / 40-59. . . 861 17.7 (14.7-21.0) 1.4 / 60 and older.
+    . . 1,389 27.3 (23.0-31.9) 2.0
+rob:
+  tool: Newcastle-Ottawa
+  judgement: low
+  notes: 'Nationally representative, measured (not self-reported) fasting glucose and HbA1c. Cross-sectional,
+    so it is not a cumulative incidence: it is subject to survivor bias (people who developed diabetes
+    and died are absent) and to cohort effects. NHANES 2021-2023 had reduced response after the pandemic
+    pause.'
+funding: US federal (CDC/NCHS)
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

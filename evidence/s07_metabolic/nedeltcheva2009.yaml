@@ -1,0 +1,125 @@
+study_id: nedeltcheva2009
+citation: "Nedeltcheva AV, Kessler L, Imperial J, Penev PD. Exposure to recurrent sleep restriction in the setting of high caloric intake and physical inactivity results in increased insulin resistance and reduced glucose tolerance. J Clin Endocrinol Metab. 2009;94(9):3242-3250."
+doi: "10.1210/jc.2009-0483"
+pmid: "19567526"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2819825/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Exposure to recurrent sleep restriction in the setting of high caloric intake and physical inactivity results in increased insulin resistance and reduced glucose tolerance."
+access_tier: abstract_only
+secondhand_via: "Full text XML returned empty from Europe PMC and the NCBI PMC copy contains front matter plus the structured abstract only (8.5 kB). All numbers below are first-hand from that structured abstract, which publishes per-condition means with SDs and p-values."
+design: rct_crossover
+tier: T1
+n: 11
+n_studies_pooled: null
+population:
+  age_mean: 39.0
+  age_range: null
+  pct_female: 45.5
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: insulin_sensitivity_si_minimal_model
+    exposure: {type: chronic_restriction, dose_h: 5.5, referent_h: 8.5, duration_days: 14, contrast_label: "14 days at 5.5 h vs 8.5 h bedtime, sedentary living with AD LIBITUM food intake; randomised crossover; achieved sleep reduction 122 +/- 25 min/day"}
+    scale: pct_change
+    unit: "% change in Minimal-model insulin sensitivity index S_I"
+    value: -17.5
+    se: 6.92388
+    ci: [-31.07, -3.93]
+    conversion_formula: "Published as S_I 3.3 +/- 1.1 vs 4.0 +/- 1.6 (mU/liter)^-1 x min^-1, P < 0.03. Percent change = (3.3-4.0)/4.0 = -17.50%. The per-condition SDs cannot give SE_diff without the within-subject correlation, so SE was backed out from the p-value: with n=11 paired, df=10, t = t_isf(0.03/2, 10) = 2.5275, se = 17.50/2.5275 = 6.92388 percentage points. Because P<0.03 is a BOUND rather than an exact p, the true t is at least 2.5275 and the true SE is at most 6.92, so this SE is CONSERVATIVE (an upper bound). ci = -17.50 +/- 1.96*6.92388. Absolute-scale equivalent: diff -0.7 (mU/L)^-1.min^-1, se 0.27696."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = HARM (lower insulin sensitivity). Magnitude is close to buxton2010's -20% by the same IVGTT method, despite a milder dose (5.5 h vs 5 h) and a longer exposure (14 vs 7 days)."
+    covariates: ["randomised crossover order", "comparable weight gain in both conditions (so the effect is not explained by differential weight change)"]
+    followup_years: null
+    cohort_family: "Chicago_Penev_5.5h_protocol"
+    quote: "Bedtime restriction reduced daily sleep by 122 +/- 25 min. Both study periods were associated with comparable weight gain; however, recurrent sleep restriction resulted in reduced oral glucose tolerance (2-h glucose value, 144 +/- 25 vs. 132 +/- 36 mg/dl; P < 0.01) and insulin sensitivity [3.3 +/- 1.1 vs. 4.0 +/- 1.6 (mU/liter)(-1) x min(-1); P < 0.03], and increased glucose effectiveness (0.023 +/- 0.005 vs. 0.020 +/- 0.005 min(-1); P < 0.04)."
+  - outcome_domain: metabolic
+    outcome_construct: ogtt_2h_glucose
+    exposure: {type: chronic_restriction, dose_h: 5.5, referent_h: 8.5, duration_days: 14, contrast_label: "14 days at 5.5 h vs 8.5 h bedtime, ad libitum food; 2-h glucose on oral glucose tolerance test"}
+    scale: pct_change
+    unit: "% change in 2-h OGTT plasma glucose"
+    value: 9.09
+    se: 2.86845
+    ci: [3.47, 14.71]
+    conversion_formula: "Published as 2-h glucose 144 +/- 25 vs 132 +/- 36 mg/dl, P < 0.01. Percent change = (144-132)/132 = +9.09%. SE backed out from the p-value bound: df=10, t = t_isf(0.01/2,10) = 3.1693, se = 9.09/3.1693 = 2.86845 percentage points (conservative, since P<0.01 is a bound). ci = 9.09 +/- 1.96*2.86845. Absolute-scale equivalent: +12 mg/dL, se 3.78636 mg/dL."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = HARM (higher 2-h glucose = worse oral glucose tolerance). Clinically framed: mean 2-h glucose moved from 132 to 144 mg/dL, i.e. from clearly normal toward the impaired-glucose-tolerance threshold of 140 mg/dL, in 14 days, in middle-aged adults who were already overweight."
+    covariates: ["randomised crossover order", "comparable weight gain in both conditions"]
+    followup_years: null
+    cohort_family: "Chicago_Penev_5.5h_protocol"
+    quote: "recurrent sleep restriction resulted in reduced oral glucose tolerance (2-h glucose value, 144 +/- 25 vs. 132 +/- 36 mg/dl; P < 0.01)"
+  - outcome_domain: metabolic
+    outcome_construct: glucose_effectiveness_sg
+    exposure: {type: chronic_restriction, dose_h: 5.5, referent_h: 8.5, duration_days: 14, contrast_label: "14 days at 5.5 h vs 8.5 h bedtime, ad libitum food; Minimal-model glucose effectiveness S_G"}
+    scale: pct_change
+    unit: "% change in glucose effectiveness (non-insulin-dependent glucose disposal)"
+    value: 15.0
+    se: null
+    ci: null
+    conversion_formula: "Published as 0.023 +/- 0.005 vs 0.020 +/- 0.005 min^-1, P < 0.04. Percent change = (0.023-0.020)/0.020 = +15.0%. On the absolute scale, diff = +0.003 min^-1 with SE backed out from the p bound = 0.00127 min^-1 (df=10, t=2.3593). The PERCENT-scale SE is not recorded because the reported values are rounded to two significant figures, so the percentage is only accurate to roughly +/-5 percentage points and a derived SE would convey false precision; se left null deliberately."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE HERE MEANS glucose effectiveness INCREASED, i.e. non-insulin-dependent glucose disposal went UP under restriction. This is the OPPOSITE SIGN to spiegel1999, where glucose effectiveness reportedly fell by 30%. Flagged deliberately - see notes. Whether 'up' is good or bad is ambiguous: it is most plausibly a compensatory response to the fall in insulin-dependent disposal."
+    covariates: ["randomised crossover order"]
+    followup_years: null
+    cohort_family: "Chicago_Penev_5.5h_protocol"
+    quote: "and increased glucose effectiveness (0.023 +/- 0.005 vs. 0.020 +/- 0.005 min(-1); P < 0.04)"
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomised crossover with controlled inpatient-style exposure, 14-day conditions (long for this literature), comparable weight gain across conditions, and both oral and intravenous glucose challenges. Concerns: (1) n=11, so all estimates are imprecise and the p-value-derived SEs rest on a small df; (2) open-label, unavoidable; (3) mixed-sex sample of 5 women and 6 men with no sex-stratified results, in a literature where sex differences are reported; (4) the exposure is deliberately bundled with 'a Western-like lifestyle' - sedentary living AND ad libitum food intake - so this trial estimates the effect of short sleep IN THAT CONTEXT rather than the effect of short sleep alone. That is a design choice, not a flaw, but it must not be read as an isolated sleep effect; the companion trial nedeltcheva2012 changes the energy-balance context and gets a different answer; (5) p-values are reported only as bounds (P<0.01, P<0.03, P<0.04), which forces conservative SE derivation; (6) participants were overweight (BMI 26.5 +/- 1.5) and middle-aged, not healthy young adults."
+funding: "Not stated in the retrievable abstract or front matter (University of Chicago; the group's work in this period was NIH-supported, but I did not retrieve the funding statement for THIS paper, so it is left unstated rather than guessed)."
+notes: |
+  READ THIS RECORD AS ONE HALF OF A MATCHED PAIR. The same laboratory ran the same 14-day 5.5 h
+  versus 8.5 h bedtime protocol twice, changing only the energy-balance context, and got opposite
+  glycaemic answers:
+    nedeltcheva2009 (this record) - ad libitum food, sedentary, weight GAIN
+        -> S_I -17.5% (P<0.03), 2-h OGTT glucose +9.1% (P<0.01). CLEAR HARM.
+    nedeltcheva2012              - hypocaloric diet, weight LOSS of 1.0 BMI unit
+        -> oral glucose tolerance NOT impaired, 24-h glucose maintained on LESS insulin, fasting
+           glucose slightly DOWN. IVGTT suggested S_I -26%, but the authors distrust that estimate.
+  The pair is the shard's only experimental evidence on how ENERGY BALANCE modifies the glycaemic
+  cost of short sleep, and the modifier is large enough to flip the sign of the primary oral-glucose
+  outcome. That is a first-order effect-modification finding, not a footnote.
+
+  WHY THIS MATTERS A GREAT DEAL FOR OUR SUBJECT: he is an 18-year-old entering his second year of
+  college. The relevant context is emphatically the 2009 one - not dieting, plausibly sedentary,
+  eating ad libitum, in an environment where short sleep reliably increases caloric intake. So the
+  2009 arm is the more applicable of the pair, and it is the arm that shows harm. The corollary is
+  that the subject's glycaemic risk from short sleep is likely to be partly mediated by, and
+  certainly amplified by, the intake and activity pathways rather than being a pure sleep effect.
+  That is a mechanistic claim the modeller can use, and it also means an intervention on diet and
+  activity could blunt the glycaemic consequence without changing sleep at all.
+
+  DISTANCE FROM OUR SUBJECT'S EXPOSURE:
+  * Dose: 5.5 h TIB, achieving a 122 min/day sleep reduction. This is close to the subject's weekday
+    5-6 h and far milder than the 4 h protocols. Good dose match.
+  * Duration: 14 consecutive days - among the longest in the shard, exceeded only by zuraikat2024
+    (6 weeks) and the 3-week protocols buxton2012_fd and yuan2021. Still tiny against 3 years.
+  * Pattern: continuous, no weekend recovery. Cannot speak to weekday/weekend cycling.
+  * AGE IS THE MAIN MISMATCH: mean age 39 +/- 5 y, BMI 26.5 +/- 1.5, overweight. Two decades older
+    than the subject and already carrying excess adiposity, which plausibly raises susceptibility.
+    Scored poor_midlife. The 2-h glucose finding is especially age-sensitive: moving from 132 to
+    144 mg/dL matters much more in someone already near the impaired-glucose-tolerance threshold
+    than in a healthy 18-year-old, whose 2-h glucose would typically start well below that.
+
+  THE GLUCOSE-EFFECTIVENESS CONTRADICTION - flagging it explicitly so a later station does not
+  quietly average the two: spiegel1999 is reported (secondhand) as showing glucose effectiveness
+  DOWN 30% after 6 nights at 4 h TIB, whereas this study found it UP 15% after 14 days at 5.5 h TIB.
+  Both used Minimal-model analysis of an IVGTT. Possible reconciliations: different dose (4 h vs
+  5.5 h), different duration (6 vs 14 days), different referent (12 h TIB extension vs 8.5 h), a
+  genuine compensatory adaptation emerging over two weeks, or imprecision in two samples of 11.
+  I cannot resolve it from the retrievable text. Glucose effectiveness should therefore be treated as
+  a LOW-CONFIDENCE, SIGN-UNSTABLE outcome in this shard and should not carry weight in the headline
+  numbers. The insulin-sensitivity and glucose-tolerance outcomes, by contrast, agree in direction
+  across every restriction study except dutil2024 and nedeltcheva2012.
+
+  n = 11 (5 female, 6 male), so pct_female = 5/11 = 45.5%. Mean age 39 +/- 5 y (SD given but no
+  range published, so age_range is null rather than guessed).
+shard: "s07_metabolic"

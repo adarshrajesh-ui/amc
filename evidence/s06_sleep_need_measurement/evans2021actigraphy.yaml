@@ -1,0 +1,128 @@
+study_id: evans2021actigraphy
+citation: "Evans MA, Buysse DJ, Marsland AL, Wright AGC, Foust J, Carroll LW, Kohli N, Mehra R, Jasper A, Srinivasan S, Hall MH. Meta-analysis of age and actigraphy-assessed sleep characteristics across the lifespan. Sleep. 2021;44(9):zsab088."
+doi: "10.1093/sleep/zsab088"
+pmid: "33823052"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8436145/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Meta-analysis of age and actigraphy-assessed sleep characteristics across the lifespan"
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 23365
+n_studies_pooled: 91
+population:
+  age_mean: null
+  age_range: [6, 99]
+  pct_female: null
+  country: "multinational"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: actigraphy_sleep_efficiency_tst_over_tib_age_10_to_20
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "study-averaged actigraphy sleep efficiency (TST/TIB), decade band 10-19.99 y"}
+    scale: probability
+    unit: "proportion of time in bed spent asleep"
+    value: 0.8720
+    se: null
+    ci: null
+    conversion_formula: "Table 3 ('Averages of sleep characteristics across each assessed decade of the lifespan'), Sleep efficiency row, 10-19.99 column: 87.20%, from 12 studies. value = 0.8720. This is an average of STUDY-LEVEL means, so no participant-level SD is available and se is left null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "higher = more of time in bed is actually asleep. THE PRIMARY AGE-MATCHED SLEEP-EFFICIENCY ESTIMATE FOR THIS SHARD, and the definition is the one the model needs (TST divided by TIB). Directly covers our subject at ages 16-19."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      Sleep efficiency was operationalized as sleep duration divided by time in bed and multiplied by 100 to
+      render percent values. ... Table 3. Averages of sleep characteristics across each assessed decade of the
+      lifespan 6-9.99 10-19.99 20-29.99 ... Sleep efficiency, % 84.10 87.20 87.79 ... Number of studies 8 12 9
+  - outcome_domain: exposure_measurement
+    outcome_construct: actigraphy_sleep_efficiency_tst_over_tib_age_20_to_30
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "study-averaged actigraphy sleep efficiency (TST/TIB), decade band 20-29.99 y"}
+    scale: probability
+    unit: "proportion of time in bed spent asleep"
+    value: 0.8779
+    se: null
+    ci: null
+    conversion_formula: "Table 3, Sleep efficiency row, 20-29.99 column: 87.79%, from 9 studies. value = 0.8779."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "higher = better. RECORDED TO SHOW THERE IS NO STEP AT AGE 20: 87.20% at 10-19.99 y versus 87.79% at 20-29.99 y, a difference of 0.6 percentage points. Sleep efficiency is effectively CONSTANT across our subject's whole exposure window, so a single efficiency value can be used for ages 16 through 19 without an age adjustment."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      Table 3. Averages of sleep characteristics across each assessed decade of the lifespan 6-9.99 10-19.99
+      20-29.99 30-39.99 ... Sleep efficiency, % 84.10 87.20 87.79 77.88 ... Number of studies 8 12 9 3
+  - outcome_domain: exposure_measurement
+    outcome_construct: sleep_efficiency_age_association_across_lifespan
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "meta-analytic correlation of age with actigraphy sleep efficiency"}
+    scale: raw_units
+    unit: "correlation coefficient r"
+    value: -0.05
+    se: 0.0255
+    ci: [-0.10, -0.001]
+    conversion_formula: "Result text: 'The overall effect size was r = -0.05, 95% CI [-0.10, -0.001], p = .05, T2 = 0.02, I2 = 42.24%'. se = (-0.001-(-0.10))/3.92 = 0.0253; recorded as 0.0255. Based on 53 articles, 58 effect sizes, 11,525 participants."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = slightly lower efficiency at older ages, but the magnitude is negligible (r = -0.05, upper bound essentially zero) AND the authors report the result is fragile: removing any one of 31 individual effect sizes made it nonsignificant. TREAT SLEEP EFFICIENCY AS AGE-INVARIANT for this shard. This independently replicates ohayon2004's adolescent null (d = 0.01, 95% CI -0.13 to 0.15) in a much larger and more recent actigraphy literature."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      This meta-analysis included 53 articles with 58 effect sizes and 11 525 participants. The overall effect
+      size was r = -0.05, 95% CI [-0.10, -0.001], p = .05, T 2 = 0.02, I 2 = 42.24% (Figure 4), indicating a
+      small correlation between older age and lower sleep efficiency. Removal of any one of 31 published effect
+      sizes included in the meta-analysis rendered the overall association nonsignificant (p > .05), with a range
+      of the point estimate after removal of individual studies from -0.04 to -0.06.
+  - outcome_domain: sleep_need
+    outcome_construct: actigraphy_sleep_duration_age_10_to_20
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "study-averaged actigraphy sleep duration, decade band 10-19.99 y"}
+    scale: hours
+    unit: "hours"
+    value: 7.18
+    se: null
+    ci: null
+    conversion_formula: "Table 3, Sleep duration row, 10-19.99 column: 7.18 h, from 25 studies. value = 7.18. Average of study-level means, so no participant-level SD; se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive: what 10-19 year olds actually sleep by actigraphy. INDEPENDENT CORROBORATION of galland2018's pooled 7.4 h for 15-18 year olds and of white2026ffcws's 7.57 h weekday figure, from a different search, a different author group and a different pooling method. The adolescent actigraphy norm is robustly 7.2-7.6 h, i.e. roughly 1.5-1.8 h below the T1 sleep-need estimate of ~9 h."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      Table 3. Averages of sleep characteristics across each assessed decade of the lifespan 6-9.99 10-19.99
+      20-29.99 ... Sleep duration, hour 8.63 7.18 7.20 6.42 ... Number of studies 16 25 11 7
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Large systematic search of four databases (7079 titles screened), studies with known psychiatric or medical comorbidity excluded, random-effects pooling, funnel plot with trim-and-fill, and formal moderator analyses including actigraphy device type and number of nights (neither of which moderated the effect sizes). THE AUTHORS' OWN QUALITY VERDICT IS NEGATIVE AND I AM RECORDING IT: 'The quality of the evidence was considered insufficient for sleep duration, sleep efficiency, and wake-up time ages 6-21.' Further limitations: the decade averages in Table 3 are unweighted averages of STUDY-level means, so they carry no participant-level dispersion and are vulnerable to small-study influence (the 10-19.99 y efficiency figure rests on only 12 studies); actigraphy over-counts sleep relative to PSG (see meredithjones2024) so the duration figures are upper bounds; fewer than half the studies reported race/ethnicity."
+funding: "Not extracted"
+notes: |
+  RETRIEVED AS FULL TEXT. The PMC XML deposit (PMC8436145) contains only the abstract, so I fetched and parsed the PMC
+  article HTML instead, which carries the complete results text and Tables 2, 3 and 5.
+  WHY THIS IS THE BEST SOURCE IN THE SHARD FOR SLEEP EFFICIENCY. It is the only retrieved source that gives all three of:
+  (a) an age band that actually contains 16-19 year olds, (b) the TST/TIB definition the model needs, stated explicitly
+  ("Sleep efficiency was operationalized as sleep duration divided by time in bed and multiplied by 100"), and (c) a large
+  pooled evidence base (53 articles, 11,525 participants for the efficiency analysis).
+  FOUR-WAY CONVERGENCE ON SLEEP EFFICIENCY (TST/TIB), across two measurement modalities and four independent evidence bases:
+    evans2021actigraphy  actigraphy meta-analysis, ages 10-19.99   0.8720   (12 studies)
+    evans2021actigraphy  actigraphy meta-analysis, ages 20-29.99   0.8779   ( 9 studies)
+    mitterling2015       PSG, ages <= 30, Austria                  0.870    (median)
+    meredithjones2024    PSG, ages 8-16, New Zealand               0.891    (mean, SD 0.125)
+  Central value 0.875. This is now one of the better-supported quantities in the shard and it is the basis for
+  exposure_priors.md section (iii). Ohayon 2004 (d = 0.01 across adolescence) and this paper (r = -0.05 across the whole
+  lifespan, fragile) both say the age adjustment is unnecessary.
+  ONE TENSION I AM FLAGGING RATHER THAN SMOOTHING OVER. The Table 3 decade means for the young bands are about 87%, but the
+  Discussion notes that "the average sleep efficiency was below 85% (a common threshold for insomnia) for half of the
+  included studies". Those two statements are compatible - the first is a decade-band average, the second is the median of
+  the study-level distribution across ALL ages including the elderly bands where efficiency is much lower (74.52% at
+  60-69.99 y) - but together they show the between-study spread is wide. That spread, plus the participant-level SD of 0.125
+  from meredithjones2024, is why I recommend an efficiency SD of 0.06 rather than something tighter: 0.06 is narrower than a
+  single-night participant SD (correct, because a 3-year habitual average averages out night-to-night noise) but wide enough
+  to cover the study-to-study disagreement.
+shard: "s06_sleep_need_measurement"

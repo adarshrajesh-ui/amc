@@ -1,0 +1,73 @@
+study_id: short2018
+citation: "Short MA, Weber N, Reynolds C, Coussens S, Carskadon MA. Estimating adolescent sleep need using dose-response modeling. Sleep. 2018;41(4):zsy011."
+doi: "10.1093/sleep/zsy011"
+pmid: "29325109"
+url: "https://pubmed.ncbi.nlm.nih.gov/29325109/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Estimating adolescent sleep need using dose-response modeling"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 34
+n_studies_pooled: null
+population:
+  age_mean: 16.0
+  age_range: [15, 17]
+  pct_female: null
+  country: "Australia"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: adolescent_sleep_need_for_optimal_pvt
+    exposure: {type: sleep_extension, dose_h: 10, referent_h: null, duration_days: 5, contrast_label: "sleep need back-modelled from PVT lapse dose-response across 5-, 7.5- and 10-h TIB doses in 15-17 year olds"}
+    scale: hours
+    unit: "h of sleep per night needed to maintain optimal sustained attention"
+    value: 9.35
+    se: null
+    ci: null
+    conversion_formula: "Reported model output directly. The independent estimate from the 10-h TIB sleep opportunities themselves was ~9 h, so the two approaches bracket 9.0-9.35 h. SE not reported in the abstract and full text is paywalled, so se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is the TARGET for a recovery prescription in the age group of interest, not a harm estimate. It is ~0.9-1.0 h higher than the young-adult asymptote (Kitamura 8.41 h; Klerman & Dijk 8.9 h), which means an adolescent sleeping 5-6 h/night is running a ~3.4-4.4 h/night deficit, not the ~1 h/night deficit seen in adult short-sleeper studies."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Sleep need estimated from 10-hour TIB sleep opportunities was approximately 9 hours, while modeling PVT lapse data suggested that 9.35 hours of sleep is needed to maintain optimal sustained attention performance."
+  - outcome_domain: circadian
+    outcome_construct: circadian_phase_delay_from_sleep_restriction
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 10, duration_days: 4, contrast_label: "salivary dim-light melatonin onset after 4 nights of restricted TIB vs baseline, dose-dependent"}
+    scale: probability
+    unit: "reported as dose-dependent; direction only, no magnitude available from the abstract"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "No magnitude is reported in the abstract and the full text is paywalled. Encoded as a direction indicator (1.0 = delay present and dose-dependent) with se null. Downstream model should treat this as qualitative evidence only."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1.0 = restriction produced dose-dependent circadian phase DELAY. Mechanistically important for a recovery prescription: restriction does not only deplete sleep, it moves the clock later, so simply going to bed earlier will initially fail because the circadian gate has shifted."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Dose-dependent deficits to sleep duration, circadian phase timing, lapses of attention, and subjective sleepiness occurred. Less TIB resulted in less sleep, more lapses of attention, greater subjective sleepiness, and larger circadian phase delays."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Well-designed within-subject laboratory dose-response with three TIB doses and 10-h TIB baseline and recovery nights, in exactly the target age band. Downgraded because I could only obtain the abstract (paywalled, no PMC deposit, no open-access copy found via Europe PMC), so I cannot verify the modelling assumptions behind the 9.35 h figure, cannot extract SEs or CIs, and cannot check the recovery-night data. n=34 split across three dose groups means ~11 per group."
+funding: "Not verifiable from the abstract."
+notes: |
+  Included because it is the ONLY exact-age-match (15-17 y) estimate of sleep need in this shard, and it
+  reframes the entire recovery prescription. Two convergent estimates: ~9 h from ad-lib sleep at 10 h TIB, and
+  9.35 h from inverting the PVT lapse dose-response.
+  Consequence for the target subject (weekday 5-6 h from age 16 to 19): the per-night shortfall is
+  9.35 - 5.5 = ~3.85 h/night, roughly 4x the ~1 h/night shortfall that took Kitamura's young adults 4 days of
+  12 h TIB to clear. This is the single most important reason not to transport adult recovery timelines
+  directly onto this subject.
+  ACCESS LIMITATION LOGGED: paywalled. Both numbers quoted above are verbatim from the PubMed abstract, which
+  I retrieved via efetch. No number in this record comes from anywhere else.
+  I attempted PMC and Europe PMC retrieval; Europe PMC returns pmcid None and isOpenAccess N for
+  DOI 10.1093/sleep/zsy011.
+shard: "s05_recovery_kinetics"

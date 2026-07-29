@@ -1,0 +1,149 @@
+study_id: ma2023_le8_life_expectancy
+citation: Ma H, Wang X, Xue Q, Li X, Liang Z, Heianza Y, Franco OH, Qi L. Cardiovascular Health and Life
+  Expectancy Among Adults in the United States. Circulation. 2023;147(15):1137-1146.
+doi: 10.1161/CIRCULATIONAHA.122.062457
+pmid: '37036905'
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10165723/
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Cardiovascular Health and Life Expectancy Among Adults in the United States
+access_tier: full_text
+design: prospective_cohort_selfreport
+n: 23003
+population:
+  age_mean: null
+  age_range:
+  - 20
+  - 79
+  pct_female: null
+  country: US
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: life_expectancy_at_50_gained_high_vs_low_sleep_health_score
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: 8.0
+    duration_days: null
+    contrast_label: high vs low LE8 sleep health score; LE8 scores 7 to <9 h as 100 and short sleep progressively
+      lower, so 'low' is dominated by short duration
+  scale: years
+  unit: years of life expectancy at exact age 50, high versus low LE8 sleep health score, NOT mutually
+    adjusted for the other seven CVH components
+  value: 5.0
+  se: 0.8928571428571429
+  ci:
+  - 3.2
+  - 6.7
+  conversion_formula: se = (6.7 - 3.2)/3.92 = 0.893
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'positive = years GAINED by good sleep, i.e. 5.0 y notionally lost by the poor-sleep
+    group. TREAT AS A HARD CEILING, NOT AN ESTIMATE. The paper''s own numbers prove the component contrasts
+    are not independent: tobacco alone gives 7.4 y and sleep alone gives 5.0 y, summing to 12.4 y, which
+    exceeds the ENTIRE high-vs-low LE8 contrast of 8.9 y before the other six components are even counted.
+    The components therefore overlap heavily and 5.0 y cannot be read as sleep''s independent contribution.
+    It is 4.2x this shard''s life-table result for a lifelong all-cause HR of 1.13 (-1.49 y) and 4.2x
+    Chaput''s 1.2 y.'
+  covariates:
+  - age
+  - sex
+  - race/ethnicity
+  followup_years: 7.8
+  cohort_family: NHANES_NDI
+  quote: The new component for CVH--high sleep health score was significantly associated with a longer
+    life expectancy at age 50 by 5.0 (95% CI, 3.2-6.7) years for all participants.
+- outcome_domain: baseline_risk
+  outcome_construct: life_expectancy_at_50_gained_high_vs_low_total_cvh_male
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: high (LE8 >=80) vs low (LE8 <50) total cardiovascular health; sleep is 1 of 8 components
+  scale: years
+  unit: years of life expectancy at exact age 50, high vs low total LE8 score, MALES
+  value: 8.1
+  se: 1.989795918367347
+  ci:
+  - 4.2
+  - 12.0
+  conversion_formula: se = (12.0 - 4.2)/3.92 = 1.990
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = years gained. THE CEILING FOR THE WHOLE EIGHT-COMPONENT LIFESTYLE BUNDLE
+    IN MEN. Sleep duration is one of eight equally weighted components, so an equal-share allocation caps
+    sleep at about 1.0 y (8.1/8) - close to Chaput's independently derived 1.2 y and to this shard's HR
+    1.10-1.13 result. That agreement between three unrelated methods is the strongest available constraint
+    on the mortality channel. The 1.0 y equal-share figure is THIS SHARD'S ARITHMETIC, not published by
+    Ma et al.
+  covariates:
+  - age
+  - sex
+  - race/ethnicity
+  followup_years: 7.8
+  cohort_family: NHANES_NDI
+  quote: In men, participants with high CVH had 8.1 (95% CI, 4.2-12.0) more years of estimated life expectancy
+    at age 50 compared with those with low CVH.
+- outcome_domain: baseline_risk
+  outcome_construct: life_expectancy_at_50_low_cvh_years
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: years
+  unit: absolute remaining life expectancy at age 50, low-CVH stratum, both sexes
+  value: 27.3
+  se: 0.5867346938775503
+  ci:
+  - 26.1
+  - 28.4
+  conversion_formula: se = (28.4 - 26.1)/3.92 = 0.587
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'higher = longer life. INCLUDED AS A CALIBRATION CHECK ON THE PAPER ITSELF, not as an
+    exposure effect: NCHS 2023 Table 2 publishes e50 = 29.96 y for US males, so this cohort''s low-CVH
+    stratum (27.3 y, both sexes) sits below the national male value and its high-CVH stratum (36.2 y)
+    well above it, which is the expected direction and indicates the paper''s life-table machinery is
+    not grossly miscalibrated. The national value falls between their low and moderate strata, as it should
+    for a population whose modal LE8 is moderate.'
+  covariates:
+  - age
+  - sex
+  - race/ethnicity
+  followup_years: 7.8
+  cohort_family: NHANES_NDI
+  quote: The estimated life expectancy at age 50 years was 27.3 years (95% CI, 26.1-28.4), 32.9 years
+    (95% CI, 32.3-33.4), and 36.2 years (95% CI, 34.2-38.2) in participants with low (LE8 score <50),
+    moderate (50<= LE8 score <80), and high (LE8 score >=80) CVH, respectively.
+rob:
+  tool: ROBINS-I
+  judgement: critical
+  notes: 'The single-component estimates in Table S8, including the 5.0-year sleep figure, are marginal
+    high-vs-low contrasts that are NOT adjusted for the other seven components. Because the components
+    are strongly correlated in these data (the low-CVH stratum has a mean sleep health score of 68.2 versus
+    93.2 in the high-CVH stratum), the sleep contrast absorbs smoking, diet, BMI, glucose and blood pressure.
+    The internal arithmetic makes this unavoidable: the components sum to far more than the total contrast.
+    Additionally, only 1359 deaths (328 CVD) over a median 7.8 years support an extrapolation of survival
+    from age 50 to 100, and sleep duration is self-reported in a single NHANES interview. Confounding
+    by socioeconomic position is not addressed in the component analysis at all.'
+funding: NIH (per paper)
+notes: 'THE LARGEST PUBLISHED SLEEP LIFE-EXPECTANCY NUMBER THIS SHARD FOUND, AND THE ONE MOST LIKELY TO
+  BE MISUSED. If a downstream consumer wants a headline ''good sleep is worth 5 years'' claim, this is
+  where it comes from, and it is not defensible as a causal sleep effect for the reasons in rob.notes.
+  Its real value is as the upper end of a bracket: the four independent published anchors for the mortality
+  channel are Chaput 2022 (+1.2 y from age 20, life table + meta-analytic RR), Huang 2023 (-2.31 CVD-free
+  y in men, UK Biobank), Li 2024 (-4.7 y at age 30 in men, 5-factor composite) and Ma 2023 (5.0 y at age
+  50, unadjusted single component). They span 1.2 to 5.0 years and the spread is explained almost entirely
+  by how much non-sleep lifestyle each contrast absorbs, ordered exactly as one would predict. Index age
+  50 versus the subject''s 19 is a second reason to discount it: it conditions on surviving to 50.'
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

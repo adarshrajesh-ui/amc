@@ -1,0 +1,83 @@
+study_id: schmid2012
+citation: Schmid SM, Hallschmid M, Jauch-Chara K, Lehnert H, Schultes B. Sleep timing may modulate the effect of sleep loss
+  on testosterone. Clin Endocrinol (Oxf). 2012;77(5):749-754.
+doi: 10.1111/j.1365-2265.2012.04419.x
+pmid: '22568763'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: Sleep timing may modulate the effect of sleep loss on testosterone
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 15
+n_studies_pooled: null
+population:
+  age_mean: 27.1
+  age_range: null
+  pct_female: 0.0
+  country: DE
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: endocrine
+  outcome_construct: total_testosterone_late_bedtime_restriction_null
+  exposure:
+    type: chronic_restriction
+    dose_h: 4
+    referent_h: 8
+    duration_days: 2
+    contrast_label: 2 nights 4 h sleep with LATE bedtime (02:45-07:00) vs 8 h (22:45-07:00); 15-h hormone profile
+  scale: pct_change
+  unit: '% change in testosterone (null)'
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: No point estimate reported; authors report no difference between conditions. value=0 encodes the null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'value=0 encodes a NULL. HIGHEST-RELEVANCE exposure pattern for a college student: the sleep loss is taken
+    off the FRONT of the night (late bedtime, fixed wake time). Under that pattern testosterone was unaffected. Comparator
+    is a realistic 8 h, not 10-12 h.'
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Serum LH, T and PRL concentrations showed characteristic diurnal variations across the 15-h period without any
+    differences between the 4- and 8-h sleep conditions.
+- outcome_domain: endocrine
+  outcome_construct: morning_testosterone_early_night_only_sleep
+  exposure:
+    type: chronic_restriction
+    dose_h: 4.5
+    referent_h: 7
+    duration_days: 1
+    contrast_label: 1 night 4.5 h sleep confined to the FIRST half of the night (22:30-03:30) vs 7 h (22:30-06:00), separate
+      experiment n=8
+  scale: pct_change
+  unit: '% change in morning testosterone (direction only)'
+  value: -1.0
+  se: null
+  ci: null
+  conversion_formula: No point estimate reported; only 'markedly decreased ... P <= 0.05'. value=-1 encodes a signed but
+    unquantified decrease.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Negative = lower morning testosterone. The effect appears only when the subject is AWAKE during the second
+    half of the night. This is the mechanistic explanation for the Leproult-vs-Reynolds/Schmid discrepancy and it depends
+    on WHERE the sleep sits, not only on how much there is.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: However, total sleep deprivation and 4.5 h of sleep restricted to the first night-half markedly decreased morning
+    T and PRL concentrations (both P <= 0.05). ... While sleep loss in the early part of the night does not affect T and
+    PRL, early awakening and wakefulness during the second part of the night reduces morning circulating T and PRL concentrations.
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: n=15 (main) and n=8 (second experiment); only 2 nights of restriction, so chronic adaptation is untested; no effect
+    magnitudes reported for the positive finding
+funding: Non-US government
+notes: The single most decision-relevant modifier in this shard. Our subject's exposure is late-bedtime restriction with
+  a fixed alarm - which is Schmid's 02:45-07:00 condition, the one that produced NO testosterone effect at all.
+shard: s11_endocrine_growth

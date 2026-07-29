@@ -1,0 +1,162 @@
+study_id: kyle2017
+citation: "Kyle SD, Sexton CE, Feige B, Luik AI, Lane J, Saxena R, Anderson SG, Bechtold DA, Dixon W, Little MA, Ray D, Riemann D, Espie CA, Rutter MK, Spiegelhalder K. Sleep and cognitive performance: cross-sectional associations in the UK Biobank. Sleep Medicine. 2017;38:85-91."
+doi: "10.1016/j.sleep.2017.07.001"
+pmid: "29031762"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5656094/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep and cognitive performance: cross-sectional associations in the UK Biobank."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 477529
+n_studies_pooled: null
+population:
+  age_mean: 56.4
+  age_range: [40, 69]
+  pct_female: 54.8
+  country: "UK"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: cognition
+    outcome_construct: verbal_numerical_reasoning_fluid_intelligence
+    exposure: {type: habitual_short_sleep, dose_h: 6.0, referent_h: 8.0, duration_days: null, contrast_label: "self-reported habitual sleep <7 h vs 7-9 h (reference), fully adjusted model 4"}
+    scale: hedges_g
+    unit: null
+    value: -0.0694
+    se: 0.00685
+    ci: [-0.0829, -0.0560]
+    conversion_formula: "Table 3 model 4 beta = -1.5 x 10^-1 raw points on the 13-item verbal-numerical reasoning test. Standardized by the UK Biobank baseline SD of that test, 2.16 (Lyall 2016 PLoS ONE Table 1: 'Verbal-numerical reasoning score | 158,845 | 5.99 (2.16)'), giving g = -0.150/2.16 = -0.0694. SE approximated as sqrt(1/n_short + 1/n_ref) with n_short = 0.246*115,668 = 28,454 and n_ref = 0.737*115,668 = 85,247, giving 0.00685; this reproduces the reported p < 10^-24 (implied p = 3.6e-24) and is conservative because the adjusted residual SD is smaller than the raw SD."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse reasoning in habitual short sleepers"
+    covariates: ["age", "sex", "socioeconomic status (Townsend)", "education", "BMI", "hypertension", "antihypertensive medication", "cardiovascular disease", "depressive symptoms", "psychotropic medication", "sleep medication", "chronotype", "insomnia symptoms"]
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "Sleep duration < 7 h$ | β = −1.5 x 10−1p < 10−24 | β = 3.6 x 10−3p < 10−5 | β = −4.4 x 10−2p = 0.009 | β = 8.3 x 10−3p = 0.002 | β = −1.8 x 10−1p < 10−22"
+  - outcome_domain: cognition
+    outcome_construct: simple_reaction_time_snap_task
+    exposure: {type: habitual_short_sleep, dose_h: 6.0, referent_h: 8.0, duration_days: null, contrast_label: "self-reported habitual sleep <7 h vs 7-9 h (reference), fully adjusted model 4"}
+    scale: hedges_g
+    unit: null
+    value: -0.0189
+    se: 0.00404
+    ci: [-0.0269, -0.0110]
+    conversion_formula: "Table 3 model 4 beta = +3.6 x 10^-3 on LOG reaction time (positive = slower = worse). Standardized by the UK Biobank baseline SD of log RT, 0.19 (Lyall 2016 Table 1: 'Log Reaction time | 475,051 | 5.63 (0.19)'), giving 0.0036/0.19 = 0.0189, sign flipped to -0.0189 so that negative = worse. SE = sqrt(1/81,747 + 1/244,907) = 0.00404 from n = 332,303 split 24.6%/73.7%; implies p = 2.7e-6 vs reported p < 10^-5."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = slower (worse) reaction time in habitual short sleepers; raw beta was positive because the outcome is log latency"
+    covariates: ["age", "sex", "socioeconomic status (Townsend)", "education", "BMI", "hypertension", "antihypertensive medication", "cardiovascular disease", "depressive symptoms", "psychotropic medication", "sleep medication", "chronotype", "insomnia symptoms"]
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "Sleep duration < 7 h$ | β = −1.5 x 10−1p < 10−24 | β = 3.6 x 10−3p < 10−5 | β = −4.4 x 10−2p = 0.009 | β = 8.3 x 10−3p = 0.002 | β = −1.8 x 10−1p < 10−22"
+  - outcome_domain: cognition
+    outcome_construct: numeric_working_memory_digit_span
+    exposure: {type: habitual_short_sleep, dose_h: 6.0, referent_h: 8.0, duration_days: null, contrast_label: "self-reported habitual sleep <7 h vs 7-9 h (reference), fully adjusted model 4"}
+    scale: hedges_g
+    unit: null
+    value: -0.0328
+    se: 0.01249
+    ci: [-0.0573, -0.0084]
+    conversion_formula: "Table 3 model 4 beta = -4.4 x 10^-2 raw points, standardized by SD 1.34 (Lyall 2016 Table 1: 'Numeric memory score | 48,335 | 6.70 (1.34)') giving -0.0328. SE = sqrt(1/8,549 + 1/25,613) = 0.01249 from n = 34,753; implies p = 0.0086 vs reported p = 0.009 (near-exact match)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = shorter maximum digit span (worse) in habitual short sleepers"
+    covariates: ["age", "sex", "socioeconomic status (Townsend)", "education", "BMI", "hypertension", "antihypertensive medication", "cardiovascular disease", "depressive symptoms", "psychotropic medication", "sleep medication", "chronotype", "insomnia symptoms"]
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "Sleep duration < 7 h$ | β = −1.5 x 10−1p < 10−24 | β = 3.6 x 10−3p < 10−5 | β = −4.4 x 10−2p = 0.009 | β = 8.3 x 10−3p = 0.002 | β = −1.8 x 10−1p < 10−22"
+  - outcome_domain: cognition
+    outcome_construct: visual_memory_pairs_matching_errors
+    exposure: {type: habitual_short_sleep, dose_h: 6.0, referent_h: 8.0, duration_days: null, contrast_label: "self-reported habitual sleep <7 h vs 7-9 h (reference), fully adjusted model 4"}
+    scale: hedges_g
+    unit: null
+    value: -0.0126
+    se: 0.00403
+    ci: [-0.0205, -0.0047]
+    conversion_formula: "Table 3 model 4 beta = +8.3 x 10^-3 on LOG visual memory errors (positive = more errors = worse). Standardized by SD 0.66 (Lyall 2016 Table 1: 'Log visual memory errors | 475,948 | 1.44 (0.66)') giving 0.0126, sign flipped to -0.0126. SE = sqrt(1/82,156 + 1/246,133) = 0.00403; implies p = 0.0018 vs reported p = 0.002. NOTE this task has poor retest reliability (ICC = 0.16, Lyall 2016), so the true effect is heavily attenuated."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = more pairs-matching errors (worse) in habitual short sleepers"
+    covariates: ["age", "sex", "socioeconomic status (Townsend)", "education", "BMI", "hypertension", "antihypertensive medication", "cardiovascular disease", "depressive symptoms", "psychotropic medication", "sleep medication", "chronotype", "insomnia symptoms"]
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "Sleep duration < 7 h$ | β = −1.5 x 10−1p < 10−24 | β = 3.6 x 10−3p < 10−5 | β = −4.4 x 10−2p = 0.009 | β = 8.3 x 10−3p = 0.002 | β = −1.8 x 10−1p < 10−22"
+  - outcome_domain: cognition
+    outcome_construct: prospective_memory_log_odds
+    exposure: {type: habitual_short_sleep, dose_h: 6.0, referent_h: 8.0, duration_days: null, contrast_label: "self-reported habitual sleep <7 h vs 7-9 h (reference), fully adjusted model 4"}
+    scale: log_or
+    unit: "log odds of successful prospective-memory trial"
+    value: -0.18
+    se: null
+    ci: null
+    conversion_formula: "Table 3 model 4 beta = -1.8 x 10^-1 from a LOGISTIC model, so the coefficient is a log odds ratio (OR = 0.835) and is not on the same scale as the four linear outcomes above. No CI or SE is reported and the binary outcome is at a 93.9% success ceiling (Lyall 2016), so no SE is derivable without the cell counts. Recorded for completeness; do not pool with the hedges_g rows."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = lower odds of prospective-memory success (worse) in habitual short sleepers"
+    covariates: ["age", "sex", "socioeconomic status (Townsend)", "education", "BMI", "hypertension", "antihypertensive medication", "cardiovascular disease", "depressive symptoms", "psychotropic medication", "sleep medication", "chronotype", "insomnia symptoms"]
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "Sleep duration < 7 h$ | β = −1.5 x 10−1p < 10−24 | β = 3.6 x 10−3p < 10−5 | β = −4.4 x 10−2p = 0.009 | β = 8.3 x 10−3p = 0.002 | β = −1.8 x 10−1p < 10−22"
+  - outcome_domain: cognition
+    outcome_construct: verbal_numerical_reasoning_long_sleep_contrast
+    exposure: {type: habitual_short_sleep, dose_h: 9.5, referent_h: 8.0, duration_days: null, contrast_label: "self-reported habitual sleep >9 h vs 7-9 h (reference), fully adjusted model 4"}
+    scale: hedges_g
+    unit: null
+    value: -0.2963
+    se: 0.02281
+    ci: [-0.3410, -0.2516]
+    conversion_formula: "Table 3 model 4 beta = -6.4 x 10^-1 / SD 2.16 = -0.2963. SE = sqrt(1/1,966 + 1/85,247) = 0.02281 from n_long = 0.017*115,668. Recorded because it is the U-shape reference arm: LONG sleep is associated with ~4.3x the reasoning decrement of short sleep in the same model, which is a strong hint that residual confounding by ill health drives these cross-sectional gradients rather than sleep loss per se."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse reasoning in habitual long sleepers"
+    covariates: ["age", "sex", "socioeconomic status (Townsend)", "education", "BMI", "hypertension", "antihypertensive medication", "cardiovascular disease", "depressive symptoms", "psychotropic medication", "sleep medication", "chronotype", "insomnia symptoms"]
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "Sleep duration > 9 h$ | β = −6.4 x 10−1p < 10−34 | β = 2.7 x 10−2p < 10−24 | β = −3.1 x 10−1p < 10−6 | β = 6.2 x 10−2p < 10−9 | β = −3.9 x 10−1p < 10−10"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "Cross-sectional, so no causal direction. Exposure is a single self-reported whole-number hours question ('About how many hours sleep do you get in every 24 hours?'), which is categorized rather than continuous, so no per-hour slope is estimable and the <7 h bin lumps 6 h with 3 h sleepers. Outcome battery is unvalidated and brief: authors concede 'our cognitive dependent variables were created for brief completion on large numbers of participants and hence have not undergone formal validation' and 'tasks were brief and did not parametrically manipulate cognitive load'. Reasoning test Cronbach alpha only 0.62; visual memory retest ICC only 0.16. UK Biobank is a healthy-volunteer-biased sample. Adjustment set includes education and SES, which are plausibly mediators as well as confounders of a habitual-sleep-to-cognition path, so these estimates may be over-adjusted."
+funding: "Kyle supported by a UK Medical Research Council Fellowship (MR/K021177/1); UK Biobank application 6818. Full author funding list in the paper."
+notes: |
+  THE STANDARDIZATION IS INTERNALLY VALIDATED, which is the reason this record is trustworthy despite the raw betas being
+  in unlabelled test units. The paper states its own SD-unit conversions for a different contrast: "The apparent small, but
+  statistical advantage of those with insomnia versus those without was unexpected and is unlikely to be clinically
+  meaningful [note, effect size differences in SD units = .044 (reasoning), .035 (reaction time) and .022 (visual
+  memory)]." Dividing the matching Table 2 model-4 betas by the Lyall 2016 baseline SDs reproduces all three exactly:
+    reasoning       0.095 / 2.16 = 0.0440  vs stated .044
+    reaction time   0.0067 / 0.19 = 0.0353 vs stated .035
+    visual memory   0.014 / 0.66 = 0.0212  vs stated .022
+  So beta/SD_Lyall is the authors' own conversion, applied here to the sleep-duration rows.
+
+  The SE approximation sqrt(1/n1 + 1/n2) is likewise checked against the reported p-values and reproduces them closely
+  (numeric memory implied p = 0.0086 vs reported 0.009; visual memory 0.0018 vs 0.002; reasoning 3.6e-24 vs "< 10^-24").
+
+  MAGNITUDE, FOR THE DOWNSTREAM POOLER: the habitual short-sleep reasoning decrement here is g = -0.069, i.e. about
+  1.0 full-scale IQ point if one were willing to treat the 13-item verbal-numerical reasoning test as a fully g-loaded
+  measure (it is not; see iq_conversion_basis.md - its first-unrotated-PC loading is 0.774 in Lyall 2016, so the
+  g-attributable part is nearer 0.069 * 0.774 * 15 = 0.8 points). This is roughly 18x SMALLER than the acute total-SD
+  vigilance effect in lim2010 (g = -0.762) and ~5x smaller than lim2010's reasoning cell (g = -0.125). Two reasons the
+  pooler should not treat this as the causal effect of the subject's 5-6 h weekday schedule: (1) the <7 h bin is not a
+  5-6 h exposure, and (2) LONG sleep shows a much larger decrement (g = -0.296) in the identical model, the classic
+  signature of reverse causation and residual ill-health confounding rather than a sleep-loss dose-response.
+
+  Group sizes used for the SE arithmetic come from the Results text: "73.7% of the sample reported sleep duration between
+  7 and 9 hours, 24.6% reported sleep duration <7 hours, while 1.7% reported sleep duration >9 hours."
+  Analytic n differs per outcome (Table 3 header): reasoning 115,668; reaction time 332,303; numeric memory 34,753;
+  visual memory 333,966; prospective memory 117,438. The header n = 477,529 is the screened cohort, not the analytic n
+  for any single outcome.
+
+  pct_female is computed from the two subgroups reported in the Methods (133,314 with insomnia symptoms at 62.1% female
+  and 344,215 without at 52.0% female): (0.621*133314 + 0.520*344215)/477529 = 54.8%.
+
+  The headline finding of the paper is about insomnia, not sleep duration, and it is negative/reversed: "In our large UK
+  sample frequent insomnia symptoms were not independently associated with cognitive impairment." The sleep-duration
+  result is a secondary aim: "Both short (<7 hrs) and long (>9 hrs) sleep duration were associated with poorer
+  performance on the reasoning test, basic reaction time test, numeric memory test, visual memory test, and prospective
+  memory test."
+shard: "s02_cognition_meta"

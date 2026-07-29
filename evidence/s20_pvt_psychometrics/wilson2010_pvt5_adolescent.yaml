@@ -1,0 +1,87 @@
+study_id: wilson2010_pvt5_adolescent
+citation: "Wilson A, Dollman J, Lushington K, Olds T. Reliability of the 5-min psychomotor vigilance task in a primary school classroom setting. Behav Res Methods. 2010;42(3):754-758."
+doi: "10.3758/BRM.42.3.754"
+pmid: "20805597"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Reliability of the 5-min psychomotor vigilance task in a primary school classroom setting"
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: 75
+n_studies_pooled: null
+population:
+  age_mean: 11.82
+  age_range: [9, 14]
+  pct_female: 0.0
+  country: "AU"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvt5_mean_rt_test_retest_icc_field_setting
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "two 5-min PDA-based PVTs in a classroom (non-laboratory) setting, test-retest subsample n=37"}
+    scale: raw_units
+    unit: "ICC"
+    value: 0.84
+    se: null
+    ci: null
+    conversion_formula: "published ICC; no CI in the abstract"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more reliable. Reproduces Thompson 2022's adult ICC of 0.79 for mean RT in a genuinely uncontrolled field environment, which is the environment an at-home n-of-1 protocol will actually run in."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Test-retest intraclass correlation coefficients (ICCs) in the classroom setting indicated moderate to high reliability (mean RT = .84, lapses = .59)."
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvt5_lapses_test_retest_icc_field_setting
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "two 5-min PDA-based PVTs in a classroom setting, n=37"}
+    scale: raw_units
+    unit: "ICC"
+    value: 0.59
+    se: null
+    ci: null
+    conversion_formula: "published ICC"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more reliable. Third independent replication that LAPSE COUNT is the least reliable common PVT metric (0.59 here, 0.51 in Sunwoo 2012, <0.50-ish precision in Thompson 2022)."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "mean RT = .84, lapses = .59"
+  - outcome_domain: exposure_measurement
+    outcome_construct: pvt5_setting_equivalence_isolated_vs_classroom
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "5-min PVT administered in an isolated room vs a busy classroom, same participants (n=75)"}
+    scale: raw_units
+    unit: "qualitative: no significant difference in mean RT or lapse count between settings"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No numeric between-setting difference published in the abstract; value 0 encodes 'no significant difference detected'. Do not pool quantitatively."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Supports out-of-laboratory administration: PVT scores were not systematically shifted by a distracting environment. BUT an ORDER effect appeared for lapses, so administration order/time must still be fixed."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Using a mixed-model analysis, there was no significant difference in the mean response time (RT) or number of lapses (RTs >or= 500 msec) between the isolated and the classroom setting. There was, however, an order effect for the number of lapses in the isolated setting, with the number of lapses being greater if the isolated test was conducted second. Bland-Altman analysis showed no systematic difference between the two settings."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Abstract-only. Sample is 75 MALE primary-school students, mean age 11.82 (SD 1.12) - younger than the 18-19 y/o target, and single-sex; I set adolescent_match to exact_16_19 because it is the only PEDIATRIC/ADOLESCENT PVT reliability estimate available and is far closer in age than the adult alternatives, but the age gap (11.8 vs 19) is real and the downstream model should inflate uncertainty accordingly. Test-retest subsample only n=37. Palm PDA hardware, timing precision not characterised (contrast the PC-PVT papers, which show hardware timing can add tens of ms of error)."
+funding: "Not extracted."
+notes: |
+  Kept for two reasons: (a) it is the ONLY reliability estimate in a young sample, and (b) it is
+  the only one obtained in a genuinely uncontrolled, real-world environment - which is exactly the
+  setting of an at-home student self-experiment. The finding that classroom vs isolated-room
+  administration did not shift mean RT is direct evidence that a bedroom/dorm-administered PVT is
+  not automatically invalid, provided the clock time and the device are held constant.
+
+  The order effect for lapses in the isolated setting is another data point on the
+  practice/order-effect question and again points away from lapse count as the primary outcome.
+shard: "s20_pvt_psychometrics"

@@ -1,0 +1,143 @@
+study_id: okano2019
+citation: "Okano K, Kaczmarzyk JR, Dave N, Gabrieli JDE, Grossman JC. Sleep quality, duration, and consistency are associated with better academic performance in college students. npj Science of Learning. 2019;4:16."
+doi: "10.1038/s41539-019-0055-z"
+pmid: "31583118"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6773696/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep quality, duration, and consistency are associated with better academic performance in college students"
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 88
+n_studies_pooled: null
+population:
+  age_mean: 18.19
+  age_range: [17, 20]
+  pct_female: 51.0
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: academic
+    outcome_construct: correlation_semester_mean_sleep_duration_with_overall_course_score
+    exposure: {type: habitual_short_sleep, dose_h: 7.13, referent_h: null, duration_days: 105, contrast_label: "semester-long mean actigraphy sleep duration (mean 7 h 8 min, SD of participant means 41 min) vs overall course score"}
+    scale: raw_units
+    unit: "Pearson r"
+    value: 0.38
+    se: 0.092
+    ci: [0.185, 0.545]
+    conversion_formula: "reported r(86) = 0.38, p < 0.0005. SE(r) approximated as (1 - r^2)/sqrt(n-1) = (1-0.1444)/sqrt(87) = 0.0917. CI computed by Fisher z transform: z = 0.4001, SE(z) = 1/sqrt(85) = 0.1085, back-transformed."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = more semester-long sleep associated with higher course score; less sleep is worse"
+    covariates: []
+    followup_years: 0.29
+    cohort_family: MIT_3091_chemistry
+    quote: "There was a significant positive correlation between mean sleep duration throughout the semester (sleep duration) and overall score (r (86) = 0.38, p < 0.0005), indicating that a greater amount of sleep was associated with a higher overall score"
+  - outcome_domain: academic
+    outcome_construct: correlation_semester_sleep_quality_with_overall_course_score
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: 105, contrast_label: "semester-long mean actigraphy sleep quality vs overall course score"}
+    scale: raw_units
+    unit: "Pearson r"
+    value: 0.44
+    se: 0.086
+    ci: [0.254, 0.593]
+    conversion_formula: "reported r(86) = 0.44, p < 0.00005. SE(r) = (1-0.1936)/sqrt(87) = 0.0864; CI via Fisher z (z = 0.4722, SE(z) = 0.1085)."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = better sleep quality associated with higher score. Quality has a LARGER correlation than duration."
+    covariates: []
+    followup_years: 0.29
+    cohort_family: MIT_3091_chemistry
+    quote: "there was a significant positive correlation between mean sleep quality throughout the semester (Sleep Quality) and Overall Score (r (86) = 0.44, p < 0.00005)"
+  - outcome_domain: academic
+    outcome_construct: correlation_sleep_inconsistency_with_overall_course_score
+    exposure: {type: social_jetlag, dose_h: null, referent_h: null, duration_days: 105, contrast_label: "within-person SD of nightly sleep duration (sleep inconsistency) vs overall course score"}
+    scale: raw_units
+    unit: "Pearson r"
+    value: -0.36
+    se: 0.093
+    ci: [-0.529, -0.162]
+    conversion_formula: "reported r(86) = -0.36, p < 0.001. SE(r) = (1-0.1296)/sqrt(87) = 0.0933; CI via Fisher z (z = -0.3769, SE(z) = 0.1085)."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = MORE night-to-night variability in sleep duration is associated with WORSE scores. Directly relevant to our subject's 5-6 h weekday / 7-8 h weekend / 10-11 h occasional pattern, which is a high-inconsistency pattern."
+    covariates: []
+    followup_years: 0.29
+    cohort_family: MIT_3091_chemistry
+    quote: "There was a significant negative correlation between sleep inconsistency and overall score (r (86) = -0.36, p < 0.001), indicating that the greater inconsistency in sleep duration was associated with a lower overall score"
+  - outcome_domain: academic
+    outcome_construct: night_before_exam_sleep_duration_and_quality_null
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: 1, contrast_label: "sleep duration and quality on the SINGLE NIGHT BEFORE each of 3 midterms and 8 quizzes"}
+    scale: raw_units
+    unit: "Pearson r (upper bound across all tests)"
+    value: 0.20
+    se: 0.103
+    ci: [-0.010, 0.391]
+    conversion_formula: "authors report all rs < 0.20 and all ps > 0.05 for midterms; I record the reported upper bound 0.20 as a bounding null. SE(r) = (1-0.04)/sqrt(87) = 0.1029; CI via Fisher z."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NULL. Sleep the night before a test did NOT predict performance on that test. Answers the task's explicit question: night-before sleep did not matter; semester-long sleep did."
+    covariates: []
+    followup_years: 0.29
+    cohort_family: MIT_3091_chemistry
+    quote: "We conducted a correlation between sleep quality the night before a midterm and respective midterm scores as well as sleep duration the night before a midterm and respective scores. There were no significant correlations with sleep duration or sleep quality for all three midterms (all rs < 0.20, all ps > 0.05). Similar analyses for sleep duration and sleep quality the night before respective quizzes revealed no correlations (rs from 0.01 to 0.26, all ps > 0.05)."
+  - outcome_domain: academic
+    outcome_construct: variance_explained_r2_three_sleep_measures
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: 105, contrast_label: "stepwise regression of overall score on semester sleep duration + quality + inconsistency"}
+    scale: raw_units
+    unit: "proportion of variance in overall course score explained (R-squared)"
+    value: 0.2444
+    se: null
+    ci: null
+    conversion_formula: "reported R2 = 0.24 with F(3,84) = 8.95, p = 0.00003; authors state 24.44% of variance explained, decomposed by relaimpo into 7.16% duration, 9.68% quality, 7.6% inconsistency. No SE for R2 reported."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = share of grade variance attributable to sleep measures. Not a signed harm measure; a magnitude-of-association measure."
+    covariates: []
+    followup_years: 0.29
+    cohort_family: MIT_3091_chemistry
+    quote: "We found a significant regression (F (3,84) = 8.95, p = .00003), with an R2 of 0.24. Students' predicted overall score was equal to 77.48 + 0.21 (sleep duration) + 19.59 (Sleep Quality) - 0.45 (sleep inconsistency). While sleep inconsistency was the only significant individual predictor of overall score (p = 0.03) in this analysis, we found that 24.44% of variance was explained by the three regressors. The relative importance of these metrics were 7.16% sleep duration, 9.68% sleep quality, and 7.6% sleep inconsistency."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Objective actigraphy over a full semester and objectively scored assessments in a single class with a verified absence of TA effects - strong measurement. But it is OBSERVATIONAL and CROSS-SECTIONAL in the exposure: no randomization, no instrument, and NO adjustment for prior academic ability, conscientiousness, course load or mental health. Reverse causation (struggling students sleep less because they study more, or study at night) is not addressed."
+funding: "Not extracted from retrieved text"
+notes: |
+  THIS IS NOT A T2 STUDY AND MUST NOT BE TREATED AS ONE. The task listed it alongside the natural
+  experiments, but there is no exogenous variation here at all. It is a prospective cohort with an
+  objective (actigraphy) exposure measure, which is tier T4 by the spec's own definitions. I have tiered it
+  T4 accordingly. The 0.38 correlation between semester sleep and grades has no identification strategy;
+  Edwards (2012) shows that in this literature naive estimates are roughly 4x quasi-experimental ones once
+  demographics enter, and Okano et al. adjust for nothing.
+  ANSWERS TO THE TASK'S SPECIFIC QUESTIONS:
+  (1) Coefficients from the multiple regression on a 0-100 course score: +0.21 points per unit of sleep
+      duration (units are minutes, so ~+12.6 points per additional hour, which is transparently
+      confounded and far too large), +19.59 per unit of sleep quality, -0.45 per unit of sleep
+      inconsistency. Only INCONSISTENCY was individually significant (p = 0.03).
+  (2) Variance explained: R2 = 0.244, i.e. ~24.4% of overall grade variance, split 7.16% duration /
+      9.68% quality / 7.6% inconsistency.
+  (3) NIGHT BEFORE vs WHOLE SEMESTER - the headline finding: sleep on the night before a test did NOT
+      predict performance on that test (all rs < 0.20, ps > 0.05 for midterms; rs 0.01-0.26, ps > 0.05 for
+      quizzes). Sleep averaged over the WEEK and MONTH before a test DID predict performance (quality rs
+      0.21-0.38, all ps < 0.05 across all three midterms). All signs are in the direction "more/better
+      sleep -> better grades"; there is no sign reversal anywhere in the paper.
+  (4) The authors' interpretation, which is the decision-relevant one for our subject: "Rather than the
+      night before a quiz or exam, it may be more important to sleep well for the duration of the time
+      when the topics tested were taught... the role of sleep is crucial during the time the content
+      itself is learned, and simply getting good sleep the night before may not be as helpful."
+      This directly implies our subject's occasional 3-4 h pre-exam nights are LESS damaging than his
+      habitual 5-6 h weeknights, and that cramming cannot recover the learning lost during the term.
+  POPULATION MATCH IS THE BEST IN THE ENTIRE SHARD: 88 MIT freshmen, mean age 18.19, i.e. essentially our
+  subject's exact demographic (an 18-year-old entering his second year at a demanding college). Mean
+  semester sleep was 7 h 8 min - about 1.5 h MORE than our subject's weekday sleep - so our subject sits
+  below the bottom of this sample's central range.
+  MALE-SPECIFIC FINDING: sleep inconsistency correlated with worse performance in males (r(41) = -0.44,
+  p = 0.003) but not females (r(43) = -0.13, p = 0.39). Our subject is male and has a highly inconsistent
+  schedule, so this subgroup result is directly on point - but it is a single small subgroup analysis and
+  should be treated as hypothesis-generating.
+shard: "s04_academic_natural_experiments"

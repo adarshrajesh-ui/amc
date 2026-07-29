@@ -1,0 +1,87 @@
+study_id: wang2012_htn
+citation: "Wang Q, Xi B, Liu M, Zhang Y, Fu M. Short sleep duration is associated with hypertension risk among adults: a systematic review and meta-analysis. Hypertens Res. 2012 Oct;35(10):1012-1018."
+doi: "10.1038/hr.2012.91"
+pmid: "22763475"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Short sleep duration is associated with hypertension risk among adults: a systematic review and meta-analysis"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 115391
+n_studies_pooled: 23
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: cardiovascular
+    outcome_construct: incident_hypertension_age_under_65
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "short sleep vs normal, prospective cohorts, subgroup aged <65 y"}
+    scale: log_rr
+    unit: null
+    value: 0.28518
+    se: 0.09487
+    ci: [0.10436, 0.47623]
+    conversion_formula: "log_rr = ln(1.33) = 0.28518; se = (ln(1.61) - ln(1.11))/3.92 = 0.09487"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = elevated incident-hypertension risk with short sleep in the under-65 subgroup
+      (RR 1.33). THE AGE-INTERACTION ESTIMATE requested by target #3 - but see notes: "<65 years"
+      is not "young". This subgroup spans roughly 18-64 y and is dominated by midlife adults.
+    covariates: ["per-study adjustment sets, not harmonised"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_6_prospective"
+    quote: "In addition, short sleep duration was also associated with an increased risk of incident hypertension among subjects younger than 65 years (RR=1.33, 95% CI: 1.11-1.61, P=0.002)."
+  - outcome_domain: cardiovascular
+    outcome_construct: prevalent_hypertension
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "short sleep vs normal, 17 cross-sectional studies, N=105432"}
+    scale: log_or
+    unit: null
+    value: 0.18232
+    se: 0.04884
+    ci: [0.08618, 0.27763]
+    conversion_formula: "log_or = ln(1.20) = 0.18232; se = (ln(1.32) - ln(1.09))/3.92 = 0.04884"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = higher odds of PREVALENT hypertension with short sleep (OR 1.20). Cross-sectional,
+      so cannot establish temporal order; hypertension may cause or accompany short sleep.
+    covariates: ["per-study adjustment sets"]
+    followup_years: null
+    cohort_family: "pooled_multi_cohort_17_crosssectional"
+    quote: "The results indicated that short sleep duration was associated with an increased risk of prevalent hypertension (OR=1.20, 95% CI: 1.09-1.32, P<0.001), especially among subjects younger than 65 years and females."
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: >
+    The prospective evidence base here is thin: only 6 prospective studies with a combined N of 9959,
+    against 17 cross-sectional studies with N=105 432. The headline incident-hypertension RR of 1.33
+    therefore rests on ~10 000 people. The age subgroup is a crude dichotomy at 65 y, was not
+    pre-registered as far as can be told from the abstract, and no interaction p-value is reported -
+    so "stronger in the young" is an informal comparison of subgroup point estimates, not a tested
+    interaction. Search current only to October 2011; superseded in coverage by Itani 2017 (RR 1.17
+    for incident hypertension from prospective data only) and Li 2019.
+funding: null
+notes: >
+  Target extraction #3, age-interaction component. HONEST READING: this paper is the origin of the
+  widely repeated claim that the short-sleep/hypertension association is stronger in younger people,
+  and it does NOT support extending that claim to a 19-year-old. The "younger" stratum is everyone
+  under 65. Nothing in this meta-analysis speaks to 16-25 year olds specifically.
+  n recorded as 115 391 = 9959 prospective + 105 432 cross-sectional, since the paper reports these
+  two pools separately and gives no single total. n_studies_pooled = 23 = 6 prospective + 17
+  cross-sectional.
+  No absolute hypertension incidence rates are reported, which is a limitation for this shard's
+  absolute-risk requirement. Note that "incident hypertension" in these cohorts is largely
+  ascertained in midlife adults whose underlying 5-10 y hypertension incidence is on the order of
+  10-25%; a 19-year-old male's is far lower, so an RR of 1.33 translates to a much smaller absolute
+  excess at his age even if the ratio were transportable.
+shard: "s08_cardiovascular"

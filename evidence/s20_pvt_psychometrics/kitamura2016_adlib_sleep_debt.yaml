@@ -1,0 +1,301 @@
+study_id: kitamura2016_adlib_sleep_debt
+citation: "Kitamura S, Katayose Y, Nakazaki K, Motomura Y, Oba K, Katsunuma R, Terasawa Y, Enomoto M, Moriguchi Y, Hida A, Mishima K. Estimating individual optimal sleep duration and potential sleep debt. Scientific Reports. 2016;6:35812."
+doi: "10.1038/srep35812"
+pmid: "27775095"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5075948/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Estimating individual optimal sleep duration and potential sleep debt"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 15
+n_studies_pooled: null
+population:
+  age_mean: 23.1
+  age_range: [20, 26]
+  pct_female: 0.0
+  country: "JP"
+  adolescent_match: good_young_adult
+effects:
+  # ===== THE AD-LIB ASYMPTOTE: THE OPERATIONAL DEFINITION OF INDIVIDUAL SLEEP NEED =====
+  - outcome_domain: sleep_need
+    outcome_construct: optimal_sleep_duration_asymptote_of_9_day_extension
+    exposure:
+      type: sleep_extension
+      dose_h: 12.0
+      referent_h: null
+      duration_days: 9
+      contrast_label: "asymptote of an exponential decay fitted to nightly PSG total sleep time across 9 consecutive nights at 12 h TIB ('optimal sleep duration', OSD)"
+    scale: hours
+    unit: "hours of total sleep time per night at asymptote"
+    value: 8.41
+    se: 0.18
+    ci: [8.06, 8.76]
+    conversion_formula: "Reported directly: 'The mean estimated OSD was 8.41 +/- 0.18 h (range, 7.29-9.26 h).' The +/- 0.18 is the SEM as used throughout this paper, so se = 0.18 and ci = 8.41 +/- 1.96*0.18 = [8.06, 8.76] (MY computation of the CI from the reported SEM)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Not a harm - this is the TARGET quantity. 8.41 h is the group mean individual sleep need in 15 healthy Japanese men aged 20-26; the individual range 7.29-9.26 h is ~2 h wide, which is why sleep need must be measured per person."
+    covariates: []
+    followup_years: null
+    cohort_family: NCNP_Tokyo_sleep_extension
+  - outcome_domain: sleep_need
+    outcome_construct: potential_sleep_debt_osd_minus_habitual
+    exposure:
+      type: habitual_short_sleep
+      dose_h: 7.37
+      referent_h: 8.41
+      duration_days: null
+      contrast_label: "potential sleep debt = individual optimal sleep duration minus at-home habitual sleep duration (14 days actigraphy + diary), in healthy young men reporting no sleep complaints"
+    scale: hours
+    unit: "hours of nightly sleep debt"
+    value: 1.04
+    se: 0.24
+    ci: [0.57, 1.58]
+    conversion_formula: "Reported directly: 'the result of the trial calculation of mean PSD (i.e., the difference between OSD and HSD) for the 15 participants was 1.04 +/- 0.24 h (range, -0.58 to 2.73 h; 95% confidence interval: 0.57-1.58 h)'. CI is the authors' own. Corroborated by the paired test 'HSD was significantly shorter than OSD (t(14) = 4.547, p < 0.001)'."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = hours of sleep owed per night. Healthy young men who reported NO sleep problems were carrying ~1 h/night of unrecognised debt. Sign convention matches the factory's units convention (positive = hours owed)."
+    covariates: []
+    followup_years: null
+    cohort_family: NCNP_Tokyo_sleep_extension
+  # ===== THE RECOVERY-DURATION NUMBER (Part B7 / washout design) =====
+  - outcome_domain: recovery
+    outcome_construct: days_of_extended_sleep_to_reach_asymptote_for_1h_debt
+    exposure:
+      type: sleep_extension
+      dose_h: 12.0
+      referent_h: 7.37
+      duration_days: 9
+      contrast_label: "number of consecutive nights of 12 h TIB required for nightly total sleep time to stop declining (reach the OSD asymptote), starting from a mean potential sleep debt of 1.04 h/night"
+    scale: raw_units
+    unit: "nights of extended sleep opportunity"
+    value: 4.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly in the abstract: 'only 1 h of PSD takes four days to recover to their optimal level.' Supported in Results by 'There were no significant differences in TST between each of E4-E8 and E9' (i.e. nights 4 through 9 are statistically indistinguishable, so the decline has stopped by night 4) and in Discussion by 'Thereafter, TST decreased, reached standard OSD levels at E4, and leveled off.' A count of nights; se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = slower recovery. FOUR nights of 12 h sleep opportunity to discharge only ~1 h/night of debt. This is the empirical basis for the washout requirement: a weekend (2 nights) cannot clear even a mild debt, which is exactly why Pejovic 2013 saw no PVT recovery after 2 nights."
+    covariates: []
+    followup_years: null
+    cohort_family: NCNP_Tokyo_sleep_extension
+  # ===== THE UNAWARENESS RESULT (Part B6) =====
+  - outcome_domain: sleep_need
+    outcome_construct: first_night_tst_rebound_above_habitual
+    exposure:
+      type: sleep_extension
+      dose_h: 12.0
+      referent_h: 7.37
+      duration_days: 1
+      contrast_label: "PSG total sleep time on the FIRST night of 12 h TIB (10.59 h) minus at-home habitual sleep duration (7.37 h), in men reporting no sleepiness or perceived sleep loss"
+    scale: hours
+    unit: "hours of first-night sleep rebound"
+    value: 3.22
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: 'The mean TST at E1 was 10.59 +/- 0.19 h and showed a large increase (rebound) from HSD (mean, 3.22 h)'. The 3.22 h is the reported mean rebound; no SE is given for the difference itself, so se: null (the 0.19 is the SEM of the E1 TST, not of the difference)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = slept this much more than habitual on night 1. Note the authors' own gloss: participants 'had no awareness of any problems with their sleep habits such as sleepiness or perceived sleep loss' yet rebounded >3 h. Direct evidence of unrecognised sleep debt."
+    covariates: []
+    followup_years: null
+    cohort_family: NCNP_Tokyo_sleep_extension
+  - outcome_domain: sleep_need
+    outcome_construct: correlation_first_night_rebound_with_potential_sleep_debt
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: 1
+      contrast_label: "Pearson correlation between the first-night TST rebound (E1 minus habitual) and the 9-day-derived potential sleep debt"
+    scale: raw_units
+    unit: "Pearson r"
+    value: 0.769
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: 'There was a significant correlation between the TST rebound at E1and PSD (r = 0.769, p = 0.001; Fig. 3).' No CI reported; with n = 15, Fisher-z gives an approximate 95% CI of [0.42, 0.92] (MY computation, not the authors'), which I note here rather than in the ci field because it is derived, not reported."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE and strong. Practically important: the FIRST-NIGHT rebound alone predicts most of the 9-day-derived sleep debt, so a cheap 1-2 night ad-lib probe recovers much of the information from an expensive 9-night protocol. r = 0.769 implies r^2 = 0.59, i.e. ~59% of the variance in debt, so it is a good screen but NOT a substitute for the full asymptote."
+    covariates: []
+    followup_years: null
+    cohort_family: NCNP_Tokyo_sleep_extension
+  # ===== SUBJECTIVE MEASURES DO NOT TRACK THE DEBT (Part B6) =====
+  - outcome_domain: sleep_need
+    outcome_construct: correlation_potential_sleep_debt_with_subjective_sleepiness_vas
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: null
+      contrast_label: "correlation between potential sleep debt and SUBJECTIVE sleepiness (visual analogue scale) at baseline"
+    scale: raw_units
+    unit: "Pearson r"
+    value: 0.052
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: 'no correlation between PSD and visual analogue scale (r = 0.052, p = 0.854)'."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "ESSENTIALLY ZERO. The subject's own rating of his sleepiness carries no information about how much sleep debt he is carrying. This is the single most quotable number in my shard for the 'you cannot tell how impaired you are' claim, because it is a near-exact null in exactly the right population (healthy men aged 20-26)."
+    covariates: []
+    followup_years: null
+    cohort_family: NCNP_Tokyo_sleep_extension
+  - outcome_domain: sleep_need
+    outcome_construct: correlation_potential_sleep_debt_with_objective_sleepiness_mwt
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: null
+      contrast_label: "correlation between potential sleep debt and OBJECTIVE sleepiness (Maintenance of Wakefulness Test) at baseline, unadjusted"
+    scale: raw_units
+    unit: "Pearson r"
+    value: -0.486
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: 'there was a significant trend of correlation between PSD and Maintenance Wakefulness Test (r = -0.486, p = 0.066)'. After adjusting for individual sleep homeostasis (mean slow-wave activity in the first NREM cycle of recovery sleep) as a covariate in multiple regression it became significant: 'PSD showed a significant negative correlation with Maintenance Wakefulness Test score (beta = -0.544, p = 0.029)'."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NEGATIVE = more debt, shorter time able to stay awake (worse). The OBJECTIVE measure tracks the debt (r = -0.49, and beta = -0.54 after adjusting for individual homeostatic vulnerability) while the SUBJECTIVE measure does not (r = 0.05). That contrast IS the dissociation, measured within one study on one sample."
+    covariates: ["mean slow-wave activity in the first NREM cycle of recovery sleep (for the adjusted beta)"]
+    followup_years: null
+    cohort_family: NCNP_Tokyo_sleep_extension
+  - outcome_domain: sleep_need
+    outcome_construct: habitual_sleep_duration_does_not_predict_sleepiness
+    exposure:
+      type: descriptive
+      dose_h: null
+      referent_h: null
+      duration_days: null
+      contrast_label: "correlations of HABITUAL sleep duration (not debt) with subjective (VAS) and objective (MWT) sleepiness at baseline"
+    scale: raw_units
+    unit: "Pearson r (VAS; MWT r = 0.119 reported separately)"
+    value: 0.077
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: 'HSD showed no correlation with visual analogue scale or Maintenance Wakefulness Test at BL (Visual analogue scale: r = 0.077, p = 0.785; Maintenance Wakefulness Test: r = 119, p = 0.673).' NOTE the paper prints 'r = 119' for the MWT correlation, which is impossible for a correlation coefficient and is evidently a typographical error for r = 0.119; I record the VAS value (0.077) as the effect and flag the typo rather than silently correcting it."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "ESSENTIALLY ZERO for both. How LONG someone habitually sleeps predicts neither their subjective nor their objective sleepiness; only the DEBT (need minus habitual) does. This is why the protocol must measure the subject's own sleep NEED and not just his sleep DURATION."
+    covariates: []
+    followup_years: null
+    cohort_family: NCNP_Tokyo_sleep_extension
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "n = 15, single-arm, no control condition, no blinding (impossible), males only, single Japanese site. Curve fitting quality was highly variable (R2 = 0.244-0.946) and 2 of 15 participants' TST did not converge at all, for whom the authors substituted the mean TST across extension nights as the OSD estimate - a defensible but non-preregistered-looking choice that will bias OSD toward the sample mean for those two. The neuroendocrine secondary outcomes are multiple-tested without stated correction and should not be relied on. The CORE structural findings (asymptote exists; 4 nights to reach it; first-night rebound predicts debt; subjective sleepiness does not) are robust and are corroborated independently by Klerman & Dijk 2005."
+funding: "Japanese government / National Center of Neurology and Psychiatry (see paper)"
+notes: |
+  ===== PART C10 PRIMARY RECORD: THE AD-LIB PROTOCOL THAT ACTUALLY REACHES AN ASYMPTOTE =====
+  Full text from PMC5075948 (Scientific Reports, open access). Population: 15 healthy Japanese men,
+  mean age 23.1 +/- 2.1 y (range 20-26) - the best male young-adult match in my Part C set.
+
+  THE PROTOCOL, VERBATIM - COPY THIS
+  ----------------------------------
+  Habitual measurement (Part C9 relevance: 2 weeks, actigraphy AND diary together):
+  "To estimate OSD and PSD, we recruited 15 healthy young men (mean age, 23.1 +/- 2.1 years; range,
+  20-26 years). They recorded their daily HSD at home using an actigraph and sleep diary for
+  approximately 2 weeks."
+
+  The laboratory protocol:
+  "They then started a 14-day sleep protocol in a sleep laboratory experiment consisting of time in bed
+  (TIB) set at 8 h for an adaption night (AN) and a baseline night (BL), then 9 consecutive days of
+  extended sleep sessions (sessions E1-E9) with TIB set at 12 h followed by 1 night of total sleep
+  deprivation (SD) and 1 night of 12-h recovery sleep (RS)."
+
+  How the asymptote was derived:
+  "From the exponential decay curve fitting for the decrease in TST over the 9 days of extended sleep
+  sessions, we were able to obtain an asymptote (the estimation of OSD) from individual TSTs
+  (R2 = 0.244-0.946) for 13 participants. TSTs for 2 of the participants (S05 and S11) did not converge
+  for curve fitting. These results indicate that sleep debt did not exist for these 2 participants, and
+  therefore instead of an asymptote, we treated the mean TST value over the extended sleep sessions as
+  the estimate of OSD."
+
+  THE RESULTS, VERBATIM
+  ---------------------
+  Habitual duration and its night-to-night spread (a Part C9 number in its own right):
+  "Among all participants, the mean HSD at home was 7.37 +/- 0.27 h (range, 5.82-8.89 h). For each
+  individual, HSD also significantly varied by day, with a mean range in HSD of 6.36 +/- 0.82 h (range,
+  2.03-14.42 h)."
+  -> a mean WITHIN-PERSON RANGE of 6.36 h across ~14 nights. That is an enormous night-to-night spread
+     and is fully consistent with Knutson 2007's within-person daily SD of 1.26 h (for a roughly normal
+     variable, the expected range over 14 draws is about 3.2 SD = 4.0 h, so 6.36 h implies these young
+     men were MORE variable than Knutson's midlife cohort - which is the direction I predicted and
+     another reason to prefer 14+ nights of actigraphy for an 18-year-old).
+
+  The decay to asymptote:
+  "The mean TST showed a distinct successive change over E1-E9. The mean TST at E1 was 10.59 +/- 0.19 h
+  and showed a large increase (rebound) from HSD (mean, 3.22 h), but decreased through extended sleep
+  sessions over the next 8 days (F(8,109.107) = 10.590, p < 0.001; Fig. 1a). There were no significant
+  differences in TST between each of E4-E8 and E9."
+  "The mean estimated OSD was 8.41 +/- 0.18 h (range, 7.29-9.26 h). The range of OSD was smaller than
+  the range of HSD (Fig. 2a). There was a significant correlation between estimated OSD and HSD
+  (r = 0.514, p = 0.050); ... However, HSD was significantly shorter than OSD (t(14) = 4.547, p < 0.001;
+  Fig. 2a), and the result of the trial calculation of mean PSD (i.e., the difference between OSD and
+  HSD) for the 15 participants was 1.04 +/- 0.24 h (range, -0.58 to 2.73 h; 95% confidence interval:
+  0.57-1.58 h; Fig. 2b). We thus observed a relationship where PSD increased as HSD became shorter
+  (r = -0.756, p = 0.001). On the other hand, there was no significant correlation between PSD and OSD
+  (r = 0.172, p = 0.539)."
+
+  WHICH SLEEP STAGES REBOUND (a mechanistic detail that matters for what recovery means):
+  "Over the extended sleep sessions, the total durations of stage 3 + 4 (st3 + 4; known as slow wave
+  sleep) showed no significant changes (F(8,109.970) = 1.342, p = 0.230). In contrast, shallow non-rapid
+  eye movement (NREM) sleep (stages 1 + 2; st1 + 2) and REM sleep (stREM) were significantly higher at
+  E1, E2, and E3 compared to E9."
+  -> the recovered sleep is light NREM and REM, not slow-wave sleep. Klerman & Dijk 2005 found the same
+     pattern (REM +1.2 h vs SWS +0.5 h on their first extension night).
+
+  THE UNAWARENESS PASSAGE - THE MOST IMPORTANT QUOTE IN THIS RECORD FOR PART B6
+  ----------------------------------------------------------------------------
+  "In fact, the participants had no awareness of any problems with their sleep habits such as sleepiness
+  or perceived sleep loss. However, even in this group of healthy individuals who subjectively reported
+  having enough sleep, we observed a TST rebound of more than 3 h in average at E1. Thus, they were
+  experiencing possible sleep loss without being aware of it."
+
+  A NUANCE THAT CUTS AGAINST A NAIVE READING (report it, do not hide it):
+  "Subjective sleepiness showed a similar decreasing pattern as sleep time approached OSD, but objective
+  sleepiness recovered at E1. Such a fast disappearance of objective sleepiness is consistent with
+  published findings that a decline in cognitive behavioral performance due to a rather strong sleep debt
+  recovers after only 1 night of recovery sleep."
+  Here the OBJECTIVE measure (MWT sleep-resistance) normalised after ONE extended night while the
+  SUBJECTIVE rating took ~4 days to settle - the OPPOSITE ordering to Pejovic 2013. The resolution is
+  that MWT measures sleep PROPENSITY, not attentional PERFORMANCE, and sleep propensity is the fastest-
+  recovering variable in this whole literature. The report must keep three things distinct and NOT lump
+  them as "objective":
+      sleep propensity (MSLT/MWT)      - recovers fastest, sometimes overshoots (Pejovic: +2.5 min above
+                                         baseline after 2 nights)
+      subjective sleepiness (SSS/KSS/VAS) - recovers fast, saturates under accumulating restriction
+      attentional performance (PVT)    - recovers SLOWEST and is the one that stays impaired
+  The claim the report can defend is specifically about the PVT, not about "objective measures" in
+  general.
+
+  PRACTICAL SIMPLIFICATION THE AUTHORS ENDORSE (useful because a 9-night lab protocol is not feasible
+  for a college student):
+  "In reality, however, there are large costs associated with assessing individual OSD or PSD using the
+  present method. In clinical settings, TST rebound that showed a strong correlation with PSD may be a
+  useful and simple indicator for the presence of sleep debt. TST rebound is analogous to catch-up sleep
+  on the weekends from sleep debt that occurs as a result of social obligations such as going to work or
+  school. The increase in TST on a weekend or holiday indicates that PSD has a strong relationship with
+  sleepiness rather than with HSD as the previous studies implicated. Suppressing this increase as much
+  as possible may be one approach to establishing sleep habits suited to each individual."
+  -> ACTIONABLE: the index subject's own weekend catch-up magnitude is itself a sleep-debt readout
+     (r = 0.769 with the 9-day-derived debt), and "weekend sleep minus weekday sleep approaching zero"
+     is a legitimate, cheap target for the intervention.
+
+  Sleep-need convergence:
+  "The mean OSD for the present participants was 8.41 +/- 0.18 h. ... It seems reasonable, therefore, to
+  estimate that the mean sleep time needed for young adults is around 8.5 h."
+  and, citing Klerman & Dijk: "When Klerman and Dijk gave young and elderly subjects the opportunity to
+  sleep 16 h/day, sleep time showed exponential decay in both groups and asymptotic values were obtained
+  at 8.9 h and 7.4 h, respectively." (SECONDHAND via Kitamura - the 8.9 h figure is not stated in the
+  Klerman & Dijk paper I read, which reports 10.2 h at day 3 without an asymptote; treat with caution.)
+  and: "a study investigating the relationship between sleep time and psychomotor vigilance performance
+  reported a sleep need of 8.16 h for preventing cumulative neurobehavioral deficits" (this is Van Dongen
+  2003, which I hold firsthand in vandongen2003_subjective_plateau.yaml).
+shard: "s20_pvt_psychometrics"

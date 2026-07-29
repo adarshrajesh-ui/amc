@@ -1,0 +1,103 @@
+study_id: gbd2016alcohol
+citation: 'GBD 2016 Alcohol Collaborators; Griswold MG, Fullman N, Hawley C, et al. Alcohol use and burden
+  for 195 countries and territories, 1990-2016: a systematic analysis for the Global Burden of Disease
+  Study 2016. Lancet. 2018;392(10152):1015-1035.'
+doi: 10.1016/S0140-6736(18)31310-2
+pmid: '30146330'
+url: https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(18)31310-2/fulltext
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Alcohol use and burden for 195 countries and territories, 1990–2016: a systematic analysis
+    for the Global Burden of Disease Study 2016'
+access_tier: abstract_only
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: null
+n_studies_pooled: 592
+population:
+  age_mean: null
+  age_range:
+  - 15
+  - 95
+  pct_female: null
+  country: global (195 countries)
+  adolescent_match: mixed
+effects:
+- outcome_domain: comparator
+  outcome_construct: population_attributable_fraction_male_deaths_ages_15_49
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: all alcohol use, MALES aged 15-49, global, 2016
+  scale: pct_change
+  unit: percent of male deaths at 15-49 attributable to alcohol
+  value: 12.2
+  se: 0.714299
+  ci:
+  - 10.8
+  - 13.6
+  conversion_formula: PAF 12.2% (95% UI 10.8-13.6). se on the PERCENTAGE scale = (13.6-10.8)/3.919928
+    = 0.714298. Implied population-average hazard ratio over this age band = 1/(1-0.122) = 1.139; applied
+    to ages 16-18 of the US male 2023 life table that is 0.020 y = 7.4 days of life expectancy (convert.py).
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'positive = share of male deaths at 15-49 ATTRIBUTABLE to alcohol (harm). THE CRITICAL
+    ASYMMETRY IN THIS SHARD: alcohol is the LEADING risk factor at exactly our subject''s age, and the
+    mechanism is acute (road injury, self-harm), not chronic disease. Alcohol harm is FRONT-LOADED into
+    the 16-24 window and therefore must NOT be pro-rated from a midlife estimate.'
+  covariates: []
+  followup_years: null
+  cohort_family: GBD
+  quote: Among the population aged 15-49 years, alcohol use was the leading risk factor globally in 2016,
+    with 3.8% (95% UI 3.2-4.3) of female deaths and 12.2% (10.8-13.6) of male deaths attributable to alcohol
+    use. For the population aged 15-49 years, female attributable DALYs were 2.3% (95% UI 2.0-2.6) and
+    male attributable DALYs were 8.9% (7.8-9.9). The three leading causes of attributable deaths in this
+    age group were tuberculosis (1.4% [95% UI 1.0-1.7] of total deaths), road injuries (1.2% [0.7-1.9]),
+    and self-harm (1.1% [0.6-1.5]).
+- outcome_domain: comparator
+  outcome_construct: minimum_risk_consumption_level
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: level of consumption minimising all-cause health loss
+  scale: raw_units
+  unit: standard drinks per week (10 g ethanol each)
+  value: 0.0
+  se: null
+  ci:
+  - 0.0
+  - 0.8
+  conversion_formula: Reported as zero (95% UI 0.0-0.8) standard drinks per week. UI recorded in ci; se
+    null because the estimate is bounded at zero and the UI is asymmetric.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: zero = no protective threshold. Contradicts Wood 2018's implicit J-shape for myocardial
+    infarction; the two disagree because GBD includes cancer and injury outcomes and uses abstainers as
+    referent.
+  covariates: []
+  followup_years: null
+  cohort_family: GBD
+  quote: The level of alcohol consumption that minimised harm across health outcomes was zero (95% UI
+    0.0-0.8) standard drinks per week.
+rob:
+  tool: none
+  judgement: moderate
+  notes: Comparative risk assessment, not a study. PAFs depend on modelled exposure distributions, on
+    relative risks meta-analysed from heterogeneous sources, and on strong assumptions about unrecorded
+    consumption. Attributable fractions are not individual risks. The zero-minimum-risk finding has been
+    substantively criticised for how it handles the abstainer referent.
+funding: Bill & Melinda Gates Foundation
+notes: 'Included because it is the only source in the shard that prices a comparator AT OUR SUBJECT''S
+  AGE BAND. It changes the shape of the alcohol comparator entirely: the chronic-disease pro-rata figure
+  (0.04-0.35 y for 3 years) must be ADDED to an acute-injury window term that is at least 0.02 y for an
+  average male and plausibly 0.07-0.29 y for a heavy-drinking one (convert.py sensitivity over HR 1.5-3.0).
+  Alcohol is the one comparator where the WINDOW model dominates the PRO-RATA model.'
+shard: s18_comparators

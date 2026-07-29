@@ -1,0 +1,52 @@
+study_id: yang2024
+citation: 'Yang C, Yan P, Wu X, Zhang W, Cui H, Zhang L, et al. Associations of sleep with cardiometabolic risk factors and cardiovascular diseases: An umbrella review of observational and mendelian randomization studies. Sleep Medicine Reviews. 2024;77:101965.'
+doi: 10.1016/j.smrv.2024.101965
+pmid: '39137553'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Associations of sleep with cardiometabolic risk factors and cardiovascular diseases: An umbrella review of observational and mendelian randomization studies.'
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: null
+n_studies_pooled: 34
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: multinational
+  adolescent_match: mixed
+effects:
+- outcome_domain: comparator
+  outcome_construct: n_mendelian_randomization_studies_reviewed
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: count of MR studies synthesised on sleep traits and cardiometabolic outcomes
+  scale: raw_units
+  unit: number of Mendelian randomization studies
+  value: 11.0
+  se: null
+  ci: null
+  conversion_formula: 'Count as reported: 14 systematic reviews comprising 23 meta-analyses, plus 11 MR studies.'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Descriptive. Establishes how the MR literature as a whole lands on obesity.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Fourteen systematic reviews consisting of 23 meta-analyses, and 11 Mendelian randomization (MR) studies were included in this study.
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: Umbrella review; does not report pooled effect sizes for obesity, only directional concordance between observational and MR evidence. Its conclusion that MR supports causality for obesity conflicts with the specific MR estimates extracted in hayes2023 and wang2019 (adults) - the umbrella review does not name which MR study or which adiposity trait carried the obesity signal.
+funding: not stated in abstract
+notes: 'CONTEXT-ONLY RECORD, included because it is the highest-level synthesis of the MR-vs-observational comparison. Verbatim: ''Short sleep duration was associated with a higher risk of obesity, type 2 diabetes (T2D), hypertension, stroke, and coronary heart disease (CHD) in observational studies, while a causal role was only demonstrated in obesity, hypertension, and CHD by MR.'' DO NOT TREAT AS AN EFFECT ESTIMATE: no magnitude is given, and the primary MR papers retrieved in this shard (hayes2023 for adult BMI and clinical obesity; wang2019 for adult BMI) report NULLS. The discrepancy is unresolved and is flagged as a gap in station_report.md.'
+shard: s09_obesity_bmi

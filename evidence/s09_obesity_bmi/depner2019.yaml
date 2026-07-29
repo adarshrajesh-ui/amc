@@ -1,0 +1,100 @@
+study_id: depner2019
+citation: Depner CM, Melanson EL, Eckel RH, Snell-Bergeon JK, Perreault L, Bergman BC, Higgins JA, Guerin MK, Stothard ER, Morton SJ, Wright KP Jr. Ad libitum Weekend Recovery Sleep Fails to Prevent Metabolic Dysregulation during a Repeating Pattern of Insufficient Sleep and Weekend Recovery Sleep. Current Biology. 2019;29(6):957-967.e4.
+doi: 10.1016/j.cub.2019.01.069
+pmid: '30827911'
+url: https://www.cell.com/current-biology/fulltext/S0960-9822(19)30098-3
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Ad libitum Weekend Recovery Sleep Fails to Prevent Metabolic Dysregulation during a Repeating Pattern of Insufficient Sleep and Weekend Recovery Sleep.
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 36
+n_studies_pooled: null
+population:
+  age_mean: 25.0
+  age_range: null
+  pct_female: null
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: body_weight_change_kg_sleep_restriction
+  exposure:
+    type: chronic_restriction
+    dose_h: 5.0
+    referent_h: 9.0
+    duration_days: 9
+    contrast_label: 'SR group: 9 nights of 5 h sleep opportunity; weight on study day 13 vs baseline'
+  scale: raw_units
+  unit: kg
+  value: 1.4
+  se: 0.1336
+  ci:
+  - 1.138
+  - 1.662
+  conversion_formula: se = SD/sqrt(n) = 0.5/sqrt(14) = 0.1336. ci = 1.4 +/- 1.96*0.1336.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = weight gained under sustained sleep restriction (harm)
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: In the SR and WR groups, body weight was increased to a similar extent (SR versus WR, p = 0.91; study day 13 versus baseline, all p < 0.05) by 1.4 +/- 0.5 kg and 1.3 +/- 0.4 kg, respectively, on the morning of study day 13 versus baseline (Figure S2E).
+- outcome_domain: recovery
+  outcome_construct: body_weight_change_kg_with_weekend_recovery
+  exposure:
+    type: weekend_catchup
+    dose_h: 5.0
+    referent_h: 9.0
+    duration_days: 9
+    contrast_label: 'WR group: 5 d insufficient sleep + 2 d ad libitum weekend recovery + 2 nights insufficient sleep; weight day 13 vs baseline'
+  scale: raw_units
+  unit: kg
+  value: 1.3
+  se: 0.1069
+  ci:
+  - 1.091
+  - 1.509
+  conversion_formula: se = SD/sqrt(n) = 0.4/sqrt(14) = 0.1069. ci = 1.3 +/- 1.96*0.1069.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'POSITIVE AND STATISTICALLY INDISTINGUISHABLE FROM THE NO-RECOVERY GROUP (SR vs WR p = 0.91). DIRECTLY RELEVANT: adding weekend catch-up sleep - which is exactly our subject''s pattern - did NOT prevent the weight gain.'
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: In the SR and WR groups, body weight was increased to a similar extent (SR versus WR, p = 0.91; study day 13 versus baseline, all p < 0.05) by 1.4 +/- 0.5 kg and 1.3 +/- 0.4 kg, respectively, on the morning of study day 13 versus baseline (Figure S2E).
+- outcome_domain: anthropometric
+  outcome_construct: body_weight_change_kg_control_group
+  exposure:
+    type: descriptive
+    dose_h: 9.0
+    referent_h: 9.0
+    duration_days: 9
+    contrast_label: CONTROL group with 9 h sleep opportunities throughout; weight day 13 vs baseline
+  scale: raw_units
+  unit: kg
+  value: 1.0
+  se: 0.2828
+  ci:
+  - 0.446
+  - 1.554
+  conversion_formula: se = SD/sqrt(n) = 0.8/sqrt(8) = 0.2828. Between-group SR minus CON = 1.4 - 1.0 = 0.4 kg, se = sqrt(0.1336^2 + 0.2828^2) = 0.3128, i.e. 0.4 +/- 0.61 kg - NOT significant.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'CRITICAL CAVEAT: adequately-slept controls in the same laboratory ALSO gained ~1.0 kg. The sleep-attributable increment is only ~0.4 kg (95% CI approximately -0.21 to +1.01 kg), i.e. NOT statistically distinguishable from zero. Ad libitum access to laboratory food, not sleep loss, drove most of the weight gain.'
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: In the CON group, body weight was non-significantly increased (p = 0.23) 1.0 +/- 0.8 kg on the morning of study day 13 versus baseline.
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: Randomised parallel groups but small and unequal (CON n=8 vs SR/WR n=14 each), so the between-group weight comparison is underpowered. Ad libitum in-laboratory feeding causes weight gain in ALL arms, which is the key interpretive limitation.
+funding: NIH; Office of Naval Research; PAC-12 conference; Somalogic (K.P. Wright disclosures)
+notes: 'BEST AGE MATCH of the laboratory studies (healthy young adults, mean age 23-27 y across groups) AND the only one that tests the weekday-restriction/weekend-catch-up pattern our subject actually has. Two findings matter: (1) weekend recovery sleep did NOT prevent weight gain or insulin-sensitivity loss; (2) controls gained nearly as much weight, so the sleep-specific weight effect in this protocol is small and imprecise.'
+shard: s09_obesity_bmi

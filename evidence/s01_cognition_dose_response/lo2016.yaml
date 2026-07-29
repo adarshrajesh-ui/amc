@@ -1,0 +1,284 @@
+study_id: lo2016
+citation: "Lo JC, Ong JL, Leong RLF, Gooley JJ, Chee MWL. Cognitive Performance, Sleepiness, and Mood in Partially Sleep Deprived Adolescents: The Need for Sleep Study. Sleep. 2016;39(3):687-698."
+doi: "10.5665/sleep.5552"
+pmid: "26612392"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4763363/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Cognitive Performance, Sleepiness, and Mood in Partially Sleep Deprived Adolescents: The Need for Sleep Study"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 56
+n_studies_pooled: null
+population:
+  age_mean: 16.6
+  age_range: [15, 19]
+  pct_female: 55.4
+  country: "Singapore"
+  adolescent_match: exact_16_19
+effects:
+  # -------------------------------------------------------- PVT lapses, night 7
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7,
+               contrast_label: "5h TIB vs 9h TIB, night 7 (M7), adolescents, difference in change from baseline"}
+    scale: raw_units
+    unit: "PVT lapses per 10-min session (mean of 3 daily sessions)"
+    value: 15.84
+    se: null
+    ci: null
+    conversion_formula: "Digitised from Fig 2A (colour-separated markers, raster). SR arm B3=1.70,
+      M7=18.26 -> +16.56. Control arm B3=2.32, M7=3.04 -> +0.72. Difference in differences = 15.84
+      lapses. Baseline-unadjusted M7 gap is 18.26-3.04 = 15.22. Note the SR arm was slightly BETTER
+      at baseline, which is why the paper included day-B2 performance as a covariate."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "positive = more lapses = worse vigilance under restriction"
+    covariates: ["baseline (day B2) performance"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7,
+               contrast_label: "5h TIB vs 9h TIB, night 7, adolescents, standardised"}
+    scale: hedges_g
+    unit: null
+    value: 2.399
+    se: 0.354
+    ci: [1.705, 3.093]
+    conversion_formula: "Fig 2A plots 'daily average and standard errors'. Digitised whisker
+      half-lengths at M7: SR 1.515 (n=30) -> SD 8.30; control 0.670 (n=26) -> SD 3.42.
+      SD_pooled = sqrt((29*8.30^2 + 25*3.42^2)/54) = 6.51. Using the difference-in-differences
+      15.84: d = 2.433, Hedges J = 1-3/(4*54-1) = 0.9860, g = 2.399.
+      SE = sqrt((30+26)/(30*26) + g^2/(2*54)) = 0.354. The unadjusted M7 contrast gives g = 2.31."
+    from_figure: true
+    inferred_from_ci: true
+    direction_note: "positive = worse vigilance. SDs are back-calculated from figure SEM whiskers,
+      so treat as approximate; whisker reading error is roughly +-0.1 lapses."
+    covariates: ["baseline performance"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+  # ------------------------------------------------------ accumulation per night
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapse_accumulation_rate_per_night
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7,
+               contrast_label: "linear rate of lapse accumulation across nights M1-M7 at 5h TIB"}
+    scale: per_hour_beta
+    unit: "additional PVT lapses per 10-min session per additional night of 5h TIB"
+    value: 2.409
+    se: null
+    ci: null
+    conversion_formula: "OLS of change-from-B3 on night number over M1-M7 (digitised Fig 2A):
+      SR +1.87 +4.42 +5.93 +10.76 +12.36 +14.33 +16.56 -> slope +2.511 lapses/night.
+      Control arm slope +0.103 lapses/night. Net (SR minus control) = +2.409 lapses per night.
+      The paper describes this as 'a monotonic increase in the number of lapses throughout the
+      partial sleep deprivation period' with no plateau over 7 nights."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "positive = deficit accumulates night over night; NO plateau within 7 nights"
+    covariates: []
+    followup_years: null
+    cohort_family: NFS_Singapore
+  # -------------------------------------------- Cohen f2 by cognitive domain
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_local_effect_size_cohen_f2
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7,
+               contrast_label: "local effect size of group x day interaction, PVT lapses"}
+    scale: raw_units
+    unit: "Cohen f-squared of the group x day interaction (restriction days only)"
+    value: 1.48
+    se: null
+    ci: null
+    conversion_formula: "Reported directly. Authors' own cut-offs: small 0.02, medium 0.15,
+      large 0.35. Full within-study ranking, all from the same model:
+      PVT lapses 1.48 > mental arithmetic (speed of processing) 1.14 > SDMT 0.72 >
+      verbal 3-back A' 0.70 > verbal 1-back A' 0.63 > KSS subjective sleepiness 0.50 >
+      SART A' 0.20 > PANAS positive affect 0.17 > PANAS negative affect 0.07.
+      Objective vigilance beats subjective sleepiness by a factor of 3.0."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "larger = more sensitive to restriction; PVT lapses is the single most sensitive
+      measure and is ~3x more sensitive than self-rated sleepiness"
+    covariates: ["baseline performance"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+  # -------------------------------- subjective plateau vs objective monotonicity
+  - outcome_domain: cognition
+    outcome_construct: kss_subjective_sleepiness_plateau
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7,
+               contrast_label: "KSS trajectory across 7 nights at 5h TIB in adolescents"}
+    scale: raw_units
+    unit: "Cohen f-squared of the group x day interaction on Karolinska Sleepiness Scale"
+    value: 0.50
+    se: null
+    ci: null
+    conversion_formula: "Reported directly (f2 = 0.50 for KSS vs 1.48 for PVT lapses).
+      Trajectory shape from the paper: 'KSS score was elevated after only 1 night of partial sleep
+      deprivation (P < 0.001), progressively increased thereafter, and plateaued toward the end of
+      the manipulation period.' Compare PVT: 'The SR group showed a monotonic increase in the number
+      of lapses throughout the partial sleep deprivation period.' Same subjects, same days:
+      subjective plateau, objective monotonic rise. This reproduces Van Dongen 2003's dissociation
+      in an exactly age-matched adolescent sample."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "subjective sleepiness saturates while objective vigilance keeps degrading"
+    covariates: ["baseline performance"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+  # ------------------------------------------------ adolescent vs adult severity
+  - outcome_domain: cognition
+    outcome_construct: adolescent_vs_adult_lapse_severity_at_matched_dose
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7,
+               contrast_label: "adolescents at 5h TIB x 7 nights vs adults at 4h TIB x 7 nights"}
+    scale: raw_units
+    unit: "ratio of PVT lapses (adolescent / adult) at 7 nights"
+    value: 1.83
+    se: null
+    ci: null
+    conversion_formula: "The paper states verbatim: 'For example, young adults showed about 10 lapses
+      in the PVT after 7 nights of 4 h TIB, whereas an average of 18 lapses were found after 7 nights
+      of 5 h TIB in the current study.' 18.26/10 = 1.83, at a one-hour MILDER dose. This is the
+      single most important transportability datum in the shard: it argues against down-weighting
+      adult-derived slopes for a 16-19 year old, and possibly for inflating them."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: ">1 = adolescents worse than adults at an equal-or-milder dose. Cross-study
+      comparison, not a within-study randomised contrast - treat as indicative."
+    covariates: []
+    followup_years: null
+    cohort_family: NFS_Singapore
+  # ------------------------------------------------------------ recovery
+  - outcome_domain: recovery
+    outcome_construct: pvt_lapses_after_2_recovery_nights
+    exposure: {type: recovery_sleep, dose_h: 9, referent_h: 9, duration_days: 2,
+               contrast_label: "2 nights of 9h TIB recovery after 7 nights at 5h TIB, adolescents"}
+    scale: raw_units
+    unit: "PVT lapses per 10-min session, SR arm at R2 minus its own baseline"
+    value: 4.86
+    se: null
+    ci: null
+    conversion_formula: "Digitised: SR B3=1.70, R1=5.00, R2=6.56. R2 minus B3 = +4.86 lapses, i.e.
+      after two 9h recovery nights the SR arm retained 29% of its peak deficit (4.86/16.56).
+      Control arm drifted +1.65 over the same interval (B3 2.32 -> R2 3.97), so the net residual is
+      about +3.2 lapses. Paper: lapses 'remained elevated relative to baseline after the first two
+      nights of recovery sleep (P < 0.001)'."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "positive = residual deficit persists after 2 weekend-length recovery nights"
+    covariates: []
+    followup_years: null
+    cohort_family: NFS_Singapore
+  # -------------------------------------------------- exposure characterisation
+  - outcome_domain: exposure_measurement
+    outcome_construct: psg_tst_at_5h_tib_in_adolescents
+    exposure: {type: descriptive, dose_h: 5, referent_h: 9, duration_days: 7,
+               contrast_label: "polysomnographic TST achieved at 5h TIB vs 9h TIB, adolescents"}
+    scale: hours
+    unit: "hours PSG-verified TST per night"
+    value: 4.7
+    se: 0.07
+    ci: null
+    conversion_formula: "Paper: SR arm PSG TST rose from 4.57 +- 0.07 h early in the manipulation to
+      4.82 +- 0.07 h mid-period and 4.81 +- 0.07 h at the end; recorded value is the mid-range 4.7 h.
+      Control arm held 7.99-8.18 h at 9h TIB. Baseline (both arms, 9h TIB): SR 7.95 +- 0.07 h,
+      control 8.09 +- 0.07 h. Actigraphy underestimated TST by ~1 h relative to PSG in this sample -
+      important when comparing to actigraphy-based cohort exposures."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive; use to map a TIB dose to actual sleep obtained in adolescents"
+    covariates: []
+    followup_years: null
+    cohort_family: NFS_Singapore
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "Randomised parallel-group allocation, boarding-school residential setting with continuous
+    supervision, PSG-verified dose, baseline performance used as covariate, arms balanced on age,
+    sex, BMI, caffeine, non-verbal IQ, anxiety/depression, chronotype, daytime sleepiness, chronic
+    sleep reduction symptoms, PSQI and actigraphic habitual sleep. Concerns: no blinding possible;
+    only two dose levels (5 h vs 9 h) so no within-study dose-response curve; per-arm n ~30; the
+    first five test batteries were discarded to reduce practice effects, which is good practice but
+    means the reported baseline is already partly practised."
+funding: "National Medical Research Council Singapore (NMRC/STaR/0004/2008); Far East Organization"
+notes: |
+  THE CLOSEST EXPERIMENTAL MATCH TO THE TARGET SUBJECT anywhere in this literature: healthy
+  16-19 year olds (mean 16.6 +- 1.1 y), 5 h TIB - which is exactly the subject's reported weekday
+  dose - sustained for 7 consecutive nights, with objective PSG dose verification.
+
+  DESIGN (Need for Sleep study 1, NFS1): 2-week residential protocol in a boarding school.
+  3 baseline nights at 9 h TIB (23:00-08:00), then 7 nights of manipulation - SR arm (n=30) 5 h TIB
+  (01:00-06:00), control arm (n=26) 9 h TIB - then 3 recovery nights at 9 h TIB. Cognitive battery
+  3x/day (10:00, 15:00, 20:00). 56 analysable participants, 25 male.
+
+  ACCUMULATE vs PLATEAU IN ADOLESCENTS: objective vigilance accumulated monotonically over all
+  7 nights at ~2.4 extra lapses per night with no sign of a plateau, while subjective sleepiness
+  plateaued. Working memory (1-back, 3-back) and SART only declined after 4 nights, so different
+  domains have different onset latencies - the model should not assume a single shared onset.
+
+  DIGITISED RAW DATA, PVT lapses per 10-min session (Fig 2A left panel; mean with SEM whiskers):
+    SR (5h TIB):    B3 1.70  M1 3.57  M2 6.12  M3 7.63  M4 12.46  M5 14.06  M6 16.03  M7 18.26
+                    R1 5.00  R2 6.56
+    control (9h):   B3 2.32  M1 2.14  M2 2.68  M3 2.32  M4 2.37   M5 2.41   M6 2.72   M7 3.04
+                    R1 3.04  R2 3.97
+    digitised SEM whisker half-lengths, SR arm: B3 0.40  M1 0.63  M3 0.67  M5 0.89  M7 1.52
+    digitised SEM whisker half-lengths, control: ~0.67-1.16 throughout
+  Reading error is about +-0.1 lapses for means; whisker ends near the marker body (control arm) are
+  less reliable than the long SR whiskers.
+
+  EFFECT SIZE RANKING ACROSS DOMAINS (Cohen f2 of group x day, restriction days only, Fig 3):
+    PVT lapses 1.48 | mental arithmetic 1.14 | SDMT 0.72 | verbal 3-back A' 0.70 |
+    verbal 1-back A' 0.63 | KSS 0.50 | SART A' 0.20 | PANAS positive 0.17 | PANAS negative 0.07
+
+  PRACTICE EFFECTS: the control arm IMPROVED on both speed-of-processing tasks across the protocol
+  while the SR arm did not, so on those tasks the restriction effect is largely suppression of
+  learning rather than absolute decline - the same pattern Van Dongen 2003 saw on DSST/SAST.
+  The authors also discarded the first five test batteries specifically to blunt practice effects.
+
+  KEY VERBATIM QUOTES
+  Monotonic objective accumulation: "In evaluating sustained attention, we found a group x day
+  interaction on the number of lapses in the PVT (F(9,456) = 9.09, P < 0.001). The SR group showed a
+  monotonic increase in the number of lapses throughout the partial sleep deprivation period. The
+  number of lapses was significantly reduced after the first recovery sleep episode (P < 0.001), but
+  remained elevated relative to baseline after the first two nights of recovery sleep (P < 0.001)."
+  Subjective plateau: "Subjective sleepiness evaluated using the KSS showed a significant group x day
+  interaction (F(9,457) = 9.32, P < 0.001). KSS score was elevated after only 1 night of partial
+  sleep deprivation (P < 0.001), progressively increased thereafter, and plateaued toward the end of
+  the manipulation period."
+  Dissociation stated directly: "Restricting adolescents' sleep to 5 h TIB for 7 nights led to
+  cumulative degradation of sustained attention, working memory, executive function, and speed of
+  processing. In contrast, the increase in subjective sleepiness and the reduction in positive mood
+  leveled off in the course of the experiment. Residual effects on sustained attention and subjective
+  sleepiness persisted after 2 nights of 9 h recovery sleep opportunity."
+  Adolescents at least as bad as adults: "The severity of neurobehavioral deficits we observed in
+  adolescents is comparable to if not greater than that observed with adults exposed to a similar
+  degree of partial sleep deprivation. For example, young adults showed about 10 lapses in the PVT
+  after 7 nights of 4 h TIB, whereas an average of 18 lapses were found after 7 nights of 5 h TIB in
+  the current study."
+  PVT is the right instrument: "Previous studies have suggested that executive function and not
+  attention is the cognitive domain most affected in partially sleep deprived children and
+  adolescents. These prior studies may not have found strong effects on attention because of
+  differences in tests used to measure attention. ... We detected monotonic deterioration in vigilance
+  over the 7 nights of sleep restriction. The SART was less sensitive (f2 = 0.20) than the PVT
+  (f2 = 1.48; Figure 3) highlighting the differential sensitivity to multi-night sleep restriction
+  across tasks evaluating the same cognitive domain."
+  No executive-load gradient: "The size of the partial sleep deprivation effect on 1- and 3-back was
+  similar in magnitude (f2 = 0.63 and 0.70; Figure 3), suggesting that cognitive decrement induced by
+  partial sleep deprivation did not change with executive load."
+  Practice-effect suppression: "In both the MAT and the SDMT, which are tests of speed of processing,
+  performance improved with repeated testing, but this was attenuated in the SR group relative to the
+  control group (group x day interaction for the MAT: F(9,456) = 4.33, P < 0.001; for the SDMT:
+  F(9,456) = 4.02, P < 0.001)."
+  Practice-effect handling: "We excluded data from the first five test batteries on days B0 and B1 in
+  all the analyses to minimize influence of practice effects."
+  Real-world relevance of the dose: "Preliminary data from students of one of the feeder schools to
+  the current work showed that on average, the actigraphically estimated TST was below 5.5 h during
+  weekdays (unpublished data). As such, the severity and duration of sleep restriction used here has
+  real-world relevance."
+  Ecological framing: "even students from top schools who regularly sleep 2 to 3 h less than
+  recommended for their age on weekday nights experience significant neurobehavioral deficits when
+  exposed to partial sleep deprivation."
+shard: "s01_cognition_dose_response"

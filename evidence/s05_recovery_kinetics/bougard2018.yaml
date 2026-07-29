@@ -1,0 +1,91 @@
+study_id: bougard2018
+citation: "Bougard C, Sagui E, Bourrilhon C, Sauvet F, Van Beers P, Guillard M, Drogou C, Chennaoui M, Gomez-Merino D, Leger D, Rabat A. Daytime microsleeps during 7 days of sleep restriction followed by 13 days of sleep recovery in healthy young adults. Conscious Cogn. 2018;61:1-12."
+doi: "10.1016/j.concog.2018.03.008"
+pmid: "29631192"
+url: "https://pubmed.ncbi.nlm.nih.gov/29631192/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Daytime microsleeps during 7 days of sleep restriction followed by 13 days of sleep recovery in healthy young adults"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 12
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [20, 36]
+  pct_female: 0.0
+  country: "France"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: recovery_window_length_with_full_return_of_sleepiness_measures
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 13, contrast_label: "13 nights of recovery sleep after 7 nights of 4 h TIB, with assessment at recovery days 3 and 13"}
+    scale: raw_units
+    unit: "days of recovery sleep after which MWT latency, KSS and all sleep values had returned to baseline"
+    value: 13
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "13 = the recovery window studied. The abstract reports that recovery nights allowed MWT latencies, KSS and all sleep values to return to baseline, with assessments at R3 and R13. Because only R3 and R13 were assessed, this study establishes an UPPER bound of 13 days for these measures, not the earliest day of recovery."
+    covariates: []
+    followup_years: null
+    cohort_family: "IRBA_CSR_NCT01989741"
+    quote: "Recovery nights allowed MWT latencies, KSS scores and all sleep values to return to baseline levels, while a rebound in N3, N3% and REM% sleep stages occurred."
+  - outcome_domain: cognition
+    outcome_construct: mwt_latency_decrement_after_7_nights_of_4h_tib
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 7, contrast_label: "MWT sleep latency on restriction night 7 vs baseline"}
+    scale: pct_change
+    unit: "% change in MWT sleep latency at SR7 vs baseline"
+    value: -24.4
+    se: null
+    ci: null
+    conversion_formula: "Reported directly as 'SR7: -24.4%'. No SE or CI given in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = shorter latency to fall asleep, i.e. WORSE ability to stay awake, after 7 nights of 4 h TIB."
+    covariates: []
+    followup_years: null
+    cohort_family: "IRBA_CSR_NCT01989741"
+    quote: "During SR, MWT latencies decreased (SR7: -24.4%), whereas the number, the cumulative duration of microsleeps and KSS scores increased."
+  - outcome_domain: cognition
+    outcome_construct: microsleeps_detectable_despite_preserved_n3_sleep
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 7, contrast_label: "EEG-detected daytime microsleeps during 4 h TIB restriction, in the presence of maintained N3 sleep duration"}
+    scale: probability
+    unit: "direction indicator: 1 = microsleep burden increased and was not captured by MWT latency"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded as a direction indicator; the abstract reports the finding qualitatively with no magnitude for the microsleep counts."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = the harm was present and UNDER-detected by the standard test. Deep (N3) sleep duration was preserved during restriction yet persistent sleep attacks occurred, and MWT latency did not reflect the true sleepiness level. Preserved slow-wave sleep is NOT evidence of adequate recovery."
+    covariates: []
+    followup_years: null
+    cohort_family: "IRBA_CSR_NCT01989741"
+    quote: "During SR, the maintenance of N3 sleep duration seems not sufficient to reduce daytime sleepiness and MWT results did not reflect the sleepiness levels characterized by persistent sleep attacks."
+rob:
+  tool: RoB2
+  judgement: moderate
+  notes: "Very small (n=12, all male), no control arm, single-group before-after design with recovery assessed at only two timepoints (R3 and R13), so the recovery time course is coarsely sampled. I could obtain only the abstract, so I cannot verify whether MWT/KSS had already recovered by R3 or only by R13, which is the single number I most wanted from this paper. Same protocol/cohort as Rabat et al. 2016 (ClinicalTrials NCT01989741), so cohort_family is recorded to prevent double counting."
+funding: "Not verifiable from the abstract. Registered as ClinicalTrials NCT01989741."
+notes: |
+  Included because it is one of only two studies I could find with a recovery window longer than 7 days
+  (13 nights), which directly addresses the shard's requirement to find studies tracking recovery for more
+  than a few days.
+  IMPORTANT CORRECTION TO A CLAIM I ENCOUNTERED SECONDHAND: while searching, I saw this study cited as showing
+  that microsleeps remained elevated until recovery day 12. The abstract I actually retrieved does NOT support
+  that specific claim - it states that recovery nights allowed MWT latencies, KSS scores and all sleep values
+  to return to baseline, with a rebound in N3 and REM. Because assessments occurred only at R3 and R13, the
+  abstract cannot distinguish "recovered by R3" from "recovered only by R13". I therefore record 13 days as an
+  UPPER bound and do not claim a day-12 non-recovery. Reporting reality per the extraction instructions.
+  The companion paper on the same cohort (Rabat et al. 2016, DOI 10.3389/fnbeh.2016.00095, PMID 27242464,
+  verified) DOES report a measure that had not recovered at R13 - salivary alpha-amylase - and is extracted
+  separately as rabat2016.
+  ACCESS LIMITATION LOGGED: abstract only (Consciousness and Cognition, paywalled).
+shard: "s05_recovery_kinetics"

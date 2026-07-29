@@ -1,0 +1,101 @@
+==============================================================================
+ROUTE 1: bidirectional coefficients in the SAME adolescent sample
+==============================================================================
+  1a. roberts2014, odds ratios:
+      major depression       forward log_or=+1.3244  reverse log_or=+1.4540  reverse share=0.523
+      depressive symptoms    forward log_or=+0.3221  reverse log_or=+0.2151  reverse share=0.400
+  1b. marino2022_qlscd, cross-lagged betas in one model, ages 10-12:
+      disturbed sleep <-> dep forward beta=+0.1000  reverse beta=+0.0900  reverse share=0.474
+      ages 12-13: ONLY the reverse arrow survives (beta 0.05), forward null
+             -> reverse share at that wave = 1.00
+      ages 13-15 and 15-17: BOTH arrows null (subject's own age band)
+  -> reverse share 40-52% (roberts2014) and 47% (marino2022_qlscd) on three
+     outcomes across two independent cohorts. Converges near one half.
+
+==============================================================================
+ROUTE 2: MR in both directions on the INSOMNIA axis
+==============================================================================
+  sun2022_mr (log OR)      forward=+0.2700  reverse=+0.3148  reverse share=0.538
+  cai2021_mr (bxy)         forward=+0.5700  reverse=+0.1600  reverse share=0.219
+  -> the two MR studies DISAGREE: 22% vs 54%. Range, not a point estimate.
+
+==============================================================================
+ROUTE 3: what adjusting for BASELINE DEPRESSION does to the youth association
+==============================================================================
+  hertenstein2019 (not baseline-adjusted) log_or=+1.0403
+  marino2021      (baseline-adjusted)     log_or=+0.4055
+  -> fraction removed by baseline-depression adjustment = 0.610
+     CAVEAT: different studies, different exposures. Cross-study, so weak.
+
+==============================================================================
+ROUTE 4: within-study attenuation from covariate adjustment (short2020, adolescents)
+==============================================================================
+  covariates = none            log_or=+0.5128
+  covariates = others (max)    log_or=+0.2469
+  -> fraction removed by covariate adjustment alone = 0.519
+
+==============================================================================
+ROUTE 5: observational vs genetically identified, SLEEP DURATION axis
+==============================================================================
+  observational short sleep (zhai2015)        log=+0.27003
+  MR dichotomous short sleep (zhang2024_mr)   log=+0.16467  -> non-causal share=0.390
+  MR continuous duration (zhang2024_mr)       log=-0.00200  -> non-causal share=0.993
+  sun2022_mr continuous duration -> MDD: NULL (no point estimate published)
+  -> non-causal share on the duration axis: 39% to ~100%
+
+==============================================================================
+ROUTE 6: quasi-experimental (externally IMPOSED sleep opportunity) vs observational
+==============================================================================
+  This is the route that matches the subject's exposure: sleep restricted by an
+  outside constraint, not by insomnia and not by his own mood.
+  sadikova2024  IV, +30 min/night sustained 2 y  -> d = -0.1559
+                    naive linear per-hour        -> d = -0.3118 (linearity UNTESTED)
+  wang2026_dsst pooled DSST, +69 min/night        -> g = -0.2000
+                    implied per-hour             -> g = -0.1739
+  gangwisch2010 parental bedtime >=midnight vs <=10pm, a 2 h swing in imposed
+                sleep opportunity: OR 1.24 -> log_or +0.2151, d ~= +0.1186
+  -> three unrelated quasi-experiments converge on |d| ~ 0.12 to 0.31 for imposed
+     short sleep, against observational cross-sectional ORs of 1.7-2.8 (|d| 0.3-0.6).
+
+==============================================================================
+ROUTE 7: CRITERION CONTAMINATION -- a third inflation mechanism, not reverse causation
+==============================================================================
+  sadikova2024 decomposed the 6-item Kandel-Davies scale under a causal sleep gain.
+  Two items are fatigue/sleep ('too tired to do things', 'trouble going to sleep or
+  staying asleep'); four are mood (unhappy/sad/depressed, hopeless, nervous, worrying).
+    total score ITT 2 y : -0.26 (-0.50, -0.02)  SIGNIFICANT
+    fatigue cluster     : -0.91 (-1.45, -0.38)  SIGNIFICANT, 3.5x the total
+    mood cluster        : -0.03 (-0.09,  0.02)  NULL
+  If the total is the 6-item mean, the 2 fatigue items contribute (2/6)*fatigue:
+    fatigue contribution to the total = (2/6) * -0.91 = -0.3033
+    that is 117% of the observed total effect of -0.26
+    ASSUMPTION: 'Mood' in Table 2 is the remaining 4 items. If it is item c alone the
+    exact share shifts, but it cannot fall much below 100% while mood is null.
+  -> essentially the ENTIRE causal effect on the depression SCALE is the scale
+     re-measuring the exposure. Independently replicated by berger2026_start in the
+     same cohort by difference-in-differences, and predicted by talbot2010's authors
+     ('The POMS may indicate greater mood disturbance in part because some of its
+     scales overlap with sleepiness, such as fatigue and vigor').
+
+==============================================================================
+SYNTHESIS: absolute risk arithmetic for an 18-19 y MALE
+==============================================================================
+  base rate past-year MDE, 18-25, combined sex : 0.172
+  male-specific rate NOT quotable from my sources; direction is lower.
+  working male range used below: 0.09 to 0.12
+  base suicide mortality, male 15-19 : 17.3 /100k/y
+  base suicide mortality, male 20-24 : 27.9 /100k/y
+
+  DEPRESSION, absolute excess under three candidate causal ORs:
+    null continuous-duration MR (sun2022)  OR=1.000  excess = -0.00 to +0.00 pp
+    genetic short sleep (zhang2024_mr)     OR=1.179  excess = +1.44 to +1.85 pp
+    quasi-experiment (gangwisch2010)       OR=1.240  excess = +1.92 to +2.46 pp
+    naive observational (short2020 adj)    OR=1.280  excess = +2.24 to +2.86 pp
+
+  SUICIDE MORTALITY, absolute excess (applying an IDEATION OR to a death rate,
+  which OVERSTATES it -- wang2024 shows RR shrinks from 2.01 ideation to 1.52
+  medically-treated attempt, so the OR for death is likely well below these):
+    quasi-experiment ideation OR (gangwisch2010) +4.0 /100k/y  = 1 extra death per 25,000 exposed per year
+        over 3 years of exposure: ~1 per 8,333
+    YRBS adjusted attempt aOR (wang2024)         +4.8 /100k/y  = 1 extra death per 20,833 exposed per year
+        over 3 years of exposure: ~1 per 6,944

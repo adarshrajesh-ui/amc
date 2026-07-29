@@ -1,0 +1,99 @@
+study_id: huang2023_cvdfree_life_expectancy
+citation: 'Huang BH, Del Pozo Cruz B, Teixeira-Pinto A, Cistulli PA, Stamatakis E. Influence of poor sleep
+  on cardiovascular disease-free life expectancy: a multi-resource-based population cohort study. BMC
+  Med. 2023;21(1):75.'
+doi: 10.1186/s12916-023-02732-x
+pmid: '36859313'
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9979412/
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Influence of poor sleep on cardiovascular disease-free life expectancy: a multi-resource-based
+    population cohort study.'
+access_tier: abstract_only
+design: prospective_cohort_selfreport
+n: 308683
+population:
+  age_mean: null
+  age_range:
+  - 40
+  - 70
+  pct_female: null
+  country: UK
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: cvd_free_life_expectancy_lost_poor_sleepers_male
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: poor vs healthy composite sleep profile (chronotype, duration, insomnia complaints,
+      snoring, daytime sleepiness)
+  scale: years
+  unit: CVD-free years lost at age 40, poor vs healthy sleepers, males
+  value: -2.31
+  se: 0.4668367346938776
+  ci:
+  - -3.29
+  - -1.46
+  conversion_formula: se = (3.29 - 1.46)/3.92 = 0.467; sign flipped to negative = years lost
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'negative = CVD-free life lost. NOT total life expectancy: this is a health-expectancy
+    quantity from a three-state Markov model, closer in spirit to a QALY than plain life-years but not
+    utility-weighted.'
+  covariates:
+  - age
+  - sex
+  - socioeconomic
+  - lifestyle
+  - comorbidity
+  followup_years: null
+  cohort_family: UK_Biobank
+  quote: We observed a gradual loss in CVD-free life expectancy toward poor sleep such as, compared with
+    healthy sleepers, poor sleepers lost 1.80 [95% CI 0.96-2.75] and 2.31 [1.46-3.29] CVD-free years in
+    females and males, respectively, while intermediate sleepers lost 0.48 [0.41-0.55] and 0.55 [0.49-0.61]
+    years.
+- outcome_domain: baseline_risk
+  outcome_construct: cvd_free_life_expectancy_lost_intermediate_sleepers_male
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: intermediate vs healthy composite sleep profile
+  scale: years
+  unit: CVD-free years lost at age 40, intermediate vs healthy sleepers, males
+  value: -0.55
+  se: 0.030612244897959183
+  ci:
+  - -0.61
+  - -0.49
+  conversion_formula: se = (0.61 - 0.49)/3.92 = 0.0306; sign flipped to negative
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'negative = CVD-free life lost. THE MORE RELEVANT CONTRAST for mild-to-moderate chronic
+    restriction, and it is 4.2x smaller than the poor-sleeper estimate: 0.55 y = 6.6 months.'
+  covariates: []
+  followup_years: null
+  cohort_family: UK_Biobank
+  quote: '... while intermediate sleepers lost 0.48 [0.41-0.55] and 0.55 [0.49-0.61] years.'
+rob:
+  tool: ROBINS-I
+  judgement: high
+  notes: UK Biobank is a healthy-volunteer cohort with about 5% response, middle-aged at baseline, so
+    it is not representative and contains no adolescents. The composite sleep score conflates duration
+    with insomnia, snoring and chronotype, so the exposure is not sleep restriction. Self-reported at
+    a single time point. Conditions on survival at age 40, which is not the subject's index age.
+funding: null
+notes: Also reports, among men, 3.84 [0.61-8.59] CVD-free years lost with clinical insomnia and 6.73 [5.31-8.48]
+  with sleep-related breathing disorders; those are diagnosed disorders, not restriction, and are not
+  extracted.
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

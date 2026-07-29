@@ -1,0 +1,113 @@
+study_id: sun2025
+citation: 'Sun S, Yang Y, Yu F, He Y, Luo C, Zhang M, Chen H, Tung TH. Social jetlag and depressive symptoms
+  among young people: a systematic review and meta-analysis. BMC Psychiatry. 2025;25(1):664.'
+doi: 10.1186/s12888-025-07066-x
+pmid: '40597088'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Social jetlag and depressive symptoms among young people: a systematic review and meta-analysis.'
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: null
+n_studies_pooled: 8
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: multi
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: psychiatric
+  outcome_construct: depressive_symptoms_high_sjl
+  exposure:
+    type: social_jetlag
+    dose_h: 2.0
+    referent_h: 0.5
+    duration_days: null
+    contrast_label: SJL >= 2 h vs referent
+  scale: log_or
+  unit: null
+  value: 0.3646
+  se: 0.1034
+  ci:
+  - 0.1655
+  - 0.571
+  conversion_formula: OR 1.44 (95% CI 1.18-1.77); log_or = ln(1.44) = 0.3646; se = (ln(1.77)-ln(1.18))/3.92
+    = 0.1034
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = HARM. Applies only ABOVE a ~2 h SJL threshold.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_8_studies
+  quote: high social jetlag (>= 2 hours) was associated with increased odds of depressive symptoms among
+    young people(OR = 1.44, 95% CI:1.18-1.77, I2 =85%), whereas low social jetlag (1-2 hours) was not
+    significantly associated (OR = 1.05, 95% CI:1.00-1.09,I2 = 47%).
+- outcome_domain: psychiatric
+  outcome_construct: depressive_symptoms_low_sjl
+  exposure:
+    type: social_jetlag
+    dose_h: 1.5
+    referent_h: 0.5
+    duration_days: null
+    contrast_label: SJL 1-2 h vs referent
+  scale: log_or
+  unit: null
+  value: 0.0488
+  se: 0.022
+  ci:
+  - 0.0
+  - 0.0862
+  conversion_formula: OR 1.05 (95% CI 1.00-1.09); log_or = ln(1.05) = 0.0488; se = (ln(1.09)-ln(1.00))/3.92
+    = 0.0220
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'POSITIVE but NOT SIGNIFICANT. Establishes a THRESHOLD: 1-2 h of SJL carries essentially
+    no depression signal. This is the single most decision-relevant number for our subject, whose central
+    SJL estimate falls in this band.'
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_8_studies
+  quote: whereas low social jetlag (1-2 hours) was not significantly associated (OR = 1.05, 95% CI:1.00-1.09,I2
+    = 47%).
+- outcome_domain: psychiatric
+  outcome_construct: depressive_symptoms_correlation
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: pooled correlation, continuous SJL
+  scale: raw_units
+  unit: Pearson r
+  value: 0.16
+  se: 0.0638
+  ci:
+  - 0.03
+  - 0.28
+  conversion_formula: se_r = (0.28-0.03)/3.92 = 0.0638
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: POSITIVE = more SJL, more depressive symptoms. HARM, small.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_8_studies
+  quote: 'Meta-analysis of correlations showed that social jetlag was significantly but weakly associated
+    with depressive symptoms (r = 0.16, 95% CI: 0.03-0.28,I2 = 73%).'
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: Only 8 studies; substantial heterogeneity (I2=85% for the high-SJL OR); cross-sectional constituents;
+    total n not reported in the abstract.
+funding: null
+notes: 'PROVIDES THE DOSE THRESHOLD THAT MATTERS MOST HERE: depression risk is elevated only above ~2
+  h of SJL (OR 1.44), and is essentially null at 1-2 h (OR 1.05, CI touching 1.00). Our subject''s central
+  SJL estimate (~1.75 h) sits in the null band, with his occasional long-weekend excursions (~3.25-3.5
+  h) crossing into the elevated band. The authors report the >2 h finding as robust to sensitivity analysis.'
+shard: s16_social_jetlag

@@ -1,0 +1,219 @@
+study_id: daghlas2019
+citation: "Daghlas I, Dashti HS, Lane J, Aragam KG, Rutter MK, Saxena R, Vetter C. Sleep Duration and Myocardial Infarction. J Am Coll Cardiol. 2019 Sep 10;74(10):1304-1314."
+doi: "10.1016/j.jacc.2019.07.022"
+pmid: "31488267"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep Duration and Myocardial Infarction"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: 461347
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [40, 69]
+  pct_female: null
+  country: "UK (UK Biobank); CARDIoGRAMplusC4D for the 2-sample MR"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: cardiovascular
+    outcome_construct: mi_mr_two_sample_per_hour_more_sleep
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "MR, IVW, 71 SNPs for continuous sleep duration, per +1 h genetically predicted sleep; MI in CARDIoGRAMplusC4D (43676 cases/128199 controls)"}
+    scale: log_or
+    unit: "per +1 h genetically predicted sleep"
+    value: -0.22314
+    se: 0.08908
+    ci: [-0.40048, -0.05129]
+    conversion_formula: "log_or = ln(0.80) = -0.22314; se = (ln(0.95) - ln(0.67))/3.92 = 0.08908. Inverted to per-hour-LESS: OR 1.25 (1.05-1.49)."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      NEGATIVE = each additional genetically predicted hour of sleep LOWERS MI odds (OR 0.80), i.e.
+      each hour LESS raises them by a factor of 1.25 (95% CI 1.05-1.49). THE HEADLINE MR PER-HOUR
+      ESTIMATE requested by target #5.
+    covariates: ["MR requires no covariate adjustment; instrument robust to adjustment for BMI (OR 0.81, 0.65-0.99), insomnia, lifestyle traits, shiftwork exclusion, and prevalent-disease exclusion"]
+    followup_years: null
+    cohort_family: "CARDIoGRAMplusC4D"
+    quote: "IVW estimates in two-sample MR were consistent with a causal effect of short sleep duration on MI (OR per additional h of sleep = 0.80, 0.67-0.95, p=0.013; OR short sleep = 1.19, 1.09-1.29, p=4.2e-04; Figure 3 )."
+  - outcome_domain: cardiovascular
+    outcome_construct: mi_mr_one_sample_per_hour_more_sleep
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "one-sample MR in 337532 unrelated White British UKB participants (17157 cases/320375 controls), per +1 h"}
+    scale: log_or
+    unit: "per +1 h genetically predicted sleep"
+    value: -0.15082
+    se: 0.10585
+    ci: [-0.35667, 0.05827]
+    conversion_formula: "log_or = ln(0.86) = -0.15082; se = (ln(1.06) - ln(0.70))/3.92 = 0.10585"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      NEGATIVE point estimate (protective per extra hour) but NOT STATISTICALLY SIGNIFICANT
+      (OR 0.86, CI 0.70-1.06, p = 0.17). The continuous per-hour MR estimate FAILS TO REPLICATE in
+      the independent one-sample analysis. The authors attribute this to low power and note the CAD
+      estimate in the same sample did exclude the null at 0.81 (0.68-0.97).
+    covariates: ["one-sample MR using weighted genetic instrument, individual-level UKB data"]
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "We observed similar causal effects for shorter sleep duration on MI (OR per additional h of sleep =0.86, 0.70-1.06, p=0.17; OR short sleep =1.21, 1.08-1.37, p=1.47e-03; Figure 3 ). The overlap of the confidence intervals for the continuous sleep duration genetic instrument estimates in UKB was likely driven by low power, as the estimates for CAD (sample size n=17,157 cases/320,375 controls) did not overlap with the null (0.81, 0.68-0.97; Online Appendix Supplementary figure 1 )."
+  - outcome_domain: cardiovascular
+    outcome_construct: mi_mr_short_sleep_binary_instrument
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "MR, 24 SNPs for short sleep; per DOUBLING OF THE ODDS of short sleep - NOT a <6h vs 6-9h contrast"}
+    scale: log_or
+    unit: "per doubling of the odds of genetically predicted short sleep"
+    value: 0.17395
+    se: 0.04298
+    ci: [0.08618, 0.25464]
+    conversion_formula: "log_or = ln(1.19) = 0.17395; se = (ln(1.29) - ln(1.09))/3.92 = 0.04298"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = elevated MI odds with genetic liability to short sleep (OR 1.19). Replicated in UKB
+      at 1.21 (1.08-1.37). SCALE WARNING: this is per doubling of the ODDS of being a short sleeper,
+      which is NOT the same contrast as the observational <6 h vs 6-9 h comparison. The much-quoted
+      near-identity of the MR estimate (1.19) and the observational estimate (1.20) is therefore
+      partly a coincidence of scales, not a like-for-like agreement.
+    covariates: ["MR; MR-Egger intercept test non-significant for pleiotropy (p = 0.22 for short sleep)"]
+    followup_years: null
+    cohort_family: "CARDIoGRAMplusC4D"
+    quote: "Short sleep duration associations reflect the increase in MI risk concomitant with a doubling in the odds of short sleep duration. Continuous sleep duration associations reflect the effect of increasing sleep duration by 1 hour."
+  - outcome_domain: cardiovascular
+    outcome_construct: mi_observational_6h_UNADJUSTED
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7.5, duration_days: null,
+               contrast_label: "6 h vs 7-8 h habitual sleep, UNADJUSTED Cox model, UK Biobank"}
+    scale: log_hr
+    unit: null
+    value: 0.14842
+    se: 0.03524
+    ci: [0.07696, 0.21511]
+    conversion_formula: "log_hr = ln(1.16) = 0.14842; se = (ln(1.24) - ln(1.08))/3.92 = 0.03524"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = elevated MI risk at 6 h BEFORE any adjustment. Paired with the adjusted estimate below to quantify confounding."
+    covariates: []
+    followup_years: 7.04
+    cohort_family: "UK_Biobank"
+    quote: "Unadjusted model: HR (95% CI) | 1.96 (1.57-2.43) | 1.52 (1.35, 1.70) | 1.16 (1.08, 1.24) | 1.00 (ref) | 1.40 (1.26, 1.56) | 2.07 (1.73, 2.46) | 2.78 (1.59, 4.51)"
+  - outcome_domain: cardiovascular
+    outcome_construct: mi_observational_6h_FULLY_ADJUSTED
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 7.5, duration_days: null,
+               contrast_label: "6 h vs 7-8 h habitual sleep, fully multivariable-adjusted (Model 3), UK Biobank"}
+    scale: log_hr
+    unit: null
+    value: 0.04879
+    se: 0.03633
+    ci: [-0.02020, 0.12222]
+    conversion_formula: "log_hr = ln(1.05) = 0.04879; se = (ln(1.13) - ln(0.98))/3.92 = 0.03633"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = elevated MI risk at 6 h AFTER full adjustment - but the effect is now NULL
+      (HR 1.05, CI 0.98-1.13). Adjustment removed 67% of the log-scale association at 6 h
+      (ln1.16 = 0.1484 -> ln1.05 = 0.0488). THE SINGLE MOST IMPORTANT CONFOUNDING NUMBER IN THIS SHARD.
+    covariates: ["age", "sex", "ethnicity", "smoking status", "frequency of alcohol consumption", "family history of heart disease", "marital status", "education", "income", "Townsend deprivation index", "employment status", "physical activity (MET/h-week)", "television watching", "grip strength", "BMI", "waist-hip ratio", "history of seeing provider for mental health", "snoring", "use of sleep medications", "sleep apnea", "self-reported insomnia", "probable type 2 diabetes", "hypertension", "BP-lowering medication", "history of high cholesterol", "cholesterol-lowering medication", "aspirin use"]
+    followup_years: 7.04
+    cohort_family: "UK_Biobank"
+    quote: "Model 3: MV adjusted * (95% CI) | 1.34 (1.07-1.68) | 1.19 (1.06-1.35) | 1.05 (0.98-1.13) | 1.00 (ref) | 1.07 (0.96-1.19) | 1.32 (1.11-1.58) | 1.87 (1.14-3.06)"
+  - outcome_domain: cardiovascular
+    outcome_construct: mi_observational_5h_UNADJUSTED
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7.5, duration_days: null,
+               contrast_label: "5 h vs 7-8 h habitual sleep, UNADJUSTED, UK Biobank"}
+    scale: log_hr
+    unit: null
+    value: 0.41871
+    se: 0.05881
+    ci: [0.30010, 0.53063]
+    conversion_formula: "log_hr = ln(1.52) = 0.41871; se = (ln(1.70) - ln(1.35))/3.92 = 0.05881"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = elevated MI risk at 5 h before adjustment (HR 1.52)"
+    covariates: []
+    followup_years: 7.04
+    cohort_family: "UK_Biobank"
+    quote: "Unadjusted model: HR (95% CI) | 1.96 (1.57-2.43) | 1.52 (1.35, 1.70) | 1.16 (1.08, 1.24) | 1.00 (ref)"
+  - outcome_domain: cardiovascular
+    outcome_construct: mi_observational_5h_FULLY_ADJUSTED
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7.5, duration_days: null,
+               contrast_label: "5 h vs 7-8 h habitual sleep, fully multivariable-adjusted (Model 3), UK Biobank"}
+    scale: log_hr
+    unit: null
+    value: 0.17395
+    se: 0.06169
+    ci: [0.05827, 0.30010]
+    conversion_formula: "log_hr = ln(1.19) = 0.17395; se = (ln(1.35) - ln(1.06))/3.92 = 0.06169"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = elevated MI risk at 5 h after full adjustment (HR 1.19), still significant. Adjustment
+      removed 58% of the log-scale association at 5 h (ln1.52 = 0.4187 -> ln1.19 = 0.1740).
+    covariates: ["full Model 3 set as enumerated on the 6 h effect above"]
+    followup_years: 7.04
+    cohort_family: "UK_Biobank"
+    quote: "Model 3: MV adjusted * (95% CI) | 1.34 (1.07-1.68) | 1.19 (1.06-1.35) | 1.05 (0.98-1.13) | 1.00 (ref)"
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_mi_incidence_rate_by_sleep_duration
+    exposure: {type: descriptive, dose_h: 6, referent_h: 7.5, duration_days: null,
+               contrast_label: "MI incidence per 1000 person-years at 6 h vs 7-8 h, UK Biobank, median age ~56"}
+    scale: probability
+    unit: "excess MI events per 1000 person-years, 6 h minus 7-8 h"
+    value: 0.23
+    se: null
+    ci: null
+    conversion_formula: >
+      1.70 per 1000 PY at 6 h minus 1.47 per 1000 PY at 7-8 h = 0.23 excess events per 1000 PY, i.e.
+      1 extra MI per 4348 person-years, i.e. about 1 extra MI per 4348 people per year of exposure -
+      IN A COHORT AGED 40-69. At 5 h the excess is 2.23 - 1.47 = 0.76 per 1000 PY; at 4 h,
+      2.88 - 1.47 = 1.41 per 1000 PY. These are UNADJUSTED crude rates.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      positive = excess absolute events with short sleep. THE ABSOLUTE-RISK ANCHOR THIS SHARD WAS
+      ASKED TO SUPPLY. Note how small it is even in a midlife cohort: 0.23 excess MI per 1000
+      person-years at 6 h. A 19-year-old male's MI incidence is roughly two orders of magnitude below
+      1.47 per 1000 PY, so applying the adjusted HR of 1.05 at 6 h to his baseline yields an excess on
+      the order of 1 event per several hundred thousand person-years over the next few years.
+    covariates: []
+    followup_years: 7.04
+    cohort_family: "UK_Biobank"
+    quote: "Cases/person-years | 82/28,496 | 310/138,902 | 1,058/621,416 | 3,248/2,205,231 | 375/182,263 | 129/42,441 | 16/3,948 || Incidence rates per 1,000 person-years | 2.88 | 2.23 | 1.70 | 1.47 | 2.06 | 3.04 | 4.05"
+rob:
+  tool: MR-STROBE
+  judgement: low
+  notes: >
+    Strong MR execution: IVW primary with weighted median, MR-Egger, MR-PRESSO and MR-RAPS
+    sensitivity analyses; MR-Egger intercept test non-significant for both instruments
+    (p = 0.23 continuous, 0.22 short sleep); leave-one-out revealed no driving SNP; instruments
+    reconstructed from GWAS excluding shiftworkers and prevalent disease gave similar estimates;
+    BMI-adjusted instrument gave OR 0.81 (0.65-0.99). Residual concerns: the instrument IS associated
+    with BMI, which the authors concede is "consistent with either a confounding or mediating role";
+    one variant distorted weighted-median and MR-Egger estimates and had to be pruned; the continuous
+    instrument failed to reach significance in the one-sample replication; sleep duration is
+    self-reported in the underlying GWAS; and UK Biobank is a healthy-volunteer cohort.
+funding: null
+notes: >
+  Target extraction #5 (MR) AND target #7 (confounding), the shard's highest-value single record.
+  AUTHOR-LIST CORRECTION: the task named "Daghlas, Dashti, Lane, Saxena, Rutter et al." The actual
+  author order is Daghlas I, Dashti HS, Lane J, Aragam KG, Rutter MK, Saxena R, Vetter C - Aragam and
+  Vetter (senior/corresponding) were omitted from the prompt and Saxena/Rutter are transposed.
+  Journal, year and volume match.
+  INTERNAL DISCREPANCY IN THE PAPER: the abstract states "5,128 incident cases" of MI while the
+  Results text states "5,218 incident MIs over a median follow-up of 7.04 years". Table 1's
+  case counts sum to 82+310+1058+3248+375+129+16 = 5,218, which corroborates the Results figure;
+  the abstract's 5,128 appears to be a typographical transposition. I use 5,218.
+  OBSERVATIONAL vs MR COMPARISON (the comparison target #5 asks for):
+    observational, fully adjusted, <6 h vs 6-9 h : HR 1.20 (1.07-1.33)
+    MR, short-sleep instrument                   : OR 1.19 (1.09-1.29), UKB replication 1.21 (1.08-1.37)
+    MR, continuous, per hour LESS sleep          : OR 1.25 (1.05-1.49); one-sample 1.16 (0.94-1.43), ns
+  So the MR DOES support a causal contribution, and its magnitude is of the same order as the adjusted
+  observational estimate. But two caveats temper the "MR confirms observation" reading: the two
+  headline numbers are on different exposure scales (see the scale warning above), and the continuous
+  per-hour instrument did not replicate in the one-sample analysis.
+  ADDITIONAL FINDING: healthy sleep duration attenuated MI risk even in the top quartile of CAD
+  genetic risk (HR 0.82, 95% CI 0.68-0.998) - a marginal result whose upper bound nearly touches 1.
+shard: "s08_cardiovascular"

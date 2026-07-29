@@ -1,0 +1,100 @@
+study_id: hasler2022
+citation: Hasler BP, Soehner AM, Wallace ML, Logan RW, Ngari W, Forbes EE, Buysse DJ, Clark DB. Experimentally
+  imposed circadian misalignment alters the neural response to monetary rewards and response inhibition
+  in healthy adolescents. Psychological Medicine. 2022;52(16):3939-3947.
+doi: 10.1017/S0033291721000787
+pmid: '33729109'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Experimentally imposed circadian misalignment alters the neural response to monetary
+    rewards and response inhibition in healthy adolescents.
+access_tier: abstract_only
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 25
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 13
+  - 17
+  pct_female: null
+  country: US
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: brain_structure
+  outcome_construct: ventral_striatal_response_to_reward_outcome
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: '''misaligned'' school-year schedule (20:00-05:30) vs ''aligned'' summer schedule
+      (00:00-09:30), counterbalanced within-subject'
+  scale: hedges_g
+  unit: null
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'Direction is HARM: bilateral ventral striatal activation to reward outcome was LOWER
+    under misalignment, AND this held after accounting for the prior night''s total sleep time, i.e. it
+    is a TIMING effect not a duration effect. No numeric effect size in the abstract; full text not retrieved.
+    value=0.0/se=null placeholder; DO NOT POOL as a magnitude.'
+  covariates:
+  - prior_night_total_sleep_time
+  followup_years: null
+  cohort_family: null
+  quote: Bilateral ventral striatal (VS) activation during reward outcome was lower during the Misaligned
+    condition after accounting for the prior night's total sleep time.
+- outcome_domain: cognition
+  outcome_construct: response_inhibition_inferior_frontal_gyrus
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: misaligned vs aligned schedule, morning scan
+  scale: hedges_g
+  unit: null
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'Direction is HARM: right inferior frontal gyrus activation during response inhibition
+    was LOWER under misalignment, before AND after adjusting for total sleep time and vigilant attention,
+    and ONLY in the MORNING scan. The morning specificity is the signature of misalignment rather than
+    of sleep loss. value=0.0/se=null placeholder; do not pool.'
+  covariates:
+  - total_sleep_time
+  - vigilant_attention
+  followup_years: null
+  cohort_family: null
+  quote: Right inferior frontal gyrus activation during response inhibition was lower during the Misaligned
+    condition, before and after accounting for total sleep time and vigilant attention, but only during
+    the morning scan.
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: Counterbalanced within-subject experimental manipulation in ADOLESCENTS with melatonin-verified
+    phase and actigraphy, adjusted for total sleep time. Small (n=25); the reward-anticipation finding
+    did not survive multiple-comparison correction; neural outcomes are surrogates, not clinical endpoints.
+funding: null
+notes: 'THE ONLY EXPERIMENTAL CIRCADIAN-MISALIGNMENT STUDY I FOUND IN ADOLESCENTS, and it directly simulates
+  our subject''s exposure: the ''misaligned'' arm mimics school-year sleep times and the ''aligned'' arm
+  mimics summer sleep times, which is precisely the weekday-versus-weekend contrast that defines social
+  jetlag. It therefore supplies the age-appropriate causal link that the metabolic experiments (all in
+  adults, all at 8.5-12 h misalignment) cannot. Its value is QUALITATIVE ONLY: no effect sizes are extractable
+  from the abstract, so both effects are direction-only placeholders. The authors'' own framing: ''circadian
+  misalignment analogous to that resulting from school schedules may have measurable impacts on healthy
+  adolescents'' reward processing and inhibition of prepotent responses.'''
+shard: s16_social_jetlag

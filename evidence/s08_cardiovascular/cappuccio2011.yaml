@@ -1,0 +1,108 @@
+study_id: cappuccio2011
+citation: "Cappuccio FP, Cooper D, D'Elia L, Strazzullo P, Miller MA. Sleep duration predicts cardiovascular outcomes: a systematic review and meta-analysis of prospective studies. Eur Heart J. 2011 Jun;32(12):1484-1492."
+doi: "10.1093/eurheartj/ehr007"
+pmid: "21300732"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep duration predicts cardiovascular outcomes: a systematic review and meta-analysis of prospective studies."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: T5
+n: 474684
+n_studies_pooled: 15
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational (Europe, US, Asia)"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: cardiovascular
+    outcome_construct: chd_incidence_or_mortality
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "short sleep vs referent (study-specific cutpoints, mostly <5-6 h vs 7-8 h)"}
+    scale: log_rr
+    unit: null
+    value: 0.39204
+    se: 0.09922
+    ci: [0.19885, 0.58779]
+    conversion_formula: "log_rr = ln(1.48) = 0.39204; se = (ln(1.80) - ln(1.22))/3.92 = 0.09922"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = elevated CHD risk with short sleep (harm)"
+    covariates: ["varies by study; maximally adjusted estimate extracted per study"]
+    followup_years: 12.0
+    cohort_family: "pooled_multi_cohort_24_samples"
+    quote: "Short duration of sleep was associated with a greater risk of developing or dying of CHD (RR 1.48, 95% CI 1.22-1.80, P < 0.0001)"
+  - outcome_domain: cardiovascular
+    outcome_construct: stroke_incidence_or_mortality
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "short sleep vs referent (study-specific cutpoints)"}
+    scale: log_rr
+    unit: null
+    value: 0.13976
+    se: 0.06888
+    ci: [0.0, 0.27003]
+    conversion_formula: "log_rr = ln(1.15) = 0.13976; se = (ln(1.31) - ln(1.00))/3.92 = 0.06888"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = elevated stroke risk with short sleep; lower CI bound is exactly 1.00, i.e. borderline (P = 0.047)"
+    covariates: ["varies by study; maximally adjusted estimate extracted per study"]
+    followup_years: 12.0
+    cohort_family: "pooled_multi_cohort_24_samples"
+    quote: "stroke (1.15, 1.00-1.31, P = 0.047)"
+  - outcome_domain: cardiovascular
+    outcome_construct: total_cvd_incidence_or_mortality
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "short sleep vs referent (study-specific cutpoints)"}
+    scale: log_rr
+    unit: null
+    value: 0.02956
+    se: 0.05417
+    ci: [-0.07257, 0.13976]
+    conversion_formula: "log_rr = ln(1.03) = 0.02956; se = (ln(1.15) - ln(0.93))/3.92 = 0.05417"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = elevated total-CVD risk; NULL result, CI spans 1.0 (P = 0.52). Short sleep did NOT predict total CVD in this meta-analysis."
+    covariates: ["varies by study; maximally adjusted estimate extracted per study"]
+    followup_years: 12.0
+    cohort_family: "pooled_multi_cohort_24_samples"
+    quote: "but not total CVD (1.03, 0.93-1.15, P = 0.52) with no evidence of publication bias"
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_event_counts_in_pooled_cohorts
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "whole pooled sample, all sleep durations"}
+    scale: probability
+    unit: "events per participant over 6.9-25 y follow-up (all sleep strata combined)"
+    value: 0.03385
+    se: null
+    ci: null
+    conversion_formula: "16067 total CVD-related events / 474684 participants = 0.03385. Endpoint-specific: CHD 4169/474684 = 0.00878; stroke 3478/474684 = 0.00733; total CVD 8420/474684 = 0.01774. Denominator is the whole pooled sample, not the short-sleep stratum; the meta-analysis does not report stratum-specific absolute rates."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "absolute scale anchor: ~0.9% of participants had a CHD event and ~0.7% a stroke over a mean ~12 y in predominantly midlife/older adults. Not transportable to a 19-year-old."
+    covariates: []
+    followup_years: 12.0
+    cohort_family: "pooled_multi_cohort_24_samples"
+    quote: "Overall, 15 studies (24 cohort samples) included 474 684 male and female participants (follow-up 6.9-25 years), and 16 067 events (4169 for CHD, 3478 for stroke, and 8420 for total CVD)."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Random-effects pooling of self-reported exposure; study-specific and heterogeneous short-sleep cutpoints are pooled as if equivalent, so the contrast has no single dose interpretation. No publication bias detected (P = 0.95 CHD, 0.30 stroke, 0.46 CVD). Superseded for dose-response purposes by Yin 2017, which includes 19 further cohorts and explicitly contradicts the null total-CVD finding here."
+funding: null
+notes: >
+  Target extraction #1 for this shard. Confirms the task's description: CHD and stroke are reported
+  separately and the effects differ markedly (CHD RR 1.48 vs stroke RR 1.15, the latter borderline).
+  The total-CVD result is null (1.03) - a fact often omitted when this paper is cited as showing that
+  "short sleep causes cardiovascular disease". Author list and journal/year in the task prompt are
+  correct. Note the internal inconsistency of the three estimates: a genuine causal effect on CHD of
+  RR 1.48 with a null effect on total CVD (of which CHD is a large component) is difficult to
+  reconcile and suggests outcome-specific ascertainment or reporting effects. Long sleep effects
+  (CHD 1.38, stroke 1.65, CVD 1.41) were larger than short sleep for stroke and CVD, which is a
+  pattern more consistent with reverse causation / illness-related sleep change than with a
+  short-sleep toxicity mechanism. Age of pooled cohorts not reported in the abstract; the constituent
+  cohorts are predominantly midlife and older adults, hence adolescent_match poor_midlife.
+shard: "s08_cardiovascular"

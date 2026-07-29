@@ -1,0 +1,166 @@
+study_id: hudomiet2025_dementia_lifetime
+citation: Hudomiet P, Hurd MD, Rohwedder S. Inequalities in the Duration and Lifetime Risk of Dementia
+  in the United States. Demography. 2025;62(4):1389-1412.
+doi: 10.1215/00703370-12175489
+pmid: '40739976'
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12370282/
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Inequalities in the Duration and Lifetime Risk of Dementia in the United States
+access_tier: full_text
+design: prospective_cohort_objective
+n: 8814
+population:
+  age_mean: null
+  age_range:
+  - 70
+  - 999
+  pct_female: 55.0
+  country: US
+  adolescent_match: poor_elderly
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: dementia_probability_6mo_before_death_given_death_after_70_both_sexes
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: probability of having dementia six months before death, CONDITIONAL on dying after age 70; both
+    sexes
+  value: 0.413
+  se: 0.009948979591836729
+  ci:
+  - 0.393
+  - 0.432
+  conversion_formula: se = (0.432 - 0.393)/3.92 = 0.00995
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'higher = more disease. THE HIGHEST US DEMENTIA ESTIMATE THIS SHARD FOUND, and the estimand
+    is NOT a lifetime risk from a young index age: it conditions on surviving to 70. Converting to the
+    unconditional risk this project needs requires multiplying by S(19->70) = 0.7274 from this shard''s
+    life table, giving 30.0% both sexes. That multiplication is exactly the competing-mortality correction
+    documented in competing_risk_method.md section 2.'
+  covariates:
+  - sex
+  - education
+  - race/ethnicity
+  - nativity
+  - lifetime earnings
+  - marital status
+  - age at death
+  - stroke
+  - hypertension
+  - diabetes
+  - heart problems
+  - survey wave
+  followup_years: null
+  cohort_family: HRS
+  quote: 'We found a higher lifetime risk of dementia than found in earlier U.S. studies: 41.3% (CI: 39.3%
+    to 43.2%) of those who died after age 70 had dementia assessed at six months before death.'
+- outcome_domain: baseline_risk
+  outcome_construct: dementia_probability_5y_before_death_given_death_after_70_both_sexes
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: probability of having dementia at least FIVE years before death, conditional on dying after age
+    70; both sexes
+  value: 0.201
+  se: 0.007397959183673469
+  ci:
+  - 0.186
+  - 0.215
+  conversion_formula: se = (0.215 - 0.186)/3.92 = 0.0074
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. THE DURATION-WEIGHTED FIGURE, AND THE ONE A QALY MODEL SHOULD
+    USE. 41.3% ever have dementia before death but only 20.1% live with it for 5+ years, so roughly half
+    of all dementia in this cohort is a terminal-phase phenomenon of under 5 years. A model that multiplies
+    a 41% lifetime risk by a multi-year disability weight would roughly double the true QALY loss.
+  covariates:
+  - sex
+  - education
+  - race/ethnicity
+  - age at death
+  - stroke
+  followup_years: null
+  cohort_family: HRS
+  quote: '38.7% (CI: 36.8% to 40.5%), 33.6% (CI: 31.8% to 35.4%), and 20.1% (18.6% to 21.5%) had dementia
+    one, two, and five years before death, respectively.'
+- outcome_domain: baseline_risk
+  outcome_construct: dementia_risk_difference_women_minus_men_6mo_before_death
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: adjusted risk difference, women minus men, in probability of dementia six months before death
+  value: 0.064
+  se: 0.015816326530612244
+  ci:
+  - 0.033
+  - 0.095
+  conversion_formula: 'se = (0.095 - 0.033)/3.92 = 0.0158. THIS SHARD''S DERIVATION of the male level:
+    applying the 6.4-point female excess to the published 41.3% marginal at the published sample weights
+    (45.0% male, 55.0% female) gives men approx 41.3 - 0.55*6.4 = 37.8% and women approx 44.2%. Approximate,
+    because the 6.4 points is a covariate-adjusted coefficient rather than a marginal difference; the
+    paper does not publish the male level directly.'
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: positive = higher risk in women, so MALE RISK IS LOWER, which matters because the subject
+    is male and this is the only sex information the paper reports. Men approx 37.8% conditional on dying
+    after 70, i.e. approx 27.5% unconditional from age 19 after multiplying by S(19->70) = 0.7274.
+  covariates:
+  - education
+  - race/ethnicity
+  - nativity
+  - lifetime earnings
+  - marital status
+  - age at death
+  - stroke
+  - hypertension
+  - diabetes
+  - heart problems
+  - survey wave
+  followup_years: null
+  cohort_family: HRS
+  quote: 'Table 2. OLS regressions of the probability of having dementia six months and five years before
+    death. 5 years / 6 months: Women 0.057 ** [0.033; 0.081] / 0.064 ** [0.033; 0.095]'
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Dementia status is imputed by a joint longitudinal latent-variable model of cognition, dementia
+    and survival rather than clinically diagnosed, so the estimates inherit that model's assumptions.
+    The authors validate it against ADAMS, the HRS clinical-assessment substudy, and match it closely
+    at ages 85+ (0.359 vs ADAMS 0.358) where the widely used calibrated cutoff method underpredicts by
+    4.8 points (0.310) - this is a genuine strength over the comparison methods. Sample is decedents aged
+    70+ from HRS waves 2000-2016, so the estimand is inherently conditional on surviving to 70 and cannot
+    be read as a lifetime risk from a young age. No adolescent content whatsoever.
+funding: NIA / RAND (per paper)
+notes: 'THIS RECORD IS THE ARBITRATOR FOR THIS SHARD''S LARGEST DISAGREEMENT. The paper''s discussion
+  diagnoses, in the authors'' own words, why published US dementia lifetime risks range from 11% to 41%,
+  and the mechanisms are all ascertainment rather than statistical method: (a) claims-based ascertainment
+  misses undiagnosed dementia (Alzheimer''s Association 2014, about one-third); (b) the calibrated cutoff
+  method underpredicts dementia prevalence at 85+ by 4.8 points, which they show explains Hale 2020 (24%
+  men, 37% women) and Cha 2024; (c) estimates from measured status some months before death miss progression
+  in the final months (Fishman 2017, 24% for 70-year-old men); and (d) older Framingham cohorts had LOWER
+  life expectancy, so more members died young where dementia risk is low, which they name explicitly as
+  a reason Seshadri 1997 and Seshadri & Wolf 2007 are low. Every one of those four mechanisms biases DOWNWARD,
+  which means the 13.8% from Chene 2015 that this shard also carries is very likely a floor rather than
+  a central estimate. See the dementia_denominator_reconciliation block in baseline_risks.yaml for all
+  five estimates converted to a common index age of 19.'
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

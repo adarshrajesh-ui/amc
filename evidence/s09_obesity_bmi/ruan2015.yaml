@@ -1,0 +1,102 @@
+study_id: ruan2015
+citation: 'Ruan H, Xun P, Cai W, He K, Tang Q. Habitual Sleep Duration and Risk of Childhood Obesity: Systematic Review and Dose-response Meta-analysis of Prospective Cohort Studies. Scientific Reports. 2015;5:16160.'
+doi: 10.1038/srep16160
+pmid: '26537869'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Habitual Sleep Duration and Risk of Childhood Obesity: Systematic Review and Dose-response Meta-analysis of Prospective Cohort Studies.'
+access_tier: abstract_only
+secondhand_via: null
+design: dose_response_meta_analysis
+tier: T5
+n: 56584
+n_studies_pooled: 25
+population:
+  age_mean: null
+  age_range:
+  - 0
+  - 18
+  pct_female: null
+  country: multinational
+  adolescent_match: mixed
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: overweight_or_obesity_per_hour_more_sleep
+  exposure:
+    type: per_hour_less_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: every 1 h/day increment in sleep duration, children and adolescents
+  scale: log_or
+  unit: null
+  value: -0.2357
+  se: 0.0613
+  ci:
+  - -0.3567
+  - -0.1165
+  conversion_formula: 'log_or = ln(0.79); se = (ln(0.89) - ln(0.70))/3.92 = 0.0613. Inverted for 1 h LESS sleep: OR 1.266 (1.124-1.429).'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = each additional hour of sleep cuts overweight/obesity risk 21%; each hour LESS sleep raises it ~27% (harm). Substantially larger than Zhou 2019's adult 9%/h.
+  covariates: []
+  followup_years: 3.4
+  cohort_family: pooled_25_paediatric_cohorts
+  quote: 'With every 1 hour/day increment in sleep duration, the risk of overweight/obesity was reduced by 21% (OR: 0.79; 95% CI: 0.70, 0.89); and the annual BMI gain declined by 0.05 kg/m(2) (beta = -0.05; 95% CI: -0.09, -0.01).'
+- outcome_domain: anthropometric
+  outcome_construct: annual_bmi_gain_per_hour_more_sleep
+  exposure:
+    type: per_hour_less_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: every 1 h/day increment in sleep duration; outcome = ANNUAL BMI gain
+  scale: per_hour_beta
+  unit: kg/m2 per year per hour of sleep
+  value: -0.05
+  se: 0.0204
+  ci:
+  - -0.09
+  - -0.01
+  conversion_formula: se = (-0.01 - (-0.09))/3.92 = 0.0204
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = more sleep -> slower annual BMI gain. Each hour LESS sleep -> +0.05 kg/m2 per YEAR (harm). This is a RATE, unlike Miller 2018's level difference; over 3 years of exposure it implies ~0.15 kg/m2 per hour of deficit.
+  covariates: []
+  followup_years: 3.4
+  cohort_family: pooled_25_paediatric_cohorts
+  quote: 'With every 1 hour/day increment in sleep duration, the risk of overweight/obesity was reduced by 21% (OR: 0.79; 95% CI: 0.70, 0.89); and the annual BMI gain declined by 0.05 kg/m(2) (beta = -0.05; 95% CI: -0.09, -0.01).'
+- outcome_domain: anthropometric
+  outcome_construct: overweight_or_obesity_shortest_vs_longest
+  exposure:
+    type: habitual_short_sleep
+    dose_h: 10.0
+    referent_h: 12.2
+    duration_days: null
+    contrast_label: shortest (~10.0 h) vs longest (~12.2 h) sleep duration
+  scale: log_or
+  unit: null
+  value: 0.5653
+  se: 0.1206
+  ci:
+  - 0.3293
+  - 0.802
+  conversion_formula: log_or = ln(1.76); se = (ln(2.23) - ln(1.39))/3.92 = 0.1206
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = harm. Note the absolute sleep durations (10 vs 12.2 h) are those of YOUNG children, not adolescents.
+  covariates: []
+  followup_years: 3.4
+  cohort_family: pooled_25_paediatric_cohorts
+  quote: 'Compared with children having the longest sleep duration (~12.2 hours), kids with the shortest sleep duration (~10.0 hours) were 76% more likely to be overweight/obese (pooled odds ratio [OR]: 1.76; 95% confidence interval [CI]: 1.39, 2.23); and had relatively larger annual BMI gain (pooled beta coefficient: 0.13; 95% CI: 0.01, 0.25 kg/m(2)).'
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: Prospective cohorts, mean 3.4 y follow-up, dose-response modelled. Authors describe the association as 'modest'. The reference sleep durations (10-12 h) are paediatric, so the per-hour slope is being read off a very different part of the sleep-duration distribution than a 16-19 year old occupies.
+funding: not stated in abstract
+notes: 'The only paediatric dose-response meta-analysis giving a per-hour BMI GAIN RATE. Authors'' own summary: ''Accumulated literature indicates a modest inverse association between sleep duration and the risk of childhood overweight/obesity.'''
+shard: s09_obesity_bmi

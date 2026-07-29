@@ -1,0 +1,56 @@
+study_id: liu2024
+citation: 'Liu R, Figueroa R, Brink HV, Vorland CJ, Auckburally S, Johnson L, Garay J, Brown T, Simon S, Ells L. The efficacy of sleep lifestyle interventions for the management of overweight or obesity in children: a systematic review and meta-analysis. BMC Public Health. 2024;24(1):321.'
+doi: 10.1186/s12889-024-17708-6
+pmid: '38287352'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'The efficacy of sleep lifestyle interventions for the management of overweight or obesity in children: a systematic review and meta-analysis.'
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: 2231
+n_studies_pooled: 8
+population:
+  age_mean: null
+  age_range:
+  - 5
+  - 17
+  pct_female: null
+  country: multinational (7 countries)
+  adolescent_match: mixed
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: bmi_effect_of_sleep_component_interventions
+  exposure:
+    type: sleep_extension
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: interventions with a sleep behaviour component vs control in children/adolescents WITH overweight or obesity; pooled standardised effect on BMI (8 studies, n = 2,231)
+  scale: smd
+  unit: null
+  value: 0.18
+  se: 0.1122
+  ci:
+  - -0.04
+  - 0.4
+  conversion_formula: se = (0.40 - (-0.04))/3.92 = 0.1122
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NULL (P = .11). Sign convention is not stated unambiguously in the abstract; the authors describe it as 'no significant overall effect on children's BMI'. Substantial heterogeneity (I2 = 83.7%).
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Our meta-analysis showed no significant overall effect on children's BMI as a result of participation in an intervention with a sleep component (Cohen's d = 0.18, 95% CI= -0.04, 0.40, Z = 1.56, P = .11), though caution is warranted due to substantial heterogeneity observed across studies (Tau2 = 0.08; X2 = 23.05, df = 7; I2 = 83.73%).
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: PROSPERO-registered, RoB2-assessed. But 4 of 8 studies were rated HIGH risk of bias and only one isolated sleep as the intervention component. I2 = 83.7% means the pooled estimate is barely interpretable.
+funding: US Government work (not under copyright protection in the US)
+notes: 'Second, more recent, pooled null for sleep-focused interventions on paediatric BMI. Authors'' own bottom line names precisely the gap this shard cares about: ''Findings from this study highlight the need for additional RCTs isolating sleep as a component, focusing on children and adolescents living with overweight and obesity.'' Note the one study that DID isolate sleep ''reported statistically significant decreases in weight and waist circumference compared to control, though we rated it at high risk of bias.'''
+shard: s09_obesity_bmi

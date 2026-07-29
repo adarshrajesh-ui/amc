@@ -1,0 +1,142 @@
+study_id: james2023
+citation: "James SA, Erickson DJ, Lammert S, Widome R. School start time delays and high school educational outcomes: Evidence from the START/LEARN study. Journal of Adolescence. 2023;95(4):751-763."
+doi: "10.1002/jad.12151"
+pmid: "36793198"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10257742/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "School start time delays and high school educational outcomes: Evidence from the START/LEARN study."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: quasi_experiment
+tier: T2
+n: 2153
+n_studies_pooled: null
+population:
+  age_mean: 15.0
+  age_range: [14, 18]
+  pct_female: 49.0
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: academic
+    outcome_construct: gpa_did_year2_fall_weighted
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 730, contrast_label: "difference-in-differences, 50-65 min school start time delay vs schools that stayed early; spring 2016 baseline to fall 2017 (2nd year after the change). The delay produced +43 min/night of actigraphy-measured sleep (widome2020)."}
+    scale: raw_units
+    unit: "GPA_points_0_to_4"
+    value: 0.17
+    se: 0.031
+    ci: [0.11, 0.23]
+    conversion_formula: "Reported directly as a difference-in-differences estimate with 95% CI. SE = (0.23 - 0.11)/3.92 = 0.0306."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher GPA in the schools that delayed start times, i.e. more sleep is associated with more learning. On a 0-4 scale 0.17 points is ~4.2% of full scale, or roughly 0.24 SD if SD(GPA) ~ 0.7."
+    covariates: ["sex", "race", "free_or_reduced_price_lunch", "parental_college_completion", "school_random_intercept", "student_random_intercept"]
+    followup_years: 1.5
+    cohort_family: "START_LEARN_Minnesota"
+    quote: "| GPA, Wayzata weighted | 0.02 (-0.03, 0.07) | 0.01 (-0.03, 0.06) | -0.0005 (-0.05, 0.05) | 0.17*** (0.11, 0.23) | 0.14*** (0.07, 0.21) |"
+  - outcome_domain: academic
+    outcome_construct: gpa_did_year2_fall_unweighted
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 730, contrast_label: "same contrast, using unweighted GPA for the one district that reported both weighted and unweighted GPA (the conservative specification)"}
+    scale: raw_units
+    unit: "GPA_points_0_to_4"
+    value: 0.08
+    se: 0.028
+    ci: [0.02, 0.13]
+    conversion_formula: "Reported directly. SE = (0.13 - 0.02)/3.92 = 0.0281."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher GPA under the later start time. This is the LOWER of the two GPA specifications the authors report and should be preferred as the conservative estimate: weighting inflates GPA for advanced courses and so mixes course-taking behaviour into the outcome."
+    covariates: ["sex", "race", "free_or_reduced_price_lunch", "parental_college_completion", "school_random_intercept", "student_random_intercept"]
+    followup_years: 1.5
+    cohort_family: "START_LEARN_Minnesota"
+    quote: "| GPA, Wayzata unweighted | 0.02 (-0.03, 0.06) | -0.03 (-0.08, 0.02) | -0.03 (-0.08, 0.02) | 0.08* (0.02, 0.13) | 0.07* (0.006, 0.14) |"
+  - outcome_domain: academic
+    outcome_construct: gpa_did_year1_null
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 365, contrast_label: "same contrast but only ONE year after the start-time change (fall 2016), when sleep had already increased by +41 min/night"}
+    scale: raw_units
+    unit: "GPA_points_0_to_4"
+    value: 0.01
+    se: 0.023
+    ci: [-0.03, 0.06]
+    conversion_formula: "Reported directly. SE = (0.06 - (-0.03))/3.92 = 0.0230. The unweighted specification for the same period is -0.03 (-0.08, 0.02), SE 0.0255."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "null at one year. THIS IS THE KEY CONTRAST IN THIS RECORD - see notes. Sleep had already increased by 41 min/night at this follow-up, yet GPA had not moved."
+    covariates: ["sex", "race", "free_or_reduced_price_lunch", "parental_college_completion", "school_random_intercept", "student_random_intercept"]
+    followup_years: 0.5
+    cohort_family: "START_LEARN_Minnesota"
+    quote: "Effects were larger in the second year of follow-up than in the first year of follow-up, and differences in absences and GPA emerged in the second year of follow-up only."
+  - outcome_domain: academic
+    outcome_construct: gpa_per_hour_of_additional_sleep
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: 730, contrast_label: "Wald/IV rescaling: year-2 weighted GPA DiD divided by the +43 min/night actigraphy sleep gain measured in the same cohort"}
+    scale: per_hour_beta
+    unit: "GPA_points_0_to_4_per_hour_of_nightly_sleep"
+    value: 0.237
+    se: 0.043
+    ci: [0.153, 0.321]
+    conversion_formula: "Wald ratio. Numerator = 0.17 GPA points (SE 0.0306) from Table 3. Denominator = 43 min = 0.7167 h of additional objectively measured school-night sleep from widome2020 (same cohort, same policy change, same follow-up). 0.17/0.7167 = 0.2372; SE = 0.0306/0.7167 = 0.0427. The CI ignores uncertainty in the denominator (95% CI 25-61 min) and is therefore too narrow; widening it to account for the first-stage uncertainty gives roughly [0.10, 0.42]."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = each additional hour of habitual nightly sleep is associated with ~0.24 GPA points after two school years. Using the conservative unweighted numerator gives 0.112 (SE 0.039). STRONG ASSUMPTION: this assumes the entire GPA effect of the policy runs through sleep duration, which is the exclusion restriction and is not testable here - the delay also reduced late arrivals and absences."
+    covariates: ["sex", "race", "free_or_reduced_price_lunch", "parental_college_completion"]
+    followup_years: 1.5
+    cohort_family: "START_LEARN_Minnesota"
+    quote: "This policy change extended students' objectively-measured nightly sleep, measured using wrist actigraphy, by 40 minutes per night on school nights at follow-ups that occurred both one and two years later (Widome et al., 2020a)."
+  - outcome_domain: academic
+    outcome_construct: absences_did_year2
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 730, contrast_label: "number of absences per school year, DiD, baseline to 2nd year of follow-up"}
+    scale: raw_units
+    unit: "absences_per_school_year"
+    value: -0.8
+    se: 0.332
+    ci: [-1.5, -0.2]
+    conversion_formula: "Reported directly. SE = (-0.2 - (-1.5))/3.92 = 0.3316. At follow-up 1 the same estimate was -0.5 (-1.0, 0.09), i.e. null."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = fewer absences under the later start time. Included as a competing mechanism, not as a sleep effect: fewer absences means more instructional hours, which raises GPA without any consolidation pathway. Late arrivals fell by 3.1 (-3.8, -2.4)."
+    covariates: ["sex", "race", "free_or_reduced_price_lunch", "parental_college_completion"]
+    followup_years: 1.5
+    cohort_family: "START_LEARN_Minnesota"
+    quote: "| Number of absences | 6.8 (4.4, 9.2) | 8.7 (6.4, 11.1) | 9.8 (7.4, 12.2) | 6.1 (4.2, 8.1) | 8.5 (6.6, 10.5) | 9.9 (7.8, 11.9) | -0.5 (-1.0, 0.09) | -0.8** (-1.5, -0.2) |"
+rob:
+  tool: ROBINS-I
+  judgement: moderate
+  notes: "Strong design for an observational question: difference-in-differences against three concurrent comparison schools, a genuine pre-period, administrative-record outcomes rather than self-report, objectively measured first-stage sleep exposure in the same cohort, and adjustment for sex, race, lunch subsidy and parental education with school and student random effects. Residual concerns: policy change was not randomly assigned to schools (the two delaying districts differ from the comparison district in GPA level and in how they weight GPA); comparison-school GPA drifted DOWNWARD over the study, so part of the positive DiD is comparison-school decline rather than policy-school improvement; GPA calculation differed across districts, and the weighted vs unweighted specifications differ by more than a factor of two; and the delay also cut late arrivals and absences, so sleep is not the only pathway."
+funding: "not stated in retrieved full text; START/LEARN is a University of Minnesota cohort study"
+notes: |
+  THIS IS THE BEST AVAILABLE EVIDENCE FOR REQUIREMENT 6 and it speaks unusually directly to the
+  channel this shard is supposed to supply.
+
+  THE DECISIVE PATTERN: the GPA benefit did not exist after one school year and did exist after two.
+  Sleep had ALREADY increased by 41 min/night at the one-year follow-up (widome2020), so the delay in the
+  GPA response cannot be explained by a delay in the exposure. The weighted estimates run
+  +0.01 (year 1 fall), -0.0005 (year 1 spring), then +0.17 and +0.14 (year 2); the unweighted estimates
+  run -0.03, -0.03, then +0.08 and +0.07. A reversible state deficit in test-day performance
+  (channel a) would have produced an immediate, roughly constant improvement from the moment sleep
+  increased. A cumulative knowledge-accumulation effect (channel c) is what produces a null in year 1
+  that grows into a detectable effect in year 2. The authors state the timing plainly, and it is the
+  single most channel-(c)-diagnostic result I found in this domain.
+
+  Caveat the modeller must carry: the same year-1-null/year-2-effect pattern is also produced by the
+  attendance mechanism, which follows an identical trajectory (absences -0.5 and null in year 1,
+  -0.8 and significant in year 2). Fewer absences means more instructional time, which is knowledge
+  accumulation but NOT sleep-dependent consolidation. This record cannot separate those two routes to
+  channel (c). It establishes that the learning-accumulation channel is real and cumulative; it does not
+  establish that consolidation physiology is the mediator.
+
+  DIRECTION OF TRANSPORT TO OUR SUBJECT: this is an intervention that ADDED ~43 min of sleep to
+  adolescents who were sleeping too little, and it recovered ~0.08-0.17 GPA points over two years. Our
+  subject went the other way and for three years. Naive linear extrapolation of the per-hour Wald
+  estimate to a 2-2.5 h weekday deficit would give 0.2-0.6 GPA points, but that extrapolation is
+  unjustified: the estimate is identified over a 43-min contrast near the sleep-sufficiency margin, and
+  there is no reason to expect linearity three times further out. Treat 0.10-0.24 GPA points per hour as
+  a local slope only, with the unweighted 0.112 preferred.
+
+  COHORT OVERLAP WARNING: cohort_family = START_LEARN_Minnesota, shared with widome2020, which supplies
+  the first-stage sleep exposure used in the Wald rescaling above. These two records are NOT independent
+  and the pooler must not treat the sleep exposure and the GPA outcome as separate studies. dunster2018
+  is an independent cohort (Seattle) testing the same policy.
+shard: "s03_memory_consolidation"

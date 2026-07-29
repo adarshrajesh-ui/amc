@@ -1,0 +1,133 @@
+study_id: leproult2014
+citation: "Leproult R, Holmback U, Van Cauter E. Circadian misalignment augments markers of insulin resistance and inflammation, independently of sleep loss. Diabetes. 2014 Jun;63(6):1860-9."
+doi: "10.2337/db13-1546"
+pmid: "24458353"
+url: "https://europepmc.org/articles/PMC4030107"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Circadian misalignment augments markers of insulin resistance and inflammation, independently of sleep loss."
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 26
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: insulin_sensitivity_si_sleep_restriction_CIRCADIAN_ALIGNED_men
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 10, duration_days: 8, contrast_label: "MEN: 8 days of 5 h TIB with FIXED NOCTURNAL bedtimes (circadian ALIGNED) vs own 10 h baseline"}
+    scale: pct_change
+    unit: "% change in IVGTT minimal-model insulin sensitivity (SI)"
+    value: -32.0
+    se: null
+    ci: null
+    conversion_formula: "Published as '-32% [25%]' for the aligned men, where the bracketed figure is the SD. The male-only subgroup n is NOT stated in the retrieved full text (26 completed overall, 13 per arm, but the men-only counts are not given), so SE = SD/sqrt(n_men) is not computable -> se null per instructions. The published between-group test is P = 0.011."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = HARM. This is the SLEEP-RESTRICTION-ONLY effect, with circadian timing held fixed - the cleanest available 'pure short sleep' estimate at 5 h for 8 days."
+    covariates: ["BMI controlled in the sex-by-intervention analysis", "caloric intake nearly identical between arms (P>0.115)"]
+    followup_years: null
+    cohort_family: null
+    quote: "The relative decrease in SI in men was nearly twice as large in the misaligned than in the aligned group (-58% [13%] vs. -32% [25%], P = 0.011; Fig. 6 )."
+  - outcome_domain: circadian
+    outcome_construct: insulin_sensitivity_si_sleep_restriction_CIRCADIAN_MISALIGNED_men
+    exposure: {type: social_jetlag, dose_h: 5, referent_h: 10, duration_days: 8, contrast_label: "MEN: 8 days of 5 h TIB WITH bedtimes delayed 8.5 h on 4 of the 8 days (circadian MISALIGNED) vs own 10 h baseline; total sleep time matched to the aligned arm"}
+    scale: pct_change
+    unit: "% change in IVGTT minimal-model insulin sensitivity (SI)"
+    value: -58.0
+    se: null
+    ci: null
+    conversion_formula: "Published as '-58% [13%]' for the misaligned men (bracketed figure is the SD). Male-only n not stated, so se null. The aligned-vs-misaligned difference is P = 0.011. Total sleep time did NOT differ between the arms (men only, P = 0.30; whole sample 4 h 48 min vs 4 h 45 min), so the extra harm is attributable to TIMING, not to sleep amount."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = HARM, and NEARLY DOUBLE the aligned arm's harm at IDENTICAL total sleep time. This is the key causal contrast in the record."
+    covariates: ["total sleep time verified equivalent between arms", "caloric intake equivalent", "BMI"]
+    followup_years: null
+    cohort_family: null
+    quote: "Importantly, total sleep time for men only was not significantly different between the two groups during the sleep restriction period when baseline levels were controlled for ( P = 0.30). The relative decrease in SI in men was nearly twice as large in the misaligned than in the aligned group (-58% [13%] vs. -32% [25%], P = 0.011; Fig. 6 )."
+  - outcome_domain: metabolic
+    outcome_construct: disposition_index_aligned_vs_misaligned_men
+    exposure: {type: social_jetlag, dose_h: 5, referent_h: 10, duration_days: 8, contrast_label: "MEN: disposition index change, misaligned vs aligned arm"}
+    scale: pct_change
+    unit: "% change in disposition index (misaligned arm)"
+    value: -48.0
+    se: null
+    ci: null
+    conversion_formula: "Published as '-48% [24%]' misaligned vs '-19% [43%]' aligned, P = 0.124 (the source prints this as 'P = 124', an obvious typographical error for 0.124 given the context). Bracketed figures are SDs; male-only n not stated so se null. NOT statistically significant."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = HARM (lower disposition index = higher diabetes risk). Direction matches the SI result and the magnitude is large, but the difference between arms is NOT significant, so treat as suggestive only."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Therefore, the reduction in DI, reflecting an increase in diabetes risk, tended to be greater after circadian misalignment than when the sleep-wake cycle remained aligned (-48% [24%] vs. -19% [43%], P = 124; Fig. 6 )."
+  - outcome_domain: immune
+    outcome_construct: hscrp_inflammation_aligned_vs_misaligned_men
+    exposure: {type: social_jetlag, dose_h: 5, referent_h: 10, duration_days: 8, contrast_label: "MEN: hsCRP change, misaligned vs aligned arm"}
+    scale: pct_change
+    unit: "% increase in hsCRP (misaligned arm)"
+    value: 146.0
+    se: null
+    ci: null
+    conversion_formula: "Published as '+146% [103%]' misaligned vs '+64% [63%]' aligned, P = 0.049. Bracketed figures are SDs; male-only n not stated so se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM (systemic inflammation). Significantly greater under misalignment, and the increase CORRELATED with the magnitude of circadian phase shift (r = 0.487, P = 0.040) - a dose-response within the mechanism."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Increases in hsCRP after sleep restriction were higher in the misaligned than in the aligned groups (+146% [103%] vs. +64% [63%], P = 0.049; Fig. 6 ) in male participants. Interestingly, these hsCRP increases were correlated with the shift in circadian phase, as estimated by melatonin onset ( r = 0.487, P = 0.040)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Parallel-group randomised design with the crucial control that TOTAL SLEEP TIME was matched between arms (4 h 48 min vs 4 h 45 min; men-only P=0.30) and caloric intake was equivalent (P>0.115), which is exactly what is needed to isolate circadian misalignment from sleep loss. Concerns: n=26 total (13 per arm) and the headline result is a MEN-ONLY subgroup of that, whose size is not reported in the paper; the SI comparison is significant (P=0.011) but the disposition-index comparison is not (P=0.124), so the 'doubling' does not carry through to the composite diabetes-risk index; and participants OVERATE substantially in both arms (~4,060 kcal/24 h) with significant weight gain, so this is not an isocaloric protocol."
+funding: "Not extracted from the retrieved text (University of Chicago Sleep Metabolism and Health Center; funder left unstated rather than guessed)."
+notes: |
+  *** THE DECISIVE EXPERIMENTAL EVIDENCE THAT TIMING MATTERS INDEPENDENTLY OF DURATION, AND IT IS
+  MALE-SPECIFIC. *** Both arms slept the same amount (about 4 h 45-48 min actual sleep on a 5 h TIB
+  schedule for 8 days). The only difference was that one arm's bedtimes were delayed by 8.5 h on 4 of
+  the 8 days. In men, that timing manipulation alone nearly DOUBLED the fall in insulin sensitivity,
+  from -32% to -58% (P=0.011), and more than doubled the rise in hsCRP, from +64% to +146% (P=0.049).
+
+  WHY THIS IS THE MOST IMPORTANT MECHANISTIC RECORD FOR OUR SUBJECT:
+  * He is MALE, and the effect was demonstrated in men (the authors restricted the main analysis to
+    men because of too few women).
+  * His exposure is not merely short sleep - it is short weekday sleep plus a shifted weekend sleep
+    schedule, i.e. exactly the "irregular bedtimes at constant sleep debt" structure this study
+    manipulated. The misaligned arm delayed bedtimes on 4 of 8 days; the subject delays his sleep
+    timing on 2 of every 7 days.
+  * It converges with FOUR other records in this shard: yuan2021 (restriction without circadian
+    disruption was glycaemically null), depner2019 (weekend catch-up itself delayed circadian phase),
+    chen2021 (later weekend sleep midpoint associated with higher HOMA-IR at the same duration), and
+    liu2025 (evening chronotype OR 1.59 > short-sleep OR 1.18). Five designs - two randomised, one
+    within-lab comparison, two observational - all point the same way.
+
+  DISTANCE FROM OUR SUBJECT'S EXPOSURE:
+  * Dose: 5 h TIB for 8 CONSECUTIVE days, more severe and more sustained than the subject's 5-night
+    weekday blocks.
+  * Misalignment intensity: 8.5 h bedtime delays are FAR larger than a typical weekend lie-in of 2-3 h.
+    So this study over-states his circadian exposure substantially - probably by a factor of 3 or more.
+    Do NOT transport the -58% figure; transport the RATIO (misalignment roughly doubles the harm at
+    equal sleep) as a qualitative amplification factor and apply heavy shrinkage.
+  * Overeating: both arms consumed ~4,060 kcal/24 h and gained weight significantly, so part of the
+    metabolic deterioration in BOTH arms reflects acute positive energy balance rather than sleep or
+    circadian effects alone. This inflates both point estimates.
+  * Age: "26 healthy adults", no age reported in the retrieved abstract or the extracted text, so
+    age_mean/age_range are null and adolescent_match is fair_adult. Treat the age match as UNVERIFIED.
+
+  ALSO NOTE THE ALIGNED ARM'S OWN NUMBER: -32% SI after 8 days of 5 h with FIXED nocturnal bedtimes.
+  That is substantially larger than buxton2010's -20% (IVGTT) / -11% (clamp) after 7 nights of 5 h.
+  The likely explanations are the extra day of exposure and the large caloric excess here. The spread
+  between -11% and -58% across T1 studies at nominally similar doses is the single clearest signal
+  that this literature's effect magnitudes are not tightly determined, and the downstream posterior
+  should be wide accordingly.
+shard: "s07_metabolic"

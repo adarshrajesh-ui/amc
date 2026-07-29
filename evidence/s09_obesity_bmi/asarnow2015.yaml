@@ -1,0 +1,58 @@
+study_id: asarnow2015
+citation: Asarnow LD, McGlinchey E, Harvey AG. Evidence for a Possible Link between Bedtime and Change in Body Mass Index. Sleep. 2015;38(10):1523-1527.
+doi: 10.5665/sleep.5038
+pmid: '26194568'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: Evidence for a Possible Link between Bedtime and Change in Body Mass Index.
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 3342
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range:
+  - 12
+  - 32
+  pct_female: null
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: bmi_change_per_minute_later_workweek_bedtime_over_6y
+  exposure:
+    type: social_jetlag
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: later average WORKWEEK BEDTIME from adolescence to adulthood -> change in BMI over 6 years, Add Health waves 1994-2009, hierarchical linear model
+  scale: raw_units
+  unit: kg/m2 per minute later bedtime per 6 years
+  value: 0.035
+  se: 0.016
+  ci:
+  - 0.0036
+  - 0.0664
+  conversion_formula: 'b = 0.035 with SE = 0.016 as reported (t = 2.12, df = 3238, P < 0.05); ci = 0.035 +/- 1.96*0.016. Rescaled per HOUR of later bedtime: 0.035 x 60 = 2.1 kg/m2 per 6 years, se = 0.016 x 60 = 0.96 kg/m2.'
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'positive = later bedtime predicts BMI INCREASE (harm). CRITICAL NUANCE: this signal is for bedtime TIMING, and the authors report that adjusting for SLEEP DURATION did not attenuate it. In this cohort the durable BMI signal is carried by late bedtime and fast-food consumption, NOT by sleep duration per se.'
+  covariates:
+  - demographic characteristics
+  - baseline BMI
+  followup_years: 6.0
+  cohort_family: Add_Health
+  quote: Later average bedtime during the workweek, in hours, from adolescence to adulthood was associated with an increase in BMI over time (b = 0.035 kg/m(2) per min later bedtime per 6 years; standard error = 0.016; t = 2.12, degrees of freedom = 3,238, P < 0.05). These results remained significant after controlling for demographic characteristics and baseline BMI.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Three waves of a nationally representative cohort spanning exactly the age transition of interest, with adjustment for baseline BMI. Self-reported bedtime and BMI in Add Health waves. The effect is borderline (t = 2.12, P just under 0.05) and the reported units ('in hours' in the sentence but 'per min' in the coefficient) are internally ambiguous in the abstract.
+funding: not stated in abstract
+notes: 'MECHANISTICALLY IMPORTANT DISSOCIATION for our subject, whose late-night studying implies both short sleep AND late bedtimes. Verbatim: ''Although sleep duration, screen time, and exercise frequency did not attenuate the relationship between workday bedtime and BMI over time, fast-food consumption was recognized as a significant partial mediator of the relationship between bedtimes and BMI longitudinally.'' Same cohort as suglia2014, sokol2020, krueger2015 (Add_Health) - DO NOT POOL AS INDEPENDENT. Note the unit ambiguity flagged in rob.notes when using this coefficient.'
+shard: s09_obesity_bmi

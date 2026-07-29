@@ -1,0 +1,163 @@
+study_id: depner2019
+citation: "Depner CM, Melanson EL, Eckel RH, Snell-Bergeon JK, Perreault L, Bergman BC, Higgins JA, Guerin MK, Stothard ER, Morton SJ, Wright KP Jr. Ad libitum weekend recovery sleep fails to prevent metabolic dysregulation during a repeating pattern of insufficient sleep and weekend recovery sleep. Curr Biol. 2019;29(6):957-967.e4."
+doi: "10.1016/j.cub.2019.01.069"
+pmid: "30827911"
+url: "https://pubmed.ncbi.nlm.nih.gov/30827911/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Ad libitum Weekend Recovery Sleep Fails to Prevent Metabolic Dysregulation during a Repeating Pattern of Insufficient Sleep and Weekend Recovery Sleep"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 36
+n_studies_pooled: null
+population:
+  age_mean: 25.5
+  age_range: [18, 40]
+  pct_female: 50.0
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: weekend_catchup_debt_repayment_fraction
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: 8.0, duration_days: 3, contrast_label: "3 nights (Fri-Sun) of ad libitum weekend recovery sleep (>=10 h TIB enforced, naps allowed) after a 5-night workweek of 5 h sleep opportunity"}
+    scale: pct_change
+    unit: "% of workweek sleep debt repaid by the weekend"
+    value: 9.2
+    se: null
+    ci: null
+    conversion_formula: "Reported: WR participants slept ~1.1 h more than their baseline-derived total sleep need cumulatively across nights 8-10, against '>12 h of sleep lost during the workweek'. 1.1/12 = 9.2%; because the denominator is a lower bound ('more than 12 h'), 9.2% is an UPPER bound on the fraction repaid."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = debt repaid. <=9.2% of a single workweek's debt was repaid by a full ad-lib weekend. This is the direct quantitative answer to 'is weekend catch-up sufficient': no, by roughly an order of magnitude."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Thus, cumulatively across study nights 8-10 with ad libitum weekend recovery sleep, WR participants only slept a total of ~1.1h more than their estimated total sleep need as estimated from each participant's baseline sleep duration. Therefore, the weekend of ad libitum recovery sleep did not repay on an hour-by-hour basis the more than 12h of sleep lost during the workweek."
+  - outcome_domain: recovery
+    outcome_construct: max_ad_lib_tst_with_12h_tib_young_adults
+    exposure: {type: recovery_sleep, dose_h: 12.1, referent_h: 8.1, duration_days: 1, contrast_label: "single ad libitum weekend recovery night, men, TIB 12.1 +/- 0.7 h"}
+    scale: hours
+    unit: "h TST on the maximal ad-lib recovery night"
+    value: 10.2
+    se: 0.6
+    ci: null
+    conversion_formula: "Reported mean +/- SEM for men on study day 9 (Saturday) with a mean TIB of 12.1 +/- 0.7 h, i.e. sleep efficiency ~84%. Women's maximum was 10.3 +/- 0.6 h on study day 8 with TIB 11.2 +/- 0.4 h."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "EMPIRICAL CEILING under true ad-lib conditions with naps permitted: ~10.2-10.3 h. Even with >12 h in bed and >12 h of debt, healthy young adults did not sleep 14-16 h. Converges with Kitamura (~10.4 h) and Banks (8.96 h at 10 h TIB)."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Moreover, in the WR group sleep duration for men was increased (all P < 0.01) on study days 8 (9.8 +/- 0.4h) and 9 (10.2 +/- 0.6h) versus baseline (8.1 +/- 0.1h) (Figure S6C), whereas sleep duration for women was increased (P <0.05) on study day 8 (10.3 +/- 0.6h) but not study day 9 (7.9 +/- 0.6h; P = 0.91), versus baseline (8.0 +/- 0.1h) (Figure S6D)."
+  - outcome_domain: recovery
+    outcome_construct: sex_difference_in_cumulative_weekend_recovery_sleep
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: 8.05, duration_days: 3, contrast_label: "cumulative extra sleep across Fri-Sun ad libitum weekend, men vs women"}
+    scale: hours
+    unit: "h of cumulative extra sleep over the whole weekend"
+    value: 2.1
+    se: null
+    ci: null
+    conversion_formula: "Reported: men ~2.1 h more than baseline average across nights 8-10; women ~0.02 h. Value entered is the men's figure; the sex contrast is 2.1 - 0.02 = 2.08 h."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = extra sleep obtained. Women obtained essentially ZERO net catch-up (0.02 h) over a full ad-lib weekend despite equivalent time in bed. Weekend catch-up is not merely insufficient, it is unreliable and sex-dependent."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "As such, cumulatively across the Friday to Sunday nights with ad libitum weekend recovery sleep, men slept ~2.1h more than their baseline average sleep duration, whereas women slept ~0.02h more than their baseline average sleep duration."
+  - outcome_domain: metabolic
+    outcome_construct: whole_body_insulin_sensitivity_after_weekend_recovery
+    exposure: {type: weekend_catchup, dose_h: 5, referent_h: 9, duration_days: 13, contrast_label: "recurrent insufficient sleep (5 h) FOLLOWING an ad libitum weekend recovery, vs own baseline; hyperinsulinemic-euglycemic clamp on day 12"}
+    scale: pct_change
+    unit: "% change in insulin sensitivity vs baseline"
+    value: -18.0
+    se: null
+    ci: [-27.0, -9.0]
+    conversion_formula: "Reported as a range: 'whole-body, hepatic, and muscle insulin sensitivity decreased ~9-27%'. Midpoint -18% entered as the point estimate, with the reported range used as the interval. This is a reported-range midpoint, NOT a modelled CI."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = WORSE insulin sensitivity. The weekend recovery group ended up with MORE tissues affected (whole-body plus hepatic plus muscle) than the group that never got a recovery weekend (whole-body only, ~13%). Weekend catch-up did not protect and may have added circadian harm."
+    covariates: ["energy intake", "body weight", "plasma glucose during the 40-mU insulin infusion"]
+    followup_years: null
+    cohort_family: null
+    quote: "In SR, whole-body insulin sensitivity decreased ~13% during insufficient sleep versus baseline, and in WR, whole-body, hepatic, and muscle insulin sensitivity decreased ~9-27%, during recurrent insufficient sleep versus baseline."
+  - outcome_domain: metabolic
+    outcome_construct: whole_body_insulin_sensitivity_sustained_restriction
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 9, contrast_label: "9 nights of 5 h sleep opportunity with NO recovery weekend (SR group) vs own baseline"}
+    scale: pct_change
+    unit: "% change in whole-body insulin sensitivity vs baseline"
+    value: -13.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly as '~13%'. One-tailed a priori directional mixed-effects ANOVA, per the authors' stated analysis plan."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = WORSE insulin sensitivity after 9 nights of 5 h sleep opportunity."
+    covariates: ["energy intake", "body weight", "plasma glucose during the 40-mU insulin infusion"]
+    followup_years: null
+    cohort_family: null
+    quote: "In SR, whole-body insulin sensitivity decreased ~13% during insufficient sleep versus baseline, and in WR, whole-body, hepatic, and muscle insulin sensitivity decreased ~9-27%, during recurrent insufficient sleep versus baseline."
+  - outcome_domain: metabolic
+    outcome_construct: total_daily_energy_intake_increase_during_restriction
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 5, contrast_label: "total daily ad libitum energy intake during insufficient-sleep workweeks vs energy-balanced baseline"}
+    scale: raw_units
+    unit: "kcal/day above baseline"
+    value: 805.0
+    se: null
+    ci: [480.0, 1130.0]
+    conversion_formula: "Reported as a range across the workweek-1, weekend and workweek-2 segments in SR and WR: '480-1130 kcal'. Midpoint 805 kcal entered; interval is the reported range, not a modelled CI. After-dinner snacking accounted for most of it: +481-507 kcal (SR) and +409-641 kcal (WR workweeks)."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = MORE energy consumed under restriction. Driven almost entirely by after-dinner snacking, i.e. by extra waking hours in the biological night."
+    covariates: ["baseline energy intake per kg body weight"]
+    followup_years: null
+    cohort_family: null
+    quote: "In the SR and WR groups, total daily energy intake increased (P < 0.05) 480-1130 kcal during workweek-1, weekend, and workweek-2 segments versus baseline (Figure 4A)."
+  - outcome_domain: metabolic
+    outcome_construct: energy_intake_during_weekend_recovery_sex_difference
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: 2, contrast_label: "% change in total energy intake during the ad libitum recovery weekend vs baseline, men vs women"}
+    scale: pct_change
+    unit: "% change in total energy intake vs baseline, during the recovery weekend"
+    value: 40.3
+    se: 7.6
+    ci: null
+    conversion_formula: "Reported mean +/- SEM for men during the weekend segment (P < 0.01 vs baseline). Women during the same weekend: 1.9 +/- 6.1% (P = 0.77, not different from baseline). Men also had +72.0 +/- 9.2% (workweek-1) and +64.7 +/- 11.2% (workweek-2)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = overeating relative to energy-balanced baseline. Men continued to overeat by 40% even during the recovery weekend; women's intake normalised. Recovery sleep did not normalise energy intake in men."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "For women in the WR group, total energy intake as percent change from baseline was similar during the weekend (1.9 +/- 6.1%) segment compared to baseline (P = 0.77), whereas energy intake was increased (all P < 0.05) during workweek-1 (29.6 +/- 8.8%) and workweek-2 (24.6 +/- 8.3%) segments compared to the weekend and baseline."
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "Randomized three-group in-laboratory design (modified Latin square, sex-balanced), gold-standard outcomes (PSG, hyperinsulinemic-euglycemic clamp with isotope tracers, doubly-controlled diet at baseline). Main limitations: small groups (CON n=8, SR n=14, WR n=14), only ONE recovery weekend was studied so the design cannot test whether repeated weekends accumulate benefit or harm, insulin sensitivity was measured at a single post-intervention timepoint (day 12) rather than serially, the sex analyses are explicitly labelled exploratory and underpowered, and the study cannot separate the effect of recovery sleep per se from the circadian delay it induced. Ages 18-40 (mean 25.5), so reasonable but not exact transportability to an 18-year-old."
+funding: "NIH (R01 HL109706, R21 DK092624, T32 HL149646 and related), Colorado CTSA UL1 TR001082"
+notes: |
+  The definitive quantitative answer on weekend catch-up, and the answer is unambiguous:
+    - Nights 8-9 (Fri, Sat) alone: +3.0 h cumulative extra sleep vs baseline.
+    - Add night 10 (Sun), when subjects self-selected bedtime knowing Monday waketime was 2 h early:
+      TST fell BELOW baseline, so the net across the whole weekend was only +1.1 h.
+    - Denominator: >12 h lost across the 5-night workweek. Net repayment <= ~9%.
+  The Sunday-night collapse is the mechanism that makes weekend catch-up self-defeating: the anticipation of
+  an early Monday truncates the last recovery night, and the two late weekend nights delay circadian phase
+  (dim-light melatonin onset delayed ~1.2 h by day 5 and ~1.7 h by day 11) so that Monday sleep is worse too.
+  Independent EEG confirmation that recovery was incomplete: "Higher cumulative SWA in the WR group on study
+  day 9 indicates homeostatic sleep drive was still elevated and therefore WR participants were not fully
+  recovered." So both the TST ledger and the homeostatic marker agree.
+  Authors' own bottom line on how much a weekend can ever repay: "Given the limited amount of total sleep
+  recovered during the ad libitum weekend recovery sleep opportunity provided, it is unclear how much
+  insufficient sleep during the workweek can be recovered in a typical weekend."
+  Highly relevant to the target subject, whose exposure pattern (weekday 5-6 h, weekend 7-8 h with occasional
+  10-11 h nights) is a milder real-world version of exactly this protocol. Note the target subject's weekend
+  catch-up is SMALLER than the one tested here (which had >=10 h TIB enforced and naps permitted) and still
+  failed.
+  Companion analysis of energy balance in the same cohort: Depner et al. Sleep 2021 (DOI
+  10.1093/sleep/zsab136, PMID 34059916, verified). Not extracted separately - same cohort_family, would
+  double-count.
+shard: "s05_recovery_kinetics"

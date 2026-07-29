@@ -1,0 +1,113 @@
+study_id: belenky2003
+citation: "Belenky G, Wesensten NJ, Thorne DR, Thomas ML, Sing HC, Redmond DP, Russo MB, Balkin TJ. Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study. J Sleep Res. 2003;12(1):1-12."
+doi: "10.1046/j.1365-2869.2003.00337.x"
+pmid: "12603781"
+url: "https://pubmed.ncbi.nlm.nih.gov/12603781/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: "Numeric sleep tables taken from the underlying US DOT/FMCSA technical report of the same protocol: Balkin TJ, Thorne D, Sing H, Thomas M, Redmond D, Wesensten N, Williams J, Hall S, Belenky G. Effects of Sleep Schedules on Commercial Motor Vehicle Driver Performance. Report DOT-MC-00-133, May 2000 (retrieved full text). The JSR 2003 paper reports the same protocol and PVT findings."
+design: lab_restriction_within_subject
+tier: T1
+n: 66
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [24, 62]
+  pct_female: 24.2
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: recovery
+    outcome_construct: pvt_recovery_incomplete_after_3_nights_8h_tib
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 3, contrast_label: "3 recovery nights at 8 h TIB following 7 nights of 3/5/7/9 h TIB"}
+    scale: raw_units
+    unit: "nights of 8 h TIB recovery sleep that failed to restore baseline PVT"
+    value: 3
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "3 = three consecutive 8 h TIB recovery nights were administered and PVT speed/lapses had NOT returned to baseline at the end of them. This is the study's central negative finding; it is a bound, not a point estimate of recovery time."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "During recovery, PVT speed in the 7- and 5-h groups (and lapses in the 5-h group) remained at the stable, but reduced levels seen during the last days of the experimental phase, with no evidence of recovery. Speed and lapses in the 3-h group recovered rapidly following the first night of recovery sleep; however, recovery was incomplete with speed and lapses stabilizing at a level comparable with the 7- and 5-h groups."
+  - outcome_domain: recovery
+    outcome_construct: recuperative_sleep_ceiling_at_8h_tib
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 3, contrast_label: "recuperative sleep (stage2+SWS+REM) obtained at 8 h TIB during recovery, all 4 groups"}
+    scale: hours
+    unit: "h/night of recuperative sleep"
+    value: 6.58
+    se: 0.256
+    ci: null
+    conversion_formula: "Highest single recovery-night mean across all 4 groups = 394.92 min (SE 15.37 min) on recovery night 1 in the 3-h group = 6.582 h (SE 0.256 h). Table 2-4 of DOT-MC-00-133."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is the empirical CEILING on recuperative sleep when TIB is capped at 8 h: even after a 24.6 h debt, the maximum obtained was 6.58 h/night (82.3% of the 8 h TIB). An 8 h TIB recovery prescription therefore leaves almost no room for debt repayment."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Recuperative sleep time returned to baseline levels (approximately 6.5 hours per night) across the recovery phase (8 hours in bed per night) for all sleep groups (group simple effect, NS)."
+  - outcome_domain: recovery
+    outcome_construct: pct_of_sleep_debt_repaid_3_nights_8h_tib
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 3, contrast_label: "3 nights of 8 h TIB recovery after 7 nights of 3 h TIB"}
+    scale: pct_change
+    unit: "% of accumulated recuperative-sleep debt repaid"
+    value: 2.1
+    se: null
+    ci: null
+    conversion_formula: "3-h group: baseline recuperative sleep 372.00 min/night; experimental-phase mean over 7 nights = (155.57+159.02+160.06+162.08+165.53+166.86+160.53)/7 = 161.38 min => debt = 7*(372.00-161.38) = 1474.3 min = 24.57 h. Recovery-night excess over baseline = (394.92-372.00)+(380.83-372.00)+(371.15-372.00) = 30.90 min = 0.515 h. Fraction repaid = 0.515/24.57 = 2.10%. All inputs from Table 2-4, DOT-MC-00-133."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = debt repaid. 2.1% means 3 nights at 8 h TIB repaid essentially none of the accumulated debt; the debt is NOT repaid hour-for-hour."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "It was also found that following more severe sleep restriction (e g., the 3-hour group), recovery of performance was not complete after 3 consecutive nights of recovery sleep (with 8 hours spent in bed on each night). This suggests that full recovery from substantial sleep debt requires recovery sleep of extended duration"
+  - outcome_domain: sleep_need
+    outcome_construct: tst_yield_per_hour_tib_during_restriction
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: 8, duration_days: 7, contrast_label: "TST obtained per hour of TIB across 3/5/7/9 h TIB groups"}
+    scale: per_hour_beta
+    unit: "h TST per h TIB"
+    value: 0.840
+    se: null
+    ci: null
+    conversion_formula: "OLS of reported mean TST (2.87, 4.66, 6.28, 7.93 h) on TIB (3, 5, 7, 9 h): TST = 0.395 + 0.840*TIB, R^2 = 0.9995. Reported TST means are verbatim from the report text."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Each extra hour of TIB buys only ~0.84 h of actual sleep across the 3-9 h range; sleep opportunity is NOT converted 1:1 into sleep."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Average recuperative sleep time during the experimental phase (i.e., the mean of experimental days 1 through 7) for the 3-, 5-, 7-, and 9-hour TIB groups was 2.69, 4.29, 5.68, and 6.67 hours, respectively."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomized to TIB group but no blinding possible; commercial motor vehicle drivers aged 24-62, so poor age transportability to an 18-year-old; recovery phase capped at 8 h TIB by design, which structurally prevents rebound sleep and therefore cannot distinguish 'brain adaptation' from 'insufficient recovery dose'. Group ns are small (16-18). Recovery-phase PVT means are presented only in figures in both the JSR paper and the report, so only the direction (incomplete recovery) and not the exact PVT deltas could be quoted."
+funding: "US Department of Transportation / Federal Motor Carrier Safety Administration; Walter Reed Army Institute of Research"
+notes: |
+  This is the anchor study for the report's incomplete-recovery claim, and its design is the reason the
+  claim is so strong: recovery TIB was fixed at 8 h, which is at or below the sleep need of the sample.
+  Full repayment ledger computed from Table 2-4 (recuperative sleep = stage 2 + SWS + REM, excludes stage 1),
+  all values mean (SE) in minutes:
+    group  baseline  exp-phase mean  debt(h)  R1     R2     R3     extra(h)  %repaid  peak(h)  peak/8h TIB
+    3 h    372.00    161.38          24.57    394.92 380.83 371.15  +0.51     2.10     6.58     82.3%
+    5 h    369.23    257.29          13.06    380.30 380.16 347.27  +0.00     0.01     6.34     79.2%
+    7 h    375.17    340.97           3.99    375.73 373.72 354.03  -0.37    -9.20     6.26     78.3%
+    9 h    385.24    400.28          -1.75    374.53 377.34 378.43  -0.42     n/a      6.31     78.8%
+  Interpretation: the 9-h group, given 1 extra hour of TIB above their own 8-h baseline, gained only
+  +0.25 h/night of recuperative sleep (400.28 vs 385.24 min) - a marginal yield of 0.25 h TST per h TIB
+  once already near-satiated. The 7-h group actually slept LESS during recovery than at baseline.
+  Van Dongen's re-analysis of this same dataset (quoted in Lo et al. 2022, PMID 35089345) confirms:
+  "during the recovery sleep period, ToT effects diminished, but did not return to baseline levels after
+  three nights of 9-h TIB, even for individuals with the mildest dose of sleep restriction to 7 h per night."
+  Note that Lo et al. describe the recovery nights as 9-h TIB; the primary report and JSR paper both state
+  8 h TIB, and I use 8 h.
+  DISCREPANCY LOGGED: the DOT report narrative in places refers to a 4-day recovery period, but the data
+  tables and the JSR 2003 paper both contain 3 recovery nights. I use 3.
+shard: "s05_recovery_kinetics"

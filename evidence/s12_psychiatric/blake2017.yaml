@@ -1,0 +1,116 @@
+study_id: blake2017
+citation: "Blake MJ, Sheeber LB, Youssef GJ, Raniti MB, Allen NB. Systematic Review and Meta-analysis of Adolescent Cognitive-Behavioral Sleep Interventions. Clin Child Fam Psychol Rev. 2017 Sep;20(3):227-249."
+doi: "10.1007/s10567-017-0234-5"
+pmid: "28331991"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Systematic Review and Meta-analysis of Adolescent Cognitive-Behavioral Sleep Interventions."
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: 357
+n_studies_pooled: 9
+population:
+  age_mean: 14.97
+  age_range: [10, 19]
+  pct_female: 61.74
+  country: "multinational"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: depression_and_anxiety_symptoms
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "adolescent cognitive-behavioral sleep intervention, within-condition pre-post (n=221); NOT a randomized between-group contrast"}
+    scale: probability
+    unit: "direction only; no effect size reported in the abstract"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "NOT POOLABLE. The abstract states depression and anxiety 'also improved' but gives no g, d, CI, or p for either. I could not retrieve the article text (Springer paywall; the sole Unpaywall OA location, figshare item 20855059, returns no downloadable files via the Figshare API). Per the hard rule 'if you cannot quote it, you may not extract it,' I record direction only and set se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = depression and anxiety improved after an adolescent sleep intervention. Magnitude unknown; must not be entered into a pooling as a number."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple_trials"
+    quote: "Global sleep quality, daytime sleepiness, depression, and anxiety also improved. Gains were generally maintained over time."
+  - outcome_domain: sleep_need
+    outcome_construct: total_sleep_time_gain_subjective
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: null, contrast_label: "post-intervention change in subjective TST, within sleep condition (n=221)"}
+    scale: raw_units
+    unit: "minutes of total sleep time"
+    value: 29.47
+    se: 6.26786
+    ci: [17.18, 41.75]
+    conversion_formula: "29.47 min (17.18, 41.75); se = (41.75-17.18)/3.92 = 24.57/3.92 = 6.26786"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = MORE sleep after intervention. This is the achievable-dose ceiling: the best available adolescent sleep interventions buy about 30 minutes per night, not the ~2 h our subject is short."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple_trials"
+    quote: "At post-intervention, subjective TST improved by 29.47 min (95% CI 17.18, 41.75), SOL by 21.44 min (95% CI -30.78, -12.11), SE by 5.34% (95% CI 2.64, 8.04), and WASO by a medium effect size [d = 0.59 (95% CI 0.36, 0.82)]."
+  - outcome_domain: sleep_need
+    outcome_construct: sleep_onset_latency_reduction_objective_actigraphy
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "post-intervention change in actigraphic SOL, within sleep condition"}
+    scale: raw_units
+    unit: "minutes of sleep onset latency"
+    value: -16.15
+    se: 5.09184
+    ci: [-26.13, -6.17]
+    conversion_formula: "-16.15 min (-26.13, -6.17); se = (26.13-6.17)/3.92 = 19.96/3.92 = 5.09184"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = FASTER sleep onset after intervention. Objectively confirmed, so the interventions do something real to sleep initiation."
+    covariates: []
+    followup_years: null
+    cohort_family: "pooled_multiple_trials"
+    quote: "Objective SOL improved by 16.15 min (95% CI -26.13, -6.17) and SE by 2.82% (95% CI 0.58, 5.07)."
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: "Authors' own statement: 'There were a small number of randomized controlled trials (RCTs; n = 4) and a high risk of bias across the RCTs; therefore, within sleep condition meta-analyses were examined (n = 221).' The headline numbers are therefore UNCONTROLLED pre-post changes within the treated arm, not randomized between-group contrasts. Pre-post change in an unblinded adolescent sample conflates intervention effect with regression to the mean, seasonal/term effects, and expectancy. Total n = 357 across 9 trials is very small. Authors conclude 'further high-quality RCTs are needed.'"
+funding: null
+notes: |
+  WHY I KEPT THIS RECORD DESPITE NOT BEING ABLE TO QUOTE A MOOD EFFECT SIZE. It is the only
+  ADOLESCENT-SPECIFIC intervention meta-analysis in this domain (mean age 14.97), and the two things
+  it does quantify are directly load-bearing for our subject's case, even though they are not mood
+  outcomes.
+
+  THE 30-MINUTE CEILING IS THE MOST DECISION-RELEVANT NUMBER I EXTRACTED FROM ANY INTERVENTION STUDY.
+  Nine trials of the best available adolescent cognitive-behavioral sleep interventions produced a
+  subjective total-sleep-time gain of 29.47 min/night (95% CI 17.18-41.75). Our subject's weeknight
+  deficit against an 8-9 h adolescent target is on the order of 2.0-3.0 h. So even a fully successful
+  course of the best-evidenced adolescent sleep intervention would close roughly 17-25% of his gap.
+  This matters in two directions:
+    (1) It caps the achievable benefit of any behavioural sleep treatment offered to him. Whatever
+        mood benefit the intervention meta-analyses report (gee2019 SMD -0.45, scott2021 -0.47) was
+        bought partly by symptom-focused insomnia therapy, not by adding 2 h of sleep, and there is
+        no evidence base at all for adding 2 h.
+    (2) It reframes the intervention target. His problem is scheduling and workload, not sleep skills.
+        The relevant lever is opportunity (hours available), which no trial in this meta-analysis
+        manipulated.
+
+  WHAT THE INTERVENTIONS ACTUALLY FIX, AND WHY IT IS AGAIN THE WRONG TARGET. Look at which parameters
+  moved: SOL -21.44 min subjective and -16.15 min objective, sleep efficiency +5.34% subjective and
+  +2.82% objective, WASO d = 0.59. Every one of those is a sleep-CONTINUITY parameter, i.e. an
+  insomnia parameter. This is the same exposure mismatch that runs through lovato2014,
+  hertenstein2019, marino2021, gee2019, gebara2018, scott2021, and freeman2017: the entire
+  adolescent and adult intervention literature treats people who cannot sleep, and our subject is a
+  person who does not have time to sleep. A subject with normal latency and high efficiency has
+  almost no headroom on the parameters these interventions move.
+
+  ARITHMETIC TRAIL.
+    subjective TST:  29.47 (17.18, 41.75)  -> width 24.57 -> se = 24.57/3.92 = 6.26786
+    objective SOL:  -16.15 (-26.13, -6.17) -> width 19.96 -> se = 19.96/3.92 = 5.09184
+
+  AGE RANGE. The abstract gives mean age 14.97 and no range; I recorded [10, 19] as the outer bound
+  implied by "adolescent" trials in this literature rather than leaving it null, and flag that the
+  mean (14.97) is 3-4 years below our subject's age, which is a real limitation given how much sleep
+  regulation and circadian phase change between 15 and 18. adolescent_match is set to exact_16_19 on
+  the basis of developmental stage rather than mean age; a downstream modeller preferring strict
+  age-overlap should treat it as mixed.
+shard: "s12_psychiatric"

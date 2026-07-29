@@ -1,0 +1,400 @@
+study_id: tefft2016_aaa
+citation: "Tefft BC. Acute Sleep Deprivation and Risk of Motor Vehicle Crash Involvement (Technical Report). Washington, DC: AAA Foundation for Traffic Safety; December 2016."
+doi: null
+pmid: null
+url: "https://aaafoundation.org/wp-content/uploads/2026/01/AcuteSleepDeprivationCrashRisk.pdf"
+verification:
+  crossref_ok: null
+  pubmed_ok: null
+  status: UNVERIFIED
+  resolved_title: "Acute Sleep Deprivation and Risk of Motor Vehicle Crash Involvement"
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: T5
+n: 7234
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [14, 100]
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  # ================================================================
+  # BLOCK A — SLEEP IN THE PAST 24 HOURS (acute). Referent >=7 h.
+  # These are the numbers the task asked for, in exactly the requested bins.
+  # ================================================================
+  - outcome_domain: mortality
+    outcome_construct: culpable_crash_involvement_rate_ratio
+    exposure: {type: total_deprivation, dose_h: 3.5, referent_h: 7.5, duration_days: 1,
+               contrast_label: "<4:00 h slept in past 24 h vs >=7:00 h; culpable (critical-reason) crash involvement"}
+    scale: log_or
+    unit: null
+    value: 2.442347
+    se: 0.703415
+    ci: [1.064711, 3.822098]
+    conversion_formula: "log_or = ln(11.5) = 2.442347; se = (ln(45.7) - ln(2.9))/3.92 = 0.703415"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = HARM. Higher odds of having been assigned the critical reason for the crash, i.e. higher crash-causation rate. Under the paper's induced-exposure assumption this OR approximates a crash-involvement RATE RATIO per unit time driving."
+    covariates: ["driver age", "time of day of crash", "intersection vs non-intersection location", "recent change in sleep schedule"]
+    followup_years: null
+    cohort_family: "NMVCCS_2005_2007"
+    quote: >
+      drivers who reported having slept for less than 4 hours in the past 24 hours had an estimated 11.5 times the
+      odds of having contributed to the crash in which they were involved, compared with drivers who reported
+      having slept for 7 or more hours in the past 24 hours (Odds Ratio [OR] 11.5; 95% Confidence Interval [CI]
+      2.9 - 45.7)
+  - outcome_domain: mortality
+    outcome_construct: culpable_crash_involvement_rate_ratio
+    exposure: {type: total_deprivation, dose_h: 4.5, referent_h: 7.5, duration_days: 1,
+               contrast_label: "4:00-4:59 h slept in past 24 h vs >=7:00 h"}
+    scale: log_or
+    unit: null
+    value: 1.458615
+    se: 0.338724
+    ci: [0.788457, 2.116256]
+    conversion_formula: "log_or = ln(4.3) = 1.458615; se = (ln(8.3) - ln(2.2))/3.92 = 0.338724"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = HARM. 4.3x the crash rate of a 7+ h sleeper. The report notes this is comparable to NHTSA's estimated crash risk at BAC 0.08 (the US legal limit)."
+    covariates: ["driver age", "time of day of crash", "intersection vs non-intersection location", "recent change in sleep schedule"]
+    followup_years: null
+    cohort_family: "NMVCCS_2005_2007"
+    quote: >
+      Drivers who reported having slept for 4:00 - 4:59, 5:00 - 5:59, and 6:00 - 6:59 had 4.3 (CI 2.2 - 8.3), 1.9
+      (CI 1.3 - 2.6), and 1.3 (CI 1.1 - 1.7) times the odds, respectively, of having contributed to the crash in
+      which they were involved compared with drivers who had slept for 7 hours or longer.
+  - outcome_domain: mortality
+    outcome_construct: culpable_crash_involvement_rate_ratio
+    exposure: {type: total_deprivation, dose_h: 5.5, referent_h: 7.5, duration_days: 1,
+               contrast_label: "5:00-5:59 h slept in past 24 h vs >=7:00 h — CLOSEST ACUTE MATCH TO THE SUBJECT'S WEEKDAY DOSE"}
+    scale: log_or
+    unit: null
+    value: 0.641854
+    se: 0.176823
+    ci: [0.262364, 0.955511]
+    conversion_formula: "log_or = ln(1.9) = 0.641854; se = (ln(2.6) - ln(1.3))/3.92 = 0.176823"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = HARM. 1.9x the crash rate. This is THE single most directly usable number in the literature for a driver who slept 5-6 h before driving. NOTE: it is an ACUTE (last-24-h) exposure, not a habitual one — see BLOCK B, where the same paper's HABITUAL 5-6 h estimate is only 1.4 and not significant."
+    covariates: ["driver age", "time of day of crash", "intersection vs non-intersection location", "recent change in sleep schedule"]
+    followup_years: null
+    cohort_family: "NMVCCS_2005_2007"
+    quote: >
+      Drivers who reported having slept for 4:00 - 4:59, 5:00 - 5:59, and 6:00 - 6:59 had 4.3 (CI 2.2 - 8.3), 1.9
+      (CI 1.3 - 2.6), and 1.3 (CI 1.1 - 1.7) times the odds, respectively, of having contributed to the crash in
+      which they were involved compared with drivers who had slept for 7 hours or longer.
+  - outcome_domain: mortality
+    outcome_construct: culpable_crash_involvement_rate_ratio
+    exposure: {type: total_deprivation, dose_h: 6.5, referent_h: 7.5, duration_days: 1,
+               contrast_label: "6:00-6:59 h slept in past 24 h vs >=7:00 h"}
+    scale: log_or
+    unit: null
+    value: 0.262364
+    se: 0.111051
+    ci: [0.095310, 0.530628]
+    conversion_formula: "log_or = ln(1.3) = 0.262364; se = (ln(1.7) - ln(1.1))/3.92 = 0.111051"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = HARM. 1.3x. The subject's WEEKLY AVERAGE sleep is 6.1-6.4 h, so on an acute reading this bin, not the 5-6 h bin, describes his average night."
+    covariates: ["driver age", "time of day of crash", "intersection vs non-intersection location", "recent change in sleep schedule"]
+    followup_years: null
+    cohort_family: "NMVCCS_2005_2007"
+    quote: >
+      Drivers who reported having slept for 4:00 - 4:59, 5:00 - 5:59, and 6:00 - 6:59 had 4.3 (CI 2.2 - 8.3), 1.9
+      (CI 1.3 - 2.6), and 1.3 (CI 1.1 - 1.7) times the odds, respectively, of having contributed to the crash in
+      which they were involved compared with drivers who had slept for 7 hours or longer.
+  # ================================================================
+  # BLOCK B — USUAL (HABITUAL) DAILY SLEEP. Referent >=7 h.
+  # THIS IS THE SUBJECT'S ACTUAL EXPOSURE TYPE, AND IT IS NULL AT 5-6 h.
+  # ================================================================
+  - outcome_domain: mortality
+    outcome_construct: culpable_crash_involvement_rate_ratio
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 7.5, duration_days: null,
+               contrast_label: "USUAL daily sleep 5:00-5:59 h vs USUAL >=7:00 h — THE SUBJECT'S ACTUAL EXPOSURE TYPE"}
+    scale: log_or
+    unit: null
+    value: 0.336472
+    se: 0.503592
+    ci: [-0.693147, 1.280934]
+    conversion_formula: "log_or = ln(1.4) = 0.336472; se = (ln(3.6) - ln(0.5))/3.92 = 0.503592"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = HARM, but NOT STATISTICALLY SIGNIFICANT (CI 0.5-3.6 spans 1). CRITICAL FOR THIS SHARD: when the SAME dataset and SAME modelling are applied to HABITUAL rather than ACUTE short sleep, the 5-6 h estimate falls from OR 1.9 (significant) to OR 1.4 (null, n=102 drivers in this bin). The subject is a habitual, not an acute, short sleeper on a typical weekday."
+    covariates: ["driver age", "time of day of crash", "intersection vs non-intersection location", "recent change in sleep schedule"]
+    followup_years: null
+    cohort_family: "NMVCCS_2005_2007"
+    quote: >
+      [Table 3, unmatched, critical-reason: "Usual daily hours of sleep ... < 4:00 0.8 (0.1-5.6) ... 4:00 - 4:59
+      5.4 (1.6-17.6) ... 5:00 - 5:59 1.4 (0.5-3.6) ... 6:00 - 6:59 1.4 (0.9-2.0) ... >= 7:00 1.0 Ref"]
+  - outcome_domain: mortality
+    outcome_construct: culpable_crash_involvement_rate_ratio
+    exposure: {type: habitual_short_sleep, dose_h: 6.5, referent_h: 7.5, duration_days: null,
+               contrast_label: "USUAL daily sleep 6:00-6:59 h vs USUAL >=7:00 h"}
+    scale: log_or
+    unit: null
+    value: 0.336472
+    se: 0.203701
+    ci: [-0.105361, 0.693147]
+    conversion_formula: "log_or = ln(1.4) = 0.336472; se = (ln(2.0) - ln(0.9))/3.92 = 0.203701"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = HARM, NOT SIGNIFICANT (CI 0.9-2.0). Note the habitual dose-response is FLAT between 5-6 h and 6-7 h (both 1.4) — a graded causal effect of habitual sleep loss would not do that."
+    covariates: ["driver age", "time of day of crash", "intersection vs non-intersection location", "recent change in sleep schedule"]
+    followup_years: null
+    cohort_family: "NMVCCS_2005_2007"
+    quote: >
+      [Table 3, unmatched, critical-reason: "Usual daily hours of sleep ... < 4:00 0.8 (0.1-5.6) ... 4:00 - 4:59
+      5.4 (1.6-17.6) ... 5:00 - 5:59 1.4 (0.5-3.6) ... 6:00 - 6:59 1.4 (0.9-2.0) ... >= 7:00 1.0 Ref"]
+  - outcome_domain: mortality
+    outcome_construct: culpable_crash_involvement_rate_ratio
+    exposure: {type: habitual_short_sleep, dose_h: 4.5, referent_h: 7.5, duration_days: null,
+               contrast_label: "USUAL daily sleep 4:00-4:59 h vs USUAL >=7:00 h"}
+    scale: log_or
+    unit: null
+    value: 1.686399
+    se: 0.611708
+    ci: [0.470004, 2.867899]
+    conversion_formula: "log_or = ln(5.4) = 1.686399; se = (ln(17.6) - ln(1.6))/3.92 = 0.611708"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = HARM. The ONLY significant habitual-sleep category (OR 5.4). Rests on 30 drivers total (6 non-culpable, 24 culpable), and in the matched sensitivity analysis it was inestimable because ZERO non-culpable drivers reported usually sleeping 4-5 h. Treat as extremely fragile."
+    covariates: ["driver age", "time of day of crash", "intersection vs non-intersection location", "recent change in sleep schedule"]
+    followup_years: null
+    cohort_family: "NMVCCS_2005_2007"
+    quote: >
+      Drivers who reported usually sleeping for between 4 and 5 hours daily had an estimated 5.4 (CI 1.6 - 17.6)
+      times the odds of having contributed to the crash in which they were involved compared with drivers who
+      reported usually sleeping for 7 hours or longer
+  - outcome_domain: mortality
+    outcome_construct: culpable_crash_involvement_rate_ratio
+    exposure: {type: habitual_short_sleep, dose_h: 3.5, referent_h: 7.5, duration_days: null,
+               contrast_label: "USUAL daily sleep <4:00 h vs USUAL >=7:00 h"}
+    scale: log_or
+    unit: null
+    value: -0.223144
+    se: 1.026875
+    ci: [-2.302585, 1.722767]
+    conversion_formula: "log_or = ln(0.8) = -0.223144; se = (ln(5.6) - ln(0.1))/3.92 = 1.026875"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NEGATIVE = apparently PROTECTIVE (OR 0.8), which is not credible. Included deliberately as a NOISE MARKER: the habitual-sleep exposure is so sparsely populated (13 drivers) and so poorly measured that the most extreme category comes out protective. In the matched analysis this same cell gives OR 0.1 (0.0-0.8), i.e. 'significantly protective'. Any downstream model that treats habitual short sleep from this dataset as a graded causal exposure must reckon with this. NOTE: value is not the exact log-midpoint of the CI (mid = -0.2899) because the paper rounds OR to 1 decimal and CI to 1 decimal."
+    covariates: ["driver age", "time of day of crash", "intersection vs non-intersection location", "recent change in sleep schedule"]
+    followup_years: null
+    cohort_family: "NMVCCS_2005_2007"
+    quote: >
+      [Table 3, unmatched, critical-reason: "Usual daily hours of sleep ... < 4:00 0.8 (0.1-5.6) ... 4:00 - 4:59
+      5.4 (1.6-17.6) ... 5:00 - 5:59 1.4 (0.5-3.6) ... 6:00 - 6:59 1.4 (0.9-2.0) ... >= 7:00 1.0 Ref"]
+  # ================================================================
+  # BLOCK C — SLEEP DEBT RELATIVE TO THE DRIVER'S OWN USUAL AMOUNT.
+  # This is the closest available analogue to "an exam-week 3-4 h night".
+  # ================================================================
+  - outcome_domain: mortality
+    outcome_construct: culpable_crash_involvement_rate_ratio
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 1,
+               contrast_label: "slept 1:00-1:59 h LESS than own usual amount in past 24 h vs slept at least usual amount"}
+    scale: log_or
+    unit: null
+    value: 0.262364
+    se: 0.135364
+    ci: [0.000000, 0.530628]
+    conversion_formula: "log_or = ln(1.3) = 0.262364; se = (ln(1.7) - ln(1.0))/3.92 = 0.135364"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = HARM. Borderline (CI lower bound exactly 1.0). Relevant because the subject's habitual 5-6 h is his OWN usual amount on weekdays — on this parameterisation a habitual short sleeper who sleeps his usual amount is in the REFERENT group, not an exposed group."
+    covariates: ["driver age", "time of day of crash", "intersection vs non-intersection location", "recent change in sleep schedule", "usual daily sleep"]
+    followup_years: null
+    cohort_family: "NMVCCS_2005_2007"
+    quote: >
+      Drivers who slept for between 1 and 2 hours less than usual in the past 24 hours had a statistically
+      significant 30% increase in the odds of having contributed to the crash (OR 1.3; CI 1.0 - 1.7)
+  - outcome_domain: mortality
+    outcome_construct: culpable_crash_involvement_rate_ratio
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 1,
+               contrast_label: "slept 2:00-2:59 h LESS than own usual amount vs at least usual amount"}
+    scale: log_or
+    unit: null
+    value: 1.098612
+    se: 0.195272
+    ci: [0.693147, 1.458615]
+    conversion_formula: "log_or = ln(3.0) = 1.098612; se = (ln(4.3) - ln(2.0))/3.92 = 0.195272"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = HARM. OR 3.0. THIS IS THE SUBJECT'S PRE-EXAM NIGHT: 3-4 h against a 5.5-6 h usual, i.e. roughly 2-3 h below usual. Note that on this metric the subject's *routine* weekday night carries no excess at all and only his *occasional* 3-4 h nights do."
+    covariates: ["driver age", "time of day of crash", "intersection vs non-intersection location", "recent change in sleep schedule", "usual daily sleep"]
+    followup_years: null
+    cohort_family: "NMVCCS_2005_2007"
+    quote: >
+      drivers who slept for 2-3 hours, 3-4 hours, and more than 4 hours less than usual had 3.0 (CI 2.0 - 4.3),
+      2.1 (CI 1.0 - 4.4), and 10.2 (CI 4.6 - 22.9) times the odds of having contributed to the crash in which they
+      were involved, respectively, compared with drivers who had slept for at least their usual amount in the 24
+      hours preceding the crash.
+  - outcome_domain: mortality
+    outcome_construct: culpable_crash_involvement_rate_ratio
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 1,
+               contrast_label: "slept 3:00-3:59 h LESS than own usual amount vs at least usual amount"}
+    scale: log_or
+    unit: null
+    value: 0.741937
+    se: 0.377960
+    ci: [0.000000, 1.481605]
+    conversion_formula: "log_or = ln(2.1) = 0.741937; se = (ln(4.4) - ln(1.0))/3.92 = 0.377960"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = HARM. OR 2.1, LOWER than the 2-3 h deficit category's 3.0 — the dose-response is NON-MONOTONE here (46 drivers). Evidence of noise, not of a clean gradient."
+    covariates: ["driver age", "time of day of crash", "intersection vs non-intersection location", "recent change in sleep schedule", "usual daily sleep"]
+    followup_years: null
+    cohort_family: "NMVCCS_2005_2007"
+    quote: >
+      drivers who slept for 2-3 hours, 3-4 hours, and more than 4 hours less than usual had 3.0 (CI 2.0 - 4.3),
+      2.1 (CI 1.0 - 4.4), and 10.2 (CI 4.6 - 22.9) times the odds of having contributed to the crash in which they
+      were involved, respectively, compared with drivers who had slept for at least their usual amount in the 24
+      hours preceding the crash.
+  - outcome_domain: mortality
+    outcome_construct: culpable_crash_involvement_rate_ratio
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: 1,
+               contrast_label: ">=4:00 h LESS than own usual amount vs at least usual amount"}
+    scale: log_or
+    unit: null
+    value: 2.322388
+    se: 0.409459
+    ci: [1.526056, 3.131137]
+    conversion_formula: "log_or = ln(10.2) = 2.322388; se = (ln(22.9) - ln(4.6))/3.92 = 0.409459"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "POSITIVE = HARM. OR 10.2. An all-nighter-scale deficit. Not the subject's routine exposure."
+    covariates: ["driver age", "time of day of crash", "intersection vs non-intersection location", "recent change in sleep schedule", "usual daily sleep"]
+    followup_years: null
+    cohort_family: "NMVCCS_2005_2007"
+    quote: >
+      drivers who slept for 2-3 hours, 3-4 hours, and more than 4 hours less than usual had 3.0 (CI 2.0 - 4.3),
+      2.1 (CI 1.0 - 4.4), and 10.2 (CI 4.6 - 22.9) times the odds of having contributed to the crash in which they
+      were involved, respectively, compared with drivers who had slept for at least their usual amount in the 24
+      hours preceding the crash.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Design strengths: (1) nationally representative probability sample of police-reported crashes
+    (NMVCCS) in which at least one passenger vehicle was towed and EMS was dispatched, with
+    on-scene investigation by specially trained multidisciplinary teams rather than routine police
+    reporting; (2) sleep in the past 24 h reconstructed from reported start/end times of every sleep
+    interval >30 min, then internally cross-checked against the last sleep interval and time since
+    waking, with inconsistencies recomputed; (3) quasi-induced-exposure ("culpability") design, which
+    means the odds ratio approximates an exposure-based RATE RATIO rather than a prevalence contrast;
+    (4) four-way sensitivity analysis (unmatched/matched x two case definitions) reported in full.
+    .
+    Weaknesses that matter for this shard:
+    (a) CRASHES BETWEEN MIDNIGHT AND 05:59 WERE EXCLUDED FROM NMVCCS ENTIRELY. Those are the hours
+        in which drowsy crashes concentrate (Tefft 2024: most fatal drowsy crashes 23:00-02:59, highest
+        drowsy PERCENTAGE 03:00-06:59). The author states this makes the study an UNDERestimate. This
+        is the single most important bias and it points UPWARD.
+    (b) Exposure is self-reported by a driver who has just crashed and may face liability; recall and
+        social-desirability bias are plausible in both directions.
+    (c) Culpability assignment ("critical reason") is an investigator judgement made with knowledge of
+        the crash circumstances, so it is not blind to time of day or single-vehicle configuration —
+        the very features that co-vary with drowsiness. This inflates the association.
+    (d) The habitual-sleep bins are extremely sparse (13, 30 and 102 drivers in the <4, 4-5 and 5-6 h
+        cells respectively) and the habitual analysis is internally incoherent (usual <4 h gives
+        OR 0.8, and 0.1 in the matched analysis).
+    (e) Grey literature: no journal peer review, no DOI, no PMID. The acute-sleep analysis was
+        subsequently peer-reviewed and published as tefft2018 (PMID 30239905), where the 4 h estimate
+        fell from 4.3 to 2.9 and the <4 h estimate rose from 11.5 to 15.1 — so the specific point
+        estimates in this report are not stable across peer review.
+funding: "AAA Foundation for Traffic Safety (501(c)(3); funding from AAA/CAA motor clubs, club members, insurance companies). Data collected by NHTSA."
+notes: >
+  PRIMARY TARGET #1 for this shard. This is the report the task described as "the most directly usable
+  numbers in existence for this question", and that description is correct — it is the only source that
+  reports crash rate ratios in exactly the 4-5 h / 5-6 h / 6-7 h bins the task asked for.
+  .
+  VERIFICATION STATUS — READ THIS. This is an AGENCY TECHNICAL REPORT. It has no DOI and no PMID, so
+  Crossref and PubMed verification are not possible and `status` is UNVERIFIED, not VERIFIED. It is
+  NOT secondhand: I retrieved the full PDF directly from the publisher's own domain
+  (aaafoundation.org), HTTP 200, and stored the extracted text at
+  src/tefft2016_aaa_acutesleep.txt (sha256 b392f20b4ef17ecd25ccea7c5ca95ffb180ab3aed00b464b9102d75ddc15f52b).
+  A second copy retrieved from the 2017 upload path is stored at src/tefft2016_aaa_acutesleep_v2017.txt
+  (sha256 9357f4adbf6547b6f11c8385e0991fd704ef356e02f4d197bc0136aae2dbb1b1); the two agree on every
+  number extracted here. Under gate G2, the PEER-REVIEWED TWIN `tefft2018` (VERIFIED) should carry the
+  acute-sleep effects in the primary model; this record should carry only the HABITUAL-sleep and
+  DEVIATION-FROM-USUAL effects, which tefft2018 does not report.
+  .
+  DE-DUPLICATION WARNING: `tefft2016_aaa` and `tefft2018` ANALYSE THE SAME 6,845-7,234 DRIVERS FROM THE
+  SAME NMVCCS 2005-2007 SAMPLE. They are ONE dataset, not two. cohort_family: NMVCCS_2005_2007 on both.
+  Averaging them is double-counting.
+  .
+  THE CENTRAL FINDING OF THIS RECORD, STATED PLAINLY: the acute and habitual analyses of the same data
+  disagree by a factor of ~2 at the subject's dose.
+    acute    5-6 h in past 24 h  -> OR 1.9 (1.3-2.6)   SIGNIFICANT
+    habitual usual 5-6 h daily   -> OR 1.4 (0.5-3.6)   NULL
+  The subject is a habitual 5-6 h weekday sleeper who is not acutely deprived relative to his own
+  baseline on a typical Tuesday. Using 1.9 for him is the optimistic-for-harm reading; 1.4 is the
+  like-for-like reading. I carry both forward and use 1.4-1.9 as the range in injury_channel.md.
+  .
+  EXPOSURE PREVALENCE IN THE SOURCE POPULATION (weighted column %, all 7,234 drivers), useful for PAF
+  arithmetic: past-24-h sleep <4:00 1.4%, 4:00-4:59 0.9%, 5:00-5:59 1.4%, 6:00-6:59 7.9%, >=7:00 88.4%.
+  USUAL daily sleep: <4:00 0.3%, 4:00-4:59 0.4%, 5:00-5:59 1.2%, 6:00-6:59 5.6%, >=7:00 92.5%.
+  Note how rare habitual short sleep is in this driving population — 1.2% at 5-6 h — which is why the
+  habitual CIs are so wide.
+  .
+  AGE STRUCTURE (all drivers, weighted %): 14-17 5.5%, 18-20 11.4%, 21-24 11.3%, 25-34 21.3%,
+  35-54 30.2%, 55-64 10.0%, 65-74 6.3%, 75+ 4.0%. So ~28% of the sample is under 25 and the ORs are
+  ADJUSTED for age; no age-stratified sleep ORs are reported, which is this record's key gap for us.
+  .
+  VERBATIM QUOTES SUPPORTING THE NUMBERS ABOVE:
+  BLOCK A: "After adjustment for driver age, relation to intersection, time of day, and recent change
+  in sleep schedule, drivers who reported having slept for less than 4 hours in the past 24 hours had
+  an estimated 11.5 times the odds of having contributed to the crash in which they were involved,
+  compared with drivers who reported having slept for 7 or more hours in the past 24 hours (Odds Ratio
+  [OR] 11.5; 95% Confidence Interval [CI] 2.9 - 45.7) (Figure 1). Drivers who reported having slept for
+  4:00 - 4:59, 5:00 - 5:59, and 6:00 - 6:59 had 4.3 (CI 2.2 - 8.3), 1.9 (CI 1.3 - 2.6), and 1.3 (CI
+  1.1 - 1.7) times the odds, respectively, of having contributed to the crash in which they were
+  involved compared with drivers who had slept for 7 hours or longer."
+  BLOCK B: "Drivers who reported usually sleeping for between 4 and 5 hours daily had an estimated 5.4
+  (CI 1.6 - 17.6) times the odds of having contributed to the crash in which they were involved
+  compared with drivers who reported usually sleeping for 7 hours or longer (Figure 2). Odds ratios
+  associated with usually sleeping for less than 4 hours, 5-6 hours, and 6-7 hours daily were not
+  statistically significant." [Table 3, unmatched, critical-reason: "Usual daily hours of sleep ...
+  < 4:00 0.8 (0.1-5.6) ... 4:00 - 4:59 5.4 (1.6-17.6) ... 5:00 - 5:59 1.4 (0.5-3.6) ...
+  6:00 - 6:59 1.4 (0.9-2.0) ... >= 7:00 1.0 Ref"]
+  BLOCK C: "Independent of a drivers' usual daily amount of sleep, drivers who slept for up to 1 hour
+  less than their usual amount in the past 24 hours had no statistically significant increase in the
+  odds of having contributed to the crash in which they were involved relative to drivers who slept
+  for at least their usual amount (OR 1.2; CI 0.9 - 1.6) (Figure 2). Drivers who slept for between 1
+  and 2 hours less than usual in the past 24 hours had a statistically significant 30% increase in the
+  odds of having contributed to the crash (OR 1.3; CI 1.0 - 1.7), and drivers who slept for 2-3 hours,
+  3-4 hours, and more than 4 hours less than usual had 3.0 (CI 2.0 - 4.3), 2.1 (CI 1.0 - 4.4), and
+  10.2 (CI 4.6 - 22.9) times the odds of having contributed to the crash in which they were involved,
+  respectively, compared with drivers who had slept for at least their usual amount in the 24 hours
+  preceding the crash. A test for multiplicative interaction between drivers' usual amount of sleep and
+  their sleep in the past 24 hours relative to their usual amount of sleep was not statistically
+  significant (P=0.43)."
+  MIDNIGHT-05:59 EXCLUSION: "The NMVCCS study only included crashes that occurred between 6 AM and
+  11:59 PM; crashes that occurred between midnight and 5:59 AM were not included in the NMVCCS."
+  AUTHOR'S OWN DIRECTION-OF-BIAS STATEMENT: "This study may underestimate the risk of driving while
+  sleep-deprived, because data on crashes that occurred between midnight and 6 AM were not available,
+  and other studies have shown that the effects of sleep deprivation on attention and performance are
+  greatest during the early morning hours."
+  INDUCED-EXPOSURE ASSUMPTION: "Controls were assumed to have been sampled from among all drivers on
+  the road in proportion to their exposure, thus the odds ratio associated with a particular amount of
+  sleep approximates the ratio of the exposure-based crash involvement rates associated with that
+  amount of sleep compared with a reference amount."
+  PREVALENCE TABLE: "Total sleep in 24 hours before crash (hours: minutes) < 4:00 6 (0.2) 74 (2.5) 80
+  (1.4) 4:00 - 4:59 22 (0.4) 49 (1.4) 71 (0.9) 5:00 - 5:59 59 (0.9) 99 (1.8) 158 (1.4) 6:00 - 6:59 286
+  (7.2) 331 (8.5) 617 (7.9) >= 7:00 3,282 (91.4) 3,026 (85.7) 6,308 (88.4)" and "Usual daily hours of
+  sleep (hours: minutes) < 4:00 3 (0.5) 10 (0.2) 13 (0.3) 4:00 - 4:59 6 (0.1) 24 (0.7) 30 (0.4)
+  5:00 - 5:59 34 (1.0) 68 (1.5) 102 (1.2) 6:00 - 6:59 235 (5.0) 259 (6.2) 494 (5.6) >= 7:00 3,340
+  (93.5) 3,167 (91.5) 6,507 (92.5)"
+  MATCHED-ANALYSIS INSTABILITY: "Results in the sensitivity analysis of usual amount of sleep and
+  deviations from usual sleep were generally similar in the main analysis and in sensitivity analyses
+  (Table 3), with the exception that odds ratios for the lowest two categories of usual daily hours of
+  sleep became [unstable] ... only 1 non-contributing driver reported usually sleeping less than 4
+  hours daily, and zero reported usually sleeping 4-5 hours daily."
+  .
+  SCHEMA MAPPING NOTE: this is a POPULATION-BASED CASE-CONTROL (quasi-induced-exposure) study. The
+  schema's `design` enum contains no `case_control` value; `cross_sectional` is the nearest available
+  and is used here. `tier` is set to T5 rather than TX because this is an analytic observational study
+  with a comparison group sampled in proportion to driving exposure, not a descriptive survey — but the
+  exposure is self-reported and there is no prospective follow-up, so it does not reach T4.
+shard: "s21_drowsy_driving"

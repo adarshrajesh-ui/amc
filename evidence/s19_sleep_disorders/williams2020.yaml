@@ -1,0 +1,129 @@
+study_id: williams2020
+citation: "Williams AB, Dzierzewski JM, Griffin SC, Lind MJ, Dick D, Rybarczyk BD. Insomnia Disorder and Behaviorally Induced Insufficient Sleep Syndrome: Prevalence and Relationship to Depression in College Students. Behav Sleep Med. 2020;18(2):275-286."
+doi: "10.1080/15402002.2019.1578772"
+pmid: "30789063"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6814500/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Insomnia Disorder and Behaviorally Induced Insufficient Sleep Syndrome: Prevalence and Relationship to Depression in College Students."
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 989
+n_studies_pooled: null
+population:
+  age_mean: 20.4
+  age_range: [19, 22]
+  pct_female: 65.6
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_biiss_college_students
+    exposure: {type: habitual_short_sleep, dose_h: 6.5, referent_h: null, duration_days: null, contrast_label: "BIISS = sleep <=6.5 h + good sleep quality + sleep latency <30 min + daytime sleepiness, college students"}
+    scale: probability
+    unit: "proportion of college students"
+    value: 0.099
+    se: 0.0095
+    ci: [0.0804, 0.1176]
+    conversion_formula: "9.9% (n = 98 of 989) from Results/Table 3. se = sqrt(0.099*0.901/989) = 0.00950; Wald 95% CI = [0.0804, 0.1176]. My construction. Sensitivity analysis in the paper: with a <7 h cut-off instead of <=6.5 h the estimate becomes 10.6%."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive prevalence. THE ONLY PUBLISHED BIISS PREVALENCE IN COLLEGE STUDENTS - the exact population our subject is entering - and it replicates pallesen2011's 10.4% in Norwegian 16-19 year olds almost exactly. The BIISS prior for our subject is therefore ~10%, robust across two countries and two instruments."
+    covariates: []
+    followup_years: null
+    cohort_family: "Spit_for_Science"
+    quote: "A majority (68%) of students were categorized as normal sleepers, followed by insomnia (22%), and BIISS (10%). ... Prevalence rates included 22.1% insomnia, 9.9% BIISS, and 67.2% normal sleep."
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_insomnia_college_students
+    exposure: {type: habitual_short_sleep, dose_h: 6.5, referent_h: null, duration_days: null, contrast_label: "insomnia = sleep <=6.5 h + (poor sleep quality OR sleep latency >=30 min), college students"}
+    scale: probability
+    unit: "proportion of college students"
+    value: 0.221
+    se: 0.01319
+    ci: [0.1951, 0.2469]
+    conversion_formula: "22.1% (n = 218 of 989). se = sqrt(0.221*0.779/989) = 0.01319; Wald 95% CI = [0.1951, 0.2469]. My construction. With a <7 h cut-off: 23.3%."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive. IMPORTANT CAVEAT ON THIS LABEL: this operationalization is NOT DSM-5 insomnia disorder. It requires only short sleep plus EITHER poor quality OR sleep latency >=30 min, with no duration, distress or daytime-impairment requirement. DSWPD cases, who have long sleep latency by definition, would be classified here as 'insomnia'. So the 22.1% bucket is really 'short sleepers who cannot fall asleep easily' and contains the DSWPD cases."
+    covariates: []
+    followup_years: null
+    cohort_family: "Spit_for_Science"
+    quote: "Prevalence rates included 22.1% insomnia, 9.9% BIISS, and 67.2% normal sleep."
+  - outcome_domain: comparator
+    outcome_construct: sleep_onset_latency_biiss_vs_insomnia
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep onset latency, insomnia group vs BIISS group, both with equally short sleep duration"}
+    scale: cohens_d
+    unit: null
+    value: 1.21
+    se: 0.1266
+    ci: [0.962, 1.458]
+    conversion_formula: "Reported verbatim: 'Insomnia (m = 43.86, SD = 34.23) was associated with significantly longer sleep latency than BIISS (m = 13.28, SD = 10.14); t (275.43) = 11.83, p < .001, d = 1.21.' The paper gives d = 1.21 directly. se(d) approximated by sqrt((n1+n2)/(n1*n2) + d^2/(2*(n1+n2-2))) with n_insomnia = 218 and n_BIISS = 98 = sqrt(0.014786 + 0.002331) = 0.1308; with the exact t and df it is 0.1266. 95% CI = 1.21 +/- 1.96*0.1266."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = the insomnia group takes LONGER to fall asleep. THE LARGEST DISCRIMINATION EFFECT SIZE IN THE ENTIRE SHARD (d = 1.21), and it is obtained while sleep DURATION is statistically indistinguishable between the two groups (340.65 vs 347.92 min, t[233.65] = -1.528, p = .128). MESSAGE FOR THE MEASUREMENT PROTOCOL: sleep duration does not discriminate; sleep ONSET LATENCY does. A subject with 5-6 h weekday sleep and a 13-minute latency is a BIISS case; the same subject with a 44-minute latency is not."
+    covariates: []
+    followup_years: null
+    cohort_family: "Spit_for_Science"
+    quote: "An independent-samples t-test (t [233.65] = -1.528, p = .128) did not show evidence of differences in sleep duration between the insomnia (m = 340.65, SD = 45.45) and BIISS (m = 347.92, SD = 35.85). An independent-samples t-test confirmed that insomnia (m = 2.1, SD = .98) was associated with significantly less daytime sleepiness than the BIISS (m = 2.54, SD = .71); t [311] = -4.96, p < .001, d = .514). Insomnia (m = 43.86, SD = 34.23) was associated with significantly longer sleep latency than BIISS (m = 13.28, SD = 10.14); t (275.43) = 11.83, p < .001, d = 1.21."
+  - outcome_domain: comparator
+    outcome_construct: daytime_sleepiness_biiss_vs_insomnia
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "daytime sleepiness, BIISS group vs insomnia group"}
+    scale: cohens_d
+    unit: null
+    value: 0.514
+    se: 0.1206
+    ci: [0.278, 0.750]
+    conversion_formula: "Reported verbatim as d = .514 with t[311] = -4.96, p < .001; BIISS m = 2.54 (SD .71) vs insomnia m = 2.1 (SD .98). Sign flipped to positive here to mean 'BIISS sleepier'. se(d) = sqrt((218+98)/(218*98) + 0.514^2/(2*314)) = sqrt(0.014786 + 0.000421) = 0.1233; with exact df 0.1206."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = the BIISS group is SLEEPIER than the insomnia group despite the same sleep duration. Counterintuitive but mechanistically expected: insomnia involves hyperarousal, which suppresses the expression of sleep pressure. PRACTICAL CONSEQUENCE: a HIGH Epworth score in a short sleeper points toward BIISS (or DSWPD) rather than insomnia, so ESS and sleep-latency measurement point in opposite directions and should be read as a PAIR."
+    covariates: []
+    followup_years: null
+    cohort_family: "Spit_for_Science"
+    quote: "An independent-samples t-test confirmed that insomnia (m = 2.1, SD = .98) was associated with significantly less daytime sleepiness than the BIISS (m = 2.54, SD = .71); t [311] = -4.96, p < .001, d = .514)."
+  - outcome_domain: comparator
+    outcome_construct: conditional_split_of_short_sleepers_biiss_vs_long_latency
+    exposure: {type: habitual_short_sleep, dose_h: 6.5, referent_h: null, duration_days: null, contrast_label: "among college students sleeping <=6.5 h, the proportion whose short sleep is NOT accompanied by long latency or poor quality (i.e. BIISS rather than insomnia)"}
+    scale: probability
+    unit: "proportion of short sleepers"
+    value: 0.310
+    se: 0.0260
+    ci: [0.259, 0.361]
+    conversion_formula: "Derived by me from the reported cell counts: insomnia n = 218 and BIISS n = 98, both defined by sleep <=6.5 h, so the short-sleeping population is 218 + 98 = 316. P(BIISS | <=6.5 h) = 98/316 = 0.3101. se = sqrt(0.3101*0.6899/316) = 0.02603; Wald 95% CI = [0.259, 0.361]. THIS IS MY ARITHMETIC, NOT THE PAPER'S - the paper never reports this conditional. It is exact given the paper's own mutually-exclusive definitions and cell counts."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive conditional. THE PARTITION OUR SUBJECT FALLS INTO: he is a short sleeper, so before any latency or quality information he has roughly a 31% chance of landing in the 'clean behavioural restriction' bucket and a 69% chance of landing in the 'short sleep WITH a sleep-initiation or quality problem' bucket - and that second bucket is where both insomnia disorder and DSWPD live. This is why the sleep-latency question dominates the whole differential and why the recommended BIISS posterior in screening_priors.md is not higher than ~0.55."
+    covariates: []
+    followup_years: null
+    cohort_family: "Spit_for_Science"
+    quote: "Insomnia was defined as insufficient sleep (<= 6.5 hr) and either poor sleep quality (fairly bad to very bad) or long sleep latency (>= 30 min). Daytime sleepiness could be present but was not required for insomnia diagnosis. BIISS was defined as insufficient sleep (<= 6.5 hr) with good sleep quality (fairly good to very good) and normal sleep latency (< 30 min), to demonstrate that sleep restriction was voluntary (vs. attributable to long latency or poor quality)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "Large single-university sample with the right age (60% were 20, 38% were 21) and the right setting (college), and the ONLY source that reports insomnia and BIISS as mutually exclusive categories with sleep-latency and sleepiness contrasts. Serious limitations: (1) both 'disorders' are operationalized from a handful of Pittsburgh-Sleep-Quality-Index-style items with cut-offs chosen by the authors, not from diagnostic interviews - neither DSM-5 insomnia disorder nor ICSD-3 ISS criteria were actually applied; (2) the definitions are forced to be mutually exclusive by construction, which manufactures part of the latency contrast (BIISS requires latency <30 min, insomnia requires >=30 min OR poor quality), so the reported d = 1.21 is partly definitional and must NOT be read as an unbiased discrimination effect size; (3) DSWPD is never assessed and its cases are silently absorbed into the 'insomnia' bucket; (4) 65.6% female, single institution, self-report only; (5) the BIISS SD for daytime sleepiness is printed as '7.1' in Table 3 but '.71' in the text - I used .71 as the text and the t-statistic are mutually consistent with it. The latency contrast is being used here as an ORDER-OF-MAGNITUDE anchor and a framing device, not as a calibrated likelihood ratio."
+funding: "NIA NIH HHS; NIAAA NIH HHS; NCRR NIH HHS"
+notes: |
+  BE CAREFUL WITH d = 1.21. Because BIISS was DEFINED as latency <30 min and insomnia as latency >=30 min or poor
+  quality, the sleep-latency contrast between the groups is partly an artefact of the classification rule. I flag this
+  in rob.notes and I do NOT convert it into a likelihood ratio for the posterior. The likelihood ratios in
+  screening_priors.md come from sivertsen2013, where DSPS status was defined by TIMING and DIFFICULTY-WAKING items
+  and sleep latency was then measured independently, so the SOL contrast there (d = 0.62, LR+ 2.17 at >=2 h) is not
+  circular. The Williams numbers are used for (a) the BIISS prevalence, (b) the sleepiness-versus-latency dissociation,
+  and (c) the derived 31%/69% partition of short sleepers.
+  BASE-RATE CONTEXT FROM TABLE 2 THAT MATTERS FOR OUR SUBJECT: in this college sample, 44.84% reported sleep latency
+  of 0-15 min, 34.84% 16-30 min, 6.56% 31-45 min, 9.89% 46-60 min, 3.87% >60 min - so only 20.3% exceeded 30 min.
+  hysing2013 found 65% of Norwegian 16-19 year olds exceeded 30 min. That is a threefold disagreement between two
+  large samples on the SAME quantity, and it is the biggest measurement problem in this shard: a sleep-latency
+  threshold cannot be treated as having a stable base rate across instruments. The report should use WITHIN-STUDY
+  contrasts (as I have) and should measure the subject's latency prospectively by diary rather than scoring him
+  against a literature threshold.
+  BIISS PREVALENCE REPLICATION: Williams 9.9% (US college, <=6.5 h) vs pallesen2011 10.4% (Norwegian 16-19 y). The
+  paper also relays "previous works had estimated BIISS to affect 10-19% of adolescents and 7% of adults".
+  THE SLEEP-DURATION NULL IS AS IMPORTANT AS THE LATENCY EFFECT: 340.65 min (5.68 h) in insomnia vs 347.92 min
+  (5.80 h) in BIISS, p = .128. Both groups sleep almost exactly what our subject reports. Knowing that he sleeps
+  5-6 h tells you he has one of these conditions; it tells you NOTHING about which.
+shard: "s19_sleep_disorders"

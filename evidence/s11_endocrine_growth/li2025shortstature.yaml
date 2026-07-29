@@ -1,0 +1,71 @@
+study_id: li2025shortstature
+citation: 'Explainable predictive models of short stature and exploration of related environmental growth factors: a case-control
+  study. BMC Endocr Disord. 2025;25(1):125.'
+doi: 10.1186/s12902-025-01936-x
+pmid: '40355909'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: 'Explainable predictive models of short stature and exploration of related environmental growth factors:
+    a case-control study'
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 300
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: CN
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: anthropometric
+  outcome_construct: odds_of_normal_variant_short_stature_with_sufficient_night_sleep
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: sufficient nighttime sleep duration (parent-reported) vs not; 100 clinic cases of normal-variant short
+      stature vs 200 age-matched controls
+  scale: log_or
+  unit: log odds of normal-variant short stature
+  value: -0.734
+  se: 0.31391
+  ci:
+  - -1.3471
+  - -0.1165
+  conversion_formula: log_or = ln(0.48) = -0.7340; se = (ln(0.89) - ln(0.26))/3.92 = (-0.11653 - (-1.34707))/3.92 = 0.31391;
+    ci = ln of the reported bounds [0.26, 0.89].
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: 'Negative = sufficient sleep is PROTECTIVE against being in the short-stature category (i.e. short sleep
+    is associated with short stature; harm). BUT: paediatric endocrine clinic cases, parental recall of sleep, 33 candidate
+    variables screened, and parental height dominated the model (maternal OR 0.79 and paternal OR 0.83 per cm). Children
+    in the active growing phase, not 16-19 y.'
+  covariates:
+  - child weight
+  - maternal height
+  - paternal height
+  - outdoor activity time
+  - caregiver education
+  followup_years: null
+  cohort_family: Nanjing_Childrens_Hospital
+  quote: 'In the multivariate logistic regression analysis, children''s weight (OR = 0.92, 95% CI: 0.86, 0.99), maternal
+    height (OR = 0.79, 95% CI: 0.72, 0.87), paternal height (OR = 0.83, 95% CI: 0.75, 0.91), sufficient nighttime sleep
+    duration (OR = 0.48, 95% CI: 0.26, 0.89), and outdoor activity time exceeding three hours (OR = 0.02, 95% CI: 0.00,
+    0.66) were identified as protective factors for normal-variant short stature.'
+rob:
+  tool: Newcastle-Ottawa
+  judgement: critical
+  notes: clinic-based case-control with parent-reported exposure collected AFTER the outcome was known (recall bias runs
+    directly toward this finding); 33 variables screened with 100 cases; the outdoor-activity OR of 0.02 is not credible
+    and signals severe model instability
+funding: null
+notes: Author list not recoverable from the PubMed record retrieved in this session, so the citation is title-first; DOI
+  and PMID both verified. This is the only study found that links sleep DURATION specifically to a stature outcome, and
+  its risk of bias is critical. It concerns children still growing, not 16-19 year olds.
+shard: s11_endocrine_growth

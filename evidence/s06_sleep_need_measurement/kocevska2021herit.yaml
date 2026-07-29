@@ -1,0 +1,107 @@
+study_id: kocevska2021herit
+citation: "Kocevska D, Barclay NL, Bramer WM, Gehrman PR, Van Someren EJW. Heritability of sleep duration and quality: A systematic review and meta-analysis. Sleep Medicine Reviews. 2021;59:101448."
+doi: "10.1016/j.smrv.2021.101448"
+pmid: "33636423"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Heritability of sleep duration and quality: A systematic review and meta-analysis"
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 45328
+n_studies_pooled: 19
+population:
+  age_mean: null
+  age_range: [0.5, 88]
+  pct_female: null
+  country: "multiple"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: heritability_sleep_duration_overall
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "meta-analysed twin heritability of sleep duration, all ages"}
+    scale: probability
+    unit: "proportion of between-person variance in sleep duration attributable to genes"
+    value: 0.46
+    se: null
+    ci: null
+    conversion_formula: "verbatim: 'we showed that 46% of the variability in sleep duration and 44% of the variability in sleep quality is genetically determined'. Abstract gives no CI, so se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "heritability of OBSERVED DURATION, not of sleep NEED. Because observed duration = need + volitional restriction + measurement error, and restriction is itself partly heritable via chronotype and conscientiousness, this is an UPPER BOUND on the genetic component of need."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      Collectively, we showed that 46% of the variability in sleep duration and 44% of the variability in sleep
+      quality is genetically determined.
+  - outcome_domain: sleep_need
+    outcome_construct: heritability_sleep_duration_adolescence
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "meta-analysed twin heritability of sleep duration, adolescence"}
+    scale: probability
+    unit: "proportion of between-person variance in sleep duration attributable to genes, in adolescents"
+    value: 0.69
+    se: null
+    ci: null
+    conversion_formula: "verbatim: 'Meta-analyzed heritability estimates for sleep duration, however, varied substantially with age (17% infancy, 20-52% childhood, 69% adolescence and 42-45% adulthood)'. No CI in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "heritability peaks in ADOLESCENCE at 69%, the highest of any life stage and precisely our subject's age band. Consistent with adolescence being when genetically-driven chronotype delay collides with fixed school start times, so it may index heritable TIMING rather than heritable need."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      Meta-analyzed heritability estimates for sleep duration, however, varied substantially with age (17%
+      infancy, 20-52% childhood, 69% adolescence and 42-45% adulthood) and reporter (8% parent-report, 38-52%
+      self-report).
+  - outcome_domain: exposure_measurement
+    outcome_construct: heritability_by_reporter_method
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "heritability of sleep duration by measurement method: parent-report vs self-report"}
+    scale: probability
+    unit: "proportion of variance attributable to genes, by reporter"
+    value: 0.08
+    se: null
+    ci: [0.08, 0.52]
+    conversion_formula: "verbatim: 'and reporter (8% parent-report, 38-52% self-report)'. value = the parent-report estimate (0.08); ci field holds the span across reporters (0.08 to 0.52)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "MEASUREMENT WARNING, not a biology finding: the same trait yields h2 = 8% by parent-report and 38-52% by self-report. A 6-fold swing driven purely by who fills in the form. This quantifies how much of the 'genetics of sleep duration' literature is really the genetics of reporting."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: |
+      Meta-analyzed heritability estimates for sleep duration, however, varied substantially with age (17%
+      infancy, 20-52% childhood, 69% adolescence and 42-45% adulthood) and reporter (8% parent-report, 38-52%
+      self-report).
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "well-conducted systematic review (5 databases, dual independent screening of 5,644 abstracts and 160 full texts, 19 independent samples, 45,328 twins). Main limitation for our purposes is the construct: it meta-analyses heritability of MEASURED/REPORTED duration, and the authors themselves note that 'Heritability estimates for actigraphic and Polysomnography (PSG)-estimated sleep were based on few small samples, warranting more research'. Abstract-only access."
+funding: "not stated in retrieved abstract"
+notes: |
+  Verbatim (abstract, retrieved from PubMed): "We conducted a systematic literature search in five online databases on January
+  24th 2020. Two authors independently screened 5644 abstracts, and 160 complete articles for the inclusion criteria of twin
+  studies from the general population reporting heritability statistics on sleep duration and/or quality, and written in English.
+  We ultimately included 23 papers (19 independent samples: 45,328 twins between 6 mo and 88 y) for sleep duration, and 13
+  papers (10 independent samples: 39,020 twins between 16 and 95 y) for sleep quality. Collectively, we showed that 46% of the
+  variability in sleep duration and 44% of the variability in sleep quality is genetically determined. The remaining variation
+  in the sleep characteristics can mostly be attributed to the unique environment the twins experience, although the shared
+  environment seemed to play a role for the variability of childhood sleep duration. Meta-analyzed heritability estimates for
+  sleep duration, however, varied substantially with age (17% infancy, 20-52% childhood, 69% adolescence and 42-45% adulthood)
+  and reporter (8% parent-report, 38-52% self-report). Heritability estimates for actigraphic and Polysomnography
+  (PSG)-estimated sleep were based on few small samples, warranting more research."
+  HOW TO USE THIS, AND HOW NOT TO. A tempting but WRONG inference is: "h2 = 46-69%, and the population SD of sleep duration is
+  ~1.1 h, therefore the genetic (i.e. 'true need') SD is sqrt(0.46)*1.1 = 0.75 h." That arithmetic is superficially close to
+  kitamura2016's directly measured 0.70 h, which makes it seductive, but it is not a valid derivation:
+    - heritable variance in observed duration includes heritable variance in CHRONOTYPE, school/work schedule sorting, and
+      reporting style, none of which is sleep need;
+    - klerman2005 shows most of the observed duration spread is self-imposed restriction, and restriction is not need;
+    - the 6-fold reporter effect (8% vs 38-52%) proves a large slice of the estimated h2 is measurement artefact.
+  So I record the heritability numbers as CONTEXT that a genetic component of sleep need exists, and I do NOT use them to set the
+  SD of need. The SD comes from kitamura2016 alone. This is deliberate and is flagged as the shard's central weakness in
+  station_report.md.
+shard: "s06_sleep_need_measurement"

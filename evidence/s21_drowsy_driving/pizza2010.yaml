@@ -1,0 +1,155 @@
+study_id: pizza2010
+citation: "Pizza F, Contardi S, Antognini AB, Zagoraiou M, Borrotti M, Mostacci B, Mondini S, Cirignotta F. Sleep quality and motor vehicle crashes in adolescents. J Clin Sleep Med. 2010;6(1):41-45."
+doi: "10.5664/jcsm.27708"
+pmid: "20191936"
+url: "https://doi.org/10.5664/jcsm.27708"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Sleep quality and motor vehicle crashes in adolescents."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 339
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [16, 19]
+  pct_female: null
+  country: "Italy"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: mortality
+    outcome_construct: self_reported_ever_car_crash
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "SELF-REPORTED 'BAD SLEEP' (subjective sleep quality) vs not; outcome = ever had at least one car crash; multivariate logistic model"}
+    scale: log_or
+    unit: null
+    value: 0.641854
+    se: 0.323140
+    ci: [0.008499, 1.275209]
+    conversion_formula: >
+      Reported as "bad sleep (p = 0.047; odds ratio = 1.9)". No CI published.
+      log_or = ln(1.9) = 0.641854.
+      SE backed out from the p-value: z = |Phi^-1(0.047/2)| = 1.9863; se = 0.641854/1.9863 = 0.323140.
+      ci = 0.641854 +/- 1.96 * 0.323140 = [0.008499, 1.275209], i.e. OR 1.01 to 3.58.
+      This is an INFERRED SE.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = HARM. OR 1.9 for poor subjective sleep quality. NOTE THE EXPOSURE IS SLEEP QUALITY, NOT
+      SLEEP DURATION — this paper does not report a duration-based crash OR, which is why it cannot serve
+      as the adolescent dose-response estimate this shard needs.
+    covariates: ["male sex", "tobacco use", "sleepiness while driving", "and the other variables entered into the multivariate logistic model (driving frequency, night driving, stimulant/caffeine use, drug use)"]
+    followup_years: null
+    cohort_family: "Bologna_HS_2010"
+    quote: >
+      The logistic procedure established a significant predictive role of male sex (p < 0.0001; odds ratio = 3.3),
+      tobacco use (p < 0.0001; odds ratio = 3.2), sleepiness while driving (p = 0.010; odds ratio = 2.1), and bad
+      sleep (p = 0.047; odds ratio = 1.9) for the crash risk.
+  - outcome_domain: mortality
+    outcome_construct: self_reported_ever_car_crash
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "SLEEPINESS WHILE DRIVING (self-reported) vs not; outcome = ever had at least one car crash"}
+    scale: log_or
+    unit: null
+    value: 0.741937
+    se: 0.288038
+    ci: [0.177382, 1.306492]
+    conversion_formula: >
+      Reported as "sleepiness while driving (p = 0.010; odds ratio = 2.1)".
+      log_or = ln(2.1) = 0.741937; z = |Phi^-1(0.010/2)| = 2.5758; se = 0.741937/2.5758 = 0.288038.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = HARM. OR 2.1. USEFUL CONVERGENCE: this is an adolescent-only estimate for at-the-wheel
+      sleepiness and it lands at 2.1, close to bioulac2017's all-ages pooled 2.51. So the adult pooled
+      sleepiness OR does appear to transport to adolescents, at least in this one small sample.
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: "Bologna_HS_2010"
+    quote: >
+      The logistic procedure established a significant predictive role of male sex (p < 0.0001; odds ratio = 3.3),
+      tobacco use (p < 0.0001; odds ratio = 3.2), sleepiness while driving (p = 0.010; odds ratio = 2.1), and bad
+      sleep (p = 0.047; odds ratio = 1.9) for the crash risk.
+  - outcome_domain: mortality
+    outcome_construct: self_reported_ever_car_crash
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "CONFOUNDER BENCHMARK: current tobacco use vs not, in the SAME multivariate model as the sleep variables"}
+    scale: log_or
+    unit: null
+    value: 1.163151
+    se: 0.298965
+    ci: [0.577179, 1.749122]
+    conversion_formula: >
+      Reported as "tobacco use (p < 0.0001; odds ratio = 3.2)". log_or = ln(3.2) = 1.163151.
+      z taken as |Phi^-1(0.0001/2)| = 3.8906 (a CONSERVATIVE reading of "p < 0.0001": using the boundary
+      value gives the LARGEST se consistent with the statement); se = 1.163151/3.8906 = 0.298965.
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      POSITIVE = HARM. RECORDED DELIBERATELY AS A CONFOUNDING YARDSTICK, NOT AS A SLEEP EFFECT. In this
+      adolescent sample the ORs for SMOKING (3.2) and MALE SEX (3.3) are each larger than the ORs for bad
+      sleep (1.9) or at-the-wheel sleepiness (2.1). The crash-prone adolescent phenotype is a bundle:
+      male, smokes, drives at night, uses stimulants, sleeps badly. That bundle is exactly what
+      wheaton2016 documents at national scale. Sleep is one strand of it, and the strand is not the
+      thickest.
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: "Bologna_HS_2010"
+    quote: >
+      The logistic procedure established a significant predictive role of male sex (p < 0.0001; odds ratio = 3.3),
+      tobacco use (p < 0.0001; odds ratio = 3.2), sleepiness while driving (p = 0.010; odds ratio = 2.1), and bad
+      sleep (p = 0.047; odds ratio = 1.9) for the crash risk.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: >
+    (1) CROSS-SECTIONAL SELF-ADMINISTERED QUESTIONNAIRE, 339 licensed students in 7 high schools in one
+        Italian city, 80 self-reported crashes. Tiny.
+    (2) OUTCOME IS "EVER CRASHED", SELF-REPORTED, WITH NO TIME WINDOW AND NO VERIFICATION. Since exposure
+        is measured NOW and the crash may have been years ago, the temporal ordering is not established
+        and reverse causation is fully open: a crash can cause poor sleep.
+    (3) EXPOSURE IS SLEEP QUALITY AND SUBJECTIVE SLEEPINESS, NOT SLEEP DURATION. The paper reports no
+        sleep-duration OR, so it cannot inform the dose-response question directly.
+    (4) NO CIs PUBLISHED — every SE in this record is inferred from a p-value.
+    (5) ITALIAN, 2010. Licensing age, driving exposure (many of these adolescents will be riding
+        two-wheelers), road environment and crash reporting all differ from the US.
+    (6) The comparison of crash vs no-crash groups shows the two groups differ on essentially EVERY
+        behaviour measured (driving frequency 79% vs 62%, night driving 25% vs 9%, drowsy driving 56% vs
+        35%, bad sleep 29% vs 16%, caffeine 32% vs 19%, tobacco 54% vs 27%, drugs 21% vs 7%). With that
+        much co-variation and 339 subjects, the multivariate model cannot credibly separate the strands.
+funding: "Not stated in the retrievable abstract."
+notes: >
+  REQUIRED EXTRACTION #2 ("any study of sleep duration and crash risk in high-school or college
+  students"). This is the closest thing that exists to a high-school-student crash study with a
+  multivariate model, and I am recording honestly that its exposure is sleep QUALITY, not DURATION.
+  .
+  VERBATIM QUOTE (abstract, PMID 20191936): "Nineteen percent of the sample reported bad sleep, 64%
+  complained of daytime sleepiness, and 40% reported sleepiness while driving. Eighty students (24%), 76%
+  of which were males, reported that they had already crashed at least once, and 15% considered
+  sleepiness to have been the main cause of their crash. As compared with adolescents who had not had a
+  crash, those who had at least 1 previous crash reported that they more frequently used to drive (79% vs
+  62%), drove at night (25% vs 9%), drove while sleepy (56% vs 35%), had bad sleep (29% vs 16%), and used
+  stimulants such as caffeinated soft drinks (32% vs 19%), tobacco (54% vs 27%), and drugs (21% vs 7%).
+  The logistic procedure established a significant predictive role of male sex (p < 0.0001; odds ratio =
+  3.3), tobacco use (p < 0.0001; odds ratio = 3.2), sleepiness while driving (p = 0.010; odds ratio =
+  2.1), and bad sleep (p = 0.047; odds ratio = 1.9) for the crash risk."
+  .
+  ONE NUMBER FROM THIS PAPER THAT IS DIRECTLY USEFUL FOR THE ATTRIBUTION STEP: "15% considered sleepiness
+  to have been the main cause of their crash", among crash-involved adolescents. That is a
+  self-attribution, not an epidemiological estimate, and adolescents may over- or under-attribute. But it
+  is strikingly close to Tefft's imputation-based 16.5% of FATAL crashes (tefft2012) and to the 17.6%
+  figure in tefft2024_aaa, from a completely different method in a completely different country. Three
+  independent approaches landing in the 15-18% band is the strongest single argument that the true drowsy
+  share of serious crashes is in the mid-teens percent, not the 1-2% the police-report statistics show.
+  .
+  age_range [16, 19] is inferred by me from "high-school ... students who had a driver's license" in
+  Italy, where the car licensing age is 18 and moped/scooter licensing starts at 14; the abstract does not
+  print an age range or mean, and I have not invented one for age_mean.
+  .
+  ACCESS: abstract_only. Every number quoted verbatim from PubMed. I did not retrieve the tables, so I
+  cannot report the covariate list exactly and have flagged that in `covariates`.
+shard: "s21_drowsy_driving"

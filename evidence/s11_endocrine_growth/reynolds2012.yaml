@@ -1,0 +1,106 @@
+study_id: reynolds2012
+citation: Reynolds AC, Dorrian J, Liu PY, Van Dongen HP, Wittert GA, Harmer LJ, Banks S. Impact of five nights of sleep
+  restriction on glucose metabolism, leptin and testosterone in young adult men. PLoS One. 2012;7(7):e41218.
+doi: 10.1371/journal.pone.0041218
+pmid: '22844441'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: Impact of Five Nights of Sleep Restriction on Glucose Metabolism, Leptin and Testosterone in Young Adult
+    Men
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 14
+n_studies_pooled: null
+population:
+  age_mean: 27.4
+  age_range: null
+  pct_female: 0.0
+  country: AU
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: endocrine
+  outcome_construct: total_testosterone_null_result
+  exposure:
+    type: chronic_restriction
+    dose_h: 4
+    referent_h: 10
+    duration_days: 5
+    contrast_label: 5 nights 4 h TIB (04:00-08:00) vs 2 baseline nights 10 h TIB (22:00-08:00)
+  scale: pct_change
+  unit: '% change in total testosterone (null)'
+  value: 0.0
+  se: null
+  ci: null
+  conversion_formula: No point estimate reported; only F(1,168)=2.8, p=0.089 (non-significant). value=0 encodes the null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: value=0 encodes a NON-REPLICATION of the Leproult 2011 testosterone effect at a MORE severe dose (4 h
+    vs 5 h TIB). Direction of the trend is not stated in the abstract.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Also, cortisol (F(1,168) = 10.2, p = 0.002) and leptin (F(1,168) = 10.7, p = 0.001) increased, sex hormone binding
+    globulin (F(1,167) = 12.1, p<0.001) fell and there were no significant changes in ACTH (F(1,168) = 0.3, p = 0.59) or
+    total testosterone (F(1,168) = 2.8, p = 0.089).
+- outcome_domain: endocrine
+  outcome_construct: mean_daytime_cortisol
+  exposure:
+    type: chronic_restriction
+    dose_h: 4
+    referent_h: 10
+    duration_days: 5
+    contrast_label: 5th night of 4 h TIB vs baseline 10 h TIB night, 09:00-20:00 sampling
+  scale: pct_change
+  unit: '% change in mean cortisol'
+  value: 15.47
+  se: null
+  ci: null
+  conversion_formula: value = 100*(337.4-292.2)/292.2 = 15.47%. SEs given are for each condition mean (16.9 and 18.1 nmol/L),
+    not for the paired difference; the repeated-measures F was on 168 observations from 14 subjects, so a valid paired SE
+    is not derivable. se=null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Positive = HIGHER cortisol under restriction (harm). p=0.002.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: 'Cortisol was 15.5% higher after sleep restriction (mean +/- SE: 337.4+/-16.9 nmol/L) than at baseline (292.2+/-18.1),
+    and this increase was statistically significant ( p = 0.002).'
+- outcome_domain: endocrine
+  outcome_construct: evening_cortisol_1800h
+  exposure:
+    type: chronic_restriction
+    dose_h: 4
+    referent_h: 10
+    duration_days: 5
+    contrast_label: 5th night of 4 h TIB vs baseline 10 h TIB night, 18:00 timepoint
+  scale: pct_change
+  unit: '% change in 18:00 cortisol'
+  value: 67.32
+  se: null
+  ci: null
+  conversion_formula: value = 100*(298.0-178.1)/178.1 = 67.32%. F(1,97)=13.3, p<0.001. Reported SEMs are per-condition (41.4
+    and 17.9 nmol/L), not paired; se=null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Positive = higher evening cortisol under restriction (harm). Largest single-timepoint effect; consistent
+    with guyon2014's +30% evening total cortisol.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: 'Planned contrasts showed that cortisol levels were significantly higher at 16:00 on SR5 (mean +/- SEM; 247.1+/-21.9)
+    than B1 (179.0+/-16.6; F 1,97 = 5.5, p = 0.02) and at 18:00 (SR5: 298.0+/-41.4, B1: 178.1+/-17.9; F 1,97 = 13.3, p <0.001).'
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: n=14, no randomisation of order (baseline always first), 10 h TIB comparator, food intake controlled at ~2000 kcal/d
+    which is a strength
+funding: Non-US government
+notes: 'Key non-replication: at 4 h TIB for 5 nights - a HARSHER dose than Leproult 2011''s 5 h for 8 nights - total testosterone
+  did not change significantly (p=0.089). SHBG fell (p<0.001), which would tend to RAISE free testosterone. The cortisol
+  signal replicated cleanly.'
+shard: s11_endocrine_growth

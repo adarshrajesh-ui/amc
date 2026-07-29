@@ -1,0 +1,65 @@
+study_id: gunawan2024
+citation: 'Gunawan SP, Huang SY, Wang CC, Huynh LBP, Nguyen NN, Hsu SY, Chen YC. Sleep deprivation alters pubertal timing
+  in humans and rats: the role of the gut microbiome. Sleep. 2024;47(2):zsad308.'
+doi: 10.1093/sleep/zsad308
+pmid: '38065690'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: 'Sleep deprivation alters pubertal timing in humans and rats: the role of the gut microbiome'
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 1418
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 67.6
+  country: TW
+  adolescent_match: mixed
+effects:
+- outcome_domain: endocrine
+  outcome_construct: odds_of_early_sexual_maturation_with_insufficient_sleep_girls
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: self-reported insufficient sleep (PSQI) vs sufficient, girls, Taiwan Pubertal Longitudinal Study
+  scale: log_or
+  unit: log odds of early sexual maturation
+  value: 0.3646
+  se: 0.1404
+  ci:
+  - 0.0862
+  - 0.6366
+  conversion_formula: log_or = ln(1.44) = 0.3646; se = (ln(1.89) - ln(1.09))/3.92 = (0.6366 - 0.0862)/3.92 = 0.1404; ci
+    = ln of the reported bounds [1.09, 1.89].
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: 'Positive = EARLIER puberty with insufficient sleep, mediated by obesity, and significant in GIRLS ONLY
+    (no significant boy estimate was reported despite 459 boys in the cohort). The paired rat experiment found the OPPOSITE
+    direction - delayed vaginal opening and preputial separation - so the literature does not even agree on sign. Irrelevant
+    to the subject in any case: he was 16 and post-pubertal at exposure onset.'
+  covariates:
+  - obesity (tested as mediator)
+  followup_years: null
+  cohort_family: Taiwan_Pubertal_Longitudinal_Study
+  quote: 'In the human cohort, insufficient sleep increased the risk of early sexual maturation, particularly in girls (OR,
+    1.44; 95% CI: 1.09 to 1.89; p-value < 0.01). Insufficient sleep also indirectly affected early sexual maturation in
+    girls, with obesity serving as the mediator. ... The sleep-deprived juvenile rats in the sleep-deprived-female (SDF)
+    and sleep-deprived-male (SDM) groups experienced delayed VO (mean VO days: 33 days in control; 35 days in SDF; p-value
+    < 0.05) and PS (mean PS days: 42 days in control; 45 days in SDM; p-value < 0.05), respectively.'
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: self-reported sleep by PSQI; effect significant in girls only; human and animal arms give opposite directions;
+    pubertal onset is not an outcome that can be affected by an exposure beginning at age 16
+funding: null
+notes: The best available human evidence on sleep and pubertal timing. It concerns pubertal ONSET in pre-pubertal children
+  and is mediated by adiposity. For a 16-year-old male who has already passed peak height velocity by ~2.5 years, pubertal
+  timing is not a live outcome.
+shard: s11_endocrine_growth

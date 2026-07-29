@@ -1,0 +1,82 @@
+study_id: leproult1997
+citation: Leproult R, Copinschi G, Buxton O, Van Cauter E. Sleep loss results in an elevation of cortisol levels the next
+  evening. Sleep. 1997;20(10):865-870.
+doi: 10.1093/sleep/20.10.865
+pmid: '9415946'
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: Sleep Loss Results in an Elevation of Cortisol Levels the Next Evening
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: US/BE
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: endocrine
+  outcome_construct: evening_cortisol_1800_2300_after_one_night_partial_deprivation
+  exposure:
+    type: chronic_restriction
+    dose_h: 4
+    referent_h: 8
+    duration_days: 1
+    contrast_label: 1 night partial sleep deprivation (04:00-08:00) vs normal schedule (23:00-07:00); 18:00-23:00 cortisol
+      on day 2 vs day 1
+  scale: pct_change
+  unit: '% change in 18:00-23:00 plasma cortisol'
+  value: 37.0
+  se: null
+  ci: null
+  conversion_formula: Reported as a 37% increase with p=0.03, but n is not stated in the retrievable abstract, so no df
+    is available and no SE can be derived. se=null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Positive = higher evening cortisol the day AFTER one restricted night (harm). Note the comparator here
+    is a normal 8 h schedule, not 12 h TIB - so this 37% is a cleaner estimate of the real-world contrast than spiegel1999's
+    4h-vs-12h design. But it is a single acute night.
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: After normal sleep, plasma cortisol levels over the 1800-2300-hour period were similar on days 1 and 2. After partial
+    and total sleep deprivation, plasma cortisol levels over the 1800-2300-hour period were higher on day 2 than on day
+    1 (37 and 45% increases, p = 0.03 and 0.003, respectively), and the onset of the quiescent period of cortisol secretion
+    was delayed by at least 1 hour.
+- outcome_domain: endocrine
+  outcome_construct: evening_cortisol_1800_2300_after_total_sleep_deprivation
+  exposure:
+    type: total_deprivation
+    dose_h: 0
+    referent_h: 8
+    duration_days: 1
+    contrast_label: 1 night total sleep deprivation vs normal schedule; 18:00-23:00 cortisol day 2 vs day 1
+  scale: pct_change
+  unit: '% change in 18:00-23:00 plasma cortisol'
+  value: 45.0
+  se: null
+  ci: null
+  conversion_formula: Reported as a 45% increase with p=0.003; n not stated in the abstract, so se=null.
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: Positive = higher evening cortisol (harm). Total deprivation gives 45% vs 37% for partial - a shallow
+    dose gradient at the extreme end.
+  covariates: []
+  followup_years: null
+  cohort_family: UChicago_VanCauter_sleepdebt
+  quote: Alterations in cortisol levels could only be demonstrated in the evening following the night of sleep deprivation.
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: n not reported in the retrievable abstract and the full text was not obtained; within-subject day-2-vs-day-1 comparison
+funding: Non-US government / US government / US PHS
+notes: 'Important framing from the authors: ''Alterations in cortisol levels could only be demonstrated in the evening following
+  the night of sleep deprivation.'' i.e. the effect is a delayed evening shutdown, not a generalised hypercortisolaemia.
+  n=null because it was not recoverable; downstream models should inflate uncertainty accordingly.'
+shard: s11_endocrine_growth

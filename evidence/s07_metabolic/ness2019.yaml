@@ -1,0 +1,110 @@
+study_id: ness2019
+citation: "Ness KM, Strayer SM, Nahmod NG, Chang AM, Buxton OM, Shearer GC. Two nights of recovery sleep restores the dynamic lipemic response, but not the reduction of insulin sensitivity, induced by five nights of sleep restriction. Am J Physiol Regul Integr Comp Physiol. 2019 Jun 1;316(6):R697-R703."
+doi: "10.1152/ajpregu.00336.2018"
+pmid: "30892916"
+url: "https://pubmed.ncbi.nlm.nih.gov/30892916/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Two nights of recovery sleep restores the dynamic lipemic response, but not the reduction of insulin sensitivity, induced by five nights of sleep restriction."
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 15
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: insulin_sensitivity_ivgtt_during_restriction
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 10, duration_days: 5, contrast_label: "5 h TIB x 5 nights vs 10 h TIB x 3 baseline nights"}
+    scale: cohens_d
+    unit: "dz (within-subject standardised paired difference)"
+    value: -0.9779
+    se: 0.3139
+    ci: [-1.593, -0.363]
+    conversion_formula: "Only 'insulin sensitivity P = 0.002' is published, with n=15 paired. Backed out per instructions: df=14, t=t.isf(0.002/2,14)=3.7874; dz=t/sqrt(n)=3.7874/sqrt(15)=0.9779; SE(dz)=sqrt(1/15+dz^2/30)=0.3139. Sign set negative to denote harm."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = HARM (reduced insulin sensitivity) after 5 nights of 5 h TIB"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Reductions in insulin sensitivity without a compensatory change in acute insulin response to glucose were consistent with prior studies (insulin sensitivity P = 0.002; acute insulin response to glucose P = 0.23)."
+  - outcome_domain: recovery
+    outcome_construct: disposition_index_after_two_recovery_nights
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 10, duration_days: 2, contrast_label: "after 2 recovery nights of 10 h TIB, vs the original 10 h TIB baseline"}
+    scale: cohens_d
+    unit: "dz (within-subject standardised paired difference, recovery vs baseline)"
+    value: -0.7686
+    se: 0.2939
+    ci: [-1.345, -0.193]
+    conversion_formula: "Published as 'The disposition index was suppressed by sleep restriction and did not recover after recovery sleep (P < 0.0001 and P = 0.01, respectively)'; the P=0.01 is the post-recovery-vs-baseline test. df=14, t=t.isf(0.01/2,14)=2.9768; dz=2.9768/sqrt(15)=0.7686; SE(dz)=sqrt(1/15+dz^2/30)=0.2939. Sign negative = still-suppressed."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = HARM PERSISTING. This is the key reversibility number: after 2 full 10 h recovery nights the disposition index was STILL significantly below baseline."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The disposition index was suppressed by sleep restriction and did not recover after recovery sleep (P < 0.0001 and P = 0.01, respectively)."
+  - outcome_domain: recovery
+    outcome_construct: nefa_rebound_after_two_recovery_nights
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 10, duration_days: 2, contrast_label: "after 2 recovery nights of 10 h TIB, vs baseline"}
+    scale: pct_change
+    unit: "% change (null result = full recovery)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Explicit RECOVERY result: NEFA rebound was suppressed by restriction (P=0.01) but 'returned to baseline values after recovery sleep'. Recorded as 0 to register the return to baseline. No magnitude published."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "zero = FULLY RECOVERED. Lipid-side adipocyte function normalised within 2 nights while the glucose-side did not - evidence that different metabolic subsystems have different recovery time constants."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "NEFA rebound was significantly suppressed by sleep restriction (P = 0.01) but returned to baseline values after recovery sleep. Our study indicates that sleep restriction impacts NEFA metabolism and demonstrates that 2 nights of recovery sleep may not be adequate to restore glycemic health."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Fixed-order within-subject design (baseline -> restriction -> recovery) with NO time-matched control arm, so drift, repeated-IVGTT effects and sustained laboratory sedentariness are not separable from the sleep manipulation - this matters especially for the 'failure to recover' conclusion, since a control arm is exactly what would rule out drift. n=15, men only. Effect sizes are derived from p-values, not published, so precision is approximate."
+funding: "Not retrievable from the abstract (Pennsylvania State University / Buxton laboratory; funder left unstated rather than guessed)."
+notes: |
+  *** THE PRIMARY RECOVERY TIME-CONSTANT RECORD. *** Design: 3 baseline nights at 10 h TIB, 5 nights
+  at 5 h TIB, then 2 recovery nights at 10 h TIB, with an IVGTT on the final day of EACH condition.
+  That third measurement is what makes this study uniquely informative: almost no other protocol
+  re-tests glucose metabolism after a defined recovery dose.
+
+  DISTANCE FROM OUR SUBJECT'S EXPOSURE:
+  * Dose: 5 h TIB vs the subject's weekday 5-6 h. Close.
+  * Duration: 5 consecutive restricted nights - an EXACT match to the subject's 5-night school week.
+    This is the best duration match in the shard.
+  * Recovery dose: 2 nights at 10 h TIB. The subject's weekend was 2 nights at 7-8 h, occasionally
+    10-11 h. So this study's recovery dose is at or ABOVE what the subject typically got: 10 h x 2
+    nights is more generous than 7-8 h x 2 nights. That makes the failure-to-recover finding MORE
+    concerning for the subject, not less - he was getting a weaker recovery dose than the one that
+    already proved insufficient here.
+  * Referent: 10 h TIB baseline, a sleep-repletion referent rather than a normal 8 h, so the
+    restriction contrast (5 h/night) is ~1.5-2x the subject's true weekday deficit.
+  * Age: "fifteen healthy men", no age given in the abstract -> age_mean/age_range null. Recorded as
+    good_young_adult provisionally; the modeller should treat the age match as UNVERIFIED for this
+    record specifically.
+  * Setting: inpatient, so free-living appetite and activity pathways are absent.
+
+  REVERSIBILITY VERDICT: partial and outcome-specific, on a 2-night recovery dose.
+    - RECOVERED within 2 nights: the dynamic lipaemic response (NEFA rebound) returned to baseline.
+    - DID NOT RECOVER within 2 nights: the disposition index (the product of insulin sensitivity and
+      insulin secretion, i.e. the best single predictor of future diabetes risk) remained
+      significantly suppressed, P=0.01 vs baseline.
+  This is the direct experimental basis for classifying the metabolic effect as REVERSIBLE BUT WITH
+  A TIME CONSTANT LONGER THAN ONE WEEKEND. Combined with buxton2012_fd (full normalisation after 9
+  days of recovery) the bracket for full glucose-metabolic recovery is: longer than 2 nights,
+  and no longer than about 9 days. Killick2015 shows 3 nights of extension already moves insulin
+  sensitivity in the right direction, so the recovery is likely gradual rather than all-or-none.
+shard: "s07_metabolic"

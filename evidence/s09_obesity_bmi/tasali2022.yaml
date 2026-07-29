@@ -1,0 +1,102 @@
+study_id: tasali2022
+citation: 'Tasali E, Wroblewski K, Kahn E, Kilkus J, Schoeller DA. Effect of Sleep Extension on Objectively Assessed Energy Intake Among Adults With Overweight in Real-life Settings: A Randomized Clinical Trial. JAMA Internal Medicine. 2022;182(4):365-374.'
+doi: 10.1001/jamainternmed.2021.8098
+pmid: '35129580'
+url: https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2788694
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: 'Effect of Sleep Extension on Objectively Assessed Energy Intake Among Adults With Overweight in Real-life Settings: A Randomized Clinical Trial.'
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 80
+n_studies_pooled: null
+population:
+  age_mean: 29.8
+  age_range:
+  - 21
+  - 40
+  pct_female: 48.7
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: metabolic
+  outcome_construct: energy_intake_change_kcal_per_day_sleep_extension
+  exposure:
+    type: sleep_extension
+    dose_h: 8.5
+    referent_h: 6.5
+    duration_days: 14
+    contrast_label: individualised sleep-hygiene counselling to extend bedtime to 8.5 h vs continued habitual short sleep (<6.5 h); 2 weeks, free-living; energy intake by doubly labelled water plus body-energy-store change
+  scale: raw_units
+  unit: kcal/day
+  value: -270.0
+  se: 62.7551
+  ci:
+  - -393.0
+  - -147.0
+  conversion_formula: se = (-147 - (-393))/3.92 = 62.76
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NEGATIVE = EXTENDING sleep REDUCED energy intake by 270 kcal/day. Directionally the mirror image of Al Khatib 2017's +385 kcal/day for restriction, and of similar magnitude (70% as large). Achieved sleep increase was ~1.2 h/night, so this is roughly -225 kcal per hour of sleep gained.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: The sleep extension group had a significant decrease in energy intake compared with the control group (-270 kcal/d; 95% CI, -393 to -147 kcal/d; P < .001).
+- outcome_domain: anthropometric
+  outcome_construct: body_weight_change_kg_sleep_extension
+  exposure:
+    type: sleep_extension
+    dose_h: 8.5
+    referent_h: 6.5
+    duration_days: 14
+    contrast_label: between-group body-weight change over 2 weeks, sleep extension vs control
+  scale: raw_units
+  unit: kg over 2 weeks
+  value: -0.87
+  se: 0.2653
+  ci:
+  - -1.39
+  - -0.35
+  conversion_formula: se = (-0.35 - (-1.39))/3.92 = 0.2653
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: NEGATIVE = sleep extension caused WEIGHT LOSS relative to control over just 2 weeks. THE ONLY RANDOMISED EVIDENCE THAT INCREASING SLEEP MOVES BODY WEIGHT DOWNWARD IN FREE-LIVING CONDITIONS. Controls GAINED 0.39 kg (95% CI 0.02-0.76) while the extension group LOST weight.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Participants in the sleep extension group had a statistically significant reduction in weight compared with those in the control group (-0.87 kg; 95% CI, -1.39 to -0.35 kg; P = .001). There was weight gain from baseline in the control group (0.39 kg; 95% CI, 0.02 to 0.76 kg) and weight reduction from baseline in the sleep extension group
+- outcome_domain: metabolic
+  outcome_construct: sleep_duration_achieved_increase
+  exposure:
+    type: sleep_extension
+    dose_h: 8.5
+    referent_h: 6.5
+    duration_days: 14
+    contrast_label: actigraphy-measured increase in sleep duration achieved by the intervention
+  scale: hours
+  unit: hours per night
+  value: 1.2
+  se: 0.102
+  ci:
+  - 1.0
+  - 1.4
+  conversion_formula: se = (1.4 - 1.0)/3.92 = 0.102
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = the intervention actually worked; a behavioural sleep-hygiene intervention added ~1.2 h/night in habitual short sleepers. Relevant to whether our subject can plausibly normalise.
+  covariates: []
+  followup_years: null
+  cohort_family: null
+  quote: Sleep duration was increased by approximately 1.2 hours per night (95% CI, 1.0 to 1.4 hours; P < .001) in the sleep extension group vs the control group.
+rob:
+  tool: RoB2
+  judgement: low
+  notes: 'Well-conducted RCT with objectively assessed energy intake (doubly labelled water + DXA body-composition change), actigraphy-verified exposure, free-living setting, weights hidden from participants, intention-to-treat analysis. LIMITATIONS for our purposes: participants had OVERWEIGHT (BMI 25.0-29.9) and were aged 21-40 (mean 29.8), the follow-up was only 2 weeks, and there is no evidence that the weight change persists.'
+funding: see paper; authors report no conflicts of interest. ClinicalTrials.gov NCT02253368
+notes: 'STRONGEST CAUSAL EVIDENCE IN THIS SHARD ON THE REVERSIBILITY QUESTION, though indirect: it shows that raising sleep in habitual short sleepers produces a negative energy balance and measurable weight LOSS within 2 weeks. It does NOT establish that weight accumulated over years of prior short sleep is recovered - and the authors are explicit that this had been unknown: ''However, it remains unknown whether extending sleep duration can be an effective strategy for preventing or reversing obesity.'' Their cited dynamic-model benchmark is useful for scaling: ''a sustained increase in energy intake of even 100 kcal/d would result in a weight gain of about 4.5 kg over 3 years.'''
+shard: s09_obesity_bmi

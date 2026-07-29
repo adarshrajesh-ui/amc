@@ -1,0 +1,165 @@
+study_id: tortcolet2026
+citation: "Tort-Colet N, Stankeviciute L, Fernandez-Arcos A, Soldevila-Domenech N, Sanchez-Benavides G, Shekari M, Vallez Garcia D, Altomare D, Barkhof F, Boada M, et al. Self-reported sleep quality and longitudinal amyloid burden in clinically unimpaired adults from the AMYPAD PNHS study. Alzheimer's Research & Therapy. 2026 Apr 17;18(1)."
+doi: "10.1186/s13195-026-02049-w"
+pmid: "41998740"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13220363/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Self-reported sleep quality and longitudinal amyloid burden in clinically unimpaired adults from the AMYPAD PNHS study."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 417
+n_studies_pooled: null
+population:
+  age_mean: 63.44
+  age_range: null
+  pct_female: 60.4
+  country: "multinational (Europe; AMYPAD PNHS)"
+  adolescent_match: poor_elderly
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: rate_of_amyloid_pet_accumulation_per_psqi_point_whole_sample_NULL
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "baseline PSQI global score (worse subjective sleep QUALITY, not duration) x follow-up time, predicting rate of amyloid PET accumulation in Centiloids/year; whole sample of 417 clinically unimpaired adults"}
+    scale: per_hour_beta
+    unit: "Centiloid per year per 1-point increase in PSQI global score"
+    value: 0.04
+    se: 0.038265
+    ci: [-0.04, 0.11]
+    conversion_formula: >
+      Reported as beta = 0.04, CI = [-0.04, 0.11], p = 0.352 for the PSQI-global-by-time interaction in
+      Model 1. se = (0.11 - (-0.04))/3.92 = 0.15/3.92 = 0.038265.
+      SCALE FIELD CAVEAT: `per_hour_beta` is used because the schema's enum has no generic
+      "per-unit-of-exposure beta" option; the unit here is PER PSQI POINT, NOT PER HOUR OF SLEEP, and the
+      `unit` field states this. The pooler MUST NOT treat this as an hours-of-sleep coefficient.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NULL (p = 0.352). Positive would mean worse subjective sleep quality predicts faster amyloid
+      accumulation. THIS IS THE LARGEST PROSPECTIVE HUMAN TEST OF SLEEP PREDICTING AMYLOID ACCUMULATION THAT
+      THIS SHARD LOCATED - 417 clinically unimpaired adults with serial amyloid PET - AND THE MAIN EFFECT IS
+      NULL. It is also null cross-sectionally at baseline (beta = 0.12, CI [-0.41, 0.66], p = 0.658).
+    covariates: ["age", "sex", "APOE status", "cohort", "presence of anxiety or depression"]
+    followup_years: 2.8
+    cohort_family: "AMYPAD_PNHS"
+    quote: "The PSQI global score was not significantly associated with Ab burden at baseline (b = 0.12, CI = [-0.41, 0.66], p = 0.658), and the interaction of PSQI global score with time was not significant (b = 0.04, CI = [-0.04, 0.11], p = 0.352) (Table 2 )."
+  - outcome_domain: neurodegeneration
+    outcome_construct: rate_of_amyloid_accumulation_per_psqi_point_amyloid_negative_stratum_NULL
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "PSQI global x visit years in the AMYLOID-NEGATIVE stratum (baseline Centiloid < 12), n = 309 - the stratum that most resembles a healthy young person"}
+    scale: per_hour_beta
+    unit: "Centiloid per year per 1-point increase in PSQI global score"
+    value: 0.03
+    se: 0.033163
+    ci: [-0.04, 0.09]
+    conversion_formula: >
+      Table 3, "Amyloid negative (N = 309), PSQI x visit years, 0.03, [-0.04, 0.09], p = 0.395".
+      se = (0.09 - (-0.04))/3.92 = 0.13/3.92 = 0.033163. Same per-PSQI-point unit caveat as above.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NULL (p = 0.395), AND THIS IS THE MOST TRANSPORTABLE STRATUM IN THE STUDY. Among the 309 participants
+      who had not yet begun accumulating amyloid, subjective sleep quality predicted nothing about their
+      subsequent amyloid trajectory. The positive finding in this paper is confined to the 85 "grey-zone"
+      participants who had ALREADY started accumulating amyloid at baseline. A 19-year-old is, with
+      overwhelming probability, in the amyloid-negative state. The stratum that matches him is the null one.
+    covariates: ["age", "sex", "APOE status", "cohort", "presence of anxiety or depression"]
+    followup_years: 2.8
+    cohort_family: "AMYPAD_PNHS"
+    quote: "Table 3.  Stratified results  Amyloid burden   Predictors  Estimates  CI   p value   Amyloid negative ( N = 309)    PSQI x visit years  0.03  [-0.04, 0.09]  0.395   Grey-zone ( N = 85)    PSQI x visit years  0.28  [0.06, 0.50]  0.013 *   Amyloid positive ( N = 23)    PSQI x visit years  -0.29  [-0.77, 0.19]  0.232"
+  - outcome_domain: neurodegeneration
+    outcome_construct: rate_of_amyloid_accumulation_per_psqi_point_grey_zone_stratum_POSITIVE
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "PSQI global x visit years in the GREY-ZONE stratum (baseline Centiloid 12-50), n = 85 - participants already accumulating amyloid"}
+    scale: per_hour_beta
+    unit: "Centiloid per year per 1-point increase in PSQI global score"
+    value: 0.28
+    se: 0.112245
+    ci: [0.06, 0.50]
+    conversion_formula: >
+      Table 3, "Grey-zone (N = 85), PSQI x visit years, 0.28, [0.06, 0.50], p = 0.013".
+      se = (0.50 - 0.06)/3.92 = 0.44/3.92 = 0.112245. Same per-PSQI-point unit caveat.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      POSITIVE = worse subjective sleep quality predicts faster amyloid accumulation, in the 85 people who
+      were ALREADY in the amyloid grey zone. This is the paper's headline, and it is a subgroup finding in
+      20% of the sample, uncorrected for multiple comparisons by the authors' own admission, in people whose
+      pathology had already started. It is the single best piece of prospective human evidence that sleep and
+      amyloid accumulation are linked, and its scope conditions are severe: sleep QUALITY not duration,
+      already-accumulating adults at mean age 63, over 2.8 years.
+    covariates: ["age", "sex", "APOE status", "cohort", "presence of anxiety or depression"]
+    followup_years: 2.8
+    cohort_family: "AMYPAD_PNHS"
+    quote: "Worse sleep quality predicted faster Ab accumulation in individuals with intermediate baseline amyloid burden categorized in the GZ group (b = 0.28, CI = [0.06, 0.50], p = 0.013)."
+  - outcome_domain: neurodegeneration
+    outcome_construct: rate_of_amyloid_accumulation_per_psqi_point_amyloid_positive_stratum_SIGN_REVERSAL
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "PSQI global x time in AMYLOID-POSITIVE participants relative to amyloid-negative (interaction contrast), n = 23 A+ participants"}
+    scale: per_hour_beta
+    unit: "Centiloid per year per 1-point increase in PSQI global score, A+ relative to A-"
+    value: -0.41
+    se: 0.160714
+    ci: [-0.73, -0.10]
+    conversion_formula: >
+      Reported as beta = -0.41 CL/year per PSQI point, CI = [-0.73, -0.10], p = 0.010, for A+ relative to A-.
+      se = (-0.10 - (-0.73))/3.92 = 0.63/3.92 = 0.160714. Same per-PSQI-point unit caveat.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      NEGATIVE AND STATISTICALLY SIGNIFICANT IN THE WRONG DIRECTION: among amyloid-positive participants,
+      WORSE sleep quality predicted SLOWER amyloid accumulation (p = 0.010). The authors label this
+      "Paradoxically". Recorded because a literature in which the same exposure significantly accelerates the
+      outcome in one stratum and significantly decelerates it in another, in the same model, is not a
+      literature from which a stable causal coefficient can be extracted. Note n = 23 in this stratum.
+    covariates: ["age", "sex", "APOE status", "cohort", "presence of anxiety or depression"]
+    followup_years: 2.8
+    cohort_family: "AMYPAD_PNHS"
+    quote: "In contrast, for A+ participants, worse sleep quality was associated with slower Ab accumulation relative to the A- group (b = -0.41 CL/year per PSQI point, CI = [-0.73, -0.10], p = 0.010) (Fig. 1 )."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Genuinely strong design for the biomarker question: 417 clinically unimpaired adults, serial quantitative
+    amyloid PET harmonised to the Centiloid scale, linear mixed-effects models adjusted for age, sex, APOE,
+    cohort and mood, plus sensitivity analyses excluding A+ participants and excluding people with anxiety or
+    depression. Concerns: (1) exposure is a single baseline PSQI, i.e. subjective sleep QUALITY, and the
+    authors note the global score "may not capture specific sleep features that are more closely linked to Ab
+    burden"; (2) follow-up is short - 81% had one repeat scan at mean 2.8 y and only 19% had two spanning
+    5.3 y; (3) the positive result is a 20%-of-sample subgroup and the authors state they did not correct for
+    multiple comparisons in these analyses; (4) n = 23 in the A+ stratum that produced the significant reversed
+    effect; (5) participants are enriched for APOE e4 (43% carriers), so this is not a general population;
+    (6) mean age 63, three decades older than the subject.
+funding: "AMYPAD (Innovative Medicines Initiative / EU-EFPIA); see paper"
+notes: >
+  THE NEWEST AND LARGEST PROSPECTIVE SLEEP-TO-AMYLOID-ACCUMULATION STUDY, AND ITS MAIN EFFECT IS NULL. This
+  matters because winer2020.yaml (n = 32) is the only other prospective sleep-forecasts-amyloid study in the
+  shard, and it also found that sleep DURATION did not forecast accumulation - only specific NREM slow-wave
+  frequencies and sleep efficiency did. Two prospective studies, neither of which supports sleep duration as a
+  predictor of amyloid accumulation.
+  THE AUTHORS' OWN SUMMARY OF SCOPE, VERBATIM: "Our main conclusion is that worse self-reported sleep quality
+  at baseline is associated with an increased rate of Ab accumulation over time only in individuals with
+  intermediate baseline Ab levels (i.e., those who have begun accumulating amyloid but are still in the grey
+  zone). Paradoxically, we observed an unexpected association whereby poorer self-reported sleep quality at
+  baseline was linked to a lower Ab accumulation over time, only in individuals who were amyloid-positive at
+  baseline." And: "Cross-sectionally, we did not observe an association between self-reported sleep quality and
+  Ab burden."
+  THE AUTHORS' OWN EPISTEMIC STATUS FOR THEIR FINDING, VERBATIM: "Given the limited sample size in the A+
+  group, these findings should be interpreted with caution. Replication in independent cohorts is necessary,
+  and the results should be considered hypothesis-generating rather than confirmatory."
+  WHY THE STRATIFICATION IS THE MOST IMPORTANT THING IN THIS RECORD. The effect exists only in people who had
+  ALREADY begun accumulating amyloid. In the 309 amyloid-negative participants - the group whose biology most
+  resembles a healthy 19-year-old - the coefficient is 0.03 with a CI spanning zero. If the sleep-amyloid link
+  requires pre-existing pathology to manifest, then it is a modifier of an ongoing disease process in older
+  adults rather than an initiator of pathology in the young, and the entire premise of extrapolating it back to
+  adolescence is misconceived. The paper's own framing supports the older-adult reading: it describes the
+  finding as "identifying an optimal intervention window", i.e. a window in mid-to-late life, not in youth.
+  SAMPLE CHARACTERISTICS, VERBATIM: "The sample included 417 CU adults (mean age 63 years; 60% females; 43%
+  APOE -e4 carriers). Among them, 24.5% reported symptoms of anxiety (23.5%) and/or depression (7.0%). The
+  average PSQI global score was 5.78 +/- 0.17."
+shard: "s14_dementia_amyloid"

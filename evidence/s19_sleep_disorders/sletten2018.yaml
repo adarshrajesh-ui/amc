@@ -1,0 +1,194 @@
+study_id: sletten2018
+citation: "Sletten TL, Magee M, Murray JM, Gordon CJ, Lovato N, Kennaway DJ, Gwini SM, Bartlett DJ, Lockley SW, Lack LC, Grunstein RR, Rajaratnam SMW. Efficacy of melatonin with behavioural sleep-wake scheduling for delayed sleep-wake phase disorder: A double-blind, randomised clinical trial. PLoS Med. 2018;15(6):e1002587."
+doi: "10.1371/journal.pmed.1002587"
+pmid: "29912983"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Efficacy of melatonin with behavioural sleep-wake scheduling for delayed sleep-wake phase disorder: A double-blind, randomised clinical trial"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 116
+n_studies_pooled: null
+population:
+  age_mean: 29.0
+  age_range: [16, 65]
+  pct_female: 46.6
+  country: "Australia"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: circadian
+    outcome_construct: actigraphic_sleep_onset_advance_melatonin_0p5mg_vs_placebo
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 28, contrast_label: "0.5 mg fast-release melatonin taken 1 h before desired bedtime, >=5 nights/wk for 4 wk, PLUS behavioural sleep-wake scheduling, vs placebo plus the same scheduling; DLMO-confirmed DSWPD"}
+    scale: raw_units
+    unit: "minutes (negative = sleep onset moved EARLIER, the therapeutic direction)"
+    value: -34.0
+    se: 13.265
+    ci: [-60.0, -8.0]
+    conversion_formula: "se = (upper - lower)/3.92 = (-8 - -60)/3.92 = 52/3.92 = 13.265 min"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = earlier sleep onset. PRIMARY OUTCOME, objectively measured by actigraphy, intention-to-treat."
+    covariates: ["baseline sleep onset time"]
+    followup_years: null
+    cohort_family: null
+    quote: "Relative to baseline and compared to placebo, sleep onset occurred 34 min earlier (95% confidence interval [CI] -60 to -8) in the melatonin group."
+  - outcome_domain: circadian
+    outcome_construct: clinician_rated_much_improved_melatonin_vs_placebo
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 28, contrast_label: "proportion rated 'very much' or 'much' improved on Clinical Global Impression, melatonin 0.5 mg + scheduling vs placebo + scheduling"}
+    scale: log_rr
+    unit: "log risk ratio for clinician-rated marked improvement"
+    value: 0.789
+    se: 0.28316
+    ci: [0.234, 1.344]
+    conversion_formula: "28/53 = 0.5283 melatonin vs 12/50 = 0.2400 placebo. RR = 0.5283/0.2400 = 2.201; log RR = 0.7890. se = sqrt(1/28 - 1/53 + 1/12 - 1/50) = sqrt(0.035714 - 0.018868 + 0.083333 - 0.020000) = sqrt(0.080180) = 0.28316. 95% CI on log RR = 0.789 +/- 1.96*0.28316 = [0.234, 1.344], i.e. RR [1.26, 3.83]. Absolute risk difference = 28.8 percentage points, NNT = 3.47. All derived by me from the counts the paper reports; the paper gives only percentages and P = 0.011."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive log RR = melatonin group MORE likely to be rated markedly improved. RR 2.20, NNT ~3.5."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "CGI Global Improvement ratings were significantly different between treatment groups ( P = 0.011), with 52.8% ( n = 28) of the melatonin group classified as very much/much improved compared to 24.0% ( n = 12) of the placebo group"
+  - outcome_domain: circadian
+    outcome_construct: dlmo_phase_advance_melatonin_vs_placebo
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 28, contrast_label: "change in salivary dim light melatonin onset (endogenous circadian phase), melatonin vs placebo, subset with valid post-treatment DLMO"}
+    scale: hours
+    unit: "hours of phase ADVANCE (positive = circadian pacemaker moved earlier)"
+    value: 0.49
+    se: 0.3539
+    ci: [-0.204, 1.184]
+    conversion_formula: "melatonin 0.73 +/- 1.21 h (n = 23) minus placebo 0.24 +/- 1.11 h (n = 20) = 0.49 h. se = sqrt(1.21^2/23 + 1.11^2/20) = sqrt(0.063656 + 0.061605) = sqrt(0.125261) = 0.3539 h. 95% CI = 0.49 +/- 1.96*0.3539 = [-0.204, 1.184] h = [-12.2, +71.0] min. CI includes zero, matching the authors' 'did not reach statistical significance'. CI is MY computation from the reported means, SDs and ns."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = phase advance. NOT statistically significant. This is the single most conceptually important result in the trial - see notes. Underpowered (n = 43 of 116)."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Following melatonin treatment ( n = 23), DLMO was advanced by 0.73 +/- 1.21 h, compared to 0.24 +/- 1.11 h following placebo ( n = 20) although this difference did not reach statistical significance ( P > 0.05)."
+  - outcome_domain: exposure_measurement
+    outcome_construct: baseline_isi_in_dlmo_confirmed_dswpd_patients
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "baseline Insomnia Severity Index in clinically diagnosed, DLMO-CONFIRMED DSWPD patients (melatonin arm, n = 58)"}
+    scale: raw_units
+    unit: "ISI points (0-28)"
+    value: 12.93
+    se: 0.638
+    ci: [11.68, 14.18]
+    conversion_formula: "reported mean 12.93, SD 4.86, n = 58 (ISI n = 51 at baseline per table footnote a, but the column header states n = 58; I use 58 conservatively for the se, which makes the se slightly smaller - with n = 51 se = 4.86/sqrt(51) = 0.680). se = 4.86/sqrt(58) = 4.86/7.616 = 0.638. 95% CI = 12.93 +/- 1.96*0.638 = [11.68, 14.18]."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = worse insomnia. CRITICAL FOR INSTRUMENT INTERPRETATION: the MEAN ISI in confirmed DSWPD sits in the ISI 'subthreshold insomnia' band (8-14), not the moderate/severe band, and 16.4% scored in the 'insomnia absent' band (0-7). So the ISI does NOT separate DSWPD from insomnia disorder, and a low-ish ISI does not exclude DSWPD."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "ISI (mean +/- SD) 12.29 +/- 4.67 12.93 +/- 4.86 0.483 ... Categorical ISI: n (%) ... Absent (0-7) 8 (13.8) 9 (16.4) 0.713 ... Subthreshold (8-14) 30 (51.7) 24 (43.6) ... Moderate (15-21) / Severe (22-28) 20 (34.5) 22 (40.0)"
+  - outcome_domain: exposure_measurement
+    outcome_construct: baseline_ess_normal_proportion_in_dlmo_confirmed_dswpd
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "proportion of DLMO-confirmed DSWPD patients scoring in the NORMAL/borderline Epworth range (0-9) at baseline"}
+    scale: probability
+    unit: "proportion with ESS 0-9 (i.e. NOT excessively sleepy by the conventional threshold)"
+    value: 0.845
+    se: 0.0475
+    ci: [0.752, 0.938]
+    conversion_formula: "49/58 = 0.8448 in BOTH arms (the table reports 49 (84.5) for placebo and 49 (84.5) for melatonin). se = sqrt(p(1-p)/n) = sqrt(0.8448*0.1552/58) = sqrt(0.002261) = 0.0475. 95% CI = 0.845 +/- 1.96*0.0475 = [0.752, 0.938]. Complement: only 9/58 = 15.5% had ESS > 9."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "MOST DSWPD PATIENTS ARE NOT SLEEPY ON THE EPWORTH. This is a strong argument against using the ESS to screen for DSWPD - it would miss ~85% of confirmed cases. It also distinguishes DSWPD from BIISS, where irrepressible sleepiness is a required criterion."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Categorical ESS: n (%) 0.98 (0.19-5.15) >0.999 ... Normal/borderline (0-9) 49 (84.5) 49 (84.5) >0.999 44 (93.6) 45 (93.8) Excessive daytime sleepiness (>9) 9 (15.5) 9 (15.5) 3 (6.4) 3 (6.3)"
+  - outcome_domain: exposure_measurement
+    outcome_construct: isi_reduction_melatonin_vs_placebo_between_group
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 28, contrast_label: "post-treatment ISI, melatonin minus placebo, DLMO-confirmed DSWPD"}
+    scale: raw_units
+    unit: "ISI points (negative = melatonin group less insomnia)"
+    value: -2.37
+    se: 1.1173
+    ci: [-4.56, -0.18]
+    conversion_formula: "se = (upper - lower)/3.92 = (-0.18 - -4.56)/3.92 = 4.38/3.92 = 1.1173. Treatment-by-time interaction P = 0.004; within-group change was -4.59 (95% CI -5.96 to -3.22) for melatonin vs -1.59 (-3.10 to -0.08) for placebo."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = melatonin better. Note the placebo arm ALSO improved by 1.59 ISI points on behavioural scheduling alone, so roughly a third of the total ISI improvement in the melatonin arm is attributable to the scheduling component that both arms received."
+    covariates: ["baseline ISI"]
+    followup_years: null
+    cohort_family: null
+    quote: "ISI (mean +/- SD) 12.29 +/- 4.67 12.93 +/- 4.86 0.483 10.70 +/- 5.2 8.33 +/- 5.57 -2.37 (-4.56 to -0.18) 0 . 035 -1.59 (-3.10 to -0.08) -4.59 (-5.96 to -3.22) 0 . 004"
+rob:
+  tool: RoB2
+  judgement: low
+  notes: |
+    A genuinely well-conducted trial and the strongest single piece of treatment evidence in this
+    shard. Randomised, placebo-controlled, DOUBLE-BLIND, prospectively registered
+    (ACTRN12612000425897), intention-to-treat analysis, objective primary outcome (actigraphic
+    sleep onset time), adverse events reported, no differential adherence ("The groups did not
+    differ in the number of nights treatment was taken per protocol"), and - unusually for this
+    literature - participants were selected on OBJECTIVE circadian phase (salivary DLMO relative to
+    desired bedtime) rather than on symptoms alone.
+    Limitations relevant to us: (1) mean age 29.0 y, range 16-65, so this is an ADULT outpatient
+    sample and only a minority are in our subject's age band - no age-stratified results are
+    reported; (2) the DLMO substudy (n = 43 of 116) was underpowered for the phase-shift outcome,
+    which the authors acknowledge; (3) both arms received behavioural sleep-wake scheduling, so the
+    trial estimates the INCREMENTAL effect of melatonin on top of scheduling, not the effect of
+    melatonin alone - this is the clinically relevant contrast but it is not the same as a
+    melatonin-vs-nothing comparison; (4) 4 weeks only, so long-term efficacy and safety are
+    explicitly not assessed; (5) generalisability restricted to DSWPD patients WITH a confirmed
+    phase delay - the authors state it "remains unknown whether the same treatment regime would
+    benefit patients experiencing DSWPD sleep symptomology without a delay in the endogenous
+    melatonin rhythm."
+funding: "NCATS NIH HHS (per PubMed grant record). Full funding statement not extracted."
+notes: |
+  WHY THIS RECORD MATTERS: the task asked for the AASM guideline's melatonin dose and timing. This
+  is the randomised evidence UNDERNEATH that recommendation, and it post-dates the 2015 guideline.
+  The authors note at the outset that "Although there are published therapeutic guidelines for the
+  administration of melatonin for DSWPD, to our knowledge, randomised controlled trials are
+  lacking" - i.e. the AASM 2015 recommendation was made without a trial of this kind.
+
+  THE REGIMEN, EXACTLY AS TESTED (this is what the report should quote if it recommends melatonin):
+  0.5 mg FAST-RELEASE melatonin, taken 1 hour before the patient's DESIRED bedtime, on at least 5
+  consecutive nights per week, for 4 weeks, COMBINED WITH behavioural sleep-wake scheduling in
+  which bedtime is scheduled at the desired bedtime. Note that 0.5 mg is far lower than the 5 mg
+  in the AASM adult recommendation (auger2015.yaml) and is consistent with that guideline's
+  statement that timing matters more than dose.
+
+  EFFECT SIZE, HONESTLY: sleep onset 34 min earlier (95% CI -60 to -8) and NNT ~3.5 for
+  clinician-rated marked improvement (RR 2.20, 95% CI 1.26-3.83 [derived]). Real but modest. For
+  comparison, the CBT + bright light trial in ADOLESCENTS (gradisar2011rct.yaml) produced a
+  55.9 min reduction in school-night sleep onset latency and NNT 1.4. On the available evidence,
+  behavioural/light therapy in adolescents looks stronger than melatonin in adults, though these
+  are different populations, outcomes and comparators and I am not pooling them.
+
+  THE MECHANISTIC SURPRISE, AND IT CHANGES HOW MELATONIN SHOULD BE DESCRIBED: post-treatment DLMO
+  was NOT significantly advanced (difference 0.49 h, 95% CI -0.20 to +1.18 h [derived]), and the
+  authors conclude "Improvements were achieved largely through the sleep-promoting effects of
+  melatonin, combined with behavioural sleep-wake scheduling." So at 0.5 mg given 1 h before
+  bedtime, melatonin worked mainly as a mild HYPNOTIC, not as a chronobiotic that moved the clock.
+  The report should not tell the subject that melatonin "resets his body clock" on the strength of
+  this trial. Caveat: the DLMO substudy was underpowered (n = 43), so absence of a detected phase
+  shift is not proof of absence.
+
+  TWO INCIDENTAL FINDINGS THAT ARE ARGUABLY MORE USEFUL TO MY SHARD THAN THE TREATMENT EFFECT,
+  because they come from the only DLMO-CONFIRMED DSWPD sample I have and therefore describe the
+  disease-present distribution of two instruments I recommend:
+
+  1. THE EPWORTH IS A POOR DSWPD SCREEN. 84.5% of DLMO-confirmed DSWPD patients scored in the
+     NORMAL/borderline ESS range (0-9); only 15.5% exceeded the conventional >9 threshold. An ESS
+     used to screen for DSWPD would miss roughly five in six confirmed cases. This is a
+     quantitative version of the point that DSWPD sleepiness is schedule-dependent rather than
+     constitutional, and it also helps separate DSWPD from BIISS, where irrepressible sleepiness is
+     a REQUIRED criterion. Practical consequence for our subject: a normal ESS does essentially
+     nothing to lower the DSWPD posterior, and the report must not treat "he isn't very sleepy" as
+     reassuring on that axis.
+
+  2. THE ISI DOES NOT SEPARATE DSWPD FROM INSOMNIA DISORDER. Mean baseline ISI in confirmed DSWPD
+     was 12.93 (SD 4.86) - inside the ISI's own "subthreshold insomnia" band (8-14) and ABOVE the
+     >=10 case-detection cut-off I recommend for insomnia (morin2011.yaml). 43.6% were subthreshold
+     and 16.4% scored in the "insomnia absent" band. So (a) an ISI >= 10 in our subject would be
+     equally consistent with DSWPD as with insomnia disorder and cannot adjudicate between them,
+     and (b) an ISI below 10 does not exclude DSWPD. The ISI remains the best instrument for
+     grading insomnia SEVERITY; it is not a differential-diagnostic test. This qualifies the
+     "highest information-per-minute measurement" claim I made for the ISI in screening_priors.md
+     section 3.3 - that claim holds for the insomnia-vs-no-insomnia question only.
+shard: "s19_sleep_disorders"

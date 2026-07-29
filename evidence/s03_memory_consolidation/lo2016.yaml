@@ -1,0 +1,175 @@
+study_id: lo2016
+citation: "Lo JC, Bennion KA, Chee MWL. Sleep restriction can attenuate prioritization benefits on declarative memory consolidation. Journal of Sleep Research. 2016;25(6):664-672."
+doi: "10.1111/jsr.12424"
+pmid: "27291639"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5324680/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep restriction can attenuate prioritization benefits on declarative memory consolidation."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 56
+n_studies_pooled: null
+population:
+  age_mean: 16.6
+  age_range: [15, 19]
+  pct_female: 55.4
+  country: "SG"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: cognition
+    outcome_construct: prose_passage_free_recall_total
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "5 h TIB x 7 nights vs 9 h TIB; prose passage encoded BEFORE the manipulation, recall tested at 1 week and 6 weeks"}
+    scale: cohens_d
+    unit: null
+    value: -0.32
+    se: 0.30
+    ci: [-0.27, 0.91]
+    conversion_formula: "MAGNITUDE ONLY. From the reported group main effect F(1,43) = 1.13, eta_p^2 = 0.026. d = sqrt(F*(1/n1+1/n2)) with the 45 completers split proportionally (n1~21 control, n2~24 SR) = 0.318; cross-check via eta_p^2: d = 2*sqrt(0.026/0.974) = 0.327. SE = sqrt(1/n1+1/n2+d^2/(2*43)) = 0.301. CI given on the POSITIVE convention because the sign is not recoverable (see direction_note)."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "SIGN IS NOT ESTABLISHED BY THE SOURCE. The paper reports only that there was no main effect of group; it never states which group recalled more, and the group means appear only in Figure 2 without numeric labels. The value is written negative to follow this shard's harm convention, but the modeller must treat this as |d| = 0.32 with an unknown sign. Do not use for signed pooling; use as an upper bound on the group difference."
+    covariates: []
+    followup_years: null
+    cohort_family: "NeedForSleep_Singapore"
+    quote: "There was no main effect of group (F(1,43) = 1.13, P = 0.29, etap2 = 0.026), nor was there an interaction between group and prioritization (F(1,43) = 0091, P = 0.76, etap2 = 0.002) or group and delay length (F(1,43) = 0.005, P = 0.995, etap2 < 0.001)."
+  - outcome_domain: cognition
+    outcome_construct: prioritization_benefit_strengthening_control_arm
+    exposure: {type: chronic_restriction, dose_h: 9, referent_h: 9, duration_days: 7, contrast_label: "WITHIN the 9 h TIB control arm: growth of the prioritized-minus-nonprioritized recall advantage from minutes-after-encoding to 1 week"}
+    scale: cohens_d
+    unit: null
+    value: 0.48
+    se: 0.21
+    ci: [0.08, 0.89]
+    conversion_formula: "Recomputed as paired d_z = t/sqrt(n) = 2.47/sqrt(26) = 0.4844; SE = sqrt(1/n + d_z^2/(2*(n-1))) = 0.2077. The paper itself prints d = 0.99 for this contrast - see notes for why I did not use the published value."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = the memory advantage for prioritized material GREW over the week of adequate sleep, i.e. consolidation actively strengthened the tagged material"
+    covariates: []
+    followup_years: null
+    cohort_family: "NeedForSleep_Singapore"
+    quote: "the benefit of prioritization on memory was greater 1 week after encoding relative to initially only for the control group (t(25) = 2.47, P = 0.021, d = 0.99), and not the SR group (t(29) = 1.45, P = 0.16, d = 0.26; Fig. 3)."
+  - outcome_domain: cognition
+    outcome_construct: prioritization_benefit_strengthening_restricted_arm
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "WITHIN the 5 h TIB arm: growth of the prioritized-minus-nonprioritized recall advantage from minutes-after-encoding to 1 week"}
+    scale: cohens_d
+    unit: null
+    value: 0.26
+    se: 0.19
+    ci: [-0.10, 0.63]
+    conversion_formula: "Recomputed as paired d_z = t/sqrt(n) = 1.45/sqrt(30) = 0.2647; SE = sqrt(1/n + d_z^2/(2*(n-1))) = 0.1859. This matches the paper's own printed d = 0.26 exactly."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = strengthening. The point estimate is positive but the CI includes zero: under 5 h TIB the consolidation-driven strengthening of prioritized material was not detectable."
+    covariates: []
+    followup_years: null
+    cohort_family: "NeedForSleep_Singapore"
+    quote: "the benefit of prioritization on memory was greater 1 week after encoding relative to initially only for the control group (t(25) = 2.47, P = 0.021, d = 0.99), and not the SR group (t(29) = 1.45, P = 0.16, d = 0.26; Fig. 3)."
+  - outcome_domain: sleep_need
+    outcome_construct: rem_duration_reduction_under_restriction
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "REM minutes, 5 h TIB vs 9 h TIB, averaged over PSG nights M1/M4/M7"}
+    scale: hedges_g
+    unit: null
+    value: -0.92
+    se: 0.28
+    ci: [-1.47, -0.37]
+    conversion_formula: "LOWER BOUND. Back-computed from the reported P < 0.001 with control n = 26, SR n = 30, df = 54: t = 3.480, d = t*sqrt(1/26+1/30) = 0.9325, J = 0.9860, g = 0.9194, SE = 0.2822. Because the paper reports P < 0.001 rather than an exact P, the true |g| is at least this large."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = less REM sleep under 5 h TIB. Direction is stated explicitly by the authors ('shorter ... REM sleep')."
+    covariates: []
+    followup_years: null
+    cohort_family: "NeedForSleep_Singapore"
+    quote: "on all manipulation nights (M1, M4, M7), relative to the control group, participants in the SR group had shorter TST, WASO, sleep latency, N1, N2, and REM sleep (all Ps < 0.001; Fig. 4; Supporting information, Appendix S3); the only sleep parameter that did not differ between groups was the duration of N3 (M1: P = 0.23; M4: P = 0.36; M7: P = 0.10)."
+  - outcome_domain: sleep_need
+    outcome_construct: n3_slow_wave_sleep_duration_preserved
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "N3 minutes, 5 h TIB vs 9 h TIB, PSG night M1 (M4 and M7 also null)"}
+    scale: hedges_g
+    unit: null
+    value: 0.32
+    se: 0.27
+    ci: [-0.21, 0.85]
+    conversion_formula: "MAGNITUDE ONLY, as an upper bound on the N3 group difference. Back-computed from the reported P = 0.23 at df = 54: t = 1.214, d = 0.3253, g = 0.3208, SE = 0.2697. The two other PSG nights give g = 0.244 (M4, P = 0.36) and g = 0.442 (M7, P = 0.10) by the same route."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "SIGN NOT ESTABLISHED - the paper reports only that N3 did not differ between groups and does not say which arm was numerically higher. Use as |g| <= ~0.32-0.44, i.e. N3 minutes are statistically indistinguishable between 5 h and 9 h TIB. This is the load-bearing architecture finding: the same protocol that cut TST, N1, N2 and REM at P < 0.001 left N3 unchanged."
+    covariates: []
+    followup_years: null
+    cohort_family: "NeedForSleep_Singapore"
+    quote: "the SR group in the present study maintained their absolute amount of N3 sleep during the manipulation period despite a marked reduction in TST and all other sleep stages."
+  - outcome_domain: cognition
+    outcome_construct: rem_duration_memory_correlation_under_restriction
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "within the 5 h TIB arm (n = 30): Pearson r between mean REM minutes across M1/M4/M7 and recall 6 weeks after encoding"}
+    scale: raw_units
+    unit: "pearson_r"
+    value: -0.50
+    se: 0.14
+    ci: [-0.73, -0.17]
+    conversion_formula: "Reported as r > -0.50 with P < 0.013 for total, HL and nHL content; I take the boundary value r = -0.50 as the conservative estimate. Fisher z = -0.5493, SE_z = 1/sqrt(30-3) = 0.1925, back-transformed CI = [-0.729, -0.170]. Approximate SE on the r scale = (1-r^2)/sqrt(n-1) = 0.139."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NEGATIVE = more REM sleep during the restricted week predicted WORSE delayed recall. This is the opposite of the direction that a simple 'REM loss causes learning loss' model predicts, and the authors flag it as unexpected."
+    covariates: []
+    followup_years: 0.115
+    cohort_family: "NeedForSleep_Singapore"
+    quote: "Also in the SR group, there was an inverse linear relation between average REM duration and memory for total, HL, and nHL (r > -0.50, P < 0.013) content at the delayed time point (Fig. 5f-h). ... Unexpectedly, under conditions of sleep restriction, greater REM sleep was associated with poorer memory after an extended time interval (here, 6 weeks)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomised parallel-group residential protocol with PSG verification of the dose - strong on exposure measurement. Concerns: (i) the headline claim rests on a difference in significance between two within-arm tests while the formal three-way interaction was null (F(2,42) = 0.90, P = 0.41), which is a recognised inferential error; (ii) the published Cohen's d values are internally inconsistent (see notes); (iii) 45 of 56 returned for the 6-week visit, so the ANOVA is on 45; (iv) single site, no blinding possible; (v) recall means are only in figures, not tabulated."
+funding: "not stated in the retrieved full text"
+notes: |
+  WHY THIS RECORD MATTERS: it is one of only two studies in this shard that applies the subject's exact
+  weekday dose (5 h TIB) for a full week, in the subject's exact age band, with PSG confirmation, and
+  measures retention of prose - i.e. material of the kind actually studied at school - out to 6 weeks.
+  Together with voderholzer2011 it is the strongest available evidence AGAINST the premise that 5-6 h
+  nights straightforwardly destroy declarative consolidation.
+
+  WHAT IT FOUND, PLAINLY: no detectable difference in total prose recall between 5 h and 9 h TIB at any
+  time point. What the restricted arm lost was the *growth over the week* of the advantage for material
+  that had been tagged as important at encoding. In the 9 h arm that advantage strengthened between
+  10 minutes and 1 week after encoding; in the 5 h arm it did not. So the damage the authors detected is
+  selective - it is to the preferential consolidation of prioritised material, not to gross retention.
+
+  PUBLISHED-EFFECT-SIZE DEFECT, IMPORTANT: the paper's printed Cohen's d values are on two different
+  scales within a single sentence. For every paired contrast in the paper except one, the printed d is
+  almost exactly 2 x t/sqrt(n): initial 1.35 vs d_z 0.667 (ratio 2.02), 1 week 1.69 vs 0.839 (2.01),
+  6 weeks 1.68 vs 0.829 (2.03), forgetting contrasts 2.15 vs 1.066 (2.02) and 2.57 vs 1.272 (2.02), and
+  the control-arm strengthening 0.99 vs 0.484 (2.04). But the SR-arm strengthening is printed as d = 0.26,
+  which equals t/sqrt(n) = 0.265 exactly (ratio 0.98). The headline comparison "control d = 0.99 versus
+  SR d = 0.26" therefore compares a doubled effect size against an undoubled one and overstates the
+  contrast by roughly a factor of two. On a consistent d_z scale it is 0.48 versus 0.26, a difference of
+  0.22 (SE 0.28, 95% CI -0.33 to 0.77) - which is exactly what the null three-way interaction
+  (F(2,42) = 0.90, P = 0.41, eta_p^2 = 0.041) already implied. I have recorded the consistent d_z values
+  and the modeller should use those. This is the single most important caveat attached to this record.
+
+  ARCHITECTURE CONTRIBUTION (requirement 4): this is the cleanest exact-age-match demonstration of
+  selective N3 preservation at the subject's own dose. One week of 5 h TIB shortened TST, WASO, sleep
+  latency, N1, N2 and REM all at P < 0.001, while N3 was statistically unchanged on all three PSG nights
+  (P = 0.23, 0.36, 0.10). The authors' own interpretation is that this preservation is protective:
+  "N3 may offset detrimental effects of sleep restriction on memory" and "speaks to the resilience of
+  adolescents in the context of declarative memory consolidation."
+
+  THE FINDING THAT CUTS AGAINST A SIMPLE REM STORY: within the restricted arm, MORE REM predicted WORSE
+  6-week recall (r < -0.50, P < 0.013), while more N2 predicted BETTER recall (r = 0.45 at 1 week,
+  r > 0.56 at 6 weeks). If REM loss were the mechanism of consolidation failure under restriction, the
+  REM correlation should be positive. It is not. The authors call this "unexpected" and caution that
+  findings obtained under restriction "should be interpreted cautiously". The modeller should therefore
+  NOT assume that the disproportionate REM loss documented in campbell2021/kopasz2010/skorucak2021
+  translates into declarative learning loss; the mechanistic link is unsupported and here mildly
+  contradicted. Note also that only the N2 correlations differed significantly BETWEEN groups
+  (Fisher's Z > 2.22, two-tailed P < 0.026), so even the REM correlation is a within-arm result.
+
+  COHORT OVERLAP WARNING: part of the Need for Sleep Study programme at Duke-NUS, the same programme as
+  cousins2018, huang2016 and ong2016. cohort_family = NeedForSleep_Singapore on all of them. These are
+  separate cohorts under a common protocol at the same boarding school, run by an overlapping author
+  group - not independent replications. Note that cousins2018 (impairment, g = -0.89) and this study
+  (no gross impairment) come from the SAME programme at the SAME dose, which localises the discrepancy
+  to the outcome measured rather than to the population: cousins2018 restricted sleep BEFORE encoding
+  and measured encoding capacity, whereas this study encoded BEFORE restriction and measured
+  consolidation. That contrast is the central reconciliation in this shard - see station_report.md.
+shard: "s03_memory_consolidation"

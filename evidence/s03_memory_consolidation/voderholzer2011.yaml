@@ -1,0 +1,110 @@
+study_id: voderholzer2011
+citation: "Voderholzer U, Piosczyk H, Holz J, Landmann N, Feige B, Loessl B, Kopasz M, Doerr JP, Riemann D, Nissen C. Sleep restriction over several days does not affect long-term recall of declarative and procedural memories in adolescents. Sleep Medicine. 2011;12(2):170-178."
+doi: "10.1016/j.sleep.2010.07.017"
+pmid: "21256802"
+url: "https://doi.org/10.1016/j.sleep.2010.07.017"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep restriction over several days does not affect long-term recall of declarative and procedural memories in adolescents."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 88
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [14, 16]
+  pct_female: null
+  country: "DE"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: cognition
+    outcome_construct: declarative_memory_word_pair_recall_dose_response
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 4, contrast_label: "5 vs 6 vs 7 vs 8 vs 9 h TIB for 4 consecutive nights AFTER encoding; word-pair recall after 2 recovery nights and again at 4 weeks"}
+    scale: hedges_g
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No effect size is computable from the retrievable text: the paper reports a null across all five arms without per-arm means/SDs in the abstract. 0.0 encodes the reported null. SE deliberately left null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no detectable dose-response of post-encoding TIB (5-9 h) on declarative recall. This is a NULL record that constrains channel (c) downward."
+    covariates: []
+    followup_years: 0.077
+    cohort_family: "Freiburg_adolescent_restriction"
+    quote: "In contrast to the initial prediction, restriction of nocturnal sleep over four consecutive nights had no significant impact on declarative or procedural memory consolidation."
+  - outcome_domain: cognition
+    outcome_construct: procedural_memory_mirror_tracing_dose_response
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 4, contrast_label: "5 vs 6 vs 7 vs 8 vs 9 h TIB for 4 consecutive nights after encoding; mirror-tracing recall after 2 recovery nights and at 4 weeks"}
+    scale: hedges_g
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "As above; reported null with no per-arm dispersion available."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no detectable dose-response of post-encoding TIB on procedural memory"
+    covariates: []
+    followup_years: 0.077
+    cohort_family: "Freiburg_adolescent_restriction"
+    quote: "Contrary to our initial hypothesis, groups who slept 9, 8, 7, 6 or 5h for four nights after learning showed highly similar levels of memory consolidation."
+  - outcome_domain: sleep_need
+    outcome_construct: slow_wave_sleep_preservation_under_restriction
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 4, contrast_label: "PSG-measured SWS across 5/6/7/8/9 h TIB arms"}
+    scale: raw_units
+    unit: "qualitative: SWS preserved (no numeric per-arm minutes retrievable)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "0.0 encodes 'no meaningful reduction in SWS amount'. The per-arm SWS minutes are in the paywalled tables and I could not retrieve them; see campbell2021, ong2016 and kopasz2010 for numeric architecture data."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = SWS amount essentially unchanged by restriction down to 5 h TIB"
+    covariates: []
+    followup_years: null
+    cohort_family: "Freiburg_adolescent_restriction"
+    quote: "Polysomnographic monitoring after sleep restriction demonstrated a high preservation of the amount of slow wave sleep in the restricted conditions."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomised across five TIB arms with controlled conditions excluding daytime sleep, adherence verified by diary and actigraphy, PSG confirmation of the manipulation - a strong design. Downgraded to some_concerns for the purpose it is used here because with 88 participants across FIVE arms the per-arm n is ~17-18, so this is an underpowered null: it cannot exclude the g ~ 0.9 effect that cousins2018 reports. Absence of evidence, at limited precision."
+funding: "not stated in retrieved abstract"
+notes: |
+  REPORTING REALITY, AS THE INSTRUCTIONS REQUIRE. The shard brief presumes consolidation was impaired
+  during three years of schooling. This study is the best-designed direct test of that presumption at
+  the subject's dose in the subject's age band, and it is NULL - including at a 4-week follow-up.
+  It must not be suppressed.
+
+  Verbatim summary of the authors' interpretation: "The results suggest that adolescents show a high
+  resilience of memory consolidation to substantial sleep curtailment across four nights that might be
+  promoted by increased sleep intensity under conditions of sleep restriction."
+
+  This is the ONLY randomised study I located that covers the subject's exact 6 h weekday dose as a
+  discrete arm (arms at 9, 8, 7, 6, 5 h).
+
+  CRITICAL DESIGN DIFFERENCE FROM cousins2018 - this reconciles the apparent contradiction and the
+  downstream model should encode it. Here, encoding happened BEFORE the restriction period ("Declarative
+  (word-pair task) and procedural memory (mirror tracing task) encoding was assessed prior to the sleep
+  restriction protocol"), so the study tests whether restricted sleep degrades CONSOLIDATION of
+  already-encoded material. In cousins2018 the restriction came BEFORE encoding, testing whether
+  restricted sleep degrades the CAPACITY TO ENCODE. The two studies are therefore not in direct conflict:
+  read together they suggest the damage in partial restriction sits on the ENCODING side rather than the
+  post-encoding consolidation side. That is a substantive, decision-relevant distinction for channel (c),
+  and it is consistent with yoo2007 (deprivation before learning) and with the huang2016 finding that
+  material re-encountered repeatedly (spaced) was spared.
+
+  ACCESS LIMITATION: abstract plus the ScienceDirect landing page only; per-arm means, SDs and the PSG
+  stage tables are paywalled. Three of the four effects above are therefore recorded as reported nulls
+  with se: null. This shard did NOT invent dispersion for them.
+
+  SECONDHAND FIGURE NOTED BUT NOT USED: a review page retrieved alongside the article characterises this
+  trial as "27 adolescents (M age, 15 +/- 0.9 y) ... 5-h sleep restriction group (n = 15) than in the
+  control group (8 h) (n = 12)". Those numbers conflict with the primary abstract's 88 participants across
+  five arms and presumably refer to a PSG subsample or to a different report. I have recorded the primary
+  abstract's figures only and flag the discrepancy rather than reconciling it without the full text.
+shard: "s03_memory_consolidation"

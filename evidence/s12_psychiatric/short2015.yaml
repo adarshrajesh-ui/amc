@@ -1,0 +1,111 @@
+study_id: short2015
+citation: "Short MA, Louca M. Sleep deprivation leads to mood deficits in healthy adolescents. Sleep Med. 2015 Aug;16(8):987-993."
+doi: "10.1016/j.sleep.2015.03.007"
+pmid: "26141007"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Sleep deprivation leads to mood deficits in healthy adolescents."
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 12
+n_studies_pooled: null
+population:
+  age_mean: 16.17
+  age_range: [14, 18]
+  pct_female: 50.0
+  country: "Australia"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: overall_mood_deficit_all_poms_subscales
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: 10, duration_days: 1, contrast_label: "36 h total sleep deprivation vs two baseline days with 10-h sleep opportunities; POMS-SF every 2 h, compared at matched clock times 0900-1900"}
+    scale: probability
+    unit: "direction only; per-subscale effect sizes not reported in abstract"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "NOT POOLABLE. The abstract states 'All mood states significantly worsened' without giving per-subscale effect sizes, means, SDs, F or t statistics, or CIs. Article text not retrievable (Elsevier paywall; no OA copy located). value 1.0 encodes 'all six subscales worsened significantly'; se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = all six POMS subscales (depression, anger, confusion, anxiety, vigour, fatigue) significantly worsened after one night without sleep, in the WHOLE sample. Note this is TOTAL deprivation, a much more severe exposure than our subject's chronic partial restriction."
+    covariates: []
+    followup_years: null
+    cohort_family: "UniSA_adolescent_lab"
+    quote: "The subscales of depression, anger, confusion, anxiety, vigour, and fatigue were compared across days. All mood states significantly worsened following one night without sleep."
+  - outcome_domain: psychiatric
+    outcome_construct: sex_moderation_depressed_mood_and_anxiety_female_only
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: 10, duration_days: 1, contrast_label: "36 h total sleep deprivation; SEX-STRATIFIED analysis of depressed mood and anxiety (6 male, 6 female)"}
+    scale: probability
+    unit: "0 = effect NOT observed in males"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Encodes the authors' explicit statement that increases in depressed mood and anxiety after sleep deprivation were seen ONLY in females. No sex-stratified effect sizes are given, so se: null. This is a REPORTED null in males (unlike my inference-from-absence in vandyk2017), but it rests on n=6 males vs n=6 females."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = in MALES, depressed mood and anxiety did NOT significantly worsen after a night of total sleep deprivation; the effect was female-specific. Confusion worsened in both sexes but more in females. Directly relevant: our subject is male."
+    covariates: []
+    followup_years: null
+    cohort_family: "UniSA_adolescent_lab"
+    quote: "Females showed a greater vulnerability to mood deficits following sleep loss, with greater depressed mood and anxiety following sleep deprivation only witnessed among female participants. While both males and females reported more confusion following sleep deprivation, the magnitude of this effect was greater for females."
+rob:
+  tool: RoB2
+  judgement: high
+  notes: "n = 12 total, split 6 male / 6 female for the sex-moderation analysis, which is the finding I most want to use. A subgroup analysis on six people per cell is very weak evidence and could easily be a power artefact rather than true moderation. Design strengths: proper sleep laboratory, PSG-era controlled environment, 10-h baseline opportunities (a genuinely well-rested referent, which most studies lack), repeated measures every 2 h, and clock-time-matched comparison which controls for circadian phase. But there is no control CONDITION -- baseline days are compared to the deprivation day within the same participants in fixed order, so order and adaptation-to-laboratory effects are not controlled. Six POMS subscales tested with no stated multiple-comparison correction. Exposure is TOTAL deprivation, the least transportable exposure to chronic partial restriction."
+funding: null
+notes: |
+  I EXTRACTED THIS STUDY MAINLY FOR ITS SEX MODERATION, WHICH IS THE THIRD INDEPENDENT SUCH FINDING IN MY
+  SHARD, AND THE ONLY ONE FROM AN EXPERIMENT.
+
+  The convergence across three completely different designs is now the most robust sex-specific signal I
+  have, and it all points the same way -- that the sleep/depression link in adolescents is concentrated in
+  girls:
+    short2015 (this, EXPERIMENT, n=12):        depressed mood and anxiety rose after sleep loss in
+                                              FEMALES ONLY; not in males
+    conklin2018_basus (PROSPECTIVE, n=3071):   chronic short sleep predicted CESD in young women
+                                              (adjusted Cohen's D 0.13); "mean CESD scores in young men
+                                              did not differ across levels of cumulative sleep deprivation"
+    wang2024_yrbs (CROSS-SECTIONAL, n=73,356): females with insufficient sleep at greatest suicidality risk
+                                              (ideation OR 1.46, plan OR 1.44); the rising trend among
+                                              insufficient sleepers was "non-significantly increasing among
+                                              male adolescents"
+  Experimental, prospective, and cross-sectional; laboratory, Canadian cohort, and US national survey;
+  n=12, n=3071, n=73,356. All three find the effect larger in females. For an 18-year-old MALE this is a
+  genuine and repeatedly replicated downward adjustment to the depression risk estimate, and it is one of
+  the few places where the literature offers our subject a specific, favourable qualifier rather than a
+  population average.
+
+  THE HONEST CAVEATS, WHICH ARE SUBSTANTIAL.
+    (1) POWER. Six males. A null in six people is nearly uninformative on its own. Its value comes
+        entirely from replicating in the two much larger studies above.
+    (2) MEASUREMENT ARTEFACT IS A LIVE ALTERNATIVE EXPLANATION FOR ALL THREE. Both the POMS
+        Depression/Dejection subscale and the CESD are known to show differential item functioning by sex
+        -- conklin2018_basus explicitly flags that the CESD's items (e.g. "I had crying spells") inflate
+        female scores. If the standard instruments are simply less sensitive to how depression presents in
+        adolescent males (irritability, withdrawal, risk-taking, somatic complaints), then "no effect in
+        boys" may mean "no effect that these questionnaires can see in boys." Notably, ANGER and
+        IRRITABILITY -- the male-typical presentation -- are exactly the constructs that DO move reliably
+        in the experimental literature (baum2014 anger d_z 0.44, vandyk2017 anger improved with extension).
+        That is an uncomfortable and important possibility: the effect in boys may be real but
+        misclassified as irritability rather than depression.
+    (3) EXPOSURE. This is 36 h of TOTAL sleep deprivation against a 10 h baseline. Our subject has never
+        done that; he does chronic 5-6 h nights. Total deprivation is the least transportable exposure in
+        the whole tier-1 literature, and pilcher1996 found partial deprivation actually has MORE profound
+        effects than total deprivation on some outcomes, so the mapping is not even monotonic.
+
+  ONE METHODOLOGICAL POINT IN THIS STUDY'S FAVOUR THAT IS RARE IN THE LITERATURE. The baseline condition
+  gave 10-h sleep opportunities. Most studies compare short sleep to "normal" sleep of 7-8 h, which in a
+  chronically sleep-restricted adolescent population is itself a restricted state. Using a 10-h referent
+  means the contrast is against genuinely satiated sleep, which if anything makes the effects larger and
+  more visible. The same authors' meta-analysis (short2020) is my main observational adolescent
+  mood record.
+
+  NOTE ON STUDY IDENTITY. This is Short & Louca 2015 in Sleep Medicine (n=12, experimental). Do not confuse
+  it with short2020 (Short, Booth, Omar, Ostlundh, Arora 2020, Sleep Medicine Reviews), the meta-analysis
+  of sleep duration and mood in adolescents, which is a separate record in this shard.
+shard: "s12_psychiatric"

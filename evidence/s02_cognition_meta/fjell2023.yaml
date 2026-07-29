@@ -1,0 +1,127 @@
+study_id: fjell2023
+citation: "Fjell AM, Sorensen O, Wang Y, Amlien IK, Baare WFC, Bartres-Faz D, Boraxbekk C-J, Brandmaier AM, Demuth I, Drevon CA, Ebmeier KP, Ghisletta P, Kievit R, Kuhn S, Madsen KS, Mowinckel AM, Nyberg L, Sexton CE, Solé-Padullés C, Vidal-Pineiro D, Wagner G, Watne LO, Zsoldos E, Walhovd KB. Is Short Sleep Bad for the Brain? Brain Structure and Cognitive Function in Short Sleepers. The Journal of Neuroscience. 2023;43(28):5241-5250."
+doi: "10.1523/JNEUROSCI.2330-22.2023"
+pmid: "37365003"
+url: "https://www.jneurosci.org/content/43/28/5241"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Is Short Sleep Bad for the Brain? Brain Structure and Cognitive Function in Short Sleepers."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 8694
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [20, 89]
+  pct_female: 52.3
+  country: "multinational (Europe and US: Lifebrain consortium, UK Biobank, Human Connectome Project)"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: cognition
+    outcome_construct: general_cognitive_ability_g_factor
+    exposure: {type: habitual_short_sleep, dose_h: 6.0, referent_h: 7.5, duration_days: null, contrast_label: "self-reported habitual sleep <=6 h WITHOUT daytime sleepiness or sleep problems (group 1, n=740) vs recommended 7-8 h without sleepiness or sleep problems (group 3, n=3886)"}
+    scale: hedges_g
+    unit: null
+    value: -0.16
+    se: 0.0421
+    ci: [-0.2425, -0.0775]
+    conversion_formula: "Value reported directly in SD units of a g-factor score. SE derived from the reported t statistic: SE = |estimate|/t = 0.16/3.80 = 0.0421. GCA is 'calculated as a g-factor from the available cognitive tests in each sample' and 'the principal component of different cognitive scores available for each sample', so unlike the single-task UK Biobank outcomes this IS a general-factor score and SD x 15 is a legitimate IQ-point conversion. The authors perform exactly that conversion themselves (2.4 IQ points)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = lower general cognitive ability in habitual short sleepers"
+    covariates: ["age", "sex", "sample/site", "BMI", "depression symptoms", "income", "education"]
+    followup_years: null
+    cohort_family: "Lifebrain_UKB_HCP"
+    quote: "Both group 1: Short sleep and no sleep problems/sleepiness (estimate = −0.16 SD, t = −3.80, p < 0.0002) and group 2: Short sleep and sleep problems/sleepiness (estimate = −0.19 SD, t = −9.94, p < 2.97e−09) showed significantly lower scores than group 3: Recommended sleep and no sleep problems/sleepiness."
+  - outcome_domain: cognition
+    outcome_construct: general_cognitive_ability_g_factor_with_sleepiness
+    exposure: {type: habitual_short_sleep, dose_h: 6.0, referent_h: 7.5, duration_days: null, contrast_label: "self-reported habitual sleep <=6 h WITH daytime sleepiness and/or sleep problems (group 2, n=1742) vs recommended 7-8 h without sleepiness or sleep problems (group 3, n=3886)"}
+    scale: hedges_g
+    unit: null
+    value: -0.19
+    se: 0.0191
+    ci: [-0.2275, -0.1525]
+    conversion_formula: "Reported directly in SD units of a g-factor. SE = |estimate|/t = 0.19/9.94 = 0.0191."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = lower general cognitive ability in habitual short sleepers who also report sleepiness/sleep problems"
+    covariates: ["age", "sex", "sample/site", "BMI", "depression symptoms", "income", "education"]
+    followup_years: null
+    cohort_family: "Lifebrain_UKB_HCP"
+    quote: "Both group 1: Short sleep and no sleep problems/sleepiness (estimate = −0.16 SD, t = −3.80, p < 0.0002) and group 2: Short sleep and sleep problems/sleepiness (estimate = −0.19 SD, t = −9.94, p < 2.97e−09) showed significantly lower scores than group 3: Recommended sleep and no sleep problems/sleepiness."
+  - outcome_domain: cognition
+    outcome_construct: published_iq_point_equivalent_of_habitual_short_sleep
+    exposure: {type: habitual_short_sleep, dose_h: 6.0, referent_h: 7.5, duration_days: null, contrast_label: "authors' own conversion of the two short-sleep GCA effects into full-scale-IQ-equivalent points"}
+    scale: raw_units
+    unit: "full-scale IQ points (SD = 15)"
+    value: -2.4
+    se: 0.632
+    ci: [-3.64, -1.16]
+    conversion_formula: "THE PUBLISHED PRECEDENT FOR THIS SHARD'S IQ CONVERSION. The authors convert the GCA SD estimates to IQ points at 15 points per SD: 0.16 x 15 = 2.40 and 0.19 x 15 = 2.85 ~ 2.9, matching their stated '2.4' and '2.9' exactly. I record the group-1 (short sleep WITHOUT sleepiness) value of -2.4 points as the primary figure because that group is the cleanest habitual-short-sleep contrast. SE = 0.0421 x 15 = 0.632. The conversion is defensible HERE and only here among my observational records because the outcome is an extracted general factor, not a single task."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = lower IQ-equivalent score in habitual short sleepers; this is a CROSS-SECTIONAL ASSOCIATION and the authors explicitly decline to claim causality"
+    covariates: ["age", "sex", "sample/site", "BMI", "depression symptoms", "income", "education"]
+    followup_years: null
+    cohort_family: "Lifebrain_UKB_HCP"
+    quote: "Still, although short sleep was not associated with smaller regional brain volumes, the short sleepers scored lower on tests of general cognitive abilities. The effect sizes were equal to 2.9 and 2.4 IQ-points for the short sleepers with and without sleep problems and daytime sleepiness, respectively."
+  - outcome_domain: cognition
+    outcome_construct: general_cognitive_ability_short_sleepers_with_vs_without_sleepiness
+    exposure: {type: habitual_short_sleep, dose_h: 6.0, referent_h: 6.0, duration_days: null, contrast_label: "among <=6 h sleepers only: those WITH sleepiness/sleep problems vs those WITHOUT (group 2 vs group 1, n=2173)"}
+    scale: hedges_g
+    unit: null
+    value: -0.077
+    se: 0.0497
+    ci: [-0.1744, 0.0204]
+    conversion_formula: "Reported directly in SD units. SE = 0.077/1.55 = 0.0497. NOT significant (p = 0.12). Recorded because it is the study's key negative: sleepiness does not identify which short sleepers are cognitively worse off, which undercuts the 'undetected sleep debt' interpretation of the short-sleep deficit."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = sleepy short sleepers slightly worse than non-sleepy short sleepers; CI crosses zero"
+    covariates: ["age", "sex", "sample/site", "BMI", "depression symptoms", "income", "education"]
+    followup_years: null
+    cohort_family: "Lifebrain_UKB_HCP"
+    quote: "There were no significant differences between the groups of short sleepers (group 2 vs 1; estimate = −0.077 SD, t = −1.55, p = 0.12, n = 2173)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "Cross-sectional for the cognitive outcome (the longitudinal component is MRI only). Exposure is self-reported habitual duration, though a UK Biobank accelerometer subsample validation was run (n = 92 and 274 for the two short-sleep groups) and 'Analyses using accelerometer-estimated sleep duration confirmed the findings'. Authors state the samples 'are not representative of the populations from which they are drawn' and that they 'were not thoroughly screened for sleep disorders such as sleep apnea'. Only 20% of <=6 h sleepers could be classified into the strict groups. GCA is assembled from DIFFERENT test batteries in different subsamples (Cattell Culture Fair in CamCAN, WASI in LCBC, UK Biobank fluid intelligence in UKB, NIH Toolbox tasks in HCP, etc.), so the g-factor is not a single instrument; this is mitigated by the authors extracting a per-sample principal component. Direction of causality explicitly not established by the authors."
+funding: "European Union Horizon 2020 Grant 732592 (Lifebrain); European Research Council starting grants 283634, 725025 (Fjell) and 313440 (Walhovd); Research Council of Norway; full list in the paper."
+notes: |
+  THIS IS THE ANCHOR RECORD FOR THE IQ CONVERSION DELIVERABLE. It supplies a peer-reviewed, top-neuroscience-journal
+  precedent for converting a standardized cognitive effect into full-scale-IQ-equivalent points at 15 points per SD, and it
+  does so on the ONLY kind of outcome for which that conversion is legitimate: an extracted general factor. The arithmetic
+  reproduces exactly (0.16 x 15 = 2.40 -> stated 2.4; 0.19 x 15 = 2.85 -> stated 2.9). See iq_conversion_basis.md.
+
+  The same paper also supplies the counterweight the downstream model needs, in the authors' own words: "However, a
+  meta-analysis did not find an effect of sleep deprivation on intelligence and reasoning measures (Lowe et al., 2017),
+  which are the tests most similar to the present measures of cognitive function. In addition, most sleep deprivation
+  experiments involve rapid and dramatic reductions in sleep duration, unlike natural variations in habitual sleep duration
+  between people." So the authors themselves flag that their -2.4 IQ-point cross-sectional association is NOT corroborated
+  by the experimental literature on the matched (reasoning/intelligence) outcome. The pooler must not treat -2.4 points as
+  a causal effect of short sleep.
+
+  n is recorded as 8694 = the number of classified participants with GCA scores ("General cognitive function (GCA) scores
+  were available for 8694 of the classified participants"). The full MRI sample is 47,029 and the fully classified sample
+  is 9611; neither is the analytic n for the cognitive effects above.
+
+  pct_female is derived from the only sex breakdown given, which is at the MRI-observation level: "26 811 female/24,509
+  male observations" -> 52.2%. Recorded as approximate; it is not specifically the GCA subsample.
+
+  OVERLAP WARNING: this sample INCLUDES UK Biobank, so it partially overlaps kyle2017 and west2024. cohort_family is set
+  to Lifebrain_UKB_HCP rather than UK_Biobank to signal partial rather than full overlap; the pooler should down-weight
+  rather than drop.
+
+  THE BRAIN-STRUCTURE RESULT MATTERS FOR INTERPRETATION even though it is another shard's domain: short sleepers without
+  sleepiness had LARGER, not smaller, regional brain volumes than 7-8 h sleepers (estimate = 0.0067 [CI: 0.0030, 0.0103],
+  p < 0.001). A cognitive deficit with no structural correlate, no sleepiness gradient, and no experimental corroboration
+  on reasoning measures is most parsimoniously read as confounding or as individual differences in sleep need, which is the
+  authors' own conclusion: "some people can cope with less sleep without obvious negative associations with brain
+  morphometry".
+
+  Age range 20-89 makes this a poor age match for an 18-year-old. HCP contributes young adults but the bulk of the GCA
+  sample is UK Biobank and Lifebrain midlife/elderly participants.
+shard: "s02_cognition_meta"

@@ -1,0 +1,128 @@
+study_id: yoo2007
+citation: "Yoo SS, Hu PT, Gujar N, Jolesz FA, Walker MP. A deficit in the ability to form new human memories without sleep. Nature Neuroscience. 2007;10(3):385-392."
+doi: "10.1038/nn1851"
+pmid: "17293859"
+url: "https://doi.org/10.1038/nn1851"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "A deficit in the ability to form new human memories without sleep."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 28
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: episodic_recognition_dprime_after_deprived_encoding
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1, contrast_label: "~35 h total sleep deprivation BEFORE encoding vs normal sleep before encoding; recognition tested 2 d later after two recovery nights"}
+    scale: hedges_g
+    unit: null
+    value: -0.84
+    se: 0.40
+    ci: [-1.61, -0.06]
+    conversion_formula: "Back-computed from the reported significance test and group sizes as the instructions direct for p-value-only reporting. t for two-tailed P = 0.031 at df = 26 is t = 2.281; d = t*sqrt(1/14+1/14) = 0.862; Hedges' J = 1-3/(4*26-1) = 0.9709; g = 0.837; SE = sqrt(1/14+1/14+g^2/(2*26)) = 0.395. Sign set negative to denote harm."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = worse recognition memory for material encoded while sleep-deprived. NOTE the deficit was measured AFTER two full recovery nights, so it is an encoding/consolidation loss, not a state deficit at test."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Memory performance in the SD group was significantly worse than that in the SC group at later testing, with mean recognition levels (d') showing a 19% deficit under conditions of sleep deprivation, relative to those after a normal night of sleep (2.58 versus 2.17, respectively; unpaired t-test P < 0.031; and Table 1)."
+  - outcome_domain: cognition
+    outcome_construct: episodic_recognition_dprime_pct_deficit
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1, contrast_label: "~35 h total sleep deprivation before encoding vs normal sleep, d-prime"}
+    scale: pct_change
+    unit: "percent of the sleep-deprived group's d-prime"
+    value: -19.0
+    se: null
+    ci: null
+    conversion_formula: "Authors' own figure. Reproduces as (2.58 - 2.17)/2.17 = 18.89% ~ 19%, i.e. the denominator is the SLEEP-DEPRIVED value. Expressed instead as a fraction of the rested control value the deficit is (2.58 - 2.17)/2.58 = 15.9%."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = memory deficit from deprived encoding. Use -15.9% if the modeller needs the loss expressed relative to the rested referent."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Sleep control Mean 0.86 0.91 2.58 s.d. 0.019 0.021 0.197 / Sleep deprivation Mean 0.74 0.92 2.17 s.d. 0.044 0.017 0.174"
+  - outcome_domain: cognition
+    outcome_construct: episodic_recognition_hit_rate
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1, contrast_label: "~35 h total sleep deprivation before encoding vs normal sleep, hit rate"}
+    scale: pct_change
+    unit: "percent of control hit rate"
+    value: -14.0
+    se: null
+    ci: null
+    conversion_formula: "From Table 1 means: (0.86 - 0.74)/0.86 = 13.95% ~ 14.0%. Correct-rejection rate was essentially unchanged (0.91 vs 0.92), so the deficit is specific to retrieving studied items rather than a general response bias."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = fewer studied pictures recognised after deprived encoding"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Sleep control Mean 0.86 0.91 2.58 ... Sleep deprivation Mean 0.74 0.92 2.17"
+  - outcome_domain: brain_structure
+    outcome_construct: hippocampal_encoding_activation_difference
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1, contrast_label: "~35 h total sleep deprivation before encoding vs normal sleep; fMRI Dm contrast, posterior hippocampus parameter estimates"}
+    scale: raw_units
+    unit: "SPM parameter estimate (arbitrary units relative to global mean)"
+    value: -4.28
+    se: null
+    ci: null
+    conversion_formula: "Difference of the two reported averaged parameter estimates: -0.21 (SD group) minus 4.07 (SC group) = -4.28. Units are arbitrary SPM betas and are NOT convertible to a standardised effect size; supplied only so the modeller can see the sign and that the SD group's estimate fell below the global mean."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = reduced hippocampal encoding-related activation in the sleep-deprived group; p = 0.038 for the group difference"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Averaged parameter estimates from the identified posterior hippocampal regions once more showed a significant difference between the SC and SD groups (4.07 versus -0.21, respectively; P = 0.038)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomised parallel groups (n = 14 per arm) but no blinding is possible; very small n for an fMRI group contrast; imaging contrasts thresholded at P < 0.001 uncorrected with a 5-voxel extent, which is liberal by present-day standards; the internal inconsistency in Table 1's dispersion values (see notes) is a reporting defect."
+funding: "not stated in retrieved text; conducted at Beth Israel Deaconess Medical Center / Brigham and Women's Hospital General Clinical Research Center"
+notes: |
+  DATA-QUALITY FLAG - Table 1's dispersion values cannot be reconciled with the reported P.
+  Table 1 labels its dispersion row "s.d." and gives 0.197 (SC) and 0.174 (SD) for d-prime with n = 14
+  per group. I checked three readings and none reproduces the stated "unpaired t-test P < 0.031":
+    (a) taking the values literally as SDs -> pooled SD 0.186, d = -2.21, implied t = 5.84, P < 0.0001;
+    (b) treating them as SEMs -> implied SDs 0.737 and 0.651, d = -0.59, implied t = 1.56, P ~ 0.13;
+    (c) back-computing from the reported P = 0.031 at df = 26 -> t = 2.281, d = 0.862, g = 0.837.
+  I have recorded (c) as the primary effect because the instructions direct that a p-value plus n be
+  used to back out an approximate SE, and because the authors' significance claim is the one datum all
+  readings must respect. The downstream model should inflate uncertainty on this estimate accordingly;
+  the plausible range across readings spans g ~ 0.6 to g ~ 2.2 in magnitude.
+
+  WHY THIS STUDY MATTERS FOR CHANNEL (c) AND WHAT IT CANNOT SHOW.
+  It matters because the design isolates ENCODING CAPACITY rather than test-time state: the deprivation
+  happened before learning, and testing happened two days later after two full recovery nights.
+  Verbatim: "In the SD group, subjects were awake during day 1, night 1 and day 2, accumulating
+  approximately 35 h of total sleep deprivation before the encoding session. In the SC group, subjects
+  slept normally during night 1 before the encoding session on day 2. Both groups then performed a
+  recognition test (without fMRI) on day 4, after two recovery nights of sleep". So a 19% recognition
+  deficit survived two recovery nights - direct evidence that the encoding window does not reopen.
+  The authors also rule out simple alertness mediation: there was no group effect on encoding-trial
+  response times (F1,27 = 0.93, P = 0.343) and no correlation between encoding response times and
+  subsequent memory in either group. And the hippocampal deficit persisted in performance-matched
+  subgroups: "contrasting upper-level performers in the SD group with the lower-level performers in the
+  SC group (n = 9 in each group; d': 2.46 versus 2.48 ...), we still observed a relative decreased
+  right (para)hippocampal activation in the SD group".
+
+  What it CANNOT show: this is TOTAL deprivation (~35 h), not the partial 5-6 h restriction our subject
+  experienced. Per the shard brief, total-deprivation studies are mechanistic only. Use yoo2007 to
+  justify the EXISTENCE and the encoding-side location of the mechanism; use cousins2018 and huang2016
+  for the magnitude at a partial-restriction dose.
+
+  Full text obtained from the Walker lab reprint (walkerlab.berkeley.edu/reprints/Walker_NatureNeurosci_2007.pdf);
+  the OCR renders "d-prime" as "d¢" and "P <" as "P o", which I have normalised in the quotes above
+  without altering any numeral. Identifiers verified via Crossref and PubMed.
+shard: "s03_memory_consolidation"

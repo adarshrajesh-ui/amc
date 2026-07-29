@@ -1,0 +1,71 @@
+study_id: yang2022
+citation: "Yang FN, Xie W, Wang Z. Effects of sleep duration on neurocognitive development in early adolescents in the USA: a propensity score matched, longitudinal, observational study. Lancet Child and Adolescent Health. 2022;6(10):705-712."
+doi: "10.1016/S2352-4642(22)00188-2"
+pmid: "35914537"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9482948/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Effects of sleep duration on neurocognitive development in early adolescents in the USA: a propensity score matched, longitudinal, observational study"
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 8323
+n_studies_pooled: null
+population:
+  age_mean: 9.9
+  age_range: [9, 12]
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: brain_structure
+    outcome_construct: persistence_of_grey_matter_volume_group_difference_over_2y
+    exposure: {type: habitual_short_sleep, dose_h: 9.0, referent_h: 9.0, duration_days: null,
+               contrast_label: "insufficient (<9 h) vs sufficient (>=9 h) sleep, propensity-matched on 11 covariates; correlation between the vector of grey-matter-volume effect sizes at baseline and the same vector at 2-year follow-up"}
+    scale: raw_units
+    unit: "Pearson r between baseline and 2-year effect-size maps for grey matter volume"
+    value: 0.61
+    se: 0.0728
+    ci: [0.51, 0.69]
+    conversion_formula: "Reported directly: r=0.61, 95% CI 0.51-0.69, p<0.0001. se computed on the Fisher z scale: z=atanh(0.61)=0.7089; atanh(0.51)=0.5627, atanh(0.69)=0.8480; se_z=(0.8480-0.5627)/3.92=0.0728."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "CRITICAL INTERPRETIVE WARNING: this is NOT an effect of sleep on the brain. It is the correlation between two effect-size maps measured 2 years apart. A high value means the group difference is STABLE/reproducible over time. A stable difference is equally consistent with (a) a persistent sleep effect and (b) a pre-existing trait difference that never changed. It cannot discriminate the two, and the paper's 'long-lasting effect' language does not follow from it."
+    covariates: ["sex", "socioeconomic status", "puberty status", "and 8 further propensity-matching covariates"]
+    followup_years: 2.0
+    cohort_family: "ABCD"
+    quote: "we identified 3021 matched sufficient sleep-insufficient sleep pairs at baseline and 749 matched pairs at 2-year follow-up, and observed similar differences between the groups in behaviour and neural measures at both timepoints; the effect sizes of between-group differences in behavioural measures at these two timepoints were significantly correlated with each other (r=0.85, 95% CI 0.73-0.92; p<0.0001). A similar pattern was observed in resting-state functional connectivity (r=0.54, 0.45-0.61; p<0.0001) and in structural measures (eg, in grey matter volume r=0.61, 0.51-0.69; p<0.0001)."
+rob:
+  tool: ROBINS-I
+  judgement: moderate
+  notes: "Propensity matching on 11 covariates including SES and pubertal status is a genuine strength and is more than most studies here attempt. But: exposure is a dichotomised parent-report at a 9 h cut-off; matched pairs collapse from 3,021 at baseline to 749 at follow-up, which is heavy attrition/matching loss and risks selection; propensity matching only balances MEASURED confounders and cannot address unmeasured ones or reverse causation; the headline design does not test whether the group difference GREW, which is the test that would distinguish an ongoing effect from a stable trait."
+funding: "US National Institutes of Health"
+notes: |
+  THIS PAPER IS ROUTINELY CITED AS THE EVIDENCE FOR 'LONG-LASTING' STRUCTURAL EFFECTS OF
+  ADOLESCENT SHORT SLEEP. Read carefully, it does not establish that.
+
+  WHAT IT ACTUALLY SHOWS: the grey matter volume difference between short and adequate sleepers
+  looks much the same at age 10 and at age 12 (effect-size map correlation r = 0.61). That is a
+  finding about STABILITY, not about progression.
+
+  WHY STABILITY IS THE WRONG EVIDENCE FOR PERMANENT DAMAGE, AND ARGUABLY EVIDENCE AGAINST IT:
+    - If chronic short sleep were progressively damaging structure, the difference should GROW
+      over the two years. The paper does not report growth; it reports persistence.
+    - A difference that is present at baseline and unchanged two years later is exactly the
+      signature of a PRE-EXISTING trait difference - the reading fjell2023 argues for on much
+      larger data ("Cross-sectional sleep-volume relationships therefore represent mostly stable
+      factors, not brain changes").
+    - The same paper's behavioural effect-size maps correlate at r = 0.85, again indicating
+      stable group differences rather than divergence.
+
+  This is the clearest example in the shard of a mismatch between a paper's causal language
+  ("Effects of sleep duration on...", "long-lasting effect", "insufficient sleep induced")
+  and what its statistics can license.
+
+  EXPOSURE AND AGE MISMATCH: <9 h at ages 9-12, propensity matched. Not 5-6 h at 16-19.
+  COHORT: ABCD - overlaps cheng2021, limasantos2025, chen2026. Do not treat as independent.
+shard: "s15_brain_structure"

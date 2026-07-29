@@ -1,0 +1,38 @@
+==========================================================================
+talbot2010 -- check printed eta_p^2 against F and df_error
+==========================================================================
+  PANAS-C positive affect composite  F= 34.11 df_err=55  eta_p2 calc=0.3828 printed=0.38  MATCH
+  catastrophizing pre-post anxiety   F=  6.17 df_err=55  eta_p2 calc=0.1009 printed=0.10  MATCH
+  catastrophe likelihood rating      F=  3.79 df_err=49  eta_p2 calc=0.0718 printed=0.07  MATCH
+  most threatening worry rating      F=  4.36 df_err=51  eta_p2 calc=0.0788 printed=0.08  MATCH
+
+==========================================================================
+talbot2010 -- d_z conversions
+==========================================================================
+  PANAS-C positive affect composite  N=58  d_z=+0.7669  se=0.14937  ci=[+0.4741, +1.0596]
+  catastrophizing pre-post anxiety   N=58  d_z=+0.3262  se=0.13475  ci=[+0.0620, +0.5903]
+  catastrophe likelihood rating      N=52  d_z=+0.2700  se=0.14118  ci=[-0.0067, +0.5467]
+  most threatening worry rating      N=54  d_z=+0.2841  se=0.13880  ci=[+0.0121, +0.5562]
+
+  NEGATIVE affect composite: F(1,55) < 1, ns -> bound only
+    F < 1 implies t < 1, so |d_z| < 1/sqrt(58) = 0.1313
+
+==========================================================================
+sadikova2024 -- standardise the IV estimate on the Kandel-Davies scale
+==========================================================================
+  pooled baseline SD = sqrt((4.8^2 + 5.2^2)/2) = 5.0040
+  overall depression symptoms  -0.78 pts -> d=-0.1559  ci=[-0.2638,-0.0560]  se_points=0.26531
+  fatigue cluster              -1.36 pts -> d=-0.2718  ci=[-0.4377,-0.1379]  se_points=0.38265
+  paper states 0.78 points = '15.6% of a standard deviation'; my d = -0.1559
+
+  per-hour rescaling: the IV contrast is a SUSTAINED 30-MIN gain, so a per-hour
+  figure is 2x the above ONLY under linearity, which is not tested:
+    overall depression, per +1 h = -1.560 points = d -0.3118
+
+  intention-to-treat (policy) effects from Table 2, points on the same scale:
+    overall, 1 y   -0.13 (-0.17, -0.08)  se=0.02296  d=-0.0260
+    overall, 2 y   -0.26 (-0.50, -0.02)  se=0.12245  d=-0.0520
+    mood, 1 y      -0.04 (-0.46, 0.38)  se=0.21429  d=-0.0080
+    mood, 2 y      -0.03 (-0.09, 0.02)  se=0.02806  d=-0.0060
+    fatigue, 1 y   -0.54 (-0.73, -0.35)  se=0.09694  d=-0.1079
+    fatigue, 2 y   -0.91 (-1.45, -0.38)  se=0.27296  d=-0.1819

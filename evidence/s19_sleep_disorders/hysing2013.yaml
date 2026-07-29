@@ -1,0 +1,109 @@
+study_id: hysing2013
+citation: "Hysing M, Pallesen S, Stormark KM, Lundervold AJ, Sivertsen B. Sleep patterns and insomnia among adolescents: a population-based study. J Sleep Res. 2013;22(5):549-556."
+doi: "10.1111/jsr.12055"
+pmid: "23611716"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Sleep patterns and insomnia among adolescents: a population-based study."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 10220
+n_studies_pooled: null
+population:
+  age_mean: 17.4
+  age_range: [16, 19]
+  pct_female: 54.0
+  country: "Norway"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: baseline_risk
+    outcome_construct: prevalence_insomnia_dsm5_adolescents
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "insomnia by DSM-5 criteria, ages 16-19"}
+    scale: probability
+    unit: "proportion of adolescents"
+    value: 0.185
+    se: 0.00384
+    ci: [0.1775, 0.1925]
+    conversion_formula: "'Insomnia prevalence rates ranged from a total prevalence of 23.8 (DSM-IV criteria), 18.5 (DSM-V criteria) and 13.6% (quantitative criteria for insomnia)' verbatim. value = 0.185 for DSM-5. se = sqrt(0.185*0.815/10220) = 0.00384; Wald 95% CI = [0.1775, 0.1925]. My construction. The DSM-IV (0.238) and Quantitative-Criteria (0.136) figures are recorded in notes as a definitional sensitivity range rather than as separate effects, because all three are the same people scored three ways."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive prevalence. THE DEFINITIONAL RANGE IS THE FINDING: 23.8% / 18.5% / 13.6% in ONE sample of 10,220 adolescents depending purely on which criteria set is applied - a 1.75-fold spread. Any claim about whether our subject 'has insomnia' is therefore roughly as sensitive to the definition chosen as to his actual symptoms, and the report must name the criteria set."
+    covariates: []
+    followup_years: null
+    cohort_family: "ung_hordaland"
+    quote: "Insomnia prevalence rates ranged from a total prevalence of 23.8 (DSM-IV criteria), 18.5 (DSM-V criteria) and 13.6% (quantitative criteria for insomnia)."
+  - outcome_domain: exposure_measurement
+    outcome_construct: population_weekday_sleep_duration_adolescents
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "mean self-reported weekday sleep duration, unselected Norwegian 16-19 year olds"}
+    scale: hours
+    unit: "hours of weekday total sleep time"
+    value: 6.417
+    se: null
+    ci: null
+    conversion_formula: "'The adolescents reported short sleep duration on weekdays (mean 6:25 hours), resulting in a sleep deficiency of about 2 h' verbatim. 6:25 = 6 + 25/60 = 6.417 h. The abstract gives no SD, so se is null rather than invented. The same cohort's SD (weekday sleep duration 1:38 in the non-DSPS group) is available from sivertsen2013 Table 2."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive population mean, not an effect. CALIBRATES HOW DEVIANT OUR SUBJECT IS: the unselected 16-19 year old population mean weekday sleep is 6 h 25 min. Our subject's reported 5-6 h is therefore roughly 0.4-0.9 h below the population mean, i.e. about 0.3-0.6 SD - well inside the distribution, not an outlier. He is not unusual for sleeping short; he would be unusual only if the shortfall is driving measurable impairment."
+    covariates: []
+    followup_years: null
+    cohort_family: "ung_hordaland"
+    quote: "The adolescents reported short sleep duration on weekdays (mean 6:25 hours), resulting in a sleep deficiency of about 2 h."
+  - outcome_domain: exposure_measurement
+    outcome_construct: population_base_rate_sol_over_30min
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "proportion of unselected 16-19 year olds reporting sleep onset latency exceeding 30 minutes"}
+    scale: probability
+    unit: "proportion of adolescents"
+    value: 0.65
+    se: 0.00472
+    ci: [0.6407, 0.6593]
+    conversion_formula: "'A majority of the adolescents (65%) reported sleep onset latency exceeding 30 min' verbatim. se = sqrt(0.65*0.35/10220) = 0.00472; Wald 95% CI = [0.6407, 0.6593]. My construction."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive base rate. THIS NUMBER DESTROYS THE >30-MINUTE SLEEP-LATENCY THRESHOLD AS A SCREENING TOOL IN LATE ADOLESCENTS: if 65% of the unselected population exceeds it, its maximum achievable positive likelihood ratio is 1/0.65 = 1.54 even if it were perfectly sensitive. It also directly contradicts williams2020, where only 20.3% of US college students exceeded 30 min. Two large samples, one quantity, a threefold disagreement - so the report must NOT score our subject against a literature latency threshold; it must measure his latency prospectively by diary and compare weekday to free-day nights WITHIN him."
+    covariates: []
+    followup_years: null
+    cohort_family: "ung_hordaland"
+    quote: "A majority of the adolescents (65%) reported sleep onset latency exceeding 30 min."
+  - outcome_domain: comparator
+    outcome_construct: sex_difference_in_weekday_weekend_discrepancy
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: null, contrast_label: "direction of the sex difference in weekday-weekend sleep discrepancy, boys vs girls, unselected adolescents"}
+    scale: raw_units
+    unit: "qualitative direction code (+1 = boys show the LARGER weekday-weekend discrepancy)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "No magnitude is given in the abstract, only the direction: 'boys reported later bedtimes and a larger weekday-weekend discrepancy on several sleep parameters'. Coded +1 for direction so the record is schema-valid. No arithmetic, no se."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = boys normally show the larger weekday-weekend discrepancy. DIRECTLY LOWERS THE DIAGNOSTIC VALUE OF OUR SUBJECT'S PRESENTING FEATURE: he is male, and a large weekday-weekend discrepancy is the NORMATIVE male pattern in this age band. The feature that the task premise treats as a DSWPD red flag is in fact the modal presentation of a healthy 16-19 year old boy."
+    covariates: ["sex"]
+    followup_years: null
+    cohort_family: "ung_hordaland"
+    quote: "Girls reported longer sleep onset latency and a higher rate of insomnia than boys, while boys reported later bedtimes and a larger weekday-weekend discrepancy on several sleep parameters."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Same very large population-based cohort as sivertsen2013 (ung@hordaland 2012, n = 10,220, ages 16-18/19), and the criteria-set comparison (DSM-IV vs DSM-5 vs Quantitative Criteria for Insomnia in the same respondents) is a genuine methodological strength. Weaknesses: entirely self-report, including derived quantities (sleep duration = time in bed minus latency minus wake-after-sleep-onset); no actigraphy; the abstract reports no SDs and no CIs; and the sex contrast is stated qualitatively with no magnitude. Abstract-only access on my side (Unpaywall reports no OA location for 10.1111/jsr.12055), so I could not read the tables. Where I needed SDs for the same cohort I used sivertsen2013, which I do hold in full text."
+funding: "Not stated in the abstract"
+notes: |
+  ACCESS: abstract only, but the SAME COHORT is available to me in full text as sivertsen2013 (PMC3878844), from
+  which I took the weekday/weekend means and SDs used for the likelihood-ratio derivations. cohort_family is
+  ung_hordaland on both records so the pooler counts them once.
+  THE THREE INSOMNIA NUMBERS AND WHAT THEY MEAN FOR THE PRIOR: DSM-IV 23.8%, DSM-5 18.5%, Quantitative Criteria for
+  Insomnia 13.6%. DSM-5 tightened the frequency/duration requirements relative to DSM-IV, and the Quantitative
+  Criteria (Lineberger et al., Behav Res Ther 2003) are the most restrictive. I use 18.5% as the headline
+  adolescent insomnia prior and carry 13.6-23.8% as the definitional interval.
+  WHY THIS RECORD MATTERS MOST FOR WHAT IT RULES OUT: it supplies the two population BASE RATES that the report needs
+  in order not to over-read our subject's presentation - a mean weekday sleep of 6:25 (so 5-6 h is common) and a 65%
+  base rate for sleep latency over 30 minutes (so that threshold cannot discriminate). Both push the DSWPD posterior
+  DOWN relative to a naive reading of the presenting complaint.
+  ALSO NOTED: girls reported longer sleep onset latency and a higher insomnia rate than boys. Our subject is male, so
+  the insomnia prior for him should sit below the mixed-sex 18.5% - sivertsen2019 gives the male-specific student
+  figure (22.2%) in an older sample, and hysing2013 does not give a male-specific split in the abstract, so I carry
+  both and widen the interval.
+shard: "s19_sleep_disorders"

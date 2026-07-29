@@ -1,0 +1,115 @@
+study_id: ward2017_obesity_age35
+citation: Ward ZJ, Long MW, Resch SC, Giles CM, Cradock AL, Gortmaker SL. Simulation of Growth Trajectories
+  of Childhood Obesity into Adulthood. N Engl J Med. 2017;377(22):2145-2153.
+doi: 10.1056/NEJMoa1703860
+pmid: '29171811'
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9036858/
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Simulation of Growth Trajectories of Childhood Obesity into Adulthood.
+access_tier: abstract_only
+design: normative_descriptive
+n: 41567
+n_studies_pooled: 5
+population:
+  age_mean: null
+  age_range:
+  - 2
+  - 35
+  pct_female: null
+  country: US
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: probability_obese_at_age_35_current_us_children
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: probability of BMI >= 30 at exact age 35, 2016 US population aged 0-19
+  value: 0.573
+  se: 0.012244897959183655
+  ci:
+  - 0.552
+  - 0.6
+  conversion_formula: se = (0.600 - 0.552)/3.92 = 0.0122 on the probability scale
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more obesity. FORWARD-LOOKING denominator for the subject's own birth cohort,
+    and HIGHER than the current 40-59 prevalence of 45.4% because of cohort effects. Both sexes combined.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_5_US_longitudinal_studies
+  quote: Given the current level of childhood obesity, the models predicted that a majority of today's
+    children (57.3%; 95% uncertainly interval [UI], 55.2 to 60.0) will be obese at the age of 35 years,
+    and roughly half of the projected prevalence will occur during childhood.
+- outcome_domain: baseline_risk
+  outcome_construct: log_rr_adult_obesity_for_19yo_with_severe_obesity
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: log_rr
+  unit: log relative risk of obesity at 35 for a severely obese 19-year-old
+  value: 1.1314021114911006
+  se: 0.10378467098008749
+  ci:
+  - 0.8878912573524571
+  - 1.2947271675944
+  conversion_formula: log_rr = ln(3.10) = 1.1314; se = (ln(3.65) - ln(2.43))/3.92 = 0.10389
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = higher risk of adult obesity.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_5_US_longitudinal_studies
+  quote: Our simulations indicated that the relative risk of adult obesity increased with age and BMI,
+    from 1.17 (95% UI, 1.09 to 1.29) for overweight 2-year-olds to 3.10 (95% UI, 2.43 to 3.65) for 19-year-olds
+    with severe obesity.
+- outcome_domain: baseline_risk
+  outcome_construct: probability_not_obese_at_35_if_severely_obese_at_19
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: probability of escaping obesity by 35 given severe obesity at exactly 19
+  value: 0.061
+  se: 0.01989795918367347
+  ci:
+  - 0.021
+  - 0.099
+  conversion_formula: se = (0.099 - 0.021)/3.92 = 0.0199
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'higher = more escape. THE PERSISTENCE COEFFICIENT THE MODEL NEEDS: BMI status at exactly
+    age 19 is nearly absorbing (only a 6.1% chance of escape), so a sleep-driven BMI shift at ages 16-19
+    should be modelled as largely PERMANENT rather than transient. This is the empirical warrant for the
+    ''mediator-locked'' persistence scenario in competing_risk_method.md section 1.3, which is worth about
+    -18 months of e19 versus -0.3 months for the transient scenario.'
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_5_US_longitudinal_studies
+  quote: For children with severe obesity, the chance they will no longer be obese at the age of 35 years
+    fell from 21.0% (95% UI, 7.3 to 47.3) at the age of 2 years to 6.1% (95% UI, 2.1 to 9.9) at the age
+    of 19 years.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Microsimulation, so the uncertainty intervals reflect parameter and sampling uncertainty but
+    not structural model uncertainty. Secular trend extrapolation to 2016 and beyond. Both sexes combined
+    for the headline 57.3%. Severe obesity in children defined as >=120% of the 95th percentile.
+funding: JPB Foundation and others
+shard: s17_baseline_risk
+secondhand_via: null
+tier: TX

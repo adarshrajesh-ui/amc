@@ -1,0 +1,97 @@
+study_id: stickgold2000nn
+citation: "Stickgold R, James L, Hobson JA. Visual discrimination learning requires sleep after training. Nature Neuroscience. 2000;3(12):1237-1238."
+doi: "10.1038/81756"
+pmid: "11100141"
+url: "https://doi.org/10.1038/81756"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Visual discrimination learning requires sleep after training."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 21
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: skill_improvement_after_deprived_night_plus_two_recovery_nights
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1, contrast_label: "30 h total sleep deprivation on the night AFTER training, then two full recovery nights, tested day 3, vs undeprived controls"}
+    scale: hedges_g
+    unit: null
+    value: -1.14
+    se: 0.47
+    ci: [-2.07, -0.21]
+    conversion_formula: "From the reported between-group test t19 = 2.71 with n = 11 (deprived) and n = 10 (control): d = 2.71*sqrt(1/11+1/10) = 1.1841; Hedges' J = 1-3/(4*19-1) = 0.96; g = 1.1367; SE = sqrt(1/11+1/10+g^2/(2*19)) = 0.4742. Sign set negative to denote harm. NOTE the paper's group comparison is a ONE-TAILED test, so the two-sided CI here is the conservative reading."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = the deprived group failed to gain the skill. Deprived group improved 3.9 ms (n.s.); controls improved 19.8 ms. Two full recovery nights did NOT restore the learning."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Following one night of sleep deprivation and two full nights of recovery sleep (Fig. 2; day 3, white bar), subjects did not show any significant improvement (mean, 3.9 ms; t10 = 1.06, p > 0.30), whereas control subjects (Fig. 2; day 3, black bar) showed significant improvement (mean, 19.8 ms; t9 = 4.26, p < 0.005). Control subjects showed significantly more improvement than sleep-deprived subjects (one-tailed t-test, t19 = 2.71, p < 0.01). A single night of sleep deprivation permanently aborted the normal consolidation of the learning process."
+  - outcome_domain: recovery
+    outcome_construct: absolute_skill_gain_deprived_vs_control
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1, contrast_label: "improvement in visual discrimination threshold, day 3, deprived vs control"}
+    scale: raw_units
+    unit: "milliseconds of threshold improvement"
+    value: 3.9
+    se: null
+    ci: null
+    conversion_formula: "Deprived group's own improvement; control group improved 19.8 ms. Ratio 3.9/19.8 = 19.7% of the normal gain retained, i.e. ~80% of the learning was lost and not recovered."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "smaller = less learning. 3.9 ms was not significantly different from zero (t10 = 1.06, p > 0.30)."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "subjects did not show any significant improvement (mean, 3.9 ms; t10 = 1.06, p > 0.30), whereas control subjects ... showed significant improvement (mean, 19.8 ms; t9 = 4.26, p < 0.005)"
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Small parallel groups (n = 11 vs 10); the headline group contrast is reported with a ONE-TAILED test, which inflates apparent significance; single perceptual task. Strengths: baseline thresholds did not differ between groups (t19 = 1.12, p > 0.2) and residual sleepiness was explicitly excluded as an explanation."
+funding: "not stated in retrieved text"
+notes: |
+  THE CLASSIC 'CLOSED WINDOW' RESULT AND THE STRONGEST SINGLE PIECE OF EVIDENCE FOR IRRECOVERABILITY.
+  This is the study the shard brief's question 5 is really about: does sleeping well afterwards restore
+  memory for material learned during the deficient period? For this task, no. The authors' own words:
+  "A single night of sleep deprivation permanently aborted the normal consolidation of the learning
+  process."
+
+  ALTERNATIVE EXPLANATIONS THE AUTHORS RULE OUT, quoted because they matter for separating channel (a)
+  from channel (c): "The failure of the sleep-deprived subjects to show improvement was not the result of
+  residual sleepiness, because Stanford Sleepiness Scale scores showed no differences between control and
+  sleep-deprived subjects (mean values of 2.46 and 2.50, respectively; full scale range, 1-7; unpaired
+  t-test, t19 = 0.09, p > 0.9)." So the deficit at test was not a state deficit - it was absent learning.
+
+  From the abstract: "Performance on a visual discrimination task showed maximal improvement 48-96 hours
+  after initial training, even without intervening practice. When subjects were deprived of sleep for 30
+  hours after training and then tested after two full nights of recovery sleep, they showed no significant
+  improvement, despite normal levels of alertness. Together with previous findings that subjects show no
+  improvement when retested the same day as training, this demonstrates that sleep within 30 hours of
+  training is absolutely required for improved performance."
+
+  IMPORTANT LIMITS ON HOW FAR THIS TRANSFERS TO THE SUBJECT.
+  1. It is TOTAL deprivation (30 h), not the partial 5-6 h restriction the subject experienced. Per the
+     shard brief, total-deprivation studies are mechanistic only.
+  2. It is a visual/perceptual discrimination skill, not classroom declarative knowledge. Generalisation
+     to school learning is an assumption, not a finding.
+  3. n = 21 with a one-tailed primary test.
+  4. It CONFLICTS with the meta-analytic aggregate: berres2021 finds that in total-deprivation designs
+     with an intervening recovery night the sleep benefit shrinks to g = 0.14 (n.s.), i.e. across many
+     studies recovery sleep DOES largely restore measured performance. It also conflicts with kopasz2010,
+     where one 4 h night followed by one recovery night left declarative recall intact.
+  The honest synthesis is that irrecoverability is established for this specific perceptual task and is
+  NOT established as a general property of sleep-dependent consolidation. cousins2018 is the record that
+  bridges the gap: partial restriction, adolescents, and a deficit that survived three recovery nights.
+
+  Full text statistics retrieved from the article record; PubMed carries no abstract for this brief
+  communication. Identifiers verified via Crossref and PubMed.
+shard: "s03_memory_consolidation"

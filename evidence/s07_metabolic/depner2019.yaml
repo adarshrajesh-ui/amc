@@ -1,0 +1,125 @@
+study_id: depner2019
+citation: "Depner CM, Melanson EL, Eckel RH, Snell-Bergeon JK, Perreault L, Bergman BC, Higgins JA, Guerin MK, Stothard ER, Morton SJ, Wright KP Jr. Ad libitum weekend recovery sleep fails to prevent metabolic dysregulation during a repeating pattern of insufficient sleep and weekend recovery sleep. Curr Biol. 2019 Mar 18;29(6):957-967.e4."
+doi: "10.1016/j.cub.2019.01.069"
+pmid: "30827911"
+url: "https://pubmed.ncbi.nlm.nih.gov/30827911/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Ad libitum Weekend Recovery Sleep Fails to Prevent Metabolic Dysregulation during a Repeating Pattern of Insufficient Sleep and Weekend Recovery Sleep."
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 36
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: whole_body_insulin_sensitivity_sustained_restriction
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: null, duration_days: 9, contrast_label: "SR arm: 5 h sleep opportunity x 9 consecutive nights vs own baseline (n=14)"}
+    scale: pct_change
+    unit: "% change in whole-body insulin sensitivity vs baseline"
+    value: -13.0
+    se: null
+    ci: null
+    conversion_formula: "Reported in the abstract as 'decreased ~13% during insufficient sleep versus baseline' with no dispersion. Full text not retrievable (PMC12798825 not OA in Europe PMC; publisher PDF returned HTTP 403), so no SE is derivable -> se null per instructions."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = HARM (lower whole-body insulin sensitivity) after 9 nights of 5 h"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "In SR, whole-body insulin sensitivity decreased ~13% during insufficient sleep versus baseline, and in WR, whole-body, hepatic, and muscle insulin sensitivity decreased ~9%-27% during recurrent insufficient sleep versus baseline."
+  - outcome_domain: recovery
+    outcome_construct: whole_body_hepatic_muscle_insulin_sensitivity_after_weekend_recovery
+    exposure: {type: weekend_catchup, dose_h: 5, referent_h: null, duration_days: 9, contrast_label: "WR arm: 5 nights insufficient sleep, then 2 days ad libitum weekend recovery, then 2 more nights insufficient sleep, vs own baseline (n=14)"}
+    scale: pct_change
+    unit: "% change in insulin sensitivity vs baseline, measured AFTER a weekend recovery opportunity had been taken"
+    value: -18.0
+    se: null
+    ci: null
+    conversion_formula: "The abstract reports a RANGE across three tissue-level measures: 'whole-body, hepatic, and muscle insulin sensitivity decreased ~9%-27%'. -18% is recorded as the MIDPOINT of that published 9-27% range so a single number is available to the pooler; it is NOT itself a published point estimate. Use ci [-27,-9] as the published span. No SE derivable -> se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = HARM. Critically, this deficit PERSISTS after a weekend recovery opportunity, and the range is not smaller than the sustained-restriction arm's -13%."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "In SR, whole-body insulin sensitivity decreased ~13% during insufficient sleep versus baseline, and in WR, whole-body, hepatic, and muscle insulin sensitivity decreased ~9%-27% during recurrent insufficient sleep versus baseline."
+  - outcome_domain: recovery
+    outcome_construct: weekend_recovery_sleep_obtained
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: 2, contrast_label: "cumulative extra sleep obtained across 2 ad libitum weekend recovery days vs baseline"}
+    scale: hours
+    unit: "hours of extra sleep obtained cumulatively across the whole weekend"
+    value: 1.1
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: 'participants cumulatively slept ~1.1 h more than baseline'. No dispersion published."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more recovery sleep obtained. KEY DOSE FACT: ad libitum weekend recovery recouped only ~1.1 h in TOTAL across the whole weekend, i.e. far less than the ~5 h/night x 5 nights deficit incurred."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "During ad libitum weekend recovery sleep, participants cumulatively slept ~1.1 h more than baseline, and after-dinner energy intake decreased versus insufficient sleep."
+  - outcome_domain: circadian
+    outcome_construct: circadian_phase_delay_after_weekend_recovery
+    exposure: {type: weekend_catchup, dose_h: null, referent_h: null, duration_days: 2, contrast_label: "recurrent insufficient sleep following weekend recovery"}
+    scale: pct_change
+    unit: "direction only; magnitude not in abstract"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "PLACEHOLDER DIRECTION FLAG ONLY (value=+1 means 'delayed'). Abstract states the circadian phase was delayed but gives no magnitude. Do NOT pool as a magnitude."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM (circadian phase delay induced by the weekend catch-up itself). Mechanistically important: weekend recovery buys sleep but costs circadian alignment."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "However, during recurrent insufficient sleep following the weekend, the circadian phase was delayed, and after-dinner energy intake and body weight increased versus baseline."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomised 3-arm parallel design with a genuine time-matched control arm (CON, 9 h, n=8) - much stronger than the fixed-order within-subject designs of spiegel1999/buxton2010. Weaknesses: small and unequal arms (8/14/14), and the WR-vs-SR comparison of interest is between-arm with n=14 per arm, so it is underpowered to prove that WR is WORSE than SR rather than merely not better. Effect magnitudes are reported only as approximate ranges in the abstract and the full text was not retrievable."
+funding: "Not retrievable from the abstract (US NIH-funded University of Colorado Boulder / Anschutz laboratory; funder left unstated rather than guessed)."
+notes: |
+  *** THE SINGLE MOST STRUCTURALLY RELEVANT EXPERIMENTAL STUDY IN THIS SHARD FOR OUR SUBJECT. ***
+  This is the only lab protocol that reproduces the subject's actual PATTERN rather than just a
+  short-sleep dose: 5 weekday nights of insufficient sleep, then a weekend recovery opportunity,
+  then back to insufficient sleep. The subject lived that cycle roughly 150 times over 3 years.
+
+  DISTANCE FROM OUR SUBJECT'S EXPOSURE:
+  * Pattern: EXCELLENT match - weekday restriction plus ad libitum weekend recovery is exactly the
+    subject's regimen. No other study in this shard has this structure except cheung2026.
+  * Dose: 5 h sleep opportunity vs the subject's 5-6 h. Close, slightly more severe.
+  * Weekend recovery: ad libitum, and participants actually recouped only ~1.1 h cumulatively. Our
+    subject reportedly reached 7-8 h at weekends and occasionally 10-11 h, i.e. a LARGER weekend
+    rebound than these participants achieved. So this study may over-state the residual damage for
+    our subject, because his weekend recovery dose was bigger.
+  * Duration: ONE cycle (plus 2 post-weekend nights). The subject completed ~150 cycles. This study
+    therefore cannot tell us whether the deficit plateaus, accumulates, or adapts across years -
+    that extrapolation is entirely unsupported and is the central uncertainty for this shard.
+  * Age: "healthy, young adults" - no mean age in the abstract, so age_mean/age_range left null.
+    Recorded as good_young_adult on the strength of the word "young", not on a number.
+  * n recorded as 36 = 8 CON + 14 SR + 14 WR (sums the three randomised arms).
+
+  REVERSIBILITY VERDICT THIS RECORD SUPPORTS: a single weekend recovery opportunity does NOT restore
+  insulin sensitivity when insufficient sleep resumes. The insulin-sensitivity deficit after the
+  weekend (9-27%) bracketed and did not undercut the sustained-restriction deficit (13%). The
+  authors' own conclusion is that "weekend recovery sleep is not an effective strategy to prevent
+  metabolic dysregulation associated with recurrent insufficient sleep."
+  IMPORTANT CAVEAT AGAINST OVER-READING THIS: the measurement in the WR arm was taken after 2
+  further nights of insufficient sleep, NOT at the end of the weekend. So this study does not show
+  that recovery sleep fails to repair; it shows that the repair does not survive resumption of
+  restriction. Those are different claims and the distinction matters for the subject, who is about
+  to either continue or stop the exposure.
+shard: "s07_metabolic"

@@ -1,0 +1,204 @@
+study_id: debruin2017
+citation: "de Bruin EJ, van Run C, Staaks J, Meijer AM. Effects of sleep manipulation on cognitive functioning of adolescents: A systematic review. Sleep Medicine Reviews. 2017;32:45-57."
+doi: "10.1016/j.smrv.2016.02.006"
+pmid: "27039223"
+url: "https://pubmed.ncbi.nlm.nih.gov/27039223/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Effects of sleep manipulation on cognitive functioning of adolescents: A systematic review"
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: null
+n_studies_pooled: 16
+population:
+  age_mean: null
+  age_range: [10, 19]
+  pct_female: null
+  country: "Netherlands"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: cognition
+    outcome_construct: pvt_is_the_most_consistently_impaired_domain_in_adolescent_sleep_manipulation
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "qualitative synthesis of 16 experimental sleep-manipulation studies in adolescents (mean age 10-19), objective sleep measures required"}
+    scale: raw_units
+    unit: "1 = PVT identified as the most consistent impairment across the included adolescent experiments"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Directional encoding of a NARRATIVE synthesis. This review performed no
+      meta-analysis and reports no pooled effect size, so no magnitude and no se are extractable - the
+      authors state explicitly that 'Due to the great diversity of tests and lack of coherent results,
+      decisive conclusions could not be drawn about which domains in particular were influenced by sleep
+      manipulation.'
+      WHY IT IS INCLUDED DESPITE HAVING NO NUMBER. It is the only systematic review in this shard whose
+      inclusion criteria are AGE-MATCHED to our subject (participants' mean age between 10 and 19 y) AND
+      which required objective sleep measurement. It therefore functions as a CALIBRATION CHECK on the
+      adolescent literature as a whole, and it independently reproduces the outcome hierarchy that five other
+      records in this shard arrive at separately (lim_dinges2010, lowe2017, campbell2024, smith2021,
+      vandongen2003): vigilant attention is the most sensitive and most reliably detected domain.
+      It also converges with Lowe 2017's meta-analytic finding that sustained attention carries the largest
+      pooled effect, and with Basner & Dinges 2011's recommendation that PVT lapses/speed are the metrics to
+      use. Six independent routes, one ranking. That consistency is worth more to the downstream model than
+      any single point estimate, because it justifies weighting PVT-based evidence most heavily when
+      constructing the dose-response backbone."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = PVT most consistently impaired. Qualitative ranking, not a magnitude."
+    covariates: ["required objective sleep measures", "required cognitive performance outcomes", "mean age 10-19 y", "English language"]
+    followup_years: null
+    cohort_family: null
+    quote: "Based on these criteria 16 articles were included. The results showed that the sleep
+      manipulations were successful. Partial sleep restriction had small or no effects on adolescent
+      cognitive functioning. Sleep deprivation studies showed decrements in the psychomotor vigilance task as
+      most consistent finding."
+  - outcome_domain: cognition
+    outcome_construct: partial_sleep_restriction_had_small_or_no_effects_on_adolescent_cognition
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "partial sleep restriction (as opposed to total deprivation) vs control, pooled qualitatively across adolescent experiments"}
+    scale: raw_units
+    unit: "0 = review's verdict was 'small or no effects' of PARTIAL restriction on adolescent cognition"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Directional encoding of the review's headline verdict. No pooled estimate exists to
+      convert, so se is null.
+      THIS IS THE MOST IMPORTANT DISCONFIRMING RECORD IN THE SHARD AND IT IS DELIBERATELY INCLUDED AS SUCH.
+      Every other record here documents substantial harm. This age-matched systematic review, applying
+      pre-specified criteria to 16 adolescent experiments, concluded that PARTIAL sleep restriction had
+      'small or no effects on adolescent cognitive functioning', reserving the reliable findings for TOTAL
+      deprivation. A shard that reports only the confirming evidence would mislead the Bayesian pooler, so
+      this record exists to pull the posterior toward zero and to widen it.
+      HOW TO RECONCILE IT WITH THE REST OF THIS SHARD - four specific, checkable reasons the verdict may
+      understate the effect rather than refute it:
+        (1) VINTAGE. The article was published online on 3 March 2016 and appeared in the April 2017 print
+            volume, so its literature search closed no later than early 2016 and it PRE-DATES most of the
+            strongest age-matched evidence in this shard: Lo 2016 (n=56) was concurrent, and Lo 2017,
+            Lo 2019, Lo 2022 (n=194, four doses), Short 2018 (5/7.5/10h in 15-17 y olds), Campbell 2019,
+            Campbell 2024, Cousins 2019, Koa 2024 and Duraccio 2024 all appeared afterwards. The adolescent
+            experimental literature roughly doubled after this review's window, and the newer studies are
+            larger and better dosed.
+        (2) DOSE. Many pre-2016 adolescent 'partial restriction' protocols used mild doses for few nights.
+            The studies that find large effects use 5h TIB for 5-7 nights (Lo) or ladder three doses
+            (Campbell, Short). A review pooling mild short exposures with severe sustained ones will dilute
+            toward null.
+        (3) POWER AND HETEROGENEITY. The authors themselves list the reasons their synthesis could not
+            resolve domains: 'Small number of participants, not accounting for the role of sleep quality,
+            individual differences in sleep need, compensatory mechanisms in adolescent sleep and cognitive
+            functioning, and the impurity problem of cognitive tests'. Individual differences in
+            vulnerability are large and trait-like (vandongen2004), so small-n adolescent studies are badly
+            underpowered for between-group contrasts.
+        (4) THE PVT EXCEPTION IS DOING REAL WORK. The review's own most consistent positive finding is the
+            PVT - which is precisely the outcome this shard's dose-response backbone is built on. So the
+            'small or no effects' verdict applies mainly to the heterogeneous higher-order cognitive battery,
+            not to vigilant attention. Read that way, this review AGREES with campbell2024's threshold
+            finding (PVT graded from 10h down; executive measures only impaired below ~8.5h; working memory
+            unaffected at any dose) rather than contradicting it.
+      NET RECOMMENDATION TO THE POOLER: treat this as strong evidence that NON-VIGILANCE cognitive domains in
+      adolescents have small and poorly estimated restriction effects, and as weak evidence against the
+      vigilance dose-response, which it partially endorses."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = null/small verdict. This record REDUCES the expected harm for non-vigilance
+      cognitive domains and should widen the downstream posterior."
+    covariates: ["16 studies", "total and partial sleep restriction, sleep extension and sleep improvement manipulations", "objective sleep measures required"]
+    followup_years: null
+    cohort_family: null
+    quote: "Partial sleep restriction had small or no effects on adolescent cognitive functioning. Sleep
+      deprivation studies showed decrements in the psychomotor vigilance task as most consistent finding.
+      Sleep extension and sleep improvement contributed to improvement of working memory. [...] Due to the
+      great diversity of tests and lack of coherent results, decisive conclusions could not be drawn about
+      which domains in particular were influenced by sleep manipulation."
+  - outcome_domain: cognition
+    outcome_construct: sleep_extension_improves_working_memory_in_adolescents
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "sleep extension and sleep-improvement interventions vs habitual sleep, adolescents"}
+    scale: raw_units
+    unit: "1 = extension/improvement interventions produced working-memory gains"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Directional encoding; no pooled magnitude reported, so se is null.
+      WHY THIS ASYMMETRY IS INTERESTING RATHER THAN TRIVIAL. The same review found partial RESTRICTION had
+      'small or no effects' on cognition, but EXTENSION improved working memory. If restriction does nothing
+      and extension helps, the implication is that habitually sleeping adolescents are ALREADY on the
+      descending limb of the dose-response curve - i.e. their baseline is restricted, so there is headroom
+      above it but little further to fall within the mild range tested. That reading reconciles the review's
+      apparently null restriction verdict with the rest of this shard, and it converges independently on
+      Short 2018's estimate that adolescents need 9.35 h of sleep, far above what they habitually obtain.
+      It also matters directly for our subject: it implies his 7-8 h weekend sleep is not a neutral baseline
+      but is itself below optimum, which is what campbell2024 shows directly for the PVT (performance fell
+      going from 10 h to 8.5 h TIB).
+      CAUTION: extension studies are unblinded and unblindable, and expectancy plus practice effects on
+      working-memory tasks are plausible. Working memory is also the domain where campbell2024 found NO
+      restriction effect at any dose (Sternberg), and where Lim & Dinges 2010's pooled effect is smaller than
+      for lapses. So the extension-improves-working-memory result should be held loosely."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = extension improved working memory, implying adolescents' habitual sleep is already
+      on the descending limb of the dose-response curve."
+    covariates: ["sleep extension and sleep improvement manipulations", "objective sleep measures required"]
+    followup_years: null
+    cohort_family: null
+    quote: "Sleep extension and sleep improvement contributed to improvement of working memory. Sleep
+      directly after learning improved memory consolidation."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "A genuine systematic review with pre-specified, defensible inclusion criteria (experimental sleep
+    manipulation; participants' mean age 10-19 y; OBJECTIVE sleep measures required; cognitive performance
+    outcomes; English language) and a librarian co-author (Staaks) which usually signals a competent search.
+    LIMITATIONS THAT DETERMINE HOW MUCH WEIGHT IT SHOULD CARRY: (1) NARRATIVE SYNTHESIS ONLY - no
+    meta-analysis, no pooled effect sizes, no forest plots, so it contributes direction and consistency but
+    no magnitude and no SE, and all three effects in this record are directional encodings; (2) only 16
+    included studies, and the authors themselves attribute their inability to resolve domain-specific effects
+    to small participant numbers, unmeasured sleep quality, individual differences in sleep need, adolescent
+    compensatory mechanisms and the task-impurity problem; (3) the search window closes in early 2016, which
+    excludes most of the strongest age-matched experimental evidence now available (epub 3 March 2016, print
+    April 2017) - a substantial currency problem given how much this literature grew after 2016; (4) it pools heterogeneous
+    manipulations (total deprivation, partial restriction, extension, sleep improvement) whose expected
+    effects differ in both sign and size, which mechanically dilutes any single verdict; (5) ABSTRACT-ONLY
+    ACCESS here - Sleep Medicine Reviews is Elsevier-paywalled with no PMCID and no OA location in Europe
+    PMC, Unpaywall or OpenAlex - so the included-study list, the individual study characteristics and any
+    domain-level tabulation could not be inspected. That last point limits what this record can be used for:
+    it cannot be checked for overlap with the primary studies already extracted in this shard, so the pooler
+    should NOT combine it with those primaries as if it were independent evidence."
+funding: "Not stated in the retrieved abstract."
+notes: |
+  WHY A REVIEW WITH NO POOLED NUMBER EARNED A RECORD. Two reasons, both about calibration rather than
+  estimation.
+
+  FIRST, IT IS THE SHARD'S PRINCIPAL DISCONFIRMING EVIDENCE. Its verdict - 'Partial sleep restriction had
+  small or no effects on adolescent cognitive functioning' - runs against nearly every other record here. The
+  extraction instructions require reporting reality rather than the hypothesis, and a shard that returned
+  only confirming evidence for the Tier-1 causal backbone would corrupt the downstream posterior. This record
+  is the counterweight. It should widen the credible interval on adolescent cognitive harm, particularly for
+  non-vigilance domains.
+
+  SECOND, IT IS THE ONLY AGE-MATCHED SYSTEMATIC REVIEW. Its inclusion criterion - participants' mean age
+  between 10 and 19 - matches our subject's exposure window, unlike lowe2017 (mixed ages, adults dominant)
+  and lim_dinges2010 (mostly young adults, short-term total deprivation). So when it and the primaries
+  disagree, the disagreement cannot be dismissed as an age-transportability artefact.
+
+  HOW THE DISAGREEMENT RESOLVES, on the evidence available. Four things narrow it considerably:
+    - The review's own strongest positive finding is the PVT, the very outcome the shard's backbone rests on.
+      So it endorses the vigilance dose-response while doubting the higher-order cognitive battery - which is
+      exactly campbell2024's threshold structure (PVT graded from 10h down; executive control impaired only
+      below ~8.5h; working memory unaffected at any dose).
+    - Its search closed no later than early 2016 (epub 3 March 2016), before Lo 2017/2019/2022, Short 2018,
+      Campbell 2019/2024, Cousins 2019, Koa 2024 and Duraccio 2024. The adolescent experimental literature
+      roughly doubled afterwards, with larger samples and better-laddered doses.
+    - It pools mild and severe protocols together, which dilutes toward null.
+    - Its finding that EXTENSION improves working memory while restriction does little implies adolescents'
+      habitual sleep already sits on the descending limb - headroom above, little room below within the mild
+      range. That is consistent with, not contrary to, Short 2018's 9.35 h adolescent requirement.
+
+  BOTTOM LINE FOR THE POOLER. Weight this record heavily against large effects in NON-VIGILANCE adolescent
+  cognitive domains; weight it only lightly against the PVT/vigilance dose-response, which it partly
+  supports. Do not treat it as independent of the primary studies in this shard - the included-study list
+  could not be retrieved, so overlap with lo2016 and others cannot be ruled out.
+shard: "s01_cognition_dose_response"

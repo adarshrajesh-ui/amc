@@ -1,0 +1,102 @@
+study_id: miao2024
+citation: "Miao A, Luo T, Hsieh B, Edge CJ, Gridley M, Wong RTC, Constandinou TG, Wisden W, Franks NP. Brain clearance is reduced during sleep and anesthesia. Nature Neuroscience. 2024 Jun;27(6):1046-1050."
+doi: "10.1038/s41593-024-01638-y"
+pmid: "38741022"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11156586/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  resolved_title: "Brain clearance is reduced during sleep and anesthesia."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: TX
+n: 13
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: "UK (laboratory)"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: neurodegeneration
+    outcome_construct: brain_clearance_of_small_fluorescent_tracer_AF488_MOUSE
+    exposure: {type: total_deprivation, dose_h: null, referent_h: null, duration_days: 0.21,
+               contrast_label: "enforced wakefulness (5 h novel-object sleep deprivation) vs first recovery sleep episode, within-animal, male mice"}
+    scale: raw_units
+    unit: "direction of difference in percentage clearance at peak (sleep minus wake)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: >
+      The paper reports the direction and significance but the percentage-clearance values themselves are
+      shown only as bar/violin plots (Fig 2h-k) with 95% CIs drawn graphically; no numeric group means or
+      SEs are printed in text or in Extended Data Table 1 for the sleep-vs-wake contrast. The only printed
+      numeric anchor is that peak clearance was "70-80% with saline-injected controls" (i.e. awake), and
+      that clearance was significantly REDUCED during sleep (two-tailed paired t-test, P = 0.016). Because
+      no numeric effect magnitude is published, value is coded as a sign indicator (-1 = clearance lower
+      during sleep) and se is null. This record must NOT enter an inverse-variance pool; it exists to
+      register a direct contradiction of xie2013.
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: >
+      NEGATIVE = clearance was LOWER during sleep than during wakefulness, i.e. the OPPOSITE sign to
+      Xie 2013. Same species (mouse), a within-animal design, and a tracer that moves freely in
+      extracellular space rather than one delivered into CSF. The authors also report that deeper sleep
+      was associated with LESS clearance ("a weak negative correlation between peak clearance and delta
+      (0.5-4 Hz) power ... implying that the deeper the sleep, the lower the clearance"), which inverts
+      the slow-wave-activity-drives-clearance premise of the popular account.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "It has been suggested that the function of sleep is to actively clear metabolites and toxins from the brain. Enhanced clearance is also said to occur during anesthesia. Here, we measure clearance and movement of fluorescent molecules in the brains of male mice and show that movement is, in fact, independent of sleep and wake or anesthesia. Moreover, we show that brain clearance is markedly reduced, not increased, during sleep and anesthesia."
+  - outcome_domain: neurodegeneration
+    outcome_construct: peak_percentage_clearance_awake_saline_controls_MOUSE
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "awake saline-injected control mice, peak concentration at ~2-3 h post-injection"}
+    scale: pct_change
+    unit: "percent of injected tracer cleared at peak"
+    value: 75.0
+    se: null
+    ci: [70.0, 80.0]
+    conversion_formula: >
+      Reported as a range, "the clearance was 70-80% with saline-injected controls". Midpoint 75 entered
+      as the value with the printed range placed in ci; this is a reported RANGE, not a confidence
+      interval, so se is null and the ci field must not be read as a 95% CI.
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      Descriptive baseline only: shows that normal clearance machinery was intact in the awake controls,
+      which is what makes the reduction under sleep and anaesthesia interpretable.
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "At the peak concentration (~2–3 h) the clearance was 70–80% with saline-injected controls, indicating that the normal mechanisms of brain clearance had not been disrupted. Notably, in the presence of anesthetics, this clearance was substantially reduced."
+rob:
+  tool: none
+  judgement: na
+  notes: >
+    Not a clinical study; tier TX. This record is included specifically because it falsifies the
+    directional claim that the entire popular "sleep clears amyloid, so sleep loss causes Alzheimer's"
+    chain rests on. The authors identify the methodological reason for the disagreement with Xie 2013:
+    Xie and most successors infused tracer into CSF and measured how far it penetrated into parenchyma,
+    which confounds entry, exit and redistribution, whereas Miao injected tracer directly into
+    parenchyma. Limitations of Miao: male mice only; a single small (~570 Da) freely diffusing dye, so
+    larger molecules including Ab may behave differently (the authors say so explicitly); anaesthesia
+    contrasts dominate the dataset; no amyloid, plaque or cognitive outcome. Neither Xie nor Miao
+    measures anything in a human.
+funding: "Wellcome Trust and UK Dementia Research Institute (see paper acknowledgements)"
+notes: >
+  MECHANISM LINK 1, DISCONFIRMING. Sample size: n = 13 mice in the sleep condition (11 for the WAKE
+  vigilance-state percentages). Verbatim on the vigilance-state verification: "During the sleep
+  experiments, mice were first sleep deprived by placing novel objects in their cage and after 5 hours
+  were then allowed to sleep. ... During the first five hours the vigilance state percentages were:
+  WAKE 9.3% ( n = 11 mice), NREM 80.8% ( n = 13 mice), REM 9.9% ( n = 13 mice), TOTAL SLEEP 90.7%
+  ( n = 13 mice)." The authors' own summary of the implication: "Whatever the mechanism, however, our
+  results challenge the idea that the core function of sleep is to clear toxins from the brain."
+  Downstream consumers MUST treat glymphatic clearance in mice as a CONTESTED mechanism with two
+  primary studies of opposite sign, not as established fact.
+shard: "s14_dementia_amyloid"

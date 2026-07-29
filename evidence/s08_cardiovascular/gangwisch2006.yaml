@@ -1,0 +1,93 @@
+study_id: gangwisch2006
+citation: "Gangwisch JE, Heymsfield SB, Boden-Albala B, Buijs RM, Kreier F, Pickering TG, Rundle AG, Zammit GK, Malaspina D. Short sleep duration as a risk factor for hypertension: analyses of the first National Health and Nutrition Examination Survey. Hypertension. 2006 May;47(5):833-839."
+doi: "10.1161/01.HYP.0000217362.34748.e0"
+pmid: "16585410"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Short Sleep Duration as a Risk Factor for Hypertension"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 4810
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [32, 59]
+  pct_female: null
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: cardiovascular
+    outcome_construct: incident_hypertension_age_32_59
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 7, duration_days: null,
+               contrast_label: "<=5 h/night vs 7-8 h/night, subjects aged 32-59 y at baseline"}
+    scale: log_hr
+    unit: null
+    value: 0.74194
+    se: 0.14506
+    ci: [0.45742, 1.02604]
+    conversion_formula: "log_hr = ln(2.10) = 0.74194; se = (ln(2.79) - ln(1.58))/3.92 = 0.14506"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: >
+      positive = elevated incident-hypertension risk at <=5 h (HR 2.10). This is the LARGEST ratio
+      estimate in the entire shard, and the only one approaching a doubling of risk. Restricted by the
+      authors to ages 32-59; the association was not reported for the older stratum, which is the
+      basis of the age-interaction claim in this literature.
+    covariates: ["Cox models controlling for covariates (abstract does not enumerate them); separately reported to remain significant after controlling for obesity and diabetes, which the authors treat as partial mediators rather than confounders"]
+    followup_years: 9.0
+    cohort_family: "NHANES_I_NHEFS"
+    quote: "Sleep durations of < or =5 hours per night were associated with a significantly increased risk of hypertension (hazard ratio, 2.10; 95% CI, 1.58 to 2.79) in subjects between the ages of 32 and 59 years, and controlling for the potential confounding variables only partially attenuated this relationship."
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_incident_hypertension_risk_midlife
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "whole analytic cohort, all sleep strata, ages 32-59 at baseline"}
+    scale: probability
+    unit: "cumulative incidence over 8-10 y follow-up"
+    value: 0.1345
+    se: null
+    ci: null
+    conversion_formula: "647 incident hypertension cases / 4810 participants = 0.13451 over the 8-10 y window 1982-1992. Stratum-specific absolute risks by sleep duration are not reported in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: >
+      ABSOLUTE ANCHOR. About 13.5% of this MIDLIFE cohort developed hypertension within a decade. If
+      HR 2.10 were transportable, the <=5 h stratum's absolute risk would be roughly 20-25% vs ~11-12%
+      in normal sleepers - a large absolute effect AT AGES 32-59. A 19-year-old male's 10-year
+      incidence of physician-diagnosed hypertension is far below 13.5%, so the same HR would generate
+      a much smaller absolute excess over the next decade of his life.
+    covariates: []
+    followup_years: 9.0
+    cohort_family: "NHANES_I_NHEFS"
+    quote: "Hypertension incidence (n=647) was determined by physician diagnosis, hospital record, or cause of death over the 8- to 10-year follow-up period between 1982 and 1992."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: >
+    Genuinely prospective with hard-ish outcome ascertainment (physician diagnosis, hospital record,
+    or cause of death) rather than self-report, and the authors state that adjustment "only partially
+    attenuated" the association. Concerns: single-item self-reported sleep duration from the early
+    1980s; the covariate set is not enumerated in the abstract so the adequacy of adjustment cannot be
+    assessed from what I retrieved; the analysis is presented for the 32-59 y stratum, and reporting a
+    subgroup as the headline result invites selective-reporting bias; obesity and diabetes are treated
+    as mediators, which if they are in fact confounders would inflate the estimate.
+funding: null
+notes: >
+  This is the origin of the "short sleep doubles hypertension risk" claim and the source of the age
+  restriction that the task asks about. Two cautions for the downstream model:
+  (1) MAGNITUDE OUTLIER. HR 2.10 is 3-6x larger on the log scale than the pooled meta-analytic
+  estimates for the same outcome (Guo 2013 RR 1.23; Itani 2017 RR 1.17; Wang 2012 RR 1.33). A single
+  1980s cohort of 4810 people reporting an effect this much larger than the pooled literature is more
+  likely to reflect residual confounding or a subgroup-selection artefact than a true effect size.
+  (2) AGE DIRECTION. The restriction to 32-59 y is the empirical basis for claiming the association
+  is stronger in younger people, but 32-59 is MIDLIFE. Neither this study nor Wang 2012 (<65 y)
+  contains anyone near 19 years old. The age-interaction evidence therefore does NOT license
+  transporting a larger effect to the subject; it licenses only the weaker statement that the
+  association appears in working-age adults and fades in the elderly, which is also the pattern
+  expected if competing risks and reverse causation dominate at older ages.
+  age_range recorded as [32,59] because that is the stratum the reported effect applies to, not the
+  full NHANES I sampling frame.
+shard: "s08_cardiovascular"

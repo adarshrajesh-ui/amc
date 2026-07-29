@@ -1,0 +1,163 @@
+study_id: vandongen2004
+citation: "Van Dongen HPA, Baynard MD, Maislin G, Dinges DF. Systematic interindividual differences in neurobehavioral impairment from sleep loss: evidence of trait-like differential vulnerability. Sleep. 2004;27(3):423-433."
+doi: "10.1093/sleep/27.3.423"
+pmid: "15164894"
+url: "https://pubmed.ncbi.nlm.nih.gov/15164894/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Systematic Interindividual Differences in Neurobehavioral Impairment from Sleep Loss: Evidence of Trait-Like Differential Vulnerability"
+access_tier: abstract_only
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 21
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [21, 38]
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: interindividual_variability_exceeds_the_effect_of_a_4_1h_per_day_dose_change
+    exposure: {type: chronic_restriction, dose_h: 6, referent_h: 12, duration_days: 7,
+               contrast_label: "prior week at 6h/day vs prior week at 12h/day (a 4.1h/day achieved difference), randomised counterbalanced within subject"}
+    scale: hours
+    unit: "hours per day of achieved sleep difference between the restriction and extension conditions"
+    value: 4.1
+    se: null
+    ci: null
+    conversion_formula: "Reported directly as the achieved difference produced by the sleep-history
+      manipulation. The effect recorded here is the DOSE, given because the authors' key comparison is
+      expressed against it: between-subject variability in impairment was 'substantial relative to' the
+      effect of this 4.1 h/day, 7-day dose difference. No numeric variance components are given in the
+      abstract and the full text was not retrievable, so the comparison cannot be quantified further and
+      se is null. This is a genuine limitation - the qualitative claim is strong but the magnitude is not
+      extractable from the accessible text."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "the recorded number is an exposure contrast, not an outcome. Read as: one week at
+      6h/day versus 12h/day moved the group mean LESS than individual differences moved individuals."
+    covariates: ["randomised counterbalanced order of prior-restriction and prior-extension conditions",
+                 "3 repeat sessions per subject at >=2 week intervals"]
+    followup_years: null
+    cohort_family: null
+    quote: "There was strong evidence that interindividual differences in neurobehavioral deficits during
+      sleep deprivation were systematic and trait-like. The magnitude of interindividual variability was
+      substantial relative to the magnitude of the effect of prior sleep restriction (which on average
+      involved a reduction of 4.1 hours sleep per day, compared to prior sleep extension, for 7 days)."
+  - outcome_domain: cognition
+    outcome_construct: vulnerability_is_trait_like_not_explained_by_sleep_history
+    exposure: {type: chronic_restriction, dose_h: 6, referent_h: 12, duration_days: 7,
+               contrast_label: "is differential vulnerability a consequence of sleep history (state) or stable within person (trait)?"}
+    scale: raw_units
+    unit: "1 = stable within-person trait; 0 = explained by sleep history or baseline functioning"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Binary encoding of the authors' conclusion, established by exposing each subject
+      to sleep deprivation on THREE separate occasions at least two weeks apart while experimentally
+      manipulating prior sleep history in randomised counterbalanced order. That design is what licenses
+      the trait interpretation: if vulnerability were merely a residue of recent sleep, manipulating
+      recent sleep would have reordered the subjects, and it did not.
+      MODELLING CONSEQUENCE: the population dose-response function has a large, irreducible,
+      person-specific multiplier that cannot be predicted from baseline performance or from any of the
+      other candidate predictors the authors tested. For a SINGLE named subject, the posterior predictive
+      interval must therefore be much wider than the uncertainty on the group slope."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = trait. Individual vulnerability is stable and, on the evidence here,
+      unpredictable in advance - so an individual-level estimate inherits variance that no amount of
+      additional group-level data will remove."
+    covariates: ["baseline functioning tested as a predictor and rejected", "several other unnamed predictors tested and rejected"]
+    followup_years: null
+    cohort_family: null
+    quote: "Neurobehavioral deficits from sleep loss varied significantly among individuals and were
+      stable within individuals. Interindividual differences in neurobehavioral responses to sleep
+      deprivation were not merely a consequence of variations in sleep history. Rather, they involved
+      trait-like differential vulnerability to impairment from sleep loss, for which neurobiologic
+      correlates have yet to be discovered. ... Overall, interindividual differences were not explained by
+      subjects' baseline functioning or a variety of other potential predictors."
+  - outcome_domain: cognition
+    outcome_construct: subjective_and_objective_vulnerability_are_separate_dimensions
+    exposure: {type: chronic_restriction, dose_h: 6, referent_h: 12, duration_days: 7,
+               contrast_label: "dimensionality of individual differences in response to sleep loss"}
+    scale: raw_units
+    unit: "number of statistically distinct neurobehavioral dimensions on which individual differences clustered"
+    value: 3.0
+    se: null
+    ci: null
+    conversion_formula: "Counted from the reported result. The three dimensions are: (1) self-evaluation
+      of sleepiness, fatigue and mood; (2) cognitive processing capability; (3) behavioral alertness /
+      sustained attention.
+      THIS IS A THIRD, INDEPENDENT FORM OF THE SUBJECTIVE-OBJECTIVE DISSOCIATION, and arguably the
+      deepest one. Van Dongen 2003 showed the two accumulate at different RATES (theta 0.24 vs 0.78).
+      Rupp 2009 showed subjective report can miss a real randomised objective difference entirely. This
+      paper shows that a person's subjective vulnerability and their objective vigilance vulnerability
+      are DIFFERENT TRAITS: being someone who feels sleepy under restriction does not make you someone
+      whose vigilance collapses under restriction, and vice versa. Consequently, self-report cannot
+      identify who is at risk, not merely how much risk they are in."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "3 = three orthogonal dimensions; the practical reading is that subjective sleepiness
+      is not a proxy for objective vigilance either in level or in individual susceptibility"
+    covariates: ["repeated exposure across 3 sessions"]
+    followup_years: null
+    cohort_family: null
+    quote: "Interindividual variability clustered on 3 distinct neurobehavioral dimensions:
+      self-evaluation of sleepiness, fatigue, and mood; cognitive processing capability; and behavioral
+      alertness as measured by sustained attention performance."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Strong design for its question: 21 healthy adults each exposed to 36 h total sleep deprivation
+    on 3 separate occasions at least 2 weeks apart, with prior sleep history experimentally manipulated
+    (6 h/day restriction versus 12 h/day extension for a week) in randomised counterbalanced order, under
+    continuous laboratory monitoring of wakefulness, with a laboratory-adaptation session preceding the
+    deprivation phase. Repeated exposure is exactly what is needed to separate trait from state, and the
+    randomised counterbalancing addresses order effects. Concerns: n = 21 is small for estimating variance
+    components, which is what the paper's central claim rests on; the ACUTE CHALLENGE IS 36 H TOTAL
+    DEPRIVATION, not chronic restriction, so the trait stability demonstrated is stability of response to
+    total deprivation - the 6 h versus 12 h manipulation is the modifier, not the challenge; ages 21-38,
+    so fair rather than good transportability to a 16-19 year old, and there is no evidence here about
+    whether adolescent vulnerability is similarly trait-like. Abstract-only access: the variance
+    components, intraclass correlations and the per-dimension statistics - the quantities that would let
+    a downstream model set the width of an individual-level predictive interval - could not be extracted."
+funding: "Not stated in the retrieved abstract (NIH-supported per the parent programme; not verified)"
+notes: |
+  WHY THIS RECORD MATTERS EVEN THOUGH ITS CHALLENGE IS TOTAL DEPRIVATION. Everything else in this shard
+  estimates a GROUP dose-response function. The pipeline's target is one specific 18-year-old. This paper
+  is the reason those two things are not the same, and it is from the same laboratory and overlapping
+  authorship as Van Dongen 2003, so it applies directly to the interpretation of that study's arms.
+
+  THREE FINDINGS, IN DESCENDING ORDER OF CONSEQUENCE FOR THE PIPELINE:
+
+  1. Individual differences in impairment are LARGE relative to the effect of a substantial dose change.
+     One week at 6 h/day versus 12 h/day is a 4.1 h/day difference - larger than the gap between our
+     subject's weekday sleep and a healthy 8 h - and between-subject variability was of comparable or
+     greater magnitude. Any point estimate for a named individual is therefore dominated by a term this
+     shard cannot estimate from group data.
+
+  2. That variability is TRAIT-LIKE and, on this evidence, NOT PREDICTABLE. It survived experimental
+     manipulation of sleep history, was stable across three sessions weeks apart, and was not explained
+     by baseline performance. So it cannot be conditioned away using anything we would plausibly know
+     about our subject. Axelsson 2008 puts a usable scale on the same phenomenon under chronic
+     restriction: one between-subject SD equals about 3.2 nights of 4 h TIB for lapses.
+
+  3. Subjective and objective vulnerability are SEPARATE traits. This is the strongest version of the
+     dissociation the shard brief asks about, because it operates at the level of who is affected rather
+     than how much. Combined with Rupp 2009 (subjective sleepiness detected nothing in any phase while
+     PVT and MWT detected a significant randomised difference) and Van Dongen 2003 (subjective
+     accumulation exponent about a third of the PVT exponent), the conclusion is consistent and hard to
+     escape: our subject's own report of how tired he feels carries very little information about his
+     measured impairment, in level, in trajectory, or in susceptibility.
+
+  A CAUTION AGAINST OVER-READING. "Trait-like differential vulnerability" is sometimes cited as though it
+  implied some people are immune to sleep loss. That is not what was found. The group effect was robust;
+  what varied was its MAGNITUDE across people. Nothing in this literature identifies a resilient subgroup
+  that escapes impairment, and the authors are explicit that the neurobiological correlates of the trait
+  "have yet to be discovered".
+shard: "s01_cognition_dose_response"

@@ -1,0 +1,116 @@
+study_id: gao2019_mr
+citation: "Gao X, Meng LX, Ma KL, Liang J, Wang H, Gao Q, Wang T. The bidirectional causal relationships of insomnia with five major psychiatric disorders: A Mendelian randomization study. Eur Psychiatry. 2019 Jun;60:79-85."
+doi: "10.1016/j.eurpsy.2019.05.004"
+pmid: "31234011"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "The bidirectional causal relationships of insomnia with five major psychiatric disorders: A Mendelian randomization study."
+access_tier: abstract_only
+secondhand_via: null
+design: mendelian_randomization
+tier: T3
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "European ancestry (GWAS consortia)"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: psychiatric
+    outcome_construct: mdd_from_insomnia_null
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "FORWARD: genetically predicted INSOMNIA -> MDD, bidirectional GSMR with HEIDI pleiotropy filtering. NULL RESULT."}
+    scale: log_or
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "NO POINT ESTIMATE QUOTABLE. The abstract reports only that estimates for MDD were 'not significant' without giving the OR or CI for the insomnia -> MDD contrast. I record 0.0 with se: null to encode a null result and do NOT assert OR = 1.00. Full text not retrieved (Elsevier Masson paywall)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no detectable causal effect of insomnia on MDD. DISCORDANT with sun2022_mr (OR 1.31, p=6.88e-31), zhang2024_mr (OR 1.233), and cai2021_mr (bxy 0.57), all of which found a clear effect. See notes for why I attribute this to power, not to absence of effect."
+    covariates: ["MR assumptions; HEIDI approach used to remove pleiotropic instruments; MR-Egger regression used to test instrument validity"]
+    followup_years: null
+    cohort_family: "GWAS_consortia_European"
+    quote: "When insomnia was considered as either the exposure or outcome variable, causal estimates for the remaining three psychiatric disorders were not significant."
+  - outcome_domain: psychiatric
+    outcome_construct: insomnia_from_mdd_reverse_null
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "REVERSE: genetically predicted MDD -> insomnia. Also null in this study."}
+    scale: log_or
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Same limitation as above: 'not significant' with no numbers reported for MDD in either direction. Encoded as 0.0 with se: null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no detectable reverse arrow either. Both arrows null for MDD in this study, i.e. it is uninformative about the direction question rather than supporting one side."
+    covariates: ["MR assumptions; HEIDI filtering"]
+    followup_years: null
+    cohort_family: "GWAS_consortia_European"
+    quote: "When insomnia was considered as either the exposure or outcome variable, causal estimates for the remaining three psychiatric disorders were not significant."
+  - outcome_domain: psychiatric
+    outcome_construct: bipolar_disorder_from_insomnia
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "genetically predicted insomnia -> bipolar disorder (the study's positive finding; recorded as evidence the instruments had power)"}
+    scale: log_or
+    unit: null
+    value: 0.57998
+    se: 0.12563
+    ci: [0.33366, 0.82649]
+    conversion_formula: "OR 1.786 (1.396-2.285); log(1.786)=0.57998; se=(log(2.285)-log(1.396))/3.92=0.12563"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = insomnia liability raises bipolar risk. I extract this only to establish that the insomnia instrument DID have power to detect effects in this study, which makes the MDD null slightly more meaningful than a purely underpowered null."
+    covariates: ["MR assumptions; HEIDI filtering; no reverse causality detected (p = 0.546)"]
+    followup_years: null
+    cohort_family: "GWAS_consortia_European"
+    quote: "We observed significant causal effects of insomnia on the risk of autism spectrum disorder and bipolar disorder, with odds ratios of 1.739 (95% confidence interval: 1.217-2.486, p = 0.002) and 1.786 (95% confidence interval: 1.396-2.285, p = 4.02 × 10-6), respectively."
+rob:
+  tool: MR-STROBE
+  judgement: some_concerns
+  notes: "Methodologically careful for its date: HEIDI filtering to remove pleiotropic instruments, MR-Egger validity testing, and a genuinely bidirectional design with explicit reverse-causality p-values for its positive findings (p=0.945 and 0.546). The limitation is vintage: it used a 2019-era insomnia GWAS and 2019-era PGC psychiatric GWAS. sun2022_mr explicitly attributes the discrepancy to sample size, stating that in its own study 'the GWASs with a larger sample size were utilised.' Abstract reports no instrument counts, F-statistics, or sample sizes, and gives no numbers at all for the null MDD contrasts."
+funding: null
+notes: |
+  I INCLUDE THIS RECORD BECAUSE IT IS THE DISSENTING MR RESULT, AND SUPPRESSING DISAGREEMENT WOULD
+  MISREPRESENT THE EVIDENCE BASE. Four MR studies in my shard estimate insomnia -> MDD:
+    sun2022_mr:   OR 1.31 (1.25-1.37), p = 6.88e-31     significant
+    zhang2024_mr: OR 1.233 (1.214-1.253), p < 0.001     significant
+    cai2021_mr:   bxy 0.57 +/- 0.07, p = 1.17e-14       significant
+    gao2019_mr:   NOT SIGNIFICANT                       this record
+  Three to one in favour of a real effect.
+
+  WHY I WEIGHT THE NULL LIGHTLY, WITH THE SPECIFIC EVIDENCE. sun2022_mr explicitly addresses this exact
+  disagreement in its discussion and attributes it to statistical power, noting that it used larger
+  GWAS. I retrieved that passage while extracting sun2022: "ch was partially consistent with a previous
+  MR study (Gao et al ., 2019 ). Findings from study of Gao et al ., indicated a potential causal effect
+  of insomnia on the risk of ASD (OR = 1.74, 95% CI 1.22-2.49) and BD (OR = 1.79, 95% CI 1.40-2.29), but
+  no effects were found for ADHD, MDD or SCZ. In present study, since the GWASs with a larger sample
+  size were ut[ilised]..." So the later, better-powered study reproduces gao2019's positive findings and
+  adds the MDD effect that gao2019 missed. That is the signature of a power-limited null, not of a
+  genuine absence.
+
+  THE COUNTERARGUMENT, STATED FAIRLY. gao2019's insomnia instrument was not simply weak: it detected
+  ASD (OR 1.739) and BD (OR 1.786) at p = 0.002 and p = 4.02e-6, and it ruled out reverse causality for
+  both (p = 0.945, p = 0.546). An instrument with enough power to find two effects and exclude their
+  reverse arrows is not powerless. If the true insomnia -> MDD OR is only ~1.23-1.31, however, that is a
+  much smaller target than 1.74-1.79, so the pattern is still consistent with power limitation. It also
+  used HEIDI filtering, which is more aggressive at removing pleiotropic SNPs than the approaches in the
+  other three studies -- an alternative reading is that gao2019's null reflects successful removal of
+  pleiotropy that inflates the other estimates. I cannot distinguish these without the full text.
+
+  RELEVANCE TO OUR SUBJECT: LOW, AND WORTH SAYING PLAINLY. This study examines only INSOMNIA, not sleep
+  duration. Whatever the truth about insomnia -> MDD, it is not our subject's exposure. The record's
+  value is methodological: it shows the MR literature on this axis is less settled than the headline
+  estimates suggest, which argues for wider uncertainty on the insomnia arm and hence on any estimate
+  that leans on insomnia-derived risk.
+
+  ARITHMETIC. Only the BD contrast was quotable numerically: log(1.786) = +0.57998,
+  se = (log 2.285 - log 1.396)/3.92 = 0.12563. Both MDD contrasts are recorded as nulls with se: null
+  because the abstract gives no point estimates for them.
+
+  ACCESS. Abstract only. Sample sizes not stated; n: null.
+shard: "s12_psychiatric"
