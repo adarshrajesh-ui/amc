@@ -1,0 +1,133 @@
+study_id: arias2025_uslifetable
+citation: 'Arias E, Xu JQ, Kochanek K. United States life tables, 2023. National Vital Statistics Reports.
+  2025 Jul 15;74(6):1-63. Hyattsville, MD: National Center for Health Statistics.'
+doi: 10.15620/cdc/174591
+pmid: null
+url: https://www.cdc.gov/nchs/data/nvsr/nvsr74/nvsr74-06.pdf
+verification:
+  crossref_ok: true
+  pubmed_ok: null
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: United States Life Tables, 2023
+access_tier: full_text
+design: life_table
+n: null
+population:
+  age_mean: null
+  age_range:
+  - 0
+  - 100
+  pct_female: 0.0
+  country: US
+  adolescent_match: mixed
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: life_expectancy_at_age_19_male_years
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: years
+  unit: years of remaining life expectancy at exact age 19
+  value: 57.6565
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'higher = longer remaining life. This is the DENOMINATOR the whole project''s life-expectancy
+    losses are subtracted from: 57.6565 y = 691.88 months.'
+  covariates: []
+  followup_years: null
+  cohort_family: NVSS_2023
+  quote: 'Table 2. Life table for males: United States, 2023 ... 19-20 . . . 0.001061 98,810 105 98,757
+    5,697,034 57.7 (columns qx lx dx Lx Tx ex). Full-precision ex at age 19 from the official spreadsheet
+    Table02.xlsx = 57.656521.'
+- outcome_domain: baseline_risk
+  outcome_construct: life_expectancy_at_birth_male_years
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: years
+  unit: years of life expectancy at birth
+  value: 75.8178
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = longer life. Calibration target for gate G10.
+  covariates: []
+  followup_years: null
+  cohort_family: NVSS_2023
+  quote: Between 2022 and 2023, life expectancy at birth increased by 1.0 year for males (from 74.8 to
+    75.8) and by 0.9 year for females (80.2 to 81.1).
+- outcome_domain: baseline_risk
+  outcome_construct: probability_of_death_between_19_and_20_male
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: one-year probability of death (qx) at exact age 19
+  value: 0.001061
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more death. Baseline all-cause hazard against which every mortality hazard
+    ratio in this project must be applied.
+  covariates: []
+  followup_years: null
+  cohort_family: NVSS_2023
+  quote: 19-20 . . . 0.001061 98,810 105 98,757 5,697,034 57.7
+- outcome_domain: baseline_risk
+  outcome_construct: probability_male_survives_from_19_to_65
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: probability
+  value: 0.7996
+  se: null
+  ci: null
+  conversion_formula: l(65)/l(19) from NCHS Table 2 published lx column
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more likely to survive. A 19-year-old US male has only a 79.96% chance of reaching
+    65 and a 51.68% chance of reaching 80; this is why unadjusted lifetime risks are inflated.
+  covariates: []
+  followup_years: null
+  cohort_family: NVSS_2023
+  quote: 'Computed from the published lx column of Table 2: lx(65)=79,011 divided by lx(19)=98,810 (full
+    precision 79,011.383 / 98,809.875 = 0.79963).'
+rob:
+  tool: none
+  judgement: na
+  notes: 'Complete national vital registration; not a study with bias risk. Known limitations: PERIOD
+    table, so it assumes a 19-year-old will face 2023''s age-80 mortality in 2087; Medicare data used
+    for ages 66-99; race/ethnicity misclassification adjustment applies to subgroup tables only.'
+funding: US federal (CDC/NCHS)
+notes: PRIMARY SOURCE for /workspace/data/lifetable_us_male.csv. Downloaded the official machine-readable
+  Table02.xlsx from https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Publications/NVSR/74-06/Table02.xlsx
+  so no hand transcription was involved. Most recent United States Life Tables published as of retrieval
+  (data year 2023, published 2025-07-15); the CDC life tables index lists no 2024 volume. NCHS closes
+  the table at an open-ended '100 and older' interval, so single-year qx above 99 came from SSA (record
+  ssa2023_periodlifetable). Recomputing ex from the published qx with a(x)=0.5 reproduces e0 to 0.0025
+  y, e19 to 0.0003 y and e65 to 0.0004 y.
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

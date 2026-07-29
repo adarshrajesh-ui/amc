@@ -1,0 +1,114 @@
+study_id: fryar2024_hypertension_prevalence
+citation: 'Fryar CD, Kit B, Carroll MD, Afful J. Hypertension Prevalence, Awareness, Treatment, and Control
+  Among Adults Age 18 and Older: United States, August 2021-August 2023. NCHS Data Brief No. 511. Hyattsville,
+  MD: National Center for Health Statistics; 2024.'
+doi: null
+pmid: '40085792'
+url: https://www.cdc.gov/nchs/data/databriefs/db511.pdf
+verification:
+  crossref_ok: null
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Hypertension Prevalence, Awareness, Treatment, and Control Among Adults Age 18 and
+    Older: United States, August 2021-August 2023.'
+access_tier: full_text
+design: cross_sectional
+n: 2776
+population:
+  age_mean: null
+  age_range:
+  - 18
+  - 999
+  pct_female: 0.0
+  country: US
+  adolescent_match: mixed
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: hypertension_prevalence_us_male_18_39
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: prevalence of hypertension in US men aged 18-39
+  value: 0.3
+  se: 0.0201530612244898
+  ci:
+  - 0.262
+  - 0.341
+  conversion_formula: se = (0.341 - 0.262)/3.92 = 0.0202; NCHS publishes SE = 1.8 percentage points =
+    0.018, consistent
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'higher = more disease. AGE-OVERLAPPING with the subject: 30.0% of US men aged 18-39
+    already meet the 2017 ACC/AHA definition.'
+  covariates: []
+  followup_years: null
+  cohort_family: NHANES
+  quote: Men 18 and older (age adjusted). . . 2,776 48.8 (46.2-51.4) 1.2 / 18 and older (crude) . . .
+    2,776 50.8 (48.4-53.2) 1.1 / 18-39 . . . 787 30.0 (26.2-34.1) 1.8 / 40-59 . . . 752 55.9 (50.6-61.1)
+    2.4 / 60 and older . . . 1,237 72.7 (68.8-76.4) 1.7
+- outcome_domain: baseline_risk
+  outcome_construct: hypertension_prevalence_us_male_40_59
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: prevalence of hypertension in US men aged 40-59
+  value: 0.559
+  se: 0.02678571428571428
+  ci:
+  - 0.506
+  - 0.611
+  conversion_formula: se = (0.611 - 0.506)/3.92 = 0.0268
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. Midlife denominator.
+  covariates: []
+  followup_years: null
+  cohort_family: NHANES
+  quote: 40-59 . . . 752 55.9 (50.6-61.1) 2.4
+- outcome_domain: baseline_risk
+  outcome_construct: hypertension_prevalence_us_male_60plus
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: prevalence of hypertension in US men aged 60 and older
+  value: 0.727
+  se: 0.019387755102040834
+  ci:
+  - 0.688
+  - 0.764
+  conversion_formula: se = (0.764 - 0.688)/3.92 = 0.0194
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. Note the approach to saturation, which is why hypertension incidence,
+    not prevalence, is the identifiable outcome.
+  covariates: []
+  followup_years: null
+  cohort_family: NHANES
+  quote: 60 and older . . . 1,237 72.7 (68.8-76.4) 1.7
+rob:
+  tool: Newcastle-Ottawa
+  judgement: low
+  notes: Nationally representative with measured blood pressure. Definition is SBP >=130 or DBP >=80 or
+    on antihypertensive medication (2017 ACC/AHA), which roughly doubles young-adult prevalence relative
+    to the older >=140/90 threshold; do NOT compare with Vasan 2002. Cross-sectional.
+funding: US federal (CDC/NCHS)
+notes: This NCHS Data Brief has no registered DOI, so the doi field is null rather than guessed; the record
+  verifies through PubMed instead. PDF retrieved directly from cdc.gov and the figure data tables parsed
+  programmatically.
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

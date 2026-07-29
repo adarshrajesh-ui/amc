@@ -1,0 +1,98 @@
+study_id: nsduh2024_mde_male_18_25
+citation: 'Substance Abuse and Mental Health Services Administration, Center for Behavioral Health Statistics
+  and Quality. 2024 National Survey on Drug Use and Health: Detailed Tables. Rockville, MD: SAMHSA; 2025.
+  Tables 6.39B (percentages) and 6.39D (standard errors).'
+doi: null
+pmid: null
+url: https://www.samhsa.gov/data/report/2024-nsduh-detailed-tables
+verification:
+  crossref_ok: null
+  pubmed_ok: null
+  title_similarity: null
+  status: UNVERIFIED
+  resolved_title: null
+access_tier: full_text
+design: cross_sectional
+n: null
+population:
+  age_mean: null
+  age_range:
+  - 18
+  - 25
+  pct_female: 0.0
+  country: US
+  adolescent_match: good_young_adult
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: past_year_major_depressive_episode_us_male_18_25
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: past-12-month prevalence of DSM-5-aligned MDE, US males aged 18-25, 2024
+  value: 0.124
+  se: 0.0058
+  ci:
+  - 0.112632
+  - 0.135368
+  conversion_formula: ci = value +/- 1.96 * published SE of 0.58 percentage points; SAMHSA prints SEs,
+    not CIs
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: 'higher = more depression. AGE-MATCHED CONTEMPORARY DENOMINATOR: 12.4% of US males aged
+    18-25 had a past-year major depressive episode in 2024, roughly double the 6.4% for males 18+.'
+  covariates: []
+  followup_years: null
+  cohort_family: NSDUH
+  quote: 'Table 6.39B - Major Depressive Episode in Past Year: Among People Aged 18 or Older; by Sex and
+    Detailed Age Category, Percentages, 2023 and 2024. Row ''18-25'': 17.5a | 15.9 | 12.8 | 12.4 | 22.2b
+    | 19.3 (columns Total 2023, Total 2024, Male 2023, Male 2024, Female 2023, Female 2024). Table 6.39D
+    standard errors, row ''18-25'': 0.51 | 0.48 | 0.65 | 0.58 | 0.72 | 0.71.'
+- outcome_domain: baseline_risk
+  outcome_construct: past_year_major_depressive_episode_us_male_18_20
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: past-12-month prevalence of MDE, US males aged 18-20, 2024
+  value: 0.112
+  se: 0.0092
+  ci:
+  - 0.093968
+  - 0.130032
+  conversion_formula: ci = value +/- 1.96 * published SE of 0.92 percentage points
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: 'higher = more depression. THE EXACT AGE BAND OF THE SUBJECT: 11.2% (SE 0.92) of US
+    males aged 18-20 had a past-year MDE. This is the denominator against which any sleep-restriction
+    depression odds ratio must be applied.'
+  covariates: []
+  followup_years: null
+  cohort_family: NSDUH
+  quote: 'Table 6.39B row ''18-20'': 15.8 | 16.0 | 11.2 | 11.2 | 20.9 | 21.2. Table 6.39D row ''18-20'':
+    0.80 | 0.77 | 1.03 | 0.92 | 1.18 | 1.19.'
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: 'Nationally representative but the 2024 NSDUH had 47.9% adult non-response and used multimode
+    (in-person plus web) collection; SAMHSA itself warns that ''comparison of estimates from the 2024
+    NSDUH with those from prior years must be made with caution''. Measures MDE (an episode) not MDD (the
+    disorder): MDE omits the bipolar exclusion. Self-report instrument, not a clinician interview.'
+funding: US federal (SAMHSA)
+notes: 'VERIFICATION UNVERIFIED BY CONSTRUCTION, NOT BY FAILURE: NSDUH detailed tables carry no DOI and
+  are not indexed in PubMed, so both identifier fields are correctly null rather than guessed. Retrieval
+  evidence: the official SAMHSA ZIP 2024-nsduh-detailed-tables-072325.zip was downloaded from samhsa.gov,
+  extracted, and tables 6.39B and 6.39D parsed programmatically from the HTML rather than transcribed.
+  CORROBORATION: NIMH''s Major Depression statistics page reports 18.6% past-year MDE for all adults aged
+  18-25 in 2021 (both sexes) and 6.2% for adult males overall, consistent in level and in the male-female
+  ratio.'
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

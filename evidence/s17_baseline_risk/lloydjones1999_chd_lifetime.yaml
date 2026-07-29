@@ -1,0 +1,84 @@
+study_id: lloydjones1999_chd_lifetime
+citation: Lloyd-Jones DM, Larson MG, Beiser A, Levy D. Lifetime risk of developing coronary heart disease.
+  Lancet. 1999;353(9147):89-92.
+doi: 10.1016/S0140-6736(98)10279-9
+pmid: '10023892'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Lifetime risk of developing coronary heart disease.
+access_tier: abstract_only
+design: prospective_cohort_objective
+n: 7733
+population:
+  age_mean: null
+  age_range:
+  - 40
+  - 94
+  pct_female: null
+  country: US
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_chd_from_age_40_male
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: probability of first CHD event from exact age 40 to death
+  value: 0.486
+  se: 0.014030612244897957
+  ci:
+  - 0.458
+  - 0.513
+  conversion_formula: se = (0.513 - 0.458)/3.92 = 0.0140 on the probability scale
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. Competing-risk adjusted by multiple-decrement life-table methods.
+    CLOSEST published index age to the subject for a hard coronary endpoint.
+  covariates: []
+  followup_years: null
+  cohort_family: Framingham
+  quote: Lifetime risk of coronary heart disease at age 40 years was 48.6% (95% CI 45.8-51.3) for men
+    and 31.7% (29.2-34.2) for women. At age 70 years, lifetime risk was 34.9% (31.2-38.7) for men and
+    24.2% (21.4-27.0) for women.
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_hard_cad_excluding_angina_from_age_40_male
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: probability of first hard CAD event from exact age 40
+  value: 0.424
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. Narrower, MACE-like endpoint. No CI reported for this variant,
+    so se is null.
+  covariates: []
+  followup_years: null
+  cohort_family: Framingham
+  quote: After we excluded isolated angina pectoris as an initial event, the lifetime risk of coronary
+    artery disease events at age 40 years was 42.4% for men and 24.9% for women.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: 'Framingham: white, largely middle-class New England, examined 1971-1975 with mid-20th-century
+    background mortality. Index age 40 requires multiplying by P(survive 19->40) = 0.9583 and adding the
+    19-40 incidence the published figure excludes.'
+funding: NIH/NHLBI
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

@@ -1,0 +1,95 @@
+study_id: garnett2024_suicide
+citation: 'Garnett MF, Curtin SC. Suicide Mortality in the United States, 2002-2022. NCHS Data Brief No.
+  509. Hyattsville, MD: National Center for Health Statistics; 2024.'
+doi: 10.15620/cdc/160504
+pmid: '39392858'
+url: https://www.cdc.gov/nchs/data/databriefs/db509.pdf
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Suicide Mortality in the United States, 2002-2022.
+access_tier: full_text
+design: normative_descriptive
+n: 4779
+population:
+  age_mean: null
+  age_range:
+  - 15
+  - 24
+  pct_female: 0.0
+  country: US
+  adolescent_match: exact_16_19
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: suicide_rate_us_male_15_24_2022
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: raw_units
+  unit: suicide deaths per 100,000 US males aged 15-24 per year, 2022
+  value: 21.1
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more death. Complete national vital registration, so there is no sampling SE;
+    se is null by construction, not omission.
+  covariates: []
+  followup_years: null
+  cohort_family: NVSS
+  quote: 'Between 2020 and 2022, rates decreased for males ages 10-14 (3.6 deaths per 100,000 population
+    to 2.8) and 15-24 (22.4 to 21.1), while rates increased for males age 25 and older. Data table for
+    Figure 3, 2022 row: 303 2.8 | 4,779 21.1 | 13,390 29.6 | 12,075 29.5 | 4,320 27.2 | 4,395 43.9 (age
+    groups 10-14, 15-24, 25-44, 45-64, 65-74, 75+; number of deaths then rate per 100,000).'
+- outcome_domain: baseline_risk
+  outcome_construct: suicide_share_of_all_cause_male_mortality_at_age_19
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: fraction of all-cause male mortality at age 19 attributable to suicide
+  value: 0.199
+  se: null
+  ci: null
+  conversion_formula: 0.000211 / 0.001061 = 0.199
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = larger share. THE CAUSE FRACTION f(x) required by competing_risk_method.md
+    section 1.4 for turning a suicide-specific hazard ratio into months of life expectancy. Suicide is
+    roughly a fifth of all young-male mortality, so a psychiatric-channel hazard ratio is not a small
+    perturbation at these ages, and because a death at 19 destroys the entire 57.66-year remaining life
+    expectancy, this is the highest-leverage mortality pathway in the model.
+  covariates: []
+  followup_years: null
+  cohort_family: NVSS
+  quote: 'Numerator from this report (21.1 suicide deaths per 100,000 males aged 15-24 in 2022). Denominator
+    from NCHS United States Life Tables 2023 Table 2: ''19-20 . . . 0.001061 98,810 105 98,757 5,697,034
+    57.7'', i.e. all-cause q(19) = 0.001061.'
+rob:
+  tool: none
+  judgement: na
+  notes: 'Complete national death registration; ICD-10 U03, X60-X84, Y87.0. Known limitations: suicide
+    is undercounted because some deaths are certified as undetermined intent or unintentional poisoning;
+    the 15-24 band is wider than the subject''s exposure window; rates are crude within the band and the
+    20-24 rate is substantially higher than the 15-19 rate (27.9 vs 17.3 per 100,000 in 2018, the last
+    year the Health United States series publishes the 5-year split).'
+funding: US federal (CDC/NCHS)
+notes: 'Time series for males 15-24, deaths per 100,000: 2018 22.7, 2019 22.0, 2020 22.4, 2021 23.8, 2022
+  21.1 (Figure 3 data table, extracted programmatically from the PDF). CORROBORATION for 2023: NIMH''s
+  suicide statistics page, Figure 2 (''crude rates of suicide within sex and age categories in 2023'',
+  sourced to CDC WISQARS/NVSS), gives 21.2 per 100,000 for males aged 15-24 and 5.5 for females, i.e.
+  essentially unchanged from 2022. That page is an aggregator, so the 2022 figure from this primary NCHS
+  report is the one recorded above.'
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

@@ -1,0 +1,98 @@
+study_id: hafner2017_rand_sleep_costs
+citation: 'Hafner M, Stepanek M, Taylor J, Troxel WM, van Stolk C. Why Sleep Matters - The Economic Costs
+  of Insufficient Sleep: A Cross-Country Comparative Analysis. Rand Health Quarterly. 2017;6(4):11. (RAND
+  Corporation research report RR-1791.)'
+doi: null
+pmid: '28983434'
+url: https://www.rand.org/pubs/research_reports/RR1791.html
+verification:
+  crossref_ok: null
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Why Sleep Matters-The Economic Costs of Insufficient Sleep: A Cross-Country Comparative
+    Analysis.'
+access_tier: full_text
+design: normative_descriptive
+n: null
+population:
+  age_mean: null
+  age_range:
+  - 16
+  - 70
+  pct_female: null
+  country: US, UK, Japan, Germany, Canada
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: log_rr_all_cause_mortality_under_6h_vs_7_9h
+  exposure:
+    type: habitual_short_sleep
+    dose_h: 5.5
+    referent_h: 8.0
+    duration_days: null
+    contrast_label: habitual sleep <6 h vs 7-9 h per night
+  scale: log_rr
+  unit: log relative risk of all-cause mortality, <6 h vs 7-9 h habitual sleep
+  value: 0.12221763272424911
+  se: null
+  ci: null
+  conversion_formula: log_rr = ln(1.13) = 0.12222; no CI reported in the report, so se is null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = elevated mortality with short sleep. THE ONLY QUANTITY IN THE RAND REPORT
+    USABLE BY THIS PROJECT. Fed through this shard's life table, HR 1.13 costs -1.488 y (-17.9 months)
+    of e19 if sustained for life from 19, but only -0.026 y (-0.31 months) if confined to a 3-year window
+    at ages 19-21. That 58-fold gap is the central modelling decision in the mortality channel.
+  covariates: []
+  followup_years: null
+  cohort_family: RAND_macro_model
+  quote: Insufficient Sleep Increases Mortality Risk by up to 13 Per Cent Investigating the link between
+    sleep duration and mortality we find that at any given point in time, an individual that sleeps on
+    average less than six hours per night has a 13 per cent higher mortality risk than an individual sleeping
+    between seven and nine hours, which is considered as the healthy amount of sleep. Furthermore, an
+    individual sleeping between six and seven hours per night has a 7 per cent higher mortality risk.
+- outcome_domain: baseline_risk
+  outcome_construct: log_rr_all_cause_mortality_6_to_7h_vs_7_9h
+  exposure:
+    type: habitual_short_sleep
+    dose_h: 6.5
+    referent_h: 8.0
+    duration_days: null
+    contrast_label: habitual sleep 6-7 h vs 7-9 h per night
+  scale: log_rr
+  unit: log relative risk of all-cause mortality, 6-7 h vs 7-9 h habitual sleep
+  value: 0.06765864847381486
+  se: null
+  ci: null
+  conversion_formula: log_rr = ln(1.07) = 0.06766; no CI reported, so se is null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'positive = elevated mortality. Gives a crude dose-response: roughly half the excess
+    at 6-7 h versus <6 h. Worth -0.821 y (-9.9 months) of e19 if lifelong.'
+  covariates: []
+  followup_years: null
+  cohort_family: RAND_macro_model
+  quote: Furthermore, an individual sleeping between six and seven hours per night has a 7 per cent higher
+    mortality risk.
+rob:
+  tool: ROBINS-I
+  judgement: critical
+  notes: The 13% and 7% figures are ASSOCIATIONS imported from prior observational meta-analyses of self-reported
+    sleep duration and then treated as causal inside a macroeconomic model, with no sensitivity analysis
+    for reverse causation and no confidence intervals reported. No adolescent or young-adult stratum.
+    The report's primary outputs are GDP, working days and employment, not health.
+funding: RAND Corporation / Vitality Group (per report)
+notes: 'THE MOST COMMONLY MISCITED SOURCE IN THIS DOMAIN. RAND DOES NOT PUBLISH A LIFE-EXPECTANCY OR QALY
+  ESTIMATE for short sleep; anyone citing it for ''years of life lost to short sleep'' is misciting it.
+  Its US findings are: economic cost $280-411 billion per year (1.56-2.28% of GDP, 2015 prices) and about
+  1.23 million working days lost annually, quoted verbatim as ''sustains by far the highest annual economic
+  loss (between $280 billion and $411 billion currently, depending on the scenario) due to the size of
+  its economy, followed by Japan (between $88 billion and $138 billion)''. rand.org returns HTTP 403 to
+  automated clients, so the text was retrieved from the PubMed Central copy of the Rand Health Quarterly
+  reprint (PMC5627640); the report has no DOI, so that field is null rather than guessed, and verification
+  is via PubMed.'
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

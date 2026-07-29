@@ -1,0 +1,97 @@
+study_id: gregg2014_diabetes_lifetime
+citation: 'Gregg EW, Zhuo X, Cheng YJ, Albright AL, Narayan KMV, Thompson TJ. Trends in lifetime risk
+  and years of life lost due to diabetes in the USA, 1985-2011: a modelling study. Lancet Diabetes Endocrinol.
+  2014;2(11):867-874.'
+doi: 10.1016/S2213-8587(14)70161-5
+pmid: '25128274'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Trends in lifetime risk and years of life lost due to diabetes in the USA, 1985-2011:
+    a modelling study.'
+access_tier: abstract_only
+design: normative_descriptive
+n: 598216
+population:
+  age_mean: null
+  age_range:
+  - 20
+  - 100
+  pct_female: null
+  country: US
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_diagnosed_diabetes_from_age_20_male
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: probability of ever being diagnosed with diabetes, from exact age 20
+  value: 0.402
+  se: 0.005357142857142848
+  ci:
+  - 0.392
+  - 0.413
+  conversion_formula: se = (0.413 - 0.392)/3.92 = 0.00536 on the probability scale
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. This is a BASELINE ABSOLUTE RISK, not an effect of sleep. Competing
+    mortality handled via a Markov model.
+  covariates:
+  - sex
+  - race/ethnicity
+  - calendar period
+  followup_years: null
+  cohort_family: NHIS_linked_mortality
+  quote: On the basis of 2000-11 data, lifetime risk of diagnosed diabetes from age 20 years was 40.2%
+    (95% CI 39.2-41.3) for men and 39.6% (38.6-40.5) for women, representing increases of 20 percentage
+    points and 13 percentage points, respectively, since 1985-89.
+- outcome_domain: baseline_risk
+  outcome_construct: life_years_lost_if_diabetes_diagnosed_at_40_male
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: years
+  unit: years of life expectancy lost, men diagnosed at age 40, 2000-11 cohort
+  value: -5.8
+  se: 0.6377551020408163
+  ci:
+  - -7.1
+  - -4.6
+  conversion_formula: se = (7.1 - 4.6)/3.92 = 0.638; sign flipped to negative = years lost
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'negative = life lost. DOWNSTREAM MULTIPLIER: once the model has an absolute increase
+    in diabetes incidence, this converts it to months of life expectancy. 5.8 y = 69.6 months per incident
+    case at 40.'
+  covariates: []
+  followup_years: null
+  cohort_family: NHIS_linked_mortality
+  quote: The number of life-years lost to diabetes when diagnosed at age 40 years decreased from 7.7 years
+    (95% CI 6.5-9.0) in 1990-99 to 5.8 years (4.6-7.1) in 2000-11 in men, and from 8.7 years (8.4-8.9)
+    to 6.8 years (6.7-7.0) in women over the same period.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Self-reported diagnosed diabetes only, so undiagnosed disease (5.1 percentage points of US men
+    per NHANES) is missed and type 1 is included. Markov model with parametric incidence and mortality
+    regressions; model uncertainty is not in the CI. Period 2000-2011, now superseded by Koyama 2022 for
+    currency.
+funding: None declared
+notes: The seed paper named in the shard task; it is real and the numbers match. See koyama2022_diabetes_lifetime
+  for the newer, LOWER estimate from the same data source. Age-specific cumulative incidence at 50/65/80
+  is NOT in this paper.
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

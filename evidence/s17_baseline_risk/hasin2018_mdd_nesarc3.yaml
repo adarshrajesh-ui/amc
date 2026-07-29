@@ -1,0 +1,109 @@
+study_id: hasin2018_mdd_nesarc3
+citation: Hasin DS, Sarvet AL, Meyers JL, Saha TD, Ruan WJ, Stohl M, Grant BF. Epidemiology of Adult DSM-5
+  Major Depressive Disorder and Its Specifiers in the United States. JAMA Psychiatry. 2018;75(4):336-346.
+doi: 10.1001/jamapsychiatry.2017.4602
+pmid: '29450462'
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5875313/
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Epidemiology of Adult DSM-5 Major Depressive Disorder and Its Specifiers in the United
+    States.
+access_tier: full_text
+design: cross_sectional
+n: 36309
+population:
+  age_mean: null
+  age_range:
+  - 18
+  - 999
+  pct_female: null
+  country: US
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_prevalence_mdd_us_male
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: lifetime prevalence of DSM-5 MDD, US males aged 18+
+  value: 0.147
+  se: 0.004
+  ci:
+  - 0.13916
+  - 0.15483999999999998
+  conversion_formula: ci = value +/- 1.96 * published SE of 0.40 percentage points
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: higher = more disorder. An all-ages male cross-section, so it UNDERSTATES a 19-year-old's
+    forward-looking lifetime risk; use mcgrath2023_morbid_risk for that.
+  covariates: []
+  followup_years: null
+  cohort_family: NESARC_III
+  quote: 'Table 1: Male | 7.2 (0.26) | 0.5 (0.46-0.55) | 14.7 (0.40) | 0.5 (0.46-0.53) (columns: 12-month
+    prevalence % (SE), 12-month OR, lifetime prevalence % (SE), lifetime OR). Text: ''Of the 36 309 adult
+    participants in NESARC-III, 12-month and lifetime prevalences of MDD were 10.4% and 20.6%, respectively.'''
+- outcome_domain: baseline_risk
+  outcome_construct: twelve_month_prevalence_mdd_us_male
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: 12-month prevalence of DSM-5 MDD, US males aged 18+
+  value: 0.072
+  se: 0.0026
+  ci:
+  - 0.06690399999999999
+  - 0.077096
+  conversion_formula: ci = value +/- 1.96 * published SE of 0.26 percentage points
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: higher = more disorder.
+  covariates: []
+  followup_years: null
+  cohort_family: NESARC_III
+  quote: 'Table 1: Male | 7.2 (0.26) | 0.5 (0.46-0.55) | 14.7 (0.40) | 0.5 (0.46-0.53)'
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_prevalence_mdd_age_18_29_both_sexes
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: lifetime prevalence of DSM-5 MDD, US adults aged 18-29, both sexes
+  value: 0.202
+  se: 0.0055
+  ci:
+  - 0.19122
+  - 0.21278000000000002
+  conversion_formula: ci = value +/- 1.96 * published SE of 0.55 percentage points
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: higher = more disorder. Age band overlapping the subject, but both sexes; men are roughly
+    half the female rate (lifetime OR 0.5).
+  covariates: []
+  followup_years: null
+  cohort_family: NESARC_III
+  quote: 'Table 1, Age, y: 18-29 | 12.9 (0.47) | 3.0 (2.48-3.55) | 20.2 (0.55) | 1.9 (1.65-2.10)'
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Large nationally representative in-person survey with the AUDADIS-5 lay interview, whose agreement
+    with clinician diagnosis for MDD is moderate. Cross-sectional lifetime recall is subject to forgetting,
+    which biases lifetime prevalence downward, especially in older respondents. 2012-2013 data.
+funding: NIAAA intramural
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

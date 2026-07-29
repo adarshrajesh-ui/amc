@@ -1,0 +1,96 @@
+study_id: koyama2022_diabetes_lifetime
+citation: Koyama AK, Cheng YJ, Brinks R, Xie H, Gregg EW, Hoyer A, Pavkov ME, Imperatore G. Trends in
+  lifetime risk and years of potential life lost from diabetes in the United States, 1997-2018. PLoS One.
+  2022;17(5):e0268805.
+doi: 10.1371/journal.pone.0268805
+pmid: '35609056'
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9129010/
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Trends in lifetime risk and years of potential life lost from diabetes in the United
+    States, 1997-2018.
+access_tier: full_text
+design: normative_descriptive
+n: 653811
+population:
+  age_mean: 46.5
+  age_range:
+  - 18
+  - 84
+  pct_female: 51.5
+  country: US
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_diagnosed_diabetes_from_age_20_both_sexes_2015_2018
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: probability of ever being diagnosed with diabetes between exact ages 20 and 84
+  value: 0.328
+  se: 0.002040816326530614
+  ci:
+  - 0.324
+  - 0.332
+  conversion_formula: se = (0.332 - 0.324)/3.92 = 0.00204 on the probability scale
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. MOST CURRENT lifetime-risk estimate; multistate difference equation
+    accounting for competing risks.
+  covariates:
+  - age
+  - sex
+  - race/ethnicity
+  - survey period
+  followup_years: null
+  cohort_family: NHIS_linked_mortality
+  quote: 'LR for adults at age 20 increased from 31.7% (95% CI: 31.2-32.1%) in 1997-1999 to 40.7% (40.2-41.1%)
+    in 2005-2009, then decreased to 32.8% (32.4-33.2%) in 2015-2018.'
+- outcome_domain: baseline_risk
+  outcome_construct: years_of_potential_life_lost_to_diabetes_age_20_2015_2018
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: years
+  unit: years of potential life lost due to diabetes, adult aged 20
+  value: -6.2
+  se: 0.07653061224489814
+  ci:
+  - -6.4
+  - -6.1
+  conversion_formula: se = (6.4 - 6.1)/3.92 = 0.0765; sign flipped to negative = years lost
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = life lost.
+  covariates: []
+  followup_years: null
+  cohort_family: NHIS_linked_mortality
+  quote: YPLL significantly decreased over the study period, with the estimated YPLL due to diabetes for
+    an adult aged 20 decreasing from 8.9 (8.7-9.1) in 1997-1999 to 6.2 (6.1-6.4) in 2015-2018 (p = 0.02).
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: 'Same self-report limitation as Gregg 2014. NOT SEX-SPECIFIC: reports LR for adults overall.
+    Horizon truncated at age 84, which biases the lifetime risk slightly downward. An erratum exists (PLoS
+    One 2025 Jun 23;20(6):e0326955); the erratum was not retrieved, so the possibility that it revises
+    these figures is an open flag.'
+funding: US federal (CDC)
+notes: 'SUPERSEDES Gregg 2014 for currency but not for sex-specificity. Because Gregg found men 40.2%
+  versus women 39.6%, the male-specific 2015-2018 figure is likely close to 32.8%. Recommended range for
+  a 19-year-old US male: 33-40%. Figure 1 shows LR by BASELINE age 18-60, which is the complement of the
+  requested cumulative incidence by attained age; the figure''s underlying values could not be extracted,
+  which is why baseline_risks.yaml marks the 50/65/80 cutpoints DERIVED_BOUNDS.'
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

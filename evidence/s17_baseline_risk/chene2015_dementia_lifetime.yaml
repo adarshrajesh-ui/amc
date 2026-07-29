@@ -1,0 +1,138 @@
+study_id: chene2015_dementia_lifetime
+citation: Chene G, Beiser A, Au R, Preis SR, Wolf PA, Dufouil C, Seshadri S. Gender and incidence of dementia
+  in the Framingham Heart Study from mid-adult life. Alzheimers Dement. 2015;11(3):310-320.
+doi: 10.1016/j.jalz.2013.10.005
+pmid: '24418058'
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4092061/
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Gender and incidence of dementia in the Framingham Heart Study from mid-adult life.
+access_tier: full_text
+design: prospective_cohort_objective
+n: 7901
+population:
+  age_mean: null
+  age_range:
+  - 45
+  - 105
+  pct_female: 54.8
+  country: US
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_dementia_from_age_45_male_competing_adjusted
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: competing-mortality-adjusted lifetime risk of all-cause dementia from exact age 45
+  value: 0.138
+  se: 0.007908163265306122
+  ci:
+  - 0.122
+  - 0.153
+  conversion_formula: se = (0.153 - 0.122)/3.92 = 0.00791 on the probability scale
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. USE THIS, not the unadjusted 0.610 below.
+  covariates:
+  - sex
+  followup_years: null
+  cohort_family: Framingham
+  quote: 'Table 2 (index age 45), Lifetime risk row: 507 | 270 | 76.5 [60.9-92.2] | 61.0 [50.4-71.5] |
+    0.11 | 22.7 [20.9-24.5] | 13.8 [12.2-15.3] | <0.001 (women then men, competing-mortality-unadjusted
+    then competing-mortality-adjusted cumulative incidence). Text: ''LTR of dementia/AD at age 45 was
+    1 in 5 in women and 1 in 10 in men.'''
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_dementia_from_age_45_male_NOT_competing_adjusted
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: Kaplan-Meier lifetime risk of dementia from age 45, competing mortality IGNORED
+  value: 0.61
+  se: 0.05382653061224489
+  ci:
+  - 0.504
+  - 0.715
+  conversion_formula: se = (0.715 - 0.504)/3.92 = 0.0538 on the probability scale
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'higher = more disease. RECORDED ONLY AS A NEGATIVE CONTROL. Same men, same cohort,
+    same endpoint as the record above: 61.0% unadjusted versus 13.8% adjusted, a factor of 4.42. Any downstream
+    dementia denominator must state which of the two it is.'
+  covariates: []
+  followup_years: null
+  cohort_family: Framingham
+  quote: 'Table 2 (index age 45), Lifetime risk row, competing-mortality-UNADJUSTED cumulative incidence:
+    men 61.0 [50.4-71.5].'
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_alzheimer_from_age_45_male_competing_adjusted
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: competing-adjusted lifetime risk of Alzheimer's disease from exact age 45
+  value: 0.103
+  se: 0.007397959183673469
+  ci:
+  - 0.089
+  - 0.118
+  conversion_formula: se = (0.118 - 0.089)/3.92 = 0.0074
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease. Unadjusted counterpart is 53.3% (5.17x larger).
+  covariates: []
+  followup_years: null
+  cohort_family: Framingham
+  quote: 'Table 2 (index age 45), AD Lifetime risk row: 412 | 187 | 72.3 [54.0-90.7] | 53.3 [41.1-65.5]
+    | 0.09 | 19.5 [17.8-21.2] | 10.3 [8.9-11.8] | <0.001'
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_dementia_from_age_65_male_competing_adjusted
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: competing-adjusted lifetime risk of dementia from exact age 65
+  value: 0.155
+  se: 0.008928571428571423
+  ci:
+  - 0.137
+  - 0.172
+  conversion_formula: se = (0.172 - 0.137)/3.92 = 0.00893
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disease.
+  covariates: []
+  followup_years: null
+  cohort_family: Framingham
+  quote: 'Table 3 (index age 65), Lifetime risk row: 503 | 259 | 76.5 (60.8-92.1) | 60.7 (50.0-71.4) |
+    0.10 | 24.6 (22.7-24.5) | 15.5 (13.7-17.2) | <0.001'
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Framingham clinical dementia ascertainment, which is less complete than active surveillance plus
+    claims linkage; see fang2025_dementia_lifetime, which gets 35% for men from ARIC. Predominantly white
+    New England sample. Index age 45, not 19.
+funding: NIH/NIA/NHLBI; Inserm
+notes: THE CANONICAL COMPETING-RISK DEMONSTRATION for this project. Tables extracted programmatically
+  from the PMC full text (PMC4092061).
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

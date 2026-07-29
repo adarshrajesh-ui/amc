@@ -1,0 +1,122 @@
+# US period life table, MALES, single year of age 19-110
+# PRIMARY SOURCE (ages 19-99 qx): Arias E, Xu JQ, Kochanek K. United States life tables, 2023. Natl Vital Stat Rep. 2025 Jul 15;74(6):1-63. DOI: 10.15620/cdc/174591
+#   Table 2 (life table for males), machine-readable: https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Publications/NVSR/74-06/Table02.xlsx
+#   Report PDF: https://www.cdc.gov/nchs/data/nvsr/nvsr74/nvsr74-06.pdf  | data year 2023 | published 2025-07-15
+# TAIL SOURCE (ages 100-110 qx): U.S. Social Security Administration, Office of the Chief Actuary. Actuarial Life Table: Period Life Table, 2023, as used in the 2026 Trustees Report.
+#   https://www.ssa.gov/oact/STATS/table4c6.html  | data year 2023 | published 2026 (2026 Trustees Report)
+# WHY TWO SOURCES: NCHS closes its published table at an open-ended '100 and older'
+#   interval, so single-year qx above age 99 is not published by NCHS. SSA publishes
+#   single-year male qx to age 119. SSA rates are applied to the NCHS lx radix.
+# CROSS-SOURCE AGREEMENT, ages 19-99: max |qx_NCHS - qx_SSA| = 1.05e-02 at age 97; max relative diff = 6.78% at age 19.
+# COLUMNS
+#   age = exact age x in years
+#   qx  = published probability of dying between exact age x and x+1 (NOT recomputed)
+#   lx  = number surviving to exact age x per 100,000 MALE LIVE BIRTHS (NCHS radix;
+#         divide by lx(19)=98809.875 to renormalize a cohort to age 19)
+#   ex  = expectation of life (mean remaining years) at exact age x
+# lx and ex are recomputed on one consistent recursion: NCHS published lx and Lx for
+#   ages 0-99; for 100-119, dx = lx*qx and Lx = lx - 0.5*dx; closed with qx=1 at 120.
+#   ex(x) = T(x)/l(x) with T(x) = sum of L(a) for a >= x.
+# CALIBRATION (gate G10): recomputed vs published expectation of life, males 2023
+#   e0  recomputed 75.8181  vs NCHS published 75.8178  (|diff| 0.0003 y)
+#   e19 recomputed 57.6568  vs NCHS published 57.6565  (|diff| 0.0003 y)
+#   e65 recomputed 18.1947  vs NCHS published 18.1943  (|diff| 0.0004 y)
+#   SSA independent published values for comparison: e0 = 75.79, e19 = 57.62
+# NOTE ON THE LAST ROW: qx at age 110 is the published SSA value (0.597297), i.e. the
+#   table does NOT terminate at 110. ex at 110 accounts for the published SSA
+#   continuation to 119. Ages 0-18 and 111-120 are in lifetable_us_male_full.csv.
+#   Truncating the tail at 110 with qx=1 changes e19 by < 1e-4 years.
+# Built by evidence/s17_baseline_risk/build_lifetable.py -- no hand transcription.
+age,qx,lx,ex
+19,0.001061,98809.875,57.6568
+20,0.001175,98705.055,56.7175
+21,0.001295,98589.047,55.7837
+22,0.001401,98461.391,54.8553
+23,0.001487,98323.469,53.9316
+24,0.001560,98177.234,53.0112
+25,0.001625,98024.070,52.0932
+26,0.001697,97864.766,51.1772
+27,0.001783,97698.734,50.2633
+28,0.001890,97524.516,49.3522
+29,0.002008,97340.188,48.4447
+30,0.002127,97144.742,47.5412
+31,0.002237,96938.117,46.6415
+32,0.002336,96721.258,45.7449
+33,0.002423,96495.328,44.8508
+34,0.002505,96261.539,43.9586
+35,0.002588,96020.438,43.0677
+36,0.002680,95771.945,42.1781
+37,0.002784,95515.281,41.2901
+38,0.002903,95249.336,40.4040
+39,0.003032,94972.828,39.5202
+40,0.003176,94684.891,38.6389
+41,0.003326,94384.148,37.7604
+42,0.003464,94070.266,36.8847
+43,0.003588,93744.406,36.0112
+44,0.003714,93408.016,35.1391
+45,0.003862,93061.117,34.2682
+46,0.004052,92701.734,33.3991
+47,0.004284,92326.141,32.5329
+48,0.004557,91930.586,31.6708
+49,0.004859,91511.680,30.8135
+50,0.005182,91067.023,29.9615
+51,0.005535,90595.133,29.1149
+52,0.005938,90093.672,28.2742
+53,0.006411,89558.695,27.4401
+54,0.006960,88984.547,26.6139
+55,0.007549,88365.211,25.7970
+56,0.008183,87698.180,24.9894
+57,0.008909,86980.562,24.1914
+58,0.009721,86205.656,23.4044
+59,0.010581,85367.625,22.6292
+60,0.011457,84464.320,21.8659
+61,0.012333,83496.633,21.1135
+62,0.013223,82466.859,20.3709
+63,0.014147,81376.438,19.6372
+64,0.015132,80225.188,18.9118
+65,0.016196,79011.234,18.1947
+66,0.017494,77731.531,17.4860
+67,0.018695,76371.703,16.7884
+68,0.019985,74943.922,16.0987
+69,0.021360,73446.141,15.4168
+70,0.022642,71877.336,14.7424
+71,0.024317,70249.898,14.0724
+72,0.026170,68541.609,13.4106
+73,0.028328,66747.875,12.7576
+74,0.030787,64857.027,12.1149
+75,0.033522,62860.301,11.4839
+76,0.036028,60753.109,10.8649
+77,0.040607,58564.316,10.2522
+78,0.044020,56186.180,9.6650
+79,0.049348,53712.875,9.0870
+80,0.054164,51062.246,8.5328
+81,0.061040,48296.512,7.9928
+82,0.068034,45348.473,7.4799
+83,0.075182,42263.246,6.9894
+84,0.082862,39085.828,6.5170
+85,0.092160,35847.098,6.0606
+86,0.103004,32543.420,5.6251
+87,0.115464,29191.316,5.2136
+88,0.129086,25820.777,4.8289
+89,0.143895,22487.686,4.4705
+90,0.159898,19251.820,4.1379
+91,0.177078,16173.494,3.8303
+92,0.195392,13309.527,3.5469
+93,0.214769,10708.954,3.2868
+94,0.235109,8409.002,3.0490
+95,0.256283,6431.967,2.8325
+96,0.278136,4783.560,2.6363
+97,0.300487,3453.082,2.4594
+98,0.323140,2415.478,2.3012
+99,0.345888,1634.941,2.1611
+100,0.366568,1069.435,2.0394
+101,0.384960,677.414,1.9303
+102,0.404252,416.637,1.8255
+103,0.424488,248.211,1.7249
+104,0.445712,142.848,1.6283
+105,0.467998,79.179,1.5356
+106,0.491398,42.123,1.4467
+107,0.515968,21.424,1.3613
+108,0.541766,10.370,1.2794
+109,0.568854,4.752,1.2008
+110,0.597297,2.049,1.1255

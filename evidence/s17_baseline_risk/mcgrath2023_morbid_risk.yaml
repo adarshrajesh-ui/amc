@@ -1,0 +1,94 @@
+study_id: mcgrath2023_morbid_risk
+citation: 'McGrath JJ, Al-Hamzawi A, Alonso J, et al.; WHO World Mental Health Survey Collaborators. Age
+  of onset and cumulative risk of mental disorders: a cross-national analysis of population surveys from
+  29 countries. Lancet Psychiatry. 2023;10(9):668-681.'
+doi: 10.1016/S2215-0366(23)00193-1
+pmid: '37531964'
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10529120/
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Age of onset and cumulative risk of mental disorders: a cross-national analysis of
+    population surveys from 29 countries.'
+access_tier: full_text
+design: cross_sectional
+n: 156331
+n_studies_pooled: 32
+population:
+  age_mean: null
+  age_range:
+  - 18
+  - 999
+  pct_female: 54.5
+  country: 29 countries incl. US
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: morbid_risk_mdd_by_age_75_male
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: projected cumulative lifetime risk of DSM-IV MDD by age 75, males
+  value: 0.201
+  se: 0.0043367346938775475
+  ci:
+  - 0.192
+  - 0.209
+  conversion_formula: se = (0.209 - 0.192)/3.92 = 0.00434 on the probability scale
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'higher = more disorder. RECOMMENDED FORWARD-LOOKING MDD DENOMINATOR for a 19-year-old
+    male: about 20% will develop MDD by 75. Note the morbid-risk-to-lifetime-prevalence ratio of 2.7 in
+    males, which quantifies how badly a cross-sectional lifetime prevalence understates a young person''s
+    risk.'
+  covariates: []
+  followup_years: null
+  cohort_family: WHO_WMH
+  quote: 'Major depressive disorder | 20.1 | (19.2-20.9) | 34.0 | (33.2-34.9) | 2.7 | (2.6-2.8) | 2.5
+    | (2.4-2.5)  (Morbid risk per 100 participants at age 75: male then female, then the ratio of morbid
+    risk to lifetime prevalence for each sex.)'
+- outcome_domain: baseline_risk
+  outcome_construct: morbid_risk_any_mental_disorder_by_age_75_male
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: projected cumulative lifetime risk of any of 13 DSM-IV disorders by 75, males
+  value: 0.464
+  se: 0.007397959183673462
+  ci:
+  - 0.449
+  - 0.478
+  conversion_formula: se = (0.478 - 0.449)/3.92 = 0.0074
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'higher = more disorder. Also records the fact most relevant to this project: the MEDIAN
+    AGE OF FIRST ONSET of any mental disorder in males is exactly 19, so the sleep-restriction exposure
+    window and the peak-incidence window coincide completely.'
+  covariates: []
+  followup_years: null
+  cohort_family: WHO_WMH
+  quote: Morbid risk of any mental disorder by age 75 years was 46.4% (44.9-47.8) for male respondents
+    and 53.1% (51.9-54.3) for female respondents. Conditional probabilities of first onset peaked at approximately
+    age 15 years, with a median age of onset of 19 years (IQR 14-32) for male respondents and 20 years
+    (12-36) for female respondents.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: Cross-national, NOT US-specific; the US contributes one of 32 surveys, so transportability to
+    a US male is only fair. Morbid risk is projected from retrospectively reported ages of onset, which
+    are subject to recall telescoping, and it is NOT adjusted for competing mortality (the paper projects
+    to age 75 in a survey population). Surveys span 2001-2022 with heterogeneous fielding.
+funding: None declared
+shard: s17_baseline_risk
+secondhand_via: null
+tier: TX

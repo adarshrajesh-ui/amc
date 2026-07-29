@@ -1,0 +1,87 @@
+study_id: emmerich2024_obesity_prevalence
+citation: 'Emmerich SD, Fryar CD, Stierman B, Ogden CL. Obesity and Severe Obesity Prevalence in Adults:
+  United States, August 2021-August 2023. NCHS Data Brief No. 508. Hyattsville, MD: National Center for
+  Health Statistics; 2024.'
+doi: 10.15620/cdc/159281
+pmid: '39808758'
+url: https://www.cdc.gov/nchs/data/databriefs/db508.pdf
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Obesity and Severe Obesity Prevalence in Adults: United States, August 2021-August
+    2023.'
+access_tier: full_text
+design: cross_sectional
+n: 2680
+population:
+  age_mean: null
+  age_range:
+  - 20
+  - 999
+  pct_female: 0.0
+  country: US
+  adolescent_match: mixed
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: obesity_prevalence_us_male_40_59
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: prevalence of BMI >= 30 in US men aged 40-59 (midlife)
+  value: 0.454
+  se: 0.019
+  ci:
+  - 0.41676
+  - 0.49124
+  conversion_formula: NCHS publishes SE = 1.9 percentage points; ci computed as value +/- 1.96*SE because
+    the data brief prints SEs, not CIs
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: 'higher = more obesity. DIRECT ANSWER to ''probability of being obese by midlife for
+    a US male'' read as a period prevalence: 45.4%.'
+  covariates: []
+  followup_years: null
+  cohort_family: NHANES
+  quote: Men 20 and older. . . 2,680 39.2 1.9 39.3 1.9 / 20-39. . . 672 34.3 2.8 / 40-59. . . 762 45.4
+    1.9 / 60 and older. . . 1,246 38.0 2.3
+- outcome_domain: baseline_risk
+  outcome_construct: obesity_prevalence_us_male_20_39
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: prevalence of BMI >= 30 in US men aged 20-39
+  value: 0.343
+  se: 0.028
+  ci:
+  - 0.28812000000000004
+  - 0.39788
+  conversion_formula: ci = value +/- 1.96 * published SE of 2.8 percentage points
+  from_figure: false
+  inferred_from_ci: true
+  direction_note: 'higher = more obesity. AGE-OVERLAPPING with the subject: 34.3% of US men aged 20-39
+    are already obese, so the baseline the sleep exposure perturbs is already high.'
+  covariates: []
+  followup_years: null
+  cohort_family: NHANES
+  quote: 20-39. . . 672 34.3 2.8
+rob:
+  tool: Newcastle-Ottawa
+  judgement: low
+  notes: 'Nationally representative with measured height and weight. Cross-sectional prevalence is not
+    cumulative incidence: it understates the fraction EVER obese by midlife (some regress below BMI 30)
+    and it embeds cohort effects, which for obesity are strongly upward.'
+funding: US federal (CDC/NCHS)
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

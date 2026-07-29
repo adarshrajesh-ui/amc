@@ -1,0 +1,92 @@
+study_id: kessler2003_mdd_ncsr
+citation: 'Kessler RC, Berglund P, Demler O, Jin R, Koretz D, Merikangas KR, Rush AJ, Walters EE, Wang
+  PS. The epidemiology of major depressive disorder: results from the National Comorbidity Survey Replication
+  (NCS-R). JAMA. 2003;289(23):3095-3105.'
+doi: 10.1001/jama.289.23.3095
+pmid: '12813115'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'The epidemiology of major depressive disorder: results from the National Comorbidity
+    Survey Replication (NCS-R).'
+access_tier: abstract_only
+design: cross_sectional
+n: 9090
+population:
+  age_mean: null
+  age_range:
+  - 18
+  - 999
+  pct_female: null
+  country: US
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_prevalence_mdd_us_adults_both_sexes
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: lifetime prevalence of DSM-IV MDD, US adults 18+, both sexes
+  value: 0.162
+  se: 0.005612244897959182
+  ci:
+  - 0.151
+  - 0.173
+  conversion_formula: se = (0.173 - 0.151)/3.92 = 0.00561 on the probability scale
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disorder.
+  covariates: []
+  followup_years: null
+  cohort_family: NCS_R
+  quote: The prevalence of CIDI MDD for lifetime was 16.2% (95% confidence interval [CI], 15.1-17.3) (32.6-35.1
+    million US adults) and for 12-month was 6.6% (95% CI, 5.9-7.3) (13.1-14.2 million US adults).
+- outcome_domain: baseline_risk
+  outcome_construct: twelve_month_prevalence_mdd_us_adults_both_sexes
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: 12-month prevalence of DSM-IV MDD, US adults 18+, both sexes
+  value: 0.066
+  se: 0.0035714285714285713
+  ci:
+  - 0.059
+  - 0.073
+  conversion_formula: se = (0.073 - 0.059)/3.92 = 0.00357
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more disorder.
+  covariates: []
+  followup_years: null
+  cohort_family: NCS_R
+  quote: The prevalence of CIDI MDD for lifetime was 16.2% ... and for 12-month was 6.6% (95% CI, 5.9-7.3)
+    (13.1-14.2 million US adults).
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: 2001-2002 data, DSM-IV, lay CIDI interview. The abstract does NOT report a sex-by-age-band breakdown,
+    so the male 18-25 figure had to come from NSDUH and the male lifetime figure from NESARC-III. Full
+    text not retrievable, so the sex-specific table could not be read.
+funding: NIMH, and others
+notes: 'The NCS-R paper named in the shard task; real, and the headline numbers match. Kessler 2005 (Arch
+  Gen Psychiatry 62:593, DOI 10.1001/archpsyc.62.6.593, PMID 15939837) is the companion age-of-onset paper:
+  lifetime prevalence of any mood disorder 20.8%, median age of onset for mood disorders 30 years, projected
+  lifetime risk of ANY disorder at age 75 of 50.8% versus observed lifetime prevalence 46.4%, and ''Half
+  of all lifetime cases start by age 14 years and three fourths by age 24 years''. That last sentence
+  matters here: the subject''s exposure window sits inside the peak-onset window, so a sleep effect on
+  depression can plausibly act on incidence rather than only on recurrence.'
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

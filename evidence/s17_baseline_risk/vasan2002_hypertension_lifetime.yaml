@@ -1,0 +1,92 @@
+study_id: vasan2002_hypertension_lifetime
+citation: 'Vasan RS, Beiser A, Seshadri S, Larson MG, Kannel WB, D''Agostino RB, Levy D. Residual lifetime
+  risk for developing hypertension in middle-aged women and men: The Framingham Heart Study. JAMA. 2002;287(8):1003-1010.'
+doi: 10.1001/jama.287.8.1003
+pmid: '11866648'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Residual lifetime risk for developing hypertension in middle-aged women and men: The
+    Framingham Heart Study.'
+access_tier: abstract_only
+design: prospective_cohort_objective
+n: 1298
+population:
+  age_mean: null
+  age_range:
+  - 55
+  - 65
+  pct_female: null
+  country: US
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: residual_lifetime_risk_hypertension_age_55_and_65
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: residual lifetime risk of hypertension from age 55 or 65
+  value: 0.9
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'higher = more disease. WARNING: this is NOT competing-risk adjusted. The paper''s MAIN
+    OUTCOME MEASURES reads ''Residual lifetime risk (lifetime cumulative incidence not adjusted for competing
+    causes of mortality) for hypertension''. A 0.90 baseline is nearly saturated, so applying any hazard
+    ratio to it is arithmetically almost inert: HR 1.20 moves it to 0.937, while naive multiplication
+    gives an impossible 1.08.'
+  covariates:
+  - sex
+  - calendar period
+  followup_years: 22.0
+  cohort_family: Framingham
+  quote: The residual lifetime risks for developing hypertension and stage 1 high blood pressure or higher
+    (greater-than-or-equal to 140/90 mm Hg regardless of treatment) were 90% in both 55- and 65-year-old
+    participants.
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_probability_of_antihypertensive_medication
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: lifetime probability of receiving antihypertensive medication
+  value: 0.6
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: higher = more treatment. No CI reported, so se is null.
+  covariates: []
+  followup_years: null
+  cohort_family: Framingham
+  quote: The lifetime probability of receiving antihypertensive medication was 60%.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: NOT adjusted for competing mortality, by the authors' own statement. Index ages 55-65 are selected
+    survivors who were still normotensive at that age, so the estimand is not 'lifetime risk for a 19-year-old'.
+    Framingham is overwhelmingly white, New England, 1976-1998. JNC-VI threshold >=140/90, which is NOT
+    the current 2017 ACC/AHA >=130/80.
+funding: NIH/NHLBI (Framingham Heart Study contract)
+notes: The seed paper named in the task; real, and the 90% figure is correct. But it is the WRONG estimand
+  for this project on three counts (unadjusted, wrong index age, obsolete threshold) and it is nearly
+  saturated. For a sleep model the informative hypertension outcome is blood pressure LEVEL or AGE AT
+  ONSET, not lifetime incidence. Use fryar2024_hypertension_prevalence for the contemporary, age-matched,
+  current-definition denominator.
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX

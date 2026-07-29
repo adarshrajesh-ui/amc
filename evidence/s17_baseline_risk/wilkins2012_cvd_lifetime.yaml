@@ -1,0 +1,90 @@
+study_id: wilkins2012_cvd_lifetime
+citation: Wilkins JT, Ning H, Berry J, Zhao L, Dyer AR, Lloyd-Jones DM. Lifetime risk and years lived
+  free of total cardiovascular disease. JAMA. 2012;308(17):1795-1801.
+doi: 10.1001/jama.2012.14312
+pmid: '23117780'
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3748966/
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: Lifetime risk and years lived free of total cardiovascular disease.
+access_tier: abstract_only
+design: meta_analysis_observational
+n: null
+n_studies_pooled: 5
+population:
+  age_mean: null
+  age_range:
+  - 45
+  - 95
+  pct_female: null
+  country: US
+  adolescent_match: poor_midlife
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: lifetime_risk_total_cvd_from_age_45_male
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: probability
+  unit: probability of any total CVD event (CHD, stroke, heart failure, other CVD death) from exact age
+    45 to age 95
+  value: 0.603
+  se: 0.004846938775510208
+  ci:
+  - 0.593
+  - 0.612
+  conversion_formula: se = (0.612 - 0.593)/3.92 = 0.00485 on the probability scale
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: 'higher = more disease. PREFERRED CENTRAL ESTIMATE for MACE-like lifetime risk in a
+    US male: broadest endpoint, 5 pooled cohorts, up to 905,115 person-years.'
+  covariates:
+  - blood pressure
+  - total cholesterol
+  - diabetes
+  - smoking
+  followup_years: null
+  cohort_family: pooled_NHLBI_5cohorts
+  quote: At an index age of 45 years, overall lifetime risk for total CVD was 60.3% (95% CI, 59.3%-61.2%)
+    for men and 55.6% (95% CI, 54.5%-56.7%) for women. Men had higher lifetime risk estimates than women
+    across all index ages.
+- outcome_domain: baseline_risk
+  outcome_construct: years_lived_free_of_cvd_gained_with_optimal_risk_factors
+  exposure:
+    type: descriptive
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: no sleep exposure; absolute baseline risk
+  scale: years
+  unit: years of additional CVD-free life with an optimal risk factor profile
+  value: 14.0
+  se: null
+  ci: null
+  conversion_formula: null
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: positive = more healthy life. Upper bound ('up to'), no CI, so se is null. Comparable
+    in kind to Huang 2023's CVD-free life expectancy.
+  covariates: []
+  followup_years: null
+  cohort_family: pooled_NHLBI_5cohorts
+  quote: Compared with participants with at least 2 major risk factors, those with an optimal risk factor
+    profile lived up to 14 years longer free of total CVD.
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: 'Pools Framingham, Framingham Offspring, ARIC, Chicago Heart Association Detection Project in
+    Industry and Cardiovascular Health Study, data from 1964-2008. COHORT-FAMILY OVERLAP: shares the Framingham
+    sample with lloydjones1999_chd_lifetime and lloydjones2006_cvd_lifetime, and the ARIC sample with
+    fang2025_dementia_lifetime. The pooler must not treat these as independent (gate G6).'
+funding: NIH/NHLBI
+shard: s17_baseline_risk
+secondhand_via: null
+tier: TX

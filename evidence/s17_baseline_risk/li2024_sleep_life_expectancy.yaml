@@ -1,0 +1,110 @@
+study_id: li2024_sleep_life_expectancy
+citation: 'Li H, Qian F, Han L, Feng W, Zheng D, Guo X, Zhang H. Association of healthy sleep patterns
+  with risk of mortality and life expectancy at age of 30 years: a population-based cohort study. QJM.
+  2024;117(3):177-186.'
+doi: 10.1093/qjmed/hcad237
+pmid: '37831896'
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: null
+  status: VERIFIED
+  resolved_title: 'Association of healthy sleep patterns with risk of mortality and life expectancy at
+    age of 30 years: a population-based cohort study.'
+access_tier: abstract_only
+design: prospective_cohort_selfreport
+n: 172321
+population:
+  age_mean: 46.98
+  age_range:
+  - 18
+  - 999
+  pct_female: 50.9
+  country: US
+  adolescent_match: fair_adult
+effects:
+- outcome_domain: baseline_risk
+  outcome_construct: life_expectancy_at_30_lost_by_poor_sleep_pattern_male
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: 0-1 vs 5 low-risk sleep factors (7-8 h duration, no difficulty falling asleep, no
+      difficulty staying asleep, no sleep medication, feeling rested)
+  scale: years
+  unit: years of life expectancy at age 30 lost by men with 0-1 vs 5 low-risk sleep factors
+  value: -4.7
+  se: 1.0204081632653061
+  ci:
+  - -6.7
+  - -2.7
+  conversion_formula: se = (6.7 - 2.7)/3.92 = 1.020; sign flipped to negative = years lost
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = life lost by the poor-sleep group. MUCH LARGER than Chaput's 1.2 years because
+    the contrast is a 5-factor composite, not sleep duration alone; attributing all 4.7 years to short
+    duration would be a category error.
+  covariates:
+  - age
+  - sex
+  - race
+  - socioeconomic factors
+  - lifestyle
+  - comorbidity
+  followup_years: 4.3
+  cohort_family: NHIS_NDI
+  quote: 'When compared to those with 0-1 low-risk sleep factors, life expectancy at the age of 30 years
+    for individuals with all five low-risk sleep factors was 4.7 (95% CI: 2.7-6.7) years greater for men
+    and 2.4 (95% CI: 0.4-4.4) years greater for women.'
+- outcome_domain: baseline_risk
+  outcome_construct: log_hr_all_cause_mortality_5_vs_0_1_low_risk_sleep_factors
+  exposure:
+    type: habitual_short_sleep
+    dose_h: null
+    referent_h: null
+    duration_days: null
+    contrast_label: 5 vs 0-1 low-risk sleep factors
+  scale: log_hr
+  unit: log hazard ratio for all-cause mortality, 5 vs 0-1 low-risk sleep factors
+  value: -0.35667494393873245
+  se: 0.051191503944426314
+  ci:
+  - -0.4620354595965587
+  - -0.2613647641344075
+  conversion_formula: log_hr = ln(0.70) = -0.3567; se = (ln(0.77) - ln(0.63))/3.92 = 0.05122
+  from_figure: false
+  inferred_from_ci: false
+  direction_note: negative = LOWER mortality with healthy sleep, i.e. the harm direction is the reciprocal
+    HR of 1.43 for the poor-sleep group. Feeding 1.43 lifelong from age 30 through this shard's life table
+    gives about -4.5 years, internally consistent with their 4.7.
+  covariates:
+  - age
+  - sex
+  - race
+  - socioeconomic factors
+  - lifestyle
+  - comorbidity
+  followup_years: 4.3
+  cohort_family: NHIS_NDI
+  quote: 'The adjusted hazard ratios (95% confidence intervals [CI]) of participants with five vs. 0-1
+    low-risk sleep factors for all-cause, cardiovascular, and cancer mortality were 0.70 (0.63-0.77),
+    0.79 (0.67-0.93) and 0.81 (0.66-0.98), respectively. Nearly 8% (population attributable fraction 7.9%,
+    95% CI: 5.5-10.4) of mortality in this cohort could be attributed to suboptimal sleep patterns.'
+rob:
+  tool: ROBINS-I
+  judgement: high
+  notes: 'Median follow-up only 4.3 years with 8,681 deaths, so life expectancy at age 30 is extrapolated
+    far beyond the observed data by a flexible parametric model and the reported CI understates that extrapolation
+    uncertainty. Reverse causation is severe for the insomnia and restedness components: people who died
+    within 4.3 years were often already ill. Mean age 47, so essentially no adolescent or young-adult
+    exposure. Self-reported sleep at a single time point.'
+funding: null
+notes: US nationally representative (NHIS 2013-18 linked to the National Death Index through 2019), which
+  is a transportability advantage over Chaput 2022 and Huang 2023. Use as an UPPER bound on the plausible
+  life-expectancy effect of a sleep syndrome, not of short duration alone.
+shard: s17_baseline_risk
+secondhand_via: null
+n_studies_pooled: null
+tier: TX
