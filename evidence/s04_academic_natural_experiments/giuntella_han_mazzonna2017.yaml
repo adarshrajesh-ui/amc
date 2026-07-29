@@ -1,0 +1,87 @@
+study_id: giuntella_han_mazzonna2017
+citation: "Giuntella O, Han W, Mazzonna F. Circadian Rhythms, Sleep, and Cognitive Skills: Evidence From an Unsleeping Giant. Demography. 2017;54(5):1715-1742."
+doi: "10.1007/s13524-017-0609-8"
+pmid: null
+url: "https://docs.iza.org/dp9774.pdf"
+verification:
+  crossref_ok: true
+  pubmed_ok: null
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Circadian Rhythms, Sleep, and Cognitive Skills: Evidence From an Unsleeping Giant"
+access_tier: full_text
+secondhand_via: "effect magnitudes read from the authors' working-paper version (IZA DP No. 9774, February 2016); journal, volume and pages verified against Crossref for the published Demography article"
+design: instrumental_variable
+tier: T2
+n: null
+n_studies_pooled: null
+population:
+  age_mean: 58.0
+  age_range: [45, 90]
+  pct_female: null
+  country: "China"
+  adolescent_match: poor_elderly
+effects:
+  - outcome_domain: cognition
+    outcome_construct: cognitive_test_score_mental_and_numerical_skills_sd
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "IV (sunset time): 1 hour LESS sleep duration -> cognitive test scores, workers aged 45+"}
+    scale: per_hour_beta
+    unit: "SD of cognitive test score per hour LESS sleep"
+    value: -0.50
+    se: null
+    ci: [-0.60, -0.40]
+    conversion_formula: "authors report a range of 0.4 to 0.6 SD per hour of sleep across cognitive outcomes; I record the midpoint -0.50 (sign-flipped for 'less sleep') and use the reported range as the interval. This interval is a RANGE ACROSS OUTCOMES, not a 95% CI, so se is null and the ci field must not be read as a sampling interval."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = one hour LESS sleep lowers cognitive test scores by ~0.4-0.6 SD"
+    covariates: ["city fixed effects", "demographics", "socioeconomic controls", "sunset time as instrument for sleep duration"]
+    followup_years: null
+    cohort_family: CHARLS
+    quote: "Using sunset time as an instrument for sleep duration, we show that increasing sleeping time by an hour increases significantly the scores reported in cognitive tests measuring mental and numerical skills. A one-hour change in sleep duration produces effects on cognitive outcomes ranging from 0.4 to 0.6 standard deviations."
+  - outcome_domain: psychiatric
+    outcome_construct: depression_symptoms
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "IV (sunset time): 1 hour LESS sleep -> depressive symptoms, workers aged 45+"}
+    scale: raw_units
+    unit: "direction only; magnitude not extracted"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "NO MAGNITUDE EXTRACTED. Value -1.0 is a placeholder sign indicator only (negative = worse) because the schema requires a numeric value; do not use this number in any pooled calculation. The authors report only that sleep 'eases depression symptoms' without a magnitude in the text I retrieved."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "PLACEHOLDER SIGN ONLY - magnitude not available. negative = less sleep worsens depressive symptoms. EXCLUDE FROM POOLING."
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: CHARLS
+    quote: "we show that a later sunset time reduces significantly sleep duration and that sleep duration increases cognitive skills and eases depression symptoms of workers aged over 45 years"
+rob:
+  tool: ROBINS-I
+  judgement: moderate
+  notes: "Sunset-time IV with a plausible exclusion restriction, strengthened by the Hukou residence-registration system which largely rules out residential sorting (authors report <1% live in a city different from their Hukou). Weaknesses: no time-zone borders in China (single national time zone) so the instrument is longitude-driven and colinear with development gradients; the estimated per-hour effects are very large; and the population is 45+, far from our subject."
+funding: "Not stated in retrieved working paper"
+notes: |
+  IDENTIFYING ASSUMPTION: China uses a single time zone across ~60 degrees of longitude, so sunset
+  clock-time varies enormously while school and work schedules are nationally synchronized. Conditional
+  on controls, this variation in sunset time affects cognition only through sleep. Two features make the
+  assumption relatively PLAUSIBLE for a longitude-based instrument: the Hukou system means almost nobody
+  has sorted across cities ("in our data less than 1% of the respondents live in a city that is
+  different from that of their Hukou"), and the authors show the effects are concentrated exactly where
+  the mechanism predicts - urban EMPLOYED workers with rigid schedules - and are ABSENT for the
+  self-employed and farmers, who can adjust their schedules to the sun. That heterogeneity test is the
+  strongest evidence for the exclusion restriction, because a generic east-west development confounder
+  would not switch off for farmers.
+  Residual worry: longitude in China correlates with almost everything (coastal development, income,
+  education, ethnicity, altitude). The paper relies on within-region comparisons and controls to handle
+  this, but a single-time-zone design has no sharp discontinuity to lean on, unlike the US border studies.
+  MAGNITUDE: 0.4-0.6 SD of cognitive test score per hour of sleep. This is in the same implausibly-large
+  region as Jagnani (-1.15 SD/h) and above Groen & Pabilonia's implied academic IV (-0.26 SD/h). A common
+  explanation for all three: IV estimates that divide a modest reduced form by a small first stage are
+  badly amplified by any violation of the exclusion restriction, and are LATEs for the most
+  schedule-constrained compliers.
+  TRANSPORTABILITY: POOR. Population is Chinese workers aged 45+ (mean well above 50); cognitive tests are
+  word recall and serial-7 subtraction type measures where age-related decline may make performance more
+  sleep-sensitive than in an 18-year-old. Also, the outcome is cognition, not academic achievement.
+  n: not extracted. CHARLS wave 1 (2011) covers about 10,000 households / ~17,000 individuals, but the
+  analysis sample after restricting to employed urban workers aged 45+ is smaller and I did not locate the
+  exact count in the retrieved text, so n is null rather than guessed.
+shard: "s04_academic_natural_experiments"

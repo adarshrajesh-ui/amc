@@ -1,0 +1,84 @@
+study_id: huang2016_nfs_vocab
+citation: "Huang S, Deshpande A, Yeo SC, Lo JC, Chee MW, Gooley JJ. Sleep Restriction Impairs Vocabulary Learning when Adolescents Cram for Exams: The Need for Sleep Study. Sleep. 2016;39(9):1681-1690."
+doi: "10.5665/sleep.6092"
+pmid: "27253768"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4989257/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep Restriction Impairs Vocabulary Learning when Adolescents Cram for Exams: The Need for Sleep Study."
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 56
+n_studies_pooled: null
+population:
+  age_mean: 17.0
+  age_range: [15, 19]
+  pct_female: 55.4
+  country: "Singapore"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: academic
+    outcome_construct: cued_recall_massed_items_gre_vocabulary
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "5 h TIB vs 9 h TIB for 7 nights; 40 GRE-type words studied all at once (massed / crammed)"}
+    scale: raw_units
+    unit: "direction only; magnitude not available from abstract"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "NO MAGNITUDE AVAILABLE. Value -1.0 is a placeholder sign indicator (negative = worse recall under restriction) because the schema requires a numeric value. The abstract states the effect qualitatively across all three retention intervals (0 h, 24 h, 120 h). I retrieved only the abstract and refuse to invent a magnitude. DO NOT POOL THIS NUMBER."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "PLACEHOLDER SIGN ONLY. negative = sleep-restricted adolescents recalled fewer crammed vocabulary items, at every retention interval tested. EXCLUDE FROM POOLING; use for mechanism only."
+    covariates: []
+    followup_years: null
+    cohort_family: NFS_Singapore
+    quote: "For all retention intervals examined, recall of massed items was impaired by a greater amount in adolescents exposed to sleep restriction. In contrast, cued recall performance on spaced items was similar between sleep groups."
+  - outcome_domain: academic
+    outcome_construct: cued_recall_spaced_items_gre_vocabulary
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "5 h TIB vs 9 h TIB for 7 nights; same 40 words studied spaced over 4 consecutive days, total study time held constant"}
+    scale: raw_units
+    unit: "direction only; magnitude not available from abstract"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "NO MAGNITUDE AVAILABLE. Recorded as 0.0 to encode the reported NULL ('similar between sleep groups'). DO NOT POOL."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL. Spaced study fully protected recall against 7 nights of 5 h sleep. This is a MODERATOR result, not a harm estimate."
+    covariates: []
+    followup_years: null
+    cohort_family: NFS_Singapore
+    quote: "Spaced learning conferred strong protection against the effects of sleep restriction on recall performance, whereas students who had insufficient sleep were more likely to forget items studied over short time intervals."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Same randomized parallel-group protocol and sample as lo2016_nfs, so the design strengths and weaknesses are identical. Additional concern here: I retrieved only the abstract, so I could not check the magnitude, the standard errors, or whether the massed/spaced interaction survives multiple-comparison adjustment."
+funding: "Not known - abstract only"
+notes: |
+  SAME SAMPLE AS lo2016_nfs - COHORT_FAMILY NFS_Singapore. These two records are the same 56 randomized
+  adolescents analysed for different outcomes. The downstream pooler MUST NOT count them as two independent
+  studies. If only one is used, prefer lo2016_nfs, which has extractable effect sizes.
+  WHY THIS RECORD IS STILL WORTH HAVING: it is the only randomized experiment I found that measures an
+  ACADEMIC learning outcome (GRE-type vocabulary retention, tested at 0 h, 24 h and 120 h) rather than a
+  laboratory cognitive task, in adolescents, at exactly our subject's age and at almost exactly his weekday
+  sleep dose (5 h TIB for 7 nights).
+  THE FINDING THAT MATTERS MOST FOR OUR SUBJECT, who "crams" with occasional 3-4 h nights before exams:
+  sleep restriction selectively destroyed recall of MASSED (crammed) material while leaving SPACED material
+  intact. The interaction runs exactly against the strategy our subject uses. This is a mechanistic
+  explanation for why Okano et al. (2019) found that semester-long sleep predicted grades but the night
+  before an exam did not: sleep matters during encoding and consolidation of material as it is taught, and
+  cramming under sleep restriction is the worst combination.
+  It also implies a partially protective behavioural margin - a sleep-restricted student who spaces study can
+  recover much of the loss - which the downstream model may want to represent as a moderator rather than
+  assuming the full deficit applies.
+  ACCESS LIMITATION: abstract_only. I verified the identifiers (PMID 27253768, PMCID PMC4989257, and DOI
+  10.5665/sleep.6092 confirmed against Crossref as Sleep 39:1681-1690 with the matching title) and extracted
+  the verbatim results and conclusions from the PubMed abstract, but I did not obtain the full text, so no
+  numeric effect sizes or SEs are recorded. Both effect entries carry placeholder values that are explicitly
+  flagged as non-poolable.
+shard: "s04_academic_natural_experiments"

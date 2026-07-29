@@ -1,0 +1,95 @@
+study_id: dunster2018
+citation: "Dunster GP, de la Iglesia L, Ben-Hamo M, Nave C, Fleischer JG, Panda S, de la Iglesia HO. Sleepmore in Seattle: Later school start times are associated with more sleep and better performance in high school students. Science Advances. 2018;4(12):eaau6200."
+doi: "10.1126/sciadv.aau6200"
+pmid: "30547089"
+url: "https://www.science.org/doi/10.1126/sciadv.aau6200"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleepmore in Seattle: Later school start times are associated with more sleep and better performance in high school students"
+access_tier: full_text
+secondhand_via: null
+design: quasi_experiment
+tier: T2
+n: 178
+n_studies_pooled: null
+population:
+  age_mean: 15.5
+  age_range: [14, 17]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: exposure_measurement
+    outcome_construct: first_stage_actigraphy_sleep_duration_minutes
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "Seattle district-wide 55-minute delay of high school start time (07:50 -> 08:45), wrist actigraphy"}
+    scale: raw_units
+    unit: "minutes of school-night sleep gained (median difference, actigraphy)"
+    value: 34.0
+    se: null
+    ci: null
+    conversion_formula: "reported median difference from Wilcoxon signed-rank test, P = 0.0007, effect size 0.353. No SE reported for a median difference; refused to invent one."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = later start produced MORE objectively measured sleep. This is the best-measured first stage in the school-start-time literature (actigraphy, not self-report)."
+    covariates: []
+    followup_years: null
+    cohort_family: Seattle_SPS
+    quote: "This asymmetric effect led to an overall 34-min increase in the sleep duration median during school days in 2017 (P = 0.0007, effect size = 0.353)."
+  - outcome_domain: academic
+    outcome_construct: second_semester_course_grade_pct
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "55-minute later start (post-change cohort vs pre-change cohort, same schools, same teachers, same grade)"}
+    scale: pct_change
+    unit: "percent change in median second-semester grade"
+    value: 4.5
+    se: null
+    ci: null
+    conversion_formula: "reported as 'a 4.5% increase in the median grades'; underlying medians are 77.5% (2016) and 82% (2017), i.e. +4.5 percentage points on a 0-100 grade scale, which the authors express as 4.5%. Generalized linear model P = 0.0261. No SE reported for the median contrast."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = later start associated with higher grades"
+    covariates: ["school", "school-day sleep offset", "mood", "chronotype", "sleepiness (all entered in the GLM)"]
+    followup_years: null
+    cohort_family: Seattle_SPS
+    quote: "we show that there was an increase in the daily median sleep duration of 34 min, associated with a 4.5% increase in the median grades of the students and an improvement in attendance."
+  - outcome_domain: academic
+    outcome_construct: grade_change_per_hour_of_sleep_implied
+    exposure: {type: per_hour_less_sleep, dose_h: 6.83, referent_h: 7.4, duration_days: null, contrast_label: "implied: 1 hour LESS sleep, scaling the 34-min first stage to an hour"}
+    scale: per_hour_beta
+    unit: "percentage points of course grade per hour LESS sleep"
+    value: -7.9
+    se: null
+    ci: null
+    conversion_formula: "4.5 grade points per 34 min * (60/34) = 7.94 points per hour, sign-flipped for less sleep. STRONG LINEARITY ASSUMPTION and a pre/post cohort comparison, so this is an ILLUSTRATIVE upper bound, not an identified per-hour effect."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = one hour less sleep associated with ~8 percentage points lower course grade. Implausibly large; treat as an upper bound contaminated by cohort differences and teacher grading drift."
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: Seattle_SPS
+    quote: "Our study demonstrates a lengthening in the median daily sleep duration from 6 hours and 50 min to 7 hours and 24 min"
+rob:
+  tool: ROBINS-I
+  judgement: high
+  notes: "Objective actigraphy is a major strength for the first stage. The grade outcome is weak: pre/post comparison of two DIFFERENT cohorts of 10th-grade biology students, small n, absolute (non-normalized) teacher-assigned grades, and the authors themselves warn the grades 'could carry an implicit bias from teachers who could have been for or against the school time change.'"
+funding: "Not extracted from retrieved text"
+notes: |
+  IDENTIFYING ASSUMPTION: the 2016 (pre-change) and 2017 (post-change) cohorts of 10th-grade biology
+  students at the same two Seattle high schools, in the same classes with the same instructors, are
+  exchangeable apart from the bell-time change. This is a SINGLE-GROUP PRE/POST DESIGN with no control
+  school, so it is the WEAKEST identification in this shard. Any secular trend, cohort composition
+  change, or teacher grading drift is fully confounded with treatment. The authors are candid about
+  the grading-bias risk.
+  USE THIS RECORD FOR THE FIRST STAGE, NOT THE OUTCOME. Its unique contribution is a high-quality
+  objectively measured first stage: a 55-minute bell delay bought 34 minutes of extra actigraphy-measured
+  sleep (0.62 min of sleep per min of delay), achieved entirely by later wake time ("a 44 min later median
+  sleep offset (P < 0.0001, effect size = 0.194), and a trend toward a later sleep onset that was not
+  statistically significant"), with NO compensating change on non-school nights and no change in napping.
+  It also documents a reduction in social jetlag (median 1.60 -> 1.25 h, P = 0.0118).
+  Baseline sleep in this sample - median 6 h 50 min on school nights - is very close to our subject's
+  reported weekday 5-6 h, so the first stage is measured on the relevant part of the sleep distribution.
+  n: 84 students (2017) and 94 students (2016) contributed school-day actigraphy; I record n = 178 total.
+  Each student contributed at least five school nights.
+shard: "s04_academic_natural_experiments"

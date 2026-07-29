@@ -1,0 +1,86 @@
+study_id: carrell2011
+citation: "Carrell SE, Maghakian T, West JE. A's from Zzzz's? The Causal Effect of School Start Time on the Academic Achievement of Adolescents. American Economic Journal: Economic Policy. 2011;3(3):62-81."
+doi: "10.1257/pol.3.3.62"
+pmid: null
+url: "https://www.aeaweb.org/articles?id=10.1257/pol.3.3.62"
+verification:
+  crossref_ok: true
+  pubmed_ok: null
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "A's from Zzzz's? The Causal Effect of School Start Time on the Academic Achievement of Adolescents"
+access_tier: full_text
+secondhand_via: null
+design: quasi_experiment
+tier: T2
+n: 6165
+n_studies_pooled: null
+population:
+  age_mean: 18.5
+  age_range: [17, 22]
+  pct_female: 19.0
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: academic
+    outcome_construct: normalized_course_grade_gpa_sd
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "7:00 am first-period class vs later first period (i.e. ~50 min earlier start)"}
+    scale: raw_units
+    unit: "SD of normalized course grade, per 7:00am (vs later) start"
+    value: -0.140
+    se: 0.045
+    ci: [-0.228, -0.052]
+    conversion_formula: "reported coefficient, Table 5 column 5 (professor fixed effects); CI = value +/- 1.96*SE"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = earlier (7:00am) start LOWERS grades; harm from early start / less sleep"
+    covariates: ["individual demographics", "SAT verbal", "SAT math", "academic composite", "fitness", "leadership composite", "professor-by-year-by-day fixed effects"]
+    followup_years: null
+    cohort_family: USAFA
+    quote: "estimates in column 5, when including professor fixed effects, show that students who are assigned to a first period course perform a statistically significant 0.140 standard deviations lower on average for the 7:00 am start time, but only a statistically insignificant 0.014 standard deviations lower for the 7:50 am start time"
+  - outcome_domain: academic
+    outcome_construct: achievement_sd_per_hour_later_start_scaled
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "50-minute later start time (scaled to 1 h: 0.140 * 60/50)"}
+    scale: per_hour_beta
+    unit: "SD of normalized course grade per hour later start time"
+    value: 0.168
+    se: 0.054
+    ci: [0.062, 0.274]
+    conversion_formula: "0.140 SD per 50 min * (60/50) = 0.168 SD per hour; SE scaled identically 0.045*1.2=0.054. LINEARITY ASSUMED - authors do not report a per-hour coefficient."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = later start improves grades"
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: USAFA
+    quote: "A later start time of 50 minutes in our sample has the equivalent benefit as raising teacher quality by roughly one standard deviation."
+rob:
+  tool: ROBINS-I
+  judgement: low
+  notes: "Random assignment of freshmen to course sections and instructors at USAFA; two exogenous administrative changes to the daily schedule (7:30 -> 7:00 -> 7:50). Grades are objectively scored common exams. Main threats are (a) no measurement of sleep at all, so the sleep channel is assumed not demonstrated, and (b) generalizability from a highly selected military academy with a mandatory regimented schedule."
+funding: "Not stated in article text retrieved"
+notes: |
+  IDENTIFYING ASSUMPTION: conditional on random assignment to course sections/instructors and on
+  professor-by-year-by-day fixed effects, whether a student's course falls in first period is
+  unrelated to unobserved determinants of that student's performance. This is close to
+  experimental: USAFA randomly places freshmen into sections, and the institution shifted the
+  first-period bell twice for administrative reasons. Assumption is PLAUSIBLE and this is the
+  cleanest internal validity in the school-start-time literature.
+  CRITICAL CAVEAT FOR THE MODELLER: Carrell et al. NEVER MEASURE SLEEP. There is no first stage.
+  The 0.14 SD is the effect of a 7:00am class, not the effect of an hour of sleep. Herber, Quis &
+  Heineck (2017) point out a specific alternative mechanism: "Note however that students allocated
+  to later courses could not use the additional time in the mornings to sleep longer but were
+  required to attend the early breakfast with their fellow students... Given that the military
+  institution prohibited napping (p. 78), it is contradictory that additional sleep should be the
+  main driver of higher performance. To us, it seems equally likely that students in late courses
+  achieved higher grades because the empty time-slot allowed them to repeat and thereby better
+  remember the course content." So this record should be treated as an UPPER BOUND on the
+  time-of-day + sleep bundle, not as a per-hour-of-sleep estimate.
+  A second reported result: the 7:00am effect spills over to that student's NON-first-period
+  classes that same day (-0.131 SD, SE 0.049), which is more consistent with a fatigue/sleep
+  channel than with a pure "empty timeslot to revise" channel.
+  Sample: 6,165 first-year students, entering classes 2004-2008, 20,680 student-class observations.
+  Population match to a US 18-year-old male entering his second year of college is excellent on age
+  and sex but the USAFA environment (mandatory lights-out, prohibited napping, mandatory breakfast)
+  is far more regimented than a normal college.
+shard: "s04_academic_natural_experiments"

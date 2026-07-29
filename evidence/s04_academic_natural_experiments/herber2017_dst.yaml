@@ -1,0 +1,87 @@
+study_id: herber2017_dst
+citation: "Herber SP, Quis JS, Heineck G. Does the transition into daylight saving time affect students' performance? Economics of Education Review. 2017;61:130-139."
+doi: "10.1016/j.econedurev.2017.07.002"
+pmid: null
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: null
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Does the transition into daylight saving time affect students' performance?"
+access_tier: full_text
+secondhand_via: "numbers read from the authors' working-paper version; journal, volume and pages verified against Crossref for the published article"
+design: quasi_experiment
+tier: T2
+n: 22000
+n_studies_pooled: null
+population:
+  age_mean: 10.0
+  age_range: [9, 11]
+  pct_female: null
+  country: "Six European countries"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: academic
+    outcome_construct: math_test_score_sd_dst_rd
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "tested in the week AFTER the spring DST transition (clocks forward 1 h) vs the week before; regression discontinuity"}
+    scale: raw_units
+    unit: "SD of TIMSS math score"
+    value: -0.06
+    se: null
+    ci: null
+    conversion_formula: "authors report 'about 4 points lower in both math and science' against a score SD 'of about 72 and 70', i.e. 4/72 = 0.056 ~ 0.06 SD, and state the effects are not statistically significant. No SE for the SD-scaled quantity was extracted, so se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse math score after losing an hour of sleep, BUT NOT STATISTICALLY SIGNIFICANT. This is a null result."
+    covariates: ["HLM specification without covariates (column 1); results robust to adding weekday dummies and weekday-treatment interactions"]
+    followup_years: null
+    cohort_family: TIMSS_PIRLS
+    quote: "students scored about 4 points lower in both math and science when tested during the week after the clock change. Given a standard deviation of about 72 and 70, test scores in the week after the clock change drop by circa 6% of a standard deviation. Yet, these effects are neither substantial in terms of statistical significance nor in terms of magnitude."
+  - outcome_domain: academic
+    outcome_construct: reading_test_score_sd_dst_rd
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "tested in the week AFTER the spring DST transition vs the week before; regression discontinuity"}
+    scale: raw_units
+    unit: "SD of PIRLS reading score"
+    value: 0.01
+    se: null
+    ci: null
+    conversion_formula: "authors report students performed 'less than 1% of a standard deviation better when sampled after the clock change' and that the effect is not statistically different from zero. Recorded as +0.01 SD. No SE extracted."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "essentially zero, wrong sign for a sleep-harm hypothesis. Null."
+    covariates: ["as above"]
+    followup_years: null
+    cohort_family: TIMSS_PIRLS
+    quote: "This gets even clearer when looking at the estimate for reading, indicating that students performed less than 1% of a standard deviation better when sampled after the clock change. Again, the effect is not statistically different from zero."
+rob:
+  tool: ROBINS-I
+  judgement: low
+  notes: "Clean regression discontinuity: TIMSS/PIRLS test dates are assigned by testing agencies for logistical reasons and cannot plausibly be chosen with respect to the DST transition, which the authors verify with covariate balance and normalized-difference checks. Large sample. The main limitation for our purposes is the TINY and TRANSIENT exposure (one hour of sleep lost on a single night) and the young population."
+funding: "Not stated in retrieved working paper"
+notes: |
+  IDENTIFYING ASSUMPTION: whether a school's TIMSS/PIRLS testing date falls just before or just after the
+  spring DST transition is effectively random with respect to student ability. The authors defend this
+  carefully: test dates are set by international testing agencies well in advance, assessments cluster at
+  the end of term when scheduling is driven by school logistics, and individual schools cannot be
+  identified in the data so there is no incentive to game the date. They also verify covariate balance
+  using Imbens-Wooldridge normalized differences. This assumption is HIGHLY PLAUSIBLE - this is the most
+  internally valid design in this shard after Carrell.
+  WHAT IT ACTUALLY TESTS, AND WHY THE NULL IS ONLY WEAK EVIDENCE AGAINST OUR HYPOTHESIS: the spring DST
+  transition removes roughly one hour of sleep on ONE night, and the test occurs some days later. This is
+  an acute, single-night, small-dose exposure. Our subject's exposure is 2-3 hours of nightly deficit
+  sustained for three years. A null here is therefore fully consistent with large chronic effects; it
+  bounds the ACUTE single-night effect at roughly |0.06| SD or less in 9-11 year olds. The authors'
+  own framing is appropriately narrow: they conclude only that the evidence does not support abandoning
+  DST on school-performance grounds.
+  This record is included because the task asked for DST/test-score regression discontinuities and
+  because it is the correct answer to that question: the best-identified DST/test-score RD finds NOTHING.
+  It also usefully constrains the interpretation of the school-start-time literature: if a one-hour
+  single-night sleep loss does not move test scores, then the ~0.06-0.10 SD per hour of bell time found by
+  Edwards and Heissel & Norris is unlikely to be a pure same-day alertness effect and more likely reflects
+  chronic/cumulative exposure - which is the channel that matters for our subject.
+  The paper also contains the only description I could retrieve of Gaski & Sagarin (2011): "16% of a
+  standard deviation lower SAT scores in DST-adopting counties. Yet, we doubt..." - see gaski2011 record.
+  POPULATION: elementary students (TIMSS grade 4 / PIRLS grade 4), so roughly age 9-11. Poor age match.
+  n: "more than 22,000 students from six European countries"; I record 22,000 as a conservative integer.
+shard: "s04_academic_natural_experiments"

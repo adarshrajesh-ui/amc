@@ -1,0 +1,108 @@
+study_id: creswell2023
+citation: "Creswell JD, Tumminia MJ, Price S, Sefidgar Y, Cohen S, Ren Y, Brown J, Dey AK, Dutcher JM, Villalba D, Mankoff J, Xu X, Creswell K, Doryab A, Mattingly S, Striegel A, Hachen D, Martinez G, Lovett MC. Nightly sleep duration predicts grade point average in the first year of college. Proceedings of the National Academy of Sciences. 2023;120(8):e2209123120."
+doi: "10.1073/pnas.2209123120"
+pmid: "36780521"
+url: "https://www.pnas.org/doi/10.1073/pnas.2209123120"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Nightly sleep duration predicts grade point average in the first year of college"
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 557
+n_studies_pooled: 5
+population:
+  age_mean: 18.5
+  age_range: [17, 20]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: academic
+    outcome_construct: gpa_change_per_hour_nightly_sleep
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: 30, contrast_label: "1 hour LESS mean nightly actigraphy sleep over the first month of term, first-year college students, controlling for previous-term GPA"}
+    scale: per_hour_beta
+    unit: "GPA points (4.0 scale) per hour LESS nightly sleep"
+    value: -0.07
+    se: 0.024
+    ci: [-0.117, -0.023]
+    conversion_formula: "authors report beta = 0.001 per minute, p < 0.01, 'which corresponds to a 0.07 improvement in GPA for every additional hour of nightly sleep'; sign flipped for 'less sleep'. SE inferred from p < 0.01 in the pooled N = 557 analysis: taking p = 0.005 gives z = 2.81 and SE = 0.07/2.81 = 0.0249; I record 0.024. This is a CEILING on precision since the reported p is only bounded."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = one hour LESS nightly sleep costs ~0.07 GPA points. THIS IS THE HEADLINE GPA-PER-HOUR NUMBER for college students."
+    covariates: ["previous-term GPA", "daytime sleep", "race", "gender", "first-generation status", "(separately) total academic term load"]
+    followup_years: 0.3
+    cohort_family: CMU_UW_ND_first_year_actigraphy
+    quote: "Specifically, every additional hour of average nightly sleep duration early in the semester was associated with an 0.07 increase in end-of-term GPA."
+  - outcome_domain: academic
+    outcome_construct: gpa_threshold_below_6h_sleep
+    exposure: {type: habitual_short_sleep, dose_h: 6.0, referent_h: null, duration_days: 30, contrast_label: "sleeping less than 6 h per night: the threshold at which the sleep-GPA relationship turns harmful relative to previous-term GPA"}
+    scale: raw_units
+    unit: "hours of nightly sleep (threshold location)"
+    value: 6.0
+    se: null
+    ci: null
+    conversion_formula: "reported threshold from sensitivity analyses; the paper describes it as the point where sleep 'shifted from helpful to harmful for end-of-term GPA, relative to previous-term GPA'. Not an effect size, so no SE."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "identifies a nonlinearity/threshold at 6 h. Our subject's weekday sleep of 5-6 h sits AT OR BELOW this threshold, in the region the authors flag as harmful."
+    covariates: ["previous-term GPA"]
+    followup_years: 0.3
+    cohort_family: CMU_UW_ND_first_year_actigraphy
+    quote: "Sensitivity analyses using sleep thresholds also indicated that sleeping less than 6 h each night was a period where sleep shifted from helpful to harmful for end-of-term GPA, relative to previous-term GPA."
+  - outcome_domain: academic
+    outcome_construct: gpa_specificity_to_total_nightly_sleep
+    exposure: {type: social_jetlag, dose_h: null, referent_h: null, duration_days: 30, contrast_label: "sleep midpoint and bedtime-timing variability (as opposed to total nightly sleep) vs end-of-term GPA"}
+    scale: per_hour_beta
+    unit: "GPA points per unit of sleep timing/variability measure"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "reported as a null: predictive relationships were 'specific to total nightly sleep duration, and not other markers of sleep'. Recorded as 0.0 with se null because no magnitude is given."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL for sleep timing and bedtime variability. Contrasts with Okano et al. 2019, who found sleep INCONSISTENCY was the strongest single predictor. Two well-measured actigraphy studies in the same population disagree on which sleep dimension matters, which should widen uncertainty on any variability-based mechanism."
+    covariates: ["previous-term GPA"]
+    followup_years: 0.3
+    cohort_family: CMU_UW_ND_first_year_actigraphy
+    quote: "Notably, predictive relationships with GPA were specific to total nightly sleep duration, and not other markers of sleep, such as the midpoint of a student's nightly sleep window or bedtime timing variability."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Strong for an observational design: objective actigraphy, prospective, five independent samples at three universities, an explicit discovery/confirmation split (Study 1 discovery N=77, Studies 2-5 confirmation), and crucially it controls for PREVIOUS-TERM GPA, which absorbs a large amount of ability and conscientiousness confounding. Still observational: no exogenous variation, so residual confounding by concurrent workload, mental health and substance use remains, as does reverse causation from academic difficulty to sleep."
+funding: "Not extracted from retrieved text"
+notes: |
+  TIER: T4, not T2. There is no natural experiment here. But this is the best answer to the task's
+  question 6 ("any credible estimate of GPA change per hour of habitual sleep in college students, with the
+  identification strategy stated"), and the identification strategy needs to be stated plainly:
+  IDENTIFICATION STRATEGY = LAGGED-OUTCOME (VALUE-ADDED) REGRESSION ON OBSERVATIONAL DATA. The causal claim
+  rests on conditioning on previous-term GPA, so that the estimate uses only the CHANGE in GPA. That
+  removes time-invariant ability and study-habit confounders but not time-varying ones. It is materially
+  more credible than a raw cross-sectional correlation (compare Okano et al., who adjust for nothing and
+  whose implied per-hour effect is roughly 12 grade points per hour, i.e. absurd) and materially less
+  credible than the school-start-time or sunset-time designs. The authors are careful to write
+  "predicts"/"associated with", not "causes".
+  ROBUSTNESS THAT MATTERS: the +0.07 GPA per hour survives adding daytime sleep, race, gender,
+  first-generation status (N = 557) and, in a subset, total academic term load (N = 405). It replicated in
+  3 of 4 confirmatory samples (Study 2 N=140 p=.01, Study 3 N=139 p<.01, Study 4 N=147 p=.01) and failed to
+  reach significance but was correctly signed in Study 5 (N=131, p=.34). So the effect is real in this
+  population but not enormous, and one in four samples missed it.
+  HOW TO USE IT FOR OUR SUBJECT: he sleeps ~5-6 h on weekdays against a healthy young-adult reference of
+  ~8-9 h, i.e. a deficit of roughly 2-3 h on weeknights, partially offset at weekends. Applying the linear
+  0.07/h to a 2-hour average nightly deficit gives roughly 0.14 GPA points; to a 3-hour deficit, ~0.21
+  points. But the paper's own threshold result warns the relationship is NOT linear below 6 h, where
+  additional loss becomes disproportionately harmful, so 0.14-0.21 should be treated as a LOWER BOUND for a
+  subject whose weekday sleep is at or under the 6 h threshold.
+  IMPORTANT CROSS-CHECK AGAINST T2: the implied SD-scale effect is small. With a typical first-year college
+  GPA SD of roughly 0.5-0.7 points, 0.07 GPA per hour is about 0.10-0.14 SD per hour of sleep - remarkably
+  close to the Groen & Pabilonia implied academic IV of ~0.26 SD/h (same order) and vastly below
+  Jagnani's ~1.15 SD/h or Giuntella-Han-Mazzonna's 0.4-0.6 SD/h. The convergence of the two best
+  age-matched estimates (0.10-0.14 and 0.26 SD per hour) is the most useful quantitative anchor this shard
+  produces.
+  n: 557 in the pooled confirmatory analysis (Studies 2-5); 634 across all five studies including the
+  N = 77 discovery sample. Descriptives: students averaged 41 min (SD 27.4) of daytime sleep per day.
+shard: "s04_academic_natural_experiments"

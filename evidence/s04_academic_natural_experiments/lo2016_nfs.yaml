@@ -1,0 +1,120 @@
+study_id: lo2016_nfs
+citation: "Lo JC, Ong JL, Leong RLF, Gooley JJ, Chee MWL. Cognitive Performance, Sleepiness, and Mood in Partially Sleep Deprived Adolescents: The Need for Sleep Study. Sleep. 2016;39(3):687-698."
+doi: "10.5665/sleep.5552"
+pmid: "26612392"
+url: null
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Cognitive Performance, Sleepiness, and Mood in Partially Sleep Deprived Adolescents: The Need for Sleep Study."
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 56
+n_studies_pooled: null
+population:
+  age_mean: 17.0
+  age_range: [15, 19]
+  pct_female: 55.4
+  country: "Singapore"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_sustained_attention
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "5 h TIB vs 9 h TIB for 7 consecutive nights, boarding-school protocol"}
+    scale: raw_units
+    unit: "Cohen f-squared (local effect size of group x day interaction)"
+    value: 1.48
+    se: null
+    ci: null
+    conversion_formula: "reported Cohen f2 for the group x day interaction, computed by the authors from PROC MIXED per Selya et al. 2012. Cutoffs stated by the authors: small 0.02, medium 0.15, large 0.35. f2 = 1.48 corresponds to a very large effect. Sign convention: f2 is unsigned; the direction (more lapses under restriction) is given in direction_note. No SE for f2 reported."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "HARM. The restricted group showed monotonically increasing PVT lapses across the 7 nights. Larger f2 = larger deterioration. Vigilance was the most sleep-sensitive domain tested."
+    covariates: ["baseline (day B2) performance included as covariate"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+    quote: "In terms of effect size, performance in the PVT was the most sensitive to partial sleep deprivation of all the tests in this study (f2 = 1.48; Figure 3). In comparison, the A' in SART, was much less affected by sleep restriction (f2 = 0.20; Figure 3)."
+  - outcome_domain: cognition
+    outcome_construct: mental_arithmetic_speed_of_processing
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "5 h TIB vs 9 h TIB for 7 consecutive nights"}
+    scale: raw_units
+    unit: "Cohen f-squared"
+    value: 1.14
+    se: null
+    ci: null
+    conversion_formula: "reported Cohen f2 for group x day interaction on the Mental Arithmetic Test (MAT); F(9,456) = 4.33, P < 0.001."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "HARM. Restricted adolescents failed to show the normal practice-related improvement. This is the most academically relevant measure in the battery: timed mental arithmetic."
+    covariates: ["baseline performance covariate"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+    quote: "In both the MAT and the SDMT, which are tests of speed of processing, performance improved with repeated testing, but this was attenuated in the SR group relative to the control group (group x day interaction for the MAT: F(9,456) = 4.33, P < 0.001; for the SDMT: F(9,456) = 4.02, P < 0.001)... performance in the MAT was a more sensitive measure of sleep loss than the SDMT (f2 = 1.14 and 0.72)."
+  - outcome_domain: cognition
+    outcome_construct: working_memory_verbal_3back
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "5 h TIB vs 9 h TIB for 7 consecutive nights"}
+    scale: raw_units
+    unit: "Cohen f-squared"
+    value: 0.70
+    se: null
+    ci: null
+    conversion_formula: "reported Cohen f2 for group x day interaction on verbal 3-back A'; F(9,457) = 3.20, P < 0.001. The verbal 1-back gave f2 = 0.63."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "HARM. Working memory declined after 4 nights of restriction. Effect size did NOT increase with executive load (1-back 0.63 vs 3-back 0.70)."
+    covariates: ["baseline performance covariate"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+    quote: "The size of the partial sleep deprivation effect on 1- and 3-back was similar in magnitude (f2 = 0.63 and 0.70; Figure 3), suggesting that cognitive decrement induced by partial sleep deprivation did not change with executive load."
+  - outcome_domain: recovery
+    outcome_construct: incomplete_recovery_after_two_nights_9h
+    exposure: {type: recovery_sleep, dose_h: 9, referent_h: null, duration_days: 2, contrast_label: "2 recovery nights at 9 h TIB after 7 nights at 5 h TIB"}
+    scale: raw_units
+    unit: "qualitative: residual deficit present/absent after 2 nights of 9 h recovery sleep"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "coded 1.0 = residual deficit still present after 2 nights of 9 h recovery sleep, based on the reported P values. Not a magnitude; a presence indicator. PVT lapses 'remained elevated relative to baseline after the first two nights of recovery sleep (P < 0.001)'; MAT and SDMT 'remained significantly poorer than the control group (P < 0.003 for both tasks)'."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "HARM PERSISTS. Two nights of 9 h recovery sleep did NOT fully restore vigilance or speed of processing. Directly relevant: our subject's weekend catch-up of 7-8 h (and occasional 10-11 h) is shorter and less complete than this protocol's 9 h recovery, so weekend recovery should not be assumed to erase weekday deficits."
+    covariates: ["baseline performance covariate"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+    quote: "The number of lapses was significantly reduced after the first recovery sleep episode (P < 0.001), but remained elevated relative to baseline after the first two nights of recovery sleep (P < 0.001)... Nevertheless, after 2 nights of recovery sleep, performance of the SR group remained significantly poorer than the control group (P < 0.003 for both tasks)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomized parallel-group design with a controlled boarding-school environment (excellent adherence and exposure control), baseline-adjusted analysis, and a battery administered three times daily. Concerns: no blinding is possible; n = 56 split across two arms; participants were students at top high schools who were NOT habitual short sleepers, so they are the opposite of our subject in baseline adaptation; and effect sizes are reported as f2 of an interaction, which is not directly convertible to a per-hour SMD."
+funding: "Not extracted from retrieved text"
+notes: |
+  THIS IS THE T1 ANCHOR AT EXACTLY OUR SUBJECT'S AGE, and it is the single most important study I found for
+  calibrating how much cognitive damage 5 h nights do to a 16-19 year old. It is a genuine RCT: "Fifty-six
+  healthy adolescents (25 males, age = 15-19 y) who studied in top high schools and were not habitual short
+  sleepers were randomly assigned to Sleep Restriction (SR) or Control groups. Participants underwent a 2-w
+  protocol consisting of 3 baseline nights (TIB = 9 h), 7 nights of sleep opportunity manipulation (TIB = 5 h
+  for the SR and 9 h for the control groups), and 3 nights of recovery sleep (TIB = 9 h) at a boarding school."
+  EXPOSURE MATCH IS NEARLY EXACT: 5 h TIB for 7 consecutive nights is essentially our subject's weekday
+  pattern (5-6 h). The contrast (9 h) is the age-appropriate reference. The only mismatch is duration:
+  7 nights here versus ~3 years for our subject, and these adolescents were not previously sleep-adapted.
+  EFFECT SIZES, all Cohen f2 of the group x day interaction (author cutoffs: 0.02 small, 0.15 medium, 0.35
+  large): PVT lapses 1.48; MAT (mental arithmetic) 1.14; SDMT 0.72; verbal 3-back 0.70; verbal 1-back 0.63;
+  KSS subjective sleepiness 0.50; SART A' 0.20. Every cognitive domain except SART is in the "large" range,
+  and several are 3-4x the "large" threshold.
+  DOMAIN PATTERN WORTH TRANSMITTING: sustained attention (PVT) degrades MONOTONICALLY across the 7 nights -
+  i.e. it accumulates and does not plateau - whereas working memory dropped after ~4 nights and then
+  stabilized. Speed of processing degraded by BLOCKING NORMAL PRACTICE GAINS rather than by absolute
+  decline, which is the mechanism most directly analogous to failing to learn course material over a term.
+  This paper also contradicts the prior literature claim that executive function is the most affected domain
+  in adolescents; here attention is: "The SART was less sensitive (f2 = 0.20) than the PVT (f2 = 1.48)".
+  RECOVERY IS THE KEY FINDING FOR OUR SUBJECT'S WEEKEND-CATCHUP PATTERN: two nights of 9 h recovery sleep
+  did not restore PVT lapses to baseline, and MAT/SDMT remained significantly worse than controls. Since our
+  subject's weekend sleep is only 7-8 h, the implication is that his weekday deficits are only partially
+  repaid and will accumulate across a 3-year exposure.
+  DOI 10.5665/sleep.5552 was obtained from PubMed's own record for PMID 26612392 and then independently
+  confirmed against Crossref, which returns the matching title and Sleep 39:687-698.
+shard: "s04_academic_natural_experiments"

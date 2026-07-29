@@ -1,0 +1,82 @@
+study_id: shapiro2015_izawol
+citation: "Shapiro TM. The educational effects of school start times. IZA World of Labor. 2015;181."
+doi: "10.15185/izawol.181"
+pmid: null
+url: "https://wol.iza.org/articles/educational-effects-of-school-start-times"
+verification:
+  crossref_ok: true
+  pubmed_ok: null
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "The educational effects of school start times"
+access_tier: full_text
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: 16.0
+  age_range: [11, 19]
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: academic
+    outcome_construct: pooled_narrative_achievement_sd_per_hour_later_start
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "1 hour later secondary school start time; author's narrative synthesis of the quasi-experimental literature"}
+    scale: per_hour_beta
+    unit: "SD of overall student achievement per hour later start"
+    value: 0.10
+    se: null
+    ci: null
+    conversion_formula: "author's narrative summary figure across studies ('roughly 0.10 standard deviation'). No meta-analytic pooling is performed and no SE or CI is reported, so se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = later start raises achievement. Useful as a consensus central value for the school-start-time reduced form; NOT an independent estimate."
+    covariates: []
+    followup_years: null
+    cohort_family: IZA_WoL_narrative_synthesis
+    quote: "Delaying start times by one hour for students in secondary school would increase overall student achievement by roughly 0.10 standard deviation, on average."
+  - outcome_domain: comparator
+    outcome_construct: benchmark_equivalent_interventions
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "benchmarking a 1-hour start-time delay against class-size reduction and teacher quality"}
+    scale: raw_units
+    unit: "SD-equivalent benchmark (percentile of teacher effectiveness)"
+    value: 0.10
+    se: null
+    ci: null
+    conversion_formula: "no arithmetic; the author's stated equivalence is 'one-third fewer students' or 'an average teacher with one in the 84th percentile of effectiveness', the latter being a 1 SD improvement in teacher quality which Chetty et al. put at ~0.10 SD of test score. Recorded as 0.10 for that benchmark."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "context only. Establishes that the start-time effect, while modest in SD terms, is large relative to feasible education policy levers."
+    covariates: []
+    followup_years: null
+    cohort_family: IZA_WoL_narrative_synthesis
+    quote: "A one-hour delay in a school's start time has the same effect as being in a class with one-third fewer students or replacing an average teacher with one in the 84th percentile of effectiveness."
+rob:
+  tool: none
+  judgement: na
+  notes: "Non-systematic narrative policy review by an author of one of the primary studies (Shapiro is the 'Maghakian' of Carrell, Maghakian & West 2011). No search strategy, no risk-of-bias assessment, no formal pooling, and it does not discuss the null results (Hinrichs 2011 is not among the studies whose findings are summarised in the headline number). Treat as an advocacy-leaning synthesis."
+funding: "IZA World of Labor"
+notes: |
+  TIER TX - CONTEXT ONLY, NOT A PRIMARY MODEL INPUT. This is a narrative policy summary, not a
+  meta-analysis. It has no identification strategy of its own and it double-counts the primary studies
+  already recorded in this shard (Carrell 2011, Edwards 2012).
+  WHY I KEPT IT: two reasons. First, it supplies the field's consensus central value for the school-start-
+  time reduced form - about 0.10 SD of achievement per hour of bell-time delay - which is a useful sanity
+  check on my own extractions (Edwards 0.04-0.06 SD, Heissel & Norris 0.06-0.08 SD, Carrell ~0.17 SD scaled,
+  Groen & Pabilonia 0.16 SD for female reading, Hinrichs ~0.00 SD). The consensus 0.10 sits mid-range and is
+  slightly above the median of the individual estimates, which is what one would expect from a synthesis
+  that does not weight the precise null.
+  Second, it supplies the policy benchmark that makes the magnitude interpretable: a 1-hour delay is
+  equivalent to a one-third class-size reduction or to swapping an average teacher for an 84th-percentile
+  teacher. That equivalence is worth carrying into the final report because it converts an abstract 0.10 SD
+  into something a reader can size.
+  CONFLICT OF INTEREST NOTE: the author, Teny Maghakian Shapiro, is a co-author of Carrell, Maghakian & West
+  (2011), the largest positive estimate in the literature. The review is appropriately cited as the field's
+  advocacy position rather than as an independent synthesis. It does not engage with Hinrichs (2011)'s
+  precise null on ACT scores.
+  IMPORTANT: this review contains NO first stage. It never states how much extra sleep a 1-hour delay
+  produces, so it cannot be used to derive a per-hour-of-sleep effect.
+shard: "s04_academic_natural_experiments"
