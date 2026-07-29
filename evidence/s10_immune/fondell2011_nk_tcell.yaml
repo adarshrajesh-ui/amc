@@ -1,0 +1,76 @@
+study_id: fondell2011_nk_tcell
+citation: "Fondell E, Axelsson J, Franck K, Ploner A, Lekander M, Balter K, Gaines H. Short natural sleep is associated with higher T cell and lower NK cell activities. Brain, Behavior, and Immunity. 2011;25(7):1367-1375."
+doi: "10.1016/j.bbi.2011.04.004"
+pmid: "21496482"
+url: "https://pubmed.ncbi.nlm.nih.gov/21496482/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Short natural sleep is associated with higher T cell and lower NK cell activities."
+access_tier: abstract_only
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 36
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [20, 54]
+  pct_female: null
+  country: "Sweden"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: immune
+    outcome_construct: pha_induced_t_cell_function
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 8, duration_days: 1, contrast_label: "self-reported <7 h sleep on the night before blood draw vs 7-9 h; PHA-induced T cell function per volume whole blood"}
+    scale: log_rr
+    unit: null
+    value: 0.3988
+    se: 0.1708
+    ci: [0.0677, 0.7372]
+    conversion_formula: "Reported as '49% higher PHA-induced T cell function (95% CI 7/109%)', i.e. a ratio of 1.49 (1.07-2.09). log ratio = ln(1.49) = 0.3988; se = (ln 2.09 - ln 1.07)/3.92 = 0.1708."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "DIRECTION IS THE POINT, AND IT IS NOT 'HARM'. positive here = HIGHER T cell function after a short night. Short sleep was associated with a 49% INCREASE in mitogen-stimulated T cell function, not a decrease. Whether that is good (mobilised immunity) or bad (dysregulated activation) is genuinely unclear, and the paper does not resolve it. It directly contradicts the simple 'short sleep suppresses immune function' narrative."
+    covariates: ["see paper; abstract notes stress and physical activity were also modelled"]
+    followup_years: null
+    cohort_family: "Karolinska_Fondell"
+    quote: "Short sleep duration prior to blood draw (<7 h) was associated with 49% higher PHA-induced T cell function (95% CI 7/109%) and 30% lower NKCA compared with normal prior sleep (7-9 h) (95% CI -46/-8%)."
+  - outcome_domain: immune
+    outcome_construct: natural_killer_cell_activity
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 8, duration_days: 1, contrast_label: "self-reported <7 h sleep the night before blood draw vs 7-9 h; natural killer cell activity (NKCA)"}
+    scale: log_rr
+    unit: null
+    value: -0.3567
+    se: 0.1359
+    ci: [-0.6162, -0.0834]
+    conversion_formula: "Reported as '30% lower NKCA ... (95% CI -46/-8%)', i.e. a ratio of 0.70 (0.54-0.92). log ratio = ln(0.70) = -0.3567; se = (ln 0.92 - ln 0.54)/3.92 = 0.1359."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = plausibly HARM (30% lower NK cell activity, which is the arm of innate immunity most directly implicated in early antiviral defence and tumour surveillance). Note this moves in the OPPOSITE direction to T cell function in the SAME people on the SAME night. 'Immune competence' is not one thing that goes up or down together."
+    covariates: ["see paper"]
+    followup_years: null
+    cohort_family: "Karolinska_Fondell"
+    quote: "Short sleep duration prior to blood draw (<7 h) was associated with 49% higher PHA-induced T cell function (95% CI 7/109%) and 30% lower NKCA compared with normal prior sleep (7-9 h) (95% CI -46/-8%)."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "TIER TX - CONTEXT ONLY. n = 36 (29 with three consecutive morning draws, 7 with one), cross-sectional, exposure is self-reported sleep on the single night before each draw, and there is no clinical outcome - only ex vivo functional assays whose relationship to real-world infection risk is unestablished. Multiple immune functions tested (NKCA, T cell responses to PHA/influenza/SEA+B, B cell response to PWM) with several exposures (sleep, stress, physical activity), so multiplicity is a serious concern for a study this small. The authors themselves call for replication and for the clinical consequences to be explored."
+funding: "not stated in the abstract"
+notes: |
+  ACCESS: abstract only (Brain Behav Immun 2011, paywalled). All numbers from the PubMed abstract.
+  WHY I INCLUDED A SMALL CROSS-SECTIONAL STUDY: because it is the cleanest single demonstration in my
+  set that sleep loss does not produce uniform "immunosuppression". In the same 36 people, on the same
+  mornings, short prior sleep went with T cell function 49% HIGHER and NK cell activity 30% LOWER.
+  Any downstream model that treats "immune competence" as a single latent variable moving in one
+  direction will misrepresent this literature.
+  This pattern recurs elsewhere in the shard: vanleeuwen2009_recovery found IL-6 and IL-1beta mRNA UP
+  but TNF-alpha protein DOWN; ballesio2026_experimental_meta found IL-6/CRP up but TNF-alpha
+  non-significantly DOWN; simpson2016_repeated_recovery found glucocorticoid sensitivity UP rather
+  than down. Marker-level heterogeneity is the rule, not the exception.
+  CONFOUNDING NOTE the abstract itself raises: high perceived stress was independently associated with
+  39% higher PHA-induced T cell function (95% CI 0/94%) - almost the same magnitude as the short-sleep
+  association - so stress and short sleep are hard to separate here.
+shard: "s10_immune"

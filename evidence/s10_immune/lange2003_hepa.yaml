@@ -1,0 +1,74 @@
+study_id: lange2003_hepa
+citation: "Lange T, Perras B, Fehm HL, Born J. Sleep enhances the human antibody response to hepatitis A vaccination. Psychosomatic Medicine. 2003;65(5):831-835."
+doi: "10.1097/01.psy.0000091382.61178.f1"
+pmid: "14508028"
+url: "https://pubmed.ncbi.nlm.nih.gov/14508028/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep enhances the human antibody response to hepatitis A vaccination."
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 19
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "Germany"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: immune
+    outcome_construct: hepatitis_a_antibody_titre_4wk
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: 8, duration_days: 1, contrast_label: "ONE night of total sleep deprivation on the night after primary HAV vaccination vs regular sleep; titre at 4 weeks"}
+    scale: pct_change
+    unit: "% difference in HAV antibody titre at 4 weeks, sleep vs sleep-deprived"
+    value: 100.0
+    se: null
+    ci: null
+    conversion_formula: "Abstract reports a 'nearly two-fold higher' titre in the sleep group at 4 weeks, p = .018. Encoded as approximately +100% for the sleep group (equivalently roughly -50% for the deprived group). Group means and SDs are in the paywalled full text, which I could not retrieve, so se is null rather than invented. The p-value (.018) with n = 19 implies roughly |d| ~ 1.2, but I have NOT recorded that as an effect because the group split (n per arm) is not stated in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = BENEFIT of sleep. Sleeping normally after vaccination produced nearly double the antibody titre of staying awake for one night. Framed as harm: a single night of no sleep after immunisation roughly halved the 4-week antibody response."
+    covariates: []
+    followup_years: 0.077
+    cohort_family: "Luebeck_Lange_vaccination"
+    quote: "Subjects who had regular sleep after vaccination, displayed a nearly two-fold higher HAV antibody titer after 4 weeks than subjects staying awake on this night (p=.018)."
+  - outcome_domain: endocrine
+    outcome_construct: immune_supportive_hormone_release_during_sleep
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: 8, duration_days: 1, contrast_label: "one night awake vs asleep after vaccination; growth hormone, prolactin, dopamine"}
+    scale: raw_units
+    unit: "qualitative direction only (plasma concentrations, units not in abstract)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Direction-only flag (+1 = hormones higher during sleep). No numeric magnitudes in the abstract; se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "MECHANISM, not an outcome. Sleep raised growth hormone, prolactin and dopamine (p<.01) and lowered TSH, noradrenaline and adrenaline (p<.02). White-blood-cell subset counts were only marginally affected - i.e. the antibody effect is not explained by cell trafficking."
+    covariates: []
+    followup_years: null
+    cohort_family: "Luebeck_Lange_vaccination"
+    quote: "Compared with wakefulness, sleep after vaccination distinctly increased release of several immune-stimulating hormones including growth hormone, prolactin, and dopamine (p <.01). Concentrations of thyrotropin, norepinephrine, and epinephrine were lowered by sleep (p <.02), whereas sleep only marginally influenced WBC subset counts."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Experimental manipulation of sleep with a hard immunological endpoint, which is the right design. But n = 19 total across two parallel groups is very small; abstract only, so I cannot verify randomisation, whether the assay was blinded, or baseline comparability; and the exposure is ONE night of total deprivation, which is not the subject's exposure (chronic partial restriction). Single-centre."
+funding: "not stated in the abstract"
+notes: |
+  ACCESS: abstract only. Psychosomatic Medicine 2003 is paywalled and has no PMC copy. Every number
+  above is from the PubMed abstract, retrieved with efetch. No table or figure values are recorded.
+  EXPOSURE MISMATCH warning for the pooler: this is a single night of TOTAL sleep deprivation on the
+  night immediately after immunisation - a targeted attack on the consolidation window - not habitual
+  short sleep. It bounds the immunological importance of sleep-around-vaccination but should not be
+  used to estimate the effect of a 5-6 h habitual schedule.
+  This study is one of the four experimental studies pooled in spiegel2023_vaccine_meta; do not
+  double-count it against that record.
+  The same group's follow-up (lange2011_memory, PMID 21632713) extended this design to three
+  vaccinations with 1-year follow-up and is the best available evidence on whether the deficit
+  persists.
+shard: "s10_immune"

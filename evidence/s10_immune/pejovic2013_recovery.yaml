@@ -1,0 +1,111 @@
+study_id: pejovic2013_recovery
+citation: "Pejovic S, Basta M, Vgontzas AN, Kritikou I, Shaffer ML, Tsaoussoglou M, Stiffler D, Stefanakis Z, Bixler EO, Chrousos GP. Effects of recovery sleep after one work week of mild sleep restriction on interleukin-6 and cortisol secretion and daytime sleepiness and performance. American Journal of Physiology-Endocrinology and Metabolism. 2013;305(7):E890-E896."
+doi: "10.1152/ajpendo.00301.2013"
+pmid: "23941878"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3798707/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Effects of recovery sleep after one work week of mild sleep restriction on interleukin-6 and cortisol secretion and daytime sleepiness and performance."
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 30
+n_studies_pooled: null
+population:
+  age_mean: 24.7
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: immune
+    outcome_construct: il6_24h_plasma_during_restriction
+    exposure: {type: chronic_restriction, dose_h: 6, referent_h: 8, duration_days: 6, contrast_label: "6 h/night x 6 nights vs own 8 h baseline; 24-h serial IL-6 profile"}
+    scale: raw_units
+    unit: "pg/ml change in 24-h IL-6 (restriction minus baseline)"
+    value: 0.90
+    se: 0.41
+    ci: [0.096, 1.704]
+    conversion_formula: "Paper reports 'baseline minus restriction, -0.90 +/- 0.41 pg/ml, P = 0.03'. Sign flipped here so that positive = increase under restriction. ci = 0.90 +/- 1.96*0.41. Derived d_z = 0.90 / (0.41*sqrt(30)) = 0.401 (SD of the difference = 2.246 pg/ml)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM (IL-6 rose under restriction). MILD restriction - 6 h/night, which is the mild end of the subject's weekday range - was enough to raise 24-h IL-6 significantly. Approximate within-subject d_z = 0.40, closely matching the meta-analytic d = 0.42 from ballesio2026_experimental_meta."
+    covariates: ["gender", "time of day (repeated measures)"]
+    followup_years: null
+    cohort_family: "PennState_Vgontzas_recovery"
+    quote: "Sleep restriction was associated with a significant overall increase in 24-h secretion of IL-6 (baseline minus restriction, -0.90 +/- 0.41 pg/ml, P = 0.03), whereas after recovery IL-6 levels decreased significantly and returned to baseline levels (restriction minus recovery, 0.93 +/- 0.45 pg/ml, P = 0.04; baseline minus recovery, 0.02 +/- 0.34 pg/ml, P = 0.94)."
+  - outcome_domain: recovery
+    outcome_construct: il6_24h_plasma_after_2_nights_recovery_vs_baseline
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 8, duration_days: 2, contrast_label: "2 nights of 10 h recovery sleep after 6 nights of 6 h; 24-h IL-6 compared back to the SAME person's 8 h baseline"}
+    scale: raw_units
+    unit: "pg/ml residual difference in 24-h IL-6 (baseline minus recovery)"
+    value: 0.02
+    se: 0.34
+    ci: [-0.646, 0.686]
+    conversion_formula: "Reported directly: 'baseline minus recovery, 0.02 +/- 0.34 pg/ml, P = 0.94'. ci = 0.02 +/- 1.96*0.34. Derived d_z = 0.011 - i.e. essentially exact recovery."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "THE HEADLINE REVERSIBILITY RESULT, AND IT IS A NULL IN THE GOOD DIRECTION. After only 2 nights of 10 h sleep, 24-h IL-6 was statistically indistinguishable from the person's own pre-restriction baseline (residual 0.02 pg/ml, P = 0.94). The CI excludes anything larger than ~0.7 pg/ml of residual elevation, i.e. less than the 0.90 pg/ml the restriction had caused. Positive would mean recovery levels still BELOW baseline; near-zero means complete normalisation."
+    covariates: ["gender", "time of day (repeated measures)"]
+    followup_years: null
+    cohort_family: "PennState_Vgontzas_recovery"
+    quote: "In summary, 2 days of extended sleep over the weekend reverses the impact of one work week of mild sleep restriction on daytime sleepiness, fatigue, and IL-6 levels and reduces the levels of the stress hormone cortisol. However, it does not improve performance, suggesting that complete performance recovery may require more than just 2 days."
+  - outcome_domain: recovery
+    outcome_construct: il6_decrease_from_restriction_to_recovery
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 6, duration_days: 2, contrast_label: "2 nights of 10 h recovery vs the restriction state (within-person)"}
+    scale: raw_units
+    unit: "pg/ml fall in 24-h IL-6 (restriction minus recovery)"
+    value: 0.93
+    se: 0.45
+    ci: [0.048, 1.812]
+    conversion_formula: "Reported: 'restriction minus recovery, 0.93 +/- 0.45 pg/ml, P = 0.04'. ci = 0.93 +/- 1.96*0.45. Derived d_z = 0.377."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = BENEFIT of recovery sleep. The fall on recovery (0.93 pg/ml) is essentially the mirror image of the rise on restriction (0.90 pg/ml) - the IL-6 elevation was fully given back."
+    covariates: ["gender", "time of day (repeated measures)"]
+    followup_years: null
+    cohort_family: "PennState_Vgontzas_recovery"
+    quote: "Our study shows that 2 days of extended recovery sleep reverses the adverse effects of short-term sleep loss on the secretion of IL-6, as it is marked by a significant drop in its 24-h plasma levels following 2 days of 10 h of sleep per night compared with the restriction period."
+  - outcome_domain: cognition
+    outcome_construct: psychomotor_vigilance_not_recovered_dissociation
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 8, duration_days: 2, contrast_label: "2 nights of 10 h recovery; PVT performance vs baseline"}
+    scale: raw_units
+    unit: "qualitative flag (-1 = still impaired after recovery)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Qualitative flag; the numeric PVT values are in this paper's figures which I did not digitise. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "CRITICAL DISSOCIATION, and it is the reason this record matters beyond immunology. In the SAME people, over the SAME 2 recovery nights: IL-6 and sleepiness fully normalised, but objective PERFORMANCE did not. Immune markers recover faster than neurobehavioural function. Do not generalise 'the inflammation reverses' into 'everything reverses'."
+    covariates: []
+    followup_years: null
+    cohort_family: "PennState_Vgontzas_recovery"
+    quote: "Subjective and objective sleepiness increased significantly after restriction and returned to baseline after recovery. In contrast, performance deteriorated significantly during sleep restriction and did not improve after recovery."
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "Within-subject lab protocol with polysomnographic control of the sleep opportunity and 24-h serial (hourly) blood sampling - the correct way to measure IL-6, which has a strong diurnal rhythm that single morning draws confound. n = 30 young adults (mean 24.7 y), which is a good age match. Limitations: no parallel control arm, so an order/habituation effect cannot be formally excluded; only ONE restriction-recovery cycle, so it cannot speak to repeated weekly cycles (see simpson2016_repeated_recovery, which did, and got a different answer); recovery was 10 h/night, more generous than most people's weekends."
+funding: "Partially funded by the National Institutes of Health"
+notes: |
+  PROTOCOL, verbatim: "30 healthy young men and women (mean age +/- SD, 24.7 +/- 3.5 yr; mean body mass
+  index +/- SD, 23.6 +/- 2.4 kg/m2) participated in a sleep laboratory experiment of 13 nights
+  [4 baseline nights (8 h/night), followed by 6 sleep restriction nights (6 h/night) and 3 recovery
+  nights (10 h/night)]. ... assessed on days 4 (baseline), 10 (after 1 wk of sleep restriction), and
+  13 (after 2 nights of recovery sleep)."
+  WHY THIS IS THE BEST-MATCHED RECOVERY RECORD IN THE SHARD: the exposure (6 h weeknights) and the
+  recovery (10 h for 2 nights, i.e. a weekend lie-in) map almost exactly onto the target subject's
+  described pattern of ~5-6 h weekdays with 7-8 h weekends and occasional 10-11 h weekend nights.
+  ANSWER TO THE REVERSIBILITY QUESTION, for a single week-long cycle: the IL-6 rise is fully
+  reversible within 2 nights. This is strong evidence that the inflammatory signal is a STATE
+  response to current sleep debt, not accumulating damage.
+  THE IMPORTANT CAVEAT: this was ONE cycle. simpson2016_repeated_recovery ran three consecutive
+  restriction/recovery weeks in the same design space and found monocyte IL-6 still elevated AFTER
+  recovery sleep in weeks 2 and 3. Pejovic's own discussion anticipates this, noting other work
+  "suggesting that repeated sleep restriction/recovery cycles may have lasting effects."
+  Assay: IL-6 by ELISA (R&D Systems), lower limit of detection 0.094 pg/ml.
+shard: "s10_immune"

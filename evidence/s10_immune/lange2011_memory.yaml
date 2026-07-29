@@ -1,0 +1,88 @@
+study_id: lange2011_memory
+citation: "Lange T, Dimitrov S, Bollinger T, Diekelmann S, Born J. Sleep after vaccination boosts immunological memory. Journal of Immunology. 2011;187(1):283-290."
+doi: "10.4049/jimmunol.1100015"
+pmid: "21632713"
+url: "https://pubmed.ncbi.nlm.nih.gov/21632713/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep after vaccination boosts immunological memory."
+access_tier: abstract_only
+secondhand_via: "Abstract retrieved directly from PubMed efetch. The clinical-protection detail and the 1-year persistence of the T-cell effect are additionally quoted from Besedovsky L, Lange T, Haack M. The Sleep-Immune Crosstalk in Health and Disease. Physiol Rev. 2019;99(3):1325-1380 (doi 10.1152/physrev.00010.2018, PMID 30920354), whose second author is this study's first author and which cites it as reference 320. Europe PMC confirms this article is NOT open access (isOpenAccess = N, 'Subscription required'), so I could not read the primary full text."
+design: rct_crossover
+tier: T1
+n: 27
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: "Germany"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: immune
+    outcome_construct: antigen_specific_th_cell_frequency
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: 8, duration_days: 1, contrast_label: "one night awake vs asleep after each of 3 hepatitis A vaccinations (weeks 0, 8, 16); antigen-specific Th cells followed 1 year"}
+    scale: pct_change
+    unit: "% difference in frequency of antigen-specific Th cells, sleep vs wake"
+    value: 100.0
+    se: null
+    ci: null
+    conversion_formula: "Abstract states sleep 'doubled the frequency of Ag-specific Th cells'. Encoded as +100% for the sleep condition. No means, SDs or CIs are in the abstract and the full text is paywalled, so se is null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = BENEFIT of sleep. Sleep after vaccination doubled antigen-specific Th cell frequency; conversely a night of total deprivation halved it. This is the only human study to show that sleep affects the CELLULAR (not just humoral) arm of vaccine memory."
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "Luebeck_Lange_vaccination"
+    quote: "Compared with the wake condition, sleep after vaccination doubled the frequency of Ag-specific Th cells and increased the fraction of Th1 cytokine-producing cells in this population. Moreover, sleep markedly increased Ag-specific IgG1."
+  - outcome_domain: immune
+    outcome_construct: persistence_of_vaccine_memory_effect_at_1_year
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: 8, duration_days: 1, contrast_label: "same contrast; question is whether the group difference persists to 1 year"}
+    scale: raw_units
+    unit: "qualitative persistence flag (1 = effect still detectable at 1 year)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Qualitative flag; no poolable numeric estimate available from the abstract. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "CRITICAL FOR THE DURABLE-VS-TRANSIENT DISTINCTION, and it cuts AGAINST pure reversibility. The advantage conferred by sleep on the night after immunisation was still measurable one year later. Unlike a circulating cytokine, an immunological memory compartment that is laid down badly is not re-made by catching up on sleep. NOTE the tension with spiegel2002_influenza_vaccine, where the ANTIBODY gap had closed by 3-4 weeks: the durable signal here is in antigen-specific T cells, and it followed 3 separate deprivation nights aligned to 3 immunisations, not chronic restriction."
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "Luebeck_Lange_vaccination"
+    quote: "The effects were followed up for 1 y and were associated with high sleep slow-wave activity during the postvaccination night as well as with accompanying levels of immunoregulatory hormones (i.e., increased growth hormone and prolactin but decreased cortisol release)."
+  - outcome_domain: immune
+    outcome_construct: failure_to_reach_clinical_protection_threshold
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: 8, duration_days: 1, contrast_label: "wake vs sleep after vaccination; outcome = needing an extra vaccination because titre was below the clinical protection level"}
+    scale: probability
+    unit: "proportion of participants below the clinical protection threshold"
+    value: 0.222
+    se: 0.113
+    ci: [0.0, 0.443]
+    conversion_formula: "Besedovsky 2019 reports 3 participants in the Wake group needed an extra vaccination vs 0 in the Sleep group. With 27 men in a within-subject-by-vaccination design, the Wake arm is not cleanly n = 27; taking the reported 3 events against the arm size implied by a ~13-14 per condition split gives roughly 3/13.5 = 0.222. se = sqrt(p(1-p)/13.5) = 0.113. THIS IS A DERIVED APPROXIMATION because the exact per-arm denominator is not stated in the sources I retrieved - treat the 22% as indicative, not measured. The RAW, fully quotable fact is: 3 in the Wake group vs 0 in the Sleep group."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. Some participants deprived of sleep after immunisation failed to reach seroprotection at all and had to be re-vaccinated, whereas none of the slept participants did. This is a hard clinical endpoint, not a marker."
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "Luebeck_Lange_vaccination"
+    quote: "Of note, three participants from the Wake group had to receive an additional vaccination because their titers were below levels for clinical protection, whereas all participants from the Sleep group had sufficient protection, showing the clinical significance of the findings. [Besedovsky, Lange & Haack, Physiol Rev 2019, describing Lange et al. 2011]"
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Experimentally manipulated sleep, polysomnographically verified, repeated across three immunisations, with 1-year follow-up and a clinical endpoint - about as strong as this literature gets. Weaknesses: n = 27 healthy men only (no women, so the sex difference found by spiegel2023_vaccine_meta cannot be checked here); abstract-only access means I cannot verify allocation or assay blinding; the exposure is total deprivation on a specific night, not chronic restriction; and 3-events-vs-0 is a very thin basis for the clinical-protection claim."
+funding: "not stated in the abstract"
+notes: |
+  ACCESS: abstract only (Europe PMC: isOpenAccess = N). The clinical-protection detail is secondhand
+  from Besedovsky 2019, co-authored by this study's first author.
+  MECHANISM: the effect tracked slow-wave activity, and the review reports that SWS/slow-oscillation
+  amount plus the accompanying GH/prolactin rise and cortisol fall "correlated with the percentage of
+  antigen-specific CD4 T cells measured up to 1 year later". This is the mechanistic bridge from
+  sleep architecture to durable adaptive immunity, and it is why SLEEP TIMING relative to antigen
+  exposure matters more than total hours in these experiments.
+  EXPOSURE MISMATCH: do not use this to estimate the effect of 5-6 h habitual sleep. It bounds what
+  losing an entire night at the wrong moment can do.
+shard: "s10_immune"

@@ -1,0 +1,322 @@
+study_id: irwin2016_inflammation_meta
+citation: "Irwin MR, Olmstead R, Carroll JE. Sleep Disturbance, Sleep Duration, and Inflammation: A Systematic Review and Meta-Analysis of Cohort Studies and Experimental Sleep Deprivation. Biol Psychiatry. 2016;80(1):40-52."
+doi: "10.1016/j.biopsych.2015.05.014"
+pmid: "26140821"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4666828/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep Disturbance, Sleep Duration, and Inflammation: A Systematic Review and Meta-Analysis of Cohort Studies and Experimental Sleep Deprivation."
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 50000
+n_studies_pooled: 72
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: immune
+    outcome_construct: crp_short_sleep_categorical_extreme
+    exposure: {type: habitual_short_sleep, dose_h: 6.0, referent_h: 7.5, duration_days: null, contrast_label: "EXTREME OF SHORT SLEEP: categorical <7 h/night vs 7-8 h reference"}
+    scale: smd
+    unit: null
+    value: 0.08
+    se: 0.0434
+    ci: [-0.01, 0.16]
+    conversion_formula: "reported ES 0.08 (95% CI -0.01 to 0.16); se = (0.16 - (-0.01))/3.92 = 0.0434"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NULL - THIS IS THE HEADLINE SHORT-SLEEP RESULT. positive would = harm (higher CRP). CI crosses zero. 11 samples, N = 19,573. Categorical short sleep (<7 h) was NOT significantly associated with CRP."
+    covariates: ["adjusted estimates used where available; many contributing studies unadjusted"]
+    followup_years: null
+    cohort_family: "Irwin2016_inflammation_meta"
+    quote: "When extremes of sleep duration (i.e., short vs. long sleep duration) were analyzed as compared to normal sleep reference (7-8 h), short sleep duration was not associated with CRP (11 samples; N=19573; ES 0.08; 95% CI -0.01 - 0.16; Qv=11.5; p=.32; I2 = 12.9; Figure 5)"
+  - outcome_domain: immune
+    outcome_construct: il6_short_sleep_categorical_extreme
+    exposure: {type: habitual_short_sleep, dose_h: 6.0, referent_h: 7.5, duration_days: null, contrast_label: "EXTREME OF SHORT SLEEP: categorical <7 h/night vs 7-8 h reference"}
+    scale: smd
+    unit: null
+    value: 0.08
+    se: 0.0510
+    ci: [-0.02, 0.18]
+    conversion_formula: "reported ES 0.08 (95% CI -0.02 to 0.18); se = (0.18 - (-0.02))/3.92 = 0.0510"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NULL. 8 samples, N = 12,925. Categorical short sleep was NOT associated with IL-6."
+    covariates: []
+    followup_years: null
+    cohort_family: "Irwin2016_inflammation_meta"
+    quote: "IL-6 (8 samples; N=12925; ES 0.08; 95% CI -0.02 - 0.18; Qv=7.8; p=.35; I2 =9.7; Figure 6)"
+  - outcome_domain: immune
+    outcome_construct: tnf_short_sleep_categorical_extreme
+    exposure: {type: habitual_short_sleep, dose_h: 6.0, referent_h: 7.5, duration_days: null, contrast_label: "categorical <7 h/night vs 7-8 h reference"}
+    scale: smd
+    unit: null
+    value: 0.11
+    se: 0.0587
+    ci: [-0.01, 0.22]
+    conversion_formula: "reported ES 0.11 (95% CI -0.01 to 0.22); se = (0.22 - (-0.01))/3.92 = 0.0587"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NULL. 3 samples, N = 1,979."
+    covariates: []
+    followup_years: null
+    cohort_family: "Irwin2016_inflammation_meta"
+    quote: "or TNF (3 samples; N=1979; ES=0.11; 95% CI -.01 - .22; Qv=0.1; p=.97; I2=0%; Figure S4)"
+  - outcome_domain: immune
+    outcome_construct: crp_short_sleep_continuous_combined
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep duration as a CONTINUOUS variable, subjective + objective measures combined"}
+    scale: smd
+    unit: null
+    value: 0.09
+    se: 0.0408
+    ci: [0.01, 0.17]
+    conversion_formula: "reported ES 0.09 (95% CI 0.01 to 0.17); se = (0.17 - 0.01)/3.92 = 0.0408"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = HARM (higher CRP with shorter sleep). SIGNIFICANT but tiny (SMD 0.09) - roughly 1/10th of a standard deviation. 16 samples, N = 5,040. This is the ONE significant short-sleep-and-inflammation result in the paper."
+    covariates: []
+    followup_years: null
+    cohort_family: "Irwin2016_inflammation_meta"
+    quote: "In analyses that combined subjective and objective measures, short sleep duration was associated with higher levels of CRP (16 samples; N=5040; ES 0.09; 95% CI 0.01 - 0.17; Qv=15.4; p=.43; I2 =2.3; Figure 3) but not with IL-6 (18 samples; N=2573; ES 0.11; 95% CI -0.01 - 0.23; Qv=203; p=.26; I2 = 16.1; Figure 4) or TNF (4 samples; N=157; ES=0.29; 95% CI -0.27 - 0.84; Qv=3.1; p=.38; I2=3.2%; Figure S3)"
+  - outcome_domain: immune
+    outcome_construct: il6_short_sleep_continuous_combined
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep duration continuous, subjective + objective combined"}
+    scale: smd
+    unit: null
+    value: 0.11
+    se: 0.0612
+    ci: [-0.01, 0.23]
+    conversion_formula: "reported ES 0.11 (95% CI -0.01 to 0.23); se = (0.23 - (-0.01))/3.92 = 0.0612"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NULL. 18 samples, N = 2,573."
+    covariates: []
+    followup_years: null
+    cohort_family: "Irwin2016_inflammation_meta"
+    quote: "but not with IL-6 (18 samples; N=2573; ES 0.11; 95% CI -0.01 - 0.23; Qv=203; p=.26; I2 = 16.1; Figure 4)"
+  - outcome_domain: immune
+    outcome_construct: il6_short_sleep_continuous_objective_only
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep duration continuous, OBJECTIVE measures only (actigraphy/PSG)"}
+    scale: smd
+    unit: null
+    value: 0.29
+    se: 0.1199
+    ci: [0.05, 0.52]
+    conversion_formula: "reported ES 0.29 (95% CI 0.05 to 0.52); se = (0.52 - 0.05)/3.92 = 0.1199"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = HARM. SIGNIFICANT and ~3x larger than the self-report estimate. 9 samples, N = 489. Suggests self-report measurement error attenuates the true association - the same pattern seen in the vaccine literature."
+    covariates: []
+    followup_years: null
+    cohort_family: "Irwin2016_inflammation_meta"
+    quote: "When sleep duration was treated continuously using objective measures, sleep duration was also not associated with CRP (5 samples; N= 1550; ES 0.18; 95% CI -.04 - .41; Qv=4.0; p=.41; I2 = 0.00; Figure 3), although short sleep duration was associated with higher levels of IL-6 (9 samples; N=489; ES 0.29; 95% CI 0.05 - 0.52; Qv=8.2; p=.41; I2 = 3.0; Figure 4)."
+  - outcome_domain: immune
+    outcome_construct: crp_short_sleep_continuous_objective_only
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep duration continuous, OBJECTIVE measures only"}
+    scale: smd
+    unit: null
+    value: 0.18
+    se: 0.1148
+    ci: [-0.04, 0.41]
+    conversion_formula: "reported ES 0.18 (95% CI -0.04 to 0.41); se = (0.41 - (-0.04))/3.92 = 0.1148"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NULL. 5 samples, N = 1,550."
+    covariates: []
+    followup_years: null
+    cohort_family: "Irwin2016_inflammation_meta"
+    quote: "sleep duration was also not associated with CRP (5 samples; N= 1550; ES 0.18; 95% CI -.04 - .41; Qv=4.0; p=.41; I2 = 0.00; Figure 3)"
+  - outcome_domain: immune
+    outcome_construct: crp_short_sleep_continuous_subjective_only
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep duration continuous, SUBJECTIVE measures only"}
+    scale: smd
+    unit: null
+    value: 0.04
+    se: 0.0357
+    ci: [-0.03, 0.11]
+    conversion_formula: "reported ES 0.04 (95% CI -0.03 to 0.11); se = (0.11 - (-0.03))/3.92 = 0.0357"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NULL. 11 samples, N = 3,490."
+    covariates: []
+    followup_years: null
+    cohort_family: "Irwin2016_inflammation_meta"
+    quote: "Sleep duration as a continuous variable using subjective measures was not associated with CRP (11 samples; N= 3490; ES 0.04; 95% CI -.03 - .11; Qv=7.3; p=.70; I2 = 0.00; Figure 3), or IL-6 (9 samples; N=2084; ES 0.03; 95% CI -0.09 - 0.14; Qv=8.5; p=.39; I2 = 6.1; Figure 4)."
+  - outcome_domain: immune
+    outcome_construct: il6_short_sleep_continuous_subjective_only
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "sleep duration continuous, SUBJECTIVE measures only"}
+    scale: smd
+    unit: null
+    value: 0.03
+    se: 0.0587
+    ci: [-0.09, 0.14]
+    conversion_formula: "reported ES 0.03 (95% CI -0.09 to 0.14); se = (0.14 - (-0.09))/3.92 = 0.0587"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NULL. 9 samples, N = 2,084. This is the estimate quoted in the paper's ABSTRACT as 'but not IL-6 (ES .03; 95% CI: -.09 to .14)'."
+    covariates: []
+    followup_years: null
+    cohort_family: "Irwin2016_inflammation_meta"
+    quote: "or IL-6 (9 samples; N=2084; ES 0.03; 95% CI -0.09 - 0.14; Qv=8.5; p=.39; I2 = 6.1; Figure 4)"
+  - outcome_domain: immune
+    outcome_construct: crp_long_sleep_categorical_extreme
+    exposure: {type: other, dose_h: 9.0, referent_h: 7.5, duration_days: null, contrast_label: "EXTREME OF LONG SLEEP: categorical >8 h/night vs 7-8 h reference"}
+    scale: smd
+    unit: null
+    value: 0.17
+    se: 0.0842
+    ci: [0.01, 0.34]
+    conversion_formula: "reported ES 0.17 (95% CI 0.01 to 0.34); se = (0.34 - 0.01)/3.92 = 0.0842"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher CRP. SIGNIFICANT for LONG sleep - roughly TWICE the (null) short-sleep estimate. 11 samples, N = 19,573. The inflammation-duration relationship in this meta-analysis is driven by the LONG tail, not the short tail."
+    covariates: []
+    followup_years: null
+    cohort_family: "Irwin2016_inflammation_meta"
+    quote: "However, long sleep duration was associated with higher levels of CRP (11 samples; N=19573; ES 0.17; 95% CI 0.01 - 0.34; Qv=10.6; p=.39; I2 = 5.4; Figure 5) and with higher levels of IL-6 (8 samples; N=12925; ES 0.11; 95% CI 0.02 - 0.20; Qv=7.3; p=.39; I2 = 4.6; Figure 6), but not TNF (3 samples; N=1979; ES=.08; CI -.06 - .22; Qv=2.2; p=.34; I2=8.0%; Figure S4)."
+  - outcome_domain: immune
+    outcome_construct: il6_long_sleep_categorical_extreme
+    exposure: {type: other, dose_h: 9.0, referent_h: 7.5, duration_days: null, contrast_label: "categorical >8 h/night vs 7-8 h reference"}
+    scale: smd
+    unit: null
+    value: 0.11
+    se: 0.0459
+    ci: [0.02, 0.20]
+    conversion_formula: "reported ES 0.11 (95% CI 0.02 to 0.20); se = (0.20 - 0.02)/3.92 = 0.0459"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = higher IL-6. SIGNIFICANT for LONG sleep while categorical short sleep was null. 8 samples, N = 12,925."
+    covariates: []
+    followup_years: null
+    cohort_family: "Irwin2016_inflammation_meta"
+    quote: "and with higher levels of IL-6 (8 samples; N=12925; ES 0.11; 95% CI 0.02 - 0.20; Qv=7.3; p=.39; I2 = 4.6; Figure 6)"
+  - outcome_domain: immune
+    outcome_construct: crp_experimental_sleep_restriction_multiple_nights
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null, contrast_label: "EXPERIMENTAL sleep restriction over several consecutive days vs control"}
+    scale: smd
+    unit: null
+    value: 0.61
+    se: 0.8648
+    ci: [-1.09, 2.30]
+    conversion_formula: "reported ES 0.61 (95% CI -1.09 to 2.30); se = (2.30 - (-1.09))/3.92 = 0.8648"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NULL, and hopelessly imprecise (CI width 3.4 SD units). 4 samples, N = 188. Large point estimate but no information content."
+    covariates: []
+    followup_years: null
+    cohort_family: "Irwin2016_inflammation_meta"
+    quote: "Likewise, sleep restriction over several days was not associated with CRP (4 samples; N=188; ES 0.61; 95% CI -1.09 - 2.30; Qv=0.1.; p=.99; I2 = 0.0; Figure 7), IL-6 (5 samples; N=98; ES 0.13; 95% CI -0.21 - 0.47; Qv=4.1; p=.39; I2 = 2.1; Figure 8), or TNF (4 samples; N=48, ES=.06; 95% CI -0.34 - 0.46; Qv=0.8; p=.86; I2=0%; Figure S5)."
+  - outcome_domain: immune
+    outcome_construct: il6_experimental_sleep_restriction_multiple_nights
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null, contrast_label: "EXPERIMENTAL sleep restriction over several consecutive days vs control"}
+    scale: smd
+    unit: null
+    value: 0.13
+    se: 0.1735
+    ci: [-0.21, 0.47]
+    conversion_formula: "reported ES 0.13 (95% CI -0.21 to 0.47); se = (0.47 - (-0.21))/3.92 = 0.1735"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NULL. 5 samples, N = 98. NOTE this is superseded by ballesio2026_experimental_meta, which with more studies (k=5 after outlier exclusion) reports d = 0.42 (0.11-0.73) for 3+ nights of ~4.5 h."
+    covariates: []
+    followup_years: null
+    cohort_family: "Irwin2016_inflammation_meta"
+    quote: "IL-6 (5 samples; N=98; ES 0.13; 95% CI -0.21 - 0.47; Qv=4.1; p=.39; I2 = 2.1; Figure 8)"
+  - outcome_domain: immune
+    outcome_construct: crp_experimental_sleep_deprivation_one_night
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: 8, duration_days: 1, contrast_label: "EXPERIMENTAL total or partial deprivation, one night, vs control"}
+    scale: smd
+    unit: null
+    value: -0.43
+    se: 0.6097
+    ci: [-1.62, 0.77]
+    conversion_formula: "reported ES -0.43 (95% CI -1.62 to 0.77); se = (0.77 - (-1.62))/3.92 = 0.6097"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NULL, and the POINT ESTIMATE IS NEGATIVE (i.e. lower CRP after deprivation). 4 samples, N = 30. Directly contradicts the popular claim that a night of lost sleep raises CRP."
+    covariates: []
+    followup_years: null
+    cohort_family: "Irwin2016_inflammation_meta"
+    quote: "Experimental sleep deprivation, either for partial or total night, was not associated with CRP (4 samples; N=30; ES -0.43; 95% CI -1.62 - 0.77; Qv=0.1; p=.99; I2 = 0.0; Figure 7), IL-6 (12 samples; N=165; ES 0.16; 95% CI -0.11 - 0.43; Qv=11.4; p=.41; I2 = 3.3; Figure 8), or TNF (5 samples; N=61, ES=.04; 95% CI -0.32 - 0.39; Qv=0.4; p=.98; I2=0%; Figure S5)."
+  - outcome_domain: immune
+    outcome_construct: crp_sleep_disturbance_insomnia_all_methods
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "SLEEP DISTURBANCE / insomnia complaint (all assessment methods combined) - NOT short duration"}
+    scale: smd
+    unit: null
+    value: 0.12
+    se: 0.0357
+    ci: [0.05, 0.19]
+    conversion_formula: "reported ES 0.12 (95% CI 0.05 to 0.19); se = (0.19 - 0.05)/3.92 = 0.0357"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = HARM. SIGNIFICANT. This is the effect that is frequently mis-cited as if it were a short-sleep-duration effect. It is an INSOMNIA/DISTURBANCE effect and does NOT transport to a healthy adolescent who is voluntarily curtailing sleep and sleeps well when given the opportunity."
+    covariates: []
+    followup_years: null
+    cohort_family: "Irwin2016_inflammation_meta"
+    quote: "Sleep disturbance was associated with higher levels of CRP (ES .12; 95% CI = .05-.19) and IL-6 (ES .20; 95% CI = .08-.31)."
+  - outcome_domain: immune
+    outcome_construct: il6_sleep_disturbance_insomnia_all_methods
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "SLEEP DISTURBANCE / insomnia complaint - NOT short duration"}
+    scale: smd
+    unit: null
+    value: 0.20
+    se: 0.0587
+    ci: [0.08, 0.31]
+    conversion_formula: "reported ES 0.20 (95% CI 0.08 to 0.31); se = (0.31 - 0.08)/3.92 = 0.0587"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = HARM. SIGNIFICANT for insomnia/disturbance. Again: NOT a short-duration effect."
+    covariates: []
+    followup_years: null
+    cohort_family: "Irwin2016_inflammation_meta"
+    quote: "Sleep disturbance was associated with higher levels of CRP (ES .12; 95% CI = .05-.19) and IL-6 (ES .20; 95% CI = .08-.31)."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Large, well-conducted, prespecified analysis stratified by assessment method (a real strength). Limitations acknowledged by the authors: meta-analysis of observational data is open to residual confounding; many contributing studies did not report adjusted estimates; the vast majority used questionnaires rather than actigraphy/PSG; long-sleep effects may reflect uncontrolled comorbidity. Some publication-bias signal for the sleep-disturbance strand only, removed by trimming |ES|>1.0. Experimental strata are severely underpowered (N as low as 30 across 4 samples for CRP)."
+funding: "NIH (Irwin lab, UCLA Cousins Center for Psychoneuroimmunology)"
+notes: |
+  THIS RECORD IS THE ANSWER TO THE SHARD'S SPECIFIC QUESTION ABOUT WHETHER SHORT SLEEP DURATION
+  RAISES INFLAMMATION. The answer is: mostly no, and the paper says so explicitly in its own
+  conclusion. Verbatim conclusion: "Sleep disturbance and long sleep duration, but not short sleep
+  duration, are associated with increases in markers of systemic inflammation."
+  Verbatim abstract result: "Shorter sleep duration, but not the extreme of short sleep, was
+  associated with higher levels of CRP (ES .09; 95% CI = .01-.17) but not IL-6 (ES .03; 95% CI:
+  -.09 to .14). The extreme of long sleep duration was associated with higher levels of CRP (ES .17;
+  95% CI = .01-.34) and IL-6 (ES .11; 95% CI = .02-20). Neither sleep disturbances nor sleep
+  duration was associated with TNFa. Neither experimental sleep deprivation nor sleep restriction
+  was associated with CRP, IL-6, or TNFa."
+  SCORECARD for short sleep across the 12 short-sleep tests in this paper: 2 significant
+  (CRP continuous combined ES 0.09; IL-6 continuous objective-only ES 0.29), 10 null. Both
+  significant results are small and neither survives the categorical (<7 h vs 7-8 h) specification.
+  ABSTRACT/BODY INCONSISTENCY worth flagging to the pooler: the abstract's IL-6 short-sleep figure
+  (0.03; -0.09 to 0.14) is the SUBJECTIVE-continuous estimate (9 samples), whereas the body's
+  combined subjective+objective continuous estimate is 0.11 (-0.01 to 0.23) and the categorical
+  estimate is 0.08 (-0.02 to 0.18). All three are null, so the conclusion is unaffected, but a
+  downstream extractor reading only the abstract would record a different number than one reading
+  the results section. Both are provided as separate effects above.
+  DEFINITIONS: "the reference category for sleep duration was 7-8 h per night in the majority of
+  studies. Hence, short sleep was defined as < 7 h per night, and long sleep was defined as > 8 h
+  per night." Note this means the <7 h bin lumps a 6.5 h sleeper with a 4 h sleeper, so a threshold
+  effect below ~5-6 h could be diluted to null by this binning - a real limitation when applying
+  the null to a subject sleeping 5-6 h.
+  MECHANISM the authors propose: loss of the normal nocturnal drop in sympathetic outflow ->
+  beta-adrenergic signalling -> NF-kB -> proinflammatory gene expression.
+  Tier assigned TX rather than T1/T5 because this is a mixed meta-analysis whose observational
+  strand dominates; the embedded experimental strata are tiny. Use the strata separately.
+  DOUBLE-COUNTING WARNING FOR THE POOLER: this record's four EXPERIMENTAL effects (restriction and
+  total-deprivation strata, 5 and 6 samples) pool largely the same primaries as
+  ballesio2026_experimental_meta, which searched to March 2025 and has k up to 6 per contrast.
+  Do not enter both experimental strands. Prefer ballesio2026 for the experimental question and
+  this record for the OBSERVATIONAL duration-inflammation question; the two answer different
+  questions and only the observational strand here is non-redundant. cohort_family is set to
+  "Irwin2016_inflammation_meta" on every effect to make this record blockable as a unit.
+shard: "s10_immune"

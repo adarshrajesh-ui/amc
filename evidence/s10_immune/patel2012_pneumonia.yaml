@@ -1,0 +1,126 @@
+study_id: patel2012_pneumonia
+citation: "Patel SR, Malhotra A, Gao X, Hu FB, Neuman MI, Fawzi WW. A prospective study of sleep duration and pneumonia risk in women. Sleep. 2012;35(1):97-101."
+doi: "10.5665/sleep.1594"
+pmid: "22215923"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3242694/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "A prospective study of sleep duration and pneumonia risk in women."
+access_tier: full_text
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 56953
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [37, 57]
+  pct_female: 100.0
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: immune
+    outcome_construct: incident_physician_diagnosed_pneumonia
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 8, duration_days: null, contrast_label: "self-reported habitual <=5 h/night vs 8 h; incident radiographically-confirmed pneumonia over 4 y"}
+    scale: log_rr
+    unit: null
+    value: 0.3293
+    se: 0.1379
+    ci: [0.0583, 0.5988]
+    conversion_formula: "Multivariate Model #2 RR 1.39 (1.06-1.82) -> log_rr = ln(1.39) = 0.3293; se = (ln 1.82 - ln 1.06)/3.92 = 0.1379. Age-adjusted was RR 1.70 (1.30-2.23), log_rr = 0.5306, se = 0.1377."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. THE HARDEST INFECTION ENDPOINT IN MY WHOLE EVIDENCE SET: incident pneumonia requiring physician diagnosis AND chest radiograph confirmation, ascertained prospectively - not a self-reported cold. Attenuated from 1.70 to 1.39 by adjustment, but survives."
+    covariates: ["age", "smoking", "alcohol", "caffeine", "BMI", "depressed mood", "hypertension", "snoring", "shift work"]
+    followup_years: 4.0
+    cohort_family: "Nurses_Health_Study_II"
+    quote: "Hours of Sleep per Day | <= 5 | 6 | 7 | 8 | >= 9 | Number of Incident Pneumonia Cases | 73 | 245 | 401 | 196 | 62 | Age-Adjusted Relative Risk | 1.70 (1.30-2.23) | 1.29 (1.07-1.56) | 1.15 (0.97-1.37) | 1.00 | 1.49 (1.12-1.98) | Multivariate Model #1 | 1.53 (1.17-2.01) | 1.23 (1.02-1.49) | 1.15 (0.97-1.36) | 1.00 | 1.45 (1.09-1.93) | Multivariate Model #2 | 1.39 (1.06-1.82) | 1.17 (0.96-1.41) | 1.14 (0.96-1.35) | 1.00 | 1.38 (1.04-1.84)"
+  - outcome_domain: immune
+    outcome_construct: incident_pneumonia_at_6_hours
+    exposure: {type: habitual_short_sleep, dose_h: 6, referent_h: 8, duration_days: null, contrast_label: "self-reported 6 h/night vs 8 h; incident pneumonia"}
+    scale: log_rr
+    unit: null
+    value: 0.1570
+    se: 0.0981
+    ci: [-0.0408, 0.3436]
+    conversion_formula: "Multivariate Model #2 RR 1.17 (0.96-1.41) -> log_rr = ln(1.17) = 0.1570; se = (ln 1.41 - ln 0.96)/3.92 = 0.0981. Age-adjusted was 1.29 (1.07-1.56), significant; Model #1 1.23 (1.02-1.49), significant."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL AFTER FULL ADJUSTMENT, but note it was significant before. positive would = harm. The 6 h estimate was RR 1.29 age-adjusted (significant), 1.23 with lifestyle adjustment (significant), and 1.17 (0.96-1.41) after adding BMI, mood, hypertension, snoring and shift work - i.e. the 6 h signal is entirely explicable by correlated risk factors. 7 h was null in every model."
+    covariates: ["age", "smoking", "alcohol", "caffeine", "BMI", "depressed mood", "hypertension", "snoring", "shift work"]
+    followup_years: 4.0
+    cohort_family: "Nurses_Health_Study_II"
+    quote: "Multivariate Model #2 | 1.39 (1.06-1.82) | 1.17 (0.96-1.41) | 1.14 (0.96-1.35) | 1.00 | 1.38 (1.04-1.84)"
+  - outcome_domain: immune
+    outcome_construct: incident_pneumonia_long_sleep
+    exposure: {type: other, dose_h: 9, referent_h: 8, duration_days: null, contrast_label: "self-reported >=9 h/night vs 8 h; incident pneumonia (LONG sleep arm)"}
+    scale: log_rr
+    unit: null
+    value: 0.3221
+    se: 0.1455
+    ci: [0.0392, 0.6098]
+    conversion_formula: "Multivariate Model #2 RR 1.38 (1.04-1.84) -> log_rr = ln(1.38) = 0.3221; se = (ln 1.84 - ln 1.04)/3.92 = 0.1455"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NON-LINEARITY, IN A PROSPECTIVE DESIGN. positive = HARM. Long sleep (RR 1.38) carries essentially the SAME risk as <=5 h (RR 1.39). This U-shape recurs across pratherleung2016_nhanes (weaker), martinezalbert2025_infection (stronger for long sleep), irwin2016_inflammation_meta (long sleep, not short, associated with CRP) and zhang2023_mr_inflammation. A symmetric U is hard to explain by a mechanism in which sleep loss impairs immunity; it points to illness-driven sleep change and shared confounding."
+    covariates: ["age", "smoking", "alcohol", "caffeine", "BMI", "depressed mood", "hypertension", "snoring", "shift work"]
+    followup_years: 4.0
+    cohort_family: "Nurses_Health_Study_II"
+    quote: "Interestingly, long sleep durations were also associated with elevated risk. Compared to 8-h sleepers, the RR associated with >= 9 h sleep was 1.49 (95% CI 1.12-1.98) in age-adjusted analyses. After covariate adjustment, this risk was only slightly attenuated (RR = 1.38, 95% CI 1.04-1.84)."
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_pneumonia_incidence_rate_by_sleep_category
+    exposure: {type: habitual_short_sleep, dose_h: 5, referent_h: 8, duration_days: null, contrast_label: "ABSOLUTE unadjusted pneumonia incidence per 1000 person-years by sleep category"}
+    scale: raw_units
+    unit: "excess cases of pneumonia per 1000 person-years, <=5 h vs 8 h"
+    value: 2.7
+    se: null
+    ci: null
+    conversion_formula: "Published unadjusted incidence rates: 6.5, 4.8, 4.3, 3.8 and 5.7 cases per 1000 person-years for <=5, 6, 7, 8 and >=9 h. Absolute difference <=5 h minus 8 h = 6.5 - 3.8 = 2.7 per 1000 person-years. No SE published for the rates; se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. THE ABSOLUTE SCALE OF THE SERIOUS-INFECTION EFFECT: 2.7 extra pneumonias per 1000 person-years, i.e. about 1 extra case per 370 short-sleeping person-years. Even taking the association at face value as causal, a serious respiratory infection attributable to short sleep is a rare event - and this is in 37-57 year-old women, who are at higher baseline pneumonia risk than an 18-year-old man."
+    covariates: []
+    followup_years: 4.0
+    cohort_family: "Nurses_Health_Study_II"
+    quote: "The unadjusted incidence rates for pneumonia were 6.5, 4.8, 4.3, 3.8, and 5.7 cases per 1000 person-years for women sleeping <= 5, 6, 7, 8, and >= 9 h, respectively."
+  - outcome_domain: immune
+    outcome_construct: perceived_inadequate_sleep_and_pneumonia
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "perceived INADEQUATE sleep (yes vs no), regardless of duration; incident pneumonia"}
+    scale: log_rr
+    unit: null
+    value: 0.4055
+    se: 0.0764
+    ci: [0.2546, 0.5539]
+    conversion_formula: "Multivariate RR 1.50 (1.29-1.74) -> log_rr = ln(1.50) = 0.4055; se = (ln 1.74 - ln 1.29)/3.92 = (0.5539 - 0.2546)/3.92 = 0.0764"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM, and LARGER + MORE PRECISE than the duration effect. Perceived sleep INADEQUACY (RR 1.50, 1.29-1.74) beat <=5 h duration (RR 1.39, 1.06-1.82) on both point estimate and precision. Third independent replication of the pattern that sleep QUALITY/adequacy predicts infection better than sleep DURATION (cf. cohen2009_cold sleep efficiency OR 5.50; pratherleung2016_nhanes sleep disturbance OR 1.27)."
+    covariates: ["age", "smoking", "alcohol", "caffeine", "BMI", "depressed mood", "hypertension", "snoring", "shift work"]
+    followup_years: 4.0
+    cohort_family: "Nurses_Health_Study_II"
+    quote: "Perceived inadequate sleep was also associated with pneumonia with a relative risk of 1.50 (95% CI 1.29-1.74) in multivariate models."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Genuinely prospective with a validated hard outcome (physician diagnosis PLUS chest radiograph), 977 events over 217,500 person-years, >90% follow-up, and healthy-at-baseline restriction (excluded prior pneumonia, cancer, CVD, diabetes, asthma) - which removes the most obvious reverse-causation pathway. Weaknesses: exposure is a SINGLE self-reported question at baseline, so misclassification is certain (the authors report validation rho = 0.79 against a week of diaries, and note self-report OVERestimates true sleep, biasing the effect toward the null); residual confounding by unmeasured illness remains, evidenced by the symmetric long-sleep risk; all-female, 37-57 y, mostly white nurses - poor transportability to an 18-year-old man."
+funding: "not extracted"
+notes: |
+  Sample construction, verbatim: "Thus, 56,953 women were included in this analysis. The distribution
+  of habitual sleep duration was 5.2%, 23.3%, 42.7%, 23.7%, and 5.0% for <= 5, 6, 7, 8, and >= 9 h,
+  respectively." 977 pneumonia cases over 217,500 person-years.
+  WHY THIS RECORD MATTERS DESPITE THE POOR AGE MATCH: it is the only prospective study in my set with
+  a biologically verified SERIOUS infection outcome and enough events to estimate it precisely, and it
+  supplies the absolute rate needed to put the relative risks in perspective (2.7 extra pneumonias per
+  1000 person-years).
+  MEASUREMENT-BIAS NOTE THE AUTHORS MAKE THEMSELVES, and it cuts in the harmful direction: "objective
+  measurement of sleep habits suggests individuals typically overestimate their actual sleep time, and
+  the less one sleeps, the greater the overestimate. ... As a result of this reporting bias, the effect
+  of reduced sleep on pneumonia risk would tend to be underestimated by relying on self-report."
+  This is the same point that makes the objective-vs-self-report gap in spiegel2023_vaccine_meta and
+  prather2015_rhinovirus so important for dose calibration.
+  THRESHOLD PATTERN: only <=5 h survived full adjustment; 6 h and 7 h did not. Consistent with
+  pratherleung2016_nhanes (nothing at 6 h) and prather2015_rhinovirus (threshold at ~6 h actigraphic).
+shard: "s10_immune"

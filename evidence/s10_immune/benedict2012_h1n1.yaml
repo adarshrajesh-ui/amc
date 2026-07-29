@@ -1,0 +1,81 @@
+study_id: benedict2012_h1n1
+citation: "Benedict C, Brytting M, Markstrom A, Broman JE, Schioth HB. Acute sleep deprivation has no lasting effects on the human antibody titer response following a novel influenza A H1N1 virus vaccination. BMC Immunology. 2012;13:1."
+doi: "10.1186/1471-2172-13-1"
+pmid: "22217111"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3266189/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Acute sleep deprivation has no lasting effects on the human antibody titer response following a novel influenza A H1N1 virus vaccination."
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 24
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 54.2
+  country: "Sweden"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: immune
+    outcome_construct: h1n1_antibody_titre_day5_men
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: 8, duration_days: 1, contrast_label: "24 h continuous wakefulness after H1N1 vaccination vs a regular 24-h cycle including 8 h nocturnal sleep; antibody at day 5, MEN"}
+    scale: raw_units
+    unit: "qualitative flag (-1 = significantly reduced antibody in the sleep-deprived group)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Direction/significance flag. The paper reports the day-5 sex-specific difference but I did not extract a numeric titre contrast with dispersion from the results text; se null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = HARM. A single night of total deprivation reduced H1N1 antibody at day 5 in MEN only - consistent with the male-specific effect found meta-analytically in spiegel2023_vaccine_meta (men ES 0.93 vs women 0.42 NS). The target subject is male, so this sex-specificity is not a reason to discount the effect for him."
+    covariates: []
+    followup_years: 0.014
+    cohort_family: "Uppsala_Benedict_H1N1"
+    quote: "In comparison to the sleep group, sleep-deprived males but not females had reduced serum concentration of H1N1-specific antibodies five days after vaccination, whereas antibody titers at later time points did not differ between the conditions."
+  - outcome_domain: immune
+    outcome_construct: h1n1_antibody_titre_day10_17_52_null
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: 8, duration_days: 1, contrast_label: "same contrast; antibody at days 10, 17 and 52 post-vaccination"}
+    scale: raw_units
+    unit: "qualitative null flag (0 = no group difference)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Explicit null across three later timepoints; no numeric contrasts recorded. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "CENTRAL NULL FOR THE TRANSIENT-VS-DURABLE DISTINCTION, AND THE PAPER IS TITLED AROUND IT. positive would = harm. The day-5 deficit was gone by day 10 and stayed gone at days 17 and 52. The authors' explicit conclusion is that acute sleep deprivation has NO LASTING effect on antibody response. Titres were assayed out to 52 days - nearly two months of follow-up - so this is a reasonably strong null, subject to n = 24."
+    covariates: []
+    followup_years: 0.142
+    cohort_family: "Uppsala_Benedict_H1N1"
+    quote: "These findings concur with the notion that sleep is a supportive influence in the very early stage of an adaptive immune response to a viral antigen. However, our results do not support the view that acute sleep deprivation has lasting effects on the human antibody titer response to influenza vaccination."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Experimental sleep manipulation with a parallel control, a real vaccine, standard hemagglutination-inhibition assay, and follow-up to 52 days - the right design for the durability question. Weaknesses: n = 24 total (11 men, 13 females) split across two conditions, so the sex-stratified day-5 analysis rests on roughly 5-6 men per arm; that is far too small to trust the point estimate, and equally too small for the later-timepoint nulls to exclude modest effects; four timepoints x two sexes invites multiplicity; exposure is one night of total deprivation, not chronic restriction."
+funding: "not extracted"
+notes: |
+  THIS RECORD IS THE MAIN COUNTERWEIGHT TO THE VACCINE ALARM in my evidence set, and it is worth
+  stating plainly what it does and does not show.
+  WHAT IT SHOWS: losing one night's sleep at the moment of vaccination slows the EARLY antibody
+  response (day 5, men), but by day 10 and out to day 52 the deprived group had caught up.
+  WHAT IT DOES NOT SHOW: it does not address chronic restriction, and it does not measure the cellular
+  memory compartment that lange2011_memory found still altered at 1 year. Antibody titre and
+  antigen-specific T-cell frequency are different outcomes, and the two studies may both be right.
+  THE THREE-WAY TENSION worth carrying downstream:
+    - spiegel2002 (secondhand): day-10 antibody halved, gap GONE by 3-4 weeks -> transient
+    - benedict2012 (this record): day-5 deficit in men, gone by day 10, null to day 52 -> transient
+    - lange2011_memory: Th cell and IgG1 advantage of sleep still present at 1 YEAR, and 3 wake-group
+      participants never reached seroprotection -> durable
+  Reasonable synthesis: for a single mistimed night, the humoral deficit is a kinetic delay that
+  resolves; the durable signal appears when deprivation is repeated across multiple immunisations
+  (Lange's 3-dose design) or when it pushes someone below the seroprotection threshold, at which point
+  catching up on sleep cannot retroactively fix it.
+  This study is one of the four experimental studies pooled in spiegel2023_vaccine_meta - do not
+  double-count.
+shard: "s10_immune"

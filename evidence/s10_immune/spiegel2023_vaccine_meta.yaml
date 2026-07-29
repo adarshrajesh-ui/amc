@@ -1,0 +1,150 @@
+study_id: spiegel2023_vaccine_meta
+citation: "Spiegel K, Rey AE, Cheylus A, Ayling K, Benedict C, Lange T, Prather AA, Taylor DJ, Irwin MR, Van Cauter E. A meta-analysis of the associations between insufficient sleep duration and antibody response to vaccination. Current Biology. 2023;33(5):998-1005.e2."
+doi: "10.1016/j.cub.2023.02.017"
+pmid: "36917932"
+url: "https://www.cell.com/current-biology/fulltext/S0960-9822(23)00156-2"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "A meta-analysis of the associations between insufficient sleep duration and antibody response to vaccination."
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_observational
+tier: T1
+n: 504
+n_studies_pooled: 7
+population:
+  age_mean: null
+  age_range: [18, 85]
+  pct_female: null
+  country: "US, Germany, UK, Sweden"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: immune
+    outcome_construct: vaccine_antibody_response_objective_short_sleep
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 8, duration_days: 7, contrast_label: "OBJECTIVELY assessed short sleep (<6 h/night, actigraphy/PSG or experimental) vs 7-9 h, within 7 days of inoculation"}
+    scale: smd
+    unit: null
+    value: 0.79
+    se: 0.1990
+    ci: [0.40, 1.18]
+    conversion_formula: "Reported ES 0.79 (95% CI 0.40-1.18); se = (1.18 - 0.40)/3.92 = 0.1990"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. Positive ES means short sleep is associated with LOWER antibody titres / reduced seroprotection - the authors' stated sign convention. This is the headline estimate and it is LARGE by conventional benchmarks (the paper says 'ES of 0.80 and above are typically considered as large'). Ages 18-60, total n = 304."
+    covariates: []
+    followup_years: null
+    cohort_family: "Spiegel2023_vaccine_meta"
+    quote: "For studies that used objective measures of sleep, a robust adverse impact of short sleep on vaccine response was detected (total n= 304, ages 18-60, ES= 0.79 [0.40, 1.18]; Figure2B). The pooled ES [95% CI] was 0.86 [0.28, 1.44] for experimental studies (n= 133) and 0.67 [0.18, 1.16] for prospective studies (total n= 171)."
+  - outcome_domain: immune
+    outcome_construct: vaccine_antibody_response_selfreport_short_sleep
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 8, duration_days: 7, contrast_label: "SELF-REPORTED short sleep (<6 h/night) vs 7-9 h (or 7-8 h if >=65 y), within 7 days of inoculation"}
+    scale: smd
+    unit: null
+    value: 0.29
+    se: 0.1709
+    ci: [-0.04, 0.63]
+    conversion_formula: "Reported ES 0.29 (95% CI -0.04 to 0.63); se = (0.63 - (-0.04))/3.92 = 0.1709"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL as pre-specified. positive would = harm; the CI includes zero and the authors explicitly say it 'did not reach our pre-defined statistical significant criteria'. Total n = 504, ages 18-85. The self-report/objective gap (0.29 vs 0.79) is the single most important methodological finding in this record: SELF-REPORTED short sleep does not reliably predict vaccine response, objectively measured short sleep does."
+    covariates: []
+    followup_years: null
+    cohort_family: "Spiegel2023_vaccine_meta"
+    quote: "The relationship between self-reported short sleep, i.e. <6h/night, and vaccine response did not reach our pre-defined statistical significant criteria (total n= 504, ages 18-85, effect size and 95% confidence interval (ES [95% CI])= 0.29 [-0.04, 0.63]; Figure2A)."
+  - outcome_domain: immune
+    outcome_construct: vaccine_antibody_response_selfreport_short_sleep_under65
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 8, duration_days: 7, contrast_label: "SELF-REPORTED short sleep, exploratory analysis restricted to ages 18-60 (excluding the >=65 y study)"}
+    scale: smd
+    unit: null
+    value: 0.59
+    se: 0.2372
+    ci: [0.12, 1.05]
+    conversion_formula: "Reported ES 0.59 (95% CI 0.12-1.05); se = (1.05 - 0.12)/3.92 = 0.2372"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM, and significant. This is the estimate most transportable to an 18-year-old because it drops the elderly cohort: in 299 adults aged 18-60 the self-reported short-sleep effect becomes significant and 'medium' (the paper: 'ES between 0.50 and 0.80 are typically considered as medium'). EXPLORATORY, post hoc - treat with appropriate scepticism."
+    covariates: []
+    followup_years: null
+    cohort_family: "Spiegel2023_vaccine_meta"
+    quote: "Given that sleep duration and quality are generally reduced in older adults, we conducted an exploratory analysis excluding the study recruiting only adults >=65 years, an age group not represented in studies that used objective sleep assessment; in the remaining total sample of 299 adults ages 18-60, a significant association emerged (ES [95% CI]= 0.59 [0.12, 1.05])."
+  - outcome_domain: immune
+    outcome_construct: vaccine_antibody_response_objective_short_sleep_men
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 8, duration_days: 7, contrast_label: "objectively assessed short sleep, MEN only"}
+    scale: smd
+    unit: null
+    value: 0.93
+    se: 0.2015
+    ci: [0.54, 1.33]
+    conversion_formula: "Reported ES 0.93 (95% CI 0.54-1.33); se = (1.33 - 0.54)/3.92 = 0.2015"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. THIS IS THE SEX-MATCHED ESTIMATE FOR THE TARGET SUBJECT (male). In men the pooled effect is large (0.93); in women it was 0.42 (95% CI -0.49 to 1.32), not significant. The authors flag the cause of this disparity as an open question and note no included study controlled for hormonal modulators."
+    covariates: []
+    followup_years: null
+    cohort_family: "Spiegel2023_vaccine_meta"
+    quote: "In men, short sleep was associated with a reduced antibody titers with an overall large pooled ES [95% CI] of 0.93 [0.54, 1.33] (Figure 3). In women, this association failed to reach significance with an ES [95% CI] of 0.42 [-0.49, 1.32] (Figure3)."
+  - outcome_domain: immune
+    outcome_construct: vaccine_antibody_response_objective_experimental_subgroup
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 6, contrast_label: "EXPERIMENTAL subgroup only: sleep shortened by partial or total deprivation, 1 or multiple nights around inoculation"}
+    scale: smd
+    unit: null
+    value: 0.86
+    se: 0.2959
+    ci: [0.28, 1.44]
+    conversion_formula: "Reported ES 0.86 (95% CI 0.28-1.44), n = 133; se = (1.44 - 0.28)/3.92 = 0.2959"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. The experimental (randomised/within-subject) subgroup gives essentially the same answer as the observational one (0.86 vs 0.67), which is reassuring against confounding as the explanation."
+    covariates: []
+    followup_years: null
+    cohort_family: "Spiegel2023_vaccine_meta"
+    quote: "The pooled ES [95% CI] was 0.86 [0.28, 1.44] for experimental studies (n= 133) and 0.67 [0.18, 1.16] for prospective studies (total n= 171)."
+  - outcome_domain: comparator
+    outcome_construct: benchmark_es_of_2_month_covid_antibody_waning
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 60, contrast_label: "natural waning of BNT162b2 antibody response from baseline to ~2 months, estimated by the authors from Levin et al. NEJM 2021"}
+    scale: smd
+    unit: null
+    value: 0.79
+    se: null
+    ci: null
+    conversion_formula: "Authors' own recalculation from published numerical data in Levin et al., NEJM 2021;385:e84. No CI given for this benchmark, so se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "CALIBRATION ANCHOR, not an effect of sleep. The ES for two months of natural antibody waning after a COVID vaccine is 0.79 - numerically identical to the ES they estimate for objectively measured short sleep. This is the most intuitive way to communicate the magnitude: sleeping <6 h around vaccination is worth roughly the same antibody loss as letting the vaccine age two months."
+    covariates: []
+    followup_years: 0.167
+    cohort_family: "Spiegel2023_vaccine_meta"
+    quote: "The ES for waning over two months was 0.79, essentially identical to the ES estimated for objectively assessed short sleep duration. If, similar to the influenza and hepatitis vaccines, the antibody response to COVID-19 vaccines is adversely affected by insufficient sleep, then insufficient sleep around the time of COVID-19 vaccination may reduce antibody titers in the same range as the waning of the response to the most commonly administered vaccine over 2months."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Strengths: PRISMA-followed, pre-defined significance criteria, and - unusually - the authors obtained the data needed for effect-size estimation directly FROM the original study authors, several of whom are coauthors here. Weaknesses that matter: only 7 studies total (4 experimental, 3 prospective); the objective-sleep pooled estimate rests on n = 304 people; the author list overlaps heavily with the included primary studies (Spiegel, Benedict, Lange, Prather, Ayling all contributed primaries), which is a conflict for study selection and for the 'most significant result in the expected direction was used' rule when a study reported multiple strains; no COVID-19 vaccine data existed at the time; and the sex-difference analysis is underpowered in women. The 'most significant result in the expected direction was used' convention biases pooled ES UPWARD."
+funding: "Per the paper's declaration section, one author reported unrelated support from Takeda Pharmaceutical Company; see paper for full list."
+notes: |
+  This is the primary vaccine-response record for the shard: a 2023 meta-analysis, T1, with both
+  experimental and prospective arms and with the crucial subjective-vs-objective contrast.
+  INCLUDED PRIMARIES (all 7): Spiegel 2002 (influenza, PSD), Lange 2003 (hepatitis A, TSD),
+  Lange 2011 (hepatitis A x3, TSD), Benedict 2012 (H1N1, TSD), Prather 2012 (hepatitis B, actigraphy
+  prospective), Ayling 2018 (influenza, older adults, self-report), Prather 2020 (influenza, diary,
+  83 young adults 18-25). Four of these have their own records in this shard - the pooler must NOT
+  add them to this estimate.
+  DEFINITIONS USED: "In prospective cohort studies, sleep duration was assessed categorically, with
+  short sleep being defined as <6h and normal sleep being defined by sleep duration of >7 to 9h per
+  night for people under 65 years and of 7 to 8h for people >=65 years; and ES [95% CI] were
+  calculated using the sleep data collected within a window of 7days around inoculation because
+  recent evidence suggests that antibody levels are mostly affected by insufficient sleep on the
+  closest nights around vaccination."
+  WHY THE SUBJECTIVE/OBJECTIVE GAP MATTERS for this project: the authors attribute it to the fact
+  that "self-reported and objective sleep are only moderately correlated and that subjective report
+  tends to overestimate actual sleep duration." Our subject's exposure is self-reported. If his true
+  sleep is shorter than he reports, the objective estimate (0.79) is the right one; if his report is
+  accurate, the self-report estimate (0.29-0.59) is.
+  TRANSPORTABILITY: all objectively-assessed studies were in young/middle-aged adults (18-60), so
+  the headline estimate is not contaminated by immunosenescence. The male-specific ES (0.93) is the
+  best-matched single number for an 18-year-old male.
+  SCOPE LIMIT: this measures sleep in a ~7-day window AROUND an immunisation. It does NOT establish
+  that 3 years of restriction degrades immunity generally, and the authors make no such claim.
+shard: "s10_immune"

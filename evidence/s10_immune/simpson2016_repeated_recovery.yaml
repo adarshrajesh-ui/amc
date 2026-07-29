@@ -1,0 +1,97 @@
+study_id: simpson2016_repeated_recovery
+citation: "Simpson NS, Diolombi M, Scott-Sutherland J, Yang H, Bhatt V, Gautam S, Mullington J, Haack M. Repeating patterns of sleep restriction and recovery: do we get used to it? Brain, Behavior, and Immunity. 2016;58:142-151."
+doi: "10.1016/j.bbi.2016.06.001"
+pmid: "27263430"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5067189/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Repeating patterns of sleep restriction and recovery: Do we get used to it?"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 14
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: monocyte_il6_lps_stimulated_after_recovery_sleep_week2
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 2, contrast_label: "AFTER 2 nights of 8 h recovery sleep following week 2 of a 5x4h-restriction/2x8h-recovery cycle, vs the 8 h control condition"}
+    scale: raw_units
+    unit: "qualitative flag (+1 = still significantly elevated after recovery sleep, p<0.05)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "The paper reports significance from mixed models but the percentages of IL-6-positive monocytes are presented only in Figure 5a (estimated mean +/- SEM); I did not digitise the figure, so no magnitude is recorded and se is null. This is a directional/significance flag ONLY."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "THE CENTRAL COUNTER-EVIDENCE TO SIMPLE REVERSIBILITY. positive = HARM PERSISTING. LPS-stimulated monocyte IL-6 was still significantly higher than control AFTER two nights of 8 h recovery sleep (p<0.05 after week 2; p=0.09 after week 3). So in a design that repeats the restrict-then-catch-up cycle - which is exactly the subject's pattern - the cellular inflammatory response did NOT return to baseline over the weekend."
+    covariates: []
+    followup_years: 0.058
+    cohort_family: "Boston_Haack_repeated_recovery"
+    quote: "Morning IL-6 expression in monocytes was significantly increased during week 2 and 3 of sleep restriction, and remained increased after recovery sleep in week 2 (p<0.05) and week 3 (p<0.09)."
+  - outcome_domain: recovery
+    outcome_construct: monocyte_il6_unstimulated_after_recovery_sleep_week1
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 2, contrast_label: "unstimulated IL-6-positive monocytes after 2 nights of 8 h recovery following week 1 of restriction, vs control"}
+    scale: raw_units
+    unit: "qualitative flag (+1 = still significantly elevated after recovery sleep)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Significance-only flag from mixed models (Figure 5b); magnitudes not digitised, se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM PERSISTING, and it appears from the FIRST week. Non-stimulated monocyte IL-6 stayed significantly higher after the first restriction-recovery cycle (p<0.05) and trended higher after the second (p=0.07)."
+    covariates: []
+    followup_years: 0.058
+    cohort_family: "Boston_Haack_repeated_recovery"
+    quote: "When compared to the control sleep condition, non-stimulated IL-6 levels were significantly higher during the first sleep restriction week (p<0.05) and trended to be higher during the second and third sleep restriction week (both p=0.06). Levels stayed significantly higher after two nights of recovery sleep following the first sleep restriction exposure (p<0.05) and trended to be higher after the second sleep restriction exposure (p= 0.07)."
+  - outcome_domain: immune
+    outcome_construct: subjective_vs_physiological_dissociation
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 15, contrast_label: "3 weeks of (5 nights at 4 h + 2 nights at 8 h) vs 8 h throughout; subjective stress vs physiological activation"}
+    scale: raw_units
+    unit: "qualitative flag (-1 = subjective adaptation despite continued physiological activation)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Qualitative flag from the paper's own summary; no poolable numeric estimate. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "BEHAVIOURALLY THE MOST IMPORTANT FINDING FOR THIS PROJECT. The subjects habituated SUBJECTIVELY - they did not experience the restriction as stressful and reported feeling resilient - while their inflammatory and HPA systems stayed activated. A student who reports feeling fine on 5-6 h is not evidence that his physiology is fine."
+    covariates: []
+    followup_years: 0.058
+    cohort_family: "Boston_Haack_repeated_recovery"
+    quote: "Sleep restriction was not perceived to be subjectively stressful and some degree of resilience or resistance to the effects of sleep restriction was observed in subjective domains. In contrast, physiological stress response systems remain activated with repeated exposures to sleep loss and limited recovery opportunity."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Intra-individual crossover with a control condition in the same 14 people, PSG-controlled, and uniquely it models the REAL-WORLD weekday-restrict/weekend-catch-up cycle over three weeks - the closest experimental analogue to the target exposure that exists. Weaknesses: n = 14 is small; the persistence findings sit at p<0.05 and p=0.09, i.e. right at the boundary, with several 'trended' results the authors correctly do not overclaim; magnitudes are only in figures, so I could extract direction and significance but not effect sizes; monocyte IL-6 expression is a mechanistic readout whose mapping onto clinical infection risk is unestablished; only 3 weeks, not 3 years."
+funding: "not extracted"
+notes: |
+  PROTOCOL, verbatim: "This common sleep pattern was experimentally modeled with three weeks of
+  5 nights of sleep restricted to 4 hours followed by two nights of 8-hour recovery sleep. In an
+  intra-individual design, 14 healthy adults completed both the sleep deprivation and an 8-hour
+  control condition."
+  THIS RECORD IS THE DIRECT ANSWER TO REQUIRED EXTRACTION #6, and it complicates the optimistic story.
+  Pair it with pejovic2013_recovery, which found that circulating 24-h IL-6 DID fully normalise after
+  2 nights of 10 h sleep following ONE week of 6 h nights. The two are reconcilable:
+    - one cycle, mild restriction (6 h), generous recovery (10 h), PLASMA IL-6  -> fully reverses
+    - repeated cycles, severe restriction (4 h), ordinary recovery (8 h), MONOCYTE IL-6 -> does not
+  So the reversibility of inflammation depends on cycle repetition, restriction depth, and how much
+  recovery sleep is actually taken. The subject's pattern (5-6 h weekdays, 7-8 h weekends, sustained
+  for ~3 years) sits closer to the Simpson design in repetition but closer to Pejovic in depth.
+  THIRD SUPPORTING SOURCE, quoted by this paper: "using a five night sleep restriction/two night
+  recovery protocol, van Leeuwen and colleagues showed that IL-6 mRNA levels remained elevated after
+  two nights of recovery sleep (van Leeuwen et al., 2009)." That is vanleeuwen2009_recovery in this
+  shard - so two independent labs found incomplete inflammatory recovery after a weekend.
+  ALSO NOTABLE: glucocorticoid sensitivity of monocytes went UP, not down, during restriction. The
+  popular "sleep loss causes glucocorticoid resistance" framing is not what these data show.
+shard: "s10_immune"

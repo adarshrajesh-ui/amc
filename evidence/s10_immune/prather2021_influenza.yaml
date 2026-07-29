@@ -1,0 +1,97 @@
+study_id: prather2021_influenza
+citation: "Prather AA, Pressman SD, Miller GE, Cohen S. Temporal links between self-reported sleep and antibody responses to the influenza vaccine. International Journal of Behavioral Medicine. 2021;28(1):151-158."
+doi: "10.1007/s12529-020-09879-4"
+pmid: "32236831"
+url: "https://pubmed.ncbi.nlm.nih.gov/32236831/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Temporal Links Between Self-Reported Sleep and Antibody Responses to the Influenza Vaccine."
+access_tier: abstract_only
+secondhand_via: "Design details (strains, assay, timing, and the significance pattern) additionally cross-checked against Table 2 of Spiegel K et al., Curr Biol 2023;33:998-1005 (doi 10.1016/j.cub.2023.02.017), which included this study and lists it as 'Prather et al., 2020'."
+design: prospective_cohort_selfreport
+tier: T5
+n: 83
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [18, 25]
+  pct_female: 55.4
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: immune
+    outcome_construct: influenza_antibody_a_new_caledonia_1_and_4_months
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: 13, contrast_label: "shorter self-reported (diary) sleep duration averaged over 13 days around trivalent influenza vaccination; antibody to A/New Caledonia at 1 and 4 months"}
+    scale: raw_units
+    unit: "qualitative flag (-1 = shorter sleep associated with fewer antibodies)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Direction/significance flag only. The abstract reports the association as significant but gives no coefficient, and the full text is paywalled with no PMC copy; se null rather than invented."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = HARM. Shorter diary-reported sleep predicted lower antibody to one of three influenza strains at both 1 and 4 months, independent of baseline antibody, age, sex and cohort year. The 4-month persistence is the notable part - unlike benedict2012_h1n1, the gap had not closed."
+    covariates: ["baseline antibodies", "age", "sex", "cohort year"]
+    followup_years: 0.33
+    cohort_family: "CMU_Pittsburgh_flu_vaccine"
+    quote: "Shorter sleep duration, averaged over the collection period, was associated with fewer antibodies to the A/New Caledonia viral strain 1 and 4 months later, independent of baseline antibodies, age, sex, and cohort year."
+  - outcome_domain: immune
+    outcome_construct: sensitive_window_two_nights_before_vaccination
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: 2, contrast_label: "sleep duration on the TWO NIGHTS IMMEDIATELY BEFORE vaccination specifically; antibody at 1 and 4 months"}
+    scale: raw_units
+    unit: "qualitative flag (-1 = shorter sleep in this window associated with fewer antibodies)"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Direction/significance flag; no coefficient in the abstract. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "TIMING FINDING, AND IT NARROWS THE EXPOSURE WINDOW SHARPLY. negative = HARM. The effect localised to the two nights BEFORE vaccination, not the ten nights after. Combined with the Lange experiments (which manipulated the night AFTER), this says the vulnerable window is a few days wide and centred on inoculation - which is good news for a chronically short sleeper, because it means the risk is concentrated at specific, plannable moments rather than smeared across three years."
+    covariates: ["baseline antibodies", "age", "sex", "cohort year"]
+    followup_years: 0.33
+    cohort_family: "CMU_Pittsburgh_flu_vaccine"
+    quote: "Analyses focused on nightly sleep on the days preceding and after the vaccination revealed that shorter sleep duration on the two nights before the vaccination predicted fewer antibodies 1 and 4 months later."
+  - outcome_domain: immune
+    outcome_construct: sleep_efficiency_and_quality_null
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 13, contrast_label: "self-reported sleep efficiency and subjective sleep quality vs antibody response"}
+    scale: raw_units
+    unit: "qualitative null flag (0 = unrelated)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Explicit null; flag only. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL, and it runs OPPOSITE to the infection literature. Here DURATION mattered and efficiency/quality did not - whereas in cohen2009_cold, patel2012_pneumonia and pratherleung2016_nhanes, quality/efficiency/disturbance outperformed duration. The sleep dimension that matters appears to differ between vaccine response and infection susceptibility."
+    covariates: []
+    followup_years: 0.33
+    cohort_family: "CMU_Pittsburgh_flu_vaccine"
+    quote: "Measures of self-reported sleep efficiency and subjective quality were unrelated to antibody responses to the influenza vaccination."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Prospective, with sleep measured by DAILY DIARY over 13 days (better than a single recall question), a real vaccine, and antibody assayed at baseline, 1 month and 4 months. Weaknesses: n = 83; exposure entirely self-reported; the significant result is for ONE of three viral strains (A/New Caledonia), with A/Panama only at p<0.10 and the B strain not reported as significant - so this is a 1-of-3 outcome selection issue, which matters because spiegel2023_vaccine_meta's protocol was to use 'the most significant result in the expected direction', inflating its pooled estimate; abstract-only access, so I have no effect sizes."
+funding: "not stated in the abstract"
+notes: |
+  ACCESS: abstract only (Int J Behav Med, paywalled, no PMC copy). Design details cross-checked against
+  Table 2 of spiegel2023_vaccine_meta, which describes this study verbatim as: "healthy young adults|83|
+  18-25|37/46|Influenza (A/New Caldonia (H1N1) and A/Panama (H3N2) and B/Yamanashi or B/Victoria
+  (H1N1))|1|Ab to the 3 influenza viral strains via hemagglutination inhibition assays at 0, 1, and
+  4mths|13days self-reported (diary-based) for 3 nights prior and 10 nights following vaccination.|
+  *13days sleep duration linked to Ab to A/New caledonia (H1N1) at 1 and 4mths (largely driven by the
+  2 nights preceding vaccination);# A/Panama viral strain at 1mth|". pct_female derived from that
+  table's 37/46 male/female split = 55.4% female.
+  WHY THIS RECORD MATTERS DESPITE BEING SMALL AND ABSTRACT-ONLY: the age range is 18-25. It is one of
+  only two vaccine-response datasets in the target age band (the other, the college-student insomnia
+  study cited in besedovsky2019_review, was NULL). For a shard about an 18-year-old, that is worth
+  more than another midlife cohort.
+  It is one of the three prospective studies pooled in spiegel2023_vaccine_meta (self-report arm,
+  pooled ES 0.29 overall / 0.59 in under-65s) - do not double-count.
+  STRAIN-SELECTION CAVEAT, stated because it cuts against the pooled vaccine estimate: only 1 of 3
+  strains reached p<.05. The meta-analysis's rule of taking the most significant strain per study
+  means its 0.79/0.59 pooled estimates are biased upward relative to a pre-specified single-strain
+  analysis.
+shard: "s10_immune"

@@ -1,0 +1,146 @@
+study_id: prather2015_rhinovirus
+citation: "Prather AA, Janicki-Deverts D, Hall MH, Cohen S. Behaviorally Assessed Sleep and Susceptibility to the Common Cold. Sleep. 2015;38(9):1353-1359."
+doi: "10.5665/sleep.4968"
+pmid: "26118561"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4531403/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Behaviorally Assessed Sleep and Susceptibility to the Common Cold."
+access_tier: full_text
+secondhand_via: null
+design: quasi_experiment
+tier: T2
+n: 164
+n_studies_pooled: null
+population:
+  age_mean: 29.9
+  age_range: [18, 55]
+  pct_female: 42.7
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: immune
+    outcome_construct: clinical_cold_incidence_biologically_verified
+    exposure: {type: habitual_short_sleep, dose_h: 4.5, referent_h: 7.6, duration_days: 7, contrast_label: "actigraphy TST <5 h vs >7 h/night, 7 nights pre-challenge"}
+    scale: log_or
+    unit: null
+    value: 1.5041
+    se: 0.7273
+    ci: [0.0770, 2.9280]
+    conversion_formula: "OR 4.50 (1.08-18.69) -> log_or = ln(4.50) = 1.5041; se = (ln 18.69 - ln 1.08)/3.92 = 0.7273"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = HARM; higher odds of developing a biologically verified clinical cold after standardised rhinovirus (RV39) challenge in short sleepers"
+    covariates: ["age", "prechallenge virus-specific antibody titer"]
+    followup_years: 0.014
+    cohort_family: "CMU_Pittsburgh_viral_challenge"
+    quote: "To better characterize the effect of sleep duration on odds of developing a cold, sleep categories were created. As illustrated in Figure 1, the predictive influence of sleep duration on cold susceptibility indicates a threshold effect at 6 or fewer hours of sleep (< 5 h, OR = 4.50; 95% CI 1.08-18.69; 5-6 h, OR = 4.24; 95% CI 1.08-16.71; 6.01-7 h, OR = 1.66; 95% CI 0.40-6.95; > 7 h, 1 [reference])."
+  - outcome_domain: immune
+    outcome_construct: clinical_cold_incidence_biologically_verified
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 7.6, duration_days: 7, contrast_label: "actigraphy TST 5-6 h vs >7 h/night, 7 nights pre-challenge"}
+    scale: log_or
+    unit: null
+    value: 1.4446
+    se: 0.6987
+    ci: [0.0770, 2.8160]
+    conversion_formula: "OR 4.24 (1.08-16.71) -> log_or = ln(4.24) = 1.4446; se = (ln 16.71 - ln 1.08)/3.92 = 0.6987"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = HARM. THIS IS THE CATEGORY THAT MATCHES THE SUBJECT'S WEEKDAY EXPOSURE (5-6 h actigraphic TST)."
+    covariates: ["age", "prechallenge virus-specific antibody titer"]
+    followup_years: 0.014
+    cohort_family: "CMU_Pittsburgh_viral_challenge"
+    quote: "5-6 h, OR = 4.24; 95% CI 1.08-16.71"
+  - outcome_domain: immune
+    outcome_construct: clinical_cold_incidence_biologically_verified
+    exposure: {type: habitual_short_sleep, dose_h: 6.5, referent_h: 7.6, duration_days: 7, contrast_label: "actigraphy TST 6.01-7 h vs >7 h/night"}
+    scale: log_or
+    unit: null
+    value: 0.5068
+    se: 0.7283
+    ci: [-0.9163, 1.9387]
+    conversion_formula: "OR 1.66 (0.40-6.95) -> log_or = ln(1.66) = 0.5068; se = (ln 6.95 - ln 0.40)/3.92 = 0.7283"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NULL. positive would = harm; CI spans 1. Establishes a THRESHOLD at ~6 h rather than a smooth gradient across the whole range."
+    covariates: ["age", "prechallenge virus-specific antibody titer"]
+    followup_years: 0.014
+    cohort_family: "CMU_Pittsburgh_viral_challenge"
+    quote: "6.01-7 h, OR = 1.66; 95% CI 0.40-6.95"
+  - outcome_domain: immune
+    outcome_construct: rhinovirus_infection_rate_virus_recovery_or_4fold_titer_rise
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: null, duration_days: 7, contrast_label: "per 1 h less actigraphy TST, predicting INFECTION (not illness)"}
+    scale: per_hour_beta
+    unit: "logit(infection) per +1 h actigraphy TST"
+    value: -0.11
+    se: 0.17
+    ci: [-0.443, 0.223]
+    conversion_formula: "reported b = -0.11, SE = 0.17; ci = b +/- 1.96*SE"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "IMPORTANT NULL. Sleep duration did NOT predict whether the virus established infection. Sign convention here: negative b = shorter sleep -> more infection, but p = 0.543. The paper attributes the clinical-cold effect to illness EXPRESSION, not to infection susceptibility."
+    covariates: ["fully adjusted (14 covariates)"]
+    followup_years: 0.014
+    cohort_family: "CMU_Pittsburgh_viral_challenge"
+    quote: "The observed elevated risk of developing the cold in participants experiencing shorter sleep duration may have been due to increased susceptibility to infection and/or increased illness expression among those infected. In this regard, in adjusted analyses, actigraphy assessed sleep duration was unrelated to rates of infection (b = -0.11, SE = 0.17, P = 0.543)."
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_clinical_cold_rate_whole_sample
+    exposure: {type: descriptive, dose_h: 5.8, referent_h: null, duration_days: 7, contrast_label: "whole sample; mean actigraphy TST 5.8 h (SD 1.1)"}
+    scale: probability
+    unit: "proportion developing biologically verified clinical cold within 5 days of RV39 challenge"
+    value: 0.293
+    se: 0.0355
+    ci: [0.223, 0.363]
+    conversion_formula: "48/164 = 0.2927; se = sqrt(p(1-p)/n) = sqrt(0.2927*0.7073/164) = 0.0355"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "ABSOLUTE BASELINE. Needed to convert ORs to absolute risk. 75.6% were infected but only 29.3% developed a clinical cold."
+    covariates: []
+    followup_years: 0.014
+    cohort_family: "CMU_Pittsburgh_viral_challenge"
+    quote: "Of the 164 participants, 124 (75.6%) were infected and 48 (29.3%) developed a biologically verified cold, which was defined as infection and objective cold criterion."
+  - outcome_domain: immune
+    outcome_construct: adjusted_predicted_pct_objective_colds_by_sleep_category
+    exposure: {type: habitual_short_sleep, dose_h: 4.5, referent_h: 7.6, duration_days: 7, contrast_label: "adjusted predicted absolute risk, <5 h minus >7 h (Figure 1)"}
+    scale: probability
+    unit: "absolute risk difference in proportion with objective cold"
+    value: 0.28
+    se: null
+    ci: null
+    conversion_formula: "Read from Figure 1 bar heights: <5 h ~45%, 5-6 h ~30%, 6.01-7 h ~23%, >7 h ~17%. ARD = 0.45 - 0.17 = 0.28. Figure gives ADJUSTED PREDICTED values from the continuous-duration model, not raw cell proportions. Independent back-calculation from the reported category ORs + category ns (36/54/52/22) constrained to 48 total colds gives implied absolute risks of 39.7% / 38.3% / 19.6% / 12.8% (ARD 0.27), i.e. the same order of magnitude by a different route."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "positive = HARM (higher absolute cold rate in short sleepers). ~28 percentage points absolute, <5 h vs >7 h."
+    covariates: ["age", "prechallenge viral-specific antibody levels"]
+    followup_years: 0.014
+    cohort_family: "CMU_Pittsburgh_viral_challenge"
+    quote: "Sleep duration (measured by wrist actigraphy) averaged over a 7-day period before virus exposure is associated with percentage of participants who subsequently developed a cold. The percentage of colds is based on predicted values (adjusted for age and prechallenge viral-specific antibody levels)."
+rob:
+  tool: ROBINS-I
+  judgement: moderate
+  notes: "Exposure objectively measured (actigraphy) and prospectively precedes randomly-timed viral challenge, so reverse causation is excluded and the outcome is biologically verified - unusually strong for an observational immune exposure. But: sleep itself was NOT randomised, so residual confounding remains; volunteers were selected for LOW prechallenge antibody to maximise infection rate (limits transportability of absolute rates); category ns are small (>7 h referent n = 22, only ~3 colds), which is why the CIs are enormous; 14 separate one-covariate-at-a-time models raise multiplicity concerns. Actigraphy mean TST 5.8 h vs diary 7.5 h in the same people - a 1.7 h discrepancy that matters for dose calibration."
+funding: "NIH (per PMC record: grants supporting the Pittsburgh Common Cold Project)"
+notes: |
+  DOSE CALIBRATION WARNING for the downstream model: the exposure here is ACTIGRAPHIC TST, and
+  actigraphy mean was 5.8 h while diary mean in the same 164 people was 7.5 h (Table 1). A subject
+  who self-reports 5-6 h weekday sleep is therefore probably in this study's "<5 h" actigraphic
+  category, not its "5-6 h" category. Do not equate self-reported and actigraphic hours.
+  MECHANISM SPLIT: the effect is on CLINICAL COLD (infection + objective illness signs), not on
+  infection per se; sleep duration was unrelated to infection rate (P = 0.543) and only marginally
+  related to illness expression among the infected (b = -0.32, SE = 0.19, P = 0.090). The authors
+  write "the association with cold incidence appears to be primarily driven by illness expression."
+  So this is better read as evidence about symptom severity/inflammatory regulation than about
+  host resistance to viral entry.
+  Sleep FRAGMENTATION was null (b = -0.01, SE = 0.02, P = 0.755 fully adjusted), and self-reported
+  duration and efficiency were also null in this sample - which contradicts the same group's
+  earlier Cohen 2009 self-report finding.
+  Continuous per-hour estimate: b = -0.44 (SE 0.17, P = 0.011) adjusting for age + antibody;
+  b = -0.49 (SE 0.20, P = 0.012) fully adjusted; b = -0.56 (SE 0.21, P = 0.006) also adjusting for
+  fragmentation. Approx OR per 1 h less sleep = exp(0.44) = 1.55.
+  Shares the Pittsburgh viral-challenge infrastructure with cohen2009_cold but a different,
+  later-recruited sample (2007-2011 vs earlier); cohort_family tagged identically so the pooler
+  can decide whether to treat them as correlated.
+shard: "s10_immune"

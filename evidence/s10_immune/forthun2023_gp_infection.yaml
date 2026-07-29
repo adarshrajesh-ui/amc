@@ -1,0 +1,125 @@
+study_id: forthun2023_gp_infection
+citation: "Forthun I, Eliassen KER, Emberland KE, Bjorvatn B. The association between self-reported sleep problems, infection, and antibiotic use in patients in general practice. Frontiers in Psychiatry. 2023;14:1033034."
+doi: "10.3389/fpsyt.2023.1033034"
+pmid: "36937728"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10017838/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "The association between self-reported sleep problems, infection, and antibiotic use in patients in general practice."
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 1848
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "Norway"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: immune
+    outcome_construct: any_self_reported_infection_past_3mo
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 7.5, duration_days: null, contrast_label: "self-reported <6 h/night vs 7-8 h; any infection in the past 3 months"}
+    scale: log_rr
+    unit: null
+    value: 0.2390
+    se: 0.0699
+    ci: [0.1044, 0.3784]
+    conversion_formula: "Adjusted RR 1.27 (1.11-1.46) -> log_rr = ln(1.27) = 0.2390; se = (ln 1.46 - ln 1.11)/3.92 = 0.0699"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. A modest 27% relative increase in reporting any infection. Note the outcome is a broad self-reported composite (common cold, throat, lung, eye, gastrointestinal, urinary tract, skin or other infection) over 3 months."
+    covariates: ["adjusted model per paper (age, sex and other covariates listed in Supplementary Table 1)"]
+    followup_years: 0.25
+    cohort_family: "Norway_GP_survey_2020"
+    quote: "Patients who reported a sleep duration of < 6 h had an increased risk of infection (adjusted RR (aRR) 1.27, 1.11-1.46) and antibiotic use (aRR 1.57, 95% CI 1.13-2.18) compared to those with sleep duration of 7-8 h (Figure 1, Supplementary Table 1). The risk of infection was also increased in those with >9 h (aRR 1.44, 95% CI 1.12-1.84)."
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_rate_any_infection_past_3mo_by_sleep_category
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 7.5, duration_days: null, contrast_label: "ABSOLUTE 3-month any-infection rate, <6 h vs 7-8 h"}
+    scale: probability
+    unit: "absolute risk difference, proportion reporting any infection in 3 months"
+    value: 0.135
+    se: 0.0313
+    ci: [0.0736, 0.1964]
+    conversion_formula: "From Table 2: <6 h 223/359 = 62.1%; 6-7 h 427/803 = 53.2%; 7-8 h 209/430 = 48.6%; 8-9 h 53/103 = 51.5%; >9 h 26/35 = 74.3%. ARD = 62.1 - 48.6 = 13.5 percentage points. se of difference = sqrt(0.621*0.379/359 + 0.486*0.514/430) = 0.0313. UNADJUSTED."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. In a general-practice population, 48.6% of 7-8 h sleepers vs 62.1% of <6 h sleepers reported some infection in 3 months - 13.5 percentage points. Baseline rates are very high because these are people attending a doctor, so this absolute gap is NOT transportable to a healthy 18-year-old; use the rate ratio instead."
+    covariates: []
+    followup_years: 0.25
+    cohort_family: "Norway_GP_survey_2020"
+    quote: "Sleep duration < 6 h 223 (62.1) 82 (22.2) 6-7 h 427 (53.2) 120 (14.8) 7-8 h 209 (48.6) 66 (15.0) 8-9 h 53 (51.5) 18 (17.1) >9 h 26 (74.3) 4 (11.8)"
+  - outcome_domain: immune
+    outcome_construct: respiratory_tract_infection_null
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 7.5, duration_days: null, contrast_label: "self-reported <6 h/night vs 7-8 h; RESPIRATORY tract infection specifically"}
+    scale: log_rr
+    unit: null
+    value: 0.1484
+    se: 0.0999
+    ci: [-0.0408, 0.3507]
+    conversion_formula: "Adjusted RR 1.16 (0.96-1.42) -> log_rr = ln(1.16) = 0.1484; se = (ln 1.42 - ln 0.96)/3.92 = 0.0999"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "IMPORTANT NULL, AND IT UNDERCUTS THE HEADLINE. positive would = harm. The respiratory infection outcome - the one everyone assumes short sleep affects, and the one the rhinovirus-challenge studies address - was NOT significant here (RR 1.16, 0.96-1.42), nor was 6-7 h (1.13, 0.96-1.33). Absolute rates: 38.7% at <6 h vs 33.5% at 7-8 h. The significant composite result is driven by other infection types."
+    covariates: ["adjusted model per paper"]
+    followup_years: 0.25
+    cohort_family: "Norway_GP_survey_2020"
+    quote: "Respiratory infections Sleep duration < 6 h 139 (38.7) 1.16 (0.96-1.39) 1.16 (0.96-1.42) 6-7 h 295 (36.7) 1.10 (0.93-1.29) 1.13 (0.96-1.33) 7-8 h 144 (33.5) 1.00 (ref.) 1.00 (ref.) 8-9 h 32 (31.1) 0.93 (0.68-1.27) 1.02 (0.74-1.39) >9 h 15 (42.9) 1.28 (0.85-1.92) 1.23 (0.80-1.89)"
+  - outcome_domain: immune
+    outcome_construct: gastrointestinal_infection
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 7.5, duration_days: null, contrast_label: "self-reported <6 h/night vs 7-8 h; GASTROINTESTINAL infection"}
+    scale: log_rr
+    unit: null
+    value: 0.6523
+    se: 0.2040
+    ci: [0.2546, 1.0543]
+    conversion_formula: "Adjusted RR 1.92 (1.29-2.87) -> log_rr = ln(1.92) = 0.6523; se = (ln 2.87 - ln 1.29)/3.92 = 0.2040"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM, and this is where the composite signal actually lives: GI infection RR 1.92 (1.29-2.87), absolute 16.9% vs 8.9%. But note >9 h sleepers had RR 2.33 (1.12-4.85), i.e. LONG sleep was worse than short - the same U-shape that signals reverse causation. A GI infection is also a very plausible cause of both short AND long sleep in the preceding 3 months."
+    covariates: ["adjusted model per paper"]
+    followup_years: 0.25
+    cohort_family: "Norway_GP_survey_2020"
+    quote: "Gastrointestinal infection Sleep duration < 6 h 62 (16.9) 1.90 (1.30 - 2.76) 1.92 (1.29 - 2.87) 6-7 h 75 (9.3) 1.04 (0.72-1.51) 1.05 (0.71-1.55) 7-8 h 39 (8.9) 1.00 (ref.) 1.00 (ref.) 8-9 h 12 (11.7) 1.31 (0.71-2.41) 1.51 (0.80-2.83) >9 h 8 (22.9) 2.57 (1.30 - 5.06) 2.33 (1.12 - 4.85)"
+  - outcome_domain: immune
+    outcome_construct: antibiotic_use_past_3mo
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 7.5, duration_days: null, contrast_label: "self-reported <6 h/night vs 7-8 h; antibiotic use in the past 3 months"}
+    scale: log_rr
+    unit: null
+    value: 0.4511
+    se: 0.1676
+    ci: [0.1222, 0.7793]
+    conversion_formula: "Adjusted RR 1.57 (1.13-2.18) -> log_rr = ln(1.57) = 0.4511; se = (ln 2.18 - ln 1.13)/3.92 = 0.1676"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. Antibiotic prescription is a slightly harder outcome than self-diagnosed infection because it requires a clinician to have acted. Absolute: 22.2% at <6 h vs 15.0% at 7-8 h. Still cross-sectional and still self-reported."
+    covariates: ["adjusted model per paper"]
+    followup_years: 0.25
+    cohort_family: "Norway_GP_survey_2020"
+    quote: "For antibiotic use, the risk was higher for patients sleeping < 6 h, and for those with chronic insomnia disorder or a chronic sleep problem."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "TIER TX - CONTEXT ONLY. Cross-sectional, entirely self-reported on both sides, with a 3-month recall window for infections, collected in Norwegian GP waiting rooms during 2020 (a pandemic year, which distorts both infection rates and sleep). The population is people currently seeking medical care, so baseline infection prevalence is ~50% and selection is severe. Strengths: 1,848 unselected consecutive patients, validated insomnia instrument (Bergen Insomnia Scale), modified Poisson so RRs (not ORs) are reported, and - unusually and creditably - the paper reports absolute risks and breaks results out by infection SITE, which is what reveals the respiratory null."
+funding: "not extracted"
+notes: |
+  WHY I KEPT THIS: it is the only record that disaggregates infection by SITE, and doing so overturns
+  the headline. The composite 'any infection' result (RR 1.27) is significant, but the RESPIRATORY
+  component - the mechanism everyone invokes - is null (RR 1.16, 0.96-1.42). If short sleep impaired
+  antiviral host defence in the way the rhinovirus-challenge literature suggests, respiratory
+  infection is precisely where the effect should appear.
+  U-SHAPE AGAIN: >9 h had higher risk than <6 h for any infection (1.44 vs 1.27) and much higher for
+  GI infection (2.33 vs 1.92). Fifth independent dataset in this shard showing the long-sleep arm is
+  as bad or worse - a strong collective argument that these observational associations are
+  substantially reverse-caused.
+  SLEEP PROBLEM vs SLEEP DURATION: chronic insomnia disorder (aRR 1.15, 1.05-1.27) and chronic sleep
+  problem (aRR 1.13, 1.03-1.24) were significant for any infection, and chronic sleep problem was the
+  strongest predictor of GI infection (aRR 1.59, 1.20-2.11) while insomnia was not (1.30, 0.97-1.73).
+  Data collected "in the spring and fall of 2020" - i.e. during COVID-19, when both respiratory
+  infection exposure and sleep patterns were highly atypical. Weight accordingly.
+shard: "s10_immune"

@@ -1,0 +1,132 @@
+study_id: cohen2009_cold
+citation: "Cohen S, Doyle WJ, Alper CM, Janicki-Deverts D, Turner RB. Sleep habits and susceptibility to the common cold. Arch Intern Med. 2009;169(1):62-67."
+doi: "10.1001/archinternmed.2008.505"
+pmid: "19139325"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2629403/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Sleep habits and susceptibility to the common cold."
+access_tier: full_text
+secondhand_via: null
+design: quasi_experiment
+tier: T2
+n: 153
+n_studies_pooled: null
+population:
+  age_mean: 37.0
+  age_range: [21, 55]
+  pct_female: null
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: immune
+    outcome_construct: clinical_cold_incidence_objective_criteria
+    exposure: {type: habitual_short_sleep, dose_h: 6.5, referent_h: 8.5, duration_days: 14, contrast_label: "self-reported mean TST <7 h vs >=8 h (tertiles), 14 daily interviews pre-challenge"}
+    scale: log_or
+    unit: null
+    value: 1.0784
+    se: 0.4649
+    ci: [0.1655, 1.9879]
+    conversion_formula: "OR 2.94 (1.18-7.30) -> log_or = ln(2.94) = 1.0784; se = (ln 7.30 - ln 1.18)/3.92 = 0.4649"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = HARM; higher odds of a biologically verified cold (infection + objective illness signs) after rhinovirus challenge"
+    covariates: ["age", "prechallenge antibody titer"]
+    followup_years: 0.014
+    cohort_family: "CMU_Pittsburgh_viral_challenge"
+    quote: "Using tertiles of the sleep variables to predict objectively defined colds illustrates that the relationships between sleep variables and colds were graded for both duration (OR=2.94, CI =1.18-7.30 for low, OR = 1.63, CI =.63-4.19 for middle, and 1 for high) and efficiency (OR= 5.50, CI=2.08-14.48 for low, OR=3.94, CI=1.50-10.37 for middle, 1 for high; Figure 1)."
+  - outcome_domain: immune
+    outcome_construct: clinical_cold_incidence_objective_criteria
+    exposure: {type: habitual_short_sleep, dose_h: 7.5, referent_h: 8.5, duration_days: 14, contrast_label: "self-reported mean TST 7 to <8 h vs >=8 h"}
+    scale: log_or
+    unit: null
+    value: 0.4886
+    se: 0.4834
+    ci: [-0.4620, 1.4327]
+    conversion_formula: "OR 1.63 (0.63-4.19) -> log_or = ln(1.63) = 0.4886; se = (ln 4.19 - ln 0.63)/3.92 = 0.4834"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "NULL (CI spans 1) but point estimate in the harm direction; supplies the middle rung of the dose-response"
+    covariates: ["age", "prechallenge antibody titer"]
+    followup_years: 0.014
+    cohort_family: "CMU_Pittsburgh_viral_challenge"
+    quote: "OR = 1.63, CI =.63-4.19 for middle"
+  - outcome_domain: immune
+    outcome_construct: clinical_cold_incidence_objective_criteria
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 14, contrast_label: "sleep efficiency <92% vs >98% (tertiles)"}
+    scale: log_or
+    unit: null
+    value: 1.7047
+    se: 0.4950
+    ci: [0.7324, 2.6728]
+    conversion_formula: "OR 5.50 (2.08-14.48) -> log_or = ln(5.50) = 1.7047; se = (ln 14.48 - ln 2.08)/3.92 = 0.4950"
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive = HARM. Sleep EFFICIENCY (continuity), not duration, was the stronger and the independently significant predictor when both were entered together."
+    covariates: ["age", "prechallenge antibody titer"]
+    followup_years: 0.014
+    cohort_family: "CMU_Pittsburgh_viral_challenge"
+    quote: "efficiency (OR= 5.50, CI=2.08-14.48 for low, OR=3.94, CI=1.50-10.37 for middle, 1 for high; Figure 1)"
+  - outcome_domain: immune
+    outcome_construct: absolute_pct_colds_by_sleep_efficiency_tertile
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: 14, contrast_label: "adjusted predicted absolute risk, efficiency <92% minus >98% (Figure 1)"}
+    scale: probability
+    unit: "absolute risk difference in proportion with objective cold"
+    value: 0.37
+    se: null
+    ci: null
+    conversion_formula: "Read from Figure 1 bar heights: <92% = 0.52, 92-98% = 0.40, >98% = 0.15. ARD = 0.52 - 0.15 = 0.37. Cross-check by back-calculating from the reported ORs (5.50, 3.94, 1) with tertile ns (48/53/52) constrained to 54 total colds: implied 49.9% / 41.6% / 15.3%, ARD 0.35 - closely reproduces the figure, so the figure reading is reliable."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "positive = HARM. ~37 percentage points absolute difference in objective cold rate across efficiency tertiles."
+    covariates: ["prechallenge antibody", "age"]
+    followup_years: 0.014
+    cohort_family: "CMU_Pittsburgh_viral_challenge"
+    quote: "Sleep efficiency (% time in bed asleep) averaged over 14-days before virus exposure is associated with the percent of persons who subsequently develop a cold. Percent colds are based on predicted values (adjusted for pre-challenge antibody and age) from equation."
+  - outcome_domain: baseline_risk
+    outcome_construct: absolute_clinical_cold_rate_whole_sample
+    exposure: {type: descriptive, dose_h: 7.45, referent_h: null, duration_days: 14, contrast_label: "whole sample; mean self-reported TST 7.45 h (SD 1.33), mean efficiency 94%"}
+    scale: probability
+    unit: "proportion developing objective-criteria clinical cold"
+    value: 0.3529
+    se: 0.0386
+    ci: [0.277, 0.429]
+    conversion_formula: "54/153 = 0.3529; se = sqrt(0.3529*0.6471/153) = 0.0386"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "ABSOLUTE BASELINE for converting the ORs. 88.2% were infected; 35.3% met objective cold criteria; 43.1% met subjective (Jackson) criteria."
+    covariates: []
+    followup_years: 0.014
+    cohort_family: "CMU_Pittsburgh_viral_challenge"
+    quote: "Of the 153 subjects, 135 (88.24%) were infected; 54 (35.29%) developed a cold defined as infection and the objective cold criterion and 66 (43.14%) developed a cold defined as infection and the subjective (Jackson) criterion."
+rob:
+  tool: ROBINS-I
+  judgement: moderate
+  notes: "Strengths: 14 consecutive daily interviews (not a single recall question), exposure precedes a standardised viral challenge, biologically verified outcome, robust to 16 covariates entered singly and jointly. Weaknesses: exposure is SELF-REPORT (the same group's later actigraphy study found self-reported duration and efficiency were null - prather2015_rhinovirus); tertile cells are small; participants selected for prechallenge antibody titer <=4, so absolute infection rate (88%) is engineered and not generalisable; duration and efficiency effects overlap and only efficiency survived joint entry, so the duration OR is partly a proxy for continuity."
+funding: "NIH / NCCAM (Pittsburgh Common Cold Project)"
+notes: |
+  KEY NUANCE ON INFECTION vs ILLNESS, quoted verbatim: "When the components of clinical illness
+  (infection and signs or symptoms) were examined separately, sleep efficiency but not duration was
+  associated with signs and symptoms of illness. However, neither was associated with infection
+  (analysis not reported). This study was designed to maximize the infection rate (participants
+  selected for low antibody levels) and was not powered to fairly test whether sleep is associated
+  with infection (over 88% were infected). Consequently no conclusions about the role of sleep in
+  infection can be made from this null effect."
+  So BOTH Pittsburgh challenge studies find the effect on symptomatic illness, not on infection.
+  Continuous estimates (age + antibody adjusted): duration B = -0.39, SE 0.15, P<.02; efficiency
+  B = -8.93, SE 2.97, P<.003. Fully adjusted (16 covariates): duration b = -0.39, SE 0.18, P<.03;
+  efficiency b = -6.93, SE 3.37, P<.04. Joint entry: efficiency B = -7.34, SE 3.14, P<.02 remained
+  significant, duration B = -0.27, SE 0.16, P>.10 did not.
+  Tertile ns: duration low <7 h N=58, middle 7-<8 N=52, high >=8 N=43; efficiency low <92% N=48,
+  middle 92-98% N=53, high >98-100% N=52.
+  Extreme-efficiency contrast: efficiency <=85% (N=13) vs rest, OR 5.37 (1.51-19.1);
+  log_or = 1.6808, se = 0.6473.
+  "Feeling rested" (the evaluative measure) was NOT associated with colds (P>.17) - an internal null
+  that argues the effect is not pure symptom-reporting bias.
+  Note this cohort is age 21-55, mean 37 - poor age match to an 18-year-old. Population match
+  labelled poor_midlife accordingly.
+  Same viral-challenge infrastructure as prather2015_rhinovirus; tag as one cohort_family.
+shard: "s10_immune"

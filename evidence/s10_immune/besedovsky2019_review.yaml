@@ -1,0 +1,130 @@
+study_id: besedovsky2019_review
+citation: "Besedovsky L, Lange T, Haack M. The sleep-immune crosstalk in health and disease. Physiological Reviews. 2019;99(3):1325-1380."
+doi: "10.1152/physrev.00010.2018"
+pmid: "30920354"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6689741/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "The Sleep-Immune Crosstalk in Health and Disease."
+access_tier: full_text
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: null
+  adolescent_match: mixed
+effects:
+  - outcome_domain: immune
+    outcome_construct: mechanism_sleep_promotes_inflammatory_homeostasis
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "narrative mechanistic model: sleep as a regulator of inflammatory homeostasis"}
+    scale: raw_units
+    unit: "qualitative mechanistic claim (1 = review asserts sleep deficiency leads to low-grade inflammation)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Narrative review; no pooled estimate exists. Recorded as a mechanistic flag with value 1 and se null. NOT POOLABLE - use for interpretation only."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "MECHANISM ONLY, NOT AN EFFECT ESTIMATE. The review's framing: in the absence of infection, sleep promotes inflammatory homeostasis, and prolonged sleep deficiency can produce chronic low-grade inflammation. Note the review's own hedged verb - 'can lead to' - and that it groups short sleep duration together with sleep disturbance, a conflation that irwin2016_inflammation_meta shows matters enormously (disturbance is associated with CRP/IL-6; short duration categorically is not)."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "In the absence of an infectious challenge, sleep appears to promote inflammatory homeostasis through effects on several inflammatory mediators, such as cytokines. This notion is supported by findings that prolonged sleep deficiency (e.g., short sleep duration, sleep disturbance) can lead to chronic, systemic low-grade inflammation and is associated with various diseases that have an inflammatory component, like diabetes, atherosclerosis, and neurodegeneration."
+  - outcome_domain: immune
+    outcome_construct: mechanism_sws_endocrine_milieu_supports_adaptive_immunity
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "slow-wave sleep, GH/prolactin up and cortisol down, supporting APC-T cell interaction and immunological memory"}
+    scale: raw_units
+    unit: "qualitative mechanistic claim"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Narrative mechanism; not poolable. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "MECHANISM, and it is the one that best explains the VACCINE findings. The proposed pathway is that slow-wave sleep creates a low-cortisol, high-GH/prolactin window that favours antigen-presenting-cell-to-T-cell signalling, laying down stronger immunological memory. This is why sleep TIMING relative to antigen exposure matters more than total hours in the Lange experiments, and it predicts that the vaccine effect should be larger than any general 'immune weakening' effect."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "In line with this idea, the amount of SWS and SWA in the slow oscillation range (i.e., slow frequencies of <=1 Hz), as well as the accompanying increases in GH and prolactin and reduction in cortisol levels in the night following vaccination, correlated with the percentage of antigen-specific CD4 T cells measured up to 1 year later (320). Thus the general idea is that SWS, by inducing this unique endocrine constellation, supports the interaction between APCs and T cells, which results in a stronger immunological memory (578)."
+  - outcome_domain: immune
+    outcome_construct: summary_of_vaccine_primaries_effect_magnitude
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 7.75, duration_days: 6, contrast_label: "review's summary of Spiegel 2002: 4 h/night for 4 nights before + 2 nights after influenza vaccination vs 7.5-8 h"}
+    scale: pct_change
+    unit: "% relative antibody titre, normally-rested vs restricted, at day 10"
+    value: 100.0
+    se: null
+    ci: null
+    conversion_formula: "Review states control titres were 'more than doubled' relative to restricted, i.e. >=+100% for controls. This is the SECONDHAND source I used for spiegel2002_influenza_vaccine, whose primary text I could not obtain. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = BENEFIT of normal sleep. Recorded here for cross-checking the spiegel2002 record - two independent secondary sources (this review and spiegel2023_vaccine_meta) agree the day-10 difference was roughly two-fold. DO NOT POOL this with the spiegel2002 record; it is the same underlying data."
+    covariates: []
+    followup_years: null
+    cohort_family: "Chicago_Spiegel_restriction"
+    quote: "The very first human study in this context examined the influence of restricting bed time to 4 h per night for 4 days before and 2 days after vaccination against influenza. Influenza-virus-specific antibody titers measured 10 days after vaccination were more than doubled in participants that were allowed to keep their usual bed time of 7.5-8 h compared with those with restricted sleep (522). Further studies showed that also a single night without sleep on the night following vaccination against hepatitis A, hepatitis B, and H1N1 (swine flu) reduces the antigen-specific antibody response (which reflects immunological memory) to a similar extent (34, 320, 325)."
+  - outcome_domain: immune
+    outcome_construct: null_finding_insomnia_and_influenza_vaccine_in_college_students
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "insomnia (DSM-5) vs no insomnia in 133 healthy COLLEGE STUDENTS; influenza vaccine antibody response"}
+    scale: raw_units
+    unit: "qualitative null flag (0 = no group difference in vaccine response)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Secondhand null reported in this review (its reference 536); no effect size given. Flag only; se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL, AND IT IS THE ONLY COLLEGE-STUDENT VACCINE DATA I FOUND. In 133 healthy college students, influenza vaccine response did NOT differ between those with and without insomnia - although the insomnia group had lower antibody levels both before and after. Directly relevant to the target population and it does not support a large effect."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "In this study, the vaccination response to influenza did not differ between 133 healthy college students with or without insomnia (based on DSM-V criteria), although the insomnia group had overall lower antibody amounts pre- and post-vaccination. When controlling for potential covariates, subjective sleep quality (assessed by the PSQI) and insomnia status were predictive of the influenza antibody response"
+  - outcome_domain: immune
+    outcome_construct: clinical_significance_of_vaccine_deficit_lange2011
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: 8, duration_days: 1, contrast_label: "wake vs sleep after hepatitis A vaccination; proportion failing to reach clinical protection"}
+    scale: raw_units
+    unit: "count of participants requiring an extra vaccination (Wake group vs Sleep group)"
+    value: 3.0
+    se: null
+    ci: null
+    conversion_formula: "Raw counts as reported: 3 in the Wake group vs 0 in the Sleep group. No denominator per arm given in this review, so no rate or SE is recorded here; see lange2011_memory for my derived approximation and its caveats."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. The one place in this literature where a marker-level finding is tied to a hard clinical consequence: some sleep-deprived participants failed seroprotection entirely and had to be re-vaccinated, while none of the slept participants did."
+    covariates: []
+    followup_years: 1.0
+    cohort_family: "Luebeck_Lange_vaccination"
+    quote: "Of note, three participants from the Wake group had to receive an additional vaccination because their titers were below levels for clinical protection, whereas all participants from the Sleep group had sufficient protection, showing the clinical significance of the findings."
+rob:
+  tool: AMSTAR-2
+  judgement: critical
+  notes: "This is a NARRATIVE review, not a systematic review or meta-analysis - no protocol, no search strategy, no risk-of-bias assessment of included primaries, no quantitative synthesis. AMSTAR-2 rates such reviews as critically low by construction; that is not a criticism of the paper, which is an authoritative Physiological Reviews synthesis by leading investigators, but it means NOTHING here should be pooled as an effect estimate. It is also not independent of the primaries in my set: Lange is an author here and first author of lange2003_hepa and lange2011_memory. Used strictly as instructed - for mechanism and to locate primaries."
+funding: "not extracted"
+notes: |
+  ROLE OF THIS RECORD: required extraction #5. Used for (a) mechanism, (b) finding primaries, and
+  (c) as one of my two secondhand sources for spiegel2002_influenza_vaccine, whose full text I could
+  not obtain. It contributes NO poolable effect estimate.
+  PRIMARIES LOCATED VIA THIS REVIEW that became records in this shard: Spiegel 2002 (its ref 522),
+  Lange 2003 hepatitis A (ref 320 or 325), Lange 2011 immunological memory (ref 320), Benedict 2012
+  H1N1 (ref 34). It also pointed me to the college-student insomnia/influenza study (ref 536), which
+  is the only vaccine data in the target age band and which was NULL.
+  DEFINITION WORTH RECORDING for calibrating what "low-grade inflammation" means in magnitude terms:
+  "elevations of inflammatory markers are of low magnitude and the cardinal signs of local inflammation
+  are generally absent. Such mild and often chronic elevations are most frequently referred to as
+  low-grade inflammation... The magnitude of the response may be defined as a two- to threefold
+  elevation of such markers (297, 437). However, there is currently no consistent definition."
+  Read against that yardstick, the experimentally observed changes under sleep restriction (IL-6
+  d = 0.42; CRP +45% in vanleeuwen2009) are at or below the bottom of what this review calls
+  low-grade inflammation.
+  THE CONFLATION TO WATCH: this review, like much of the field, writes "prolonged sleep deficiency
+  (e.g., short sleep duration, sleep disturbance)" as a single construct. irwin2016_inflammation_meta
+  shows those two components behave differently - disturbance is associated with CRP and IL-6, short
+  duration categorically is not. Any downstream use of this review's framing must keep them separate.
+shard: "s10_immune"

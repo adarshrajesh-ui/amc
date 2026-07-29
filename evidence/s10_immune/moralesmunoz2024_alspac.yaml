@@ -1,0 +1,92 @@
+study_id: moralesmunoz2024_alspac
+citation: "Morales-Munoz I, Marwaha S, Upthegrove R, Cropley V. Role of inflammation in short sleep duration across childhood and psychosis in young adulthood. JAMA Psychiatry. 2024;81(8):825-833."
+doi: "10.1001/jamapsychiatry.2024.0796"
+pmid: "38717746"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11079792/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Role of Inflammation in Short Sleep Duration Across Childhood and Psychosis in Young Adulthood."
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_selfreport
+tier: T5
+n: 12394
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [0.5, 24]
+  pct_female: 50.5
+  country: "UK"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: immune
+    outcome_construct: il6_at_age_9_as_mediator_of_persistent_short_sleep
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "persistent shorter nighttime sleep duration across childhood (measured at 6, 18, 30 months and 3.5, 4-5, 5-6, 6-7 years); IL-6 at age 9 as mediator of psychosis at 24"}
+    scale: raw_units
+    unit: "bias-corrected path-analysis mediation estimate (psychotic disorder pathway)"
+    value: 0.003
+    se: 0.000765
+    ci: [0.002, 0.005]
+    conversion_formula: "Reported bias-corrected estimate = 0.003 (95% CI 0.002-0.005), P = .007. se = (0.005 - 0.002)/3.92 = 0.000765."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM, and this is genuine evidence that persistent short sleep leaves a detectable inflammatory signature YEARS LATER - IL-6 measured at age 9 partially mediated the link between persistent short childhood sleep and psychosis at 24. BUT note the magnitude: the mediated path estimate is 0.003, i.e. the inflammatory pathway explains a very small fraction of a much larger total association. And note the exposure window is EARLY CHILDHOOD (6 months to 7 years), NOT adolescence."
+    covariates: ["see paper; abstract does not enumerate"]
+    followup_years: 23.5
+    cohort_family: "ALSPAC"
+    quote: "Increased levels of IL-6 at 9 years, but not CRP at 9 or 15 years, partially mediated the associations between persistent shorter sleep duration and PD (bias-corrected estimate = 0.003; 95% CI, 0.002-0.005; P = .007) and PEs (bias-corrected estimate = 0.002; 95% CI, 0-0.003; P = .03) in young adulthood."
+  - outcome_domain: immune
+    outcome_construct: crp_null_as_mediator
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "same exposure; CRP at ages 9 AND 15 tested as mediator"}
+    scale: raw_units
+    unit: "qualitative null flag (0 = no mediation detected)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Explicit null stated in the abstract without numeric estimates for the non-significant CRP paths. Flag only; se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "IMPORTANT NULL, AND A MARKER-SPECIFICITY SIGNAL. CRP at age 9 and at age 15 did NOT mediate, while IL-6 at 9 did. If persistent short sleep in childhood produced generalised systemic inflammation, CRP - the standard downstream acute-phase marker of IL-6 signalling - should have moved too. It did not. Consistent with irwin2016_inflammation_meta and stager2023_adolescent_crp, where short sleep duration was not associated with CRP."
+    covariates: []
+    followup_years: 23.5
+    cohort_family: "ALSPAC"
+    quote: "Increased levels of IL-6 at 9 years, but not CRP at 9 or 15 years, partially mediated the associations"
+  - outcome_domain: psychiatric
+    outcome_construct: psychotic_disorder_at_24_after_persistent_short_childhood_sleep
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "persistent shorter nighttime sleep trajectory across childhood vs other trajectories; psychotic disorder at age 24"}
+    scale: log_or
+    unit: null
+    value: 0.9163
+    se: 0.2582
+    ci: [0.4121, 1.4231]
+    conversion_formula: "OR 2.50 (1.51-4.15) -> log_or = ln(2.50) = 0.9163; se = (ln 4.15 - ln 1.51)/3.92 = 0.2582"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM. Recorded here because it is the OUTCOME the inflammatory pathway was tested against, and because it bounds how much of the total effect inflammation carries (very little). Psychotic experiences OR was 3.64 (2.23-5.95). NOT an immune outcome - this belongs to a psychiatric shard - and NOT the subject's exposure window."
+    covariates: ["see paper"]
+    followup_years: 23.5
+    cohort_family: "ALSPAC"
+    quote: "The LCGA identified a group of individuals with persistent shorter nighttime sleep duration across childhood. These individuals were more likely to develop PD (odds ratio [OR], 2.50; 95% CI, 1.51-4.15; P < .001) and PEs (OR, 3.64; 95% CI, 2.23-5.95; P < .001) at age 24 years."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Large well-characterised birth cohort (ALSPAC), 12,394 children for trajectory modelling, 3,962 for the outcome analyses, prospectively measured exposure at 7 timepoints and objectively assayed inflammatory markers - a strong design. Weaknesses for MY purposes: the exposure window is infancy through age 7, which is not the target subject's exposure; parent-reported sleep in early childhood; mediation analysis on observational data cannot establish that IL-6 is causal in the pathway; attrition from 12,394 to 3,962 is substantial and likely non-random; abstract-only access, so I could not check the mediation model specification or the proportion of effect mediated."
+funding: "See paper; one author reports NIHR Oxford Health Biomedical Research Centre support and various industry fees outside the submitted work."
+notes: |
+  ACCESS: abstract only (retrieved via PubMed efetch). A PMC copy exists (PMC11079792) but I did not
+  retrieve the full text, so I have no table values and record only what the abstract states.
+  RELEVANCE, STATED HONESTLY: this record is included because it is the ONLY prospective evidence I
+  found that a sustained short-sleep pattern in the young leaves a measurable inflammatory trace
+  years later (IL-6 at age 9). That is directly on point for the durable-vs-transient question.
+  BUT THREE THINGS LIMIT IT SHARPLY:
+  1. Exposure window is 6 months to 7 years - early childhood, when sleep architecture and immune
+     development differ fundamentally from age 16-19. It is NOT evidence about adolescent restriction.
+  2. The mediated effect is tiny (0.003) relative to a total association of OR 2.50-3.64. Inflammation
+     is a minor pathway even in the authors' own model.
+  3. CRP - the marker most used to argue that short sleep causes systemic inflammation - was null at
+     BOTH 9 and 15 years.
+  So this cuts both ways and should not be read as vindication of the durable-inflammation story.
+shard: "s10_immune"

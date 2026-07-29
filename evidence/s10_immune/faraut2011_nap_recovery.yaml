@@ -1,0 +1,91 @@
+study_id: faraut2011_nap_recovery
+citation: "Faraut B, Boudjeltia KZ, Dyzma M, Rousseau A, David E, Stenuit P, Franck T, Van Antwerpen P, Vanhaeverbeek M, Kerkhofs M. Benefits of napping and an extended duration of recovery sleep on alertness and immune cells after acute sleep restriction. Brain, Behavior, and Immunity. 2011;25(1):16-24."
+doi: "10.1016/j.bbi.2010.08.001"
+pmid: "20699115"
+url: "https://pubmed.ncbi.nlm.nih.gov/20699115/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Benefits of napping and an extended duration of recovery sleep on alertness and immune cells after acute sleep restriction."
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 40
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: "Belgium"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: leukocyte_and_neutrophil_counts_after_standard_8h_recovery
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 1, contrast_label: "ONE standard 8 h recovery night after a 2 h night; leukocyte and neutrophil counts vs baseline"}
+    scale: raw_units
+    unit: "qualitative flag (+1 = still elevated after a standard recovery night)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Significance/direction flag from the abstract; cell counts and dispersions are in the paywalled full text. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = ABNORMALITY PERSISTING. After a 2 h night, leukocyte and neutrophil counts rose, and ONE standard 8 h recovery night was NOT enough to normalise them."
+    covariates: []
+    followup_years: null
+    cohort_family: "Brussels_Faraut_recovery"
+    quote: "After sleep restriction, leukocyte and - among leukocyte subsets - neutrophil counts were increased, an effect that persisted after the 8-h recovery sleep, but, in subjects who had a nap or a 10-h recovery sleep, these values returned nearly to baseline."
+  - outcome_domain: recovery
+    outcome_construct: leukocyte_counts_after_nap_or_extended_10h_recovery
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 8, duration_days: 1, contrast_label: "a 30-min midday nap PLUS an 8 h night, OR a single 10 h extended recovery night, after a 2 h night"}
+    scale: raw_units
+    unit: "qualitative flag (0 = returned to baseline)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Direction flag: 'returned nearly to baseline'. se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "REVERSIBILITY, WITH A DOSE REQUIREMENT - THE MOST ACTIONABLE FINDING IN THE RECOVERY SET. The same abnormality that persisted after 8 h of recovery resolved when recovery was EXTENDED (10 h) or supplemented with a 30-min nap. So 'does it reverse?' depends on the recovery dose, not just on whether a recovery night occurred. This reconciles pejovic2013_recovery (10 h recovery -> full IL-6 normalisation) with simpson2016_repeated_recovery and vanleeuwen2009_recovery (8 h recovery -> incomplete normalisation)."
+    covariates: []
+    followup_years: null
+    cohort_family: "Brussels_Faraut_recovery"
+    quote: "Our results indicate that additional recovery sleep after sleep restriction provided by a midday nap prior to recovery sleep or a sleep extended night can improve alertness and return leukocyte counts to baseline values."
+  - outcome_domain: immune
+    outcome_construct: inflammatory_biomarkers_mostly_unchanged_by_acute_restriction
+    exposure: {type: chronic_restriction, dose_h: 2, referent_h: 8, duration_days: 1, contrast_label: "one 2 h night; hsCRP, IL-8, myeloperoxidase, fibrinogen, ApoB/ApoA"}
+    scale: raw_units
+    unit: "qualitative null flag (0 = unchanged)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Explicit null for most markers; only myeloperoxidase rose. Flag only; se null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "IMPORTANT NULL. A single severely restricted night (2 h) did NOT move hsCRP, IL-8, fibrinogen or apolipoproteins - only myeloperoxidase rose. Converges with ballesio2026_experimental_meta, where single nights of total or partial deprivation produced no detectable inflammatory change. Relevant to the subject's 'occasional 3-4 h nights before exams': single bad nights shift cell counts, not systemic inflammation."
+    covariates: []
+    followup_years: null
+    cohort_family: "Brussels_Faraut_recovery"
+    quote: "Inflammatory and atherogenesis biomarkers were unchanged except for higher myeloperoxidase levels after sleep restriction. ... All parameters remained unchanged in the control group."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Parallel-group design with a proper control arm (9 men who slept 3 consecutive 8 h nights, in whom all parameters remained unchanged), continuous PSG, and daily 7 a.m. blood draws - good internal validity. Weaknesses: 4 arms of only 9-12 men each (total 40); abstract-only access, so no magnitudes, no SEs, and no check on randomisation or blinding; exposure is a single 2 h night (acute severe deprivation), which is not the target exposure; leukocyte/neutrophil counts are trafficking markers whose link to clinical immune competence is not established."
+funding: "not stated in the abstract"
+notes: |
+  ACCESS: abstract only (Brain Behav Immun 2011, paywalled; no PMC copy found). All content is from
+  the PubMed abstract retrieved by efetch. n = 40 recorded as the sum of the four arms: 8 h recovery
+  n = 12, nap + 8 h recovery n = 10, 10 h extended recovery n = 9, control n = 9.
+  WHY THIS RECORD IS DISPROPORTIONATELY USEFUL despite being abstract-only: it is the only study in my
+  set that VARIES THE RECOVERY DOSE while holding the restriction constant. That converts the
+  recovery literature from a contradiction into a dose-response:
+    - 8 h recovery      -> abnormalities persist (this study; simpson2016; vanleeuwen2009)
+    - 10 h recovery or nap + 8 h -> return to baseline (this study; pejovic2013 used 10 h)
+  For the target subject, whose weekend sleep is 7-8 h with occasional 10-11 h nights, this predicts
+  incomplete weekly normalisation on ordinary weekends and fuller normalisation on the long ones.
+  CAUTION: this is a single small study read at abstract level, and "returned nearly to baseline" is
+  the authors' phrasing, not a statistical equivalence test.
+shard: "s10_immune"

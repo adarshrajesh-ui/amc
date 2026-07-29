@@ -1,0 +1,78 @@
+study_id: jaiswal2024_breakthrough
+citation: "Jaiswal SJ, Gadaleta M, Quer G, Radin JM, Waalen J, Ramos E, Pandit J, Owens RL. Objectively measured peri-vaccination sleep does not predict COVID-19 breakthrough infection. Scientific Reports. 2024;14(1):4655."
+doi: "10.1038/s41598-024-53743-4"
+pmid: "38409137"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10897487/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Objectively measured peri-vaccination sleep does not predict COVID-19 breakthrough infection."
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 5265
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: immune
+    outcome_construct: covid_breakthrough_infection_by_objective_sleep_duration
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "objectively measured (wearable) peri-vaccination sleep DURATION; breakthrough COVID-19 infection after 2nd dose (n=5265) and after 1st booster (n=2583)"}
+    scale: raw_units
+    unit: "qualitative null flag (0 = no difference in sleep duration between breakthrough and non-breakthrough)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Explicit null, twice: 'There was no difference in sleep duration between those with and without breakthrough infection' and 'Sleep duration was not associated with breakthrough infection after COVID vaccination.' No effect size or CI is reported for the null in the abstract, so se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "THE STRONGEST SINGLE NULL IN THIS SHARD, AND THE ONE WITH THE MOST REAL-WORLD OUTCOME. positive would = harm. Objectively measured sleep duration around vaccination did NOT predict actual breakthrough COVID-19 infection in 5,265 people (256 events) after dose 2, nor in 2,583 people (581 events) after the booster. This is the clinical endpoint that the vaccine-antibody literature is a proxy for, measured with OBJECTIVE exposure and a large sample - and it is null."
+    covariates: ["age", "gender"]
+    followup_years: null
+    cohort_family: "DETECT"
+    quote: "256 out of 5265 individuals reported a breakthrough infection after the 2nd vaccine, and 581 out of 2583 individuals reported a breakthrough after the 1st booster. There was no difference in sleep duration between those with and without breakthrough infection. ... Sleep duration was not associated with breakthrough infection after COVID vaccination."
+  - outcome_domain: immune
+    outcome_construct: covid_breakthrough_by_awakening_frequency
+    exposure: {type: other, dose_h: null, referent_h: null, duration_days: null, contrast_label: "frequency of awakenings per hour (sleep FRAGMENTATION, not duration); breakthrough infection after 1st booster"}
+    scale: log_hr
+    unit: null
+    value: 0.1570
+    se: null
+    ci: null
+    conversion_formula: "Reported hazard ratio 1.17 per unit awakening frequency, P = 0.019 -> log_hr = ln(1.17) = 0.1570. No CI is given in the abstract, so no SE is derivable; se null rather than invented. Raw group difference: 3.01 +/- 0.65 awakenings/hour in the breakthrough group vs 2.82 +/- 0.65 in those without (P < 0.001)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM, but SMALL and of unclear meaning - the authors say so themselves. Once again the sleep dimension that predicts an immune outcome is CONTINUITY/fragmentation, not duration: same pattern as cohen2009_cold (efficiency beat duration), patel2012_pneumonia (perceived inadequacy beat duration), pratherleung2016_nhanes (disturbance beat duration) and irwin2016_inflammation_meta (disturbance beat duration). The absolute difference here is 0.19 awakenings/hour - tiny."
+    covariates: ["age", "gender"]
+    followup_years: null
+    cohort_family: "DETECT"
+    quote: "Increased awakening frequency was associated with breakthrough infection after the 1st booster with 3.01 +/- 0.65 awakenings/hour in the breakthrough group compared to 2.82 +/- 0.65 awakenings/hour in those without breakthrough (P < 0.001). Cox proportional hazards modeling showed that age < 60 years (hazard ratio 2.15, P < 0.001) and frequency of awakenings (hazard ratio 1.17, P = 0.019) were associated with breakthrough infection after the 1st booster. ... While increased awakening frequency during sleep was associated with breakthrough infection beyond traditional risk factors, the clinical implications of this finding are unclear."
+rob:
+  tool: Newcastle-Ottawa
+  judgement: moderate
+  notes: "Big (5,265 and 2,583), prospective, with OBJECTIVE wearable-measured exposure preceding the outcome - unusual and valuable for this literature. Weaknesses: outcome is SELF-REPORTED breakthrough infection in a digitally-recruited app cohort, so ascertainment depends on the participant testing and reporting; consumer wearables estimate sleep imperfectly; digitally recruited volunteers are unrepresentative (health-engaged, likely older and wealthier than average); models adjusted only for age and gender; abstract-only access, so I could not see the sleep-duration effect estimate or its CI, which limits how tightly I can bound the null."
+funding: "not stated in the abstract; authors declare no competing interests"
+notes: |
+  ACCESS: abstract only (a PMC copy exists, PMC10897487, which I did not retrieve). Everything recorded
+  is from the PubMed abstract.
+  WHY THIS IS THE MOST IMPORTANT NULL FOR THE DOWNSTREAM MODEL: the entire vaccine-response chain of
+  reasoning is antibody titre -> presumed reduced protection -> more infection. This study tested the
+  last link directly, with objective sleep measurement and 837 total breakthrough events, and found
+  nothing for sleep duration. spiegel2023_vaccine_meta explicitly noted that no COVID-vaccine sleep
+  data existed when it was written and speculated that the antibody effect would carry over; this
+  study is the closest test of that speculation and it did not.
+  HOW TO RECONCILE with spiegel2023_vaccine_meta's ES of 0.79: an antibody-titre shift of that size
+  need not translate into measurable differences in clinical breakthrough, because protection is a
+  saturating function of titre and most vaccinated people sit well above the protective threshold.
+  That is the most parsimonious reading, and it argues for translating the vaccine finding into
+  outcomes CAUTIOUSLY rather than assuming proportional infection risk.
+  LIMITATION ON THE NULL ITSELF: with no reported CI for the duration effect I cannot state how large
+  an effect is excluded. The null is directionally informative, not a tight equivalence bound.
+shard: "s10_immune"

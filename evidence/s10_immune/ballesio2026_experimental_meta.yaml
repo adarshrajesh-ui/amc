@@ -1,0 +1,181 @@
+study_id: ballesio2026_experimental_meta
+citation: "Ballesio A, Fiori V, Lombardo C. Effects of experimental sleep deprivation on peripheral inflammation: an updated meta-analysis of human studies. Journal of Sleep Research. 2026;35(1):e70099."
+doi: "10.1111/jsr.70099"
+pmid: "40474574"
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11753884/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  title_similarity: 1.0
+  status: VERIFIED
+  resolved_title: "Effects of Experimental Sleep Deprivation on Peripheral Inflammation: An Updated Meta-Analysis of Human Studies."
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: 887
+n_studies_pooled: 35
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "multiple"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: immune
+    outcome_construct: il6_circulating_multinight_partial_deprivation
+    exposure: {type: chronic_restriction, dose_h: 4.6, referent_h: 8, duration_days: 9, contrast_label: "multiple nights (3+) of experimental partial sleep deprivation, ~4.6 h TST, mean 9.0 +/- 7.0 nights, vs normal sleep"}
+    scale: cohens_d
+    unit: null
+    value: 0.42
+    se: 0.1582
+    ci: [0.11, 0.73]
+    conversion_formula: "Reported d = 0.42 (95% CI 0.11-0.73); se = (0.73 - 0.11)/3.92 = 0.1582. THIS IS THE OUTLIER-EXCLUDED ESTIMATE (k = 5). See the k = 6 record below for the all-studies estimate."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM (higher circulating IL-6 under restriction). Moderate and significant, with zero residual heterogeneity after removing one outlier (I2 = 0%). This is the closest experimental analogue to the subject's weekday exposure available in any meta-analysis."
+    covariates: []
+    followup_years: null
+    cohort_family: "Ballesio2026_experimental_meta"
+    quote: "After excluding this study from the analysis, the random effect model showed a moderate significant effect of multiple nights of experimental partial sleep deprivation on IL-6 [k = 5, d = 0.42, [95% CI = 0.11 to 0.73], p < 0.01]. Heterogeneity was low and non-significant (Q = 1.80, df = 4, p = 0.772; tau2 = 0.0, I2 = 0.00%). In the studies included in this analysis, sleep manipulation occurred over 9.0 +/- 7.00 nights at 276 +/- 53 min."
+  - outcome_domain: immune
+    outcome_construct: il6_circulating_multinight_partial_deprivation_all_studies
+    exposure: {type: chronic_restriction, dose_h: 4.6, referent_h: 8, duration_days: 9, contrast_label: "same contrast, ALL studies retained including the outlier (Schmid 2011, d = -1.38)"}
+    scale: cohens_d
+    unit: null
+    value: 0.10
+    se: 0.2934
+    ci: [-0.48, 0.67]
+    conversion_formula: "Reported d = 0.10 (95% CI -0.48 to 0.67); se = (0.67 - (-0.48))/3.92 = 0.2934"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "IMPORTANT NULL, AND THE HONEST HEADLINE. With all 6 studies in, the effect of multiple nights of partial restriction on IL-6 is d = 0.10, p = 0.746 - indistinguishable from zero. The significant d = 0.42 above depends ENTIRELY on excluding one study (Schmid et al. 2011, d = -1.38). The downstream model should probably carry both, or use the all-studies estimate and let the outlier-excluded one inform the upper tail."
+    covariates: []
+    followup_years: null
+    cohort_family: "Ballesio2026_experimental_meta"
+    quote: "Preliminary random effect model revealed a non-significant effect of multiple nights of experimental partial sleep deprivation on IL-6 [k = 6, d = 0.10, [95% CI = -0.48 to 0.67], p = 0.746], with substantial heterogeneity (Q = 18.71, df = 5, p < 0.001; tau2 = 0.374, I2 = 73.29%), and one outlier (Schmid et al. 2011, d = -1.38, 95% CI = -2.17 to -0.58)."
+  - outcome_domain: immune
+    outcome_construct: crp_multinight_partial_deprivation
+    exposure: {type: chronic_restriction, dose_h: 4.0, referent_h: 8, duration_days: 7.5, contrast_label: "multiple nights (3+) of experimental partial sleep deprivation, 240 min in bed, mean 7.5 +/- 4.2 nights, vs normal sleep"}
+    scale: cohens_d
+    unit: null
+    value: 0.76
+    se: 0.3418
+    ci: [0.09, 1.43]
+    conversion_formula: "Reported d = 0.76 (95% CI 0.09-1.43); se = (1.43 - 0.09)/3.92 = 0.3418. OUTLIER-EXCLUDED estimate (k = 5)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = HARM (higher CRP under restriction). Large and significant BUT the CI nearly touches zero (lower bound 0.09) and this too is an outlier-excluded estimate. Compare the all-studies estimate below."
+    covariates: []
+    followup_years: null
+    cohort_family: "Ballesio2026_experimental_meta"
+    quote: "After excluding this study from the analysis, random effects model showed a large significant effect of multiple nights of experimental partial sleep deprivation on CRP [k = 5, d = 0.76, [95% CI = 0.09 to 1.43], p = 0.027]. In the studies included in this analysis, sleep manipulation occurred over 7.5 +/- 4.20 nights at 240 min."
+  - outcome_domain: immune
+    outcome_construct: crp_multinight_partial_deprivation_all_studies
+    exposure: {type: chronic_restriction, dose_h: 4.0, referent_h: 8, duration_days: 7.5, contrast_label: "same contrast, ALL studies retained including the outlier (Baek 2020, d = -0.70)"}
+    scale: cohens_d
+    unit: null
+    value: 0.50
+    se: 0.4490
+    ci: [-0.38, 1.38]
+    conversion_formula: "Reported d = 0.50 (95% CI -0.38 to 1.38); se = (1.38 - (-0.38))/3.92 = 0.4490"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL. positive would = harm; p = 0.265 with I2 = 86%. As with IL-6, the significant CRP result survives only after dropping one study (Baek et al. 2020, d = -0.70)."
+    covariates: []
+    followup_years: null
+    cohort_family: "Ballesio2026_experimental_meta"
+    quote: "Preliminary random effects model revealed a moderate non-significant effect of multiple nights of experimental partial sleep deprivation on CRP [k = 6, d = 0.50, [95% CI = -0.38 to 1.38], p = 0.265], with substantial heterogeneity (Q = 36.65, df = 5, p < 0.001; tau2 = 0.974, I2 = 86.36%) and one potential outlier (Baek et al. 2020, d = -0.70, 95% CI = -0.97 to -0.44)."
+  - outcome_domain: immune
+    outcome_construct: tnf_alpha_multinight_partial_deprivation
+    exposure: {type: chronic_restriction, dose_h: 4.0, referent_h: 8, duration_days: null, contrast_label: "multiple nights of experimental partial sleep deprivation vs normal sleep, TNF-alpha"}
+    scale: cohens_d
+    unit: null
+    value: -0.34
+    se: 0.2755
+    ci: [-0.88, 0.20]
+    conversion_formula: "Reported d = -0.34 (95% CI -0.88 to 0.20); se = (0.20 - (-0.88))/3.92 = 0.2755"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL, AND POINT ESTIMATE IN THE WRONG DIRECTION. positive would = harm, so d = -0.34 means TNF-alpha was if anything LOWER under restriction. p = 0.213. Directly contradicts the widely-repeated claim that sleep loss uniformly raises pro-inflammatory cytokines."
+    covariates: []
+    followup_years: null
+    cohort_family: "Ballesio2026_experimental_meta"
+    quote: "Random effect model revealed a non-significant effect of multiple nights of experimental partial sleep deprivation on TNF-alpha [k = 5, d = -0.34, [95% CI = -0.88 to 0.20], p = 0.213], with non-significant heterogeneity (Q = 8.45, df = 3, p = 0.07; tau2 = 0.194, I2 = 52.6%)."
+  - outcome_domain: immune
+    outcome_construct: il6_one_night_total_deprivation
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: 8, duration_days: 1, contrast_label: "ONE night of total sleep deprivation vs normal sleep, IL-6 (outlier-excluded)"}
+    scale: cohens_d
+    unit: null
+    value: 0.21
+    se: 0.1862
+    ci: [-0.15, 0.58]
+    conversion_formula: "Reported d = 0.21 (95% CI -0.15 to 0.58); se = (0.58 - (-0.15))/3.92 = 0.1862. Preliminary all-studies estimate was k = 9, d = 0.41 (95% CI -0.04 to 0.87), p = 0.076 - also non-significant."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL. One all-nighter does NOT reliably raise IL-6 (p = 0.251). Relevant to the subject's 'occasional 3-4 h nights before exams': single acute nights are not where the inflammatory signal is."
+    covariates: []
+    followup_years: null
+    cohort_family: "Ballesio2026_experimental_meta"
+    quote: "After removing this study from the analysis, the random effect model showed a non-significant effect of experimental total sleep deprivation on IL-6 [k = 8, d = 0.21, [95% CI = -0.15 to 0.58], p = 0.251], and moderate heterogeneity (Q = 14.51, df = 7, = 0.043; tau2 = 0.141, I2 = 50.51%)."
+  - outcome_domain: immune
+    outcome_construct: crp_one_night_total_deprivation
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: 8, duration_days: 1, contrast_label: "ONE night of total sleep deprivation vs normal sleep, CRP"}
+    scale: cohens_d
+    unit: null
+    value: -0.23
+    se: 0.2143
+    ci: [-0.65, 0.19]
+    conversion_formula: "Reported d = -0.23 (95% CI -0.65 to 0.19); se = (0.19 - (-0.65))/3.92 = 0.2143"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL with the point estimate in the protective direction. positive would = harm. One night of total deprivation did not raise CRP (p = 0.280)."
+    covariates: []
+    followup_years: null
+    cohort_family: "Ballesio2026_experimental_meta"
+    quote: "Random effect model revealed non-significant effect of one night of experimental total sleep deprivation on CRP [k = 5, d = -0.23, [95% CI = -0.65 to 0.19], p = 0.280], with substantial heterogeneity (Q = 8.308, df = 4, p = 0.081; tau2 = 0.117, I2 = 51.85%)."
+  - outcome_domain: immune
+    outcome_construct: il6_one_night_partial_deprivation
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 1, contrast_label: "ONE night of experimental partial sleep deprivation vs normal sleep, IL-6"}
+    scale: cohens_d
+    unit: null
+    value: 0.48
+    se: 0.3138
+    ci: [-0.13, 1.10]
+    conversion_formula: "Reported d = 0.48 (95% CI -0.13 to 1.10); se = (1.10 - (-0.13))/3.92 = 0.3138"
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NULL (p = 0.125) though the point estimate is moderate and positive (= harm direction). I2 = 75%, so the studies genuinely disagree."
+    covariates: []
+    followup_years: null
+    cohort_family: "Ballesio2026_experimental_meta"
+    quote: "Random effect model revealed a non-significant effect of one night of experimental partial sleep deprivation on IL-6 [k = 6, d = 0.48, [95% CI = -0.13 to 1.10], p = 0.125], and substantial heterogeneity (Q = 20.10, df = 5, < 0.001; tau2 = 0.411, I2 = 75.12%)."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Up-to-date (searched to March 2025), PRISMA-compliant, 35 experimental studies / 887 participants, random-effects DerSimonian-Laird, and the authors report both all-studies and outlier-excluded models - which is exactly the transparency needed. Weaknesses: the two headline significant results (IL-6 d = 0.42, CRP d = 0.76) BOTH depend on excluding a single study, and the excluded studies were dropped for being outliers rather than for methodological flaws; k = 5 per analysis is very thin; heterogeneity is substantial in most models; the authors note that only 82.8% of studies handled confounders adequately. Small-study/publication bias cannot be excluded with k = 5."
+funding: "not extracted"
+notes: |
+  THIS IS THE BEST AVAILABLE EXPERIMENTAL ANSWER on sleep restriction and inflammation, and it is
+  more equivocal than the popular claim.
+  What the paper concludes, verbatim from the abstract: "Compared to normal sleep, multiple nights of
+  experimental partial sleep deprivation (sleep duration reduced to ~4.30 h for 3+ nights) were
+  associated with a significant increase of interleukin-6 [IL-6, k = 5, d = 0.42, [95% CI = 0.11 to
+  0.73], p < 0.01] and C-reactive protein [CRP, k = 5, d = 0.76, [95% CI = 0.09 to 1.43], p = 0.03]
+  in blood. A single night of total or partial sleep deprivation was not associated with changes in
+  inflammation. Results suggest that the upregulation of inflammatory proteins in blood may only
+  manifest following persistent p[artial sleep deprivation]."
+  So: the DOSE PATTERN is the finding. Acute single nights do nothing measurable; sustained partial
+  restriction over roughly a week or more does raise IL-6 and CRP - and even then only after outlier
+  exclusion, and only for IL-6 and CRP, not TNF-alpha (which went the other way).
+  CRUCIAL SCOPE LIMIT for the transient-vs-durable question: EVERY estimate here is a marker measured
+  DURING or immediately after the restriction protocol. Nothing in this meta-analysis speaks to
+  whether the elevation persists after recovery sleep. For that see pejovic2013_recovery (IL-6
+  normalised) and simpson2016_repeated_recovery (monocyte IL-6 did NOT normalise).
+  Contrast with irwin2016_inflammation_meta, which pooled the OBSERVATIONAL literature and found
+  short sleep duration NOT associated with CRP/IL-6 categorically. The experimental and observational
+  literatures disagree, and the experimental one is the better-identified of the two.
+  Reduced-dose detail: multi-night PSD studies restricted sleep to 240 min (CRP analyses) / 276 +/- 53
+  min (IL-6 analyses) - i.e. 4-4.6 h, HARSHER than the subject's 5-6 h weekday schedule. Effects at
+  5-6 h should be assumed smaller.
+shard: "s10_immune"
