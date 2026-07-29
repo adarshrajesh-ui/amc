@@ -1,0 +1,150 @@
+study_id: binks1999
+citation: "Binks PG, Waters WF, Hurry M. Short-term total sleep deprivations does not selectively impair higher cortical functioning. Sleep. 1999;22(3):328-334."
+doi: "10.1093/sleep/22.3.328"
+pmid: "10341383"
+url: "https://repository.lsu.edu/gradschool_disstheses/6212/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Short-Term Total Sleep Deprivations Does Not Selectively Impair Higher Cortical Functioning"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: "Effect sizes computed from the means and SDs in the author's dissertation reporting the same study and sample (Binks PG. The Impact of Total Sleep Deprivation on Neuropsychological Functioning. LSU Historical Dissertations and Theses, 1996, no. 6212); the Sleep 1999 abstract confirms the same n (29 deprived, 32 control), the same 34-36 h protocol, and the same null conclusion."
+design: quasi_experiment
+tier: T2
+n: 61
+n_studies_pooled: null
+population:
+  age_mean: 21.4
+  age_range: [17, 35]
+  pct_female: null
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: wais_r_short_form_full_scale_iq
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "34-36 h continuous total sleep deprivation vs normally-sleeping controls, WAIS-R 4-subtest short-form estimated IQ measured on the test day"}
+    scale: hedges_g
+    unit: null
+    value: 0.329
+    se: 0.258
+    ci: [-0.177, 0.835]
+    conversion_formula: "Dissertation results table: control n = 32, WAIS-R EST. IQ 102.5 (9.8); sleep-deprived n = 29, 106.1 (11.8). SD_pooled = sqrt((31*9.8^2 + 28*11.8^2)/59) = 10.795. d = (106.1 - 102.5)/10.795 = +0.3335; J = 1 - 3/(4*59 - 1) = 0.98723; g = +0.329. SE(g) = sqrt(1/32 + 1/29 + g^2/(2*61)) = 0.258. THE SIGN IS POSITIVE, i.e. the SLEEP-DEPRIVED group scored 3.6 IQ points HIGHER. Published ANCOVA controlling for screening IQ: F(1,56) = 0.46, p = .500."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = sleep-deprived scored HIGHER than controls. There is no measurable IQ decrement here; the point estimate is in the wrong direction for a harm hypothesis and is fully explained by baseline imbalance (see conversion notes and record notes)."
+    covariates: ["Shipley estimated IQ (screening measure) entered as covariate in the published ANCOVA"]
+    followup_years: null
+    cohort_family: "Binks_LSU"
+    quote: "WAIS-R EST. IQ 102.5 (9.8) 106.1 (11.8) F (1,56) 0.46 p = .500"
+  - outcome_domain: cognition
+    outcome_construct: wais_r_short_form_full_scale_iq_raw_points
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "34-36 h total sleep deprivation vs control, expressed in raw IQ points"}
+    scale: raw_units
+    unit: "full-scale IQ points (SD = 15 scale)"
+    value: 3.6
+    se: 2.768
+    ci: [-1.825, 9.025]
+    conversion_formula: "Raw difference 106.1 - 102.5 = +3.6 IQ points. SE = SD_pooled * sqrt(1/32 + 1/29) = 10.795 * 0.2564 = 2.768 points. 95% CI = [-1.83, +9.03]. THE DECISION-RELEVANT READING IS THE LOWER BOUND: this study excludes any IQ DECREMENT larger than 1.8 points from 34-36 h of total sleep deprivation, at 95% confidence. It does NOT establish zero effect - minimum detectable effect at 80% power is d = 0.718 = 10.8 IQ points, so it is only powered to detect large decrements."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = deprived group higher. The useful quantity is the lower confidence bound: a decrement worse than -1.8 IQ points is excluded."
+    covariates: []
+    followup_years: null
+    cohort_family: "Binks_LSU"
+    quote: "WAIS-R EST. IQ 102.5 (9.8) 106.1 (11.8) F (1,56) 0.46 p = .500"
+  - outcome_domain: cognition
+    outcome_construct: pasat_sustained_attention_percent_correct
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "34-36 h total sleep deprivation vs control, Paced Auditory Serial Addition Task % correct"}
+    scale: hedges_g
+    unit: null
+    value: -0.079
+    se: 0.256
+    ci: [-0.581, 0.423]
+    conversion_formula: "Control 57.3 (15.3), deprived 56.1 (14.7). SD_pooled = sqrt((31*15.3^2 + 28*14.7^2)/59) = 15.02. d = (56.1 - 57.3)/15.02 = -0.0799; g = -0.0789; SE = sqrt(1/32 + 1/29 + g^2/122) = 0.256. Published F(1,56) = 0.38, p = .539. RECORDED BECAUSE IT IS THE INTERNAL VALIDITY CHECK: the study also failed to detect an attention deficit, which the wider literature says is the effect that is MOST reliably present after 34-36 h awake (lim2010 lapses g = -0.776). Finding null on the positive control means the null on IQ carries little information."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = deprived group worse on sustained attention; not distinguishable from zero"
+    covariates: []
+    followup_years: null
+    cohort_family: "Binks_LSU"
+    quote: "PASAT% 57.3 (15.3) 56.1 (14.7) F (1,56) 0.38 p = .539"
+  - outcome_domain: cognition
+    outcome_construct: booklet_category_test_errors_executive_function
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: null, duration_days: 1.5, contrast_label: "34-36 h total sleep deprivation vs control, Booklet Category Test total errors"}
+    scale: hedges_g
+    unit: null
+    value: 0.428
+    se: 0.259
+    ci: [-0.080, 0.936]
+    conversion_formula: "Control 43.8 (20.1) errors, deprived 35.0 (20.6) errors. SD_pooled = 20.34. FEWER errors is BETTER, so d = (43.8 - 35.0)/20.34 = +0.4327 in the direction of the deprived group performing BETTER; g = +0.428, SE = 0.259. Published F(1,56) = 1.36, p = .249."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = sleep-deprived made FEWER errors, i.e. performed better on this executive-function task. Wrong direction for the harm hypothesis; almost certainly baseline imbalance plus noise."
+    covariates: []
+    followup_years: null
+    cohort_family: "Binks_LSU"
+    quote: "BFCT ERR 43.8 (20.1) 35.0 (20.6) F (1,56) 1.36 p=.249"
+  - outcome_domain: exposure_measurement
+    outcome_construct: baseline_group_imbalance_in_screening_iq
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "PRE-manipulation Shipley Institute of Living Scale estimated IQ, deprived arm minus control arm"}
+    scale: raw_units
+    unit: "estimated IQ points"
+    value: 2.7
+    se: 1.887
+    ci: [-1.0, 6.4]
+    conversion_formula: "Screening table: control (n=32) Shipley IQ 106.0 (8.3); deprived (n=29) 108.7 (6.3); reported group comparison p = .151. Difference = +2.7 points in favour of the deprived arm BEFORE any manipulation. SD_pooled = sqrt((31*8.3^2 + 28*6.3^2)/59) = 7.38; SE = 7.38*sqrt(1/32+1/29) = 1.887. THIS IS THE KEY TO INTERPRETING THE STUDY: 2.7 of the 3.6-point post-manipulation IQ 'advantage' of the deprived group was already present at baseline. The residual +0.9 points is far inside noise. This is why the authors' ANCOVA adjusting for Shipley IQ returns F(1,56) = 0.46, p = .500."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = the arm later assigned to deprivation was already smarter at screening; this is confounding, not an effect"
+    covariates: []
+    followup_years: null
+    cohort_family: "Binks_LSU"
+    quote: "Shipley IQ | | 106.0 | (8.3) | 108.7 | | (6.3) | p=.151"
+rob:
+  tool: ROBINS-I
+  judgement: high
+  notes: "Design is a parallel-group comparison of a sleep-deprived arm against a separately-recruited normally-sleeping control arm, with NO within-subject baseline cognitive testing and NO successful randomization of ability: the deprived arm was 2.7 Shipley IQ points higher at screening. That single confound is larger than any plausible effect the study was looking for, and it points in the direction that would MASK a deprivation deficit. Severely underpowered: n = 61 total gives a minimum detectable effect of d = 0.72 (about 11 IQ points) at 80% power, so it cannot speak to the small decrements that are actually at issue. It also failed to detect the well-established attention deficit (PASAT g = -0.08) that 34-36 h of wakefulness should reliably produce, which means the battery or the timing of testing lacked sensitivity rather than that sleep loss lacked effect. Time of day of testing relative to the circadian nadir is not reported in the extract I retrieved. Effect sizes are my computations from the dissertation's descriptive tables, not published effect sizes."
+funding: "Not stated in the retrieved text."
+notes: |
+  THIS RECORD ANSWERS TASK ITEM 6 - "is measured IQ depressed by acute sleep loss on test day, and by how much" - and the
+  answer that the literature actually supports is narrower and less dramatic than the question implies.
+
+  WHAT THIS STUDY SHOWS: after 34-36 h of continuous total sleep deprivation, a WAIS-R short-form full-scale IQ estimate was
+  NOT lower than in rested controls. The point estimate is +3.6 IQ points in the deprived group's favour, and 2.7 of those
+  points were present at screening before anyone lost sleep. The authors' own ANCOVA, adjusting for screening IQ, gives
+  F(1,56) = 0.46, p = .500. Their title states the conclusion: total sleep deprivation "does not selectively impair higher
+  cortical functioning".
+
+  WHAT IT DOES NOT SHOW, and I want this to be impossible to misread: it does not show that acute sleep loss is harmless. It is
+  underpowered (MDE about 11 IQ points) and it failed its own positive control (no PASAT attention deficit either). The single
+  defensible quantitative claim is the LOWER CONFIDENCE BOUND: 34-36 h without sleep does not cost more than about 1.8
+  full-scale IQ points on a psychometric IQ short form. That bound is the useful contribution.
+
+  WHY THIS IS THE RIGHT ANSWER ANYWAY, converging from three independent directions:
+  (1) lim2010 pooled 70 articles of short-term total sleep deprivation and found REASONING accuracy - the domain closest to
+      psychometric g - to be the SMALLEST and only non-significant effect in the entire meta-analysis (g = -0.125, 95% CI
+      [-0.27, 0.02]), against g = -0.776 for lapses of simple attention. A 6-fold domain gradient.
+  (2) campbell2024, in the target age band, found working memory completely unaffected by 4 nights at 7 h TIB while vigilance
+      moved substantially.
+  (3) astill2012 pooled the child literature and found intelligence the least-established of eight cognitive subdomains
+      (r = 0.10, p = .08, k = 6).
+  Independent designs, independent samples, same conclusion: PSYCHOMETRIC ABILITY MEASURES ARE THE MOST SLEEP-RESISTANT
+  COGNITIVE OUTCOMES THAT EXIST. A model that converts a vigilance g into IQ points at 1:1 will overstate the IQ effect by
+  roughly the ratio of those two numbers.
+
+  IMPORTANT SCOPE LIMIT FOR THE TARGET SUBJECT: this is ACUTE TOTAL deprivation in a laboratory on a single test day, tested
+  once. It says nothing about (a) chronic partial restriction over three years, which is the actual exposure, (b) LEARNING -
+  the mechanism by which chronic short sleep would plausibly lower a measured ability score is not same-day performance
+  decrement but degraded consolidation and reduced effective instruction over years, for which see huang2016 (GRE vocabulary
+  cued recall, g = -0.55) and the school-performance records, or (c) high-stakes timed testing under time pressure, which was
+  not the format here. The absence of a same-day IQ decrement is entirely compatible with a chronic cumulative cost.
+
+  ACCESS NOTE: the peer-reviewed Sleep 1999 paper is paywalled. Every number above comes from the author's LSU dissertation on
+  the same sample (n = 32 control, n = 29 deprived, 34-36 h protocol, WAIS-R short form, PASAT, Booklet Category Test, word
+  fluency), which the Sleep abstract matches on design, n, protocol duration, and conclusion. I have set access_tier to
+  full_text with secondhand_via naming the dissertation, because the numbers were read from a primary document by the same
+  author about the same study, but a checker should know the tables are the dissertation's tables. The four-subtest WAIS-R short
+  form used correlates .95 with the full battery per the dissertation's citation of Silverstein (1982), and the dissertation
+  reports the WAIS-R short form correlating r = .57 with the Shipley screening IQ in this sample.
+shard: "s02_cognition_meta"

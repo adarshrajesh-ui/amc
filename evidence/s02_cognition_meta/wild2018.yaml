@@ -1,0 +1,236 @@
+study_id: wild2018
+citation: "Wild CJ, Nichols ES, Battista ME, Stojanoski B, Owen AM. Dissociable effects of self-reported daily sleep duration on high-level cognitive abilities. Sleep. 2018;41(12):zsy182."
+doi: "10.1093/sleep/zsy182"
+pmid: "30212878"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6289236/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Dissociable effects of self-reported daily sleep duration on high-level cognitive abilities"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 10886
+n_studies_pooled: null
+population:
+  age_mean: 41.7
+  age_range: [18, 100]
+  pct_female: 62.4
+  country: "multinational (>=95% primarily English-speaking at home)"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: cognition
+    outcome_construct: cbs_overall_composite
+    exposure: {type: habitual_short_sleep, dose_h: 4.0, referent_h: 7.38, duration_days: 30, contrast_label: "self-reported typical 4 h/night vs the model-estimated optimum (7.38 h), past month"}
+    scale: hedges_g
+    unit: "SD of the 12-test overall composite"
+    value: -0.26
+    se: 0.0246
+    ci: [-0.308, -0.212]
+    conversion_formula: "Value as published. SE backed out of the reported t: SE = 0.26/10.55 = 0.02464; CI = value +/- 1.96*SE. Independently reproduced from the published OLS coefficients (Table 1: linear 0.045, quadratic -0.023, sleep mean-centred at 6.42 h): delta(x) = A*((x - 6.42) - c*)^2 with c* = -B/(2A) = 0.9783, giving delta(4.0) = -0.2656, i.e. the paper's 0.26 to within rounding."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse overall cognition than optimal sleepers"
+    covariates: ["age", "gender", "education", "anxiety frequency", "depression frequency"]
+    followup_years: null
+    cohort_family: "Cambridge_Brain_Sciences_2018"
+    quote: "This figure shows, for example, that reasoning, verbal, and overall performance scores for participants who reportedly slept only 4 hours per night were on average 0.20, 0.20, and 0.26 SDs lower, respectively, than participants who slept the optimal amount (reasoning: t(10865) = 7.94, p < 0.001; verbal t(10865) = 7.19, p < 0.001, overall t(10865) = 10.55, p < 0.001)."
+  - outcome_domain: cognition
+    outcome_construct: cbs_reasoning_composite
+    exposure: {type: habitual_short_sleep, dose_h: 4.0, referent_h: 7.16, duration_days: 30, contrast_label: "self-reported typical 4 h/night vs the model-estimated optimum (7.16 h), past month"}
+    scale: hedges_g
+    unit: "SD of the reasoning composite"
+    value: -0.20
+    se: 0.0252
+    ci: [-0.249, -0.151]
+    conversion_formula: "Value as published. SE = 0.20/7.94 = 0.02519 from the reported t; CI = value +/- 1.96*SE. Reproduced from Table 1 coefficients (linear 0.030, quadratic -0.020, c* = 0.75): delta(4.0) = -0.2010."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse reasoning than optimal sleepers. THIS IS THE MOST IQ-LOADED COMPOSITE IN THE STUDY."
+    covariates: ["age", "gender", "education", "anxiety frequency", "depression frequency"]
+    followup_years: null
+    cohort_family: "Cambridge_Brain_Sciences_2018"
+    quote: "reasoning, verbal, and overall performance scores for participants who reportedly slept only 4 hours per night were on average 0.20, 0.20, and 0.26 SDs lower, respectively, than participants who slept the optimal amount"
+  - outcome_domain: cognition
+    outcome_construct: cbs_verbal_composite
+    exposure: {type: habitual_short_sleep, dose_h: 4.0, referent_h: 7.44, duration_days: 30, contrast_label: "self-reported typical 4 h/night vs the model-estimated optimum (7.44 h), past month"}
+    scale: hedges_g
+    unit: "SD of the verbal composite"
+    value: -0.20
+    se: 0.0278
+    ci: [-0.255, -0.145]
+    conversion_formula: "Value as published. SE = 0.20/7.19 = 0.02782 from the reported t. Reproduced from Table 1 coefficients (linear 0.036, quadratic -0.017, c* = 1.0588): delta(4.0) = -0.2057."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse verbal ability than optimal sleepers"
+    covariates: ["age", "gender", "education", "anxiety frequency", "depression frequency"]
+    followup_years: null
+    cohort_family: "Cambridge_Brain_Sciences_2018"
+    quote: "reasoning, verbal, and overall performance scores for participants who reportedly slept only 4 hours per night were on average 0.20, 0.20, and 0.26 SDs lower, respectively, than participants who slept the optimal amount"
+  - outcome_domain: cognition
+    outcome_construct: cbs_overall_composite
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 7.38, duration_days: 30, contrast_label: "self-reported typical 5.5 h/night vs optimum (7.38 h) - DERIVED, matches the subject's habitual weekday sleep"}
+    scale: hedges_g
+    unit: "SD of the 12-test overall composite"
+    value: -0.083
+    se: 0.0133
+    ci: [-0.109, -0.057]
+    conversion_formula: "DERIVED by me from the published Table 1 OLS coefficients, not printed in the paper. Model: score = B*c + A*c^2 with c = (hours - 6.42) mean-centred; B = 0.045 (SE 0.007), A = -0.023 (SE 0.003). Vertex c* = -B/(2A) = 0.9783 (x* = 7.398 h, paper reports 7.38). Decrement from the optimum: delta(c) = A*(c - c*)^2. At x = 5.5, c = -0.92, delta = -0.023*(-1.9183)^2 = -0.0829. SE by the delta method with Cov(A,B) assumed 0: dDelta/dA = c^2 - B^2/(4A^2) = -0.1106, dDelta/dB = c - c* = -1.8983, SE = sqrt((0.1106*0.003)^2 + (1.8983*0.007)^2) = 0.0133. CALIBRATION OF THAT SE: applying the identical delta method at x = 4.0 gives SE 0.0280 versus the paper's t-implied 0.0246, i.e. my method is ~14% conservative, so 0.0133 is a slight over-statement of uncertainty rather than an under-statement."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse overall cognition than optimal sleepers"
+    covariates: ["age", "gender", "education", "anxiety frequency", "depression frequency"]
+    followup_years: null
+    cohort_family: "Cambridge_Brain_Sciences_2018"
+    quote: "The x-coordinate of a parabola's vertex (e.g. the optimal amount of sleep) was simply calculated as x= -B2A where A was the estimated coefficient for the variable-squared term, and B was the coefficient for the linear term."
+  - outcome_domain: cognition
+    outcome_construct: cbs_reasoning_composite
+    exposure: {type: habitual_short_sleep, dose_h: 5.5, referent_h: 7.16, duration_days: 30, contrast_label: "self-reported typical 5.5 h/night vs optimum (7.16 h) - DERIVED, matches the subject's habitual weekday sleep"}
+    scale: hedges_g
+    unit: "SD of the reasoning composite"
+    value: -0.056
+    se: 0.0117
+    ci: [-0.079, -0.033]
+    conversion_formula: "DERIVED as above from Table 1: B = 0.030 (SE 0.007), A = -0.020 (SE 0.003), c* = 0.75. At x = 5.5, c = -0.92, delta = -0.020*(-1.67)^2 = -0.0558. Delta-method SE (Cov = 0) = 0.0117; the same method at x = 4.0 yields 0.0273 vs the paper's t-implied 0.0252, i.e. ~8% conservative."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse reasoning than optimal sleepers"
+    covariates: ["age", "gender", "education", "anxiety frequency", "depression frequency"]
+    followup_years: null
+    cohort_family: "Cambridge_Brain_Sciences_2018"
+    quote: "The optimal amount of sleep was found to be 7.16 (95% CI = 6.78-7.74), 7.44 (95% CI = 6.92-8.43), and 7.38 (95% CI = 7.02-7.91) hours for reasoning, verbal, and overall abilities, respectively."
+  - outcome_domain: cognition
+    outcome_construct: cbs_short_term_memory_composite
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: 30, contrast_label: "linear + quadratic effect of typical sleep duration on the short-term memory composite"}
+    scale: raw_units
+    unit: "delta R-squared for the joint linear+quadratic sleep term"
+    value: 0.001
+    se: null
+    ci: null
+    conversion_formula: "Table 2, LR test of the joint linear+quadratic typical-sleep-duration term on the STM composite: LR = 8.55, p = 0.014, p_adj = 0.198 (non-significant after correction for 14.27 effective comparisons), delta R2 = 0.001, f2 = 0.001, BF01 = 151.113. Recorded as delta R2 rather than an SD decrement because the quadratic term was not significant, so no vertex (and hence no decrement-from-optimum) could be estimated."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "essentially zero: strong Bayesian evidence FOR the null. Short-term memory is not related to habitual sleep duration in this sample."
+    covariates: ["age", "gender", "education", "anxiety frequency", "depression frequency"]
+    followup_years: null
+    cohort_family: "Cambridge_Brain_Sciences_2018"
+    quote: "No significant relationship was observed between sleep duration and performance in the STM domain. Bayesian comparisons support these conclusions (Table 2, Supplementary Figure S1B), offering very strong evidence (BF10 > 1000) that reported sleep duration was associated with reasoning, verbal, and overall ability, whereas there was very strong evidence (BF01 > 150) that STM performance had no such association with sleep."
+  - outcome_domain: cognition
+    outcome_construct: age_slope_of_cbs_overall_composite
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "cross-sectional decline in the overall composite per year of age, ages 18-100"}
+    scale: per_hour_beta
+    unit: "SD of overall composite per year of age"
+    value: -0.033
+    se: 0.001
+    ci: [-0.035, -0.032]
+    conversion_formula: "Table 1, 'Age at test' row, Overall score: Coef -0.033, SE 0.001, t = -48.10, 95% CI [-0.035, -0.032]. THIS IS THE EXCHANGE RATE THAT GENERATES THE PAPER'S HEADLINE 'YEARS OF AGEING' CLAIM: 1 SD of overall composite = 1/0.033 = 30.3 years of cross-sectional ageing, so the 4-h decrement of 0.2656 SD = 8.05 years (paper reports 7.86 y using unrounded coefficients). Corresponding slopes are -0.022 SD/y for reasoning (1 SD = 45.5 y) and -0.012 SD/y for verbal (1 SD = 83.3 y), which is why the SAME 0.20 SD decrement is reported as 9.04 years for reasoning but 17.0 years for verbal. Unit is labelled per_hour_beta only because the schema enum lacks a per-year option; the actual denominator is ONE YEAR OF AGE, not one hour of sleep."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = older age associated with worse performance. Not a sleep effect; recorded so the pooler can audit and, if it wishes, undo the paper's years-of-ageing conversion."
+    covariates: ["gender", "education", "anxiety frequency", "depression frequency", "typical sleep duration"]
+    followup_years: null
+    cohort_family: "Cambridge_Brain_Sciences_2018"
+    quote: "Age at test | STM | -0.025 | 0.001 | -34.76 | 0.000 | -0.027 | -0.024 | Reasoning | -0.022 | 0.001 | -31.11 | 0.000 | -0.024 | -0.021 | Verbal | -0.012 | 0.001 | -15.23 | 0.000 | -0.014 | -0.011 | Overall | -0.033 | 0.001 | -48.10 | 0.000 | -0.035 | -0.032"
+  - outcome_domain: sleep_need
+    outcome_construct: optimum_sleep_duration_for_overall_cognition
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 30, contrast_label: "vertex of the fitted inverted-U, overall composite"}
+    scale: hours
+    unit: "hours of self-reported typical sleep per night"
+    value: 7.38
+    se: null
+    ci: [7.02, 7.91]
+    conversion_formula: "Vertex of the fitted quadratic, x* = -B/(2A); 95% CI by Fieller's method as reported by the authors. Companion values: reasoning 7.16 h (95% CI 6.78-7.74), verbal 7.44 h (95% CI 6.92-8.43). CI is asymmetric because it comes from Fieller's method, so no symmetric SE exists."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "higher = more sleep needed for peak performance; this is the referent for all the decrements above"
+    covariates: ["age", "gender", "education", "anxiety frequency", "depression frequency"]
+    followup_years: null
+    cohort_family: "Cambridge_Brain_Sciences_2018"
+    quote: "The optimal amount of sleep was found to be 7.16 (95% CI = 6.78-7.74), 7.44 (95% CI = 6.92-8.43), and 7.38 (95% CI = 7.02-7.91) hours for reasoning, verbal, and overall abilities, respectively."
+  - outcome_domain: cognition
+    outcome_construct: detection_threshold_hours_for_impairment
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 30, contrast_label: "shortest sleep duration at which a decrement from peak is statistically detectable"}
+    scale: hours
+    unit: "hours of self-reported typical sleep per night"
+    value: 6.26
+    se: null
+    ci: null
+    conversion_formula: "Overall composite. Companion thresholds: 5.97 h for reasoning and 6.06 h for verbal. Read directly from the reported values, not from the figure."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "sleeping at or below this many hours produces a detectable decrement from peak overall cognition. The subject's ~5.5 h weekday sleep is BELOW all three thresholds."
+    covariates: ["age", "gender", "education", "anxiety frequency", "depression frequency"]
+    followup_years: null
+    cohort_family: "Cambridge_Brain_Sciences_2018"
+    quote: "Figure 4 also indicates that we could reliably detect an impairment (i.e. a difference from optimal performance, p < 0.05 uncorrected) for 5.97, 6.06, and 6.26 hours of sleep for reasoning, verbal, and overall scores. In our sample, 48.9% of participants reported getting typically less than 6.30 hours of sleep per night in the past month."
+  - outcome_domain: recovery
+    outcome_construct: sleep_delta_optimum_relative_to_habitual
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: null, duration_days: 1, contrast_label: "hours slept the night before testing minus habitual hours, value maximising overall performance"}
+    scale: hours
+    unit: "hours more than usual on the night before testing"
+    value: 1.18
+    se: null
+    ci: [0.249, 2.762]
+    conversion_formula: "Vertex of the fitted quadratic in 'sleep delta' for the overall composite, 95% CI by Fieller's method. Reasoning gave 1.30 h (95% CI -0.235 to 7.377), i.e. far less precisely located."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = sleeping MORE than usual the night before testing improved same-day performance, up to about 1.2 h extra; beyond ~2.8 h extra the benefit reverses"
+    covariates: ["age", "gender", "education", "anxiety frequency", "depression frequency", "typical sleep duration", "typical duration x delta interaction"]
+    followup_years: null
+    cohort_family: "Cambridge_Brain_Sciences_2018"
+    quote: "The location of the maximum occurred at a delta of 1.30 hours (95% CI = -0.235 to 7.377) and 1.18 hours (95% CI = 0.249-2.762) for reasoning and overall scores, respectively. This implies that sleeping around 1.18 hours more than usual was associated with best overall cognitive performance"
+rob:
+  tool: ROBINS-I
+  judgement: high
+  notes: "Cross-sectional, self-reported exposure, self-selected internet volunteers recruited by Facebook/Twitter advertising, no objective sleep measurement, education/anxiety/depression adjusted only as coarse categorical variables, no adjustment for shift work, medication, caffeine, or physical health. Authors state the causal limitation explicitly. Confounding by reverse causation (poor cognition/mental health causing atypical reported sleep) is plausible and only partly addressed. Two mitigations are worth crediting: a sensitivity analysis restricted to +/-1.5 SD of mean sleep gave the same pattern, and the DOMAIN-SPECIFIC pattern (reasoning and verbal affected, STM not) rules out any confounder that would act uniformly across all tests."
+funding: "Not extracted from the record."
+notes: |
+  THE 'YEARS OF AGEING' DELIVERABLE. The paper's headline is: "In terms of overall cognition, a self-reported typical
+  sleep duration of 4 hours per night was equivalent to aging 8 years", restated in the Discussion as "For those who slept
+  even less - four hours per night - the impairment was equivalent to adding almost 8 years to their age."
+  CRITICAL AUDIT POINT FOR THE DOWNSTREAM MODEL: that "8 years" is NOT an IQ-scale statement and is NOT a longitudinal
+  ageing statement. It is produced entirely inside this study by dividing the sleep-related decrement in the CBS overall
+  composite by this study's own CROSS-SECTIONAL age slope on the same composite (-0.033 SD per year). Any figure of the
+  form "X hours of sleep loss = Y years of ageing" therefore inherits (a) the cross-sectional age gradient of a
+  self-selected internet sample, and (b) whichever composite was chosen. The choice of composite changes the answer by a
+  factor of TWO: the same 0.20 SD decrement is "9.04 years" on reasoning but "17.0 years" on verbal, purely because verbal
+  ability declines more slowly with age. The paper contains no statement in IQ units.
+
+  SHAPE OF THE RELATIONSHIP (tasked question): inverted U, confirmed. Quadratic term negative and significant for reasoning
+  (LR = 36.99, p_adj < 0.001), verbal (LR = 22.40) and overall (LR = 51.38); NOT significant for short-term memory
+  (LR = 2.03, p = 0.154, BF01 = 37.7). Optimum 7.16-7.44 h depending on domain, ~7.38 h overall. Age-invariant: the
+  Age x typical-sleep-duration interaction was null for every composite (BF01 > 1000 for all four), so the optimum does not
+  move with age within 18-100 y.
+
+  DECREMENT AT 5-6 H (tasked question), derived by me from the published coefficients and tabulated here for the pooler:
+    hours   overall     reasoning   verbal      (SD below the respective optimum)
+    4.0     -0.266      -0.201      -0.206
+    5.0     -0.132      -0.094      -0.105
+    5.5     -0.083      -0.056      -0.067
+    6.0     -0.045      -0.027      -0.037
+    6.5     -0.019      -0.009      -0.016
+    7.0     -0.004      -0.001      -0.004
+  So a habitual 5-6 h sleeper sits 0.045-0.132 SD below peak on the overall composite, about one third to one half of the
+  4-h decrement, and the curve is strongly non-linear: the marginal cost of the hour from 5 to 4 is roughly three times the
+  cost of the hour from 6 to 5. In this study's own ageing metric, 5.5 h corresponds to about 2.5 years of ageing on both
+  the overall and the reasoning composite, NOT 8 years.
+
+  APPLICABILITY WARNING: mean age 41.7 y (SD 14.3) and the authors state "We also cannot conclude that these results apply
+  to children and adolescents, given that they were not included in the study." Set adolescent_match to poor_midlife.
+  Self-report bias direction is stated by the authors to inflate the estimated effect: "people tended to over-report how
+  much they actually slept, and that over-report was greater for people who actually slept less. If this were the case in
+  our study, then our results would slightly overestimate the size of the sleep-related effect on cognition and the optimal
+  amount of sleep."
+
+  BATTERY STRUCTURE (relevant to the IQ conversion, see iq_conversion_basis.md): the composites are not a single g. The 12
+  tests were projected onto "the 12 x 3 matrix of varimax-rotated principal component weights (i.e. factor loadings) from
+  Hampshire et al." - i.e. three separable components (STM, reasoning, verbal), and the "overall" score is a simple average
+  of 12 z-scores rather than a g factor score. Because one of the three components (STM) is demonstrably UNRELATED to sleep
+  duration, the overall composite understates the reasoning/verbal effect and cannot be read as an IQ-equivalent SD.
+
+  Sample construction: 40,105 registered, 16,812 completed everything, exclusions for age <18 or >100 (1,175), sleep 0 or
+  >16 h (514), missing data (3,853), score outliers (54 + 242), leaving 10,886 (6,797 female, 4,013 male, 76 other).
+  Reported mean typical sleep 6.42 h (SD 1.28); mean sleep the night before testing 6.88 h (SD 1.67).
+shard: "s02_cognition_meta"

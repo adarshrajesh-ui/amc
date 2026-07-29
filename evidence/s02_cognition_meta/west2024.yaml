@@ -1,0 +1,123 @@
+study_id: west2024
+citation: "West R, Wong RTC, Park J-E, Lee SWH, Rani D, Mazidi M, Chalmers J. Sleep duration, chronotype, health and lifestyle factors affect cognition: a UK Biobank cross-sectional study. BMJ Public Health. 2024;2(1):e001000."
+doi: "10.1136/bmjph-2024-001000"
+pmid: "40018197"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11841639/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep duration, chronotype, health and lifestyle factors affect cognition: a UK Biobank cross-sectional study."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: cross_sectional
+tier: TX
+n: 26820
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [40, 69]
+  pct_female: null
+  country: "UK"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: cognition
+    outcome_construct: global_cognitive_z_score_cohort1
+    exposure: {type: habitual_short_sleep, dose_h: 6.0, referent_h: 8.0, duration_days: null, contrast_label: "self-reported habitual sleep <7 h (short) vs 7-9 h (normal); short sleep is the model reference so the sign is flipped here"}
+    scale: hedges_g
+    unit: null
+    value: -0.0567
+    se: 0.0140
+    ci: [-0.0842, -0.0292]
+    conversion_formula: "Table 2, Cohort 1: 'Sleep duration (normal) | 0.0567*** | SE 0.0140 | 95% CI 0.0292 to 0.0842'. Short sleep is the reference category, so the coefficient is the ADVANTAGE of normal sleep; the short-sleep effect is its negation, -0.0567. The outcome is already a standardized global z-score (mean of z-scored Fluid Intelligence, Pairs Matching, Reaction Time, Prospective Memory), so the coefficient is already in SD units and needs no rescaling. SE taken directly from the table; CI-implied SE = (0.0842-0.0292)/3.92 = 0.0140, consistent."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse global cognition in habitual short sleepers"
+    covariates: ["age", "sex", "chronotype", "sleeplessness/insomnia", "cancer", "heart attack", "angina", "stroke", "high blood pressure", "diabetes", "alcohol intake", "smoking", "BMI"]
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "Sleep duration (normal) | 0.0567*** | 0.0052ns | 0.0140 | 0.0136 | 0.0292 to 0.0842 | −0.0214 to 0.0318"
+  - outcome_domain: cognition
+    outcome_construct: global_cognitive_z_score_cohort2
+    exposure: {type: habitual_short_sleep, dose_h: 6.0, referent_h: 8.0, duration_days: null, contrast_label: "self-reported habitual sleep <7 h (short) vs 7-9 h (normal), independent replication cohort, 2 tests only"}
+    scale: hedges_g
+    unit: null
+    value: -0.0052
+    se: 0.0136
+    ci: [-0.0318, 0.0214]
+    conversion_formula: "Table 2, Cohort 2: 'Sleep duration (normal) | 0.0052ns | SE 0.0136 | 95% CI -0.0214 to 0.0318'. Sign flipped as above. NOT statistically significant: this is a failed replication of the Cohort 1 short-sleep penalty in the same biobank, using a 2-test battery (Pairs Matching and Reaction Time) that omits the Fluid Intelligence test."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse global cognition in habitual short sleepers; CI crosses zero, i.e. no detectable effect"
+    covariates: ["age", "sex", "chronotype", "sleeplessness/insomnia", "cancer", "heart attack", "angina", "stroke", "high blood pressure", "diabetes", "alcohol intake", "smoking", "BMI"]
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "Sleep duration (normal) | 0.0567*** | 0.0052ns | 0.0140 | 0.0136 | 0.0292 to 0.0842 | −0.0214 to 0.0318"
+  - outcome_domain: cognition
+    outcome_construct: global_cognitive_z_score_long_sleep_contrast
+    exposure: {type: habitual_short_sleep, dose_h: 9.5, referent_h: 6.0, duration_days: null, contrast_label: "self-reported habitual sleep >9 h (long) vs <7 h (short, reference), Cohort 1"}
+    scale: hedges_g
+    unit: null
+    value: -0.1880
+    se: 0.0468
+    ci: [-0.2797, -0.0963]
+    conversion_formula: "Table 2, Cohort 1: 'Sleep duration (long) | -0.1880*** | SE 0.0468 | -0.2797 to -0.0963'. Reference is SHORT sleep, so long sleepers score 0.188 SD BELOW short sleepers. Cohort 2 gives -0.2619 (SE 0.0432, CI -0.3465 to -0.1773). Recorded as the U-shape reference arm."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = long sleepers worse than short sleepers; the long-sleep penalty is 3.3x the short-sleep penalty in Cohort 1 and replicates while the short-sleep penalty does not"
+    covariates: ["age", "sex", "chronotype", "sleeplessness/insomnia", "cancer", "heart attack", "angina", "stroke", "high blood pressure", "diabetes", "alcohol intake", "smoking", "BMI"]
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "Sleep duration (long) | −0.1880*** | −0.2619*** | 0.0468 | 0.0432 | −0.2797 to −0.0963 | −0.3465 to −0.1773"
+  - outcome_domain: cognition
+    outcome_construct: age_slope_of_global_cognitive_z_score
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "one additional year of chronological age, same adjusted model"}
+    scale: per_hour_beta
+    unit: "SD of global cognitive z-score per year of age"
+    value: -0.0177
+    se: 0.0008
+    ci: [-0.0193, -0.0162]
+    conversion_formula: "Table 2, Cohort 1: 'Age | -0.0177*** | SE 0.0008 | -0.0193 to -0.0162'. Cohort 2 gives -0.0264 (SE 0.0008). Recorded as the SCALING RULER, not as an exposure effect: dividing the short-sleep penalty by this slope gives the 'years of ageing' equivalent, 0.0567/0.0177 = 3.2 years in Cohort 1 (and 0.0052/0.0264 = 0.2 years in Cohort 2). scale is per_hour_beta because the schema has no per_year option; the unit field carries the real denominator."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = cognition declines with age in this midlife-to-elderly cross-section"
+    covariates: ["sex", "sleep duration", "chronotype", "sleeplessness/insomnia", "cancer", "heart attack", "angina", "stroke", "high blood pressure", "diabetes", "alcohol intake", "smoking", "BMI"]
+    followup_years: null
+    cohort_family: "UK_Biobank"
+    quote: "Age | −0.0177*** | −0.0264*** | 0.0008 | 0.0008 | −0.0193 to −0.0162 | −0.0279 to −0.0249"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: high
+  notes: "Cross-sectional; self-reported categorical sleep duration; short-sleep result does not replicate across the paper's own two cohorts. Sleep duration was categorized <7 / 7-9 / >9 h so no per-hour slope is estimable. Same brief unvalidated UK Biobank touchscreen battery as kyle2017, and Cohort 2 lacks the Fluid Intelligence test entirely. Education is NOT in the adjustment set (unlike kyle2017), so these estimates are less confounder-adjusted than kyle2017's on the strongest single confounder of cognitive test performance. Cook's distance flagged 5.93% / 4.83% of points as outliers and they were retained. The two cohorts are drawn from the same biobank and must not be pooled as independent evidence with kyle2017."
+funding: "Not stated in the retrieved text; BMJ Public Health open access."
+notes: |
+  HEAVILY OVERLAPPING SAMPLE WITH kyle2017 - both are UK Biobank. cohort_family is set to UK_Biobank on every effect so
+  the pooler can collapse them. kyle2017 has ~4-17x the analytic n per outcome and adjusts for education, so if only one
+  UK Biobank record is to be used, use kyle2017 and treat west2024 as a sensitivity check.
+
+  n is recorded as 26,820 = the sum of the two analysis cohorts (10,067 + 16,753) described in Table 1: "Cohort 1
+  contained 10 067 participants who undertook four cognitive tests (Fluid Intelligence, Prospective Memory, Paired
+  Associated Learning, and Reaction Time). Cohort 2 contained 16 753 participants who undertook two cognitive tests only
+  (Paired Associated Learning and Reaction Time)." The cohorts are analysed separately, so each effect above applies to
+  one cohort's n, not to the sum.
+
+  DISCREPANCY TO REPORT: the abstract gives the Cohort 1 normal-sleep CI as "95% CI 0.0284 to 0.0851" and the Cohort 1
+  long-sleep CI as "-0.2938 to -0.0822", whereas Table 2 gives 0.0292 to 0.0842 and -0.2797 to -0.0963 respectively. I
+  have used the Table 2 values because they come with the matching SEs. The differences do not change any inference.
+
+  SHAPE OF THE RELATIONSHIP: "For Cohort 1, the data show an inverted U-shaped curve, signifying optimal cognitive
+  function among individuals reporting 6-9 hours of sleep, with performance diminishing among those with shorter or longer
+  sleep durations. In contrast, Cohort 2 shows a relatively stable cognitive function across individuals sleeping 5-9
+  hours." Note that Cohort 1's own optimum plateau starts at SIX hours, which sits inside the subject's weekday 5-6 h
+  band; and Cohort 2 finds performance flat from 5 h upward. Neither cohort supports a steep penalty in the 5-6 h range
+  in midlife.
+
+  "YEARS OF AGEING" EQUIVALENT (derived by me, not stated by the authors): the short-sleep penalty divided by the age
+  slope is 0.0567/0.0177 = 3.2 years in Cohort 1 and 0.0052/0.0264 = 0.2 years in Cohort 2. The 15-fold spread between
+  the two cohorts of the same biobank is the honest uncertainty on any such statement. This is an age-equivalence, NOT an
+  IQ-point statement; see iq_conversion_basis.md.
+
+  The largest coefficient in the whole model is not a sleep variable: never/occasional alcohol consumption carries
+  beta = -0.2971 relative to daily drinkers, which is 5x the short-sleep penalty and is obviously not a causal effect of
+  abstinence. That is the clearest available illustration of how much residual confounding lives in this design.
+shard: "s02_cognition_meta"

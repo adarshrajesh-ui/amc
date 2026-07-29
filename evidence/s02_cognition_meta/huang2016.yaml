@@ -1,0 +1,127 @@
+study_id: huang2016
+citation: "Huang S, Deshpande A, Yeo SC, Lo JC, Chee MW, Gooley JJ. Sleep Restriction Impairs Vocabulary Learning when Adolescents Cram for Exams: The Need for Sleep Study. Sleep. 2016;39(9):1681-1690."
+doi: "10.5665/sleep.6092"
+pmid: "27253768"
+url: "https://europepmc.org/articles/PMC4989257"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep Restriction Impairs Vocabulary Learning when Adolescents Cram for Exams: The Need for Sleep Study."
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 56
+n_studies_pooled: null
+population:
+  age_mean: 16.6
+  age_range: [15, 19]
+  pct_female: 55.4
+  country: "Singapore"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: academic
+    outcome_construct: gre_vocabulary_cued_recall_retention_phase
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "5 h TIB vs 9 h TIB, main effect of TIB on cued recall across the retention phase (0 h, 24 h, 120 h)"}
+    scale: hedges_g
+    unit: null
+    value: -0.408
+    se: 0.271
+    ci: [-0.938, 0.123]
+    conversion_formula: "Derived by me from Table 2: eta2 = 0.041 for the TIB main effect (LR chi2 = 17.29, P < 0.001). For a two-group factor, d = 2*sqrt(eta2/(1-eta2)) = 2*sqrt(0.041/0.959) = 0.4135; Hedges' correction J = 1 - 3/(4*54-1) = 0.9860 gives g = 0.4078, sign set negative for harm. SE(g) = sqrt(1/30 + 1/26 + g^2/(2*56)) = 0.2707. CAVEAT: the eta2 comes from a multi-factor likelihood-ratio model (Spacing, TIB, Session, Order plus interactions), so it behaves partly like a partial eta2 and this conversion is approximate; the significant LR test (P < 0.001) is inconsistent with the wide CI, which reflects that the published test exploits the repeated-measures structure while my between-group SE formula does not. Treat the point estimate as usable and the SE as conservative."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = worse cued recall of studied vocabulary under sleep restriction"
+    covariates: ["study spacing", "test session", "presentation order"]
+    followup_years: null
+    cohort_family: "Need_for_Sleep_Study"
+    quote: "Factor | Retention Phase Review Phase | LR χ2 P η2 LR χ2 P η2 | Spacing 61.65 < 0.001* 0.150 21.28 < 0.001* 0.077 | TIB 17.29 < 0.001* 0.041 7.55 < 0.01* 0.027"
+  - outcome_domain: academic
+    outcome_construct: gre_vocabulary_cued_recall_after_review_session
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "5 h TIB vs 9 h TIB, main effect of TIB on cued recall after a one-time review of all 40 items"}
+    scale: hedges_g
+    unit: null
+    value: -0.329
+    se: 0.270
+    ci: [-0.857, 0.200]
+    conversion_formula: "Derived from Table 2 review-phase eta2 = 0.027 (LR chi2 = 7.55, P < 0.01) by the same route: d = 2*sqrt(0.027/0.973) = 0.3332, g = 0.3285, SE = 0.2697. Recorded because it quantifies how much a review session RECOVERS: the TIB penalty shrinks from g = -0.41 to g = -0.33, i.e. re-studying recovers only about a fifth of the deficit."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = worse cued recall under sleep restriction, after a remedial review session"
+    covariates: ["study spacing", "test session", "presentation order"]
+    followup_years: null
+    cohort_family: "Need_for_Sleep_Study"
+    quote: "Factor | Retention Phase Review Phase | LR χ2 P η2 LR χ2 P η2 | Spacing 61.65 < 0.001* 0.150 21.28 < 0.001* 0.077 | TIB 17.29 < 0.001* 0.041 7.55 < 0.01* 0.027"
+  - outcome_domain: academic
+    outcome_construct: spacing_by_tib_interaction_massed_vs_spaced_study
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7, contrast_label: "5 h vs 9 h TIB interaction with massed ('cramming') vs spaced study of the same 40 items"}
+    scale: hedges_g
+    unit: null
+    value: -0.282
+    se: 0.269
+    ci: [-0.809, 0.246]
+    conversion_formula: "Derived from Table 2 retention-phase Spacing x TIB eta2 = 0.020 (LR chi2 = 8.40, P < 0.01): d = 2*sqrt(0.020/0.980) = 0.2857, g = 0.2817, SE = 0.2693. THE POLICY-RELEVANT CELL: the sleep-restriction penalty is concentrated entirely in MASSED (crammed) material and is absent for SPACED material, so the harm is conditional on study strategy."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = the sleep-restriction penalty is larger for crammed than for spaced material"
+    covariates: ["test session", "presentation order"]
+    followup_years: null
+    cohort_family: "Need_for_Sleep_Study"
+    quote: "there remained a significant interaction between study spacing and TIB in which recall performance for massed items was worse in individuals exposed to 5 h of TIB versus 9 h of TIB (Tukey test, P < 0.01), while test scores were similar between sleep groups for spaced items (Tukey test, P = 0.99)."
+  - outcome_domain: exposure_measurement
+    outcome_construct: habitual_weekday_and_weekend_tst_of_the_enrolled_adolescents
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "actigraphic habitual sleep of the 56 enrolled adolescents during term time, measured at screening before any manipulation"}
+    scale: hours
+    unit: "hours of actigraphic total sleep time on weekday nights"
+    value: 5.50
+    se: 0.107
+    ci: [5.29, 5.71]
+    conversion_formula: "Table 1: weekday TST 5.37 +/- 0.73 h (9h TIB arm, n = 26) and 5.61 +/- 0.86 h (5h TIB arm, n = 30). Pooled mean = (26*5.37 + 30*5.61)/56 = 5.50 h; pooled SD = 0.803; SE = 0.803/sqrt(56) = 0.107. Weekend TST was 7.53 +/- 1.14 and 7.46 +/- 1.10, pooled 7.49 h. RECORDED AS AN EXPOSURE-CALIBRATION FACT, not an outcome: it establishes that a real cohort of 15-19 year olds carrying the target subject's exact sleep pattern was directly measured, so the subject's stated schedule is neither unusual nor extrapolated."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive; no direction of harm"
+    covariates: []
+    followup_years: null
+    cohort_family: "Need_for_Sleep_Study"
+    quote: "Weekday TST (h) 5.37 0.73 5.61 0.86 1.11 0.27 | Weekend TST (h) 7.53 1.14 7.46 1.10 0.21 0.84"
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "Same randomized parallel-group protocol as lo2016, so the same strengths: residential control of the exposure, actigraphy, balanced arms, blinding to allocation until day 1. Additional concerns specific to this paper: effect sizes are published only as eta-squared from likelihood-ratio models, so all g values here are my conversions rather than reported values; the outcome is a bespoke GRE-word flashcard task rather than a standardized achievement test; and the primary published finding is the SPACING x TIB interaction, meaning the main TIB effect I converted is an average over a condition where the effect is large and one where it is absent."
+funding: "National Medical Research Council Singapore (NMRC/STaR/0015/2013) and the Far East Organisation."
+notes: |
+  SAME PARTICIPANTS AS lo2016 - DO NOT DOUBLE-COUNT. Both papers report "the Need for Sleep Study": 56 adolescents aged
+  15-19, 9 h TIB n = 26 and 5 h TIB n = 30, and this paper cites lo2016 as its ref 22 and ref 55. cohort_family is set to
+  Need_for_Sleep_Study in both records. lo2016 carries the attention / working-memory / processing-speed outcomes;
+  huang2016 carries the vocabulary-learning outcome. They are complementary outcome sets on one sample, so the pooler
+  should treat them as one study contributing multiple correlated effects.
+
+  WHY THIS RECORD MATTERS DESPITE THE WIDE CIs: it is the only age-matched experimental evidence I found for an ACADEMIC,
+  exam-relevant outcome under exactly the target exposure. The subject's profile includes "occasional 3-4 h nights before
+  exams", i.e. cramming under sleep loss, and this study is a direct test of that: adolescents studied GRE-type vocabulary
+  either massed (crammed over one session) or spaced across 4 days, under 5 h vs 9 h TIB.
+
+  THE HEADLINE IS CONDITIONAL, AND THE CONDITION IS ACTIONABLE: "Spaced learning conferred strong resistance to the
+  effects of sleep restriction on memory, such that cued recall performance was similar in students exposed to 9 h of TIB
+  versus 5 h of TIB." The 5 h penalty on crammed material was significant (Tukey P < 0.01) while the penalty on spaced
+  material was not (Tukey P = 0.99). So for the target subject, the estimated harm to learned material depends more on
+  whether he spaces his study than on whether he sleeps 5 h or 9 h.
+
+  A review session does not undo it: after re-studying all 40 flashcards once, the massed-item deficit persisted
+  (Tukey P < 0.01) and the TIB main effect only fell from eta2 = 0.041 to 0.027.
+
+  CONVERSION ARITHMETIC I PERFORMED, spelled out so it can be checked or rejected:
+    d = 2*sqrt(eta2/(1-eta2)); J = 1 - 3/(4*df-1) with df = n1+n2-2 = 54; g = d*J; SE(g) = sqrt(1/n1+1/n2+g^2/(2n)).
+    retention TIB   eta2 0.041 -> d 0.4135 -> g 0.408, SE 0.271
+    review TIB      eta2 0.027 -> d 0.3332 -> g 0.329, SE 0.270
+    spacing x TIB   eta2 0.020 -> d 0.2857 -> g 0.282, SE 0.269
+  The published LR tests are significant at P < 0.001 / P < 0.01 while my CIs cross zero. That is not a contradiction: the
+  LR tests are computed within a repeated-measures model over multiple test sessions and item sets, which is far more
+  powerful than the between-group SE formula I used. I have kept the conservative SEs rather than reverse-engineering a
+  narrower one from the p-values, and flagged inferred_from_ci: true on all three.
+
+  NOTE ON RAVEN'S: RAPM was administered at screening only, as a group-matching variable (10.38 +/- 1.06 vs 9.77 +/- 1.98,
+  t = 1.43, P = 0.16). It was NOT re-administered under sleep restriction. So this cohort still provides no age-matched
+  experimental estimate of a fluid-intelligence decrement.
+shard: "s02_cognition_meta"

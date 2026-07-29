@@ -1,0 +1,172 @@
+study_id: lowe2017
+citation: "Lowe CJ, Safati A, Hall PA. The neurocognitive consequences of sleep restriction: A meta-analytic review. Neuroscience and Biobehavioral Reviews. 2017;80:586-604."
+doi: "10.1016/j.neubiorev.2017.07.010"
+pmid: "28757454"
+url: "https://pubmed.ncbi.nlm.nih.gov/28757454/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "The neurocognitive consequences of sleep restriction: A meta-analytic review"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: "PubMed abstract (PMID 28757454) plus the publisher's own Abstract and Discussion excerpt served on the ScienceDirect landing page for S0149763417301641; full text is paywalled and Unpaywall reports is_oa = false with no OA location."
+design: meta_analysis_of_trials
+tier: T1
+n: 1688
+n_studies_pooled: 61
+population:
+  age_mean: null
+  age_range: null
+  # age_range is null rather than [3, null] because the schema requires two numbers and the
+  # published age banding is open-ended at the top: "children (3-5 years), school-aged children
+  # (6-13 years), adolescents (14-17 years), young adults (18-30), adults (31-59), older adults
+  # (60+)". Lower bound 3 y, upper bound unbounded. Rather than invent a ceiling I have left the
+  # field null; the verbatim band list is preserved in notes below.
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: cognition
+    outcome_construct: overall_neurocognitive_composite
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null, contrast_label: "experimentally restricted sleep vs control/normal sleep, pooled across all cognitive domains"}
+    scale: hedges_g
+    unit: null
+    value: -0.383
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse cognitive performance under experimental sleep restriction"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Based on a sample of 61 studies, from 71 different populations, findings revealed a significant negative effect of sleep restriction on cognitive processing across cognitive domains (g=-0.383, p<0.001)."
+  - outcome_domain: cognition
+    outcome_construct: sustained_attention
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null, contrast_label: "experimentally restricted sleep vs control/normal sleep"}
+    scale: hedges_g
+    unit: null
+    value: -0.409
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse sustained attention under experimental sleep restriction; largest domain effect in this meta-analysis"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "This effect held for executive functioning (g=-0.324, p<0.001), sustained attention (g=-0.409, p<0.001), and long-term memory (g=-0.192, p=0.002)."
+  - outcome_domain: cognition
+    outcome_construct: attentional_lapses
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null, contrast_label: "experimentally restricted sleep vs control/normal sleep"}
+    scale: hedges_g
+    unit: null
+    value: -0.516
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = more attentional lapses under experimental sleep restriction; largest sub-domain effect reported"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "This effect was apparent across multiple cognitive domains, with the largest effects being observed on measures of sustained attention ( g =-0.409) and EF ( g =-0.324), and within these domains, attentional lapses and ( g =-0.516) and behavioural inhibition (g=-0.464) specifically."
+  - outcome_domain: cognition
+    outcome_construct: executive_functioning
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null, contrast_label: "experimentally restricted sleep vs control/normal sleep"}
+    scale: hedges_g
+    unit: null
+    value: -0.324
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse executive functioning under experimental sleep restriction"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "This effect held for executive functioning (g=-0.324, p<0.001), sustained attention (g=-0.409, p<0.001), and long-term memory (g=-0.192, p=0.002)."
+  - outcome_domain: cognition
+    outcome_construct: behavioural_inhibition
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null, contrast_label: "experimentally restricted sleep vs control/normal sleep"}
+    scale: hedges_g
+    unit: null
+    value: -0.464
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse response inhibition under experimental sleep restriction"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "within these domains, attentional lapses and ( g =-0.516) and behavioural inhibition (g=-0.464) specifically"
+  - outcome_domain: cognition
+    outcome_construct: long_term_memory
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null, contrast_label: "experimentally restricted sleep vs control/normal sleep"}
+    scale: hedges_g
+    unit: null
+    value: -0.192
+    se: 0.062
+    ci: [-0.314, -0.070]
+    conversion_formula: "SE backed out of the reported two-sided p-value: p = 0.002 -> |z| = 3.090 -> SE = 0.192/3.090 = 0.0621; CI = value +/- 1.96*SE. This is the only domain in the abstract with an exact p-value, so it is the only domain for which an SE is derivable."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = worse long-term/declarative memory under experimental sleep restriction"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "This effect held for executive functioning (g=-0.324, p<0.001), sustained attention (g=-0.409, p<0.001), and long-term memory (g=-0.192, p=0.002)."
+  - outcome_domain: cognition
+    outcome_construct: intelligence
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: null, duration_days: null, contrast_label: "experimentally restricted sleep vs control/normal sleep, intelligence domain"}
+    scale: hedges_g
+    unit: null
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No pooled estimate is published for this domain; the authors report only that evidence was insufficient to detect an effect. Value entered as 0.0 to encode 'no detectable effect' and MUST be treated by the pooler as an unquantified null (se = null), not as a measured zero."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "no detectable effect of experimental sleep restriction in the intelligence domain; sign undetermined"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "There was insufficient evidence to detect an effect within the domains of attention, multitask, impulsive decision-making or intelligence."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Search of PubMed, Scopus, Web of Science and PsycInfo (Nov 2016); random-effects models; 7 pre-specified moderators. RoB rating is downgraded because I could not read the full text: no CIs, no per-domain k, no funnel/Egger results, and no risk-of-bias table are visible from the abstract or the publisher excerpt. Because the pooled effects are entered without SEs, this record must not be given a precision-based weight downstream."
+funding: "This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors."
+notes: |
+  MOST DECISION-RELEVANT META-ANALYSIS IN THIS SHARD for the subject's exposure, because unlike lim2010 the exposure is
+  PARTIAL sleep restriction (sleep shortened below the age-recommended range) rather than total deprivation, and unlike
+  lim2010 it spans childhood through old age. Overall g = -0.383 across 1,688 participants and 71 populations.
+
+  ANSWER TO THE TASKED QUESTION "did they separate total deprivation from partial restriction": YES, by design. This
+  meta-analysis deliberately EXCLUDED total sleep deprivation and analysed only restriction, positioning itself against
+  Lim & Dinges 2010. The rationale is stated verbatim on the publisher's landing page: "Nevertheless, TSD seldom occurs
+  outside the context of a sleep laboratory and certain professions (e.g., medical personnel or emergency workers), thus,
+  the ecological validity of such experimental protocols remains questionable. Conversely, the impact of sleep restriction
+  or partial sleep deprivation on basic and complex cognitive processes has received substantially less attention within
+  the literature; sleep restriction refers to sleep durations shortened below the age recommended range." So the
+  restriction-vs-deprivation comparison must be made ACROSS lowe2017 and lim2010, not within either.
+
+  Age bands analysed: "children (3-5 years), school-aged children (6-13 years), adolescents (14-17 years), young adults
+  (18-30), adults (31-59), older adults (60+)", and "Age group ... [was] a significant moderator of the overall effect".
+  The direction and magnitude of that age moderation is exactly what the downstream model needs for a 16-19 y old and is
+  the single most valuable number I could NOT retrieve (paywalled). Flagged in station_report.md as the top gap.
+
+  COMPARISON WITH LIM & DINGES 2010 (do not double-count; they share primary studies only minimally because lowe2017
+  excludes total SD): partial restriction produces roughly HALF the vigilance effect of acute total deprivation
+  (-0.409 vs -0.762) but a similar relative sparing of higher-order abilities. Critically for the IQ conversion, the
+  intelligence domain was again undetectable, replicating lim2010's null reasoning/crystallized cell in an independent
+  study set with a different (more ecologically relevant) exposure.
+
+  SIGN CONVENTION: all values recorded as negative = harm, matching the paper's own sign convention.
+shard: "s02_cognition_meta"

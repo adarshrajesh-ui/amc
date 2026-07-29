@@ -1,0 +1,177 @@
+study_id: campbell2024
+citation: "Campbell IG, Kurinec CA, Zhang ZY, Cruz-Basilio A, Figueroa JG, Bottom VB, Feinberg I. Sleep restriction and age effects on distinct aspects of cognition in adolescents. Sleep. 2024;47(12):zsae216."
+doi: "10.1093/sleep/zsae216"
+pmid: "39283917"
+url: "https://europepmc.org/articles/PMC12477114"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep restriction and age effects on distinct aspects of cognition in adolescents"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 159
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [9.9, 22.8]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: cognition
+    outcome_construct: pvt_lsnr_vigilant_attention
+    exposure: {type: chronic_restriction, dose_h: 8.5, referent_h: 10, duration_days: 4, contrast_label: "8.5 h TIB vs 10 h TIB, 4 consecutive nights"}
+    scale: raw_units
+    unit: "dB of PVT log signal-to-noise ratio"
+    value: -0.33
+    se: 0.07
+    ci: [-0.467, -0.193]
+    conversion_formula: "Reported directly as estimate +/- SE from the mixed-effects model. 95% CI = -0.33 +/- 1.96*0.07. Per hour of TIB: -0.33/1.5 = -0.220 dB/h (SE 0.047)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse vigilant attention (lower signal-to-noise ratio) with less time in bed"
+    covariates: ["age", "random subject effect", "annual visit"]
+    followup_years: null
+    cohort_family: "UCDavis_Campbell_adolescent_TIB"
+    quote: "As TIB was decreased from 10 to 8.5 hours LSNR decreased (t3333 = 4.65, p < .0001) by 0.33 +/- 0.07 dB (estimate +/- SE), which is equivalent to a 7.3% reduction in the fidelity of information processing."
+  - outcome_domain: cognition
+    outcome_construct: pvt_lsnr_vigilant_attention
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 8.5, duration_days: 4, contrast_label: "7 h TIB vs 8.5 h TIB, 4 consecutive nights"}
+    scale: raw_units
+    unit: "dB of PVT log signal-to-noise ratio"
+    value: -0.44
+    se: 0.07
+    ci: [-0.577, -0.303]
+    conversion_formula: "Reported directly as estimate +/- SE. Per hour of TIB: -0.44/1.5 = -0.293 dB/h (SE 0.047). Note the per-hour slope STEEPENS as TIB falls (-0.220 dB/h from 10->8.5 vs -0.293 dB/h from 8.5->7), i.e. the dose-response is convex in this range."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse vigilant attention with less time in bed"
+    covariates: ["age", "random subject effect", "annual visit"]
+    followup_years: null
+    cohort_family: "UCDavis_Campbell_adolescent_TIB"
+    quote: "LSNR decreased by another 0.44 +/- 0.07 dB, equivalent to a 9.6% reduction in the fidelity of information processing, as TIB was decreased from 8.5 to 7 hours (t3333 = 6.21, p < .0001)."
+  - outcome_domain: cognition
+    outcome_construct: pvt_lsnr_vigilant_attention_maturation_equivalent
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 10, duration_days: 4, contrast_label: "7 h TIB vs 10 h TIB expressed as years of adolescent brain maturation lost"}
+    scale: years
+    unit: "years of adolescent maturation on PVT LSNR"
+    value: -3.85
+    se: 0.76
+    ci: [-5.34, -2.36]
+    conversion_formula: "Total 10->7 h deficit = -0.33 + -0.44 = -0.77 dB (SE = sqrt(0.07^2+0.07^2) = 0.099, treating the two adjacent contrasts as independent because their covariance is not reported). Age slope = +0.20 +/- 0.03 dB per year. Ratio R = 0.77/0.20 = 3.85 y. Delta-method SE(R) = R*sqrt((0.099/0.77)^2 + (0.03/0.20)^2) = 0.76. CROSS-CHECK via the authors' own percentage units: (7.3% + 9.6%)/4.7% per year = 3.60 y, consistent with 3.85 y."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = restriction to 7 h TIB sets vigilant attention back by ~3.9 years of normal adolescent maturation"
+    covariates: ["age", "random subject effect", "annual visit"]
+    followup_years: null
+    cohort_family: "UCDavis_Campbell_adolescent_TIB"
+    quote: "PVT LSNR improved significantly (F1,3333 = 51.7, p < .0001) by 0.20 +/- 0.03 dB per year of age, equivalent to a 4.7% increase in the fidelity of information processing per year."
+  - outcome_domain: cognition
+    outcome_construct: ax_cpt_x_probe_discriminability_top_down_attention
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 8.5, duration_days: 4, contrast_label: "7 h TIB vs 8.5 h TIB, resistance to probe interference (d')"}
+    scale: raw_units
+    unit: "F statistic for the 7 vs 8.5 h contrast (no effect size reported)"
+    value: 12.2
+    se: null
+    ci: null
+    conversion_formula: "NO standardized effect size, mean, or SD is reported for this contrast; only F(1,183) = 12.2, p = .0006. I record the F so the pooler can see the contrast exists and its direction, but the value field is an F statistic, NOT an effect size, and se is null. Do NOT pool this value. An F(1,183) = 12.2 in a within-subject design implies roughly d = 2*sqrt(12.2/183) = 0.52 if the design were between-subject, which it is not, so even that is an upper bound and I decline to record it as an effect."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "restriction to 7 h reduced d'; the F statistic is unsigned"
+    covariates: ["age", "random subject effect"]
+    followup_years: null
+    cohort_family: "UCDavis_Campbell_adolescent_TIB"
+    quote: "TIB restriction was significantly (F2,183 = 6.28, p = .0023) associated with reduced ability to resist probe interference on non-target trials (X-probe d'), with a significant decrement as TIB was reduced from 8.5 to 7 hours (F1,183 = 12.2, p = .0006) but no significant difference between 10 and 8.5 hours (F1,183 = 1.51, p = .22)."
+  - outcome_domain: cognition
+    outcome_construct: sternberg_working_memory_slope_ms_per_item
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 10, duration_days: 4, contrast_label: "7 h TIB vs 10 h TIB, Sternberg search rate (working memory)"}
+    scale: raw_units
+    unit: "ms per memory-set item"
+    value: 1.8
+    se: 2.26
+    ci: [-2.63, 6.23]
+    conversion_formula: "7 h slope 33.1 +/- 1.6 ms/item minus 10 h slope 31.3 +/- 1.6 ms/item = +1.8 ms/item. SE of the difference approximated as sqrt(1.6^2 + 1.6^2) = 2.26, which OVERSTATES the SE for a within-subject contrast (positive covariance is ignored), but the omnibus test is null anyway: F(2,729) = 0.68, p = .51. Age slope for reference: +1.28 +/- 0.35 ms/item per year."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = slower memory search (worse) under restriction; the CI includes zero, so this is a NULL for working memory"
+    covariates: ["age", "random subject effect", "memory set size"]
+    followup_years: null
+    cohort_family: "UCDavis_Campbell_adolescent_TIB"
+    quote: "The slope of the function describing the relation between response time and memory set size did not change significantly with TIB (Figure 5A. F2,729 = 0.68, p = .51). The slope was similar for 7 hours TIB (estimate +/- SE = 33.1 +/- 1.6 ms/item), 8.5 hours TIB (33.5 +/- 1.6 ms/item) and 10 hours TIB (31.3 +/- 1.6 ms/item)."
+  - outcome_domain: sleep_need
+    outcome_construct: tst_achieved_per_tib_condition
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 10, duration_days: 4, contrast_label: "night-4 total sleep time at 7 h vs 10 h TIB"}
+    scale: hours
+    unit: "hours of total sleep time"
+    value: -2.068
+    se: 0.0335
+    ci: [-2.134, -2.003]
+    conversion_formula: "Night-4 TST: 10 h TIB = 525.8 +/- 36.0 min; 7 h TIB = 401.7 +/- 20.0 min. Difference = -124.1 min = -2.068 h. SE = sqrt(36.0^2/159 + 20.0^2/159)/60 = 0.0335 h using n = 159 as a lower bound on the number of observations (the model had 631 df, so this SE is conservative). USEFUL FOR THE TARGET SUBJECT: a 3 h reduction in TIB bought only a 2.07 h reduction in actual sleep, i.e. 69% pass-through. So a target subject with ~5-6 h of weekday sleep is being restricted more severely than a 7 h TIB condition here."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = less sleep obtained; this is the exposure-measurement fidelity check, not an outcome"
+    covariates: []
+    followup_years: null
+    cohort_family: "UCDavis_Campbell_adolescent_TIB"
+    quote: "Average (+/-standard deviation [SD]) night 4 sleep duration of 525.8 +/- 36.0 minutes with 10 hours TIB decreased to 470.1 +/- 20.3 minutes with 8.5 hours TIB and decreased further to 401.7 +/- 20.0 minutes with 7 hours TIB."
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "Within-subject dose-response design with each participant completing all three TIB conditions annually, order counterbalanced, actigraphy/PSG-verified sleep duration, mixed-effects models with subject random effects. No blinding is possible for a sleep manipulation and none was attempted. The older cohort was interrupted by COVID (only 25 of 82 completed multiple years), which weakens the longitudinal but not the within-year TIB contrast. Healthy, screened, single-site volunteers, so the usual volunteer-selection caveat applies. The main analytic limitation for this pipeline is that the paper reports F statistics and raw model estimates rather than standardized effect sizes, and never reports between-subject SDs for the AX-CPT d' indices, so most of its outcomes cannot be converted to Hedges' g."
+funding: "NIH (grant support stated in the paper); see the article for the full statement."
+notes: |
+  THIS IS THE SINGLE BEST AGE-MATCHED EXPERIMENTAL RECORD IN MY DOMAIN and it should dominate the youth-experimental part of the
+  pool. Age range 9.9-22.8 y brackets the target subject (18 y) exactly; the older cohort alone is 15-22.8 y. It is a
+  within-subject DOSE-RESPONSE design (7 vs 8.5 vs 10 h TIB, 4 consecutive nights each), which is the design the downstream
+  model needs and which essentially nothing else in the adolescent literature provides.
+
+  FOUR FINDINGS THAT MATTER MOST:
+
+  (1) DOSE-RESPONSE IS GRADED AND CONVEX FOR VIGILANCE. PVT LSNR fell 0.33 dB going 10 -> 8.5 h and a further 0.44 dB going
+  8.5 -> 7 h. Per hour that is -0.220 dB/h then -0.293 dB/h, so the marginal cost of each lost hour RISES as sleep shortens.
+  Extrapolating that convexity to the target subject's 5-6 h weekday sleep is not licensed by these data (7 h TIB was the
+  shortest condition) but the direction of the extrapolation error is clear: a linear per-hour slope fit in the 7-10 h range
+  UNDERSTATES the damage below 7 h.
+
+  (2) THE MATURATION-EQUIVALENT. The age slope on the same measure is +0.20 dB per year across 10-23 y, so the 0.77 dB deficit
+  from restricting 10 -> 7 h TIB equals 3.85 years (95% CI 2.4 to 5.3) of adolescent brain maturation on vigilant attention.
+  This is the SAME KIND of statement that wild2018 makes for adults with age-slope conversion and that sadeh2003 asserted
+  qualitatively ("similar to those gained by 2 years of development"). It is the best-quantified version that exists in the
+  right age band. CAUTION FOR THE DOWNSTREAM MODEL: "years of maturation" on a PVT is NOT "years of IQ" - see
+  iq_conversion_basis.md. The PVT is the LEAST g-loaded measure in this whole shard.
+
+  (3) WORKING MEMORY WAS NOT IMPAIRED. The Sternberg search-rate slope, the recency effect, and the serial-position accuracy
+  profile were all unaffected by TIB (F(2,729) = 0.68, p = .51 for the slope). This is a REAL and important dissociation: in
+  the age group that matters, 4 nights of 7 h TIB moved vigilance a lot and working memory not at all. It agrees in direction
+  with lim2010 (working memory g much smaller than simple-attention g) and it directly contradicts any model that treats a
+  vigilance decrement as a general cognitive decrement.
+
+  (4) NO TIB-BY-AGE INTERACTION ANYWHERE (p > .48 for all AX-CPT indices; p = .34 for PVT LSNR; the 8.5-vs-10 h contrast was
+  significant even in the oldest quartile, p = .034). Two consequences. First, sleep need for these functions does NOT decline
+  across adolescence into the early twenties, so a 18-year-old cannot be assumed to have "grown out of" needing 8.5-9 h.
+  Second, and this is the transportability licence the pooler needs: effects measured in the 10-16 y cohort can be carried to
+  an 18-year-old without an age discount, because the interaction is null.
+
+  A FIFTH POINT THAT CUTS THE OTHER WAY and must be reported honestly: because maturation improves PVT performance so steeply,
+  the authors observe that "vigilant attention in older teens and young adults restricted to 7 hours TIB exceeds the vigilant
+  attention in well-rested younger participants with 10 hours TIB." So in ABSOLUTE terms a sleep-restricted 18-year-old still
+  outperforms a rested 11-year-old. The deficit is real and is measured against the subject's own potential, not against a
+  floor of dysfunction.
+
+  ALSO: 8.5 h OF TIB APPEARED SUFFICIENT for top-down attentional control and cognitive flexibility (no index improved from 8.5
+  to 10 h, and the authors argue this is not merely a power failure), but NOT sufficient for the PVT, which kept improving out
+  to 10 h TIB in every age quartile. So the "optimum" depends on the measure: ~8.5 h TIB for executive measures, >10 h TIB for
+  vigilance. Given 8.5 h TIB yielded 470 min = 7.8 h of actual sleep, the executive-sufficiency threshold in TST terms is
+  around 7.8 h.
+
+  EXPOSURE FIDELITY, which the pooler should propagate: 3 h less TIB produced only 2.07 h less TST (69% pass-through). Studies
+  that label their exposure in TIB are therefore delivering a milder TST contrast than the label implies.
+
+  WHAT I COULD NOT EXTRACT: no standardized effect sizes, no group SDs for the AX-CPT d' indices, and no dB-scale SD for LSNR,
+  so I cannot convert any of the attention/flexibility outcomes to Hedges' g. The X-probe row above carries an F statistic in
+  the value field with se: null specifically so that no downstream process mistakes it for an effect size. If the pooler needs
+  a g for adolescent attentional control it must come from lundahl2015 (g = -0.19 to -0.37) or lo2016, not from here.
+shard: "s02_cognition_meta"

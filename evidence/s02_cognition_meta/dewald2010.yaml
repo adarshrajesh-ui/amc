@@ -1,0 +1,129 @@
+study_id: dewald2010
+citation: "Dewald JF, Meijer AM, Oort FJ, Kerkhof GA, Bogels SM. The influence of sleep quality, sleep duration and sleepiness on school performance in children and adolescents: A meta-analytic review. Sleep Medicine Reviews. 2010;14(3):179-189."
+doi: "10.1016/j.smrv.2009.10.004"
+pmid: "20093054"
+url: "https://doi.org/10.1016/j.smrv.2009.10.004"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "The influence of sleep quality, sleep duration and sleepiness on school performance in children and adolescents: A meta-analytic review"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: meta_analysis_observational
+tier: TX
+n: 19530
+n_studies_pooled: 50
+population:
+  age_mean: null
+  age_range: [8, 18]
+  pct_female: null
+  country: "multinational"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: academic
+    outcome_construct: school_performance_vs_sleep_duration
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "correlation of habitual sleep DURATION with school performance, mean age 8-18 y"}
+    scale: raw_units
+    unit: "Pearson r"
+    value: 0.069
+    se: 0.01327
+    ci: [0.043, 0.095]
+    conversion_formula: "Random-effects estimate: k = 17 studies, N = 15,199, r = 0.069, 95% CI [0.043, 0.095]. SE = (0.095 - 0.043)/3.92 = 0.01327. Fixed-effects estimate was r = 0.071, CI [0.055, 0.087]. Heterogeneity Q(16) = 34.666, p = 0.004."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive r = longer habitual sleep associated with better school performance"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The meta-analysis yielded a small overall effect size (z = 0.071; p < 0.001 (CI [0.055;0.087]), r = 0.071, fixed model; z = 0.069; p < 0.001 (CI [0.043;0.095]), r = 0.069, random model), indicating that more sleep is associated with better school performance."
+  - outcome_domain: academic
+    outcome_construct: school_performance_vs_sleep_quality
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "correlation of habitual sleep QUALITY with school performance, mean age 8-18 y"}
+    scale: raw_units
+    unit: "Pearson r"
+    value: 0.096
+    se: 0.02347
+    ci: [0.061, 0.153]
+    conversion_formula: "Random-effects: k = 16, N = 13,631, r = 0.096, 95% CI [0.061, 0.153]. SE = (0.153 - 0.061)/3.92 = 0.02347. Note the published CI is asymmetric about the point estimate (it is a back-transformed Fisher z interval), so this SE is an approximation. Q(15) = 45.060, p < 0.001."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive r = better sleep quality associated with better school performance"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The meta-analysis yielded a small overall effect size (z = 0.100; p < 0.001 (CI [0.083;0.117]), r = 0.100, fixed model; z = 0.096; p < 0.001 (CI [0.061;0.153]), r = 0.096, random model), indicating that better sleep quality is associated with better school performance."
+  - outcome_domain: academic
+    outcome_construct: school_performance_vs_daytime_sleepiness
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null, contrast_label: "correlation of daytime SLEEPINESS with school performance, mean age 8-18 y"}
+    scale: raw_units
+    unit: "Pearson r"
+    value: -0.133
+    se: 0.02475
+    ci: [-0.182, -0.085]
+    conversion_formula: "Random-effects: k = 17, N = 19,530, r = -0.133, 95% CI [-0.182, -0.085]. SE = (0.182 - 0.085)/3.92 = 0.02475. Q(16) = 155.717, p < 0.001 - by far the most heterogeneous cell. THIS IS THE LARGEST OF THE THREE ASSOCIATIONS, roughly double the sleep-duration correlation."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = more daytime sleepiness associated with worse school performance"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The meta-analysis yielded a small overall effect size (z = 0.135; p < 0.001 (CI [0.149; 0.121]), r = 0.134, fixed model; z = 0.134; p < 0.001 (CI [0.182; 0.085]), r = 0.133, random model), indicating that lower sleepiness scores are associated with better school performance."
+  - outcome_domain: academic
+    outcome_construct: age_moderator_on_sleep_school_performance_association
+    exposure: {type: habitual_short_sleep, dose_h: null, referent_h: null, duration_days: null, contrast_label: "moderator: mean sample age as a predictor of the sleep-duration / school-performance correlation"}
+    scale: raw_units
+    unit: "standardized moderator coefficient b in the meta-regression"
+    value: 0.526
+    se: null
+    ci: null
+    conversion_formula: "Reported as b = 0.591, p = 0.010 (fixed) and b = 0.526, p = 0.049 (random) for the age moderator in the sleep-duration meta-regression; I record the random-effects value. NO SE IS PUBLISHED, so se is null. The coefficient's scale is not interpretable as an effect size - it is the meta-regression slope on sample mean age - so this row is a DIRECTION-ONLY record. Direction: POSITIVE b with the sign convention such that YOUNGER samples show LARGER sleep-school associations."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "the association between sleep and school performance is STRONGER in younger samples and WEAKER in older adolescents - this attenuates transportability to an 18-year-old"
+    covariates: ["gender", "objectivity of sleep assessment", "objectivity of school performance assessment"]
+    followup_years: null
+    cohort_family: null
+    quote: "Effect sizes were larger for studies including younger participants than for studies that included older participants. This age effect was stronger for studies that included more males than for studies that included more females."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Systematic search with explicit inclusion criteria (mean age 8-18, general-population samples), separate random- and fixed-effects models for three exposures, pre-specified moderator set, and heterogeneity reported for every cell. Fundamental limitation: every constituent study is CORRELATIONAL, so none of these estimates is causal and all are open to confounding by socioeconomic status, parental involvement, mental health, and screen use - the review does not adjust for any of these. Sleep and school performance were both mostly self- or parent-reported in the included studies, and the review's own moderator analysis shows the association is LARGER when measurement is subjective, which is the signature of shared-method bias inflating the estimate. Publication bias was not formally assessed with trim-and-fill (unlike astill2012 and lundahl2015). Heterogeneity remained significant in most models after moderators."
+funding: "Not stated in the retrieved text."
+notes: |
+  THE BEST-POWERED ACADEMIC-OUTCOME ESTIMATE in the 8-18 age band, and the only one in my shard whose age range actually
+  includes the target subject at the top end. It independently reproduces the astill2012 school-performance cell almost
+  exactly - Dewald r = 0.069 (k = 17, N = 15,199) vs Astill r = 0.09 (k = 20, N = 21,157), from partly overlapping primary
+  literature. Two meta-analyses converging on r = 0.07-0.09 for habitual sleep duration and grades is about as solid as the
+  observational youth literature gets.
+
+  MAGNITUDE IN PLAIN TERMS. r = 0.069 is small: sleep duration accounts for under half a percent of the variance in school
+  performance. If read as a standardized slope per SD of sleep duration, and taking an adolescent weekday-sleep SD of roughly
+  1 h, one extra hour of habitual sleep is worth about 0.07 SD of school performance. On an IQ-like scale that is about 1 point
+  per hour, and even that requires the assumption that a grades composite is fully g-loaded, which it certainly is not.
+  IMPORTANT HONESTY FLAG: I could NOT retrieve a citable g-loading for an academic-achievement composite, so
+  iq_conversion_basis.md row E explicitly DECLINES to convert grades into IQ points at all. Do not read "about 1 point per
+  hour" above as a licensed IQ conversion - it is an unadjusted ceiling that assumes a g-loading of 1.0, and the true figure is
+  necessarily smaller by whatever the achievement g-loading turns out to be. The defensible statement is: UNDER 1
+  IQ-equivalent point per habitual hour, cross-sectionally, uncorrected for confounding, with no lower bound established.
+
+  THE AGE MODERATOR RUNS OPPOSITE TO LUNDAHL 2015 AND THIS IS THE MOST IMPORTANT THING IN THE RECORD. Dewald finds the
+  sleep/school association is LARGER in YOUNGER samples and attenuates with age, and interprets that as maturational: "with
+  maturation adolescents experience a decrease in sensitivity to sleep deprivation and extended wakefulness". Lundahl 2015
+  found the opposite sign in experimental data (older youth MORE impaired). campbell2024, the best-designed test of the
+  question, found NO age interaction from 9.9 to 22.8 y. THREE STUDIES, THREE ANSWERS. The pooler should therefore treat the
+  age-moderation of sleep-loss effects as UNRESOLVED and widen uncertainty on any age-transported effect rather than applying a
+  directional correction. My own reading is that Dewald's age moderator is the weakest of the three because it is a
+  between-study meta-regression on correlational data where sample age is confounded with grade-level measurement, the range of
+  achievement measures, and the amount of unmeasured autonomy over bedtime.
+
+  n = 19,530 in the header is the LARGEST single cell (sleepiness), not an unduplicated total across the three meta-analyses;
+  the three cells (13,631 / 15,199 / 19,530) overlap heavily since most studies contributed to more than one. n_studies_pooled
+  = 50 is likewise the sum across cells (16 + 17 + 17) and double-counts. The paper does not report an unduplicated total.
+
+  SLEEPINESS BEATS DURATION, ROUGHLY 2:1 (r = -0.133 vs 0.069). That ordering recurs across my shard - fjell2023 found
+  sleepiness and sleep problems more related to brain structure than duration was, and kyle2017 found insomnia symptoms
+  comparable to short duration. For the target subject, whose exposure is defined in HOURS, this means duration-based estimates
+  will UNDERSTATE the total burden of his sleep pattern if that pattern also produces daytime sleepiness, which at 5-6 h on
+  weekdays it almost certainly does.
+shard: "s02_cognition_meta"
