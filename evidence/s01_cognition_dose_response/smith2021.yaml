@@ -1,0 +1,196 @@
+study_id: smith2021
+citation: "Smith MG, Wusk GC, Nasrini J, Baskin P, Dinges DF, Roma PG, Basner M. Effects of six weeks of chronic sleep restriction with weekend recovery on cognitive performance and wellbeing in high-performing adults. Sleep. 2021;44(8):zsab051."
+doi: "10.1093/sleep/zsab051"
+pmid: "33630069"
+url: "https://pubmed.ncbi.nlm.nih.gov/33630069/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Effects of six weeks of chronic sleep restriction with weekend recovery on cognitive performance and wellbeing in high-performing adults."
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 15
+n_studies_pooled: null
+population:
+  age_mean: 38.5
+  age_range: [30, 47]
+  pct_female: 40.0
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: cognition
+    outcome_construct: vigilant_attention_slope_on_accumulating_sleep_debt
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 8, duration_days: 42,
+               contrast_label: "5h TIB weekdays with 8h TIB weekends, sustained SIX WEEKS; slope on accumulating sleep debt"}
+    scale: per_hour_beta
+    unit: "standardised beta per unit increase in accumulated sleep debt relative to pre-mission baseline"
+    value: -0.688
+    se: 0.2091
+    ci: [-1.098, -0.278]
+    conversion_formula: "Standardised beta reported directly. No SE or CI is published and the full text is
+      paywalled (no PMC body deposit, no OA copy located), so the SE is an UPPER BOUND from the reported
+      significance: p < 0.001 two-sided implies |z| > 3.2905, hence SE < 0.688/3.2905 = 0.2091. CI is the
+      widest interval compatible with that bound. Using the bound as the SE is conservative.
+      The debt metric's units are not stated in the abstract, so this is a standardised slope on an
+      accumulating-debt index rather than a per-hour-of-sleep coefficient - do not read it as 'per hour'."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse vigilant attention as sleep debt accumulates. Vigilant attention was
+      by far the most affected domain, with a slope 5.7x the all-domain average (-0.688 vs -0.121)."
+    covariates: ["pre-mission baseline", "evening testing near the circadian peak", "actigraphy-recorded individual sleep-wake patterns"]
+    followup_years: null
+    cohort_family: null
+    quote: "There were some small to moderate effects of increasing sleep debt relative to pre-mission
+      baseline, with decreases in accuracy across cognitive domains (standardized beta = -0.121, p = 0.001),
+      specifically on tests of spatial orientation (beta = -0.289, p = 0.011) and vigilant attention
+      (beta = -0.688, p < 0.001), which were not restored by two nights of weekend recovery sleep."
+  - outcome_domain: cognition
+    outcome_construct: accuracy_across_all_cognitive_domains_slope_on_sleep_debt
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 8, duration_days: 42,
+               contrast_label: "5h weekday / 8h weekend TIB for 6 weeks; pooled accuracy across a 10-test battery"}
+    scale: per_hour_beta
+    unit: "standardised beta per unit increase in accumulated sleep debt, pooled across ten cognitive tests"
+    value: -0.121
+    se: 0.0368
+    ci: [-0.193, -0.049]
+    conversion_formula: "Reported standardised beta. SE backed out from the exact p: two-sided p = 0.001
+      implies |z| = 3.2905, so SE = 0.121/3.2905 = 0.0368; CI = value +/- 1.96*SE.
+      NOTE THE DILUTION: pooling across all ten domains gives a slope only 18% of the vigilant-attention
+      slope, because eight of the ten domains showed no significant effect. A single 'global cognition'
+      summary badly understates the vigilance-specific damage."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = less accurate as debt accumulates; small in pooled terms, large in the
+      one domain that drives it"
+    covariates: ["pre-mission baseline", "evening testing"]
+    followup_years: null
+    cohort_family: null
+    quote: "with decreases in accuracy across cognitive domains (standardized beta = -0.121, p = 0.001)"
+  - outcome_domain: cognition
+    outcome_construct: spatial_orientation_slope_on_sleep_debt
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 8, duration_days: 42,
+               contrast_label: "5h weekday / 8h weekend TIB for 6 weeks; spatial orientation accuracy"}
+    scale: per_hour_beta
+    unit: "standardised beta per unit increase in accumulated sleep debt"
+    value: -0.289
+    se: 0.1136
+    ci: [-0.512, -0.066]
+    conversion_formula: "Reported standardised beta. SE from the exact p: two-sided p = 0.011 implies
+      |z| = 2.543, so SE = 0.289/2.543 = 0.1136; CI = value +/- 1.96*SE. The only domain besides vigilant
+      attention to reach significance over six weeks."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = worse spatial orientation as debt accumulates"
+    covariates: ["pre-mission baseline", "evening testing"]
+    followup_years: null
+    cohort_family: null
+    quote: "specifically on tests of spatial orientation (beta = -0.289, p = 0.011) and vigilant attention
+      (beta = -0.688, p < 0.001)"
+  - outcome_domain: recovery
+    outcome_construct: two_weekend_nights_do_not_restore_deficits_over_six_weeks
+    exposure: {type: weekend_catchup, dose_h: 8, referent_h: 8, duration_days: 2,
+               contrast_label: "two nights of 8h TIB weekend recovery, repeated weekly for six weeks"}
+    scale: raw_units
+    unit: "1 = weekend recovery failed to restore the deficits; 0 = it restored them"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Binary encoding of the authors' explicit finding. No residual magnitude is
+      published, so no numeric deficit is recorded.
+      THIS IS THE MOST DIRECTLY TRANSFERABLE RECOVERY RESULT IN THE ENTIRE SHARD. Every other recovery
+      record here tests a single consolidated recovery block after one restriction period. This study
+      tested the actual repeating weekly cycle - five short nights, two longer nights, six times over -
+      and found the deficits were not restored. That is precisely our subject's schedule, and the answer
+      is that the weekend does not clear the week."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = no restoration. Deficits persisted across repeated weekly cycles rather than
+      resetting each Monday."
+    covariates: ["pre-mission baseline"]
+    followup_years: null
+    cohort_family: null
+    quote: "which were not restored by two nights of weekend recovery sleep"
+  - outcome_domain: cognition
+    outcome_construct: domains_not_significantly_affected_after_six_weeks
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 8, duration_days: 42,
+               contrast_label: "which of the ten Cognition battery domains showed NO significant effect over six weeks"}
+    scale: raw_units
+    unit: "count of cognitive domains with no significant effect of accumulated sleep debt"
+    value: 8.0
+    se: null
+    ci: null
+    conversion_formula: "Counted directly from the verbatim list of null domains: sensorimotor speed,
+      spatial learning and memory, working memory, abstraction and mental flexibility, emotion
+      identification, abstract reasoning, cognitive throughput, risk decision making = 8 named nulls out of
+      the 10-test Cognition battery. Only vigilant attention and spatial orientation reached significance.
+      Treat these as 'not detected' rather than 'no effect': n = 15, and three protocol features (daytime
+      naps in breach of protocol, evening testing near the circadian peak, caffeine before 14:00) all bias
+      toward null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "not an effect size; a count. Higher = more cognitive domains spared. The pattern is
+      highly selective: vigilance collapses, most other domains hold up."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Sensorimotor speed, spatial learning and memory, working memory, abstraction and mental
+      flexibility, emotion identification, abstract reasoning, cognitive throughput, and risk decision
+      making were not significantly affected by sleep debt."
+rob:
+  tool: RoB2
+  judgement: high
+  notes: "n = 15, no control arm, no randomisation - a single-cohort observational analysis of a
+    within-subject exposure, so the debt-versus-performance slopes are confounded with time on mission and
+    with practice on a repeatedly administered battery (which for the Cognition battery's throughput and
+    learning tests would bias TOWARD null or toward apparent improvement - see koa2024.yaml, where sleep
+    restriction attenuated practice-based improvement). Protocol adherence was imperfect and the authors
+    say so: 'Cognitive and subjective decrements occurred despite occasional daytime napping in breach of
+    study protocol, evening testing around the circadian peak, and access to caffeine before 14:00'. Each
+    of those three deviations biases toward NULL, so the observed effects are conservative. Population is
+    the worst feature for our purposes: 15 'high-performing individuals' aged 38.5 +/- 8.2 y, selected for
+    an operationally relevant confinement mission and confined in groups of four in small space - a
+    selected, midlife, socially unusual sample, so poor_midlife transportability and possible
+    resilience selection. Sleep was actigraphic, not PSG. Abstract-only access, so all four SEs here are
+    derived from p-values rather than reported, and no per-week trajectory could be extracted."
+funding: "NASA Human Research Program (per the parent programme; not restated in the retrieved abstract)"
+notes: |
+  THE SINGLE CLOSEST SCHEDULE MATCH TO OUR SUBJECT THAT EXISTS IN THE EXPERIMENTAL LITERATURE, and I found
+  it only on a late systematic sweep. Sleep opportunities were 5 h on weekdays and 8 h on weekends,
+  sustained for SIX WEEKS. Our subject: ~5-6 h weekdays, 7-8 h weekends, for three years. Same shape, same
+  weekday dose, same weekend catch-up, and roughly 1/26th of the duration.
+
+  WHY IT MATTERS OUT OF PROPORTION TO ITS n = 15. The rest of this shard's chronic-restriction evidence
+  runs 5 to 14 consecutive restricted nights with no weekend structure, so all of it has to be
+  extrapolated to a repeating weekday/weekend cycle. This study does not need extrapolating on that axis.
+  Its answer to the shard's central structural question is unambiguous:
+
+    "There were some small to moderate effects of increasing sleep debt relative to pre-mission baseline,
+     with decreases in accuracy across cognitive domains ... which were NOT RESTORED BY TWO NIGHTS OF
+     WEEKEND RECOVERY SLEEP."
+
+  Read together with Belenky 2003 (93-112% of the mild/moderate arms' deficit still present after 3
+  recovery nights), Axelsson 2008 (lapses not normalised after 7 recovery nights), Yamazaki 2021 (PVT
+  lapses and speed failed to recover across 4 nights at 12 h TIB), Lo 2017 and Lo 2019 (further
+  deterioration in a second restriction cycle in adolescents) and Koa 2024 (faster vigilance deterioration
+  in week 2 of a 6 h weekday schedule), the recovery evidence is now consistent across six independent
+  laboratories and both age groups: A WEEKEND DOES NOT CLEAR A WEEK'S VIGILANCE DEFICIT.
+
+  THE OTHER HEADLINE IS THE SELECTIVITY, and it should temper any broad "cognitive damage" claim. Over six
+  weeks, only 2 of 10 domains moved: vigilant attention (beta = -0.688) and spatial orientation
+  (beta = -0.289). Working memory, abstract reasoning, cognitive throughput, sensorimotor speed, spatial
+  learning and memory, abstraction and mental flexibility, emotion identification and risk decision making
+  all held. This reproduces, at six weeks and in a different battery, the same domain hierarchy that
+  Lim & Dinges 2010 found meta-analytically for total deprivation, that Lowe 2017 found meta-analytically
+  for restriction, and that Van Dongen 2003 found in its accumulation exponents. Vigilance is the outcome
+  that carries the signal; most other cognition is comparatively robust.
+
+  A CAUTION ON DIRECTION OF BIAS. Three protocol features all push toward null - protocol-breaching daytime
+  naps, testing in the evening near the circadian performance peak rather than at the trough, and caffeine
+  access until 14:00. Cohen 2010 shows the same nightly dose looks 14 times worse when measured late in the
+  waking day rather than early. So the true effect of this schedule is very likely larger than the betas
+  reported here, and the 8 null domains should be read as 'not detected under favourable measurement
+  conditions in 15 selected midlife adults', not as 'unaffected'.
+shard: "s01_cognition_dose_response"

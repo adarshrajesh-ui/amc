@@ -1,0 +1,174 @@
+study_id: banks2007
+citation: "Banks S, Dinges DF. Behavioral and Physiological Consequences of Sleep Restriction. Journal of Clinical Sleep Medicine. 2007;3(5):519-528."
+doi: "10.5664/jcsm.26918"
+pmid: "17803017"
+url: "https://jcsm.aasm.org/doi/10.5664/jcsm.26918"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Behavioral and Physiological Consequences of Sleep Restriction"
+access_tier: full_text
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: null
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: sleep_dose_threshold_for_cumulative_lapse_accumulation
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 8, duration_days: 7,
+               contrast_label: "pooled reading of the two large dose-response experiments: TIB threshold below which lapses accumulate"}
+    scale: hours
+    unit: "hours nightly TIB at or below which PVT lapses accumulate progressively across days"
+    value: 7.0
+    se: null
+    ci: null
+    conversion_formula: "No new data; this is the review's own pooled conclusion from Van Dongen 2003
+      and Belenky 2003 read jointly, quoted verbatim below. Recorded because it is the authoritative
+      secondary statement of the dose threshold and because it agrees with an independent adolescent
+      estimate (Lo 2022: harm between 6.5 and 8 h TIB)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "at or below 7 h TIB, deficits accumulate; above it, they do not"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_per_day_absolute_at_day_7
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 7,
+               contrast_label: "absolute daily lapse count after 7 nights, 4h vs 6h TIB (Van Dongen 2003 data re-presented)"}
+    scale: raw_units
+    unit: "PVT lapses summed over 9 test bouts on day 7"
+    value: 70.0
+    se: null
+    ci: null
+    conversion_formula: "Verbatim from the Figure 2 legend: 'by day 7, subjects in the 6-h sleep
+      restriction condition averaged 54 lapses (6 lapses x 9 test times) that day, while those in the
+      4-h sleep condition averaged 70 lapses that day.' 70/9 = 7.8 lapses per bout at 4h TIB and
+      54/9 = 6.0 at 6h TIB, which independently corroborates the values I digitised from Van Dongen's
+      Figure 1A for day 7 (4h = 9.80 and 6h = 6.53 lapses per bout, change from baseline; adding the
+      arms' baselines brings these into the same range). Useful as an absolute-scale anchor because
+      Van Dongen's own figure is plotted as change from baseline only."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more lapses = worse; 4h TIB is worse than 6h TIB"
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_GCRC_2003
+  - outcome_domain: cognition
+    outcome_construct: dose_response_significance_within_van_dongen_arms
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 6, duration_days: 14,
+               contrast_label: "4h vs 6h TIB rate of lapse increase over 14 nights"}
+    scale: raw_units
+    unit: "p-value for the 4h-vs-6h difference in the rate of lapse increase"
+    value: 0.036
+    se: null
+    ci: null
+    conversion_formula: "Verbatim from the Figure 2 legend: 'The graph shows systematic increases in
+      lapses of sustained attention when sleep was restricted to either 4 h (p < 0.001) or 6 h
+      (p < 0.001) per night, but not when sleep was restricted to 8 h per night (p = 0.29). The
+      increase in lapsing was worse in the 4-h sleep condition than in the 6-h sleep condition
+      (p = 0.036), further supporting a dose-response relationship within and between conditions.'
+      This supplies the PAIRWISE 4h-vs-6h contrast that the 2003 primary paper reports only as an
+      omnibus F (F2,30 = 3.67, P = 0.037), and the 8h-arm null (p = 0.29) that confirms the control
+      arm did not deteriorate."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "significant = the two restriction doses are separable; dose-response is graded"
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_GCRC_2003
+  - outcome_domain: cognition
+    outcome_construct: subjective_objective_dissociation_pooled_statement
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: 8, duration_days: 14,
+               contrast_label: "pooled statement on self-rated sleepiness vs objective performance under chronic restriction"}
+    scale: raw_units
+    unit: "qualitative pooled conclusion; no numeric estimate published in this review"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "No numeric effect is given; value 0 is a placeholder and must not be pooled.
+      Recorded solely to carry the review's authoritative verbatim statement of the dissociation,
+      quoted in the notes field. The quantitative version of this claim lives in vandongen2003.yaml
+      (theta 0.78 for PVT vs 0.24 for SSS) and lo2016.yaml (Cohen f2 1.48 for PVT vs 0.50 for KSS)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "placeholder, not an effect estimate - do not pool"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+rob:
+  tool: AMSTAR-2
+  judgement: high
+  notes: "Narrative expert review, not a systematic review: no protocol, no stated search strategy, no
+    inclusion criteria, no risk-of-bias appraisal of included studies, no quantitative synthesis. Both
+    authors are also authors of one of the two primary experiments it synthesises (Van Dongen 2003),
+    so the pooled statements are not independent of the primary evidence. Use it for the verbatim
+    pooled threshold statement, for the absolute-scale lapse anchor, and for locating primaries -
+    never as an independent effect estimate."
+funding: "NIH grants NR004281, RR00040, HL070154 (as acknowledged in the paper)"
+notes: |
+  ROLE IN THIS SHARD: used exactly as instructed - for pooled statements and to locate primary
+  sources. It contributed no independent data. Everything numeric in it traces back to Van Dongen
+  2003 and Belenky 2003, both of which I retrieved and extracted directly.
+
+  PRIMARIES THIS REVIEW POINTED ME TO (all subsequently retrieved and screened independently):
+    Van Dongen et al. 2003 Sleep 26:117-126        -> vandongen2003.yaml
+    Belenky et al. 2003 J Sleep Res 12:1-12        -> belenky2003.yaml
+    Dinges et al. 1997 Sleep 20:267-277            -> dinges1997.yaml
+    Carskadon & Dement 1981 Psychophysiology 18:107-113 -> screened, see screening_log.md
+    Balkin et al. 2000 (DOT truck driver study, the source of Belenky's protocol)
+
+  THE KEY POOLED THRESHOLD STATEMENT, verbatim: "The remarkable similarity and internal consistency of
+  the dependence of severity of PVT lapsing on the chronic sleep dose suggests that when the nightly
+  sleep period is restricted to <=7 h, healthy adults have increasing numbers of lapses of attention in
+  proportion to the dose of sleep allowed (between subjects) and the number of days of sleep
+  restriction (within subjects)."
+  And: "Considering data in both Panels A and B, it is clear that restriction of nocturnal sleep time
+  to <7 h per night in healthy adults results in systematic increases in lapses of waking attention
+  that get progressively worse across days, in a dose-response manner."
+
+  THE DISSOCIATION, verbatim: "Like NREM SWA, subjective sleepiness responses during chronic sleep
+  restriction show a different dynamic profile than those found for total sleep deprivation. While the
+  latter results in immediate increases in feelings of sleepiness, fatigue and cognitive confusion,
+  with concomitant decreases in vigor and alertness, chronic sleep restriction yields much smaller
+  changes in these psychometric ratings of internal state. Thus, in contrast to the continuing
+  accumulation of cognitive performance deficits associated with nightly restriction of sleep <8 h,
+  ratings of sleepiness repeatedly made by subjects on standardized sleepiness scales did not parallel
+  performance deficits. As a consequence, after a week or two of sleep restriction, subjects were
+  markedly impaired and less alert, but rated themselves subjectively as only moderately sleepy (see
+  Figure 4). This suggests that people frequently underestimate the cognitive impact of sleep
+  restriction and overestimate their performance readiness when sleep restricted."
+
+  ON THE MECHANISM AND WHY SLEEP PHYSIOLOGY IS THE WRONG BIOMARKER, verbatim: "Collectively they
+  suggest that there is a neurobiological integrator that either accumulates homeostatic sleep drive or
+  the neurobiological consequences of excess wakefulness. There has as yet been no definitive evidence
+  of what is accumulating and destabilizing cognitive functions over time when sleep is regularly
+  restricted to less than 7 hours per night, but one intriguing line of evidence suggests that it may
+  involve extracellular adenosine in the basal forebrain." And: "While the neurobehavioral effects of
+  chronic sleep restriction appear similar to those of total sleep deprivation, the primary physiologic
+  measure of homeostatic sleep - slow wave activity in the spectrally analyzed NREM EEG - shows a much
+  more muted response to the former than to the latter, suggesting that there may be a different
+  neurobiological mechanisms sub-serving the adverse effects of chronic sleep restriction."
+
+  A SECOND, INDEPENDENT DOSE-RESPONSE STRAND (physiological sleep propensity, not cognition):
+  "A significant increase in sleep propensity across 7 days of sleep restricted to either 3 or 5 h per
+  night was observed, with no differences found when sleep was restricted to 7 or 9 h per night." And
+  from an epidemiological study: "Persons reporting >7.5 hours of sleep had significantly less
+  probability of falling asleep on the MSLT than those reporting to between 6.75 to 7.5 h per night
+  (27% risk of falling asleep) and than those reporting sleep durations less than 6.75 h per night
+  (73% risk of falling asleep)." These converge on the same ~7 h threshold from a different measurement
+  modality, which raises confidence in the threshold's location.
+
+  NOTE ON A DISCREPANCY WORTH RECORDING: this review's Figure 2 legend states Belenky's arms as
+  n = 13/13/13/16, whereas Belenky's own Table 1 gives 3h n=13, 5h n=13, 7h n=14, 9h n=16. I used
+  Belenky's own table. The review also describes Belenky's PVT as assessed 4 times daily from 09:00 to
+  21:00, which the primary paper does not state explicitly in the text I retrieved.
+shard: "s01_cognition_dose_response"

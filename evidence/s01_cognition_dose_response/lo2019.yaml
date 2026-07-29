@@ -1,0 +1,154 @@
+study_id: lo2019
+citation: "Lo JC, Twan DCK, Karamchedu S, Lee XK, Ong JL, Van Rijn E, Gooley JJ, Chee MWL. Differential effects of split and continuous sleep on neurobehavioral function and glucose tolerance in sleep-restricted adolescents. Sleep. 2019;42(5):zsz037."
+doi: "10.1093/sleep/zsz037"
+pmid: "30753648"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6519912/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Differential effects of split and continuous sleep on neurobehavioral function and glucose tolerance in sleep-restricted adolescents"
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 58
+n_studies_pooled: null
+population:
+  age_mean: 16.6
+  age_range: [15, 19]
+  pct_female: 50.0
+  country: "Singapore"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_6_5h_continuous_vs_9h_control
+    exposure: {type: chronic_restriction, dose_h: 6.5, referent_h: 9, duration_days: 5,
+               contrast_label: "6.5h continuous nocturnal TIB for 5 nights vs 9h TIB historical control, adolescents"}
+    scale: raw_units
+    unit: "F statistic for the three-group x day interaction on PVT lapses"
+    value: 3.47
+    se: null
+    ci: null
+    conversion_formula: "Reported directly for the split-vs-continuous-vs-control model:
+      'the split sleep group exhibited fewer lapses than the continuous sleep group during both cycles
+      of sleep restriction and in the intervening recovery sleep (Group x Day interaction: F = 3.47,
+      p < 0.001)'. Degrees of freedom not printed, so no standardised effect is derivable.
+      THE DOSE-RELEVANT FACT: 6.5 h continuous TIB - only 1.5 h below the recommended minimum -
+      produced a significant progressive lapse increase across a single school week
+      ('the continuous sleep group showed an increase in lapses (p < 0.001)'), while the split-sleep
+      arm at 5h + 1.5h nap did NOT deteriorate within week 1 (SR11 vs SR15: p = 0.10).
+      Both arms nonetheless stayed worse than the 9 h control."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "6.5h continuous TIB is already an accumulating dose in adolescents"
+    covariates: ["baseline performance (third battery on day B1)"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+  - outcome_domain: cognition
+    outcome_construct: apportionment_beats_total_sleep_time
+    exposure: {type: chronic_restriction, dose_h: 6.5, referent_h: 9, duration_days: 8,
+               contrast_label: "5h nocturnal + 1.5h nap vs 6.5h continuous, matched-ish 24h dose"}
+    scale: raw_units
+    unit: "minutes of extra 24-h TST held by the continuous arm despite performing worse"
+    value: 18.0
+    se: null
+    ci: null
+    conversion_formula: "Verbatim: 'Overall, splitting sleep shortened total daily TST by 15-21 minutes
+      compared with continuous sleep (SR11-SR15 and SR23: p < 0.007)'. Midpoint 18 min. Yet
+      'The split sleep group had fewer vigilance lapses, better working memory and executive function,
+      faster processing speed, lower level of subjective sleepiness, and more positive mood, even
+      though PSG-verified total sleep time was less than the continuous sleep group.'
+      MODELLING CONSEQUENCE: total 24-h sleep duration is NOT a sufficient statistic for
+      neurobehavioral outcome - the timing/apportionment of sleep relative to hours-awake carries
+      independent information. A model that maps only average nightly TST to deficit will misprice
+      schedules with daytime sleep."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "the arm with LESS total sleep performed BETTER, so TST alone is insufficient"
+    covariates: ["baseline performance"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+  - outcome_domain: recovery
+    outcome_construct: further_deterioration_in_second_restriction_cycle
+    exposure: {type: weekend_catchup, dose_h: 9, referent_h: 9, duration_days: 2,
+               contrast_label: "matched restricted night in cycle 2 vs cycle 1, both arms"}
+    scale: raw_units
+    unit: "p-value for the SR13 vs SR23 within-arm contrast"
+    value: 0.02
+    se: null
+    ci: null
+    conversion_formula: "Verbatim: 'Both groups showed further deterioration in performance during the
+      second sleep restriction period (e.g. SR13 vs. SR23: p = 0.02 and 0.03).' Recorded value is the
+      first of the two p's. Independent replication, in a third NFS cohort, of the carry-over /
+      ratcheting seen in lo2017 and lo2022 - three separate adolescent samples now show that two
+      weekend recovery nights do not reset the deficit."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "cycle 2 worse than cycle 1 despite intervening 9h recovery nights"
+    covariates: ["baseline performance"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Properly randomised parallel-group allocation between the two restriction schedules
+    (126 screened, 60 randomised, 58 analysed), dormitory residential control, PSG-verified dose,
+    baseline covariate, arms matched on pre-study actigraphic TIB and TST. Concerns: the 9 h TIB
+    reference arm is again a HISTORICAL control from NFS1, so the restriction-vs-adequate-sleep
+    contrast is quasi-experimental; the randomised contrast is schedule shape rather than dose, so
+    this study contributes little to the dose slope itself; per-arm lapse means and SDs are in figures
+    and supplementary material only, and the supplementary figures were not retrievable, so no raw
+    per-arm numbers could be extracted."
+funding: "National Medical Research Council Singapore (STaR/0015/2013); National Research Foundation
+  (NRF2016-SOL002-001); Far East Organization; Defence Science and Technology Agency Singapore;
+  Ministry of Education Singapore (MOE2015-T2-077)"
+notes: |
+  NEED FOR SLEEP STUDY 4 (NFS4). Included in this shard for two reasons only, since its randomised
+  contrast is schedule shape rather than sleep dose:
+
+  1. It supplies the 6.5 h TIB dose level in adolescents with a clean within-week trajectory:
+     6.5 h continuous nocturnal TIB - a dose the target subject probably exceeds only at weekends -
+     produced a significant progressive increase in PVT lapses across five nights.
+  2. It shows that 24-h total sleep time is not a sufficient exposure statistic. The split arm slept
+     15-21 min LESS per 24 h yet performed BETTER on vigilance, working memory, processing speed,
+     subjective sleepiness and mood. Any dose-response function keyed purely on average nightly TST
+     will therefore mis-specify schedules containing daytime sleep.
+
+  DESIGN: 15-day dormitory protocol, vacation period 2017. 2 baseline nights at 9 h TIB (23:00-08:00);
+  cycle 1 = 5 restricted nights (SR11-SR15) + 2 recovery nights at 9 h TIB; cycle 2 = 3 restricted
+  nights (SR21-SR23) + 2 recovery nights. Randomised arms: continuous 6.5 h nocturnal TIB
+  (00:15-06:45, n=29) vs split 5 h nocturnal TIB (01:00-06:00) plus a 1.5 h nap at 14:00-15:30 (n=29).
+  Nap TST 71-79 min. PSG on selected nights; battery 3x/day.
+
+  A GLUCOSE COUNTERPOINT WORTH FLAGGING TO OTHER SHARDS: the schedule that was better for cognition
+  was WORSE for glucose. "During sleep restriction, the split sleep group showed a greater increase in
+  blood glucose (glucose excursion) during the OGTT than the continuous sleep group (Group x Day
+  interaction: F = 3.14, p = 0.03)". Cognitive and metabolic outcomes therefore do not share a single
+  dose-response surface - relevant to s07_metabolic.
+
+  KEY VERBATIM QUOTES
+  Main result: "The split sleep group had fewer vigilance lapses, better working memory and executive
+  function, faster processing speed, lower level of subjective sleepiness, and more positive mood, even
+  though PSG-verified total sleep time was less than the continuous sleep group. However, vigilance in
+  both sleep-restricted groups was inferior to adolescents in a prior sample given 9-hour nocturnal
+  TIB."
+  6.5 h accumulates within one week: "Although vigilance performance as indicated by the number of PVT
+  lapses was similar in the two groups at baseline, the split sleep group exhibited fewer lapses than
+  the continuous sleep group during both cycles of sleep restriction and in the intervening recovery
+  sleep (Group x Day interaction: F = 3.47, p < 0.001; Figure 4A). During the first sleep restriction
+  period, the split sleep group maintained PVT performance (SR11 vs. SR15: p = 0.10), whereas the
+  continuous sleep group showed an increase in lapses (p < 0.001). Both groups showed further
+  deterioration in performance during the second sleep restriction period (e.g. SR13 vs. SR23: p = 0.02
+  and 0.03)."
+  Less sleep, better performance: "Overall, splitting sleep shortened total daily TST by 15-21 minutes
+  compared with continuous sleep (SR11-SR15 and SR23: p < 0.007; Figure 2A)."
+  Both restricted arms still below an adequately slept reference: "While exhibiting poorer morning
+  vigilance relative to the control group that received 9 hours of TIB in our previous study
+  (Figure 4B; SR13-SR15: p < 0.05; R12-SR23: p < 0.04), the split sleep group critically had fewer
+  lapses than the continuous sleep group during the first period of sleep restriction
+  (SR12-SR15: p < 0.02)."
+  Authors' bottom line: "In adolescents, modest multinight sleep restriction had divergent negative
+  effects on cognitive performance and glucose levels depending on how the restricted sleep was
+  apportioned. They are best advised to obtain the recommended amount of nocturnal sleep."
+shard: "s01_cognition_dose_response"

@@ -1,0 +1,203 @@
+study_id: duraccio2024
+citation: "Duraccio KM, Kaiser N, Ehsani S, Blackburn BE, Zaugg K, Ho KJ, Kelly RG, Jarrett S, Krietsch KN, Beebe DW, Jones BL. Effect of Sleep Restriction on Adolescent Cognition by Adiposity: A Randomized Crossover Trial. JAMA Neurology. 2024;81(7):712-720."
+doi: "10.1001/jamaneurol.2024.1332"
+pmid: "38767872"
+url: "https://pubmed.ncbi.nlm.nih.gov/38767872/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Effect of Sleep Restriction on Adolescent Cognition by Adiposity: A Randomized Crossover Trial."
+access_tier: abstract_only
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 61
+n_studies_pooled: null
+population:
+  age_mean: 16.3
+  age_range: [14, 19]
+  pct_female: 57.4
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: cognition
+    outcome_construct: cognitive_flexibility_restricted_vs_adequate_higher_adiposity_subgroup
+    exposure: {type: chronic_restriction, dose_h: 4.2, referent_h: 8.9, duration_days: 1,
+               contrast_label: "ONE night restricted (4h12min actual sleep) vs adequate (8h54min), adolescents with overweight/obesity"}
+    scale: cohens_d
+    unit: null
+    value: -0.487
+    se: 0.190
+    ci: [-0.859, -0.115]
+    conversion_formula: "Reported values: restricted 84.8 (2.8-3.0), adequate 92.8 (3.0), subgroup n = 30.
+      CRITICAL INTERPRETIVE STEP, FLAGGED: the paper labels the parenthetical values 'SD', but NIH Cognitive
+      Toolbox scores are normed with a population SD of about 15, and a within-condition SD of 3.0 on such a
+      scale is not credible. I therefore read them as mixed-model STANDARD ERRORS and convert:
+      SD = SE*sqrt(n) = 3.0*sqrt(30) = 16.43, which lands almost exactly on the expected norm of 15 and
+      corroborates the reading. d = (84.8 - 92.8)/16.43 = -0.487.
+      SE for a paired/within-subject standardised difference: sqrt(1/30 + 0.487^2/60) = 0.190;
+      CI = d +/- 1.96*SE.
+      IF THE PUBLISHED VALUES WERE LITERALLY SDs, d would be about -2.7 for one night of 4 h sleep, which is
+      larger than Belenky's 3h-arm effect after SEVEN nights and is not credible. The SE reading is the only
+      self-consistent one. Because the conversion rests on that judgement, inferred_from_ci is set true.
+      Between-condition pooled SD is used as the denominator (the SD of the within-person difference is not
+      published) - the same fallback Lim & Dinges 2010 document for crossover designs, which biases the
+      magnitude DOWNWARD relative to a properly paired denominator."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = worse cognitive flexibility after restriction. Largest of the three
+      significant outcomes. Present ONLY in adolescents with overweight or obesity; no differences emerged
+      in the healthy-weight group."
+    covariates: ["randomised condition order", "2-day washout of adequate sleep before each condition",
+                 "actigraphy-confirmed sleep duration", "single-blind assessment"]
+    followup_years: null
+    cohort_family: null
+    quote: "Restricted sleep predicted poorer global cognition scores (restricted mean [SD], 98.0 [2.8];
+      adequate mean [SD], 103.2 [2.9]), fluid cognition scores (restricted mean [SD], 94.5 [3.2]; adequate
+      mean [SD], 102.0 [3.6]), and cognitive flexibility scores (restricted mean [SD], 84.8 [3.0]; adequate
+      mean [SD], 92.8 [3.0]) for adolescents with overweight or obesity. No differences emerged for
+      adolescents with healthy weight."
+  - outcome_domain: cognition
+    outcome_construct: fluid_cognition_restricted_vs_adequate_higher_adiposity_subgroup
+    exposure: {type: chronic_restriction, dose_h: 4.2, referent_h: 8.9, duration_days: 1,
+               contrast_label: "one restricted night vs one adequate night, fluid cognition composite, overweight/obesity subgroup"}
+    scale: cohens_d
+    unit: null
+    value: -0.401
+    se: 0.187
+    ci: [-0.768, -0.034]
+    conversion_formula: "Restricted 94.5 (3.2), adequate 102.0 (3.6), n = 30. Same SE-to-SD reading as above:
+      SD_restricted = 3.2*sqrt(30) = 17.53, SD_adequate = 3.6*sqrt(30) = 19.72, pooled = 18.70.
+      d = (94.5 - 102.0)/18.70 = -0.401. SE = sqrt(1/30 + 0.401^2/60) = 0.187; CI = d +/- 1.96*SE."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = worse fluid cognition after one restricted night, in the higher-adiposity
+      subgroup only"
+    covariates: ["randomised order", "washout", "actigraphy-confirmed dose", "single-blind"]
+    followup_years: null
+    cohort_family: null
+    quote: "fluid cognition scores (restricted mean [SD], 94.5 [3.2]; adequate mean [SD], 102.0 [3.6])"
+  - outcome_domain: cognition
+    outcome_construct: global_cognition_restricted_vs_adequate_higher_adiposity_subgroup
+    exposure: {type: chronic_restriction, dose_h: 4.2, referent_h: 8.9, duration_days: 1,
+               contrast_label: "one restricted night vs one adequate night, global cognition composite, overweight/obesity subgroup"}
+    scale: cohens_d
+    unit: null
+    value: -0.333
+    se: 0.185
+    ci: [-0.696, 0.030]
+    conversion_formula: "Restricted 98.0 (2.8), adequate 103.2 (2.9), n = 30. SE-to-SD reading:
+      SD = 2.8*sqrt(30) = 15.34 and 2.9*sqrt(30) = 15.88, pooled = 15.61.
+      d = (98.0 - 103.2)/15.61 = -0.333. SE = sqrt(1/30 + 0.333^2/60) = 0.185; CI = d +/- 1.96*SE.
+      Note the CI computed this way just crosses zero even though the paper reports the effect as
+      significant - because my SE is for an unpaired standardised difference while the paper's test was
+      paired (within-person), which is more powerful. The CI here is therefore CONSERVATIVELY WIDE and
+      should not be read as contradicting the published significance."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = worse global cognition. Smallest of the three composites, consistent with
+      the general pattern that broad composites dilute the vigilance-specific signal."
+    covariates: ["randomised order", "washout", "actigraphy-confirmed dose", "single-blind"]
+    followup_years: null
+    cohort_family: null
+    quote: "Restricted sleep predicted poorer global cognition scores (restricted mean [SD], 98.0 [2.8];
+      adequate mean [SD], 103.2 [2.9])"
+  - outcome_domain: cognition
+    outcome_construct: adiposity_moderates_the_cognitive_response_to_sleep_restriction
+    exposure: {type: chronic_restriction, dose_h: 4.2, referent_h: 8.9, duration_days: 1,
+               contrast_label: "overweight/obesity (n=30) vs healthy weight (n=31): does the restriction effect differ?"}
+    scale: raw_units
+    unit: "1 = adiposity significantly moderated the effect of restriction on cognition"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Binary encoding of the trial's primary moderation finding. The restriction effect on
+      global cognition, fluid cognition and cognitive flexibility was present in the higher-adiposity group
+      and ABSENT in the healthy-weight group; and adolescents with overweight/obesity had poorer attention
+      than healthy-weight peers after restriction (80.0 vs 88.4) with no difference after adequate sleep.
+      A dose threshold was also reported for body fat: above 42% total body fat, restriction additionally
+      impaired processing speed.
+      HOW THIS SHOULD BE USED FOR OUR SUBJECT: as an effect modifier to condition on, not as a headline
+      effect. If he is of healthy weight, this trial's own healthy-weight arm found NO detectable effect of
+      one restricted night on these composites - which is a genuine argument for caution about acute
+      single-night extrapolations. It does NOT argue against the chronic effects in this shard, since every
+      chronic study here found large effects in unselected healthy samples. The honest reading is that ONE
+      night at 4 h is detectable in a vulnerable subgroup and not in healthy-weight adolescents on these
+      broad composites, whereas SEVEN nights at 5 h is detectable in unselected healthy adolescents with
+      g > 2 on PVT lapses (Lo 2016). Duration, not just dose, is doing the work."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = moderation present. Higher adiposity confers greater cognitive vulnerability to
+      sleep restriction; healthy-weight adolescents showed no significant effect after a single night."
+    covariates: ["BMI percentile", "bioelectrical impedance total body fat percentage"]
+    followup_years: null
+    cohort_family: null
+    quote: "Adolescents with overweight or obesity also had poorer attention scores (mean [SD], 80.0 [2.3])
+      compared to adolescents with healthy weight (mean [SD], 88.4 [SD, 2.3]) following restricted sleep. No
+      differences emerged following adequate sleep. Findings were similar for total body fat percentage
+      (TBF%); however, for adolescents with TBF% above 42, restricted sleep also predicted poorer processing
+      speed, and the association between sleep and attention did not vary based on TBF%. ... Adolescents with
+      overweight or obesity may be more vulnerable to negative cognitive effects following sleep restriction."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Methodologically the strongest adolescent design in this shard on several axes: properly randomised
+    single-blind crossover, actigraphy-CONFIRMED rather than assumed dose (restricted 4 h 12 min SD 50.7 min;
+    adequate 8 h 54 min SD 58.0 min), a 2-day washout of adequate sleep before each condition, a validated
+    normed battery (NIH Cognitive Toolbox plus Stroop), prospective registration (NCT04346433), and exact age
+    match (mean 16.3 y, range 14-19, 57.4% female).
+    THE DECISIVE LIMITATION FOR THIS SHARD IS EXPOSURE DURATION, NOT QUALITY: the restriction is ONE night.
+    My domain is chronic partial restriction sustained >= 5 consecutive nights. This record is therefore
+    OUT OF SCOPE for pooling with the chronic effects and duration_days is set to 1 so the downstream pooler
+    can filter it out. I include it because it is the only study I found in 14-19 year olds that publishes
+    per-condition means with dispersion, making it the only exact-age-match record here with a directly
+    computable standardised effect.
+    Other concerns: heavy participation attrition (323 assessed, 244 eligible, 157 declined, 87 randomised,
+    26 dropped out, 61 analysed = 25% of eligible), so selection is a real risk; the significant effects are
+    SUBGROUP results in n = 30, and subgroup effects at that size are fragile; the parenthetical dispersion
+    values are labelled SD but are almost certainly SEs (see conversion_formula), so all three standardised
+    effects rest on my re-interpretation rather than on published statistics; and abstract-only access means
+    I could not check the labelling against the methods or tables."
+funding: "Not stated in the retrieved abstract. Trial registration: ClinicalTrials.gov NCT04346433"
+notes: |
+  WHY AN ACUTE STUDY IS IN A CHRONIC-RESTRICTION SHARD, AND HOW TO USE IT. Every other record here that
+  matches our subject's age (the Lo/Chee Singapore series, Campbell's Davis series) reports F statistics,
+  p-values or figures rather than per-condition means with dispersion, so none of them yields a standardised
+  effect without digitisation or assumption. This trial publishes means and dispersion for a normed battery
+  in 61 adolescents aged 14-19. It is therefore the cleanest available exact-age-match calibration point,
+  even though its exposure is a single night and must not be pooled with the multi-night effects.
+
+  THE THREE COMPUTED EFFECTS, one night at 4 h 12 min versus 8 h 54 min, higher-adiposity subgroup (n = 30):
+    cognitive flexibility  d = -0.49 (SE 0.19)
+    fluid cognition        d = -0.40 (SE 0.19)
+    global cognition       d = -0.33 (SE 0.19)
+  All three rest on reading the published dispersion values as standard errors rather than standard
+  deviations; the arithmetic and the justification are in each conversion_formula, and the alternative
+  reading gives implausible effects around d = -2.7 for a single night.
+
+  A USEFUL CONSISTENCY CHECK. These magnitudes sit almost exactly on Lowe 2017's pooled restriction estimate
+  (g = -0.383 across domains; -0.324 for executive functioning), which is reassuring for both. They are also
+  far below the chronic multi-night effects in this shard (Van Dongen 2003 4h vs 8h at day 14: |g| = 1.44;
+  Lo 2016 5h vs 9h in adolescents: |g| = 1.79 at night 5 rising to 2.40 at night 7). Ordering by exposure
+  duration: one night ~0.4, five nights ~0.9-1.2 (Basner 2011), seven nights in adolescents ~2.4 (Lo 2016),
+  fourteen nights ~1.44 (Van Dongen 2003). Magnitudes only - the sign convention differs between records
+  because the constructs differ. The ordering is monotone in duration EXCEPT that Lo's seven adolescent
+  nights exceed Van Dongen's fourteen adult nights, which is the age effect rather than a duration
+  inversion; it supports treating duration as a first-order term and age as a multiplier on it.
+
+  THE NULL RESULT DESERVES EQUAL BILLING AND I WANT TO BE STRAIGHT ABOUT IT. In healthy-weight adolescents
+  (n = 31), one restricted night produced NO detectable effect on these composites. That is a real and
+  relevant finding: broad normed cognitive composites after a single short night are not sensitive in healthy
+  adolescents. It is not evidence against the chronic effects - those were measured with the PVT in
+  unselected healthy adolescents over five to seven nights and were large - but it does argue against
+  extrapolating from single-night studies to a chronic schedule, and against expecting a chronically
+  restricted teenager to look impaired on a one-off broad cognitive screen. The measure and the duration both
+  matter: use PVT lapses over multiple nights, not a composite after one.
+
+  A CROSS-SHARD FLAG. Adiposity moderated the cognitive response, with an apparent threshold above 42% total
+  body fat. Since chronic restriction also PROMOTES adiposity (s07_metabolic territory), there is a plausible
+  feedback loop in which short sleep increases adiposity which in turn increases cognitive vulnerability to
+  short sleep. Nothing here establishes that loop, but the two halves are each documented and the metabolic
+  shard should be told.
+shard: "s01_cognition_dose_response"

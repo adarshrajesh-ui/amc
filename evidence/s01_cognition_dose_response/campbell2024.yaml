@@ -1,0 +1,174 @@
+study_id: campbell2024
+citation: "Campbell IG, Kurinec CA, Zhang ZY, Cruz-Basilio A, Figueroa JG, Bottom VB, Whitney P, Hinson JM, Van Dongen HPA. Sleep restriction and age effects on distinct aspects of cognition in adolescents. Sleep. 2024;47(12):zsae216."
+doi: "10.1093/sleep/zsae216"
+pmid: "39283917"
+url: "https://pubmed.ncbi.nlm.nih.gov/39283917/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Sleep restriction and age effects on distinct aspects of cognition in adolescents"
+access_tier: abstract_only
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 159
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [9.9, 22.8]
+  pct_female: null
+  country: "US"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: cognition
+    outcome_construct: pvt_degrades_monotonically_across_10_to_8_5_to_7h_tib
+    exposure: {type: chronic_restriction, dose_h: 8.5, referent_h: 10, duration_days: 4,
+               contrast_label: "4 consecutive nights at 8.5h TIB vs 10h TIB, within-subject, adolescents"}
+    scale: raw_units
+    unit: "1 = PVT performance significantly worse at the lower dose; 0 = no difference"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Binary encoding of the reported dose ordering. No means, SDs or effect sizes are
+      printed in the abstract and the full text is paywalled (PMC12477114 has no body deposit; no OA copy
+      located), so no magnitude is extractable and se is null.
+      THIS IS THE MOST IMPORTANT SINGLE FACT IN THIS RECORD: vigilance degraded going from 10h to 8.5h TIB,
+      and degraded FURTHER going from 8.5h to 7h. There is no threshold at 8.5 h below which vigilance is
+      spared - the PVT dose-response extends into the MILD range that most adolescents and our subject's own
+      weekends actually occupy. Every other chronic-restriction study in this shard tests 3-6h doses, so
+      this is the only evidence on the 7-10h segment of the dose curve, and it says the curve has not
+      flattened even at 8.5h."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = worse at the lower dose. Monotone dose-response in PVT across 10 > 8.5 > 7 h TIB
+      with no floor in the range tested."
+    covariates: ["within-subject: every participant completed all three TIB conditions", "age", "annual repeat measurement"]
+    followup_years: null
+    cohort_family: Campbell_Feinberg_Davis
+    quote: "Psychomotor vigilance test performance decreased as TIB was restricted from 10 to 8.5 hours and
+      decreased further with restriction to 7 hours."
+  - outcome_domain: cognition
+    outcome_construct: attentional_control_and_flexibility_have_a_threshold_near_8_5h
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 8.5, duration_days: 4,
+               contrast_label: "4 nights at 7h TIB vs 8.5h TIB, top-down attentional control and cognitive flexibility"}
+    scale: raw_units
+    unit: "1 = impaired only at the 7h dose, with 8.5h and 10h indistinguishable"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Binary encoding. The contrast with the PVT result above is the point and it is a
+      genuinely new structural finding for this shard: DIFFERENT COGNITIVE MEASURES HAVE DIFFERENT DOSE
+      THRESHOLDS. Vigilance degrades continuously from 10h down. Top-down attentional control and cognitive
+      flexibility show a threshold - impaired at 7h, but 'performance did not differ between 8.5 and 10
+      hours'. Working memory (Sternberg) was not significantly affected at any dose tested.
+      MODELLING CONSEQUENCE: there is no single 'sleep need' number. The authors say so explicitly:
+      'the minimal duration of sleep needed for optimal performance appears to differ depending on the
+      cognitive measure.' A model with one threshold parameter shared across outcomes is mis-specified."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = threshold-shaped rather than graded; impairment appears only below ~8.5h for these
+      executive measures, unlike the PVT"
+    covariates: ["within-subject across all three TIB conditions", "age"]
+    followup_years: null
+    cohort_family: Campbell_Feinberg_Davis
+    quote: "Restricting TIB to 7 hours was associated with impaired top-down attentional control and
+      cognitive flexibility, but performance did not differ between 8.5 and 10 hours of TIB conditions.
+      Psychomotor vigilance test performance decreased as TIB was restricted from 10 to 8.5 hours and
+      decreased further with restriction to 7 hours. Sternberg test measures of working memory were not
+      significantly affected by TIB restriction."
+  - outcome_domain: sleep_need
+    outcome_construct: no_evidence_of_reduced_sleep_need_across_adolescence
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 10, duration_days: 4,
+               contrast_label: "does the effect of a fixed TIB restriction shrink with age from 10 to 23 years?"}
+    scale: raw_units
+    unit: "0 = no significant age moderation of the sleep-loss effect on cognition"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Binary encoding of the reported null age interaction, spanning ages 9.9 to 22.8
+      years in a longitudinal within-subject design - the widest age range with a common protocol anywhere
+      in this shard.
+      WHY THIS IS DECISION-RELEVANT: it licenses transporting an adolescent dose-response across the whole
+      16-19 window without an age adjustment, and it directly contradicts the common assumption that older
+      adolescents need less sleep. The authors also flag a subtlety that cuts the other way for
+      interpretation: 'age-related improvement in many of the measures may compensate for some sleep loss
+      effects' - i.e. maturation can mask a constant sleep-loss penalty in raw scores, so a cross-sectional
+      look would under-detect it."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no age moderation. The sleep-loss penalty does not shrink as adolescents get
+      older, so sleep need does not appear to fall across adolescence."
+    covariates: ["longitudinal annual repeat measurement", "within-subject TIB conditions"]
+    followup_years: 3.0
+    cohort_family: Campbell_Feinberg_Davis
+    quote: "The effects of sleep loss on these cognitive measures did not change significantly with age, but
+      age-related improvement in many of the measures may compensate for some sleep loss effects. The
+      findings here do not indicate an adolescent decrease in sleep need; however, the minimal duration of
+      sleep needed for optimal performance appears to differ depending on the cognitive measure."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Design strengths are unusual and important: THREE dose levels (7, 8.5, 10 h TIB), four consecutive
+    nights at each, every participant completing all three conditions (within-subject, so between-person
+    variance is removed), two cohorts totalling 159 participants spanning ages 9.9-22.8 years, and
+    longitudinal annual repetition over 3 years. That is the only >=3-dose within-subject chronic
+    restriction experiment in adolescents covering the MILD dose range, and it is the design the shard brief
+    asks for in point 5. Concerns: condition order was NOT randomised in the companion papers from this
+    programme (Campbell 2017 states 'The order in which they completed the schedules was not randomized but
+    was accounted for in all statistical analyses'), which leaves an order/practice confound handled
+    statistically rather than by design; the older cohort was 'interrupted by the COVID pandemic with 25
+    participants completing multiple years', so its longitudinal component is incomplete and unbalanced;
+    four nights is short, so this study speaks to dose sensitivity rather than to multi-week accumulation.
+    Abstract-only access - PMC12477114 carries no body deposit and no OA copy was located - so NO effect
+    sizes, means or SDs could be extracted and all three effects here are directional encodings. That is the
+    principal limitation: the study answers WHERE the dose thresholds are but not HOW BIG the decrements
+    are."
+funding: "NIH (per the parent programme; not restated in the retrieved abstract)"
+notes: |
+  THIS IS THE ADOLESCENT >=3-DOSE EXPERIMENT THE BRIEF ASKED FOR, and it complements the Lo/Chee Singapore
+  series rather than duplicating it. Lo's studies contrast a severe 5h dose against a 9h control; this one
+  ladders three MILD doses (7, 8.5, 10 h TIB) within subject. Between them they cover the whole range our
+  subject actually occupies - 5-6 h weekdays (Lo territory) and 7-8 h weekends (Campbell territory).
+
+  THE THREE RESULTS, and each one changes something:
+
+  1. VIGILANCE HAS NO SAFE THRESHOLD IN THIS RANGE. PVT performance fell going 10 -> 8.5 h and fell further
+     going 8.5 -> 7 h. So our subject's *weekend* sleep of 7-8 h is already on the descending limb for
+     vigilance. This is the strongest available argument that the deficit is not confined to his weekdays.
+
+  2. DIFFERENT OUTCOMES HAVE DIFFERENT THRESHOLDS. Top-down attentional control and cognitive flexibility
+     were impaired only at 7 h, with 8.5 h and 10 h indistinguishable; Sternberg working memory was not
+     affected at any dose. Verbatim: "the minimal duration of sleep needed for optimal performance appears
+     to differ depending on the cognitive measure." A single sleep-need parameter shared across cognitive
+     outcomes is therefore wrong, and the ordering (vigilance most sensitive, executive control
+     intermediate, working memory least) reproduces the hierarchy from Lim & Dinges 2010, Lowe 2017,
+     Smith 2021 and Van Dongen 2003's exponents. Five independent lines, one ranking.
+
+  3. SLEEP NEED DOES NOT FALL ACROSS ADOLESCENCE. Longitudinally, across ages 9.9-22.8, the effect of a
+     fixed restriction did not shrink with age. This matters because the folk model - and some of the
+     school-schedule literature - assumes older teenagers tolerate short sleep better. On this evidence they
+     do not; they merely get better at the tasks for maturational reasons, which can hide a constant
+     penalty.
+
+  COMPANION STUDIES FROM THE SAME PROGRAMME, each now given its OWN record in this shard because full text
+  was subsequently obtained and both contain extractable per-dose numbers that this abstract-only record
+  cannot supply. All three share cohort_family Campbell_Feinberg_Davis and OVERLAP IN PARTICIPANTS, so the
+  pooler MUST NOT treat them as independent samples:
+    - campbell2017.yaml - Campbell IG, Burright CS, Kraus AM, Grimm KJ, Feinberg I. "Daytime Sleepiness
+      Increases With Age in Early Adolescence: A Sleep Restriction Dose-Response Study." Sleep
+      2017;40(5):zsx046, PMID 28419388. n = 76 analysed (77 enrolled), ages 9.9-14, same 7 / 8.5 / 10 h TIB
+      x 4 nights protocol. Supplies the adolescent per-hour KSS slope (0.56 +/- 0.07 points per hour of TIB)
+      and the raw MSLT sleep-onset proportions per dose (41% / 58% / 80% at 10 / 8.5 / 7 h).
+    - campbell2019.yaml - Campbell IG, Van Dongen HPA, Gainer M, Karmouta E, Feinberg I. "Differential and
+      interacting effects of age and sleep restriction on daytime sleepiness and vigilance in adolescence: a
+      longitudinal study." Sleep 2018;41(12):zsy177, PMID 30169721. n = 76, ages 9.8-16.2. Supplies the
+      per-dose PVT LSNR estimates (12.15 / 12.55 / 12.88 dB at 7 / 8.5 / 10 h TIB), the PSG-measured
+      TIB-to-TST conversion factor (41.5 +/- 0.8 min per hour of TIB), and the carryover/practice-effect
+      finding that PVT performance DECLINED across repeated visits in proportion to the preceding dose.
+  Between them those two records confirm and quantify the dose-ordering that this record could only encode
+  directionally, and campbell2019 adds the dissociation worth carrying: the SLEEPINESS response to dose
+  attenuates with age (-0.14 +/- 0.05 log-odds per year, p = 0.0060) while the VIGILANCE response to dose
+  does not (p = 0.12) - an adolescent-specific instance of physiological sleepiness and objective
+  performance coming apart, across exactly the ages our subject was exposed.
+shard: "s01_cognition_dose_response"

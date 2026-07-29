@@ -1,0 +1,193 @@
+study_id: axelsson2008
+citation: "Axelsson J, Kecklund G, Akerstedt T, Donofrio P, Lekander M, Ingre M. Sleepiness and performance in response to repeated sleep restriction and subsequent recovery during semi-laboratory conditions. Chronobiology International. 2008;25(2):297-308."
+doi: "10.1080/07420520802107031"
+pmid: "18533328"
+url: "https://pubmed.ncbi.nlm.nih.gov/18533328/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Sleepiness and performance in response to repeated sleep restriction and subsequent recovery during semi-laboratory conditions."
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 9
+n_studies_pooled: null
+population:
+  age_mean: 25.5
+  age_range: [23, 28]
+  pct_female: 0.0
+  country: "Sweden"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_accumulation_rate_per_night
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5,
+               contrast_label: "4h TIB (03:00-07:00) for 5 consecutive nights vs 8h TIB baseline"}
+    scale: raw_units
+    unit: "additional lapses per test, per additional night of 4h TIB"
+    value: 0.69
+    se: 0.16
+    ci: [0.376, 1.004]
+    conversion_formula: "Reported directly as a mixed-effect regression slope with its standard error.
+      CI computed as value +/- 1.96*SE = 0.69 +/- 0.314. This is the cleanest published per-night
+      accumulation coefficient for lapses at a 4 h dose. Note the abstract prints the unit as 'ms' for
+      this coefficient, which is a typographical slip - the outcome is lapses per test, as named."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more lapses = worse vigilance; the slope is per NIGHT, so the deficit
+      is modelled as accumulating linearly, not saturating, across 5 nights at 4h TIB"
+    covariates: ["random intercept per subject", "time of day (tests at 08:00, 14:00, 20:00)"]
+    followup_years: null
+    cohort_family: null
+    quote: "The mixed-effect regression models showed that each day of restricted sleep resulted in an
+      increase of sleepiness by 0.64+/- .05 KSS units (a nine-step scale, p < .001), increase of median
+      reaction times of 6.6+/- 1.6 ms ( p = .003), and increase of lapses/test of 0.69 +/- .16 ms
+      ( p < .001)."
+  - outcome_domain: cognition
+    outcome_construct: kss_subjective_sleepiness_accumulation_rate_per_night
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5,
+               contrast_label: "4h TIB for 5 consecutive nights vs 8h TIB baseline"}
+    scale: raw_units
+    unit: "KSS units (9-point scale) per additional night of 4h TIB"
+    value: 0.64
+    se: 0.05
+    ci: [0.542, 0.738]
+    conversion_formula: "Reported directly as a mixed-effect slope with SE. CI = 0.64 +/- 1.96*0.05.
+      Relative precision is the informative quantity here: SE/estimate = 0.078 for KSS versus 0.232 for
+      lapses and 0.242 for median RT, i.e. subjective sleepiness tracks the dose about three times more
+      tightly than either objective measure in the same subjects on the same days."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = sleepier; subjective sleepiness DOES rise linearly here rather than
+      plateauing, which is evidence AGAINST universal subjective habituation at a 4h dose over 5 nights"
+    covariates: ["random intercept per subject", "time of day"]
+    followup_years: null
+    cohort_family: null
+    quote: "each day of restricted sleep resulted in an increase of sleepiness by 0.64+/- .05 KSS units
+      (a nine-step scale, p < .001)"
+  - outcome_domain: cognition
+    outcome_construct: median_reaction_time_accumulation_rate_per_night
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5,
+               contrast_label: "4h TIB for 5 consecutive nights vs 8h TIB baseline"}
+    scale: raw_units
+    unit: "milliseconds of median RT per additional night of 4h TIB"
+    value: 6.6
+    se: 1.6
+    ci: [3.464, 9.736]
+    conversion_formula: "Reported directly with SE; CI = 6.6 +/- 1.96*1.6. Recorded for completeness
+      but DEPRECATED as a primary measure: Basner & Dinges 2011 show median RT has the lowest
+      sensitivity to sleep loss of ten candidate PVT metrics (see basner2011.yaml)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = slower = worse"
+    covariates: ["random intercept per subject", "time of day"]
+    followup_years: null
+    cohort_family: null
+    quote: "increase of median reaction times of 6.6+/- 1.6 ms ( p = .003)"
+  - outcome_domain: recovery
+    outcome_construct: lapses_fail_to_return_to_baseline_after_seven_recovery_nights
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 7,
+               contrast_label: "7 consecutive recovery nights at 8h TIB (23:00-07:00) after 5 nights at 4h TIB"}
+    scale: raw_units
+    unit: "number of the three outcomes that had NOT returned to baseline after 7 recovery nights"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Counted from the reported result: sleepiness recovered, median RT recovered,
+      lapses did not. No numeric residual is given in the abstract and the full text was not
+      retrievable, so no magnitude can be attached - only the qualitative fact of non-recovery.
+      This is the LONGEST recovery window in this shard (7 nights) and it still failed to normalise
+      lapses, which bounds recovery from below far more strongly than the 2-3 night windows used by
+      Belenky 2003, Lo 2016/2017 and Dinges 1997."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "the objective lapse measure is the one that does NOT recover; the subjective
+      measure and the insensitive RT measure both do - the same dissociation seen during restriction
+      reappears during recovery"
+    covariates: ["random intercept per subject"]
+    followup_years: null
+    cohort_family: null
+    quote: "Seven days of recovery allowed participants to return to the baseline for sleepiness and
+      median reaction time, but not for lapses."
+  - outcome_domain: cognition
+    outcome_construct: between_subject_sd_expressed_in_equivalent_nights_of_restriction
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5,
+               contrast_label: "between-subject SD of the random intercept, converted to nights of 4h TIB"}
+    scale: raw_units
+    unit: "nights of 4h TIB equivalent to one between-subject SD, for PVT lapses"
+    value: 3.2
+    se: null
+    ci: null
+    conversion_formula: "Reported directly by the authors, who performed exactly the conversion the
+      downstream model needs: they divided the between-subject SD of the random intercept by the
+      per-night slope. Companion values: 1.1 nights for KSS sleepiness, 6.6 nights for median RT.
+      INTERPRETATION FOR THE MODEL: for lapses, one SD of individual difference is worth ~3.2 nights
+      of 4h TIB, so an individual-level prediction for our subject carries an irreducible uncertainty
+      of roughly +/- 3 nights' worth of dose even if the group slope were known exactly. For subjective
+      sleepiness the individual-difference term is much smaller (1.1 nights)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "larger = individual differences dominate the dose effect more strongly; the
+      ranking (RT 6.6 > lapses 3.2 > sleepiness 1.1) means objective measures are far more
+      trait-dominated than subjective ones"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The individual differences were larger for performance measures than for sleepiness; the
+      between-subject standard deviation for the random intercept was in the magnitude of the effects
+      of 1.1 days of restricted sleep for sleepiness, 6.6 days of restricted sleep for median reaction
+      time, and 3.2 days for lapses. In conclusion, the present study shows that sleepiness is closely
+      related to sleep pressure, while performance measures, to a larger extent, appear determined by
+      specific individual traits."
+rob:
+  tool: RoB2
+  judgement: high
+  notes: "n = 9, all male, single-arm within-subject design with no randomisation and no non-restricted
+    control arm, so the day-over-day slopes are confounded with any monotone practice or order effect
+    across the 15-day protocol (the authors explicitly set out to test for order effects, and the
+    return of sleepiness and median RT to baseline after recovery argues against a large monotone
+    artefact for those two measures, but not for lapses). Semi-laboratory rather than fully controlled:
+    participants went outdoors at least twice daily, so light exposure and activity were uncontrolled.
+    Abstract only - the full text was not retrievable, so per-day means, SDs and the recovery-phase
+    numbers could not be extracted, and only the regression coefficients quoted in the abstract are
+    available. Weight this study for its SLOPES (which are precisely reported) and not for its levels."
+funding: "Not stated in the retrieved abstract"
+notes: |
+  WHY THIS RECORD IS DISPROPORTIONATELY USEFUL DESPITE n = 9. It is the only study in this shard that
+  publishes per-night accumulation coefficients WITH standard errors for a subjective and two objective
+  measures simultaneously, estimated from the same subjects on the same days by one mixed-effects model.
+  That makes it the only source from which a per-night slope and its uncertainty can be read off without
+  any digitisation or conversion.
+
+  DOSE: 4 h TIB (03:00-07:00) x 5 nights, bracketed by 2 baseline nights and 7 recovery nights at
+  8 h TIB (23:00-07:00), plus 1 habituation night. Reaction-time tests at 08:00, 14:00 and 20:00 daily,
+  KSS self-rated after each test.
+
+  THE THREE SLOPES, side by side, per night of 4h TIB:
+    KSS subjective sleepiness  +0.64 +/- 0.05 units/night on a 9-point scale  (p < .001)
+    PVT lapses                 +0.69 +/- 0.16 lapses/test/night               (p < .001)
+    PVT median RT              +6.6  +/- 1.6  ms/night                        (p = .003)
+  Over the 5 restricted nights that projects to about +3.2 KSS units, +3.5 lapses and +33 ms.
+
+  WHAT THIS SAYS ABOUT THE HABITUATION QUESTION - AND IT CUTS AGAINST THE SIMPLE STORY. Here subjective
+  sleepiness did NOT plateau; it rose linearly and in fact tracked the dose more tightly than either
+  objective measure ("sleepiness is closely related to sleep pressure, while performance measures, to a
+  larger extent, appear determined by specific individual traits"). Contrast Van Dongen 2003, where the
+  subjective accumulation exponent was only about a third of the PVT exponent (theta 0.24 vs 0.78), and
+  Rupp 2009, where subjective sleepiness showed no group difference at all while PVT did. The honest
+  synthesis is that subjective sleepiness rises reliably in the FIRST week of restriction but its
+  accumulation exponent is much flatter than that of lapses, so the gap between felt and measured
+  impairment widens with duration rather than existing from night one. Five nights is too short a window
+  to see the divergence that Van Dongen's 14 nights exposes; this study should therefore not be read as
+  refuting the dissociation, only as bounding when it becomes detectable.
+
+  RECOVERY, AND WHY IT MATTERS MOST HERE. Seven consecutive 8 h nights - a longer recovery window than
+  any other study in this shard - restored sleepiness and median RT but not lapses. Combined with
+  Belenky 2003 (93-112% of the 5h/7h-arm lapse deficit still present after 3 recovery nights) and
+  Lo 2017 (incomplete recovery after 2 nights in adolescents), the recovery literature converges on a
+  timescale for lapse normalisation that is longer than one week of adequate sleep. For a subject on a
+  5-6 h weekday / 7-8 h weekend schedule this implies weekends cannot clear the weekday deficit, which
+  is the mechanism by which a chronic pattern can hold a standing deficit for years.
+shard: "s01_cognition_dose_response"

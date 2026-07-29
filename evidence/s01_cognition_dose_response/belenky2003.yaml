@@ -1,0 +1,342 @@
+study_id: belenky2003
+citation: "Belenky G, Wesensten NJ, Thorne DR, Thomas ML, Sing HC, Redmond DP, Russo MB, Balkin TJ. Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study. Journal of Sleep Research. 2003;12(1):1-12."
+doi: "10.1046/j.1365-2869.2003.00337.x"
+pmid: "12603781"
+url: "https://onlinelibrary.wiley.com/doi/10.1046/j.1365-2869.2003.00337.x"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 66
+n_studies_pooled: null
+population:
+  age_mean: 39.0
+  age_range: [24, 62]
+  pct_female: 24.2
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  # ------------------------------------------------- PVT lapses, 4 dose levels
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses
+    exposure: {type: chronic_restriction, dose_h: 3, referent_h: 9, duration_days: 7,
+               contrast_label: "3h TIB vs 9h TIB, night 7 (E7), change from baseline"}
+    scale: raw_units
+    unit: "PVT lapses per session (RT > 500 ms), change from baseline, collapsed across time of day"
+    value: 15.47
+    se: null
+    ci: null
+    conversion_formula: "Digitised from Fig 4 (vector drawing objects in the publisher PDF, so
+      marker centres are exact to the drawing coordinates). 3h: B=1.612, E7=17.126 -> +15.514.
+      9h: B=1.039, E7=1.074 -> +0.035. Difference of changes = 15.479. No SDs are published for
+      lapses (Table 4 gives SDs for mean speed only), hence se: null."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "positive = more lapses = worse vigilance"
+    covariates: []
+    followup_years: null
+    cohort_family: WRAIR_2003
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7,
+               contrast_label: "5h TIB vs 9h TIB, night 7 (E7), change from baseline"}
+    scale: raw_units
+    unit: "PVT lapses per session, change from baseline"
+    value: 4.68
+    se: null
+    ci: null
+    conversion_formula: "5h: B=2.282, E7=6.997 -> +4.715. Minus 9h change +0.035 = 4.680."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "positive = more lapses = worse vigilance"
+    covariates: []
+    followup_years: null
+    cohort_family: WRAIR_2003
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 9, duration_days: 7,
+               contrast_label: "7h TIB vs 9h TIB, night 7 (E7), change from baseline"}
+    scale: raw_units
+    unit: "PVT lapses per session, change from baseline"
+    value: 2.02
+    se: null
+    ci: null
+    conversion_formula: "7h: B=1.763, E7=3.816 -> +2.053. Minus 9h change +0.035 = 2.018.
+      The paper notes this arm's lapse increase was not statistically significant: 'Mean number of
+      lapses did not differ among the 5-, 7- and 9-h TIB groups during the experimental phase.'"
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "positive = more lapses = worse vigilance"
+    covariates: []
+    followup_years: null
+    cohort_family: WRAIR_2003
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_per_hour_tib
+    exposure: {type: per_hour_less_sleep, dose_h: null, referent_h: 9, duration_days: 7,
+               contrast_label: "linear dose slope across 9h/7h/5h/3h TIB arms at night 7"}
+    scale: per_hour_beta
+    unit: "additional PVT lapses per session at night 7, per 1 h less TIB"
+    value: 2.455
+    se: null
+    ci: null
+    conversion_formula: "OLS of E7-minus-baseline lapse change on nominal TIB over 4 arms:
+      (9, +0.035), (7, +2.053), (5, +4.715), (3, +15.514) -> slope -2.455 lapses per hour TIB.
+      Using measured TST instead of TIB (9h arm 7.93 h, 7h 6.28 h, 5h 4.66 h, 3h 2.87 h, from the
+      paper's text) the slope is -2.948 lapses per hour of actual sleep. STRONGLY CONVEX: the step
+      from 5h to 3h TIB costs 5.4 lapses/h while 9h to 7h costs 1.0 lapses/h, so a single linear
+      per-hour coefficient badly misrepresents this dose-response - fit a spline."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "positive = harm accrues as TIB falls; relation is convex, accelerating below 5h"
+    covariates: []
+    followup_years: null
+    cohort_family: WRAIR_2003
+  # ------------------------------------------------------------ PVT mean speed
+  - outcome_domain: cognition
+    outcome_construct: pvt_mean_speed
+    exposure: {type: chronic_restriction, dose_h: 3, referent_h: 9, duration_days: 7,
+               contrast_label: "3h TIB vs 9h TIB, night 7, PVT mean speed"}
+    scale: hedges_g
+    unit: null
+    value: -1.998
+    se: 0.462
+    ci: [-2.904, -1.092]
+    conversion_formula: "Means digitised from Fig 3, SDs read from the paper's Table 4 (SDs of mean
+      speed by day and TIB group). Change from baseline: 3h 2.3487-3.8282 = -1.4795;
+      9h 4.0456-3.9595 = +0.0861; difference -1.5656. SD_pooled at E7 =
+      sqrt((12*1.0131^2 + 15*0.4723^2)/27) = 0.7616. d = -2.0556, Hedges J = 1-3/(4*27-1) = 0.9720,
+      g = -1.998. SE = sqrt((13+16)/(13*16) + g^2/(2*27)) = 0.462."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "negative = slower responses = worse vigilance"
+    covariates: []
+    followup_years: null
+    cohort_family: WRAIR_2003
+  - outcome_domain: cognition
+    outcome_construct: pvt_mean_speed
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7,
+               contrast_label: "5h TIB vs 9h TIB, night 7, PVT mean speed"}
+    scale: hedges_g
+    unit: null
+    value: -0.950
+    se: 0.395
+    ci: [-1.724, -0.176]
+    conversion_formula: "5h change -0.6592, 9h +0.0861, difference -0.7453.
+      SD_pooled = sqrt((12*1.0149^2 + 15*0.4723^2)/27) = 0.7627. d = -0.9772, g = -0.950,
+      SE = 0.395."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "negative = slower responses = worse vigilance"
+    covariates: []
+    followup_years: null
+    cohort_family: WRAIR_2003
+  - outcome_domain: cognition
+    outcome_construct: pvt_mean_speed
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 9, duration_days: 7,
+               contrast_label: "7h TIB vs 9h TIB, night 7, PVT mean speed"}
+    scale: hedges_g
+    unit: null
+    value: -0.558
+    se: 0.373
+    ci: [-1.289, 0.173]
+    conversion_formula: "7h change -0.2714, 9h +0.0861, difference -0.3575.
+      SD_pooled = sqrt((13*0.7619^2 + 15*0.4723^2)/28) = 0.6237. d = -0.5732, g = -0.558,
+      SE = 0.373. Note losing only 1-2 h of TIB (8h habitual -> 7h) already gives a
+      half-standard-deviation speed decrement after one week."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "negative = slower responses = worse vigilance"
+    covariates: []
+    followup_years: null
+    cohort_family: WRAIR_2003
+  # -------------------------------------------------------------- recovery phase
+  - outcome_domain: recovery
+    outcome_construct: pvt_mean_speed_after_3_recovery_nights
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 9, duration_days: 3,
+               contrast_label: "3rd recovery night (R3, 8h TIB) after 7 nights at 3h TIB, vs 9h arm"}
+    scale: hedges_g
+    unit: null
+    value: -1.048
+    se: 0.400
+    ci: [-1.832, -0.264]
+    conversion_formula: "3h arm R3 3.1740 vs its own baseline 3.8282 = -0.6542; 9h arm R3 change
+      +0.0431; difference -0.6973. SD_pooled at R3 = sqrt((12*0.8296^2 + 15*0.4492^2)/27) = 0.6465.
+      d = -1.0785, g = -1.048, SE = 0.400. Three 8h recovery nights removed only 55% of the E7
+      deficit (-1.5656 -> -0.6973)."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "negative = still slower than the rested arm after 3 recovery nights"
+    covariates: []
+    followup_years: null
+    cohort_family: WRAIR_2003
+  - outcome_domain: recovery
+    outcome_construct: pvt_lapses_residual_after_3_recovery_nights
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 9, duration_days: 3,
+               contrast_label: "fraction of the night-7 lapse deficit still present after 3 nights at 8h TIB"}
+    scale: pct_change
+    unit: "% of the E7 lapse deficit still present at R3"
+    value: 93.0
+    se: null
+    ci: null
+    conversion_formula: "(R3 - B)/(E7 - B) per arm, from digitised Fig 4:
+      7h arm 2.301/2.053 = 112%; 5h arm 4.365/4.715 = 93%; 3h arm 5.940/15.514 = 38%.
+      Value recorded here is the 5h arm (the dose closest to the target exposure). The 7h arm was
+      no better at R3 than at E7. Only the 3h arm - which was still far above baseline in absolute
+      terms - showed large proportional rebound."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "positive and near 100 = essentially no recovery in 3 nights at the mild/moderate doses"
+    covariates: []
+    followup_years: null
+    cohort_family: WRAIR_2003
+  # ------------------------------------------ subjective/objective dissociation
+  - outcome_domain: cognition
+    outcome_construct: sss_subjective_sleepiness
+    exposure: {type: chronic_restriction, dose_h: 5, referent_h: 9, duration_days: 7,
+               contrast_label: "5h TIB, night 7, SSS change from baseline"}
+    scale: raw_units
+    unit: "Stanford Sleepiness Scale points (1-7), change from baseline"
+    value: 0.415
+    se: null
+    ci: null
+    conversion_formula: "Digitised Fig 7: 5h B=1.8187, E7=2.2340 -> +0.415 SSS points, against a
+      +4.72 lapse increase in the same arm on the same day. In the 7h arm SSS actually FELL
+      (B=1.7661, E7=1.5497, -0.216 points) while lapses more than doubled (1.76 -> 3.82).
+      During recovery the 3h arm's SSS returned fully to baseline (B=1.836; R1 1.854, R2 1.795,
+      R3 1.649) while its PVT lapses remained 4.7x baseline (B=1.61, R3=7.55)."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "positive = sleepier. Magnitude is trivially small relative to the objective
+      decrement, and it is fully normalised by recovery sleep while performance is not."
+    covariates: []
+    followup_years: null
+    cohort_family: WRAIR_2003
+  # ------------------------------------------------- exposure characterisation
+  - outcome_domain: exposure_measurement
+    outcome_construct: tst_obtained_per_tib_dose
+    exposure: {type: descriptive, dose_h: 5, referent_h: 9, duration_days: 7,
+               contrast_label: "polysomnographic TST actually obtained at each TIB dose"}
+    scale: hours
+    unit: "hours TST per night, mean over the 7 restriction nights"
+    value: 4.66
+    se: null
+    ci: null
+    conversion_formula: "Verbatim from the paper: 9h TIB -> 7.93 h TST; 7h TIB -> 6.28 h;
+      5h TIB -> 4.66 h; 3h TIB -> 2.87 h. Sleep efficiency rises as TIB shrinks (96% at 3h TIB,
+      88% at 9h), so a TIB-based dose axis compresses the true sleep-dose differences."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "descriptive; use to convert a TIB dose axis to a TST dose axis"
+    covariates: []
+    followup_years: null
+    cohort_family: WRAIR_2003
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Four-arm dose-response with in-laboratory PSG monitoring; the widest dose range available
+    (3/5/7/9 h). Concerns: no blinding; PVT attrition (66 enrolled, analysable n = 13/13/14/16 after
+    technical data loss); age 24-62 (mean ~39) makes this the WORST population match to a 16-19
+    year old of any T1 study in this shard; only ONE baseline day; SDs published for mean speed only,
+    so lapse effects cannot be standardised; recovery TIB (8 h) differed from the 9 h control dose."
+funding: "US Army Medical Research and Materiel Command / Walter Reed Army Institute of Research"
+notes: |
+  DESIGN: 66 volunteers -> 3 h (n=18), 5 h (n=16), 7 h (n=16) or 9 h (n=16) daily TIB for 7 nights
+  (E1-E7), then 3 nights at 8 h TIB (R1-R3). Analysable PVT n: 3h=13, 5h=13, 7h=14, 9h=16.
+  Wake time fixed at 07:00. PVT administered 4x/day; plotted values are collapsed across time of day.
+
+  THIS STUDY IS THE MAIN COUNTERWEIGHT TO VAN DONGEN 2003 on the accumulate-vs-plateau question and
+  the two must be modelled jointly. Belenky found STABILISATION at 5 h and 7 h TIB but continuous
+  decline at 3 h; Van Dongen found continued accumulation at 4 h and 6 h across 14 days. McCauley
+  et al. 2009 (see mccauley2009.yaml) reconciles the two: a bifurcation at ~20.2 h daily wakefulness
+  (~3.8 h daily sleep) separates convergent from divergent trajectories, and Belenky's 7-day window
+  is too short to distinguish slow convergence from linear accumulation.
+
+  DIGITISED RAW DATA (vector drawing coordinates from the publisher PDF; series identified by glyph
+  style matched to the legend; day columns matched to x-axis label positions within +-4 px).
+  PVT mean number of lapses (Fig 4):
+    9h: B 1.04  E1 1.15  E2 0.93  E3 1.34  E4 1.03  E5 0.84  E6 0.76  E7 1.07  R1 1.21  R2 1.15  R3 0.98
+    7h: B 1.76  E1 1.85  E2 1.73  E3 2.53  E4 2.96  E5 2.96  E6 3.87  E7 3.82  R1 3.71  R2 3.82  R3 4.06
+    5h: B 2.28  E1 3.13  E2 3.28  E3 4.57  E4 4.82  E5 6.07  E6 7.00  E7 7.00  R1 5.46  R2 6.36  R3 6.65
+    3h: B 1.61  E1 4.42  E2 5.22  E3 10.11 E4 11.40 E5 12.67 E6 14.43 E7 17.13 R1 7.47  R2 5.40  R3 7.55
+  PVT mean speed, (1/RT)*1000 (Fig 3):
+    9h: B 3.960 E1 3.992 E2 4.011 E3 4.020 E4 4.014 E5 4.031 E6 4.025 E7 4.046 R1 3.971 R2 3.994 R3 4.003
+    7h: B 3.893 E1 3.899 E2 3.828 E3 3.802 E4 3.786 E5 3.683 E6 3.593 E7 3.622 R1 3.644 R2 3.487 R3 3.509
+    5h: B 3.953 E1 3.761 E2 3.744 E3 3.538 E4 3.426 E5 3.260 E6 3.310 E7 3.294 R1 3.471 R2 3.406 R3 3.361
+    3h: B 3.828 E1 3.485 E2 3.396 E3 2.985 E4 2.838 E5 2.734 E6 2.587 E7 2.349 R1 3.130 R2 3.294 R3 3.174
+  PVT mean speed of the fastest 10% of responses (Fig 5) - the "optimum capacity" measure:
+    9h: B 5.364 E1 5.352 E2 5.274 E3 5.339 E4 5.315 E5 5.286 E6 5.314 E7 5.358 R1 5.316 R2 5.329 R3 5.342
+    7h: B 5.386 E1 5.293 E2 5.368 E3 5.388 E4 5.276 E5 5.262 E6 5.209 E7 5.189 R1 5.210 R2 5.212 R3 5.252
+    5h: B 5.460 E1 5.260 E2 5.161 E3 5.091 E4 5.091 E5 5.036 E6 4.971 E7 4.952 R1 5.104 R2 5.011 R3 5.064
+    3h: B 5.159 E1 4.926 E2 4.931 E3 4.780 E4 4.622 E5 4.691 E6 4.598 E7 4.564 R1 4.867 R2 4.862 R3 4.814
+  Mean Stanford Sleepiness Scale score (Fig 7):
+    9h: B 1.60 E1 1.61 E2 1.48 E3 1.61 E4 1.71 E5 1.46 E6 1.48 E7 1.65 R1 1.48 R2 1.60 R3 1.52
+    7h: B 1.77 E1 1.67 E2 1.63 E3 1.61 E4 1.72 E5 1.68 E6 1.60 E7 1.55 R1 1.58 R2 1.63 R3 1.47
+    5h: B 1.82 E1 1.92 E2 2.06 E3 2.00 E4 2.05 E5 2.27 E6 2.12 E7 2.23 R1 2.06 R2 2.08 R3 1.90
+    3h: B 1.84 E1 2.13 E2 2.53 E3 2.56 E4 2.46 E5 2.72 E6 2.74 E7 2.54 R1 1.85 R2 1.80 R3 1.65
+  Published SDs of PVT mean speed (Table 4, transcribed verbatim), day x TIB group:
+             3-HR    5-HR    7-HR    9-HR
+    B      0.5032  0.7173  0.5711  0.5280
+    E1     0.6972  0.8667  0.5335  0.5001
+    E2     0.7412  0.8144  0.5275  0.4632
+    E3     0.9471  0.8925  0.6275  0.5028
+    E4     1.0648  0.9835  0.7213  0.4626
+    E5     0.9543  1.1022  0.6469  0.4431
+    E6     0.9205  1.0715  0.7728  0.4119
+    E7     1.0131  1.0149  0.7619  0.4723
+    R1     0.8825  0.9543  0.7575  0.4673
+    R2     0.7227  1.0193  0.8799  0.5169
+    R3     0.8296  1.1119  0.8544  0.4492
+  Note the SD roughly DOUBLES in the restricted arms while staying flat in the 9h arm: sleep
+  restriction inflates between-subject variance as well as shifting the mean.
+
+  KEY VERBATIM QUOTES
+  Summary of the dose pattern: "In the 3-h group, speed (mean and fastest 10% of responses) on the
+  psychomotor vigilance task (PVT) declined, and PVT lapses (reaction times greater than 500 ms)
+  increased steadily across the 7 days of sleep restriction. In the 7- and 5-h groups speed initially
+  declined, then appeared to stabilize at a reduced level; lapses were increased only in the 5-h
+  group. In the 9-h group, speed and lapses remained at baseline levels."
+  Recovery: "During recovery, PVT speed in the 7- and 5-h groups (and lapses in the 5-h group)
+  remained at the stable, but reduced levels seen during the last days of the experimental phase,
+  with no evidence of recovery. Speed and lapses in the 3-h group recovered rapidly following the
+  first night of recovery sleep; however, recovery was incomplete with speed and lapses stabilizing
+  at a level comparable with the 7- and 5-h groups."
+  Adaptation claim: "These results suggest that the brain adapts to chronic sleep restriction. In
+  mild to moderate sleep restriction this adaptation is sufficient to stabilize performance, although
+  at a reduced level. These adaptive changes are hypothesized to restrict brain operational capacity
+  and to persist for several days after normal sleep duration is restored, delaying recovery."
+  The inflection point (the paper's own dose threshold): "Based on these findings, it appears that the
+  inflection point (i.e. the minimum amount of nightly sleep required to achieve a state of
+  equilibrium in which daytime alertness and performance can be maintained at a stable, albeit
+  reduced, level) is approximately 4 h per night. If less than 4 h of sleep per night is obtained,
+  daily decrements in performance capacity may be unavoidable - at least across a 7-day period of
+  sleep restriction."
+  Asymptotic functional form, stated verbally: "sleep durations that do not satisfy the core sleep
+  requirement would, across days, result in continued degradation of alertness and performance;
+  whereas sleep durations that satisfy the core requirement would produce deficits in alertness and
+  performance relative to baseline, but degradation would not continue across days indefinitely - an
+  asymptotic, stable level of reduced alertness and performance would eventually be achieved; and
+  additional sleep (i.e. incremental increases in the duration of sleep beyond the core requirement)
+  would produce correspondingly higher, and stable, levels of alertness and performance."
+  Even 1 h of loss matters: "our finding that PVT performance was decremented during recovery
+  following 7 days of a mild, 1-h reduction of nightly TIB - from 8 to 7 h - suggests that meaningful
+  recuperation continues to accrue as sleep durations are extended beyond the hypothesized core sleep
+  requirement."
+  Failure to recover: "Following chronic, mild to moderate sleep restriction (5 or 7 h TIB), 3 days
+  of recovery sleep (8-h TIB) did not restore performance to baseline levels."
+  TST per dose: "Average TST over the 7 days of sleep restriction/augmentation were 7.93 h for the
+  9-h TIB group, 6.28 h for the 7-h TIB group, 4.66 h for the 5-h TIB group, and 2.87 h for the 3-h
+  TIB group."
+  Lapse significance pattern: "During the experimental phase more lapses occurred in the 3-h TIB
+  group than (a) the 9-h group on E3-E7; (b) the 7-h group on E4-E7; and (c) the 5-h group on E6 and
+  E7. Mean number of lapses did not differ among the 5-, 7- and 9-h TIB groups during the
+  experimental phase."
+  Time-of-day interaction: "A significant three-way Group x Day x Time of Day interaction
+  (F(30,520) = 1.67, P = 0.0235) indicated that the time of day effect (more lapses at 09:00 h vs.
+  21:00 h) was greatest in the 3-h group, and that these time of day differences in the 3-h group
+  increased across the experimental phase."
+shard: "s01_cognition_dose_response"

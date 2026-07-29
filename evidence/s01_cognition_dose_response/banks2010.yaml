@@ -1,0 +1,156 @@
+study_id: banks2010
+citation: "Banks S, Van Dongen HPA, Maislin G, Dinges DF. Neurobehavioral dynamics following chronic sleep restriction: dose-response effects of one night for recovery. Sleep. 2010;33(8):1013-1026."
+doi: "10.1093/sleep/33.8.1013"
+pmid: "20815182"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2910531/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Neurobehavioral Dynamics Following Chronic Sleep Restriction: Dose-Response Effects of One Night for Recovery"
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 159
+n_studies_pooled: null
+population:
+  age_mean: 29.0
+  age_range: [22, 45]
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: recovery_dose_response_functional_form_pvt_and_kss
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 0, duration_days: 1,
+               contrast_label: "six randomised single-night recovery doses (0, 2, 4, 6, 8, 10h TIB) after 5 nights at 4h TIB"}
+    scale: raw_units
+    unit: "1 = exponential recovery function fitted best; 0 = linear fitted best"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Binary encoding of the fitted functional form. THIS IS THE ONLY PUBLISHED
+      DOSE-RESPONSE FUNCTION FOR RECOVERY SLEEP, and it is a genuine six-level randomised dose ladder,
+      which makes it the strongest design in this shard on the recovery axis. The shape matters: an
+      EXPONENTIAL recovery function in dose means the marginal benefit of each extra recovery hour
+      DIMINISHES, so a long weekend lie-in buys progressively less per hour, whereas the physiological
+      measures (TST, stage 2, REM, slow-wave energy) rose LINEARLY with dose. Physiology and performance
+      therefore recover on different functional forms - sleep architecture fills in proportionally while
+      behaviour saturates."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = exponential (saturating) for PVT lapses and KSS sleepiness; the MWT recovered
+      linearly instead, so even the recovery form is outcome-specific"
+    covariates: ["randomised allocation to recovery dose", "intent-to-treat"]
+    followup_years: null
+    cohort_family: null
+    quote: "While TST, stage 2, REM sleep and NREM slow wave energy (SWE) increased linearly across
+      recovery sleep doses, best-fitting neurobehavioral recovery functions were exponential across
+      recovery sleep doses for PVT and KSS outcomes, and linear for the MWT."
+  - outcome_domain: recovery
+    outcome_construct: recovery_incomplete_even_at_the_maximum_10h_dose
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 4, duration_days: 1,
+               contrast_label: "single 10h TIB recovery night (8.96h achieved TST) after 5 nights at 4h TIB"}
+    scale: raw_units
+    unit: "count of primary outcomes still not recovered after the largest single recovery dose tested"
+    value: 3.0
+    se: null
+    ci: null
+    conversion_formula: "Counted from the reported result: PVT performance, KSS sleepiness, and POMS
+      fatigue all remained short of recovery at 10 h TIB (8.96 h achieved TST). Assessed two ways by the
+      authors - return to baseline, and estimated intersection with the control-condition means - with the
+      same conclusion.
+      DIRECTLY RELEVANT TO OUR SUBJECT'S OCCASIONAL 10-11 H WEEKEND NIGHTS: one very long night, even
+      approaching 9 hours of actual sleep, does not clear the deficit from five short nights. The authors'
+      own inference is that complete recovery needs either a longer single sleep period or multiple nights."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "higher = more outcomes left unrecovered; 3 of 3 primary outcomes were incomplete at
+      the ceiling dose"
+    covariates: ["randomised recovery dose", "comparison against a 10h-TIB-throughout control arm (n=17)"]
+    followup_years: null
+    cohort_family: null
+    quote: "Analyses based on return to baseline and on estimated intersection with control condition means
+      revealed recovery was incomplete at the 10 h TIB (8.96 h TST) for PVT performance, KSS sleepiness,
+      and POMS fatigue. Both TST and SWE were elevated above baseline at the maximum recovery dose of
+      10 h TIB."
+  - outcome_domain: recovery
+    outcome_construct: monotonic_improvement_with_recovery_dose
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 0, duration_days: 1,
+               contrast_label: "does more recovery sleep help monotonically, across a 0-10h randomised ladder?"}
+    scale: raw_units
+    unit: "1 = deficits improved monotonically with increasing recovery dose"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Binary encoding of the authors' conclusion. Worth recording explicitly because it
+      rules out a plausible alternative: there is no threshold below which recovery sleep is useless, and
+      no non-monotonicity. Every extra hour helps, just with diminishing returns (see the exponential form
+      above). For a schedule model this licenses treating weekend sleep as partially restorative on a
+      concave function rather than as all-or-nothing."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = monotone improvement; combined with the exponential form, marginal value per hour
+      is positive but falling"
+    covariates: ["randomised dose allocation"]
+    followup_years: null
+    cohort_family: null
+    quote: "Neurobehavioral deficits induced by 5 nights of sleep restricted to 4 h improved monotonically
+      as acute recovery sleep dose increased, but some deficits remained after 10 h TIB for recovery.
+      Complete recovery from such sleep restriction may require a longer sleep period during 1 night,
+      and/or multiple nights of recovery sleep. It appears that acute recovery from chronic sleep
+      restriction occurs as a result of elevated sleep pressure evident in both increased SWE and TST."
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "The best-designed study in this shard on the recovery axis and one of the largest: N = 159
+    healthy adults, intent-to-treat, randomised allocation to one of six recovery doses (0, 2, 4, 6, 8,
+    10 h TIB) after an identical 5-night 4 h TIB restriction, with a concurrent 10 h TIB control arm
+    (n = 17), 12 consecutive days in a controlled laboratory, polysomnography, and a pre-study week of
+    home actigraphy. Randomisation of the DOSE is what makes the recovery dose-response causal rather than
+    observational, and n = 142 across six arms gives roughly 24 per arm - small per cell but adequate for
+    fitting a smooth dose function. Remaining concerns: no blinding is possible; the recovery manipulation
+    is a SINGLE night, so the study cannot speak to multi-night or repeated weekly recovery (Yamazaki 2021
+    and Smith 2021 cover that); adults aged 22-45 with median 29, so fair rather than good transportability
+    to a 16-19 year old. Abstract-only access here: the PMC record has no body deposit and no OA copy was
+    located, so the fitted exponential parameters, per-dose means and SDs could not be extracted. That is a
+    real loss - the fitted recovery curve coefficients would have been directly usable."
+funding: "NIH grants NR004281, RR00040 (per the parent programme; not restated in the retrieved abstract)"
+notes: |
+  WHY THIS RECORD IS LOAD-BEARING. Our subject's schedule is defined as much by his recovery opportunities
+  (weekends at 7-8 h, occasional 10-11 h nights) as by his weekday restriction. This is the only randomised
+  dose-response experiment on recovery sleep I could find, so it is the only source that can price those
+  recovery nights on a curve rather than as a binary.
+
+  THE TWO FINDINGS THAT CHANGE THE MODEL:
+
+  1. RECOVERY IS CONCAVE IN DOSE, WHILE SLEEP PHYSIOLOGY IS LINEAR IN DOSE. PVT lapses and KSS sleepiness
+     recovered as exponential (saturating) functions of recovery TIB; total sleep time, stage 2, REM and
+     slow-wave energy all rose linearly. So the brain keeps banking more sleep proportionally while
+     behaviour improves with diminishing returns. Practically: the jump from 4 h to 6 h of recovery buys
+     much more than the jump from 8 h to 10 h. Our subject's occasional 10-11 h weekend nights are
+     therefore in the flat part of the curve - they are not worthless, but they are inefficient.
+
+  2. EVEN THE CEILING DOSE WAS NOT ENOUGH. At 10 h TIB (8.96 h achieved TST), PVT performance, KSS
+     sleepiness and POMS fatigue were all still short of both baseline and the control-arm means, after
+     only FIVE nights at 4 h TIB. Five short nights cost more than one long night can repay.
+
+  HOW THIS COMPOSES WITH THE REST OF THE SHARD. The recovery picture is now bounded from several directions
+  and they all agree:
+    Banks 2010    - 1 night, up to 10 h TIB, randomised 6-dose ladder: incomplete
+    Dinges 1997   - "two full nights" claimed sufficient, but from an unspecified subset (the outlier)
+    Belenky 2003  - 3 nights at 8 h TIB: 93-112% of the 5h/7h-arm lapse deficit retained
+    Yamazaki 2021 - 4 nights at 12 h TIB: PVT lapses and response speed still not recovered
+    Axelsson 2008 - 7 nights at 8 h TIB: lapses still not recovered
+    Smith 2021    - weekly 2-night weekend recovery x 6 weeks: deficits not restored
+  Only Dinges 1997 is optimistic, and it is the weakest of the six on this point. THE DEFENSIBLE POSITION IS
+  THAT VIGILANCE DEFICITS FROM MULTI-NIGHT RESTRICTION PERSIST THROUGH ANY RECOVERY WINDOW SO FAR TESTED,
+  UP TO AND INCLUDING FOUR TO SEVEN CONSECUTIVE ADEQUATE NIGHTS.
+
+  A MECHANISTIC NOTE THAT SUPPORTS THE BIFURCATION MODEL. The authors attribute acute recovery to "elevated
+  sleep pressure evident in both increased SWE and TST", and observe that both were still above baseline at
+  the 10 h ceiling - i.e. the homeostatic system had not finished discharging. That is consistent with
+  McCauley 2009's account, in which the asymptote itself has moved and takes time to return, rather than
+  with a simple debt ledger that a sufficiently long night could clear.
+shard: "s01_cognition_dose_response"

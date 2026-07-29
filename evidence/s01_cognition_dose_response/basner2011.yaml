@@ -1,0 +1,177 @@
+study_id: basner2011
+citation: "Basner M, Dinges DF. Maximizing sensitivity of the psychomotor vigilance test (PVT) to sleep loss. Sleep. 2011;34(5):581-591."
+doi: "10.1093/sleep/34.5.581"
+pmid: "21532951"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3079937/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Maximizing sensitivity of the psychomotor vigilance test (PVT) to sleep loss."
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 74
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [22, 45]
+  pct_female: 45.9
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapse_and_speed_effect_size_5_nights_of_4h_tib_lower_bound
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: null, duration_days: 5,
+               contrast_label: "5 nights of 4h TIB vs own rested baseline, paired t-test, n=43; LOWER end of the reported range"}
+    scale: cohens_d
+    unit: null
+    value: -0.88
+    se: 0.1526
+    ci: [-1.179, -0.581]
+    conversion_formula: "The paper reports a RANGE of effect sizes (0.88-1.21) across the PVT metrics
+      related to lapses and to psychomotor speed, in a paired within-subject design with n = 43. I record
+      the two endpoints as two separate conservative effects rather than inventing a point estimate.
+      SE for a one-sample/paired standardised mean difference: SE = sqrt(1/n + d^2/(2n)) =
+      sqrt(1/43 + 0.88^2/86) = 0.1526. CI = d +/- 1.96*SE. Sign set negative to mean impairment,
+      matching the convention used elsewhere in this shard.
+      WHY THIS IS THE MOST DIRECTLY USABLE NUMBER IN THE RECORD: it is a purpose-built, adequately powered
+      (n = 43) standardised effect for exactly 5 consecutive nights at 4 h TIB - the canonical
+      short-chronic dose - measured with the metrics the same paper identifies as optimal."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = impaired. Magnitude ~0.9-1.2 SD for lapses and speed after 5 nights at
+      4h TIB, versus 1.59-1.94 SD for 33h total deprivation in the same laboratory with the same metrics."
+    covariates: ["paired within-subject comparison against each subject's own rested baseline"]
+    followup_years: null
+    cohort_family: null
+    quote: "In a paired t-test paradigm and for both TSD and PSD, effect sizes of 10 different PVT
+      performance outcomes were calculated. Effect sizes were high for both TSD (1.59-1.94) and PSD
+      (0.88-1.21) for PVT metrics related to lapses and to measures of psychomotor speed, i.e., mean 1/RT
+      (response time) and mean slowest 10% 1/RT."
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapse_and_speed_effect_size_5_nights_of_4h_tib_upper_bound
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: null, duration_days: 5,
+               contrast_label: "5 nights of 4h TIB vs own rested baseline, paired t-test, n=43; UPPER end of the reported range"}
+    scale: cohens_d
+    unit: null
+    value: -1.21
+    se: 0.1657
+    ci: [-1.535, -0.885]
+    conversion_formula: "Upper endpoint of the reported 0.88-1.21 range. SE = sqrt(1/43 + 1.21^2/86) =
+      0.1657; CI = d +/- 1.96*SE. Best-performing metrics per the paper are lapse counts, mean 1/RT and
+      mean slowest 10% 1/RT. The two endpoints should be treated as bracketing a single quantity, not as
+      two independent estimates - do not pool them as if they were."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = impaired; upper bound of the plausible range for a 5-night 4h TIB dose"
+    covariates: ["paired within-subject comparison"]
+    followup_years: null
+    cohort_family: null
+    quote: "Effect sizes were high for both TSD (1.59-1.94) and PSD (0.88-1.21) for PVT metrics related
+      to lapses and to measures of psychomotor speed"
+  - outcome_domain: comparator
+    outcome_construct: ratio_of_total_deprivation_to_chronic_restriction_effect_size
+    exposure: {type: total_deprivation, dose_h: 0, referent_h: 4, duration_days: 1,
+               contrast_label: "33h total sleep deprivation (n=31) vs 5 nights of 4h TIB (n=43), same lab, same metrics"}
+    scale: raw_units
+    unit: "ratio of the TSD effect-size range midpoint to the PSD effect-size range midpoint"
+    value: 1.69
+    se: null
+    ci: null
+    conversion_formula: "Midpoints: TSD (1.59+1.94)/2 = 1.765; PSD (0.88+1.21)/2 = 1.045; ratio =
+      1.765/1.045 = 1.69. Computed here; no SE derivable without the covariance of the two ranges.
+      INTERPRETATION: one night of total deprivation is worth roughly 1.7x five nights at 4 h TIB on the
+      same metrics in the same laboratory - so about 3 nights at 4 h TIB per all-nighter equivalent.
+      This is the single cleanest within-laboratory calibration between the two exposure types available
+      in this shard, and it is far more trustworthy than comparing across the meta-analyses (Lim & Dinges
+      2010 pooled TSD lapse g = -0.76 versus Lowe 2017 pooled restriction g = -0.41), because it holds
+      the laboratory, the task, the metric set and the analysis constant."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "larger = total deprivation is relatively more damaging per episode; note that on a
+      per-hour-of-lost-sleep basis restriction is MORE efficient at producing impairment, since 5 nights
+      at 4h loses ~20h of sleep versus ~8h for one all-nighter yet produces 60% of the effect"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Repeated-measures experiments involving 10-min PVT assessments every 2 h across both acute
+      total sleep deprivation (TSD) and 5 days of chronic partial sleep deprivation (PSD). ... TSD
+      experiment involving 33 h awake (N = 31 subjects) and a PSD experiment involving 5 nights of 4 h
+      time in bed (N = 43 subjects)."
+  - outcome_domain: exposure_measurement
+    outcome_construct: median_and_mean_rt_should_not_be_used_as_primary_pvt_outcomes
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "measurement-validity ranking of 10 candidate PVT outcome metrics"}
+    scale: raw_units
+    unit: "1 = the authors explicitly advise against mean and median RT as primary measures"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Binary encoding of an explicit measurement recommendation, recorded because it
+      changes how OTHER records in this shard should be weighted. Studies whose primary PVT outcome is
+      median RT - notably Cohen 2010 and the median-RT slope in Axelsson 2008 - are using a metric this
+      paper shows to be among the least sensitive, so their reported effects are conservative and should
+      not be averaged on equal footing with lapse-based effects. Conversely, the lapse-based effects that
+      dominate this shard (Van Dongen 2003, Belenky 2003, Lo 2016) are on the recommended metrics."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = advice against; use lapse counts, mean 1/RT, and mean slowest 10% 1/RT instead"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "In contrast, PVT mean and median RT outcomes scored low to moderate effect sizes influenced by
+      extreme values. ... Due to their superior conceptual and statistical properties and high sensitivity
+      to sleep deprivation, metrics involving response speed and lapses should be considered primary
+      outcomes for the 10-min PVT. In contrast, PVT mean and median metrics, which are among the most
+      widely used outcomes, should be avoided as primary measures of alertness."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Two separate single-arm within-subject experiments (33 h TSD, n = 31; 5 nights at 4 h TIB,
+    n = 43) with no non-restricted control arm in either, so the paired baseline-versus-exposure contrast
+    is confounded with any practice or order effect. The confound is small for the PVT specifically -
+    Van Dongen 2003's 8 h control arm drifted only +2.6 lapses over 14 days of 9-times-daily testing -
+    but it is not zero and it is not measured here. The primary purpose was psychometric (metric and
+    duration optimisation), so the effect sizes are a by-product and the paper reports them only as
+    RANGES across metrics rather than per metric; that is why two bracketing effects are recorded above
+    instead of one point estimate. Access is abstract-only: the PMC deposit contains the structured
+    abstract but no body or tables (checked PMC and Europe PMC full-text endpoints; both returned no
+    body), so the per-metric effect sizes, which are the most valuable content, could not be extracted.
+    Adults aged 22-45, so transportability to a 16-19 year old is only fair."
+funding: "Not stated in the retrieved abstract (NIH and NASA support per the parent programme; not verified)"
+notes: |
+  DUAL ROLE. This record supplies (a) a properly standardised effect size for a 5-night 4 h TIB dose, and
+  (b) the measurement-validity rules that determine how much weight every other PVT-based record in this
+  shard should get.
+
+  THE EFFECT SIZES, as reported: 5 nights at 4 h TIB gives d = 0.88 to 1.21 on the sensitive metrics
+  (lapses, mean 1/RT, mean slowest 10% 1/RT), n = 43. Thirty-three hours awake gives d = 1.59 to 1.94,
+  n = 31. Both from paired within-subject comparisons in one laboratory with one metric set.
+
+  A CROSS-CHECK THAT INCREASES CONFIDENCE IN THIS SHARD'S CENTRAL ESTIMATE. Van Dongen 2003's 4 h arm
+  versus 8 h arm at day 14 gives |g| = 1.44 (SE 0.49) from my digitisation of Figure 1 and the
+  band-derived SD (recorded as +1.435 in vandongen2003.yaml, where positive = more lapses = worse; the
+  sign convention differs between records because the constructs differ, so compare magnitudes only).
+  Basner's independent, directly measured, better-powered estimate for a shorter
+  exposure at the same dose is d = 0.88-1.21. The two agree closely once duration is accounted for -
+  Basner's 5 nights should sit just below Van Dongen's 14 nights, and it does. That is meaningful
+  corroboration of the digitised Van Dongen effect, which is otherwise the single most load-bearing and
+  most methodologically fragile number in this shard.
+
+  THE PER-HOUR-OF-LOST-SLEEP COMPARISON IS WORTH STATING EXPLICITLY, because it inverts the intuitive
+  ordering. Five nights at 4 h TIB against an 8 h referent forfeits about 20 h of sleep and yields
+  d ~ 1.05. Thirty-three hours awake forfeits about 8 h of sleep relative to a normal night and yields
+  d ~ 1.77. Per episode the all-nighter is worse; per hour of sleep lost the all-nighter is about four
+  times more potent. So chronic restriction is not a "diluted" all-nighter - it produces less impairment
+  per hour forfeited but is applied over vastly more hours. Over three years at 5-6 h on weekdays our
+  subject forfeits on the order of 1,500-2,000 hours of sleep, which is why the chronic exposure
+  dominates despite its lower potency per hour.
+
+  METRIC GUIDANCE THAT SHOULD PROPAGATE DOWNSTREAM: prefer lapse counts, mean 1/RT (response speed) and
+  mean slowest 10% 1/RT. Avoid mean RT and median RT, which are distorted by extreme values and scored
+  only low-to-moderate sensitivity. Also relevant to any future data collection: "for some outcomes, high
+  effect sizes could be achieved with PVT durations considerably shorter than 10 min, although metrics
+  involving lapses seemed to profit from longer test durations in TSD."
+shard: "s01_cognition_dose_response"

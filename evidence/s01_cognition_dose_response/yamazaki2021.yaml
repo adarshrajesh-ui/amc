@@ -1,0 +1,153 @@
+study_id: yamazaki2021
+citation: "Yamazaki EM, Antler CA, Lasek CR, Goel N. Residual, differential neurobehavioral deficits linger after multiple recovery nights following chronic sleep restriction or acute total sleep deprivation. Sleep. 2021;44(4):zsaa224."
+doi: "10.1093/sleep/zsaa224"
+pmid: "33274389"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8274462/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Residual, differential neurobehavioral deficits linger after multiple recovery nights following chronic sleep restriction or acute total sleep deprivation"
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 83
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: pvt_lapses_and_speed_fail_to_recover_across_four_nights_at_12h_tib
+    exposure: {type: recovery_sleep, dose_h: 12, referent_h: 4, duration_days: 4,
+               contrast_label: "four consecutive recovery nights at 12h TIB after five nights at 4h TIB"}
+    scale: raw_units
+    unit: "count of measures that failed to fully recover across four 12h-TIB recovery nights after restriction"
+    value: 2.0
+    se: null
+    ci: null
+    conversion_formula: "Counted from the reported result: PVT lapses and PVT response speed. Every other
+      cognitive and self-reported measure recovered by R1 and stayed recovered. No residual magnitudes are
+      published and the full text is paywalled (PMC8274462 carries no body deposit), so no effect size is
+      derivable and se is null.
+      THIS IS THE MOST GENEROUS RECOVERY OPPORTUNITY TESTED ANYWHERE IN THIS SHARD - four consecutive nights
+      at TWELVE hours time in bed, i.e. roughly 48 h of sleep opportunity to repay 5 nights x 4 h - AND PVT
+      LAPSES STILL DID NOT FULLY REVERSE. That bounds recovery from above more strongly than Banks 2010
+      (one night, up to 10 h) or Belenky 2003 (three nights at 8 h)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "the two measures that fail to recover are both PVT metrics, i.e. exactly the outcome
+      this shard treats as primary. The measures that DO recover are the less sensitive ones."
+    covariates: ["two baseline nights at 10-12h TIB", "testing every 2h across wakefulness", "PSG on B2, R1, R4"]
+    followup_years: null
+    cohort_family: null
+    quote: "Neurobehavioral recovery from SR occurred after R1 and was maintained for all measures except
+      Psychomotor Vigilance Test (PVT) lapses and response speed, which failed to completely recover."
+  - outcome_domain: recovery
+    outcome_construct: recovery_pattern_differs_between_restriction_and_total_deprivation
+    exposure: {type: recovery_sleep, dose_h: 12, referent_h: 4, duration_days: 4,
+               contrast_label: "which measures fail to recover after 5x4h restriction vs after 36h total deprivation"}
+    scale: raw_units
+    unit: "1 = the unrecovered measure differs by exposure type (PVT after restriction, vigor after deprivation)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Binary encoding of the reported dissociation. After chronic restriction the residual
+      deficit was in PVT lapses and speed; after total deprivation the residual deficit was in subjective
+      vigor instead, with PVT recovering. So restriction and total deprivation are NOT the same insult
+      differing only in magnitude - they leave different things broken.
+      THIS SUPPORTS BELENKY 2003's CENTRAL CLAIM against Van Dongen 2003's excess-wakefulness unification.
+      Belenky argued that chronic restriction and acute deprivation 'cause differential performance effects
+      that are most salient during the recovery period'; Van Dongen argued that both collapse onto one
+      near-linear function of cumulative excess wakefulness. On the recovery axis specifically, this study
+      is evidence for Belenky. Both records are in this shard; the disagreement is real and should be
+      carried as structural uncertainty."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = exposure-type-specific residual. Objective vigilance is what lingers after
+      RESTRICTION; that is the exposure our subject has."
+    covariates: ["identical 4-night recovery protocol in both arms"]
+    followup_years: null
+    cohort_family: null
+    quote: "PVT impairments from SR failed to reverse completely; by contrast, vigor did not recover after
+      TSD; all other deficits were reversed after sleep loss. These results suggest that TSD and SR induce
+      sustained, differential biological, physiological, and/or neural changes, which remarkably are not
+      reversed with chronic, long-duration recovery sleep."
+  - outcome_domain: recovery
+    outcome_construct: first_recovery_night_is_longer_and_better_quality_than_the_fourth
+    exposure: {type: recovery_sleep, dose_h: 12, referent_h: 4, duration_days: 4,
+               contrast_label: "PSG-measured sleep on recovery night 1 vs recovery night 4, same 12h TIB"}
+    scale: raw_units
+    unit: "1 = R1 sleep longer, more efficient and better quality than R4 at identical time in bed"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Binary encoding of the PSG finding (polysomnography on B2, R1 and R4). No magnitudes
+      published. WHY IT MATTERS: it shows the homeostatic drive discharging across the recovery window -
+      the first recovery night is consumed by rebound and by the fourth night sleep has normalised - while
+      PVT lapses had still not normalised. So the physiological system finishes recovering BEFORE the
+      behavioural one does. The same physiology-leads-behaviour ordering appears in Banks 2010, where TST
+      and slow-wave energy rose linearly with recovery dose while performance recovered only exponentially.
+      A model that infers behavioural recovery from sleep architecture will therefore be systematically
+      optimistic."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = rebound sleep on night 1, normalised by night 4, while behaviour lagged behind"
+    covariates: ["PSG on B2, R1, R4"]
+    followup_years: null
+    cohort_family: null
+    quote: "After TSD and SR, R1 recovery sleep was longer and of higher efficiency and better quality than
+      R4 recovery sleep."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Good size for a laboratory protocol (N = 83), generous and well-specified baseline (two nights at
+    10-12 h TIB), dense sampling (neurobehavioral tests every 2 h across wakefulness), an objective
+    physiological sleepiness measure (modified Maintenance of Wakefulness Test) alongside the cognitive
+    battery, and polysomnography on three nights. The restriction-versus-deprivation comparison is a
+    strength because both arms received the identical 4-night recovery protocol, so the differential
+    residual cannot be an artefact of unequal recovery. Concerns: allocation to the SR versus TSD arm is not
+    described as randomised in the abstract, and the abstract gives no per-arm n, no ages and no sex
+    distribution, so the population fields here are largely null and adolescent_match is set to fair_adult
+    on the assumption of a typical healthy-adult laboratory sample rather than on stated data - that
+    assumption should be checked if the full text becomes available. No blinding possible. Abstract-only:
+    the PMC deposit (PMC8274462) has no body, and no OA copy was located, so no means, SDs or effect sizes
+    could be extracted; all three effects here are directional encodings with se: null."
+funding: "Not stated in the retrieved abstract"
+notes: |
+  THE UPPER BOUND ON RECOVERY. This study gave four consecutive nights at TWELVE hours time in bed after
+  five nights at 4 h TIB - the most sleep opportunity of any recovery protocol in this shard - and PVT lapses
+  and response speed still failed to fully reverse. Combined with Banks 2010 (one night up to 10 h TIB:
+  incomplete), Belenky 2003 (three nights at 8 h: 93-112% of the mild/moderate deficit retained),
+  Axelsson 2008 (seven nights at 8 h: lapses not recovered) and Smith 2021 (repeated weekly two-night weekend
+  recovery over six weeks: not restored), the conclusion is now supported by five independent laboratories:
+  MULTI-NIGHT RESTRICTION LEAVES A VIGILANCE DEFICIT THAT NO RECOVERY WINDOW SO FAR TESTED FULLY CLEARS.
+
+  For our subject this is the mechanism by which a repeating weekly pattern can hold a standing deficit for
+  three years without ever producing a dramatic single event: each week's shortfall is only partly repaid,
+  and the unrepaid remainder is specifically in the vigilance domain.
+
+  TWO REFINEMENTS THIS RECORD ADDS BEYOND "RECOVERY IS SLOW":
+
+  1. WHAT LINGERS IS EXPOSURE-SPECIFIC. After chronic restriction, PVT lapses and speed linger. After acute
+     total deprivation, PVT recovers and subjective vigor lingers instead. So restriction and deprivation
+     are not one phenomenon at two magnitudes, at least not on the recovery axis. This is direct support for
+     Belenky 2003's position ("chronic sleep restriction leads to long-time-constant changes ... brain
+     operational capacity is capped in a manner that apparently precludes rapid recovery ... In contrast,
+     rapid recovery to baseline is typical of performance following acute TSD") and a problem for the
+     excess-wakefulness unification in Van Dongen 2003, which predicts one common currency. Carry both.
+
+  2. PHYSIOLOGY RECOVERS BEFORE BEHAVIOUR. PSG showed R1 sleep longer, more efficient and higher quality
+     than R4 at the same 12 h TIB - the homeostatic rebound had finished by night 4 - while PVT lapses had
+     not normalised. Any inference from "his sleep architecture looks normal again" to "his performance is
+     back" is therefore invalid, and would understate residual impairment.
+
+  DESIGN, verbatim: "In total, 83 adults received two baseline nights (10-12-hour time in bed [TIB]) followed
+  by five 4-hour TIB SR nights or 36-hour TSD and four recovery nights (R1-R4; 12-hour TIB). Neurobehavioral
+  tests were completed every 2 hours during wakefulness and a Maintenance of Wakefulness Test measured
+  physiological sleepiness. Polysomnography was collected on B2, R1, and R4 nights."
+shard: "s01_cognition_dose_response"

@@ -1,0 +1,185 @@
+study_id: mccauley2009
+citation: "McCauley P, Kalachev LV, Smith AD, Belenky G, Dinges DF, Van Dongen HPA. A new mathematical model for the homeostatic effects of sleep loss on neurobehavioral performance. Journal of Theoretical Biology. 2009;256(2):227-239."
+doi: "10.1016/j.jtbi.2008.09.012"
+pmid: "18938181"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2657297/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "A new mathematical model for the homeostatic effects of sleep loss on neurobehavioral performance."
+access_tier: full_text
+secondhand_via: null
+design: normative_descriptive
+tier: TX
+n: null
+n_studies_pooled: 2
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: sleep_need
+    outcome_construct: bifurcation_threshold_daily_sleep_hours
+    exposure: {type: chronic_restriction, dose_h: 3.8, referent_h: null, duration_days: null,
+               contrast_label: "critical daily sleep duration below which impairment diverges instead of stabilising"}
+    scale: hours
+    unit: "hours of daily sleep at the bifurcation (= 24 - Wc)"
+    value: 3.8
+    se: null
+    ci: null
+    conversion_formula: "Read directly off the fitted model: Wc = 20.2 h daily wakefulness, so daily
+      sleep at the threshold = 24 - 20.2 = 3.8 h. Estimated by least-squares fit of Eqs (21)+(26) to
+      all 404 group-average PVT-lapse data points of Van Dongen 2003, then independently checked
+      against Belenky 2003. No SE published for Wc."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "ABOVE 3.8 h daily sleep the model predicts impairment converges to a stable
+      plateau; BELOW 3.8 h it predicts impairment diverges (escalates without bound). This is the
+      single most important structural claim for our subject, whose weekday dose (5-6 h) sits ABOVE
+      the threshold - i.e. in the convergent regime - while his pre-exam 3-4 h nights sit AT or BELOW it."
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_GCRC_2003
+    quote: "Evaluation of Eq. (22) given the parameter estimates in Eqs. (27) indicates that there
+      must be a bifurcation at Wc = 20.2h. That is, the model should flip from a state of convergence
+      to a state of divergence when daily wakefulness is increased to more than 20.2h (i.e., when
+      daily sleep is reduced to less than 3.8h)."
+  - outcome_domain: cognition
+    outcome_construct: variance_explained_in_pvt_lapse_trajectories_new_model
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: 8, duration_days: 14,
+               contrast_label: "model fit to the 4h/6h/8h/0h PVT lapse trajectories of Van Dongen 2003"}
+    scale: pct_change
+    unit: "percent of variance in group-average PVT lapse data explained"
+    value: 72.4
+    se: null
+    ci: null
+    conversion_formula: "Reported directly. Comparators from the same fit: original two-process model
+      22.6%, extended two-process model 38.4%. The gain comes entirely from allowing the upper
+      asymptote to move (alpha22 > 0), which is what creates the bifurcation."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "higher = better fit; a bifurcating model beats non-bifurcating two-process
+      models by a factor of ~3 in explained variance on chronic-restriction trajectories"
+    covariates: []
+    followup_years: null
+    cohort_family: UPenn_GCRC_2003
+    quote: "With the parameter estimates of Eqs. (27), the model explains 72.4% of the variance in
+      the group-average data of Fig. 1a. It fits substantially better to the data than the original
+      two-process model (Fig. 1b, explained variance 22.6%) and the extended two-process model
+      (Fig. 1c, explained variance 38.4%)."
+  - outcome_domain: cognition
+    outcome_construct: out_of_sample_variance_explained_belenky_4_dose_data
+    exposure: {type: chronic_restriction, dose_h: null, referent_h: 9, duration_days: 7,
+               contrast_label: "parameters frozen from Van Dongen 2003, applied to Belenky 2003 3/5/7/9h TIB"}
+    scale: pct_change
+    unit: "percent of variance explained, out of sample, all parameters held fixed"
+    value: 72.2
+    se: null
+    ci: null
+    conversion_formula: "Reported directly. Only a single multiplicative scaling factor (1.17) was
+      fitted; all dynamic parameters were fixed at the Van Dongen-derived values of Eqs (27).
+      This is the strongest available evidence that a SINGLE dose-response surface transports across
+      two independent chronic-restriction experiments in young adults."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "higher = better; near-unity scaling factor means the absolute lapse scale is
+      also nearly transportable between the two labs"
+    covariates: []
+    followup_years: null
+    cohort_family: WRAIR_2003
+    quote: "Applying linear scaling to account for any irrelevant differences in absolute performance
+      outcomes (e.g., due to variations in population characteristics or performance testing
+      conditions), we find the scaling factor to be 1.17-suitably close to 1. The corresponding
+      performance predictions are shown in Fig. 4b. They explain 72.2% of the variance in the data,
+      and fit well to the observed performance changes across days."
+  - outcome_domain: recovery
+    outcome_construct: sleep_debt_bookkeeping_is_not_required
+    exposure: {type: recovery_sleep, dose_h: 6, referent_h: 4, duration_days: 1,
+               contrast_label: "one 6h recovery night after five 4h nights: excess-wakefulness model vs bifurcation model"}
+    scale: raw_units
+    unit: "number of mutually contradictory published predictions for the same protocol"
+    value: 2.0
+    se: null
+    ci: null
+    conversion_formula: "Not an effect size. Recorded so the modeller knows that the two leading
+      published functional forms DISAGREE about post-restriction recovery: Van Dongen's
+      excess-wakefulness model predicts continued (slower) deterioration after a 6 h night, whereas
+      this model predicts a modest improvement. The disagreement is a live, unresolved structural
+      uncertainty and should be carried as model uncertainty, not averaged away."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "sign not applicable; flags an unresolved structural fork in the literature"
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "However, the excess wakefulness model and the model introduced in the present paper make
+      contradictory predictions for performance impairment after a period of chronic sleep restriction
+      followed by a limited amount of recovery sleep (Fig. 6). ... In this view, the brain does not
+      need to maintain a running tally of sleep and wakefulness-it does not need to keep track of a
+      'sleep debt' (cf. Dement, 2006)."
+rob:
+  tool: none
+  judgement: na
+  notes: "Theoretical / biomathematical paper, not a new experiment. It contributes no independent
+    observations; all data are re-used from Van Dongen 2003 (n=48) and Belenky 2003 (n=66), both of
+    which are separately recorded in this shard. Each effect therefore carries the cohort_family of the
+    data it was fitted to - UPenn_GCRC_2003 for the two parameters fitted to Van Dongen's 404
+    group-average points, WRAIR_2003 for the out-of-sample check on Belenky - using the SAME strings
+    vandongen2003 and belenky2003 use, so a pooler de-duplicating on that field will collapse them
+    instead of counting a refit of existing data as new evidence. The fourth effect is a structural
+    claim about two models disagreeing, not a sample estimate, so it stays null.
+    Included ONLY as the source of a published functional
+    form and of the 3.8 h bifurcation estimate. The 404 fitted points are group averages, so the fit
+    ignores between-subject variance and the reported explained-variance figures are NOT comparable to
+    subject-level R-squared. Wc = 20.2 h has no published confidence interval, which matters because
+    the qualitative claim (converge vs diverge) hinges on which side of it a dose falls."
+funding: "Congressionally Directed Medical Research Program award W81XWH-05-1-0099; Air Force Office of
+  Scientific Research; NIH grants NR004281, RR00040"
+notes: |
+  WHY THIS RECORD EXISTS. Van Dongen 2003 and Belenky 2003 appear to contradict each other: Van Dongen
+  found impairment still accumulating at day 14 with no plateau, Belenky found stabilisation in the 5 h
+  and 7 h arms but escalation in the 3 h arm. This paper resolves the contradiction with a single model
+  possessing a bifurcation: below a critical daily wakefulness Wc, trajectories CONVERGE to a stable
+  plateau; above Wc they DIVERGE. Both datasets are then explained by one parameter set. The verbatim
+  equations and the fitted coefficients are reproduced in notes_for_modeller.md.
+
+  THE ESTIMATE THAT MATTERS: Wc = 20.2 h wake / 3.8 h sleep per day. Our subject's habitual weekday
+  dose of 5-6 h sits comfortably in the CONVERGENT regime, which predicts his weekday deficit reaches a
+  plateau rather than growing without limit over three years. His occasional 3-4 h pre-exam nights sit
+  at or below Wc, in the divergent regime, which predicts disproportionate impairment on exactly those
+  nights. A model that is linear in nightly sleep hours will get both of these wrong in opposite
+  directions.
+
+  IMPORTANT CAVEAT ON "PLATEAU". Convergence to a stable equilibrium does NOT mean recovery, and it does
+  not mean the plateau is at an unimpaired level. It means the deficit stops growing at a level set by
+  the prevailing wake/sleep ratio. The plateau level itself is dose-dependent and, per Eqs (23), rises
+  as W rises.
+
+  KEY MECHANISTIC CLAIM WITH A DOSE COROLLARY. The authors tie Wc to slow-wave activity: "SWA during
+  sleep is substantially preserved when wake duration is no greater than ~20h per day (Brunner et al.,
+  1993; Van Dongen et al., 2003). However, when daily wakefulness is extended beyond ~20h, then
+  insufficient time for sleep remains to fully express SWA". They hypothesise SWA is a correlate of
+  adenosine-receptor downregulation during sleep. If correct, the threshold is a property of how much
+  sleep time is needed to express a fixed amount of SWA, which is age-dependent - and adolescents have
+  substantially higher SWA. Nothing in this paper calibrates Wc in adolescents, and I could find no
+  paper that does. Flagged as the largest transportability hole in the functional-form literature.
+
+  SUCCESSOR MODEL. McCauley et al. 2013 (Sleep 36(12):1987-1997, PMID 24293775, doi 10.5665/sleep.3246)
+  updates the same model class with time-dependent circadian amplitude and reports that "the
+  homeostatic equilibrium for sleep/wake regulation-and thus sensitivity to sleep loss-depends not only
+  on the duration but also on the circadian timing of prior sleep". Only the abstract was retrievable,
+  so no parameters were extracted from it; it is logged as screened-abstract-only rather than given its
+  own record.
+
+  THREE POSITIVE STRUCTURAL PREDICTIONS THE MODEL MAKES, verbatim, that the modeller can treat as
+  testable priors: (a) performance is "a function of the prevailing wake/sleep ratio" rather than of
+  cumulative debt; (b) "Sleep/wake history is fully represented by the current performance level (p or
+  q) and the current level of the asymptote (u or v), and past amounts of sleep and wake have no
+  further impact beyond the present"; (c) at exactly W = Wc "there is no equilibrium state, resulting
+  in an asymptotically linear build-up of performance impairment across days" - i.e. the observed
+  quasi-linear accumulation in Van Dongen's 4 h arm is what a system sitting near its bifurcation
+  looks like, not evidence of true unbounded linearity.
+shard: "s01_cognition_dose_response"

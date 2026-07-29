@@ -1,0 +1,248 @@
+study_id: campbell2017
+citation: "Campbell IG, Burright CS, Kraus AM, Grimm KJ, Feinberg I. Daytime Sleepiness Increases With Age in Early Adolescence: A Sleep Restriction Dose-Response Study. Sleep. 2017;40(5):zsx046."
+doi: "10.1093/sleep/zsx046"
+pmid: "28419388"
+url: "https://europepmc.org/articles/PMC6410938"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Daytime Sleepiness Increases With Age in Early Adolescence: A Sleep Restriction Dose-Response Study"
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 76
+n_studies_pooled: null
+population:
+  age_mean: 12.2
+  age_range: [9.9, 14.0]
+  pct_female: 47.4
+  country: "US"
+  adolescent_match: mixed
+effects:
+  - outcome_domain: cognition
+    outcome_construct: karolinska_subjective_sleepiness_per_hour_of_time_in_bed
+    exposure: {type: per_hour_less_sleep, dose_h: 7, referent_h: 10, duration_days: 4,
+               contrast_label: "KSS points per additional hour of TIB, 7 / 8.5 / 10 h TIB x 4 nights, adolescents"}
+    scale: per_hour_beta
+    unit: "KSS points (9-point Karolinska Sleepiness Scale) per additional hour of TIB"
+    value: -0.56
+    se: 0.07
+    ci: [-0.6972, -0.4228]
+    conversion_formula: "Reported directly with its SE, no derivation needed: 'the average KSS rating for
+      7-h TIB was 6.33 (+/-0.28 SE) points and decreased by 0.56 (=/- 0.07) points for each additional hour
+      in bed' (the '=/-' is a typographical error for '+/-' in the published text). Sign flipped to negative
+      so that NEGATIVE = the direction of harm, matching this shard's convention: each hour of TIB LOST adds
+      0.56 KSS points. CI = -0.56 +/- 1.96 x 0.07. Overall TIB effect F1,810 = 68.6, p < 0.0001.
+      THIS IS THE ONLY CLEAN PER-HOUR SUBJECTIVE-SLEEPINESS SLOPE IN ADOLESCENTS IN THIS SHARD, and it is
+      the quantitative counterpart the brief asks for on the subjective side of the dissociation.
+      ANCHORING IT: the KSS runs 1-9. At 7h TIB the mean was 6.33, i.e. roughly 'some signs of sleepiness'
+      shading into 'sleepy but no effort to stay awake'. Extrapolating the slope, 10h TIB gives
+      6.33 - 3 x 0.56 = 4.65, i.e. 'neither alert nor sleepy'. So THREE HOURS of TIB difference moves
+      adolescents only about 1.7 points on a 9-point scale and never out of the middle of the range.
+      Compare the objective channel in the same subjects and the same nights: the odds of falling asleep
+      within any given MSLT minute rose 6.7-fold from 10h to 7h, and the proportion of MSLTs with sleep
+      onset went from 41% to 80%. A 1.7-point self-report shift accompanies a doubling of objectively
+      measured sleep propensity. That asymmetry - modest, bounded, mid-scale subjective movement alongside
+      large objective movement - is the dissociation, quantified on both channels in one sample."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "NEGATIVE = harm. Each hour of TIB removed raises KSS by 0.56 points (sleepier).
+      Reported with the sign inverted from the paper's 'decreased by 0.56 per additional hour'."
+    covariates: ["time of day (estimate centred on the 15:00 battery)", "lab visit order (estimate centred on the third visit)", "age", "linear mixed-effects on repeated within-subject measures"]
+    followup_years: null
+    cohort_family: Campbell_Feinberg_Davis
+    quote: "Subjective sleepiness rating on the KSS (Figure 5) increased with decreasing TIB
+      (F1,810 = 68.6. p < .0001). Linear mixed effects analysis estimated that for the third lab visit at
+      15:00, the average KSS rating for 7-h TIB was 6.33 (+/-0.28 SE) points and decreased by 0.56
+      (=/- 0.07) points for each additional hour in bed."
+  - outcome_domain: cognition
+    outcome_construct: subjective_sleepiness_dose_response_does_not_vary_with_age_unlike_objective_sleepiness
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 10, duration_days: 4,
+               contrast_label: "age x TIB interaction on KSS (subjective) vs on MSLT (objective), same subjects, same nights"}
+    scale: raw_units
+    unit: "0 = no age moderation of the TIB effect on SUBJECTIVE sleepiness (contrast with the significant age moderation of OBJECTIVE sleepiness)"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Encoding of a pair of contrasting results within one sample. se is null because a
+      null interaction has no point estimate.
+      SUBJECTIVE (KSS): no age main effect (F1,74 = 0.16, p = .69) and no age x TIB interaction
+        (F1,810 = 0.24, p = .63). Flat in age on both counts.
+      OBJECTIVE (MSLT): significant age main effect (t75 = 3.24, p = .0018) AND significant age x TIB
+        interaction (t75 = -3.40, p = .0011 for age x 8.5h; t75 = -4.25, p < .0001 for age x 7h), such that
+        the TIB effect SHRANK with age.
+      WHY THIS PAIRING IS THE POINT OF THE RECORD: the two sleepiness channels were measured in the same
+      participants, on the same test days, minutes apart (the KSS was administered immediately before each
+      MSLT). So the divergence cannot be attributed to different samples, schedules, or timing. As
+      adolescents mature, their physiologically measured sleep propensity becomes progressively LESS
+      responsive to sleep dose, while their SELF-REPORTED sleepiness response to dose stays exactly the same.
+      Neither channel tracks the other's age trajectory.
+      COMBINED WITH campbell2019 (same programme, ages extended to 16.2), the full picture is a three-way
+      dissociation across adolescence: PVT vigilance response to dose is CONSTANT with age; MSLT sleepiness
+      response to dose SHRINKS with age; KSS subjective response to dose is CONSTANT with age. Any model
+      that treats 'sleepiness' as one latent variable indexing 'impairment' is mis-specified for this age
+      group - the three measures do not even share an age trajectory, let alone a scale."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = no age moderation of the subjective channel. Recorded specifically as a CONTRAST to
+      the significant age moderation of the objective channel in the same subjects."
+    covariates: ["time of day", "lab visit order", "age", "sex", "Tanner stage"]
+    followup_years: null
+    cohort_family: Campbell_Feinberg_Davis
+    quote: "KSS ratings did not change with age (F1,74 = 0.16, p = .69) nor did the TIB effect on KSS ratings
+      differ by age (F1,810 = 0.24, p = .63). [...] Furthermore, age and TIB effects showed a significant
+      interaction (t75 = -3.40, p = .0011 for age x 8.5 h TIB; t75 = -4.25, p < .0001 for age x 7h TIB), such
+      that the size of the TIB effect decreased with increasing age of study participants."
+  - outcome_domain: cognition
+    outcome_construct: proportion_of_mslt_trials_with_sleep_onset_by_tib_dose
+    exposure: {type: chronic_restriction, dose_h: 7, referent_h: 10, duration_days: 4,
+               contrast_label: "% of 20-min MSLTs ending in sleep onset: 7h vs 8.5h vs 10h TIB, 4 nights, pooled over 4 daily tests"}
+    scale: pct_change
+    unit: "percentage-point increase in the proportion of MSLTs ending in sleep onset, 7h TIB vs 10h TIB"
+    value: 39.0
+    se: null
+    ci: null
+    conversion_formula: "80% (7h TIB) - 41% (10h TIB) = 39 percentage points. The intermediate dose gives
+      58% (8.5h TIB), so the three-point ladder is 41 / 58 / 80 % at 10 / 8.5 / 7 h TIB, pooling all
+      participants and all four daily MSLTs. se is null - the paper reports these as raw proportions without
+      intervals, and the accompanying inferential test is the survival analysis (8.5h vs 10h t75 = 6.93,
+      p < .0001; 7h vs 10h t75 = 14.3, p < .0001).
+      SHAPE OF THE DOSE-RESPONSE: increments of 17 points (10 -> 8.5 h) then 22 points (8.5 -> 7 h) for
+      successive 1.5h reductions. The second 1.5h costs more than the first, i.e. ACCELERATING, not
+      saturating, across 10 -> 7 h TIB in adolescents. This matches the log-odds ladder in campbell2019
+      (0 / 0.86 / 1.90) and the convex acceleration Van Dongen 2003 found in adults at 4-6h, and it argues
+      against any model in which the dose-response plateaus in the mild-to-moderate range.
+      RAW PER-ARM DATA FOR THE SPLINE, all from this paper's Results: night-4 PSG total sleep time was
+      405 +/- 2 min (7h TIB), 472 +/- 2 min (8.5h TIB), 534 +/- 3 min (10h TIB), n = 77, ages 9.9-14.
+      These agree with the 3-year averages in campbell2019 (405 / 471 / 530 min) to within 4 min, as they
+      should, being year 1 of the same protocol."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "POSITIVE = worse. Restricting from 10h to 7h TIB nearly doubled the proportion of
+      objective sleep-latency tests in which adolescents fell asleep (41% -> 80%)."
+    covariates: ["time of day (1300 vs 0900 t75 = 8.54, p < .0001)", "lab visit order", "age", "sex", "Tanner stage", "summer vacation vs school year (tested, no effect)"]
+    followup_years: null
+    cohort_family: Campbell_Feinberg_Davis
+    quote: "Pooling all participants and the 4 MSLTs across the day, participants who kept the 10-h TIB
+      schedule fell asleep during 41% of the MSLTs. This percentage increased to 58% for the 8.5-h schedule
+      and to 80% for the 7-h schedule. [...] On the fourth night of the prescribed schedule, average total
+      sleep durations (+/-SE) for 7, 8.5, and 10 hours in bed were 405 +/- 2 min, 472 +/- 2 min, and
+      534 +/- 3 min, respectively."
+  - outcome_domain: cognition
+    outcome_construct: repeated_lab_visits_increase_sleep_propensity_an_order_effect_not_a_practice_effect
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: null,
+               contrast_label: "MSLT sleep-onset likelihood on third vs first laboratory visit"}
+    scale: raw_units
+    unit: "1 = participants became MORE likely to fall asleep with repeated visits (adaptation, opposite of a practice/learning gain)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Directional encoding of a reported order effect: 'Participants were most likely to
+      fall asleep on their third visit to the lab and least likely to fall asleep on their first visit
+      (first vs third, t75 = -7.97, p < .0001).' se is null - no magnitude in natural units is given.
+      WHY THIS BELONGS IN THE TEST-RETEST SECTION OF THE BRIEF. It is a large effect (t75 = -7.97) running in
+      the OPPOSITE direction to a practice effect, and it is a distinct mechanism from the PVT carryover
+      reported in campbell2019. Here the likely cause is environmental habituation - participants become
+      comfortable enough in the laboratory bedroom to fall asleep - which the authors say explicitly
+      ('Likely due to participants becoming more comfortable with the lab environment, sleep latency
+      decreased with repeated visits to the lab'). It is a measurement artefact of the MSLT, not a change in
+      sleep need.
+      CONSEQUENCE FOR THIS SHARD: in any crossover study that does not adjust for visit order, an MSLT-based
+      or sleep-propensity-based outcome will drift toward greater apparent sleepiness over the protocol
+      REGARDLESS of dose, inflating the apparent effect of whichever condition happens to be scheduled late,
+      and deflating it for conditions scheduled early. Campbell's team handled this by entering order as a
+      covariate in every model. Combined with the opposite-signed PVT carryover in campbell2019, the general
+      lesson is that BOTH objective sleepiness and objective performance carry order artefacts in
+      multi-condition adolescent protocols, in OPPOSITE directions, and neither is a classical practice gain."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = later visits produced greater measured sleepiness. An artefact to adjust for, not a
+      dose effect. Direction is opposite to a learning/practice improvement."
+    covariates: ["entered as an order covariate in all survival analyses"]
+    followup_years: null
+    cohort_family: Campbell_Feinberg_Davis
+    quote: "Potential adaptation to the environment for the MSLT was con[trolled] [...] Participants were
+      most likely to fall asleep on their third visit to the lab and least likely to fall asleep on their
+      first visit (first vs third, t75 = -7.97, p < .0001)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "STRENGTHS: three TIB doses (7 / 8.5 / 10 h) x four consecutive nights, ALL 77 participants
+    completing ALL THREE schedules (fully within-subject, so trait vulnerability differences are removed by
+    design - the weakness that limits Short 2018's parallel-arm design); all-night PSG verified sleep
+    duration; four test batteries at fixed 2-hour intervals with the KSS administered immediately before
+    each MSLT, so the subjective and objective sleepiness channels are matched minute-for-minute and the
+    dissociation this record reports cannot be a timing artefact; and the authors ran two useful robustness
+    checks - a summer-vacation-versus-school-year factor (no effect: t75 = 0.71, p = .48; no interaction with
+    TIB) which rules out a seasonal confound arising from the unbalanced scheduling, and a Tanner-stage
+    analysis showing age rather than pubertal stage carried the sleepiness effect.
+    CONCERNS: (1) ORDER WAS NOT RANDOMISED - 'The order in which they completed the schedules was not
+    randomized but was accounted for in all statistical analyses' - and the paper then documents a LARGE
+    order effect (t75 = -7.97) on the primary outcome, so the covariate adjustment is doing heavy lifting and
+    residual confounding cannot be excluded. (2) Restriction was imposed by delaying bedtime with rise time
+    held fixed and NO circadian phase measure was taken, so an unmeasured phase delay may contribute to the
+    TIB effect. (3) Adherence was imperfect in a direction that biases toward zero: participants lengthened
+    the 7h schedule by ~6 min and shortened the 10h schedule by ~10 min, compressing the true dose contrast
+    below the nominal 3h.     (4) AGE IS THE MAIN LIMITATION FOR OUR PURPOSES - 9.9 to 14.0 years, mean 12.2 (SD 1.2), entirely
+    BELOW our subject's 16-19 window. adolescent_match is therefore recorded as
+    'mixed' rather than exact_16_19, unlike the sibling record campbell2019 whose range reaches 16.2. The
+    reason to use it anyway is that the KSS per-hour slope is not reported anywhere else in this age band and
+    that the study's own analysis found NO age moderation of the KSS-TIB relation, which is the licence for
+    carrying it upward - but that licence rests on a null within a narrow range and should widen the
+    downstream uncertainty. (5) Four nights only: dose sensitivity, not accumulation."
+funding: "Not stated in the retrieved full text section captured; the parent programme is supported by U.S. Public Health Service grant R01-HL116490 (stated in the sibling paper, PMID 30169721)."
+notes: |
+  WHY THIS RECORD EXISTS SEPARATELY FROM campbell2019 AND campbell2024. Same laboratory, same 7 / 8.5 / 10 h
+  x 4-night protocol, OVERLAPPING PARTICIPANTS - all three share cohort_family Campbell_Feinberg_Davis and
+  the pooler MUST NOT treat them as independent. They are kept apart because they report different outcomes:
+  this one is the only source in the shard for an adolescent per-hour KSS slope and for the raw MSLT
+  sleep-onset proportions per dose; campbell2019 carries the PVT LSNR slope, the TIB-to-TST conversion and
+  the age interactions to 16.2 years; campbell2024 carries the executive/working-memory battery.
+
+  SAMPLE SIZE, STATED PRECISELY: 77 children were enrolled and completed year 1, but 'Data from one
+  participant were not included in this report because this participant failed to keep the assigned sleep
+  schedules. Of the remaining 76 participants, 36 were female and 40 were male.' The abstract says 'In 77
+  children'; the analysed n is 76, which is what this record uses. Ages 9.9-14.0, mean 12.2, SD 1.2. 53 of
+  the 77 were non-Latino white and the authors state the sample 'is not racially/ethnically representative
+  of the United States'.
+
+  THE TWO NUMBERS WORTH CARRYING FORWARD.
+
+  1. SUBJECTIVE SLEEPINESS, PER HOUR, IN ADOLESCENTS: 0.56 +/- 0.07 KSS points per hour of TIB lost
+     (F1,810 = 68.6, p < 0.0001), anchored at 6.33 +/- 0.28 points on the 9-point scale at 7h TIB. This is
+     the subjective half of the dissociation the brief asks to have quantified on both sides, measured in
+     the right age group.
+
+  2. OBJECTIVE SLEEP PROPENSITY, PER DOSE: 41% / 58% / 80% of MSLTs ending in sleep onset at 10 / 8.5 / 7 h
+     TIB. Successive 1.5h cuts cost 17 then 22 percentage points, so the curve ACCELERATES downward rather
+     than saturating - consistent with campbell2019's log-odds ladder (0 / 0.86 / 1.90) and with
+     Van Dongen 2003's convex lapse curve in adults.
+
+  THE DISSOCIATION, STATED PRECISELY, BECAUSE THIS IS THE SHARD'S CENTRAL QUESTION. Going from 10h to 7h
+  TIB in the same 77 adolescents, measured minutes apart on the same afternoons:
+      SUBJECTIVE (KSS):        about +1.7 points on a 9-point scale, never leaving the mid-range.
+      OBJECTIVE (MSLT):        41% -> 80% of trials ending in sleep onset; 6.7-fold odds increase per minute.
+  The self-report channel moves modestly and stays bounded; the physiological channel nearly doubles. A
+  subject relying on how sleepy he feels would substantially under-detect his own state - and note that this
+  is the MILD end of the dose range, 7h TIB, not the 4-5h range where the adult literature usually
+  demonstrates the effect.
+
+  THE AGE STORY, WHICH IS THE PAPER'S OWN HEADLINE AND CUTS AGAINST A COMMON ASSUMPTION. Objective daytime
+  sleepiness INCREASES with age across 9.9-14 even when prior sleep is held constant (10h TIB: 60% of MSLTs
+  with sleep onset in the oldest third versus 23% in the youngest third), while the BENEFIT of extending TIB
+  shrinks with age. The authors reject the obvious reading - that older adolescents simply need more sleep -
+  and attribute the rise in sleep propensity to synaptic pruning reducing waking brain activity. Whichever
+  interpretation is right, the empirical pattern is what the model needs: an older adolescent is closer to
+  the sleep-onset threshold at any given sleep dose, but gains less from extending sleep. Both halves are
+  unfavourable for our subject.
+
+  A METHODOLOGICAL FINDING WORTH MORE THAN ITS SIZE. Sleep latency SHORTENED across repeated lab visits
+  (first vs third, t75 = -7.97, p < .0001) because participants grew comfortable in the laboratory. This is
+  an order artefact in the opposite direction to a practice effect, and it is the mirror image of the PVT
+  carryover in campbell2019 where performance DECLINED across visits in proportion to prior restriction.
+  Together they establish that multi-condition adolescent crossover protocols carry order artefacts on both
+  objective sleepiness and objective performance, in opposite directions, and that neither is a classical
+  learning gain. Unadjusted estimates from such designs should be treated as biased by an unknown sign.
+shard: "s01_cognition_dose_response"

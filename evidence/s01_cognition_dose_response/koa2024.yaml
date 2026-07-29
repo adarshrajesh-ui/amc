@@ -1,0 +1,157 @@
+study_id: koa2024
+citation: "Koa TB, Gooley JJ, Chee MWL, Lo JC. Neurobehavioral functions during recurrent periods of sleep restriction: effects of intra-individual variability in sleep duration. Sleep. 2024;47(3):zsae010."
+doi: "10.1093/sleep/zsae010"
+pmid: "38219041"
+url: "https://pubmed.ncbi.nlm.nih.gov/38219041/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  status: VERIFIED
+  resolved_title: "Neurobehavioral functions during recurrent periods of sleep restriction: effects of intra-individual variability in sleep duration"
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 52
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [21, 28]
+  pct_female: 51.9
+  country: "Singapore"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: vigilance_deteriorates_faster_in_the_second_week_of_a_6h_weekday_schedule
+    exposure: {type: chronic_restriction, dose_h: 6, referent_h: 8, duration_days: 10,
+               contrast_label: "6h TIB weekday nights with 8h TIB weekend recovery, week 2 vs week 1, randomised vs 8h control"}
+    scale: raw_units
+    unit: "1 = faster vigilance deterioration in week 2 than week 1 at the same nightly dose"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Binary encoding of the primary randomised result. No effect sizes, means or SDs are
+      published in the abstract and the full text is paywalled (no PMC body deposit, no OA copy located), so
+      se is null.
+      WHY THIS ONE MATTERS SO MUCH: the dose is 6 h TIB - the mild end of our subject's weekday range, and a
+      dose most people consider survivable - the recovery is a realistic two-night weekend at 8 h TIB, the
+      structure is two repeated weekly cycles, and the comparison is against a properly randomised 8 h
+      control arm in a young-adult sample. It shows the ACCUMULATION RATE ITSELF STEEPENS on re-exposure: not
+      merely that the deficit fails to clear, but that the second week does damage faster than the first.
+      That is a ratcheting mechanism, and it is what makes a three-year repetition qualitatively different
+      from a one-week experiment repeated 150 times."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = week 2 worse and deteriorating faster than week 1 despite an intervening weekend at
+      8h TIB. Applies to the STABLE 6h schedule; the variable schedule did not show it."
+    covariates: ["randomised allocation to stable short / variable short / control", "two baseline nights at 8h TIB", "five assessments per day"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+    quote: "The stable short sleep group showed faster vigilance deterioration in the second week of sleep
+      restriction as compared to the first. This effect was not observed in the variable short sleep group."
+  - outcome_domain: cognition
+    outcome_construct: sleep_restriction_attenuates_practice_based_improvement_in_processing_speed
+    exposure: {type: chronic_restriction, dose_h: 6, referent_h: 8, duration_days: 10,
+               contrast_label: "practice-based improvement in processing speed, both short-sleep arms vs 8h control"}
+    scale: raw_units
+    unit: "1 = practice-based improvement was attenuated by restriction"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Binary encoding. DIRECTLY ANSWERS THE SHARD BRIEF'S QUESTION ABOUT PRACTICE EFFECTS,
+      and it answers it in a way that complicates the usual treatment. The standard concern is that practice
+      MASKS a deficit; this result shows that restriction also SUPPRESSES practice itself. So on
+      practice-sensitive tasks (throughput, digit symbol substitution, serial addition) the restricted-versus-
+      control gap is a mixture of two things: real impairment, and a failure to learn at the normal rate.
+      Those are different constructs and a single difference score cannot separate them.
+      COMPARE Van Dongen 2003, where the 8 h control arm gained +9.6 DSST correct responses over 14 days from
+      practice while the 4 h arm LOST 5.1 - a 14.7-point gap of which an unknown share is suppressed learning
+      rather than acute decrement. This finding says that share is not zero. It also means the PVT's near-
+      absence of practice effects is not merely a convenience but a genuine interpretive advantage."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = attenuated learning under restriction. Practice contamination on throughput tasks is
+      bidirectional and cannot be removed by simple baseline subtraction."
+    covariates: ["randomised allocation", "8h TIB control arm as the practice reference"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+    quote: "Subjective alertness and practice-based improvement in processing speed were attenuated in both
+      short sleep groups."
+  - outcome_domain: cognition
+    outcome_construct: variable_short_sleep_mitigates_vigilance_ratcheting_but_not_other_deficits
+    exposure: {type: chronic_restriction, dose_h: 6, referent_h: 8, duration_days: 10,
+               contrast_label: "variable schedule (8/4/8/4/6h TIB) vs stable 6h TIB, matched weekly total, randomised"}
+    scale: raw_units
+    unit: "count of outcome classes still impaired in BOTH short-sleep arms despite the schedule difference"
+    value: 2.0
+    se: null
+    ci: null
+    conversion_formula: "Counted from the reported result: processing speed and subjective sleepiness were
+      impaired in both arms. The variable arm avoided only the week-2 vigilance ratcheting.
+      NOTE THE WEEKLY TOTALS ARE NEARLY MATCHED: stable = 6+6+6+6+6 = 30 h across the five manipulation
+      nights; variable = 8+4+8+4+6 = 30 h. Same total, different distribution, different vigilance outcome.
+      THIS REPLICATES LO 2019'S CONCLUSION IN A DIFFERENT DESIGN AND A DIFFERENT AGE GROUP: total sleep time
+      is not a sufficient exposure statistic - how the sleep is distributed carries independent information.
+      Lo 2019 showed it for nocturnal-versus-split sleep within a day; this shows it for night-to-night
+      variability within a week. Two independent demonstrations, same laboratory family, consistent
+      direction."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "2 = both processing speed and subjective alertness remained impaired regardless of
+      schedule shape; only the vigilance ratcheting was schedule-dependent. The authors' bottom line is that
+      no distribution of insufficient sleep is safe."
+    covariates: ["randomised allocation", "matched weekly sleep totals across the two short-sleep arms"]
+    followup_years: null
+    cohort_family: NFS_Singapore
+    quote: "In young adults, more variable short sleep schedules incorporating days of prophylactic or
+      recovery sleep might mitigate compounding vigilance deficits resulting from recurrent cycles of sleep
+      restriction. However, processing speed and subjective sleepiness were still impaired in both short
+      sleep schedules. Getting sufficient sleep consistently is the only way to ensure optimal neurobehavioral
+      functioning."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Genuinely randomised three-arm parallel design (stable short 6h / variable short 8-4-8-4-6h /
+    control 8h) with a CONCURRENT rather than historical control arm - a real improvement over Lo 2019 and
+    Lo 2016, both of which relied on a historical 9h comparison group. Laboratory-based, two baseline nights
+    at 8h TIB, five neurobehavioral assessments per day, prospectively registered (NCT04731662), and the two
+    short-sleep arms are matched on weekly sleep total so the schedule-shape contrast is clean. Concerns:
+    n = 52 across three arms is about 17 per arm; no blinding possible; the exposure is 8h TIB as the control
+    rather than 9h, so the reference is realistic but not maximal; and the population is young adults aged
+    21-28, i.e. good but not exact age match to a 16-19 year old. Abstract-only access - no PMC body deposit,
+    no OA copy located - so no per-arm means, SDs or effect sizes could be extracted and all three effects
+    here are directional encodings with se: null. That is the main limitation: the study establishes the
+    ratcheting and the practice-attenuation qualitatively but supplies no magnitude."
+funding: "Not stated in the retrieved abstract. Trial registration: ClinicalTrials.gov NCT04731662 (STAVAR)"
+notes: |
+  THE THIRD PIECE OF THE RATCHETING EVIDENCE, and the one closest to our subject's weekday dose. Three
+  studies from this laboratory family now show that a second week of restriction is worse than the first
+  despite intervening recovery nights, across three separate samples and two age groups:
+    Lo 2017 (adolescents, 5h TIB)   - "worse this Monday than last Friday, p = .02", and "the rate of
+                                      deterioration was faster during the second period of sleep restriction
+                                      than the first period"
+    Lo 2019 (adolescents, 6.5h/5h+nap) - "Both groups showed further deterioration in performance during the
+                                      second sleep restriction period (SR13 vs. SR23: p = 0.02 and 0.03)"
+    Koa 2024 (young adults, 6h)     - "The stable short sleep group showed faster vigilance deterioration in
+                                      the second week of sleep restriction as compared to the first"
+  Smith 2021 extends the same pattern to six weekly cycles at 5h weekdays in midlife adults. The accumulation
+  SLOPE is not stationary across weeks, which means a three-year exposure cannot be modelled as a fixed-slope
+  repetition of a single week. Whatever functional form is chosen, it needs a slowly moving state variable
+  (McCauley 2009's drifting asymptote is the natural candidate).
+
+  THE PRACTICE-EFFECT FINDING IS THE OTHER REASON THIS RECORD EARNS ITS PLACE, and I had not found this
+  anywhere else. "Practice-based improvement in processing speed [was] attenuated in both short sleep
+  groups." The shard brief asks about test-retest and practice effects as a confound on the trajectory. The
+  usual framing is that practice inflates performance and masks decline - which is why Van Dongen 2003
+  curved its comparison bands parallel to the 8 h arm's learning curve for DSST and SAST. This result adds
+  that restriction ALSO suppresses learning, so on throughput tasks the restricted-vs-control gap conflates
+  acute impairment with failure to learn. Practically: use PVT lapses or mean 1/RT as the primary outcome
+  (near practice-free; Cohen 2010: "The PVT does not display appreciable practice effects"), and treat any
+  DSST or serial-addition trajectory as uninterpretable without an explicitly modelled learning curve.
+
+  DESIGN: 52 healthy young adults (25 male, aged 21-28), randomised to stable short sleep, variable short
+  sleep, or control. Two baseline nights at 8h TIB, then two cycles of a five-night "weekday" manipulation
+  followed by two-night "weekend" recovery at 8h TIB. Stable short = 6h TIB each manipulation night; variable
+  short = 8h, 4h, 8h, 4h, 6h; control = 8h throughout. Weekly manipulation totals match at 30h for both
+  short arms. Neurobehavioral functions assessed five times daily.
+shard: "s01_cognition_dose_response"
