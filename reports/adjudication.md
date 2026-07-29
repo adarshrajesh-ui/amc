@@ -199,7 +199,9 @@ cognition/health scales; log-scale ratios positive = elevated risk. Every record
 `direction_note`."* — but it appears **only** in the QA gate document. It is absent from
 `spec/EXTRACTION_INSTRUCTIONS.md`, the document extractors are told to read before doing anything,
 and absent from the re-extraction task schema, which carries `target_unit` but no direction field.
-That single omission produced five of these six disputes.
+That omission accounts for B2, B3, B4 and the B6 class. The remaining two, B1 and B5, come from a
+second gap in the same rule: it says nothing about contrasts that are not between sleep conditions,
+so it cannot be applied to them at all.
 
 ## B1. `dama2025::2` — depression severity in DSWPD
 
