@@ -1,0 +1,94 @@
+study_id: bei2014
+citation: "Bei B, Allen NB, Nicholas CL, Dudgeon P, Murray G, Trinder J. Actigraphy-assessed sleep during school and vacation periods: a naturalistic study of restricted and extended sleep opportunities in adolescents. J Sleep Res. 2014;23(1):107-117."
+doi: "10.1111/jsr.12080"
+pmid: "23992480"
+url: "https://doi.org/10.1111/jsr.12080"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Actigraphy-assessed sleep during school and vacation periods: a naturalistic study of restricted and extended sleep opportunities in adolescents."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: prospective_cohort_objective
+tier: T4
+n: 146
+n_studies_pooled: null
+population:
+  age_mean: 16.2
+  age_range: [15, 18]
+  pct_female: 52.7
+  country: "AU"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: recovery
+    outcome_construct: days_for_adlib_sleep_to_stabilize_in_adolescents
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 14, contrast_label: "2-week school vacation with unrestricted sleep opportunity following the last week of a school term; actigraphic total sleep time trajectory"}
+    scale: years
+    unit: "days of unrestricted sleep opportunity before total sleep time stabilized"
+    value: 7.0
+    se: null
+    ci: [7.0, 14.0]
+    conversion_formula: "Read from the abstract's described trajectory, not from a fitted parameter: TST rose abruptly on removal of school restriction, then 'Across the first vacation week, total sleep time and sleep efficiency linearly decreased' and 'These changes stabilized during the second vacation week.' Stabilization is therefore located at the boundary of vacation weeks 1 and 2, i.e. between day 7 and day 14; I record the lower edge (7 days) as the point estimate and [7, 14] as the bracket. This interval is READ FROM THE DESCRIBED TRAJECTORY, not computed, hence inferred_from_ci: true. The abstract reports no numeric TST values, so no SE exists. NOTE the scale enum has no 'days' option; 'years' is the generic numeric-duration scale and the unit field states days."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "LARGER = slower stabilization of ad-lib sleep. In free-living 16-year-olds, sleep duration took 1-2 weeks of unrestricted opportunity to settle, versus ~4 days in the laboratory (Kitamura 2016, 12 h TIB) and ~5 days (Klerman 2008, 16 h/24 h). Real-world stabilization is SLOWER than laboratory stabilization, because the adolescent's circadian phase drifts later at the same time as the debt discharges - the two processes fight each other."
+    covariates: ["chronotype (Morningness-Eveningness Questionnaire)", "age", "sex"]
+    followup_years: 0.077
+    cohort_family: Bei_AU_adolescent_actigraphy
+    quote: "The removal of school-related sleep restriction was associated with an abrupt delay in sleep timing and increase in sleep duration. Subsequently, bedtime and rise-time showed further linear delays throughout the vacation, while changes in time-in-bed were non-significant. Sleep onset latency increased linearly, peaking in the middle of the second vacation week. Across the first vacation week, total sleep time and sleep efficiency linearly decreased, while % wake after sleep onset increased. These changes stabilized during the second vacation week."
+  - outcome_domain: circadian
+    outcome_construct: progressive_phase_delay_during_unrestricted_sleep_opportunity
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 14, contrast_label: "actigraphic bedtime and rise-time across a 2-week vacation with unrestricted sleep opportunity"}
+    scale: probability
+    unit: "1 = significant progressive linear delay of bedtime and rise-time throughout the vacation"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Direction indicator from latent growth curve modelling described in the abstract. Slopes were significant and linear but no coefficients or SEs are reported in the abstract, and I could not obtain the full text (no free PMC deposit; the PMC elink returns only citing articles), so se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = ad-lib recovery in adolescents is accompanied by a PROGRESSIVE CIRCADIAN DELAY, not merely by longer sleep. This is the practical failure mode of an unstructured 'just sleep as much as you want' prescription: time in bed did NOT increase significantly across the vacation ('changes in time-in-bed were non-significant'), sleep onset latency INCREASED linearly (peaking mid-week-2), sleep efficiency FELL, and wake after sleep onset ROSE - while bed and rise times slid ever later. The adolescent ends the recovery period phase-delayed and facing a worse re-entry to school, which is exactly the mechanism that regenerates the debt each term."
+    covariates: ["chronotype", "age", "sex"]
+    followup_years: 0.077
+    cohort_family: Bei_AU_adolescent_actigraphy
+    quote: "Subsequently, bedtime and rise-time showed further linear delays throughout the vacation, while changes in time-in-bed were non-significant. Sleep onset latency increased linearly, peaking in the middle of the second vacation week. ... Older age and eveningness were associated with later bedtime and rise-time"
+rob:
+  tool: Newcastle-Ottawa
+  judgement: some_concerns
+  notes: "Strong naturalistic design for this shard's purposes: n = 146 community adolescents wearing actigraphs CONTINUOUSLY for 4 weeks spanning school term, a 2-week vacation and return to term, analysed with latent growth curve modelling, plus self-report and chronotype. It is observational (T4) rather than experimental, so the vacation 'extension' is not a controlled dose and is confounded with the removal of morning wake-time constraint, seasonal factors and altered daytime activity. Actigraphy over-estimates sleep relative to PSG. No performance or physiological outcomes were measured, so this record speaks only to the SLEEP trajectory, not to functional recovery. ACCESS IS ABSTRACT-ONLY: J Sleep Res 2014 is paywalled and has no free PMC deposit, so both effects are encoded from the abstract's qualitative trajectory description with se: null and no numeric TST values available."
+funding: "Not stated in the abstract; not retrievable without full text."
+notes: |
+  WHY THIS RECORD EARNS ITS PLACE DESPITE ABSTRACT-ONLY ACCESS: it is the only study in the shard that
+  observes ad-lib recovery sleep, objectively and for two full weeks, in EXACTLY the target
+  demographic - 146 community adolescents aged 16.2 +/- 1.0 y, 47.3% male - under exactly the target
+  subject's real-world pattern of school-term restriction relieved by an unstructured break. Every
+  other multi-day recovery observation in this shard is either laboratory-based or in adults or both.
+  adolescent_match is exact_16_19.
+
+  THE TIME-CONSTANT CONTRIBUTION. Sleep duration rose abruptly when school restriction lifted, then
+  decayed linearly across vacation week 1 and stabilized during week 2. That places free-living
+  adolescent sleep stabilization at 7-14 days, slightly slower than the laboratory estimates it
+  otherwise agrees with:
+    Kitamura 2016  12 h TIB, lab, young men       ~4 days to asymptote
+    Klerman 2008   16 h/24 h, lab, 18-32 y        ~5 days to asymptote
+    Bei 2014       ad-lib, free-living, 16.2 y    7-14 days to stabilize   (this record)
+  The convergence of three independent designs on "about one week, not one or two nights" is the most
+  robust quantitative claim available for the recovery time constant of sleep duration itself.
+
+  THE UNCOMFORTABLE FINDING, and the reason this record changes the prescription rather than merely
+  supporting it: an unstructured break did NOT increase time in bed significantly. What changed was
+  TIMING - bedtime and rise-time delayed progressively and linearly for the whole fortnight - together
+  with DETERIORATING sleep quality: sleep onset latency rose linearly, sleep efficiency fell, and wake
+  after sleep onset rose across week 1. So left to their own devices, adolescents given unlimited
+  opportunity converted it into later sleep rather than more sleep, and finished the period
+  phase-delayed with worse sleep continuity. A recovery prescription for a 19-year-old that says only
+  "sleep more over the break" will predictably reproduce this pattern. Wake time, not bedtime, is the
+  variable that has to be anchored.
+
+  CAUTION ON THE DECLINING-TST INTERPRETATION: the linear fall in TST across vacation week 1 is
+  consistent with debt discharge (as in Kitamura and Klerman), but in this uncontrolled setting it is
+  equally consistent with the progressive circadian delay simply truncating sleep. The abstract does
+  not let me separate these. Both mechanisms argue against unstructured catch-up, so the prescription
+  implication is robust to the ambiguity even though the mechanism is not identified.
+shard: "s05_recovery_kinetics"

@@ -1,0 +1,111 @@
+study_id: pejovic2013
+citation: "Pejovic S, Basta M, Vgontzas AN, Kritikou I, Shaffer ML, Tsaoussoglou M, Stiffler D, Stefanakis Z, Bixler EO, Chrousos GP. Effects of recovery sleep after one work week of mild sleep restriction on interleukin-6 and cortisol secretion and daytime sleepiness and performance. Am J Physiol Endocrinol Metab. 2013;305(7):E890-E896."
+doi: "10.1152/ajpendo.00301.2013"
+pmid: "23941878"
+url: "https://pubmed.ncbi.nlm.nih.gov/23941878/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Effects of recovery sleep after one work week of mild sleep restriction on interleukin-6 and cortisol secretion and daytime sleepiness and performance"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 30
+n_studies_pooled: null
+population:
+  age_mean: 24.7
+  age_range: [21, 32]
+  pct_female: 46.7
+  country: "US"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_after_two_10h_recovery_nights_vs_baseline
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 8, duration_days: 2, contrast_label: "PVT lapses after 2 recovery nights at 10 h TIB vs baseline (8 h TIB), following 6 nights of 6 h TIB"}
+    scale: hedges_g
+    unit: null
+    value: 0.488
+    se: 0.227
+    ci: [0.043, 0.933]
+    conversion_formula: "Table 3, n=30. Reported means +/- SE: baseline 2.9 +/- 0.4, restriction 3.96 +/- 0.6, recovery 4.3 +/- 0.6; p = 0.08 (B vs SR), 0.69 (SR vs R), 0.04 (B vs R). SD = SE*sqrt(30): SD_B = 2.191, SD_R = 3.286. sd_av = sqrt((2.191^2+3.286^2)/2) = 2.793. d_av = (4.3-2.9)/2.793 = 0.501. J = 1 - 3/(4*29-1) = 0.9739. g = 0.488. SE from inverting the two-sided paired t at df=29 for p=0.04 -> t=2.150; SE = |g|/t = 0.227."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "positive g = MORE lapses than baseline, i.e. vigilance was still WORSE than baseline after two 10 h TIB recovery nights, and no better than during restriction (SR vs R p = 0.69). Note the paradox: the baseline-vs-restriction contrast was only p=0.08 while baseline-vs-recovery reached p=0.04 - performance did not merely fail to recover, it continued to drift."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "A significant deterioration of performance in number of lapses, median RT, and fastest 10% RTs per trial was observed after 1 wk of mild sleep restriction compared with baseline (Table 3). No improvement was observed in any of the variables examined after recovery compared with restriction (Table 3)."
+  - outcome_domain: immune
+    outcome_construct: il6_returns_to_baseline_after_two_10h_recovery_nights
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 8, duration_days: 2, contrast_label: "24-h serial plasma IL-6 after 2 recovery nights at 10 h TIB vs baseline, following 6 nights of 6 h TIB"}
+    scale: probability
+    unit: "direction indicator: 0 = returned to baseline"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded as a direction indicator because the paper reports the recovery result as a return to baseline without a quotable effect size for the baseline-vs-recovery contrast. 0 = no residual difference from baseline."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = fully recovered. IL-6 rose during restriction and returned to baseline after 2 nights of 10 h TIB, in the SAME subjects and SAME sessions in which PVT had not recovered. This is the cleanest within-study demonstration that inflammatory and cognitive recovery run on different clocks."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Serial 24-h IL-6 plasma levels increased significantly during sleep restriction and returned to baseline after recovery sleep."
+  - outcome_domain: recovery
+    outcome_construct: objective_and_subjective_sleepiness_recover_while_performance_does_not
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 8, duration_days: 2, contrast_label: "MSLT sleep latency and Stanford Sleepiness Scale after 2 recovery nights at 10 h TIB vs baseline"}
+    scale: probability
+    unit: "direction indicator: 0 = returned to baseline"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded as a direction indicator; the paper states return to baseline for both sleepiness measures without a quotable baseline-vs-recovery effect size."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0 = fully recovered. Both the objective (MSLT) and subjective (SSS) sleepiness measures normalised while PVT did not. A person relying on 'do I feel sleepy?' would conclude they had recovered."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Subjective and objective sleepiness increased significantly after restriction and returned to baseline after recovery. In contrast, performance deteriorated significantly after restriction and did not improve after recovery."
+  - outcome_domain: recovery
+    outcome_construct: tst_yield_and_debt_repayment_at_10h_tib
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 8, duration_days: 2, contrast_label: "TST at 10 h TIB recovery vs 8 h TIB baseline, derived from PSG sleep efficiency"}
+    scale: per_hour_beta
+    unit: "h TST gained per h TIB added, 8 h -> 10 h"
+    value: 0.903
+    se: null
+    ci: null
+    conversion_formula: "From Table 2 sleep efficiency (%ST, mean +/- SE): baseline 91.8 +/- 0.8%, restriction 93.5 +/- 0.5%, recovery 91.5 +/- 0.7%. TST = %ST x TIB: baseline 0.918*8 = 7.34 h; restriction 0.935*6 = 5.61 h; recovery 0.915*10 = 9.15 h. Marginal yield = (9.15-7.34)/(10-8) = 0.903 h TST per h TIB. Debt over 6 restricted nights = 6*(7.34-5.61) = 10.40 h; repayment over 2 recovery nights = 2*(9.15-7.34) = 3.61 h = 34.7% of debt."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0.903 h TST per additional h TIB is the HIGHEST marginal yield in this shard, because these subjects were only mildly restricted (6 h TIB) and were given a generous 10 h TIB. Yet even repaying ~35% of the debt in 2 nights left PVT unrecovered - so the debt ledger and the performance ledger do not track each other."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "%ST | 91.8 +/- 0.8 | 93.5 +/- 0.5 | 91.5 +/- 0.7 | 0.07 | 0.02 | 0.77"
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Within-subject laboratory design with PSG, 24-h serial hourly blood sampling, MSLT and PVT - excellent measurement. But there is no parallel control arm, so the day-4/day-10/day-13 comparisons cannot be separated from time-on-study effects; for PVT this cuts against the finding's direction (practice would produce apparent improvement, and none was seen, so the non-recovery result is conservative). Subjects were dismissed from the laboratory on non-sampling days with compliance assessed by questionnaire and actigraphy rather than continuous supervision. The restriction was mild (6 h TIB x 6 nights), so the absolute debt was small. n=30, ages ~21-32 (mean 24.7), age range inferred from mean +/- ~2 SD and approximate. Three of 14 women were in the luteal phase at the recovery sampling."
+funding: "NIH (R01 HL64415, R01 HL51931, C06 RR016499)"
+notes: |
+  The best single-study dissociation of recovery timelines, because everything was measured in the same
+  subjects at the same three sessions after a deliberately weekend-like recovery (10 h/night):
+    RECOVERED by 2 nights at 10 h TIB : 24-h IL-6, MSLT sleep latency, Stanford Sleepiness Scale
+    NOT RECOVERED                     : PVT lapses (g = 0.49 vs baseline, p = 0.04), median RT, fastest 10% RT
+    OVERSHOT                          : 24-h cortisol, which was significantly LOWER after recovery than at
+                                        baseline, suggesting the 8 h baseline itself carried some debt
+  The authors designed this explicitly as a weekend-catch-up model: "We chose a 5-day restriction period and a
+  2-night recovery period to mimic the weeklong work schedule and rest period of a typical worker." Their own
+  conclusion is the report's headline: "Extended recovery sleep over the weekend reverses the impact of one
+  work week of mild sleep restriction on daytime sleepiness, fatigue, and IL-6 levels, reduces cortisol
+  levels, but does not correct performance deficits."
+  They also flag exactly the gap this shard cares about: "The long-term effects of a repeated sleep
+  restriction/sleep recovery weekly cycle in humans remain unknown." (Simpson 2016 and Lo 2022 partially fill
+  this; see those records.)
+  Repayment ledger derived from PSG sleep efficiency: 6 nights at 6 h TIB built a 10.4 h debt; 2 nights at
+  10 h TIB repaid 3.6 h (34.7%). Note the contrast with Belenky (2.1% at 8 h TIB) - the difference is entirely
+  driven by the recovery TIB cap. Going from 8 h to 10 h TIB recovery raises the repayment rate by ~17x.
+shard: "s05_recovery_kinetics"

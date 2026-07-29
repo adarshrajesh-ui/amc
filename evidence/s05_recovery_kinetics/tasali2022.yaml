@@ -1,0 +1,93 @@
+study_id: tasali2022
+citation: "Tasali E, Wroblewski K, Kahn E, Kilkus J, Schoeller DA. Effect of sleep extension on objectively assessed energy intake among adults with overweight in real-life settings: a randomized clinical trial. JAMA Intern Med. 2022;182(4):365-374."
+doi: "10.1001/jamainternmed.2021.8098"
+pmid: "35129580"
+url: "https://pubmed.ncbi.nlm.nih.gov/35129580/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Effect of Sleep Extension on Objectively Assessed Energy Intake Among Adults With Overweight in Real-life Settings: A Randomized Clinical Trial"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 80
+n_studies_pooled: null
+population:
+  age_mean: 29.8
+  age_range: [21, 40]
+  pct_female: 48.7
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: achieved_tst_gain_from_bedtime_extension_counselling
+    exposure: {type: sleep_extension, dose_h: 8.5, referent_h: 6.5, duration_days: 14, contrast_label: "individualised sleep-hygiene counselling to extend bedtime to 8.5 h vs habitual sleep, in adults habitually sleeping <6.5 h; actigraphic sleep duration"}
+    scale: hours
+    unit: "h/night of additional actigraphic sleep vs control"
+    value: 1.2
+    se: 0.102
+    ci: [1.0, 1.4]
+    conversion_formula: "Reported between-group difference: +1.2 h/night (95% CI 1.0 to 1.4 h), P < .001. SE = (1.4-1.0)/3.92 = 0.102 h. Yield relative to the ~2 h TIB target increase (from <6.5 h habitual to an 8.5 h bedtime window) is ~0.60 h TST per h TIB."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more sleep. The largest free-living sleep-duration gain in this shard (+1.2 h), achieved by a single counselling session in people starting from a LARGE deficit (<6.5 h). Yield ~0.60 h TST per h TIB - better than Al Khatib's 0.38, plausibly because a deeper starting deficit raises sleep pressure and therefore efficiency."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Sleep duration was increased by approximately 1.2 hours per night (95% CI, 1.0 to 1.4 hours; P < .001) in the sleep extension group vs the control group."
+  - outcome_domain: metabolic
+    outcome_construct: energy_intake_reduction_from_sleep_extension
+    exposure: {type: sleep_extension, dose_h: 8.5, referent_h: 6.5, duration_days: 14, contrast_label: "change in objectively assessed energy intake (doubly labelled water total energy expenditure plus change in body energy stores), sleep extension vs control"}
+    scale: raw_units
+    unit: "kcal/day change in energy intake vs control"
+    value: -270.0
+    se: 62.8
+    ci: [-393.0, -147.0]
+    conversion_formula: "Reported between-group difference: -270 kcal/d (95% CI -393 to -147 kcal/d), P < .001. SE = (393-147)/3.92 = 62.8 kcal/d."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = LESS energy consumed after sleep extension, i.e. a benefit. This is the mirror image of Depner 2019, where restriction INCREASED intake by 480-1130 kcal/d. Reassuringly, the appetite/energy-intake consequence of restriction appears substantially reversible with sustained sleep extension."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The sleep extension group had a significant decrease in energy intake compared with the control group (-270 kcal/d; 95% CI, -393 to -147 kcal/d; P < .001)."
+  - outcome_domain: metabolic
+    outcome_construct: dose_response_between_sleep_gain_and_energy_intake_reduction
+    exposure: {type: sleep_extension, dose_h: 8.5, referent_h: 6.5, duration_days: 14, contrast_label: "correlation between individual change in sleep duration and individual change in energy intake"}
+    scale: raw_units
+    unit: "Pearson r between change in sleep duration and change in energy intake"
+    value: -0.41
+    se: 0.0995
+    ci: [-0.59, -0.20]
+    conversion_formula: "Reported r = -0.41 (95% CI -0.59 to -0.20), P < .001, n = 80. SE = (0.59-0.20)/3.92 = 0.0995 on the r scale."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative r = the MORE extra sleep obtained, the GREATER the reduction in energy intake. A genuine within-trial dose-response, in a randomized design with objective doubly-labelled-water measurement, which makes it much stronger evidence than the analogous correlation in Leproult 2015."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The change in sleep duration was inversely correlated with the change in energy intake (r = -0.41; 95% CI, -0.59 to -0.20; P < .001)."
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "Randomized clinical trial with intention-to-treat analysis, actigraphic sleep monitoring, and an objectively measured primary outcome (energy intake reconstructed from doubly labelled water total energy expenditure plus DXA/home-weight-derived change in body energy stores) - methodologically the strongest free-living sleep-extension trial available. Limitations: only 2 weeks of intervention, participants selected for overweight BMI 25.0-29.9 and habitual sleep <6.5 h so the population is specifically metabolically-at-risk short sleepers, ages 21-40 (mean 29.8) so not adolescents, and no cognitive outcomes at all. Abstract only, so I cannot check the ITT handling or per-protocol sensitivity analyses."
+funding: "Not verifiable from the abstract. Registered at ClinicalTrials.gov as NCT02253368."
+notes: |
+  The best-quality free-living sleep-extension evidence in the shard, and the most useful single data point on
+  what a real person can actually achieve: a single individualised counselling session, in adults habitually
+  sleeping under 6.5 h, produced +1.2 h/night of actigraphic sleep sustained over 2 weeks.
+  Placed alongside the other extension trials, the achievable-yield picture is:
+    Al Khatib 2018 (4 wk, habitual 5 to <7 h, one counselling session)  : +0.35 h, yield 0.38 h/h TIB
+    Leproult 2015  (6 wk, chronic restriction, +1 h TIB target)         : +0.73 h, yield ~0.73 h/h TIB
+    Tasali 2022    (2 wk, habitual <6.5 h, 8.5 h bedtime target)       : +1.20 h, yield ~0.60 h/h TIB
+  The pattern suggests yield rises with the depth of the starting deficit, which is favourable for the target
+  subject (weekday 5-6 h, i.e. a deep deficit against an adolescent need of ~9.35 h).
+  On the metabolic side this is the strongest evidence that the appetite consequence of restriction is
+  reversible: -270 kcal/d with a clean within-trial dose-response (r = -0.41). It contrasts with the cognitive
+  picture, where residual deficits persist for days to weeks. Different outcome domains recover on very
+  different schedules, and energy intake appears to be among the more tractable.
+  ACCESS LIMITATION LOGGED: abstract only. pct_female derived from the reported "41 men [51.3%]" of 80
+  analysed participants.
+shard: "s05_recovery_kinetics"

@@ -1,0 +1,105 @@
+study_id: axelsson2008
+citation: "Axelsson J, Kecklund G, Akerstedt T, Donofrio P, Lekander M, Ingre M. Sleepiness and performance in response to repeated sleep restriction and subsequent recovery during semi-laboratory conditions. Chronobiol Int. 2008;25(2):297-308."
+doi: "10.1080/07420520802107031"
+pmid: "18533328"
+url: "https://pubmed.ncbi.nlm.nih.gov/18533328/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleepiness and Performance in Response to Repeated Sleep Restriction and Subsequent Recovery during Semi-Laboratory Conditions"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 9
+n_studies_pooled: null
+population:
+  age_mean: 25.5
+  age_range: [23, 28]
+  pct_female: 0.0
+  country: "Sweden"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: pvt_lapses_not_recovered_after_7_days
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 7, contrast_label: "7 recovery days at 8 h TIB (23:00-07:00) after 5 days of 4 h TIB (03:00-07:00)"}
+    scale: raw_units
+    unit: "days of 8 h TIB recovery after which lapses had still not returned to baseline"
+    value: 7
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "7 = seven full recovery days at 8 h TIB, and lapses had still not returned to baseline while sleepiness and median reaction time HAD. Confirms the Yamazaki/Banks/Belenky pattern (vigilance lapses are the last thing to recover) with the longest recovery window of any 8 h TIB study."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Seven days of recovery allowed participants to return to the baseline for sleepiness and median reaction time, but not for lapses."
+  - outcome_domain: cognition
+    outcome_construct: pvt_lapses_accumulation_rate_per_restricted_day
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5, contrast_label: "increase in lapses per test per day of 4 h TIB restriction"}
+    scale: per_hour_beta
+    unit: "additional PVT lapses per test per day of restriction"
+    value: 0.69
+    se: 0.16
+    ci: [0.376, 1.004]
+    conversion_formula: "Reported mixed-effect regression slope +/- SE directly (p < .001). CI = 0.69 +/- 1.96*0.16. Note the abstract's units for this coefficient are printed as 'ms' in the published abstract, which is evidently a typographical error - the quantity is lapses/test/day."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more lapses accumulate with each additional restricted day. The DEBT ACCUMULATES LINEARLY at ~0.69 lapses/test/day; combined with the non-recovery of lapses after 7 days, restriction is fast to accumulate and slow to clear."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The mixed-effect regression models showed that each day of restricted sleep resulted in an increase of sleepiness by 0.64+/- .05 KSS units (a nine-step scale, p < .001), increase of median reaction times of 6.6+/- 1.6 ms ( p = .003), and increase of lapses/test of 0.69 +/- .16 ms ( p < .001)."
+  - outcome_domain: cognition
+    outcome_construct: kss_sleepiness_accumulation_rate_per_restricted_day
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5, contrast_label: "increase in KSS sleepiness per day of 4 h TIB restriction"}
+    scale: per_hour_beta
+    unit: "KSS points (9-point scale) per day of restriction"
+    value: 0.64
+    se: 0.05
+    ci: [0.542, 0.738]
+    conversion_formula: "Reported slope +/- SE directly (p < .001). CI = 0.64 +/- 1.96*0.05."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = sleepier. 0.64 KSS points/day means 5 days of 4 h TIB moves a person ~3.2 points up a 9-point scale, e.g. from 'alert' to 'sleepy'. But this measure fully recovered within 7 days while lapses did not."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The mixed-effect regression models showed that each day of restricted sleep resulted in an increase of sleepiness by 0.64+/- .05 KSS units (a nine-step scale, p < .001)"
+  - outcome_domain: recovery
+    outcome_construct: individual_variability_exceeds_group_effect_for_performance
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 5, contrast_label: "between-subject SD of the random intercept expressed in units of days-of-restriction-equivalent"}
+    scale: raw_units
+    unit: "days of restriction equivalent to 1 between-subject SD"
+    value: 6.6
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: the between-subject SD of the random intercept was equivalent to 1.1 days of restriction for sleepiness, 6.6 days for median reaction time, and 3.2 days for lapses."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Larger = individual differences dominate. For median RT, one between-person SD equals 6.6 days of sleep restriction - i.e. WHO you are matters more than how restricted you are. Any individual recovery prescription therefore needs individual measurement, not a population timeline."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The individual differences were larger for performance measures than for sleepiness; the between-subject standard deviation for the random intercept was in the magnitude of the effects of 1.1 days of restricted sleep for sleepiness, 6.6 days of restricted sleep for median reaction time, and 3.2 days for lapses."
+rob:
+  tool: RoB2
+  judgement: moderate
+  notes: "Very small (n=9, all male), no control arm, semi-laboratory conditions with participants going outdoors twice daily so light and activity exposure were not controlled, and only three test sessions per day. Mixed-effect modelling is appropriate for the design. Downgraded further because I could only obtain the abstract (Chronobiology International, paywalled; no PMC deposit found), so all values are from the abstract and I cannot verify the recovery-day trajectories or check whether practice effects were modelled. The published abstract contains an apparent unit typo ('lapses/test of 0.69 +/- .16 ms')."
+funding: "Not verifiable from the abstract."
+notes: |
+  Valuable specifically because the recovery window is 7 days at 8 h TIB - long enough to show the ordering:
+    recovered by day 7 : subjective sleepiness (KSS), median reaction time
+    NOT recovered      : PVT lapses
+  Combined with Ochab 2021 (7 days, only mean RT recovered), Bougard 2018 (13 days), Rabat 2016 (13 days) and
+  Yamazaki 2021 (4 x 12 h TIB), the consistent picture is that lapse-type vigilance failures are the slowest
+  measure to recover and are still detectable at 7+ days.
+  The individual-variability result is one of the most practically important numbers in this whole shard: one
+  between-person SD in median RT equals 6.6 days of restriction. Population-mean recovery timelines will be
+  badly wrong for any specific individual, which is an argument for the recovery prescription to include
+  self-measurement rather than a fixed number of days.
+  ACCESS LIMITATION LOGGED: abstract only.
+shard: "s05_recovery_kinetics"

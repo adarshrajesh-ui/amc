@@ -1,0 +1,107 @@
+study_id: alkhatib2018
+citation: "Al Khatib HK, Hall WL, Creedon A, Ooi E, Masri T, McGowan L, Harding SV, Darzi J, Pot GK. Sleep extension is a feasible lifestyle intervention in free-living adults who are habitually short sleepers: a potential strategy for decreasing intake of free sugars? A randomized controlled pilot study. Am J Clin Nutr. 2018;107(1):43-53."
+doi: "10.1093/ajcn/nqx030"
+pmid: "29381788"
+url: "https://pubmed.ncbi.nlm.nih.gov/29381788/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Sleep extension is a feasible lifestyle intervention in free-living adults who are habitually short sleepers: a potential strategy for decreasing intake of free sugars? A randomized controlled pilot study"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 42
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: [18, 64]
+  pct_female: null
+  country: "UK"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: free_living_tst_gain_from_sleep_extension_counselling
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 28, contrast_label: "4 weeks of personalised sleep-hygiene counselling to extend sleep vs maintained habitual short sleep, in free-living habitual short sleepers (5 to <7 h)"}
+    scale: hours
+    unit: "h/night of additional actigraphic sleep vs control"
+    value: 0.350
+    se: 0.128
+    ci: [0.100, 0.600]
+    conversion_formula: "Reported between-group difference: sleep duration +0:21 h:mm (95% CI 0:06, 0:36) = +0.350 h (95% CI 0.100, 0.600). SE = (0.600-0.100)/3.92 = 0.128 h."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = more actual sleep obtained. This is the REAL-WORLD achievable gain: a behavioural sleep-extension intervention in habitual short sleepers bought only ~21 minutes of extra sleep per night, with a lower confidence bound of just 6 minutes."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The sleep extension group significantly increased time in bed [0:55 hours:minutes (h:mm); 95% CI: 0:37, 1:12 h:mm], sleep period (0:47 h:mm; 95% CI: 0:29, 1:05 h:mm), and sleep duration (0:21 h:mm; 95% CI: 0:06, 0:36 h:mm) compared with the control group."
+  - outcome_domain: recovery
+    outcome_construct: free_living_tst_yield_per_hour_of_added_tib
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 28, contrast_label: "ratio of achieved sleep-duration gain to achieved time-in-bed gain in a free-living 4-week extension trial"}
+    scale: per_hour_beta
+    unit: "h TST gained per h TIB added, free-living"
+    value: 0.382
+    se: null
+    ci: null
+    conversion_formula: "TIB gain +0:55 = 0.917 h; sleep-duration gain +0:21 = 0.350 h. Yield = 0.350/0.917 = 0.382 h TST per h TIB. Sleep PERIOD gain was +0:47 = 0.783 h, so the loss is split: ~0.13 h of the extra TIB went to sleep-onset latency and ~0.43 h to wake within the sleep period. se is null because this yield is a RATIO of two separately-reported estimates whose covariance the paper does not report; propagating error would require assuming independence, which is false here (both derive from the same actigraphy records). The SE of the numerator alone is derivable and is 0.128 h: (0.600 - 0.100)/3.92 from the reported 95% CI of the sleep-duration gain (+0:06 to +0:36)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0.382 h TST per h TIB is the CRITICAL real-world number, and it is dramatically worse than the laboratory figures (0.72-0.98 h/h in Banks, Belenky, Pejovic). In a supervised lab, extra time in bed becomes sleep; at home, roughly TWO THIRDS of it is lost to latency and fragmentation. Any recovery prescription must budget for this."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The sleep extension group significantly increased time in bed [0:55 hours:minutes (h:mm); 95% CI: 0:37, 1:12 h:mm], sleep period (0:47 h:mm; 95% CI: 0:29, 1:05 h:mm), and sleep duration (0:21 h:mm; 95% CI: 0:06, 0:36 h:mm) compared with the control group."
+  - outcome_domain: recovery
+    outcome_construct: feasibility_of_at_home_sleep_extension
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 28, contrast_label: "participation, attrition and compliance across a 4-week free-living sleep extension intervention"}
+    scale: pct_change
+    unit: "% compliance with the sleep extension protocol"
+    value: 85.7
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: participation 100%, attrition 6.5%, compliance 85.7%."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = feasible. 85.7% compliance with a single behavioural consultation session shows the intervention is achievable; the constraint on recovery is not willingness but the low conversion of time in bed into sleep."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Rates of participation, attrition, and compliance were 100%, 6.5%, and 85.7%, respectively."
+  - outcome_domain: metabolic
+    outcome_construct: free_sugar_intake_reduction_with_sleep_extension
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 28, contrast_label: "change in free-sugar intake, sleep extension vs control, 7-day food diaries"}
+    scale: raw_units
+    unit: "g/day change in free sugars"
+    value: -9.6
+    se: 3.29
+    ci: [-16.0, -3.1]
+    conversion_formula: "Reported: sleep extension -9.6 g (95% CI -16.0, -3.1) vs control +0.7 g (95% CI -5.7, 7.2), between-group P = 0.042. SE of the extension-group change = (16.0-3.1)/3.92 = 3.29 g."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = LESS free sugar consumed after sleep extension, i.e. a benefit. Note this is the within-arm change for the extension group; the between-group test was P = 0.042. No significant differences were found in energy balance or cardiometabolic markers, so this is a dietary-behaviour signal in a pilot, not a demonstrated metabolic benefit."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Sleep extension led to reduced intake of free sugars (-9.6 g; 95% CI: -16.0, -3.1 g) compared with control (0.7 g; 95% CI: -5.7, 7.2 g) (P = 0.042)."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Registered (NCT02787577) parallel-group RCT with objective wrist actigraphy as the primary sleep measure and excellent retention - appropriate for the feasibility question it was designed to answer. But it is explicitly a PILOT: dietary outcomes rest on self-reported 7-day food diaries, the free-sugar finding required a sensitivity analysis restricted to plausible reporters to extend to other macronutrients, and there were no significant effects on energy balance or cardiometabolic markers. Only the abstract was retrievable, so age/sex distributions are null. Eligibility 18-64 y, so the sample is largely adult, not adolescent."
+funding: "Not verifiable from the abstract. Registered at ClinicalTrials.gov as NCT02787577."
+notes: |
+  This record exists to supply the single most important reality check in the shard: the gap between the
+  laboratory repayment function and the achievable one.
+    laboratory yield (Banks, recovery night, supervised)     : 0.73-0.98 h TST per h TIB
+    laboratory yield (Rupp, semi-supervised extension week)   : 0.67 h TST per h TIB
+    free-living yield (this study, behavioural counselling)   : 0.38 h TST per h TIB
+  So a person told to "spend an extra hour in bed" at home should expect roughly 20-25 minutes of extra sleep,
+  not 60. To bank an extra hour of actual sleep at home requires budgeting roughly 2.5 hours of additional time
+  in bed, or improving sleep efficiency alongside extending opportunity.
+  Consistent with Leproult 2015 (+44 min actigraphic sleep from a target of +60 min TIB on weekdays, but zero
+  change at weekends) and Tasali 2022 (+1.2 h from a target bedtime extension of ~2 h in a population starting
+  below 6.5 h). Tasali's higher yield is probably because her participants started from a much larger deficit
+  (<6.5 h habitual), which increases sleep pressure and therefore efficiency.
+  ACCESS LIMITATION LOGGED: abstract only.
+shard: "s05_recovery_kinetics"

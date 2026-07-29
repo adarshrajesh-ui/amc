@@ -1,0 +1,108 @@
+study_id: killick2015
+citation: "Killick R, Hoyos CM, Melehan KL, Dungan GC 2nd, Poh J, Liu PY. Metabolic and hormonal effects of 'catch-up' sleep in men with chronic, repetitive, lifestyle-driven sleep restriction. Clin Endocrinol (Oxf). 2015;83(4):498-507."
+doi: "10.1111/cen.12747"
+pmid: "25683266"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4858168/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Metabolic and hormonal effects of 'catch-up' sleep in men with chronic, repetitive, lifestyle-driven sleep restriction"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_crossover
+tier: T1
+n: 19
+n_studies_pooled: null
+population:
+  age_mean: 28.6
+  age_range: [18, 50]
+  pct_female: 0.0
+  country: "Australia"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: metabolic
+    outcome_construct: insulin_sensitivity_improvement_with_three_nights_catchup_sleep
+    exposure: {type: weekend_catchup, dose_h: 10, referent_h: 6, duration_days: 3, contrast_label: "3 weekend nights of 10 h TIB vs 3 weekend nights of 6 h TIB (continued restriction), in men with ~5 years of habitual weekday restriction"}
+    scale: pct_change
+    unit: "% change in minimal-model insulin sensitivity"
+    value: 45.0
+    se: null
+    ci: null
+    conversion_formula: "Reported directly: '45% improvement in ISx with catch-up sleep', measured by minimal model of a 19-sample 2-h OGTT on the Monday morning after 3 nights of each condition. The 10 h vs 6 h comparison had n = 8. No SE or CI is given for the percentage in the retrieved text (Figure 2a carries the SEMs), so se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "positive = BETTER insulin sensitivity with catch-up sleep. Important: this is a benefit versus CONTINUING to be restricted, not a demonstration of return to a never-restricted normal. The study has no never-restricted comparison arm, so it cannot show that 3 nights fully normalised metabolism."
+    covariates: ["condition", "day", "condition x day interaction", "age group"]
+    followup_years: null
+    cohort_family: null
+    quote: "We show that men who regularly adopt lifestyle-driven, chronic, repetitive sleep restriction with weekend 'catch-up' sleep significantly improved insulin sensitivity by 45% following three nights of a saturating sleep compared to ongoing sleep restriction, as measured by minimal model after an oral glucose challenge."
+  - outcome_domain: exposure_measurement
+    outcome_construct: real_world_weekday_sleep_and_weekend_extension_in_chronic_short_sleepers
+    exposure: {type: habitual_short_sleep, dose_h: 6.2, referent_h: null, duration_days: 1862, contrast_label: "actigraphic weekday sleep and weekend extension in men with >=6 months (mean 5.1 y) of lifestyle-driven restriction"}
+    scale: pct_change
+    unit: "% weekend sleep extension over weekday sleep"
+    value: 37.3
+    se: 2.4
+    ci: null
+    conversion_formula: "Reported mean +/- SEM directly. Weekday sleep was 6 h 12 min +/- 7 min (range 5 h 18 min - 6 h 54 min), i.e. 6.20 h; a 37.3% extension implies weekend sleep of ~8.5 h. Duration_days = 5.1 y x 365 = 1862 d."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Descriptive real-world benchmark. This cohort's exposure pattern (6.2 h weekdays, ~8.5 h weekends, sustained ~5 years) is a close adult analogue of the target subject's 3-year pattern, which makes their residual metabolic state directly informative."
+    covariates: []
+    followup_years: 5.1
+    cohort_family: null
+    quote: "Screening characteristics are shown in Table 1, demonstrating subjects were sleep restricted during the working work (6 h 12 min/night +/- 7 min). All men showed a significant increase in weekend sleep compared to weekday sleep (mean weekend sleep extension 37.3% +/- 2.4) (Fig. S1)."
+  - outcome_domain: recovery
+    outcome_construct: catchup_sleep_ceiling_10h_tib_exceeds_actual_weekend_sleep
+    exposure: {type: recovery_sleep, dose_h: 10, referent_h: 6.2, duration_days: 3, contrast_label: "a 10 h TIB opportunity vs the amount these habitual short sleepers actually slept on their own weekends"}
+    scale: probability
+    unit: "direction indicator: 1 = the 10 h opportunity exceeded self-selected weekend sleep (a saturating dose)"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded as a direction indicator. The authors state that a 6-h opportunity was almost identical to average weekday sleep and a 10-h opportunity EXCEEDED weekend sleep, so the intervention was a saturating dose beyond what these men achieve naturally."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = saturating. Practically important: the 45% metabolic benefit required a supervised 10 h TIB opportunity that was LARGER than what these men spontaneously took on their own weekends (~8.5 h). Self-selected weekend catch-up therefore under-doses relative to what produced the benefit here."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Hence, a 6-h sleep opportunity was almost identical to the average time spent asleep during weekdays, whereas a 10-h sleep opportunity exceeded the time each slept during weekends (Fig. S1)."
+  - outcome_domain: endocrine
+    outcome_construct: hormonal_changes_with_catchup_sleep
+    exposure: {type: weekend_catchup, dose_h: 10, referent_h: 6, duration_days: 3, contrast_label: "fasting hormones after 3 nights of 10 h TIB vs 6 h TIB"}
+    scale: probability
+    unit: "direction indicator: 1 = favourable direction of change with catch-up sleep"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded as a direction indicator for a bundle of reported findings without individually quotable magnitudes: fasting insulin, c-peptide, HOMA-IR, HOMA-beta, leptin and PYY decreased; QUICKI and testosterone increased; morning cortisol and LH unchanged."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = favourable. Three independent indices of insulin sensitivity (minimal model, HOMA-IR, QUICKI) all moved in the same direction, which is reassuring for the primary result. Testosterone rose with catch-up sleep - relevant to an adolescent male, and consistent with Rabat 2016 where testosterone fell under restriction and recovered fastest."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Insulin sensitivity was higher following three nights of sleep extension compared to sustained sleep restriction. Fasting insulin, c-peptide, HOMA-IR, HOMA-beta, leptin and PYY decreased with 'catch-up' sleep, QUICKI and testosterone increased, while morning cortisol and LH did not change."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "Randomized in-laboratory crossover with a gold-standard 19-sample OGTT minimal-model endpoint and PSG verification, in a genuinely chronically restricted real-world population - a rare and valuable feature. But each subject completed only TWO of the three conditions, so the key 10 h vs 6 h comparison rests on n=8, and the other pairwise cells are n=5-6. All male. No never-restricted control arm, so the 45% improvement is relative to continued restriction, not to a healthy reference. Ages 18-50 with mean 28.6, so only fair transportability. The SWS-suppression arm succeeded in reducing SWS by 23% but did not change insulin sensitivity, which weakens the proposed slow-wave-sleep mechanism."
+funding: "NHMRC Australia; Centre for Integrated Research and Understanding of Sleep (CIRUS); NIH R01 HL124211; UCLA CTSI UL1TR000124"
+notes: |
+  This is the most optimistic study in the shard, and it is important to represent it fairly: in men with
+  ~5 years of real-world weekday restriction, three nights of a saturating (10 h TIB) catch-up opportunity
+  improved insulin sensitivity by 45% relative to continued restriction, with concordant movement in HOMA-IR,
+  QUICKI, leptin, PYY and testosterone.
+  Two caveats that keep it consistent with depner2019 rather than contradicting it:
+  1. The comparator is CONTINUED RESTRICTION, not a rested state. Depner's comparator is the subject's own
+     pre-restriction baseline, and Depner also assessed metabolism AFTER a return to restriction. So Killick
+     answers "does a big weekend help versus not sleeping?" (yes, substantially) while Depner answers "does a
+     weekend prevent the damage of a repeating weekday-restriction pattern?" (no).
+  2. The dose that worked was 10 h TIB x 3 nights, which the authors note EXCEEDED what these men actually
+     take on their own weekends (~8.5 h). So the benefit required over-dosing relative to natural behaviour.
+  Also notable: the acoustic SWS-suppression arm cut slow-wave sleep by 23% without changing insulin
+  sensitivity, arguing against a simple "it's the deep sleep that matters" story for glucose metabolism.
+  Age range [18, 50] is the stated eligibility range; the observed mean was 28.6 +/- 2.0 (SEM).
+shard: "s05_recovery_kinetics"

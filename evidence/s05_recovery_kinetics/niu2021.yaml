@@ -1,0 +1,76 @@
+study_id: niu2021
+citation: "Niu J, Kelly-Weeder S, Amiri M, Chen X, Wang H. The feasibility of at-home sleep extension in adolescents and young adults: A meta-analysis and systematic review. Sleep Med Rev. 2021;56:101443."
+doi: "10.1016/j.smrv.2021.101443"
+pmid: "33571888"
+url: "https://pubmed.ncbi.nlm.nih.gov/33571888/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "The feasibility of at-home sleep extension in adolescents and young adults: A meta-analysis and systematic review"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: meta_analysis_of_trials
+tier: T1
+n: null
+n_studies_pooled: 17
+population:
+  age_mean: null
+  age_range: [13, 30]
+  pct_female: null
+  country: "multiple"
+  adolescent_match: exact_16_19
+effects:
+  - outcome_domain: recovery
+    outcome_construct: at_home_sleep_extension_increases_sleep_duration_in_adolescents_and_young_adults
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 5, contrast_label: "at-home sleep extension of at least 5 consecutive days vs unmanipulated sleep opportunity, in 13-30 year olds; pooled across 17 studies (7 adolescent, 10 young adult)"}
+    scale: probability
+    unit: "direction indicator: 1 = sleep duration reliably increased"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded as a direction indicator. The abstract reports the pooled conclusion qualitatively ('reliably increased') without a pooled effect size, SMD or CI, and the full text is paywalled, so no magnitude can be extracted. 2254 studies were screened for eligibility; 17 met inclusion criteria."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = feasible and effective in the right direction. Establishes that at-home sleep extension WORKS in the target age band for sleep duration, sleep quality and daytime sleepiness. It does NOT establish the magnitude, and the review explicitly warns that the size varies by population and method."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "At-home extension of sleep opportunity reliably increased sleep duration and sleep quality, and decreased daytime sleepiness when compared to unmanipulated sleep opportunity. These results indicate that at-home sleep extension is feasible in adolescents and young adults."
+  - outcome_domain: recovery
+    outcome_construct: heterogeneity_of_extension_effect_by_population_and_method
+    exposure: {type: sleep_extension, dose_h: null, referent_h: null, duration_days: 5, contrast_label: "variability in the magnitude of the sleep-extension effect across study populations and extension methods"}
+    scale: probability
+    unit: "direction indicator: 1 = substantial heterogeneity in effect magnitude"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded as a direction indicator; no I-squared or between-study variance estimate is given in the abstract."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = heterogeneous. The review's own caution: the magnitude of improvement varied by population and extension method, which the authors say has downstream consequences for effectiveness. This is an argument against quoting a single population-average extension effect in the recovery prescription."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "However, the degree of improvement in sleep duration, sleep quality, and daytime sleepiness varied by study population and sleep extension method, which will have downstream consequences for the effectiveness of sleep extension as an experimental manipulation and intervention to improve health and performance during adolescence and young adulthood."
+rob:
+  tool: AMSTAR-2
+  judgement: moderate
+  notes: "Pre-registered meta-analysis and systematic review with a large screening yield (2254 records assessed, 17 included) and explicit inclusion criteria (>=5 consecutive days of at-home extension, pre/post sleep-duration measurement, ages 13-30). Downgraded because only the abstract was retrievable: I cannot see the pooled effect sizes, the heterogeneity statistics, the risk-of-bias assessment of included studies, or whether dissertations (explicitly included in screening) were weighted differently from peer-reviewed studies. Because no pooled magnitude is available, this record contributes direction and feasibility only, not a quantitative effect for pooling."
+funding: "Not verifiable from the abstract."
+notes: |
+  This is the only meta-analysis in the shard and it is on the most decision-relevant population (13-30 y,
+  overlapping the target subject's age exactly), which is why it is included despite yielding no extractable
+  magnitude. Its contribution is a feasibility guarantee: at-home sleep extension in adolescents and young
+  adults reliably increases sleep duration and sleep quality and reduces daytime sleepiness.
+  Per the extraction instructions' preference ordering (dose-response meta-analyses > systematic reviews >
+  primaries), this should sit above the individual extension trials - but because the abstract reports no
+  pooled estimate, the quantitative work in this shard has to be done by the primaries
+  (alkhatib2018, leproult2015, tasali2022 for achievable yield; kitamura2016, short2018 for the target).
+  EVIDENCE GAP THIS EXPOSES: 17 studies of at-home sleep extension in 13-30 year olds exist, yet none of the
+  studies I could identify tracked COGNITIVE recovery trajectories over weeks of at-home extension in
+  chronically restricted adolescents. The extension literature measures feasibility, sleep quality, sleepiness
+  and diet; the recovery-kinetics literature measures cognition but only in short laboratory protocols. Nobody
+  has run the study that the recovery prescription actually needs.
+  ACCESS LIMITATION LOGGED: abstract only (Sleep Medicine Reviews, paywalled).
+shard: "s05_recovery_kinetics"

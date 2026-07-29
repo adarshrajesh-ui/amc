@@ -1,0 +1,108 @@
+study_id: ochab2021
+citation: "Ochab JK, Szwed J, Oles K, Beres A, Chialvo DR, Domagalik A, Fafrowicz M, Oginska H, Gudowska-Nowak E, Marek T, Nowak MA. Observing changes in human functioning during induced sleep deficiency and recovery periods. PLoS One. 2021;16(9):e0255771."
+doi: "10.1371/journal.pone.0255771"
+pmid: "34469434"
+url: "https://pubmed.ncbi.nlm.nih.gov/34469434/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Observing changes in human functioning during induced sleep deficiency and recovery periods"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 19
+n_studies_pooled: null
+population:
+  age_mean: 21.5
+  age_range: [20, 23]
+  pct_female: 92.3
+  country: "Poland"
+  adolescent_match: good_young_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: measures_failing_to_recover_after_7_days
+    exposure: {type: recovery_sleep, dose_h: 7.6, referent_h: 7.62, duration_days: 7, contrast_label: "7 days of unrestricted (habitual) sleep after 10 days of 30% sleep restriction"}
+    scale: raw_units
+    unit: "number of outcome families that had NOT returned to baseline after 7 recovery days (of 4 assessed)"
+    value: 3
+    se: null
+    ci: null
+    conversion_formula: "From the authors' Table 1 summary: full return = reaction times (1 family); only partial return = actigraphy rest/activity distributions and Stroop accuracy (2 families); no return = ERPs and resting-state power spectrum (2 families). 3 of 4 non-RT families were not fully back (actigraphy, accuracy partial; ERP/spectrum not at all)."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Higher = more measures still impaired. Only ONE of the measured domains (mean Stroop reaction time) fully recovered in 7 days. This is the longest naturalistic multi-domain recovery follow-up available in a young-adult sample."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Further results indicate that a week of recovery subsequent to prolonged periods of sleep restriction is insufficient to recover fully. Only one measure (mean reaction time in Stroop task) reverted to baseline values, while the others did not."
+  - outcome_domain: recovery
+    outcome_construct: actigraphy_rest_duration_exponent_incomplete_recovery
+    exposure: {type: recovery_sleep, dose_h: 7.6, referent_h: 7.62, duration_days: 7, contrast_label: "power-law exponent gamma of rest-duration distribution: recovery vs baseline and vs sleep restriction"}
+    scale: probability
+    unit: "p-value for the baseline-vs-recovery difference after 7 recovery days"
+    value: 0.16
+    se: null
+    ci: null
+    conversion_formula: "Reported p-values directly: SR vs RCV p = 0.019 (still significantly different from the restricted state), BASE vs RCV p = 0.16 (no longer statistically distinguishable from baseline, but the authors describe the difference as 'still visible' and below their confidence threshold). Recorded as a probability because no effect size or SE is derivable from the reported statistics."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "This is an intermediate state: after 7 days the locomotor-activity structure was no longer statistically different from baseline (p=0.16) but was still statistically different from the restricted state (p=0.019), i.e. partway back. Not a harm estimate; se is null because the paper reports only p-values."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "The new result is long recovery time: even one week of regular sleep does not stabilize the distributions (the difference between SR/RCV is significant, p = 0.019, but smaller, while for BASE/RCV it is still visible but below confidence threshold, p = 0.16)."
+  - outcome_domain: recovery
+    outcome_construct: subjective_sleepiness_fully_recovers_while_eeg_does_not
+    exposure: {type: recovery_sleep, dose_h: 7.6, referent_h: 7.62, duration_days: 7, contrast_label: "Karolinska Sleepiness Scale at recovery vs baseline vs sleep restriction"}
+    scale: raw_units
+    unit: "KSS points (9-point scale) at recovery minus baseline"
+    value: -0.15
+    se: null
+    ci: null
+    conversion_formula: "Reported means +/- SD: baseline 3.4 +/- 0.94, sleep restriction 5.55 +/- 1.17, recovery 3.25 +/- 1.09. Recovery minus baseline = -0.15 points. SE not derivable because the paper reports no test statistic for this specific contrast."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = slightly LESS sleepy than baseline, i.e. subjective sleepiness fully normalised (indeed slightly overshot) while ERPs and resting-state power spectra had not returned at all. Self-reported sleepiness is therefore an unreliable readout of recovery - it says 'recovered' while the brain measures say otherwise."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Mean sleepiness score during baseline was 3.4 +/- 0.94, during sleep restriction period it amounted 5.55 +/- 1.17, and in recovery it averaged 3.25 +/- 1.09 pts."
+  - outcome_domain: exposure_measurement
+    outcome_construct: sleep_durations_by_phase
+    exposure: {type: chronic_restriction, dose_h: 5.3, referent_h: 7.62, duration_days: 10, contrast_label: "actigraphic sleep: baseline vs 30% restriction vs recovery"}
+    scale: hours
+    unit: "h/night during the 7-day recovery phase"
+    value: 7.60
+    se: null
+    ci: null
+    conversion_formula: "Reported: baseline 7 h 37 min +/- 50 min = 7.617 h; restriction 5 h 18 min +/- 31 min = 5.300 h (69.6% of baseline); recovery 7 h 36 min +/- 26 min = 7.600 h. SDs are over individual means; SE not computed because the n differs between the actigraphy (19) and EEG (13) samples."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "CRITICAL DESIGN FEATURE: the 'recovery' phase was a return to HABITUAL sleep (7.60 h), not extended sleep. So this study shows that 7 days of merely-adequate sleep does not restore function - it does NOT test whether 7 days of EXTENDED sleep would."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "After excluding participants who did not manage to observe the rules of the study, mean baseline sleep was 7 h 37 minutes +/- 50 min (SD over individual means) and during sleep restriction condition-5h 18 min +/- 31 min (69.6% of baseline sleep). Average sleep length during recovery turned out to be again 7 h 36 min +/- 26 min."
+rob:
+  tool: RoB2
+  judgement: moderate
+  notes: "Conducted in natural (at-home) conditions with no randomization and no control arm, so time-on-study, learning and seasonal effects are not controlled - a particular concern for the Stroop task, where practice effects would bias TOWARD apparent recovery. Very small and heavily female sample (13 for EEG/behaviour: 12 women, 1 man; 19 for actigraphy). Compliance-driven day-level exclusions (32/273 days for EEG, 54/399 for actigraphy) were applied post hoc. Most reported statistics are p-values without effect sizes or SEs, so quantitative pooling is limited. Recovery consisted of habitual, not extended, sleep."
+funding: "Polish National Science Centre (Symfonia grant 2016/20/W/NZ4/00354)"
+notes: |
+  The single most valuable feature of this study is the 7-day recovery window in a young-adult sample under
+  naturalistic conditions - most of the literature stops at 1-3 nights. Recovery ordering observed:
+    fully recovered  : mean Stroop reaction time; subjective sleepiness (KSS 3.25 vs 3.4 baseline)
+    partially        : Stroop accuracy; actigraphic rest/activity duration distributions
+    not at all       : event-related potentials (P300 amplitude/latency); resting-state EEG power spectra
+  The dissociation between fully-recovered subjective sleepiness and unrecovered EEG is the most decision-
+  relevant result for the report: a person will feel recovered well before their brain measures normalise.
+  The authors also note that alpha power in both restriction AND recovery exceeded baseline in the eyes-open
+  condition, i.e. some measures overshoot rather than simply returning.
+  This paper's discussion is also where I found the two longer-recovery studies used in this shard
+  (Bougard et al. 2018, 13-day recovery; Rabat et al. 2016, R13 follow-up).
+  Note n: I record n=19 (the actigraphy sample, the largest analysed group); the EEG/behavioural analyses
+  used n=13 with mean age 21.5 +/- 1.3 y. Age range [20, 23] is inferred from mean +/- ~1 SD and is
+  approximate; the paper gives only the mean and SD.
+shard: "s05_recovery_kinetics"

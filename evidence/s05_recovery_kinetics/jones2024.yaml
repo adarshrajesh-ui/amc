@@ -1,0 +1,85 @@
+study_id: jones2024
+citation: "Jones CW, Basner M, Mollicone DJ, Mott CM, Dinges DF. The dynamic responses of mood and sleep physiology to chronic sleep restriction and subsequent recovery sleep. Sleep. 2024;47(7):zsae091."
+doi: "10.1093/sleep/zsae091"
+pmid: "38602131"
+url: "https://doi.org/10.1093/sleep/zsae091"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "The dynamic responses of mood and sleep physiology to chronic sleep restriction and subsequent recovery sleep."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 221
+n_studies_pooled: 2
+population:
+  age_mean: null
+  age_range: null
+  pct_female: null
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: mood_disturbance_recovery_dose_response_poms
+    exposure: {type: recovery_sleep, dose_h: 12, referent_h: 0, duration_days: 1, contrast_label: "single recovery night randomized to 1 of 7 doses, 0-12 h TIB in 2 h increments, after 5 nights of 4 h TIB"}
+    scale: probability
+    unit: "1 = monotonic dose-response recovery confirmed; qualitative direction only, no numeric dose coefficients in abstract"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "NOT a computed effect size. The abstract states the direction and shape of the recovery dose-response but reports no dose coefficient, no per-dose means, and no SDs, so no Hedges' g or per-hour beta is derivable. Encoded as a direction indicator with se: null per the instruction never to invent an SE."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Mood recovery is DOSE-DEPENDENT and monotonic in recovery sleep duration - larger recovery doses produce more mood restoration. Unlike PVT vigilance in the same protocol family (Banks 2010), mood is described as 'restored', i.e. mood is one of the FASTER-recovering domains. Do not read this as evidence that vigilance recovers similarly."
+    covariates: ["sex", "EEG slow-wave activity"]
+    followup_years: null
+    cohort_family: UPenn_Dinges_SR_dose_response
+    quote: "The mood was restored in a dose-response fashion where improvements were greater with longer sleep doses."
+  - outcome_domain: psychiatric
+    outcome_construct: poms_total_mood_disturbance_during_restriction
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 10, duration_days: 5, contrast_label: "5 nights 4 h TIB vs 10 h TIB control"}
+    scale: probability
+    unit: "1 = significant progressive deterioration reported; direction only"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Direction indicator only. The abstract reports progressive deterioration and a sex-specific SWA-mood association but gives no means, SDs, or coefficients; nothing quantitative is derivable without the full text."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = mood deteriorated progressively across 5 nights of 4 h TIB. Disturbance was concentrated in SOMATIC mood components rather than affective ones, which matters for interpretation: a sleep-restricted person may present as physically depleted rather than psychologically distressed."
+    covariates: ["sex"]
+    followup_years: null
+    cohort_family: UPenn_Dinges_SR_dose_response
+    quote: "Mood progressively deteriorated across SR with marked disturbances in somatic mood components. Altered sleep physiology contributed to mood disturbance whereby increased EEG slow-wave activity (SWA) was associated with increased POMS Total Mood Disturbance scores, a finding specific to males."
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "Large pooled laboratory sample (N = 221; 205 SR, 16 control) with randomized allocation to recovery dose - the strongest available design for isolating recovery dose-response. Main limitations for this shard: (a) the control arm is small (n = 16) relative to the SR arm; (b) only a SINGLE recovery night was given, so the abstract's claim that mood was 'restored' speaks to one night only and cannot address multi-night or multi-week recovery; (c) abstract_only access, so no numeric dose coefficients could be extracted."
+funding: "NIH / NASA (per journal record; not verified from full text)"
+notes: |
+  DE-DUPLICATION WARNING FOR THE POOLER: this analysis pools two multi-day laboratory studies with
+  identical 9-day SR protocols run by the same University of Pennsylvania group, and the design
+  (5 nights of 4 h TIB followed by randomization to a single recovery night of 0-12 h TIB) is the
+  same protocol family as Banks 2010 (banks2010.yaml), which used doses 0/2/4/6/8/10 h. Jones 2024
+  extends the dose ladder to 12 h and adds a 7th dose arm. cohort_family is set to
+  UPenn_Dinges_SR_dose_response on BOTH records. These are almost certainly overlapping or
+  partially overlapping participant samples and MUST NOT be treated as independent evidence.
+  Banks 2010 is the record to use for numeric recovery dose-response (it has per-dose means and
+  SDs); this record contributes the mood domain and the existence of a 12 h dose arm.
+
+  WHY IT MATTERS ANYWAY: this is the only record I found that pushes the single-night recovery dose
+  ladder up to 12 h TIB, and it demonstrates that mood recovery is monotonic in dose. Combined with
+  Banks 2010, it establishes an important DISSOCIATION: after a single recovery night, mood is
+  described as restored in a dose-response fashion, whereas PVT lapses and KSS in the same protocol
+  family remained significantly worse than baseline even at the largest dose (Banks 2010: 10 h TIB,
+  g = +0.43, p = 0.008 for lapses). Subjective and affective measures therefore recover FASTER than
+  objective vigilance. This is the same dissociation independently reported by Ochab 2021 (KSS
+  recovered, ERPs and power spectra did not) and Pejovic 2013 (IL-6 and MSLT recovered, PVT did not).
+  PRESCRIPTION IMPLICATION: feeling better is not evidence of having recovered, and self-report
+  cannot be used to decide when recovery is complete.
+
+  ACCESS: abstract_only. Two effects are encoded as direction indicators with se: null because the
+  abstract contains no extractable numbers for these constructs. I did not fabricate coefficients.
+shard: "s05_recovery_kinetics"

@@ -1,0 +1,128 @@
+study_id: smith2021
+citation: "Smith MG, Wusk GC, Nasrini J, Baskin P, Dinges DF, Roma PG, Basner M. Effects of six weeks of chronic sleep restriction with weekend recovery on cognitive performance and wellbeing in high-performing adults. Sleep. 2021;44(8):zsab051."
+doi: "10.1093/sleep/zsab051"
+pmid: "33630069"
+url: "https://doi.org/10.1093/sleep/zsab051"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Effects of six weeks of chronic sleep restriction with weekend recovery on cognitive performance and wellbeing in high-performing adults."
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 15
+n_studies_pooled: null
+population:
+  age_mean: 38.5
+  age_range: null
+  pct_female: 40.0
+  country: "US"
+  adolescent_match: poor_midlife
+effects:
+  - outcome_domain: recovery
+    outcome_construct: vigilant_attention_accuracy_slope_vs_cumulative_sleep_debt
+    exposure: {type: weekend_catchup, dose_h: 8, referent_h: 5, duration_days: 42, contrast_label: "5 h TIB weekdays + 8 h TIB weekends x 6 weeks; standardized slope of performance on accumulating sleep debt"}
+    scale: hedges_g
+    unit: "standardized beta per unit cumulative sleep debt"
+    value: -0.688
+    se: 0.209
+    ci: null
+    conversion_formula: "reported standardized beta = -0.688, p < 0.001. SE = |beta|/z(p); z(0.001, two-sided) = 3.2905 -> SE = 0.688/3.2905 = 0.2091. Because true p < 0.001, z > 3.29 and the true SE is SMALLER than 0.209; this SE is therefore conservative (uncertainty-inflating)."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = worse vigilant attention as cumulative sleep debt grows. THE CRITICAL FINDING IS THAT THIS DECLINE WAS NOT REVERSED BY WEEKEND RECOVERY: deficits accumulated monotonically across 6 weeks despite two 8 h recovery nights every week."
+    covariates: ["cumulative sleep debt relative to pre-mission baseline", "evening test time (circadian peak)"]
+    followup_years: null
+    cohort_family: NASA_HERA_analog
+    quote: "There were some small to moderate effects of increasing sleep debt relative to pre-mission baseline, with decreases in accuracy across cognitive domains (standardized beta = -0.121, p = 0.001), specifically on tests of spatial orientation (beta = -0.289, p = 0.011) and vigilant attention (beta = -0.688, p < 0.001), which were not restored by two nights of weekend recovery sleep."
+  - outcome_domain: cognition
+    outcome_construct: accuracy_across_all_cognitive_domains
+    exposure: {type: weekend_catchup, dose_h: 8, referent_h: 5, duration_days: 42, contrast_label: "5 h TIB weekdays + 8 h TIB weekends x 6 weeks; pooled accuracy across 10-test Cognition battery"}
+    scale: hedges_g
+    unit: "standardized beta per unit cumulative sleep debt"
+    value: -0.121
+    se: 0.0368
+    ci: null
+    conversion_formula: "reported standardized beta = -0.121, p = 0.001. SE = |beta|/z(p) = 0.121/3.2905 = 0.03677."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = worse accuracy with accumulating debt; pooled across all ten Cognition tests. Small pooled magnitude because 8 of 10 domains were unaffected - the damage is concentrated in vigilant attention and spatial orientation."
+    covariates: ["cumulative sleep debt relative to pre-mission baseline"]
+    followup_years: null
+    cohort_family: NASA_HERA_analog
+    quote: "with decreases in accuracy across cognitive domains (standardized beta = -0.121, p = 0.001)"
+  - outcome_domain: cognition
+    outcome_construct: spatial_orientation_accuracy
+    exposure: {type: weekend_catchup, dose_h: 8, referent_h: 5, duration_days: 42, contrast_label: "5 h TIB weekdays + 8 h TIB weekends x 6 weeks"}
+    scale: hedges_g
+    unit: "standardized beta per unit cumulative sleep debt"
+    value: -0.289
+    se: 0.1137
+    ci: null
+    conversion_formula: "reported standardized beta = -0.289, p = 0.011. SE = |beta|/z(p); z(0.011, two-sided) = 2.5427 -> SE = 0.289/2.5427 = 0.11366."
+    from_figure: false
+    inferred_from_ci: true
+    direction_note: "negative = worse spatial orientation with accumulating debt; not restored by weekend recovery sleep"
+    covariates: ["cumulative sleep debt relative to pre-mission baseline"]
+    followup_years: null
+    cohort_family: NASA_HERA_analog
+    quote: "specifically on tests of spatial orientation (beta = -0.289, p = 0.011) and vigilant attention (beta = -0.688, p < 0.001), which were not restored by two nights of weekend recovery sleep."
+  - outcome_domain: recovery
+    outcome_construct: weekend_catchup_structural_repayment_ceiling
+    exposure: {type: weekend_catchup, dose_h: 8, referent_h: 8, duration_days: 42, contrast_label: "arithmetic ceiling: 2 nights x 8 h TIB weekend against 5 nights x 5 h TIB weekday deficit, assuming 8 h/night need"}
+    scale: pct_change
+    unit: "% of weekday sleep debt structurally repayable by the weekend"
+    value: 0.0
+    se: null
+    ci: null
+    conversion_formula: "Weekday deficit = 5 nights x (8 - 5) = 15.0 h/week. Weekend surplus = 2 nights x (8 - 8) = 0.0 h/week. Repayment fraction = 0/15 = 0.0%. This is a protocol-arithmetic ceiling, not an estimated quantity: an 8 h weekend sleep OPPORTUNITY equal to nightly sleep need cannot by construction repay any debt - it can only stop the debt from growing. Empirically TST < TIB, so 8 h weekend TIB yields ~7.4-7.7 h TST and the weekend actually adds a further small deficit. Mean TIB across the whole week = (5x5 + 2x8)/7 = 5.857 h/night; total shortfall vs 8 h need over 6 weeks = 90.0 h."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "0% = weekend recovery at 8 h TIB repays none of the weekday debt. This explains mechanistically why deficits accumulated monotonically over 6 weeks: the protocol never provided any surplus sleep."
+    covariates: []
+    followup_years: null
+    cohort_family: NASA_HERA_analog
+    quote: "Sleep opportunities were limited to 5 h on weekdays and 8 h on weekends. Individual sleep-wake patterns were recorded with actigraphy."
+rob:
+  tool: RoB2
+  judgement: some_concerns
+  notes: "No randomization or control group - within-subject accumulation slope only, so drift/practice effects cannot be fully excluded (though practice would bias toward IMPROVEMENT, making the observed decline conservative). n = 15 high-performing, highly selected individuals (astronaut-analog) confined 4-to-a-habitat, which likely UNDERSTATES effects in an ordinary population. Protocol was breached: 'occasional daytime napping in breach of study protocol' and caffeine access before 14:00, both of which attenuate measured deficits. Testing occurred in the evening near the circadian alerting peak, again attenuating measured deficits. Midlife cohort (38.5 +/- 8.2 y) - poor transportability to an 18-year-old, and Zitting 2018 indicates young adults are MORE vulnerable, so the true adolescent effect is plausibly larger."
+funding: "NASA / National Space Biomedical Research Institute (per journal record; not verified from full text)"
+notes: |
+  WHY THIS RECORD MATTERS: this is the longest laboratory-controlled chronic restriction protocol
+  with a REPEATING weekend-recovery structure (6 weeks), and it is the closest available analogue to
+  the target subject's actual 3-year exposure pattern (weekday short sleep, weekend catch-up). Most
+  restriction studies run 5-14 days with a single recovery block; this one repeats the weekly cycle
+  six times.
+
+  HEADLINE: deficits in vigilant attention and spatial orientation grew monotonically with cumulative
+  sleep debt across all six weeks and were explicitly "not restored by two nights of weekend recovery
+  sleep." There is no evidence of adaptation or plateau.
+
+  MECHANISTIC ARITHMETIC (my calculation, recorded for transparency): with 5 h weekday TIB and 8 h
+  weekend TIB, the weekend cannot repay debt at all if nightly need is ~8 h, because the weekend
+  opportunity merely EQUALS need. Weekday deficit 5 x 3 h = 15 h/week; weekend surplus 2 x 0 h = 0 h.
+  Mean TIB across the week is 5.857 h/night. Cumulative shortfall over 6 weeks vs an 8 h need is
+  90 h. This is a purely structural point and it generalizes: the target subject's reported pattern
+  (weekday 5-6 h, weekend 7-8 h) has the same defect - the weekend opportunity is at or below need,
+  so it cannot generate the surplus that debt repayment requires. Repayment requires TIB ABOVE need,
+  not TIB AT need.
+
+  DOMAIN SPECIFICITY: 8 of 10 cognitive domains were unaffected - "Sensorimotor speed, spatial
+  learning and memory, working memory, abstraction and mental flexibility, emotion identification,
+  abstract reasoning, cognitive throughput, and risk decision making were not significantly affected
+  by sleep debt." Vigilant attention is by far the most sensitive (beta = -0.688, ~5.7x the pooled
+  effect), consistent with the PVT-selectivity seen in Banks 2010, Belenky 2003, Ochab 2021 and
+  Yamazaki 2021. So the recovery prescription should be monitored on vigilance, not on general
+  cognition, which will look deceptively normal.
+
+  ACCESS: abstract_only. All quoted numbers are verbatim from the PubMed abstract; I did not obtain
+  the full text, so per-week trajectory values and actigraphic TST are not available and no
+  repayment-fraction estimate from measured TST is possible (only the TIB-based structural ceiling
+  above, which is flagged as arithmetic rather than measured).
+
+  DEMOGRAPHICS: reported as "15 high-performing individuals (38.5 +/- 8.2 years, 6 women)". age_range
+  is set to null because the abstract gives a mean +/- SD, not a range; 6/15 women = 40.0% female.
+shard: "s05_recovery_kinetics"

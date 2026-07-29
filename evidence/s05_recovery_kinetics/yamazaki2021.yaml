@@ -1,0 +1,110 @@
+study_id: yamazaki2021
+citation: "Yamazaki EM, Antler CA, Lasek CR, Goel N. Residual, differential neurobehavioral deficits linger after multiple recovery nights following chronic sleep restriction or acute total sleep deprivation. Sleep. 2021;44(4):zsaa224."
+doi: "10.1093/sleep/zsaa224"
+pmid: "33274389"
+url: "https://pubmed.ncbi.nlm.nih.gov/33274389/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Residual, differential neurobehavioral deficits linger after multiple recovery nights following chronic sleep restriction or acute total sleep deprivation"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: rct_parallel
+tier: T1
+n: 83
+n_studies_pooled: null
+population:
+  age_mean: 34.7
+  age_range: [21, 50]
+  pct_female: 43.4
+  country: "US"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: recovery
+    outcome_construct: recovery_nights_at_12h_tib_insufficient_for_pvt
+    exposure: {type: recovery_sleep, dose_h: 12, referent_h: 10, duration_days: 4, contrast_label: "4 consecutive recovery nights at 12 h TIB after 5 nights of 4 h TIB chronic sleep restriction"}
+    scale: raw_units
+    unit: "nights of 12 h TIB recovery that failed to restore baseline PVT lapses and response speed"
+    value: 4
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "4 = the largest recovery dose ever tested (four consecutive 12 h TIB nights, n=41 restricted) and PVT lapses and response speed still did not fully recover. This is the strongest single piece of evidence that vigilance recovery is not simply a matter of giving enough sleep opportunity."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "Neurobehavioral recovery from SR occurred after R1 and was maintained for all measures except Psychomotor Vigilance Test (PVT) lapses and response speed, which failed to completely recover."
+  - outcome_domain: recovery
+    outcome_construct: differential_recovery_by_measure
+    exposure: {type: recovery_sleep, dose_h: 12, referent_h: 10, duration_days: 4, contrast_label: "measures restored to baseline by recovery night 1 vs measures still impaired at recovery night 4, after 5 nights of 4 h TIB"}
+    scale: raw_units
+    unit: "number of measured neurobehavioral domains still impaired at recovery night 4 (of ~6 assessed)"
+    value: 1
+    se: null
+    ci: null
+    conversion_formula: "From the abstract and Statement of Significance: after chronic SR, all neurobehavioral functions EXCEPT behavioral attention (PVT lapses and response speed) returned to baseline after one recovery night; DSST, KSS, POMS fatigue, POMS vigor and MWT recovered. After TSD, all recovered except self-reported vigor."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = exactly one domain (behavioral attention / PVT) remained impaired after chronic restriction. Recovery is domain-specific: throughput (DSST), physiological alertness (MWT) and self-report (KSS, fatigue) all normalised after ONE night while vigilance did not normalise after FOUR."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "After chronic SR, all neurobehavioral functions, except behavioral attention, returned to baseline after one recovery night. By contrast, after TSD, all neurobehavioral functions, except self-reported vigor, returned to baseline after one recovery night. Remarkably, four consecutive long-duration recovery nights were not enough to reverse these deficits."
+  - outcome_domain: recovery
+    outcome_construct: recovery_sleep_decays_across_nights_at_12h_tib
+    exposure: {type: recovery_sleep, dose_h: 12, referent_h: 10, duration_days: 4, contrast_label: "PSG recovery sleep on night R1 vs night R4, both at 12 h TIB"}
+    scale: raw_units
+    unit: "direction of change in TST/efficiency/quality from R1 to R4 at constant 12 h TIB"
+    value: -1.0
+    se: null
+    ci: null
+    conversion_formula: "Qualitative direction encoded as -1 (R4 < R1). The paper reports that R1 recovery sleep was longer, more efficient and of better quality than R4; the numeric TST values for R1 and R4 are in Table 3, which I could read for sleep efficiency (~87-89% in SR at R1) but for which I could not verify every TST cell in the retrieved HTML, so I do not quote a TST number here."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "negative = recovery sleep SHRANK across nights even though TIB was held at 12 h. Sleep drive is discharged within the first night or two; extra nights of long TIB do not produce more sleep. This is the ceiling mechanism, observed directly."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "After TSD and SR, R1 recovery sleep was longer and of higher efficiency and better quality than R4 recovery sleep."
+  - outcome_domain: sleep_need
+    outcome_construct: baseline_psg_tst_at_10_to_12h_tib
+    exposure: {type: descriptive, dose_h: null, referent_h: null, duration_days: 2, contrast_label: "baseline PSG total sleep time at 10-12 h TIB, whole sample"}
+    scale: hours
+    unit: "h TST"
+    value: 9.55
+    se: 0.124
+    ci: null
+    conversion_formula: "Reported overall mean +/- SD 9.55 +/- 1.13 h; SE = 1.13/sqrt(83) = 0.124 h. Pre-study actigraphic sleep duration in the same sample was 8.00 +/- 0.60 h despite self-reported habitual sleep of 6.5-8.5 h."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Descriptive. Note that this baseline is itself an extended-opportunity night (10-12 h TIB), which is why it is so high; it is not habitual sleep. Comparisons to this baseline are therefore comparisons to a sleep-satiated state, which makes the PVT non-recovery finding conservative in one direction and harder to interpret in another."
+    covariates: []
+    followup_years: null
+    cohort_family: null
+    quote: "There were no significant differences between conditions in age, BMI, chronotype, the percentage of participants who were female or African American, or in pre-study actigraphic sleep duration (overall mean +/- SD: 8.00 +/- 0.60 h), onset, offset, or midpoint, or in baseline PSG total sleep time (overall mean +/- SD: 9.55 +/- 1.13 h)"
+rob:
+  tool: RoB2
+  judgement: low
+  notes: "Large (n=83), randomized to SR vs TSD condition, PSG-verified sleep, standard neurobehavioral battery every 2 h, and by far the longest and largest recovery-sleep dose in the acute literature (4 x 12 h TIB). Limitations: no non-sleep-loss control arm, so practice/learning effects across the 4 recovery days are uncontrolled (this would bias toward apparent recovery, making the PVT non-recovery finding conservative); baseline was measured at 10-12 h TIB rather than at habitual sleep; mean age 34.7 (range 21-50) so only fair transportability to an 18-year-old; the sample is 72.3% African American, which is unusual and may limit comparability with other cohorts; exact per-timepoint means are in figures/supplementary tables I could not fully retrieve, so most extracted values here are structural (which measures recovered when) rather than continuous effect sizes."
+funding: "NIH (R01DK117488, NASA NNX14AN49G, NIH R01NR004281)"
+notes: |
+  This is the definitive test of "can you just sleep it off": FOUR consecutive nights at 12 h TIB - more
+  recovery opportunity than any other study in the literature - and PVT lapses and response speed still did
+  not fully recover after five nights of 4 h TIB. It also cleanly separates recovery kinetics after chronic
+  restriction from those after acute total deprivation:
+    after chronic SR : everything recovers after 1 night EXCEPT behavioral attention (PVT)
+    after acute TSD  : everything recovers after 1 night EXCEPT self-reported vigor
+  So chronic restriction leaves a residue specifically in objective vigilance, while acute deprivation leaves
+  a residue specifically in subjective energy. The two exposures are not interchangeable and neither is fully
+  reversible on this timescale.
+  The authors' own framing: "These results suggest that TSD and SR induce sustained, differential biological,
+  physiological, and/or neural changes, which remarkably are not reversed with chronic, long-duration
+  recovery sleep."
+  Their literature review also independently establishes the pattern this whole shard converges on: "while
+  self-reported and/or physiological sleepiness tests recovered after multiple recovery sleep nights (ranging
+  from 2 to 7 nights of 8- to 10-hour TIB), behavioral or sustained attention measures (PVT or SRTT) failed
+  to recover to baseline levels".
+shard: "s05_recovery_kinetics"

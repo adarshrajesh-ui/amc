@@ -1,0 +1,76 @@
+study_id: cheng2026
+citation: "Cheng J, Zhu K, Wang J, Huang Q, Shen J, Xiong Y, Yang Q, Zhang Z, Li F, Fan L. Transcriptomic recovery and persistence patterns reveal the biological cost of sleep debt in healthy adult males. Sleep. 2026;49(7):zsag071."
+doi: "10.1093/sleep/zsag071"
+pmid: "41848057"
+url: "https://pubmed.ncbi.nlm.nih.gov/41848057/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Transcriptomic recovery and persistence patterns reveal the biological cost of sleep debt in healthy adult males"
+  status: VERIFIED
+access_tier: abstract_only
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: null
+n_studies_pooled: null
+population:
+  age_mean: null
+  age_range: null
+  pct_female: 0.0
+  country: null
+  adolescent_match: mixed
+effects:
+  - outcome_domain: recovery
+    outcome_construct: genes_persistently_dysregulated_after_five_weeks_of_recovery_sleep
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: null, duration_days: 35, contrast_label: "whole-blood RNA-seq after 5 weeks of recovery sleep following 1-2 weeks of sleep restriction"}
+    scale: raw_units
+    unit: "number of genes still dysregulated after 5 weeks of recovery sleep"
+    value: 74
+    se: null
+    ci: null
+    conversion_formula: "Reported counts directly: 74 genes persistently dysregulated after 5 weeks of recovery sleep vs 68 genes completely restored. Ratio 74/142 = 52% of the differentially expressed set had not normalised."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "74 genes still abnormal after FIVE WEEKS of recovery sleep - the longest recovery follow-up in the entire evidence base for this shard. The persistently dysregulated set was enriched for inflammation and ribosomal activity, while the fully restored set was enriched for immune rebalancing, metabolic adaptation and epigenetic regulation."
+    covariates: []
+    followup_years: 0.096
+    cohort_family: null
+    quote: "Whole-blood RNA sequencing and temporal expression profiling identified two distinct gene groups: 74 genes exhibiting persistent dysregulation even after 5 weeks of recovery sleep, and 68 genes demonstrating complete restoration."
+  - outcome_domain: recovery
+    outcome_construct: recovery_window_length_studied
+    exposure: {type: recovery_sleep, dose_h: null, referent_h: null, duration_days: 35, contrast_label: "duration of the recovery-sleep phase over which transcriptomic normalisation was tracked"}
+    scale: raw_units
+    unit: "weeks of recovery sleep tracked"
+    value: 5
+    se: null
+    ci: null
+    conversion_formula: null
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "5 weeks is the LONGEST recovery window I could find in any human sleep-restriction study. It sets the current empirical upper bound on what is known: at 5 weeks of recovery sleep, molecular normalisation was still incomplete. Nobody has looked further, so no study can currently support a claim that any given number of weeks is sufficient."
+    covariates: []
+    followup_years: 0.096
+    cohort_family: null
+    quote: "In this study, we systematically investigated the transcriptomic impacts of one-week sleep restriction (SR-1wk), two-week sleep restriction (SR-2wk), subsequent five-week recovery sleep (SR-recovery), and chronic sleep deprivation (SD) in in healthy adult males."
+rob:
+  tool: RoB2
+  judgement: high
+  notes: "I could obtain only the abstract, and the abstract does not report the sample size, participant ages, the sleep doses used for restriction or recovery, the country, or any statistical thresholds - so n, age and country are null in this record and the design details are unverifiable. Blood transcriptomics with no stated multiple-comparison strategy in the abstract; gene-count outcomes are highly sensitive to filtering choices. All male. Very recent (2026) so no independent replication or post-publication scrutiny yet. This record should be treated as directional evidence about the EXISTENCE of a >5-week molecular residue, not as a quantitative estimate."
+funding: "Not verifiable from the abstract."
+notes: |
+  Included for one reason: it is the only study I found that follows recovery for longer than three weeks, and
+  it reports that molecular normalisation was still incomplete at 5 weeks. That extends the shard's upper
+  bound on recovery time from ~13 days (Rabat 2016, salivary alpha-amylase) to ~5 weeks.
+  Two things to be careful about when the downstream model consumes this:
+  1. "74 genes still dysregulated" is not a health outcome. Persistent differential expression of 74
+     whole-blood transcripts is a plausible biomarker of incomplete recovery but has no established mapping to
+     cognition, metabolism or risk. It should not be used to argue for a specific magnitude of residual harm.
+  2. The authors' own hedged phrasing ("not fully recovered within the study timeframe") is more accurate than
+     the word "persistent", and the abstract uses that hedge repeatedly.
+  Author framing: "Our findings suggest that recovery sleep alone cannot fully reverse the molecular scars
+  induced by prolonged sleep restriction."
+  ACCESS LIMITATION LOGGED: abstract only; no PMC deposit at time of retrieval. Author list, journal, volume
+  and issue were taken from the PubMed record retrieved via efetch. DOI and PMID both resolve and the title
+  matches, so verification status is VERIFIED on identifiers.
+shard: "s05_recovery_kinetics"

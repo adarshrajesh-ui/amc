@@ -1,0 +1,106 @@
+study_id: rabat2016
+citation: "Rabat A, Gomez-Merino D, Roca-Paixao L, Bougard C, Van Beers P, Dispersyn G, Guillard M, Bourrilhon C, Drogou C, Arnal PJ, Sauvet F, Leger D, Chennaoui M. Differential kinetics in alteration and recovery of cognitive processes from a chronic sleep restriction in young healthy men. Front Behav Neurosci. 2016;10:95."
+doi: "10.3389/fnbeh.2016.00095"
+pmid: "27242464"
+url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4876616/"
+verification:
+  crossref_ok: true
+  pubmed_ok: true
+  resolved_title: "Differential Kinetics in Alteration and Recovery of Cognitive Processes from a Chronic Sleep Restriction in Young Healthy Men"
+  status: VERIFIED
+access_tier: full_text
+secondhand_via: null
+design: lab_restriction_within_subject
+tier: T1
+n: 12
+n_studies_pooled: null
+population:
+  age_mean: 29.3
+  age_range: [20, 37]
+  pct_female: 0.0
+  country: "France"
+  adolescent_match: fair_adult
+effects:
+  - outcome_domain: endocrine
+    outcome_construct: salivary_alpha_amylase_not_recovered_at_recovery_day_13
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 13, contrast_label: "morning salivary alpha-amylase at recovery day 13 vs baseline (B2), after 7 nights of 4 h TIB"}
+    scale: raw_units
+    unit: "days of 8 h TIB recovery after which morning alpha-amylase was still significantly below baseline"
+    value: 13
+    se: null
+    ci: null
+    conversion_formula: "Reported significance levels at each timepoint (Table 3, Wilcoxon): alpha-amylase p < 0.01 at SR7 and R2, p < 0.05 at R13, all vs baseline B2. Omnibus test chi-square(12,3) = 13.89, p < 0.01. No means/SDs are reported in the retrieved text for this marker, so no standardised effect size is derivable and se is null."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "13 = still significantly DEPRESSED below baseline 13 days after restriction ended. This is the longest documented non-recovery of a physiological measure in a controlled human sleep-restriction protocol other than the 5-week transcriptomic study (cheng2026). Direction is a reduction in a sympatho-adrenal-medullary marker, which the authors link to impaired cognitive performance."
+    covariates: []
+    followup_years: null
+    cohort_family: "IRBA_CSR_NCT01989741"
+    quote: "Compared to baseline values (B2), concentrations of cortisol and alpha-amylase in saliva were significantly lower after seven nights of sleep restriction and stayed lower until almost two nights of sleep recovery for cortisol (D: p < 0.05 SR7 and R2; Table 3) and stayed lower after 13 sleep recovery nights compared to baseline values for alpha-amylase concentrations (W: p < 0.01 for SR7 and R2 and p < 0.05 for R13; Table 3)."
+  - outcome_domain: endocrine
+    outcome_construct: cortisol_recovery_day_within_same_subjects
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 13, contrast_label: "morning salivary cortisol: significantly below baseline at SR7 and R2, back to baseline by R13"}
+    scale: raw_units
+    unit: "days of 8 h TIB recovery needed for morning cortisol to return to baseline (bounded by the sampling schedule)"
+    value: 13
+    se: null
+    ci: null
+    conversion_formula: "Reported: cortisol significantly lower than baseline at SR7 and R2 (p < 0.05) but no longer different at R13; omnibus F(3,33) = 3.62, p < 0.05. Saliva was sampled only at B2, SR7, R2 and R13, so cortisol's true recovery day lies in the interval (2, 13]; 13 is recorded as the upper bound."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "Cortisol recovered somewhere between recovery day 2 and day 13 while alpha-amylase had NOT recovered by day 13, in the same men from the same exposure. The within-study spread in recovery time constants across two stress-axis markers is therefore at least several-fold. Sampling is too coarse to pin cortisol's exact recovery day."
+    covariates: []
+    followup_years: null
+    cohort_family: "IRBA_CSR_NCT01989741"
+    quote: "Finally we showed: (i) a significant decrease of morning cortisol concentrations in saliva at SR7 and at R2 (after 2 sleep-recovery nights) with a return to baseline values at the end (R13); and (ii) a significant decrease of morning salivary alpha-amylase (sAA) concentrations at SR7, at R2 and also at R13."
+  - outcome_domain: cognition
+    outcome_construct: differential_recovery_kinetics_attention_vs_executive
+    exposure: {type: recovery_sleep, dose_h: 8, referent_h: 8, duration_days: 13, contrast_label: "recovery kinetics of sustained attention vs executive processes after 7 nights of 4 h TIB, tested at R2, R3 and R13"}
+    scale: probability
+    unit: "direction indicator: 1 = recovery kinetics differ by cognitive domain"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded as a direction indicator; the paper reports the domain contrast qualitatively and its per-task statistics are distributed across figures I did not fully transcribe, so no magnitude is claimed."
+    from_figure: false
+    inferred_from_ci: false
+    direction_note: "1 = domains differ. Sustained attention had the FASTER kinetic in both directions and showed a morning-specific vulnerability; executive processes were impaired and recovered uniformly across the day. Practical implication: a single morning attention test will read 'recovered' before executive function has."
+    covariates: ["baseline performance", "MWT capacity to stay awake", "age"]
+    followup_years: null
+    cohort_family: "IRBA_CSR_NCT01989741"
+    quote: "Cognitive processes were differently impaired and recovered with a more rapid kinetic for sustained attention process. Besides, a significant time of day effect was only evidenced for sustained attention failures that seemed to be related to subject's age and their morning capacity to stay awake."
+  - outcome_domain: cognition
+    outcome_construct: younger_age_predicts_greater_vulnerability
+    exposure: {type: chronic_restriction, dose_h: 4, referent_h: 8, duration_days: 7, contrast_label: "correlation between subject age and sustained-attention failures at restriction day 7, within a 20-37 y male sample"}
+    scale: probability
+    unit: "direction indicator: 1 = younger subjects were more impaired"
+    value: 1.0
+    se: null
+    ci: null
+    conversion_formula: "Encoded as a direction indicator. The authors report significant age correlations with morning speed and lapses at SR7 and, weakly, at B2; the specific r values appear in Figure 5 and its caption rather than in transcribable text, so no coefficient is claimed here."
+    from_figure: true
+    inferred_from_ci: false
+    direction_note: "1 = younger = worse. Directly relevant to transporting adult findings onto an 18-year-old: within this 20-37 y sample the YOUNGER men were more impaired by the same restriction, so adult-derived deficit estimates probably understate the effect in an adolescent. Consistent with Zitting 2018 (young > older vulnerability) and with the age moderation in Rupp 2009."
+    covariates: []
+    followup_years: null
+    cohort_family: "IRBA_CSR_NCT01989741"
+    quote: "Indeed, significant correlations between age of subjects and their sustained attention failures at SR7 (both for morning speed and lapses) and to a lesser extent at baseline (B2) let us think that under such sleep-restricted situations, brain of healthy and young subjects will not be affected in the same manner with a greater deleterious effect for younger men compared to older ones."
+rob:
+  tool: RoB2
+  judgement: moderate
+  notes: "n=12, all male, single-group within-subject design with no control arm, so time-on-study and practice effects are uncontrolled (for the cognitive tasks this would bias toward apparent recovery). Saliva sampled at only 4 timepoints (B2, SR7, R2, R13) and blood at 4 (B1, SR6, R1, R12), so recovery days cannot be resolved finely. Critically, between recovery day 3 and day 12 subjects went HOME with only actigraphy and a sleep diary, so the 8-day gap before the R12/R13 sessions was not controlled - the alpha-amylase non-recovery could in principle reflect that uncontrolled period rather than residual restriction effects. Mean age 29.3 y (range 20-37), so only fair transportability. Same cohort as Bougard 2018 (NCT01989741); cohort_family recorded to prevent double counting."
+funding: "French Direction Generale de l'Armement (DGA) / Institut de Recherche Biomedicale des Armees (IRBA). Registered as ClinicalTrials NCT01989741."
+notes: |
+  Protocol: 12 men, 14 days in-residence - 2 baseline days (B1, B2; 8 h TIB), 7 restriction days (SR1-SR7;
+  4 h TIB, 02:00-06:00), 3 recovery days (R1-R3; 8 h TIB, 23:00-07:00), then 8 days at home with actigraphy,
+  then a return for 2 more days (R12-R13; 8 h TIB).
+  This is the study that supplies the shard's longest documented non-recovered physiological measure short of
+  cheng2026: morning salivary alpha-amylase was still significantly below baseline at R13 (p < 0.05), i.e.
+  ~13 days after restriction ended, while cortisol in the same samples had normalised and testosterone had
+  normalised by R1. A >13-fold spread in recovery time constants across three markers from one exposure.
+  The age finding is one of the few pieces of direct within-study evidence in this shard that YOUNGER people
+  are hit harder by the same restriction, which matters for transporting these adult numbers onto an
+  18-year-old. The authors attribute it to continuing frontal maturation until 25-30 years of age.
+  Companion paper on the same cohort: Bougard et al. 2018 (DOI 10.1016/j.concog.2018.03.008, PMID 29631192),
+  extracted separately as bougard2018 with cohort_family recorded.
+shard: "s05_recovery_kinetics"
