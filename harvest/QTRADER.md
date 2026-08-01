@@ -1,6 +1,6 @@
 # Quant trader questions
 
-218 questions across 30 firms, out of the 346-question corpus.
+185 questions across 29 firms, out of the 313-question corpus.
 
 Everything that is not software: probability, expected value, market making, mental arithmetic, estimation, game theory, statistics, regression and modelling.
 
@@ -8,13 +8,13 @@ This pool merges the former quant-trader, quant-researcher and quant-analyst set
 
 It also absorbs the questions whose source never stated a track, placed by reading each one's topic. Those carry `role_inferred` in the JSON with a stated basis, so an inference of mine is distinguishable from a label a candidate actually gave.
 
-**By level:** unknown 109 · internship 73 · new_grad 34 · experienced 2
+**By level:** unknown 94 · internship 59 · new_grad 32
 
 Tier is sort order, not confirmation: A means multiple independent dated attestations, B a single dated full-text one, C weak or snippet-only, D provenance real but a negative signal fired. See `REPORT.md` §6.
 
 ---
 
-## Susquehanna International Group  (67)
+## Susquehanna International Group  (53)
 
 **1.** `A` · new_grad · online_assessment · 2026
 
@@ -38,119 +38,79 @@ Question 2: I need to seat 5 toddlers (Anna, Brian, Charlie, Dixie, Eva) at a ro
 
 <sub>1point3acres · unknown · [source](https://www.1point3acres.com/bbs/thread-1144112-1-1.html)</sub>
 
-**4.** `B` · new_grad · online_assessment · 2025 Jul-Sep (2025(7-9月)); thread titled '2026'
-
-[Question 14 — full stem NOT recovered. Attested only through the reply thread, where a reader disputes the answer:] 你好,第14题我看AB等于32也可以?排列如下,查了也满足要求:1,4,3,2 / 2,1,4,3 / 4,3,2,1 / 3,2,1,4
-
-*English:* [Question 14 — full stem NOT recovered. Attested only via the reply thread:] 'Hi, for Q14 I think AB = 32 also works? Here's the arrangement, I checked and it satisfies the requirements: 1,4,3,2 / 2,1,4,3 / 4,3,2,1 / 3,2,1,4' [Thread context, not part of the quoted text: the original poster replies that he had dropped a condition when drawing the grid, and that with the missing constraint restored the solution is unique.]
-
-*Reported answer:* Original poster's answer disputed by reader 'jiafei9014' (AB=32 also fits); OP replies 画图的时候漏了个条件。原题应该是这样,就是唯一解了。(I left out a condition when I drew it; with the real condition it has a unique solution.) Reader then adds 加上这个限制条件做了半小时才倒腾出来个答案 :( 基本不玩sudoku,请问做这类题目有什么技巧吗?
-
-<sub>university_bbs · 2025-09-04 · [source](https://www.1point3acres.com/bbs/thread-1144112-1-1.html)</sub>
-
-**5.** `B` · internship · online_assessment · Nov 2025
+**4.** `B` · internship · online_assessment · Nov 2025
 
 A gardener is eagerly waiting for his two favorite flowers to bloom. The purple flower will blossom at some point uniformly at random in the next 20 days and be in bloom for exactly 4 days. Independent of the purple flower, the red flower will blossom at some point uniformly at random in the next 20 days and be in bloom for exactly 8 days. Compute the probability that both flowers will simultaneously be in bloom at some point in time. Express your answer as a fraction in simplest form. Enter the numerator in the first blank and the denominator in the second blank.
 
 <sub>glassdoor · 2026-07-06 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW104664176.htm)</sub>
 
-**6.** `B` · internship · online_assessment · Aug 2025
+**5.** `B` · internship · online_assessment · Aug 2025
 
 A deck contains ten cards: two 10s, two Js, two Qs, two Ks, two As. You're dealt five cards without replacement from the stack. Compute the expected number of pairs.
 
 <sub>glassdoor · 2025-08-23 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW99548933.htm)</sub>
 
-**7.** `B` · unknown · online_assessment · Mar 2024
+**6.** `B` · unknown · online_assessment · Mar 2024
 
 Mickey and Minnie plan to meet at a cafe, but will each independently show up at a uniformly random time between 9:00 to 10:00. Mickey will only wait 10 minutes for Minnie before leaving, but Minnie will wait 30 minutes for Mickey before leaving. What is the probability they end up meeting each other?
 
 <sub>glassdoor · 2024-03-29 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW85828435.htm)</sub>
 
-**8.** `B` · unknown · online_assessment · Dec 2024
-
-A logic puzzle asking to determine lies and who speaks the truth
-
-<sub>glassdoor · 2025-05-18 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW97423370.htm)</sub>
-
-**9.** `B` · unknown · online_assessment · 2026
+**7.** `B` · unknown · online_assessment · 2026
 
 Two friends canoe upstream for 3 hours, only to realize that their campsite is downstream. They turn around and paddle downstream for 4 hours. The next morning, they pack up and get back on the river to canoe to their original starting point 28 miles upstream and arrive at 2 pm. Assume the river always flows at a constant rate of 2 miles per hour, and the two friends always paddle at a constant rate. What time did they leave for their return trip?
 
 <sub>glassdoor · 2026-03-30 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW103369878.htm)</sub>
 
-**10.** `B` · new_grad · online_assessment · Feb 2024
+**8.** `B` · new_grad · online_assessment · Feb 2024
 
 A can finish a job in 100 min, B can finish the same job in 120 min. A and B work together on this job, but after 40 min C comes to help them and they finish the job in additional 10 min. How long would it take to C to finish the job by himself?
 
 <sub>glassdoor · 2024-03-17 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-RVW85406907.htm)</sub>
 
-**11.** `B` · internship · online_assessment · unknown
-
-it was around 12 questions in 36 (?) minutes including mostly probability questions and brain teasers
-
-<sub>reddit_thread · 2020-11-08 · [source](https://www.reddit.com/r/FinancialCareers/comments/jpwdzb/_/gbm11ql/)</sub>
-
-**12.** `B` · unknown · online_assessment · unknown
-
-an online maths test consisting of probability questions
-
-<sub>wso · 2025-09-23 · [source](https://www.wallstreetoasis.com/company/susquehanna-international-group/interview)</sub>
-
-**13.** `B` · experienced · online_assessment · unknown
-
-you only need to know basic probability and stats to solve most of them
-
-<sub>reddit_thread · 2024-04-25 · [source](https://www.reddit.com/r/FinancialCareers/comments/1ccz2u1/_/l19bf1p/)</sub>
-
-**14.** `B` · new_grad · phone_technical · Mar 2015
+**9.** `B` · new_grad · phone_technical · Mar 2015
 
 I have a painting, if it's an original it's worth 500k if it isn't it's worth 10k. The probability it's an original is 0.2. I have an option to pay 100k for the picture after inspection what is the value of the option?
 
 <sub>glassdoor · 2015-03-24 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW6185890.htm)</sub>
 
-**15.** `B` · new_grad · phone_technical · Nov 2014
+**10.** `B` · new_grad · phone_technical · Nov 2014
 
 You start out with 1 dollar and your friend starts out with 2 dollars. You bet 1 dollar until one of you runs out of money. You have a 2/3 chance of winning each bet. What is your chance of winning?
 
 <sub>glassdoor · 2014-12-09 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW5503556.htm)</sub>
 
-**16.** `B` · new_grad · phone_technical · Feb 2016
+**11.** `B` · new_grad · phone_technical · Feb 2016
 
 A boat fires torpedoes at another boat, the probability that the torpedo hits is 1/3, if the torpedo hits the boat, the boat is destroyed. 2 torpedoes are fired, what is the probability of the ship being destroyed?
 
 <sub>glassdoor · 2016-02-29 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW9742732.htm)</sub>
 
-**17.** `B` · unknown · phone_technical · 2024
+**12.** `B` · unknown · phone_technical · 2024
 
 Given 5 fair dices. What is the probability to get results containing 3 same values.
 
 <sub>glassdoor · 2024-01-31 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW83922916.htm)</sub>
 
-**18.** `B` · unknown · phone_technical · Jan 2025
+**13.** `B` · unknown · phone_technical · Jan 2025
 
 what’s the probability of getting HTH before HHT of flipping a fair coin?
 
 <sub>glassdoor · 2025-01-13 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW94285408.htm)</sub>
 
-**19.** `B` · internship · phone_technical · 2023
+**14.** `B` · internship · phone_technical · 2023
 
 There's a painting that has a 80% chance of being fake. If the painting is real it's worth 500k, if it's fake it's worth 10k. The seller asks for 120k. Will you buy it?
 
 <sub>glassdoor · 2023-12-03 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW82280962.htm)</sub>
 
-**20.** `B` · internship · phone_technical · unknown
+**15.** `B` · internship · phone_technical · unknown
 
 There is a game where you flip a coin 4 times and if you guess right each time, you win $10. It costs $1 to play. Should you play?
 
 <sub>reddit_thread · 2018-10-29 · [source](https://www.reddit.com/r/FinancialCareers/comments/9sd7h0/_/e8o5bwh/)</sub>
 
-**21.** `B` · internship · phone_technical · unknown
-
-a couple of questions which required having formulas learnt off
-
-<sub>wso · 2026-01-27 · [source](https://www.wallstreetoasis.com/company/susquehanna-international-group/interview)</sub>
-
-**22.** `B` · unknown · phone_technical · unknown
+**16.** `B` · unknown · phone_technical · unknown
 
 If you had a deck of 52 playing cards, no jokers. What is the probability of pulling 3 of a kind?
 
@@ -158,187 +118,157 @@ If you had a deck of 52 playing cards, no jokers. What is the probability of pul
 
 <sub>elitetrader · 2006-04-28 · [source](https://www.elitetrader.com/et/threads/phone-interview-with-sig.67976/)</sub>
 
-**23.** `B` · unknown · phone_technical · unknown
-
-you chat with a recruiter who asks you some fairly straightforward probability questions
-
-<sub>reddit_thread · 2025-08-18 · [source](https://www.reddit.com/r/quantfinance/comments/1mu093d/_/n9fhvcn/)</sub>
-
-**24.** `B` · new_grad · unknown · Jan 2026
-
-A lot about options A project give you tomorrow how will you finish it step by step
-
-<sub>glassdoor · 2026-02-09 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW102748201.htm)</sub>
-
-**25.** `B` · new_grad · unknown · Sep 2014
+**17.** `B` · new_grad · unknown · Sep 2014
 
 There are 2 boys and unknown number of girls in a nursery. A new baby is just born inside the room. We pick randomly a baby from the room, it turns out that the baby is a boy. What is the probability that the new baby just born is a boy?
 
 <sub>glassdoor · 2014-10-12 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW5151839.htm)</sub>
 
-**26.** `B` · new_grad · unknown · Dec 2013
+**18.** `B` · new_grad · unknown · Dec 2013
 
 a group of people wants to determine their average salary on the condition that no individual would be able to find out anyone else's salary. How can they accomplish this?
 
 <sub>glassdoor · 2015-06-11 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW6877957.htm)</sub>
 
-**27.** `B` · new_grad · unknown · 2025
+**19.** `B` · new_grad · unknown · 2025
 
 Pick three numbers between 1 and 20. What is the probability that one number is the average of the other two?
 
 <sub>glassdoor · 2025-01-30 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW94712966.htm)</sub>
 
-**28.** `B` · internship · unknown · Apr 2023
+**20.** `B` · internship · unknown · Apr 2023
 
 If you play a game and your opponent doubles the stakes of the game, what likelihood should you have of winning for you to accept this instead of having to resign the game.
 
 <sub>glassdoor · 2024-11-06 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW92591239.htm)</sub>
 
-**29.** `B` · internship · unknown · 2022
+**21.** `B` · internship · unknown · 2022
 
 Q: How many ways can you sit in a circle of 5 people that you end up sitting with your best friend?
 
 <sub>glassdoor · 2022-10-14 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW70139863.htm)</sub>
 
-**30.** `B` · internship · unknown · Feb 2023
+**22.** `B` · internship · unknown · Feb 2023
 
 Compute conditional probabilities, and explain one's thought process.
 
 <sub>glassdoor · 2023-08-28 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW79550591.htm)</sub>
 
-**31.** `B` · internship · unknown · Apr 2023
+**23.** `B` · internship · unknown · Apr 2023
 
 There are two fair dices, you should dice another if you didn’t get 6 for that dice. Calculate the Expected number of times you get dice 1=6.
 
 <sub>glassdoor · 2023-05-27 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW76835111.htm)</sub>
 
-**32.** `B` · internship · unknown · 2021
+**24.** `B` · internship · unknown · 2021
 
 Given x identical marbles how can you figure out which is the dissimilar marble in y uses of the scale
 
 <sub>glassdoor · 2021-09-07 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW52200794.htm)</sub>
 
-**33.** `B` · internship · unknown · Nov 2018
+**25.** `B` · internship · unknown · Nov 2018
 
 If you get multiple offers, how would you choose?
 
 <sub>glassdoor · 2018-11-25 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW23551083.htm)</sub>
 
-**34.** `B` · internship · unknown · Dec 2017
+**26.** `B` · internship · unknown · Dec 2017
 
 You seem to be doing fairly well up to now, why do you think that is?
 
 <sub>glassdoor · 2017-12-16 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW18371833.htm)</sub>
 
-**35.** `B` · internship · unknown · Dec 2017
+**27.** `B` · internship · unknown · Dec 2017
 
 You have 8 marbles. One is heavier than the rest. You have a balance scales and you can use it only twice. Can you determine which marble is heaviest?
 
 <sub>glassdoor · 2017-12-15 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW18357302.htm)</sub>
 
-**36.** `B` · unknown · unknown · Feb 2024
+**28.** `B` · unknown · unknown · Feb 2024
 
 what is the expectation of a coin tossing game.
 
 <sub>glassdoor · 2025-01-09 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW94209537.htm)</sub>
 
-**37.** `B` · internship · unknown · 2026
-
-A simple probability question simple math and you have to explain your train of thoughts
-
-<sub>glassdoor · 2026-07-13 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW104758139.htm)</sub>
-
-**38.** `B` · internship · unknown · Sep 2025
+**29.** `B` · internship · unknown · Sep 2025
 
 Calculate the probability that the value of the first roll of a six-sided die is strictly less than the value of the second roll. Why SIG? Why Trading?
 
 <sub>glassdoor · 2025-11-09 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW101165338.htm)</sub>
 
-**39.** `B` · unknown · unknown · Nov 2025
-
-A problem on Bayes theorem with multiple extensions. By the end (and under interview conditions) it got slightly tricky.
-
-<sub>glassdoor · 2026-01-22 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW102416701.htm)</sub>
-
-**40.** `B` · unknown · unknown · May 2026
-
-A classic question of whether HHT or HTH will appear first.
-
-<sub>glassdoor · 2026-06-27 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW104560534.htm)</sub>
-
-**41.** `B` · unknown · unknown · Nov 2024
+**30.** `B` · unknown · unknown · Nov 2024
 
 Calculate the probability of having a disease if the test is positive. What is the probability if the test is positive twice?
 
 <sub>glassdoor · 2025-05-13 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW97303579.htm)</sub>
 
-**42.** `B` · unknown · unknown · 2025
+**31.** `B` · unknown · unknown · 2025
 
 Basic questions like how would you apply ML and AI to your job?
 
 <sub>glassdoor · 2025-04-09 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW96560287.htm)</sub>
 
-**43.** `B` · new_grad · unknown · 2024
+**32.** `B` · new_grad · unknown · 2024
 
 Compute the probability of an overlap of arrivals.
 
 <sub>glassdoor · 2024-10-28 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW92322145.htm)</sub>
 
-**44.** `B` · new_grad · unknown · Aug 2024
+**33.** `B` · new_grad · unknown · Aug 2024
 
 You have $100 and get an extra $100 to play a casino game where you bet on flips of a fair coin, and this game has 4:5 payout. You must bet a total of at least $500 to cash out. How do you maximize your expected earnings?
 
 <sub>glassdoor · 2024-09-27 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW91423031.htm)</sub>
 
-**45.** `B` · internship · unknown · 2025
+**34.** `B` · internship · unknown · 2025
 
 How would you price an option contract given its strike price and possible fair values?
 
 <sub>glassdoor · 2025-07-18 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW98791545.htm)</sub>
 
-**46.** `B` · internship · unknown · 2023
+**35.** `B` · internship · unknown · 2023
 
 You are playing a game where you and your opponent have put $10 in the pot each. Your opponent bets another $10. What is the minimum probability of you winning to call this $10 bet?
 
 <sub>glassdoor · 2023-09-25 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW80372101.htm)</sub>
 
-**47.** `B` · internship · unknown · 2020
+**36.** `B` · internship · unknown · 2020
 
 You have 9 coins, one of which is heavier than the others, and a scale. How can you determine which coin is heavier by only using the scale twice?
 
 <sub>glassdoor · 2020-12-11 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW39378462.htm)</sub>
 
-**48.** `B` · unknown · unknown · Jul 2023
+**37.** `B` · unknown · unknown · Jul 2023
 
 Do you have any experience with sports trading?
 
 <sub>glassdoor · 2024-04-13 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW86283368.htm)</sub>
 
-**49.** `B` · unknown · unknown · 2023
+**38.** `B` · unknown · unknown · 2023
 
 Which financial derivatives do you have experience trading?
 
 <sub>glassdoor · 2023-09-21 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW80270779.htm)</sub>
 
-**50.** `B` · internship · unknown · 2026
+**39.** `B` · internship · unknown · 2026
 
 What is the max entry fee you would take to earn the outcome of a dice roll?
 
 <sub>glassdoor · 2026-07-02 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW104625356.htm)</sub>
 
-**51.** `B` · internship · unknown · 2013
+**40.** `B` · internship · unknown · 2013
 
 the probability of seeing a shooting star in 1 hour is 91%. What is the probability of seeing a shooting star in 30 minutes?
 
 <sub>glassdoor · 2013-03-11 · [source](https://www.glassdoor.com/Interview/Susquehanna-International-Group-Interview-E24446-RVW2450001.htm)</sub>
 
-**52.** `B` · unknown · unknown · unknown
+**41.** `B` · unknown · unknown · unknown
 
 Years ago, I was asked about coin flipping outcome with normal coins and a biased coin. Given five flips are all heads, what is the probability that the coin is the biased one (both sides are heads)?
 
 <sub>reddit_thread · 2022-04-09 · [source](https://www.reddit.com/r/FinancialCareers/comments/tzyuhp/_/i42romz/)</sub>
 
-**53.** `C` · new_grad · online_assessment · 2026
+**42.** `C` · new_grad · online_assessment · 2026
 
 You walk into a barn and see a collection of spiders, chickens, and cows. You notice that there are 520 legs in total. The number of chickens is twice the number of cows and the number of spiders is twice the number of chickens. Compute the number of spiders.
 
@@ -346,7 +276,7 @@ You walk into a barn and see a collection of spiders, chickens, and cows. You no
 
 <sub>other · 2025-09-04 · [source](https://web.archive.org/web/20250912084409/https://www.1point3acres.com/bbs/thread-1144112-1-1.html)</sub>
 
-**54.** `C` · new_grad · online_assessment · 2026
+**43.** `C` · new_grad · online_assessment · 2026
 
 I need to seat 5 toddlers (Anna, Brian, Charlie, Dixie, Eva) at a round table with these rules: i) Anna won’t sit next to Brian or Eva. ii) Brian won’t sit next to Charlie. iii) Dixie won’t sit next to Eva or Charlie. If Dixie is sitting to the left of Anna, who is sitting to the left of Brian?
 
@@ -354,7 +284,7 @@ I need to seat 5 toddlers (Anna, Brian, Charlie, Dixie, Eva) at a round table wi
 
 <sub>other · 2025-09-04 · [source](https://web.archive.org/web/20250912084409/https://www.1point3acres.com/bbs/thread-1144112-1-1.html)</sub>
 
-**55.** `C` · new_grad · online_assessment · 2026
+**44.** `C` · new_grad · online_assessment · 2026
 
 Compute the weight of the green triangle in pounds if the following system is balanced and weighs 96 pounds in total.
 
@@ -362,13 +292,13 @@ Compute the weight of the green triangle in pounds if the following system is ba
 
 <sub>other · 2025-09-04 · [source](https://web.archive.org/web/20250912084409/https://www.1point3acres.com/bbs/thread-1144112-1-1.html)</sub>
 
-**56.** `C` · new_grad · online_assessment · 2026
+**45.** `C` · new_grad · online_assessment · 2026
 
 You roll three fair 6-sided dice. If they all show the same number, you earn $20. If exactly two of the numbers are the same, you earn $10. If all of the numbers are different, you lose $2. Compute your expected return per roll in dollars. (Round to the nearest cent.)
 
 <sub>other · 2025-09-04 · [source](https://web.archive.org/web/20250912084409/https://www.1point3acres.com/bbs/thread-1144112-1-1.html)</sub>
 
-**57.** `C` · new_grad · online_assessment · 2026
+**46.** `C` · new_grad · online_assessment · 2026
 
 Suppose you have 3 tokens for a betting game and your goal is to reach 5 tokens before running out. Each turn you bet as many tokens as possible but not more than needed to reach 5. You win each bet with probability 2/3​. Compute the probability you reach 5 tokens before running out. (Give your answer as a reduced fraction.)
 
@@ -376,7 +306,7 @@ Suppose you have 3 tokens for a betting game and your goal is to reach 5 tokens 
 
 <sub>other · 2025-09-04 · [source](https://web.archive.org/web/20250912084409/https://www.1point3acres.com/bbs/thread-1144112-1-1.html)</sub>
 
-**58.** `C` · unknown · online_assessment · unknown
+**47.** `C` · unknown · online_assessment · unknown
 
 青蛙想从(0,0)跳到(7,4),每次只能向右跳一格或向上跳一格。青蛙不愿意同方向连续跳三次。共多少种不同跳法?
 
@@ -386,13 +316,13 @@ Suppose you have 3 tokens for a betting game and your goal is to reach 5 tokens 
 
 <sub>1point3acres · unknown · [source](https://www.1point3acres.com/bbs/thread-1114232-1-1.html)</sub>
 
-**59.** `C` · unknown · online_assessment · unknown
+**48.** `C` · unknown · online_assessment · unknown
 
 [... 5 toddlers at a round table, opening sentence cut off by the paywall ...] are some problems! i. Anna won't sit next to Brian or Eva. ii. Brian won't sit next to Charlie. iii. Dixie won't sit next to Eva or Charlie. If Dixie is sitting to the left of Anna, who is sitting to the left of Brian?
 
 <sub>1point3acres · unknown · [source](https://www.1point3acres.com/bbs/thread-1086565-1-1.html)</sub>
 
-**60.** `C` · unknown · onsite · unknown
+**49.** `C` · unknown · onsite · unknown
 
 二面就纯bq,问了一些地里其他一样的bq,类似与why QR? why SIG这种之类的。
 
@@ -400,7 +330,7 @@ Suppose you have 3 tokens for a betting game and your goal is to reach 5 tokens 
 
 <sub>other · unknown · [source](https://www.1point3acres.com/bbs/thread-1042392-1-1.html)</sub>
 
-**61.** `C` · unknown · phone_technical · unknown
+**50.** `C` · unknown · phone_technical · unknown
 
 1. 圆里随机画n条线,问能把圆分成几分 (期望)? 把分成的份数和交点个数对应起来,然后算交点个数的期望。
 
@@ -410,7 +340,7 @@ Suppose you have 3 tokens for a betting game and your goal is to reach 5 tokens 
 
 <sub>other · 2020-11-11 · [source](https://www.1point3acres.com/bbs/thread-686183-1-1.html)</sub>
 
-**62.** `C` · unknown · phone_technical · unknown
+**51.** `C` · unknown · phone_technical · unknown
 
 2. 扔硬币 进入 HTH HHT 之一就结束,问进入每一个的概率是多大?(不太记得具体ending state是啥了)
 
@@ -418,23 +348,7 @@ Suppose you have 3 tokens for a betting game and your goal is to reach 5 tokens 
 
 <sub>other · 2020-11-11 · [source](https://www.1point3acres.com/bbs/thread-686183-1-1.html)</sub>
 
-**63.** `C` · unknown · phone_technical · unknown
-
-[第二轮第一题 — statement point-gated. All that surfaced are two readers asking about it:] 请问第二轮第一题是在那个三角形平面,还是四面体内,做sampling ... 想问三角形要怎样做?
-
-*English:* [Round 2, question 1 — statement gated.] Reader: 'Can I ask whether round 2 question 1 does the sampling in that triangular plane, or inside the tetrahedron?' Another reader: 'I want to ask how to do the triangle one.'
-
-<sub>1point3acres · 2020-11 · [source](https://www.1point3acres.com/bbs/thread-686183-1-1.html)</sub>
-
-**64.** `C` · unknown · superday · 2024
-
-[终面题目本身在积分墙后。可确认的是终面至少有三题,且第 1、3 题连读者读完题解都无从下手:] 请问lz final round 第1,3题有什么可以参考的思路吗? 看了之后没什么头绪。。。然后lz是有finance背景吗?
-
-*English:* [The final-round questions themselves are behind the paywall. What is established: the final round had at least three questions, and questions 1 and 3 left even a reader who had read the write-up with no idea how to start.] Reader: 'Could I ask whether there's any line of approach for final-round questions 1 and 3? After reading them I have no clue... also, does OP have a finance background?'
-
-<sub>1point3acres · 2024-10-13 · [source](https://www.1point3acres.com/bbs/thread-1091467-1-1.html)</sub>
-
-**65.** `C` · internship · unknown · unknown
+**52.** `C` · internship · unknown · unknown
 
 -If you have 8 balls with one is slightly heavier, how do you weight the least time to find that one?
 
@@ -442,19 +356,13 @@ Suppose you have 3 tokens for a betting game and your goal is to reach 5 tokens 
 
 <sub>student_doc · unknown · [source](https://quizlet.com/928572850/sig-qt-intern-interview-questions-flash-cards/)</sub>
 
-**66.** `C` · unknown · unknown · unknown
+**53.** `C` · unknown · unknown · unknown
 
 you have 8 marbles, 1 weighs less than the others but you cannot tell which one is lighter by touching them. they give you a balance and you only have 2 chances to measure all 8 to find out which one is the lighter one. How would you do it?
 
 *Reported answer:* Split into three groups of three, three, and two. weigh the two groups of three against each other. If equal, weigh the group of two to find the heavier. If one group of three is heavier pick two of the three and compare them to find the heaviest.
 
 <sub>student_doc · unknown · [source](https://quizlet.com/240587160/sig-interview-flash-cards/)</sub>
-
-**67.** `D` · internship · online_assessment · Summer 2027
-
-if you've done it before then its the same questions with different numbers
-
-<sub>reddit_thread · 2026-07-24 · [source](https://www.reddit.com/r/quantfinance/comments/1v5cal7/_/ozhln12/)</sub>
 
 
 ## Citadel  (14)
@@ -572,168 +480,6 @@ Marty has a bar of gold. Marty's friend Shea is to be paid this gold over the co
 <sub>blog · 2024-06-25 · [source](https://blog.csdn.net/dcdsc/article/details/139953481)</sub>
 
 
-## Old Mission Capital  (13)
-
-**1.** `B` · unknown · online_assessment · unknown
-
-Given a list of n numbers, return the median of each sublist up to the kth element.
-
-<sub>wso · 2024-11-15 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
-
-**2.** `B` · unknown · onsite · unknown
-
-A market making portion of the interview (feedback given was that it was too weak)
-
-<sub>wso · 2025-04 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview/floor-trader)</sub>
-
-**3.** `B` · unknown · phone_technical · unknown
-
-If you think the market is overestimating volatility, what options strategy can you use
-
-<sub>wso · 2025-06-16 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
-
-**4.** `B` · unknown · phone_technical · unknown
-
-What is the expected value of a dice roll? Make me a market on __
-
-<sub>wso · 2023-10-26 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
-
-**5.** `B` · internship · phone_technical · unknown
-
-Four points are chosen uniformly at random on the surface of a sphere. What is the probability that the center of the sphere lies inside the tetrahedron whose vertices are at the four points?
-
-<sub>wso · 2019-10-10 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
-
-**6.** `B` · internship · phone_technical · unknown
-
-There was also a Markov Chain chess question. It essentially went as follows: You and I play chess. 1/2 games end in draws and in the other half I win with 2/3 probability and you win with 1/3. If the matches with either of us winning 3 consecutive games, what is the probability that I win?
-
-<sub>wso · 2019-10-10 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
-
-**7.** `B` · internship · phone_technical · unknown
-
-2) What is the expected value of rolling a fair dice? What if you can re-roll? What if the re-roll cost 1 dollar and you make 1 dollar for every dot on the die that is shown?
-
-<sub>wso · 2018-09-23 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
-
-**8.** `B` · internship · phone_technical · unknown
-
-4) In how many ways can you have three numbers that sum to 10? What about 11? 5) In how many ways can you have three numbers that some to n for any n greater than or equal to 3?
-
-<sub>wso · 2018-09-23 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
-
-**9.** `B` · internship · phone_technical · unknown
-
-1) What is the expected value of a random variable x in [0,10]? What is the variance?
-
-<sub>wso · 2018-09-23 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
-
-**10.** `B` · internship · phone_technical · unknown
-
-There are 5 pirates and they are trying to split 100 gold coins in a rational way. The most senior pirate will choose to split in a certain way and all the other pirates will vote to agree or disagree. The most senior pirate is always the one to propose the split and must get at least a majority of the votes from the other pirates for the split to work. How should the senior-most pirate split the 100 gold coins such that he will survive and maximize his own earnings?
-
-<sub>wso · 2018-02-27 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
-
-**11.** `B` · internship · phone_technical · unknown
-
-You have two decks of cards, one with 52 cards and one with 104. If your goal is to draw a black card followed by a red card, which deck would you choose?
-
-<sub>wso · 2015-02-28 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
-
-**12.** `B` · internship · phone_technical · unknown
-
-What is fifty six times sixty seven (no calculator, quick response)?
-
-<sub>wso · 2015-02-28 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
-
-**13.** `B` · internship · phone_technical · unknown
-
-What is the probability of drawing a 4 of a kind in a 5 card poker hand?
-
-<sub>wso · 2014-03 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
-
-
-## Optiver  (13)
-
-**1.** `B` · unknown · online_assessment · unknown
-
-15/25 / ? = 14/35 A) 3/5 B) 63/30 C) 14/15 D) 9/6
-
-<sub>wso · 2013-09-28 · [source](https://www.wallstreetoasis.com/forum/trading/optiver-trading-numerical-test)</sub>
-
-**2.** `B` · unknown · unknown · unknown
-
-You have a dartboard, circumscribed within a square. The square's dimensions are 10"x10". The circle is split into 20 equal sections, and each is marked with a number alternating from the low end to the high end of interval [1,20], so 1, 20, 2, 19, 3, etc. Also, inside the center of the dartboard, is another circle 1" in diameter. This is marked 50. So you have 21 sections with numbers in them, these are your point values (payoff in dollars), and the area outside the circle but in the square is worth 0. -What's the EV of the game? -What's the optimal strategy? -If I let you rethrow your first throw at the cost of $1, will you take it? What if you have 2 rethrows?
-
-<sub>wso · 2013-09-28 · [source](https://www.wallstreetoasis.com/forum/trading/optiver-trading-numerical-test)</sub>
-
-**3.** `C` · internship · math_sequences_test · unknown
-
-an identifying sequences test, e.g. you are shown a sequence of numbers, and must guess the next number or missing number
-
-<sub>blog · unknown · [source](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)</sub>
-
-**4.** `C` · internship · online_assessment · 2026
-
-You flip a coin 3 times. What is the probability that the outcome is the same for all flips? all Heads or all Tails.
-
-<sub>other · 2025-08-04 · [source](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)</sub>
-
-**5.** `C` · internship · online_assessment · 2026
-
-You throw one dice two times. What is the probability that the 2nd throw has a different face value than the first throw?
-
-<sub>other · 2025-08-04 · [source](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)</sub>
-
-**6.** `C` · internship · online_assessment · 2026
-
-ss. Once you have won a toss, your strategy has been implemented, and you stop. If you have a total bankroll of $63 available to implement this strategy, what is your expected profit?
-
-<sub>other · 2025-08-04 · [source](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)</sub>
-
-**7.** `C` · internship · online_assessment · 2026
-
-You will play a coin game against an opponent. A biased coin will be continually flipped where there is a 2/3 chance of Heads and a 1/3 chance of Tails. If Heads is flipped then you receive $1 from your opponent. If Tails is flipped then you pay $1 to your opponent. You start with $10 and your opponent starts with $20. You keep playing until one of you is bankrupt (= has $0 left); they will be declared the loser, the other will be declared the winner. What is the probability that you win?
-
-<sub>other · 2025-08-04 · [source](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)</sub>
-
-**8.** `C` · internship · online_assessment · 2026 summer intern cycle (thread title '26 summer'); OA sat 2025(7-9月) per the post's tag line
-
-a coin and whilst you do this you keep track of the number of Heads and the number of Tails. You can think of this as a race between Heads and Tails. For example, if after 9 flips you have landed on Heads 7 times and Tails 2 times, then Heads is winning the race by 5. Now
-
-<sub>university_bbs · unknown (the 2025(7-9月) tag dates the assessment, not the post) · [source](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)</sub>
-
-**9.** `C` · internship · online_assessment · unknown
-
-an SHL “General Ability” test ... consists of questions testing your ability to calculate simple percentages, read data from graphs and interpret information
-
-<sub>blog · unknown · [source](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)</sub>
-
-**10.** `C` · internship · trading_game · unknown
-
-You are given a question, such as “How much money was spent in pubs in the UK, on the first day after the COVID lockdown?”
-
-<sub>blog · unknown · [source](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)</sub>
-
-**11.** `C` · internship · unknown · unknown
-
-How long would it take you to do 2/17 in your head (to 3 decimal places)?
-
-<sub>blog · unknown · [source](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)</sub>
-
-**12.** `C` · internship · unknown · unknown
-
-Today is a Wednesday, what will be the day of the week on this date next year?
-
-<sub>blog · unknown · [source](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)</sub>
-
-**13.** `C` · internship · unknown · unknown
-
-Simpson’s Paradox question: Was given various pieces of information on two football teams, playing two halves of a game, and they individually have a “pass ratio” for each half. It was asked that if Team X has a higher pass ratio than Team Y in the first half, and the same again in the second half, could Team Y have a higher pass ratio overall? I was then asked to give a numerical example.
-
-<sub>blog · unknown · [source](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)</sub>
-
-
 ## G-Research  (11)
 
 **1.** `C` · unknown · unknown · unknown
@@ -803,130 +549,73 @@ I have $50 and I'm gambling on a series of coin flips. For each head I win $2 an
 <sub>firm_official_pdf · unknown · [source](https://www.gresearch.com/wp-content/uploads/2019/12/Sample-Quant-Exa.pdf)</sub>
 
 
-## Five Rings  (10)
+## Old Mission Capital  (11)
 
-**1.** `B` · internship · phone_technical · unknown
+**1.** `B` · unknown · online_assessment · unknown
 
-A question on ordered stats. X and Y in a normal distribution. Find the distribution/expectation value of max(X, Y).
+Given a list of n numbers, return the median of each sublist up to the kth element.
 
-<sub>wso · 2026-07-28 · [source](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)</sub>
+<sub>wso · 2024-11-15 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
 
-**2.** `B` · internship · phone_technical · unknown
+**2.** `B` · unknown · phone_technical · unknown
 
-what is the maximum number of pieces you can cut a pizza using 10 straight cuts?
+If you think the market is overestimating volatility, what options strategy can you use
 
-<sub>wso · 2023-06-15 · [source](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)</sub>
+<sub>wso · 2025-06-16 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
 
-**3.** `B` · unknown · phone_technical · unknown
+**3.** `B` · internship · phone_technical · unknown
 
-How many tennis balls in a suit case?, 3^ 3.4? Confidence interval?
+Four points are chosen uniformly at random on the surface of a sphere. What is the probability that the center of the sphere lies inside the tetrahedron whose vertices are at the four points?
 
-<sub>wso · 2022-09-05 · [source](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)</sub>
+<sub>wso · 2019-10-10 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
 
 **4.** `B` · internship · phone_technical · unknown
 
-A game theory question at second round. Cannot remember exactly as a very long question, but similar to the Jane street example interview at this page 'https://www.janestreet.com/trading-interviews/'.
+There was also a Markov Chain chess question. It essentially went as follows: You and I play chess. 1/2 games end in draws and in the other half I win with 2/3 probability and you win with 1/3. If the matches with either of us winning 3 consecutive games, what is the probability that I win?
 
-<sub>wso · 2022-10-21 · [source](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)</sub>
+<sub>wso · 2019-10-10 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
 
 **5.** `B` · internship · phone_technical · unknown
 
-How many digit 7s appear in the numbers from 1 to 6000?
+2) What is the expected value of rolling a fair dice? What if you can re-roll? What if the re-roll cost 1 dollar and you make 1 dollar for every dot on the die that is shown?
 
-<sub>wso · 2022-11 · [source](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview/intern-1)</sub>
+<sub>wso · 2018-09-23 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
 
-**6.** `B` · unknown · phone_technical · unknown
+**6.** `B` · internship · phone_technical · unknown
 
-How many balls in a suitcase? (given as an example of the numerous guesstimation problems, 10-15 seconds each)
+4) In how many ways can you have three numbers that sum to 10? What about 11? 5) In how many ways can you have three numbers that some to n for any n greater than or equal to 3?
 
-<sub>wso · 2019-11 · [source](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview/quant-trader-1)</sub>
+<sub>wso · 2018-09-23 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
 
 **7.** `B` · internship · phone_technical · unknown
 
-A game theory question - easy math, but you must be careful with all the conditions
+1) What is the expected value of a random variable x in [0,10]? What is the variance?
 
-<sub>wso · 2022-04 · [source](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview/trader-intern)</sub>
+<sub>wso · 2018-09-23 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
 
 **8.** `B` · internship · phone_technical · unknown
 
-Recruiter 1:1: behavioral (why trading? why Five Rings?) then 10 questions each with a 30 second time limit
+There are 5 pirates and they are trying to split 100 gold coins in a rational way. The most senior pirate will choose to split in a certain way and all the other pirates will vote to agree or disagree. The most senior pirate is always the one to propose the split and must get at least a majority of the votes from the other pirates for the split to work. How should the senior-most pirate split the 100 gold coins such that he will survive and maximize his own earnings?
 
-<sub>wso · 2024-08 · [source](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview/trading-intern-13)</sub>
+<sub>wso · 2018-02-27 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
 
 **9.** `B` · internship · phone_technical · unknown
 
-A series of fast-paced estimation-style questions in the first interview
+You have two decks of cards, one with 52 cards and one with 104. If your goal is to draw a black card followed by a red card, which deck would you choose?
 
-<sub>wso · 2022-09 · [source](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview/quant-trading-intern-0)</sub>
+<sub>wso · 2015-02-28 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
 
-**10.** `D` · internship · online_assessment · 2027
+**10.** `B` · internship · phone_technical · unknown
 
-I just got OA. It says 19 min on hackerrank, is that the same you got? I thought hackerrank was just coding not math questions
+What is fifty six times sixty seven (no calculator, quick response)?
 
-<sub>reddit_thread · 2026-03-06 · [source](https://www.reddit.com/r/quantfinance/comments/1rb4s05/just_did_interview_for_five_rings_winternship_2027/)</sub>
+<sub>wso · 2015-02-28 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
 
+**11.** `B` · internship · phone_technical · unknown
 
-## Jump Trading  (10)
+What is the probability of drawing a 4 of a kind in a 5 card poker hand?
 
-**1.** `B` · unknown · onsite · unknown
-
-I'm dealing a deck of poker, you can stop me anytime. If the next card is red, you win. Otherwise you lose. What's optimal strategy and the probability of winning ?
-
-<sub>wso · 2018-12-24 · [source](https://www.wallstreetoasis.com/company/jump-trading/interview)</sub>
-
-**2.** `B` · internship · onsite · unknown
-
-a math problem about the probability an array is sorted after swapping the first two if they're out of order, swapping the new second and third if they're out of order, and so on until swapping the last two if they're out of order
-
-<sub>wso · 2018-12-22 · [source](https://www.wallstreetoasis.com/company/jump-trading/interview)</sub>
-
-**3.** `B` · unknown · phone_technical · unknown
-
-1)Can you create a linked list? Do it. 2) Let's say we want to change places of 2 nodes in linked list. Can you create a function for that.
-
-<sub>wso · 2023-10-03 · [source](https://www.wallstreetoasis.com/company/jump-trading/interview)</sub>
-
-**4.** `B` · unknown · phone_technical · unknown
-
-Suppose you sit on the road side and observe cars driving by. Assume the distribution of cars driving by is according to an exponential distribution. Now you observe a first car after sitting for x mins, a second car after sitting for y min. Given those observations, can you estimate the parameter in the distribution?
-
-<sub>wso · 2018-02-15 · [source](https://www.wallstreetoasis.com/company/jump-trading/interview)</sub>
-
-**5.** `B` · unknown · phone_technical · unknown
-
-Suppose you backtested a trading strategy, it did very well. But in live trading, you keep losing money, what would you do?
-
-<sub>wso · 2018-02-15 · [source](https://www.wallstreetoasis.com/company/jump-trading/interview)</sub>
-
-**6.** `B` · unknown · phone_technical · unknown
-
-What are ensemble methods? Can you describe boosted tree methods?
-
-<sub>wso · 2018-02-15 · [source](https://www.wallstreetoasis.com/company/jump-trading/interview)</sub>
-
-**7.** `C` · unknown · unknown · unknown
-
-A bee starts at a hive. It has a 20% chance to move forward, a 50% chance to stay still, and a 30% to move backward. What percentage of the time does it spend in the hive?
-
-<sub>blog · unknown · [source](https://www.efinancialcareers-canada.com/news/electronic-trading-interviews)</sub>
-
-**8.** `C` · unknown · unknown · unknown
-
-I'm dealing a deck of cards. You can stop it at any time and if the next card is red, you win. What is the optimal strategy for winning?
-
-<sub>blog · unknown · [source](https://www.efinancialcareers-canada.com/news/electronic-trading-interviews)</sub>
-
-**9.** `C` · unknown · unknown · unknown
-
-There are four balls, two black and two white. You pick two and random and flip their color from one to the other and repeat. How many times would you do this to ensure all four balls are the same color?
-
-<sub>blog · unknown · [source](https://www.efinancialcareers-canada.com/news/electronic-trading-interviews)</sub>
-
-**10.** `C` · unknown · unknown · unknown
-
-What is the probability that two people in a room full of 15 share the same birthday?
-
-<sub>blog · unknown · [source](https://www.efinancialcareers-canada.com/news/electronic-trading-interviews)</sub>
+<sub>wso · 2014-03 · [source](https://www.wallstreetoasis.com/company/old-mission-capital/interview)</sub>
 
 
 ## Morgan Stanley  (10)
@@ -998,100 +687,169 @@ Which would you choose to estimate your time series model? R squared, MSE, RMSE,
 <sub>chat_telegram · 2026-01-25 · [source](https://t.me/aistockanalyst/1072)</sub>
 
 
-## Chicago Trading Company (CTC)  (8)
+## Optiver  (10)
 
-**1.** `B` · internship · online_assessment · interviewed June 2016
+**1.** `B` · unknown · online_assessment · unknown
 
-an online assessment consisting of probability/brainteaser questions, ~10 to be completed in thirty minutes
+15/25 / ? = 14/35 A) 3/5 B) 63/30 C) 14/15 D) 9/6
 
-<sub>interview_review_site · 2021-03-11 · [source](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)</sub>
+<sub>wso · 2013-09-28 · [source](https://www.wallstreetoasis.com/forum/trading/optiver-trading-numerical-test)</sub>
 
-**2.** `B` · internship · onsite · interviewed January 2020
+**2.** `B` · unknown · unknown · unknown
 
-A stick is randomly cut at 2 different points. What is the probability that the three pieces form a triangle?
+You have a dartboard, circumscribed within a square. The square's dimensions are 10"x10". The circle is split into 20 equal sections, and each is marked with a number alternating from the low end to the high end of interval [1,20], so 1, 20, 2, 19, 3, etc. Also, inside the center of the dartboard, is another circle 1" in diameter. This is marked 50. So you have 21 sections with numbers in them, these are your point values (payoff in dollars), and the area outside the circle but in the square is worth 0. -What's the EV of the game? -What's the optimal strategy? -If I let you rethrow your first throw at the cost of $1, will you take it? What if you have 2 rethrows?
 
-<sub>interview_review_site · 2020-02-26 · [source](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)</sub>
+<sub>wso · 2013-09-28 · [source](https://www.wallstreetoasis.com/forum/trading/optiver-trading-numerical-test)</sub>
 
-**3.** `B` · internship · onsite · interviewed January 2020
+**3.** `C` · internship · online_assessment · 2026
 
-A python-based coding question which involved analyzing stock data
+You flip a coin 3 times. What is the probability that the outcome is the same for all flips? all Heads or all Tails.
 
-<sub>interview_review_site · 2020-02-26 · [source](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)</sub>
+<sub>other · 2025-08-04 · [source](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)</sub>
 
-**4.** `B` · unknown · phone_technical · interviewed November 2018
+**4.** `C` · internship · online_assessment · 2026
 
-You have 8 marbles. One of them weighs more than the 7 others. What is the minimum number of steps you need in order to determine the outlier?
+You throw one dice two times. What is the probability that the 2nd throw has a different face value than the first throw?
 
-<sub>interview_review_site · 2019-06-04 · [source](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)</sub>
+<sub>other · 2025-08-04 · [source](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)</sub>
 
-**5.** `B` · internship · phone_technical · interviewed February 2018
+**5.** `C` · internship · online_assessment · 2026
 
-What is 5/32 expressed as a decimal. What is 7/12. What is 34*45.
+ss. Once you have won a toss, your strategy has been implemented, and you stop. If you have a total bankroll of $63 available to implement this strategy, what is your expected profit?
 
-<sub>interview_review_site · 2018-03-13 · [source](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)</sub>
+<sub>other · 2025-08-04 · [source](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)</sub>
 
-**6.** `B` · internship · superday · interviewed October 2020
+**6.** `C` · internship · online_assessment · 2026
 
-Estimate how many windows Empire State Building has and how confident are you to your estimation.
+You will play a coin game against an opponent. A biased coin will be continually flipped where there is a 2/3 chance of Heads and a 1/3 chance of Tails. If Heads is flipped then you receive $1 from your opponent. If Tails is flipped then you pay $1 to your opponent. You start with $10 and your opponent starts with $20. You keep playing until one of you is bankrupt (= has $0 left); they will be declared the loser, the other will be declared the winner. What is the probability that you win?
 
-<sub>interview_review_site · 2020-11-15 · [source](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)</sub>
+<sub>other · 2025-08-04 · [source](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)</sub>
 
-**7.** `B` · unknown · superday · interviewed November 2017
+**7.** `C` · internship · trading_game · unknown
 
-Estimate the number of barrels of oil you could fit on an aircraft carrier, number of gas stations in California.
+You are given a question, such as “How much money was spent in pubs in the UK, on the first day after the COVID lockdown?”
 
-<sub>interview_review_site · 2020-04-25 · [source](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)</sub>
+<sub>blog · unknown · [source](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)</sub>
 
-**8.** `B` · internship · unknown · interviewed January 2020
+**8.** `C` · internship · unknown · unknown
 
-You have 27 race horses. You can race five of them at a time. You don't know what each one's time even if you race them (you only know the order in which the five horses raced ended up in). How many races do you need to make, in what order, with what horses, in order to know the top three horses overall from the pool of 27 horses? You also need to know not just which three horses these are, but their order relative to each other (who came first, second, third). Optimize your strategy to find the minimum number of races.
+How long would it take you to do 2/17 in your head (to 3 decimal places)?
 
-<sub>interview_review_site · 2020-02-10 · [source](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)</sub>
+<sub>blog · unknown · [source](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)</sub>
+
+**9.** `C` · internship · unknown · unknown
+
+Today is a Wednesday, what will be the day of the week on this date next year?
+
+<sub>blog · unknown · [source](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)</sub>
+
+**10.** `C` · internship · unknown · unknown
+
+Simpson’s Paradox question: Was given various pieces of information on two football teams, playing two halves of a game, and they individually have a “pass ratio” for each half. It was asked that if Team X has a higher pass ratio than Team Y in the first half, and the same again in the second half, could Team Y have a higher pass ratio overall? I was then asked to give a numerical example.
+
+<sub>blog · unknown · [source](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)</sub>
 
 
-## Maven Securities  (7)
+## Jump Trading  (9)
 
-**1.** `B` · internship · online_assessment · 2026
+**1.** `B` · unknown · onsite · unknown
 
-If today is Monday, what day will it be in 80 days?
+I'm dealing a deck of poker, you can stop me anytime. If the next card is red, you win. Otherwise you lose. What's optimal strategy and the probability of winning ?
 
-<sub>interview_review_db · 2025-11-14 · [source](https://www.wallstreetoasis.com/company/maven-securities/interview)</sub>
+<sub>wso · 2018-12-24 · [source](https://www.wallstreetoasis.com/company/jump-trading/interview)</sub>
 
-**2.** `B` · new_grad · online_assessment · 2026
+**2.** `B` · internship · onsite · unknown
 
-How many combinations are there of the letters in the word "MISSISSIPPI"?
+a math problem about the probability an array is sorted after swapping the first two if they're out of order, swapping the new second and third if they're out of order, and so on until swapping the last two if they're out of order
 
-<sub>interview_review_db · 2026-02-20 · [source](https://www.wallstreetoasis.com/company/maven-securities/interview)</sub>
+<sub>wso · 2018-12-22 · [source](https://www.wallstreetoasis.com/company/jump-trading/interview)</sub>
 
-**3.** `B` · internship · phone_technical · 2026
+**3.** `B` · unknown · phone_technical · unknown
 
-a combinatorial problem about extracting different coloured cubes randomly and the probabilities for the towers they would make
+1)Can you create a linked list? Do it. 2) Let's say we want to change places of 2 nodes in linked list. Can you create a function for that.
 
-<sub>interview_review_db · 2025-11-14 · [source](https://www.wallstreetoasis.com/company/maven-securities/interview)</sub>
+<sub>wso · 2023-10-03 · [source](https://www.wallstreetoasis.com/company/jump-trading/interview)</sub>
 
-**4.** `B` · internship · phone_technical · 2025
+**4.** `B` · unknown · phone_technical · unknown
 
-You observe a symmetric random walk starting at zero. You are allowed to stop at any time, and your payoff when you stop is the position of the walk minus a cost that accumulates with each step. What stopping strategy maximizes your expected payoff?
+Suppose you sit on the road side and observe cars driving by. Assume the distribution of cars driving by is according to an exponential distribution. Now you observe a first car after sitting for x mins, a second car after sitting for y min. Given those observations, can you estimate the parameter in the distribution?
 
-<sub>interview_review_db · 2025-11-12 · [source](https://www.wallstreetoasis.com/company/maven-securities/interview)</sub>
+<sub>wso · 2018-02-15 · [source](https://www.wallstreetoasis.com/company/jump-trading/interview)</sub>
 
-**5.** `B` · internship · phone_technical · 2025
+**5.** `B` · unknown · phone_technical · unknown
 
-You quote both a bid and an ask on a product whose fair value jumps up or down randomly every second. Given that informed traders are more likely to hit your quotes when the fair value moves against you, how do you design a quoting strategy to avoid being picked off
+Suppose you backtested a trading strategy, it did very well. But in live trading, you keep losing money, what would you do?
 
-<sub>interview_review_db · 2025-11-12 · [source](https://www.wallstreetoasis.com/company/maven-securities/interview)</sub>
+<sub>wso · 2018-02-15 · [source](https://www.wallstreetoasis.com/company/jump-trading/interview)</sub>
 
-**6.** `B` · internship · phone_technical · 2025
+**6.** `B` · unknown · phone_technical · unknown
 
-You observe a sequence of coin flips, but you do not know whether the coin is fair or biased. You have a small prior belief that it may be biased. After seeing several flips that look suspicious, how would you decide whether the coin is likely biased?
+What are ensemble methods? Can you describe boosted tree methods?
 
-<sub>interview_review_db · 2025-11-12 · [source](https://www.wallstreetoasis.com/company/maven-securities/interview)</sub>
+<sub>wso · 2018-02-15 · [source](https://www.wallstreetoasis.com/company/jump-trading/interview)</sub>
 
-**7.** `B` · new_grad · phone_technical · 2022
+**7.** `C` · unknown · unknown · unknown
 
-Tell me about the current SP500 price. What will be the new price if it increases by 10%, and another 10% again. If we decrease the value by 10% and another 10% will we derive the same price as the original one?
+A bee starts at a hive. It has a 20% chance to move forward, a 50% chance to stay still, and a 30% to move backward. What percentage of the time does it spend in the hive?
 
-<sub>interview_review_db · 2022-11-02 · [source](https://www.wallstreetoasis.com/company/maven-securities/interview)</sub>
+<sub>blog · unknown · [source](https://www.efinancialcareers-canada.com/news/electronic-trading-interviews)</sub>
+
+**8.** `C` · unknown · unknown · unknown
+
+There are four balls, two black and two white. You pick two and random and flip their color from one to the other and repeat. How many times would you do this to ensure all four balls are the same color?
+
+<sub>blog · unknown · [source](https://www.efinancialcareers-canada.com/news/electronic-trading-interviews)</sub>
+
+**9.** `C` · unknown · unknown · unknown
+
+What is the probability that two people in a room full of 15 share the same birthday?
+
+<sub>blog · unknown · [source](https://www.efinancialcareers-canada.com/news/electronic-trading-interviews)</sub>
+
+
+## Five Rings  (7)
+
+**1.** `B` · internship · phone_technical · unknown
+
+A question on ordered stats. X and Y in a normal distribution. Find the distribution/expectation value of max(X, Y).
+
+<sub>wso · 2026-07-28 · [source](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)</sub>
+
+**2.** `B` · internship · phone_technical · unknown
+
+what is the maximum number of pieces you can cut a pizza using 10 straight cuts?
+
+<sub>wso · 2023-06-15 · [source](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)</sub>
+
+**3.** `B` · unknown · phone_technical · unknown
+
+How many tennis balls in a suit case?, 3^ 3.4? Confidence interval?
+
+<sub>wso · 2022-09-05 · [source](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)</sub>
+
+**4.** `B` · internship · phone_technical · unknown
+
+How many digit 7s appear in the numbers from 1 to 6000?
+
+<sub>wso · 2022-11 · [source](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview/intern-1)</sub>
+
+**5.** `B` · unknown · phone_technical · unknown
+
+How many balls in a suitcase? (given as an example of the numerous guesstimation problems, 10-15 seconds each)
+
+<sub>wso · 2019-11 · [source](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview/quant-trader-1)</sub>
+
+**6.** `B` · internship · phone_technical · unknown
+
+Recruiter 1:1: behavioral (why trading? why Five Rings?) then 10 questions each with a 30 second time limit
+
+<sub>wso · 2024-08 · [source](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview/trading-intern-13)</sub>
+
+**7.** `D` · internship · online_assessment · 2027
+
+I just got OA. It says 19 min on hackerrank, is that the same you got? I thought hackerrank was just coding not math questions
+
+<sub>reddit_thread · 2026-03-06 · [source](https://www.reddit.com/r/quantfinance/comments/1rb4s05/just_did_interview_for_five_rings_winternship_2027/)</sub>
 
 
 ## Tower Research Capital  (7)
@@ -1141,6 +899,45 @@ How many golf balls fit in the empire state building? Explain thought process an
 <sub>interview_review_site · 2013-09-15 · [source](https://www.wallstreetoasis.com/company/tower-research-capital/interview)</sub>
 
 
+## Chicago Trading Company (CTC)  (6)
+
+**1.** `B` · internship · onsite · interviewed January 2020
+
+A stick is randomly cut at 2 different points. What is the probability that the three pieces form a triangle?
+
+<sub>interview_review_site · 2020-02-26 · [source](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)</sub>
+
+**2.** `B` · unknown · phone_technical · interviewed November 2018
+
+You have 8 marbles. One of them weighs more than the 7 others. What is the minimum number of steps you need in order to determine the outlier?
+
+<sub>interview_review_site · 2019-06-04 · [source](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)</sub>
+
+**3.** `B` · internship · phone_technical · interviewed February 2018
+
+What is 5/32 expressed as a decimal. What is 7/12. What is 34*45.
+
+<sub>interview_review_site · 2018-03-13 · [source](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)</sub>
+
+**4.** `B` · internship · superday · interviewed October 2020
+
+Estimate how many windows Empire State Building has and how confident are you to your estimation.
+
+<sub>interview_review_site · 2020-11-15 · [source](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)</sub>
+
+**5.** `B` · unknown · superday · interviewed November 2017
+
+Estimate the number of barrels of oil you could fit on an aircraft carrier, number of gas stations in California.
+
+<sub>interview_review_site · 2020-04-25 · [source](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)</sub>
+
+**6.** `B` · internship · unknown · interviewed January 2020
+
+You have 27 race horses. You can race five of them at a time. You don't know what each one's time even if you race them (you only know the order in which the five horses raced ended up in). How many races do you need to make, in what order, with what horses, in order to know the top three horses overall from the pool of 27 horses? You also need to know not just which three horses these are, but their order relative to each other (who came first, second, third). Optimize your strategy to find the minimum number of races.
+
+<sub>interview_review_site · 2020-02-10 · [source](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)</sub>
+
+
 ## Marshall Wace  (6)
 
 **1.** `C` · new_grad · online_assessment · previous iterations of the Quant Associate Programme
@@ -1180,45 +977,43 @@ You are given an integer array cost where cost[i] is the cost of i th step on a 
 <sub>firm_official_pdf · unknown · [source](https://cdn.mwam.com/download/MW_Quant_Application_Guide.pdf)</sub>
 
 
-## Virtu Financial  (6)
+## Maven Securities  (6)
 
-**1.** `B` · new_grad · phone_technical · interviewed January 2026
+**1.** `B` · internship · online_assessment · 2026
 
-How to make a market/how market-making trading works
+If today is Monday, what day will it be in 80 days?
 
-<sub>interview_review_site · 2026-05-01 · [source](https://www.wallstreetoasis.com/company/virtu-financial/interview)</sub>
+<sub>interview_review_db · 2025-11-14 · [source](https://www.wallstreetoasis.com/company/maven-securities/interview)</sub>
 
-**2.** `B` · unknown · phone_technical · interviewed October 2025
+**2.** `B` · new_grad · online_assessment · 2026
 
-What is the best way to get/estimate median from given number list with some statistics?
+How many combinations are there of the letters in the word "MISSISSIPPI"?
 
-<sub>interview_review_site · 2026-01-20 · [source](https://www.wallstreetoasis.com/company/virtu-financial/interview)</sub>
+<sub>interview_review_db · 2026-02-20 · [source](https://www.wallstreetoasis.com/company/maven-securities/interview)</sub>
 
-**3.** `B` · new_grad · phone_technical · interviewed February 2025
+**3.** `B` · internship · phone_technical · 2025
 
-Some questions about financial markets. Like who are market makers? Also some brain teasers, quite easy.
+You observe a symmetric random walk starting at zero. You are allowed to stop at any time, and your payoff when you stop is the position of the walk minus a cost that accumulates with each step. What stopping strategy maximizes your expected payoff?
 
-<sub>interview_review_site · 2025-02-27 · [source](https://www.wallstreetoasis.com/company/virtu-financial/interview)</sub>
+<sub>interview_review_db · 2025-11-12 · [source](https://www.wallstreetoasis.com/company/maven-securities/interview)</sub>
 
-**4.** `B` · unknown · phone_technical · interviewed March 2025
+**4.** `B` · internship · phone_technical · 2025
 
-Length of every edge of a cube is twice as long. How much does the volume grow?
+You quote both a bid and an ask on a product whose fair value jumps up or down randomly every second. Given that informed traders are more likely to hit your quotes when the fair value moves against you, how do you design a quoting strategy to avoid being picked off
 
-<sub>interview_review_site · 2025-04-13 · [source](https://www.wallstreetoasis.com/company/virtu-financial/interview)</sub>
+<sub>interview_review_db · 2025-11-12 · [source](https://www.wallstreetoasis.com/company/maven-securities/interview)</sub>
 
-**5.** `C` · unknown · phone_technical · 2024
+**5.** `B` · internship · phone_technical · 2025
 
-a probability puzzle consisting of chances of making a basket which is a function of the fraction of baskets made in the previous n-1 shots
+You observe a sequence of coin flips, but you do not know whether the coin is fair or biased. You have a small prior belief that it may be biased. After seeing several flips that look suspicious, how would you decide whether the coin is likely biased?
 
-*Reported answer:* Standard question with some shortcut tricks.
+<sub>interview_review_db · 2025-11-12 · [source](https://www.wallstreetoasis.com/company/maven-securities/interview)</sub>
 
-<sub>interview_review_db · unknown · [source](https://www.wallstreetoasis.com/company/virtu-financial/interview/quant-research)</sub>
+**6.** `B` · new_grad · phone_technical · 2022
 
-**6.** `C` · unknown · phone_technical · 2024
+Tell me about the current SP500 price. What will be the new price if it increases by 10%, and another 10% again. If we decrease the value by 10% and another 10% will we derive the same price as the original one?
 
-a coding screen where you are asked to replicate a simulation of a game, and the biggest challenge here is making sure you walk through all the logic and edge cases
-
-<sub>interview_review_db · unknown · [source](https://www.wallstreetoasis.com/company/virtu-financial/interview/quant-research)</sub>
+<sub>interview_review_db · 2022-11-02 · [source](https://www.wallstreetoasis.com/company/maven-securities/interview)</sub>
 
 
 ## Da Vinci Derivatives  (5)
@@ -1283,6 +1078,33 @@ python 八股:1. tuple Vs. list 2. pass by reference Vs. pass by value? 3. diffe
 <sub>forum_recall_zh · unknown · [source](https://www.1point3acres.com/bbs/collection/253315)</sub>
 
 
+## Virtu Financial  (4)
+
+**1.** `B` · new_grad · phone_technical · interviewed January 2026
+
+How to make a market/how market-making trading works
+
+<sub>interview_review_site · 2026-05-01 · [source](https://www.wallstreetoasis.com/company/virtu-financial/interview)</sub>
+
+**2.** `B` · unknown · phone_technical · interviewed October 2025
+
+What is the best way to get/estimate median from given number list with some statistics?
+
+<sub>interview_review_site · 2026-01-20 · [source](https://www.wallstreetoasis.com/company/virtu-financial/interview)</sub>
+
+**3.** `B` · new_grad · phone_technical · interviewed February 2025
+
+Some questions about financial markets. Like who are market makers? Also some brain teasers, quite easy.
+
+<sub>interview_review_site · 2025-02-27 · [source](https://www.wallstreetoasis.com/company/virtu-financial/interview)</sub>
+
+**4.** `B` · unknown · phone_technical · interviewed March 2025
+
+Length of every edge of a cube is twice as long. How much does the volume grow?
+
+<sub>interview_review_site · 2025-04-13 · [source](https://www.wallstreetoasis.com/company/virtu-financial/interview)</sub>
+
+
 ## Akuna Capital  (3)
 
 **1.** `B` · unknown · phone_technical · unknown
@@ -1304,31 +1126,6 @@ I don’t remember the exact question, but it was along the lines of two separat
 <sub>wso · 2025-05-08 · [source](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview)</sub>
 
 
-## Jane Street  (3)
-
-**1.** `B` · unknown · online_assessment · unknown(标题中的 20240401 是发帖日期,不是考试季)
-
-一个盒子有 100 元钱,你和对手分别在纸上写下数字,如果数字之和小于等于 100,那么你们可以各自拿到与自己写下数字价值相同的钱,而如果数字之和大于 100 则两个人都拿不到钱。假设对手是理性的,你的最优策略是什么? Follow up:不再假设对手理性,并且将这个博弈进行 1000 遍,第一次对手说他会写 80,你会怎么办?如果游戏进行了十次,他每次都写 80,你会如何权衡? 思路或想法欢迎在留言区交流
-
-*English:* A box holds 100 yuan. You and your opponent each write down a number. If the sum is at most 100 you each receive money equal to your own number; if the sum exceeds 100 neither gets anything. Assuming the opponent is rational, what is your optimal strategy? Follow-up: dropping the rationality assumption and repeating the game 1000 times, if the opponent says at the first round that he will write 80, what do you do? If he has written 80 every time for ten rounds, how do you weigh it up?
-
-<sub>nowcoder · 2024-04-01 · [source](https://www.nowcoder.com/discuss/604265548247040000)</sub>
-
-**2.** `B` · unknown · unknown · unknown
-
-一个盒子有 100 元钱,你和对手分别在纸上写下数字,如果数字之和小于等于 100,那么你们可以各自拿到与自己写下数字价值相同的钱,而如果数字之和大于 100 则两个人都拿不到钱。假设对手是理性的,你的最优策略是什么? Follow up:不再假设对手理性,并且将这个博弈进行 1000 遍,第一次对手说他会写 80,你会怎么办?如果游戏进行了十次,他每次都写 80,你会如何权衡?
-
-*English:* A box holds 100 yuan. You and your opponent each write down a number. If the sum is at most 100 you each receive money equal to your own number; if the sum exceeds 100 neither gets anything. Assuming the opponent is rational, what is your optimal strategy? Follow-up: dropping the rationality assumption and repeating the game 1000 times, if the opponent says at the first round that he will write 80, what do you do? If he has written 80 every time for ten rounds, how do you weigh it up?
-
-<sub>nowcoder · 2024-04-01 · [source](https://www.nowcoder.com/discuss/604265548247040000)</sub>
-
-**3.** `C` · unknown · unknown · unknown
-
-A typical question is like given a game, what is the optimal strategy?
-
-<sub>glassdoor · unknown · [source](https://www.glassdoor.com/Interview/Jane-Street-Quantitative-Researcher-Interview-Questions-EI_IE255549.0,11_KO12,35.htm)</sub>
-
-
 ## Mako Global  (3)
 
 **1.** `B` · unknown · onsite · 2021
@@ -1348,42 +1145,6 @@ what's your bid and offer in the orange/apple 1by 2?
 Who out of the other candidates would you pick for this job?
 
 <sub>interview_review_db · 2024-11-26 · [source](https://www.wallstreetoasis.com/company/mako-global/interview)</sub>
-
-
-## Two Sigma  (3)
-
-**1.** `B` · internship · onsite · unknown
-
-Two Sigma QR intern final technical round: one coding, one stats and one data science round, then a round with 2-3 hiring managers
-
-<sub>wso · 2025-08 · [source](https://www.wallstreetoasis.com/company/two-sigma-investments/interview/qr-intern)</sub>
-
-**2.** `B` · unknown · phone_technical · unknown
-
-How would you make money with social media data?
-
-<sub>wso · 2024-10-04 · [source](https://www.wallstreetoasis.com/company/two-sigma-investments/interview)</sub>
-
-**3.** `B` · unknown · phone_technical · unknown
-
-How would you make money using social media data?
-
-<sub>wso · 2024-01 · [source](https://www.wallstreetoasis.com/company/two-sigma-investments/interview/researcher)</sub>
-
-
-## Balyasny Asset Management  (2)
-
-**1.** `B` · unknown · phone_technical · 2025
-
-a phone round asking probability brainteasers
-
-<sub>interview_review_db · 2025-12-27 · [source](https://www.wallstreetoasis.com/company/balyasny-asset-management/interview)</sub>
-
-**2.** `B` · internship · phone_technical · 2024
-
-You have a biased coin that lands heads 60% of the time. How can you use it to simulate a fair coin flip?
-
-<sub>interview_review_db · 2025-07-06 · [source](https://www.wallstreetoasis.com/company/balyasny-asset-management/interview)</sub>
 
 
 ## D. E. Shaw  (2)
@@ -1431,6 +1192,32 @@ How is trading with a model like being the house in a casino?
 <sub>interview_review_site · 2025-04-01 · [source](https://www.wallstreetoasis.com/company/group-one-trading-lp-0/interview)</sub>
 
 
+## Jane Street  (2)
+
+**1.** `B` · unknown · online_assessment · unknown(标题中的 20240401 是发帖日期,不是考试季)
+
+一个盒子有 100 元钱,你和对手分别在纸上写下数字,如果数字之和小于等于 100,那么你们可以各自拿到与自己写下数字价值相同的钱,而如果数字之和大于 100 则两个人都拿不到钱。假设对手是理性的,你的最优策略是什么? Follow up:不再假设对手理性,并且将这个博弈进行 1000 遍,第一次对手说他会写 80,你会怎么办?如果游戏进行了十次,他每次都写 80,你会如何权衡? 思路或想法欢迎在留言区交流
+
+*English:* A box holds 100 yuan. You and your opponent each write down a number. If the sum is at most 100 you each receive money equal to your own number; if the sum exceeds 100 neither gets anything. Assuming the opponent is rational, what is your optimal strategy? Follow-up: dropping the rationality assumption and repeating the game 1000 times, if the opponent says at the first round that he will write 80, what do you do? If he has written 80 every time for ten rounds, how do you weigh it up?
+
+<sub>nowcoder · 2024-04-01 · [source](https://www.nowcoder.com/discuss/604265548247040000)</sub>
+
+**2.** `C` · unknown · unknown · unknown
+
+A typical question is like given a game, what is the optimal strategy?
+
+<sub>glassdoor · unknown · [source](https://www.glassdoor.com/Interview/Jane-Street-Quantitative-Researcher-Interview-Questions-EI_IE255549.0,11_KO12,35.htm)</sub>
+
+
+## Balyasny Asset Management  (1)
+
+**1.** `B` · internship · phone_technical · 2024
+
+You have a biased coin that lands heads 60% of the time. How can you use it to simulate a fair coin flip?
+
+<sub>interview_review_db · 2025-07-06 · [source](https://www.wallstreetoasis.com/company/balyasny-asset-management/interview)</sub>
+
+
 ## Belvedere Trading  (1)
 
 **1.** `B` · internship · online_assessment · unknown
@@ -1458,15 +1245,6 @@ how much is th SP500 quoted in the market right now ?
 <sub>interview_review_site · 2025-02-26 · [source](https://www.wallstreetoasis.com/company/flow-traders-0/interview)</sub>
 
 
-## IMC Trading  (1)
-
-**1.** `D` · experienced · onsite · 2025
-
-Two RVs following uniform[0,1]. What's the probability of the smaller RV is less than the
-
-<sub>chat_telegram · 2025-11-01 · [source](https://t.me/usinterview/26123)</sub>
-
-
 ## Ingensoma Arbitrage  (1)
 
 **1.** `C` · unknown · phone_technical · unknown
@@ -1483,6 +1261,15 @@ Two RVs following uniform[0,1]. What's the probability of the smaller RV is less
 linear regression. How do we estimate beta. When n >> p, how to find beta?
 
 <sub>forum_recall_zh · 2026-05-01 · [source](https://www.1point3acres.com/bbs/thread-1175215-1-1.html)</sub>
+
+
+## Two Sigma  (1)
+
+**1.** `B` · unknown · phone_technical · unknown
+
+How would you make money using social media data?
+
+<sub>wso · 2024-01 · [source](https://www.wallstreetoasis.com/company/two-sigma-investments/interview/researcher)</sub>
 
 
 ## Valkyrie Trading  (1)

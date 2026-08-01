@@ -1,6 +1,6 @@
 # Quant developer / software engineering questions
 
-128 questions across 16 firms, out of the 346-question corpus.
+128 questions across 16 firms, out of the 313-question corpus.
 
 The developer and SWE tracks, a genuinely different assessment from the trading and research pipelines. This set is the largest because developer-track recall is shared far more freely, not because these firms mostly ask coding questions.
 

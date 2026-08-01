@@ -75,14 +75,25 @@ def main() -> int:
     prev = {json.loads(l)["review_id"]: json.loads(l)
             for l in open(prev_path, encoding="utf-8")} if prev_path.exists() else {}
 
-    kept, removed = [], []
+    # Carry every earlier removal forward first. review.jsonl holds only survivors, so
+    # iterating it alone would silently drop the existing audit trail on the second run.
+    removed = []
+    for rid, rec in prev.items():
+        rec = dict(rec)
+        rec["remove"] = True
+        rec.setdefault("reason", "no reason given")
+        rec.setdefault("removed_on", stamp)
+        rec["status"] = "REMOVED BY HUMAN REVIEW — was part of the shipped corpus"
+        removed.append(rec)
+
+    kept = []
     for r in rows:
         rid = r["review_id"]
-        if rid in marks or rid in prev:
-            rec = dict(prev.get(rid, r))
+        if rid in marks:
+            rec = dict(r)
             rec["remove"] = True
-            rec["reason"] = marks.get(rid) or rec.get("reason") or "no reason given"
-            rec.setdefault("removed_on", stamp)
+            rec["reason"] = marks.get(rid) or "no reason given"
+            rec["removed_on"] = stamp
             rec["status"] = "REMOVED BY HUMAN REVIEW — was part of the shipped corpus"
             removed.append(rec)
         else:
@@ -94,6 +105,28 @@ def main() -> int:
     with open(prev_path, "w", encoding="utf-8") as fh:
         for r in removed:
             fh.write(json.dumps(r, ensure_ascii=False) + "\n")
+
+    # Propagate into the corpus itself, otherwise the published question files would
+    # regenerate with the removed items still in them. REJECT is the existing exclusion
+    # marker every downstream builder already honours, and the record stays in
+    # questions.jsonl so the removal is reversible.
+    cut = {r["cluster_id"]: r for r in removed if r.get("cluster_id")}
+    qpath = HARVEST / "questions.jsonl"
+    if cut and qpath.exists():
+        qs = [json.loads(l) for l in open(qpath, encoding="utf-8") if l.strip()]
+        n = 0
+        for q in qs:
+            if q["id"] in cut and q["tier"] != "REJECT":
+                q["tier_before_review"] = q["tier"]
+                q["tier"] = "REJECT"
+                q["tier_reason"] = (
+                    f"removed by human review ({cut[q['id']]['review_id']}): "
+                    f"{cut[q['id']]['reason']}")
+                n += 1
+        with open(qpath, "w", encoding="utf-8") as fh:
+            for q in qs:
+                fh.write(json.dumps(q, ensure_ascii=False) + "\n")
+        print(f"marked REJECT in questions.jsonl : {n}")
 
     import collections
     byfirm = collections.Counter(r["firm"] for r in removed)
