@@ -1,0 +1,322 @@
+[
+  {
+    "presented_as": "v2-000",
+    "verdict": "FAKE",
+    "confidence": "high",
+    "reasoning": "Reddit post IDs are a globally monotone base-36 counter. Post id 1qm44tz = 3,786,047,567 sits between archived posts captured 2026-01-24 and 2026-01-25, so it was created in late January 2026, not the claimed 2025-10-14.",
+    "url_check": "could_not_check",
+    "decisive_evidence": "Archived posts 1qm0lr6 (captured 2026-01-24) and 1qm5uwu (captured 2026-01-25) bracket the claimed id, placing it ~102 days after its claimed post date."
+  },
+  {
+    "presented_as": "v2-001",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "The GeeksforGeeks article loads and contains the magnets puzzle and the surrounding 'Convert BST to min-heap' / 'Median of Stream' list word for word.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "100% verbatim coverage of the source quote on the live page, whose JSON-LD datePublished is 2020-08-07, exactly the claimed post_date."
+  },
+  {
+    "presented_as": "v2-002",
+    "verdict": "FAKE",
+    "confidence": "high",
+    "reasoning": "The claimed Wall Street Oasis interview-insight URL returns 404. DRW's real insight for that job title is /interview/quant-trading-intern-0; the live DRW index does list a Quant Trading Intern entry (Sept 2025) but its Interview Questions field is about market making and Fermi estimation, not a two-dice product game.",
+    "url_check": "url_not_found",
+    "decisive_evidence": "https://www.wallstreetoasis.com/company/drw/interview/quant-trading-intern-2026 returns HTTP 404 while .../quant-trading-intern-0 exists."
+  },
+  {
+    "presented_as": "v2-003",
+    "verdict": "FAKE",
+    "confidence": "high",
+    "reasoning": "Post id 1sh2pqa corresponds to April 2026 on Reddit's monotone id counter, not the claimed 2025-10-09. The described format (25 sequences at ~30 seconds each) also conflicts with Optiver's documented 26-questions-in-25-minutes sequences section.",
+    "url_check": "could_not_check",
+    "decisive_evidence": "The immediately preceding archived id 1sh1dmf is the r/wallstreetbets thread titled 'what are your moves tomorrow april 10 2026', dating this id region to 2026-04-09."
+  },
+  {
+    "presented_as": "v2-004",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "raw.githubusercontent.com serves SarthakVerma18/Intern-Guidance/QuantSDE_GODtips.md, whose Optiver technical-interview section contains the multi-exchange trading-system design prompt exactly as quoted, inside the same fenced code block.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "100% verbatim match of the quote, including the surrounding narrative about the interviewer recognising the candidate from the previous day's group discussion."
+  },
+  {
+    "presented_as": "v2-005",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "The Leader-board/OA-and-Interviews file for Virtu Quantitative Trading Analyst contains the clock-hands brainteaser and its follow-up verbatim, including the HTML blockquote markup reproduced in the quote.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "The file header records 'Notified of failure: December 10, 2021', matching the claimed post_date of 2021-12-10."
+  },
+  {
+    "presented_as": "v2-006",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "SmthnNotTaken/Interns-IITM/IMC/README.md is a short hardware-role writeup whose entire Interview section is the quoted text, including the original misspelling 'weigths'.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "The live file reproduces the quote character for character, typo included."
+  },
+  {
+    "presented_as": "v2-007",
+    "verdict": "FAKE",
+    "confidence": "high",
+    "reasoning": "1point3acres thread ids are sequential. Thread 1155718 is an archived real thread created 2025-11-24, so thread 1158833 (a higher id) must postdate it, yet this item claims 2025-11-13. No Wayback capture of the claimed thread exists either.",
+    "url_check": "could_not_check",
+    "decisive_evidence": "A lower-numbered thread (1155718) is provably from 2025-11-24, making a 2025-11-13 date impossible for thread 1158833."
+  },
+  {
+    "presented_as": "v2-008",
+    "verdict": "FAKE",
+    "confidence": "high",
+    "reasoning": "Post id 1rr82kd falls in the March 2026 band of Reddit's monotone id counter, five months after the claimed 2025-10-30.",
+    "url_check": "could_not_check",
+    "decisive_evidence": "The adjacent lower archived id 1rr4in0 is the r/wallstreetbets thread 'what are your moves tomorrow march 12 2026', pinning this id region to 2026-03-11."
+  },
+  {
+    "presented_as": "v2-009",
+    "verdict": "FAKE",
+    "confidence": "high",
+    "reasoning": "The claimed WSO URL 404s, and no interview-insight slug anywhere on wallstreetoasis.com contains 'superday' - WSO slugs are auto-generated from the job title with small numeric dedupe suffixes (SIG's real ones are analyst-2, intern-7 through intern-11, equity-research-intern-0 and similar).",
+    "url_check": "url_not_found",
+    "decisive_evidence": "HTTP 404 on the URL, plus a domain-wide Wayback scan of wallstreetoasis.com returning zero /interview/ slugs containing 'superday'."
+  },
+  {
+    "presented_as": "v2-010",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "The GeeksforGeeks Dolat Capital quantitative analyst writeup loads and contains the two-consecutive-sixes question and the trailing 'Note : This is based on purely what I can recall' verbatim.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "Page datePublished is 2020-08-04, matching the claimed post_date exactly, with 100% quote coverage."
+  },
+  {
+    "presented_as": "v2-011",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "SmthnNotTaken/Interns-IITM/Graviton/README.md opens with exactly the quoted Test section and Q1, the 200-people-and-markets combinatorics problem, followed by a collapsible answer of 10 markets.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "The quoted text is the literal opening of the live file."
+  },
+  {
+    "presented_as": "v2-012",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "The GeeksforGeeks AQR software engineer writeup contains the coding-question list including the {area, acre, bat, ball, Amsterdam, am, AmsterdaM} problem verbatim.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "Page datePublished is 2024-06-17, matching the claimed post_date, with 100% quote coverage."
+  },
+  {
+    "presented_as": "v2-013",
+    "verdict": "FAKE",
+    "confidence": "high",
+    "reasoning": "The claimed URL 404s, but Old Mission Capital's real insight at the un-suffixed slug /interview/quant-trading-intern does exist and is a November 2018 Chicago intern report about a coding-and-maths assessment, with no coin-flip conditional-expectation question. The claimed URL is that real slug with '-oa' appended.",
+    "url_check": "url_not_found",
+    "decisive_evidence": "HTTP 404 on .../quant-trading-intern-oa while .../quant-trading-intern loads a different, genuine 2018 insight."
+  },
+  {
+    "presented_as": "v2-014",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "The Leader-board/OA-and-Interviews Tibra Quant Trade Developer file contains the largest-inscribed-square question and the candidate's admission of solving for a rectangle (37.5 instead of 36) word for word.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "The file's own header line 'Phone interview: May 23rd, 2023' matches the claimed post_date of 2023-05-23."
+  },
+  {
+    "presented_as": "v2-015",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "The Business Insider first-person essay 'Former Quant Trading Intern Shares What It Was Like at HRT and SIG' loads and contains the four-cards trading game passage verbatim.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "Article datePublished is 2023-12-12, matching the claimed post_date, with the quote reproduced exactly in the body."
+  },
+  {
+    "presented_as": "v2-016",
+    "verdict": "FAKE",
+    "confidence": "high",
+    "reasoning": "1point3acres thread 1162290 is archived and real, but it is titled '普通PhD转码半年失败总结' - a post about a PhD's failed six-month transition into software - in the non-interview job-hunting board, with activity dated January 2026. It has nothing to do with a Citadel Securities quant research OA.",
+    "url_check": "url_exists_quote_not_found",
+    "decisive_evidence": "The Wayback snapshot of the exact URL shows a completely different thread on a different board, and its id ordering places it after thread 1155718 (2025-11-24), ruling out the claimed 2025-09-27."
+  },
+  {
+    "presented_as": "v2-017",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "The GeeksforGeeks Dolat Capital Set 1 on-campus writeup contains the constant-time linked-list-with-max ADT question and the '140 students applied' framing verbatim.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "Page datePublished is 2015-10-04, matching the claimed post_date, with 100% quote coverage."
+  },
+  {
+    "presented_as": "v2-018",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "The Quora question page renders and the top answer reproduces the quoted text exactly, including the 'Agree with Eugene Chen' opening, the 2012 interview framing, the three do-overs die game, and the closing complaint about being dinged in round four despite solving 3/4.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "Full verbatim answer retrieved from the live Quora URL; the die-with-do-overs question is independently attested as a Jane Street question in a 2009 interview-notes blog and QuantNet threads."
+  },
+  {
+    "presented_as": "v2-019",
+    "verdict": "FAKE",
+    "confidence": "high",
+    "reasoning": "The Blind post does not exist. Real Blind posts return post-specific Open Graph metadata; this URL returns the site's generic fallback, byte-identical to what a deliberately nonsense Blind URL returns. Its id is also mixed case, whereas real Blind post ids are lowercase.",
+    "url_check": "url_not_found",
+    "decisive_evidence": "og:title/og:url come back as the generic 'Blind - Anonymous and Professional Community' and https://www.teamblind.com, exactly as for a control URL I invented, while genuine posts such as two-sigma-quant-research-interview-asyhkqpz return their own title."
+  },
+  {
+    "presented_as": "v2-020",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "The Graviton section of SarthakVerma18/Intern-Guidance/QuantSDE_GODtips.md records a second-round senior-quant interview with exactly one question, the two-pile coin splitting game, quoted verbatim inside a fenced block.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "100% verbatim match of the quote in the live raw file."
+  },
+  {
+    "presented_as": "v2-021",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "The GeeksforGeeks JP Morgan quantitative and research analysis writeup contains the dartboard expected-distance question and the interviewer's follow-up verbatim, grammatical slips included.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "Page datePublished is 2020-09-28, matching the claimed post_date, with 100% quote coverage."
+  },
+  {
+    "presented_as": "v2-022",
+    "verdict": "FAKE",
+    "confidence": "high",
+    "reasoning": "1point3acres thread ids are sequential, and thread 1149006 is an archived real thread created 2025-10-09. Thread 1143008 has a lower id so it must predate that, yet this item claims 2025-10-21. The quoted 17-questions-in-an-hour format is genuine SIG detail attached to an impossible URL.",
+    "url_check": "could_not_check",
+    "decisive_evidence": "A higher-numbered thread (1149006) is provably from 2025-10-09, making a 2025-10-21 date impossible for the lower-numbered thread 1143008."
+  },
+  {
+    "presented_as": "v2-023",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "SmthnNotTaken/Interns-IITM/Optiver/README.md contains this as Q2 of the market-making round, with the collapsible answer 14.7 and the harder follow-up about seeing every face and the number 6 at least twice, exactly as quoted.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "The quoted block including the nested details/summary HTML is present verbatim in the live file."
+  },
+  {
+    "presented_as": "v2-024",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "The GeeksforGeeks AlphaGrep Securities writeup contains the palaces-and-tunnels HackerRank question and the DFS-connectivity note verbatim.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "Page datePublished is 2020-01-21, matching the claimed post_date, with 100% quote coverage."
+  },
+  {
+    "presented_as": "v2-025",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "The GeeksforGeeks Tower Research Set 2 writeup contains the pipelining/branch-prediction item followed immediately by the deck-of-cards probability question and the 'Pro Tip' line, exactly as quoted.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "Page datePublished is 2017-12-05, matching the claimed post_date, with 100% quote coverage."
+  },
+  {
+    "presented_as": "v2-026",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "The IMC section of SarthakVerma18/Intern-Guidance/QuantSDE_GODtips.md describes a 105-minute two-question OA whose first question is the a/b-steps-with-one-halving dynamic programming problem, quoted verbatim including the follow-on graph question.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "100% verbatim match of the quote in the live raw file, backticks and all."
+  },
+  {
+    "presented_as": "v2-027",
+    "verdict": "FAKE",
+    "confidence": "high",
+    "reasoning": "Post id 1sk9024 belongs to the April 2026 band of Reddit's id counter, roughly six months after the claimed 2025-10-02.",
+    "url_check": "could_not_check",
+    "decisive_evidence": "Nearest archived neighbours 1sjdpnv (captured 2026-04-12) and 1t0303a (captured 2026-04-30) bracket the id, placing it ~192 days after the claimed date."
+  },
+  {
+    "presented_as": "v2-028",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "SarthakVerma18/Intern-Guidance/Optiver_trading.md describes the group-discussion commodity-conversion exercise with the 4 Gold to 3 Platinum example and the 6 / 100 / 1 million gold escalation, verbatim including the parenthetical about two forgotten questions.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "The quote reproduces the live file exactly; the only slippage is the item labelling the round trading_game where the source calls it a group discussion."
+  },
+  {
+    "presented_as": "v2-029",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "The GeeksforGeeks Tower Research telephonic internship writeup opens with the research-project question followed by the O(1)-space reservoir-sampling problem, exactly as quoted.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "Page datePublished is 2014-08-28, matching the claimed post_date, with 100% quote coverage."
+  },
+  {
+    "presented_as": "v2-030",
+    "verdict": "REAL",
+    "confidence": "high",
+    "reasoning": "The GeeksforGeeks JP Morgan quantitative researcher writeup contains the expected-number-of-HH question, the interviewer's indicator-variable hint, and the remark about later finding it on Stack Exchange, verbatim.",
+    "url_check": "url_and_quote_confirmed",
+    "decisive_evidence": "Page datePublished is 2021-12-30, matching the claimed post_date, with 100% quote coverage."
+  },
+  {
+    "presented_as": "v2-031",
+    "verdict": "FAKE",
+    "confidence": "high",
+    "reasoning": "The claimed WSO URL 404s. Jane Street's real interview-insight slugs are job titles with numeric suffixes (quant-trader-intern-1, quantitative-trading-4, intern-20 through intern-23); no WSO slug anywhere encodes an interview round such as 'final'.",
+    "url_check": "url_not_found",
+    "decisive_evidence": "HTTP 404 on the URL, plus a domain-wide Wayback scan of wallstreetoasis.com returning zero /interview/ slugs ending in '-final'."
+  },
+  {
+    "presented_as": "v2-032",
+    "verdict": "FAKE",
+    "confidence": "high",
+    "reasoning": "1point3acres thread 1155718 is archived and real, but it is titled '中厂 Staff 能去大厂干 Staff 吗？' - a workplace-board question about moving between company tiers as a Staff engineer - created 2025-11-24. It is not a Jump Trading quant research OA post, and it was archived 2025-11-26, before the claimed post date.",
+    "url_check": "url_exists_quote_not_found",
+    "decisive_evidence": "The Wayback snapshot of the exact URL shows an unrelated thread, and its capture on 2025-11-26 predates the claimed post_date of 2025-12-11."
+  },
+  {
+    "presented_as": "v2-033",
+    "verdict": "FAKE",
+    "confidence": "high",
+    "reasoning": "LeetCode discuss ids are sequential. Id 4482910 falls in the band that was live in early 2024 (4506246 was archived 2024-03-15, 3974587 in 2023-09), so it cannot be a 2025-11-02 post titled for a 2026 OA. The claimed URL has no archive capture.",
+    "url_check": "could_not_check",
+    "decisive_evidence": "Neighbouring discuss id 4506246 was already archived on 2024-03-15, dating id 4482910 to roughly two years before the claimed post date."
+  },
+  {
+    "presented_as": "v2-034",
+    "verdict": "FAKE",
+    "confidence": "medium",
+    "reasoning": "The content matches SIG's genuine 17-questions-in-60-minutes assessment, but the post id is inconsistent with the claimed date. Dozens of archived posts with ids in the 1p0* range were first captured on 2025-11-18, so the counter stood near 3.689e9 that day, while 1p4mz7k is 3.696e9 - about 6.7 million ids, or five days of Reddit volume, later.",
+    "url_check": "could_not_check",
+    "decisive_evidence": "The immediately adjacent post 1p4p6us carries a confirmed created-timestamp of 2025-11-23T15:17:33Z and sits only 103,220 ids above 1p4mz7k, dating the claimed post to 2025-11-23 rather than 2025-11-18."
+  },
+  {
+    "presented_as": "v2-035",
+    "verdict": "FAKE",
+    "confidence": "high",
+    "reasoning": "The Blind post does not exist. The URL returns Blind's generic fallback metadata rather than post-specific Open Graph tags, matching the behaviour of an invented control URL, and its mixed-case id violates the lowercase id format of real Blind posts.",
+    "url_check": "url_not_found",
+    "decisive_evidence": "og:url resolves to https://www.teamblind.com with the generic site title, identical to a nonsense control, whereas genuine posts return their own title and canonical URL."
+  },
+  {
+    "presented_as": "v2-036",
+    "verdict": "FAKE",
+    "confidence": "medium",
+    "reasoning": "Nowcoder discuss ids are monotone snowflake ids. Several posts with ids strictly larger than 412889301244039168 were already archived on 2022-10-25, so this id must belong to a post from around 2022, not the claimed 2025-09-19. Nowcoder serves an identical client-rendered shell for real and nonexistent ids, so the live 200 response carries no information.",
+    "url_check": "could_not_check",
+    "decisive_evidence": "Archived nowcoder posts 413252428064215040, 413480095216689152 and 413708239324434432 all have higher ids yet were captured on 2022-10-25."
+  },
+  {
+    "presented_as": "v2-037",
+    "verdict": "FAKE",
+    "confidence": "high",
+    "reasoning": "Post id 1u2p8mq belongs to the June 2026 band of Reddit's id counter, nearly six months after the claimed 2025-12-19.",
+    "url_check": "could_not_check",
+    "decisive_evidence": "The adjacent higher archived id 1u2uqpp is the r/wallstreetbets 'daily discussion thread for june 11 2026', pinning this id region to 2026-06-11."
+  },
+  {
+    "presented_as": "v2-038",
+    "verdict": "FAKE",
+    "confidence": "high",
+    "reasoning": "1point3acres thread 1149006 is archived and real, but it is a graduate-admissions advertisement titled '德州大学大河谷分校计算机科学现招收博士研究生', posted 2025-10-09 on the admissions board. It is not a Five Rings OA post and the date does not match the claimed 2025-09-15.",
+    "url_check": "url_exists_quote_not_found",
+    "decisive_evidence": "The Wayback snapshot of the exact URL shows a UTRGV PhD recruitment ad with an original post timestamp of 2025-10-09 18:25."
+  },
+  {
+    "presented_as": "v2-039",
+    "verdict": "FAKE",
+    "confidence": "high",
+    "reasoning": "Post id 1t9k4xz belongs to the May 2026 band of Reddit's id counter, roughly 109 days after the claimed 2026-01-22.",
+    "url_check": "could_not_check",
+    "decisive_evidence": "The adjacent lower archived id 1t9h6cr is the r/wallstreetbets thread 'what are your moves tomorrow may 11 2026', pinning this id region to 2026-05-10."
+  }
+]

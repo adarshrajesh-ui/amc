@@ -1,0 +1,35 @@
+page 5: 2038040 bytes, 0 hits (0 new), 0 total
+page 6: 56429 bytes, 0 hits (0 new), 0 total
+page 7: 56429 bytes, 0 hits (0 new), 0 total
+page 8: 56429 bytes, 0 hits (0 new), 0 total
+page 9: 56607 bytes, 0 hits (0 new), 0 total
+page 10: 56436 bytes, 0 hits (0 new), 0 total
+page 11: 56435 bytes, 0 hits (0 new), 0 total
+page 12: 56436 bytes, 0 hits (0 new), 0 total
+page 13: 56436 bytes, 0 hits (0 new), 0 total
+page 14: 56436 bytes, 0 hits (0 new), 0 total
+page 15: 56436 bytes, 0 hits (0 new), 0 total
+page 16: 56436 bytes, 0 hits (0 new), 0 total
+page 17: 56436 bytes, 0 hits (0 new), 0 total
+Traceback (most recent call last):
+  File "/workspace/harvest/wso_sitemap.py", line 57, in <module>
+    main()
+  File "/workspace/harvest/wso_sitemap.py", line 41, in main
+    body = jina("https://www.wallstreetoasis.com/sitemap.xml?page=%d" % page)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/harvest/wso_sitemap.py", line 25, in jina
+    p = subprocess.run(["curl", "-sL", "--max-time", "90", "-A", "Mozilla/5.0",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 2115, in _communicate
+    ready = selector.select(timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

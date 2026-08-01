@@ -1,0 +1,421 @@
+#!/usr/bin/env python3
+"""p20: 1point3acres threads reached through WebSearch highlight blocks.
+
+1point3acres sits behind Cloudflare for this host — plain curl, r.jina.ai and WebFetch
+all return the "Performing security verification" interstitial, verified again this
+session against thread-1168005. What does get through is the search engine's highlight
+block, which reproduces long verbatim runs of the post body. Every quote below was
+copied out of such a block, so each record is snippet_only / websearch_snippet, matching
+the 49 1point3acres records already in the set.
+
+Two hazards shaped how these were written:
+  * Highlight blocks elide with "..." between fragments. Only contiguous runs are
+    quoted; where a run ended mid-sentence the quote stops there rather than being
+    stitched across the gap.
+  * 1point3acres hides the back half of most 面经 behind a 188-point paywall, so the
+    recalls are genuinely truncated at source. That truncation is recorded in `doubt`
+    rather than being papered over.
+"""
+import json
+import os
+
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "p20_1p3a_new.jsonl")
+rows = []
+
+BLOCKED = ("1point3acres answers this host with a Cloudflare challenge, so the quote is the "
+           "search engine's highlight of the page rather than bytes fetched here. ")
+PAYWALL = ("The thread's second half sits behind the forum's 188-point paywall, so the recall "
+           "is cut off mid-sentence at source. ")
+
+
+def add(**kw):
+    rec = {
+        "firm": None, "role_track": "unknown", "level": "unknown", "cycle": "unknown",
+        "office": "unknown", "round": "unknown", "round_name": None, "platform": "unknown",
+        "section_context": None, "question_type": "other", "question_text": None,
+        "question_text_en": None, "reported_answer": None, "source_url": None,
+        "source_type": "1point3acres", "source_quote": None, "source_language": "mixed",
+        "post_date": "unknown", "access": "snippet_only", "retrieval_method": "websearch_snippet",
+        "poster_context": None, "doubt": None,
+    }
+    rec.update(kw)
+    rows.append(rec)
+
+
+# ---------------------------------------------------------------- HRT Algo Dev onsite
+U = "https://www.1point3acres.com/bbs/thread-1168005-1-1.html"
+P = ("Anonymous OP of 'HRT Algo Dev Summer Intern Onsite 面经', self-described 美本学生 "
+     "(US undergraduate), tagged 2026(7-9月) 码农类General 本科 实习@hudson-river-trading - "
+     "内推 - Onsite | Neutral / Hard | Fail; says the onsite was 去年大概10-11月份 and offers "
+     "'如果有需要可以透露前两轮的题目'")
+
+add(firm="Hudson River Trading", role_track="quant_developer", level="internship",
+    cycle="Summer 2026", office="unknown", round="onsite",
+    round_name="onsite有四轮，分别是programming, data analysis, system design, and math",
+    section_context="四轮，每轮面试都是1个小时，上午下午各两场", question_type="other",
+    question_text=("onsite有四轮，分别是programming, data analysis, system design, and math."),
+    question_text_en=("The onsite had four rounds: programming, data analysis, system design, "
+                      "and math."),
+    source_url=U, source_language="mixed", post_date="2026-07",
+    source_quote="onsite有四轮，分别是programming, data analysis, system design, and math.",
+    poster_context=P,
+    doubt=(BLOCKED + "This records the shape of the loop, not a question — the poster stops at "
+           "'programming轮的面试内容是' exactly where the paywall starts, so what was actually "
+           "asked in each round is not in the visible text."))
+
+add(firm="Hudson River Trading", role_track="quant_developer", level="internship",
+    cycle="Summer 2026", office="unknown", round="phone_technical",
+    round_name="两轮数学online interview", section_context="先经过了一轮代码OA和两轮数学online interview",
+    question_type="probability",
+    question_text=("数学考一些概率和组合的问题，要对Central Limit Theorem还有一些基础概率知识掌握"
+                   "比较好。"),
+    question_text_en=("The maths rounds asked some probability and combinatorics problems; you "
+                      "need a good grasp of the Central Limit Theorem and other basic probability."),
+    source_url=U, source_language="mixed", post_date="2026-07",
+    source_quote=("美本学生，先经过了一轮代码OA和两轮数学online interview来到onsite。数学考一些概率和"
+                  "组合的问题，要对Central Limit Theorem还有一些基础概率知识掌握比较好。"),
+    poster_context=P,
+    doubt=(BLOCKED + "Names the topics of the two maths screens rather than a specific problem. "
+           "The Central Limit Theorem detail is specific enough to be a real memory, but a "
+           "topic list is also the easiest thing to write without having sat the interview."))
+
+
+# ---------------------------------------------------------------- Jump QR intern, full loop
+U = "https://www.1point3acres.com/bbs/thread-1026654-1-1.html"
+P = ("Anonymous OP of 'jump trading - QR intern 全集 挂经' (a 挂经, i.e. a rejection writeup), "
+     "9 replies; says results came within a week of each round and closes '一旦到了最后面，"
+     "标准会非常严格'")
+
+add(firm="Jump Trading", role_track="quant_researcher", level="internship", cycle="unknown",
+    office="Chicago", round="phone_technical", round_name="第二轮是coding + trading strategy",
+    section_context="他家一共三轮，没有OA", question_type="poker_game_theory",
+    question_text=("第二轮是coding + trading strategy. 考了一个game，两个player，怎么赢的策略， "
+                   "然后算各种值"),
+    question_text_en=("Round two was coding plus trading strategy. They asked about a game with "
+                      "two players — the strategy for how to win, and then computing various "
+                      "values."),
+    source_url=U, source_language="mixed", post_date="unknown",
+    source_quote=("他家一共三轮，没有OA，整体来说move 的非常快 第一轮是HR 面试，聊了聊背景然后聊了聊"
+                  "芝加哥 第二轮是coding + trading strategy. 考了一个game，两个player，怎么赢的策略，"
+                  " 然后算各种值，答得比较一般，但是也都磕磕绊绊答出来了，给过了。"),
+    poster_context=P,
+    doubt=(BLOCKED + "The two-player game is described only by its shape — the poster never says "
+           "which game, so the record cannot be checked against any specific problem."))
+
+add(firm="Jump Trading", role_track="quant_researcher", level="internship", cycle="unknown",
+    office="Chicago", round="onsite", round_name="第三轮是final 4个小时左右",
+    section_context="final round, about four hours", question_type="probability",
+    question_text=("第一轮：一个图的题，然后有一种方法作出阴影部分，然后算这个掉落到这个范围的概率，"),
+    question_text_en=("First round: a diagram problem — there is a way of constructing the shaded "
+                      "region, and then you compute the probability of landing in that range."),
+    source_url=U, source_language="mixed", post_date="unknown",
+    source_quote=("第三轮是final 4个小时左右 第一轮：一个图的题，然后有一种方法作出阴影部分，然后算"
+                  "这个掉落到这个范围的概率，"),
+    poster_context=P,
+    doubt=(BLOCKED + PAYWALL + "The quote breaks off at the paywall mid-question, so the geometry "
+           "that defines the shaded region is missing and the problem is not reconstructable."))
+
+
+# ---------------------------------------------------------------- Jump QR intern phone screen
+U = "https://www.1point3acres.com/bbs/thread-933668-1-1.html"
+UC = "https://www.1point3acres.com/bbs/collection/241722"
+P = ("Anonymous OP of 'Jump Trading QR Intern电面' in the 数科面经 (data-science interview) "
+     "section, 20 replies, opening '跪经攒人品' — a rejection post written to earn forum karma; "
+     "the reply thread argues over E[X^2] and the uniform variance (b-a)^2/12 for question 2")
+
+add(firm="Jump Trading", role_track="quant_researcher", level="internship", cycle="unknown",
+    office="unknown", round="phone_technical", round_name="电面", platform="unknown",
+    section_context="two questions, both to be coded up; 给的时间比较少",
+    question_type="coding_algorithms",
+    question_text="leetcode valid sudoku， 要写出来，给的时间比较少",
+    question_text_en=("LeetCode Valid Sudoku — you have to actually write it out, and not much "
+                      "time is given."),
+    source_url=U, source_language="mixed", post_date="unknown",
+    source_quote="leetcode valid sudoku， 要写出来，给的时间比较少",
+    poster_context=P,
+    doubt=(BLOCKED + "A named LeetCode problem is the easiest kind of recall to invent, though "
+           "the surrounding thread argues in detail about the second question's maths, which a "
+           "fabricated post would not sustain."))
+
+add(firm="Jump Trading", role_track="quant_researcher", level="internship", cycle="unknown",
+    office="unknown", round="phone_technical", round_name="电面",
+    section_context="second of two phone-screen questions", question_type="probability",
+    question_text=("在[0,1] 区间上randomly sample nested intervals，每个nested interval长度都是"
+                   "上一层interval"),
+    question_text_en=("On the interval [0,1] randomly sample nested intervals, where each nested "
+                      "interval's length is [a fraction of] the previous level's interval"),
+    source_url=UC, source_language="mixed", post_date="unknown",
+    source_quote=("跪经攒人品，1. leetcode valid sudoku， 要写出来，给的时间比较少2. 在[0,1] "
+                  "区间上randomly sample nested intervals，每个nested interval长度都是上一层interval"),
+    poster_context=P + "; quoted here from the 'Jump trading' 淘帖 collection page that reprints it",
+    doubt=(BLOCKED + PAYWALL + "The question text is cut off exactly where the nesting rule would "
+           "be stated, so the distribution is unknown. The replies computing E[X^2] via the law of "
+           "total expectation and rescaling [x, x+0.5] onto [0,1] suggest each level is uniform on "
+           "the previous interval, but that is the commenters' reading, not the poster's words. "
+           "Cited to the 淘帖 collection page because that is the rendering this run read."))
+
+add(firm="Jump Trading", role_track="quant_researcher", level="internship", cycle="unknown",
+    office="unknown", round="phone_technical", round_name="电面",
+    section_context="also had to be written out", question_type="coding_algorithms",
+    question_text="2kth node in a singly linked list， 同样要写出来",
+    question_text_en="the 2k-th node in a singly linked list — also has to be written out",
+    source_url=U, source_language="mixed", post_date="unknown",
+    source_quote="2kth node in a singly linked list， 同样要写出来",
+    poster_context=P,
+    doubt=(BLOCKED + "The highlight begins mid-word ('...d 2kth node'), so the verb — most likely "
+           "'find' — is inferred; the quote is trimmed back to the part that is certainly on the "
+           "page, and whether the index is from the head or the tail is not visible."))
+
+
+# ---------------------------------------------------------------- Jump SWE intern OA
+U = "https://www.1point3acres.com/bbs/thread-1023934-1-1.html"
+P = "Anonymous OP of 'JumpTrading SWE intern OA', posting the OA problem statements near-verbatim"
+
+add(firm="Jump Trading", role_track="quant_developer", level="internship", cycle="unknown",
+    office="unknown", round="online_assessment", round_name="SWE intern OA",
+    section_context="one of the OA problems, given as a spec with numbered requirements",
+    question_type="coding_algorithms",
+    question_text=("Implement a users endpoint against a written spec: return status code 400 if "
+                   "age is missing; 400 if age is not a number or the name is not a string; 400 "
+                   "if name is longer than 32 characters."),
+    question_text_en=None,
+    source_url=U, source_language="en", post_date="unknown",
+    source_quote="return status code 400 if name is longer than 32 characters;",
+    poster_context=P,
+    doubt=("The highlight block elides heavily through this spec, so only one requirement line "
+           "survives as a contiguous run; the rest of question_text is assembled from fragments "
+           "the highlight showed separately and should be treated as the gist, not the wording. "
+           + BLOCKED))
+
+add(firm="Jump Trading", role_track="quant_developer", level="internship", cycle="unknown",
+    office="unknown", round="online_assessment", round_name="SWE intern OA",
+    section_context=("second OA problem: parse fixed-width `ls`-style records with perm, owner, "
+                     "size, date and name columns"),
+    question_type="coding_algorithms",
+    question_text=("Column owner has length 6 and contains a string representing the name of the "
+                   "user who created the file. The name is case sensitive and aligned to the left"),
+    question_text_en=None,
+    source_url=U, source_language="en", post_date="unknown",
+    source_quote=("Column owner has length 6 and contains a string representing the name of"),
+    poster_context=P,
+    doubt=("Only a short contiguous run of this fixed-width parsing spec survives the highlight's "
+           "elisions. The filter conditions the highlight showed separately — executable files, "
+           "owner 'admin', a size bound — are omitted from the quote because the numbers around "
+           "them were broken by ellipses and I will not reconstruct them. " + BLOCKED))
+
+
+# ---------------------------------------------------------------- Jump intern onsite
+U = "https://www.1point3acres.com/bbs/thread-942280-1-1.html"
+
+add(firm="Jump Trading", role_track="quant_developer", level="internship", cycle="Summer 2023",
+    office="unknown", round="onsite", round_name="Onsite 视频面试",
+    section_context="Jump Trading Intern Onsite 问了两个题目", question_type="coding_algorithms",
+    question_text=("第一题的operations有可能是三个吗？或者多个每个只能用一次么，还是所有list的数字"
+                   "都可以用任意这四个里面的operation combine？"),
+    question_text_en=("Could the first question's operations be three? Or several, each usable "
+                      "only once? Or can all the numbers in the list be combined using any of "
+                      "these four operations?"),
+    source_url=U, source_language="mixed", post_date="2022-11",
+    source_quote=("第一题的operations有可能是三个吗？或者多个每个只能用一次么，还是所有list的数字都"
+                  "可以用任意这四个里面的operation combine？"),
+    poster_context=("Reply on 'Jump Trading Final面经 Intern Summer 2023', a thread tagged "
+                    "2022(4-6月) 码农类General 本科 实习@jumptrading - Other - 技术电面 Onsite "
+                    "视频面试 | Positive / Average | Pass | 应届毕业生 whose OP wrote 'Jump "
+                    "Trading Intern Onsite 问了两个题目'"),
+    doubt=(BLOCKED + "This is a commenter's clarifying question about the first onsite problem, "
+           "not the problem statement — it establishes that the problem combined numbers from a "
+           "list using four operations, and nothing more. The OP's own text is paywalled."))
+
+
+# ---------------------------------------------------------------- Five Rings OA, four threads
+FR_P = "Anonymous poster in the 一亩三分地 fiverings 面经 board"
+
+U = "https://www.1point3acres.com/bbs/thread-1147692-1-1.html"
+add(firm="Five Rings", role_track="quant_trader", level="internship", cycle="unknown",
+    office="unknown", round="online_assessment", round_name="qt intern OA",
+    section_context="17min 17道题，一道题限时一分钟，开摄像头，不让用计算器",
+    question_type="mental_math_speed",
+    question_text=("17min 17道题（写15题但是两题都是两小问），一道题限时一分钟，开摄像头，不让用计算器"),
+    question_text_en=("17 questions in 17 minutes (15 written, two of them with two parts), one "
+                      "minute per question, webcam on, no calculator allowed."),
+    source_url=U, source_language="mixed", post_date="unknown",
+    source_quote=("17min 17道题（写15题但是两题都是两小问），一道题限时一分钟，开摄像头，不让用计算器"),
+    poster_context=FR_P + " titled 'Five rings qt intern OA 求大米', 0 replies, opening 新人求大米",
+    doubt=(BLOCKED + "Format detail rather than a question. The per-question minute and the "
+           "webcam requirement match other Five Rings recalls in this set, which cuts both ways: "
+           "consistent, but also the part that is easiest to copy from another post."))
+
+add(firm="Five Rings", role_track="quant_trader", level="internship", cycle="unknown",
+    office="unknown", round="online_assessment", round_name="qt intern OA",
+    section_context="one of 17 one-minute questions", question_type="other",
+    question_text="给三个坐标点求三角形面积",
+    question_text_en="Given three coordinate points, find the area of the triangle.",
+    source_url=U, source_language="zh", post_date="unknown",
+    source_quote="大概都是一些计算，还能记起来的有: 给三个坐标点求三角形面积（这个很容易",
+    poster_context=FR_P + " titled 'Five rings qt intern OA 求大米'",
+    doubt=(BLOCKED + "The poster is listing what they could still remember rather than "
+           "reproducing the prompt, so the coordinates themselves are gone and only the problem "
+           "type survives."))
+
+add(firm="Five Rings", role_track="quant_trader", level="internship", cycle="unknown",
+    office="unknown", round="online_assessment", round_name="qt intern OA",
+    section_context="one of 17 one-minute questions", question_type="other",
+    question_text="求一个函数的那段的长度",
+    question_text_en="find the length of that segment of a function",
+    source_url=U, source_language="zh", post_date="unknown",
+    source_quote="求一个函数的那段的长度（但是我懒的算了直接估了一个，感觉真的老老",
+    poster_context=FR_P + " titled 'Five rings qt intern OA 求大米'",
+    doubt=(BLOCKED + "Which function, and over what interval, is not stated — the poster admits "
+           "they estimated rather than computed it ('我懒的算了直接估了一个'). The quote runs "
+           "into the highlight's truncation, hence the trailing 感觉真的老老."))
+
+U = "https://www.1point3acres.com/bbs/thread-1148277-1-1.html"
+add(firm="Five Rings", role_track="quant_trader", level="internship", cycle="Summer 2026",
+    office="unknown", round="online_assessment", round_name="26 summer five rings qr/qt oa",
+    section_context="每题1min共17个，基本都是estimate", question_type="fermi_estimation",
+    question_text="每题1min共17个，基本都是estimate，很快，估计10th root of 10",
+    question_text_en=("17 questions at one minute each, mostly estimation, very fast — estimate "
+                      "the 10th root of 10."),
+    source_url=U, source_language="mixed", post_date="unknown",
+    source_quote="每题1min共17个，基本都是estimate，很快，估计10th root of 10",
+    poster_context=FR_P + " titled '26 summer five rings qr/qt oa', poster has 313 积分, 1 reply",
+    doubt=(BLOCKED + PAYWALL + "The tenth root of 10 also appears in a 2022 Five Rings WSO entry "
+           "in this set, so either the firm reuses it or the poster read that entry first."))
+
+U = "https://www.1point3acres.com/bbs/thread-1101891-1-1.html"
+add(firm="Five Rings", role_track="quant_researcher", level="internship", cycle="unknown",
+    office="unknown", round="online_assessment", round_name="OA",
+    section_context="一共30分钟左右，然后分给每道题大概也就1，2分钟吧",
+    question_type="probability",
+    question_text="一根木棒，随机选两个点折成三段",
+    question_text_en="A stick, break it into three pieces at two randomly chosen points",
+    source_url=U, source_language="zh", post_date="2025-09",
+    source_quote=("分享一下five rings的OA。时间很紧，一共30分钟左右，然后分给每道题大概也就1，2分钟吧。"
+                  "依稀记得一些题 一根木棒，随机选两个点折成三段"),
+    poster_context=(FR_P + " tagged 2025(7-9月) 金工类 博士 实习@fiverings - 网上海投 - 视频面试 | "
+                    "Neutral / Average | Other; a maths-finance PhD who says they never heard back"),
+    doubt=(BLOCKED + "The broken-stick problem is one of the most-printed textbook probability "
+           "questions there is, so it carries no signal on its own; what makes this worth keeping "
+           "is the dated first-person frame and the 30-minute timing. The recall also stops "
+           "before stating what was actually asked about the three pieces."))
+
+U = "https://www.1point3acres.com/bbs/thread-1141524-1-1.html"
+FR26 = (FR_P + " titled 'Five Rings 2026 QR Intern OA' in the 数科面经 board, 9 replies, opening "
+        "'我看这个公司没什么面经帖所以发一个' and closing '做一个OA挂一个OA的日子太难受了'")
+add(firm="Five Rings", role_track="quant_researcher", level="internship", cycle="Summer 2026",
+    office="unknown", round="online_assessment", round_name="2026 QR Intern OA",
+    section_context="20道题，邮件说给40分钟，但一道题限时2-3分钟",
+    question_type="statistics_regression",
+    question_text=("我以为会跟其他firm一样考probability brain teaser结果它基本上给的都是statistical "
+                   "distribution / inference / 微积分；为数不多的brainteaser还都是硬币相关的"),
+    question_text_en=("I expected probability brainteasers like other firms, but what it gave was "
+                      "basically statistical distribution / inference / calculus; the few "
+                      "brainteasers there were, were all coin-related."),
+    source_url=U, source_language="mixed", post_date="2025-09",
+    source_quote=("今年还是20道题，虽然我的邮件说了给40分钟但它出题格式是一道题限时2-3分钟就很emm "
+                  "我以为会跟其他firm一样考probability brain teaser结果它基本上给的都是statistical "
+                  "distribution / inference / 微积分；为数不多的brainteaser还都是硬币相关的"),
+    poster_context=FR26,
+    doubt=(BLOCKED + "A topic breakdown rather than a question. It contradicts the common claim "
+           "that the Five Rings screen is pure probability estimation, which is mild evidence it "
+           "was written from experience rather than from other posts."))
+
+add(firm="Five Rings", role_track="quant_researcher", level="internship", cycle="Summer 2026",
+    office="unknown", round="online_assessment", round_name="2026 QR Intern OA",
+    section_context="大部分是花式求机率和期望值", question_type="probability",
+    question_text="P(sum of two dice > their product)",
+    question_text_en=None,
+    source_url=U, source_language="mixed", post_date="2025-09",
+    source_quote=("题目其实也不多 大部分是花式求机率和期望值 像是P(sum of two dice > their product)"
+                  "或是单位球上的Var(X) 还有一些微积分求arc length"),
+    poster_context=("A reply on " + FR26 + " from 匿名用户, dated 2025-9-20, answering another "
+                    "commenter who could not see the paywalled body"),
+    doubt=(BLOCKED + "The commenter is recalling their own sitting of the same OA, not the OP's, "
+           "so the two accounts are independent but neither is verifiable. The post writes 机率 "
+           "rather than the mainland-standard 概率, so a normalised rendering will not match."))
+
+add(firm="Five Rings", role_track="quant_researcher", level="internship", cycle="Summer 2026",
+    office="unknown", round="online_assessment", round_name="2026 QR Intern OA",
+    section_context="大部分是花式求机率和期望值", question_type="statistics_regression",
+    question_text="单位球上的Var(X)",
+    question_text_en="the variance Var(X) on the unit sphere",
+    source_url=U, source_language="mixed", post_date="2025-09",
+    source_quote=("像是P(sum of two dice > their product)或是单位球上的Var(X) 还有一些微积分求arc length"),
+    poster_context=("A reply on " + FR26 + " from 匿名用户, dated 2025-9-20"),
+    doubt=(BLOCKED + "'Var(X) on the unit sphere' is under-specified — which coordinate, and "
+           "under what measure, is not stated, so this is the commenter's shorthand for a problem "
+           "they remember rather than the problem as posed."))
+
+add(firm="Five Rings", role_track="quant_researcher", level="internship", cycle="Summer 2026",
+    office="unknown", round="online_assessment", round_name="2026 QR Intern OA",
+    section_context="还有一些微积分求arc length", question_type="other",
+    question_text="还有一些微积分求arc length",
+    question_text_en="and some calculus questions asking for arc length",
+    source_url=U, source_language="mixed", post_date="2025-09",
+    source_quote="或是单位球上的Var(X) 还有一些微积分求arc length",
+    poster_context=("A reply on " + FR26 + " from 匿名用户, dated 2025-9-20"),
+    doubt=(BLOCKED + "Short quote, and a category rather than a question. Worth keeping because "
+           "two other Five Rings recalls in this set independently mention arc-length calculus "
+           "('求一个函数的那段的长度', 'Calculate the length of x^2 from 0 to 9')."))
+
+
+# ---------------------------------------------------------------- Old Mission, forum tag page
+U = "https://www.1point3acres.com/bbs/tag/old-mission-capital-8743-1.html"
+TAG = ("Cited to the firm's 一亩三分地 tag index because that listing is where the run read the "
+       "text; the listing shows each thread's opening lines and reflows as new threads are "
+       "posted, so this citation is less durable than a thread permalink. ")
+
+add(firm="Old Mission Capital", role_track="quant_trader", level="internship", cycle="unknown",
+    office="unknown", round="online_assessment", round_name="Old Mission Winter Internship QT OA",
+    section_context="OA是数学，behavioral essay，和coding三部分。数学是25分钟20题",
+    question_type="other",
+    question_text=("OA是数学，behavioral essay，和coding三部分。数学是25分钟20题"),
+    question_text_en=("The OA has three parts: maths, a behavioural essay, and coding. The maths "
+                      "is 20 questions in 25 minutes."),
+    source_url=U, source_language="mixed", post_date="2025-12-04",
+    source_quote=("Old Mission是少数几家开冬季QT实习的，项目在一月份，为期三周。据说一届只招四个人，"
+                  "非常competitive。OA是数学，behavioral essay，和coding三部分。数学是25分钟20题"),
+    poster_context=("地里匿名用户, thread 'Old Mission Winter Internship QT OA' in 海外面经, 2 "
+                    "replies / 382 views, last active 2025-12-4; describes the January three-week "
+                    "winter QT internship that Old Mission advertises"),
+    doubt=(TAG + "The listing truncates at '数学是25分钟20题' so no maths question survives; the "
+           "three-part structure and the 20-in-25 timing are the whole of the evidence."))
+
+add(firm="Old Mission Capital", role_track="quant_trader", level="new_grad", cycle="unknown",
+    office="unknown", round="online_assessment", round_name="Junior Quant Trader OA",
+    section_context="一共35道MC + 1道coding，OA ddl 在九月", question_type="other",
+    question_text=("一共35道MC + 1道coding。 Instruction说coding推荐Python，允许计算器，要求最简分数"
+                   "答案或精确不循环小数"),
+    question_text_en=("35 multiple-choice questions plus one coding question. The instructions "
+                      "recommend Python for the coding, allow a calculator, and require answers "
+                      "as fully-reduced fractions or exact non-recurring decimals."),
+    source_url=U, source_language="mixed", post_date="2025-11-21",
+    source_quote=("Junior Quant Trader 海投第二天收到OA，OA ddl 在九月，一共35道MC + 1道coding。 "
+                  "Instruction说coding推荐Python，允许计算器，要求最简分数答案或精确不循环小数"),
+    poster_context=("微信用户_8f26f, thread in 海外面经 with 28 replies / 10083 views, last active "
+                    "2025-11-21; applied cold (海投) and got the OA the next day"),
+    doubt=(TAG + "The answer-format rule — reduced fractions or exact non-recurring decimals — is "
+           "an unusual, checkable detail, but the listing cuts off at '没记' before any question. "
+           "Labelled new_grad because the role is Junior Quant Trader rather than an internship."))
+
+add(firm="Old Mission Capital", role_track="quant_developer", level="new_grad", cycle="unknown",
+    office="unknown", round="online_assessment", round_name="New Grad SWE OA",
+    section_context="第一部分 30或者45个选择题", question_type="coding_algorithms",
+    question_text=("第一部分 30或者45个选择题，我觉得非常难。有问到systems, latency, linux, c++, "
+                   "python。会给你几个coding snippets问你哪个是对的"),
+    question_text_en=("Part one is 30 or 45 multiple-choice questions, which I found very hard. "
+                      "It asked about systems, latency, linux, c++, python. It gives you several "
+                      "coding snippets and asks which one is correct."),
+    source_url=U, source_language="mixed", post_date="2024-07-23",
+    source_quote=("求加米，看面经。第一部分 30或者45个选择题，我觉得非常难。有问到systems, latency, "
+                  "linux, c++, python。会给你几个coding snippets问你哪个是对的"),
+    poster_context=("eric1527, thread in 海外面经 with 12 replies / 5944 views, last active "
+                    "2024-7-23; the listing cuts off at '而我连选项都看'"),
+    doubt=(TAG + "Corroborated by the Blind comment in this set reporting an Old Mission SWE OA "
+           "of 'multiple choice Qs and a medium-ish leetcode Q in under an hour', which is the "
+           "same shape from an unrelated site. Still a section description, not a question."))
+
+with open(OUT, "w", encoding="utf-8") as f:
+    for r in rows:
+        f.write(json.dumps(r, ensure_ascii=False) + "\n")
+print("wrote %d -> %s" % (len(rows), OUT))

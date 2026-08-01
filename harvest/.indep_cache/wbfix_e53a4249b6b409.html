@@ -1,0 +1,1260 @@
+ 
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>HRT Algo Dev OA|hudson-river-trading�澭|һĶ���ֵغ����澭��</title>
+<link rel="shortcut icon" href="https://www.1point3acres.com/bbs/favicon.ico" />
+<link href="https://www.1point3acres.com/bbs/thread-1022110-1-1.html" rel="canonical" />
+<meta name="keywords" content="�����澭,hudson-river-trading" />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+<meta name="description" content="150 ���� 3�����һ�⣺����һ����n���ʱ���С���������ж���fancy number��fancy number�Ķ�����ת��4���ƺ�ֻ��0��1���㷨Ҫ��O(n)�졣�ڶ��⣺�·�ת�壬n��n ..." />
+<meta name="generator" content="1Point3Acres" />
+<meta name="author" content="1Point3Acres Team" />
+<meta name="copyright" content="2009-2022 һĶ���ֵ� at 1Point3Acres " />
+<meta property="og:site_name" content="һĶ���ֵ� 1Point3Acres" />
+<meta property="og:title" content="HRT Algo Dev OA|hudson-river-trading�澭|һĶ���ֵغ����澭��" />
+<meta property="og:url" content="https://www.1point3acres.com/bbs/thread-1022110-1-1.html" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://www.1point3acres.com/bbs/static/image/common/mu_logo.jpg" />
+<meta property="og:description" content="150 ���� 3�����һ�⣺����һ����n���ʱ���С���������ж���fancy number��fancy number�Ķ�����ת��4���ƺ�ֻ��0��1���㷨Ҫ��O(n)�졣�ڶ��⣺�·�ת�壬n��n ..." />
+<meta name="MSSmartTagsPreventParsing" content="True" />
+<meta http-equiv="MSThemeCompatible" content="Yes" />
+<meta name="application-groupid" content="7" />
+<meta name="application-adid" content="0" />
+<meta name="application-gst" content="0" />
+<meta name="ir-site-verification-token" value="-1288705735" />
+<base href="https://www.1point3acres.com/bbs/" />
+<link rel="stylesheet" type="text/css" href="static/css/custom.css?vdj" />
+<link rel="stylesheet" type="text/css" href="static/css/tailwind.css?vdj" />
+<link rel="stylesheet" type="text/css" href="static/alicdn/iconfont.css?vdj" /><link rel="stylesheet" type="text/css" href="data/cache/style_5_common.css?vdj" /><link rel="stylesheet" type="text/css" href="data/cache/style_5_forum_viewthread.css?vdj" /><script type="text/javascript">var STYLEID = '5', STATICURL = 'static/', IMGDIR = 'static/image/common', VERHASH = 'vdj', charset = 'gbk', discuz_uid = '0', cookiepre = '4Oaf_61d6_', cookiedomain = '.1point3acres.com', cookiepath = '/', showusercard = '1', attackevasive = '0', disallowfloat = '', creditnotice = '1|����|�� ,2|�ܲ�|��,3|�˲�|ö,4|ˮ��|��,5|��ݮ|��,6|С��|��,7|����|��,8|ѧ��|��', defaultstyle = '', REPORTURL = 'aHR0cDovL3d3dy4xcG9pbnQzYWNyZXMuY29tL2Jicy90aHJlYWQtMTAyMjExMC0xLTEuaHRtbA==', SITEURL = 'https://www.1point3acres.com/bbs/', JSPATH = 'data/cache/', DYNAMICURL = '', onesig_hash = '19caab021c1919897a283681a4629e27abab29ff3c1fed4b9c8d45ace388321a';</script>
+<script src="data/cache/common.js?vdj" type="text/javascript"></script>
+<script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="text/javascript" async crossorigin="anonymous"></script>
+<script data-cfasync="false" type="text/javascript">
+(function(w, d) {
+w.addEventListener("load", function() {
+var s = d.createElement('script');
+s.src = '//cdn.adpushup.com/42547/adpushup.js';
+s.crossOrigin='anonymous'; 
+s.type = 'text/javascript'; s.async = true;
+(d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+w.adpushup = w.adpushup || {que:[]};
+});
+})(window, document);
+</script>
+<script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/43528/adRecover.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+<script>(function() {window.lazySizesConfig = window.lazySizesConfig || {};window.lazySizesConfig.loadMode = 1;})();</script>
+<script src="static/js/lazysizes.min.js" type="text/javascript" async></script>
+<script src="data/cache/shortcut.js?vdj" type="text/javascript" async></script>
+<script src="data/cache/compliance.js?vdj" type="text/javascript" async></script>
+<meta NAME="ROBOTS" content="noarchive">
+<meta name="application-name" content="һĶ���ֵ�" />
+<meta name="msapplication-tooltip" content="һĶ���ֵ�" />
+<meta name="msapplication-task" content="name=�Ż�;action-uri=https://www.1point3acres.com/bbs/portal.php;icon-uri=https://www.1point3acres.com/bbs/static/image/common/portal.ico" /><meta name="msapplication-task" content="name=��̳;action-uri=https://www.1point3acres.com/bbs/forum.php;icon-uri=https://www.1point3acres.com/bbs/static/image/common/bbs.ico" />
+<meta name="msapplication-task" content="name=��԰;action-uri=https://www.1point3acres.com/bbs/home.php;icon-uri=https://www.1point3acres.com/bbs/static/image/common/home.ico" /><link rel="stylesheet" id="css_widthauto" type="text/css" href="data/cache/style_5_widthauto.css?vdj" />
+<script type="text/javascript">HTMLNODE.className += ' widthauto'</script>
+<script src="data/cache/forum.js?vdj" type="text/javascript"></script>
+</head>
+<body id="nv_forum" class="pg_viewthread" onkeydown="if(event.keyCode==27) return false;">
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+<div id="qmenu_menu" class="p_pop blk" style="display: none;">
+<div class="w-full bg-#e6f1f6">
+</div>
+<div class="ptm pbw hm">
+�� <a href="javascript:;" class="xi2" onclick="lsSubmit()"><strong>��¼</strong></a> ��ʹ�ÿ�ݵ���<br/>û���ʺţ�<a href="member.php?mod=xregister" class="xi2 xw1">ע���˺�</a>
+</div>
+<div id="fjump_menu" class="btda"></div>
+</div>
+<div id="hd"><div id="nv" class="flex items-center h-16 bg-primary border-none min-w-960px overflow-visible hover:opacity-100">
+<div class="flex items-center justify-between border-none container-1p3a">
+<div class="flex items-center">
+<a href="./" title="��ҳ">
+<img src="static/image/common/logo-1p3a.png" height="60px" />
+</a>
+<ul class="flex overflow-auto mr-2"><li class="font-semibold text-sm flex-shrink-0 2xl:mx-1" id="mn_forum" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','duration':2})">
+<a class="flex items-center text-#333 no-underline hover:bg-transparent hover:text-active px-1 " href="forum.php?mod=guide" hidefocus="true" title="Guide">����<span>Guide</span>
+</a></li>
+<li class="font-semibold text-sm flex-shrink-0 2xl:mx-1" id="mn_N6a2b" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','duration':2})">
+<a class="flex items-center text-#333 no-underline hover:bg-transparent hover:text-active px-1 " href="https://pay.1point3acres.com/bbs/vip" hidefocus="true" target="_blank">����Ȩ��
+</a></li>
+<li class="font-semibold text-sm flex-shrink-0 2xl:mx-1" id="mn_N7d05" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','duration':2})">
+<a class="flex items-center text-#333 no-underline hover:bg-transparent hover:text-active px-1 " href="tools.php" hidefocus="true">��������
+</a></li>
+<li class="font-semibold text-sm flex-shrink-0 2xl:mx-1" id="mn_Nd6d6" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','duration':2})">
+<a class="flex items-center text-#333 no-underline hover:bg-transparent hover:text-active px-1 " href="tag.html?category=1" hidefocus="true">����
+</a></li>
+<li class="font-semibold text-sm flex-shrink-0 2xl:mx-1" id="mn_N8e60" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','duration':2})">
+<a class="flex items-center text-#333 no-underline hover:bg-transparent hover:text-active px-1 " href="https://learn.1point3acres.com" hidefocus="true">����
+</a></li>
+<li class="font-semibold text-sm flex-shrink-0 2xl:mx-1" id="mn_N8155" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','duration':2})">
+<a class="flex items-center text-#333 no-underline hover:bg-transparent hover:text-active px-1 " href="https://instant.1point3acres.com/" hidefocus="true">����
+</a></li>
+<li class="font-semibold text-sm flex-shrink-0 2xl:mx-1" id="mn_Nb60e" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','duration':2})">
+<a class="flex items-center text-#333 no-underline hover:bg-transparent hover:text-active px-1 " href="https://www.1point3acres.com/bbs/misc.php?mod=faq	" hidefocus="true" target="_blank">����
+</a></li>
+</ul>
+<div class="group relative">
+<a href="/bbs/search.php" class="no-underline" id="nav-search-box">
+<div class="bg-#fafafa rounded-2xl h-7 flex items-center px-2 text-sm group-hover:bg-active box-border  whitespace-nowrap">
+<i class="iconfont icon-icons-search text-#497b89 font-bold text-sm group-hover:text-white"></i>
+<span class="text-#497b89 font-bold ml-1 group-hover:text-white">����</span>
+<div class="hidden xl:flex ml-2 w-10 shortcut-help" style="opacity: 0;">
+<kbd class="w-4 h-4 mr-1 group-hover:bg-white cmd-kbd" style="display: none;">&#8984;</kbd>
+<kbd class="h-4 mr-1 group-hover:bg-white ctrl-kbd" style="display: none;">Ctrl</kbd>
+<kbd class=" w-4 h-4 group-hover:bg-white">k</kbd>
+</div>
+</div>
+</a>
+<div id="nav-search-menu" class="invisible group-hover:visible flex flex-col space-y-1 absolute top-full -left-2 whitespace-nowrap text-center shadow px-2 py-3 text-sm bg-white" style="z-index:301;">
+<a href="/bbs/search.php" target="_blank" class="no-underline leading-7 hover:text-active">վ���������۴��ף�</a>
+<a href="https://instant.1point3acres.cn/" target="_blank" class="no-underline leading-7 hover:text-active">Instant����</a>
+<a href="/bbs/google_search.php" target="_blank" class="no-underline leading-7 hover:text-active">Google����</a>
+</div>
+</div>
+</div><div><div style="height:50px;text-align:center;margin:0px 10px;" id="ad-navbar-small">
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('ad-navbar-small').parentNode.style.flex = 1;
+      if (document.getElementById('ad-navbar-small').offsetWidth >= 320 && (typeof(tid) === 'number' || window.location.pathname.length > 5)) {
+        var adDiv = document.createElement('div');
+        adDiv.id = '6bcb7a45-50d9-4686-b847-9889fb0a8da8';
+        adDiv.className = '_ap_apex_ad';
+        document.getElementById('ad-navbar-small').appendChild(adDiv);
+        var adpushup = window.adpushup  = window.adpushup || {que:[]};
+        adpushup.que.push(function() {
+          adpushup.triggerAd('6bcb7a45-50d9-4686-b847-9889fb0a8da8');
+        });
+      }
+    });
+  </script>
+</div></div><div class="flex items-center header-app">
+<div id="um" class="flex items-center" style="line-height: 20px;">
+<a href="https://pay.1point3acres.com/bbs/vip" target="_blank" class=" cursor-pointer px-2 border-0 border-solid hover:text-#ff6600 no-underline mx-1">Ȩ�޽���</a>
+<a href="https://auth.1point3acres.com/login" class=" cursor-pointer px-2 border-0 border-solid hover:text-#ff6600 no-underline">��¼</a>
+<a class=" px-2 border-0 border-solid hover:text-#ff6600 no-underline" href="/bbs/member.php?mod=xregister" target="_blank">ע��</a>
+<span class="ml-1"></span><div class="inline relative group align-middle" id="userstatus-products-menu-item">
+<span class="ml-1"></span>
+<a class="cursor-pointer no-underline">
+<i class="iconfont icon-grid text-xl text-active"></i>
+</a>
+<div id="userstatus-products-tooltip" class="hidden group-hover:flex absolute justify-end -right-5 top-4 p-3 shadow-md z-[60] bg-white"><div class="w-72 grid grid-cols-3 gap-y-2 text-sm"><a href="https://www.1point3acres.com/" class="no-underline">
+<div class="w-auto text-xs text-center p-2 border-solid border-0 no-underline top-nav-item hover:bg-#e6f1f6 rounded-lg">
+<img data-src="https://oss.1p3a.com/static/image/common/logo_home.png!ss" class="lazyload" />
+<span class="m-0.5 block">��ҳ</span>
+</div>
+</a>
+<a href="https://www.1point3acres.com/bbs/" class="no-underline">
+<div class="w-auto text-xs text-center p-2 border-solid border-0 no-underline top-nav-item hover:bg-#e6f1f6 rounded-lg">
+<img data-src="https://oss.1p3a.com/static/image/common/logo_bbs.png!ss" class="lazyload" />
+<span class="m-0.5 block">��̳</span>
+</div>
+</a>
+<a href="https://offer.1point3acres.com/" class="no-underline">
+<div class="w-auto text-xs text-center p-2 border-solid border-0 no-underline top-nav-item hover:bg-#e6f1f6 rounded-lg">
+<img data-src="https://oss.1p3a.com/static/image/common/logo_offer.png!ss" class="lazyload" />
+<span class="m-0.5 block">Offer���</span>
+</div>
+</a>
+<a href="https://jobs.1point3acres.com/" class="no-underline">
+<div class="w-auto text-xs text-center p-2 border-solid border-0 no-underline top-nav-item hover:bg-#e6f1f6 rounded-lg">
+<img data-src="https://oss.1p3a.com/static/image/common/logo_jobs.png!ss" class="lazyload" />
+<span class="m-0.5 block">Job���</span>
+</div>
+</a>
+<a href="https://www.salarytics.com/" class="no-underline">
+<div class="w-auto text-xs text-center p-2 border-solid border-0 no-underline top-nav-item hover:bg-#e6f1f6 rounded-lg">
+<img data-src="https://oss.1p3a.com/static/image/common/logo_salarytics.png!ss" class="lazyload" />
+<span class="m-0.5 block">Salarytics</span>
+</div>
+</a>
+<a href="https://visa.1point3acres.com/" class="no-underline">
+<div class="w-auto text-xs text-center p-2 border-solid border-0 no-underline top-nav-item hover:bg-#e6f1f6 rounded-lg">
+<img data-src="https://oss.1p3a.com/static/image/common/logo_visa.png!ss" class="lazyload" />
+<span class="m-0.5 block">Visa Tracker</span>
+</div>
+</a>
+<a href="https://coronavirus.1point3acres.com/zh" class="no-underline">
+<div class="w-auto text-xs text-center p-2 border-solid border-0 no-underline top-nav-item hover:bg-#e6f1f6 rounded-lg">
+<img data-src="https://oss.1p3a.com/static/image/common/logo_coronavirus.png!ss" class="lazyload" />
+<span class="m-0.5 block">�¹�����</span>
+</div>
+</a>
+<a href="https://match.1point3acres.com/" class="no-underline">
+<div class="w-auto text-xs text-center p-2 border-solid border-0 no-underline top-nav-item hover:bg-#e6f1f6 rounded-lg">
+<img data-src="https://oss.1p3a.com/static/image/common/logo_jiaoyou.png!ss" class="lazyload" />
+<span class="m-0.5 block">����</span>
+</div>
+</a>
+<a href="https://instant.1point3acres.cn/" class="no-underline">
+<div class="w-auto text-xs text-center p-2 border-solid border-0 no-underline top-nav-item hover:bg-#e6f1f6 rounded-lg">
+<img data-src="https://oss.1p3a.com/static/image/common/logo_instant.png!ss" class="lazyload" />
+<span class="m-0.5 block">Instant</span>
+</div>
+</a>
+<a href="https://learn.1point3acres.com/" class="no-underline">
+<div class="w-auto text-xs text-center p-2 border-solid border-0 no-underline top-nav-item hover:bg-#e6f1f6 rounded-lg">
+<img data-src="https://oss.1p3a.com/static/image/common/logo_learn.png!ss" class="lazyload" />
+<span class="m-0.5 block">��Ʒ����</span>
+</div>
+</a>
+<a href="https://blog.1point3acres.com/" class="no-underline">
+<div class="w-auto text-xs text-center p-2 border-solid border-0 no-underline top-nav-item hover:bg-#e6f1f6 rounded-lg">
+<img data-src="https://oss.1p3a.com/static/image/common/logo_blog.png!ss" class="lazyload" />
+<span class="m-0.5 block">�����</span>
+</div>
+</a>
+<a href="https://www.1point3acres.com/bbs/app.php" class="no-underline">
+<div class="w-auto text-xs text-center p-2 border-solid border-0 no-underline top-nav-item hover:bg-#e6f1f6 rounded-lg">
+<img data-src="https://oss.1p3a.com/static/image/common/logo_app.png!ss" class="lazyload" />
+<span class="m-0.5 block">�ֻ�APP</span>
+</div>
+</a>
+<a href="https://www.1point3acres.com/business" target="_blank" class="no-underline">
+<div class="w-auto text-xs text-center p-2 border-solid border-0 no-underline top-nav-item hover:bg-#e6f1f6 rounded-lg">
+<img data-src="https://oss.1p3a.com/static/image/common/logo_business.png!ss" class="lazyload" />
+<span class="m-0.5 block">�������</span>
+</div>
+</a>
+<a href="https://act.1point3acres.com/" class="no-underline">
+<div class="w-auto text-xs text-center p-2 border-solid border-0 no-underline top-nav-item hover:bg-#e6f1f6 rounded-lg">
+<img data-src="https://oss.1p3a.com/static/image/common/logo_act.png!ss" class="lazyload" />
+<span class="m-0.5 block">άȨ</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div id="user_side_menu" class="group fixed z-50 right-0 bottom-260px w-6 xl:w-8 hover:pt-1 xl:pt-1 bg-white shadow-md rounded-l">
+<div class="xl:hidden group-hover:hidden fixed right-0 bottom-400px bg-#568f9f shadow-md rounded-l">
+<div class="my-8 text-white">
+&lt;
+</div>
+</div>
+<div class="hidden group-hover:block xl:block group">
+<a class="text-center no-underline cursor-pointer" href="https://auth.1point3acres.com/login">
+<div><i class="iconfont icon-icons-login text-#497b89"></i></div>
+<div class="text-10px text-#497b89 leading-tight mb-2">��¼</div>
+</a>
+<a class="text-center no-underline" href="/bbs/member.php?mod=xregister">
+<div><i class="iconfont icon-icons-register text-#497b89"></i></div>
+<div class="text-10px text-#497b89 leading-tight mb-2">ע��</div>
+</a>
+<a class="text-center no-underline" href="https://pay.1point3acres.com/bbs/vip">
+<div><i class="iconfont icon-vip text-#497b89"></i></div>
+<div class="text-10px text-#497b89 leading-tight mb-2">����</div>
+</a>
+<div id="qrcode-container" class="hidden xl:block group-hover:block relative text-center my-1">
+<div><i class="iconfont icon-icons-qr-code text-#497b89"></i></div>
+<div class="text-10px text-#497b89 leading-tight mb-2">��ע</div>
+<div id="qrcode-tooltip" class="hidden absolute w-40rem -left-40rem top-0 p-2 bg-white shadow-md flex-col justify-center">
+<div class="text-base">ɨ���עһĶ���ֵ�΢�Ź��ں�</div>
+<div class="flex justify-center">
+<div class="w-32 m-3">
+<img class="w-32 h-32 lazyload" data-src="https://oss.1p3a.com/static/image/common/wq_warald.jpg!b" />
+<figcaption>һĶ���ֵ�Warald</figcaption>
+</div>
+<div class="w-32 m-3">
+<img class="w-32 h-32 lazyload" data-src="https://oss.1p3a.com/static/image/common/wq_liuxue.jpg!b" />
+<figcaption>һĶ���ֵػ�������</figcaption>
+</div>
+<div class="w-32 m-3">
+<img class="w-32 h-32 lazyload" data-src="https://oss.1p3a.com/static/image/common/wq_career.jpg!b" />
+<figcaption>һĶ���ֵ���ְ����</figcaption>
+</div>
+<div class="w-32 m-3">
+<img class="w-32 h-32 lazyload" data-src="https://oss.1p3a.com/static/image/common/wq_invest.jpg!b" />
+<figcaption>һĶ���ֵغ���Ͷ��</figcaption>
+</div>
+</div>
+</div>
+</div>
+<a class="text-center no-underline" href="misc.php?mod=faq">
+<div><i class="iconfont icon-icons-question text-#497b89"></i></div>
+<div class="text-10px text-#497b89 leading-tight mb-2">����</div>
+</a>
+<div class="bg-#568f9f hover:bg-#497b89 text-center text-xs text-white h-6 xl:h-8 leading-6 xl:leading-8 cursor-pointer rounded-bl" onclick="window.scrollTo(0,0);">TOP</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul class="p_pop h_pop" id="plugin_menu" style="display: none"> <li><a href="dsu_paulsign-sign.html" id="mn_plink_sign">ÿ��ǩ��</a></li>
+</ul>
+<ul class="p_pop h_pop shadow-md border-none" id="mn_forum_menu" style="display: none"><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="forum.php?mod=guide&view=digest" hidefocus="true">�ö�����</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="forum.php?mod=guide&view=new" hidefocus="true">���»ظ�</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="forum.php?mod=guide&view=newthread" hidefocus="true">��������</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="forum.php?mod=guide" hidefocus="true">��������</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="thread-71069-1-1.html" hidefocus="true">��ȡ����</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="start.php" hidefocus="true">����ָ��</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="forum.php?mod=collection" hidefocus="true">����</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="forum.php?mod=guide&view=feed" hidefocus="true">�ҵĶ���</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="forum.php?mod=guide&view=my" hidefocus="true">�ҵ�����</a></li></ul><ul class="p_pop h_pop shadow-md border-none" id="mn_N6a2b_menu" style="display: none"><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://pay.1point3acres.com/bbs/vip" hidefocus="true" target="_blank" style="color: red">VIPͨ��֤</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://pay.1point3acres.com/bbs/points" hidefocus="true" target="_blank" style="color: red">������ݮ</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://pay.1point3acres.com/bbs/company" hidefocus="true" target="_blank">��ҵ��Ƹ���</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://www.1point3acres.com/business" hidefocus="true" target="_blank">������ʦר��</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://airtable.com/shrpQwAaB5k2OvgfI" hidefocus="true">Ǣ̸��������</a></li></ul><div class="p_pop h_pop" id="mn_userapp_menu" style="display: none"></div><ul class="p_pop h_pop shadow-md border-none" id="mn_N7d05_menu" style="display: none"><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="home.php?mod=magic" hidefocus="true" target="_blank" style="color: red">����[����/ɾ��/����/�ر�/��]</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://www.1point3acres.com/bbs/exam.html" hidefocus="true" target="_blank">����</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="plugin.php?id=attachcenter" hidefocus="true" target="_blank">����</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="home.php?mod=medal" hidefocus="true">ѫ��</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="plugin.php?id=xcvow:xcvows" hidefocus="true" style="color: red">��Ըǽ</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://pay.1point3acres.com/bbs/noads" hidefocus="true">ȥ���</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://www.1point3acres.com/bbs/plugin.php?id=e6_qmjc" hidefocus="true">ȫ�񾺲�</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="plugin.php?id=dsu_paulsign:sign" hidefocus="true" target="_blank">ÿ��ǩ��</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="ahome_dayquestion-pop.html" hidefocus="true" target="_blank">ÿ�մ���</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://tools.1point3acres.com/thread" hidefocus="true" target="_blank" style="color: orange">��������</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://tools.1point3acres.com/wechat" hidefocus="true" style="color: orange">΢�Ž��</a></li></ul><ul class="p_pop h_pop shadow-md border-none" id="mn_Nd6d6_menu" style="display: none"><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="tag.html?category=1" hidefocus="true">����</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="tag.html?category=2" hidefocus="true">ѧУ</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="tag.html?category=3" hidefocus="true">��˾</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="tag.html?category=4" hidefocus="true">����</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="tag.html?category=5" hidefocus="true">֤ȯ</a></li></ul><ul class="p_pop h_pop shadow-md border-none" id="mn_N8e60_menu" style="display: none"><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://learn.1point3acres.com/courses/ds501-analytics/" hidefocus="true" target="_blank" style="color: blue">DS501 ���ݿ�ѧ����40+���⽲��</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://learn.1point3acres.com/courses/shawn_algorithm/" hidefocus="true" target="_blank" style="color: red">��׼���У���ٸ���Shawn��ʦˢ�⣡</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://learn.1point3acres.com/courses/ds601-ab-test/" hidefocus="true" target="_blank" style="color: blue">DS601 AB Test�����ŵ���ͨ</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://learn.1point3acres.com/courses/cs601_system_design/" hidefocus="true" target="_blank" style="color: green">CS601 �ȸ蹤��ʦ��ϵͳ���</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://learn.1point3acres.com/courses/ds401-cracking-data-science-interview/" hidefocus="true" target="_blank">DS401 �������ݿ�ѧ�ҽ����ƽ�DS����</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://learn.1point3acres.com/courses/cs401_succeed_in_google_interview/" hidefocus="true" target="_blank" style="color: green">CS401 �ȸ���ƸίԱ���Ա�������׼������</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://learn.1point3acres.com/courses/ds402-resume-workshop/" hidefocus="true" target="_blank">DS402 Resume Workshop</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://learn.1point3acres.com/courses/ds404a-technical-interview-for-data-science/" hidefocus="true" target="_blank">DS401A ģ������-���ݿ�ѧ</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://learn.1point3acres.com/courses/ds404b-technical-interview-for-machine-learning/" hidefocus="true" target="_blank">DS404B ģ������-����ѧϰ</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://learn.1point3acres.com/courses/cs404a-mock-interview-algorithm/" hidefocus="true" target="_blank" style="color: green">CS404A ģ������-�㷨</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://learn.1point3acres.com/courses/cs404b-mock-interview-system-design/" hidefocus="true" target="_blank" style="color: green">CS404B ģ������-ϵͳ���</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://learn.1point3acres.com/courses/zenglaw-h1b/" hidefocus="true" target="_blank">������ʦ������H1Bǩ֤���뽲��</a></li></ul><ul class="p_pop h_pop shadow-md border-none" id="mn_N8155_menu" style="display: none"><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="portal/5" hidefocus="true">CS���Ź���</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="portal/2" hidefocus="true">CS��ְ����</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="portal/9" hidefocus="true">PM��ְ����</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="portal/8" hidefocus="true">ϵͳ��ƹ���</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="portal/6" hidefocus="true">���ݿ�ѧ����</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://www.1point3acres.com/bbs/thread-530349-1-1.html" hidefocus="true" style="color: blue">�ع�������Ʒ��ȫ�嵥</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://www.1point3acres.com/bbs/thread-422103-1-1.html" hidefocus="true" style="color: blue">������³��п���ʡ�İ���</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://www.1point3acres.com/bbs/thread-81269-1-1.html" hidefocus="true">��ä��ι�����ֳ�</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://www.1point3acres.com/bbs/thread-464027-1-1.html" hidefocus="true">�յ�ҽԺ������˵���ô��</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://blog.1point3acres.com/" hidefocus="true">����</a></li></ul><ul class="p_pop h_pop shadow-md border-none" id="mn_home_menu" style="display: none"><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://appsto.re/us/EesS8.i" hidefocus="true">ƻ��Ӧ���̵�</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://goo.gl/g7Rfnq" hidefocus="true">�ȸ�Ӧ���̵�</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://pan.baidu.com/s/1DAWIozLBPAd-xoD5jDJHTg" hidefocus="true">�ٶ�����apk</a></li></ul><ul class="p_pop h_pop shadow-md border-none" id="mn_Nb60e_menu" style="display: none"><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://www.1point3acres.com/contact" hidefocus="true">�������</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://www.1point3acres.com/bbs/misc.php?mod=faq	" hidefocus="true">��������</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://www.1point3acres.com/bbs/start.php" hidefocus="true" target="_blank">������·</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="app.php" hidefocus="true">App����</a></li></ul><ul class="p_pop h_pop shadow-md border-none" id="mn_N12a7_menu" style="display: none"><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://www.1point3acres.com/bbs/misc.php?mod=ranklist&type=thread&view=replies&orderby=thisweek" hidefocus="true">����</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://www.1point3acres.com/bbs/misc.php?mod=ranklist&type=poll&view=heats&orderby=thisweek" hidefocus="true">ͶƱ</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://www.1point3acres.com/bbs/misc.php?mod=ranklist&type=activity&view=heats&orderby=thismonth" hidefocus="true">�</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://www.1point3acres.com/bbs/misc.php?mod=ranklist&type=forum&view=threads" hidefocus="true">���</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://www.1point3acres.com/bbs/misc.php?mod=ranklist&type=group&view=credit" hidefocus="true">Ⱥ��</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://www.1point3acres.com/bbs/misc.php?mod=ranklist&type=blog&view=heats&orderby=thisweek" hidefocus="true">��־</a></li><li><a class=" text-center text-sm border-none hover:text-active hover:bg-transparent leading-7 " href="https://www.1point3acres.com/bbs/misc.php?mod=ranklist&type=member" hidefocus="true">�û�</a></li></ul><div id="mu" class="cl">
+<ul class="cl " id="snav_mn_userapp" style="display:none">
+</ul>
+</div></div>
+<script type="text/javascript" src="./source/plugin/saya_frontjs/sayaquery.js"></script>
+<script type="text/javascript">sayaQuery.noConflict();</script>
+<div id="wp" class="wp">
+<script type="application/ld+json">
+[{"@context":"https:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https:\/\/www.1point3acres.com\/bbs\/forum-38-1.html","url":"https:\/\/www.1point3acres.com\/bbs\/forum-38-1.html","name":"interview"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https:\/\/www.1point3acres.com\/bbs\/forum-145-1.html","url":"https:\/\/www.1point3acres.com\/bbs\/forum-145-1.html","name":"hudson-river-trading-software-engineer"}}]}]</script>
+<script type="text/javascript">var fid = parseInt('145'), tid = parseInt('1022110');</script>
+<script src="data/cache/forum_viewthread.js?vdj" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="data/cache/style_5_viewthread.css?vdj" />
+<script type="text/javascript">zoomstatus = parseInt(1);var imagemaxwidth = '700';var aimgcount = new Array();</script>
+<script src="data/cache/precheck.js?vdj" type="text/javascript" async></script>
+<style id="diy_style" type="text/css">#portal_block_479 {  margin-top:5px !important;margin-bottom:5px !important;}</style>
+<div id="diynavtop" class="area"></div>
+<div id="pt" class="bm cl">
+<div class="z">
+<a href="./" class="nvhm" title="��ҳ">һĶ���ֵ�</a><em>&raquo;</em><a href>��̳</a> <em>&rsaquo;</em> <a href="forum.php?gid=38">������ְ</a> <em>&rsaquo;</em> <a href="forum-145-1.html">�����澭</a> <em>&rsaquo;</em> <a href="thread-1022110-1-1.html">HRT Algo Dev OA</a>
+</div>
+</div>
+<div class="wp a_t"><table cellpadding="0" cellspacing="1" style="border-collapse: separate;border-spacing: 0 0;"><tr><td width="100%"><div id="0ffa8a73-1c46-4d5a-8d94-8fcabbdb3410" class="_ap_apex_ad" style="height:90px;">
+<script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("0ffa8a73-1c46-4d5a-8d94-8fcabbdb3410");
+		});
+	</script>
+</div></td></tr>
+</table></div><style id="diy_style" type="text/css">#portal_block_479 {  margin-top:5px !important;margin-bottom:5px !important;}</style>
+<div class="wp">
+<div id="diy1" class="area"></div>
+</div>
+<div id="ct" class="wp cl  ct2 cty">
+<div class="mn">
+<div id="pgt" class="pgs mbm cl ">
+<div class="pgt"></div>
+<span class="y pgb"><a href="forum-145-1.html">�����б�</a></span>
+<a id="newspecial" onmouseover="$('newspecial').id = 'newspecialtmp';this.id = 'newspecial';showMenu({'ctrlid':this.id})" onclick="location.href='forum.php?mod=post&action=newthread&fid=145';return false;" href="javascript:;" title="������"><img src="static/image/common/pn_post.png" alt="������" /></a></div>
+<div id="postlist" class="pl bm" itemid="tid1022110">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="pls ptn pbn">
+<div class="hm ptn">
+<span class="xg1">�ظ�:</span> <span class="xi1">0</span>
+</div>
+</td>
+<td class="plc ptm pbn">
+<div id="fj" class="y mt-px">
+<label class="z">ֱ��</label>
+<input type="text" class="px p_fre z" size="2" onkeyup="$('fj_btn').href='forum.php?mod=redirect&ptid=1022110&authorid=0&postno='+this.value" onkeydown="if(event.keyCode==13) {window.location=$('fj_btn').href;return false;}" title="��ת��ָ��¥��" />
+<a href="javascript:;" id="fj_btn" class="z" title="��ת��ָ��¥��"><img src="static/image/common/fj_btn.png" alt="��ת��ָ��¥��" class="vm" /></a>
+</div>
+<div class="y">
+<a href="forum.php?mod=redirect&amp;goto=nextoldset&amp;tid=1022110" title="��һ����"><img src="static/image/common/thread-prev.png" alt="��һ����" class="vm" /></a>
+<a href="forum.php?mod=redirect&amp;goto=nextnewset&amp;tid=1022110" title="��һ����"><img src="static/image/common/thread-next.png" alt="��һ����" class="vm" /></a>
+</div>
+<span class="xg1 side_btn">
+<a onclick="setcookie('close_leftinfo', 1);location.reload();" title="�������" class="btn_s_close" href="javascript:;"><img src="static/image/common/control_l.png" alt="�������" class="vm" /></a>
+</span>
+<h1 class="ts">
+<span id="thread_subject">HRT Algo Dev OA</span>
+</h1>
+<span class="xg1">
+</span>
+<div class="text-#555 flex flex-wrap space-x-2 bg-white mt-1" data-v>
+<a href="tag-6-1.html" target="_blank" class="taglink bg-#c4c4c4 bg-opacity-20 h-4 p-1 flex items-center space-x-1 rounded m-px no-underline">
+<img src="static/image/icon/ticket.svg" class="h-full w-8 object-contain" />
+<span>�����澭</span>
+</a>
+<a href="tag-8698-1.html" target="_blank" class="taglink bg-#c4c4c4 bg-opacity-20 h-4 p-1 flex items-center space-x-1 rounded m-px no-underline">
+<img src="static/image/icon/salary.svg" class="h-full w-8 object-contain" />
+<span>hudson-river-trading</span>
+</a>
+</div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="ad">
+<tr>
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</table><div id="post_18979873"><table id="pid18979873" class="plhin" summary="pid18979873" cellspacing="0" cellpadding="0" itemid="pid18979873" itemscope itemtype="http://schema.org/DiscussionForumPosting">
+<tr>
+<td class="pls" rowspan="2">
+<div id="favatar18979873" class="pls favatar">
+<a name="lastpost"></a><div class="p_pop blk bui card_gender_" id="userinfo18979873" style="display: none; ">
+<div class="m z">
+<div id="userinfo18979873_ma"></div>
+</div>
+<div class="i y">
+<div itemprop="author" itemscope itemtype="http://schema.org/Person">
+<strong><a itemprop="url" href="home.php?mod=space&amp;uid=1086464" target="_blank" class="xi2"><span itemprop="name">�����ʦ�ӷ�è</span></a></strong>
+<em>��ǰ����</em>
+</div><dl class="cl">
+<div class="tns xg2"><table cellspacing="0" cellpadding="0"><th><p><a href="home.php?mod=space&uid=1086464&do=thread&type=thread&view=me&from=space" class="xi2"></a></p>����</th><th><p><a href="home.php?mod=space&uid=1086464&do=thread&type=reply&view=me&from=space" class="xi2"></a></p>����</th><td><p><a href="home.php?mod=space&uid=1086464&do=profile" class="xi2">504</a></p>����</td></table></div>
+<p><em><a href="home.php?mod=spacecp&amp;ac=usergroup&amp;gid=53" target="_blank">ͨ��֤</a></em></p>
+<dt>����</dt><dd><a href="home.php?mod=space&uid=1086464&do=profile" target="_blank" class="xi2">504</a></dd>
+<dt>����</dt><dd> �� </dd>
+<dt>����</dt><dd> ��</dd>
+<dt>ˮ��</dt><dd> ��</dd>
+<dt>��ݮ</dt><dd> ��</dd>
+<dt>�ܲ�</dt><dd> ��</dd>
+<dt>С��</dt><dd> ��</dd>
+<dt>ѧ��</dt><dd> ��</dd>
+<dt>ע��ʱ��</dt><dd>2023-8-8</dd>
+<dt>����¼</dt><dd>1970-1-1</dd>
+</dl><div class="imicn">
+<a href="home.php?mod=space&amp;uid=1086464&amp;do=profile" target="_blank" title="�鿴��ϸ����"><img src="static/image/common/userinfo.gif" alt="�鿴��ϸ����" /></a>
+<a href="home.php?mod=magic&amp;mid=checkonline&amp;idtype=user&amp;id=%B8%B9%D3%EF%B4%F3%CA%A6%BC%D3%B7%C6%C3%A8" id="a_repent_18979873" class="xi2" onclick="showWindow(this.id, this.href)"><img src="static//image/magic/checkonline.small.gif" alt /> ���п�</a>
+</div>
+<div id="avatarfeed"><span id="threadsortswait"></span></div>
+</div>
+</div>
+<div>
+<div class="avatar" itemprop="image" itemscope itemtype="http://schema.org/URL"><a href="space-uid-1086464.html" class="avtm" target="_blank"><img data-src="https://avatar.1p3a.com/001/08/64/64_avatar_middle.jpg" class="lazyload" /></a></div>
+</div>
+</div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="thread-1022110-1-1.html" id="postnum18979873" onclick="setCopy(this.href, '���ӵ�ַ���Ƴɹ�');return false;">
+&#x1F517;
+</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi"><img class="authicn vm" id="authicon18979873" src="static/image/common/online_member.gif" />
+<a href="space-uid-1086464.html" target="_blank" class="xi2">�����ʦ�ӷ�è</a>
+<span>
+<meta itemprop="datePublished" content="2023-10-17 11:55" />
+<time itemprop="dateModified" datetime="2023-10-17 11:55">
+<span title="2023-10-17 11:55:17">3&nbsp;Сʱǰ</span></time>
+</span>
+<span class="pipe">|</span>
+<a href="forum.php?mod=viewthread&amp;tid=1022110&amp;page=1&amp;authorid=1086464" rel="nofollow">ֻ��������</a>
+<span class="pipe">|</span>
+<span><a href="https://jobs.1point3acres.com/interview" style="color: #497b89" target="_blank">&#128269;����Job���</a></span>
+<span class="pipe">|</span><a href="thread-1022110-1-1.html?ordertype=1" rel="nofollow">�������</a>
+</div>
+</div>
+</div><div class="pct"><style type="text/css">.pcb{margin-right:0}</style><div class="pcb">
+<meta itemprop="headline" content="HRT Algo Dev OA">
+<script src="./source/plugin/dxksst_credit/template/smartcome.js?v=2" type="text/javascript"></script><div id="dxksst_credit_hidden"></div>
+<!--googleoff: snippet-->
+<table width="100%" class="dxksst_table">
+<tr>
+<td align="right">��¥��</td>
+<td width="105px" align="right">
+<a id="recommend_add" href="forum.php?mod=misc&amp;action=recommend&amp;do=add&amp;tid=1022110&amp;hash=1523dc83" onclick="showWindow('login', this.href)" onmouseover="this.title = $('recommendv_add').innerHTML + ' !activity_member_unit!����'" style="text-decoration: none;">
+<font class="local_vote_icon" color="#ff6600">&#128077;</font>
+</a>
+&nbsp;
+<i id="rec_add_percent_18979873">0%</i>&nbsp;<i color="#497B89">(<i id="rec_add_18979873">0</i>)</i>
+</td>
+<td align="center" width="120px;">
+<div class="dxksst_pbg_new" align="left">
+<div class="dxksst_pbr_left" id="rec_add_bar_18979873" style="width: 0%; background-color:#ff6600">&nbsp;</div>
+<div class="dxksst_pbr_right" id="rec_sub_bar_18979873" style="width: 0%; background-color:#497b89">&nbsp;</div>
+</div>
+</td>
+<td width="105px" align="left">
+<i id="rec_sub_percent_18979873">0%</i>&nbsp;<i color="#497B89">(<i id="rec_sub_18979873">0</i>)</i>
+&nbsp;
+<a id="recommend_subtract" href="forum.php?mod=misc&amp;action=recommend&amp;do=subtract&amp;tid=1022110&amp;hash=1523dc83" onclick="showWindow('login', this.href)" onmouseover="this.title = $('recommendv_subtract').innerHTML + ' !activity_member_unit!�Ӳ�'" style="text-decoration: none;"><font class="local_vote_icon" color="#497b89">&#128078;</font></a>
+</td>
+</tr>
+<tr style="padding-top:10px;">
+<td align="right">ȫ�֣�</td>
+<td width="140px" align="right">&#128077; &nbsp;&nbsp;<i id="upvote_percent_18979873">100%</i>&nbsp;<i color="#497B89">(<i id="upvote_18979873">1</i>)</i></td>
+<td align="center" width="120px;">
+<div class="dxksst_pbg_new" align="left" title="0%">
+<div class="dxksst_pbr_left" id="upvote_bar_18979873" style="width: 100%; background-color:#ff6600">&nbsp;</div>
+<div class="dxksst_pbr_right" id="downvote_bar_18979873" style="width: 0%; background-color:#497b89">&nbsp;</div>
+</div>
+</td>
+<td width="140px" align="left"><i id="downvote_percent_18979873">0%</i>&nbsp;<i color="#497B89">(<i id="downvote_18979873">0</i>)</i>&nbsp;&nbsp;&nbsp; &#128078;</td>
+</tr>
+</table>
+<div align="right">
+</div>
+<!--googleon: snippet-->
+<br/><span style="margin-top: 3px">
+<font color="#666">2023(10-12��)</font> <u><b><font color="green">��ũ��General</font></b> <b>����</b> <b><font color="#00B2E8">ʵϰ</font></b>@<b><font color="#FF6600">hudson-river-trading</font></b></u> - ���Ϻ�Ͷ - <b><font color="brown">���߱���&nbsp;</font></b> | <b><font color="purple">&#128528; Neutral &#128528; AverageOther</font></b> | Ӧ���ҵ��
+</span>
+<br/><div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tr><td class="t_f" id="postmessage_18979873" itemprop="articleBody">
+<div class="attach_nopermission attach_tips">
+<div>
+<h3><strong>
+ע��һĶ���ֵ���̳���鿴����ɻ���</strong></h3>
+<p>����Ҫ <a href="member.php?mod=logging&amp;action=login" onclick="showWindow('login', this.href);return false;">��¼</a> �ſ������ػ�鿴������û���ʺţ�<a href="member.php?mod=xregister" title="ע���ʺ�">ע���˺�</a>
+<a href="https://auth.1point3acres.com/link/wechat"><img src="source/plugin/wq_login/static/images/wechat_login.png" class="vm" /></a>
+</p>
+</div>
+<span class="atips_close" onclick="this.parentNode.style.display='none'">x</span>
+</div>
+150 ���� 3����<br/>
+<br/>
+<br/>
+��һ�⣺����һ����n���ʱ���С���������ж���fancy number��fancy number�Ķ�����ת��4���ƺ�ֻ��0��1���㷨Ҫ��O(n)�졣<br/>
+<br/>
+�ڶ��⣺�·�ת�壬n��n���̣����Ӻ����������м�еİ��嶼���ɺ��壬��֮��Ȼ��Ҫ���ǶԽ��ߡ��������һ��������ɫ�����꣬�������պڰ����ʣ���١�<br/>
+<br/>
+�����⣺���������֡���һ<!--googleoff: snippet--><div class="locked"><div class="locked-blur">���ã�<br>�������ص�������Ҫ���ָ��� 188 �ſ����<br>����ǰ����Ϊ 0��<br>ʹ��VIP���̽����Ķ�Ȩ�޻�鿴������ȡ���ֵķ�ʽ</div>�οͣ����ã�<br>�������ص�������Ҫ���ָ��� 188 �ſ����<br>����ǰ����Ϊ 0��<br><a href="https://pay.1point3acres.com/bbs/vip" target="_blank" class="bg-#497b89 text-white text-base md:text-sm md:leading-8 font-bold no-underline rounded-lg px-2 py-1">VIP���̽����Ķ�Ȩ��</a> �� <a href="https://www.1point3acres.com/bbs/points.html" target="_blank" class="text-#666 no-underline">�鿴������ȡ���ֵķ�ʽ</a><br><a href="https://pay.1point3acres.com/bbs/vip?utm_source=bbs&amp;utm_medium=thread_ad" target="_blank"><img src="https://oss.1p3a.com/asset/202207/22/79541hxivrbxkfzlvfgx.png!d" width="400" class="mr-4" /></a></div><!--googleon: snippet-->ht��node������nodeȫ��������<br/>
+<br/>
+����о�˼���Ѷ��еȣ�������ͦ��2����Сʱ���Ĳ��ࡣ</td></tr></table>
+</div>
+<div id="comment_18979873" class="cm">
+</div>
+<div id="p_btn" class="mtw mbm hm cl">
+<a href="home.php?mod=spacecp&amp;ac=favorite&amp;type=thread&amp;id=1022110" id="k_favorite" onclick="showWindow(this.id, this.href, 'get', 0);" onmouseover="this.title = $('favoritenumber').innerHTML + ' ���ղ�'" title="�ղر���"><i><img src="static/image/common/fav.gif" alt="�ղ�" />�ղ�<span id="favoritenumber" style="display:none">0</span></i></a>
+<a href="forum.php?mod=collection&amp;action=edit&amp;op=addthread&amp;tid=1022110" id="k_collect" onclick="showWindow(this.id, this.href);return false;" onmouseover="this.title = $('collectionnumber').innerHTML + ' ������'" title="�Ժ�����ר��"><i><img src="static/image/common/collection.png" alt="����" />����<span id="collectionnumber" style="display:none">0</span></i></a>
+<div style="display: none">
+<a id="recommend_add" href="forum.php?mod=misc&amp;action=recommend&amp;do=add&amp;tid=1022110&amp;hash=1523dc83" onclick="showWindow('login', this.href)" onmouseover="this.title = $('recommendv_add').innerHTML + ' �˺���'" title="��һ��"><i><img src="static/image/common/rec_add.gif" alt="����" />����<span id="recommendv_add" style="display:none">0</span></i></a>
+<a id="recommend_subtract" href="forum.php?mod=misc&amp;action=recommend&amp;do=subtract&amp;tid=1022110&amp;hash=1523dc83" onclick="showWindow('login', this.href)" onmouseover="this.title = $('recommendv_subtract').innerHTML + ' ���Ӳ�'" title="��һ��"><i><img src="static/image/common/rec_subtract.gif" alt="�Ӳ�" />�Ӳ�<span id="recommendv_subtract" style="display:none">0</span></i></a>
+</div>
+</div>
+<div class="flex flex-wrap">
+<div class="w-1/2 min-w-[350px]">
+<h3 class="psth xs1"><span class="icon_ring vm"></span>����</h3>
+<dl id="ratelog_18979873" class="rate">
+<dd style="margin:0">
+<div id="post_rate_18979873"></div>
+<table class="ratl">
+<tr>
+<th class="xw1" width="120"><a href="forum.php?mod=misc&amp;action=viewratings&amp;tid=1022110&amp;pid=18979873" onclick="showWindow('viewratings', this.href)" title="�鿴ȫ������"> �������� <span class="xi1">1</span></a></th><th class="xw1" width="80">���� <i><span class="xi1">+1</span></i></th>
+<th>
+<a href="javascript:;" onclick="toggleRatelogCollapse('ratelog_18979873', this);" class="y xi2 op">����</a>
+<i class="txt_h">����</i>
+</th>
+</tr>
+<tbody class="ratl_l"><tr id="rate_18979873_353735">
+<td>
+<a href="space-uid-353735.html" target="_blank"><img data-src="https://avatar.1p3a.com/000/35/37/35_avatar_small.jpg" class="lazyload" /></a> <a href="space-uid-353735.html" target="_blank">harvey1993</a>
+</td><td class="xi1"> + 1</td>
+<td class="xg1">��һ��</td>
+</tr>
+</tbody>
+</table>
+<p class="ratc">
+<a href="forum.php?mod=misc&amp;action=viewratings&amp;tid=1022110&amp;pid=18979873" onclick="showWindow('viewratings', this.href)" title="�鿴ȫ������" class="xi2">�鿴ȫ������</a>
+</p>
+</dd>
+</dl>
+</div>
+</div>
+<br>��һƪ��<a href="thread-1022084-1-1.html" title="tiktok�����ɻ�" target="_blank"><font color="#497b89">tiktok�����ɻ�</font></a><br>��һƪ��<a href="thread-1022115-1-1.html" title="IBM 2024 summer backend SWE intern OA" target="_blank"><font color="#497b89">IBM 2024 summer backend SWE intern OA</font></a></div>
+</div>
+<div class="mtw mbw">
+<h3 class="pbm ptm" style="color: #FFFFFF; background-color: #497B89; padding-left: 10px;">�������</h3>
+<ul class="xl2 cl viewthread_nge_list" style="background-color: #E5EDF2; padding: 5px; border: 1px solid #C2D5E3"><li><a href="thread-1022128-1-1.html" title="�׵��澭" target="_blank">�׵��澭</a></li>
+<li><a href="thread-1022115-1-1.html" title="IBM 2024 summer backend SWE intern OA" target="_blank">IBM 2024 summer backend SWE intern OA</a></li>
+<li><a href="thread-1022084-1-1.html" title="tiktok�����ɻ�" target="_blank">tiktok�����ɻ�</a></li>
+<li><a href="thread-1022050-1-1.html" title="����ש oa" target="_blank">����ש oa</a></li>
+<li><a href="thread-1022045-1-1.html" title="����MLE����" target="_blank">����MLE����</a></li>
+<li><a href="thread-1022044-1-1.html" title="����vo" target="_blank">����vo</a></li>
+<li><a href="thread-1022042-1-1.html" title="Robinhood Karat�澭" target="_blank">Robinhood Karat�澭</a></li>
+<li><a href="thread-1022041-1-1.html" title="Citadel OA" target="_blank">Citadel OA</a></li>
+<li><a href="thread-1022039-1-1.html" title="stripe�������" target="_blank">stripe�������</a></li>
+<li><a href="thread-1022033-1-1.html" title="TikTok NG VO�澭" target="_blank">TikTok NG VO�澭</a></li>
+<li><a href="thread-1022030-1-1.html" title="Tiktok MLE ng" target="_blank">Tiktok MLE ng</a></li>
+<li><a href="thread-1022029-1-1.html" title="�ȴ����� ����" target="_blank">�ȴ����� ����</a></li>
+<li><a href="thread-1022016-1-1.html" title="fortinet sde VO" target="_blank">fortinet sde VO</a></li>
+<li><a href="thread-1022014-1-1.html" title="Tiktok Sponsor J-1 Visa ��" target="_blank">Tiktok Sponsor J-1 Visa ��</a></li>
+<li><a href="thread-1021998-1-1.html" title="Bw Summer ����" target="_blank">Bw Summer ����</a></li>
+<li><a href="thread-1021997-1-1.html" title="Illumina hirevue �����澭" target="_blank">Illumina hirevue �����澭</a></li>
+<li><a href="thread-1021996-1-1.html" title="capitalone onsite" target="_blank">capitalone onsite</a></li>
+<li><a href="thread-1021983-1-1.html" title="Snap ����coding����" target="_blank">Snap ����coding����</a></li>
+<li><a href="thread-1021982-1-1.html" title="Rippling 3��VO�Ҿ�" target="_blank">Rippling 3��VO�Ҿ�</a></li>
+<li><a href="thread-1021979-1-1.html" title="Meta����" target="_blank">Meta����</a></li>
+</ul>
+</div>
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition18979873"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="forum.php?mod=post&amp;action=reply&amp;fid=145&amp;tid=1022110&amp;reppost=18979873&amp;extra=&amp;page=1" onclick="showWindow('reply', this.href)">�ظ�</a>
+<div style="display: none">
+</div>
+</em>
+<p>
+<a href="javascript:;" id="mgc_post_18979873" onmouseover="showMenu(this.id)" class="showmenu">ʹ�õ���</a>
+<a href="javascript:;" onclick="showWindow('miscreport18979873', 'misc.php?mod=report&rtype=post&rid=18979873&tid=1022110&fid=145', 'get', -1);return false;">�ٱ�</a>
+</p>
+<ul id="mgc_post_18979873_menu" class="p_pop mgcmn" style="display: none;">
+<li><a href="home.php?mod=magic&amp;mid=bump&amp;idtype=tid&amp;id=1022110" id="a_bump" onclick="showWindow(this.id, this.href)"><img src="static/image/magic/bump.small.gif" />������</a></li>
+<li><a href="home.php?mod=magic&amp;mid=stick&amp;idtype=tid&amp;id=1022110" id="a_stick" onclick="showWindow(this.id, this.href)"><img src="static/image/magic/stick.small.gif" />�ö���</a></li>
+<li><a href="home.php?mod=magic&amp;mid=close&amp;idtype=tid&amp;id=1022110" id="a_stick" onclick="showWindow(this.id, this.href)"><img src="static/image/magic/close.small.gif" />������</a></li>
+<li><a href="home.php?mod=magic&amp;mid=open&amp;idtype=tid&amp;id=1022110" id="a_stick" onclick="showWindow(this.id, this.href)"><img src="static/image/magic/open.small.gif" />������</a></li>
+<li><a href="home.php?mod=magic&amp;mid=highlight&amp;idtype=tid&amp;id=1022110" id="a_stick" onclick="showWindow(this.id, this.href)"><img src="static/image/magic/highlight.small.gif" />��ɫ��</a></li>
+<li><a href="home.php?mod=magic&amp;mid=jack&amp;idtype=tid&amp;id=1022110" id="a_jack" onclick="showWindow(this.id, this.href)"><img src="static/image/magic/jack.small.gif" />ǧ�ﶥ</a></li>
+</ul>
+<script type="text/javascript" reload="1">checkmgcmn('post_18979873')</script>
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</table>
+</div>
+<div id="postlistreply" class="pl"><div id="post_new" class="viewthread_table" style="display: none"></div></div>
+</div>
+<form method="post" autocomplete="off" name="modactions" id="modactions">
+<input type="hidden" name="formhash" value="1523dc83" />
+<input type="hidden" name="optgroup" />
+<input type="hidden" name="operation" />
+<input type="hidden" name="listextra" value />
+<input type="hidden" name="page" value="1" />
+</form>
+<div class="pgs mtm mbm cl">
+<span class="pgb y"><a href="forum-145-1.html">�����б�</a></span>
+<a id="newspecialtmp" onmouseover="$('newspecial').id = 'newspecialtmp';this.id = 'newspecial';showMenu({'ctrlid':this.id})" onclick="location.href='forum.php?mod=post&action=newthread&fid=145';return false;" href="javascript:;" title="������"><img src="static/image/common/pn_post.png" alt="������" /></a>
+</div>
+<div id="diyfastposttop" class="area"></div>
+<script type="text/javascript">
+var postminchars = parseInt('8');
+var postmaxchars = parseInt('800000');
+var disablepostctrl = parseInt('0');
+</script>
+<div id="f_pst" class="pl bm bmw">
+<form method="post" autocomplete="off" id="fastpostform" action="forum.php?mod=post&amp;action=reply&amp;fid=145&amp;tid=1022110&amp;extra=&amp;replysubmit=yes&amp;infloat=yes&amp;handlekey=fastpost" onSubmit="
+// TODO Howard 11/3/2015
+var sbtn = $('fastpostsubmit');
+sbtn.disabled = true;
+sbtn.innerHTML = ' <strong>�ظ�������...</strong> ';
+sbtn.setAttribute('background', sbtn.style.background);  
+sbtn.setAttribute('bordercolor', sbtn.style.borderColor);
+sbtn.style.background = '#C7C7C7'; 
+sbtn.style.borderColor = '#8B8B8B'; 
+var form = this;
+
+var isValid = fastpostvalidate(form, null, 0);
+// if(!isValid) reoverBtn();
+
+return isValid;
+
+">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="pls">
+</td>
+<td class="plc">
+<span id="fastpostreturn"></span>
+<div class="cl">
+<div id="fastposteditor">
+<div class="tedt mtn">
+<div class="bar">
+<span class="y">
+<a href="forum.php?mod=post&amp;action=reply&amp;fid=145&amp;tid=1022110" onclick="return switchAdvanceMode(this.href)">�߼�ģʽ</a>
+</span><script src="data/cache/seditor.js?vdj" type="text/javascript"></script>
+<div class="fpd">
+<a href="javascript:;" title="���ּӴ�" class="fbld">B</a>
+<a href="javascript:;" title="����������ɫ" class="fclr" id="fastpostforecolor">Color</a>
+<a id="fastpostimg" href="javascript:;" title="ͼƬ" class="fmg">Image</a>
+<a id="fastposturl" href="javascript:;" title="��������" class="flnk">Link</a>
+<a id="fastpostquote" href="javascript:;" title="����" class="fqt">Quote</a>
+<a id="fastpostcode" href="javascript:;" title="����" class="fcd">Code</a>
+</div></div>
+<div class="area">
+<div class="pt hm">
+����Ҫ��¼��ſ��Ի��� <a href="member.php?mod=logging&amp;action=login" onclick="showWindow('login', this.href)" class="xi2">��¼</a> | <a href="member.php?mod=xregister" class="xi2">ע���˺�</a>
+<a href="https://auth.1point3acres.com/link/wechat"><img src="source/plugin/wq_login/static/images/wechat_login.png" class="vm" /></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<input type="hidden" name="formhash" value="1523dc83" />
+<input type="hidden" name="usesig" value="0" />
+<input type="hidden" name="subject" value="  " />
+<div style="line-height:15px; background:#fff7a0; border:#FF9A9A 1px dashed; border-radius:5px; font-size:12px;padding:5px 10px; clear:both; margin-top:10px;"><FONT color="#ff6600" size="2">��˽���ѣ�</FONT>
+<ul>
+<li>&#9745; ��ֹ������棬��Ⱥ����������ϵ��ʽ��������ȥ&#128279;<a href="https://www.1point3acres.com/bbs/forum-70-1.html" target="_blank">ͬѧͬ�·���</a>����Ⱥ��ȥ&#128279;<a href="https://www.1point3acres.com/bbs/forum-142-1.html" target="_blank">��Ⱥ���</a>�������ȥ&#128279;<a href="https://www.1point3acres.com/bbs/forum-225-1.html" target="_blank">�����г�</a>,�� &#128279;<a href="https://www.1point3acres.com/bbs/forum-224-1.html" target="_blank">�ⷿ���|������</a></li>
+<li>&#9745; ��̳�����ڷ��� 30 �����ڿ��Ա༭����������ɾ����Ϊ��ֹ��ɧ���������⣬��Ҫ������΢�ŵ���ϵ��ʽ����������������̳˽�ŷ�ʽ���͡�</li>
+<li>&#9745; �ɻ��������ʹ�� &#128279;<a href="https://tools.1point3acres.com/thread" target="_blank">��������</a>���澭�������澭���й��澭�������澭��PM�澭�������������������й�����¼ȡ�㱨����λѡУ��</li>
+<li>&#9745; ����ȫվ &#128279;<a href="http://www.1point3acres.com/bbs/thread-405991-1-1.html" target="_blank">������������</a> </li>
+</ul>
+</div> <p class="ptm pnpost">
+<a href="home.php?mod=spacecp&amp;ac=credit&amp;op=rule&amp;fid=145" class="y" target="_blank">������ֹ���</a>
+<button type="button" onclick="showWindow('login', 'member.php?mod=logging&action=login&guestmessage=yes')" name="replysubmit" id="fastpostsubmit" class="pn pnc vm" value="replysubmit" tabindex="5"><strong>�����ظ�</strong></button>
+<input type="file" id="saya_uploader" multiple style="display: none;" onChange="sayauploadfunction(upload,'attach',this.files)">
+<script src="./static/js/forum_post.js?vdj" type="text/javascript"></script>
+<script type="text/javascript">
+if(sayaQuery("#SWFUpload_0").length>0){
+sayaQuery("#SWFUpload_0").replaceWith('<a href="#" onClick="return ul();" title="HTML5�ϴ�����" style="background-position: 0 0; margin:2px 5px 0 0; width:20px; height:20px; background-image:url(./static/image/editor/icons/attach.png); background-size: contain; line-height:20px; overflow: hidden; text-indent:-9999px"></a>');
+}else{
+sayaQuery("#spanButtonPlaceholder").replaceWith('<a href="#" onClick="return ul();" title="HTML5�ϴ�����" style="background-position: 0 0px; margin:2px 5px 0 0; width:20px; height:20px; background-image:url(./static/image/editor/icons/attach.png); background-size: contain; line-height:20px; overflow: hidden; text-indent:-9999px"></a>');
+}
+var imgexts = 'jpg, jpeg, gif, png';
+function ul(){
+sayaQuery('#saya_uploader').click();
+return false;
+}
+</script>
+<label for="fastpostrefresh"><input id="fastpostrefresh" type="checkbox" class="pc" />��������ת�����һҳ</label>
+<script type="text/javascript">if(getcookie('fastpostrefresh') == 1) {$('fastpostrefresh').checked=true;}</script>
+</p>
+</td>
+</tr>
+</table>
+</form>
+</div>
+<script type="text/javascript">$("postlist").innerHTML = $("postlist").innerHTML.replace(/<a\s.*?href="forum.php\?mod=attachment([^\"]+)"/ig, "<a href=\"plugin.php?id=attachcenter:goto$1\"");</script>
+<script type="text/javascript">
+new lazyload();
+</script>
+<script type="text/javascript">document.onkeyup = function(e){keyPageScroll(e, 0, 0, 'forum.php?mod=viewthread&tid=1022110', 1);}</script>
+</div>
+<div id="sd" class="sd overflow-visible">
+<div class="drag">
+<div id="diy2" class="area"><div id="frameDk9R4P" class=" frame move-span cl frame-1"><div id="frameDk9R4P_left" class="column frame-1-c"><div id="frameDk9R4P_left_temp" class="move-span temp"></div><div id="portal_block_455" class="block move-span"><div id="portal_block_455_content" class="dxb_bc"><div class="module cl slidebox carousel-1p3a" timestep="5000" style="height:220px">
+<ul class="slideshow"><li style="width: 100%; ">
+<a href="thread-1021772-1-1.html" target="_blank"><picture>
+<source type="image/webp" data-srcset="https://www.livemint.com/lm-img/img/2023/07/31/original/4_1690809606083.png" class="lazyload object-contain" width="100%" height="200" />
+<img data-src="https://www.livemint.com/lm-img/img/2023/07/31/original/4_1690809606083.png" class="lazyload object-contain" width="100%" height="221" />
+</picture>
+<span class="carousel-title">X���طǷ���ͻ���Ů����ʦ���i</span>
+</a>
+</li><li style="width: 100%; ">
+<a href="thread-1021900-1-1.html" target="_blank"><picture>
+<source type="image/webp" data-srcset="https://oss.1p3a.com/daily_top/202206/01/18539fzohvuggbcroulk2.jpg!w" class="lazyload object-contain" width="100%" height="200" />
+<img data-src="https://oss.1p3a.com/daily_top/202206/01/18539fzohvuggbcroulk2.jpg!d" class="lazyload object-contain" width="100%" height="221" />
+</picture>
+<span class="carousel-title">����ͼ�򷿹��ԡ�1��: �ײ��߼�ƪ</span>
+</a>
+</li><li style="width: 100%; ">
+<a href="thread-1021931-1-1.html" target="_blank"><picture>
+<source type="image/webp" data-srcset="https://oss.1p3a.com/daily_top/202207/15/192330mhxkeqqyz6clfc8z.png!w" class="lazyload object-contain" width="100%" height="200" />
+<img data-src="https://oss.1p3a.com/daily_top/202207/15/192330mhxkeqqyz6clfc8z.png!d" class="lazyload object-contain" width="100%" height="221" />
+</picture>
+<span class="carousel-title">�󳧵����ԵĲ�����ص�</span>
+</a>
+</li><li style="width: 100%; ">
+<a href="thread-1021898-1-1.html" target="_blank"><picture>
+<source type="image/webp" data-srcset="https://etstatic.tnn.in/photo/msid-100152590,updatedat-1683787189387,width-200,height-200,resizemode-75/100152590.jpg" class="lazyload object-contain" width="100%" height="200" />
+<img data-src="https://etstatic.tnn.in/photo/msid-100152590,updatedat-1683787189387,width-200,height-200,resizemode-75/100152590.jpg" class="lazyload object-contain" width="100%" height="221" />
+</picture>
+<span class="carousel-title">Linkedin��Ĳ�������</span>
+</a>
+</li><li style="width: 100%; ">
+<a href="thread-1021759-1-1.html" target="_blank"><picture>
+<source type="image/webp" data-srcset="https://oss.1p3a.com/forum/202310/15/183103gkikmeom311am2ll.jpg" class="lazyload object-contain" width="100%" height="200" />
+<img data-src="https://oss.1p3a.com/forum/202310/15/183103gkikmeom311am2ll.jpg" class="lazyload object-contain" width="100%" height="221" />
+</picture>
+<span class="carousel-title">������������γ���Ravenna: �������۹�˥��֮������</span>
+</a>
+</li><li style="width: 100%; ">
+<a href="thread-1021732-1-1.html" target="_blank"><picture>
+<source type="image/webp" data-srcset="https://oss.1p3a.com/forum/202310/15/141653uxyeb77bwre2grh4.jpg" class="lazyload object-contain" width="100%" height="200" />
+<img data-src="https://oss.1p3a.com/forum/202310/15/141653uxyeb77bwre2grh4.jpg" class="lazyload object-contain" width="100%" height="221" />
+</picture>
+<span class="carousel-title">������������γ���Mantua/Mantova��ɫ�鵽����Ψ��</span>
+</a>
+</li><li style="width: 100%; ">
+<a href="thread-1021394-1-1.html" target="_blank"><picture>
+<source type="image/webp" data-srcset="https://oss.1p3a.com/tag/202310/13/17037d783xsobk56ribol.jpg!w" class="lazyload object-contain" width="100%" height="200" />
+<img data-src="https://oss.1p3a.com/tag/202310/13/17037d783xsobk56ribol.jpg!d" class="lazyload object-contain" width="100%" height="221" />
+</picture>
+<span class="carousel-title">��˹������(2023-10-18)�����Ʊ������Ĺɼۻ�������̣�</span>
+</a>
+</li><li style="width: 100%; ">
+<a href="thread-1021557-1-1.html" target="_blank"><picture>
+<source type="image/webp" data-srcset="https://oss.1p3a.com/forum/202310/14/135256fpss4d33aks6k4pa.jpg" class="lazyload object-contain" width="100%" height="200" />
+<img data-src="https://oss.1p3a.com/forum/202310/14/135256fpss4d33aks6k4pa.jpg" class="lazyload object-contain" width="100%" height="221" />
+</picture>
+<span class="carousel-title">������������γ���Parma���͹���������Ի�</span>
+</a>
+</li><li style="width: 100%; ">
+<a href="thread-1021547-1-1.html" target="_blank"><picture>
+<source type="image/webp" data-srcset="https://oss.1p3a.com/daily_top/202302/20/111646re0jenjjxztubzpl.jpg!w" class="lazyload object-contain" width="100%" height="200" />
+<img data-src="https://oss.1p3a.com/daily_top/202302/20/111646re0jenjjxztubzpl.jpg!d" class="lazyload object-contain" width="100%" height="221" />
+</picture>
+<span class="carousel-title">����������߹��ԣ�Bologna, Ferrara, Mantova, Modena, Parma, Ravenna</span>
+</a>
+</li><li style="width: 100%; ">
+<a href="thread-1021462-1-1.html" target="_blank"><picture>
+<source type="image/webp" data-srcset="https://oss.1p3a.com/tag/202310/14/203459dfmsta50ybqliwev.png!w" class="lazyload object-contain" width="100%" height="200" />
+<img data-src="https://oss.1p3a.com/tag/202310/14/203459dfmsta50ybqliwev.png!d" class="lazyload object-contain" width="100%" height="221" />
+</picture>
+<span class="carousel-title">Linkedin��һlayoff�Ĵ���</span>
+</a>
+</li></ul>
+</div>
+<script type="text/javascript">
+runslideshow();
+</script>
+<div id="amh-thread-side" style="margin-bottom:5px;"></div>
+<script>
+	(function() {
+		var amhDiv = document.getElementById('amh-thread-side');
+		if (typeof(tid) === 'number' && tid % 10 < 8 && amhDiv) {
+			amhDiv.innerHTML = '<div id="ahm-rotd" class="ahm-rotd" style="display: inline-block; vertical-align: top;max-width:365px;width: calc( 100% - 310px ); min-width: 300px;"></div><div style="display: inline-block; margin: 0 auto; width: calc(100% - 375px); min-width: 300px;"><div style="margin: 0 auto; vertical-align: top;height: 250px; width: 300px; background: #666;width: 300px; min-height: 50px;" id="_snup-rtdx-ldgr1"></div></div>';
+			(function(w,d,s,l,i){
+var groupIdNode = document.querySelector('meta[name="application-groupid"]');
+        if (groupIdNode && groupIdNode.content === '53') {return;}
+w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5ZBSVBZ');
+		}
+	})();
+</script>
+</div></div><div id="portal_block_479" class="block move-span"><div id="portal_block_479_content" class="dxb_bc"><div class="portal_block_summary"><div style="margin:auto;text-align:center;height:250px;" id="ad-thread-side-small">
+<script>
+        if (typeof(tid) === 'number' && tid % 10 < 1) {
+            (function(){
+                var adDiv = document.createElement('div');
+                adDiv.id = 'bsa-zone_1667371070839-9_123456';
+                document.getElementById('ad-thread-side-small').appendChild(adDiv);
+            })();
+            (function(){
+                var bsa_optimize=document.createElement('script');
+                bsa_optimize.type='text/javascript';
+                bsa_optimize.async=true;
+                bsa_optimize.src='https://cdn4.buysellads.net/pub/1pointacres.js?'+(new Date()-new Date()%600000);
+                (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa_optimize);
+            })();
+        } else {
+            var apSmallId = 'bfb5f1bc-0bf5-4da4-8b5b-b5963771d0f9';
+            (function(){
+                var adDiv = document.createElement('div');
+                adDiv.id = apSmallId;
+                adDiv.className = '_ap_apex_ad';
+                document.getElementById('ad-thread-side-small').appendChild(adDiv);
+            })();
+            var adpushup = window.adpushup  = window.adpushup || {que:[]};
+            adpushup.que.push(function() {
+                adpushup.triggerAd(apSmallId);
+            });
+        }
+    </script>
+</div>
+<style>
+	@media only screen and (min-width: 0px) and (min-height: 0px) {
+		div[id^="bsa-zone_1667371070839-9_123456"] {
+			min-width: 320px;
+			min-height: 50px;
+		}
+	}
+	@media only screen and (min-width: 640px) and (min-height: 0px) {
+		div[id^="bsa-zone_1667371070839-9_123456"] {
+			min-width: 300px;
+			min-height: 250px;
+		}
+	}
+</style></div></div></div><div id="portal_block_666" class="block move-span"><div id="portal_block_666_content" class="dxb_bc"><div id="news-container" class="card-1p3a" style="box-shadow:none">
+<div class="title-1p3a bg-white border-0 border-b border-solid border-#f2f2f2" style="justify-content: space-between;height:35px;">
+<a href="https://redian.news?utm_source=bbs&utm_medium=widget_news" target="_blank">
+<div class="flex items-center text-#6e6e6e">
+<strong class=" font-semibold text-sm text-#6e6e6e hover:text-active">�ȵ�����</strong>
+</div>
+</a>
+<a href="https://redian.news?utm_source=bbs&utm_medium=widget_news" target="_blank">�鿴���� >></span></a>
+</div>
+<div class="module cl">
+<ol class="list-none p-2 mt-0.5" style="font-size:12px;"><li class="flex"><a href="https://redian.news/news/77428?utm_source=bbs&utm_medium=widget_news" target="_blank" class="no-underline hover:text-active truncate text-#666">
+Ү�׻���˹�ʤ �������н��ڹ������������
+</a></li><li class="flex"><a href="https://redian.news/news/77430?utm_source=bbs&utm_medium=widget_news" target="_blank" class="no-underline hover:text-active truncate text-#666">
+������ɫ�У��ݵǳƱ��볹���������˹
+</a></li><li class="flex"><a href="https://redian.news/news/77436?utm_source=bbs&utm_medium=widget_news" target="_blank" class="no-underline hover:text-active truncate text-#666">
+�����о���������ҩ��Mounjaro��ƽ������60��
+</a></li><li class="flex"><a href="https://redian.news/news/77434?utm_source=bbs&utm_medium=widget_news" target="_blank" class="no-underline hover:text-active truncate text-#666">
+���Գ�ͻ������޷��� ����ŵ����71�����Ӵ���6����ͯ
+</a></li><li class="flex"><a href="https://redian.news/news/77358?utm_source=bbs&utm_medium=widget_news" target="_blank" class="no-underline hover:text-active truncate text-#666">
+Σ�գ�����ȫ���ֱ������ң�����˹����������
+</a></li><li class="flex"><a href="https://redian.news/news/77371?utm_source=bbs&utm_medium=widget_news" target="_blank" class="no-underline hover:text-active truncate text-#666">
+���ӹ���ʡ�Լ��õ��Ƴ���ѧ������ȴ��44�����¹�����ѣ���ʡ��
+</a></li><li class="flex"><a href="https://redian.news/news/77388?utm_source=bbs&utm_medium=widget_news" target="_blank" class="no-underline hover:text-active truncate text-#666">
+�����鶢����ɽķ
+</a></li><li class="flex"><a href="https://redian.news/news/77419?utm_source=bbs&utm_medium=widget_news" target="_blank" class="no-underline hover:text-active truncate text-#666">
+�����Գ�ͻ���� ��Ǵ�¥�������ж���ǲ�ڶ��Һ�ĸ
+</a></li></ol>
+</div>
+</div>
+<style>
+  .news-ol {
+    list-style: none;
+  }
+
+  .news-li {
+    font-size: 12px;
+    color: #666;
+  }
+
+  .news-li a {
+    vertical-align: middle;
+  }
+
+  .news-li:before {
+    content: counter(news-counter, decimal-leading-zero);
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0px 10px;
+    color: rgba(70, 120, 135, 0.3);
+    vertical-align: middle;
+  }
+
+  .news-li:hover:before {
+    color: #497b89;
+  }
+
+  .news-li:hover a div {
+    color: #497b89;
+  }
+</style>
+<script>(function(w, d) {if (getcookie('1p3a_cn') == 1 && d.getElementById('news-container')) {d.getElementById('news-container').innerHTML = '';}})(window, document);</script></div></div><div id="portal_block_482" class="block move-span"><div id="portal_block_482_content" class="dxb_bc"><div class="mt-4 card-1p3a">
+<div class="flex justify-between border-0 border-b border-solid p-3">
+<strong class=" font-semibold text-sm">�����</strong>
+<a href="https://blog.1point3acres.com" target="_blank" class="text-#999">���� ></span></a>
+</div>
+<div class="module cl">
+<ol class="list-none space-y-2 p-3"><li class="flex items-center">
+<a href="https://blog.1point3acres.com/how-to-build-a-game-pc/" target="_blank"><img data-src="https://blog.1point3acres.com/wp-content/uploads/2023/01/build_pc-300x167.jpg" class="w-10 h-10 rounded mr-1 lazyload" /></a>
+<a href="https://blog.1point3acres.com/how-to-build-a-game-pc/" target="_blank" class="text-13px text-#424242 hover:text-active ml-2">
+��һ����װ��ϷPC����Ҫ���ţ���ָ�Ͽ��԰�
+</a>
+</li><li class="flex items-center">
+<a href="https://blog.1point3acres.com/2023-new-year-christmas-gift-guide-amazon/" target="_blank"><img data-src="https://blog.1point3acres.com/wp-content/uploads/2022/12/new-years-day-gc76b4a19e_1280-300x169.jpg" class="w-10 h-10 rounded mr-1 lazyload" /></a>
+<a href="https://blog.1point3acres.com/2023-new-year-christmas-gift-guide-amazon/" target="_blank" class="text-13px text-#424242 hover:text-active ml-2">
+���������Ƽ� Amazon�����ʹ� ��������
+</a>
+</li><li class="flex items-center">
+<a href="https://blog.1point3acres.com/purchase-house-in-usa-instruction/" target="_blank"><img data-src="https://blog.1point3acres.com/wp-content/uploads/2021/04/����-2-300x201.jpeg" class="w-10 h-10 rounded mr-1 lazyload" /></a>
+<a href="https://blog.1point3acres.com/purchase-house-in-usa-instruction/" target="_blank" class="text-13px text-#424242 hover:text-active ml-2">
+�����򷿹��ԣ������̡�ע��������ɺ�
+</a>
+</li><li class="flex items-center">
+<a href="https://blog.1point3acres.com/2022-black-friday-deals-live-update-amazon-bestbuy-walmart/" target="_blank"><img data-src="https://blog.1point3acres.com/wp-content/uploads/2022/11/black-friday-sign-stock-1536x864-1-300x169.png" class="w-10 h-10 rounded mr-1 lazyload" /></a>
+<a href="https://blog.1point3acres.com/2022-black-friday-deals-live-update-amazon-bestbuy-walmart/" target="_blank" class="text-13px text-#424242 hover:text-active ml-2">
+Cyber Monday�Ż���ȫ���� Amazon Bes
+</a>
+</li><li class="flex items-center">
+<a href="https://blog.1point3acres.com/house-maintenance-checklist-inspection-guide/" target="_blank"><img data-src="https://blog.1point3acres.com/wp-content/uploads/2021/03/home-maintenance-resolutions-2018-300x203.jpeg" class="w-10 h-10 rounded mr-1 lazyload" /></a>
+<a href="https://blog.1point3acres.com/house-maintenance-checklist-inspection-guide/" target="_blank" class="text-13px text-#424242 hover:text-active ml-2">
+�������ݱ������� + inspection��
+</a>
+</li><ol>
+</div>
+</div></div></div><div id="portal_block_476" class="sticky-1p3a block move-span"><div id="portal_block_476_content" class="dxb_bc"><div class="portal_block_summary"><div style="height:10px;background-color:#f9f9f9;"></div>
+<div style="margin:auto;text-align:center;height:600px;" id="ad-thread-side-big">
+<script>
+        if (typeof(tid) === 'number' && tid % 10 < 0) {
+            (function(){
+                var adDiv = document.createElement('div');
+                adDiv.id = 'bsa-zone_1663861018046-5_123456';
+                document.getElementById('ad-thread-side-big').appendChild(adDiv);
+            })();
+            (function(){
+                var bsa_optimize=document.createElement('script');
+                bsa_optimize.type='text/javascript';
+                bsa_optimize.async=true;
+                bsa_optimize.src='https://cdn4.buysellads.net/pub/1pointacres.js?'+(new Date()-new Date()%600000);
+                (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa_optimize);
+            })();
+        } else {
+            var apLargeId = 'fe3263af-e28b-4543-b59f-de7000291d78';
+            (function(){
+                var adDiv = document.createElement('div');
+                adDiv.id = apLargeId;
+                adDiv.className = '_ap_apex_ad';
+                document.getElementById('ad-thread-side-big').appendChild(adDiv);
+            })();
+            var adpushup = window.adpushup  = window.adpushup || {que:[]};
+            adpushup.que.push(function() {
+                adpushup.triggerAd(apLargeId);
+            });
+        }
+    </script>
+</div>
+<style>
+	@media only screen and (min-width: 0px) and (min-height: 0px) {
+		div[id^="bsa-zone_1663861018046-5_123456"] {
+			min-width: 320px;
+			min-height: 50px;
+		}
+	}
+	@media only screen and (min-width: 770px) and (min-height: 0px) {
+		div[id^="bsa-zone_1663861018046-5_123456"] {
+			min-width: 120px;
+			min-height: 600px;
+		}
+	}
+</style>
+<div style="height:10px;background-color:#f9f9f9;"></div></div></div></div></div></div></div>
+</div>
+</div>
+</div>
+<div class="wp mtn">
+<div id="diy3" class="area"></div>
+</div>
+<script type="text/javascript">
+var relatedlink = [];
+(function(){
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+relatedlink = JSON.parse(this.responseText);relatedlinks('postmessage_18979873');
+}
+};
+xhr.open("GET", "/bbs/data/cache/relatedlinks.json?vdj");
+xhr.send();
+})();
+</script>
+<script type="text/javascript">
+function succeedhandle_followmod(url, msg, values) {
+var fObj = $('followmod_'+values['fuid']);
+if(values['type'] == 'add') {
+fObj.innerHTML = '������';
+fObj.href = 'home.php?mod=spacecp&ac=follow&op=del&fuid='+values['fuid'];
+} else if(values['type'] == 'del') {
+fObj.innerHTML = '����TA';
+fObj.href = 'home.php?mod=spacecp&ac=follow&op=add&hash=1523dc83&fuid='+values['fuid'];
+}
+}
+fixed_top_nv();
+</script> </div>
+<div><div id="sticky-ad-container" style="position:fixed;bottom:0px;left:0px;width:100%;background-color:rgba(255,255,255,0.8);z-index:10;">
+<div id="ad-bbs-sticky" style="width:728px;max-height:90px;margin:auto;margin-top:5px;">
+<div id="f4da85c2-7aab-40e8-a34f-c8a574313f7b" class="_ap_apex_ad">
+<script>
+                var adpushup = window.adpushup  = window.adpushup || {que:[]};
+                adpushup.que.push(function() {
+                    adpushup.triggerAd("f4da85c2-7aab-40e8-a34f-c8a574313f7b");
+                });
+            </script>
+</div>
+</div>
+<a class="hidden lg:block cursor-pointer absolute" style="right: 1px;bottom: 2px;color: #999;text-align: center;padding: 1px;width: 40px;padding-top: 1px;font-size: 11px;border-radius: 3px;border: 1px solid #ddd;z-index: -1;" href="https://pay.1point3acres.com/bbs/noads?utm_source=sticky" target="_blank">ȥ���</a>
+</div>
+<script>
+    if (document.getElementById('ad-bbs-leaderboard-1') || document.getElementById('div-gpt-ad-1622785488118-0')) {
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        var slotLeaderboard = null;
+
+        googletag.cmd.push(function() {
+            slotLeaderboard = googletag.defineSlot('21995909917/bbs-leaderboard', [[728, 90]], 'ad-bbs-leaderboard-1').setCollapseEmptyDiv(true, true).addService(googletag.pubads());
+            slotPostBottom = googletag.defineSlot('/21995909917/bbs-thread-bottom', [[728, 90], [600, 90]], 'div-gpt-ad-1622785488118-0').setCollapseEmptyDiv(true, true).addService(googletag.pubads());
+            googletag.pubads().disableInitialLoad();
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+
+        if (document.getElementById('ad-bbs-leaderboard-1')) {
+            apstag.fetchBids({
+                slots: [{
+                    slotID: 'ad-bbs-leaderboard-1',
+                    slotName: '21995909917/bbs-leaderboard',
+                    sizes: [[728, 90]]
+                }]
+            }, () => {
+                googletag.cmd.push(() => {
+                    apstag.setDisplayBids();
+                    googletag.pubads().refresh([slotLeaderboard, slotPostBottom]);
+                });
+            });
+        } else {
+            googletag.cmd.push(() => {
+                googletag.pubads().refresh([slotPostBottom]);
+            });
+        }
+
+        if (document.getElementById('ad-bbs-leaderboard-1')) {
+            googletag.cmd.push(function() {
+                googletag.display('ad-bbs-leaderboard-1');
+            });
+        }
+        if (document.getElementById('div-gpt-ad-1622785488118-0')) {
+            googletag.cmd.push(function() {
+                googletag.display('div-gpt-ad-1622785488118-0');
+            });
+        }
+    }
+</script></div>
+<div id="forum_side_menu" class="shadow-md">
+<div id="forum-menu-container" class="group flex">
+<div id="forum-menu-button" class="px-px py-0 rounded-r xl:px-0 w-8px xl:w-32px xl:py-2 group-hover:rounded-none">
+<div class="xl:hidden my-8 text-white">
+&gt;
+</div>
+<div class="hidden xl:block text-center"><i class="iconfont icon-icons-menu text-sm xl:text-lg text-white"></i></div>
+<div class="hidden xl:block mt-1 mb-2 px-1 text-base text-white text-center font-semibold leading-snug">��̳����</div>
+</div>
+</div>
+<script type="text/javascript" src="data/cache/forum_menus.js?vdj" async></script>
+</div>
+<div class="border-0 border-t border-solid border-#f2f2f2 pt-4 pb-1 bg-white mb-100px">
+<footer class="container-1p3a footer-1p3a flex justify-between text-xs">
+<img data-src="static/image/common/logo.png" class="left lazyload" height="80px" />
+<div class="flex-1 px-4">
+<div class="middle flex justify-between w-[680px] mx-auto">
+<div>
+<strong>����</strong>
+<a href="https://www.1point3acres.com/bbs/start.php" target="_blank">����ָ��</a>
+<a href="https://www.1point3acres.com/bbs/misc.php?mod=faq" target="_blank">����Q&A</a>
+<a href="https://www.1point3acres.com/bbs/forum.php?mod=misc&amp;action=showdarkroom" target="_blank">С����</a>
+</div>
+<div>
+<strong>һĶ���ֵ�</strong>
+<a href="https://www.1point3acres.com/" target="_blank">��������</a>
+<a href="https://www.1point3acres.com/career" target="_blank">�����Ŷ�</a>
+<a href="https://www.1point3acres.com/contact" target="_blank">��ϵ�ͷ�</a>
+</div>
+<div>
+<strong>����VIP</strong>
+<a href="https://pay.1point3acres.com/bbs/vip" target="_blank">VIPͨ��֤</a>
+<a href="https://pay.1point3acres.com/bbs/points" target="_blank">������ݮ</a>
+<a href="https://pay.1point3acres.com/bbs/noads" target="_blank">ȥ���</a>
+</div>
+<div>
+<strong>�������</strong>
+<a href="https://pay.1point3acres.com/bbs/company" target="_blank">��ҵ��Ƹ</a>
+<a href="https://www.1point3acres.com/business" target="_blank">����ר��</a>
+<a href="https://www.1point3acres.com/business" target="_blank">����Ǣ̸</a>
+</div>
+<div>
+<strong>����</strong>
+<a href="https://www.1point3acres.com/terms_of_service.html" target="_blank">��������</a>
+<a href="https://www.1point3acres.com/bbs/misc.php?mod=faq&amp;action=faq&amp;id=70" target="_blank">��������</a>
+<a href="https://www.1point3acres.com/privacy_policy.html" target="_blank">��˽����</a>
+<a class="dns-link cursor-pointer" style="display:none;max-width:150px;"></a>
+</div>
+</div>
+<div class="text-center mt-2 text-#666 text-12px">1Point3Acres.com does not represent or guarantee the truthfulness, accuracy, or reliability of any of communications posted by users.</div>
+<div class="text-center mt-2 text-#666 text-12px">Copyright &copy;2009-2023 1Point3Acres.com All rights reserved. <a href="https://www.1point3acres.com/terms_of_service.html" target="_blank" class="underline">See Terms of Service.</a></div>
+</div>
+<div class="right flex flex-col items-start space-y-1">
+<strong class="font-medium">��ע����</strong>
+<div class="flex items-center h-8 pt-1">
+<div class="relative group">
+<i class=" iconfont icon-icons-wechat cursor-pointer"></i>
+<div class="invisible group-hover:visible absolute -top-44 -left-96 bg-white shadow-md flex transform">
+<div class="w-32 m-3 text-center">
+<img class="w-32 h-32 lazyload" data-src="https://oss.1p3a.com/static/image/common/wq_warald.jpg!b" />
+<figcaption>΢�Ź��ں�����</figcaption>
+</div>
+<div class="w-32 m-3 text-center">
+<img class="w-32 h-32 lazyload" data-src="https://oss.1p3a.com/static/image/common/wq_liuxue.jpg!b" />
+<figcaption>��������ں�</figcaption>
+</div>
+<div class="w-32 m-3 text-center">
+<img class="w-32 h-32 lazyload" data-src="https://oss.1p3a.com/static/image/common/wq_career.jpg!b" />
+<figcaption>��ְ�����ں�</figcaption>
+</div>
+<div class="w-32 m-3 text-center">
+<img class="w-32 h-32 lazyload" data-src="https://oss.1p3a.com/static/image/common/wq_invest.jpg!b" />
+<figcaption>����Ͷ�ʹ��ں�</figcaption>
+</div>
+</div>
+</div>
+<a href="https://www.youtube.com/channel/UChit-KABNK1rc2hupwhTOWA" target="_blank" class="no-underline"><i class="iconfont icon-icons-youtube"></i></a>
+<a href="https://twitter.com/Warald" target="_blank" class="no-underline"><i class="iconfont icon-icons-twitter"></i></a>
+</div>
+<div class="text-#aaa text-10px w-64">Some icons made by
+<a href="https://www.freepik.com" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">Freepik</a>,
+<a href="https://www.flaticon.com/authors/smalllikeart" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">smalllikeart</a>,
+<a href="https://www.flaticon.com/authors/vectors-market" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">Vectors Market</a>,
+<a href="https://www.flaticon.com/authors/monkik" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">monkik</a>,
+<a href="https://www.flaticon.com/authors/ultimatearm" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">ultimatearm</a>,
+<a href="https://www.flaticon.com/authors/pixel-perfect" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">Pixel perfect</a>,
+<a href="https://www.flaticon.com/authors/linector" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">Linector</a>,
+<a href="https://www.flaticon.com/authors/good-ware" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">Good Ware</a>,
+<a href="https://www.flaticon.com/authors/icongeek26" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">Icongeek26</a>,
+<a href="https://www.flaticon.com/authors/surang" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">surang</a>,
+<a href="https://www.flaticon.com/authors/mangsaabguru" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">mangsaabguru</a>,
+<a href="https://www.flaticon.com/authors/becris" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">Becris</a>,
+<a href="https://www.flaticon.com/authors/smashicons" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">Smashicons</a>,
+<a href="https://www.flaticon.com/authors/pixelmeetup" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">Pixelmeetup</a>,
+<a href="https://www.flaticon.com/authors/mynamepong" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">mynamepong</a>,
+<a href="https://www.flaticon.com/authors/darius-dan" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">Darius Dan</a>,
+<a href="https://www.flaticon.com/authors/eucalyp" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">Eucalyp</a>,
+<a href="https://www.flaticon.com/authors/flat-icons" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">Flat Icons</a>
+from
+<a href="https://www.flaticon.com/" target="_blank" rel="noreferrer nofollow noopener" class="text-#aaa">flaticon.com</a>
+</div>
+<div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-7995916-7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-7995916-7', {
+      'user_id': window.discuz_uid
+  });
+</script>
+<script>
+  (function(){
+    if (typeof(admincpfilename) === 'undefined') {
+      window.googlefc = window.googlefc || {};
+      window.googlefc.ccpa = window.googlefc.ccpa || {};
+      window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
+      window.googlefc.controlledMessagingFunction = (message) => {
+          var groupIdElement = document.querySelector('meta[name="application-groupid"]');
+          var aidElement = document.querySelector('meta[name="application-adid"]');
+          var displayMessage = (!groupIdElement || groupIdElement.content === '7') && (!aidElement || aidElement.content !=='1') && window.location.href !== 'https://www.1point3acres.com/bbs/member.php?mod=logging&action=login';
+          message.proceed(displayMessage);
+      };
+      window.googlefc.callbackQueue.push({
+        'AD_BLOCK_DATA_READY': () => {
+          switch (window.googlefc.getAdBlockerStatus()) {
+            case window.googlefc.AdBlockerStatusEnum.EXTENSION_LEVEL_AD_BLOCKER:
+              if (window.ga) {
+                gtag('event', 'on-extension', {
+                  'event_category': 'adblock'
+                });
+              }
+              break;
+            case window.googlefc.AdBlockerStatusEnum.NETWORK_LEVEL_AD_BLOCKER:
+              if (window.ga) {
+                gtag('event', 'on-network', {
+                  'event_category': 'adblock'
+                });
+              }
+              break;
+          }
+        }
+      });
+    }
+  })();
+</script>
+<script data-cfasync="false" type="text/javascript">
+    (function(w, d) { w.addEventListener("load", function() {
+        var s = d.createElement('script'); s.src = 'https://cdn.onesignal.com/sdks/OneSignalSDK.js'; s.type = 'text/javascript'; s.async = true; d.getElementsByTagName('body')[0].appendChild(s); });
+        w.OneSignal = w.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({ appId: "5f650ed7-29f1-40c6-87db-7d04d82b3f46" });
+            OneSignal.setExternalUserId(discuz_uid, onesig_hash);
+        });
+    })(window, document);
+</script></div>
+</div>
+</footer></div>
+<div id="scrolltop">
+<span><a href="forum.php?mod=post&amp;action=reply&amp;fid=145&amp;tid=1022110&amp;extra=&amp;page=1" onclick="showWindow('reply', this.href)" class="replyfast" title="���ٻظ�"><b>���ٻظ�</b></a></span>
+<span hidefocus="true"><a title="���ض���" onclick="window.scrollTo('0','0')" class="scrolltopa"><b>���ض���</b></a></span>
+<span>
+<a href="forum-145-1.html" hidefocus="true" class="returnlist" title="�����б�"><b>�����б�</b></a>
+</span>
+</div>
+<script src="data/cache/1p3a.js?vdj" type="text/javascript"></script>
+<script type="text/javascript">
+if (!getcookie('cookie_hash')) {
+setTimeout(function () {
+Fingerprint2.get(function (components) {
+var values = components.map(function (component) { return component.value });
+var hash = Fingerprint2.x64hash128(values.join(''), 31);
+setcookie('cookie_hash', hash, 86400);
+}); 
+    	}, 500);
+}
+if (!getcookie('cuid') && 0) {
+setcookie('cuid', '0', 86400 * 30);
+}
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" data-cf-beacon='{"rayId":"8176bfffddab2516","version":"2023.8.0","b":1,"token":"082eae6c298740b5a14de36d76d8ba1d","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>

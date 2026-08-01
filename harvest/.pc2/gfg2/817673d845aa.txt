@@ -1,0 +1,213 @@
+URL: https://www.geeksforgeeks.org/interview-experiences/dolat-capital-interview-experience-set-1-on-campus/
+DATE: 2015-10-04 09:51:27
+
+Dolat Capital Interview experience | Set 1 (On-Campus) - GeeksforGeeks 
+
+ Courses 
+
+ Tutorials 
+
+ Interview Prep 
+
+ DSA 
+ Practice Problems 
+ C 
+ C++ 
+ Java 
+ Python 
+ JavaScript 
+ Data Science 
+ Machine Learning 
+ Courses 
+ Linux 
+ DevOps 
+
+ Dolat Capital Interview experience | Set 1 (On-Campus)
+
+ Last Updated : 4 Oct, 2015 
+
+ It was an on-campus interview. Total 140 students applied for this job and 3 students got the offer letter.
+
+There were 4 rounds
+
+ Round 1: Coding 
+We were given three programs to be completed in 2 hours.one program was difficult and two others were very simple.each program had different weightage
+ Program 1 (highest weightage) 
+ Insert & delete a integer value in a linked list from either end.i.e insertion and deletion should be from one end only.also find the maximum value in the linked list at any point.
+all the operations on this ADT needs to be done in constant time complexity.
+ Program 2(medium weightage) 
+ I dont remember the question, refer code at the end of this article.
+ program 3(least weightage) . 
+ It was to write a code for quicksort.
+
+ Round 2: Apitude: quants and C input output 
+It was a pen and paper round.
+There were 20 C input output questions and 10 aptitude questions and there was a negative marking.
+due to negative marking,questions were tough as options were very close like,
+a) program gives warning and gives output ....
+b) compile time error
+c) runtime error 
+d) executes with output .....
+
+Quants questions were a very easy with just some complex calculations is some cases.
+i guess total time was 40 mins for this test but it was sufficient to solve all the questions.
+
+After some days total 11 students were shortlisted for the interview.
+
+ Round 3:interview 
+Basic questions yet tricky on C. like static, global,extern, diff between static global and global.
+some code was given where variable was used before definition how to fix it.
+ans:use extern to declare the variable and compiler will find the definition afterwards
+
+A puzzle was asked ,where a silver rod of 7 units to be broken in 3 parts to pay a employee a wage who is going to work for 7 days.
+Being a very small set of solutions i was able to do bruteforce and some logical thinking and came up with answer quickly.
+
+Afterwards interviewer asked on memory leak and some complicated cases where a memory leak can happen.
+
+ Round 4: Interview 2 
+After 1st interview 5 students were shortlisted for 2nd interview round.
+it was a very short interview of 10 mins where 2 questions were asked each given 5 minutes to solve.
+
+ Question 1: Find the intersection point in 2 linked list.
+
+I was asked some question on vegetable vendor and fake note,i gave correct answer but interviewer re explained the problem but unfortunately i was not able to understand the problem 2nd time too and by that time 10 mins were over.
+and on next day i got selected and got offer letter in 3 days
+
+Overall a good experience hope this article will help others.
+
+ C 
+ 
+ /* 
+ time complexity :O(n) 
+ space complexity:O(1) 
+ input size is not considered for computing space complexity 
+ */ 
+ #include <stdio.h> 
+
+ int main () 
+ { 
+ int array_size ; 
+
+ printf ( "enter the array size : " ); 
+
+ scanf ( "%d" , & array_size ); 
+ int * array = ( int * ) malloc ( sizeof ( int ) * array_size ); 
+ int iteration = 0 ; 
+ printf ( "enter the array elements \n " ); 
+ for (; iteration < array_size ; iteration ++ ) 
+ scanf ( "%d" , & array [ iteration ]); 
+
+ /*for(iteration=0;iteration<array_size;iteration++) 
+ printf("%d ",array[iteration]); 
+ */ 
+ int ptr = 0 ; 
+ int max_sum = 0 ; 
+ int i = 1 , current_sum = 0 ; 
+ while ( ptr < array_size ) 
+ { 
+ current_sum = 0 ; 
+ printf ( " \n sorted sub elements : " ); 
+ while ( array [ ptr ] < array [ ptr + 1 ]) 
+ { 
+ current_sum += array [ ptr ]; 
+ printf ( "%d " , array [ ptr ]); 
+ ptr ++ ; 
+ } 
+ current_sum += array [ ptr ]; 
+ printf ( "%d " , array [ ptr ]); 
+ printf ( ",sum : %d " , current_sum ); 
+
+ ptr ++ ; 
+ max_sum = current_sum > max_sum ? current_sum : max_sum ; 
+ } 
+
+ printf ( " \n max sum from all sorted sub array is: %d \n " , max_sum ); 
+ free ( array ); //although is not required to free the data since program exits 
+ // and there is no problem of memory leak,but a good practice to free data 
+ return 0 ; 
+
+ } 
+ /* 
+ output: 
+ xxxxxx@ubuntu:~$ ./a.out 
+ enter the array size : 10 
+ enter the array elements 
+ 1 2 3 4 2 7 1 4 2 5 
+
+ sorted sub elements : 1 2 3 4 ,sum : 10 
+ sorted sub elements : 2 7 ,sum : 9 
+ sorted sub elements : 1 4 ,sum : 5 
+ sorted sub elements : 2 5 ,sum : 7 
+ max sum from all sorted sub array is: 10 
+
+ */ 
+
+ Comment
+
+ Explore
+ DSA Tutorial 10 min read 
+
+ System Design Tutorial 4 min read 
+
+ Aptitude Questions and Answers 3 min read 
+
+ Web Development Technologies 5 min read 
+
+ AI, ML and Data Science Tutorial 3 min read 
+
+ DevOps Tutorial 3 min read 
+
+ Corporate & Communications Address:
+
+ A-143, 6th Floor, Sovereign Corporate Tower, Sector- 136, Noida, Uttar Pradesh (201305)
+
+ Registered Address:
+
+ K 061, Tower K, Gulshan Vivante Apartment, Sector 137, Noida, Gautam Buddh Nagar, Uttar Pradesh, 201305
+
+ Company
+ About Us 
+ Legal 
+ Privacy Policy 
+ Contact Us 
+ Advertise with us 
+ GFG Corporate Solution 
+ Campus Training Program 
+ Explore
+ POTD 
+ Job-A-Thon 
+ Blogs 
+ Nation Skill Up 
+ Tutorials
+ Programming Languages 
+ DSA 
+ Web Technology 
+ AI, ML & Data Science 
+ DevOps 
+ CS Core Subjects 
+ Interview Preparation 
+ Software and Tools 
+ Courses
+ ML and Data Science 
+ DSA and Placements 
+ Web Development 
+ Programming Languages 
+ DevOps & Cloud 
+ GATE 
+ Trending Technologies 
+ Videos
+ DSA 
+ Python 
+ Java 
+ C++ 
+ Web Development 
+ Data Science 
+ CS Subjects 
+ Preparation Corner
+ Interview Corner 
+ Aptitude 
+ Puzzles 
+ GfG 160 
+ System Design 
+
+ @GeeksforGeeks, Sanchhaya Education Private Limited , All rights reserved

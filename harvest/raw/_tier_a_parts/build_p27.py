@@ -1,0 +1,317 @@
+#!/usr/bin/env python3
+"""D. E. Shaw India campus-internship accounts: three unmined GeeksforGeeks pages plus
+one university department placement blog.
+
+The GFG pages here are the ones p22 left behind. Two of them are explicitly for the
+QTE (Quantitative Technology Engineer) intern seat, which is the closest thing in
+D. E. Shaw's India campus pipeline to a quant developer track; the third is a generic
+SDE intern drive at NIT Jalandhar. The placement blog is run by a college's ECE
+department and names the student whose experience it reproduces, which makes it better
+attributed than the anonymous GFG submissions.
+"""
+import json
+import os
+
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "p27_gfg_deshaw2.jsonl")
+
+GFG_POSTER = ("Reader-submitted interview experience on GeeksforGeeks; the site publishes "
+              "these under a contributor byline with no verification of the account")
+GFG_DOUBT = ("GeeksforGeeks accepts interview experiences from anyone and does not verify "
+             "that the writer sat the interview; the site also rewards contributions, and "
+             "the write-ups are edited by GFG staff, so wording may not be the candidate's own.")
+INDIA_NOTE = (" This is D. E. Shaw's India campus pipeline, which is a software/technology "
+              "hiring track rather than the New York quantitative research seat that most "
+              "English-language 'D. E. Shaw quant' discussion refers to.")
+
+rows = []
+
+
+def add(**kw):
+    o = {
+        "firm": "D. E. Shaw", "role_track": "quant_developer", "level": "internship",
+        "cycle": "unknown", "office": "unknown", "round": "unknown", "round_name": None,
+        "platform": "unknown", "section_context": None, "question_type": "coding_algorithms",
+        "question_text": None, "question_text_en": None, "reported_answer": None,
+        "source_url": None, "source_type": "blog", "source_quote": None,
+        "source_language": "en", "post_date": "unknown", "access": "full_text",
+        "retrieval_method": "webfetch", "poster_context": GFG_POSTER,
+        "doubt": GFG_DOUBT + INDIA_NOTE,
+    }
+    o.update(kw)
+    rows.append(o)
+
+
+# =========================================================== NIT Jalandhar, Summer 2021
+U = "https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experienceon-campus-internship-2021/"
+P = ("Anonymous GeeksforGeeks contributor writing about NIT Jalandhar's Summer 2021 "
+     "D. E. Shaw internship drive; says only Computer Science, ECE and ICE could sit "
+     "round 1 and that they did not clear round 2")
+add(source_url=U, post_date="2021", cycle="unknown", round="online_assessment",
+    round_name="Round 1", platform="unknown",
+    section_context="95-minute proctored test; MCQ section 28 questions in 45 minutes; 33% negative marking",
+    question_type="other", poster_context=P,
+    question_text="MCQ section of 28 questions in 45 minutes: 16 aptitude (English paragraphs, profit and loss, percentages, bar graphs) and 12 technical (data structures and algorithms, space and time complexity, DBMS, predict the output)",
+    source_quote=("i) MCQ Section : MCQ section had in total 28 questions(3*28=84 marks ) and "
+                  "time allotted as 45 minutes"),
+    doubt=(GFG_DOUBT + INDIA_NOTE + " The aptitude topics listed (profit and loss, "
+           "percentages, bar graphs) are standard Indian campus-placement aptitude fare "
+           "rather than anything quant-specific, so the section may be a generic vendor test."))
+add(source_url=U, post_date="2021", round="online_assessment", round_name="Round 1",
+    section_context="Coding section: 2 questions in 50 minutes, 20 minutes for the first and 30 for the second",
+    question_type="coding_algorithms", poster_context=P,
+    question_text=("Rahul has n tasks. Time required to complete each task is t[i](for i'th task). "
+                   "Rahul has K days. Rahul picks up the task requiring highest number of time and "
+                   "starts doing it. He works for ceil(t[i]/2) hours. It is given that he will "
+                   "perform one task each day and cannot work for more tha 12 hours in a days i.e "
+                   "if ceil(t/2) is greater than 12 then he will work for twelve hours. He works "
+                   "for K days. tell the total remaining time he would take to finish all the tasks left."),
+    reported_answer="Priority queue based, worth 20 marks",
+    source_quote=("Rahul has n tasks. Time required to complete each task is t[i](for i'th task). "
+                  "Rahul has K days. Rahul picks up the task requiring highest number of time and "
+                  "starts doing it. He works for ceil(t[i]/2) hours."),
+    doubt=(GFG_DOUBT + INDIA_NOTE + " The prompt as written is self-contradictory about "
+           "whether Rahul works ceil(t[i]/2) hours or a whole day per task, so the "
+           "reproduction is at best a paraphrase of the original statement."))
+add(source_url=U, post_date="2021", round="online_assessment", round_name="Round 1",
+    question_type="coding_algorithms", poster_context=P,
+    question_text=("A matrix is given or r rows and c columns. Each cell is a factory that has a "
+                   "loot amount of a(i,j). We can start looting from any cell. The Directions "
+                   "allowed to move are Down & Right with a constraint that i can loot a factory "
+                   "only is previous loot is lesser than this loot. We need to find the maximum "
+                   "number of factories that can be looted."),
+    reported_answer="Dynamic programming, worth 30 marks",
+    source_quote=("A matrix is given or r rows and c columns. Each cell is a factory that has a "
+                  "loot amount of a(i,j). We can start looting from any cell."),
+    doubt=GFG_DOUBT + INDIA_NOTE + " Typos ('or r rows', 'only is previous loot') indicate the writer was reconstructing the statement from memory.")
+add(source_url=U, post_date="2021", round="phone_technical", round_name="ROUND 2 ... a Codepair Round",
+    platform="HackerRank",
+    section_context="Live code editor with video call; 3 questions: 2 coding and 1 puzzle; top 15 from the test reached this round",
+    question_type="coding_algorithms", poster_context=P,
+    question_text=("You are given data for 5 years for 50 cities. Data Includes city name, date, "
+                   "minimum temperature, maximum temperature. You need to predict the data "
+                   "structure required to answer the following queries: a) Hottest city on a given "
+                   "date b) Coldest city on a given date c) Hottest city in entire period d) "
+                   "Coldest city in entire period e)Hottest day of entire period f) Coldest day of "
+                   "entire period"),
+    source_quote=("You are given data for 5 years for 50 cities. Data Includes city name, date, "
+                  "minimum temperature, maximum temperature. You need to predict the data "
+                  "structure required to answer the following queries:"),
+    doubt=GFG_DOUBT + INDIA_NOTE + " A data-structure design question of this shape is common across Indian campus drives, so it is not distinctive to D. E. Shaw.")
+add(source_url=U, post_date="2021", round="phone_technical", round_name="ROUND 2 ... a Codepair Round",
+    platform="HackerRank", question_type="logic_brainteaser", poster_context=P,
+    question_text=("You have N machines which produce bolts (each bolt weighing exactly 10 gm) with "
+                   "one machine which is defective and produces bolts of 9 grams. You are given an "
+                   "electronic weighing machine. You need to use the machine minimum number of "
+                   "times and tell which machine is faulty. What is the minimum number of times "
+                   "you will use the machine"),
+    source_quote=("You have N machines which produce bolts (each bolt weighing exactly 10 gm) with "
+                  "one machine which is defective and produces bolts of 9 grams."),
+    doubt=(GFG_DOUBT + INDIA_NOTE + " This is the classic counterfeit-coin weighing puzzle "
+           "that appears in every published brainteaser collection, so its presence here "
+           "attests reuse of a well-known problem rather than an original one."))
+
+# ============================================================ QTE intern, On-Campus 2022
+U = "https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022/"
+P = ("Anonymous GeeksforGeeks contributor describing an on-campus D. E. Shaw drive in "
+     "July 2021 for a 2-month QTE intern position; verdict was Selected")
+add(source_url=U, post_date="2022", round="online_assessment",
+    round_name="Round 1(Technical Test-95 minutes on HackerRank)", platform="HackerRank",
+    section_context="Three sections in 95 minutes: 14 aptitude MCQs in 28 min, 12 technical MCQs in 17 min, 2 coding questions in 20 and 30 min",
+    question_type="other", poster_context=P,
+    question_text="95-minute HackerRank technical test: 14 aptitude MCQs (28 min), 12 technical MCQs on C++ logic errors, guess-the-output, DBMS and SQL (17 min), then two coding questions",
+    source_quote=("Round 1(Technical Test-95 minutes on HackerRank): There were a total of three "
+                  "sections in this test."),
+    doubt=(GFG_DOUBT + INDIA_NOTE + " Section timings here match the NIT Jalandhar account "
+           "of the same test almost exactly, which is either good corroboration or a sign "
+           "that one write-up was informed by the other."))
+add(source_url=U, post_date="2022", round="online_assessment",
+    round_name="Round 1(Technical Test-95 minutes on HackerRank)", platform="HackerRank",
+    section_context="First coding question, 20 minutes",
+    question_type="coding_algorithms", poster_context=P,
+    question_text=("Given an array of n integers, you can divide the array into sections containing "
+                   "k elements each (n is divisible by k). The score of each section is the product "
+                   "of the elements in that section. Find the maximum sum of scores of all sections "
+                   "that you can achieve."),
+    reported_answer="Greedy, per the poster's own tag",
+    source_quote=("(i) Given an array of n integers, you can divide the array into sections "
+                  "containing k elements each (n is divisible by k). The score of each section is "
+                  "the product of the elements in that section."),
+    doubt=GFG_DOUBT + INDIA_NOTE + " The statement omits whether sections must be contiguous, which changes the problem entirely, so something was lost in the retelling.")
+add(source_url=U, post_date="2022", round="online_assessment",
+    round_name="Round 1(Technical Test-95 minutes on HackerRank)", platform="HackerRank",
+    section_context="Second coding question, 30 minutes",
+    question_type="combinatorics", poster_context=P,
+    question_text=("Given that you have three items A, B, and C that you need to put them in a "
+                   "particular order such that there are no three consecutive same items. Given n "
+                   "queries of the form (a, b, c) where a, b and c are the number of items A, B, "
+                   "and C that you have, find the maximum number of A, B, and C items that you can "
+                   "order by following the above constraint."),
+    reported_answer="Math, with low constraints, per the poster's own tag",
+    source_quote=("(ii) Given that you have three items A, B, and C that you need to put them in a "
+                  "particular order such that there are no three consecutive same items."),
+    doubt=GFG_DOUBT + INDIA_NOTE + " Reads as a counting/greedy construction problem; the poster's 'Math' tag is their own classification.")
+add(source_url=U, post_date="2022", round="phone_technical",
+    round_name="Round 2(Technical Interview Round 1-60 minutes on Hacker Rank Code Pair)",
+    platform="HackerRank", section_context="60 minutes, two interviewers",
+    question_type="logic_brainteaser", poster_context=P,
+    question_text=("There are two traffic lights between your house and office. While going from "
+                   "your house to the office, you stop two times but while returning home from the "
+                   "office you stop only once. Given that the traffic lights are always red "
+                   "whenever you encounter them, how is this situation possible."),
+    reported_answer="Hint given by the poster: you don't need to stop at a traffic light when you need to turn left",
+    source_quote=("(i) There are two traffic lights between your house and office. While going from "
+                  "your house to the office, you stop two times but while returning home from the "
+                  "office you stop only once."),
+    doubt=GFG_DOUBT + INDIA_NOTE + " A lateral-thinking riddle rather than a quantitative question; its answer depends on assuming right-hand-drive road rules, which the prompt never states.")
+add(source_url=U, post_date="2022", round="phone_technical",
+    round_name="Round 2(Technical Interview Round 1-60 minutes on Hacker Rank Code Pair)",
+    platform="HackerRank", question_type="logic_brainteaser", poster_context=P,
+    question_text=("There is a 100-floor building and you have one egg. You need to find the lowest "
+                   "floor from which the egg breaks on dropping."),
+    reported_answer="The poster reports the accepted answer is linear search from the lowest floor upward, since with one egg it cannot be optimised further",
+    source_quote=("(ii) There is a 100-floor building and you have one egg. You need to find the "
+                  "lowest floor from which the egg breaks on dropping."),
+    doubt=(GFG_DOUBT + INDIA_NOTE + " The one-egg variant of the egg-drop problem is a "
+           "textbook staple, so this attests that D. E. Shaw reused a well-known puzzle "
+           "rather than establishing an original question."))
+add(source_url=U, post_date="2022", round="phone_technical",
+    round_name="Round 2(Technical Interview Round 1-60 minutes on Hacker Rank Code Pair)",
+    platform="HackerRank", question_type="coding_algorithms", poster_context=P,
+    question_text=("Given an integer n you can perform the following two operations any number of "
+                   "times : (i) decrement n by 1 or (ii) divide n by any of its factors except self. "
+                   "Find the minimum number of operations to convert n to 0."),
+    source_quote=("Given an integer n you can perform the following two operations any number of "
+                  "times : (i) decrement n by 1 or (ii) divide n by any of its factors except self."),
+    doubt=GFG_DOUBT + INDIA_NOTE + " No answer or intended complexity is recorded, so there is no way to check the prompt is complete.")
+add(source_url=U, post_date="2022", round="phone_technical",
+    round_name="Round 2(Technical Interview Round 1-60 minutes on Hacker Rank Code Pair)",
+    platform="HackerRank", question_type="coding_algorithms", poster_context=P,
+    question_text=("Given a linked list and a node, how will you delete that node from the linked "
+                   "list? He asked me to explain my approach when I had a pointer to the start of "
+                   "the linked list as well as when I only had the pointer to the node to be deleted."),
+    source_quote=("Given a linked list and a node, how will you delete that node from the linked "
+                  "list? He asked me to explain my approach when I had a pointer to the start of "
+                  "the linked list"),
+    doubt=GFG_DOUBT + INDIA_NOTE + " A standard data-structures warm-up question with no firm-specific character.")
+add(source_url=U, post_date="2022", round="phone_technical",
+    round_name="Round 3(Technical Interview Round 2-60 minutes on HackerRank Code Pair)",
+    platform="HackerRank", section_context="60 minutes, two interviewers",
+    question_type="coding_algorithms", poster_context=P,
+    question_text=("Given a binary tree, first, print its left side view then its right side view. "
+                   "Print the root node only once."),
+    reported_answer="The interviewer wanted the approach, the time complexities and a dry run on two test cases",
+    source_quote=("Given a binary tree, first, print its left side view then its right side view. "
+                  "Print the root node only once."),
+    doubt=GFG_DOUBT + INDIA_NOTE + " Common tree-traversal exercise; the only unusual part is the request to print the root once across both views.")
+add(source_url=U, post_date="2022", round="phone_technical",
+    round_name="Round 3(Technical Interview Round 2-60 minutes on HackerRank Code Pair)",
+    platform="HackerRank", question_type="coding_algorithms", poster_context=P,
+    question_text=("You are given a function getManager(int id) which returns the manager of the "
+                   "employee whose id is passed. You need to implement a function getCManager(int "
+                   "id1, int id2) which should return the lowest common manager of the two "
+                   "employees whose id is passed. You are not provided with the actual tree "
+                   "structure, only the getManager function."),
+    reported_answer=("The poster's accepted answer was to store all managers of one employee in an "
+                     "unordered_set and then walk the other employee's managers checking membership"),
+    source_quote=("You are given a function getManager(int id) which returns the manager of the "
+                  "employee whose id is passed. You need to implement a function getCManager(int "
+                  "id1, int id2) which should return the lowest common manager of the two employees "
+                  "whose id is passed."),
+    doubt=GFG_DOUBT + INDIA_NOTE + " Lowest-common-ancestor disguised as an org chart; the interesting constraint is only the missing tree structure.")
+
+# ============================================================ QTE intern, On-Campus 2020
+U = "https://www.geeksforgeeks.org/interview-experiences/de-shaw-internship-interview-experience-on-campus-2020/"
+P = ("Anonymous GeeksforGeeks contributor from a self-described Tier-2 college, writing "
+     "about a first-week-of-August-2020 D. E. Shaw drive for Quality Test Engineer summer "
+     "interns; verdict was Not Selected")
+add(source_url=U, post_date="2020", round="online_assessment",
+    round_name="Round 1: Technical Test on the Hackerrank platform", platform="HackerRank",
+    section_context="15 hard aptitude questions in 20 minutes, 15 medium technical MCQs in 15 minutes, then 2 coding questions in 10 and 20 minutes",
+    question_type="other", poster_context=P,
+    question_text="Technical test: 15 hard aptitude questions in 20 minutes and 15 medium technical MCQs in 15 minutes, then a medium DP coding question in 10 minutes and a hard DP question in 20 minutes",
+    source_quote=("Aptitude Questions (20 minutes) hard level 15 aptitude questions."),
+    doubt=(GFG_DOUBT + INDIA_NOTE + " The section timings here differ substantially from the "
+           "two other D. E. Shaw India accounts in this dataset (95 minutes, 14+12 MCQs), so "
+           "either the test varies by year and role or one of the accounts is misremembered. "
+           "The role is Quality Test Engineer, which is a QA seat rather than a quant one."))
+add(source_url=U, post_date="2020", round="phone_technical",
+    round_name="Round 2: Technical Interview 1 CodePair Hackerrank", platform="HackerRank",
+    question_type="coding_algorithms", poster_context=P,
+    question_text=("Given a sum and you have to find the no. of ways to form that sum using only "
+                   "consecutive numbers. For ex: sum = 21 ... Ans: 3 (total counts)"),
+    reported_answer="The poster solved it with the two pointer method",
+    source_quote=("Given a sum and you have to find the no. of ways to form that sum using only "
+                  "consecutive numbers."),
+    doubt=GFG_DOUBT + INDIA_NOTE + " Role is Quality Test Engineer intern, so this is a QA rather than quant track.")
+add(source_url=U, post_date="2020", round="phone_technical",
+    round_name="Round 3: Technical Interview 2 CodePair Hackerrank", platform="HackerRank",
+    question_type="coding_algorithms", poster_context=P,
+    question_text=("We have given a chessboard and there are two pieces on that one is a knight and "
+                   "the other is the bishop. And at last, we have to tell if the Knight can reach "
+                   "the given position or not. They told me to block the movement of the bishop by "
+                   "the positions of the knight."),
+    source_quote=("We have given a chessboard and there are two pieces on that one is a knight and "
+                  "the other is the bishop."),
+    doubt=(GFG_DOUBT + INDIA_NOTE + " The write-up's English is broken enough that the actual "
+           "rules of the problem (who blocks whom) are ambiguous. Role is Quality Test "
+           "Engineer intern, a QA rather than quant track."))
+add(source_url=U, post_date="2020", round="phone_technical",
+    round_name="Round 3: Technical Interview 2 CodePair Hackerrank", platform="HackerRank",
+    question_type="coding_algorithms", poster_context=P,
+    question_text="you have given bombs and you have to find the min intensity of all the bombs such that you can skip max 2 bombs.",
+    reported_answer="The poster gave a DP approach which the interviewers accepted, but could not write working code",
+    source_quote="you have given bombs and you have to find the min intensity of all the bombs such that you can skip max 2 bombs.",
+    doubt=(GFG_DOUBT + INDIA_NOTE + " As reproduced the problem is under-specified - it never "
+           "says what 'intensity' is minimised over - so this is a fragment of the real "
+           "prompt. Role is Quality Test Engineer intern."))
+
+# ============================================== ECE department placement blog, 2020-21
+U = "https://ecedplacement.wordpress.com/2021/04/18/de-shaw-2/"
+P = ("Placement-experience blog run by a college Electronics & Communication department; "
+     "the post credits Shivangi Dubey by name for the account and covers the July "
+     "2020-21 D. E. Shaw campus drive for Software Development Engineer interns in Mumbai")
+D = ("The department blog is a second-hand write-up: the department published it, "
+     "crediting a named student, so the wording is the editor's rather than the "
+     "candidate's verbatim recall. It is also from the 2020-21 cycle and describes "
+     "D. E. Shaw's India SDE intern pipeline, not a quant research seat.")
+add(source_url=U, source_type="university_bbs", post_date="2021-04-18", office="Mumbai",
+    round="online_assessment", round_name="Online test",
+    section_context="26 MCQ and 2 coding questions in 95 minutes; proctored; +3 for a correct MCQ and -1 for an incorrect one; unused section time was not carried forward",
+    question_type="other", poster_context=P, doubt=D,
+    question_text="Online test of 26 MCQs and 2 coding questions in 95 minutes: 14 aptitude MCQs in 28 minutes covering probability, permutation and combination, profit and loss, speed-distance-time, plus logical reasoning and data interpretation passages",
+    source_quote=("The test consist of 26 MCQ and 2 coding questions with a time duration of 95 "
+                  "minutes."))
+add(source_url=U, source_type="university_bbs", post_date="2021-04-18", office="Mumbai",
+    round="online_assessment", round_name="Aptitude Section",
+    section_context="14 MCQs, 28 minutes",
+    question_type="probability", poster_context=P, doubt=D,
+    question_text="Quantitative aptitude MCQs on probability, permutation and combination, profit and loss, and speed-distance-time",
+    source_quote="Quantitative. Examples: Probability, Permutation & Combination, Profit & Loss, speed-distance-time, etc.")
+add(source_url=U, source_type="university_bbs", post_date="2021-04-18", office="Mumbai",
+    round="online_assessment", round_name="Technical Section",
+    section_context="12 MCQs, 17 minutes",
+    question_type="coding_algorithms", poster_context=P, doubt=D,
+    question_text="Technical MCQs on data structures, algorithms and SQL, plus guess-the-output of pseudo code and debugging: given pseudo code and an expected output, find and fix the bugs",
+    source_quote=("Debugging. A pseudo code and expected output would be given. Candidates had to "
+                  "find and fix the bugs to achieve the given output."))
+add(source_url=U, source_type="university_bbs", post_date="2021-04-18", office="Mumbai",
+    round="online_assessment", round_name="CODING PART",
+    section_context="2 questions, 50 minutes: 20 minutes for the first and 30 for the second; 14 of 100+ students who sat the test were shortlisted",
+    question_type="coding_algorithms", poster_context=P, doubt=D,
+    question_text="Two coding questions drawn from competitive-programming dynamic programming",
+    source_quote=("The two coding questions of the coding round were from dynamic programming of "
+                  "competitive programming."))
+add(source_url=U, source_type="university_bbs", post_date="2021-04-18", office="Mumbai",
+    round="onsite", round_name="Technical/ Domain based interview",
+    platform="HackerRank",
+    section_context="Two face-to-face technical interviews; the first about 1 hour with 3 coding questions, the second 1.5 hours with 2 harder questions; 6 of 14 reached round two and 2 of 6 were offered",
+    question_type="coding_algorithms", poster_context=P, doubt=D,
+    question_text="First technical interview: solve 3 coding questions on the HackerRank platform in about an hour",
+    source_quote=("There were two face-to-face technical interviews, the first one was of about 1 hr "
+                  "and I was asked to solve 3 coding questions on the HackerRank platform."))
+
+
+with open(OUT, "w", encoding="utf-8") as f:
+    for o in rows:
+        f.write(json.dumps(o, ensure_ascii=False) + "\n")
+print("wrote %d records to %s" % (len(rows), OUT))
