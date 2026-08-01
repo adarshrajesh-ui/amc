@@ -1,6 +1,6 @@
 # TRIAGE DECK
 
-1648 questions across 333 streams and 48 firms. Susquehanna first, then by firm, tier-sorted within each. Question first, evidence underneath.
+1636 questions across 331 streams and 48 firms. Susquehanna first, then by firm, tier-sorted within each. Question first, evidence underneath.
 
 Read `REPORT.md` for the scoreboard and what to distrust.
 
@@ -3995,31 +3995,7 @@ I failed a test case each on the first two questions of my OA and got a 5/15 on 
 — reddit_thread · posted 2023-07-29 · full_text · [link](https://www.reddit.com/r/csMajors/comments/15d6d0g/quant_hackerrank_akuna/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q408 · Tier B · unknown · online_assessment (two parts, one section with programming questions in C++ or Python and)
-
-It was made up of a few very difficult tasks like implementing an algorithms and then optimizing it, as well as a question which required you to create a dynamic programming solution.
-
-> It was made up of a few very difficult tasks like implementing an algorithms and then optimizing it, as well as a question which required you to create a dynamic programming solution.
-— reddit_thread · posted 2023-09-19 · full_text · [link](https://www.reddit.com/r/csMajors/comments/16mrwui/akuna_platform_engineer_hackerrank/)
-  1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
-
-### Q409 · Tier B · unknown · online_assessment (It had 28 questions ... took up to 3 hours to complete)
-
-It had 28 questions focused mainly on math topics and financial concepts. The math topics included algebra, geometry, calculus, linear algebra, probability and statistics, and analytical reasoning. The financial topics covered interest rate concepts, derivatives, risk modelling, market trading, asset pricing, and pricing models.
-
-> It had 28 questions focused mainly on math topics and financial concepts. The math topics included algebra, geometry, calculus, linear algebra, probability and statistics, and analytical reasoning.
-— reddit_thread · posted 2023-09-19 · full_text · [link](https://www.reddit.com/r/csMajors/comments/16kq2k0/akuna_qr_internship_oa_experience/)
-  1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
-
-### Q410 · Tier B · unknown · online_assessment
-
-the Online Assessment also required me to video record myself solving each question and then submit the recordings at the end of the assessment.
-
-> In addition, the Online Assessment also required me to video record myself solving each question and then submit the recordings at the end of the assessment.
-— reddit_thread · posted 2023-09-19 · full_text · [link](https://www.reddit.com/r/csMajors/comments/16kq2k0/akuna_qr_internship_oa_experience/)
-  1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
-
-### Q411 · Tier B · unknown · online_assessment (around 70 questions, timed, no calculator)
+### Q408 · Tier B · unknown · online_assessment (around 70 questions, timed, no calculator)
 
 Timed mental math assessment, around 70 questions, no calculator, getting harder as you go; second part is scenarios testing quick decision-making
 
@@ -4027,7 +4003,7 @@ Timed mental math assessment, around 70 questions, no calculator, getting harder
 — wso · posted 2025-07 · full_text · [link](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview/junior-trader-44)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. The submitter's s
 
-### Q412 · Tier B · unknown · online_assessment (80 questions)
+### Q409 · Tier B · unknown · online_assessment (80 questions)
 
 Math test of 80 arithmetic mental-math questions
 
@@ -4035,7 +4011,7 @@ Math test of 80 arithmetic mental-math questions
 — wso · posted 2025-11 · full_text · [link](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview/junior-trader-47)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Question count (8
 
-### Q413 · Tier B · unknown · online_assessment
+### Q410 · Tier B · unknown · online_assessment
 
 Probability test involving calculating expected value of events
 
@@ -4043,7 +4019,7 @@ Probability test involving calculating expected value of events
 — wso · posted 2025-11 · full_text · [link](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview/junior-trader-47)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Describes the top
 
-### Q414 · Tier B · unknown · online_assessment (first of at least three online assessments)
+### Q411 · Tier B · unknown · online_assessment (first of at least three online assessments)
 
 First OA: standard mental math and sequences, too many to finish in the time given
 
@@ -4051,7 +4027,7 @@ First OA: standard mental math and sequences, too many to finish in the time giv
 — wso · posted 2026-02 · full_text · [link](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview/junior-trader-49)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. The submitter nev
 
-### Q415 · Tier B · unknown · online_assessment
+### Q412 · Tier B · unknown · online_assessment
 
 Second OA, probability: instead of entering a probability you are asked things like "if you win you get 1$. how much money would be a fair bet."
 
@@ -4059,7 +4035,7 @@ Second OA, probability: instead of entering a probability you are asked things l
 — wso · posted 2026-02 · full_text · [link](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview/junior-trader-49)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. The submitter exp
 
-### Q416 · Tier B · unknown · online_assessment (15 minutes, 3 questions, 5 minutes each)
+### Q413 · Tier B · unknown · online_assessment (15 minutes, 3 questions, 5 minutes each)
 
 Second OA for quant developer: 15 minutes, 3 quant probability-type questions, 5 minutes each, explaining your thought process aloud for each
 
@@ -4067,7 +4043,7 @@ Second OA for quant developer: 15 minutes, 3 quant probability-type questions, 5
 — wso · posted 2025-09 · full_text · [link](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview/quant-developer-1)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. The submitter doe
 
-### Q417 · Tier B · unknown · online_assessment (~7 recorded math questions)
+### Q414 · Tier B · unknown · online_assessment (~7 recorded math questions)
 
 Recorded video interview requiring you to verbally work through about 7 math questions
 
@@ -4075,7 +4051,7 @@ Recorded video interview requiring you to verbally work through about 7 math que
 — wso · posted 2025-10 · full_text · [link](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview/quantitative-research-intern)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Matches Akuna's k
 
-### Q418 · Tier B · unknown · online_assessment
+### Q415 · Tier B · unknown · online_assessment
 
 Process is a couple of rounds of online assessment, then Zoom calls with traders, then a behavioural round with an HR rep
 
@@ -4086,7 +4062,7 @@ Process is a couple of rounds of online assessment, then Zoom calls with traders
 
 ## Akuna Capital — onsite
 
-### Q419 · Tier B · unknown · onsite (one of three intensive 1-on-1 final-round interviews)
+### Q416 · Tier B · unknown · onsite (one of three intensive 1-on-1 final-round interviews)
 
 Talk about an experience when you help your teammate work out a difficult problem
 
@@ -4094,7 +4070,7 @@ Talk about an experience when you help your teammate work out a difficult proble
 — wso · posted 2025-10-31 · full_text · [link](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Generic behavioral prompt; same entry's prose reads somewhat LLM-polished.
 
-### Q420 · Tier B · unknown · onsite (an easy HackerRank round, then an in-person code pair interview)
+### Q417 · Tier B · unknown · onsite (an easy HackerRank round, then an in-person code pair interview)
 
 Give a function that takes a list of bowling frames and returns the score at any given frame.
 
@@ -4102,7 +4078,7 @@ Give a function that takes a list of bowling frames and returns the score at any
 — blog · posted 2019-06-25 · full_text · [link](https://www.jointaro.com/interviews/companies/akuna-capital/experiences/software-engineerinternship-new-zealand-june-25-2019-no-offer-neutral-2c79ad8c)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q421 · Tier B · unknown · onsite (Part one a systems design question on retrieving product data and a lo)
+### Q418 · Tier B · unknown · onsite (Part one a systems design question on retrieving product data and a lo)
 
 Possible strategies for a battleship player.
 
@@ -4110,7 +4086,7 @@ Possible strategies for a battleship player.
 — blog · posted 2021-05-01 · full_text · [link](https://www.jointaro.com/interviews/companies/akuna-capital/experiences/intern-software-developer-sydney-may-1-2021-accepted-offer-positive-32a407e8)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q422 · Tier B · unknown · onsite
+### Q419 · Tier B · unknown · onsite
 
 申的C++ Junior Dev,似乎要on-site了,有人面过么?求点经验,感觉略虚,还是E文的。
 
@@ -4120,7 +4096,7 @@ Possible strategies for a battleship player.
 — nowcoder · posted 2016-10-25 · full_text · [link](https://www.nowcoder.com/discuss/353153964797534208)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder posts are pseudonymous 面经 write-ups with no verification; the poster is recalling questions after the fact, so wording is theirs rather than the interviewer's. This is a request for advice, not a recall — it con
 
-### Q423 · Tier B · unknown · onsite
+### Q420 · Tier B · unknown · onsite
 
 I was asked to implement a bowling scoresheet.
 
@@ -4128,26 +4104,10 @@ I was asked to implement a bowling scoresheet.
 — reddit_thread · posted 2020-10-27 · full_text · [link](https://www.reddit.com/r/csMajors/comments/jd2d2v/akuna_capital_codepair_response/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q424 · Tier B · unknown · onsite
-
-Given a Billion records every day, how would you store them
-
-> They asked a bunch of fast-paced questions like "Given a Billion records every day, how would you store them" and technical questions like "Describe your experience with big data technologies."
-— reddit_thread · posted 2023-09-24 · full_text · [link](https://www.reddit.com/r/csMajors/comments/16qctk8/akuna_data_infra_intern_final_round/)
-  1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
-
-### Q425 · Tier B · unknown · onsite
-
-How would you implement a real-time fraud detection system?
-
-> There were also some system design questions, like "How would you implement a real-time fraud detection system?" And finally some LeetCode-level programming questions.
-— reddit_thread · posted 2023-09-24 · full_text · [link](https://www.reddit.com/r/csMajors/comments/16qctk8/akuna_data_infra_intern_final_round/)
-  1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
-
 
 ## Akuna Capital — phone_technical
 
-### Q426 · Tier B · unknown · phone_technical (quick probability puzzles, mental math, and some data structure questi)
+### Q421 · Tier B · unknown · phone_technical (quick probability puzzles, mental math, and some data structure questi)
 
 It began with a technical phone screen conducted by a Senior QR, focusing on quick probability puzzles, mental math, and some data structure questions.
 
@@ -4155,7 +4115,7 @@ It began with a technical phone screen conducted by a Senior QR, focusing on qui
 — wso · posted 2025-10-31 · full_text · [link](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Process description only; the write-up reads slightly polished/LLM-like ('clearly designed to test problem-solving speed and strong fundamentals'), which lowers my confidence it is a raw personal recall.
 
-### Q427 · Tier B · unknown · phone_technical (5 or 6 probability/game style questions after 'Why Akuna/trading')
+### Q422 · Tier B · unknown · phone_technical (5 or 6 probability/game style questions after 'Why Akuna/trading')
 
 Make me a market for the Chicago metro area. How much would you risk to win $100 if the real answer is in your market?
 
@@ -4163,7 +4123,7 @@ Make me a market for the Chicago metro area. How much would you risk to win $100
 — wso · posted 2025-10-30 · full_text · [link](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: 'Make me a market for the Chicago metro area' omits what quantity is being quoted (population? area?), so the recall drops a key clause.
 
-### Q428 · Tier B · unknown · phone_technical (5 or 6 probability/game style questions)
+### Q423 · Tier B · unknown · phone_technical (5 or 6 probability/game style questions)
 
 We are playing a game where we roll two dice. You win if you roll a 10, how much would you risk to win $100?
 
@@ -4171,7 +4131,7 @@ We are playing a game where we roll two dice. You win if you roll a 10, how much
 — wso · posted 2025-10-30 · full_text · [link](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Does not say whether 'roll a 10' means the sum on one throw or over repeated throws, so the stated problem is incomplete as recalled.
 
-### Q429 · Tier B · unknown · phone_technical (interviewer added variations to the base question)
+### Q424 · Tier B · unknown · phone_technical (interviewer added variations to the base question)
 
 How to determine the max value in a sliding window (didn't know what a monotonic queue was)
 
@@ -4179,7 +4139,7 @@ How to determine the max value in a sliding window (didn't know what a monotonic
 — wso · posted 2025-10-19 · full_text · [link](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Textbook sliding-window-maximum problem that appears in every algorithms course; nothing Akuna-specific beyond the attestation.
 
-### Q430 · Tier B · unknown · phone_technical (follows a couple rounds of online assessments)
+### Q425 · Tier B · unknown · phone_technical (follows a couple rounds of online assessments)
 
 I don’t remember the exact question, but it was along the lines of two separate games that have the same expected value which one would you choose?
 
@@ -4187,7 +4147,7 @@ I don’t remember the exact question, but it was along the lines of two separat
 — wso · posted 2025-05-08 · full_text · [link](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: The poster states outright that they do not remember the exact question.
 
-### Q431 · Tier B · unknown · phone_technical (直接做题 没有自我介绍)
+### Q426 · Tier B · unknown · phone_technical (直接做题 没有自我介绍)
 
 第一题 求一个数的奇偶校验位 第二题 求二叉树节点最大值 第三题 给一个函数,要求修改成线程安全的 第四题 手写priority_queue
 
@@ -4197,7 +4157,7 @@ I don’t remember the exact question, but it was along the lines of two separat
 — nowcoder · posted 2022-08-03 · full_text · [link](https://www.nowcoder.com/feed/main/detail/5363d0b8413448fdb1a2e0c48379aee8)
   1 attestation(s) across 1 domain(s) · doubt: Recovered permalink: this record originally cited nowcoder's client-rendered search page and was marked snippet_only for that reason. Driving nowcoder's search API surfaced the underlying thread, which curl fetches in fu
 
-### Q432 · Tier B · unknown · phone_technical (全英面试,但一上来就做题,四题完了后就反问然后结束)
+### Q427 · Tier B · unknown · phone_technical (全英面试,但一上来就做题,四题完了后就反问然后结束)
 
 求int里1的个数是否为奇数 改错,求二叉树最大值(看成了二叉搜索树,写完后提示后再改的) 让修改账户balance值函数变成线程安全的(直接加了两个锁,伪代码) 实现一个模板最小堆
 
@@ -4207,7 +4167,7 @@ I don’t remember the exact question, but it was along the lines of two separat
 — nowcoder · posted 2022-09-09 · full_text · [link](https://www.nowcoder.com/discuss/397714545857376256)
   1 attestation(s) across 1 domain(s) · doubt: Recovered permalink: this record originally cited nowcoder's client-rendered search page and was marked snippet_only for that reason. Driving nowcoder's search API surfaced the underlying thread, which curl fetches in fu
 
-### Q433 · Tier B · unknown · phone_technical (three questions in 1.5 hours)
+### Q428 · Tier B · unknown · phone_technical (three questions in 1.5 hours)
 
 DSU, calculate the parity of ones in an int32, and a naive file system with counting the number of files.
 
@@ -4215,7 +4175,7 @@ DSU, calculate the parity of ones in an int32, and a naive file system with coun
 — blog · posted 2023-04-01 · full_text · [link](https://www.jointaro.com/interviews/companies/akuna-capital/experiences/sde-intern-japan-april-1-2023-no-offer-neutral-34284c49)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q434 · Tier B · unknown · phone_technical
+### Q429 · Tier B · unknown · phone_technical
 
 What's the difference between is and == , and how do you override both?
 
@@ -4223,7 +4183,7 @@ What's the difference between is and == , and how do you override both?
 — blog · posted 2019-08-01 · full_text · [link](https://www.jointaro.com/interviews/companies/akuna-capital/experiences/software-engineerinternship-united-states-august-1-2019-no-offer-neutral-1ee81320)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q435 · Tier B · unknown · phone_technical (first step a 90-minute HackerRank with multiple-choice and 3-4 coding )
+### Q430 · Tier B · unknown · phone_technical (first step a 90-minute HackerRank with multiple-choice and 3-4 coding )
 
 Implement a String object without using std::string or any of its methods.
 
@@ -4231,7 +4191,7 @@ Implement a String object without using std::string or any of its methods.
 — blog · posted 2021-08-01 · full_text · [link](https://www.jointaro.com/interviews/companies/akuna-capital/experiences/c-developer-intern-united-states-august-1-2021-no-offer-positive-e98411cb)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q436 · Tier B · unknown · phone_technical
+### Q431 · Tier B · unknown · phone_technical
 
 Order matching question, not like LeetCode at all.
 
@@ -4239,7 +4199,7 @@ Order matching question, not like LeetCode at all.
 — blog · posted 2020-08-01 · full_text · [link](https://www.jointaro.com/interviews/companies/akuna-capital/experiences/software-engineering-intern-canada-august-1-2020-no-offer-neutral-81089713)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q437 · Tier B · 2020 · phone_technical (总共半小时,全程英语)
+### Q432 · Tier B · 2020 · phone_technical (总共半小时,全程英语)
 
 还有最常见的FPGA面试题,比如单比特跨时钟,多比特跨时钟,异步FIFO结构,亚稳态,建立时间,保持时间什么的
 
@@ -4249,7 +4209,7 @@ Order matching question, not like LeetCode at all.
 — nowcoder · posted 2019-12-18 · full_text · [link](https://www.nowcoder.com/discuss/353155979133001728)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder posts are pseudonymous 面经 write-ups with no verification; the poster is recalling questions after the fact, so wording is theirs rather than the interviewer's. This is a list of standing FPGA-interview topics ('
 
-### Q438 · Tier B · unknown · phone_technical (直接做题 没有自我介绍,四题,做完题反问)
+### Q433 · Tier B · unknown · phone_technical (直接做题 没有自我介绍,四题,做完题反问)
 
 第四题 手写priority_queue(构造,析构,push,top,pop)
 
@@ -4259,7 +4219,7 @@ Order matching question, not like LeetCode at all.
 — nowcoder · posted 2022-08-03 · full_text · [link](https://www.nowcoder.com/feed/main/detail/5363d0b8413448fdb1a2e0c48379aee8)
   1 attestation(s) across 1 domain(s) · doubt: Short bulleted recall with no problem statements — each line names a task in a handful of characters. A commenter on the same post replies '都是典型的题啊' (these are all standard questions), which is consistent with, but not p
 
-### Q439 · Tier B · unknown · phone_technical
+### Q434 · Tier B · unknown · phone_technical
 
 I got a leetcode easy and some inaudible basic stats question like what is a CDF, a conditional probability problem, etc.
 
@@ -4267,7 +4227,7 @@ I got a leetcode easy and some inaudible basic stats question like what is a CDF
 — reddit_thread · posted 2020-09-10 · full_text · [link](https://www.reddit.com/r/csMajors/comments/iihdvk/codepair_tips/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q440 · Tier B · unknown · phone_technical (a much heavier emphasis in OOP/data structures rather than pure algori)
+### Q435 · Tier B · unknown · phone_technical (a much heavier emphasis in OOP/data structures rather than pure algori)
 
 I was asked to implement an order filling system based on a multi-stage rule that was provided.
 
@@ -4275,7 +4235,7 @@ I was asked to implement an order filling system based on a multi-stage rule tha
 — reddit_thread · posted 2020-10-27 · full_text · [link](https://www.reddit.com/r/csMajors/comments/jd2d2v/akuna_capital_codepair_response/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q441 · Tier B · unknown · phone_technical
+### Q436 · Tier B · unknown · phone_technical
 
 which of two games I would rather play, one where you roll a dice and get the square of the value, and the other where you roll two dice and get the produce of the rolls
 
@@ -4283,7 +4243,7 @@ which of two games I would rather play, one where you roll a dice and get the sq
 — reddit_thread · posted 2023-07-02 · full_text · [link](https://www.reddit.com/r/quant/comments/14mqo6r/akuna_capital_to_lay_off_40_of_apac_employees/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q442 · Tier B · unknown · phone_technical
+### Q437 · Tier B · unknown · phone_technical
 
 they asked me an easy af leetcode q and some easy combinatorics/probability qs
 
@@ -4291,31 +4251,7 @@ they asked me an easy af leetcode q and some easy combinatorics/probability qs
 — reddit_thread · posted 2020-10-29 · full_text · [link](https://www.reddit.com/r/csMajors/comments/ilzn4z/akuna_capital_quantitative_developer_intern/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q443 · Tier B · unknown · phone_technical (The email said the interview was 30 minutes, but they gave me around 7)
-
-The phone screen consists of 4 LC hard questions. Questions used dynamic programming, trees, arrays, puzzles, and data structures.
-
-> The phone screen consists of 4 LC hard questions. Questions used dynamic programming, trees, arrays, puzzles, and data structures.
-— reddit_thread · posted 2023-09-07 · full_text · [link](https://www.reddit.com/r/csMajors/comments/16cioxy/akuna_capital_data_infra_intern_phone_screen/)
-  1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
-
-### Q444 · Tier B · unknown · phone_technical
-
-I was given two puzzles that required dynamic programming solutions. ... I had to optimize the code involving cache locality, memory barriers, atomic ordering, vectorization, memory alignment, context switch overhead, etc.
-
-> I had to optimize the code involving cache locality, memory barriers, atomic ordering, vectorization, memory alignment, context switch overhead, etc.
-— reddit_thread · posted 2023-09-19 · full_text · [link](https://www.reddit.com/r/csMajors/comments/16n05in/akuna_capital_c_swe_intern_phone_interview/)
-  1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
-
-### Q445 · Tier B · unknown · phone_technical
-
-For some parts of the interview, I had to act like a human compiler where I could be able to determine what the resulting native code would look like.
-
-> For some parts of the interview, I had to act like a human compiler where I could be able to determine what the resulting native code would look like.
-— reddit_thread · posted 2023-09-19 · full_text · [link](https://www.reddit.com/r/csMajors/comments/16n05in/akuna_capital_c_swe_intern_phone_interview/)
-  1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
-
-### Q446 · Tier B · unknown · phone_technical
+### Q438 · Tier B · unknown · phone_technical
 
 Live Zoom coding interview: an easy base question, then interviewer-added variations, ending on a very esoteric data structure
 
@@ -4323,7 +4259,7 @@ Live Zoom coding interview: an easy base question, then interviewer-added variat
 — wso · posted 2025-09 · full_text · [link](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview/quant-developer-1)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. The submitter nev
 
-### Q447 · Tier B · unknown · phone_technical
+### Q439 · Tier B · unknown · phone_technical
 
 Technical phone screen with a Senior QR: quick probability puzzles, mental math, and some data structure questions
 
@@ -4331,7 +4267,7 @@ Technical phone screen with a Senior QR: quick probability puzzles, mental math,
 — wso · posted 2024-11 · full_text · [link](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview/quant-researcher-intern-1)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Topic list rather
 
-### Q448 · Tier B · unknown · phone_technical
+### Q440 · Tier B · unknown · phone_technical
 
 Zoom interview with a trader: "Why Akuna/trading" then 5 or 6 probability/game style questions
 
@@ -4342,7 +4278,7 @@ Zoom interview with a trader: "Why Akuna/trading" then 5 or 6 probability/game s
 
 ## Akuna Capital — superday
 
-### Q449 · Tier B · unknown · superday
+### Q441 · Tier B · unknown · superday
 
 Final round, three 1-on-1s: advanced math and statistics (linear algebra, probability); a whiteboard algorithms/Python session; and a behavioral with a senior manager
 
@@ -4353,7 +4289,7 @@ Final round, three 1-on-1s: advanced math and statistics (linear algebra, probab
 
 ## Akuna Capital — take_home
 
-### Q450 · Tier B · unknown · take_home
+### Q442 · Tier B · unknown · take_home
 
 Akuna's Options 201 course used as a screening stage: about 5 hours over 3 days, top performers expedited to the final round
 
@@ -4361,7 +4297,7 @@ Akuna's Options 201 course used as a screening stage: about 5 hours over 3 days,
 — wso · posted 2026-03 · full_text · [link](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview/junior-quant-trader-0)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Describes the sta
 
-### Q451 · Tier B · unknown · take_home
+### Q443 · Tier B · unknown · take_home
 
 Akuna 201 course: 5 days with a quiz each day; top performers expedited to the final rounds
 
@@ -4372,7 +4308,7 @@ Akuna 201 course: 5 days with a quiz each day; top performers expedited to the f
 
 ## Akuna Capital — trading_game
 
-### Q452 · Tier B · unknown · trading_game (third OA, camera on, behavioral question at the end)
+### Q444 · Tier B · unknown · trading_game (third OA, camera on, behavioral question at the end)
 
 Describe a technical challenge you have faced and solved so that anybody who is not familiar can understand but also so an expert in the field can get something out of it.
 
@@ -4380,7 +4316,7 @@ Describe a technical challenge you have faced and solved so that anybody who is 
 — wso · posted 2026-05-13 · full_text · [link](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: The recorded-video assessment is described only as 'a market making game'; the poster does not say it was VidCruiter, so the platform label is left unknown.
 
-### Q453 · Tier B · unknown · trading_game
+### Q445 · Tier B · unknown · trading_game
 
 Third OA: an easy market making game with camera on, plus a behavioral question at the end
 
@@ -4391,7 +4327,7 @@ Third OA: an easy market making game with camera on, plus a behavioral question 
 
 ## Akuna Capital — unknown
 
-### Q454 · Tier B · unknown · unknown
+### Q446 · Tier B · unknown · unknown
 
 Doing mental math without paper pen and no calculators allowed
 
@@ -4402,7 +4338,7 @@ Doing mental math without paper pen and no calculators allowed
 
 ## Akuna Capital — online_assessment
 
-### Q455 · Tier C · unknown · online_assessment (the stage the poster had just been sent)
+### Q447 · Tier C · unknown · online_assessment (the stage the poster had just been sent)
 
 They asked me to finish the online Easyhire mathematics assessment, including 5 multiple choice questions.
 
@@ -4410,7 +4346,7 @@ They asked me to finish the online Easyhire mathematics assessment, including 5 
 — reddit_thread · posted unknown · archive_only · [link](https://www.reddit.com/r/csMajors/comments/1f28jed/akuna_capital_quant_research_intern_oa/)
   1 attestation(s) across 1 domain(s) · doubt: reddit.com returns 403 to this machine, so this was read from the Arctic Shift mirror rather than from reddit itself. It states the shape of the stage — platform, five multiple-choice items — but not a single question fr
 
-### Q456 · Tier C · 2025-2026 · online_assessment (the number of questions in round 1 and the existence of a second OA)
+### Q448 · Tier C · 2025-2026 · online_assessment (the number of questions in round 1 and the existence of a second OA)
 
 I recently gave the Online Assessment for Akuna Capital 2025-2026 C++ SWE Intern Round 1, passed the first question with all test cases but couldn't pass the second and third questions with all the test cases.
 
@@ -4418,7 +4354,7 @@ I recently gave the Online Assessment for Akuna Capital 2025-2026 C++ SWE Intern
 — reddit_thread · posted unknown · archive_only · [link](https://www.reddit.com/r/csMajors/comments/1qdl0q9/akuna_capital_swe_internship_c/)
   1 attestation(s) across 1 domain(s) · doubt: reddit.com returns 403 to this machine, so this was read from the Arctic Shift mirror. The poster establishes that round 1 had three test-case-graded coding questions and that a round 2 OA follows, but gives no problem s
 
-### Q457 · Tier C · unknown · online_assessment (考试时间只有80分钟; 十题多选加三题编程)
+### Q449 · Tier C · unknown · online_assessment (考试时间只有80分钟; 十题多选加三题编程)
 
 十题多选加三题编程,多选题主要在问C++17和20的一些特性。 编程题 第一题是数组操作, 第二题是把罗马数字转integer, 第三题是设计一个股票系统,读订单跟股价然后计算收益,
 
@@ -4428,7 +4364,7 @@ I recently gave the Online Assessment for Akuna Capital 2025-2026 C++ SWE Intern
 — 1point3acres · posted 2023-07 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1009323-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres is Cloudflare-blocked so this is a search excerpt only; the role is C++ SWE rather than an explicitly quant track.
 
-### Q458 · Tier C · unknown · online_assessment
+### Q450 · Tier C · unknown · online_assessment
 
 还以为是leetcode那种类型 反正我是真的不懂 样例简单求最小公倍数让我以为测试也是这样 信心满满点进去...... 智力题+编程题的赶脚
 
@@ -4441,7 +4377,7 @@ I recently gave the Online Assessment for Akuna Capital 2025-2026 C++ SWE Intern
 
 ## Akuna Capital — phone_technical
 
-### Q459 · Tier C · unknown · phone_technical
+### Q451 · Tier C · unknown · phone_technical
 
 自我介绍。可以去一亩三分地论坛上搜akuna的面经,基本都是类似的那种问题,反正全都是概念。
 
@@ -4454,7 +4390,7 @@ I recently gave the Online Assessment for Akuna Capital 2025-2026 C++ SWE Intern
 
 ## Akuna Capital — online_assessment
 
-### Q460 · Tier D · 2025 · online_assessment (OA)
+### Q452 · Tier D · 2025 · online_assessment (OA)
 
 Write an exchange order Matching Engine. The supported operations are: BUY SELL CANCEL MODIFY PRINT
 
@@ -4464,7 +4400,7 @@ Write an exchange order Matching Engine. The supported operations are: BUY SELL 
 — chat_telegram · posted 2025-10-13 · full_text · [link](https://t.me/usinterview/25781)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The Telegram preview cont
 
-### Q461 · Tier D · 2024 · online_assessment (OA, problem 11 "3s Wild")
+### Q453 · Tier D · 2024 · online_assessment (OA, problem 11 "3s Wild")
 
 11. 3s Wild — Description: Sabrina and Mikhail are playing a card game with a deck of custom cards, each of which contains a sin
 
@@ -4474,7 +4410,7 @@ Write an exchange order Matching Engine. The supported operations are: BUY SELL 
 — chat_telegram · posted 2024-10-08 · full_text · [link](https://t.me/usinterview/19777)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. This is genuinely the ass
 
-### Q462 · Tier D · 2024 · online_assessment (OA then phone)
+### Q454 · Tier D · 2024 · online_assessment (OA then phone)
 
 hacker rank实现order book。2周后收到coderpad技术电面实现stl vector,用bytes提前占位,优化vector dynamic allocation效率
 
@@ -4484,7 +4420,7 @@ hacker rank实现order book。2周后收到coderpad技术电面实现stl vector,
 — chat_telegram · posted 2024-09-27 · full_text · [link](https://t.me/usinterview/19607)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. Two separate rounds compr
 
-### Q463 · Tier D · 2025 · online_assessment (the first of the three coding questions)
+### Q455 · Tier D · 2025 · online_assessment (the first of the three coding questions)
 
 给两个list,分别为profit和cost,收益
 
@@ -4494,7 +4430,7 @@ hacker rank实现order book。2周后收到coderpad技术电面实现stl vector,
 — chat_telegram · posted 2025-03-18 · full_text · [link](https://t.me/usinterview/21929)
   1 attestation(s) across 1 domain(s) · doubt: The preview dies mid-sentence on the word 收益 (return/profit), which is where the actual objective function would have been defined — so what is to be maximised, under what constraint, is unknown, and the other two questi
 
-### Q464 · Tier D · 2026 · online_assessment (the signature of the function the OA required)
+### Q456 · Tier D · 2026 · online_assessment (the signature of the function the OA required)
 
 public static int maximumDifference(int gNodes,List gFrom,List gTo) {
 
@@ -4504,7 +4440,7 @@ public static int maximumDifference(int gNodes,List gFrom,List gTo) {
 — chat_telegram · posted 2026-05-25 · full_text · [link](https://t.me/usinterview/28581)
   1 attestation(s) across 1 domain(s) · doubt: The poster pasted their solution code, not the question, so what maximumDifference is supposed to compute over the graph (gNodes, gFrom, gTo) is nowhere stated — the name and the signature are all there is. The generic-t
 
-### Q465 · Tier D · 2026 · online_assessment (a second, SQL section of the same OA)
+### Q457 · Tier D · 2026 · online_assessment (a second, SQL section of the same OA)
 
 50UNION ALLSELECT
 
@@ -4514,7 +4450,7 @@ public static int maximumDifference(int gNodes,List gFrom,List gTo) {
 — chat_telegram · posted 2026-05-25 · full_text · [link](https://t.me/usinterview/28581)
   1 attestation(s) across 1 domain(s) · doubt: A three-token fragment of a SQL query with both ends missing. It attests only that the Akuna DataEng OA had a SQL component alongside the Java graph question — there is no recoverable question here at all, and it should 
 
-### Q466 · Tier D · unknown · online_assessment (~7 recorded math questions, worked through verbally)
+### Q458 · Tier D · unknown · online_assessment (~7 recorded math questions, worked through verbally)
 
 Convergence time of newton's method
 
@@ -4522,7 +4458,7 @@ Convergence time of newton's method
 — wso · posted 2025-11-30 · full_text · [link](https://www.wallstreetoasis.com/company/akuna-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Four-word question stub; the actual setup (which function, which starting point) is missing, so it is only a topic.
 
-### Q467 · Tier D · unknown · online_assessment (three questions on HackerRank)
+### Q459 · Tier D · unknown · online_assessment (three questions on HackerRank)
 
 Detect collinearity
 
@@ -4530,7 +4466,7 @@ Detect collinearity
 — blog · posted 2019-02-01 · full_text · [link](https://www.jointaro.com/interviews/companies/akuna-capital/experiences/quant-dynamic-2019-python-united-states-february-1-2019-no-offer-neutral-1bd653c0)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q468 · Tier D · unknown · online_assessment (three questions on HackerRank)
+### Q460 · Tier D · unknown · online_assessment (three questions on HackerRank)
 
 Market equilibrium
 
@@ -4538,7 +4474,7 @@ Market equilibrium
 — blog · posted 2019-02-01 · full_text · [link](https://www.jointaro.com/interviews/companies/akuna-capital/experiences/quant-dynamic-2019-python-united-states-february-1-2019-no-offer-neutral-1bd653c0)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q469 · Tier D · unknown · online_assessment
+### Q461 · Tier D · unknown · online_assessment
 
 又是全部是编程题,不擅长。。。一题没AC
 
@@ -4548,7 +4484,7 @@ Market equilibrium
 — nowcoder · posted 2020-04 · full_text · [link](https://www.nowcoder.com/discuss/353154366230175744)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder posts are pseudonymous 面经 write-ups with no verification; the poster is recalling questions after the fact, so wording is theirs rather than the interviewer's. The poster records only that Akuna's quant written 
 
-### Q470 · Tier D · 2023 · online_assessment (10选择必须20分钟;6选择+2编程26min)
+### Q462 · Tier D · 2023 · online_assessment (10选择必须20分钟;6选择+2编程26min)
 
 // 1. 检查二叉搜索树中是否包含某个值 // 只需要实现in
 
@@ -4560,7 +4496,7 @@ Market equilibrium
 — nowcoder · posted 2022-09-04 · full_text · [link](https://www.nowcoder.com/discuss/396088849078685696)
   1 attestation(s) across 1 domain(s) · doubt: The poster reconstructed the questions as C++ solution code after the fact rather than copying the prompts off the test screen, so the wording of each problem is their own summary; they also say plainly '记了3题' and '这块选择没
 
-### Q471 · Tier D · 2023 · online_assessment (10选择必须20分钟;6选择+2编程26min)
+### Q463 · Tier D · 2023 · online_assessment (10选择必须20分钟;6选择+2编程26min)
 
 // 2. 求不超过某上限的最大连续子数组和
 
@@ -4572,7 +4508,7 @@ Market equilibrium
 — nowcoder · posted 2022-09-04 · full_text · [link](https://www.nowcoder.com/discuss/396088849078685696)
   1 attestation(s) across 1 domain(s) · doubt: The poster reconstructed the questions as C++ solution code after the fact rather than copying the prompts off the test screen, so the wording of each problem is their own summary; they also say plainly '记了3题' and '这块选择没
 
-### Q472 · Tier D · 2023 · online_assessment (6选择+2编程26min)
+### Q464 · Tier D · 2023 · online_assessment (6选择+2编程26min)
 
 Unit testing.
 
@@ -4583,7 +4519,7 @@ Unit testing.
 
 ## Akuna Capital — onsite
 
-### Q473 · Tier D · 2026 · onsite (onsite question 1)
+### Q465 · Tier D · 2026 · onsite (onsite question 1)
 
 Question 1. Task: To design and implement a class which can be used by client in their trading engine code to check if they can send ou
 
@@ -4593,7 +4529,7 @@ Question 1. Task: To design and implement a class which can be used by client in
 — chat_telegram · posted 2026-01-24 · full_text · [link](https://t.me/usinterview/26984)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. Truncated at "send ou..."
 
-### Q474 · Tier D · unknown · onsite
+### Q466 · Tier D · unknown · onsite
 
 Write code to shuffle a 52-card deck.
 
@@ -4601,7 +4537,7 @@ Write code to shuffle a 52-card deck.
 — blog · posted 2014-02-01 · full_text · [link](https://www.jointaro.com/interviews/companies/akuna-capital/experiences/software-engineer-intern-champaign-il-february-1-2014-no-offer-positive-39d6ba50)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q475 · Tier D · unknown · onsite (HackerRank round, then a technical phone screen with LeetCode Medium-H)
+### Q467 · Tier D · unknown · onsite (HackerRank round, then a technical phone screen with LeetCode Medium-H)
 
 bowling scorecard
 
@@ -4612,7 +4548,7 @@ bowling scorecard
 
 ## Akuna Capital — phone_technical
 
-### Q476 · Tier D · 2025 · phone_technical (OOD round)
+### Q468 · Tier D · 2025 · phone_technical (OOD round)
 
 设计一个 Enemy 工厂,用于返回不同的 enemy instance. Let's suppose you are working for a very big online, micro-, multiplayer game company
 
@@ -4622,7 +4558,7 @@ bowling scorecard
 — chat_telegram · posted 2025-11-02 · full_text · [link](https://t.me/usinterview/26126)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The English text has a du
 
-### Q477 · Tier D · 2025 · phone_technical (the one technical question in an otherwise background conversation)
+### Q469 · Tier D · 2025 · phone_technical (the one technical question in an otherwise background conversation)
 
 第一面直接和APAC Head of Quant聊了背景 问了简单的Variance 脑子短路了没答上来
 
@@ -4632,7 +4568,7 @@ bowling scorecard
 — chat_telegram · posted 2025-02-27 · full_text · [link](https://t.me/usinterview/21573)
   1 attestation(s) across 1 domain(s) · doubt: "简单的Variance" (a simple variance question) is a category, not a question — the poster froze and did not answer, which is presumably why they did not record what was actually asked. Nothing here is answerable. It is kept 
 
-### Q478 · Tier D · unknown · phone_technical (面试官上来直接用英文沟通然后做题; four coding questions in 60 minutes)
+### Q470 · Tier D · unknown · phone_technical (面试官上来直接用英文沟通然后做题; four coding questions in 60 minutes)
 
 第一题:统计int变量中二进制1的个数,奇数输出true,偶数输出false
 
@@ -4642,7 +4578,7 @@ bowling scorecard
 — nowcoder · posted 2023-01-01 · full_text · [link](https://www.nowcoder.com/discuss/434715907903008768)
   1 attestation(s) across 1 domain(s) · doubt: The candidate is a Java/backend 秋招 applicant rather than a quant-track applicant, so this is Akuna's developer pipeline; the post is a bulk compilation of ~30 companies, which compresses each recall.
 
-### Q479 · Tier D · unknown · phone_technical (four coding questions in 60 minutes, conducted in English)
+### Q471 · Tier D · unknown · phone_technical (four coding questions in 60 minutes, conducted in English)
 
 第二题:递归实现求二叉树中的最大值
 
@@ -4652,7 +4588,7 @@ bowling scorecard
 — nowcoder · posted 2023-01-01 · full_text · [link](https://www.nowcoder.com/discuss/434715907903008768)
   1 attestation(s) across 1 domain(s) · doubt: Very short quote (under 40 characters) and an elementary problem; its value is that three independent Nowcoder posters report the same four-question Akuna set.
 
-### Q480 · Tier D · unknown · phone_technical (four coding questions in 60 minutes)
+### Q472 · Tier D · unknown · phone_technical (four coding questions in 60 minutes)
 
 第三题:实现账户转账的多线程版本,保证线程安全,可用伪代码
 
@@ -4662,7 +4598,7 @@ bowling scorecard
 — nowcoder · posted 2023-01-01 · full_text · [link](https://www.nowcoder.com/discuss/434715907903008768)
   1 attestation(s) across 1 domain(s) · doubt: Compilation-style post covering ~30 companies, so per-company detail is thin; independently matched by another Nowcoder poster's '第三题 给一个函数,要求修改成线程安全的'.
 
-### Q481 · Tier D · unknown · phone_technical (four coding questions in 60 minutes)
+### Q473 · Tier D · unknown · phone_technical (four coding questions in 60 minutes)
 
 第四题:小顶堆实现,实现top(),push(),pop()操作
 
@@ -4672,7 +4608,7 @@ bowling scorecard
 — nowcoder · posted 2023-01-01 · full_text · [link](https://www.nowcoder.com/discuss/434715907903008768)
   1 attestation(s) across 1 domain(s) · doubt: Short quote; a second Nowcoder poster independently reports '第四题 手写priority_queue' and a third reports 实现一个模板最小堆 for the same round, which is strong corroboration but also means posters may be reading each other.
 
-### Q482 · Tier D · unknown · phone_technical (applied for the Python Developer internship for Summer 2020)
+### Q474 · Tier D · unknown · phone_technical (applied for the Python Developer internship for Summer 2020)
 
 What does the pickle module do?
 
@@ -4680,7 +4616,7 @@ What does the pickle module do?
 — blog · posted 2019-08-01 · full_text · [link](https://www.jointaro.com/interviews/companies/akuna-capital/experiences/software-engineerinternship-united-states-august-1-2019-no-offer-neutral-1ee81320)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q483 · Tier D · unknown · phone_technical
+### Q475 · Tier D · unknown · phone_technical
 
 Implement Binary Tree Right Side View.
 
@@ -4688,7 +4624,7 @@ Implement Binary Tree Right Side View.
 — blog · posted 2023-06-01 · full_text · [link](https://www.jointaro.com/interviews/companies/akuna-capital/experiences/software-internship-sydney-june-1-2023-no-offer-positive-0339a27b)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q484 · Tier D · 2020 · phone_technical (这是个规模200人左右的跨国金融科技公司,做量化交易高频交易之类的,需要FPGA做加速。总部在芝加哥,上海有分部,其中只有六七个做FPGA的)
+### Q476 · Tier D · 2020 · phone_technical (这是个规模200人左右的跨国金融科技公司,做量化交易高频交易之类的,需要FPGA做加速。总部在芝加哥,上海有分部,其中只有六七个做FPGA的)
 
 一上来就让搭电路,用二选一选择器搭与门,或门,非门,异或门
 
@@ -4698,7 +4634,7 @@ Implement Binary Tree Right Side View.
 — nowcoder · posted 2019-12-18 · full_text · [link](https://www.nowcoder.com/discuss/353155979133001728)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder posts are pseudonymous 面经 write-ups with no verification; the poster is recalling questions after the fact, so wording is theirs rather than the interviewer's. Specific and plausible for an FPGA screen, but this
 
-### Q485 · Tier D · 2020 · phone_technical (这是个规模200人左右的跨国金融科技公司,做量化交易高频交易之类的,需要FPGA做加速。总部在芝加哥,上海有分部,其中只有六七个做FPGA的)
+### Q477 · Tier D · 2020 · phone_technical (这是个规模200人左右的跨国金融科技公司,做量化交易高频交易之类的,需要FPGA做加速。总部在芝加哥,上海有分部,其中只有六七个做FPGA的)
 
 然后又问怎样实现将一个数x乘以124倍最快最省资源
 
@@ -4710,7 +4646,7 @@ Implement Binary Tree Right Side View.
 — nowcoder · posted 2019-12-18 · full_text · [link](https://www.nowcoder.com/discuss/353155979133001728)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder posts are pseudonymous 面经 write-ups with no verification; the poster is recalling questions after the fact, so wording is theirs rather than the interviewer's. The one character after '他问为' renders as a mojibake
 
-### Q486 · Tier D · 2023届秋招 · phone_technical (全英面试,但一上来就做题,四题完了后就反问然后结束;都是给了一些代码然后填充实现的)
+### Q478 · Tier D · 2023届秋招 · phone_technical (全英面试,但一上来就做题,四题完了后就反问然后结束;都是给了一些代码然后填充实现的)
 
 求int里1的个数是否为奇数
 
@@ -4720,7 +4656,7 @@ Implement Binary Tree Right Side View.
 — nowcoder · posted 2022-09-20 · full_text · [link](https://www.nowcoder.com/discuss/397714545857376256)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder posts are pseudonymous 面经 write-ups with no verification; the poster is recalling questions after the fact, so wording is theirs rather than the interviewer's. Corroborated by an independent nowcoder poster who 
 
-### Q487 · Tier D · 2023届秋招 · phone_technical (全英面试,但一上来就做题,四题完了后就反问然后结束;都是给了一些代码然后填充实现的)
+### Q479 · Tier D · 2023届秋招 · phone_technical (全英面试,但一上来就做题,四题完了后就反问然后结束;都是给了一些代码然后填充实现的)
 
 改错,求二叉树最大值(看成了二叉搜索树,写完后提示后再改的)
 
@@ -4730,7 +4666,7 @@ Implement Binary Tree Right Side View.
 — nowcoder · posted 2022-09-20 · full_text · [link](https://www.nowcoder.com/discuss/397714545857376256)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder posts are pseudonymous 面经 write-ups with no verification; the poster is recalling questions after the fact, so wording is theirs rather than the interviewer's. Corroborated by an independent nowcoder poster who 
 
-### Q488 · Tier D · 2023届秋招 · phone_technical (全英面试,但一上来就做题,四题完了后就反问然后结束;都是给了一些代码然后填充实现的)
+### Q480 · Tier D · 2023届秋招 · phone_technical (全英面试,但一上来就做题,四题完了后就反问然后结束;都是给了一些代码然后填充实现的)
 
 让修改账户balance值函数变成线程安全的(直接加了两个锁,伪代码)
 
@@ -4740,7 +4676,7 @@ Implement Binary Tree Right Side View.
 — nowcoder · posted 2022-09-20 · full_text · [link](https://www.nowcoder.com/discuss/397714545857376256)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder posts are pseudonymous 面经 write-ups with no verification; the poster is recalling questions after the fact, so wording is theirs rather than the interviewer's. Corroborated by an independent nowcoder poster who 
 
-### Q489 · Tier D · 2023届秋招 · phone_technical (全英面试,但一上来就做题,四题完了后就反问然后结束;都是给了一些代码然后填充实现的)
+### Q481 · Tier D · 2023届秋招 · phone_technical (全英面试,但一上来就做题,四题完了后就反问然后结束;都是给了一些代码然后填充实现的)
 
 实现一个模板最小堆 都是给了一些代码然后填充实现的
 
@@ -4752,7 +4688,7 @@ Implement Binary Tree Right Side View.
 — nowcoder · posted 2022-09-20 · full_text · [link](https://www.nowcoder.com/discuss/397714545857376256)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder posts are pseudonymous 面经 write-ups with no verification; the poster is recalling questions after the fact, so wording is theirs rather than the interviewer's. Corroborated by an independent nowcoder poster who 
 
-### Q490 · Tier D · unknown · phone_technical (直接做题 没有自我介绍,四题,做完题反问)
+### Q482 · Tier D · unknown · phone_technical (直接做题 没有自我介绍,四题,做完题反问)
 
 第一题 求一个数的奇偶校验位
 
@@ -4762,7 +4698,7 @@ Implement Binary Tree Right Side View.
 — nowcoder · posted 2022-08-03 · full_text · [link](https://www.nowcoder.com/feed/main/detail/5363d0b8413448fdb1a2e0c48379aee8)
   1 attestation(s) across 1 domain(s) · doubt: Short bulleted recall with no problem statements — each line names a task in a handful of characters. A commenter on the same post replies '都是典型的题啊' (these are all standard questions), which is consistent with, but not p
 
-### Q491 · Tier D · unknown · phone_technical (直接做题 没有自我介绍,四题,做完题反问)
+### Q483 · Tier D · unknown · phone_technical (直接做题 没有自我介绍,四题,做完题反问)
 
 第二题 求二叉树节点最大值
 
@@ -4772,7 +4708,7 @@ Implement Binary Tree Right Side View.
 — nowcoder · posted 2022-08-03 · full_text · [link](https://www.nowcoder.com/feed/main/detail/5363d0b8413448fdb1a2e0c48379aee8)
   1 attestation(s) across 1 domain(s) · doubt: Short bulleted recall with no problem statements — each line names a task in a handful of characters. A commenter on the same post replies '都是典型的题啊' (these are all standard questions), which is consistent with, but not p
 
-### Q492 · Tier D · unknown · phone_technical (直接做题 没有自我介绍,四题,做完题反问)
+### Q484 · Tier D · unknown · phone_technical (直接做题 没有自我介绍,四题,做完题反问)
 
 第三题 给一个函数,要求修改成线程安全的
 
@@ -4785,7 +4721,7 @@ Implement Binary Tree Right Side View.
 
 ## Balyasny Asset Management — online_assessment
 
-### Q493 · Tier B · 2025 · online_assessment (programming half of the OA)
+### Q485 · Tier B · 2025 · online_assessment (programming half of the OA)
 
 Programming asked to return the n largest drawdowns
 
@@ -4796,7 +4732,7 @@ Programming asked to return the n largest drawdowns
 
 ## Balyasny Asset Management — onsite
 
-### Q494 · Tier B · 2021 · onsite (engineering track in the Quantitative Research division)
+### Q486 · Tier B · 2021 · onsite (engineering track in the Quantitative Research division)
 
 Python fundamentals, Leetcode medium algo questions.
 
@@ -4807,7 +4743,7 @@ Python fundamentals, Leetcode medium algo questions.
 
 ## Balyasny Asset Management — phone_technical
 
-### Q495 · Tier B · 2025 · phone_technical (round after the OA)
+### Q487 · Tier B · 2025 · phone_technical (round after the OA)
 
 a phone round asking probability brainteasers
 
@@ -4815,7 +4751,7 @@ a phone round asking probability brainteasers
 — interview_review_db · posted 2025-12-27 · full_text · [link](https://www.wallstreetoasis.com/company/balyasny-asset-management/interview)
   1 attestation(s) across 1 domain(s) · doubt: Names a topic only; no individual brainteaser is given, so this is not reproducible as a question.
 
-### Q496 · Tier B · 2024 · phone_technical (intern process alongside a stock pitch and motivation questions)
+### Q488 · Tier B · 2024 · phone_technical (intern process alongside a stock pitch and motivation questions)
 
 You have a biased coin that lands heads 60% of the time. How can you use it to simulate a fair coin flip?
 
@@ -4823,7 +4759,7 @@ You have a biased coin that lands heads 60% of the time. How can you use it to s
 — interview_review_db · posted 2025-07-06 · full_text · [link](https://www.wallstreetoasis.com/company/balyasny-asset-management/interview)
   1 attestation(s) across 1 domain(s) · doubt: This is the classic von Neumann fair-coin-from-biased-coin problem and appears in every quant prep textbook, so a candidate could in principle be pattern-matching from prep material rather than recalling; however it is a
 
-### Q497 · Tier B · 2025 · phone_technical (second stage, before a coding test with a data scientist)
+### Q489 · Tier B · 2025 · phone_technical (second stage, before a coding test with a data scientist)
 
 Give me optimisation about LLM inference
 
@@ -4834,7 +4770,7 @@ Give me optimisation about LLM inference
 
 ## Balyasny Asset Management — take_home
 
-### Q498 · Tier B · 2024 · take_home (after two phone rounds, followed by a presentation via video interview)
+### Q490 · Tier B · 2024 · take_home (after two phone rounds, followed by a presentation via video interview)
 
 The take home exam is pretty untraditional, but not difficult. You need to take care of data outliers and do not overthinking.
 
@@ -4845,7 +4781,7 @@ The take home exam is pretty untraditional, but not difficult. You need to take 
 
 ## Belvedere Trading — online_assessment
 
-### Q499 · Tier B · unknown · online_assessment (Commenter reports the assessment is 14 questions in 25 minutes, 'lots )
+### Q491 · Tier B · unknown · online_assessment (Commenter reports the assessment is 14 questions in 25 minutes, 'lots )
 
 given 7^1650 how many trailing zeroes are there, what are the sums of the digits etc.
 
@@ -4853,7 +4789,7 @@ given 7^1650 how many trailing zeroes are there, what are the sums of the digits
 — forum_thread · posted 2021-08-18 · full_text · [link](https://www.wallstreetoasis.com/forum/trading/belvedere-junior-trader-intern-hirevue)
   1 attestation(s) across 1 domain(s) · doubt: 7^1650 has no trailing zeroes at all, so either the commenter misremembered the base/exponent or the question was about a different quantity — the recalled statement is likely garbled. The source_quote contains an inline
 
-### Q500 · Tier B · unknown · online_assessment (Same 14-question, 25-minute assessment)
+### Q492 · Tier B · unknown · online_assessment (Same 14-question, 25-minute assessment)
 
 2020 people standing in a circle, starting with 1 you go around and shoot the guy to the right - repeats until only 1 remains, what number is it.
 
@@ -4861,7 +4797,7 @@ given 7^1650 how many trailing zeroes are there, what are the sums of the digits
 — forum_thread · posted 2021-08-18 · full_text · [link](https://www.wallstreetoasis.com/forum/trading/belvedere-junior-trader-intern-hirevue)
   1 attestation(s) across 1 domain(s) · doubt: This is the classic Josephus problem; the recalled statement is ambiguous about whether the first person shoots or is shot, which changes the answer.
 
-### Q501 · Tier B · unknown · online_assessment (A second commenter in the same thread adds another question and descri)
+### Q493 · Tier B · unknown · online_assessment (A second commenter in the same thread adds another question and descri)
 
 converting some number like 200! to base 12 how many trailing zeroes are there
 
@@ -4869,7 +4805,7 @@ converting some number like 200! to base 12 how many trailing zeroes are there
 — forum_thread · posted 2021-08-18 · full_text · [link](https://www.wallstreetoasis.com/forum/trading/belvedere-junior-trader-intern-hirevue)
   1 attestation(s) across 1 domain(s) · doubt: Commenter hedges with 'some number like 200!', so the actual factorial in the question may have been different.
 
-### Q502 · Tier D · 2025 · online_assessment (OA: 20 multiple choice + 1 coding)
+### Q494 · Tier D · 2025 · online_assessment (OA: 20 multiple choice + 1 coding)
 
 Coding题是给三只股票A,B,C,给出ABC的每日return和每日PnL,将ABC按照对PnL的影响排序
 
@@ -4882,7 +4818,7 @@ Coding题是给三只股票A,B,C,给出ABC的每日return和每日PnL,将ABC按�
 
 ## Bridgewater Associates — onsite
 
-### Q503 · Tier B · 2025 · onsite (third stage, after HR screen and group debate, before a system design )
+### Q495 · Tier B · 2025 · onsite (third stage, after HR screen and group debate, before a system design )
 
 Given a list of items and their utilitites, give an algorithm to maximise utility
 
@@ -4893,7 +4829,7 @@ Given a list of items and their utilitites, give an algorithm to maximise utilit
 
 ## Bridgewater Associates — phone_technical
 
-### Q504 · Tier B · 2024 · phone_technical (second round after the HR motivation screen)
+### Q496 · Tier B · 2024 · phone_technical (second round after the HR motivation screen)
 
 It's a philosophical question. Is television damaging to society?
 
@@ -4901,7 +4837,7 @@ It's a philosophical question. Is television damaging to society?
 — interview_review_db · posted 2025-12-30 · full_text · [link](https://www.wallstreetoasis.com/company/bridgewater/interview)
   1 attestation(s) across 1 domain(s) · doubt: Not a quantitative question at all - Bridgewater's screen is a reasoning/debate exercise. The same prompt is repeated in WSO's own editorial 'Bridgewater Interview Questions and Sample Answers' listicle further down the 
 
-### Q505 · Tier D · 2025 · phone_technical (after HR screen; 2 proctors guided the debate among several candidates)
+### Q497 · Tier D · 2025 · phone_technical (after HR screen; 2 proctors guided the debate among several candidates)
 
 Should there be a tax on happiness?
 
@@ -4912,7 +4848,7 @@ Should there be a tax on happiness?
 
 ## Chicago Trading Company — phone_technical
 
-### Q506 · Tier D · 2026 · phone_technical (the single coding question)
+### Q498 · Tier D · 2026 · phone_technical (the single coding question)
 
 用c++写一个shared pointer class
 
@@ -4925,7 +4861,7 @@ Should there be a tax on happiness?
 
 ## Chicago Trading Company (CTC) — online_assessment
 
-### Q507 · Tier B · interviewed June 2016 · online_assessment (Applied online, then given an online assessment)
+### Q499 · Tier B · interviewed June 2016 · online_assessment (Applied online, then given an online assessment)
 
 an online assessment consisting of probability/brainteaser questions, ~10 to be completed in thirty minutes
 
@@ -4936,7 +4872,7 @@ an online assessment consisting of probability/brainteaser questions, ~10 to be 
 
 ## Chicago Trading Company (CTC) — onsite
 
-### Q508 · Tier B · interviewed January 2020 · onsite (Online IQ test, then phone call, then final round onsite; technical qu)
+### Q500 · Tier B · interviewed January 2020 · onsite (Online IQ test, then phone call, then final round onsite; technical qu)
 
 A stick is randomly cut at 2 different points. What is the probability that the three pieces form a triangle?
 
@@ -4944,7 +4880,7 @@ A stick is randomly cut at 2 different points. What is the probability that the 
 — interview_review_site · posted 2020-02-26 · full_text · [link](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)
   1 attestation(s) across 1 domain(s) · doubt: The broken-stick triangle problem is a canonical textbook probability exercise that appears in Green Book and many prep collections, so it is not firm-original; included because a dated first-person recall attests it was
 
-### Q509 · Tier B · interviewed January 2020 · onsite (Same summer intern process; poster lists this as item 3 of six questio)
+### Q501 · Tier B · interviewed January 2020 · onsite (Same summer intern process; poster lists this as item 3 of six questio)
 
 A python-based coding question which involved analyzing stock data
 
@@ -4952,7 +4888,7 @@ A python-based coding question which involved analyzing stock data
 — interview_review_site · posted 2020-02-26 · full_text · [link](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)
   1 attestation(s) across 1 domain(s) · doubt: Describes the question's topic only; no actual problem statement is given, so this is not reproducible as a question.
 
-### Q510 · Tier B · interviewed January 2020 · onsite (Same summer intern process; poster notes 'I had to justify my assumpti)
+### Q502 · Tier B · interviewed January 2020 · onsite (Same summer intern process; poster notes 'I had to justify my assumpti)
 
 4. Estimate the number of windows in this building 5. Estimate the length of the equator (I had to justify my assumptions in 4 and 5)
 
@@ -4960,7 +4896,7 @@ A python-based coding question which involved analyzing stock data
 — interview_review_site · posted 2020-02-26 · full_text · [link](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)
   1 attestation(s) across 1 domain(s) · doubt: Two separate estimation questions are bundled into one recalled item; 'this building' is unresolvable without knowing which building the interviewer meant.
 
-### Q511 · Tier B · interviewed January 2020 · onsite (Same summer intern process; item 6 of six questions)
+### Q503 · Tier B · interviewed January 2020 · onsite (Same summer intern process; item 6 of six questions)
 
 Give me a theoretical explanation of Bayes Theorem. After this, he asked me to try and rephrase the theorem using a probability outcome tree
 
@@ -4971,7 +4907,7 @@ Give me a theoretical explanation of Bayes Theorem. After this, he asked me to t
 
 ## Chicago Trading Company (CTC) — phone_technical
 
-### Q512 · Tier B · interviewed November 2018 · phone_technical (First step was an intelligence test (mostly logical word problems); th)
+### Q504 · Tier B · interviewed November 2018 · phone_technical (First step was an intelligence test (mostly logical word problems); th)
 
 You have 8 marbles. One of them weighs more than the 7 others. What is the minimum number of steps you need in order to determine the outlier?
 
@@ -4979,7 +4915,7 @@ You have 8 marbles. One of them weighs more than the 7 others. What is the minim
 — interview_review_site · posted 2019-06-04 · full_text · [link](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)
   1 attestation(s) across 1 domain(s) · doubt: The 8-marbles/balance-scale puzzle is an extremely common textbook brainteaser, not firm-original; the poster's phrasing omits that a balance scale is the weighing device, so the problem as quoted is slightly underspecif
 
-### Q513 · Tier B · interviewed February 2018 · phone_technical (Before the phone interview there was an online video interview and IQ )
+### Q505 · Tier B · interviewed February 2018 · phone_technical (Before the phone interview there was an online video interview and IQ )
 
 What is 5/32 expressed as a decimal. What is 7/12. What is 34*45.
 
@@ -4990,7 +4926,7 @@ What is 5/32 expressed as a decimal. What is 7/12. What is 34*45.
 
 ## Chicago Trading Company (CTC) — superday
 
-### Q514 · Tier B · interviewed October 2020 · superday (First round was 1 behavioral + 1 technical; then 'Superweek')
+### Q506 · Tier B · interviewed October 2020 · superday (First round was 1 behavioral + 1 technical; then 'Superweek')
 
 Estimate how many windows Empire State Building has and how confident are you to your estimation.
 
@@ -4998,7 +4934,7 @@ Estimate how many windows Empire State Building has and how confident are you to
 — interview_review_site · posted 2020-11-15 · full_text · [link](https://www.wallstreetoasis.com/company/chicago-trading-company/interview)
   1 attestation(s) across 1 domain(s) · doubt: The WSO question field is not tied to a specific round, so it could have come from the first-round technical rather than Superweek; the entry is from 2020 so the current process may differ.
 
-### Q515 · Tier B · interviewed November 2017 · superday (Process: online assessment, one-way recorded video interview, on-campu)
+### Q507 · Tier B · interviewed November 2017 · superday (Process: online assessment, one-way recorded video interview, on-campu)
 
 Estimate the number of barrels of oil you could fit on an aircraft carrier, number of gas stations in California.
 
@@ -5009,7 +4945,7 @@ Estimate the number of barrels of oil you could fit on an aircraft carrier, numb
 
 ## Chicago Trading Company (CTC) — trading_game
 
-### Q516 · Tier B · interviewed October 2017 · trading_game (Process: online IQ test, video recorded interview, 2 phone interviews,)
+### Q508 · Tier B · interviewed October 2017 · trading_game (Process: online IQ test, video recorded interview, 2 phone interviews,)
 
 The mock trading was the most difficult. They simulated the trading floor and all the candidates had to trade against each other and against the two interviewers. During this time, the interviewers judged candidates based on speed, and aggressiveness.
 
@@ -5020,7 +4956,7 @@ The mock trading was the most difficult. They simulated the trading floor and al
 
 ## Chicago Trading Company (CTC) — unknown
 
-### Q517 · Tier B · interviewed January 2020 · unknown (Process was one online test, then a phone interview, then an onsite; p)
+### Q509 · Tier B · interviewed January 2020 · unknown (Process was one online test, then a phone interview, then an onsite; p)
 
 You have 27 race horses. You can race five of them at a time. You don't know what each one's time even if you race them (you only know the order in which the five horses raced ended up in). How many races do you need to make, in what order, with what horses, in order to know the top three horses overall from the pool of 27 horses? You also need to know not just which three horses these are, but their order relative to each other (who came first, second, third). Optimize your strategy to find the minimum number of races.
 
@@ -5031,7 +4967,7 @@ You have 27 race horses. You can race five of them at a time. You don't know wha
 
 ## Citadel — datathon
 
-### Q518 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
+### Q510 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
 
 In Python, which of the following gives the correct order, from first to last, of scope resolution? A. local function, enclosing function, global statements, built-in names B. local function, global statements, built-in names, enclosing function C. built-in names, global statements, local function, enclosing function D. built-in names, global statements, enclosing function, local function E. local function, global statements, enclosing function, built-in names
 
@@ -5041,7 +4977,7 @@ In Python, which of the following gives the correct order, from first to last, o
 — blog · posted 2024-06-25 · full_text · [link](https://blog.csdn.net/dcdsc/article/details/139953481)
   1 attestation(s) across 1 domain(s) · doubt: Compilation, not a first-person recall: the blogger aggregates reader-submitted 笔试 and solicits submissions with a cash/奶茶 reward and a paid 知识星球, so the item list is second-hand and could have been padded from a questio
 
-### Q519 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
+### Q511 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
 
 In Python, if you had to iteratively read over two files line-by-line, which of the following would be the BEST way to accomplish this task? A. Use with open () to open the two files as f1 and f2 then use readline() and a for loop to iteratively read lines from each file B. Use open () to open the two files as f1 and f2, then use readline() and a for loop to iteratively read lines from each file C. Use with open () to open the two files as f1 and f2, then use zip() to iterate over the two files together D. Use open () to open the two files as f1 and f2, then use zip() to iterate over the two files together E. Implement a file seek () function and call the function for the two files simultaneously
 
@@ -5051,7 +4987,7 @@ In Python, if you had to iteratively read over two files line-by-line, which of 
 — blog · posted 2024-06-25 · full_text · [link](https://blog.csdn.net/dcdsc/article/details/139953481)
   1 attestation(s) across 1 domain(s) · doubt: Compilation, not a first-person recall: the blogger aggregates reader-submitted 笔试 and solicits submissions with a cash/奶茶 reward and a paid 知识星球, so the item list is second-hand and could have been padded from a questio
 
-### Q520 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
+### Q512 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
 
 In Python, which of the following statements are true?: • I. The pipe module can be used to run shell commands in a program • Il. A pickle can store any Python object except tuples in string format • Ill. If you have a Python program called player.py, then you can import the module by running import player. py A. l and Il only B. I and Ill only C. Il and Ill only D. I, Il, and Ill E. None of A through D
 
@@ -5061,7 +4997,7 @@ In Python, which of the following statements are true?: • I. The pipe module c
 — blog · posted 2024-06-25 · full_text · [link](https://blog.csdn.net/dcdsc/article/details/139953481)
   1 attestation(s) across 1 domain(s) · doubt: Compilation, not a first-person recall: the blogger aggregates reader-submitted 笔试 and solicits submissions with a cash/奶茶 reward and a paid 知识星球, so the item list is second-hand and could have been padded from a questio
 
-### Q521 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
+### Q513 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
 
 Suppose you are given a highway congestion dataset with one feature - the average vehicle speed. It is found that if the average speed is above 70 kilometers per hour, then there are no accidents on the highway. However, if the average speed is below 70 kilometers per hour, then there is at least one accident on the highway. You would like to build a classifier for this problem using support vector machines (SVM). Your colleague suggests that this approach could be problematic due to imbalances in the distribution of vehicle speeds. Is your colleague correct, and why or why not? A. Your colleague is correct - a SVM's performance will suffer because of the reason he mentioned B. Your colleague is incorrect - SVMs assign greater weights to the data near the boundary so will perform fine C. Your colleague is correct - SVMs are bad at classifying traffic-related data in general D. Your colleague is incorrect - although linear VMs will perform poorly, radial basis VMs will perform fine E. None of the above
 
@@ -5071,7 +5007,7 @@ Suppose you are given a highway congestion dataset with one feature - the averag
 — blog · posted 2024-06-25 · full_text · [link](https://blog.csdn.net/dcdsc/article/details/139953481)
   1 attestation(s) across 1 domain(s) · doubt: Compilation, not a first-person recall: the blogger aggregates reader-submitted 笔试 and solicits submissions with a cash/奶茶 reward and a paid 知识星球, so the item list is second-hand and could have been padded from a questio
 
-### Q522 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
+### Q514 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
 
 3% of a country's population has a particular disease. The national health institute has developed a test for this disease: the test has a 98% "true positive" rate (the probability that a person will test positive given that they have the disease). However, it also has a 4% "false positive" rate (the probability that a person will test positive given that they do NOT have the disease). If you simultaneously take the test twice, and it comes out with two positive results, which of the following is CLOSEST to the probability that you actually have the disease, assuming the tests are independent? A. 0.96 B. 0.95 C. 0.94 D. 0.93 E. 0.92
 
@@ -5081,7 +5017,7 @@ Suppose you are given a highway congestion dataset with one feature - the averag
 — blog · posted 2024-06-25 · full_text · [link](https://blog.csdn.net/dcdsc/article/details/139953481)
   1 attestation(s) across 1 domain(s) · doubt: Compilation, not a first-person recall: the blogger aggregates reader-submitted 笔试 and solicits submissions with a cash/奶茶 reward and a paid 知识星球, so the item list is second-hand and could have been padded from a questio
 
-### Q523 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
+### Q515 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
 
 What is the MAIN advantage of using a random forest over a decision tree? A. It can be parallelized B. It captures non-linear decision boundaries C. It allows for batch learning D. It reduces overfitting E. It uses less memory
 
@@ -5091,7 +5027,7 @@ What is the MAIN advantage of using a random forest over a decision tree? A. It 
 — blog · posted 2024-06-25 · full_text · [link](https://blog.csdn.net/dcdsc/article/details/139953481)
   1 attestation(s) across 1 domain(s) · doubt: Compilation, not a first-person recall: the blogger aggregates reader-submitted 笔试 and solicits submissions with a cash/奶茶 reward and a paid 知识星球, so the item list is second-hand and could have been padded from a questio
 
-### Q524 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
+### Q516 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
 
 You have a dataset with two features, employee _age (range of 20 to 60) and annual_salary (range of 50,000 to 500,000). Which of the following situations is MOST likely to occur if you feed the dataset as is to a K - means clustering algorithm? A. The data will be appropriately clustered B. The program will run out of memory due to the large annual_salary values C. There will be numerical overflows due to the large annual_salary values D. The clusters will not be meaningful due to the disparity between the variances of the two features E. None of the above
 
@@ -5101,7 +5037,7 @@ You have a dataset with two features, employee _age (range of 20 to 60) and annu
 — blog · posted 2024-06-25 · full_text · [link](https://blog.csdn.net/dcdsc/article/details/139953481)
   1 attestation(s) across 1 domain(s) · doubt: Compilation, not a first-person recall: the blogger aggregates reader-submitted 笔试 and solicits submissions with a cash/奶茶 reward and a paid 知识星球, so the item list is second-hand and could have been padded from a questio
 
-### Q525 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
+### Q517 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
 
 Which of the following machine learning algorithms is NOT sensitive to the initial variables used in the optimization algorithm? A. Hidden Markov models B. Artificial neural networks C. Random forests D. Support vector machines E. k - nearest neighbors
 
@@ -5111,7 +5047,7 @@ Which of the following machine learning algorithms is NOT sensitive to the initi
 — blog · posted 2024-06-25 · full_text · [link](https://blog.csdn.net/dcdsc/article/details/139953481)
   1 attestation(s) across 1 domain(s) · doubt: Compilation, not a first-person recall: the blogger aggregates reader-submitted 笔试 and solicits submissions with a cash/奶茶 reward and a paid 知识星球, so the item list is second-hand and could have been padded from a questio
 
-### Q526 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
+### Q518 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
 
 Which of the following assumptions is NOT necessary when performing multiple linear regression with homoskedastic errors? A. The distribution of errors is normal B. The variables are continuous C. The variables are uncorrelated D. The error variance is constant across sample data E. The sample data are independent
 
@@ -5121,7 +5057,7 @@ Which of the following assumptions is NOT necessary when performing multiple lin
 — blog · posted 2024-06-25 · full_text · [link](https://blog.csdn.net/dcdsc/article/details/139953481)
   1 attestation(s) across 1 domain(s) · doubt: Compilation, not a first-person recall: the blogger aggregates reader-submitted 笔试 and solicits submissions with a cash/奶茶 reward and a paid 知识星球, so the item list is second-hand and could have been padded from a questio
 
-### Q527 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
+### Q519 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
 
 You have two fair coins and one coin with heads on both sides. You pick a coin at random and toss it twice. If it reads heads both times, what is the probability it also reads heads after a third toss? A. 1/6 B. 1/3 C. 1/2 D. 2/3 E. 5/6
 
@@ -5131,7 +5067,7 @@ You have two fair coins and one coin with heads on both sides. You pick a coin a
 — blog · posted 2024-06-25 · full_text · [link](https://blog.csdn.net/dcdsc/article/details/139953481)
   1 attestation(s) across 1 domain(s) · doubt: Compilation, not a first-person recall: the blogger aggregates reader-submitted 笔试 and solicits submissions with a cash/奶茶 reward and a paid 知识星球, so the item list is second-hand and could have been padded from a questio
 
-### Q528 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
+### Q520 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
 
 A government office has two officers handling people's requests. Suppose that the time between request arrivals at the first officer's desk is random and follows an exponential distribution withλ=μ1\lambda=\mu_1 . Similarly, the time between request arrivals at the second officer's desk is also random and follows an exponential distribution with λ=μ2\lambda=\mu_2 . The first officer has probability P1P_1 of referring any request he receives to the office supervisor, and the second officer has probability P2P_2 of doing so. What is the average time between requests referred to the supervisor? A. P1/μ1+P2/μ2P_1/\mu_1 + P_2/\mu_2 B. (P1+P2)/(μ1+μ2)(P_1+P_2) / (\mu_1+\mu_2) C. 1/(μ1P1+μ2P2)1/(\mu_1P_1+\mu_2P_2) D. 1/μ1P1+1/μ2P21/\mu_1P_1 + 1/\mu_2P_2 E. None of the above
 
@@ -5141,7 +5077,7 @@ A government office has two officers handling people's requests. Suppose that th
 — blog · posted 2024-06-25 · full_text · [link](https://blog.csdn.net/dcdsc/article/details/139953481)
   1 attestation(s) across 1 domain(s) · doubt: Compilation, not a first-person recall: the blogger aggregates reader-submitted 笔试 and solicits submissions with a cash/奶茶 reward and a paid 知识星球, so the item list is second-hand and could have been padded from a questio
 
-### Q529 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
+### Q521 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
 
 Consider a function f(x,y)f(x, y) of two variables xx and yy . Which of the following statements is ALWAYS true? Here, maxkmax_k and minkmin_k , refer to the maximum over kk and the minimum over kk respectively. A. maxx,minyf(x,y)=minymaxxf(x,y)max_x,min_y f(x, y) = min_ymax_xf(x, y) B. maxx,minyf(x,y)≤minymaxxf(x,y)max_x,min_y f(x, y) \leq min_ymax_xf(x, y) C. maxx,minyf(x,y)≥minymaxxf(x,y)max_x,min_y f(x, y) \geq min_ymax_xf(x, y) D. maxx,minyf(x,y)<minymaxxf(x,y)< span="">max_x,min_y f(x, y) < min_ymax_xf(x, y) E. None of the above, because the answer depends on the specific functional form of f
 
@@ -5151,7 +5087,7 @@ Consider a function f(x,y)f(x, y) of two variables xx and yy . Which of the foll
 — blog · posted 2024-06-25 · full_text · [link](https://blog.csdn.net/dcdsc/article/details/139953481)
   1 attestation(s) across 1 domain(s) · doubt: Compilation, not a first-person recall: the blogger aggregates reader-submitted 笔试 and solicits submissions with a cash/奶茶 reward and a paid 知识星球, so the item list is second-hand and could have been padded from a questio
 
-### Q530 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
+### Q522 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
 
 Suppose you have NN samples drawn from NN independent and identical distributions. You use the method of Maximum Likelihood Estimators to estimate the true parameters Θ\Theta governing these distributions, and it gives you parameters Θ\Theta . Which of the following statements is true? A. As NN grows asymptotically large, Θ\Theta becomes an unbiased estimator for Θ\Theta B. As NN grows asymptotically large, no other unbiased estimator of Θ\Theta can achieve a strictly smaller mean squared error value on the sample than Θ\Theta does C. Θ\Theta tends to be normally distributed for large sample sizes D. If the MLEs for Θ1\Theta_1 , Θ2\Theta_2 are Θ1,Θ2\Theta_1, \Theta_2 , respectively, then the MLE of any function of Θ1,Θ2\Theta_1, \Theta_2 is that same function with Θ1,Θ2\Theta_1, \Theta_2 as arguments instead E. All of the above
 
@@ -5161,7 +5097,7 @@ Suppose you have NN samples drawn from NN independent and identical distribution
 — blog · posted 2024-06-25 · full_text · [link](https://blog.csdn.net/dcdsc/article/details/139953481)
   1 attestation(s) across 1 domain(s) · doubt: Compilation, not a first-person recall: the blogger aggregates reader-submitted 笔试 and solicits submissions with a cash/奶茶 reward and a paid 知识星球, so the item list is second-hand and could have been padded from a questio
 
-### Q531 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
+### Q523 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
 
 A space probe is controlled by 7 different instructions from the ground. The probabilities of sending these instructions vary - the three most common instructions have probabilities 1/2. 1/4, and 1/8 of being sent, respectively. The remaining four instructions are equally likely to be sent. In expectation, what is the minimum number of whole number bits required to communicate with the probe? A. 2 B. 3 C. 4 D. 5 E. 6
 
@@ -5171,7 +5107,7 @@ A space probe is controlled by 7 different instructions from the ground. The pro
 — blog · posted 2024-06-25 · full_text · [link](https://blog.csdn.net/dcdsc/article/details/139953481)
   1 attestation(s) across 1 domain(s) · doubt: Compilation, not a first-person recall: the blogger aggregates reader-submitted 笔试 and solicits submissions with a cash/奶茶 reward and a paid 知识星球, so the item list is second-hand and could have been padded from a questio
 
-### Q532 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
+### Q524 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
 
 15. An alternative to k - means clustering is k - medoids clustering. This algorithm chooses actual data points as centers, as opposed to choosing centroids (the mean of data points in a cluster) as centers. Which of the following BEST describes why the k - mediods algorithm is often used over the k - means algorithm? • I. The k - medoids algorithm runs faster than the k - means algorithm does • I. The k - medoids algorithm is more robust to outliers than the k - means algorithm is • Ill. It is easier to choose the value of k in the k - mediods algorithm than in the k - means algorithm A. I only B. lI only C. Ill only D. I and Il only E. ll and Ill only
 
@@ -5181,7 +5117,7 @@ A space probe is controlled by 7 different instructions from the ground. The pro
 — blog · posted 2024-06-25 · full_text · [link](https://blog.csdn.net/dcdsc/article/details/139953481)
   1 attestation(s) across 1 domain(s) · doubt: Compilation, not a first-person recall: the blogger aggregates reader-submitted 笔试 and solicits submissions with a cash/奶茶 reward and a paid 知识星球, so the item list is second-hand and could have been padded from a questio
 
-### Q533 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
+### Q525 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
 
 A bag contains one fair coin, two two-headed coins, and three two-tailed coins. Each of the six coins is flipped, but the outcomes of five of the coins are hidden from you. randomly. If the outcome you see is heads, what is the probability that the fair coin (which may or may not be the coin that was shown to you) landed heads up? A. 1/5 B. 2/5 C. 1/2 D. 3/5 E. 4/5
 
@@ -5191,7 +5127,7 @@ A bag contains one fair coin, two two-headed coins, and three two-tailed coins. 
 — blog · posted 2024-06-25 · full_text · [link](https://blog.csdn.net/dcdsc/article/details/139953481)
   1 attestation(s) across 1 domain(s) · doubt: Compilation, not a first-person recall: the blogger aggregates reader-submitted 笔试 and solicits submissions with a cash/奶茶 reward and a paid 知识星球, so the item list is second-hand and could have been padded from a questio
 
-### Q534 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
+### Q526 · Tier B · 2024 · datathon (60min 15道选择题 (60 minutes, multiple choice; 17 items are actually liste)
 
 Marty has a bar of gold. Marty's friend Shea is to be paid this gold over the course of 15 days, such that on day XX , 0<=X<=150 <= X <= 15 , Shea has exactly X/15X/15 of the total gold. Additionally, on day 0, Shea has no available gold to use as change. What is the MINIMUM number of pieces that Marty must break the gold bar into so that he can pay Shea in this way? A. 4 B. 5 C. 7 D. 8 E. 15
 
@@ -5204,7 +5140,7 @@ Marty has a bar of gold. Marty's friend Shea is to be paid this gold over the co
 
 ## Citadel — online_assessment
 
-### Q535 · Tier B · unknown · online_assessment (90 mins to solve a few questions on the hackerrank site)
+### Q527 · Tier B · unknown · online_assessment (90 mins to solve a few questions on the hackerrank site)
 
 One of the problems were based on graphs.
 
@@ -5212,7 +5148,7 @@ One of the problems were based on graphs.
 — glassdoor · posted 2023-10-09 · full_text · [link](https://www.glassdoor.com/Interview/Citadel-Software-Engineering-Intern-Interview-Questions-EI_IE14937.0,7_KO8,35.htm)
   1 attestation(s) across 1 domain(s) · doubt: Glassdoor's 'interview question' field here records a topic label rather than the problem statement, so the actual question cannot be reconstructed from it; entries are also anonymous and unverified by Glassdoor, and the
 
-### Q536 · Tier B · unknown · online_assessment (2 coding questions to solve in a little bit over an hour)
+### Q528 · Tier B · unknown · online_assessment (2 coding questions to solve in a little bit over an hour)
 
 Given an nxn chess board, return the minimum number of knight moves it would take to get from point (a,b) to point(c,d)
 
@@ -5220,7 +5156,7 @@ Given an nxn chess board, return the minimum number of knight moves it would tak
 — glassdoor · posted 2023-09-24 · full_text · [link](https://www.glassdoor.com/Interview/Citadel-Software-Engineering-Intern-Interview-Questions-EI_IE14937.0,7_KO8,35.htm)
   1 attestation(s) across 1 domain(s) · doubt: Anonymous, unverified Glassdoor submission posted to unlock site content; the problem is also a standard LeetCode/BFS exercise, so a candidate could be recalling practice material rather than the paper in front of them.
 
-### Q537 · Tier B · unknown · online_assessment (two questions. Both were medium leetcode questions)
+### Q529 · Tier B · unknown · online_assessment (two questions. Both were medium leetcode questions)
 
 Online Assessment: Online Assessment was in HackerRank. It consisted of two questions. Both were medium leetcode questions. First question was based on sliding window topic . Second question was based on Dynamic Programming topic.
 
@@ -5231,7 +5167,7 @@ Online Assessment: Online Assessment was in HackerRank. It consisted of two ques
 
 ## Citadel — onsite
 
-### Q538 · Tier B · unknown · onsite (six loops)
+### Q530 · Tier B · unknown · onsite (six loops)
 
 I completed all six loops. They were enjoyable and covered various topics, from LC hard to runtime optimization to opinions about X versus Y. Understanding Linux memory management, CPU caching, and networking at a graduate level was critical. The rounds also get more challenging.
 
@@ -5239,7 +5175,7 @@ I completed all six loops. They were enjoyable and covered various topics, from 
 — blind · posted 2024-10-27 · full_text · [link](https://www.teamblind.com/post/interview-prep-guidance-for-citadel-market-structure-research-uxomsahq)
   1 attestation(s) across 1 domain(s) · doubt: Summarises six rounds in three sentences with no question reproduced, and does not state which Citadel team or role the loops were for.
 
-### Q539 · Tier B · unknown · onsite
+### Q531 · Tier B · unknown · onsite
 
 Leetcode hard of strings, some concurrency and some easies like read number of lines
 
@@ -5250,7 +5186,7 @@ Leetcode hard of strings, some concurrency and some easies like read number of l
 
 ## Citadel — phone_technical
 
-### Q540 · Tier B · unknown · phone_technical
+### Q532 · Tier B · unknown · phone_technical
 
 如果样本数量n很大不能同时放进内存怎么办,分成几部分来算,为什么可以这样做,因为XTX是dxd的矩阵。
 
@@ -5262,7 +5198,7 @@ Leetcode hard of strings, some concurrency and some easies like read number of l
 — nowcoder · posted 2021-01-26 · full_text · [link](https://www.nowcoder.com/discuss/353157497731096576)
   1 attestation(s) across 1 domain(s) · doubt: Nowcoder renders no visible publication date on the fetched page, so the cycle and recency of this recall cannot be pinned down at all — the questions could be several years old; also the poster writes from memory in sum
 
-### Q541 · Tier B · unknown · phone_technical
+### Q533 · Tier B · unknown · phone_technical
 
 如果两个变量0.999相关,权重会如何分配,如果是lasso 和 ridge分别会如何,实践中如何选择保留哪个变量。
 
@@ -5272,7 +5208,7 @@ Leetcode hard of strings, some concurrency and some easies like read number of l
 — nowcoder · posted 2021-01-26 · full_text · [link](https://www.nowcoder.com/discuss/353157497731096576)
   1 attestation(s) across 1 domain(s) · doubt: Nowcoder renders no visible publication date on the fetched page, so the cycle and recency of this recall cannot be pinned down at all — the questions could be several years old; also the poster writes from memory in sum
 
-### Q542 · Tier B · unknown · phone_technical
+### Q534 · Tier B · unknown · phone_technical
 
 如果在x加上噪声,会怎么样,分别从直观感受和推导上说,最后一直说到给x加噪声可以起到和正则化同样的作用。
 
@@ -5284,7 +5220,7 @@ Leetcode hard of strings, some concurrency and some easies like read number of l
 — nowcoder · posted 2021-01-26 · full_text · [link](https://www.nowcoder.com/discuss/353157497731096576)
   1 attestation(s) across 1 domain(s) · doubt: Nowcoder renders no visible publication date on the fetched page, so the cycle and recency of this recall cannot be pinned down at all — the questions could be several years old; also the poster writes from memory in sum
 
-### Q543 · Tier B · unknown(发帖 2021-01-26,源帖未写投的是哪一届) · phone_technical (二面:先聊二十分钟简历项目,然后一道统计题 + 两道口述算法题,这是第 2 个问题)
+### Q535 · Tier B · unknown(发帖 2021-01-26,源帖未写投的是哪一届) · phone_technical (二面:先聊二十分钟简历项目,然后一道统计题 + 两道口述算法题,这是第 2 个问题)
 
 求第n个斐波那契数,时空复杂度,然后问了如何优化,说了矩阵快速幂,问了一些具体的做法
 
@@ -5296,7 +5232,7 @@ Leetcode hard of strings, some concurrency and some easies like read number of l
 — nowcoder · posted 2021-01-26 · full_text · [link](https://www.nowcoder.com/discuss/353157497731096576)
   1 attestation(s) across 1 domain(s) · doubt: 发帖人用的是绰号「城堡 / 大城堡」而不是 Citadel 英文名——在中文求职圈 「大城堡」通常指 Citadel(对冲基金),「小城堡」指 Citadel Securities,但源帖没有写英文全称,所以 firm 归属是基于社区惯用语的推断而非源帖明写。帖子是 2021 年的,岗位线只说「量化实习」,没有区分 QR / QT / quant dev。题目是连续叙述式记录(一整段话),我在这里把它切成单题,切分边界是我做的,个别追问
 
-### Q544 · Tier B · unknown(发帖 2021-01-26,源帖未写投的是哪一届) · phone_technical (二面:先聊二十分钟简历项目,然后一道统计题 + 两道口述算法题,这是第 3 个问题)
+### Q536 · Tier B · unknown(发帖 2021-01-26,源帖未写投的是哪一届) · phone_technical (二面:先聊二十分钟简历项目,然后一道统计题 + 两道口述算法题,这是第 3 个问题)
 
 给定一堆x,求y使得 sum|x_i-y| 最小,随口说了mean,面试官说是median,然后问怎么median,先说了排序,又问怎么优化,说了quick select,然后让对比quick select和quick sort
 
@@ -5308,7 +5244,7 @@ Leetcode hard of strings, some concurrency and some easies like read number of l
 — nowcoder · posted 2021-01-26 · full_text · [link](https://www.nowcoder.com/discuss/353157497731096576)
   1 attestation(s) across 1 domain(s) · doubt: 发帖人用的是绰号「城堡 / 大城堡」而不是 Citadel 英文名——在中文求职圈 「大城堡」通常指 Citadel(对冲基金),「小城堡」指 Citadel Securities,但源帖没有写英文全称,所以 firm 归属是基于社区惯用语的推断而非源帖明写。帖子是 2021 年的,岗位线只说「量化实习」,没有区分 QR / QT / quant dev。题目是连续叙述式记录(一整段话),我在这里把它切成单题,切分边界是我做的,个别追问
 
-### Q545 · Tier B · unknown · phone_technical (40 minutes)
+### Q537 · Tier B · unknown · phone_technical (40 minutes)
 
 I got 2 lc hard for 40min in London. Didn't make it further, I think it is much harder than faang
 
@@ -5319,7 +5255,7 @@ I got 2 lc hard for 40min in London. Didn't make it further, I think it is much 
 
 ## Citadel — superday
 
-### Q546 · Tier B · unknown · superday (66 minute hackerrank -- two LC med/hards)
+### Q538 · Tier B · unknown · superday (66 minute hackerrank -- two LC med/hards)
 
 LC Medium/Hard, implementation questions, why do you want to work here and what do you want to do next summer type stuff
 
@@ -5330,7 +5266,7 @@ LC Medium/Hard, implementation questions, why do you want to work here and what 
 
 ## Citadel — unknown
 
-### Q547 · Tier B · unknown · unknown
+### Q539 · Tier B · unknown · unknown
 
 Citadel and HRT lean heavier into C++ fundamentals, concurrency, memory models, and probability. ... You will most likely get questions on lock-free data structures, cache behavior, and low-level systems stuff that big tech interviews never touch.
 
@@ -5341,7 +5277,7 @@ Citadel and HRT lean heavier into C++ fundamentals, concurrency, memory models, 
 
 ## Citadel — phone_technical
 
-### Q548 · Tier C · unknown · phone_technical
+### Q540 · Tier C · unknown · phone_technical
 
 先是求第n个斐波那契数,时空复杂度,然后问了如何优化,说了矩阵快速幂,问了一些具体的做法。
 
@@ -5353,7 +5289,7 @@ Citadel and HRT lean heavier into C++ fundamentals, concurrency, memory models, 
 — nowcoder · posted unknown · full_text · [link](https://www.nowcoder.com/discuss/353157497731096576)
   1 attestation(s) across 1 domain(s) · doubt: Nowcoder renders no visible publication date on the fetched page, so the cycle and recency of this recall cannot be pinned down at all — the questions could be several years old; also the poster writes from memory in sum
 
-### Q549 · Tier C · unknown · phone_technical
+### Q541 · Tier C · unknown · phone_technical
 
 然后是给定一堆x,求y使得 sum|x_i-y| 最小,随口说了mean,面试官说是median,然后问怎么median,先说了排序,又问怎么优化,说了quick select,然后让对比quick select和quick sort。
 
@@ -5368,7 +5304,7 @@ Citadel and HRT lean heavier into C++ fundamentals, concurrency, memory models, 
 
 ## Citadel — superday
 
-### Q550 · Tier C · 2026(源帖标题「Citadel vo2026面经」) · superday (终面 60 分钟,含 why-Citadel、行为题、系统设计三部分)
+### Q542 · Tier C · 2026(源帖标题「Citadel vo2026面经」) · superday (终面 60 分钟,含 why-Citadel、行为题、系统设计三部分)
 
 行为题讲了实习优化回测框架的事,用profiling找到性能瓶颈,拿数据说服研究员后用SIMD重写,提速40%。
 
@@ -5380,7 +5316,7 @@ Citadel and HRT lean heavier into C++ fundamentals, concurrency, memory models, 
 — nowcoder · posted unknown(帖子只显示「07-20 23:52」,无年份;标题自称 vo2026) · full_text · [link](https://www.nowcoder.com/feed/main/detail/116a865d3e564be4a175d6ba580d1fc7)
   1 attestation(s) across 1 domain(s) · doubt: 发帖人是卖「北美 OA/VO 辅助」(即代面/实时助攻)的中介,不是普通复盘的候选人,整帖的功能是广告;按任务的硬性排除规则这类卖服务的帖子原则上应剔除,此处保留仅因为 URL 与正文是我实际读到的原文。可信度问题很具体:(1) 帐号所属学校(法国克莱蒙费朗)与自称的「北美 Citadel 终面」不匹配;(2) 「刚过三轮Onsite 还是蛮简单的offer稳了」这种表述不像真实候选人的语气;(3) 系统设计答案写得像模板化的架构清单(
 
-### Q551 · Tier C · 2026(源帖标题「Citadel vo2026面经」) · superday (终面 60 分钟,含 why-Citadel、行为题、系统设计三部分)
+### Q543 · Tier C · 2026(源帖标题「Citadel vo2026面经」) · superday (终面 60 分钟,含 why-Citadel、行为题、系统设计三部分)
 
 系统设计是全球交易系统,四地多活+Anycast就近接入,跨区域走专线,多主复制+版本向量保一致性,交易路径用Saga,接受短暂不一致但最终收敛,每层冗余+熔断重试保证五个九可用性。
 
@@ -5395,7 +5331,7 @@ Citadel and HRT lean heavier into C++ fundamentals, concurrency, memory models, 
 
 ## Citadel — online_assessment
 
-### Q552 · Tier D · 2026 · online_assessment (OA optimisation question, C++)
+### Q544 · Tier D · 2026 · online_assessment (OA optimisation question, C++)
 
 /// Refactor and speed up the code below /// The current implementation is correct but slow int root_node(std::vector out
 
@@ -5405,7 +5341,7 @@ Citadel and HRT lean heavier into C++ fundamentals, concurrency, memory models, 
 — chat_telegram · posted 2026-02-06 · full_text · [link](https://t.me/usinterview/27143)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The starter code is cut o
 
-### Q553 · Tier D · 2026 · online_assessment (OA, three questions in 30 minutes)
+### Q545 · Tier D · 2026 · online_assessment (OA, three questions in 30 minutes)
 
 OA hackerrank,1个palindrome,1个lazy delete算token valid,最后一个bfs找tree的最长直径上的点
 
@@ -5415,7 +5351,7 @@ OA hackerrank,1个palindrome,1个lazy delete算token valid,最后一个bfs找tre
 — chat_telegram · posted 2026-01-21 · full_text · [link](https://t.me/usinterview/26954)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. Topic labels only, no pro
 
-### Q554 · Tier D · 2026 · online_assessment (OA, three medium questions)
+### Q546 · Tier D · 2026 · online_assessment (OA, three medium questions)
 
 三道medium[*]留斯奇: 但是注意最后要返回unique的子字符串[*]幺漆酒漆:比这道LC稍微简单一点,hashmap+list遍历[*]幺而丝雾:求树的直径的经典题
 
@@ -5425,7 +5361,7 @@ OA hackerrank,1个palindrome,1个lazy delete算token valid,最后一个bfs找tre
 — chat_telegram · posted 2026-06-06 · full_text · [link](https://t.me/usinterview/28725)
   1 attestation(s) across 1 domain(s) · doubt: The questions are named only by deliberately homophone-obfuscated LeetCode numbers (留斯奇/幺漆酒漆/幺而丝雾), a convention Chinese posters use to evade search. I have not decoded them and am not guessing, so no actual problem stat
 
-### Q555 · Tier D · 2026 · online_assessment (the first coding question)
+### Q547 · Tier D · 2026 · online_assessment (the first coding question)
 
 第一题描述有点绕但其实很简单的string 处理: 给一个sources (string 二维数组) return一个 string 一维数组input: sourcesP1:
 
@@ -5435,7 +5371,7 @@ OA hackerrank,1个palindrome,1个lazy delete算token valid,最后一个bfs找tre
 — chat_telegram · posted 2025-10-21 · full_text · [link](https://t.me/usinterview/25939)
   1 attestation(s) across 1 domain(s) · doubt: The preview is severed exactly where the worked example began — "input: sourcesP1:" is the start of a concrete input listing that would have made the transformation clear, and without it the rule mapping a 2-D string arr
 
-### Q556 · Tier D · 2025 · online_assessment (the coding question, quoted at enough length to show the input format)
+### Q548 · Tier D · 2025 · online_assessment (the coding question, quoted at enough length to show the input format)
 
 实现一个简单的会议助手。提供一个字符串列表 events[n],每个字符串的格式为 " ",其中 person_name 从 start 到 end 执行 action,包括起始和结束时间。时间格式为 HH:
 
@@ -5445,7 +5381,7 @@ OA hackerrank,1个palindrome,1个lazy delete算token valid,最后一个bfs找tre
 — chat_telegram · posted 2024-08-09 · full_text · [link](https://t.me/usinterview/19118)
   1 attestation(s) across 1 domain(s) · doubt: The record format the whole question turns on is literally empty in the source: the poster wrote it as '每个字符串的格式为 " "' — the field names inside the quotation marks were lost when the forum or the Telegram preview strippe
 
-### Q557 · Tier D · 2025 · online_assessment (the second question, given a title and a partial specification)
+### Q549 · Tier D · 2025 · online_assessment (the second question, given a title and a partial specification)
 
 第二题: ```认证令牌 用户登录后会拿到一个令牌(token)。如果过了系统设定的期限(expiryLimit) 令牌就会失效。不过在期限内重置的话,期限会
 
@@ -5455,7 +5391,7 @@ OA hackerrank,1个palindrome,1个lazy delete算token valid,最后一个bfs找tre
 — chat_telegram · posted 2025-02-07 · full_text · [link](https://t.me/usinterview/21276)
   1 attestation(s) across 1 domain(s) · doubt: The preview is severed at "期限会" — precisely at the clause that would have defined the renewal semantics, which is the entire substance of this problem (whether resetting extends from now or from the original expiry). The
 
-### Q558 · Tier D · 2025 · online_assessment (the topics covered by the multiple-choice section)
+### Q550 · Tier D · 2025 · online_assessment (the topics covered by the multiple-choice section)
 
 14mcq,一道coding exercise. Mcq have cache management,proxy servers,analyse time and space complexity,debugging code.
 
@@ -5465,7 +5401,7 @@ OA hackerrank,1个palindrome,1个lazy delete算token valid,最后一个bfs找tre
 — chat_telegram · posted 2025-02-26 · full_text · [link](https://t.me/usinterview/21556)
   1 attestation(s) across 1 domain(s) · doubt: This is a topic inventory, not a question — no individual MCQ is reproduced, and the coding exercise is mentioned but not described at all. Its value is corroborative: three other independently posted Citadel NXT recalls
 
-### Q559 · Tier D · 2025 · online_assessment (the multiple-choice section)
+### Q551 · Tier D · 2025 · online_assessment (the multiple-choice section)
 
 大概15道选择题包括time / space 复杂度分析(多个,问哪个算法复杂度高/低),debug有一道问你怎么改是对的(给你几个改正的code), os/networ
 
@@ -5475,7 +5411,7 @@ OA hackerrank,1个palindrome,1个lazy delete算token valid,最后一个bfs找tre
 — chat_telegram · posted 2025-05-03 · full_text · [link](https://t.me/usinterview/22910)
   1 attestation(s) across 1 domain(s) · doubt: Again a description of question types rather than any question: no code snippet, no answer options and no algorithms named. The preview dies mid-word on "os/networ". Kept because it independently corroborates the ~15-MCQ
 
-### Q560 · Tier D · 2025 · online_assessment (the subject matter of the multiple-choice section)
+### Q552 · Tier D · 2025 · online_assessment (the subject matter of the multiple-choice section)
 
 选择题涵盖:系统设计(pull/push mode,forward/reverse proxy),数据库相关问题,
 
@@ -5485,7 +5421,7 @@ OA hackerrank,1个palindrome,1个lazy delete算token valid,最后一个bfs找tre
 — chat_telegram · posted 2025-06-19 · full_text · [link](https://t.me/usinterview/23774)
   1 attestation(s) across 1 domain(s) · doubt: A topic list. "pull/push mode" and "forward/reverse proxy" are the only concrete items and they are named as subject areas, not as questions. The karma-farming motive is worth noting: on 1point3acres a poster is rewarded
 
-### Q561 · Tier D · 2025 · online_assessment (the multiple-choice section)
+### Q553 · Tier D · 2025 · online_assessment (the multiple-choice section)
 
 选择题感觉需要对computer system非常熟悉,然后也问了一些code snippet让比较time space complexity
 
@@ -5495,7 +5431,7 @@ OA hackerrank,1个palindrome,1个lazy delete算token valid,最后一个bfs找tre
 — chat_telegram · posted 2024-08-28 · full_text · [link](https://t.me/usinterview/19290)
   1 attestation(s) across 1 domain(s) · doubt: The code snippets that the question is entirely about are not reproduced, so nothing here can be answered — this is the candidate's impression of the section. The Telegram link preview is cut off at a fixed length and vi
 
-### Q562 · Tier D · 2026 · online_assessment (the coding question, which the poster says is identical to one in an e)
+### Q554 · Tier D · 2026 · online_assessment (the coding question, which the poster says is identical to one in an e)
 
 OA看之前的帖子coding一摸一样,就是找到最早meeting
 
@@ -5505,7 +5441,7 @@ OA看之前的帖子coding一摸一样,就是找到最早meeting
 — chat_telegram · posted 2025-07-16 · full_text · [link](https://t.me/usinterview/24202)
   1 attestation(s) across 1 domain(s) · doubt: A back-reference plus a five-character gloss ("找到最早meeting", find the earliest meeting). What the inputs are, what "earliest" ranks over and what must be returned are all absent. It is nevertheless a useful cross-check: 
 
-### Q563 · Tier D · 2024 · online_assessment (the two OA questions, named but not specified)
+### Q555 · Tier D · 2024 · online_assessment (the two OA questions, named but not specified)
 
 OA 70分钟两题,disk space analysis,visiting cities,test
 
@@ -5515,7 +5451,7 @@ OA 70分钟两题,disk space analysis,visiting cities,test
 — chat_telegram · posted 2024-04-21 · full_text · [link](https://t.me/usinterview/18101)
   1 attestation(s) across 1 domain(s) · doubt: Two problem names with no statements attached, and the preview cuts off on the word "test". Because the titles are generic ("disk space analysis", "visiting cities") they are not even reliably identifiable against other 
 
-### Q564 · Tier D · 2026 · online_assessment (the boilerplate the test hands you, quoted by the poster)
+### Q556 · Tier D · 2026 · online_assessment (the boilerplate the test hands you, quoted by the poster)
 
 /// Refactor and speed up the code below/// The current implementation is correct but slowint root_node(std::vector out
 
@@ -5525,7 +5461,7 @@ OA 70分钟两题,disk space analysis,visiting cities,test
 — chat_telegram · posted 2026-02-06 · full_text · [link](https://t.me/usinterview/27143)
   1 attestation(s) across 1 domain(s) · doubt: The poster is pasting the test's own comment header and function signature, so the wording is the assessment's rather than a paraphrase — but the paste is truncated at "int root_node(std::vector out", meaning the slow im
 
-### Q565 · Tier D · unknown · online_assessment
+### Q557 · Tier D · unknown · online_assessment
 
 Leetcode DP problems on the hard level
 
@@ -5536,7 +5472,7 @@ Leetcode DP problems on the hard level
 
 ## Citadel — onsite
 
-### Q566 · Tier D · 2023 · onsite (question 1 of the numbered onsite list)
+### Q558 · Tier D · 2023 · onsite (question 1 of the numbered onsite list)
 
 1) 爬楼梯, 每次可以1/2/3步, 多少种爬法
 
@@ -5546,7 +5482,7 @@ Leetcode DP problems on the hard level
 — chat_telegram · posted 2022-08-18 · full_text · [link](https://t.me/usinterview/14353)
   1 attestation(s) across 1 domain(s) · doubt: The number of stairs is not given, so this is the problem family rather than an instance — presumably n was supplied verbally. The thread bundles three employers (CTC, Citadel and Millennium) into one write-up and is has
 
-### Q567 · Tier D · 2023 · onsite (question 2 of the numbered onsite list)
+### Q559 · Tier D · 2023 · onsite (question 2 of the numbered onsite list)
 
 2) C++ 函数 void func(int8_t i);void main() { int32_t x = 1; func(x); }会发生什么 ?
 
@@ -5556,7 +5492,7 @@ Leetcode DP problems on the hard level
 — chat_telegram · posted 2022-08-18 · full_text · [link](https://t.me/usinterview/14353)
   1 attestation(s) across 1 domain(s) · doubt: This one reproduces the actual code the candidate was shown, which is rare in this shard and makes it the strongest item in the message. The only gap is that the follow-up — whether the interviewer wanted the narrow-conv
 
-### Q568 · Tier D · 2026 · onsite (the one question the poster names from the phone round preceding the o)
+### Q560 · Tier D · 2026 · onsite (the one question the poster names from the phone round preceding the o)
 
 店湎问了一个计算machine dependency的问题
 
@@ -5566,7 +5502,7 @@ Leetcode DP problems on the hard level
 — chat_telegram · posted 2025-10-18 · full_text · [link](https://t.me/usinterview/25896)
   1 attestation(s) across 1 domain(s) · doubt: One clause and no problem statement: "计算machine dependency" names a topic, not a question, and 店湎 is a typo/obfuscation of 店面 (phone screen), so even the round this belongs to is inferred rather than stated. Logged as a 
 
-### Q569 · Tier D · unknown · onsite
+### Q561 · Tier D · unknown · onsite
 
 Leetcode style questions- graph and DP
 
@@ -5577,7 +5513,7 @@ Leetcode style questions- graph and DP
 
 ## Citadel — phone_technical
 
-### Q570 · Tier D · 2026 · phone_technical (30 min resume discussion then one technical question)
+### Q562 · Tier D · 2026 · phone_technical (30 min resume discussion then one technical question)
 
 min x^\top Q x + c^\top x, Q 和 c 都是实数,讨论什么时候,这个问题有finit
 
@@ -5587,7 +5523,7 @@ min x^\top Q x + c^\top x, Q 和 c 都是实数,讨论什么时候,这个问题�
 — chat_telegram · posted 2026-04-28 · full_text · [link](https://t.me/usinterview/28247)
   1 attestation(s) across 1 domain(s) · doubt: The preview truncates at "有finit", so the exact property being asked about (finite minimum? finite solution set?) is inferred. The poster wrote the LaTeX themself, so spacing/notation is their reconstruction, not the int
 
-### Q571 · Tier D · 2026 · phone_technical (whiteboard discussion, no code written; interviewer was a quant develo)
+### Q563 · Tier D · 2026 · phone_technical (whiteboard discussion, no code written; interviewer was a quant develo)
 
 Find all elements equal to K in a sorted array.
 
@@ -5595,7 +5531,7 @@ Find all elements equal to K in a sorted array.
 — chat_telegram · posted 2026-06-30 · full_text · [link](https://t.me/usinterview/28985)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. This is the opening of a 
 
-### Q572 · Tier D · 2025 · phone_technical (phone coding)
+### Q564 · Tier D · 2025 · phone_technical (phone coding)
 
 用c++写一个shared pointer class
 
@@ -5605,7 +5541,7 @@ Find all elements equal to K in a sorted array.
 — chat_telegram · posted 2025-11-07 · full_text · [link](https://t.me/usinterview/26211)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. A stock C++ interview exe
 
-### Q573 · Tier D · 2026 · phone_technical (phone coding, three parts)
+### Q565 · Tier D · 2026 · phone_technical (phone coding, three parts)
 
 [*]LRU implementation[*]LFU implementation[*]Customized Evict fu
 
@@ -5615,7 +5551,7 @@ Find all elements equal to K in a sorted array.
 — chat_telegram · posted 2026-01-25 · full_text · [link](https://t.me/usinterview/26997)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The third and most intere
 
-### Q574 · Tier D · 2026 · phone_technical (C++ Software Engineer, 1 hour: 30 min resume then 30 min OOD)
+### Q566 · Tier D · 2026 · phone_technical (C++ Software Engineer, 1 hour: 30 min resume then 30 min OOD)
 
 后30分钟一道很简单的ood,实现一个Single Producer Multiple Consume
 
@@ -5625,7 +5561,7 @@ Find all elements equal to K in a sorted array.
 — chat_telegram · posted 2026-03-08 · full_text · [link](https://t.me/usinterview/27466)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. Truncated at "Consume"; w
 
-### Q575 · Tier D · 2026 · phone_technical (the whole of the 45-minute session)
+### Q567 · Tier D · 2026 · phone_technical (the whole of the 45-minute session)
 
 OA过了之后马上第一场面试,直接45分钟order book创建(用min max heap就好)
 
@@ -5635,7 +5571,7 @@ OA过了之后马上第一场面试,直接45分钟order book创建(用min max he
 — chat_telegram · posted 2025-09-03 · full_text · [link](https://t.me/usinterview/25119)
   1 attestation(s) across 1 domain(s) · doubt: "Order book creation" is a task name, not a specification — which order types must be supported, what the input stream looks like and what has to be queryable are all unstated. The parenthetical "用 min max heap就好" is the
 
-### Q576 · Tier D · 2026 · phone_technical (the single technical question of the round)
+### Q568 · Tier D · 2026 · phone_technical (the single technical question of the round)
 
 min x^\top Q x + c^\top xQ 和 c 都是实数讨论什么时候,这个问题有finit
 
@@ -5645,7 +5581,7 @@ min x^\top Q x + c^\top xQ 和 c 都是实数讨论什么时候,这个问题有f
 — chat_telegram · posted 2026-04-28 · full_text · [link](https://t.me/usinterview/28247)
   1 attestation(s) across 1 domain(s) · doubt: The prompt is written in raw LaTeX inside the forum post, which is a good sign that the poster was reproducing rather than reconstructing, and the question is essentially complete: it asks when the unconstrained quadrati
 
-### Q577 · Tier D · 2026 · phone_technical (the structure of the coding hour)
+### Q569 · Tier D · 2026 · phone_technical (the structure of the coding hour)
 
 面试形式是 1 小时 coding,题目是 tree / data structure 相关,一共三问,难度逐
 
@@ -5655,7 +5591,7 @@ min x^\top Q x + c^\top xQ 和 c 都是实数讨论什么时候,这个问题有f
 — chat_telegram · posted 2026-06-13 · full_text · [link](https://t.me/usinterview/28802)
   1 attestation(s) across 1 domain(s) · doubt: No question text at all — this describes the round (one hour, one tree/data-structure problem in three escalating parts, Data Storage/Infra team) and truncates at "难度逐" just as the poster was about to say the difficulty 
 
-### Q578 · Tier D · 2026 · phone_technical (the build task)
+### Q570 · Tier D · 2026 · phone_technical (the build task)
 
 React 实现一个event feed dashboard,non AI assisted
 
@@ -5665,7 +5601,7 @@ React 实现一个event feed dashboard,non AI assisted
 — chat_telegram · posted 2026-07-27 · full_text · [link](https://t.me/usinterview/29074)
   1 attestation(s) across 1 domain(s) · doubt: One line: the framework, the artefact and the "non AI assisted" restriction, with no specification of what the dashboard had to do. The "non AI assisted" note is a specific and currently-topical detail that is unlikely t
 
-### Q579 · Tier D · unknown(发帖 2021-01-26,源帖未写投的是哪一届) · phone_technical (一面:先聊十几分钟简历项目,然后进入统计/机器学习提问,这是第 1 个问题)
+### Q571 · Tier D · unknown(发帖 2021-01-26,源帖未写投的是哪一届) · phone_technical (一面:先聊十几分钟简历项目,然后进入统计/机器学习提问,这是第 1 个问题)
 
 线性回归,解析解是什么
 
@@ -5677,7 +5613,7 @@ React 实现一个event feed dashboard,non AI assisted
 — nowcoder · posted 2021-01-26 · full_text · [link](https://www.nowcoder.com/discuss/353157497731096576)
   1 attestation(s) across 1 domain(s) · doubt: 发帖人用的是绰号「城堡 / 大城堡」而不是 Citadel 英文名——在中文求职圈 「大城堡」通常指 Citadel(对冲基金),「小城堡」指 Citadel Securities,但源帖没有写英文全称,所以 firm 归属是基于社区惯用语的推断而非源帖明写。帖子是 2021 年的,岗位线只说「量化实习」,没有区分 QR / QT / quant dev。题目是连续叙述式记录(一整段话),我在这里把它切成单题,切分边界是我做的,个别追问
 
-### Q580 · Tier D · unknown(发帖 2021-01-26,源帖未写投的是哪一届) · phone_technical (二面:先聊二十分钟简历项目,然后一道统计题 + 两道口述算法题,这是第 1 个问题)
+### Q572 · Tier D · unknown(发帖 2021-01-26,源帖未写投的是哪一届) · phone_technical (二面:先聊二十分钟简历项目,然后一道统计题 + 两道口述算法题,这是第 1 个问题)
 
 一堆数据复制一遍,mean和variance会不会变
 
@@ -5689,7 +5625,7 @@ React 实现一个event feed dashboard,non AI assisted
 — nowcoder · posted 2021-01-26 · full_text · [link](https://www.nowcoder.com/discuss/353157497731096576)
   1 attestation(s) across 1 domain(s) · doubt: 发帖人用的是绰号「城堡 / 大城堡」而不是 Citadel 英文名——在中文求职圈 「大城堡」通常指 Citadel(对冲基金),「小城堡」指 Citadel Securities,但源帖没有写英文全称,所以 firm 归属是基于社区惯用语的推断而非源帖明写。帖子是 2021 年的,岗位线只说「量化实习」,没有区分 QR / QT / quant dev。题目是连续叙述式记录(一整段话),我在这里把它切成单题,切分边界是我做的,个别追问
 
-### Q581 · Tier D · unknown · phone_technical
+### Q573 · Tier D · unknown · phone_technical
 
 然后开始问线性回归,解析解是什么
 
@@ -5699,7 +5635,7 @@ React 实现一个event feed dashboard,non AI assisted
 — nowcoder · posted unknown · full_text · [link](https://www.nowcoder.com/discuss/353157497731096576)
   1 attestation(s) across 1 domain(s) · doubt: Nowcoder renders no visible publication date on the fetched page, so the cycle and recency of this recall cannot be pinned down at all — the questions could be several years old; also the poster writes from memory in sum
 
-### Q582 · Tier D · unknown · phone_technical
+### Q574 · Tier D · unknown · phone_technical
 
 然后问一堆数据复制一遍,mean和variance会不会变。
 
@@ -5709,7 +5645,7 @@ React 实现一个event feed dashboard,non AI assisted
 — nowcoder · posted unknown · full_text · [link](https://www.nowcoder.com/discuss/353157497731096576)
   1 attestation(s) across 1 domain(s) · doubt: Nowcoder renders no visible publication date on the fetched page, so the cycle and recency of this recall cannot be pinned down at all — the questions could be several years old; also the poster writes from memory in sum
 
-### Q583 · Tier D · unknown · phone_technical
+### Q575 · Tier D · unknown · phone_technical
 
 LC Medium - Hardish coding question
 
@@ -5717,7 +5653,7 @@ LC Medium - Hardish coding question
 — glassdoor · posted 2025-03-05 · full_text · [link](https://www.glassdoor.com/Interview/Citadel-Software-Engineering-Intern-Interview-Questions-EI_IE14937.0,7_KO8,35.htm)
   1 attestation(s) across 1 domain(s) · doubt: Glassdoor's 'interview question' field here records a topic label rather than the problem statement, so the actual question cannot be reconstructed from it; entries are also anonymous and unverified by Glassdoor, and the
 
-### Q584 · Tier D · unknown · phone_technical
+### Q576 · Tier D · unknown · phone_technical
 
 Why do you want to work at Citadel?
 
@@ -5728,7 +5664,7 @@ Why do you want to work at Citadel?
 
 ## Citadel — superday
 
-### Q585 · Tier D · 2026 · superday (a first-hand walk-through of the loop, answering the OP's checklist of)
+### Q577 · Tier D · 2026 · superday (a first-hand walk-through of the loop, answering the OP's checklist of)
 
 there’s 1 coding round (third round) which is mostly pandas work and a coding-type brain teaser. the rest is a combination of fermi problems, market making, some probability/expectation stuff, and then some behaviourals in most interviews (all with actual traders though, no full hr round). I wasn’t asked any mental maths
 
@@ -5736,7 +5672,7 @@ there’s 1 coding round (third round) which is mostly pandas work and a coding-
 — reddit_thread · posted 2026-04-28 · archive_only · [link](https://www.reddit.com/r/quantfinance/comments/1stcxn5/anyone_done_the_citadel_securities_sydney_quant/oio5sip/)
   1 attestation(s) across 1 domain(s) · doubt: No question is reproduced — this is a round-by-round topic map. It is worth keeping because the negative claims are specific and falsifiable (no mental maths, no options, no full HR round, traders conduct every interview
 
-### Q586 · Tier D · 2026(源帖标题「Citadel vo2026面经」) · superday (终面 60 分钟,含 why-Citadel、行为题、系统设计三部分)
+### Q578 · Tier D · 2026(源帖标题「Citadel vo2026面经」) · superday (终面 60 分钟,含 why-Citadel、行为题、系统设计三部分)
 
 先问了为什么选Citadel
 
@@ -5751,17 +5687,7 @@ there’s 1 coding round (third round) which is mostly pandas work and a coding-
 
 ## Citadel — unknown
 
-### Q587 · Tier D · 2025 · unknown (the question as the poster states it, before the spoiler-tagged answer)
-
-You observe a value X from a noisy dataset. You know the noise has mean zero. What is your best estimate of the actual underlying value?
-
-*Reported answer:* The poster's answer: not X, but beta times X, shrunk toward the mean, with beta = Cov(V, X) / Var(X) = Var(V) / (Var(V) + Var(noise)); e.g. with equal signal and noise variance and X = 10 the estimate is 5
-
-> You observe a value X from a noisy dataset. You know the noise has mean zero. What is your best estimate of the actual underlying value?
-— reddit_thread · posted 2026-01-13 · archive_only · [link](https://www.reddit.com/r/quantfinance/comments/1ut6ytx/a_simple_interview_question_that_trips_up/)
-  1 attestation(s) across 1 domain(s) · doubt: The strongest reason to distrust this is register: the post is written as teaching content — hook, spoiler tag, worked derivation, closing tie-in to why regularisation works — which is the house style of engagement-farme
-
-### Q588 · Tier D · 2025 · unknown (a reply from someone who says they were asked similar questions and to)
+### Q579 · Tier D · 2025 · unknown (a reply from someone who says they were asked similar questions and to)
 
 Yep I interviewed and got offers at multiple of the firms mentioned and while I was asked similar questions, I merely said X and not beta \* X (and one of them even said “correct”) and then I always just mansplained the Russian tank problem
 
@@ -5772,7 +5698,7 @@ Yep I interviewed and got offers at multiple of the firms mentioned and while I 
 
 ## Citadel Securities — online_assessment
 
-### Q589 · Tier B · unknown · online_assessment (two coding questions, ninety minutes, large constraints)
+### Q580 · Tier B · unknown · online_assessment (two coding questions, ninety minutes, large constraints)
 
 You’re given arrays of start times and end times for employees. Each pair represents when someone is active. The task: compute the maximum number of employees overlapping at any single moment. ... the constraint quietly says n can be as large as 2 x 10^5.
 
@@ -5782,7 +5708,7 @@ You’re given arrays of start times and end times for employees. Each pair repr
 — blog · posted 2026-02-22 · full_text · [link](https://hiya31.medium.com/what-they-asked-me-in-the-citadel-securities-hackerrank-coding-round-ed3ceded3c04)
   1 attestation(s) across 1 domain(s) · doubt: The author's blog is general-interest tech content and the post is written in a heavily stylised, SEO-friendly voice, so it is possible the problems were reconstructed from a public source rather than from the sitting it
 
-### Q590 · Tier B · unknown · online_assessment (two coding questions, ninety minutes, large constraints)
+### Q581 · Tier B · unknown · online_assessment (two coding questions, ninety minutes, large constraints)
 
 Again, start and end times. Again, overlapping intervals. But this time the task changed subtly. Instead of asking for the global maximum number of simultaneous employees, they asked for the maximum number of direct overlaps centered around a single employee. ... If one employee ends at time 5 and another starts at time 5, do they overlap? In this problem, yes.
 
@@ -5795,7 +5721,7 @@ Again, start and end times. Again, overlapping intervals. But this time the task
 
 ## Citadel Securities — phone_technical
 
-### Q591 · Tier B · 2024 · phone_technical (Duration: 1 hour)
+### Q582 · Tier B · 2024 · phone_technical (Duration: 1 hour)
 
 The interviewer started by asking in-depth questions about templates in C++ ... such as: How templates work; Use cases for templates in real-world scenarios; Differences between function templates and class templates; Template specialization and instantiation
 
@@ -5803,7 +5729,7 @@ The interviewer started by asking in-depth questions about templates in C++ ... 
 — blog · posted 2024-12-17 · full_text · [link](https://medium.com/@adityashrivastava2003/citadel-securities-swe-intern-singapore-interview-experience-386dc70fc1eb)
   1 attestation(s) across 1 domain(s) · doubt: Written eleven months after the fact ('I got this opportunity back in Jan of 2024'), and the round-1 problem is described only as resembling LRU Cache rather than quoted, so the actual prompt may have differed; two comme
 
-### Q592 · Tier B · 2024 · phone_technical (Duration: 1 hour)
+### Q583 · Tier B · 2024 · phone_technical (Duration: 1 hour)
 
 I was given a hard-level problem that resembled the LRU (Least Recently Used) Cache problem. The problem required designing a data structure that could efficiently perform insertions, deletions, and lookups while maintaining a specific order based on usage.
 
@@ -5814,7 +5740,7 @@ I was given a hard-level problem that resembled the LRU (Least Recently Used) Ca
 
 ## D. E. Shaw — online_assessment
 
-### Q593 · Tier B · unknown · online_assessment (4 sections: Section 1 Coding question (20 min, 20 marks); Section 2 Te)
+### Q584 · Tier B · unknown · online_assessment (4 sections: Section 1 Coding question (20 min, 20 marks); Section 2 Te)
 
 Given a list of string. Each string of the form s1-s2, where s1 is a computer connected to s2 and vice versa. If a hacker attacks one of your computer, then its connected computers will also be hacked and in turn its connected computers will also get hacked just like chain reaction. We have to find maximum count of computers that will get hacked.
 
@@ -5824,7 +5750,7 @@ Given a list of string. Each string of the form s1-s2, where s1 is a computer co
 — blog · posted 2019 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-on-campus-internship-interview-experience-2019/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks 'interview experiences' posts are user-submitted and unverified by the site; this is also D. E. Shaw India's technology/software track, NOT the US quant researcher or trader pipeline, so it should not be re
 
-### Q594 · Tier B · unknown · online_assessment (10 MCQS. Each MCQ 2 marks, negative marking)
+### Q585 · Tier B · unknown · online_assessment (10 MCQS. Each MCQ 2 marks, negative marking)
 
 Section 3 Quant MCQS (20 min) 10 MCQS. Each MCQ 2 marks. I didn't perform well in this, I think I was able to do 2 questions correctly and didn't attempted remaining questions as there was negative marking. Questions were tough. More difficult than RS Agarwal questions.
 
@@ -5832,7 +5758,7 @@ Section 3 Quant MCQS (20 min) 10 MCQS. Each MCQ 2 marks. I didn't perform well i
 — blog · posted 2019 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-on-campus-internship-interview-experience-2019/)
   1 attestation(s) across 1 domain(s) · doubt: This is a description of the quant MCQ section's difficulty, NOT an actual question — the poster reproduces no quant item at all. Included only as section-level evidence that D. E. Shaw India's OA has a dedicated quant M
 
-### Q595 · Tier B · 2025 · online_assessment (3 programming questions, separate timers: Q1 20 min, Q2 30 min, Q3 30 )
+### Q586 · Tier B · 2025 · online_assessment (3 programming questions, separate timers: Q1 20 min, Q2 30 min, Q3 30 )
 
 Problem 1: Divisible Substrings (20 mins). Given a string s of lowercase English letters (length <= 1000), map each character c to a value using: val(c) = (c - 'a' + 1) / 3 + 1. Count the number of substrings such that the sum of character values in the substring is divisible by the length of that substring.
 
@@ -5842,7 +5768,7 @@ Problem 1: Divisible Substrings (20 mins). Given a string s of lowercase English
 — blog · posted 2025 · full_text · [link](https://codeforces.com/blog/entry/145050)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and undated beyond '2025'; the problems are paraphrased into the poster's own wording rather than copied from the test screen, so exact constraints may drift.
 
-### Q596 · Tier B · 2025 · online_assessment (3 programming questions, separate timers: Q1 20 min, Q2 30 min, Q3 30 )
+### Q587 · Tier B · 2025 · online_assessment (3 programming questions, separate timers: Q1 20 min, Q2 30 min, Q3 30 )
 
 Problem 2: Airport Scanner Simulation (30 mins). Given two arrays: time[i] (time when the i-th person wants to access the scanner, sorted) and direction[i] (0 if arrival, 1 if departure). Only one person can use the scanner at a time. Priority rules: if the scanner was used in the previous second, the same direction gets preference; if unused in the previous second, departure (1) gets preference. Determine, for each person (in input order), the exact time they pass through the scanner.
 
@@ -5850,7 +5776,7 @@ Problem 2: Airport Scanner Simulation (30 mins). Given two arrays: time[i] (time
 — blog · posted 2025 · full_text · [link](https://codeforces.com/blog/entry/145050)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and undated beyond '2025'; the problems are paraphrased into the poster's own wording rather than copied from the test screen, so exact constraints may drift.
 
-### Q597 · Tier B · 2025 · online_assessment (3 programming questions, separate timers: Q1 20 min, Q2 30 min, Q3 30 )
+### Q588 · Tier B · 2025 · online_assessment (3 programming questions, separate timers: Q1 20 min, Q2 30 min, Q3 30 )
 
 Problem 3: Nearest Sensor in Row or Column (30 mins). Given n sensors (n <= 10^5), each with a unique string identifier and an (x, y) coordinate with 0 <= x, y <= 10^8. You are given q queries, each being a string ID of a sensor. For each query, report the nearest sensor in the same row (same y) or the same column (same x). If there are multiple such sensors at the same distance, choose the one with the lexicographically smallest ID. If there are no such sensors, return "NONE".
 
@@ -5858,7 +5784,7 @@ Problem 3: Nearest Sensor in Row or Column (30 mins). Given n sensors (n <= 10^5
 — blog · posted 2025 · full_text · [link](https://codeforces.com/blog/entry/145050)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and undated beyond '2025'; the problems are paraphrased into the poster's own wording rather than copied from the test screen, so exact constraints may drift.
 
-### Q598 · Tier B · unknown · online_assessment (3 questions, Total Duration: 95 minutes)
+### Q589 · Tier B · unknown · online_assessment (3 questions, Total Duration: 95 minutes)
 
 OA on HackerRank: 3 questions, each with its own timer, total 95 minutes
 
@@ -5866,7 +5792,7 @@ OA on HackerRank: 3 questions, each with its own timer, total 95 minutes
 — blog · posted 2023 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2023/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks interview-experience posts are user-submitted and unverified, and the site does not date the sitting itself (only 'Last Updated'); this is D. E. Shaw India's on-campus SDE-style drive rather than the quant-
 
-### Q599 · Tier B · unknown · online_assessment (Question-1, 25 minutes of a 95-minute OA)
+### Q590 · Tier B · unknown · online_assessment (Question-1, 25 minutes of a 95-minute OA)
 
 You are given an unweighted undirected graph. Your task is to color the leaf nodes of the graph. A node x is diverse if all the leaf nodes in its subtree have different colors. Return an array of size n where the i th element of the array represents the minimum number of different colors required to make the number of diverse nodes in the graph greater than or equal to i . (where n is the number of nodes)
 
@@ -5876,7 +5802,7 @@ You are given an unweighted undirected graph. Your task is to color the leaf nod
 — blog · posted 2023 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2023/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks interview-experience posts are user-submitted and unverified, and the site does not date the sitting itself (only 'Last Updated'); this is D. E. Shaw India's on-campus SDE-style drive rather than the quant-
 
-### Q600 · Tier B · unknown · online_assessment (Question-3, 35 minutes)
+### Q591 · Tier B · unknown · online_assessment (Question-3, 35 minutes)
 
 Given an array arr of n integers, in a single operation, one can reduce any element of the array by 1. Find the minimum number of operations required to make the array a bitonic array. Example of bitonic array: [0,1,2,3,2,1,0,0]
 
@@ -5886,7 +5812,7 @@ Given an array arr of n integers, in a single operation, one can reduce any elem
 — blog · posted 2023 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2023/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks interview-experience posts are user-submitted and unverified, and the site does not date the sitting itself (only 'Last Updated'); this is D. E. Shaw India's on-campus SDE-style drive rather than the quant-
 
-### Q601 · Tier B · 2025 · online_assessment (3 coding questions; 300+ eligible, 16 shortlisted)
+### Q592 · Tier B · 2025 · online_assessment (3 coding questions; 300+ eligible, 16 shortlisted)
 
 OA: three coding questions on binary search, dynamic programming and prefix sums, medium-to-hard
 
@@ -5894,7 +5820,7 @@ OA: three coding questions on binary search, dynamic programming and prefix sums
 — blog · posted 2025 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experience-for-technology-developer-intern-2025/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified; GFG shows only a 'Last Updated' date so the sitting date is the writer's own '2025' in the title. This is the India technology-developer track, not a quant research or trading role.
 
-### Q602 · Tier B · unknown · online_assessment (1 DSA question + 10-15 MCQs)
+### Q593 · Tier B · unknown · online_assessment (1 DSA question + 10-15 MCQs)
 
 OA on HackerRank: 1 DSA coding question plus 10-15 MCQs
 
@@ -5902,7 +5828,7 @@ OA on HackerRank: 1 DSA coding question plus 10-15 MCQs
 — blog · posted 2025-12 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experience-for-system-intern-role/)
   1 attestation(s) across 1 domain(s) · doubt: Self-published account on a user-submission site with no corroboration; the writer names the sitting as '4th July' without a year, so the 2025 date is the article's publication date rather than an attested sitting date. 
 
-### Q603 · Tier B · unknown · online_assessment
+### Q594 · Tier B · unknown · online_assessment
 
 OA DSA question combining graph traversal (BFS) with prime number checking; it looked tree-based at first
 
@@ -5912,7 +5838,7 @@ OA DSA question combining graph traversal (BFS) with prime number checking; it l
 — blog · posted 2025-12 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experience-for-system-intern-role/)
   1 attestation(s) across 1 domain(s) · doubt: Self-published account on a user-submission site with no corroboration; the writer names the sitting as '4th July' without a year, so the 2025 date is the article's publication date rather than an attested sitting date. 
 
-### Q604 · Tier B · unknown · online_assessment (three sections; 14 aptitude MCQ/28 min, 12 technical MCQ/17 min, 2 cod)
+### Q595 · Tier B · unknown · online_assessment (three sections; 14 aptitude MCQ/28 min, 12 technical MCQ/17 min, 2 cod)
 
 Round 1 structure: 14 aptitude MCQs in 28 minutes, 12 technical MCQs in 17 minutes, then 2 coding questions with 20 and 30 minute timers
 
@@ -5920,7 +5846,7 @@ Round 1 structure: 14 aptitude MCQs in 28 minutes, 12 technical MCQs in 17 minut
 — blog · posted 2021-07 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022-2/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified. QTE at D. E. Shaw India is a quality/test engineering track, so despite the quant-adjacent employer this is not a trading or research assessment; the write-up itself is unusually specific, 
 
-### Q605 · Tier B · unknown · online_assessment (first coding question, 20 minutes)
+### Q596 · Tier B · unknown · online_assessment (first coding question, 20 minutes)
 
 Given an array of n integers, you can divide the array into sections containing k elements each (n is divisible by k). The score of each section is the product of the elements in that section. Find the maximum sum of scores of all sections that you can achieve.
 
@@ -5928,7 +5854,7 @@ Given an array of n integers, you can divide the array into sections containing 
 — blog · posted 2021-07 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022-2/)
   2 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified. QTE at D. E. Shaw India is a quality/test engineering track, so despite the quant-adjacent employer this is not a trading or research assessment; the write-up itself is unusually specific, 
 
-### Q606 · Tier B · unknown · online_assessment (second coding question, 30 minutes)
+### Q597 · Tier B · unknown · online_assessment (second coding question, 30 minutes)
 
 Given three item types A, B and C, order them so that no three consecutive items are the same; for each of n queries (a, b, c) find the maximum number of items you can place
 
@@ -5936,7 +5862,7 @@ Given three item types A, B and C, order them so that no three consecutive items
 — blog · posted 2021-07 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022-2/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified. QTE at D. E. Shaw India is a quality/test engineering track, so despite the quant-adjacent employer this is not a trading or research assessment; the write-up itself is unusually specific, 
 
-### Q607 · Tier B · unknown · online_assessment (Number of questions: 3 Coding questions)
+### Q598 · Tier B · unknown · online_assessment (Number of questions: 3 Coding questions)
 
 Round 1 coding test: 3 coding questions, each with a separate timer, no switching back
 
@@ -5944,7 +5870,7 @@ Round 1 coding test: 3 coding questions, each with a separate timer, no switchin
 — blog · posted 2021-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-interview-experience-for-summer-intern-2022-on-campus/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified, and the three OA questions are paraphrased by the writer ('the gist was') rather than transcribed. India SDE internship track, not quant research.
 
-### Q608 · Tier B · unknown · online_assessment (one of 3 timed coding questions)
+### Q599 · Tier B · unknown · online_assessment (one of 3 timed coding questions)
 
 You are given an NxM matrix of '*' (land) and '.' (water); find the largest of all the minimum-area rectangles that completely enclose an island
 
@@ -5952,7 +5878,7 @@ You are given an NxM matrix of '*' (land) and '.' (water); find the largest of a
 — blog · posted 2021-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-interview-experience-for-summer-intern-2022-on-campus/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified, and the three OA questions are paraphrased by the writer ('the gist was') rather than transcribed. India SDE internship track, not quant research.
 
-### Q609 · Tier B · unknown · online_assessment (one of 3 timed coding questions)
+### Q600 · Tier B · unknown · online_assessment (one of 3 timed coding questions)
 
 You have been given N strings, you need to create a minimum length string such that those N strings are substrings of that output string, with the extra condition that if A precedes B in the list then B must start after A starts
 
@@ -5960,7 +5886,7 @@ You have been given N strings, you need to create a minimum length string such t
 — blog · posted 2021-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-interview-experience-for-summer-intern-2022-on-campus/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified, and the three OA questions are paraphrased by the writer ('the gist was') rather than transcribed. India SDE internship track, not quant research.
 
-### Q610 · Tier B · unknown · online_assessment (three coding questions, each with its own time limit, in 90 minutes)
+### Q601 · Tier B · unknown · online_assessment (three coding questions, each with its own time limit, in 90 minutes)
 
 Given an array of n numbers, find the number of triplets such that Ai<Aj<Ak or Ai>Aj>Ak where i, j, k are indices and i<j<k
 
@@ -5970,7 +5896,7 @@ Given an array of n numbers, find the number of triplets such that Ai<Aj<Ak or A
 — blog · posted 2020-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-internship-interview-experience-on-campus-2021-2/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified; the OA question statements are the writer's recollection weeks later. India SDE internship, so nothing here speaks to the quant tracks.
 
-### Q611 · Tier B · unknown · online_assessment (second of three coding questions, 30 minutes)
+### Q602 · Tier B · unknown · online_assessment (second of three coding questions, 30 minutes)
 
 You are given x lions, y tigers, z leopards, and w panthers and m cages in a line; fill all m cages so no two same animals are adjacent, and count the total number of ways
 
@@ -5980,7 +5906,7 @@ You are given x lions, y tigers, z leopards, and w panthers and m cages in a lin
 — blog · posted 2020-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-internship-interview-experience-on-campus-2021-2/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified; the OA question statements are the writer's recollection weeks later. India SDE internship, so nothing here speaks to the quant tracks.
 
-### Q612 · Tier B · unknown · online_assessment (138 marks, 95 minutes, negative marking)
+### Q603 · Tier B · unknown · online_assessment (138 marks, 95 minutes, negative marking)
 
 Round 1 on HackerRank: 138 marks in 95 minutes with 33% negative marking, split into aptitude (14Q/28min), technical (12Q/17min) and two coding sections (20 and 30 min)
 
@@ -5988,7 +5914,7 @@ Round 1 on HackerRank: 138 marks in 95 minutes with 33% negative marking, split 
 — blog · posted 2020-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-summer-internship-interview-experience-2021-on-campus-vit-vellore/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified; the writer flags their own paraphrasing ('the gist was'). Quality & Test Engineering intern at D. E. Shaw India, so this is not a quant assessment even though the employer is in the shard.
 
-### Q613 · Tier B · unknown · online_assessment
+### Q604 · Tier B · unknown · online_assessment
 
 Given an array of positive integers, find out the number of sub-arrays that consist of prime numbers only.
 
@@ -5998,7 +5924,7 @@ Given an array of positive integers, find out the number of sub-arrays that cons
 — blog · posted 2020-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-summer-internship-interview-experience-2021-on-campus-vit-vellore/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified; the writer flags their own paraphrasing ('the gist was'). Quality & Test Engineering intern at D. E. Shaw India, so this is not a quant assessment even though the employer is in the shard.
 
-### Q614 · Tier B · unknown · online_assessment
+### Q605 · Tier B · unknown · online_assessment
 
 Two arrays are given, a binary array A and a cost array B of the same length; convert A to all 1s at minimum cost, where flipping A[i] costs B[i] but is free if A[i-1] and A[i+1] are both 1
 
@@ -6008,7 +5934,7 @@ Two arrays are given, a binary array A and a cost array B of the same length; co
 — blog · posted 2020-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-summer-internship-interview-experience-2021-on-campus-vit-vellore/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified; the writer flags their own paraphrasing ('the gist was'). Quality & Test Engineering intern at D. E. Shaw India, so this is not a quant assessment even though the employer is in the shard.
 
-### Q615 · Tier B · unknown · online_assessment (2 questions in 50 minutes; 11 of 88 shortlisted)
+### Q606 · Tier B · unknown · online_assessment (2 questions in 50 minutes; 11 of 88 shortlisted)
 
 Technical test, 50 minutes, two questions: find the maximum number of connected nodes in the graph; and delete numbers from an array to maximise the difference between the sum of odd-position and even-position elements
 
@@ -6018,7 +5944,7 @@ Technical test, 50 minutes, two questions: find the maximum number of connected 
 — blog · posted 2019-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified, and the interview questions are given as a numbered list reconstructed from memory. India SDE internship drive rather than a quant assessment.
 
-### Q616 · Tier B · unknown · online_assessment (95-minute proctored test; MCQ section 28 questions in 45 minutes; 33% )
+### Q607 · Tier B · unknown · online_assessment (95-minute proctored test; MCQ section 28 questions in 45 minutes; 33% )
 
 MCQ section of 28 questions in 45 minutes: 16 aptitude (English paragraphs, profit and loss, percentages, bar graphs) and 12 technical (data structures and algorithms, space and time complexity, DBMS, predict the output)
 
@@ -6026,7 +5952,7 @@ MCQ section of 28 questions in 45 minutes: 16 aptitude (English paragraphs, prof
 — blog · posted 2021 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experienceon-campus-internship-2021/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks accepts interview experiences from anyone and does not verify that the writer sat the interview; the site also rewards contributions, and the write-ups are edited by GFG staff, so wording may not be the can
 
-### Q617 · Tier B · unknown · online_assessment (Coding section: 2 questions in 50 minutes, 20 minutes for the first an)
+### Q608 · Tier B · unknown · online_assessment (Coding section: 2 questions in 50 minutes, 20 minutes for the first an)
 
 Rahul has n tasks. Time required to complete each task is t[i](for i'th task). Rahul has K days. Rahul picks up the task requiring highest number of time and starts doing it. He works for ceil(t[i]/2) hours. It is given that he will perform one task each day and cannot work for more tha 12 hours in a days i.e if ceil(t/2) is greater than 12 then he will work for twelve hours. He works for K days. tell the total remaining time he would take to finish all the tasks left.
 
@@ -6036,7 +5962,7 @@ Rahul has n tasks. Time required to complete each task is t[i](for i'th task). R
 — blog · posted 2021 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experienceon-campus-internship-2021/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks accepts interview experiences from anyone and does not verify that the writer sat the interview; the site also rewards contributions, and the write-ups are edited by GFG staff, so wording may not be the can
 
-### Q618 · Tier B · unknown · online_assessment
+### Q609 · Tier B · unknown · online_assessment
 
 A matrix is given or r rows and c columns. Each cell is a factory that has a loot amount of a(i,j). We can start looting from any cell. The Directions allowed to move are Down & Right with a constraint that i can loot a factory only is previous loot is lesser than this loot. We need to find the maximum number of factories that can be looted.
 
@@ -6046,7 +5972,7 @@ A matrix is given or r rows and c columns. Each cell is a factory that has a loo
 — blog · posted 2021 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experienceon-campus-internship-2021/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks accepts interview experiences from anyone and does not verify that the writer sat the interview; the site also rewards contributions, and the write-ups are edited by GFG staff, so wording may not be the can
 
-### Q619 · Tier B · unknown · online_assessment (Three sections in 95 minutes: 14 aptitude MCQs in 28 min, 12 technical)
+### Q610 · Tier B · unknown · online_assessment (Three sections in 95 minutes: 14 aptitude MCQs in 28 min, 12 technical)
 
 95-minute HackerRank technical test: 14 aptitude MCQs (28 min), 12 technical MCQs on C++ logic errors, guess-the-output, DBMS and SQL (17 min), then two coding questions
 
@@ -6054,7 +5980,7 @@ A matrix is given or r rows and c columns. Each cell is a factory that has a loo
 — blog · posted 2022 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks accepts interview experiences from anyone and does not verify that the writer sat the interview; the site also rewards contributions, and the write-ups are edited by GFG staff, so wording may not be the can
 
-### Q620 · Tier B · unknown · online_assessment (Second coding question, 30 minutes)
+### Q611 · Tier B · unknown · online_assessment (Second coding question, 30 minutes)
 
 Given that you have three items A, B, and C that you need to put them in a particular order such that there are no three consecutive same items. Given n queries of the form (a, b, c) where a, b and c are the number of items A, B, and C that you have, find the maximum number of A, B, and C items that you can order by following the above constraint.
 
@@ -6064,7 +5990,7 @@ Given that you have three items A, B, and C that you need to put them in a parti
 — blog · posted 2022 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks accepts interview experiences from anyone and does not verify that the writer sat the interview; the site also rewards contributions, and the write-ups are edited by GFG staff, so wording may not be the can
 
-### Q621 · Tier B · unknown · online_assessment (15 hard aptitude questions in 20 minutes, 15 medium technical MCQs in )
+### Q612 · Tier B · unknown · online_assessment (15 hard aptitude questions in 20 minutes, 15 medium technical MCQs in )
 
 Technical test: 15 hard aptitude questions in 20 minutes and 15 medium technical MCQs in 15 minutes, then a medium DP coding question in 10 minutes and a hard DP question in 20 minutes
 
@@ -6072,7 +5998,7 @@ Technical test: 15 hard aptitude questions in 20 minutes and 15 medium technical
 — blog · posted 2020 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-internship-interview-experience-on-campus-2020/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks accepts interview experiences from anyone and does not verify that the writer sat the interview; the site also rewards contributions, and the write-ups are edited by GFG staff, so wording may not be the can
 
-### Q622 · Tier B · unknown · online_assessment (26 MCQ and 2 coding questions in 95 minutes; proctored; +3 for a corre)
+### Q613 · Tier B · unknown · online_assessment (26 MCQ and 2 coding questions in 95 minutes; proctored; +3 for a corre)
 
 Online test of 26 MCQs and 2 coding questions in 95 minutes: 14 aptitude MCQs in 28 minutes covering probability, permutation and combination, profit and loss, speed-distance-time, plus logical reasoning and data interpretation passages
 
@@ -6080,7 +6006,7 @@ Online test of 26 MCQs and 2 coding questions in 95 minutes: 14 aptitude MCQs in
 — university_bbs · posted 2021-04-18 · full_text · [link](https://ecedplacement.wordpress.com/2021/04/18/de-shaw-2/)
   1 attestation(s) across 1 domain(s) · doubt: The department blog is a second-hand write-up: the department published it, crediting a named student, so the wording is the editor's rather than the candidate's verbatim recall. It is also from the 2020-21 cycle and des
 
-### Q623 · Tier B · unknown · online_assessment (14 MCQs, 28 minutes)
+### Q614 · Tier B · unknown · online_assessment (14 MCQs, 28 minutes)
 
 Quantitative aptitude MCQs on probability, permutation and combination, profit and loss, and speed-distance-time
 
@@ -6088,7 +6014,7 @@ Quantitative aptitude MCQs on probability, permutation and combination, profit a
 — university_bbs · posted 2021-04-18 · full_text · [link](https://ecedplacement.wordpress.com/2021/04/18/de-shaw-2/)
   1 attestation(s) across 1 domain(s) · doubt: The department blog is a second-hand write-up: the department published it, crediting a named student, so the wording is the editor's rather than the candidate's verbatim recall. It is also from the 2020-21 cycle and des
 
-### Q624 · Tier B · unknown · online_assessment (12 MCQs, 17 minutes)
+### Q615 · Tier B · unknown · online_assessment (12 MCQs, 17 minutes)
 
 Technical MCQs on data structures, algorithms and SQL, plus guess-the-output of pseudo code and debugging: given pseudo code and an expected output, find and fix the bugs
 
@@ -6096,7 +6022,7 @@ Technical MCQs on data structures, algorithms and SQL, plus guess-the-output of 
 — university_bbs · posted 2021-04-18 · full_text · [link](https://ecedplacement.wordpress.com/2021/04/18/de-shaw-2/)
   1 attestation(s) across 1 domain(s) · doubt: The department blog is a second-hand write-up: the department published it, crediting a named student, so the wording is the editor's rather than the candidate's verbatim recall. It is also from the 2020-21 cycle and des
 
-### Q625 · Tier B · unknown · online_assessment (2 questions, 50 minutes: 20 minutes for the first and 30 for the secon)
+### Q616 · Tier B · unknown · online_assessment (2 questions, 50 minutes: 20 minutes for the first and 30 for the secon)
 
 Two coding questions drawn from competitive-programming dynamic programming
 
@@ -6107,7 +6033,7 @@ Two coding questions drawn from competitive-programming dynamic programming
 
 ## D. E. Shaw — onsite
 
-### Q626 · Tier B · unknown · onsite (one-hour phone screen (30 min resume, 30 min LeetCode-style), then a v)
+### Q617 · Tier B · unknown · onsite (one-hour phone screen (30 min resume, 30 min LeetCode-style), then a v)
 
 A couple of open-ended problems that required some knowledge of basic ML techniques, statistics, and probability (no need to write code for these).
 
@@ -6115,7 +6041,7 @@ A couple of open-ended problems that required some knowledge of basic ML techniq
 — blog · posted 2020-10-17 · full_text · [link](https://www.jointaro.com/interviews/companies/de-shaw/experiences/software-engineerinternship-new-york-ny-october-17-2020-no-offer-positive-5f41aca8)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q627 · Tier B · unknown · onsite
+### Q618 · Tier B · unknown · onsite
 
 The most unexpected question was: how would you color a 3-colorable graph?
 
@@ -6125,7 +6051,7 @@ The most unexpected question was: how would you color a 3-colorable graph?
 — blog · posted 2013-11-01 · full_text · [link](https://www.jointaro.com/interviews/companies/de-shaw/experiences/quantitative-analystsoftware-developer-intern-new-york-ny-november-1-2013-accepted-offer-positive-763017cd)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q628 · Tier B · 2025 · onsite (offline round, two interviewers on the panel)
+### Q619 · Tier B · 2025 · onsite (offline round, two interviewers on the panel)
 
 Design a custom class over an n x m canvas of zeros supporting draw(r, c), delete(r, c) and move(r1, c1, r2, c2), where the most recently drawn shape on a cell is the one displayed
 
@@ -6135,7 +6061,7 @@ Design a custom class over an n x m canvas of zeros supporting draw(r, c), delet
 — blog · posted 2025 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experience-for-technology-developer-intern-2025/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified; GFG shows only a 'Last Updated' date so the sitting date is the writer's own '2025' in the title. This is the India technology-developer track, not a quant research or trading role.
 
-### Q629 · Tier B · 2025 · onsite (offline round, two interviewers)
+### Q620 · Tier B · 2025 · onsite (offline round, two interviewers)
 
 Given two numbers represented as linked lists of the same length, add the numbers with reversing, modifying, extra space and recursion all disallowed
 
@@ -6145,7 +6071,7 @@ Given two numbers represented as linked lists of the same length, add the number
 — blog · posted 2025 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experience-for-technology-developer-intern-2025/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified; GFG shows only a 'Last Updated' date so the sitting date is the writer's own '2025' in the title. This is the India technology-developer track, not a quant research or trading role.
 
-### Q630 · Tier B · 2025 · onsite (OOP block, second interviewer)
+### Q621 · Tier B · 2025 · onsite (OOP block, second interviewer)
 
 Create an object of a class that has only a private constructor
 
@@ -6155,7 +6081,7 @@ Create an object of a class that has only a private constructor
 — blog · posted 2025 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experience-for-technology-developer-intern-2025/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified; GFG shows only a 'Last Updated' date so the sitting date is the writer's own '2025' in the title. This is the India technology-developer track, not a quant research or trading role.
 
-### Q631 · Tier B · unknown · onsite
+### Q622 · Tier B · unknown · onsite
 
 Given an array of strings A, find the longest string all of whose prefixes also appear in the array
 
@@ -6165,7 +6091,7 @@ Given an array of strings A, find the longest string all of whose prefixes also 
 — blog · posted 2020-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-summer-internship-interview-experience-2021-on-campus-vit-vellore/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified; the writer flags their own paraphrasing ('the gist was'). Quality & Test Engineering intern at D. E. Shaw India, so this is not a quant assessment even though the employer is in the shard.
 
-### Q632 · Tier B · unknown · onsite
+### Q623 · Tier B · unknown · onsite
 
 Given pickup, drop and tip arrays where trip i earns drop[i]-pickup[i]+tip[i] and the next pickup must be at or after the last drop, maximise earnings
 
@@ -6175,7 +6101,7 @@ Given pickup, drop and tip arrays where trip i earns drop[i]-pickup[i]+tip[i] an
 — blog · posted 2020-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-summer-internship-interview-experience-2021-on-campus-vit-vellore/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified; the writer flags their own paraphrasing ('the gist was'). Quality & Test Engineering intern at D. E. Shaw India, so this is not a quant assessment even though the employer is in the shard.
 
-### Q633 · Tier B · unknown · onsite (Two face-to-face technical interviews; the first about 1 hour with 3 c)
+### Q624 · Tier B · unknown · onsite (Two face-to-face technical interviews; the first about 1 hour with 3 c)
 
 First technical interview: solve 3 coding questions on the HackerRank platform in about an hour
 
@@ -6186,7 +6112,7 @@ First technical interview: solve 3 coding questions on the HackerRank platform i
 
 ## D. E. Shaw — phone_technical
 
-### Q634 · Tier B · unknown · phone_technical (Technical Round 1, 50 min, 2 interviewers, 16 of 250+ reached this rou)
+### Q625 · Tier B · unknown · phone_technical (Technical Round 1, 50 min, 2 interviewers, 16 of 250+ reached this rou)
 
 Q2) Given a queue q1 with elements and an empty queue q2. You need to reverse q1 by using q2 or by using nothing. No, you can't use recursion. Using recursion is equivalent to using stack.
 
@@ -6194,7 +6120,7 @@ Q2) Given a queue q1 with elements and an empty queue q2. You need to reverse q1
 — blog · posted 2019 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-on-campus-internship-interview-experience-2019/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks 'interview experiences' posts are user-submitted and unverified by the site; this is also D. E. Shaw India's technology/software track, NOT the US quant researcher or trader pipeline, so it should not be re
 
-### Q635 · Tier B · unknown · phone_technical (Q8 of Technical Round 1, explicitly labelled 'Puzzle' by the poster)
+### Q626 · Tier B · unknown · phone_technical (Q8 of Technical Round 1, explicitly labelled 'Puzzle' by the poster)
 
 Q8) Puzzle. Given 10 stacks each stack contains 10 coins of 1 gram each. But one stack all coins with weight 9 gram. You have a weighing machine. You have to find the faulty stack in minimum number of weighings ?
 
@@ -6204,7 +6130,7 @@ Q8) Puzzle. Given 10 stacks each stack contains 10 coins of 1 gram each. But one
 — blog · posted 2019 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-on-campus-internship-interview-experience-2019/)
   1 attestation(s) across 1 domain(s) · doubt: This is one of the most famous counterfeit-coin puzzles in existence (it predates quant interviewing entirely and appears in Mosteller-style collections), so the content is textbook; only the dated first-person round con
 
-### Q636 · Tier B · unknown · phone_technical (Q9 of Technical Round 1, a variant of the GfG '3 ants and triangle' pu)
+### Q627 · Tier B · unknown · phone_technical (Q9 of Technical Round 1, a variant of the GfG '3 ants and triangle' pu)
 
 Q9) Puzzle https://www.geeksforgeeks.org/aptitude/puzzle-21-3-ants-and-triangle/ . I was asked for four ants and a square.
 
@@ -6212,7 +6138,7 @@ Q9) Puzzle https://www.geeksforgeeks.org/aptitude/puzzle-21-3-ants-and-triangle/
 — blog · posted 2019 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-on-campus-internship-interview-experience-2019/)
   1 attestation(s) across 1 domain(s) · doubt: The poster gives the question only by linking a GeeksforGeeks puzzle page and noting the variant asked (square instead of triangle) — so the question text itself is not reproduced, and the puzzle is a well-known textbook
 
-### Q637 · Tier B · unknown · phone_technical (Q6 of Technical Round 1)
+### Q628 · Tier B · unknown · phone_technical (Q6 of Technical Round 1)
 
 Q6) One of your friend is getting UI of particular website, but you are not, so what is the problem, how will use you diagnose it?
 
@@ -6220,7 +6146,7 @@ Q6) One of your friend is getting UI of particular website, but you are not, so 
 — blog · posted 2019 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-on-campus-internship-interview-experience-2019/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks 'interview experiences' posts are user-submitted and unverified by the site; this is also D. E. Shaw India's technology/software track, NOT the US quant researcher or trader pipeline, so it should not be re
 
-### Q638 · Tier B · unknown · phone_technical (OA of 3 medium-difficulty questions, then an interview with 3 easy-to-)
+### Q629 · Tier B · unknown · phone_technical (OA of 3 medium-difficulty questions, then an interview with 3 easy-to-)
 
 How to find the intersection of two linked lists?
 
@@ -6228,7 +6154,7 @@ How to find the intersection of two linked lists?
 — blog · posted 2023-08-01 · full_text · [link](https://www.jointaro.com/interviews/companies/de-shaw/experiences/software-engineerinternship-mumbai-august-1-2023-no-offer-positive-41d29adc)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q639 · Tier B · unknown · phone_technical
+### Q630 · Tier B · unknown · phone_technical
 
 Given an array of n integers and an integer x, provide an algorithm that determines if a pair of integers in the array sum to x.
 
@@ -6236,7 +6162,7 @@ Given an array of n integers and an integer x, provide an algorithm that determi
 — blog · posted 2017-09-01 · full_text · [link](https://www.jointaro.com/interviews/companies/de-shaw/experiences/software-engineerinternship-new-york-ny-september-1-2017-no-offer-positive-82ecc6f8)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q640 · Tier B · unknown · phone_technical (two brain teasers, no coding)
+### Q631 · Tier B · unknown · phone_technical (two brain teasers, no coding)
 
 You call to someone's house and ask if they have two children. The answer happens to be yes. Then you ask if one of their children is a boy. The answer happens to be yes again. What's the probability that the second child is a boy?
 
@@ -6244,7 +6170,7 @@ You call to someone's house and ask if they have two children. The answer happen
 — blog · posted 2013-11-01 · full_text · [link](https://www.jointaro.com/interviews/companies/de-shaw/experiences/software-engineering-and-quantitative-research-new-york-ny-november-1-2013-no-offer-positive-af766cdc)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q641 · Tier B · unknown · phone_technical (the second, '(Much harder)', of two brain teasers)
+### Q632 · Tier B · unknown · phone_technical (the second, '(Much harder)', of two brain teasers)
 
 You call to someone's house and ask if they have two children. The answer happens to be yes. Then you ask if one of their children's names is William. The answer happens to be yes again. (We assume William is a boy's name, and that it's possible that both children are Williams.) What's the probability that the second child is a boy?
 
@@ -6252,7 +6178,7 @@ You call to someone's house and ask if they have two children. The answer happen
 — blog · posted 2013-11-01 · full_text · [link](https://www.jointaro.com/interviews/companies/de-shaw/experiences/software-engineering-and-quantitative-research-new-york-ny-november-1-2013-no-offer-positive-af766cdc)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q642 · Tier B · unknown · phone_technical
+### Q633 · Tier B · unknown · phone_technical
 
 Some situational questions such as "what would you do if a team member is spreading false/inaccurate information about your firm online"
 
@@ -6260,7 +6186,7 @@ Some situational questions such as "what would you do if a team member is spread
 — wso · posted 2026-06-20 · full_text · [link](https://www.wallstreetoasis.com/company/de-shaw/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO entries are anonymous and self-submitted with no verification that the poster interviewed at all; the submission date here is Jun 20, 2026, about thirteen months after the stated interview month, so the recall is ret
 
-### Q643 · Tier B · unknown · phone_technical
+### Q634 · Tier B · unknown · phone_technical
 
 You’re part of an intern group with 4 others and you are tasked with generating feedback on the internship. You have an idea for how to improve the internship but all the others don’t like your idea. What do you do
 
@@ -6268,7 +6194,7 @@ You’re part of an intern group with 4 others and you are tasked with generatin
 — wso · posted 2026-02-24 · full_text · [link](https://www.wallstreetoasis.com/company/de-shaw/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO entries are anonymous and self-submitted with no verification that the poster interviewed at all; the submission date here is Feb 24, 2026, about a month after the stated interview month, so the recall is retrospecti
 
-### Q644 · Tier B · unknown · phone_technical (All non-quant SWE; all in NYC)
+### Q635 · Tier B · unknown · phone_technical (All non-quant SWE; all in NYC)
 
 the overall mix was: problem solving, simple probability, OS/programming language trivia
 
@@ -6276,7 +6202,7 @@ the overall mix was: problem solving, simple probability, OS/programming languag
 — blind · posted 2020-06-17 · full_text · [link](https://www.teamblind.com/post/tc-interviews-advice-de-shaw-jane-street-hrt-citadel-hkuvevyq)
   1 attestation(s) across 1 domain(s) · doubt: Blind handles are company-verified only, so the poster's employer is attested but their candidacy is not; the comment lumps several firms together into one 'overall mix' rather than reporting each firm separately, so the
 
-### Q645 · Tier B · unknown · phone_technical (HackerRank CodePair, 2 interviewers, ~1 hr 10 min)
+### Q636 · Tier B · unknown · phone_technical (HackerRank CodePair, 2 interviewers, ~1 hr 10 min)
 
 You are given a string which contains only a's and b's. A "good string" can be split into 3 parts. First part should contain only a's(can contain 0 also), second should contain b's and third should contain a's. Now we need to find the length of the largest good string by deleting some characters from the string.
 
@@ -6286,7 +6212,7 @@ You are given a string which contains only a's and b's. A "good string" can be s
 — blog · posted 2023 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2023/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks interview-experience posts are user-submitted and unverified, and the site does not date the sitting itself (only 'Last Updated'); this is D. E. Shaw India's on-campus SDE-style drive rather than the quant-
 
-### Q646 · Tier B · unknown · phone_technical (second interviewer, C++/STL block)
+### Q637 · Tier B · unknown · phone_technical (second interviewer, C++/STL block)
 
 Internal implementation of map vs unordered_map in C++ STL: what implements it (red-black trees), what is hashing, what are collisions
 
@@ -6294,7 +6220,7 @@ Internal implementation of map vs unordered_map in C++ STL: what implements it (
 — blog · posted 2023 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2023/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks interview-experience posts are user-submitted and unverified, and the site does not date the sitting itself (only 'Last Updated'); this is D. E. Shaw India's on-campus SDE-style drive rather than the quant-
 
-### Q647 · Tier B · unknown · phone_technical (project discussion on a Gatepass Management System)
+### Q638 · Tier B · unknown · phone_technical (project discussion on a Gatepass Management System)
 
 Why did you use MongoDB over MySQL, and which database performs better under different circumstances?
 
@@ -6302,7 +6228,7 @@ Why did you use MongoDB over MySQL, and which database performs better under dif
 — blog · posted 2025-12 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experience-for-system-intern-role/)
   1 attestation(s) across 1 domain(s) · doubt: Self-published account on a user-submission site with no corroboration; the writer names the sitting as '4th July' without a year, so the 2025 date is the article's publication date rather than an attested sitting date. 
 
-### Q648 · Tier B · unknown · phone_technical
+### Q639 · Tier B · unknown · phone_technical
 
 Difference between authentication and authorization; difference between HTTP and HTTPS
 
@@ -6310,7 +6236,7 @@ Difference between authentication and authorization; difference between HTTP and
 — blog · posted 2025-12 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experience-for-system-intern-role/)
   1 attestation(s) across 1 domain(s) · doubt: Self-published account on a user-submission site with no corroboration; the writer names the sitting as '4th July' without a year, so the 2025 date is the article's publication date rather than an attested sitting date. 
 
-### Q649 · Tier B · unknown · phone_technical
+### Q640 · Tier B · unknown · phone_technical
 
 We have N blocks that are required to be painted by using K colors with the condition that at most only 1 pair of adjacent blocks could have the same color
 
@@ -6320,7 +6246,7 @@ We have N blocks that are required to be painted by using K colors with the cond
 — blog · posted 2021-07 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022-2/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified. QTE at D. E. Shaw India is a quality/test engineering track, so despite the quant-adjacent employer this is not a trading or research assessment; the write-up itself is unusually specific, 
 
-### Q650 · Tier B · unknown · phone_technical
+### Q641 · Tier B · unknown · phone_technical
 
 We go from our house to the office and back, it is given that the traffic lights are always red whenever you encounter them. Now while going from your house to the office, you stop two times but while returning home from the office you stop only once. How is this situation possible.
 
@@ -6330,7 +6256,7 @@ We go from our house to the office and back, it is given that the traffic lights
 — blog · posted 2021-07 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022-2/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified. QTE at D. E. Shaw India is a quality/test engineering track, so despite the quant-adjacent employer this is not a trading or research assessment; the write-up itself is unusually specific, 
 
-### Q651 · Tier B · unknown · phone_technical
+### Q642 · Tier B · unknown · phone_technical
 
 There is an N-floor building and you have one egg. You need to find the lowest floor from which the egg breaks on dropping. Follow-up: what is the most optimal method with 2 eggs?
 
@@ -6340,7 +6266,7 @@ There is an N-floor building and you have one egg. You need to find the lowest f
 — blog · posted 2021-07 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022-2/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified. QTE at D. E. Shaw India is a quality/test engineering track, so despite the quant-adjacent employer this is not a trading or research assessment; the write-up itself is unusually specific, 
 
-### Q652 · Tier B · unknown · phone_technical
+### Q643 · Tier B · unknown · phone_technical
 
 Which of the two is bigger, 50^99 or 99! ? Why?
 
@@ -6350,7 +6276,7 @@ Which of the two is bigger, 50^99 or 99! ? Why?
 — blog · posted 2021-07 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022-2/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified. QTE at D. E. Shaw India is a quality/test engineering track, so despite the quant-adjacent employer this is not a trading or research assessment; the write-up itself is unusually specific, 
 
-### Q653 · Tier B · unknown · phone_technical
+### Q644 · Tier B · unknown · phone_technical
 
 Students each take several courses; build an exam timetable where every student sits at most one exam a day, minimising the number of days
 
@@ -6360,7 +6286,7 @@ Students each take several courses; build an exam timetable where every student 
 — blog · posted 2021-07 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022-2/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified. QTE at D. E. Shaw India is a quality/test engineering track, so despite the quant-adjacent employer this is not a trading or research assessment; the write-up itself is unusually specific, 
 
-### Q654 · Tier B · unknown · phone_technical (DBMS block)
+### Q645 · Tier B · unknown · phone_technical (DBMS block)
 
 Explain 1NF, 2NF, 3NF using a university database example; write the query to find the maximum salary for every department
 
@@ -6368,7 +6294,7 @@ Explain 1NF, 2NF, 3NF using a university database example; write the query to fi
 — blog · posted 2021-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-interview-experience-for-summer-intern-2022-on-campus/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified, and the three OA questions are paraphrased by the writer ('the gist was') rather than transcribed. India SDE internship track, not quant research.
 
-### Q655 · Tier B · unknown · phone_technical
+### Q646 · Tier B · unknown · phone_technical
 
 Code Kadane's algorithm and dry-run it on an example, then the k-th largest sum contiguous subarray follow-up
 
@@ -6376,7 +6302,7 @@ Code Kadane's algorithm and dry-run it on an example, then the k-th largest sum 
 — blog · posted 2021-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-interview-experience-for-summer-intern-2022-on-campus/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified, and the three OA questions are paraphrased by the writer ('the gist was') rather than transcribed. India SDE internship track, not quant research.
 
-### Q656 · Tier B · unknown · phone_technical
+### Q647 · Tier B · unknown · phone_technical
 
 How would you implement your own vector (dynamic array) in C++, with add, delete, search and access and their time complexities?
 
@@ -6384,7 +6310,7 @@ How would you implement your own vector (dynamic array) in C++, with add, delete
 — blog · posted 2020-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-internship-interview-experience-on-campus-2021-2/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified; the OA question statements are the writer's recollection weeks later. India SDE internship, so nothing here speaks to the quant tracks.
 
-### Q657 · Tier B · unknown · phone_technical
+### Q648 · Tier B · unknown · phone_technical
 
 Merge two unsorted arrays of size n and m without extra space
 
@@ -6392,7 +6318,7 @@ Merge two unsorted arrays of size n and m without extra space
 — blog · posted 2020-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-internship-interview-experience-on-campus-2021-2/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified; the OA question statements are the writer's recollection weeks later. India SDE internship, so nothing here speaks to the quant tracks.
 
-### Q658 · Tier B · unknown · phone_technical
+### Q649 · Tier B · unknown · phone_technical
 
 Calculate the time to process 1 billion instructions, given the time for each cycle
 
@@ -6400,7 +6326,7 @@ Calculate the time to process 1 billion instructions, given the time for each cy
 — blog · posted 2020-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-internship-interview-experience-on-campus-2021-2/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified; the OA question statements are the writer's recollection weeks later. India SDE internship, so nothing here speaks to the quant tracks.
 
-### Q659 · Tier B · unknown · phone_technical
+### Q650 · Tier B · unknown · phone_technical
 
 Implement a Python-style list (which can hold different types of data in one list) in C++
 
@@ -6408,7 +6334,7 @@ Implement a Python-style list (which can hold different types of data in one lis
 — blog · posted 2020-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-internship-interview-experience-on-campus-2021-2/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified; the OA question statements are the writer's recollection weeks later. India SDE internship, so nothing here speaks to the quant tracks.
 
-### Q660 · Tier B · unknown · phone_technical (HackerRank CodePair, scheduled 1 hour but ran 1hr 30min, two interview)
+### Q651 · Tier B · unknown · phone_technical (HackerRank CodePair, scheduled 1 hour but ran 1hr 30min, two interview)
 
 Given a regex built from \d, \w, $, ^, + and *, generate as many kinds of matching strings as possible
 
@@ -6418,7 +6344,7 @@ Given a regex built from \d, \w, $, ^, + and *, generate as many kinds of matchi
 — blog · posted 2020-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-summer-internship-interview-experience-2021-on-campus-vit-vellore/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified; the writer flags their own paraphrasing ('the gist was'). Quality & Test Engineering intern at D. E. Shaw India, so this is not a quant assessment even though the employer is in the shard.
 
-### Q661 · Tier B · unknown · phone_technical
+### Q652 · Tier B · unknown · phone_technical
 
 There are n goods, the i-th of weight wi, and m trucks; load the trucks so each carries almost equal weight
 
@@ -6428,7 +6354,7 @@ There are n goods, the i-th of weight wi, and m trucks; load the trucks so each 
 — blog · posted 2019-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified, and the interview questions are given as a numbered list reconstructed from memory. India SDE internship drive rather than a quant assessment.
 
-### Q662 · Tier B · unknown · phone_technical
+### Q653 · Tier B · unknown · phone_technical
 
 Design a data structure with insert, delete and search in O(1) worst case, then add getRandom in O(1)
 
@@ -6438,7 +6364,7 @@ Design a data structure with insert, delete and search in O(1) worst case, then 
 — blog · posted 2019-08 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus/)
   1 attestation(s) across 1 domain(s) · doubt: User-submitted and unverified, and the interview questions are given as a numbered list reconstructed from memory. India SDE internship drive rather than a quant assessment.
 
-### Q663 · Tier B · unknown · phone_technical (30-minute first-round video interview; a writing sample is required wi)
+### Q654 · Tier B · unknown · phone_technical (30-minute first-round video interview; a writing sample is required wi)
 
 First-round 30-minute video interview mixing behavioural questions and brain teasers
 
@@ -6446,7 +6372,7 @@ First-round 30-minute video interview mixing behavioural questions and brain tea
 — wso · posted 2026-02 · full_text · [link](https://www.wallstreetoasis.com/company/de-shaw/interview/associate-0)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. The title 'Associate
 
-### Q664 · Tier B · unknown · phone_technical
+### Q655 · Tier B · unknown · phone_technical
 
 CV-related and behavioural/situational questions from a recruiter, answered with the STAR framework
 
@@ -6454,7 +6380,7 @@ CV-related and behavioural/situational questions from a recruiter, answered with
 — wso · posted 2025-05 · full_text · [link](https://www.wallstreetoasis.com/company/de-shaw/interview/summer-intern-0)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. The submission does 
 
-### Q665 · Tier B · unknown · phone_technical (Live code editor with video call; 3 questions: 2 coding and 1 puzzle; )
+### Q656 · Tier B · unknown · phone_technical (Live code editor with video call; 3 questions: 2 coding and 1 puzzle; )
 
 You are given data for 5 years for 50 cities. Data Includes city name, date, minimum temperature, maximum temperature. You need to predict the data structure required to answer the following queries: a) Hottest city on a given date b) Coldest city on a given date c) Hottest city in entire period d) Coldest city in entire period e)Hottest day of entire period f) Coldest day of entire period
 
@@ -6462,7 +6388,7 @@ You are given data for 5 years for 50 cities. Data Includes city name, date, min
 — blog · posted 2021 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experienceon-campus-internship-2021/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks accepts interview experiences from anyone and does not verify that the writer sat the interview; the site also rewards contributions, and the write-ups are edited by GFG staff, so wording may not be the can
 
-### Q666 · Tier B · unknown · phone_technical
+### Q657 · Tier B · unknown · phone_technical
 
 You have N machines which produce bolts (each bolt weighing exactly 10 gm) with one machine which is defective and produces bolts of 9 grams. You are given an electronic weighing machine. You need to use the machine minimum number of times and tell which machine is faulty. What is the minimum number of times you will use the machine
 
@@ -6470,7 +6396,7 @@ You have N machines which produce bolts (each bolt weighing exactly 10 gm) with 
 — blog · posted 2021 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experienceon-campus-internship-2021/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks accepts interview experiences from anyone and does not verify that the writer sat the interview; the site also rewards contributions, and the write-ups are edited by GFG staff, so wording may not be the can
 
-### Q667 · Tier B · unknown · phone_technical (60 minutes, two interviewers)
+### Q658 · Tier B · unknown · phone_technical (60 minutes, two interviewers)
 
 There are two traffic lights between your house and office. While going from your house to the office, you stop two times but while returning home from the office you stop only once. Given that the traffic lights are always red whenever you encounter them, how is this situation possible.
 
@@ -6480,7 +6406,7 @@ There are two traffic lights between your house and office. While going from you
 — blog · posted 2022 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks accepts interview experiences from anyone and does not verify that the writer sat the interview; the site also rewards contributions, and the write-ups are edited by GFG staff, so wording may not be the can
 
-### Q668 · Tier B · unknown · phone_technical
+### Q659 · Tier B · unknown · phone_technical
 
 There is a 100-floor building and you have one egg. You need to find the lowest floor from which the egg breaks on dropping.
 
@@ -6490,7 +6416,7 @@ There is a 100-floor building and you have one egg. You need to find the lowest 
 — blog · posted 2022 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks accepts interview experiences from anyone and does not verify that the writer sat the interview; the site also rewards contributions, and the write-ups are edited by GFG staff, so wording may not be the can
 
-### Q669 · Tier B · unknown · phone_technical
+### Q660 · Tier B · unknown · phone_technical
 
 Given an integer n you can perform the following two operations any number of times : (i) decrement n by 1 or (ii) divide n by any of its factors except self. Find the minimum number of operations to convert n to 0.
 
@@ -6498,7 +6424,7 @@ Given an integer n you can perform the following two operations any number of ti
 — blog · posted 2022 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks accepts interview experiences from anyone and does not verify that the writer sat the interview; the site also rewards contributions, and the write-ups are edited by GFG staff, so wording may not be the can
 
-### Q670 · Tier B · unknown · phone_technical
+### Q661 · Tier B · unknown · phone_technical
 
 Given a linked list and a node, how will you delete that node from the linked list? He asked me to explain my approach when I had a pointer to the start of the linked list as well as when I only had the pointer to the node to be deleted.
 
@@ -6506,7 +6432,7 @@ Given a linked list and a node, how will you delete that node from the linked li
 — blog · posted 2022 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks accepts interview experiences from anyone and does not verify that the writer sat the interview; the site also rewards contributions, and the write-ups are edited by GFG staff, so wording may not be the can
 
-### Q671 · Tier B · unknown · phone_technical (60 minutes, two interviewers)
+### Q662 · Tier B · unknown · phone_technical (60 minutes, two interviewers)
 
 Given a binary tree, first, print its left side view then its right side view. Print the root node only once.
 
@@ -6516,7 +6442,7 @@ Given a binary tree, first, print its left side view then its right side view. P
 — blog · posted 2022 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks accepts interview experiences from anyone and does not verify that the writer sat the interview; the site also rewards contributions, and the write-ups are edited by GFG staff, so wording may not be the can
 
-### Q672 · Tier B · unknown · phone_technical
+### Q663 · Tier B · unknown · phone_technical
 
 You are given a function getManager(int id) which returns the manager of the employee whose id is passed. You need to implement a function getCManager(int id1, int id2) which should return the lowest common manager of the two employees whose id is passed. You are not provided with the actual tree structure, only the getManager function.
 
@@ -6526,7 +6452,7 @@ You are given a function getManager(int id) which returns the manager of the emp
 — blog · posted 2022 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks accepts interview experiences from anyone and does not verify that the writer sat the interview; the site also rewards contributions, and the write-ups are edited by GFG staff, so wording may not be the can
 
-### Q673 · Tier B · unknown · phone_technical
+### Q664 · Tier B · unknown · phone_technical
 
 Given a sum and you have to find the no. of ways to form that sum using only consecutive numbers. For ex: sum = 21 ... Ans: 3 (total counts)
 
@@ -6536,7 +6462,7 @@ Given a sum and you have to find the no. of ways to form that sum using only con
 — blog · posted 2020 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-internship-interview-experience-on-campus-2020/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks accepts interview experiences from anyone and does not verify that the writer sat the interview; the site also rewards contributions, and the write-ups are edited by GFG staff, so wording may not be the can
 
-### Q674 · Tier B · unknown · phone_technical
+### Q665 · Tier B · unknown · phone_technical
 
 We have given a chessboard and there are two pieces on that one is a knight and the other is the bishop. And at last, we have to tell if the Knight can reach the given position or not. They told me to block the movement of the bishop by the positions of the knight.
 
@@ -6544,7 +6470,7 @@ We have given a chessboard and there are two pieces on that one is a knight and 
 — blog · posted 2020 · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-internship-interview-experience-on-campus-2020/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks accepts interview experiences from anyone and does not verify that the writer sat the interview; the site also rewards contributions, and the write-ups are edited by GFG staff, so wording may not be the can
 
-### Q675 · Tier B · unknown · phone_technical
+### Q666 · Tier B · unknown · phone_technical
 
 you have given bombs and you have to find the min intensity of all the bombs such that you can skip max 2 bombs.
 
@@ -6557,7 +6483,7 @@ you have given bombs and you have to find the min intensity of all the bombs suc
 
 ## D. E. Shaw — online_assessment
 
-### Q676 · Tier C · unknown · online_assessment (The test was for 100 marks with 90 minutes time limit; Programming Sec)
+### Q667 · Tier C · unknown · online_assessment (The test was for 100 marks with 90 minutes time limit; Programming Sec)
 
 Another one was about finding kth permutation of a string (k<=1e9).
 
@@ -6565,7 +6491,7 @@ Another one was about finding kth permutation of a string (k<=1e9).
 — blog · posted unknown · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-off-campus-fresher-interview-experience/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks 'interview experiences' posts are user-submitted and unverified by the site; this is also D. E. Shaw India's technology/software track, NOT the US quant researcher or trader pipeline, so it should not be re
 
-### Q677 · Tier C · unknown · online_assessment (This test had 26 MCQs (14 aptitude + 12 technical) and 2 coding Questi)
+### Q668 · Tier C · unknown · online_assessment (This test had 26 MCQs (14 aptitude + 12 technical) and 2 coding Questi)
 
 Coding Question One: This question was similar to Maximum Sum choosing Non-adjacent elements. Coding Question Two: This question was similar to Minimum points required to reach the end of the grid.
 
@@ -6576,7 +6502,7 @@ Coding Question One: This question was similar to Maximum Sum choosing Non-adjac
 
 ## D. E. Shaw — phone_technical
 
-### Q678 · Tier C · unknown · phone_technical (CodePair Round, 1.5 hr, two programming questions)
+### Q669 · Tier C · unknown · phone_technical (CodePair Round, 1.5 hr, two programming questions)
 
 find the number of ways a given number can be expressed as a sum of more than 1 consecutive natural numbers
 
@@ -6584,7 +6510,7 @@ find the number of ways a given number can be expressed as a sum of more than 1 
 — blog · posted unknown · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-off-campus-fresher-interview-experience/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks 'interview experiences' posts are user-submitted and unverified by the site; this is also D. E. Shaw India's technology/software track, NOT the US quant researcher or trader pipeline, so it should not be re
 
-### Q679 · Tier C · unknown · phone_technical (second of two programming questions in the 1.5 hr CodePair round)
+### Q670 · Tier C · unknown · phone_technical (second of two programming questions in the 1.5 hr CodePair round)
 
 Given a matrix(n * m) and a queen positioned at (n-1,m/2). Find the number of ways in which the queen can reach cell no. (x,y) in minimum number of moves. There were Q queries of (x,y). The queen can move in any of the eight valid directions in one move. Preprocessing of O(n2) was allowed and queries were supposed to be answered in O(1).
 
@@ -6592,7 +6518,7 @@ Given a matrix(n * m) and a queen positioned at (n-1,m/2). Find the number of wa
 — blog · posted unknown · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-off-campus-fresher-interview-experience/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks 'interview experiences' posts are user-submitted and unverified by the site; this is also D. E. Shaw India's technology/software track, NOT the US quant researcher or trader pipeline, so it should not be re
 
-### Q680 · Tier C · unknown · phone_technical (Round 2, 1 hr, on HackerRank CodePair; one programming question plus D)
+### Q671 · Tier C · unknown · phone_technical (Round 2, 1 hr, on HackerRank CodePair; one programming question plus D)
 
 Given stock prizes for N days. Each day you could either buy a stock or sell some/all of the stocks you have purchased previously. It is also allowed to not perform any operation for a day. Buying a stock will count as a negative addition to profit and selling will count as a positive addition to the profit. Find the maximum profit that could be achieved given the Stock prizes for N days. Example : [1,5,2,100,3,2]
 
@@ -6602,7 +6528,7 @@ Given stock prizes for N days. Each day you could either buy a stock or sell som
 — blog · posted unknown · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-off-campus-fresher-interview-experience/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks 'interview experiences' posts are user-submitted and unverified by the site; this is also D. E. Shaw India's technology/software track, NOT the US quant researcher or trader pipeline, so it should not be re
 
-### Q681 · Tier C · unknown · phone_technical (DBMS/OS/project questions after the coding question)
+### Q672 · Tier C · unknown · phone_technical (DBMS/OS/project questions after the coding question)
 
 What is a Composite Index? How does it work?
 
@@ -6610,7 +6536,7 @@ What is a Composite Index? How does it work?
 — blog · posted unknown · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-off-campus-fresher-interview-experience/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks 'interview experiences' posts are user-submitted and unverified by the site; this is also D. E. Shaw India's technology/software track, NOT the US quant researcher or trader pipeline, so it should not be re
 
-### Q682 · Tier C · unknown · phone_technical (DBMS/OS/project questions after the coding question)
+### Q673 · Tier C · unknown · phone_technical (DBMS/OS/project questions after the coding question)
 
 What is the significance of on condition in an outer join?
 
@@ -6618,7 +6544,7 @@ What is the significance of on condition in an outer join?
 — blog · posted unknown · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-off-campus-fresher-interview-experience/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks 'interview experiences' posts are user-submitted and unverified by the site; this is also D. E. Shaw India's technology/software track, NOT the US quant researcher or trader pipeline, so it should not be re
 
-### Q683 · Tier C · unknown · phone_technical (Round 3, 1.5 hr, on HackerRank CodePair)
+### Q674 · Tier C · unknown · phone_technical (Round 3, 1.5 hr, on HackerRank CodePair)
 
 Design and implement a class that can be used to allocate and de-allocate a certain amount of memory blocks. The class will initially have a fixed block of memory which will only be used to allocate memory. Say 1024 blocks.
 
@@ -6626,7 +6552,7 @@ Design and implement a class that can be used to allocate and de-allocate a cert
 — blog · posted unknown · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-off-campus-fresher-interview-experience/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks 'interview experiences' posts are user-submitted and unverified by the site; this is also D. E. Shaw India's technology/software track, NOT the US quant researcher or trader pipeline, so it should not be re
 
-### Q684 · Tier C · unknown · phone_technical (open-ended design discussion in Round 3)
+### Q675 · Tier C · unknown · phone_technical (open-ended design discussion in Round 3)
 
 Given a file consisting of millions of records. The data is in a structured format i.e in a tabular format with each record consisting of many attributes. How will you perform search operation on the file given the file is stored in secondary memory? Optimize it.
 
@@ -6634,7 +6560,7 @@ Given a file consisting of millions of records. The data is in a structured form
 — blog · posted unknown · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-off-campus-fresher-interview-experience/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks 'interview experiences' posts are user-submitted and unverified by the site; this is also D. E. Shaw India's technology/software track, NOT the US quant researcher or trader pipeline, so it should not be re
 
-### Q685 · Tier C · unknown · phone_technical (Round 3 CS-fundamentals probing)
+### Q676 · Tier C · unknown · phone_technical (Round 3 CS-fundamentals probing)
 
 What is a Trie Data Structure? Explain it's node structure and working? What is it's applications?How will you optimize the memory usage in Trie?
 
@@ -6642,7 +6568,7 @@ What is a Trie Data Structure? Explain it's node structure and working? What is 
 — blog · posted unknown · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-off-campus-fresher-interview-experience/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks 'interview experiences' posts are user-submitted and unverified by the site; this is also D. E. Shaw India's technology/software track, NOT the US quant researcher or trader pipeline, so it should not be re
 
-### Q686 · Tier C · unknown · phone_technical (Round 3, described by the poster as 'A simple Game Theory question')
+### Q677 · Tier C · unknown · phone_technical (Round 3, described by the poster as 'A simple Game Theory question')
 
 A simple Game Theory question: Given Two Players A and B separated by N number of tiles. In a move, each one can move one or two-step ahead. Who will win if player A starts and each one plays alternately and optimally. The player who is not able to make any move losses the game.
 
@@ -6652,7 +6578,7 @@ A simple Game Theory question: Given Two Players A and B separated by N number o
 — blog · posted unknown · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-off-campus-fresher-interview-experience/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks 'interview experiences' posts are user-submitted and unverified by the site; this is also D. E. Shaw India's technology/software track, NOT the US quant researcher or trader pipeline, so it should not be re
 
-### Q687 · Tier C · unknown · phone_technical (Codepair Round, 60 mins; 'The number of questions asked in this test w)
+### Q678 · Tier C · unknown · phone_technical (Codepair Round, 60 mins; 'The number of questions asked in this test w)
 
 First Question(Cakewalk) : Given two numbers 'a' and 'b' having equal number of digits. The task is to find the minimum number of moves required to convert 'a' to 'b'. In on move you can increment or decrement any digit of 'a' by 1. For example: a = 45, b = 34, Answer = 2 (Increment 4 by 1 and decrement 5 by 1).
 
@@ -6660,7 +6586,7 @@ First Question(Cakewalk) : Given two numbers 'a' and 'b' having equal number of 
 — blog · posted unknown · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experience-for-2021-internship-on-campus/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks 'interview experiences' posts are user-submitted and unverified by the site; this is also D. E. Shaw India's technology/software track, NOT the US quant researcher or trader pipeline, so it should not be re
 
-### Q688 · Tier C · unknown · phone_technical (second question of the 60-minute Codepair round, labelled 'Open ended')
+### Q679 · Tier C · unknown · phone_technical (second question of the 60-minute Codepair round, labelled 'Open ended')
 
 Second Question(Open ended) : There are many telecom towers in a region, each tower have a certain signal range and bandwidth range. However for every pair of towers having an overlapping signal range, there should not be any point which is lying in the bandwidth range of both the towers (i.e. their bandwidth ranges should not overlap each other). The task is to find the minimum number of unique bandwidth ranges which we can use to assign all the towers.
 
@@ -6670,7 +6596,7 @@ Second Question(Open ended) : There are many telecom towers in a region, each to
 — blog · posted unknown · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experience-for-2021-internship-on-campus/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks 'interview experiences' posts are user-submitted and unverified by the site; this is also D. E. Shaw India's technology/software track, NOT the US quant researcher or trader pipeline, so it should not be re
 
-### Q689 · Tier C · unknown · phone_technical (third question of the 60-minute Codepair round, labelled by the poster)
+### Q680 · Tier C · unknown · phone_technical (third question of the 60-minute Codepair round, labelled by the poster)
 
 Third Question(Maths and Bitwise Operators) : You are given a method which can generate 0 and 1 with 50% probability. You need to design a new method which can generate 0 with 75% and 1 with 25% probability using the given method.
 
@@ -6680,7 +6606,7 @@ Third Question(Maths and Bitwise Operators) : You are given a method which can g
 — blog · posted unknown · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experience-for-2021-internship-on-campus/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks 'interview experiences' posts are user-submitted and unverified by the site; this is also D. E. Shaw India's technology/software track, NOT the US quant researcher or trader pipeline, so it should not be re
 
-### Q690 · Tier C · unknown · phone_technical (Final round, 60 mins, Codepair; first of two questions)
+### Q681 · Tier C · unknown · phone_technical (Final round, 60 mins, Codepair; first of two questions)
 
 You are a given a text written in JSON ... Now he asked me to design a structure which can store this information from this code and answer the queries efficiently. For example if the query is A.B.C then answer will be {D:45}, similarly if the query is A.C.B then answer will be 98, formally I have to return all the information inside the given path or determine that the given path is invalid. An invalid path means a path which does not exists for example B.A
 
@@ -6690,7 +6616,7 @@ You are a given a text written in JSON ... Now he asked me to design a structure
 — blog · posted unknown · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experience-for-2021-internship-on-campus/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks 'interview experiences' posts are user-submitted and unverified by the site; this is also D. E. Shaw India's technology/software track, NOT the US quant researcher or trader pipeline, so it should not be re
 
-### Q691 · Tier C · unknown · phone_technical (last question of the final round)
+### Q682 · Tier C · unknown · phone_technical (last question of the final round)
 
 Second Question : This was the last question of the final round and it was based on DBMS. Given an employee table, find all data of the employee having maximum salary.
 
@@ -6698,7 +6624,7 @@ Second Question : This was the last question of the final round and it was based
 — blog · posted unknown · full_text · [link](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experience-for-2021-internship-on-campus/)
   1 attestation(s) across 1 domain(s) · doubt: GeeksforGeeks 'interview experiences' posts are user-submitted and unverified by the site; this is also D. E. Shaw India's technology/software track, NOT the US quant researcher or trader pipeline, so it should not be re
 
-### Q692 · Tier D · 2025 · phone_technical (post recording that content is hidden (not a question))
+### Q683 · Tier D · 2025 · phone_technical (post recording that content is hidden (not a question))
 
 有猎头reach out就面了一下de shaw 的swe genAI 岗位不知道大家对于这种公司的swe或者AI岗位有什么了解。**** 本内容被作者隐藏 ****目前面下来感觉也没有很难,
 
@@ -6708,7 +6634,7 @@ Second Question : This was the last question of the final round and it was based
 — chat_telegram · posted 2025-11-25 · full_text · [link](https://t.me/usinterview/26465)
   1 attestation(s) across 1 domain(s) · doubt: NO QUESTION CONTENT. This is the only D. E. Shaw recall in the entire Telegram mirror with any readable text, and its substance is explicitly hidden by the author ("**** 本内容被作者隐藏 ****"). It is recorded so the file shows 
 
-### Q693 · Tier D · 2022 · phone_technical (the first technical question after the background discussion)
+### Q684 · Tier D · 2022 · phone_technical (the first technical question after the background discussion)
 
 然后开始问memorization,问什么东西可以given the same input,always give the same output
 
@@ -6718,7 +6644,7 @@ Second Question : This was the last question of the final round and it was based
 — chat_telegram · posted 2022-08-08 · full_text · [link](https://t.me/usinterview/14214)
   1 attestation(s) across 1 domain(s) · doubt: The poster writes "memorization" where the context (same input always yields the same output) indicates memo[i]zation and pure functions; I have transcribed their spelling and flagged it rather than silently correcting i
 
-### Q694 · Tier D · 2020 · phone_technical (asked after the project discussion)
+### Q685 · Tier D · 2020 · phone_technical (asked after the project discussion)
 
 然后问了个问题: what is the most surprising thing you find when you use
 
@@ -6728,7 +6654,7 @@ Second Question : This was the last question of the final round and it was based
 — chat_telegram · posted 2020-09-07 · full_text · [link](https://t.me/usinterview/3138)
   1 attestation(s) across 1 domain(s) · doubt: The preview breaks off on the word "use", so the object of the question — what tool, language or system the candidate was being asked about — is missing, and that object is the whole question. Kept only as evidence that 
 
-### Q695 · Tier D · 2020 · phone_technical (the bulk of the call)
+### Q686 · Tier D · 2020 · phone_technical (the bulk of the call)
 
 面试官问了很多distributed system fundamental design principles / projects deep dive
 
@@ -6738,7 +6664,7 @@ Second Question : This was the last question of the final round and it was based
 — chat_telegram · posted 2020-07-20 · full_text · [link](https://t.me/usinterview/2595)
   1 attestation(s) across 1 domain(s) · doubt: A summary of subject matter, not a question — "a lot about distributed system fundamental design principles" identifies no individual prompt. The round is also plainly tailored to this candidate's own background, so it s
 
-### Q696 · Tier D · 2026 · phone_technical (the one technical question in an otherwise behavioural round)
+### Q687 · Tier D · 2026 · phone_technical (the one technical question in an otherwise behavioural round)
 
 唯一有效问题针对AI问了对于expensive but fast token vs. cheap but slow t
 
@@ -6748,7 +6674,7 @@ Second Question : This was the last question of the final round and it was based
 — chat_telegram · posted 2026-04-03 · full_text · [link](https://t.me/usinterview/27858)
   1 attestation(s) across 1 domain(s) · doubt: Two problems. First, the preview is cut off mid-word at "slow t", so the actual question about the fast/expensive versus slow/cheap token trade-off — what is to be decided, and on what basis — is missing. Second, the for
 
-### Q697 · Tier D · unknown · phone_technical
+### Q688 · Tier D · unknown · phone_technical
 
 Find the median of an unsorted list.
 
@@ -6756,7 +6682,7 @@ Find the median of an unsorted list.
 — blog · posted 2017-09-01 · full_text · [link](https://www.jointaro.com/interviews/companies/de-shaw/experiences/software-engineerinternship-united-states-september-1-2017-no-offer-neutral-27ce4b39)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q698 · Tier D · unknown · phone_technical
+### Q689 · Tier D · unknown · phone_technical
 
 Implement a Python list in C
 
@@ -6769,7 +6695,7 @@ Implement a Python list in C
 
 ## D. E. Shaw — take_home
 
-### Q699 · Tier D · 2025 · take_home (first of the two take-home tasks)
+### Q690 · Tier D · 2025 · take_home (first of the two take-home tasks)
 
 Take Home Coding Test-Addition on big numbers
 
@@ -6779,7 +6705,7 @@ Take Home Coding Test-Addition on big numbers
 — chat_telegram · posted 2025-05-17 · full_text · [link](https://t.me/usinterview/23220)
   1 attestation(s) across 1 domain(s) · doubt: A task title only — no bound on the size of the operands, no statement about whether library big-integer types are barred (which is the only thing that makes this a question), and no interface. The Telegram link preview 
 
-### Q700 · Tier D · 2025 · take_home (second of the two take-home tasks)
+### Q691 · Tier D · 2025 · take_home (second of the two take-home tasks)
 
 Calculate Volume weighted average price (VWAP)
 
@@ -6792,7 +6718,7 @@ Calculate Volume weighted average price (VWAP)
 
 ## DRW — online_assessment
 
-### Q701 · Tier B · unknown · online_assessment (OA consisting of math, statistics, and probability theory)
+### Q692 · Tier B · unknown · online_assessment (OA consisting of math, statistics, and probability theory)
 
 one question was about markov chains but I don't remember any other specific ones
 
@@ -6800,7 +6726,7 @@ one question was about markov chains but I don't remember any other specific one
 — wso · posted 2026-01-11 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview)
   1 attestation(s) across 1 domain(s) · doubt: Poster explicitly cannot recall the question, only its topic, so this is topic-level evidence only.
 
-### Q702 · Tier B · unknown · online_assessment (6 hard math questions, one of which the candidate found impossible)
+### Q693 · Tier B · unknown · online_assessment (6 hard math questions, one of which the candidate found impossible)
 
 First an online test consisting of 6 hard math questions, ranging from fundamental linear algebra, statistics and calculus. One of the questions is impossible to solve, left it blank.
 
@@ -6808,7 +6734,7 @@ First an online test consisting of 6 hard math questions, ranging from fundament
 — wso · posted 2025-10-24 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview)
   1 attestation(s) across 1 domain(s) · doubt: Section-level description of the OA rather than an individual question; corroborates the '6 questions' format but names no specific problem.
 
-### Q703 · Tier B · unknown · online_assessment
+### Q694 · Tier B · unknown · online_assessment
 
 Online assessment involving mathematics questions and brainteasers (linear algebra, matrix calculations, statistics + markov chains, probability brainteasers etc.)
 
@@ -6816,7 +6742,7 @@ Online assessment involving mathematics questions and brainteasers (linear algeb
 — wso · posted 2025-10-12 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview)
   1 attestation(s) across 1 domain(s) · doubt: Topic inventory of the OA, not an individual question; kept because it independently corroborates the markov-chain/linear-algebra content of DRW's math OA.
 
-### Q704 · Tier B · unknown · online_assessment (four questions: two lc medium and two lc hard (dp))
+### Q695 · Tier B · unknown · online_assessment (four questions: two lc medium and two lc hard (dp))
 
 I was sent an OA with four questions which consisted of two lc medium and two lc hard (dp) problem.
 
@@ -6824,7 +6750,7 @@ I was sent an OA with four questions which consisted of two lc medium and two lc
 — wso · posted 2024-11-08 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview)
   1 attestation(s) across 1 domain(s) · doubt: Difficulty-level description only; no problem content, so useful for format calibration but not as a question.
 
-### Q705 · Tier B · unknown · online_assessment (two questions, 70 minutes)
+### Q696 · Tier B · unknown · online_assessment (two questions, 70 minutes)
 
 One is about k-NN, and the other one is solving a math question by coding.
 
@@ -6832,7 +6758,7 @@ One is about k-NN, and the other one is solving a math question by coding.
 — blog · posted 2025-01-20 · full_text · [link](https://www.jointaro.com/interviews/companies/drw/experiences/mlai-intern-montreal-quebec-january-20-2025-no-offer-positive-695f9af6)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q706 · Tier B · unknown · online_assessment (two questions, 3 days to complete; first LeetCode easy on trees, secon)
+### Q697 · Tier B · unknown · online_assessment (two questions, 3 days to complete; first LeetCode easy on trees, secon)
 
 Q: Maximum product subarray with a twist.
 
@@ -6840,7 +6766,7 @@ Q: Maximum product subarray with a twist.
 — blog · posted 2020-10-26 · full_text · [link](https://www.jointaro.com/interviews/companies/drw/experiences/software-developer-internship-united-states-october-26-2020-no-offer-positive-c5788f0d)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q707 · Tier B · unknown · online_assessment (3 questions within 150 minutes)
+### Q698 · Tier B · unknown · online_assessment (3 questions within 150 minutes)
 
 OA LeetCode medium-hard: 3 questions within 150 minutes.
 
@@ -6848,7 +6774,7 @@ OA LeetCode medium-hard: 3 questions within 150 minutes.
 — blog · posted 2023-01-01 · full_text · [link](https://www.jointaro.com/interviews/companies/drw/experiences/devops-intern-canada-january-1-2023-no-offer-neutral-b27d6b21)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q708 · Tier B · unknown · online_assessment (2.5 hours for three coding challenges; candidate writes their own test)
+### Q699 · Tier B · unknown · online_assessment (2.5 hours for three coding challenges; candidate writes their own test)
 
 Graph, shortest path. (I didn't know how to do this one)
 
@@ -6856,7 +6782,7 @@ Graph, shortest path. (I didn't know how to do this one)
 — blog · posted 2023-01-01 · full_text · [link](https://www.jointaro.com/interviews/companies/drw/experiences/devops-intern-canada-january-1-2023-no-offer-neutral-81b41a8f)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q709 · Tier B · unknown · online_assessment
+### Q700 · Tier B · unknown · online_assessment
 
 Got a online assesment which consisted of math, statistics, and probability theory (eg. one question was about markov chains but I don't remember any other specific ones).
 
@@ -6864,7 +6790,7 @@ Got a online assesment which consisted of math, statistics, and probability theo
 — wso · posted 2026-01-11 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview)
   1 attestation(s) across 1 domain(s) · doubt: Wall Street Oasis interview entries are anonymous and unverified by the site, and this one is a company roll-up page whose displayed sample of entries can change, so a later re-fetch may not show it. The poster explicitl
 
-### Q710 · Tier B · unknown · online_assessment
+### Q701 · Tier B · unknown · online_assessment
 
 eg. one question was about markov chains but I don't remember any other specific ones
 
@@ -6872,7 +6798,7 @@ eg. one question was about markov chains but I don't remember any other specific
 — wso · posted 2026-10 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview entries are anonymous and unverified; the poster writes them up months after the fact (the 'Date Submitted' here trails the interview month), so wording is recalled rather than transcribed. The poster says 
 
-### Q711 · Tier B · unknown · online_assessment (some easy some really tough. Need to get 5/6 to pass, maybe 6/6 correc)
+### Q702 · Tier B · unknown · online_assessment (some easy some really tough. Need to get 5/6 to pass, maybe 6/6 correc)
 
 OA with 6 probability questions, some easy some really tough. Need to get 5/6 to pass, maybe 6/6 correct.
 
@@ -6880,7 +6806,7 @@ OA with 6 probability questions, some easy some really tough. Need to get 5/6 to
 — glassdoor · posted 2025-04-17 · full_text · [link](https://www.glassdoor.com/Interview/DRW-Interview-Questions-E235115.htm)
   1 attestation(s) across 1 domain(s) · doubt: Glassdoor entries are anonymous and self-reported with no verification. Glassdoor blocks direct fetching from this box; this text arrived as a complete page-text dump from the search tool and was saved into the verifier 
 
-### Q712 · Tier B · unknown · online_assessment (30 mins, 4 questions, pen and paper, no coding)
+### Q703 · Tier B · unknown · online_assessment (30 mins, 4 questions, pen and paper, no coding)
 
 4 pretty difficult probability and linear algebra questions (DRW QR online test, 30 minutes, pen and paper, no coding).
 
@@ -6888,7 +6814,7 @@ OA with 6 probability questions, some easy some really tough. Need to get 5/6 to
 — quantnet · posted 2020-09 · full_text · [link](https://quantnet.com/threads/technical-test-at-top-prop-shop.18878/)
   1 attestation(s) across 1 domain(s) · doubt: Topic-level recall: the poster names the subject areas that came up on the DRW test rather than reproducing any single question, so this documents test composition, not a question. Recalled roughly two years after the fa
 
-### Q713 · Tier B · unknown · online_assessment (Like 13 questions I think with around 30 minutes)
+### Q704 · Tier B · unknown · online_assessment (Like 13 questions I think with around 30 minutes)
 
 Stochastic processes (Markov), linear algebra, brain teaser, probability and other maths — around 13 questions in about 30 minutes on the DRW quantitative research online test.
 
@@ -6896,7 +6822,7 @@ Stochastic processes (Markov), linear algebra, brain teaser, probability and oth
 — quantnet · posted 2020-09 · full_text · [link](https://quantnet.com/threads/technical-test-at-top-prop-shop.18878/)
   1 attestation(s) across 1 domain(s) · doubt: Topic-level recall: the poster names the subject areas that came up on the DRW test rather than reproducing any single question, so this documents test composition, not a question. The poster explicitly hedges ('I could 
 
-### Q714 · Tier B · unknown · online_assessment
+### Q705 · Tier B · unknown · online_assessment
 
 Mostly probability and statistics, plus the technicality behind machine learning models and how to interpret the results — conditional probability, Bayes theorem, Markov chain, linear algebra and basic calculus.
 
@@ -6904,7 +6830,7 @@ Mostly probability and statistics, plus the technicality behind machine learning
 — quantnet · posted 2020-09 · full_text · [link](https://quantnet.com/threads/technical-test-at-top-prop-shop.18878/)
   1 attestation(s) across 1 domain(s) · doubt: Topic-level recall: the poster names the subject areas that came up on the DRW test rather than reproducing any single question, so this documents test composition, not a question. Poster is deliberately vague, possibly 
 
-### Q715 · Tier B · unknown · online_assessment (two questions)
+### Q706 · Tier B · unknown · online_assessment (two questions)
 
 The first question was a string based question. I would say that its difficulty was Leetcode medium.
 
@@ -6912,7 +6838,7 @@ The first question was a string based question. I would say that its difficulty 
 — reddit_thread · posted 2020-10-03 · full_text · [link](https://www.reddit.com/r/csMajors/comments/i9t195/drw_codility/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q716 · Tier B · unknown · online_assessment (two questions)
+### Q707 · Tier B · unknown · online_assessment (two questions)
 
 The second question was pretty tricky. I tried to think of a DP based solution but it turned out to be more of a Math oriented problem. Definitely more like a Leetcode medium to hard problem.
 
@@ -6920,7 +6846,7 @@ The second question was pretty tricky. I tried to think of a DP based solution b
 — reddit_thread · posted 2020-10-03 · full_text · [link](https://www.reddit.com/r/csMajors/comments/i9t195/drw_codility/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q717 · Tier B · unknown · online_assessment (2 LC mediums, and one Leetcode Hard)
+### Q708 · Tier B · unknown · online_assessment (2 LC mediums, and one Leetcode Hard)
 
 It was a 2 LC mediums, and one Leetcode Hard. The evaluation of some was on basis of correctness and other on basis of performance.
 
@@ -6928,7 +6854,7 @@ It was a 2 LC mediums, and one Leetcode Hard. The evaluation of some was on basi
 — reddit_thread · posted 2020-09-05 · full_text · [link](https://www.reddit.com/r/csMajors/comments/i9t195/drw_codility/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q718 · Tier B · unknown · online_assessment (new grad SWE OA scoring)
+### Q709 · Tier B · unknown · online_assessment (new grad SWE OA scoring)
 
 You get more points on OA if you write at least 1/3 questions in C++ iirc
 
@@ -6936,7 +6862,7 @@ You get more points on OA if you write at least 1/3 questions in C++ iirc
 — blind · posted 2020-09-01 · full_text · [link](https://www.teamblind.com/post/DRW-phone-interview-qPFU5TMW)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies a poster's employer, not their candidacy, so the badge below attests who they work for and nothing about whether they sat this interview. Hedged with 'iirc', and a language-weighted OA score is an unusual 
 
-### Q719 · Tier B · unknown · online_assessment (6 hard math questions)
+### Q710 · Tier B · unknown · online_assessment (6 hard math questions)
 
 Online test of 6 hard math questions across fundamental linear algebra, statistics and calculus
 
@@ -6944,7 +6870,7 @@ Online test of 6 hard math questions across fundamental linear algebra, statisti
 — wso · posted 2023-12 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview/qt-intern)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. 'Impossible to so
 
-### Q720 · Tier B · unknown · online_assessment
+### Q711 · Tier B · unknown · online_assessment
 
 OA topics: linear algebra, matrix calculations, statistics with Markov chains, probability brainteasers; then a technical phone interview on EV calculations, market making and mathematical modeling
 
@@ -6952,7 +6878,7 @@ OA topics: linear algebra, matrix calculations, statistics with Markov chains, p
 — wso · posted 2025-09 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview/quant-trading-intern-2)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. A topic inventory
 
-### Q721 · Tier B · unknown · online_assessment
+### Q712 · Tier B · unknown · online_assessment
 
 Online math assessment as the first stage
 
@@ -6963,7 +6889,7 @@ Online math assessment as the first stage
 
 ## DRW — onsite
 
-### Q722 · Tier B · unknown · onsite
+### Q713 · Tier B · unknown · onsite
 
 Please write me a binary search to qucikly locate timstamps
 
@@ -6971,7 +6897,7 @@ Please write me a binary search to qucikly locate timstamps
 — wso · posted 2025-10-24 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview)
   1 attestation(s) across 1 domain(s) · doubt: Typos suggest quick typing; round attribution (pair coding session vs phone) is inferred from the process description, not stated per-question.
 
-### Q723 · Tier B · unknown · onsite (on-site day: 1-hour unit-testing interview, then a 30-minute puzzle in)
+### Q714 · Tier B · unknown · onsite (on-site day: 1-hour unit-testing interview, then a 30-minute puzzle in)
 
 Coin game: board divided in quarters. A coin rests in each spot. You do not know their original configuration.
 
@@ -6979,7 +6905,7 @@ Coin game: board divided in quarters. A coin rests in each spot. You do not know
 — blog · posted 2011-02-01 · full_text · [link](https://www.jointaro.com/interviews/companies/drw/experiences/software-engineering-intern-chicago-illinois-february-1-2011-no-offer-neutral-d0e71915)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q724 · Tier B · unknown · onsite
+### Q715 · Tier B · unknown · onsite
 
 Second question: between each of your turns, the board will be rotated an arbitrary amount (90, 180, 270 degrees). Specify a sequence of moves that guarantees that at some point all coins will be facing the same direction.
 
@@ -6987,7 +6913,7 @@ Second question: between each of your turns, the board will be rotated an arbitr
 — blog · posted 2011-02-01 · full_text · [link](https://www.jointaro.com/interviews/companies/drw/experiences/software-engineering-intern-chicago-illinois-february-1-2011-no-offer-neutral-d0e71915)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q725 · Tier B · unknown · onsite (three back-to-back rounds of 45 minutes each)
+### Q716 · Tier B · unknown · onsite (three back-to-back rounds of 45 minutes each)
 
 How would you derive the Ordinary Least Squares?
 
@@ -6995,7 +6921,7 @@ How would you derive the Ordinary Least Squares?
 — blog · posted 2024-10-01 · full_text · [link](https://www.jointaro.com/interviews/companies/drw/experiences/junior-ai-researcher-india-october-1-2024-no-offer-negative-efc70c78)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q726 · Tier B · unknown · onsite
+### Q717 · Tier B · unknown · onsite
 
 Dimensionality reduction techniques, PCA, etc.
 
@@ -7003,7 +6929,7 @@ Dimensionality reduction techniques, PCA, etc.
 — blog · posted 2024-10-01 · full_text · [link](https://www.jointaro.com/interviews/companies/drw/experiences/junior-ai-researcher-india-october-1-2024-no-offer-negative-efc70c78)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q727 · Tier B · unknown · onsite
+### Q718 · Tier B · unknown · onsite
 
 NLP and transformer-related questions. Digging deep into the functioning of Transformers, BERT, and GPT.
 
@@ -7011,7 +6937,7 @@ NLP and transformer-related questions. Digging deep into the functioning of Tran
 — blog · posted 2024-10-01 · full_text · [link](https://www.jointaro.com/interviews/companies/drw/experiences/junior-ai-researcher-india-october-1-2024-no-offer-negative-efc70c78)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q728 · Tier B · unknown · onsite (OA 45 mins)
+### Q719 · Tier B · unknown · onsite (OA 45 mins)
 
 Technical interview on the normal distribution and market making; final round is a machine learning data task plus two back-to-back prob/stats interviews
 
@@ -7022,7 +6948,7 @@ Technical interview on the normal distribution and market making; final round is
 
 ## DRW — phone_technical
 
-### Q729 · Tier B · unknown · phone_technical (process was OA (45 mins) -> recruiter screen -> technical interview ->)
+### Q720 · Tier B · unknown · phone_technical (process was OA (45 mins) -> recruiter screen -> technical interview ->)
 
 Make me a market on the amount of diapers used in the UK daily
 
@@ -7030,7 +6956,7 @@ Make me a market on the amount of diapers used in the UK daily
 — wso · posted 2025-11-08 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO puts the market-making question in a separate 'Interview Questions' field, so the exact round it belongs to is inferred from the process description.
 
-### Q730 · Tier B · unknown · phone_technical
+### Q721 · Tier B · unknown · phone_technical
 
 Market making and fermi estimation on random quantities
 
@@ -7038,7 +6964,7 @@ Market making and fermi estimation on random quantities
 — wso · posted 2025-10-12 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview)
   1 attestation(s) across 1 domain(s) · doubt: Purely categorical — names the question types but reproduces no actual question.
 
-### Q731 · Tier B · unknown · phone_technical (process was CV round -> 6 question OA of math/stats -> 1-1 technical)
+### Q722 · Tier B · unknown · phone_technical (process was CV round -> 6 question OA of math/stats -> 1-1 technical)
 
 Apples and Oranges question with the mislabeled boxes
 
@@ -7046,7 +6972,7 @@ Apples and Oranges question with the mislabeled boxes
 — wso · posted 2024-12-24 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview)
   1 attestation(s) across 1 domain(s) · doubt: The mislabeled-boxes puzzle is a very old standard brainteaser found in every prep book; only the first-person dated attestation distinguishes this from a listicle.
 
-### Q732 · Tier B · unknown · phone_technical
+### Q723 · Tier B · unknown · phone_technical
 
 He asked me a question about when prop firms use UDP vs TCP in the trading space.
 
@@ -7054,7 +6980,7 @@ He asked me a question about when prop firms use UDP vs TCP in the trading space
 — wso · posted 2024-11-08 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview)
   1 attestation(s) across 1 domain(s) · doubt: Reported in third person summary form; the candidate admits they could not answer, so their recall of the exact framing is weak.
 
-### Q733 · Tier B · unknown · phone_technical
+### Q724 · Tier B · unknown · phone_technical
 
 System design questions were about arranging seats in a theatre.
 
@@ -7062,7 +6988,7 @@ System design questions were about arranging seats in a theatre.
 — wso · posted 2024-11-08 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview)
   1 attestation(s) across 1 domain(s) · doubt: Very compressed recall; 'arranging seats in a theatre' could be either a design or an algorithms problem and the poster does not disambiguate.
 
-### Q734 · Tier B · unknown · phone_technical
+### Q725 · Tier B · unknown · phone_technical
 
 How would you find all the words that are anagrams of each other in a text document?
 
@@ -7070,7 +6996,7 @@ How would you find all the words that are anagrams of each other in a text docum
 — blog · posted 2018-10-07 · full_text · [link](https://www.jointaro.com/interviews/companies/drw/experiences/software-engineer-internship-united-states-october-7-2018-no-offer-neutral-1ae58c58)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q735 · Tier B · unknown · phone_technical (45-minute technical interview covering concurrency and pointers in C++)
+### Q726 · Tier B · unknown · phone_technical (45-minute technical interview covering concurrency and pointers in C++)
 
 Given some multithreaded code in C++, explain the flow and result of the program.
 
@@ -7078,7 +7004,7 @@ Given some multithreaded code in C++, explain the flow and result of the program
 — blog · posted 2023-09-01 · full_text · [link](https://www.jointaro.com/interviews/companies/drw/experiences/software-engineer-intern-london-england-september-1-2023-no-offer-neutral-7a2332eb)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q736 · Tier B · unknown · phone_technical
+### Q727 · Tier B · unknown · phone_technical
 
 Sort through a list of ones and zeros only by swapping two adjacent values. An acceptable answer either had all 1s followed by all 0s or the other way around.
 
@@ -7086,7 +7012,7 @@ Sort through a list of ones and zeros only by swapping two adjacent values. An a
 — blog · posted 2019-02-01 · full_text · [link](https://www.jointaro.com/interviews/companies/drw/experiences/software-engineer-internship-montreal-quebec-february-1-2019-no-offer-neutral-f4d8fcc6)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q737 · Tier B · unknown · phone_technical
+### Q728 · Tier B · unknown · phone_technical
 
 Tell me about a time when you had to work in a group towards a common goal
 
@@ -7094,7 +7020,7 @@ Tell me about a time when you had to work in a group towards a common goal
 — wso · posted 2026-10 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview entries are anonymous and unverified; the poster writes them up months after the fact (the 'Date Submitted' here trails the interview month), so wording is recalled rather than transcribed. Same entry with 
 
-### Q738 · Tier B · unknown · phone_technical (6 Question OA at first)
+### Q729 · Tier B · unknown · phone_technical (6 Question OA at first)
 
 Quite easy behavioral. Just practice mental math
 
@@ -7102,7 +7028,7 @@ Quite easy behavioral. Just practice mental math
 — wso · posted 2025-10 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview entries are anonymous and unverified; the poster writes them up months after the fact (the 'Date Submitted' here trails the interview month), so wording is recalled rather than transcribed. The 'question' f
 
-### Q739 · Tier B · unknown · phone_technical
+### Q730 · Tier B · unknown · phone_technical
 
 R1 Interview of typical behaviorals + probability math question with proof.
 
@@ -7110,7 +7036,7 @@ R1 Interview of typical behaviorals + probability math question with proof.
 — glassdoor · posted 2025-04-17 · full_text · [link](https://www.glassdoor.com/Interview/DRW-Interview-Questions-E235115.htm)
   1 attestation(s) across 1 domain(s) · doubt: Glassdoor entries are anonymous and self-reported with no verification. Glassdoor blocks direct fetching from this box; this text arrived as a complete page-text dump from the search tool and was saved into the verifier 
 
-### Q740 · Tier B · unknown · phone_technical (first of three scheduled interviews; run inside a remote VM over Amazo)
+### Q731 · Tier B · unknown · phone_technical (first of three scheduled interviews; run inside a remote VM over Amazo)
 
 1st one is 90mns coding session, I need to download Amazon dcv client to login into some virtual machine before the interview.
 
@@ -7118,7 +7044,7 @@ R1 Interview of typical behaviorals + probability math question with proof.
 — blind · posted 2025-10-16 · full_text · [link](https://www.teamblind.com/post/drw-interview-prep-jgqrcap4)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies a poster's employer, not their candidacy, so the badge below attests who they work for and nothing about whether they sat this interview. Written before the interviews rather than after, so it attests what
 
-### Q741 · Tier B · unknown · phone_technical (second and third of three interviews, via a Codility link)
+### Q732 · Tier B · unknown · phone_technical (second and third of three interviews, via a Codility link)
 
 For 2nd and 3rd, I've got a codility link and recruiter said will focus on technical troubleshooting and system design.
 
@@ -7126,7 +7052,7 @@ For 2nd and 3rd, I've got a codility link and recruiter said will focus on techn
 — blind · posted 2025-10-16 · full_text · [link](https://www.teamblind.com/post/drw-interview-prep-jgqrcap4)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies a poster's employer, not their candidacy, so the badge below attests who they work for and nothing about whether they sat this interview. The poster is relaying the recruiter's description in advance, so t
 
-### Q742 · Tier B · unknown · phone_technical
+### Q733 · Tier B · unknown · phone_technical
 
 They asked me some weird math questions. Not leetcode
 
@@ -7134,7 +7060,7 @@ They asked me some weird math questions. Not leetcode
 — blind · posted 2025-10-16 · full_text · [link](https://www.teamblind.com/post/drw-interview-prep-jgqrcap4)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies a poster's employer, not their candidacy, so the badge below attests who they work for and nothing about whether they sat this interview. A single line with no question in it — it establishes only that a D
 
-### Q743 · Tier B · unknown · phone_technical (DRW blockchain team)
+### Q734 · Tier B · unknown · phone_technical (DRW blockchain team)
 
 You will have to download Amazon DCV Viewer and remote into an EC2 instance. You will have to complete a coding task in an ide of your choice with the interviewer also logged in. Pretty standard stuff, not hardcore leetcode.
 
@@ -7142,7 +7068,7 @@ You will have to download Amazon DCV Viewer and remote into an EC2 instance. You
 — blind · posted 2025-02-05 · full_text · [link](https://www.teamblind.com/post/drw-senior-software-engineer-interview-2fu5tboo)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies a poster's employer, not their candidacy, so the badge below attests who they work for and nothing about whether they sat this interview. Describes the environment and difficulty but not the task. Note the
 
-### Q744 · Tier B · unknown · phone_technical
+### Q735 · Tier B · unknown · phone_technical
 
 Phone and 1-on-1 interviews consisting of pair coding, statistics and machine learning discussions
 
@@ -7153,7 +7079,7 @@ Phone and 1-on-1 interviews consisting of pair coding, statistics and machine le
 
 ## DRW — superday
 
-### Q745 · Tier B · unknown · superday
+### Q736 · Tier B · unknown · superday
 
 One graph problem that I to this day don't know how to do
 
@@ -7161,7 +7087,7 @@ One graph problem that I to this day don't know how to do
 — wso · posted 2020-09 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview entries are anonymous and unverified; the poster writes them up months after the fact (the 'Date Submitted' here trails the interview month), so wording is recalled rather than transcribed. The poster expli
 
-### Q746 · Tier B · unknown · superday
+### Q737 · Tier B · unknown · superday
 
 I got asked mental math for my super day
 
@@ -7169,7 +7095,7 @@ I got asked mental math for my super day
 — reddit_thread · posted 2025-08-21 · full_text · [link](https://www.reddit.com/r/quantfinance/comments/1mvnl8f/drw_qt_superday_advice/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q747 · Tier B · unknown · superday
+### Q738 · Tier B · unknown · superday
 
 A graph problem at the on-site superday, described as quite difficult
 
@@ -7177,7 +7103,7 @@ A graph problem at the on-site superday, described as quite difficult
 — wso · posted 2020-09 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview/full-time)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. The graph problem
 
-### Q748 · Tier B · unknown · superday (3 interviews)
+### Q739 · Tier B · unknown · superday (3 interviews)
 
 In-person superday consisting of 3 interviews
 
@@ -7188,7 +7114,7 @@ In-person superday consisting of 3 interviews
 
 ## DRW — take_home
 
-### Q749 · Tier B · unknown · take_home
+### Q740 · Tier B · unknown · take_home
 
 Difficult questions were coming up with momentum signal on the spot. Then vetting it robustly with live data
 
@@ -7196,7 +7122,7 @@ Difficult questions were coming up with momentum signal on the spot. Then vettin
 — wso · posted 2025-09-26 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview)
   1 attestation(s) across 1 domain(s) · doubt: Whether the signal-design task belonged to the take-home or the live technical test is not stated; I picked take_home from the sentence order and may be wrong.
 
-### Q750 · Tier B · unknown · take_home (No test cases were provided which made it trickier. Took maybe a few h)
+### Q741 · Tier B · unknown · take_home (No test cases were provided which made it trickier. Took maybe a few h)
 
 Implement a game according to some specs. No test cases given
 
@@ -7204,7 +7130,7 @@ Implement a game according to some specs. No test cases given
 — glassdoor · posted 2025-05-22 · full_text · [link](https://www.glassdoor.com/Interview/DRW-Interview-Questions-E235115.htm)
   1 attestation(s) across 1 domain(s) · doubt: Glassdoor entries are anonymous and self-reported with no verification. Glassdoor blocks direct fetching from this box; this text arrived as a complete page-text dump from the search tool and was saved into the verifier 
 
-### Q751 · Tier B · unknown · take_home
+### Q742 · Tier B · unknown · take_home
 
 Take-home online assessment followed by a live technical test, after an intro call with the head of desk
 
@@ -7215,7 +7141,7 @@ Take-home online assessment followed by a live technical test, after an intro ca
 
 ## DRW — online_assessment
 
-### Q752 · Tier C · unknown · online_assessment (45min 6题)
+### Q743 · Tier C · unknown · online_assessment (45min 6题)
 
 第一题感觉说得不太清楚啊,你在玩这个游戏的时候知道这个coin是bias的么,如果知道的话,第一步先投有什么作用呢 【发现看错题了,应该是知道biased但是不知道biased哪个面】
 
@@ -7227,7 +7153,7 @@ Take-home online assessment followed by a live technical test, after an intro ca
 — 1point3acres · posted 2025-07 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1076221-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: This is a reader's clarifying comment about question 1, not the question statement itself; the actual biased-coin game setup is behind the forum paywall.
 
-### Q753 · Tier C · unknown · online_assessment (8道题)
+### Q744 · Tier C · unknown · online_assessment (8道题)
 
 1) Consider an N x N matrix A with a ...
 
@@ -7240,7 +7166,7 @@ Take-home online assessment followed by a live technical test, after an intro ca
 
 ## DRW — phone_technical
 
-### Q754 · Tier C · unknown · phone_technical (poster had a superday coming up at DRW Trading)
+### Q745 · Tier C · unknown · phone_technical (poster had a superday coming up at DRW Trading)
 
 Expected value of coin flip game (easy) How many (5-card) hands are there that give you four of a kind? Same as above but for full house.
 
@@ -7251,7 +7177,7 @@ Expected value of coin flip game (easy) How many (5-card) hands are there that g
 
 ## DRW — online_assessment
 
-### Q755 · Tier D · unknown · online_assessment (OA topic list (not question statements))
+### Q746 · Tier D · unknown · online_assessment (OA topic list (not question statements))
 
 第一道题:Graph第二道题:Graph第三道题:String + Hashmap
 
@@ -7261,7 +7187,7 @@ Expected value of coin flip game (easy) How many (5-card) hands are there that g
 — chat_telegram · posted 2023-07-26 · full_text · [link](https://t.me/usinterview/16104)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. Three bare 
 
-### Q756 · Tier D · 2024 · online_assessment (a candidate asking whether this round is new (not a question))
+### Q747 · Tier D · 2024 · online_assessment (a candidate asking whether this round is new (not a question))
 
 有没有做了DRW 30分钟一道题的Codility的,地里没看到过,是新出的环节吗
 
@@ -7271,7 +7197,7 @@ Expected value of coin flip game (easy) How many (5-card) hands are there that g
 — chat_telegram · posted 2024-10-04 · full_text · [link](https://t.me/usinterview/19697)
   1 attestation(s) across 1 domain(s) · doubt: This is a question *from* a candidate to the forum, not an assessment question. It records that DRW added a one-question 30-minute Codility screen around October 2024, and that this was novel enough that the candidate co
 
-### Q757 · Tier D · unknown · online_assessment (45min 6题)
+### Q748 · Tier D · unknown · online_assessment (45min 6题)
 
 45min 6题
 
@@ -7281,7 +7207,7 @@ Expected value of coin flip game (easy) How many (5-card) hands are there that g
 — 1point3acres · posted 2025-07 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1076221-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Pure format metadata, no question content; kept because the '45min 6题' figure independently corroborates the DRW OA format seen in English WSO entries.
 
-### Q758 · Tier D · unknown · online_assessment (30min 8 Question)
+### Q749 · Tier D · unknown · online_assessment (30min 8 Question)
 
 回馈地里!上周DRW发的OA,30min8道题,主要是统计和ML相关。
 
@@ -7291,7 +7217,7 @@ Expected value of coin flip game (easy) How many (5-card) hands are there that g
 — 1point3acres · posted 2020-10-27 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/drw-2833-16.html)
   1 attestation(s) across 1 domain(s) · doubt: Topic-level and from 2020, so the 30min/8-question format may since have changed to the 45min/6-question format reported in 2025.
 
-### Q759 · Tier D · unknown · online_assessment (Codility, two hours, three tasks; first two graded on correctness, thi)
+### Q750 · Tier D · unknown · online_assessment (Codility, two hours, three tasks; first two graded on correctness, thi)
 
 Find the number of 1s in 11^n.
 
@@ -7299,7 +7225,7 @@ Find the number of 1s in 11^n.
 — blog · posted 2019-08-01 · full_text · [link](https://www.jointaro.com/interviews/companies/drw/experiences/software-engineer-internship-united-states-august-1-2019-no-offer-neutral-6857d7f7)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q760 · Tier D · unknown · online_assessment (2.5 hour proctored coding assessment with video and audio)
+### Q751 · Tier D · unknown · online_assessment (2.5 hour proctored coding assessment with video and audio)
 
 Get the travel fee for those days.
 
@@ -7307,7 +7233,7 @@ Get the travel fee for those days.
 — blog · posted 2024-11-27 · full_text · [link](https://www.jointaro.com/interviews/companies/drw/experiences/software-engineer-internship-london-england-november-27-2024-no-offer-neutral-14e9761e)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q761 · Tier D · unknown · online_assessment (6 questions)
+### Q752 · Tier D · unknown · online_assessment (6 questions)
 
 Online assessment of 6 questions
 
@@ -7318,7 +7244,7 @@ Online assessment of 6 questions
 
 ## DRW — onsite
 
-### Q762 · Tier D · unknown · onsite (resume-driven technical discussion)
+### Q753 · Tier D · unknown · onsite (resume-driven technical discussion)
 
 问了简历内容,包括一些model的具体细节,主要是interest rate curv
 
@@ -7328,7 +7254,7 @@ Online assessment of 6 questions
 — chat_telegram · posted 2021-01-11 · full_text · [link](https://t.me/usinterview/4559)
   1 attestation(s) across 1 domain(s) · doubt: The Telegram link preview truncates the original post, so what is recorded is a fragment of the poster's own paraphrase rather than the assessment wording. Cut off at "interest rate curv...". This describes the round's s
 
-### Q763 · Tier D · unknown · onsite
+### Q754 · Tier D · unknown · onsite
 
 Why do you want to work here?
 
@@ -7339,7 +7265,7 @@ Why do you want to work here?
 
 ## DRW — phone_technical
 
-### Q764 · Tier D · 2025 · phone_technical (phone screen — mostly rote fundamentals)
+### Q755 · Tier D · 2025 · phone_technical (phone screen — mostly rote fundamentals)
 
 考的是八股多一些,以及iso protocol没怎么准备,所以也不意外会不过
 
@@ -7349,7 +7275,7 @@ Why do you want to work here?
 — chat_telegram · posted 2025-05-29 · full_text · [link](https://t.me/usinterview/23427)
   1 attestation(s) across 1 domain(s) · doubt: This is the complete post. The only concrete content is that "ISO protocol" came up, and even that is ambiguous — the candidate may mean ISO 8583, an ISO-standard messaging protocol, or something else entirely. Recorded 
 
-### Q765 · Tier D · unknown · phone_technical
+### Q756 · Tier D · unknown · phone_technical
 
 Mental math multiplication (e.g. 73*74)
 
@@ -7357,7 +7283,7 @@ Mental math multiplication (e.g. 73*74)
 — wso · posted 2026-01-11 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview)
   1 attestation(s) across 1 domain(s) · doubt: The interview date field on WSO (October 2026) is later than the submission date (Jan 11 2026), so at least one date on this entry is wrong.
 
-### Q766 · Tier D · unknown · phone_technical (follows a 6 Question OA)
+### Q757 · Tier D · unknown · phone_technical (follows a 6 Question OA)
 
 why DRW, why Quant
 
@@ -7365,7 +7291,7 @@ why DRW, why Quant
 — wso · posted 2025-10-19 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview)
   1 attestation(s) across 1 domain(s) · doubt: Generic behavioral prompts that any firm asks; low informational value even though the attestation is real.
 
-### Q767 · Tier D · unknown · phone_technical
+### Q758 · Tier D · unknown · phone_technical
 
 How to make a class in C++ hashable?
 
@@ -7373,7 +7299,7 @@ How to make a class in C++ hashable?
 — blog · posted 2022-10-26 · full_text · [link](https://www.jointaro.com/interviews/companies/drw/experiences/software-engineer-internship-amsterdam-netherlands-october-26-2022-no-offer-negative-3be3f64e)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q768 · Tier D · unknown · phone_technical (6 question OA before it)
+### Q759 · Tier D · unknown · phone_technical (6 question OA before it)
 
 The apples and oranges question
 
@@ -7381,7 +7307,7 @@ The apples and oranges question
 — wso · posted 2024-09 · full_text · [link](https://www.wallstreetoasis.com/company/drw/interview/quant-intern)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. The submitter nam
 
-### Q769 · Tier D · unknown · phone_technical
+### Q760 · Tier D · unknown · phone_technical
 
 Questions about contracts
 
@@ -7392,7 +7318,7 @@ Questions about contracts
 
 ## DRW — superday
 
-### Q770 · Tier D · unknown · superday (process was online math assessment -> zoom interview -> in-person supe)
+### Q761 · Tier D · unknown · superday (process was online math assessment -> zoom interview -> in-person supe)
 
 Explain how to price an option
 
@@ -7403,7 +7329,7 @@ Explain how to price an option
 
 ## DRW — take_home
 
-### Q771 · Tier D · 2025 · take_home (take-home assignment (not a question statement))
+### Q762 · Tier D · 2025 · take_home (take-home assignment (not a question statement))
 
 给我搞了个take home,是这个: https://www.glassdoor.com/Interview/DRW-Software-Engineer-Interview-Questions-EI
 
@@ -7416,7 +7342,7 @@ Explain how to price an option
 
 ## DRW — unknown
 
-### Q772 · Tier D · unknown · unknown
+### Q763 · Tier D · unknown · unknown
 
 My research project related questions
 
@@ -7427,7 +7353,7 @@ My research project related questions
 
 ## Da Vinci Derivatives — online_assessment
 
-### Q773 · Tier B · interviewed December 2022 · online_assessment (First step of the Graduate Quant Analyst process; poster explicitly co)
+### Q764 · Tier B · interviewed December 2022 · online_assessment (First step of the Graduate Quant Analyst process; poster explicitly co)
 
 Step 1: A 10 min mental math test consisting of 60 questions (found this to be tougher than Optiver/ Flow's test)
 
@@ -7435,7 +7361,7 @@ Step 1: A 10 min mental math test consisting of 60 questions (found this to be t
 — interview_review_site · posted 2023-05-12 · full_text · [link](https://www.wallstreetoasis.com/company/da-vinci-derivatives/interview)
   1 attestation(s) across 1 domain(s) · doubt: Format evidence only, no question content; the stated count (60 in 10 minutes) conflicts with a 2021 recall on the same page reporting 'around 50 tough questions in 10 minutes', so either the test changed or one recollec
 
-### Q774 · Tier B · interviewed March 2021 · online_assessment (First stage of the Graduate Trader process; poster reports doing aroun)
+### Q765 · Tier B · interviewed March 2021 · online_assessment (First stage of the Graduate Trader process; poster reports doing aroun)
 
 Around 50 tough questions in 10 minutes. Its much tougher than what you might get at Optiver screening. Thus need not complete all. No calculator allowed but you may find your ways.
 
@@ -7445,7 +7371,7 @@ Around 50 tough questions in 10 minutes. Its much tougher than what you might ge
 — interview_review_site · posted 2021-05-03 · full_text · [link](https://www.wallstreetoasis.com/company/da-vinci-derivatives/interview)
   1 attestation(s) across 1 domain(s) · doubt: Format evidence with no question content, and the count (~50 in 10 min) disagrees with a Dec 2022 recall of 60 in 10 min on the same page. The remark 'you may find your ways' about the no-calculator rule is the poster's 
 
-### Q775 · Tier B · interviewed March 2021 · online_assessment (The candidate's process appears to have ended at the programming test;)
+### Q766 · Tier B · interviewed March 2021 · online_assessment (The candidate's process appears to have ended at the programming test;)
 
 There programming test consist of evaluating a trading strategy.
 
@@ -7458,7 +7384,7 @@ There programming test consist of evaluating a trading strategy.
 
 ## Da Vinci Derivatives — onsite
 
-### Q776 · Tier B · interviewed December 2022 · onsite (Four-step process: Step 1 a 10-minute mental math test of 60 questions)
+### Q767 · Tier B · interviewed December 2022 · onsite (Four-step process: Step 1 a 10-minute mental math test of 60 questions)
 
 Technical Interview with a quant consisting of a market making game based on a deck of cards. Questions revolved around expected value of sum of three cards, deviations etc
 
@@ -7466,7 +7392,7 @@ Technical Interview with a quant consisting of a market making game based on a d
 — interview_review_site · posted 2023-05-12 · full_text · [link](https://www.wallstreetoasis.com/company/da-vinci-derivatives/interview)
   1 attestation(s) across 1 domain(s) · doubt: Describes the shape of a market-making game rather than a precise problem — the deck composition and trading rules are not recorded, so it is not reproducible.
 
-### Q777 · Tier B · interviewed November 2024 · onsite (Process: online assessment, HR interview (standard), technical online )
+### Q768 · Tier B · interviewed November 2024 · onsite (Process: online assessment, HR interview (standard), technical online )
 
 Market Making, EV and Game Theory Games.
 
@@ -7477,7 +7403,7 @@ Market Making, EV and Game Theory Games.
 
 ## Da Vinci Derivatives — phone_technical
 
-### Q778 · Tier B · interviewed February 2025 · phone_technical (Technical round consisted of option theory followed by a brain teaser )
+### Q769 · Tier B · interviewed February 2025 · phone_technical (Technical round consisted of option theory followed by a brain teaser )
 
 What's your intuition about delta of an ATM option if the implied volatility to becomes very, very, very large?
 
@@ -7487,7 +7413,7 @@ What's your intuition about delta of an ATM option if the implied volatility to 
 — interview_review_site · posted 2025-03-14 · full_text · [link](https://www.wallstreetoasis.com/company/da-vinci-derivatives/interview)
   1 attestation(s) across 1 domain(s) · doubt: The poster does not specify call or put, which changes the limiting answer (call delta tends to 1, put delta to 0 as vol grows without bound); round attribution is inferred from the narrative describing option theory in 
 
-### Q779 · Tier B · interviewed February 2025 · phone_technical (HR interview ended with rapid-fire questions mixing trivia and arithme)
+### Q770 · Tier B · interviewed February 2025 · phone_technical (HR interview ended with rapid-fire questions mixing trivia and arithme)
 
 rapid fire questions such as "What's your favorite color?", "What's 6 * 76?", more rapid fire questions and then "What's the prodcut you got minus 263?
 
@@ -7497,7 +7423,7 @@ rapid fire questions such as "What's your favorite color?", "What's 6 * 76?", mo
 — interview_review_site · posted 2025-03-14 · full_text · [link](https://www.wallstreetoasis.com/company/da-vinci-derivatives/interview)
   1 attestation(s) across 1 domain(s) · doubt: The poster's sentence is unterminated in the original and contains a typo ('prodcut'), so the exact final prompt is uncertain; the interesting feature is the working-memory test structure rather than the arithmetic itsel
 
-### Q780 · Tier B · interviewed January 2025 · phone_technical (Process: CV screen, online numerical assessment (mainly probability, s)
+### Q771 · Tier B · interviewed January 2025 · phone_technical (Process: CV screen, online numerical assessment (mainly probability, s)
 
 I was given a stock price then a strike price and asked about the minimum Money I would pay to enter the contract then about the delta of the option and how it changes with changing strike price.
 
@@ -7507,7 +7433,7 @@ I was given a stock price then a strike price and asked about the minimum Money 
 — interview_review_site · posted 2025-02-28 · full_text · [link](https://www.wallstreetoasis.com/company/da-vinci-derivatives/interview)
   1 attestation(s) across 1 domain(s) · doubt: The actual stock and strike prices are not recorded, so the numeric part cannot be reproduced; the phrase 'minimum money I would pay' is the candidate's paraphrase of what was presumably an intrinsic-value/lower-bound qu
 
-### Q781 · Tier B · interviewed March 2021 · phone_technical (HR screening designed to check the candidate's mental math is genuine )
+### Q772 · Tier B · interviewed March 2021 · phone_technical (HR screening designed to check the candidate's mental math is genuine )
 
 Question like: 8/17 till 4th precision. Follow up question tell me now 5th decimal along with previous 4. That means memory + precision. Now asked my confidence on answer if I was willing to gamble my interview result on that?
 
@@ -7517,7 +7443,7 @@ Question like: 8/17 till 4th precision. Follow up question tell me now 5th decim
 — interview_review_site · posted 2021-05-03 · full_text · [link](https://www.wallstreetoasis.com/company/da-vinci-derivatives/interview)
   1 attestation(s) across 1 domain(s) · doubt: The poster writes 'Question like: 8/17', which signals the actual fraction may have been different; from March 2021, so the process may have changed.
 
-### Q782 · Tier B · interviewed March 2021 · phone_technical (Round consisted of multiple estimations and market-making questions, a)
+### Q773 · Tier B · interviewed March 2021 · phone_technical (Round consisted of multiple estimations and market-making questions, a)
 
 Total number of moves played from both sides in last GM championship Vishy Anand vs Magnus. 11 games in total so made markets. He provided newer info 2 times about game 1 and 2 moves and checked my market.
 
@@ -7527,7 +7453,7 @@ Total number of moves played from both sides in last GM championship Vishy Anand
 — interview_review_site · posted 2021-05-03 · full_text · [link](https://www.wallstreetoasis.com/company/da-vinci-derivatives/interview)
   1 attestation(s) across 1 domain(s) · doubt: This question was improvised from the candidate's own stated interest in chess, so it is not a repeatable bank question — it demonstrates the firm's market-making-on-anything style rather than a fixed problem.
 
-### Q783 · Tier B · interviewed March 2021 · phone_technical (Second question in the same 1-on-1; the poster reflects that they swit)
+### Q774 · Tier B · interviewed March 2021 · phone_technical (Second question in the same 1-on-1; the poster reflects that they swit)
 
 Question 2: 4 Cards(2 Red + 2 Black). Bet money on four outcomes of card picking at random one by one. Different scenarios: Bet on 1 = Red. Opposite info for 1 given(Black). Now bet on 2 = Red.
 
@@ -7540,7 +7466,7 @@ Question 2: 4 Cards(2 Red + 2 Black). Bet money on four outcomes of card picking
 
 ## Da Vinci Derivatives — unknown
 
-### Q784 · Tier B · interviewed August 2024 · unknown (Process described as: 1. 20 minute mental math/probability questions r)
+### Q775 · Tier B · interviewed August 2024 · unknown (Process described as: 1. 20 minute mental math/probability questions r)
 
 you are tossing a dice and keeping track of the cumulative sum. what is the probability of ever getting total sum x(for x = 3,4). then asked for what value of x is this probability maximum.
 
@@ -7550,7 +7476,7 @@ you are tossing a dice and keeping track of the cumulative sum. what is the prob
 — interview_review_site · posted 2025-11-21 · full_text · [link](https://www.wallstreetoasis.com/company/da-vinci-derivatives/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO's question field is not tied to a round, so I cannot tell whether this came from the 20-minute mental math/probability round or the 1-on-1; the follow-up asking for the maximising x is slightly odd since the probabil
 
-### Q785 · Tier B · interviewed August 2024 · unknown (Same three-stage intern process (20-min mental math/probability, two g)
+### Q776 · Tier B · interviewed August 2024 · unknown (Same three-stage intern process (20-min mental math/probability, two g)
 
 4 cards on a table of value 10, 20, 30, 40 face down and shuffled. you can either pick card or get 25. how to max your score ? what is exp value of the game ?
 
@@ -7563,7 +7489,7 @@ you are tossing a dice and keeping track of the cumulative sum. what is the prob
 
 ## Da Vinci Derivatives — phone_technical
 
-### Q786 · Tier D · interviewed November 2025 · phone_technical (Online assessment first; then a phone interview mixing HR-style backgr)
+### Q777 · Tier D · interviewed November 2025 · phone_technical (Online assessment first; then a phone interview mixing HR-style backgr)
 
 Mental maths quick fire - 47/13
 
@@ -7574,7 +7500,7 @@ Mental maths quick fire - 47/13
 
 ## Eclipse Trading — online_assessment
 
-### Q787 · Tier D · 2026 · online_assessment (the single problem on the test)
+### Q778 · Tier D · 2026 · online_assessment (the single problem on the test)
 
 // This test consists of 1 problem. // Problem 1. // In C++,implement a quoting algorith
 
@@ -7587,7 +7513,7 @@ Mental maths quick fire - 47/13
 
 ## Five Rings — online_assessment
 
-### Q788 · Tier B · unknown · online_assessment (Is rapid fire, with ~20 mins for 15 of these difficult questions)
+### Q779 · Tier B · unknown · online_assessment (Is rapid fire, with ~20 mins for 15 of these difficult questions)
 
 estimating the Arc length of sin(x) from 0 to pi
 
@@ -7595,7 +7521,7 @@ estimating the Arc length of sin(x) from 0 to pi
 — glassdoor · posted 2025-04-22 · full_text · [link](https://www.glassdoor.com/Interview/Five-Rings-Quant-Trader-Intern-Interview-Questions-EI_IE375785.0,10_KO11,30.htm)
   1 attestation(s) across 1 domain(s) · doubt: Glassdoor blocks direct fetching from this environment; I read the page through the r.jina.ai text proxy, and Glassdoor entries are anonymous and unverified, with only the posting date shown (not necessarily the intervie
 
-### Q789 · Tier B · unknown · online_assessment
+### Q780 · Tier B · unknown · online_assessment
 
 Five Rings OA is pretty hard, probably the only OA I've struggled with. ... I would recommend preparing your mental math and being able to estimate questions well, I think I only passed from prior math competition experience.
 
@@ -7603,7 +7529,7 @@ Five Rings OA is pretty hard, probably the only OA I've struggled with. ... I wo
 — reddit_thread · posted 2025-10-12 · full_text · [link](https://www.reddit.com/r/quantfinance/comments/1o4b8ia/gave_imc_sig_oa_on_monday_still_havent_heard_back/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q790 · Tier B · unknown · online_assessment (3 probability questions in the first tech round)
+### Q781 · Tier B · unknown · online_assessment (3 probability questions in the first tech round)
 
 Proctored OA of various math problems, then a first technical round of 3 probability questions
 
@@ -7614,7 +7540,7 @@ Proctored OA of various math problems, then a first technical round of 3 probabi
 
 ## Five Rings — phone_technical
 
-### Q791 · Tier B · unknown · phone_technical (The first tech round covers 3 probability questions; preceded by a pro)
+### Q782 · Tier B · unknown · phone_technical (The first tech round covers 3 probability questions; preceded by a pro)
 
 A question on ordered stats. X and Y in a normal distribution. Find the distribution/expectation value of max(X, Y).
 
@@ -7622,7 +7548,7 @@ A question on ordered stats. X and Y in a normal distribution. Find the distribu
 — wso · posted 2026-07-28 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO entries are anonymous and unverifiable; the phrasing is the candidate's paraphrase of the problem rather than the interviewer's exact wording.
 
-### Q792 · Tier B · unknown · phone_technical (first interview was 10 guesstimation questions)
+### Q783 · Tier B · unknown · phone_technical (first interview was 10 guesstimation questions)
 
 what is the maximum number of pieces you can cut a pizza using 10 straight cuts?
 
@@ -7630,7 +7556,7 @@ what is the maximum number of pieces you can cut a pizza using 10 straight cuts?
 — wso · posted 2023-06-15 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Classic lazy-caterer textbook problem; plausible a poster reproduced a known puzzle rather than one actually asked, though the account is first-person and dated.
 
-### Q793 · Tier B · unknown · phone_technical (first interview was 10 guesstimation questions)
+### Q784 · Tier B · unknown · phone_technical (first interview was 10 guesstimation questions)
 
 number of digits 7 in numbers from 1 to 6000
 
@@ -7638,7 +7564,7 @@ number of digits 7 in numbers from 1 to 6000
 — wso · posted 2023-06-15 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Reported as an example ('like ...') rather than a verbatim question, so wording may be reconstructed.
 
-### Q794 · Tier B · unknown · phone_technical (answer within 10 seconds)
+### Q785 · Tier B · unknown · phone_technical (answer within 10 seconds)
 
 Tenth root of 10, answer within 10 seconds
 
@@ -7646,7 +7572,7 @@ Tenth root of 10, answer within 10 seconds
 — wso · posted 2022-10-21 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Terse recall from a frustrated candidate ('never hear back'); no way to confirm the exact numeric was 10 rather than another base.
 
-### Q795 · Tier B · unknown · phone_technical (asked to quickly estimate values)
+### Q786 · Tier B · unknown · phone_technical (asked to quickly estimate values)
 
 quickly estimate values such as weight of a baby elephant
 
@@ -7654,7 +7580,7 @@ quickly estimate values such as weight of a baby elephant
 — wso · posted 2022-10-21 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Given as an example of a category rather than a verbatim question.
 
-### Q796 · Tier B · unknown · phone_technical (fermi and computational math, short time limits)
+### Q787 · Tier B · unknown · phone_technical (fermi and computational math, short time limits)
 
 Weight of Baby elephant. Average distance from center of circle.
 
@@ -7662,7 +7588,7 @@ Weight of Baby elephant. Average distance from center of circle.
 — wso · posted 2021-10-04 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Two distinct questions crammed into one field; the 'baby elephant' item duplicates another WSO entry, so one poster may have copied the other.
 
-### Q797 · Tier B · unknown · phone_technical (short amount of time to answer (10-15 seconds))
+### Q788 · Tier B · unknown · phone_technical (short amount of time to answer (10-15 seconds))
 
 How many tennis balls in a suit case?, 3^ 3.4? Confidence interval?
 
@@ -7670,7 +7596,7 @@ How many tennis balls in a suit case?, 3^ 3.4? Confidence interval?
 — wso · posted 2022-09-05 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Poster prefaces with 'As some many know', suggesting they may be echoing common knowledge about the screen rather than only their own recall.
 
-### Q798 · Tier B · unknown · phone_technical (They read 15 questions off a sheet, typically 30 to 90 seconds per que)
+### Q789 · Tier B · unknown · phone_technical (They read 15 questions off a sheet, typically 30 to 90 seconds per que)
 
 15 statistics questions of varying difficulty, e.g., on the variance of complex random variables on the unit circle or sphere, etc.
 
@@ -7678,7 +7604,7 @@ How many tennis balls in a suit case?, 3^ 3.4? Confidence interval?
 — glassdoor · posted 2023-04-05 · full_text · [link](https://www.glassdoor.com/Interview/Five-Rings-Quantitative-Researcher-Interview-Questions-EI_IE375785.0,10_KO11,34.htm)
   1 attestation(s) across 1 domain(s) · doubt: Describes a topic ('variance of complex random variables on the unit circle') rather than reproducing any single question verbatim.
 
-### Q799 · Tier B · unknown · phone_technical (20-30 minute interview, 20-120 second window depending on the question)
+### Q790 · Tier B · unknown · phone_technical (20-30 minute interview, 20-120 second window depending on the question)
 
 questions on random walks, finding S.Ds of random data sets, expected value of a uniformly distributed unit sphere, questions on multivariated regression models, etc
 
@@ -7686,7 +7612,7 @@ questions on random walks, finding S.Ds of random data sets, expected value of a
 — glassdoor · posted 2022-02-21 · full_text · [link](https://www.glassdoor.com/Interview/Five-Rings-Quantitative-Researcher-Interview-Questions-EI_IE375785.0,10_KO11,34.htm)
   1 attestation(s) across 1 domain(s) · doubt: A topic list rather than an individual question; poster themselves says 'a lot of textbook problems', so overlap with prep books is admitted.
 
-### Q800 · Tier B · unknown · phone_technical
+### Q791 · Tier B · unknown · phone_technical
 
 The interview asked a variety ranges of probability questions, for example, classical bus waiting time problem, multivariate normal distribution, etc.
 
@@ -7694,7 +7620,7 @@ The interview asked a variety ranges of probability questions, for example, clas
 — glassdoor · posted 2021-10-21 · full_text · [link](https://www.glassdoor.com/Interview/Five-Rings-Quantitative-Researcher-Interview-Questions-EI_IE375785.0,10_KO11,34.htm)
   1 attestation(s) across 1 domain(s) · doubt: Names a well-known textbook problem class ('classical bus waiting time') without any Five-Rings-specific detail.
 
-### Q801 · Tier B · unknown · phone_technical (online application -> hr interview (fermi questions under tight time c)
+### Q792 · Tier B · unknown · phone_technical (online application -> hr interview (fermi questions under tight time c)
 
 proof of answer to a probability question involving discrete math
 
@@ -7702,7 +7628,7 @@ proof of answer to a probability question involving discrete math
 — wso · posted 2022-06-25 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Wall Street Oasis interview entries are anonymous and unverified by the site, and this one is a company roll-up page whose displayed sample of entries can change, so a later re-fetch may not show it. Only the shape of th
 
-### Q802 · Tier B · unknown · phone_technical (4 interviews total; the next 3 focused on math (probability, stochasti)
+### Q793 · Tier B · unknown · phone_technical (4 interviews total; the next 3 focused on math (probability, stochasti)
 
 There were many estimation questions which you have to be ready for. There is calculus, combinatorics, etc. to be done in 30 second time intervals for the first interview.
 
@@ -7710,7 +7636,7 @@ There were many estimation questions which you have to be ready for. There is ca
 — wso · posted 2022-11-18 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Wall Street Oasis interview entries are anonymous and unverified by the site, and this one is a company roll-up page whose displayed sample of entries can change, so a later re-fetch may not show it. Describes the 30-sec
 
-### Q803 · Tier B · unknown · phone_technical ('The interviewer said there were a couple of rounds to get the wintern)
+### Q794 · Tier B · unknown · phone_technical ('The interviewer said there were a couple of rounds to get the wintern)
 
 Quite hard, few probability questions but they did give hints
 
@@ -7718,7 +7644,7 @@ Quite hard, few probability questions but they did give hints
 — glassdoor · posted 2026-04-07 · full_text · [link](https://www.glassdoor.com/Interview/Five-Rings-Quant-Trader-Intern-Interview-Questions-EI_IE375785.0,10_KO11,30.htm)
   1 attestation(s) across 1 domain(s) · doubt: Glassdoor blocks direct fetching from this environment; I read the page through the r.jina.ai text proxy, and Glassdoor entries are anonymous and unverified, with only the posting date shown (not necessarily the intervie
 
-### Q804 · Tier B · unknown · phone_technical (a few behavioral questions and then ~10 rapid fire stats and probabili)
+### Q795 · Tier B · unknown · phone_technical (a few behavioral questions and then ~10 rapid fire stats and probabili)
 
 Why are you interested in quantitative finance?
 
@@ -7726,7 +7652,7 @@ Why are you interested in quantitative finance?
 — glassdoor · posted 2024-04-09 · full_text · [link](https://www.glassdoor.com/Interview/Five-Rings-Quantitative-Researcher-Interview-Questions-EI_IE375785.0,10_KO11,34.htm)
   1 attestation(s) across 1 domain(s) · doubt: Glassdoor entries are anonymous, self-reported and undated as to the question itself; the reviewer supplies the interview month but nothing verifies they interviewed at all. Glassdoor blocks direct fetching from this box
 
-### Q805 · Tier B · unknown · phone_technical
+### Q796 · Tier B · unknown · phone_technical
 
 Mainly about probability problems and mental math
 
@@ -7734,7 +7660,7 @@ Mainly about probability problems and mental math
 — glassdoor · posted 2023-11-28 · full_text · [link](https://www.glassdoor.com/Interview/Five-Rings-Quantitative-Researcher-Interview-Questions-EI_IE375785.0,10_KO11,34.htm)
   1 attestation(s) across 1 domain(s) · doubt: Glassdoor entries are anonymous, self-reported and undated as to the question itself; the reviewer supplies the interview month but nothing verifies they interviewed at all. Glassdoor blocks direct fetching from this box
 
-### Q806 · Tier B · unknown · phone_technical
+### Q797 · Tier B · unknown · phone_technical
 
 Typical statistical and probability questions
 
@@ -7742,7 +7668,7 @@ Typical statistical and probability questions
 — glassdoor · posted 2023-09-16 · full_text · [link](https://www.glassdoor.com/Interview/Five-Rings-Quantitative-Researcher-Interview-Questions-EI_IE375785.0,10_KO11,34.htm)
   1 attestation(s) across 1 domain(s) · doubt: Glassdoor entries are anonymous, self-reported and undated as to the question itself; the reviewer supplies the interview month but nothing verifies they interviewed at all. Glassdoor blocks direct fetching from this box
 
-### Q807 · Tier B · unknown · phone_technical
+### Q798 · Tier B · unknown · phone_technical
 
 math and probability and statistic problems
 
@@ -7750,7 +7676,7 @@ math and probability and statistic problems
 — glassdoor · posted 2021-10-27 · full_text · [link](https://www.glassdoor.com/Interview/Five-Rings-Quantitative-Researcher-Interview-Questions-EI_IE375785.0,10_KO11,34.htm)
   1 attestation(s) across 1 domain(s) · doubt: Glassdoor entries are anonymous, self-reported and undated as to the question itself; the reviewer supplies the interview month but nothing verifies they interviewed at all. Glassdoor blocks direct fetching from this box
 
-### Q808 · Tier B · unknown · phone_technical (a brief behavioral component (why trading? and why five rings?) and th)
+### Q799 · Tier B · unknown · phone_technical (a brief behavioral component (why trading? and why five rings?) and th)
 
 I am not allowed to share any questions due to signing and agreement with the company.
 
@@ -7758,7 +7684,7 @@ I am not allowed to share any questions due to signing and agreement with the co
 — wso · posted 2024-08 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview entries are anonymous and unverified; the poster writes them up months after the fact (the 'Date Submitted' here trails the interview month), so wording is recalled rather than transcribed. The poster delib
 
-### Q809 · Tier B · unknown · phone_technical
+### Q800 · Tier B · unknown · phone_technical
 
 A game theory question at second round. Cannot remember exactly as a very long question, but similar to the Jane street example interview at this page 'https://www.janestreet.com/trading-interviews/'.
 
@@ -7766,7 +7692,7 @@ A game theory question at second round. Cannot remember exactly as a very long q
 — wso · posted 2022-10-21 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO entries are anonymous and self-submitted with no verification that the poster interviewed at all; the submission date here is Oct 21, 2022, about six months after the stated interview month, so the recall is retrospe
 
-### Q810 · Tier B · unknown · phone_technical (in just five minutes)
+### Q801 · Tier B · unknown · phone_technical (in just five minutes)
 
 five rings asked me to fix the OA i got an 8/10 on a month ago in just five minutes. FIVE MINUTES.
 
@@ -7774,7 +7700,7 @@ five rings asked me to fix the OA i got an 8/10 on a month ago in just five minu
 — reddit_thread · posted 2024-10-04 · full_text · [link](https://www.reddit.com/r/csMajors/comments/1fw7lh1/keep_failing_final_interviews/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q811 · Tier B · unknown · phone_technical
+### Q802 · Tier B · unknown · phone_technical
 
 I was asked to schedule an interview and they said that no technical questions would be asked.
 
@@ -7782,7 +7708,7 @@ I was asked to schedule an interview and they said that no technical questions w
 — reddit_thread · posted 2025-01-09 · full_text · [link](https://www.reddit.com/r/csMajors/comments/1hxmayj/five_rings_qt_connect_experienceinterview/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q812 · Tier B · unknown · phone_technical (45 minutes)
+### Q803 · Tier B · unknown · phone_technical (45 minutes)
 
 Brownian motion, calculus, some number theory/combinatorics
 
@@ -7790,7 +7716,7 @@ Brownian motion, calculus, some number theory/combinatorics
 — blind · posted 2023-08-20 · full_text · [link](https://www.teamblind.com/post/45-minute-quant-research-video-interview-five-rings-mowddgjw)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies a poster's employer, not their candidacy, so the badge below attests who they work for and nothing about whether they sat this interview. A bare topic list posted in answer to 'what should I expect', with 
 
-### Q813 · Tier B · unknown · phone_technical
+### Q804 · Tier B · unknown · phone_technical
 
 Know about stacks, queues, dynamic growing arrays
 
@@ -7798,7 +7724,7 @@ Know about stacks, queues, dynamic growing arrays
 — blind · posted 2023-03-19 · full_text · [link](https://www.teamblind.com/post/Five-Rings-New-Grad-SWE-Interview-Process-yDKtzVTA)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies a poster's employer, not their candidacy, so the badge below attests who they work for and nothing about whether they sat this interview. Advice phrased as an imperative, not a recall — the replier never s
 
-### Q814 · Tier B · unknown · phone_technical (10 guesstimation questions)
+### Q805 · Tier B · unknown · phone_technical (10 guesstimation questions)
 
 How many digit 7s appear in the numbers from 1 to 6000?
 
@@ -7806,7 +7732,7 @@ How many digit 7s appear in the numbers from 1 to 6000?
 — wso · posted 2022-11 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview/intern-1)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. The submitter giv
 
-### Q815 · Tier B · unknown · phone_technical (10 questions, 30 seconds each)
+### Q806 · Tier B · unknown · phone_technical (10 questions, 30 seconds each)
 
 First round: 10 questions with 30 seconds to respond to each, then 3-4 further rounds of probability questions
 
@@ -7814,7 +7740,7 @@ First round: 10 questions with 30 seconds to respond to each, then 3-4 further r
 — wso · posted 2024-07 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview/intern-2)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. 'I had answered a
 
-### Q816 · Tier B · unknown · phone_technical (10-15 seconds per question)
+### Q807 · Tier B · unknown · phone_technical (10-15 seconds per question)
 
 How many balls in a suitcase? (given as an example of the numerous guesstimation problems, 10-15 seconds each)
 
@@ -7822,7 +7748,7 @@ How many balls in a suitcase? (given as an example of the numerous guesstimation
 — wso · posted 2019-11 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview/quant-trader-1)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. 'As some many kno
 
-### Q817 · Tier B · unknown · phone_technical
+### Q808 · Tier B · unknown · phone_technical
 
 HR interview consisting of fermi questions under tight time constraints
 
@@ -7830,7 +7756,7 @@ HR interview consisting of fermi questions under tight time constraints
 — wso · posted 2021-10 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview/quantitative-trading-intern-0)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. A one-line pipeli
 
-### Q818 · Tier B · unknown · phone_technical
+### Q809 · Tier B · unknown · phone_technical
 
 Quickly estimate the weight of a baby elephant
 
@@ -7838,7 +7764,7 @@ Quickly estimate the weight of a baby elephant
 — wso · posted 2022-04 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview/trader-intern)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Given as an examp
 
-### Q819 · Tier B · unknown · phone_technical
+### Q810 · Tier B · unknown · phone_technical
 
 A game theory question - easy math, but you must be careful with all the conditions
 
@@ -7846,7 +7772,7 @@ A game theory question - easy math, but you must be careful with all the conditi
 — wso · posted 2022-04 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview/trader-intern)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. The question itse
 
-### Q820 · Tier B · unknown · phone_technical (10 questions, 30 second time limit each)
+### Q811 · Tier B · unknown · phone_technical (10 questions, 30 second time limit each)
 
 Recruiter 1:1: behavioral (why trading? why Five Rings?) then 10 questions each with a 30 second time limit
 
@@ -7854,7 +7780,7 @@ Recruiter 1:1: behavioral (why trading? why Five Rings?) then 10 questions each 
 — wso · posted 2024-08 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview/trading-intern-13)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Confirms the 10-q
 
-### Q821 · Tier B · unknown · phone_technical
+### Q812 · Tier B · unknown · phone_technical
 
 Phone interview of many estimation questions, both fermi and computational math, under short time limits
 
@@ -7862,7 +7788,7 @@ Phone interview of many estimation questions, both fermi and computational math,
 — wso · posted 2020-12 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview/trading-intern-9)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Two sentences wit
 
-### Q822 · Tier B · unknown · phone_technical (4 interviews total, no superday)
+### Q813 · Tier B · unknown · phone_technical (4 interviews total, no superday)
 
 A series of fast-paced estimation-style questions in the first interview
 
@@ -7870,7 +7796,7 @@ A series of fast-paced estimation-style questions in the first interview
 — wso · posted 2022-09 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview/quant-trading-intern-0)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. Characterises the ro
 
-### Q823 · Tier B · unknown · phone_technical
+### Q814 · Tier B · unknown · phone_technical
 
 Math interviews covering probability and stochastic processes
 
@@ -7878,7 +7804,7 @@ Math interviews covering probability and stochastic processes
 — wso · posted 2022-09 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview/quant-trading-intern-0)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. Topic list only, wit
 
-### Q824 · Tier B · unknown · phone_technical
+### Q815 · Tier B · unknown · phone_technical
 
 Game theory questions across the three technical interviews
 
@@ -7889,7 +7815,7 @@ Game theory questions across the three technical interviews
 
 ## Five Rings — superday
 
-### Q825 · Tier B · unknown · superday
+### Q816 · Tier B · unknown · superday
 
 Full day of interviewing (6.5 hours) over Zoom, 1:1 and 2:1 with developers, quants and traders
 
@@ -7900,7 +7826,7 @@ Full day of interviewing (6.5 hours) over Zoom, 1:1 and 2:1 with developers, qua
 
 ## Five Rings — online_assessment
 
-### Q826 · Tier C · 2024 · online_assessment (a commenter listing the mental-arithmetic techniques the test rewards)
+### Q817 · Tier C · 2024 · online_assessment (a commenter listing the mental-arithmetic techniques the test rewards)
 
 Lot of mental math tricks (geometry approximation, log approximation, power of 2).
 
@@ -7908,7 +7834,7 @@ Lot of mental math tricks (geometry approximation, log approximation, power of 2
 — reddit_thread · posted 2024-03-20 · archive_only · [link](https://www.reddit.com/r/quant/comments/1bjfzrj/is_five_rings_a_good_firm_interview_incoming/kvqwhc3/)
   1 attestation(s) across 1 domain(s) · doubt: A list of three technique categories, not questions — but unusually specific ones (geometry approximation, log approximation, powers of 2) that a person guessing would be unlikely to produce in that combination. The comm
 
-### Q827 · Tier C · unknown · online_assessment (17min 17道题,一道题限时一分钟,开摄像头,不让用计算器)
+### Q818 · Tier C · unknown · online_assessment (17min 17道题,一道题限时一分钟,开摄像头,不让用计算器)
 
 17min 17道题(写15题但是两题都是两小问),一道题限时一分钟,开摄像头,不让用计算器
 
@@ -7918,7 +7844,7 @@ Lot of mental math tricks (geometry approximation, log approximation, power of 2
 — 1point3acres · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1147692-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres answers this host with a Cloudflare challenge, so the quote is the search engine's highlight of the page rather than bytes fetched here. Format detail rather than a question. The per-question minute and the 
 
-### Q828 · Tier C · Summer 2026 · online_assessment (每题1min共17个,基本都是estimate)
+### Q819 · Tier C · Summer 2026 · online_assessment (每题1min共17个,基本都是estimate)
 
 每题1min共17个,基本都是estimate,很快,估计10th root of 10
 
@@ -7928,7 +7854,7 @@ Lot of mental math tricks (geometry approximation, log approximation, power of 2
 — 1point3acres · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1148277-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres answers this host with a Cloudflare challenge, so the quote is the search engine's highlight of the page rather than bytes fetched here. The thread's second half sits behind the forum's 188-point paywall, so
 
-### Q829 · Tier C · Summer 2026 · online_assessment (20道题,邮件说给40分钟,但一道题限时2-3分钟)
+### Q820 · Tier C · Summer 2026 · online_assessment (20道题,邮件说给40分钟,但一道题限时2-3分钟)
 
 我以为会跟其他firm一样考probability brain teaser结果它基本上给的都是statistical distribution / inference / 微积分;为数不多的brainteaser还都是硬币相关的
 
@@ -7941,7 +7867,7 @@ Lot of mental math tricks (geometry approximation, log approximation, power of 2
 
 ## Five Rings — phone_technical
 
-### Q830 · Tier C · unknown · phone_technical (HR会读题,读完题只有30秒时间做答。如果没有听清需要重复也要算到时间里面)
+### Q821 · Tier C · unknown · phone_technical (HR会读题,读完题只有30秒时间做答。如果没有听清需要重复也要算到时间里面)
 
 1. roll 7 6-sided die. probability of the sum is between 17 and 27 inclusive.
 
@@ -7951,7 +7877,7 @@ Lot of mental math tricks (geometry approximation, log approximation, power of 2
 — 1point3acres · posted 2023-01 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1078229-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres is Cloudflare-blocked to direct fetch (confirmed in-session) so I only have the search-engine excerpt; the thread also hides part of its content behind a karma paywall, so the question list I can see is part
 
-### Q831 · Tier C · unknown · phone_technical (30 seconds per question, HR reads the question aloud)
+### Q822 · Tier C · unknown · phone_technical (30 seconds per question, HR reads the question aloud)
 
 2. what is the number of pieces we can cut the pizza with 6 cuts
 
@@ -7961,7 +7887,7 @@ Lot of mental math tricks (geometry approximation, log approximation, power of 2
 — 1point3acres · posted 2023-01 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1078229-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The same lazy-caterer pizza-cut question appears in an independent WSO Five Rings entry with 10 cuts instead of 6, which is either strong corroboration or a sign posters copy each other.
 
-### Q832 · Tier C · unknown · phone_technical (30 seconds per question)
+### Q823 · Tier C · unknown · phone_technical (30 seconds per question)
 
 3. the expected number of toss to get 10 m
 
@@ -7971,7 +7897,7 @@ Lot of mental math tricks (geometry approximation, log approximation, power of 2
 — 1point3acres · posted 2023-01 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1078229-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The search excerpt truncates the question mid-word at 'get 10 m', so I cannot tell what the target event was; I am recording the fragment rather than guessing.
 
-### Q833 · Tier C · unknown · phone_technical (poster says this one could be computed exactly but 30 seconds forces a)
+### Q824 · Tier C · unknown · phone_technical (poster says this one could be computed exactly but 30 seconds forces a)
 
 at is the expected number of painted faces for each small cube.
 
@@ -7984,7 +7910,7 @@ at is the expected number of painted faces for each small cube.
 
 ## Five Rings — online_assessment
 
-### Q834 · Tier D · 2027 · online_assessment (the poster comparing the OA they were sent against the format they had)
+### Q825 · Tier D · 2027 · online_assessment (the poster comparing the OA they were sent against the format they had)
 
 The HackerRank is 17 min, which seems different from the format with 19 questions. Has anyone taken it? How many questions and how much time per question do we get?
 
@@ -7992,7 +7918,7 @@ The HackerRank is 17 min, which seems different from the format with 19 question
 — reddit_thread · posted 2026-07-20 · archive_only · [link](https://www.reddit.com/r/quantfinance/comments/1v8csts/five_rings_quant_trading_intern_oa/)
   1 attestation(s) across 1 domain(s) · doubt: The poster has the invitation in front of them, so the 17-minute limit is first-hand; the 19-question figure they contrast it with is second-hand from what they had read. No question content at all. Note this dovetails w
 
-### Q835 · Tier D · 2026 · online_assessment (a reply from someone who had taken the same OA a year earlier)
+### Q826 · Tier D · 2026 · online_assessment (a reply from someone who had taken the same OA a year earlier)
 
 I did it last year and it was 17 min, 17 questions brutal mental maths.
 
@@ -8000,7 +7926,7 @@ I did it last year and it was 17 min, 17 questions brutal mental maths.
 — reddit_thread · posted 2026-07-21 · archive_only · [link](https://www.reddit.com/r/quantfinance/comments/1v8csts/five_rings_quant_trading_intern_oa/p0auxxj/)
   2 attestation(s) across 1 domain(s) · doubt: First-hand but a year stale by their own admission, and it contradicts the 19-question figure circulating in the same thread — 17 questions in 17 minutes versus 19 questions at a minute each. Both cannot describe the sam
 
-### Q836 · Tier D · unknown · online_assessment (29分钟20道题,时间很紧张,大部分都是算概率)
+### Q827 · Tier D · unknown · online_assessment (29分钟20道题,时间很紧张,大部分都是算概率)
 
 flip 5 fair coins, B flip 4
 
@@ -8010,7 +7936,7 @@ flip 5 fair coins, B flip 4
 — 1point3acres · posted 2025 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/fiverings-8581-1.html)
   1 attestation(s) across 1 domain(s) · doubt: This is a truncated teaser line from a tag-listing page, not the full post; the excerpt is far too short to reconstruct the question and the quote is under 40 characters.
 
-### Q837 · Tier D · unknown · online_assessment (一共30分钟左右,然后分给每道题大概也就1,2分钟吧)
+### Q828 · Tier D · unknown · online_assessment (一共30分钟左右,然后分给每道题大概也就1,2分钟吧)
 
 一根木棒,随机选两个点折成三段,组成三角形的概率是多少?
 
@@ -8020,7 +7946,7 @@ flip 5 fair coins, B flip 4
 — 1point3acres · posted 2024-12 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/fiverings-8581-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The poster says 依稀记得 ('vaguely remember'), and the broken-stick triangle problem is a textbook classic that also shows up in Two Sigma prep write-ups.
 
-### Q838 · Tier D · unknown · online_assessment (20道题,邮件说40分钟,实际每题限时2-3分钟)
+### Q829 · Tier D · unknown · online_assessment (20道题,邮件说40分钟,实际每题限时2-3分钟)
 
 今年还是20道题,虽然我的邮件说了给40分钟但它出题格式是一道题限时2-3分钟
 
@@ -8030,7 +7956,7 @@ flip 5 fair coins, B flip 4
 — 1point3acres · posted 2025-10 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/fiverings-8581-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Format description rather than a question; also a teaser snippet from a listing page so the body is unverified.
 
-### Q839 · Tier D · unknown · online_assessment (OA was on mental math, probability, and geometry; 'You need to answer )
+### Q830 · Tier D · unknown · online_assessment (OA was on mental math, probability, and geometry; 'You need to answer )
 
 Estimating the values of log
 
@@ -8038,15 +7964,7 @@ Estimating the values of log
 — glassdoor · posted 2026-02-12 · full_text · [link](https://www.glassdoor.com/Interview/Five-Rings-Quant-Trader-Intern-Interview-Questions-EI_IE375785.0,10_KO11,30.htm)
   1 attestation(s) across 1 domain(s) · doubt: Glassdoor blocks direct fetching from this environment; I read the page through the r.jina.ai text proxy, and Glassdoor entries are anonymous and unverified, with only the posting date shown (not necessarily the intervie
 
-### Q840 · Tier D · unknown · online_assessment (17 minutes)
-
-17 minutes is pure mental math, no time to think
-
-> 17 minutes is pure mental math, no time to think
-— reddit_thread · posted 2026-07-27 · full_text · [link](https://www.reddit.com/r/quantfinance/comments/1v8csts/five_rings_quant_trading_intern_oa/)
-  1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
-
-### Q841 · Tier D · 2027 · online_assessment (19 min)
+### Q831 · Tier D · 2027 · online_assessment (19 min)
 
 I just got OA. It says 19 min on hackerrank, is that the same you got? I thought hackerrank was just coding not math questions
 
@@ -8054,7 +7972,7 @@ I just got OA. It says 19 min on hackerrank, is that the same you got? I thought
 — reddit_thread · posted 2026-03-06 · full_text · [link](https://www.reddit.com/r/quantfinance/comments/1rb4s05/just_did_interview_for_five_rings_winternship_2027/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q842 · Tier D · unknown · online_assessment (one of 17 one-minute questions)
+### Q832 · Tier D · unknown · online_assessment (one of 17 one-minute questions)
 
 给三个坐标点求三角形面积
 
@@ -8064,7 +7982,7 @@ I just got OA. It says 19 min on hackerrank, is that the same you got? I thought
 — 1point3acres · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1147692-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres answers this host with a Cloudflare challenge, so the quote is the search engine's highlight of the page rather than bytes fetched here. The poster is listing what they could still remember rather than repro
 
-### Q843 · Tier D · unknown · online_assessment (one of 17 one-minute questions)
+### Q833 · Tier D · unknown · online_assessment (one of 17 one-minute questions)
 
 求一个函数的那段的长度
 
@@ -8074,7 +7992,7 @@ I just got OA. It says 19 min on hackerrank, is that the same you got? I thought
 — 1point3acres · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1147692-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres answers this host with a Cloudflare challenge, so the quote is the search engine's highlight of the page rather than bytes fetched here. Which function, and over what interval, is not stated — the poster adm
 
-### Q844 · Tier D · unknown · online_assessment (一共30分钟左右,然后分给每道题大概也就1,2分钟吧)
+### Q834 · Tier D · unknown · online_assessment (一共30分钟左右,然后分给每道题大概也就1,2分钟吧)
 
 一根木棒,随机选两个点折成三段
 
@@ -8084,7 +8002,7 @@ I just got OA. It says 19 min on hackerrank, is that the same you got? I thought
 — 1point3acres · posted 2025-09 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1101891-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres answers this host with a Cloudflare challenge, so the quote is the search engine's highlight of the page rather than bytes fetched here. The broken-stick problem is one of the most-printed textbook probabili
 
-### Q845 · Tier D · Summer 2026 · online_assessment (大部分是花式求机率和期望值)
+### Q835 · Tier D · Summer 2026 · online_assessment (大部分是花式求机率和期望值)
 
 P(sum of two dice > their product)
 
@@ -8092,7 +8010,7 @@ P(sum of two dice > their product)
 — 1point3acres · posted 2025-09 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141524-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres answers this host with a Cloudflare challenge, so the quote is the search engine's highlight of the page rather than bytes fetched here. The commenter is recalling their own sitting of the same OA, not the O
 
-### Q846 · Tier D · Summer 2026 · online_assessment (大部分是花式求机率和期望值)
+### Q836 · Tier D · Summer 2026 · online_assessment (大部分是花式求机率和期望值)
 
 单位球上的Var(X)
 
@@ -8102,7 +8020,7 @@ P(sum of two dice > their product)
 — 1point3acres · posted 2025-09 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141524-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres answers this host with a Cloudflare challenge, so the quote is the search engine's highlight of the page rather than bytes fetched here. 'Var(X) on the unit sphere' is under-specified — which coordinate, and
 
-### Q847 · Tier D · Summer 2026 · online_assessment (还有一些微积分求arc length)
+### Q837 · Tier D · Summer 2026 · online_assessment (还有一些微积分求arc length)
 
 还有一些微积分求arc length
 
@@ -8115,7 +8033,7 @@ P(sum of two dice > their product)
 
 ## Five Rings — phone_technical
 
-### Q848 · Tier D · unknown · phone_technical (QR phone round — poster notes questions were asked rapidly under stres)
+### Q838 · Tier D · unknown · phone_technical (QR phone round — poster notes questions were asked rapidly under stres)
 
 Cut a square in the unit circle, find the area ratio of the unit circle.
 
@@ -8123,7 +8041,7 @@ Cut a square in the unit circle, find the area ratio of the unit circle.
 — chat_telegram · posted 2023-10-01 · full_text · [link](https://t.me/usinterview/16534)
   1 attestation(s) across 1 domain(s) · doubt: The wording is the candidate's ungrammatical English paraphrase ("find the area ratio of the unit circle" — ratio to what?), and the rest of the list sits behind the forum's [hide=188] karma tag, visible only as the firs
 
-### Q849 · Tier D · unknown · phone_technical (10 questions, 30 seconds each, followed by 3-4 rounds of probability q)
+### Q839 · Tier D · unknown · phone_technical (10 questions, 30 seconds each, followed by 3-4 rounds of probability q)
 
 Calculate the length of x^2 from 0 to 9
 
@@ -8131,7 +8049,7 @@ Calculate the length of x^2 from 0 to 9
 — wso · posted 2025-01-11 · full_text · [link](https://www.wallstreetoasis.com/company/five-rings-capital-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Question as written is ambiguous (arc length of y=x^2 on [0,9] presumably); candidate may have garbled it, and WSO submissions are anonymous.
 
-### Q850 · Tier D · unknown · phone_technical (about 10-15 stats questions, each timed, 30-90 seconds each)
+### Q840 · Tier D · unknown · phone_technical (about 10-15 stats questions, each timed, 30-90 seconds each)
 
 Calculate EX given variance and EX^2
 
@@ -8139,7 +8057,7 @@ Calculate EX given variance and EX^2
 — glassdoor · posted 2024-01-14 · full_text · [link](https://www.glassdoor.com/Interview/Five-Rings-Quantitative-Researcher-Interview-Questions-EI_IE375785.0,10_KO11,34.htm)
   1 attestation(s) across 1 domain(s) · doubt: Glassdoor is bot-blocked to direct fetch; I read the page text only through the search tool's page capture, and the entry is anonymous with no internship/full-time label.
 
-### Q851 · Tier D · unknown · phone_technical (it's all about some(12 - 15) hard probability / stats questions)
+### Q841 · Tier D · unknown · phone_technical (it's all about some(12 - 15) hard probability / stats questions)
 
 Dice roll, Linear Regression etc.
 
@@ -8147,7 +8065,7 @@ Dice roll, Linear Regression etc.
 — glassdoor · posted 2024-03-03 · full_text · [link](https://www.glassdoor.com/Interview/Five-Rings-Quantitative-Researcher-Interview-Questions-EI_IE375785.0,10_KO11,34.htm)
   1 attestation(s) across 1 domain(s) · doubt: Glassdoor entries are anonymous, self-reported and undated as to the question itself; the reviewer supplies the interview month but nothing verifies they interviewed at all. Glassdoor blocks direct fetching from this box
 
-### Q852 · Tier D · unknown · phone_technical (HR会读题,读完题只有30秒时间做答)
+### Q842 · Tier D · unknown · phone_technical (HR会读题,读完题只有30秒时间做答)
 
 比较standard的why trading, why fiverings
 
@@ -8157,7 +8075,7 @@ Dice roll, Linear Regression etc.
 — 1point3acres · posted 2024-07-28 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/fiverings-8581-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Read from the tag-page row preview via search rather than the thread body — 1point3acres is Cloudflare-blocked here and the full post sits behind a points paywall, so the question is truncated at the preview boundary and
 
-### Q853 · Tier D · 2027 · phone_technical (my interviewer only gave 10 seconds)
+### Q843 · Tier D · 2027 · phone_technical (my interviewer only gave 10 seconds)
 
 lots of estimation. my interviewer only gave 10 seconds. then there were some other probability/EV/adverse selection stuff where I had unlimited time.
 
@@ -8168,7 +8086,7 @@ lots of estimation. my interviewer only gave 10 seconds. then there were some ot
 
 ## Five Rings — unknown
 
-### Q854 · Tier D · unknown · unknown
+### Q844 · Tier D · unknown · unknown
 
 Talk about your past internship project
 
@@ -8179,7 +8097,7 @@ Talk about your past internship project
 
 ## Flow Traders — online_assessment
 
-### Q855 · Tier B · unknown · online_assessment (WSO forum commenter comparing the mental-math screens they passed at O)
+### Q845 · Tier B · unknown · online_assessment (WSO forum commenter comparing the mental-math screens they passed at O)
 
 Flow's mental math was 75 mental with 10 minutes FILL IN THE BLANK
 
@@ -8190,7 +8108,7 @@ Flow's mental math was 75 mental with 10 minutes FILL IN THE BLANK
 
 ## Flow Traders — onsite
 
-### Q856 · Tier B · interviewed September 2023 · onsite (Process: HR behavioural, technical with brainteasers, then final round)
+### Q846 · Tier B · interviewed September 2023 · onsite (Process: HR behavioural, technical with brainteasers, then final round)
 
 Case study on ETF involving some financial knowledge on ETFs, hedging using ETFs, etc
 
@@ -8201,7 +8119,7 @@ Case study on ETF involving some financial knowledge on ETFs, hedging using ETFs
 
 ## Flow Traders — phone_technical
 
-### Q857 · Tier B · interviewed March 2025 · phone_technical (After online assessment (mental math + sequences); two interviewers fr)
+### Q847 · Tier B · interviewed March 2025 · phone_technical (After online assessment (mental math + sequences); two interviewers fr)
 
 calculating the pot odds of two different poker hands (AJd vs AQs) on a Js10s9d board
 
@@ -8209,7 +8127,7 @@ calculating the pot odds of two different poker hands (AJd vs AQs) on a Js10s9d 
 — interview_review_site · posted 2025-08-15 · full_text · [link](https://www.wallstreetoasis.com/company/flow-traders-0/interview)
   1 attestation(s) across 1 domain(s) · doubt: The poster describes the question in reported speech rather than quoting the interviewer, so exact wording and the precise hand/board notation may be imperfectly recalled; 'Ascent' may be a spring/insight programme rathe
 
-### Q858 · Tier B · interviewed March 2025 · phone_technical (Two interviewers asking a combination of behavioral and technical ques)
+### Q848 · Tier B · interviewed March 2025 · phone_technical (Two interviewers asking a combination of behavioral and technical ques)
 
 What is a trade you would make right now?
 
@@ -8217,7 +8135,7 @@ What is a trade you would make right now?
 — interview_review_site · posted 2025-08-15 · full_text · [link](https://www.wallstreetoasis.com/company/flow-traders-0/interview)
   1 attestation(s) across 1 domain(s) · doubt: Short generic question that is common across many trading interviews, so it carries little firm-specific signal; the WSO question field is not tied to a specific round.
 
-### Q859 · Tier B · interviewed June 2024 · phone_technical (Interview after OA; described as involving standard probability questi)
+### Q849 · Tier B · interviewed June 2024 · phone_technical (Interview after OA; described as involving standard probability questi)
 
 Question about poker odds - was asked given a poker hand, opponent's hand, and flop, determine ev
 
@@ -8225,7 +8143,7 @@ Question about poker odds - was asked given a poker hand, opponent's hand, and f
 — interview_review_site · posted 2025-03-26 · full_text · [link](https://www.wallstreetoasis.com/company/flow-traders-0/interview)
   1 attestation(s) across 1 domain(s) · doubt: This is the candidate's summary of a question type rather than a verbatim question; the actual cards and numbers are not given, so it is not a reproducible problem.
 
-### Q860 · Tier B · interviewed February 2025 · phone_technical (HR interview after passing OA of 80 mental math questions in 8 minutes)
+### Q850 · Tier B · interviewed February 2025 · phone_technical (HR interview after passing OA of 80 mental math questions in 8 minutes)
 
 how much is th SP500 quoted in the market right now ?
 
@@ -8235,7 +8153,7 @@ how much is th SP500 quoted in the market right now ?
 — interview_review_site · posted 2025-02-26 · full_text · [link](https://www.wallstreetoasis.com/company/flow-traders-0/interview)
   1 attestation(s) across 1 domain(s) · doubt: Poster's own typos suggest loose recall; the WSO question field is not explicitly tied to the HR round even though the narrative only describes OA and HR, so round attribution is inferred from the narrative rather than s
 
-### Q861 · Tier B · interviewed September 2024 · phone_technical (After supervised 8-minute mental math test; two phone interviews (recr)
+### Q851 · Tier B · interviewed September 2024 · phone_technical (After supervised 8-minute mental math test; two phone interviews (recr)
 
 asked about ETF Pricing and Currency Pairs in Technical
 
@@ -8246,7 +8164,7 @@ asked about ETF Pricing and Currency Pairs in Technical
 
 ## Flow Traders — superday
 
-### Q862 · Tier B · interviewed September 2023 · superday (HK office process: OA (arithmetic + sequences), group interview with b)
+### Q852 · Tier B · interviewed September 2023 · superday (HK office process: OA (arithmetic + sequences), group interview with b)
 
 Market Making questions were difficult. They expect you to be quite sure of yourself, and not to struggle too much. They will also push back on your answers, so you must be ready to defend it
 
@@ -8257,7 +8175,7 @@ Market Making questions were difficult. They expect you to be quite sure of your
 
 ## Flow Traders — unknown
 
-### Q863 · Tier B · interviewed May 2025 · unknown (Process described as: OA (mental math + sequences), HR interview, tech)
+### Q853 · Tier B · interviewed May 2025 · unknown (Process described as: OA (mental math + sequences), HR interview, tech)
 
 Make a market. Calculate the spread as a percentage of the midprice.
 
@@ -8268,7 +8186,7 @@ Make a market. Calculate the spread as a percentage of the midprice.
 
 ## Flow Traders — online_assessment
 
-### Q864 · Tier C · 2025 · online_assessment (OA sent immediately after CV submission for the Hong Kong trader inter)
+### Q854 · Tier C · 2025 · online_assessment (OA sent immediately after CV submission for the Hong Kong trader inter)
 
 OA的type是6分钟60道mental math和25分钟26道sequence problem
 
@@ -8281,7 +8199,7 @@ OA的type是6分钟60道mental math和25分钟26道sequence problem
 
 ## G-Research — unknown
 
-### Q865 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF, described by the firm as )
+### Q855 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF, described by the firm as )
 
 Suppose that X and Y are mean zero, unit variance random variables. If least squares regression (without intercept) of Y against X gives a slope of β (i.e. it minimises E[(Y − βX)^2]), what is the slope of the regression of X against Y?
 
@@ -8289,7 +8207,7 @@ Suppose that X and Y are mean zero, unit variance random variables. If least squ
 — firm_official_pdf · posted unknown · full_text · [link](https://www.gresearch.com/wp-content/uploads/2019/12/Sample-Quant-Exa.pdf)
   1 attestation(s) across 1 domain(s) · doubt: G-Research's own framing is a disjunction — questions are on the written exam, OR were asked at interview, OR the firm 'think[s] are fun' — so this specific item is not individually guaranteed to have been asked; the PDF
 
-### Q866 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF)
+### Q856 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF)
 
 I meet someone with 2 children, and I learn that one of the children is a boy. What's the probability that the other child is also a boy? What if one of the children is a boy born on a Tuesday?
 
@@ -8297,7 +8215,7 @@ I meet someone with 2 children, and I learn that one of the children is a boy. W
 — firm_official_pdf · posted unknown · full_text · [link](https://www.gresearch.com/wp-content/uploads/2019/12/Sample-Quant-Exa.pdf)
   1 attestation(s) across 1 domain(s) · doubt: This is the very well-known 'boy born on a Tuesday' puzzle that predates G-Research and appears in many puzzle collections, so it is not firm-original; the firm's framing does not guarantee this individual item was asked
 
-### Q867 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF)
+### Q857 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF)
 
 A stock has beta of 2.0 and stock specific daily volatility of 2%. Suppose that yesterday's closing price was $100 and today the market goes up by 1%. What's the probability of today's closing price being at least $103? What's the probability that the closing price is at least $110?
 
@@ -8305,7 +8223,7 @@ A stock has beta of 2.0 and stock specific daily volatility of 2%. Suppose that 
 — firm_official_pdf · posted unknown · full_text · [link](https://www.gresearch.com/wp-content/uploads/2019/12/Sample-Quant-Exa.pdf)
   1 attestation(s) across 1 domain(s) · doubt: Firm's framing does not individually guarantee this was asked; the 2017 copyright means the current exam may have moved on. Line wraps in the PDF were joined with spaces.
 
-### Q868 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF)
+### Q858 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF)
 
 If I break a stick of unit length into three random pieces, what's the expected length of the largest piece?
 
@@ -8313,7 +8231,7 @@ If I break a stick of unit length into three random pieces, what's the expected 
 — firm_official_pdf · posted unknown · full_text · [link](https://www.gresearch.com/wp-content/uploads/2019/12/Sample-Quant-Exa.pdf)
   1 attestation(s) across 1 domain(s) · doubt: Classic broken-stick problem found in Mosteller and many probability texts, so not firm-original; firm's framing does not individually guarantee it was asked.
 
-### Q869 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF)
+### Q859 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF)
 
 What is the Delta of an at-the-money binary option with a payoff 0 at < $100, and payoff 1 at ≥ $100, as it approaches expiry?
 
@@ -8321,7 +8239,7 @@ What is the Delta of an at-the-money binary option with a payoff 0 at < $100, an
 — firm_official_pdf · posted unknown · full_text · [link](https://www.gresearch.com/wp-content/uploads/2019/12/Sample-Quant-Exa.pdf)
   1 attestation(s) across 1 domain(s) · doubt: Firm's framing does not individually guarantee this was asked; standard derivatives exercise. PDF line wrap joined with a space.
 
-### Q870 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF)
+### Q860 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF)
 
 (You probably need to look up numbers for this.) Suppose the moon were to disintegrate, and fall to earth over 5000 years. How does this influx of power compare to that of the Sun? Much more, about the same, or much less?
 
@@ -8329,7 +8247,7 @@ What is the Delta of an at-the-money binary option with a payoff 0 at < $100, an
 — firm_official_pdf · posted unknown · full_text · [link](https://www.gresearch.com/wp-content/uploads/2019/12/Sample-Quant-Exa.pdf)
   1 attestation(s) across 1 domain(s) · doubt: The parenthetical 'you probably need to look up numbers for this' suggests this is one of the items the firm includes because they 'think [it is] fun' rather than a timed-exam question; short source_quote (47 chars) beca
 
-### Q871 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF)
+### Q861 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF)
 
 Consider all 100 digit numbers, i.e. those between 0 to 10^100 − 1, inclusive. For each number, take the product of non-zero digits (treat the product of digits of 0 as 1), and sum across all the numbers. What's the last digit?
 
@@ -8337,7 +8255,7 @@ Consider all 100 digit numbers, i.e. those between 0 to 10^100 − 1, inclusive.
 — firm_official_pdf · posted unknown · full_text · [link](https://www.gresearch.com/wp-content/uploads/2019/12/Sample-Quant-Exa.pdf)
   1 attestation(s) across 1 domain(s) · doubt: PDF text extraction renders the superscript 10^100 as '10100', so I have reconstructed the exponent from context; source_quote deliberately stops before the exponent to stay verbatim. Firm's framing does not individually
 
-### Q872 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF)
+### Q862 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF)
 
 Let R(n) be a random draw of integers between 0 and n − 1 (inclusive). I repeatedly apply R, starting at 10^100. What's the expected number of repeated applications until I get zero?
 
@@ -8345,7 +8263,7 @@ Let R(n) be a random draw of integers between 0 and n − 1 (inclusive). I repea
 — firm_official_pdf · posted unknown · full_text · [link](https://www.gresearch.com/wp-content/uploads/2019/12/Sample-Quant-Exa.pdf)
   1 attestation(s) across 1 domain(s) · doubt: Same superscript-extraction caveat as the previous item (10^100 rendered as '10100' by the PDF text layer); firm's framing does not individually guarantee this was asked.
 
-### Q873 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF)
+### Q863 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF)
 
 How many ways are there to tile dominos (with size 2 × 1) on a grid of 2 × n? How about on a grid of 3 × 2n?
 
@@ -8353,7 +8271,7 @@ How many ways are there to tile dominos (with size 2 × 1) on a grid of 2 × n? 
 — firm_official_pdf · posted unknown · full_text · [link](https://www.gresearch.com/wp-content/uploads/2019/12/Sample-Quant-Exa.pdf)
   1 attestation(s) across 1 domain(s) · doubt: Standard combinatorics exercise (Fibonacci tilings) that appears widely; firm's framing does not individually guarantee this was asked.
 
-### Q874 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF)
+### Q864 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF)
 
 I have $50 and I'm gambling on a series of coin flips. For each head I win $2 and for each tail I lose $1. What's the probability that I will run out of money?
 
@@ -8361,7 +8279,7 @@ I have $50 and I'm gambling on a series of coin flips. For each head I win $2 an
 — firm_official_pdf · posted unknown · full_text · [link](https://www.gresearch.com/wp-content/uploads/2019/12/Sample-Quant-Exa.pdf)
   1 attestation(s) across 1 domain(s) · doubt: Asymmetric random-walk ruin problem is a standard exercise found in many quant prep books; firm's framing does not individually guarantee this was asked.
 
-### Q875 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF; explicitly flagged '(Hard)
+### Q865 · Tier C · unknown · unknown (Official G-Research 'Sample Quant Exam' PDF; explicitly flagged '(Hard)
 
 (Hard) A company has a competition to win a car. Each contestant needs to pick a positive integer. If there's at least one unique choice, the person who made the smallest unique choice wins the car. If there are no unique choices, the company keeps the car and there's no repeat of the competition. It turns out that there are only three contestants, and you're one of them. Everyone knows before picking their numbers that there are only three contestants. How should you make your choice?
 
@@ -8372,7 +8290,7 @@ I have $50 and I'm gambling on a series of coin flips. For each head I win $2 an
 
 ## Group One Trading — onsite
 
-### Q876 · Tier B · interviewed September 2016 · onsite (Selected from resume drop alone; interview content mostly behavioral b)
+### Q866 · Tier B · interviewed September 2016 · onsite (Selected from resume drop alone; interview content mostly behavioral b)
 
 Tell me what you know of options? Do you know the difference between a call option and a put option? Can you describe the Black-Scholes model to me? What is the model used for? What factors influence the outcome of the formula?
 
@@ -8383,7 +8301,7 @@ Tell me what you know of options? Do you know the difference between a call opti
 
 ## Group One Trading — phone_technical
 
-### Q877 · Tier B · interviewed November 2024 · phone_technical (Two-round process: one round with HR to gauge you as a person, then on)
+### Q867 · Tier B · interviewed November 2024 · phone_technical (Two-round process: one round with HR to gauge you as a person, then on)
 
 How is trading with a model like being the house in a casino?
 
@@ -8391,7 +8309,7 @@ How is trading with a model like being the house in a casino?
 — interview_review_site · posted 2025-04-01 · full_text · [link](https://www.wallstreetoasis.com/company/group-one-trading-lp-0/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO's question field is not tied to a specific round, so attributing it to the senior-person round is inferred from the two-round narrative rather than stated.
 
-### Q878 · Tier B · interviewed July 2023 · phone_technical (Quick two-round process: first with a recruiter, then with someone mor)
+### Q868 · Tier B · interviewed July 2023 · phone_technical (Quick two-round process: first with a recruiter, then with someone mor)
 
 Inputs to the Black Scholes Model and their relative importance
 
@@ -8402,7 +8320,7 @@ Inputs to the Black Scholes Model and their relative importance
 
 ## Group One Trading — onsite
 
-### Q879 · Tier D · interviewed October 2021 · onsite (Final round consists of several market-making questions testing knowle)
+### Q869 · Tier D · interviewed October 2021 · onsite (Final round consists of several market-making questions testing knowle)
 
 Make a market for a liter of water
 
@@ -8413,7 +8331,7 @@ Make a market for a liter of water
 
 ## Group One Trading — phone_technical
 
-### Q880 · Tier D · interviewed January 2024 · phone_technical (Resume drop on school Handshake, then 1-on-1 HR a week later, then an )
+### Q870 · Tier D · interviewed January 2024 · phone_technical (Resume drop on school Handshake, then 1-on-1 HR a week later, then an )
 
 How is the market like a casino?
 
@@ -8421,7 +8339,7 @@ How is the market like a casino?
 — interview_review_site · posted 2024-07-16 · full_text · [link](https://www.wallstreetoasis.com/company/group-one-trading-lp-0/interview)
   1 attestation(s) across 1 domain(s) · doubt: Extremely short question with no numbers; three separate Group One entries report near-identical casino framings, which is good corroboration of the theme but means the exact wording varies between recollections.
 
-### Q881 · Tier D · interviewed September 2020 · phone_technical (First interview behavioral/fit; second interview with the head trader )
+### Q871 · Tier D · interviewed September 2020 · phone_technical (First interview behavioral/fit; second interview with the head trader )
 
 How is a market maker like a casino?
 
@@ -8429,7 +8347,7 @@ How is a market maker like a casino?
 — interview_review_site · posted 2021-12-24 · full_text · [link](https://www.wallstreetoasis.com/company/group-one-trading-lp-0/interview)
   1 attestation(s) across 1 domain(s) · doubt: The three math questions the poster mentions are not recorded, so only the conceptual question survives; wording of the casino question differs slightly across three Group One entries.
 
-### Q882 · Tier D · interviewed January 2021 · phone_technical (First stage was behaviorals with no technicals; then a phone call with)
+### Q872 · Tier D · interviewed January 2021 · phone_technical (First stage was behaviorals with no technicals; then a phone call with)
 
 Why discretionary trading?
 
@@ -8440,7 +8358,7 @@ Why discretionary trading?
 
 ## Headlands Technologies — online_assessment
 
-### Q883 · Tier C · interviewed September 2020 · online_assessment (Applied online; process was an online C++-only test then a phone inter)
+### Q873 · Tier C · interviewed September 2020 · online_assessment (Applied online; process was an online C++-only test then a phone inter)
 
 Online test (only C++) and then a difficult phone interview involving system design and questions about your C++ knowledge and experience
 
@@ -8451,7 +8369,7 @@ Online test (only C++) and then a difficult phone interview involving system des
 
 ## Hudson River Trading — online_assessment
 
-### Q884 · Tier B · unknown · online_assessment (3 coding problems, about Easy-Medium leetcode level)
+### Q874 · Tier B · unknown · online_assessment (3 coding problems, about Easy-Medium leetcode level)
 
 Submitted my application online and was sent an OA after about a week, with 3 coding problems, about Easy-Medium leetcode level.
 
@@ -8459,7 +8377,7 @@ Submitted my application online and was sent an OA after about a week, with 3 co
 — wso · posted 2025-07-31 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Format description only; contradicts other HRT reports that call the OA leetcode-hard, so difficulty perception varies by candidate.
 
-### Q885 · Tier B · unknown · online_assessment (3 coding questions, 90 minutes)
+### Q875 · Tier B · unknown · online_assessment (3 coding questions, 90 minutes)
 
 Online assessment with 3 coding questions on hacker rank, ranging from dp to tree traversal. given 90 minutes
 
@@ -8467,7 +8385,7 @@ Online assessment with 3 coding questions on hacker rank, ranging from dp to tre
 — wso · posted 2024-10-20 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Topic-level only; the candidate's own 'Interview Questions' field says 'Nothing particularly difficult', giving no problem content.
 
-### Q886 · Tier B · unknown · online_assessment (3 coding questions in 2.5 hours)
+### Q876 · Tier B · unknown · online_assessment (3 coding questions in 2.5 hours)
 
 OA with 2.5 hours for 3 coding questions: 1- brain teaser like question, asking an optimal algorithm that is unlikely to be found "naturally". Either you know the answer or it's over. Factorization stuff. 2- Manipulation of a certain data structure 3- Code a game, might require an ungodly amount of code
 
@@ -8475,7 +8393,7 @@ OA with 2.5 hours for 3 coding questions: 1- brain teaser like question, asking 
 — wso · posted 2024-09-17 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Deliberately vague ('a certain data structure', 'code a game') — possibly because the candidate was under an NDA-style agreement — so no problem can be reconstructed.
 
-### Q887 · Tier B · unknown · online_assessment (3 problems, Leetcode Medium/Hard)
+### Q877 · Tier B · unknown · online_assessment (3 problems, Leetcode Medium/Hard)
 
 Got 3 problems, Leetcode Medium/Hard. Solved all 3 in C++.
 
@@ -8483,7 +8401,7 @@ Got 3 problems, Leetcode Medium/Hard. Solved all 3 in C++.
 — wso · posted 2023-10-22 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Format only; no problem statements.
 
-### Q888 · Tier B · unknown · online_assessment (3 hard LC problems)
+### Q878 · Tier B · unknown · online_assessment (3 hard LC problems)
 
 Did an OA, which consisted of 3 hard LC problems. Two of them were related to 2D DP, one just had a lot of edge cases.
 
@@ -8491,7 +8409,7 @@ Did an OA, which consisted of 3 hard LC problems. Two of them were related to 2D
 — wso · posted 2023-01-25 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Topic-level; the separate 'Interview Questions' field only says 'BST question'.
 
-### Q889 · Tier B · unknown · online_assessment (4 questions in 90 minutes)
+### Q879 · Tier B · unknown · online_assessment (4 questions in 90 minutes)
 
 the last question, a coding question, related to geometry, performance needs to be good, so brute-force was not ok, do basic data processing & descriptive statistics on pandas
 
@@ -8499,7 +8417,7 @@ the last question, a coding question, related to geometry, performance needs to 
 — wso · posted 2022-11-10 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Two things are jammed into one field (a geometry perf problem and a pandas stats problem) so it may actually describe two separate OA questions.
 
-### Q890 · Tier B · unknown · online_assessment (three questions in the initial coding challenge)
+### Q880 · Tier B · unknown · online_assessment (three questions in the initial coding challenge)
 
 Find the maximum width of two arrays without a tree.
 
@@ -8507,7 +8425,7 @@ Find the maximum width of two arrays without a tree.
 — blog · posted 2020-12-03 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/software-engineering-intern-united-states-december-3-2020-no-offer-positive-4795704d)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q891 · Tier B · unknown · online_assessment (second of three questions in the coding challenge)
+### Q881 · Tier B · unknown · online_assessment (second of three questions in the coding challenge)
 
 Minimum steps to reach a binary number to zero.
 
@@ -8515,7 +8433,7 @@ Minimum steps to reach a binary number to zero.
 — blog · posted 2020-12-03 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/software-engineering-intern-united-states-december-3-2020-no-offer-positive-4795704d)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q892 · Tier B · unknown · online_assessment (Online assessment with 4 parts)
+### Q882 · Tier B · unknown · online_assessment (Online assessment with 4 parts)
 
 Write a program that can add two binary strings (without leading zeroes).
 
@@ -8523,7 +8441,7 @@ Write a program that can add two binary strings (without leading zeroes).
 — blog · posted 2022-11-01 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/software-engineerinternship-united-states-november-1-2022-no-offer-positive-4c20631b)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q893 · Tier B · unknown · online_assessment
+### Q883 · Tier B · unknown · online_assessment
 
 Implement a front-end interface for virtual credit card generation.
 
@@ -8531,7 +8449,7 @@ Implement a front-end interface for virtual credit card generation.
 — blog · posted 2022-12-28 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/software-engineer-intern-united-states-december-28-2022-no-offer-neutral-a3a68e56)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q894 · Tier B · unknown · online_assessment (4 questions in 90 minutes)
+### Q884 · Tier B · unknown · online_assessment (4 questions in 90 minutes)
 
 Non disclosure agreement, but the brainteasers are probability based (with kind of intuition to bring). LC hard for the programming !
 
@@ -8539,7 +8457,7 @@ Non disclosure agreement, but the brainteasers are probability based (with kind 
 — glassdoor · posted 2022-11-11 · full_text · [link](https://www.glassdoor.com/Interview/Hudson-River-Trading-Intern-Interview-Questions-EI_IE470937.0,20_KO21,27.htm)
   1 attestation(s) across 1 domain(s) · doubt: Glassdoor entries are anonymous, self-reported and undated as to the question itself; the reviewer supplies the interview month but nothing verifies they interviewed at all. Glassdoor blocks direct fetching from this box
 
-### Q895 · Tier B · unknown · online_assessment
+### Q885 · Tier B · unknown · online_assessment
 
 This was a leetcode question, probably an easy or medium about data structures.
 
@@ -8547,7 +8465,7 @@ This was a leetcode question, probably an easy or medium about data structures.
 — glassdoor · posted 2021-09-23 · full_text · [link](https://www.glassdoor.com/Interview/Hudson-River-Trading-Intern-Interview-Questions-EI_IE470937.0,20_KO21,27.htm)
   1 attestation(s) across 1 domain(s) · doubt: Glassdoor entries are anonymous, self-reported and undated as to the question itself; the reviewer supplies the interview month but nothing verifies they interviewed at all. Glassdoor blocks direct fetching from this box
 
-### Q896 · Tier B · unknown · online_assessment (only two questions with 140 minutes)
+### Q886 · Tier B · unknown · online_assessment (only two questions with 140 minutes)
 
 given a string with only A, B, C or D, remove adjacents A and Bs and remove adjacent C and Ds so 'ABACD' becomes 'ACD' becomes 'A'
 
@@ -8555,7 +8473,7 @@ given a string with only A, B, C or D, remove adjacents A and Bs and remove adja
 — reddit_thread · posted 2022-01-08 · full_text · [link](https://www.reddit.com/r/csMajors/comments/rz3dvc/oa_with_hudson_river_trading_and_preparation/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q897 · Tier B · unknown · online_assessment (only two questions with 140 minutes)
+### Q887 · Tier B · unknown · online_assessment (only two questions with 140 minutes)
 
 longest path in alternating tree. Basically, you got a tree with only 'a' or 'b' as values. Find the longest alternating path inside the tree. The hard path was that the path might connect two subpath through a common parent or it might not go through the root.
 
@@ -8565,7 +8483,7 @@ longest path in alternating tree. Basically, you got a tree with only 'a' or 'b'
 — reddit_thread · posted 2022-01-08 · full_text · [link](https://www.reddit.com/r/csMajors/comments/rz3dvc/oa_with_hudson_river_trading_and_preparation/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q898 · Tier B · unknown · online_assessment (3.5/4 problems ... something like 910/1050 or 520/600)
+### Q888 · Tier B · unknown · online_assessment (3.5/4 problems ... something like 910/1050 or 520/600)
 
 for context i solved 3.5/4 problems on the algo dev oa so something like 910/1050 or 520/600. (for swe i didn't solve the second question so that's cooked for sure
 
@@ -8573,7 +8491,7 @@ for context i solved 3.5/4 problems on the algo dev oa so something like 910/105
 — reddit_thread · posted 2025-08-29 · full_text · [link](https://www.reddit.com/r/csMajors/comments/1n2tr62/quick_questions_about_hrt_process/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q899 · Tier B · unknown · online_assessment
+### Q889 · Tier B · unknown · online_assessment
 
 Took CodeSignal GCA for the first time for internships in HRT, Roblox, Capital One and got an 834 (couldn't pass one test case on the third question).
 
@@ -8581,7 +8499,7 @@ Took CodeSignal GCA for the first time for internships in HRT, Roblox, Capital O
 — reddit_thread · posted 2022-08-22 · full_text · [link](https://www.reddit.com/r/csMajors/comments/wvbaiu/codesignal_scores_for_companies/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q900 · Tier B · unknown · online_assessment (4Q 90 minutes)
+### Q890 · Tier B · unknown · online_assessment (4Q 90 minutes)
 
 HRT algo-dev internship OA on HackerRank: 4 questions in 90 minutes, last one gated on runtime rather than correctness
 
@@ -8589,7 +8507,7 @@ HRT algo-dev internship OA on HackerRank: 4 questions in 90 minutes, last one ga
 — wso · posted 2022-09 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview/algorithm-development-internship-0)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Gives the shape o
 
-### Q901 · Tier B · unknown · online_assessment (2.5 hours, 3 coding questions)
+### Q891 · Tier B · unknown · online_assessment (2.5 hours, 3 coding questions)
 
 OA question 1: a brainteaser-like question asking for an optimal algorithm unlikely to be found naturally - factorization
 
@@ -8597,7 +8515,7 @@ OA question 1: a brainteaser-like question asking for an optimal algorithm unlik
 — wso · posted 2023-12 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview/developer)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. 'Factorization st
 
-### Q902 · Tier B · unknown · online_assessment (2.5 hours, 3 coding questions)
+### Q892 · Tier B · unknown · online_assessment (2.5 hours, 3 coding questions)
 
 OA questions 2 and 3: manipulation of a certain data structure, and code a game that may require an ungodly amount of code
 
@@ -8605,7 +8523,7 @@ OA questions 2 and 3: manipulation of a certain data structure, and code a game 
 — wso · posted 2023-12 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview/developer)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Neither question 
 
-### Q903 · Tier B · unknown · online_assessment
+### Q893 · Tier B · unknown · online_assessment
 
 OA of 3 hard LeetCode-style problems: two on 2D dynamic programming, one heavy on edge cases
 
@@ -8613,7 +8531,7 @@ OA of 3 hard LeetCode-style problems: two on 2D dynamic programming, one heavy o
 — wso · posted 2022-11 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview/engineer)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Topic labels only
 
-### Q904 · Tier B · unknown · online_assessment (3 questions; question 3 has a part 1 and a part 2)
+### Q894 · Tier B · unknown · online_assessment (3 questions; question 3 has a part 1 and a part 2)
 
 HRT new-grad Algo Developer OA: 3 questions, the third split into two parts where part 2 builds on part 1
 
@@ -8624,7 +8542,7 @@ HRT new-grad Algo Developer OA: 3 questions, the third split into two parts wher
 
 ## Hudson River Trading — onsite
 
-### Q905 · Tier B · unknown · onsite (preceded by a Math Technical Interview and a Coding Interview)
+### Q895 · Tier B · unknown · onsite (preceded by a Math Technical Interview and a Coding Interview)
 
 Data analysis where you are given a dataset and build prediction models based on it
 
@@ -8632,7 +8550,7 @@ Data analysis where you are given a dataset and build prediction models based on
 — wso · posted 2025-01-20 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Describes the task genre, not a specific dataset or target, so it cannot be reconstructed as a concrete question.
 
-### Q906 · Tier B · unknown · onsite (was given 45 minutes)
+### Q896 · Tier B · unknown · onsite (was given 45 minutes)
 
 Live code a poker simulation to find the best hand (was given 45 minutes).
 
@@ -8640,7 +8558,7 @@ Live code a poker simulation to find the best hand (was given 45 minutes).
 — wso · posted 2023-10-23 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO anonymous entry; no way to confirm the variant of poker or the exact spec that was requested.
 
-### Q907 · Tier B · unknown · onsite
+### Q897 · Tier B · unknown · onsite
 
 Design a system that can process transactions and perform specific operations on them.
 
@@ -8648,7 +8566,7 @@ Design a system that can process transactions and perform specific operations on
 — blog · posted 2023-10-01 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/software-engineer-internship-new-york-ny-october-1-2023-no-offer-positive-14c6dc5d)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q908 · Tier B · unknown · onsite (1 hour, 15 minutes per interview; four rounds: balanced trees, K-d tre)
+### Q898 · Tier B · unknown · onsite (1 hour, 15 minutes per interview; four rounds: balanced trees, K-d tre)
 
 For example, the balanced tree started as basically, "Do you know how to use a BBST and how to traverse it?" to, "How can I rebuild it?" to then, reasoning about real internals (such as walking a subsection of the binary tree; walking a subtree is O(K + nlogn), even if random access to all nodes is Klog(n)).
 
@@ -8656,7 +8574,7 @@ For example, the balanced tree started as basically, "Do you know how to use a B
 — blog · posted 2025-10-13 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/software-engineerinternship-united-states-october-13-2025-accepted-offer-positive-ab3e79e2)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q909 · Tier B · unknown · onsite (2h in front of a computer to solve 4 questions)
+### Q899 · Tier B · unknown · onsite (2h in front of a computer to solve 4 questions)
 
 First one was a warm up to see if you can do some parsing and be careful about edge condition. Second one was a simple DS to implement but I think they were looking for real world efficiency not just the right complexity. Last two were a simple algorithm question, last ones be presented as a bonus question on top of the third question but I suspect it was actually needed.
 
@@ -8666,7 +8584,7 @@ First one was a warm up to see if you can do some parsing and be careful about e
 — blind · posted 2023-05-04 · full_text · [link](https://www.teamblind.com/post/hudson-river-trading-interview-process-87mxp0h4)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies the poster's employer, not their candidacy, and threads are pseudonymous; nothing here can be tied to a named person or a dated application. The poster opens with 'Few years ago when I interviewed i got:',
 
-### Q910 · Tier B · unknown · onsite
+### Q900 · Tier B · unknown · onsite
 
 One question was about optimization of a backtracking problem, one was more a math question.
 
@@ -8674,7 +8592,7 @@ One question was about optimization of a backtracking problem, one was more a ma
 — blind · posted 2023-05-04 · full_text · [link](https://www.teamblind.com/post/hudson-river-trading-interview-process-87mxp0h4)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies the poster's employer, not their candidacy, and threads are pseudonymous; nothing here can be tied to a named person or a dated application. The poster opens with 'Few years ago when I interviewed i got:',
 
-### Q911 · Tier B · unknown · onsite
+### Q901 · Tier B · unknown · onsite
 
 Finally last question was about memory management.
 
@@ -8682,7 +8600,7 @@ Finally last question was about memory management.
 — blind · posted 2023-05-04 · full_text · [link](https://www.teamblind.com/post/hudson-river-trading-interview-process-87mxp0h4)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies the poster's employer, not their candidacy, and threads are pseudonymous; nothing here can be tied to a named person or a dated application. The poster opens with 'Few years ago when I interviewed i got:',
 
-### Q912 · Tier B · unknown · onsite
+### Q902 · Tier B · unknown · onsite
 
 a large coding task where you take a spec and implement it, questions on OS/"how computers work", and system design questions are the main things usually covered.
 
@@ -8690,7 +8608,7 @@ a large coding task where you take a spec and implement it, questions on OS/"how
 — blind · posted 2023-05-04 · full_text · [link](https://www.teamblind.com/post/hudson-river-trading-interview-process-87mxp0h4)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies the poster's employer, not their candidacy, and threads are pseudonymous; nothing here can be tied to a named person or a dated application. Phrased as what is 'usually covered' rather than what happened t
 
-### Q913 · Tier B · unknown · onsite (5 1-on-1 interviews)
+### Q903 · Tier B · unknown · onsite (5 1-on-1 interviews)
 
 Final round of 5 1-on-1s with Quants and Algo Developers: first a coding interview, second a brainteaser-focused interview
 
@@ -8698,7 +8616,7 @@ Final round of 5 1-on-1s with Quants and Algo Developers: first a coding intervi
 — wso · posted 2022-06 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview/algo-developer)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. The submitter was
 
-### Q914 · Tier B · unknown · onsite (4-5 interviews)
+### Q904 · Tier B · unknown · onsite (4-5 interviews)
 
 HRT quant research intern pipeline: Math Technical Interview, then Coding Interview, then a 4-5 interview onsite covering data analysis, coding and math
 
@@ -8706,7 +8624,7 @@ HRT quant research intern pipeline: Math Technical Interview, then Coding Interv
 — wso · posted 2024-11 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview/quant-research-intern)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Structure only, n
 
-### Q915 · Tier B · unknown · onsite (3 consecutive technical rounds)
+### Q905 · Tier B · unknown · onsite (3 consecutive technical rounds)
 
 HRT internship pipeline: resume review, behavioural screen, then 3 consecutive technical rounds
 
@@ -8717,7 +8635,7 @@ HRT internship pipeline: resume review, behavioural screen, then 3 consecutive t
 
 ## Hudson River Trading — phone_technical
 
-### Q916 · Tier B · unknown · phone_technical (followed an OA with 3 coding problems, about Easy-Medium leetcode leve)
+### Q906 · Tier B · unknown · phone_technical (followed an OA with 3 coding problems, about Easy-Medium leetcode leve)
 
 I was asked a expected value question involving the expected value among distance to an edge, with a randomly placed object.
 
@@ -8725,7 +8643,7 @@ I was asked a expected value question involving the expected value among distanc
 — wso · posted 2025-07-31 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Titled 'Campus Algo Dev' so it is campus recruiting, but the post never says internship vs new grad, so level stays unknown; the candidate says they fumbled it, weakening recall.
 
-### Q917 · Tier B · unknown · phone_technical (followed a Hackerrank test of 3 Leetcode Medium/Hard problems)
+### Q907 · Tier B · unknown · phone_technical (followed a Hackerrank test of 3 Leetcode Medium/Hard problems)
 
 Questions on EV for coin tosses, law of large numbers, Bayes theorem
 
@@ -8733,7 +8651,7 @@ Questions on EV for coin tosses, law of large numbers, Bayes theorem
 — wso · posted 2023-10-22 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: The candidate himself says the problems were 'variations of problems from the green book' (Xinfeng Zhou), so the content overlaps a textbook — included because a real dated first-person recall attests it.
 
-### Q918 · Tier B · unknown · phone_technical (Primarily behavioral questions)
+### Q908 · Tier B · unknown · phone_technical (Primarily behavioral questions)
 
 A question about the most difficult problem or challenge that I have faced.
 
@@ -8741,7 +8659,7 @@ A question about the most difficult problem or challenge that I have faced.
 — wso · posted 2022-09-20 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: Entirely generic behavioral prompt with no firm-specific signal.
 
-### Q919 · Tier B · unknown · phone_technical
+### Q909 · Tier B · unknown · phone_technical
 
 Develop a data structure capable of efficiently handling an extremely high volume of transactions, to the tune of one million per second. Each transaction encompasses a timestamp and relevant data information.
 
@@ -8749,7 +8667,7 @@ Develop a data structure capable of efficiently handling an extremely high volum
 — blog · posted 2022-10-01 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/software-engineerinternship-new-york-ny-october-1-2022-no-offer-positive-cbe7fc1b)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q920 · Tier B · unknown · phone_technical (preceded by an automated coding test with three questions in C++, Leet)
+### Q910 · Tier B · unknown · phone_technical (preceded by an automated coding test with three questions in C++, Leet)
 
 Find the k largest values in an array in average time O(n).
 
@@ -8757,7 +8675,7 @@ Find the k largest values in an array in average time O(n).
 — blog · posted 2020-10-01 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/software-engineer-intern-united-states-october-1-2020-no-offer-neutral-bf7b5f5d)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q921 · Tier B · unknown · phone_technical
+### Q911 · Tier B · unknown · phone_technical
 
 The question was asking about the requirements to create a concurrent framework, and possible limitations and flaws that the system might have.
 
@@ -8765,7 +8683,7 @@ The question was asking about the requirements to create a concurrent framework,
 — blog · posted 2024-11-01 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/software-engineering-internship-united-states-november-1-2024-no-offer-neutral-bd28d243)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q922 · Tier B · unknown · phone_technical (the OA was LeetCode Mediums; this was the live C++ implementation roun)
+### Q912 · Tier B · unknown · phone_technical (the OA was LeetCode Mediums; this was the live C++ implementation roun)
 
 Build a game (Lines and Squares) – forgot the name.
 
@@ -8773,7 +8691,7 @@ Build a game (Lines and Squares) – forgot the name.
 — blog · posted 2025-09-01 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/software-engineerinternship-september-1-2025-no-offer-neutral-88a68274)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q923 · Tier B · unknown · phone_technical (first round: an operating systems design question and a LeetCode Mediu)
+### Q913 · Tier B · unknown · phone_technical (first round: an operating systems design question and a LeetCode Mediu)
 
 Design an abstract class for task scheduling.
 
@@ -8781,7 +8699,7 @@ Design an abstract class for task scheduling.
 — blog · posted 2024-09-26 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/software-engineering-intern-new-york-ny-september-26-2024-no-offer-neutral-8cd5c8d8)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q924 · Tier B · unknown · phone_technical (preceded by a SystemVerilog programming task)
+### Q914 · Tier B · unknown · phone_technical (preceded by a SystemVerilog programming task)
 
 What happens in the synthesis stage of building an FPGA design?
 
@@ -8789,7 +8707,7 @@ What happens in the synthesis stage of building an FPGA design?
 — blog · posted 2024-01-04 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/hardware-engineer-internship-new-york-ny-january-4-2024-declined-offer-positive-177d38ab)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q925 · Tier B · unknown · phone_technical (3-hour Codesignal OA followed by a 1-hour phone screen)
+### Q915 · Tier B · unknown · phone_technical (3-hour Codesignal OA followed by a 1-hour phone screen)
 
 Design concurrent framework and contact tracing graph problem.
 
@@ -8797,7 +8715,7 @@ Design concurrent framework and contact tracing graph problem.
 — blog · posted 2024-11-29 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/software-engineerinternship-singapore-november-29-2024-no-offer-negative-f71a48c9)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q926 · Tier B · Summer 2023 · phone_technical
+### Q916 · Tier B · Summer 2023 · phone_technical
 
 I was asked to design a heartbeat system to keep network connections alive, and also design a file system/disk scheduling implementation that satisfies certain conditions.
 
@@ -8805,7 +8723,7 @@ I was asked to design a heartbeat system to keep network connections alive, and 
 — reddit_thread · posted 2022-11-24 · full_text · [link](https://www.reddit.com/r/csMajors/comments/z3q0wf/a_summary_of_my_internship_hunt_for_summer_2023/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q927 · Tier B · Summer 2023 · phone_technical
+### Q917 · Tier B · Summer 2023 · phone_technical
 
 For HRT, I was asked to design systems in networking and OS
 
@@ -8813,7 +8731,7 @@ For HRT, I was asked to design systems in networking and OS
 — reddit_thread · posted 2022-11-25 · full_text · [link](https://www.reddit.com/r/csMajors/comments/z3q0wf/a_summary_of_my_internship_hunt_for_summer_2023/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q928 · Tier B · unknown · phone_technical (All non-quant SWE; all in NYC)
+### Q918 · Tier B · unknown · phone_technical (All non-quant SWE; all in NYC)
 
 HRT is the only one so far with C++-specific interviewing.
 
@@ -8821,7 +8739,7 @@ HRT is the only one so far with C++-specific interviewing.
 — blind · posted 2020-06-17 · full_text · [link](https://www.teamblind.com/post/tc-interviews-advice-de-shaw-jane-street-hrt-citadel-hkuvevyq)
   1 attestation(s) across 1 domain(s) · doubt: Blind handles are company-verified only, so the poster's employer is attested but their candidacy is not; the comment lumps several firms together into one 'overall mix' rather than reporting each firm separately, so the
 
-### Q929 · Tier B · unknown · phone_technical (All non-quant SWE; all in NYC)
+### Q919 · Tier B · unknown · phone_technical (All non-quant SWE; all in NYC)
 
 At least the phone screens were not LC, and certainly no systems design yet (though likely for onsite).
 
@@ -8829,7 +8747,7 @@ At least the phone screens were not LC, and certainly no systems design yet (tho
 — blind · posted 2020-06-17 · full_text · [link](https://www.teamblind.com/post/tc-interviews-advice-de-shaw-jane-street-hrt-citadel-hkuvevyq)
   1 attestation(s) across 1 domain(s) · doubt: Blind handles are company-verified only, so the poster's employer is attested but their candidacy is not; the comment lumps several firms together into one 'overall mix' rather than reporting each firm separately, so the
 
-### Q930 · Tier B · unknown · phone_technical (3 problems, Leetcode Medium/Hard)
+### Q920 · Tier B · unknown · phone_technical (3 problems, Leetcode Medium/Hard)
 
 Phone screen after the HackerRank: basic EV questions, described as variations of problems from the green book
 
@@ -8837,7 +8755,7 @@ Phone screen after the HackerRank: basic EV questions, described as variations o
 — wso · posted 2020-10 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview/algorithm-developer-0)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. The submitter's o
 
-### Q931 · Tier B · unknown · phone_technical (OA was 3 coding problems, Easy-Medium leetcode level)
+### Q921 · Tier B · unknown · phone_technical (OA was 3 coding problems, Easy-Medium leetcode level)
 
 An expected value question involving order statistics
 
@@ -8845,7 +8763,7 @@ An expected value question involving order statistics
 — wso · posted 2024-10 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview/campus-algo-dev)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. The submitter nam
 
-### Q932 · Tier B · unknown · phone_technical
+### Q922 · Tier B · unknown · phone_technical
 
 HRT screening round is either coding - where they describe a complicated system or data structure, discuss implementing it, then have you implement it - or a behavioral/experience interview with probability-style brainteasers
 
@@ -8853,7 +8771,7 @@ HRT screening round is either coding - where they describe a complicated system 
 — blind · posted 2025-02-04 · full_text · [link](https://www.teamblind.com/post/hrt-ng-algo-developer-interview-process-x0b1ybun)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies only the poster's employer, not their candidacy, and the OP posts under an ex-employer tag; this is a Virtu employee telling the OP what to expect rather than someone reporting their own HRT screening, so 
 
-### Q933 · Tier B · unknown · phone_technical
+### Q923 · Tier B · unknown · phone_technical
 
 A hard dynamic-programming problem, solution only - no code required
 
@@ -8864,7 +8782,7 @@ A hard dynamic-programming problem, solution only - no code required
 
 ## Hudson River Trading — take_home
 
-### Q934 · Tier B · unknown · take_home (one-week take-home, then two one-hour phone interviews)
+### Q924 · Tier B · unknown · take_home (one-week take-home, then two one-hour phone interviews)
 
 Design a two-stage pipelined ALU that handles a collection of instructions in hex.
 
@@ -8872,7 +8790,7 @@ Design a two-stage pipelined ALU that handles a collection of instructions in he
 — blog · posted 2021-11-21 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/hardware-engineer-intern-united-states-november-21-2021-no-offer-neutral-4624d8cb)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q935 · Tier B · unknown · take_home (用6个小时写一个2-stage pipeline的ALU,自己写案例)
+### Q925 · Tier B · unknown · take_home (用6个小时写一个2-stage pipeline的ALU,自己写案例)
 
 用6个小时写一个2-stage pipeline的ALU,自己写案例,它规定了自我介绍的格式,规定要包含多少个记录。
 
@@ -8887,7 +8805,7 @@ Design a two-stage pipelined ALU that handles a collection of instructions in he
 
 ## Hudson River Trading — online_assessment
 
-### Q936 · Tier C · unknown · online_assessment (150 分钟 3道题)
+### Q926 · Tier C · unknown · online_assessment (150 分钟 3道题)
 
 150 分钟 3道题 第一题:给你一个数n,问比它小的数里面有多少fancy number,fancy number的定义是转成4
 
@@ -8897,7 +8815,7 @@ Design a two-stage pipelined ALU that handles a collection of instructions in he
 — 1point3acres · posted 2023-10 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1022110-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres is Cloudflare-blocked to direct fetch (I confirmed this in-session), so I only have the search-engine excerpt, and that excerpt is truncated mid-sentence at '转成4' so the fancy-number definition is incomplete
 
-### Q937 · Tier C · unknown · online_assessment (third question of a 3-question, 150-minute OA; has two parts)
+### Q927 · Tier C · unknown · online_assessment (third question of a 3-question, 150-minute OA; has two parts)
 
 请问第3题part2, 你如何理解 合并左右两树, 合并是指1)把 key/value加起来, 2)新建一root, 把两 做为其左右子
 
@@ -8907,7 +8825,7 @@ Design a two-stage pipelined ALU that handles a collection of instructions in he
 — 1point3acres · posted 2023-10 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1022110-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: This is a commenter's clarifying question about the OA problem rather than the problem statement itself, and the excerpt I saw is truncated; it does independently confirm a tree-merging problem was on the OA.
 
-### Q938 · Tier C · unknown · online_assessment (150 分钟 3道题)
+### Q928 · Tier C · unknown · online_assessment (150 分钟 3道题)
 
 第一题:给你一个数n,问比它小的数里面有多少fancy number,fancy number的定义是转成4
 
@@ -8917,7 +8835,7 @@ Design a two-stage pipelined ALU that handles a collection of instructions in he
 — 1point3acres · posted 2023-10 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1022110-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks this box, so this is the search engine's verbatim Highlights excerpt of the page rather than a page I loaded; the thread body itself is points-gated, so I cannot see the poster's full wording. The def
 
-### Q939 · Tier C · unknown · online_assessment (150 分钟 3道题)
+### Q929 · Tier C · unknown · online_assessment (150 分钟 3道题)
 
 ht的node,其他node全部保留。 总体感觉思考难度中等,代码量挺大,2个半小时给的不多。
 
@@ -8927,7 +8845,7 @@ ht的node,其他node全部保留。 总体感觉思考难度中等,代码量挺�
 — 1point3acres · posted 2023-10 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1022110-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks this box, so this is the search engine's verbatim Highlights excerpt of the page rather than a page I loaded; the thread body itself is points-gated, so I cannot see the poster's full wording. This is
 
-### Q940 · Tier C · unknown · online_assessment
+### Q930 · Tier C · unknown · online_assessment
 
 第三题,给定一个文本string,int limit(分段过后的长度限制不能超过这个长度),让你切
 
@@ -8937,7 +8855,7 @@ ht的node,其他node全部保留。 总体感觉思考难度中等,代码量挺�
 — 1point3acres · posted 2022-09-09 · snippet_only · [link](https://www.1point3acres.com/bbs/collection/238911)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks this box, so this is the search engine's verbatim Highlights excerpt of the page rather than a page I loaded; the thread body itself is points-gated, so I cannot see the poster's full wording. The col
 
-### Q941 · Tier C · unknown · online_assessment (一共四道题)
+### Q931 · Tier C · unknown · online_assessment (一共四道题)
 
 HRT QR OA hudson-river-trading OA 一共四道题**** 本内容被作者隐藏 ****
 
@@ -8947,7 +8865,7 @@ HRT QR OA hudson-river-trading OA 一共四道题**** 本内容被作者隐藏 *
 — 1point3acres · posted 2022-11-02 · snippet_only · [link](https://www.1point3acres.com/bbs/collection/238911)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks this box, so this is the search engine's verbatim Highlights excerpt of the page rather than a page I loaded; the thread body itself is points-gated, so I cannot see the poster's full wording. The aut
 
-### Q942 · Tier C · unknown · online_assessment
+### Q932 · Tier C · unknown · online_assessment
 
 Code Signal 上做的OA,要求打开摄像头以及共享屏幕。但是如果你有第二个屏幕还是可以在上面看一些function的调用之类的
 
@@ -8957,7 +8875,7 @@ Code Signal 上做的OA,要求打开摄像头以及共享屏幕。但是如果�
 — 1point3acres · posted 2022-09-11 · snippet_only · [link](https://www.1point3acres.com/bbs/collection/238911)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks this box, so this is the search engine's verbatim Highlights excerpt of the page rather than a page I loaded; the thread body itself is points-gated, so I cannot see the poster's full wording. This de
 
-### Q943 · Tier C · 2024 · online_assessment (150 分钟 3道题 (150 minutes, 3 questions))
+### Q933 · Tier C · 2024 · online_assessment (150 分钟 3道题 (150 minutes, 3 questions))
 
 第二题 union find,最后count两个group的成员个数 第三题 第一部分topological sort?
 
@@ -8970,7 +8888,7 @@ Code Signal 上做的OA,要求打开摄像头以及共享屏幕。但是如果�
 
 ## Hudson River Trading — onsite
 
-### Q944 · Tier C · 2023 · onsite (a reply breaking the onsite into its component round types)
+### Q934 · Tier C · 2023 · onsite (a reply breaking the onsite into its component round types)
 
 * Given a description of some complicated data structure / algorithm, implement it in C++. * Bunch of lower-level question similar to the first phone screen, except you might be asked to sketch out code. * "Design a system that does X" style questions where you have to weigh tradeoffs, estimate performance, think about bottlenecks, etc.
 
@@ -8978,7 +8896,7 @@ Code Signal 上做的OA,要求打开摄像头以及共享屏幕。但是如果�
 — reddit_thread · posted 2022-10-08 · archive_only · [link](https://www.reddit.com/r/csMajors/comments/xxkusy/hudson_river_trading_core_dev_onsite/irh0g7x/)
   1 attestation(s) across 1 domain(s) · doubt: Three round archetypes, none of them an actual question — "some complicated data structure" and "Design a system that does X" are placeholders the commenter uses deliberately. Reads first-hand from the level of detail bu
 
-### Q945 · Tier C · Summer 2026 · onsite (四轮,每轮面试都是1个小时,上午下午各两场)
+### Q935 · Tier C · Summer 2026 · onsite (四轮,每轮面试都是1个小时,上午下午各两场)
 
 onsite有四轮,分别是programming, data analysis, system design, and math.
 
@@ -8988,7 +8906,7 @@ onsite有四轮,分别是programming, data analysis, system design, and math.
 — 1point3acres · posted 2026-07 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1168005-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres answers this host with a Cloudflare challenge, so the quote is the search engine's highlight of the page rather than bytes fetched here. This records the shape of the loop, not a question — the poster stops 
 
-### Q946 · Tier C · unknown · onsite
+### Q936 · Tier C · unknown · onsite
 
 Onsite is graded on programming skills, systems-level knowledge (memory, I/O, process management) and problem-solving
 
@@ -8999,7 +8917,7 @@ Onsite is graded on programming skills, systems-level knowledge (memory, I/O, pr
 
 ## Hudson River Trading — phone_technical
 
-### Q947 · Tier C · 2025 · phone_technical (C++/systems fundamentals portion of the phone screen)
+### Q937 · Tier C · 2025 · phone_technical (C++/systems fundamentals portion of the phone screen)
 
 Inline in cpp - For functions; advantage vs disadvantage - For member variables Segfaults - MMU how does it work; how does it translate between virtual and physical addre
 
@@ -9009,7 +8927,7 @@ Inline in cpp - For functions; advantage vs disadvantage - For member variables 
 — other · posted 2025-05-17 · archive_only · [link](https://web.archive.org/web/20250911122118/https://www.1point3acres.com/bbs/thread-1129259-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: This is the candidate's own topic checklist, not the interviewer's wording, and it is truncated mid-word ("physical addre") by 本帖隐藏的内容需要积分高于 188 才可浏览 (a karma wall); only the portion of the post above/below the wall was 
 
-### Q948 · Tier C · 2025 · phone_technical (coding portion of the phone screen (only the tail of the statement sur)
+### Q938 · Tier C · 2025 · phone_technical (coding portion of the phone screen (only the tail of the statement sur)
 
 up to target. 经典的two sum problem, 用hash map O(n) 解
 
@@ -9021,7 +8939,7 @@ up to target. 经典的two sum problem, 用hash map O(n) 解
 — other · posted 2025-05-17 · archive_only · [link](https://web.archive.org/web/20250911122118/https://www.1point3acres.com/bbs/thread-1129259-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Only the last three words of the problem statement survive the karma wall; everything identifying it as two-sum is the candidate's own gloss afterwards. I am recording the fragment rather than the inferred question becau
 
-### Q949 · Tier C · 2025 · phone_technical (30-minute phone screen; the candidate says they misread the problem en)
+### Q939 · Tier C · 2025 · phone_technical (30-minute phone screen; the candidate says they misread the problem en)
 
 电面30min,我好像完全理解错题了 ... 今天碰巧看到leetcode 有这道题,而我好像当成OOD了设计了一个Wordle。。
 
@@ -9031,15 +8949,7 @@ up to target. 经典的two sum problem, 用hash map O(n) 解
 — other · posted 2025-03-27 · archive_only · [link](https://web.archive.org/web/20260701223244/https://www.1point3acres.com/bbs/thread-1120333-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The problem statement itself is behind the karma wall; all that is readable is that the phone screen problem was Wordle-related and also exists on LeetCode. The candidate says they misunderstood it, so even their framing
 
-### Q950 · Tier C · unknown · phone_technical (the split of the 45-minute phone screen)
-
-hrt london algo dev phone screens are typically 45min split between algorithms and probability/stats, sometimes a bit of systems design depending on the interviewer.
-
-> hrt london algo dev phone screens are typically 45min split between algorithms and probability/stats, sometimes a bit of systems design depending on the interviewer.
-— reddit_thread · posted unknown · archive_only · [link](https://www.reddit.com/r/quantfinance/comments/1qc38xm/hrt_algo_dev_interviews/nzhes41/)
-  1 attestation(s) across 1 domain(s) · doubt: reddit.com returns 403 to this machine, so this comment was read from the Arctic Shift mirror rather than from reddit itself. The commenter never claims to have sat this interview themselves — the whole reply is written 
-
-### Q951 · Tier C · unknown · phone_technical (HRT先得做OA,三道题,题目挺简单,一个小时都过了test case。然后是两轮电面)
+### Q940 · Tier C · unknown · phone_technical (HRT先得做OA,三道题,题目挺简单,一个小时都过了test case。然后是两轮电面)
 
 基本就是问python语法,比如coroutine以及context manager相关的知识
 
@@ -9049,7 +8959,7 @@ hrt london algo dev phone screens are typically 45min split between algorithms a
 — 1point3acres · posted 2022-11-24 · snippet_only · [link](https://www.1point3acres.com/bbs/collection/238911)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks this box, so this is the search engine's verbatim Highlights excerpt of the page rather than a page I loaded; the thread body itself is points-gated, so I cannot see the poster's full wording. The Pyt
 
-### Q952 · Tier C · Summer 2026 · phone_technical (先经过了一轮代码OA和两轮数学online interview)
+### Q941 · Tier C · Summer 2026 · phone_technical (先经过了一轮代码OA和两轮数学online interview)
 
 数学考一些概率和组合的问题,要对Central Limit Theorem还有一些基础概率知识掌握比较好。
 
@@ -9059,7 +8969,7 @@ hrt london algo dev phone screens are typically 45min split between algorithms a
 — 1point3acres · posted 2026-07 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1168005-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres answers this host with a Cloudflare challenge, so the quote is the search engine's highlight of the page rather than bytes fetched here. Names the topics of the two maths screens rather than a specific probl
 
-### Q953 · Tier C · unknown · phone_technical (usually a 45-minute discussion)
+### Q942 · Tier C · unknown · phone_technical (usually a 45-minute discussion)
 
 45-minute technical discussion on one of: Knowledge of Systems / Data Structure / Problem Solving; plus a programming round in C++ or Python depending on the team
 
@@ -9070,7 +8980,7 @@ hrt london algo dev phone screens are typically 45min split between algorithms a
 
 ## Hudson River Trading — take_home
 
-### Q954 · Tier C · unknown · take_home (take-home is timed with a deadline, run over HackerRank or Codility)
+### Q943 · Tier C · unknown · take_home (take-home is timed with a deadline, run over HackerRank or Codility)
 
 HRT campus SWE/Algo Engineering pipeline: a take-home test, roughly two phone interviews, and a full day of back-to-back onsite interviews
 
@@ -9081,7 +8991,7 @@ HRT campus SWE/Algo Engineering pipeline: a take-home test, roughly two phone in
 
 ## Hudson River Trading — online_assessment
 
-### Q955 · Tier D · 2024 · online_assessment (OA)
+### Q944 · Tier D · 2024 · online_assessment (OA)
 
 实现两个function: CountGreater (x) 求一个array里面多少个数大于x;CountLess (x) 求一个array里面多少个数小于x
 
@@ -9091,7 +9001,7 @@ HRT campus SWE/Algo Engineering pipeline: a take-home test, roughly two phone in
 — chat_telegram · posted 2024-12-20 · full_text · [link](https://t.me/usinterview/20780)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. No complexity requirement
 
-### Q956 · Tier D · 2026 · online_assessment (4 questions / 70 min, Python required, ID upload and camera on through)
+### Q945 · Tier D · 2026 · online_assessment (4 questions / 70 min, Python required, ID upload and camera on through)
 
 类似lc一溜儿,输入是一个一维数组,找满足numbers < numbers和
 
@@ -9101,7 +9011,7 @@ HRT campus SWE/Algo Engineering pipeline: a take-home test, roughly two phone in
 — chat_telegram · posted 2026-06-17 · full_text · [link](https://t.me/usinterview/28842)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The condition is mangled 
 
-### Q957 · Tier D · 2025 · online_assessment (OA format report (not a question))
+### Q946 · Tier D · 2025 · online_assessment (OA format report (not a question))
 
 OA 3道题目130min 和前面差不多
 
@@ -9111,7 +9021,7 @@ OA 3道题目130min 和前面差不多
 — other · posted 2025-03-27 · archive_only · [link](https://web.archive.org/web/20260701223244/https://www.1point3acres.com/bbs/thread-1120333-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Format only — the three questions are behind the karma wall. Included because the 3-questions/130-minutes figure is a concrete, checkable claim about HRT's Algo Engineer OA and differs from the 4-questions/70-minutes Cod
 
-### Q958 · Tier D · 2024 · online_assessment (the poster describes the first two questions as easy and similar to on)
+### Q947 · Tier D · 2024 · online_assessment (the poster describes the first two questions as easy and similar to on)
 
 前两题比较简单,地里有类似的题目,创建目录和文件的那题
 
@@ -9121,7 +9031,7 @@ OA 3道题目130min 和前面差不多
 — chat_telegram · posted 2024-12-20 · full_text · [link](https://t.me/usinterview/20778)
   1 attestation(s) across 1 domain(s) · doubt: This is a back-reference ("the one about creating directories and files"), not a problem statement — the poster is pointing at a question they assume the reader already knows from the forum, so the interface, the operati
 
-### Q959 · Tier D · 2021 · online_assessment (the first of the two OA questions)
+### Q948 · Tier D · 2021 · online_assessment (the first of the two OA questions)
 
 移除k个连续数字之后数组剩下数字的最小amplitude(max-min)
 
@@ -9131,7 +9041,7 @@ OA 3道题目130min 和前面差不多
 — chat_telegram · posted 2021-03-08 · full_text · [link](https://t.me/usinterview/5538)
   1 attestation(s) across 1 domain(s) · doubt: Compressed to a single clause, so the exact reading of "移除k个连续数字" is ambiguous — it could mean removing a contiguous run of k elements or removing k elements that are consecutive in value, and the two are different probl
 
-### Q960 · Tier D · 2021 · online_assessment (the second of the two OA questions, given only as a pointer)
+### Q949 · Tier D · 2021 · online_assessment (the second of the two OA questions, given only as a pointer)
 
 另一个是lc 上上周周赛题幺漆漆舞
 
@@ -9141,7 +9051,7 @@ OA 3道题目130min 和前面差不多
 — chat_telegram · posted 2021-03-08 · full_text · [link](https://t.me/usinterview/5538)
   1 attestation(s) across 1 domain(s) · doubt: Not a question statement at all — it is a pointer to a LeetCode weekly-contest problem whose number is written in the homophone-obfuscated digits Chinese forum posters use to dodge keyword filters (幺漆漆舞). I am deliberate
 
-### Q961 · Tier D · unknown · online_assessment (Online assessment with 4 parts)
+### Q950 · Tier D · unknown · online_assessment (Online assessment with 4 parts)
 
 Complete the calculator class.
 
@@ -9149,7 +9059,7 @@ Complete the calculator class.
 — blog · posted 2022-11-01 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/software-engineerinternship-united-states-november-1-2022-no-offer-positive-4c20631b)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q962 · Tier D · unknown · online_assessment
+### Q951 · Tier D · unknown · online_assessment
 
 Minimum distance between houses (DFS)
 
@@ -9157,7 +9067,7 @@ Minimum distance between houses (DFS)
 — blog · posted 2021-09-23 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/software-engineerinternship-united-states-september-23-2021-no-offer-negative-36ebf453)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q963 · Tier D · unknown · online_assessment
+### Q952 · Tier D · unknown · online_assessment
 
 ['A','a','b','B','C'],ret
 
@@ -9167,7 +9077,7 @@ Minimum distance between houses (DFS)
 — 1point3acres · posted 2022-10-11 · snippet_only · [link](https://www.1point3acres.com/bbs/collection/238911)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks this box, so this is the search engine's verbatim Highlights excerpt of the page rather than a page I loaded; the thread body itself is points-gated, so I cannot see the poster's full wording. The sea
 
-### Q964 · Tier D · unknown · online_assessment (three c++ questions. The time limit is two hours)
+### Q953 · Tier D · unknown · online_assessment (three c++ questions. The time limit is two hours)
 
 sum up some numbers
 
@@ -9175,7 +9085,7 @@ sum up some numbers
 — glassdoor · posted 2019-11-06 · full_text · [link](https://www.glassdoor.com/Interview/Hudson-River-Trading-Intern-Interview-Questions-EI_IE470937.0,20_KO21,27.htm)
   1 attestation(s) across 1 domain(s) · doubt: Glassdoor entries are anonymous, self-reported and undated as to the question itself; the reviewer supplies the interview month but nothing verifies they interviewed at all. Glassdoor blocks direct fetching from this box
 
-### Q965 · Tier D · unknown · online_assessment (ranging from dp to tree traversal. given 90 minutes)
+### Q954 · Tier D · unknown · online_assessment (ranging from dp to tree traversal. given 90 minutes)
 
 Nothing particularly difficult
 
@@ -9183,7 +9093,7 @@ Nothing particularly difficult
 — wso · posted 2024-10 · full_text · [link](https://www.wallstreetoasis.com/company/hudson-river-trading-llc/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview entries are anonymous and unverified; the poster writes them up months after the fact (the 'Date Submitted' here trails the interview month), so wording is recalled rather than transcribed. The poster's ans
 
-### Q966 · Tier D · 2026 · online_assessment (three questions named in the thread summary)
+### Q955 · Tier D · 2026 · online_assessment (three questions named in the thread summary)
 
 fancy number identification
 
@@ -9191,7 +9101,7 @@ fancy number identification
 — 1point3acres · posted unknown · snippet_only · [link](https://www.1point3acres.com/interview/thread/1141239)
   1 attestation(s) across 1 domain(s) · doubt: Only 1point3acres' own editorial one-line summary of the thread is public — the candidate's actual write-up is behind a login, so each question is a two-or-three-word label with no problem statement, and I could not conf
 
-### Q967 · Tier D · 2026 · online_assessment (three questions named in the thread summary)
+### Q956 · Tier D · 2026 · online_assessment (three questions named in the thread summary)
 
 Reversi simulator
 
@@ -9199,7 +9109,7 @@ Reversi simulator
 — 1point3acres · posted unknown · snippet_only · [link](https://www.1point3acres.com/interview/thread/1141239)
   1 attestation(s) across 1 domain(s) · doubt: Only 1point3acres' own editorial one-line summary of the thread is public — the candidate's actual write-up is behind a login, so each question is a two-or-three-word label with no problem statement, and I could not conf
 
-### Q968 · Tier D · 2026 · online_assessment (three questions named in the thread summary)
+### Q957 · Tier D · 2026 · online_assessment (three questions named in the thread summary)
 
 non-binary tree traversal and merging
 
@@ -9210,7 +9120,7 @@ non-binary tree traversal and merging
 
 ## Hudson River Trading — onsite
 
-### Q969 · Tier D · 2026 · onsite (system design round)
+### Q958 · Tier D · 2026 · onsite (system design round)
 
 系统设计 多个simulator client 读一个 NFS,如何增加read throughput
 
@@ -9220,7 +9130,7 @@ non-binary tree traversal and merging
 — chat_telegram · posted 2026-07-28 · full_text · [link](https://t.me/usinterview/29079)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The candidate says they d
 
-### Q970 · Tier D · unknown · onsite (OA (3 easy-medium problems), then first round, then virtual on-site; a)
+### Q959 · Tier D · unknown · onsite (OA (3 easy-medium problems), then first round, then virtual on-site; a)
 
 Implement a pool allocator in C++
 
@@ -9228,7 +9138,7 @@ Implement a pool allocator in C++
 — blog · posted 2024-08-01 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/software-engineer-intern-singapore-august-1-2024-accepted-offer-positive-90a63c2a)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q971 · Tier D · unknown · onsite
+### Q960 · Tier D · unknown · onsite
 
 Explain to me what the company does.
 
@@ -9239,7 +9149,7 @@ Explain to me what the company does.
 
 ## Hudson River Trading — phone_technical
 
-### Q972 · Tier D · 2024 · phone_technical (quant video interview)
+### Q961 · Tier D · 2024 · phone_technical (quant video interview)
 
 我扔10个硬币,你扔九个,我的head比你多的概率
 
@@ -9249,7 +9159,7 @@ Explain to me what the company does.
 — chat_telegram · posted 2024-11-14 · full_text · [link](https://t.me/usinterview/20369)
   1 attestation(s) across 1 domain(s) · doubt: This is a very well-known classic (answer 1/2 by symmetry) that appears in standard brainteaser collections, so its appearance here corroborates rather than reveals; the post is a three-item list with no interviewer word
 
-### Q973 · Tier D · 2024 · phone_technical (quant video interview)
+### Q962 · Tier D · 2024 · phone_technical (quant video interview)
 
 一道bayes公式的口算
 
@@ -9259,7 +9169,7 @@ Explain to me what the company does.
 — chat_telegram · posted 2024-11-14 · full_text · [link](https://t.me/usinterview/20369)
   1 attestation(s) across 1 domain(s) · doubt: The candidate records only that a Bayes mental-math question was asked, not what it was; this is a topic datapoint, not a question.
 
-### Q974 · Tier D · 2026 · phone_technical (round 1; interviewer dictated the problem verbally and the candidate h)
+### Q963 · Tier D · 2026 · phone_technical (round 1; interviewer dictated the problem verbally and the candidate h)
 
 一维数组,N 个玩家向右走,watcher 从初始位置出发盯着玩家,被盯的玩家不能移动,watcher 会按给定时间戳
 
@@ -9269,7 +9179,7 @@ Explain to me what the company does.
 — chat_telegram · posted 2026-05-13 · full_text · [link](https://t.me/usinterview/28458)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The poster stresses the p
 
-### Q975 · Tier D · 2025 · phone_technical (first-round video interview)
+### Q964 · Tier D · 2025 · phone_technical (first-round video interview)
 
 写Wordle。写出来但是挂了要求最后run。
 
@@ -9279,7 +9189,7 @@ Explain to me what the company does.
 — chat_telegram · posted 2025-09-13 · full_text · [link](https://t.me/usinterview/25282)
   1 attestation(s) across 1 domain(s) · doubt: One line; "write Wordle" leaves the required interface entirely unspecified. Tagged 金工类 (quant) on the forum despite being a coding task, hence the quant_analyst label.
 
-### Q976 · Tier D · 2025 · phone_technical (C++ fundamentals round)
+### Q965 · Tier D · 2025 · phone_technical (C++ fundamentals round)
 
 Inline in cpp - For functions; advantage vs disadvantage - For member variables. Segfaults. MMU how does it work; how does it translate between virtual and ph
 
@@ -9289,7 +9199,7 @@ Inline in cpp - For functions; advantage vs disadvantage - For member variables.
 — chat_telegram · posted 2025-05-17 · full_text · [link](https://t.me/usinterview/23218)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. A topic checklist written
 
-### Q977 · Tier D · 2025 · phone_technical (the single coding question in round 1)
+### Q966 · Tier D · 2025 · phone_technical (the single coding question in round 1)
 
 问了一个题 写Word[le]
 
@@ -9299,7 +9209,7 @@ Inline in cpp - For functions; advantage vs disadvantage - For member variables.
 — other · posted 2025-09-13 · archive_only · [link](https://web.archive.org/web/20251011032412/https://www.1point3acres.com/bbs/thread-1145403-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The snapshot is truncated by the karma wall in the middle of the word "Wordle" — the page literally ends at "写Word" — so the specification, interface and constraints are entirely absent. What makes it worth keeping is th
 
-### Q978 · Tier D · 2026 · phone_technical (the single problem, which the poster says the interviewer read out rat)
+### Q967 · Tier D · 2026 · phone_technical (the single problem, which the poster says the interviewer read out rat)
 
 题目描述一维数组上,玩家被 watcher 盯着就不能走。入参包括:
 
@@ -9309,7 +9219,7 @@ Inline in cpp - For functions; advantage vs disadvantage - For member variables.
 — chat_telegram · posted 2025-12-22 · full_text · [link](https://t.me/usinterview/26730)
   1 attestation(s) across 1 domain(s) · doubt: The preview stops at the colon that introduces the parameter list, so the win condition, the watchers' movement rule and what the function must return are all missing; "被 watcher 盯着就不能走" is one sentence of a simulation s
 
-### Q979 · Tier D · 2026 · phone_technical (the technical portion of the screen)
+### Q968 · Tier D · 2026 · phone_technical (the technical portion of the screen)
 
 Python context manager
 
@@ -9319,7 +9229,7 @@ Python context manager
 — chat_telegram · posted 2026-04-06 · full_text · [link](https://t.me/usinterview/27902)
   1 attestation(s) across 1 domain(s) · doubt: The poster wrote the round up as a bare run-on list with no separators — "Python context managerReact memoization,performance,hooks,render" — so these are topic headings, not questions as posed; what specifically was ask
 
-### Q980 · Tier D · 2026 · phone_technical (the technical portion of the screen)
+### Q969 · Tier D · 2026 · phone_technical (the technical portion of the screen)
 
 React memoization,performance,hooks,render
 
@@ -9329,7 +9239,7 @@ React memoization,performance,hooks,render
 — chat_telegram · posted 2026-04-06 · full_text · [link](https://t.me/usinterview/27902)
   1 attestation(s) across 1 domain(s) · doubt: The poster wrote the round up as a bare run-on list with no separators — "Python context managerReact memoization,performance,hooks,render" — so these are topic headings, not questions as posed; what specifically was ask
 
-### Q981 · Tier D · 2026 · phone_technical (the closing scenario question)
+### Q970 · Tier D · 2026 · phone_technical (the closing scenario question)
 
 Oncall的时候如果一个同事告诉你app render太慢了怎么办
 
@@ -9339,7 +9249,7 @@ Oncall的时候如果一个同事告诉你app render太慢了怎么办
 — chat_telegram · posted 2026-04-06 · full_text · [link](https://t.me/usinterview/27902)
   1 attestation(s) across 1 domain(s) · doubt: This one is a complete question as posed and needs no reconstruction, which makes it the soundest item in this message. The poster wrote the round up as a bare run-on list with no separators — "Python context managerReac
 
-### Q982 · Tier D · 2020 · phone_technical (question 1 of the three the poster numbers)
+### Q971 · Tier D · 2020 · phone_technical (question 1 of the three the poster numbers)
 
 一堆硬币,99个正常,1个双head。随机拿一个扔了10次,10次都是head,问拿到的那个是双head的概率。
 
@@ -9349,7 +9259,7 @@ Oncall的时候如果一个同事告诉你app render太慢了怎么办
 — chat_telegram · posted 2020-03-11 · full_text · [link](https://t.me/usinterview/678)
   1 attestation(s) across 1 domain(s) · doubt: Fully stated and self-contained, which is the best case for this source, but it is still a one-line paraphrase written from memory after the call rather than the interviewer's wording, and the poster gives no answer, so 
 
-### Q983 · Tier D · 2020 · phone_technical (question 2 of the three, cut off by the preview truncation)
+### Q972 · Tier D · 2020 · phone_technical (question 2 of the three, cut off by the preview truncation)
 
 一个骰子扔了10
 
@@ -9359,7 +9269,7 @@ Oncall的时候如果一个同事告诉你app render太慢了怎么办
 — chat_telegram · posted 2020-03-11 · full_text · [link](https://t.me/usinterview/678)
   1 attestation(s) across 1 domain(s) · doubt: This is a fragment, not a question: the preview truncates in the middle of the sentence after seven characters, so all that survives is that question 2 involved rolling a die ten times. It is logged because the poster st
 
-### Q984 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
+### Q973 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
 
 Stack和Heap的区别。
 
@@ -9369,7 +9279,7 @@ Stack和Heap的区别。
 — chat_telegram · posted 2020-12-22 · full_text · [link](https://t.me/usinterview/4411)
   2 attestation(s) across 2 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q985 · Tier D · 2021 · phone_technical (item 3 of the numbered list of what was asked)
+### Q974 · Tier D · 2021 · phone_technical (item 3 of the numbered list of what was asked)
 
 如何实现map
 
@@ -9379,7 +9289,7 @@ Stack和Heap的区别。
 — chat_telegram · posted 2020-12-22 · full_text · [link](https://t.me/usinterview/4411)
   1 attestation(s) across 1 domain(s) · doubt: One clause long and stripped of whatever follow-ups the interviewer actually asked, so this records the topic rather than the question as put. These are also generic enough that a poster could have produced them from exp
 
-### Q986 · Tier D · 2021 · phone_technical (item 4 of the numbered list of what was asked)
+### Q975 · Tier D · 2021 · phone_technical (item 4 of the numbered list of what was asked)
 
 实现一个可以push,randomPop的数据结构。像是LC 380/
 
@@ -9389,7 +9299,7 @@ Stack和Heap的区别。
 — chat_telegram · posted 2020-12-22 · full_text · [link](https://t.me/usinterview/4411)
   1 attestation(s) across 1 domain(s) · doubt: The poster's own cross-reference to a LeetCode number is cut off mid-way ("LC 380/"), so it is not clear whether they meant 380 alone or a pair of problems. The prompt itself is stated clearly enough to be answerable. Th
 
-### Q987 · Tier D · 2021 · phone_technical (first item in the semicolon-separated list of what was asked)
+### Q976 · Tier D · 2021 · phone_technical (first item in the semicolon-separated list of what was asked)
 
 stack和heap区别,如何track stack的增长
 
@@ -9399,7 +9309,7 @@ stack和heap区别,如何track stack的增长
 — chat_telegram · posted 2021-03-22 · full_text · [link](https://t.me/usinterview/5849)
   1 attestation(s) across 1 domain(s) · doubt: The poster lists these as a run-on string of topics rather than as questions, so the phrasing is theirs, not the interviewer's, and the boundaries between items are only as reliable as their punctuation. The Telegram lin
 
-### Q988 · Tier D · 2021 · phone_technical (second item in the list)
+### Q977 · Tier D · 2021 · phone_technical (second item in the list)
 
 map和unordered_map区别时间复杂度,hashmap的实现方式
 
@@ -9409,7 +9319,7 @@ map和unordered_map区别时间复杂度,hashmap的实现方式
 — chat_telegram · posted 2021-03-22 · full_text · [link](https://t.me/usinterview/5849)
   1 attestation(s) across 1 domain(s) · doubt: The poster lists these as a run-on string of topics rather than as questions, so the phrasing is theirs, not the interviewer's, and the boundaries between items are only as reliable as their punctuation. The Telegram lin
 
-### Q989 · Tier D · 2021 · phone_technical (third item in the list)
+### Q978 · Tier D · 2021 · phone_technical (third item in the list)
 
 BST的第k大元素怎么求
 
@@ -9419,7 +9329,7 @@ BST的第k大元素怎么求
 — chat_telegram · posted 2021-03-22 · full_text · [link](https://t.me/usinterview/5849)
   1 attestation(s) across 1 domain(s) · doubt: The poster lists these as a run-on string of topics rather than as questions, so the phrasing is theirs, not the interviewer's, and the boundaries between items are only as reliable as their punctuation. The Telegram lin
 
-### Q990 · Tier D · 2021 · phone_technical (the opening segment on Python fundamentals)
+### Q979 · Tier D · 2021 · phone_technical (the opening segment on Python fundamentals)
 
 关于Python的基础知识(e.g. 什么是generator,context man
 
@@ -9429,7 +9339,7 @@ BST的第k大元素怎么求
 — chat_telegram · posted 2021-08-16 · full_text · [link](https://t.me/usinterview/7485)
   1 attestation(s) across 1 domain(s) · doubt: The preview truncates in the middle of the word "context man[ager]", and the poster themselves flags these as examples ("e.g."), so this is a sample of the topic list rather than the questions asked. The Telegram link pr
 
-### Q991 · Tier D · 2026 · phone_technical (the two rounds as described by the candidate in the middle of the proc)
+### Q980 · Tier D · 2026 · phone_technical (the two rounds as described by the candidate in the middle of the proc)
 
 I passed the initial phone screen where they asked deep linux questions. Now I have a second round which is coding in python and told they’ll focus on Data manipulation, dictionary and sets, etc.
 
@@ -9437,7 +9347,7 @@ I passed the initial phone screen where they asked deep linux questions. Now I h
 — reddit_thread · posted 2026-06-20 · archive_only · [link](https://www.reddit.com/r/csMajors/comments/1uaog6u/hrt_systems_engineer_coding_interview/)
   1 attestation(s) across 1 domain(s) · doubt: Half of this is first-hand ("they asked deep linux questions" — a round they sat) and half is the recruiter's advance description of a round they had not yet sat, which recruiters routinely get wrong. No individual quest
 
-### Q992 · Tier D · 2026 · phone_technical (a reply describing how the round escalates)
+### Q981 · Tier D · 2026 · phone_technical (a reply describing how the round escalates)
 
 They ask you basically leetcode medium question and if you successfully solve this, then step by step they try to make hard.. like ask you for manipulate test case, logic, space complexity...
 
@@ -9445,7 +9355,7 @@ They ask you basically leetcode medium question and if you successfully solve th
 — reddit_thread · posted 2026-06-20 · archive_only · [link](https://www.reddit.com/r/csMajors/comments/1uaog6u/hrt_systems_engineer_coding_interview/osqr5e4/)
   1 attestation(s) across 1 domain(s) · doubt: Describes the shape of the round (a LeetCode-medium seed problem that the interviewer escalates with follow-ups on test cases, logic and space complexity) without naming a single problem. The commenter gives no evidence 
 
-### Q993 · Tier D · unknown · phone_technical (two phone interviews of about 45 minutes each over Zoom, ranging from )
+### Q982 · Tier D · unknown · phone_technical (two phone interviews of about 45 minutes each over Zoom, ranging from )
 
 How to write a buffered reader
 
@@ -9453,7 +9363,7 @@ How to write a buffered reader
 — blog · posted 2021-10-11 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/software-engineerinternship-united-states-october-11-2021-no-offer-positive-356dbb20)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q994 · Tier D · unknown · phone_technical
+### Q983 · Tier D · unknown · phone_technical
 
 Design a task switching algorithm.
 
@@ -9461,7 +9371,7 @@ Design a task switching algorithm.
 — blog · posted 2024-10-20 · full_text · [link](https://www.jointaro.com/interviews/companies/hudson-river-trading/experiences/software-engineer-intern-singapore-october-20-2024-no-offer-neutral-aba850c1)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q995 · Tier D · unknown · phone_technical
+### Q984 · Tier D · unknown · phone_technical
 
 algorithms, math, puzzles
 
@@ -9469,7 +9379,7 @@ algorithms, math, puzzles
 — glassdoor · posted 2016-01-03 · full_text · [link](https://www.glassdoor.com/Interview/Hudson-River-Trading-Intern-Interview-Questions-EI_IE470937.0,20_KO21,27.htm)
   1 attestation(s) across 1 domain(s) · doubt: Glassdoor entries are anonymous, self-reported and undated as to the question itself; the reviewer supplies the interview month but nothing verifies they interviewed at all. Glassdoor blocks direct fetching from this box
 
-### Q996 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
+### Q985 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
 
 big endian 和 little endian的区别。
 
@@ -9479,7 +9389,7 @@ big endian 和 little endian的区别。
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q997 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
+### Q986 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
 
 Compiler和interpreter的区别。
 
@@ -9489,7 +9399,7 @@ Compiler和interpreter的区别。
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q998 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
+### Q987 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
 
 什么时候用stack什么时候用heap,它们的区别是什么。
 
@@ -9499,7 +9409,7 @@ Compiler和interpreter的区别。
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q999 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
+### Q988 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
 
 指针是什么,不当使用指针会有什么后果。
 
@@ -9509,7 +9419,7 @@ Compiler和interpreter的区别。
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1000 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
+### Q989 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
 
 Thread和process的区别。
 
@@ -9519,7 +9429,7 @@ Thread和process的区别。
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1001 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
+### Q990 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
 
 什么是OS。
 
@@ -9529,7 +9439,7 @@ Thread和process的区别。
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1002 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
+### Q991 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
 
 Pipeline有什么好处,有什么问题。
 
@@ -9539,7 +9449,7 @@ Pipeline有什么好处,有什么问题。
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1003 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
+### Q992 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
 
 有哪几种pipeline hazard,怎么解决?
 
@@ -9549,7 +9459,7 @@ Pipeline有什么好处,有什么问题。
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1004 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
+### Q993 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
 
 什么是Cache,为什么要有cache。
 
@@ -9559,7 +9469,7 @@ Pipeline有什么好处,有什么问题。
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1005 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
+### Q994 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
 
 set associative和direct map cache有什么区别。
 
@@ -9569,7 +9479,7 @@ set associative和direct map cache有什么区别。
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1006 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
+### Q995 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
 
 Branch prediction有哪几种?
 
@@ -9579,7 +9489,7 @@ Branch prediction有哪几种?
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1007 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
+### Q996 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
 
 Register renaming你知道哪几种?
 
@@ -9589,7 +9499,7 @@ Register renaming你知道哪几种?
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1008 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
+### Q997 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
 
 怎么用汇编语言实现OOP,object在内存中是怎么存储的。
 
@@ -9599,7 +9509,7 @@ Register renaming你知道哪几种?
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1009 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
+### Q998 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
 
 怎么用C实现OOP。
 
@@ -9609,7 +9519,7 @@ Register renaming你知道哪几种?
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1010 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
+### Q999 · Tier D · unknown · phone_technical (软件部分(一小时电面的前半段))
 
 RISC和CISC的区别。
 
@@ -9619,7 +9529,7 @@ RISC和CISC的区别。
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1011 · Tier D · unknown · phone_technical (硬件部分(一小时电面的后半段))
+### Q1000 · Tier D · unknown · phone_technical (硬件部分(一小时电面的后半段))
 
 FPGA里面有什么资源,他们分别都是怎么实现的,他们的作用都是什么。
 
@@ -9629,7 +9539,7 @@ FPGA里面有什么资源,他们分别都是怎么实现的,他们的作用都�
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1012 · Tier D · unknown · phone_technical (硬件部分(一小时电面的后半段))
+### Q1001 · Tier D · unknown · phone_technical (硬件部分(一小时电面的后半段))
 
 比如实现某种逻辑,需要多少LUT。
 
@@ -9639,7 +9549,7 @@ FPGA里面有什么资源,他们分别都是怎么实现的,他们的作用都�
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1013 · Tier D · unknown · phone_technical (硬件部分(一小时电面的后半段))
+### Q1002 · Tier D · unknown · phone_technical (硬件部分(一小时电面的后半段))
 
 写逻辑表达式,跨时钟域有哪几种解决方法。
 
@@ -9649,7 +9559,7 @@ FPGA里面有什么资源,他们分别都是怎么实现的,他们的作用都�
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1014 · Tier D · unknown · phone_technical (硬件部分(一小时电面的后半段))
+### Q1003 · Tier D · unknown · phone_technical (硬件部分(一小时电面的后半段))
 
 同步FIFO读指针写指针,空满信号的生成逻辑。
 
@@ -9659,7 +9569,7 @@ FPGA里面有什么资源,他们分别都是怎么实现的,他们的作用都�
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1015 · Tier D · unknown · phone_technical (硬件部分(一小时电面的后半段))
+### Q1004 · Tier D · unknown · phone_technical (硬件部分(一小时电面的后半段))
 
 synthesis和implementation都有哪些步骤,他们会生成什么。
 
@@ -9669,7 +9579,7 @@ synthesis和implementation都有哪些步骤,他们会生成什么。
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1016 · Tier D · unknown · phone_technical (硬件部分(一小时电面的后半段))
+### Q1005 · Tier D · unknown · phone_technical (硬件部分(一小时电面的后半段))
 
 时序综合报告怎么看。
 
@@ -9679,7 +9589,7 @@ synthesis和implementation都有哪些步骤,他们会生成什么。
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1017 · Tier D · unknown · phone_technical (硬件部分(一小时电面的后半段))
+### Q1006 · Tier D · unknown · phone_technical (硬件部分(一小时电面的后半段))
 
 建立保持时间都是什么,怎么解决不正常的建立保持时间。
 
@@ -9689,7 +9599,7 @@ synthesis和implementation都有哪些步骤,他们会生成什么。
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1018 · Tier D · unknown · phone_technical (硬件部分(一小时电面的后半段))
+### Q1007 · Tier D · unknown · phone_technical (硬件部分(一小时电面的后半段))
 
 Verification有几种test的方法。
 
@@ -9699,7 +9609,7 @@ Verification有几种test的方法。
 — nowcoder · posted 2022-12-13 · full_text · [link](https://www.nowcoder.com/discuss/432302178204741632)
   1 attestation(s) across 1 domain(s) · doubt: Self-reported and reconstructed from memory a while after the fact — the poster says outright '下面是我记得的问题,可能会有不全' (these are the questions I remember, there may be gaps), and describes the pace as 快问快答, so individual word
 
-### Q1019 · Tier D · unknown · phone_technical (硬件部分(一小时电面的后半段))
+### Q1008 · Tier D · unknown · phone_technical (硬件部分(一小时电面的后半段))
 
 UVM是什么。
 
@@ -9712,7 +9622,7 @@ UVM是什么。
 
 ## Hudson River Trading — unknown
 
-### Q1020 · Tier D · unknown · unknown
+### Q1009 · Tier D · unknown · unknown
 
 tell me about yourself and what you do
 
@@ -9723,7 +9633,7 @@ tell me about yourself and what you do
 
 ## IMC Trading — online_assessment
 
-### Q1021 · Tier B · unknown · online_assessment
+### Q1010 · Tier B · unknown · online_assessment
 
 The OA is two LC medium-hards if I remember correctly.
 
@@ -9731,7 +9641,7 @@ The OA is two LC medium-hards if I remember correctly.
 — reddit_thread · posted 2023-10-04 · full_text · [link](https://www.reddit.com/r/csMajors/comments/16zricy/imc_trading_swe_intern_oa/k3gjbtp/)
   1 attestation(s) across 1 domain(s) · doubt: Hedged with 'if I remember correctly' and gives only a difficulty band, naming neither problem.
 
-### Q1022 · Tier B · unknown · online_assessment (There were two questions in the OA, and I was allowed two hours to sol)
+### Q1011 · Tier B · unknown · online_assessment (There were two questions in the OA, and I was allowed two hours to sol)
 
 Object-oriented programming questions. You had to complete a half-completed class.
 
@@ -9742,7 +9652,7 @@ Object-oriented programming questions. You had to complete a half-completed clas
 
 ## IMC Trading — unknown
 
-### Q1023 · Tier B · unknown · unknown
+### Q1012 · Tier B · unknown · unknown
 
 I was asked about an extended example. The example had something to do with two players, betting, and cards. I was asked to consider "winning strategies" for person 1 / person 2, so I guess a bit of game theory. It was more intuitive than mental math.
 
@@ -9753,7 +9663,7 @@ I was asked about an extended example. The example had something to do with two 
 
 ## IMC Trading — online_assessment
 
-### Q1024 · Tier C · unknown · online_assessment (the maths item at the end of the video assessment)
+### Q1013 · Tier C · unknown · online_assessment (the maths item at the end of the video assessment)
 
 Since that assessment includes a math problem at the end
 
@@ -9761,7 +9671,7 @@ Since that assessment includes a math problem at the end
 — reddit_thread · posted unknown · archive_only · [link](https://www.reddit.com/r/quantfinance/comments/1sus9st/imc_graduate_trader_video_assessment_math_topics/)
   1 attestation(s) across 1 domain(s) · doubt: reddit.com returns 403 to this machine, so this was read from the Arctic Shift mirror. The poster has not yet sat the assessment — they know only that it ends with a maths problem, and the list of topics they go on to gi
 
-### Q1025 · Tier C · unknown · online_assessment (两道题)
+### Q1014 · Tier C · unknown · online_assessment (两道题)
 
 第一题:Waste reduction 一个制药公司的业务场景。公司为不同病人准备液体药剂,而病人需求量不一致。药剂需要装在容器里,每个“容器集合(container set)”提供不同容量的瓶子。 给定:多个病人的需求量 requirements;若干个容器集合,每个集合包含若干种容[量]
 
@@ -9771,7 +9681,7 @@ Since that assessment includes a math problem at the end
 — 1point3acres · posted 2025-11-23 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1155726-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The snippet is truncated mid-word by the 188-point paywall, so the objective (presumably minimise wasted volume) is cut off; the thread title covers both Grad and Intern so the level cannot be pinned down.
 
-### Q1026 · Tier C · unknown · online_assessment (两道题)
+### Q1015 · Tier C · unknown · online_assessment (两道题)
 
 按照同样的规则往下传播。指令一直传播,直到所有子树节点都收到。 找出所有下属传播过程中,第 k 个收到指令的人是谁
 
@@ -9781,7 +9691,7 @@ Since that assessment includes a math problem at the end
 — 1point3acres · posted 2025-11-23 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1155726-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Only the tail of the second question survives the paywall - the setup that defines the propagation rule and the tree input is hidden, so the prompt is incomplete.
 
-### Q1027 · Tier C · unknown · online_assessment (两轮网考都没有deadline)
+### Q1016 · Tier C · unknown · online_assessment (两轮网考都没有deadline)
 
 上周刚做的OA,申请的是Quant Trader Intern。做完OA第二天就收到了下一轮HireVue的email。两轮网考都没有deadline,所以一直在拖...
 
@@ -9791,7 +9701,7 @@ Since that assessment includes a math problem at the end
 — 1point3acres · posted 2022 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-934179-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Attests the pipeline (OA then HireVue) for a Quant Trader Intern but reproduces no question; the OA content itself is behind the points wall.
 
-### Q1028 · Tier C · unknown · online_assessment (1-2min之内做一道题然后录个视频讲你的答案)
+### Q1017 · Tier C · unknown · online_assessment (1-2min之内做一道题然后录个视频讲你的答案)
 
 behavioral technical 都有 没几道题 前面问why trading 还有几个常见的behavioral technical就是1-2min之内做一道题然后录个视频讲你的答案
 
@@ -9801,7 +9711,7 @@ behavioral technical 都有 没几道题 前面问why trading 还有几个常见
 — 1point3acres · posted 2022 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-934179-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: A reply describing the HireVue round in general terms; the only verbatim question preserved is 'why trading', and the technical items are not named.
 
-### Q1029 · Tier C · unknown · online_assessment (OA 总共120分钟两道题)
+### Q1018 · Tier C · unknown · online_assessment (OA 总共120分钟两道题)
 
 OA 总共120分钟两道题。第一题是LC1381,increment必须是O(1) Time Complexity (必须用到一个extra stack)第二题是minimum moves of Knight without bishop 。国象的
 
@@ -9811,7 +9721,7 @@ OA 总共120分钟两道题。第一题是LC1381,increment必须是O(1) Time Com
 — 1point3acres · posted 2023-12-22 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/imc-2057-3.html)
   1 attestation(s) across 1 domain(s) · doubt: Truncated tag-page preview; the second problem's constraints are cut off, and the poster identifies Q1 only by its LeetCode number rather than by the prompt IMC actually used.
 
-### Q1030 · Tier C · unknown · online_assessment (两题120分钟)
+### Q1019 · Tier C · unknown · online_assessment (两题120分钟)
 
 两题120分钟,地里原题第一题:prefix sum matrix, binary searchprefix sum matrix参考莉蔻1292第二题:BFS找minimum cost不光记录坐标还记录当前的cost
 
@@ -9824,7 +9734,7 @@ OA 总共120分钟两道题。第一题是LC1381,increment必须是O(1) Time Com
 
 ## IMC Trading — phone_technical
 
-### Q1031 · Tier C · unknown · phone_technical (发邮件说是一个小时结果面了1个半小时,前一个小时是brain teaser后面半小时coding)
+### Q1020 · Tier C · unknown · phone_technical (发邮件说是一个小时结果面了1个半小时,前一个小时是brain teaser后面半小时coding)
 
 brain teaser 的set up 是三个城市,先是给了一个格图,从上角走到
 
@@ -9834,7 +9744,7 @@ brain teaser 的set up 是三个城市,先是给了一个格图,从上角走到
 — 1point3acres · posted 2025-10-08 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/imc-2057-3.html)
   1 attestation(s) across 1 domain(s) · doubt: The preview truncates exactly where the question is being stated, so the actual task is unknown; tag-page previews also rotate off this URL as newer threads are posted.
 
-### Q1032 · Tier C · unknown · phone_technical
+### Q1021 · Tier C · unknown · phone_technical
 
 questions mainly assess how you make bets / decisions and how you justify them / react to being wrong
 
@@ -9845,7 +9755,7 @@ questions mainly assess how you make bets / decisions and how you justify them /
 
 ## IMC Trading — superday
 
-### Q1033 · Tier C · unknown · superday
+### Q1022 · Tier C · unknown · superday
 
 what would you do if trading doesn't work out
 
@@ -9853,7 +9763,7 @@ what would you do if trading doesn't work out
 — wso · posted unknown · snippet_only · [link](https://www.wallstreetoasis.com/company/imc-financial-markets/interview/quantitative-trader-intern-1)
   1 attestation(s) across 1 domain(s) · doubt: wallstreetoasis.com/company/ is behind Cloudflare from this host, so the text was only ever seen as a search-engine excerpt and could not be re-read in context; the same candidate explicitly withholds the technical quest
 
-### Q1034 · Tier C · unknown · superday
+### Q1023 · Tier C · unknown · superday
 
 Technicals included a trading simulator and a more classic QT interview but very open ended.
 
@@ -9864,7 +9774,7 @@ Technicals included a trading simulator and a more classic QT interview but very
 
 ## IMC Trading — unknown
 
-### Q1035 · Tier C · unknown · unknown
+### Q1024 · Tier C · unknown · unknown
 
 Brain teaser: It was like a coinflip and if u win u get $1, if u lose u lose $1, u have a slight edge int this game, would u play it
 
@@ -9874,7 +9784,7 @@ Brain teaser: It was like a coinflip and if u win u get $1, if u lose u lose $1,
 — 1point3acres · posted 2024-09-26 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/imc-2057-3.html)
   1 attestation(s) across 1 domain(s) · doubt: Read from a truncated tag-page preview, not the thread itself; the tag page is paginated and re-orders as new threads arrive, so this exact preview may not persist at this URL.
 
-### Q1036 · Tier C · unknown · unknown (没遇到太多地里的原题,一共6题)
+### Q1025 · Tier C · unknown · unknown (没遇到太多地里的原题,一共6题)
 
 explain your favorite project to a non-technical person and describe why you enjoy it
 
@@ -9885,7 +9795,7 @@ explain your favorite project to a non-technical person and describe why you enj
 
 ## IMC Trading — online_assessment
 
-### Q1037 · Tier D · Summer 2026 · online_assessment (120 min 要求写2道题)
+### Q1026 · Tier D · Summer 2026 · online_assessment (120 min 要求写2道题)
 
 120 min 要求写2道题,在hackerrank上写
 
@@ -9898,7 +9808,7 @@ explain your favorite project to a non-technical person and describe why you enj
 
 ## IMC Trading — onsite
 
-### Q1038 · Tier D · 2025 · onsite (trader video onsite)
+### Q1027 · Tier D · 2025 · onsite (trader video onsite)
 
 Two RVs following uniform[0,1]. What's the probability of the smaller RV is less than the
 
@@ -9908,7 +9818,7 @@ Two RVs following uniform[0,1]. What's the probability of the smaller RV is less
 — chat_telegram · posted 2025-11-01 · full_text · [link](https://t.me/usinterview/26123)
   1 attestation(s) across 1 domain(s) · doubt: The preview truncates exactly at the threshold value ("less than the ..."), so the question is incomplete — the specific bound is the whole content of the problem.
 
-### Q1039 · Tier D · unknown · onsite (report that the video interview reused an earlier candidate's question)
+### Q1028 · Tier D · unknown · onsite (report that the video interview reused an earlier candidate's question)
 
 题目是跟之前一个帖子里的一摸一样的、感觉这就是今年秋招题没跑了
 
@@ -9921,7 +9831,7 @@ Two RVs following uniform[0,1]. What's the probability of the smaller RV is less
 
 ## IMC Trading — phone_technical
 
-### Q1040 · Tier D · 2026 · phone_technical (technical section of an HR-run interview)
+### Q1029 · Tier D · 2026 · phone_technical (technical section of an HR-run interview)
 
 算渔获平均期望
 
@@ -9931,7 +9841,7 @@ Two RVs following uniform[0,1]. What's the probability of the smaller RV is less
 — chat_telegram · posted 2025-12-01 · full_text · [link](https://t.me/usinterview/26504)
   1 attestation(s) across 1 domain(s) · doubt: Five characters of description with no setup at all; unusable as a question, retained only as evidence that IMC's graduate-trader HR round contains an expected-value item. Labelled "graduate trader" but the forum tag is 
 
-### Q1041 · Tier D · 2024 · phone_technical (HR phone screen for a Quantitative Researcher role (not a question))
+### Q1030 · Tier D · 2024 · phone_technical (HR phone screen for a Quantitative Researcher role (not a question))
 
 Applying for the Quantitative Researcher position at IMC Trading in Sydney,I received an HR Phone Screen notification three days later. The interview went as f
 
@@ -9941,7 +9851,7 @@ Applying for the Quantitative Researcher position at IMC Trading in Sydney,I rec
 — chat_telegram · posted 2024-03-01 · full_text · [link](https://t.me/usinterview/17648)
   1 attestation(s) across 1 domain(s) · doubt: The preview cuts off at exactly the point where the interview content would begin ("The interview went as f[ollows]"), so not a single question is recovered. Retained because it is one of only three IMC quant-track datap
 
-### Q1042 · Tier D · 2026 · phone_technical (a technical question inside an otherwise HR screen)
+### Q1031 · Tier D · 2026 · phone_technical (a technical question inside an otherwise HR screen)
 
 先做了hackerank 然后hr30mins,还问了一个什么时候用dict说呢么时候用array
 
@@ -9951,7 +9861,7 @@ Applying for the Quantitative Researcher position at IMC Trading in Sydney,I rec
 — chat_telegram · posted 2026-01-10 · full_text · [link](https://t.me/usinterview/26849)
   1 attestation(s) across 1 domain(s) · doubt: The post is one sentence with a visible typo ("说呢么时候" for 什么时候), so the wording is the poster's hurried recollection. The question itself — when to use a dict versus an array — is complete and answerable as stated, which
 
-### Q1043 · Tier D · unknown · phone_technical (跟hr做technical interview)
+### Q1032 · Tier D · unknown · phone_technical (跟hr做technical interview)
 
 brain teaser:很简单绿宝书题目,秒。
 
@@ -9964,7 +9874,7 @@ brain teaser:很简单绿宝书题目,秒。
 
 ## IMC Trading — superday
 
-### Q1044 · Tier D · unknown · superday
+### Q1033 · Tier D · unknown · superday
 
 what makes a good trader
 
@@ -9975,7 +9885,7 @@ what makes a good trader
 
 ## Ingensoma Arbitrage — phone_technical
 
-### Q1045 · Tier C · unknown · phone_technical (First round with the head of trading covered brainteasers and options )
+### Q1034 · Tier C · unknown · phone_technical (First round with the head of trading covered brainteasers and options )
 
 1) A has 7 coins. B has 6 coins. Who gets higher heads wins. What's the probability of A winning? 2) You get the value shown on a dice. If you are not satisfied, you can roll it twice or thrice. What's the expected value of the game? 3) Put has delta -0.3. Now vol increases and decreases. How does delta change? 4) Put has delta -0.3. Now time to maturity increases and decreases. How does delta change? 5) How does gamma change when time to maturity increases? 6) How does gamma change when volatility increases? 7) ATM Gamma at t=30 days and t=1 day. Which is higher?
 
@@ -9986,7 +9896,7 @@ what makes a good trader
 
 ## Jane Street — online_assessment
 
-### Q1046 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 1 题)
+### Q1035 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 1 题)
 
 箱子里有2个红球,2个蓝球。从箱子里抽球抽到蓝球+1,抽到红球-1。求最佳策略。
 
@@ -9998,7 +9908,7 @@ what makes a good trader
 — nowcoder · posted 2024-04-01 · full_text · [link](https://www.nowcoder.com/discuss/604265548247040000)
   1 attestation(s) across 1 domain(s) · doubt: 这是本次采集里可信度最低的一类来源:发帖人不是当事候选人,而是一个靠卖「知识星球」会员牟利的公众号号主,帖子本身带明显营销目的(「早加入早学习早拿offer早赚米」),按任务的硬性排除规则,这类「卖课/卖资料」的中文内容农场原则上应剔除;此处保留是因为 URL 与正文都是我实际抓取到的,且它自称题目来自候选人投稿。具体风险:(1) 无法确认这些题真的来自 Jane Street 而不是从公开题库/绿皮书搬运——其中若干题(周末下雨概率的
 
-### Q1047 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 2 题)
+### Q1036 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 2 题)
 
 两个玩家,轮流说2-30里的数。如果玩家说了的数和之前的被说的数有公因数,玩家输。你会当玩家1(先说)还是玩家 2(后说)。
 
@@ -10010,7 +9920,7 @@ what makes a good trader
 — nowcoder · posted 2024-04-01 · full_text · [link](https://www.nowcoder.com/discuss/604265548247040000)
   1 attestation(s) across 1 domain(s) · doubt: 这是本次采集里可信度最低的一类来源:发帖人不是当事候选人,而是一个靠卖「知识星球」会员牟利的公众号号主,帖子本身带明显营销目的(「早加入早学习早拿offer早赚米」),按任务的硬性排除规则,这类「卖课/卖资料」的中文内容农场原则上应剔除;此处保留是因为 URL 与正文都是我实际抓取到的,且它自称题目来自候选人投稿。具体风险:(1) 无法确认这些题真的来自 Jane Street 而不是从公开题库/绿皮书搬运——其中若干题(周末下雨概率的
 
-### Q1048 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 3 题)
+### Q1037 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 3 题)
 
 比较以下三个expectation的大小:(1) 扔一次骰子,扔出的值的平方(2) 扔两次骰子,两次值的乘积(3) 扔五次骰子,中位数的平方
 
@@ -10022,7 +9932,7 @@ what makes a good trader
 — nowcoder · posted 2024-04-01 · full_text · [link](https://www.nowcoder.com/discuss/604265548247040000)
   1 attestation(s) across 1 domain(s) · doubt: 这是本次采集里可信度最低的一类来源:发帖人不是当事候选人,而是一个靠卖「知识星球」会员牟利的公众号号主,帖子本身带明显营销目的(「早加入早学习早拿offer早赚米」),按任务的硬性排除规则,这类「卖课/卖资料」的中文内容农场原则上应剔除;此处保留是因为 URL 与正文都是我实际抓取到的,且它自称题目来自候选人投稿。具体风险:(1) 无法确认这些题真的来自 Jane Street 而不是从公开题库/绿皮书搬运——其中若干题(周末下雨概率的
 
-### Q1049 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 4 题)
+### Q1038 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 4 题)
 
 扔1000个fair coins,500个silver 500个gold,gold正面得3块,silver正面得1块,问如果已知得了1100块,expected number of gold coins with heads up 是多少。
 
@@ -10034,7 +9944,7 @@ what makes a good trader
 — nowcoder · posted 2024-04-01 · full_text · [link](https://www.nowcoder.com/discuss/604265548247040000)
   1 attestation(s) across 1 domain(s) · doubt: 这是本次采集里可信度最低的一类来源:发帖人不是当事候选人,而是一个靠卖「知识星球」会员牟利的公众号号主,帖子本身带明显营销目的(「早加入早学习早拿offer早赚米」),按任务的硬性排除规则,这类「卖课/卖资料」的中文内容农场原则上应剔除;此处保留是因为 URL 与正文都是我实际抓取到的,且它自称题目来自候选人投稿。具体风险:(1) 无法确认这些题真的来自 Jane Street 而不是从公开题库/绿皮书搬运——其中若干题(周末下雨概率的
 
-### Q1050 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 5 题)
+### Q1039 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 5 题)
 
 一个骰子上的数字为 1 到 6,另一个骰子上的数字为 1 到 10,猜两个骰子之和,如果猜中了就可以得到这个和所对应的收益,问猜多少期望收益最大。
 
@@ -10046,7 +9956,7 @@ what makes a good trader
 — nowcoder · posted 2024-04-01 · full_text · [link](https://www.nowcoder.com/discuss/604265548247040000)
   1 attestation(s) across 1 domain(s) · doubt: 这是本次采集里可信度最低的一类来源:发帖人不是当事候选人,而是一个靠卖「知识星球」会员牟利的公众号号主,帖子本身带明显营销目的(「早加入早学习早拿offer早赚米」),按任务的硬性排除规则,这类「卖课/卖资料」的中文内容农场原则上应剔除;此处保留是因为 URL 与正文都是我实际抓取到的,且它自称题目来自候选人投稿。具体风险:(1) 无法确认这些题真的来自 Jane Street 而不是从公开题库/绿皮书搬运——其中若干题(周末下雨概率的
 
-### Q1051 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 6 题)
+### Q1040 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 6 题)
 
 一圈公路有1mile长,一辆车绕着开第一圈的速度是60mile/hour,第二圈的速度是90mile/hour,求平均速度。
 
@@ -10058,7 +9968,7 @@ what makes a good trader
 — nowcoder · posted 2024-04-01 · full_text · [link](https://www.nowcoder.com/discuss/604265548247040000)
   1 attestation(s) across 1 domain(s) · doubt: 这是本次采集里可信度最低的一类来源:发帖人不是当事候选人,而是一个靠卖「知识星球」会员牟利的公众号号主,帖子本身带明显营销目的(「早加入早学习早拿offer早赚米」),按任务的硬性排除规则,这类「卖课/卖资料」的中文内容农场原则上应剔除;此处保留是因为 URL 与正文都是我实际抓取到的,且它自称题目来自候选人投稿。具体风险:(1) 无法确认这些题真的来自 Jane Street 而不是从公开题库/绿皮书搬运——其中若干题(周末下雨概率的
 
-### Q1052 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 7 题)
+### Q1041 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 7 题)
 
 扔 4 个硬币,一个正面值 1 元。在观察第一次结果后,你可以接受结果或者再把所有的硬币投第二次,此时必须接受新的收益。问最优策略是什么,以及其对应的期望收益。
 
@@ -10070,7 +9980,7 @@ what makes a good trader
 — nowcoder · posted 2024-04-01 · full_text · [link](https://www.nowcoder.com/discuss/604265548247040000)
   1 attestation(s) across 1 domain(s) · doubt: 这是本次采集里可信度最低的一类来源:发帖人不是当事候选人,而是一个靠卖「知识星球」会员牟利的公众号号主,帖子本身带明显营销目的(「早加入早学习早拿offer早赚米」),按任务的硬性排除规则,这类「卖课/卖资料」的中文内容农场原则上应剔除;此处保留是因为 URL 与正文都是我实际抓取到的,且它自称题目来自候选人投稿。具体风险:(1) 无法确认这些题真的来自 Jane Street 而不是从公开题库/绿皮书搬运——其中若干题(周末下雨概率的
 
-### Q1053 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 8 题)
+### Q1042 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 8 题)
 
 周六下雨的概率是0.3,周天下雨概率是0.4,如果是independent,求周末下雨概率。如果不independent,求周末下雨概率的range。
 
@@ -10082,7 +9992,7 @@ what makes a good trader
 — nowcoder · posted 2024-04-01 · full_text · [link](https://www.nowcoder.com/discuss/604265548247040000)
   1 attestation(s) across 1 domain(s) · doubt: 这是本次采集里可信度最低的一类来源:发帖人不是当事候选人,而是一个靠卖「知识星球」会员牟利的公众号号主,帖子本身带明显营销目的(「早加入早学习早拿offer早赚米」),按任务的硬性排除规则,这类「卖课/卖资料」的中文内容农场原则上应剔除;此处保留是因为 URL 与正文都是我实际抓取到的,且它自称题目来自候选人投稿。具体风险:(1) 无法确认这些题真的来自 Jane Street 而不是从公开题库/绿皮书搬运——其中若干题(周末下雨概率的
 
-### Q1054 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 9 题)
+### Q1043 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 9 题)
 
 一头熊在河里捕鱼,它吃 3 条鱼可以吃饱,同时每条鱼被捉到的概率是0.5,计算河里第五条鱼存活的概率是多少。
 
@@ -10094,7 +10004,7 @@ what makes a good trader
 — nowcoder · posted 2024-04-01 · full_text · [link](https://www.nowcoder.com/discuss/604265548247040000)
   1 attestation(s) across 1 domain(s) · doubt: 这是本次采集里可信度最低的一类来源:发帖人不是当事候选人,而是一个靠卖「知识星球」会员牟利的公众号号主,帖子本身带明显营销目的(「早加入早学习早拿offer早赚米」),按任务的硬性排除规则,这类「卖课/卖资料」的中文内容农场原则上应剔除;此处保留是因为 URL 与正文都是我实际抓取到的,且它自称题目来自候选人投稿。具体风险:(1) 无法确认这些题真的来自 Jane Street 而不是从公开题库/绿皮书搬运——其中若干题(周末下雨概率的
 
-### Q1055 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 10 题)
+### Q1044 · Tier B · unknown(标题中的 20240401 是发帖日期,不是考试季) · online_assessment (帖子按「题目1」...「题目10」编号列出,这是第 10 题)
 
 一个盒子有 100 元钱,你和对手分别在纸上写下数字,如果数字之和小于等于 100,那么你们可以各自拿到与自己写下数字价值相同的钱,而如果数字之和大于 100 则两个人都拿不到钱。假设对手是理性的,你的最优策略是什么? Follow up:不再假设对手理性,并且将这个博弈进行 1000 遍,第一次对手说他会写 80,你会怎么办?如果游戏进行了十次,他每次都写 80,你会如何权衡? 思路或想法欢迎在留言区交流
 
@@ -10109,7 +10019,7 @@ what makes a good trader
 
 ## Jane Street — phone_technical
 
-### Q1056 · Tier B · unknown · phone_technical (no pencil, no paper - all mental)
+### Q1045 · Tier B · unknown · phone_technical (no pencil, no paper - all mental)
 
 I was asked to do some mental computations, and a basic probability question regarding dice.
 
@@ -10120,7 +10030,7 @@ I was asked to do some mental computations, and a basic probability question reg
 
 ## Jane Street — superday
 
-### Q1057 · Tier B · unknown · superday (fourth round for a summer analyst position)
+### Q1046 · Tier B · unknown · superday (fourth round for a summer analyst position)
 
 Their 4th round interview for a SA gig (yes 4th round for a summer internship) was almost like a Math Olympiad. Game theory, FORMAL proofs and some conditional probability.
 
@@ -10131,7 +10041,7 @@ Their 4th round interview for a SA gig (yes 4th round for a summer internship) w
 
 ## Jane Street — trading_game
 
-### Q1058 · Tier B · unknown · trading_game (100 poker chips issued at the start of the day, used across 4-6 hour-l)
+### Q1047 · Tier B · unknown · trading_game (100 poker chips issued at the start of the day, used across 4-6 hour-l)
 
 At the final round itself you are given 100 poker chips at the start of the day. Over the course of the next 4-6 hour long interviews you have to use the chips to make bets on scenarios given to you. ... There is probability involved (for example a deck of cards or non-six sided die), so ... a better candidate may end up with fewer chips than one who bet and got lucky.
 
@@ -10139,7 +10049,7 @@ At the final round itself you are given 100 poker chips at the start of the day.
 — wso · posted 2012-09-03 · full_text · [link](https://www.wallstreetoasis.com/forum/trading/jane-street-final-round-what-to-expect)
   1 attestation(s) across 1 domain(s) · doubt: Describes the format of the round rather than a single question; 2012 vintage, and the poster explicitly declines to reproduce the specific problems he was given.
 
-### Q1059 · Tier B · unknown · trading_game (chip-betting scenarios; poster believes this variant is reserved for i)
+### Q1048 · Tier B · unknown · trading_game (chip-betting scenarios; poster believes this variant is reserved for i)
 
 make a market on the temperature in the room
 
@@ -10147,7 +10057,7 @@ make a market on the temperature in the room
 — wso · posted 2012-09-03 · full_text · [link](https://www.wallstreetoasis.com/forum/trading/jane-street-final-round-what-to-expect)
   1 attestation(s) across 1 domain(s) · doubt: Explicit hearsay: the poster says he did NOT get this question and is repeating what 'some sources claim', and the internship attribution is his guess, so both the question and its level label are unattested.
 
-### Q1060 · Tier B · unknown · trading_game (deliberately unsolvable prompt; candidate bets chips on a confidence i)
+### Q1049 · Tier B · unknown · trading_game (deliberately unsolvable prompt; candidate bets chips on a confidence i)
 
 they do ask an unsolvable question (or rather, one that you need a PhD in probability to answer) ... The point of the questions is not to get it right, but to bet chips on how long you think it will take you to answer it (the prompt is deceptively easy).
 
@@ -10155,7 +10065,7 @@ they do ask an unsolvable question (or rather, one that you need a PhD in probab
 — wso · posted 2012-09-03 · full_text · [link](https://www.wallstreetoasis.com/forum/trading/jane-street-final-round-what-to-expect)
   1 attestation(s) across 1 domain(s) · doubt: The poster deliberately withholds the actual prompt, so only the mechanism is attested; it is also a 2012 report of a single candidate's day.
 
-### Q1061 · Tier B · unknown · trading_game (pre-round preparation material sent by the firm)
+### Q1050 · Tier B · unknown · trading_game (pre-round preparation material sent by the firm)
 
 Before the final round they send you a sheet outlining the basics of trading terminology. What bid and ask mean, as well as how to properly phrase that you would like to make a trade and at what price.
 
@@ -10166,7 +10076,7 @@ Before the final round they send you a sheet outlining the basics of trading ter
 
 ## Jane Street — unknown
 
-### Q1062 · Tier B · unknown · unknown (45 minutes per system)
+### Q1051 · Tier B · unknown · unknown (45 minutes per system)
 
 Jane Street asks you to build full working systems from scratch in 45 minutes. Things like an arbitrage system, a real-time order book stream comparator, a ring buffer, or a text editor backend. They keep adding follow-ups.
 
@@ -10174,7 +10084,7 @@ Jane Street asks you to build full working systems from scratch in 45 minutes. T
 — blind · posted 2026-07-04 · full_text · [link](https://www.teamblind.com/post/transitioning-from-tech-to-trading-firms-rc7dtjvv)
   1 attestation(s) across 1 domain(s) · doubt: Posted by an account flaired 'Salesforce' who has not said he interviewed anywhere; the comment ends by plugging a paid question-leak site, another user replies 'Chatgpt ahh comment into an undisclosed ad', and Blind sho
 
-### Q1063 · Tier B · unknown · unknown
+### Q1052 · Tier B · unknown · unknown
 
 similar to trader roles. lots of probability questions, need to answer perfectly and give confidence intervals on anything you estimate.
 
@@ -10182,7 +10092,7 @@ similar to trader roles. lots of probability questions, need to answer perfectly
 — blind · posted 2026-06-14 · full_text · [link](https://www.teamblind.com/post/quant-interviews-at-jane-street-fsroxvol)
   1 attestation(s) across 1 domain(s) · doubt: Two sentences of second-hand-sounding advice; the poster never claims to have interviewed at Jane Street himself and names no question.
 
-### Q1064 · Tier B · unknown · unknown
+### Q1053 · Tier B · unknown · unknown
 
 一个盒子有 100 元钱,你和对手分别在纸上写下数字,如果数字之和小于等于 100,那么你们可以各自拿到与自己写下数字价值相同的钱,而如果数字之和大于 100 则两个人都拿不到钱。假设对手是理性的,你的最优策略是什么? Follow up:不再假设对手理性,并且将这个博弈进行 1000 遍,第一次对手说他会写 80,你会怎么办?如果游戏进行了十次,他每次都写 80,你会如何权衡?
 
@@ -10195,7 +10105,7 @@ similar to trader roles. lots of probability questions, need to answer perfectly
 
 ## Jane Street — online_assessment
 
-### Q1065 · Tier C · unknown · online_assessment (Jane Street Strategy and Product role)
+### Q1054 · Tier C · unknown · online_assessment (Jane Street Strategy and Product role)
 
 It mainly consists of math questions, usually involving reading charts to answer questions, or filling in numbers and multiple-choice options.
 
@@ -10203,7 +10113,7 @@ It mainly consists of math questions, usually involving reading charts to answer
 — university_bbs · posted unknown · full_text · [link](https://www.thestudentroom.co.uk/showthread.php?t=7527519)
   1 attestation(s) across 1 domain(s) · doubt: Characterises the OA rather than reproducing a question, and the replier is not clearly identified as having sat it themselves rather than relaying what they were told.
 
-### Q1066 · Tier C · unknown · online_assessment (pre-OA material supplied by the firm)
+### Q1055 · Tier C · unknown · online_assessment (pre-OA material supplied by the firm)
 
 they have provided a 1 page pdf of order market basics ... are the questions related to that
 
@@ -10214,7 +10124,7 @@ they have provided a 1 page pdf of order market basics ... are the questions rel
 
 ## Jane Street — onsite
 
-### Q1067 · Tier C · 2025 · onsite (onsite round 1, open-ended API/abstraction design)
+### Q1056 · Tier C · 2025 · onsite (onsite round 1, open-ended API/abstraction design)
 
 First interview: Design a ring buffer / rotational filesystem Given a buffer in the form of a ring, we want to design a class that let us read and write into that buffer. Say we have a head that
 
@@ -10224,7 +10134,7 @@ First interview: Design a ring buffer / rotational filesystem Given a buffer in 
 — other · posted 2025-05-12 · archive_only · [link](https://web.archive.org/web/20250614052758/https://www.1point3acres.com/bbs/thread-1128313-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Role is tagged 码农类General (generic software engineer) at a trading firm and mapped to quant_developer as the nearest controlled value, so the label may overstate how "quant" the role is. Cut off mid-sentence at "Say we h
 
-### Q1068 · Tier C · 2025 · onsite (onsite round 2 follow-ups (the poster lists these as "and follow ups"))
+### Q1057 · Tier C · 2025 · onsite (onsite round 2 follow-ups (the poster lists these as "and follow ups"))
 
 - How would you design the abstractions for exchanges and instruments? - How do you ensure performance when there are 10^6 quote updates across instruments and exchanges every second?
 
@@ -10234,7 +10144,7 @@ First interview: Design a ring buffer / rotational filesystem Given a buffer in 
 — other · posted 2025-05-12 · archive_only · [link](https://web.archive.org/web/20250614052758/https://www.1point3acres.com/bbs/thread-1128313-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Role is tagged 码农类General (generic software engineer) at a trading firm and mapped to quant_developer as the nearest controlled value, so the label may overstate how "quant" the role is. These are the two follow-ups the 
 
-### Q1069 · Tier C · 2025 · onsite (the sole onsite coding question, given with a worked example and a Pyt)
+### Q1058 · Tier C · 2025 · onsite (the sole onsite coding question, given with a worked example and a Pyt)
 
 merge diffs: {0: A, 3: B} + {0: C, 4: D} orig: {0: z, 1: z, 2: z} new: {0: C, 1: A, 2: z, 3: z, 4: D, 5: B, 6: z} """ def merge_diffs(diff_one, diff_two): ... [karma wall] ... ong> merge(self, diff_one, start, end): pass
 
@@ -10244,7 +10154,7 @@ merge diffs: {0: A, 3: B} + {0: C, 4: D} orig: {0: z, 1: z, 2: z} new: {0: C, 1:
 — other · posted 2025-09 · archive_only · [link](https://web.archive.org/web/20251010155502/https://www.1point3acres.com/bbs/thread-1145993-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: This is the strongest Jane Street record in the shard because it reproduces the assessment's own worked example and function signature rather than a paraphrase — but the prose explaining what a "diff" means and how the t
 
-### Q1070 · Tier C · unknown · onsite (一共是三个电面 + onsite 四轮)
+### Q1059 · Tier C · unknown · onsite (一共是三个电面 + onsite 四轮)
 
 不问简历不问自我介绍上来直接了当就是做题,问的都是概率题,认认真真刷完绿皮书应该基本可以进onsite
 
@@ -10254,7 +10164,7 @@ merge diffs: {0: A, 3: B} + {0: C, 4: D} orig: {0: z, 1: z, 2: z} new: {0: C, 1:
 — 1point3acres · posted 2023 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1016826-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: A characterisation of the rounds, not a question, and it explicitly points at the Green Book (Xinfeng Zhou) as the source of the material rather than reproducing anything.
 
-### Q1071 · Tier C · unknown · onsite (onsite)
+### Q1060 · Tier C · unknown · onsite (onsite)
 
 是一副52张扑克牌中任意拿的25张,任意抽完之后可以全部翻开看到是多少,然后把这25张组合成5组,要求最大化好牌的组数,并且算组数的期望
 
@@ -10264,7 +10174,7 @@ merge diffs: {0: A, 3: B} + {0: C, 4: D} orig: {0: z, 1: z, 2: z} new: {0: C, 1:
 — 1point3acres · posted 2023 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1016826-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: This restatement is the poster answering a reader's clarifying question years after the fact, and a further reply shows other readers still could not agree on what 好牌 (a good hand) or 'maximise' meant, so the prompt rema
 
-### Q1072 · Tier C · unknown · onsite (There is no Online Assessments)
+### Q1061 · Tier C · unknown · onsite (There is no Online Assessments)
 
 The first round interview is calculating basic EVs related to many different scenarios and the level of difficulty is about the problems in the green book.
 
@@ -10275,7 +10185,7 @@ The first round interview is calculating basic EVs related to many different sce
 
 ## Jane Street — phone_technical
 
-### Q1073 · Tier C · 2025 · phone_technical (phone coding/design round; poster says the emphasis is API design and )
+### Q1062 · Tier C · 2025 · phone_technical (phone coding/design round; poster says the emphasis is API design and )
 
 Design a supermarket queue. ... [karma wall] ... r customers? How to implement? (Use a red-black tree)
 
@@ -10285,7 +10195,7 @@ Design a supermarket queue. ... [karma wall] ... r customers? How to implement? 
 — other · posted 2025-06-01 · archive_only · [link](https://web.archive.org/web/20250630171445/https://www.1point3acres.com/bbs/thread-1131152-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Role is tagged 码农类General (generic software engineer) at a trading firm and mapped to quant_developer as the nearest controlled value, so the label may overstate how "quant" the role is. The problem statement is split by
 
-### Q1074 · Tier C · 2025 · phone_technical (follow-up to the supermarket-queue design, quoted by a replier from be)
+### Q1063 · Tier C · 2025 · phone_technical (follow-up to the supermarket-queue design, quoted by a replier from be)
 
 “customers can go between other customers”是不是说新进来的顾客可以插到队伍中间?为啥一定要用红黑树,其他数据结构不行吗?
 
@@ -10295,7 +10205,7 @@ Design a supermarket queue. ... [karma wall] ... r customers? How to implement? 
 — other · posted 2025-06-01 · archive_only · [link](https://web.archive.org/web/20250630171445/https://www.1point3acres.com/bbs/thread-1131152-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Role is tagged 码农类General (generic software engineer) at a trading firm and mapped to quant_developer as the nearest controlled value, so the label may overstate how "quant" the role is. This is a *replier* quoting the k
 
-### Q1075 · Tier C · 2019 · phone_technical (the third item in the poster's Round 1 list, with its follow-up)
+### Q1064 · Tier C · 2019 · phone_technical (the third item in the poster's Round 1 list, with its follow-up)
 
 两个骰子,积是完全平方数的概率,自信程度,是否接受打赌(因为我一开始算错了,就问了我这个问题)
 
@@ -10305,7 +10215,7 @@ Design a supermarket queue. ... [karma wall] ... r customers? How to implement? 
 — other · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-473191-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres is Cloudflare-blocked to this machine and archive.org was returning HTTP 429 to every snapshot lookup at the time, so only the search engine's cached extract is available. written from memory some time after
 
-### Q1076 · Tier C · 2019 · phone_technical (a replier posting their answers to the Round 2 questions)
+### Q1065 · Tier C · 2019 · phone_technical (a replier posting their answers to the Round 2 questions)
 
 Round 2的第2题我的答案是87.28855,第三题的答案是956.7521。不知道对不对。 Round 2的第4题完全没有思路。有没有人最近在准备J家trader的面试,有几道题想交流一下。
 
@@ -10315,7 +10225,7 @@ Round 2的第2题我的答案是87.28855,第三题的答案是956.7521。不知�
 — other · posted 2019-02-14 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-473191-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres is Cloudflare-blocked to this machine and archive.org was returning HTTP 429 to every snapshot lookup at the time, so only the search engine's cached extract is available. Not a question but a discussion of 
 
-### Q1077 · Tier C · 2019 · phone_technical (a replier reconstructing the answer to the first Round 3 question)
+### Q1066 · Tier C · 2019 · phone_technical (a replier reconstructing the answer to the first Round 3 question)
 
 R2P4 大概会根据密度函数的变化导致期望靠拢50,具体计算量太大。 R3Full-time P1 应该是24。个人理解:当我是最小的数字或最大的数字时,根据对称性,我的期望都是0。只考虑我是第二大或者第三大的情况,用次序统计量来计算,概率再乘以当我是第二or第三大时余下三个数字分布的期望而得到的收益。画出的三次多项式曲线和simulation的曲线大致相同。最值也是在7(min)与24(max)处取到。
 
@@ -10327,7 +10237,7 @@ R2P4 大概会根据密度函数的变化导致期望靠拢50,具体计算量太
 — other · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-473191-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres is Cloudflare-blocked to this machine and archive.org was returning HTTP 429 to every snapshot lookup at the time, so only the search engine's cached extract is available. Not a question but a worked answer 
 
-### Q1078 · Tier C · 2026 · phone_technical (the whole of the 45-minute first round)
+### Q1067 · Tier C · 2026 · phone_technical (the whole of the 45-minute first round)
 
 45分钟,两道题,无拷打简历环节 第一题比较简单,经典的可以和casino互动bet骰子的题。由于印象不是很深刻就不放了避免误导人 第二题:
 
@@ -10337,7 +10247,7 @@ R2P4 大概会根据密度函数的变化导致期望靠拢50,具体计算量太
 — other · posted 2025-10-12 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1149543-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres is Cloudflare-blocked to this machine and archive.org was returning HTTP 429 to every snapshot lookup at the time, so only the search engine's cached extract is available. The poster deliberately withholds q
 
-### Q1079 · Tier C · unknown · phone_technical (第一轮)
+### Q1068 · Tier C · unknown · phone_technical (第一轮)
 
 一个数所有数位乘积10000, 这个数最小是多少(255558),最大是多少(无穷大)
 
@@ -10349,7 +10259,7 @@ R2P4 大概会根据密度函数的变化导致期望靠拢50,具体计算量太
 — 1point3acres · posted 2021-12 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-829095-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Transcribed by the candidate mid-process rather than from a recording; the parenthesised answers are his own and the 'largest is infinite' reading depends on an unstated convention about leading or trailing 1s.
 
-### Q1080 · Tier C · unknown · phone_technical (第一轮)
+### Q1069 · Tier C · unknown · phone_technical (第一轮)
 
 周六有20%几率下雨,周日有30%,如果相互独立至少一天下雨几率是多少(44%),如果周六下雨使周日更有可能下雨,这个几率会上升还是下降,如果不知道是否相互独立,至少一天下雨
 
@@ -10361,7 +10271,7 @@ R2P4 大概会根据密度函数的变化导致期望靠拢50,具体计算量太
 — 1point3acres · posted 2021-12 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-829095-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The final clause is cut off by 1point3acres' points wall mid-sentence, so the third sub-question (the bounds under unknown dependence) is incomplete.
 
-### Q1081 · Tier C · unknown · phone_technical
+### Q1070 · Tier C · unknown · phone_technical
 
 你和一个绝对rational的对手玩,但可以告诉对手你有关你的bid的information(must be true),请问你说什么能提升你的预期收益
 
@@ -10373,7 +10283,7 @@ R2P4 大概会根据密度函数的变化导致期望靠拢50,具体计算量太
 — 1point3acres · posted 2021-12 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-829095-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The visible snippet begins mid-word ('ional的对手玩' = rational), so the setup of the bidding game itself is behind the paywall and this question is missing its premise; the round it belongs to cannot be determined.
 
-### Q1082 · Tier C · unknown · phone_technical
+### Q1071 · Tier C · unknown · phone_technical
 
 (7) 你和一个绝对rational的对手玩,他知道前10次扔硬币的结果,你应该出价多少
 
@@ -10383,7 +10293,7 @@ R2P4 大概会根据密度函数的变化导致期望靠拢50,具体计算量太
 — 1point3acres · posted 2021-12 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-829095-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Numbered (7) in a list whose items (1)-(6) are hidden by the paywall, so the shared game setup - what is being bid on and what the payoff is - is not visible.
 
-### Q1083 · Tier C · unknown · phone_technical
+### Q1072 · Tier C · unknown · phone_technical
 
 [bidding game where the opponent bids uniformly on 0-87] 那我是对面就直接出88吧
 
@@ -10395,7 +10305,7 @@ R2P4 大概会根据密度函数的变化导致期望靠拢50,具体计算量太
 — 1point3acres · posted 2021-12 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-829095-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: This is a reader (yz9, 2021-12-15) working through the problem in a reply, not the interviewer's prompt; the original question is behind the points wall, so the setup is reconstructed from the discussion.
 
-### Q1084 · Tier C · unknown · phone_technical (一轮主要是简单的概率问题)
+### Q1073 · Tier C · unknown · phone_technical (一轮主要是简单的概率问题)
 
 投四个硬币问期望,如果加上可以翻转硬币的权力,期望怎么变,翻到指定结果的期望数量是多少
 
@@ -10405,7 +10315,7 @@ R2P4 大概会根据密度函数的变化导致期望靠拢50,具体计算量太
 — 1point3acres · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-818997-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The payoff function is never stated - 'the expectation' of what is left implicit - so the question can only be reconstructed approximately.
 
-### Q1085 · Tier C · unknown · phone_technical (一轮主要是简单的概率问题)
+### Q1074 · Tier C · unknown · phone_technical (一轮主要是简单的概率问题)
 
 一个箱子里有三个红球两个蓝球,抽到红[球] ... [follow-]up是考虑有n+1个红球,n个蓝球的情况
 
@@ -10417,7 +10327,7 @@ R2P4 大概会根据密度函数的变化导致期望靠拢50,具体计算量太
 — 1point3acres · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-818997-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The snippet truncates at 抽到红, so the stopping-rule question itself is cut off; the answer quoted here comes from a replier summarising, not from the interviewer.
 
-### Q1086 · Tier C · unknown · phone_technical (三)
+### Q1075 · Tier C · unknown · phone_technical (三)
 
 知道自己的骰子点数,之后两人竞标一个装有两人点数和金额的箱子,求在无限进行游戏和有限进行游戏下的最优策略
 
@@ -10427,7 +10337,7 @@ R2P4 大概会根据密度函数的变化导致期望靠拢50,具体计算量太
 — 1point3acres · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-818997-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: A replier says outright he does not understand what 有限/无限进行游戏 means here and offers two incompatible readings, so the mechanics of the auction are genuinely unclear from the text.
 
-### Q1087 · Tier C · unknown · phone_technical (二)
+### Q1076 · Tier C · unknown · phone_technical (二)
 
 箱子里的球是等量无穷多,因此比例总是1:1,求各个箱子里分别是什么球 ... 每个箱子恰少其中一种
 
@@ -10440,7 +10350,7 @@ R2P4 大概会根据密度函数的变化导致期望靠拢50,具体计算量太
 
 ## Jane Street — trading_game
 
-### Q1088 · Tier C · unknown · trading_game (There is no Online Assessments)
+### Q1077 · Tier C · unknown · trading_game (There is no Online Assessments)
 
 The second round is playing a game with a trader but I guess they focus more on how you approach the problem and how you communicate rather than figuring out the right solution in the first try.
 
@@ -10451,7 +10361,7 @@ The second round is playing a game with a trader but I guess they focus more on 
 
 ## Jane Street — unknown
 
-### Q1089 · Tier C · unknown · unknown (four rounds)
+### Q1078 · Tier C · unknown · unknown (four rounds)
 
 In totality, I had four interview rounds consisting of an assortment of technical and behavioral questions. The technical side mainly involved probability, statistics, expected value, market making, and game theory questions.
 
@@ -10459,7 +10369,7 @@ In totality, I had four interview rounds consisting of an assortment of technica
 — blog · posted unknown · snippet_only · [link](https://openquant.co/blog/how-to-land-a-quant-internship-at-jane-street)
   1 attestation(s) across 1 domain(s) · doubt: The publisher deliberately withholds every actual question, so this attests only the shape of the process; openquant.co is a commercial quant job board, which gives it an incentive to publish this kind of content for tra
 
-### Q1090 · Tier C · unknown · unknown
+### Q1079 · Tier C · unknown · unknown
 
 Expected value of a sequential throw game
 
@@ -10467,7 +10377,7 @@ Expected value of a sequential throw game
 — glassdoor · posted unknown · snippet_only · [link](https://www.glassdoor.com/Interview/Jane-Street-Quantitative-Researcher-Interview-Questions-EI_IE255549.0,11_KO12,35.htm)
   1 attestation(s) across 1 domain(s) · doubt: Anonymous and unverified: Glassdoor rewards posting an interview with access to other people's, which incentivises thin or invented entries, and the page could not be re-read directly because Glassdoor blocks this host -
 
-### Q1091 · Tier C · unknown · unknown
+### Q1080 · Tier C · unknown · unknown
 
 some typical stochastic analysis question about martingale, bs model, and simple SDE solving
 
@@ -10475,7 +10385,7 @@ some typical stochastic analysis question about martingale, bs model, and simple
 — glassdoor · posted unknown · snippet_only · [link](https://www.glassdoor.com/Interview/Jane-Street-Quantitative-Researcher-Interview-Questions-EI_IE255549.0,11_KO12,35.htm)
   1 attestation(s) across 1 domain(s) · doubt: Anonymous and unverified: Glassdoor rewards posting an interview with access to other people's, which incentivises thin or invented entries, and the page could not be re-read directly because Glassdoor blocks this host -
 
-### Q1092 · Tier C · unknown · unknown
+### Q1081 · Tier C · unknown · unknown
 
 2 python code problems with leed code hard level questions.
 
@@ -10483,7 +10393,7 @@ some typical stochastic analysis question about martingale, bs model, and simple
 — glassdoor · posted unknown · snippet_only · [link](https://www.glassdoor.com/Interview/Jane-Street-Quantitative-Researcher-Interview-Questions-EI_IE255549.0,11_KO12,35.htm)
   1 attestation(s) across 1 domain(s) · doubt: Anonymous and unverified: Glassdoor rewards posting an interview with access to other people's, which incentivises thin or invented entries, and the page could not be re-read directly because Glassdoor blocks this host -
 
-### Q1093 · Tier C · unknown · unknown
+### Q1082 · Tier C · unknown · unknown
 
 A typical question is like given a game, what is the optimal strategy?
 
@@ -10491,7 +10401,7 @@ A typical question is like given a game, what is the optimal strategy?
 — glassdoor · posted unknown · snippet_only · [link](https://www.glassdoor.com/Interview/Jane-Street-Quantitative-Researcher-Interview-Questions-EI_IE255549.0,11_KO12,35.htm)
   1 attestation(s) across 1 domain(s) · doubt: Anonymous and unverified: Glassdoor rewards posting an interview with access to other people's, which incentivises thin or invented entries, and the page could not be re-read directly because Glassdoor blocks this host -
 
-### Q1094 · Tier C · unknown · unknown
+### Q1083 · Tier C · unknown · unknown
 
 Probability and Game Theory, optimal strategy and the expected return
 
@@ -10502,7 +10412,7 @@ Probability and Game Theory, optimal strategy and the expected return
 
 ## Jane Street — onsite
 
-### Q1095 · Tier D · 2025 · onsite (the whole onsite — the poster says this was the only question)
+### Q1084 · Tier D · 2025 · onsite (the whole onsite — the poster says this was the only question)
 
 merge diffs:{0: A,3: B} + {0: C,4: D}orig:{0: z,1: z,2: z}new:{0: C,1: A,2: z,3: z,4: D,5: B,6
 
@@ -10512,7 +10422,7 @@ merge diffs:{0: A,3: B} + {0: C,4: D}orig:{0: z,1: z,2: z}new:{0: C,1: A,2: z,3:
 — chat_telegram · posted 2025-09-17 · full_text · [link](https://t.me/usinterview/25338)
   1 attestation(s) across 1 domain(s) · doubt: The poster gives concrete input and expected-output data, which is unusually specific, but no prose statement of what "merge diffs" is supposed to mean — the semantics have to be inferred from the example, and the exampl
 
-### Q1096 · Tier D · 2026 · onsite (question 1 of the numbered list)
+### Q1085 · Tier D · 2026 · onsite (question 1 of the numbered list)
 
 1. 改已有的一个classclass Table: def_init_(self,filters,times) pass def add_t
 
@@ -10525,7 +10435,7 @@ merge diffs:{0: A,3: B} + {0: C,4: D}orig:{0: z,1: z,2: z}new:{0: C,1: A,2: z,3:
 
 ## Jane Street — phone_technical
 
-### Q1097 · Tier D · 2025 · phone_technical (first-round phone coding)
+### Q1086 · Tier D · 2025 · phone_technical (first-round phone coding)
 
 实现一个代码折叠器。要求能将"{}"代表的代码折叠,并且显示Example:1 int main() {2 if (tru
 
@@ -10535,7 +10445,7 @@ merge diffs:{0: A,3: B} + {0: C,4: D}orig:{0: z,1: z,2: z}new:{0: C,1: A,2: z,3:
 — chat_telegram · posted 2025-01-06 · full_text · [link](https://t.me/usinterview/20871)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The worked example is cut
 
-### Q1098 · Tier D · 2025 · phone_technical (QR first round)
+### Q1087 · Tier D · 2025 · phone_technical (QR first round)
 
 给出一个数据集,口述分析建模的方式
 
@@ -10545,7 +10455,7 @@ merge diffs:{0: A,3: B} + {0: C,4: D}orig:{0: z,1: z,2: z}new:{0: C,1: A,2: z,3:
 — chat_telegram · posted 2025-03-27 · full_text · [link](https://t.me/usinterview/22137)
   1 attestation(s) across 1 domain(s) · doubt: Extremely compressed two-line recall; the dataset itself is not described, so this documents the round's style rather than a reproducible question.
 
-### Q1099 · Tier D · 2025 · phone_technical (QR first round)
+### Q1088 · Tier D · 2025 · phone_technical (QR first round)
 
 给出一组数据,比较分析数据的pattern,给出理由
 
@@ -10555,7 +10465,7 @@ merge diffs:{0: A,3: B} + {0: C,4: D}orig:{0: z,1: z,2: z}new:{0: C,1: A,2: z,3:
 — chat_telegram · posted 2025-03-27 · full_text · [link](https://t.me/usinterview/22137)
   1 attestation(s) across 1 domain(s) · doubt: Same two-line post; no data is reproduced, so the question cannot be reconstructed. Note the 1point3acres role tag on this post is "Other 其他", not the quant tag, so even the QR labelling rests on the thread title.
 
-### Q1100 · Tier D · 2024 · phone_technical (ML modelling discussion)
+### Q1089 · Tier D · 2024 · phone_technical (ML modelling discussion)
 
 假如我们有minst dataset的variation,每张图片里有三个数字,求三个数字的和。不可以用OCR或者其他图像识别。
 
@@ -10565,7 +10475,7 @@ merge diffs:{0: A,3: B} + {0: C,4: D}orig:{0: z,1: z,2: z}new:{0: C,1: A,2: z,3:
 — chat_telegram · posted 2024-09-12 · full_text · [link](https://t.me/usinterview/19449)
   1 attestation(s) across 1 domain(s) · doubt: The "no OCR or other image recognition" constraint is ambiguous as recalled (a CNN is image recognition), so the poster has probably compressed the interviewer's actual restriction.
 
-### Q1101 · Tier D · 2024 · phone_technical (phone coding)
+### Q1090 · Tier D · 2024 · phone_technical (phone coding)
 
 Implement APIs for a tree class backend — Tree node的定义已知,所有API已知(不用实现)class Node { vector getAncestors
 
@@ -10575,7 +10485,7 @@ Implement APIs for a tree class backend — Tree node的定义已知,所有API�
 — chat_telegram · posted 2024-12-03 · full_text · [link](https://t.me/usinterview/20583)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The class definition is t
 
-### Q1102 · Tier D · 2025 · phone_technical (phone coding — poster says the emphasis is API design and clean code)
+### Q1091 · Tier D · 2025 · phone_technical (phone coding — poster says the emphasis is API design and clean code)
 
 Design a supermarket queue. Operations: add customer, change cu
 
@@ -10585,7 +10495,7 @@ Design a supermarket queue. Operations: add customer, change cu
 — chat_telegram · posted 2025-05-31 · full_text · [link](https://t.me/usinterview/23478)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The operation list is cut
 
-### Q1103 · Tier D · 2025 · phone_technical (phone coding, described as DP)
+### Q1092 · Tier D · 2025 · phone_technical (phone coding, described as DP)
 
 Implement 一个connect four的游戏,区别在于新放进去球会掉在最底下,然后把上面球顶上去。
 
@@ -10595,7 +10505,7 @@ Implement 一个connect four的游戏,区别在于新放进去球会掉在最底
 — chat_telegram · posted 2025-07-20 · full_text · [link](https://t.me/usinterview/24268)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The poster labels it "DP"
 
-### Q1104 · Tier D · 2025 · phone_technical (phone coding)
+### Q1093 · Tier D · 2025 · phone_technical (phone coding)
 
 实现一个类似于Candy Crush游戏一样的数据结构。输入给一个按列存储的二维数据结构,每个元素是整数,代表游戏里不同的颜色
 
@@ -10605,7 +10515,7 @@ Implement 一个connect four的游戏,区别在于新放进去球会掉在最底
 — chat_telegram · posted 2025-05-20 · full_text · [link](https://t.me/usinterview/23284)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The poster themself notes
 
-### Q1105 · Tier D · unknown · phone_technical (phone coding part 1)
+### Q1094 · Tier D · unknown · phone_technical (phone coding part 1)
 
 算数part 1: input是一个算数组,求结果只考虑+-x /eg. (4 + 5) x 6 = ? parser的部分不用写直接求结果
 
@@ -10615,7 +10525,7 @@ Implement 一个connect four的游戏,区别在于新放进去球会掉在最底
 — chat_telegram · posted 2022-09-19 · full_text · [link](https://t.me/usinterview/14711)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. Four years old (2022) and
 
-### Q1106 · Tier D · 2026 · phone_technical (the first-round coding problem)
+### Q1095 · Tier D · 2026 · phone_technical (the first-round coding problem)
 
 第一轮swe面试,告诉一种特殊的很简易的编程语言,用你擅长的语言编译实现,之后有些OOD感觉的followup
 
@@ -10625,7 +10535,7 @@ Implement 一个connect four的游戏,区别在于新放进去球会掉在最底
 — chat_telegram · posted 2025-08-01 · full_text · [link](https://t.me/usinterview/24502)
   1 attestation(s) across 1 domain(s) · doubt: The grammar of the "special, very simple programming language" is not given, and that is the question — without it there is nothing to implement. Whether the task was an interpreter or a compiler is also ambiguous in the
 
-### Q1107 · Tier D · unknown · phone_technical (the problem, quoted as far as the preview reaches)
+### Q1096 · Tier D · unknown · phone_technical (the problem, quoted as far as the preview reaches)
 
 当年校招的题给定一组 M 个 code 和 N 个时间节点,一个理想的数据形态是是一个 N x M 的 matrix,纵向数据按时间排序,横向数据按照 c
 
@@ -10635,7 +10545,7 @@ Implement 一个connect four的游戏,区别在于新放进去球会掉在最底
 — chat_telegram · posted 2026-02-01 · full_text · [link](https://t.me/usinterview/27088)
   1 attestation(s) across 1 domain(s) · doubt: Two problems. First, the preview is severed mid-word at "按照 c", right where the column ordering was being defined, and the task itself — what to do with the data once the ideal matrix shape is described — never appears. 
 
-### Q1108 · Tier D · 2023 · phone_technical (the three coding questions, of which the first two are described)
+### Q1097 · Tier D · 2023 · phone_technical (the three coding questions, of which the first two are described)
 
 3个coding题,第一题是刷题网肆肆参(压缩字符串),第二和第三题都是第一题的延展。第二题问如果输入是数据流(网络数据
 
@@ -10645,7 +10555,7 @@ Implement 一个connect four的游戏,区别在于新放进去球会掉在最底
 — chat_telegram · posted 2023-06-10 · full_text · [link](https://t.me/usinterview/15898)
   1 attestation(s) across 1 domain(s) · doubt: The problem itself is identified only by a LeetCode number written in homophone-obfuscated digits plus a two-word gloss ("压缩字符串", string compression); the poster never states the prompt. The extension — re-do it for a st
 
-### Q1109 · Tier D · 2025 · phone_technical (the single question, which the poster says had appeared on the forum b)
+### Q1098 · Tier D · 2025 · phone_technical (the single question, which the poster says had appeared on the forum b)
 
 题目是之前地里出现过的trading system。有个class叫Item,里面有buyer,seller,price,item_name这几个field,还有个class叫Database,有个show_all_items()的method。
 
@@ -10655,7 +10565,7 @@ Implement 一个connect four的游戏,区别在于新放进去球会掉在最底
 — chat_telegram · posted 2025-03-14 · full_text · [link](https://t.me/usinterview/21868)
   1 attestation(s) across 1 domain(s) · doubt: The setup is given in full but the task is not: the poster describes the two classes and their fields and then the preview ends, so what you were asked to build on top of them is missing. The poster's own claim that the 
 
-### Q1110 · Tier D · 2025 · phone_technical (the coding question)
+### Q1099 · Tier D · 2025 · phone_technical (the coding question)
 
 出的相当于一个rate limiting题目。给list of IP access log lines with IP address and timestamp,flag IP addresses that access too frequently w
 
@@ -10665,7 +10575,7 @@ Implement 一个connect four的游戏,区别在于新放进去球会掉在最底
 — chat_telegram · posted 2025-09-26 · full_text · [link](https://t.me/usinterview/25499)
   1 attestation(s) across 1 domain(s) · doubt: The preview cuts off at "too frequently w", i.e. exactly at the window definition, which is the only parameter that makes the problem well posed. The poster is partly quoting the prompt in English inside a Chinese senten
 
-### Q1111 · Tier D · 2026 · phone_technical (the first phone round, described as a build task)
+### Q1100 · Tier D · 2026 · phone_technical (the first phone round, described as a build task)
 
 要求我做一个 calculator,尽量模仿这个网站的功能和样式:https://calculator-eight-zeta.vercel.app/
 
@@ -10675,7 +10585,7 @@ Implement 一个connect four的游戏,区别在于新放进去球会掉在最底
 — chat_telegram · posted 2025-10-21 · full_text · [link](https://t.me/usinterview/25929)
   1 attestation(s) across 1 domain(s) · doubt: The specification is a URL rather than prose, and I have not opened that URL, so what the target calculator actually does is not something I can attest to — only that the poster says they were pointed at it. A live verce
 
-### Q1112 · Tier D · 2026 · phone_technical (the single coding question, with the worked example the poster reprodu)
+### Q1101 · Tier D · 2026 · phone_technical (the single coding question, with the worked example the poster reprodu)
 
 写一个类似于 vscode 的 code editor,需要支持 block shrink and expandExample:Given:1 a = 12 + for i in range(10):3 print(i)4 print(i
 
@@ -10685,7 +10595,7 @@ Implement 一个connect four的游戏,区别在于新放进去球会掉在最底
 — chat_telegram · posted 2026-05-30 · full_text · [link](https://t.me/usinterview/28634)
   1 attestation(s) across 1 domain(s) · doubt: The task is stated clearly and the poster starts reproducing the worked example — the "+" on line 2 is the collapsed-block marker — but the preview truncates partway through it, and the example is what defines the expect
 
-### Q1113 · Tier D · 2026 · phone_technical (the whole round as reported — a single sentence)
+### Q1102 · Tier D · 2026 · phone_technical (the whole round as reported — a single sentence)
 
 设计环形缓存,时间复杂度不重要,功能完成就行
 
@@ -10695,7 +10605,7 @@ Implement 一个connect four的游戏,区别在于新放进去球会掉在最底
 — chat_telegram · posted 2026-06-04 · full_text · [link](https://t.me/usinterview/28689)
   1 attestation(s) across 1 domain(s) · doubt: One sentence with no capacity, no element type and no statement of which operations were required, so this is the problem family rather than the problem. The explicit relaxation — complexity does not matter, just make it
 
-### Q1114 · Tier D · 2019 · phone_technical (the first of the questions the poster lists under Round 1)
+### Q1103 · Tier D · 2019 · phone_technical (the first of the questions the poster lists under Round 1)
 
 4个硬币,2个正面的概率,偶数个正面的概率
 
@@ -10705,7 +10615,7 @@ Implement 一个connect four的游戏,区别在于新放进去球会掉在最底
 — other · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-473191-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres is Cloudflare-blocked to this machine and archive.org was returning HTTP 429 to every snapshot lookup at the time, so only the search engine's cached extract is available. written from memory some time after
 
-### Q1115 · Tier D · 2019 · phone_technical (the second item in the poster's Round 1 list)
+### Q1104 · Tier D · 2019 · phone_technical (the second item in the poster's Round 1 list)
 
 扔骰子,6个数字全部出现时扔到次数的期望
 
@@ -10715,7 +10625,7 @@ Implement 一个connect four的游戏,区别在于新放进去球会掉在最底
 — other · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-473191-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres is Cloudflare-blocked to this machine and archive.org was returning HTTP 429 to every snapshot lookup at the time, so only the search engine's cached extract is available. written from memory some time after
 
-### Q1116 · Tier D · 2019 · phone_technical (the poster's summary of Round 1 as a whole)
+### Q1105 · Tier D · 2019 · phone_technical (the poster's summary of Round 1 as a whole)
 
 基本就是一些简单的Mental Math和概率题
 
@@ -10725,7 +10635,7 @@ Implement 一个connect four的游戏,区别在于新放进去球会掉在最底
 — other · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-473191-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres is Cloudflare-blocked to this machine and archive.org was returning HTTP 429 to every snapshot lookup at the time, so only the search engine's cached extract is available. A characterisation of the round rat
 
-### Q1117 · Tier D · unknown · phone_technical (一轮主要是简单的概率问题)
+### Q1106 · Tier D · unknown · phone_technical (一轮主要是简单的概率问题)
 
 分解数字问乘积最大怎么分解
 
@@ -10738,7 +10648,7 @@ Implement 一个connect four的游戏,区别在于新放进去球会掉在最底
 
 ## Jump Trading — online_assessment
 
-### Q1118 · Tier B · unknown · online_assessment (3 problems; poster says you fail unless all 3 are accepted)
+### Q1107 · Tier B · unknown · online_assessment (3 problems; poster says you fail unless all 3 are accepted)
 
 Given a sequence A of length n (n<=100000), get the pair (i,j) such that |i-j|>1 and minimize A[i]+A[j].
 
@@ -10749,7 +10659,7 @@ Given a sequence A of length n (n<=100000), get the pair (i,j) such that |i-j|>1
 
 ## Jump Trading — onsite
 
-### Q1119 · Tier B · unknown · onsite (first round included a simple coding question and some basic OLS and p)
+### Q1108 · Tier B · unknown · onsite (first round included a simple coding question and some basic OLS and p)
 
 They asked questions on linear algebra, which other companies don’t seem to test.
 
@@ -10757,7 +10667,7 @@ They asked questions on linear algebra, which other companies don’t seem to te
 — wso · posted 2025-10-25 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: Topic-level observation rather than a question; also unclear whether the linear algebra came in the first round or the final-round math interviews.
 
-### Q1120 · Tier B · unknown · onsite (Math and coding questions)
+### Q1109 · Tier B · unknown · onsite (Math and coding questions)
 
 What was the most unreasonable thing that you’ve ever done?
 
@@ -10765,7 +10675,7 @@ What was the most unreasonable thing that you’ve ever done?
 — wso · posted 2020-09-09 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: Unusual behavioral prompt; poster gives no context for which of the 3-4 interviewers asked it.
 
-### Q1121 · Tier B · unknown · onsite
+### Q1110 · Tier B · unknown · onsite
 
 Then I was asked about how I would store key value pairs. And then ended in a discussion about how I would implement a hash map data structure. I was asked about the tradeoffs between various implementations. I had to implement methods to add the key to the hashmap and method to retrieve a key from the hashmap.
 
@@ -10773,7 +10683,7 @@ Then I was asked about how I would store key value pairs. And then ended in a di
 — wso · posted 2019-10-08 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: Standard CS-fundamentals content that any firm could ask; the Jump-specific signal is weak.
 
-### Q1122 · Tier B · unknown · onsite
+### Q1111 · Tier B · unknown · onsite
 
 I'm dealing a deck of poker, you can stop me anytime. If the next card is red, you win. Otherwise you lose. What's optimal strategy and the probability of winning ?
 
@@ -10781,7 +10691,7 @@ I'm dealing a deck of poker, you can stop me anytime. If the next card is red, y
 — wso · posted 2018-12-24 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: This is a canonical martingale puzzle that appears in Mosteller/Green Book; included because a dated first-person Jump account attests it, and a second independent Jump WSO entry describes a very similar red-card game.
 
-### Q1123 · Tier B · unknown · onsite
+### Q1112 · Tier B · unknown · onsite
 
 one iteration of bubble sort, what's the probability that the array will be sorted.
 
@@ -10789,7 +10699,7 @@ one iteration of bubble sort, what's the probability that the array will be sort
 — wso · posted 2018-12-24 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: Terse restatement that omits the input distribution; the fuller version appears in a separate Jump WSO entry, so this one may be a compressed retelling of the same problem.
 
-### Q1124 · Tier B · unknown · onsite (Interviewed by two people for 45 minutes)
+### Q1113 · Tier B · unknown · onsite (Interviewed by two people for 45 minutes)
 
 On campus, they asked how to play a game where you call the next card and get a dollar if it's red, at which point the game is done. If you don't call, the next card is discarded and the game continues with the remaining cards.
 
@@ -10797,7 +10707,7 @@ On campus, they asked how to play a game where you call the next card and get a 
 — wso · posted 2018-12-22 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: Overlaps the classic red-card stopping problem found in quant prep books; kept because the phrasing here differs materially from the standard version and is independently dated.
 
-### Q1125 · Tier B · unknown · onsite
+### Q1114 · Tier B · unknown · onsite
 
 a math problem about the probability an array is sorted after swapping the first two if they're out of order, swapping the new second and third if they're out of order, and so on until swapping the last two if they're out of order
 
@@ -10805,7 +10715,7 @@ a math problem about the probability an array is sorted after swapping the first
 — wso · posted 2018-12-22 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: Does not state the input distribution (presumably a uniformly random permutation), so the problem is under-specified as recalled.
 
-### Q1126 · Tier B · unknown · onsite
+### Q1115 · Tier B · unknown · onsite
 
 There was a CS question about implementing an infinite stream
 
@@ -10813,7 +10723,7 @@ There was a CS question about implementing an infinite stream
 — wso · posted 2018-12-22 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: One clause with no specification of what the stream should do; effectively topic-level.
 
-### Q1127 · Tier B · unknown · onsite (The interview was 45 minutes long)
+### Q1116 · Tier B · unknown · onsite (The interview was 45 minutes long)
 
 a straightforward whiteboard question with two separate tasks: 1. Convert decimal-based number to a 16-bit binary representation 2. Represent as 4x4 matrix of 0s and 1s 3. Detect if path of 0s exists in matrix from top left to bottom right cell and if so, print out the path in the format of a string; otherwise, return a "No path" string
 
@@ -10821,7 +10731,7 @@ a straightforward whiteboard question with two separate tasks: 1. Convert decima
 — wso · posted 2018-02-05 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: Poster says 'two separate tasks' then lists three, so the recall is internally inconsistent; also 2017 vintage.
 
-### Q1128 · Tier B · unknown · onsite
+### Q1117 · Tier B · unknown · onsite
 
 Given a char buffer[4096], write a malloc implementation.
 
@@ -10829,7 +10739,7 @@ Given a char buffer[4096], write a malloc implementation.
 — blog · posted 2016-11-09 · full_text · [link](https://www.jointaro.com/interviews/companies/jump-trading/experiences/quantitative-software-engineer-new-york-new-york-november-9-2016-no-offer-negative-d0b7db19)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1129 · Tier B · unknown · onsite
+### Q1118 · Tier B · unknown · onsite
 
 Given a dependency graph, write a function to return a vector of all nodes such that all children are listed before the parent. Then make the function print each node only once.
 
@@ -10837,7 +10747,7 @@ Given a dependency graph, write a function to return a vector of all nodes such 
 — blog · posted 2016-11-09 · full_text · [link](https://www.jointaro.com/interviews/companies/jump-trading/experiences/quantitative-software-engineer-new-york-new-york-november-9-2016-no-offer-negative-d0b7db19)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1130 · Tier B · unknown · onsite
+### Q1119 · Tier B · unknown · onsite
 
 Two players are playing a game where you can pick either 1 or 2. The player that gets to 15 wins. Is there a strategy such that one player will always win, and if so, which player can use it?
 
@@ -10845,7 +10755,7 @@ Two players are playing a game where you can pick either 1 or 2. The player that
 — blog · posted 2016-11-09 · full_text · [link](https://www.jointaro.com/interviews/companies/jump-trading/experiences/quantitative-software-engineer-new-york-new-york-november-9-2016-no-offer-negative-d0b7db19)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1131 · Tier B · unknown · onsite
+### Q1120 · Tier B · unknown · onsite
 
 Write a dot product of 1,000,000 numbers that runs as fast as possible using SSE/AVX.
 
@@ -10853,7 +10763,7 @@ Write a dot product of 1,000,000 numbers that runs as fast as possible using SSE
 — blog · posted 2016-11-09 · full_text · [link](https://www.jointaro.com/interviews/companies/jump-trading/experiences/quantitative-software-engineer-new-york-new-york-november-9-2016-no-offer-negative-d0b7db19)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1132 · Tier B · unknown · onsite
+### Q1121 · Tier B · unknown · onsite
 
 Take an integer, sum the square of its digits, and repeat on the result. Some numbers will converge on 1, others will converge on 89. Write an algorithm to give the count of numbers from 1 to 1,000,000 that converge on 89.
 
@@ -10861,7 +10771,7 @@ Take an integer, sum the square of its digits, and repeat on the result. Some nu
 — blog · posted 2016-11-09 · full_text · [link](https://www.jointaro.com/interviews/companies/jump-trading/experiences/quantitative-software-engineer-new-york-new-york-november-9-2016-no-offer-negative-d0b7db19)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1133 · Tier B · unknown · onsite
+### Q1122 · Tier B · unknown · onsite
 
 Swap two variables without using a temp.
 
@@ -10869,7 +10779,7 @@ Swap two variables without using a temp.
 — blog · posted 2012-03-01 · full_text · [link](https://www.jointaro.com/interviews/companies/jump-trading/experiences/software-developer-intern-chicago-illinois-march-1-2012-no-offer-neutral-f34a7844)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1134 · Tier B · unknown · onsite
+### Q1123 · Tier B · unknown · onsite
 
 Prime number factorization, C# Caesar cipher.
 
@@ -10877,7 +10787,7 @@ Prime number factorization, C# Caesar cipher.
 — blog · posted 2024-09-05 · full_text · [link](https://www.jointaro.com/interviews/companies/jump-trading/experiences/fpga-intern-bristol-england-september-5-2024-no-offer-negative-ab052b64)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1135 · Tier B · unknown · onsite
+### Q1124 · Tier B · unknown · onsite
 
 For a 2-level nested loop iterating a 2D array, will exchanging the loop iteration index make a difference in performance?
 
@@ -10885,7 +10795,7 @@ For a 2-level nested loop iterating a 2D array, will exchanging the loop iterati
 — blog · posted 2012-02-01 · full_text · [link](https://www.jointaro.com/interviews/companies/jump-trading/experiences/software-engineer-internship-chicago-illinois-february-1-2012-no-offer-neutral-2e39e052)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1136 · Tier B · unknown · onsite (1 hour, one technical question, pen and whiteboard)
+### Q1125 · Tier B · unknown · onsite (1 hour, one technical question, pen and whiteboard)
 
 There was a string of postfix expressions, including macros and call operations. We had to write a program to correctly process it and execute the results.
 
@@ -10893,7 +10803,7 @@ There was a string of postfix expressions, including macros and call operations.
 — blog · posted 2019-09-01 · full_text · [link](https://www.jointaro.com/interviews/companies/jump-trading/experiences/software-engineer-internship-pitts-pennsylvania-september-1-2019-no-offer-positive-628928d5)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1137 · Tier B · unknown · onsite (The interview was 45 minutes long and consisted of a straightforward w)
+### Q1126 · Tier B · unknown · onsite (The interview was 45 minutes long and consisted of a straightforward w)
 
 1. Convert decimal-based number to a 16-bit binary representation 2. Represent as 4x4 matrix of 0s and 1s 3. Detect if path of 0s exists in matrix from top left to bottom right cell and if so, print out the path in the format of a string; otherwise, return a "No path" string
 
@@ -10901,7 +10811,7 @@ There was a string of postfix expressions, including macros and call operations.
 — wso · posted 2017-09 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview entries are anonymous and unverified; the poster writes them up months after the fact (the 'Date Submitted' here trails the interview month), so wording is recalled rather than transcribed. The poster says 
 
-### Q1138 · Tier B · unknown · onsite
+### Q1127 · Tier B · unknown · onsite
 
 Implement std:: classes like shared_ptr and vector.
 
@@ -10909,7 +10819,7 @@ Implement std:: classes like shared_ptr and vector.
 — blind · posted 2025-06-02 · full_text · [link](https://www.teamblind.com/post/swe-to-hedge-fundquant-firm-k6vktyvq)
   1 attestation(s) across 1 domain(s) · doubt: Blind handles are only company-verified, not role-verified, and the poster describes the process generically ('typically look like this') rather than reciting one sitting, so this is a composite of their experience rathe
 
-### Q1139 · Tier B · unknown · onsite
+### Q1128 · Tier B · unknown · onsite
 
 How I would store key value pairs, then a discussion about how I would implement a hash map data structure, tradeoffs between various implementations, and implement methods to add a key to the hashmap and retrieve a key from the hashmap.
 
@@ -10917,7 +10827,7 @@ How I would store key value pairs, then a discussion about how I would implement
 — wso · posted 2019-10-08 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO entries are anonymous and self-submitted with no verification that the poster interviewed at all; the submission date here is Oct 08, 2019, about two months after the stated interview month, so the recall is retrospe
 
-### Q1140 · Tier B · unknown · onsite (online codility test then 3 rounds of live coding interviews)
+### Q1129 · Tier B · unknown · onsite (online codility test then 3 rounds of live coding interviews)
 
 Two of the questions were leetcode medium-ish. But not exactly leetcode questions. The rest were not on leetcode but I would categorize them as high medium. They do go very deep into optimization all the way to optimizing for the underlying architecture
 
@@ -10925,7 +10835,7 @@ Two of the questions were leetcode medium-ish. But not exactly leetcode question
 — blind · posted 2022-05-08 · full_text · [link](https://www.teamblind.com/post/jump-trading-interview-process-swe-k5k5jexb)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies the poster's employer, not their candidacy, and threads are pseudonymous; nothing here can be tied to a named person or a dated application. Difficulty bands rather than questions; the one concrete claim i
 
-### Q1141 · Tier B · unknown · onsite (3-4 more hours of 'behavioral/technical' interviews after the technica)
+### Q1130 · Tier B · unknown · onsite (3-4 more hours of 'behavioral/technical' interviews after the technica)
 
 some latency sensitive c++ teams asked me questions about low level c++. Other teams asked me about my scripting experience and asked me to walk them through something I was proud of at my previous job. No coding.
 
@@ -10933,7 +10843,7 @@ some latency sensitive c++ teams asked me questions about low level c++. Other t
 — blind · posted 2022-05-08 · full_text · [link](https://www.teamblind.com/post/jump-trading-interview-process-swe-k5k5jexb)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies the poster's employer, not their candidacy, and threads are pseudonymous; nothing here can be tied to a named person or a dated application. Describes the shape of the team-matching conversations rather th
 
-### Q1142 · Tier B · unknown · onsite (two quant interviews + one programming interview)
+### Q1131 · Tier B · unknown · onsite (two quant interviews + one programming interview)
 
 Onsite: two 45-minute quant interviews plus one hour-long programming interview
 
@@ -10941,7 +10851,7 @@ Onsite: two 45-minute quant interviews plus one hour-long programming interview
 — wso · posted 2018-11 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview/quant-research-intern)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. 'each 45 minutes 
 
-### Q1143 · Tier B · unknown · onsite
+### Q1132 · Tier B · unknown · onsite
 
 On-campus: whiteboard interview with two engineers, then a full day of onsites in Chicago
 
@@ -10949,7 +10859,7 @@ On-campus: whiteboard interview with two engineers, then a full day of onsites i
 — wso · posted 2017-09 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview/jump-trading)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Process shape onl
 
-### Q1144 · Tier B · unknown · onsite (5 back-to-back 1-hour interviews)
+### Q1133 · Tier B · unknown · onsite (5 back-to-back 1-hour interviews)
 
 implement deque which invalidates iterators, implement lazy leaky singletone, implement allocator, tell me about virtual memory, codeforces div2 D questions, sfinae simple stuff
 
@@ -10957,7 +10867,7 @@ implement deque which invalidates iterators, implement lazy leaky singletone, im
 — blind · posted 2022-09-30 · full_text · [link](https://www.teamblind.com/post/old-mission-capital-jump-trading-xnpmnp28)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies the replier's own employer (Meta) but not that they interviewed at either firm; and critically the replier never says which of the two firms this was: another commenter asks 'Was this jump or old mission ?
 
-### Q1145 · Tier B · unknown · onsite (45-minute on-campus round, then a 4-round onsite)
+### Q1134 · Tier B · unknown · onsite (45-minute on-campus round, then a 4-round onsite)
 
 On-campus 45-minute interview followed by a four-round onsite
 
@@ -10965,7 +10875,7 @@ On-campus 45-minute interview followed by a four-round onsite
 — wso · posted 2018-10 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview/algo-trader)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. Structure only, and 
 
-### Q1146 · Tier B · unknown · onsite (3-4 interviewers, roughly 1 hour each)
+### Q1135 · Tier B · unknown · onsite (3-4 interviewers, roughly 1 hour each)
 
 Math and coding questions across a full day of interviews with 3-4 people, about an hour each
 
@@ -10973,7 +10883,7 @@ Math and coding questions across a full day of interviews with 3-4 people, about
 — wso · posted 2019-09 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview/quant-research-intern-0)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. 'Math and coding que
 
-### Q1147 · Tier B · unknown · onsite (four interviews: two math, one coding, one behavioural)
+### Q1136 · Tier B · unknown · onsite (four interviews: two math, one coding, one behavioural)
 
 Final round of four interviews: two math interviews, one coding interview, one behavioural interview
 
@@ -10981,7 +10891,7 @@ Final round of four interviews: two math interviews, one coding interview, one b
 — wso · posted 2025-10 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview/quantitative-research)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. Composition of the l
 
-### Q1148 · Tier B · unknown · onsite
+### Q1137 · Tier B · unknown · onsite
 
 Final onsite where people from different groups ask questions
 
@@ -10992,7 +10902,7 @@ Final onsite where people from different groups ask questions
 
 ## Jump Trading — phone_technical
 
-### Q1149 · Tier B · unknown · phone_technical (probability, linear algebra and programming questions, followed by fin)
+### Q1138 · Tier B · unknown · phone_technical (probability, linear algebra and programming questions, followed by fin)
 
 Some very difficult linear algebra questions about PCA and eigenvalues
 
@@ -11000,7 +10910,7 @@ Some very difficult linear algebra questions about PCA and eigenvalues
 — wso · posted 2024-09-10 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: Names the topic (PCA/eigenvalues) but no actual problem statement.
 
-### Q1150 · Tier B · unknown · phone_technical
+### Q1139 · Tier B · unknown · phone_technical
 
 1)Can you create a linked list? Do it. 2) Let's say we want to change places of 2 nodes in linked list. Can you create a function for that.
 
@@ -11008,7 +10918,7 @@ Some very difficult linear algebra questions about PCA and eigenvalues
 — wso · posted 2023-10-03 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: Unusually basic for a Jump QR screen, which raises the possibility the poster mislabelled the role or the firm.
 
-### Q1151 · Tier B · unknown · phone_technical
+### Q1140 · Tier B · unknown · phone_technical
 
 Let's say we have a timer with precision to nano seconds (9 digits). For all the missing values we just put nine 0's. What is the probability of at least 1 missing value given that we see 15 data points with 0's in the end in 10^5 data.
 
@@ -11016,7 +10926,7 @@ Let's say we have a timer with precision to nano seconds (9 digits). For all the
 — wso · posted 2023-10-03 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: The statement as transcribed is ambiguous about the null hypothesis, so the candidate probably lost detail in recall — though the market-data framing is distinctive and hard to invent.
 
-### Q1152 · Tier B · unknown · phone_technical (Focused heavily on the candidate's PhD research, then one probability )
+### Q1141 · Tier B · unknown · phone_technical (Focused heavily on the candidate's PhD research, then one probability )
 
 Suppose you sit on the road side and observe cars driving by. Assume the distribution of cars driving by is according to an exponential distribution. Now you observe a first car after sitting for x mins, a second car after sitting for y min. Given those observations, can you estimate the parameter in the distribution?
 
@@ -11024,7 +10934,7 @@ Suppose you sit on the road side and observe cars driving by. Assume the distrib
 — wso · posted 2018-02-15 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: PhD-track candidate but the post never states new grad vs experienced, so level is unknown; this is also a standard MLE exercise.
 
-### Q1153 · Tier B · unknown · phone_technical
+### Q1142 · Tier B · unknown · phone_technical
 
 Suppose you backtested a trading strategy, it did very well. But in live trading, you keep losing money, what would you do?
 
@@ -11032,7 +10942,7 @@ Suppose you backtested a trading strategy, it did very well. But in live trading
 — wso · posted 2018-02-15 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: Open-ended discussion prompt rather than a scored problem; 2018 vintage so may not reflect the current process.
 
-### Q1154 · Tier B · unknown · phone_technical
+### Q1143 · Tier B · unknown · phone_technical
 
 What are ensemble methods? Can you describe boosted tree methods?
 
@@ -11040,7 +10950,7 @@ What are ensemble methods? Can you describe boosted tree methods?
 — wso · posted 2018-02-15 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: Generic ML-knowledge check; not distinctive to Jump.
 
-### Q1155 · Tier B · unknown · phone_technical (one coding question requiring recursion, around 30 minutes; no online )
+### Q1144 · Tier B · unknown · phone_technical (one coding question requiring recursion, around 30 minutes; no online )
 
 Two people were playing a game to find words from a dictionary.
 
@@ -11048,7 +10958,7 @@ Two people were playing a game to find words from a dictionary.
 — blog · posted 2023-11-14 · full_text · [link](https://www.jointaro.com/interviews/companies/jump-trading/experiences/software-engineer-internship-chicago-illinois-november-14-2023-no-offer-positive-fe777791)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1156 · Tier B · unknown · phone_technical
+### Q1145 · Tier B · unknown · phone_technical
 
 Finding the first instance of a specific value in a sorted list.
 
@@ -11056,7 +10966,7 @@ Finding the first instance of a specific value in a sorted list.
 — blog · posted 2020-06-29 · full_text · [link](https://www.jointaro.com/interviews/companies/jump-trading/experiences/software-engineer-intern-united-states-june-29-2020-no-offer-positive-3c7cf4f1)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1157 · Tier B · unknown · phone_technical (online programming challenge, then technical phone interview, then on-)
+### Q1146 · Tier B · unknown · phone_technical (online programming challenge, then technical phone interview, then on-)
 
 Efficient implementation of a lazily initialized singleton in C++
 
@@ -11064,7 +10974,7 @@ Efficient implementation of a lazily initialized singleton in C++
 — blog · posted 2019-12-01 · full_text · [link](https://www.jointaro.com/interviews/companies/jump-trading/experiences/software-engineer-intern-london-england-december-1-2019-no-offer-positive-55840077)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1158 · Tier B · unknown · phone_technical
+### Q1147 · Tier B · unknown · phone_technical
 
 Write code for the Nth Fibonacci number.
 
@@ -11072,7 +10982,7 @@ Write code for the Nth Fibonacci number.
 — blog · posted 2012-02-01 · full_text · [link](https://www.jointaro.com/interviews/companies/jump-trading/experiences/software-engineer-internship-chicago-illinois-february-1-2012-no-offer-neutral-2e39e052)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1159 · Tier B · unknown · phone_technical (CV screen, OA, first-round interview, then an onsite with three separa)
+### Q1148 · Tier B · unknown · phone_technical (CV screen, OA, first-round interview, then an onsite with three separa)
 
 Given two lists of tuples representing time series data, merge them to form one large time series represented as a list of tuples.
 
@@ -11080,7 +10990,7 @@ Given two lists of tuples representing time series data, merge them to form one 
 — blog · posted 2025-09-29 · full_text · [link](https://www.jointaro.com/interviews/companies/jump-trading/experiences/software-engineer-internship-united-kingdom-september-29-2025-no-offer-neutral-8a8eb483)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1160 · Tier B · unknown · phone_technical
+### Q1149 · Tier B · unknown · phone_technical
 
 One probability question solvable by Bayes' formula, after a deep drill on the candidate's PhD research
 
@@ -11088,7 +10998,7 @@ One probability question solvable by Bayes' formula, after a deep drill on the c
 — wso · posted 2018-02 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview/quant-researcher)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. The question is i
 
-### Q1161 · Tier B · unknown · phone_technical
+### Q1150 · Tier B · unknown · phone_technical
 
 A simple coding question in the first round
 
@@ -11096,7 +11006,7 @@ A simple coding question in the first round
 — wso · posted 2025-10 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview/quantitative-research)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. 'Simple' is the post
 
-### Q1162 · Tier B · unknown · phone_technical
+### Q1151 · Tier B · unknown · phone_technical
 
 Probability and expectation problems in the first round
 
@@ -11104,7 +11014,7 @@ Probability and expectation problems in the first round
 — wso · posted 2025-10 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview/quantitative-research)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. Short topic-level qu
 
-### Q1163 · Tier B · unknown · phone_technical
+### Q1152 · Tier B · unknown · phone_technical
 
 Probability questions in the online interview
 
@@ -11112,7 +11022,7 @@ Probability questions in the online interview
 — wso · posted 2023-10 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview/quantitative-researcher-intern)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. Three topics named i
 
-### Q1164 · Tier B · unknown · phone_technical
+### Q1153 · Tier B · unknown · phone_technical
 
 Programming questions in the online interview
 
@@ -11120,7 +11030,7 @@ Programming questions in the online interview
 — wso · posted 2023-10 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview/quantitative-researcher-intern)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. No language, platfor
 
-### Q1165 · Tier B · unknown · phone_technical
+### Q1154 · Tier B · unknown · phone_technical
 
 Behavioural phone screen, then an in-person technical interview
 
@@ -11131,7 +11041,7 @@ Behavioural phone screen, then an in-person technical interview
 
 ## Jump Trading — superday
 
-### Q1166 · Tier B · unknown · superday (on-campus first round with 2 technical coding questions (~30 minutes),)
+### Q1155 · Tier B · unknown · superday (on-campus first round with 2 technical coding questions (~30 minutes),)
 
 Swap two variables without additional storage (i.e. no using a temp).
 
@@ -11139,7 +11049,7 @@ Swap two variables without additional storage (i.e. no using a temp).
 — wso · posted 2014-01-06 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: Wall Street Oasis interview entries are anonymous and unverified by the site, and this one is a company roll-up page whose displayed sample of entries can change, so a later re-fetch may not show it. The identical questi
 
-### Q1167 · Tier B · unknown · superday (4 interviews, one C++ coding on a laptop)
+### Q1156 · Tier B · unknown · superday (4 interviews, one C++ coding on a laptop)
 
 Superday rounds: one purely mathematical/linear algebra on the whiteboard, then two pen-and-paper brainteaser and math/probability rounds
 
@@ -11150,7 +11060,7 @@ Superday rounds: one purely mathematical/linear algebra on the whiteboard, then 
 
 ## Jump Trading — unknown
 
-### Q1168 · Tier B · unknown · unknown
+### Q1157 · Tier B · unknown · unknown
 
 Virtual screen take-home / HackerRank challenge related to markets: parsing market data to build a price-time priority order book.
 
@@ -11161,7 +11071,7 @@ Virtual screen take-home / HackerRank challenge related to markets: parsing mark
 
 ## Jump Trading — online_assessment
 
-### Q1169 · Tier C · unknown · online_assessment
+### Q1158 · Tier C · unknown · online_assessment
 
 source file and destination file comparison,有更改就return
 
@@ -11171,7 +11081,7 @@ source file and destination file comparison,有更改就return
 — 1point3acres · posted 2026-02-01 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/jumptrading-8699-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks this box, so this is the search engine's verbatim Highlights excerpt of the page rather than a page I loaded; the thread body itself is points-gated, so I cannot see the poster's full wording. The pre
 
-### Q1170 · Tier C · unknown · online_assessment
+### Q1159 · Tier C · unknown · online_assessment
 
 workflow management system debug 嵌套input处理
 
@@ -11181,7 +11091,7 @@ workflow management system debug 嵌套input处理
 — 1point3acres · posted 2026-02-01 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/jumptrading-8699-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks this box, so this is the search engine's verbatim Highlights excerpt of the page rather than a page I loaded; the thread body itself is points-gated, so I cannot see the poster's full wording. Two bul
 
-### Q1171 · Tier C · unknown · online_assessment (codility3题140分钟)
+### Q1160 · Tier C · unknown · online_assessment (codility3题140分钟)
 
 数组X,Y,长度相同。X/Y 代表一个fraction,找出出现次数最多的fraction,返回次数,例如2/3和4/6相等。
 
@@ -11191,7 +11101,7 @@ workflow management system debug 嵌套input处理
 — 1point3acres · posted 2026-02-13 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/jumptrading-8699-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks this box, so this is the search engine's verbatim Highlights excerpt of the page rather than a page I loaded; the thread body itself is points-gated, so I cannot see the poster's full wording. The tag
 
-### Q1172 · Tier C · unknown · online_assessment (codility3题140分钟)
+### Q1161 · Tier C · unknown · online_assessment (codility3题140分钟)
 
 正整数数组,找出最大的subset的长度。这个subset里面所有的数AND结果为正。
 
@@ -11201,7 +11111,7 @@ workflow management system debug 嵌套input处理
 — 1point3acres · posted 2026-02-13 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1165004-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks this box, so this is the search engine's verbatim Highlights excerpt of the page rather than a page I loaded; the thread body itself is points-gated, so I cannot see the poster's full wording. The pos
 
-### Q1173 · Tier C · unknown · online_assessment
+### Q1162 · Tier C · unknown · online_assessment
 
 C++的dp写一个Order Book Keeping,需要处理Order的各种增删改和交易的message,然后实时输出bid和ask price的对应信息和share量
 
@@ -11211,7 +11121,7 @@ C++的dp写一个Order Book Keeping,需要处理Order的各种增删改和交易
 — 1point3acres · posted 2025-07-14 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/jumptrading-8699-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Read from the tag-page row preview via search rather than the thread body — 1point3acres is Cloudflare-blocked here and the full post sits behind a points paywall, so the question is truncated at the preview boundary and
 
-### Q1174 · Tier C · unknown · online_assessment (两个问题,一共125分钟)
+### Q1163 · Tier C · unknown · online_assessment (两个问题,一共125分钟)
 
 买卖股票,给一个[stork price], 一个[sell pattern]。其中sell pattern和buy pattern是由-1,1的数组组成,1代表上涨, -1代表下跌
 
@@ -11221,7 +11131,7 @@ C++的dp写一个Order Book Keeping,需要处理Order的各种增删改和交易
 — 1point3acres · posted 2025-08-01 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/jumptrading-8699-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Read from the tag-page row preview via search rather than the thread body — 1point3acres is Cloudflare-blocked here and the full post sits behind a points paywall, so the question is truncated at the preview boundary and
 
-### Q1175 · Tier C · unknown · online_assessment (one of the OA problems, given as a spec with numbered requirements)
+### Q1164 · Tier C · unknown · online_assessment (one of the OA problems, given as a spec with numbered requirements)
 
 Implement a users endpoint against a written spec: return status code 400 if age is missing; 400 if age is not a number or the name is not a string; 400 if name is longer than 32 characters.
 
@@ -11229,7 +11139,7 @@ Implement a users endpoint against a written spec: return status code 400 if age
 — 1point3acres · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1023934-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The highlight block elides heavily through this spec, so only one requirement line survives as a contiguous run; the rest of question_text is assembled from fragments the highlight showed separately and should be treated
 
-### Q1176 · Tier C · unknown · online_assessment (second OA problem: parse fixed-width `ls`-style records with perm, own)
+### Q1165 · Tier C · unknown · online_assessment (second OA problem: parse fixed-width `ls`-style records with perm, own)
 
 Column owner has length 6 and contains a string representing the name of the user who created the file. The name is case sensitive and aligned to the left
 
@@ -11240,7 +11150,7 @@ Column owner has length 6 and contains a string representing the name of the use
 
 ## Jump Trading — onsite
 
-### Q1177 · Tier C · unknown · onsite (final round, about four hours)
+### Q1166 · Tier C · unknown · onsite (final round, about four hours)
 
 第一轮:一个图的题,然后有一种方法作出阴影部分,然后算这个掉落到这个范围的概率,
 
@@ -11250,7 +11160,7 @@ Column owner has length 6 and contains a string representing the name of the use
 — 1point3acres · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1026654-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres answers this host with a Cloudflare challenge, so the quote is the search engine's highlight of the page rather than bytes fetched here. The thread's second half sits behind the forum's 188-point paywall, so
 
-### Q1178 · Tier C · Summer 2023 · onsite (Jump Trading Intern Onsite 问了两个题目)
+### Q1167 · Tier C · Summer 2023 · onsite (Jump Trading Intern Onsite 问了两个题目)
 
 第一题的operations有可能是三个吗?或者多个每个只能用一次么,还是所有list的数字都可以用任意这四个里面的operation combine?
 
@@ -11263,7 +11173,7 @@ Column owner has length 6 and contains a string representing the name of the use
 
 ## Jump Trading — phone_technical
 
-### Q1179 · Tier C · unknown · phone_technical
+### Q1168 · Tier C · unknown · phone_technical
 
 问为啥想做量化然后对他们了解多少,问想通过实习获得什么之类的。还问毕业打不打算留在学术界
 
@@ -11273,7 +11183,7 @@ Column owner has length 6 and contains a string representing the name of the use
 — 1point3acres · posted 2025-10-02 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/jumptrading-8699-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks this box, so this is the search engine's verbatim Highlights excerpt of the page rather than a page I loaded; the thread body itself is points-gated, so I cannot see the poster's full wording. These a
 
-### Q1180 · Tier C · unknown · phone_technical (他家一共三轮,没有OA)
+### Q1169 · Tier C · unknown · phone_technical (他家一共三轮,没有OA)
 
 第二轮是coding + trading strategy. 考了一个game,两个player,怎么赢的策略, 然后算各种值
 
@@ -11283,7 +11193,7 @@ Column owner has length 6 and contains a string representing the name of the use
 — 1point3acres · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1026654-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres answers this host with a Cloudflare challenge, so the quote is the search engine's highlight of the page rather than bytes fetched here. The two-player game is described only by its shape — the poster never 
 
-### Q1181 · Tier C · unknown · phone_technical (second of two phone-screen questions)
+### Q1170 · Tier C · unknown · phone_technical (second of two phone-screen questions)
 
 在[0,1] 区间上randomly sample nested intervals,每个nested interval长度都是上一层interval
 
@@ -11293,7 +11203,7 @@ Column owner has length 6 and contains a string representing the name of the use
 — 1point3acres · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/collection/241722)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres answers this host with a Cloudflare challenge, so the quote is the search engine's highlight of the page rather than bytes fetched here. The thread's second half sits behind the forum's 188-point paywall, so
 
-### Q1182 · Tier C · unknown · phone_technical (also had to be written out)
+### Q1171 · Tier C · unknown · phone_technical (also had to be written out)
 
 2kth node in a singly linked list, 同样要写出来
 
@@ -11306,7 +11216,7 @@ Column owner has length 6 and contains a string representing the name of the use
 
 ## Jump Trading — unknown
 
-### Q1183 · Tier C · unknown · unknown
+### Q1172 · Tier C · unknown · unknown
 
 A bee starts at a hive. It has a 20% chance to move forward, a 50% chance to stay still, and a 30% to move backward. What percentage of the time does it spend in the hive?
 
@@ -11314,7 +11224,7 @@ A bee starts at a hive. It has a 20% chance to move forward, a 50% chance to sta
 — blog · posted unknown · compilation_only · [link](https://www.efinancialcareers-canada.com/news/electronic-trading-interviews)
   1 attestation(s) across 1 domain(s) · doubt: This is a journalist's compilation of questions scraped from Glassdoor and WSO, not a first-person sitting: no date, round, role track or candidate attaches to any single question, and eFinancialCareers does not link the
 
-### Q1184 · Tier C · unknown · unknown
+### Q1173 · Tier C · unknown · unknown
 
 I'm dealing a deck of cards. You can stop it at any time and if the next card is red, you win. What is the optimal strategy for winning?
 
@@ -11322,7 +11232,7 @@ I'm dealing a deck of cards. You can stop it at any time and if the next card is
 — blog · posted unknown · compilation_only · [link](https://www.efinancialcareers-canada.com/news/electronic-trading-interviews)
   1 attestation(s) across 1 domain(s) · doubt: This is a journalist's compilation of questions scraped from Glassdoor and WSO, not a first-person sitting: no date, round, role track or candidate attaches to any single question, and eFinancialCareers does not link the
 
-### Q1185 · Tier C · unknown · unknown
+### Q1174 · Tier C · unknown · unknown
 
 There are four balls, two black and two white. You pick two and random and flip their color from one to the other and repeat. How many times would you do this to ensure all four balls are the same color?
 
@@ -11330,7 +11240,7 @@ There are four balls, two black and two white. You pick two and random and flip 
 — blog · posted unknown · compilation_only · [link](https://www.efinancialcareers-canada.com/news/electronic-trading-interviews)
   1 attestation(s) across 1 domain(s) · doubt: This is a journalist's compilation of questions scraped from Glassdoor and WSO, not a first-person sitting: no date, round, role track or candidate attaches to any single question, and eFinancialCareers does not link the
 
-### Q1186 · Tier C · unknown · unknown
+### Q1175 · Tier C · unknown · unknown
 
 What is the probability that two people in a room full of 15 share the same birthday?
 
@@ -11341,7 +11251,7 @@ What is the probability that two people in a room full of 15 share the same birt
 
 ## Jump Trading — online_assessment
 
-### Q1187 · Tier D · unknown · online_assessment (OA question 1 of 3, 80 minutes)
+### Q1176 · Tier D · unknown · online_assessment (OA question 1 of 3, 80 minutes)
 
 第一题就是找到kth permutation
 
@@ -11351,7 +11261,7 @@ What is the probability that two people in a room full of 15 share the same birt
 — chat_telegram · posted 2020-03-28 · full_text · [link](https://t.me/usinterview/987)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. Six years o
 
-### Q1188 · Tier D · unknown · online_assessment (OA question 1 of 4)
+### Q1177 · Tier D · unknown · online_assessment (OA question 1 of 4)
 
 给一个数,比如 318, 返回数字重新排列后最大值 831.
 
@@ -11363,7 +11273,7 @@ What is the probability that two people in a room full of 15 share the same birt
 — chat_telegram · posted 2021-01-26 · full_text · [link](https://t.me/usinterview/4750)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. Five years 
 
-### Q1189 · Tier D · unknown · online_assessment (OA question 2 of 4)
+### Q1178 · Tier D · unknown · online_assessment (OA question 2 of 4)
 
 2. Word Machine,see https://leetcode.com/discuss/interview-question/algorithms/83
 
@@ -11373,7 +11283,7 @@ What is the probability that two people in a room full of 15 share the same birt
 — chat_telegram · posted 2021-01-26 · full_text · [link](https://t.me/usinterview/4750)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The Telegra
 
-### Q1190 · Tier D · unknown · online_assessment (OA format report for the trader track (not a question))
+### Q1179 · Tier D · unknown · online_assessment (OA format report for the trader track (not a question))
 
 他们trader的coding test都不太考纯算法,都带一点brain te
 
@@ -11383,7 +11293,7 @@ What is the probability that two people in a room full of 15 share the same birt
 — chat_telegram · posted 2021-12-11 · full_text · [link](https://t.me/usinterview/9186)
   1 attestation(s) across 1 domain(s) · doubt: Format datapoint only, no question. Also note the entity is Jump Crypto, a separate business from Jump Trading, and the firm label here follows the poster's framing. From 2021.
 
-### Q1191 · Tier D · unknown · online_assessment (OA format report (not a question))
+### Q1180 · Tier D · unknown · online_assessment (OA format report (not a question))
 
 一共四十分钟。准备的面经都没用上,十道shell的单选题+一道编程题。选择题答案可能有错,仅供参考。1. 如何
 
@@ -11393,7 +11303,7 @@ What is the probability that two people in a room full of 15 share the same birt
 — chat_telegram · posted 2022-07-29 · full_text · [link](https://t.me/usinterview/14079)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The Telegra
 
-### Q1192 · Tier D · 2024 · online_assessment (the Python coding item in an OA of 10 shell multiple-choice plus codin)
+### Q1181 · Tier D · 2024 · online_assessment (the Python coding item in an OA of 10 shell multiple-choice plus codin)
 
 一道python,三个数组,一个int数组prices代表股票
 
@@ -11403,7 +11313,7 @@ What is the probability that two people in a room full of 15 share the same birt
 — chat_telegram · posted 2024-01-31 · full_text · [link](https://t.me/usinterview/17398)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The Telegra
 
-### Q1193 · Tier D · 2025 · online_assessment (OA question 1 of 2)
+### Q1182 · Tier D · 2025 · online_assessment (OA question 1 of 2)
 
 买卖股票,给一个[stork price],一个[sell pattern],一个. 其中sell pattern和buy pattern是由-1,1的数组组成,1代表上涨,-1代表下跌,例如
 
@@ -11413,7 +11323,7 @@ What is the probability that two people in a room full of 15 share the same birt
 — chat_telegram · posted 2025-08-01 · full_text · [link](https://t.me/usinterview/24503)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The Telegra
 
-### Q1194 · Tier D · 2026 · online_assessment (OA, two items)
+### Q1183 · Tier D · 2026 · online_assessment (OA, two items)
 
 [*]source file and destination file comparison,有更改就return[*]workflow management system debug 嵌套input处理
 
@@ -11423,7 +11333,7 @@ What is the probability that two people in a room full of 15 share the same birt
 — chat_telegram · posted 2026-02-01 · full_text · [link](https://t.me/usinterview/27084)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. This is the
 
-### Q1195 · Tier D · 2026 · online_assessment (OA questions 1 and 2 of 3)
+### Q1184 · Tier D · 2026 · online_assessment (OA questions 1 and 2 of 3)
 
 OA (3 questions,all relatively easy):Find the largest number of equal fractions.Find the size of the largest subset such t
 
@@ -11433,7 +11343,7 @@ OA (3 questions,all relatively easy):Find the largest number of equal fractions.
 — chat_telegram · posted 2026-07-26 · full_text · [link](https://t.me/usinterview/29064)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The Telegra
 
-### Q1196 · Tier D · 2026 · online_assessment (the second of the two questions)
+### Q1185 · Tier D · 2026 · online_assessment (the second of the two questions)
 
 2.给一坨file query,每行由{owner,permission,filename} 判断哪些是read only
 
@@ -11443,7 +11353,7 @@ OA (3 questions,all relatively easy):Find the largest number of equal fractions.
 — chat_telegram · posted 2026-01-27 · full_text · [link](https://t.me/usinterview/27009)
   1 attestation(s) across 1 domain(s) · doubt: The record of the input format is precise but the output condition ("判断哪些是read only") is stated in five characters with no definition of what makes an entry read-only, which is the entire content of the problem. Question
 
-### Q1197 · Tier D · unknown · online_assessment (codility3题140分钟)
+### Q1186 · Tier D · unknown · online_assessment (codility3题140分钟)
 
 字符串处理,包含数字,空格,+, -, D
 
@@ -11453,7 +11363,7 @@ OA (3 questions,all relatively easy):Find the largest number of equal fractions.
 — 1point3acres · posted 2026-02-13 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/jumptrading-8699-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks this box, so this is the search engine's verbatim Highlights excerpt of the page rather than a page I loaded; the thread body itself is points-gated, so I cannot see the poster's full wording. The tag
 
-### Q1198 · Tier D · 2025 · online_assessment (OA共有三道题,有OOD也有算法题,总时长165分钟,一旦开始不能停止,但可以跳题做)
+### Q1187 · Tier D · 2025 · online_assessment (OA共有三道题,有OOD也有算法题,总时长165分钟,一旦开始不能停止,但可以跳题做)
 
 第一题是一个OOD的文件解析,给一个FILE的抽象类,其中
 
@@ -11463,7 +11373,7 @@ OA (3 questions,all relatively easy):Find the largest number of equal fractions.
 — 1point3acres · posted 2025-03-22 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/jumptrading-8699-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks this box, so this is the search engine's verbatim Highlights excerpt of the page rather than a page I loaded; the thread body itself is points-gated, so I cannot see the poster's full wording. The pre
 
-### Q1199 · Tier D · unknown · online_assessment (三个题)
+### Q1188 · Tier D · unknown · online_assessment (三个题)
 
 三个题不考算法,纯考写业务逻辑,最后十秒改了个bug把样例过了
 
@@ -11476,7 +11386,7 @@ OA (3 questions,all relatively easy):Find the largest number of equal fractions.
 
 ## Jump Trading — onsite
 
-### Q1200 · Tier D · unknown · onsite (the ~30-minute coding portion of a 50-minute video round)
+### Q1189 · Tier D · unknown · onsite (the ~30-minute coding portion of a 50-minute video round)
 
 实现一个Vector类如下,template Vector { void ...
 
@@ -11486,7 +11396,7 @@ OA (3 questions,all relatively easy):Find the largest number of equal fractions.
 — chat_telegram · posted 2022-07-05 · full_text · [link](https://t.me/usinterview/13726)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The Telegra
 
-### Q1201 · Tier D · unknown · onsite (VO question 1 of 2)
+### Q1190 · Tier D · unknown · onsite (VO question 1 of 2)
 
 第一题,类似于string compression. 给一个string,还有Integer k,每次可以删掉连续的k个一样的字母,返回最终结果。
 
@@ -11496,7 +11406,7 @@ OA (3 questions,all relatively easy):Find the largest number of equal fractions.
 — chat_telegram · posted 2022-07-20 · full_text · [link](https://t.me/usinterview/13952)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The poster 
 
-### Q1202 · Tier D · 2024 · onsite (onsite coding round 1)
+### Q1191 · Tier D · 2024 · onsite (onsite coding round 1)
 
 coding 1一个矩阵有数字,输出数字按snake 顺序(从上到下,
 
@@ -11506,7 +11416,7 @@ coding 1一个矩阵有数字,输出数字按snake 顺序(从上到下,
 — chat_telegram · posted 2024-11-14 · full_text · [link](https://t.me/usinterview/20375)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The Telegra
 
-### Q1203 · Tier D · 2025 · onsite (first of the two problems recorded in the post)
+### Q1192 · Tier D · 2025 · onsite (first of the two problems recorded in the post)
 
 A为R上的对称矩阵A满足多项式x^5+x^3+x=3求A
 
@@ -11516,7 +11426,7 @@ A为R上的对称矩阵A满足多项式x^5+x^3+x=3求A
 — chat_telegram · posted 2024-11-14 · full_text · [link](https://t.me/usinterview/20370)
   1 attestation(s) across 1 domain(s) · doubt: The statement is loose in a way that matters: "A satisfies the polynomial x^5+x^3+x=3" presumably means A^5 + A^3 + A = 3I, but the poster writes it with the scalar variable x and a bare 3, and does not say whether A is 
 
-### Q1204 · Tier D · 2025 · onsite (second of the two problems recorded in the post)
+### Q1193 · Tier D · 2025 · onsite (second of the two problems recorded in the post)
 
 找到小于200的所有质数
 
@@ -11526,7 +11436,7 @@ A为R上的对称矩阵A满足多项式x^5+x^3+x=3求A
 — chat_telegram · posted 2024-11-14 · full_text · [link](https://t.me/usinterview/20370)
   1 attestation(s) across 1 domain(s) · doubt: Six characters, and on its face an elementary sieve exercise, which is surprising for a quant-track onsite — the interesting part of such a question at Jump would be the follow-up on method or efficiency, and none is rec
 
-### Q1205 · Tier D · unknown · onsite (on-campus first round, then a full day of four interviews at the Chica)
+### Q1194 · Tier D · unknown · onsite (on-campus first round, then a full day of four interviews at the Chica)
 
 Design a linked list class.
 
@@ -11537,7 +11447,7 @@ Design a linked list class.
 
 ## Jump Trading — phone_technical
 
-### Q1206 · Tier D · unknown · phone_technical (phone screen run by a Quant Researcher hiring an engineer for their de)
+### Q1195 · Tier D · unknown · phone_technical (phone screen run by a Quant Researcher hiring an engineer for their de)
 
 面试是非典型面试,不直接问你题,一上给你一个 .tar.gz 的 logs file
 
@@ -11547,7 +11457,7 @@ Design a linked list class.
 — chat_telegram · posted 2021-03-17 · full_text · [link](https://t.me/usinterview/5747)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The Telegra
 
-### Q1207 · Tier D · unknown · phone_technical (systems and C++ round, three items)
+### Q1196 · Tier D · unknown · phone_technical (systems and C++ round, three items)
 
 1 heap、stack区别,有哪些场景应用;如何申请内存的, 谁快谁慢2 TCP UDP区别 3 coding 实现个 vector
 
@@ -11557,7 +11467,7 @@ Design a linked list class.
 — chat_telegram · posted 2022-11-10 · full_text · [link](https://t.me/usinterview/15102)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. This is the
 
-### Q1208 · Tier D · 2025 · phone_technical (phone screen debugging question, 12 test cases, problem shown as a scr)
+### Q1197 · Tier D · 2025 · phone_technical (phone screen debugging question, 12 test cases, problem shown as a scr)
 
 debugging的题 有点莫名其妙的一题 可以看截图一共12个testcase ... Consider a workflow management
 
@@ -11567,7 +11477,7 @@ debugging的题 有点莫名其妙的一题 可以看截图一共12个testcase .
 — chat_telegram · posted 2025-10-13 · full_text · [link](https://t.me/usinterview/25780)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The actual 
 
-### Q1209 · Tier D · 2023 · phone_technical (the C++ knowledge segment)
+### Q1198 · Tier D · 2023 · phone_technical (the C++ knowledge segment)
 
 c++ 常考语言知识virtual fucntion,virtual table. mutex,smart pointer...
 
@@ -11577,7 +11487,7 @@ c++ 常考语言知识virtual fucntion,virtual table. mutex,smart pointer...
 — chat_telegram · posted 2022-11-15 · full_text · [link](https://t.me/usinterview/15126)
   1 attestation(s) across 1 domain(s) · doubt: A topic list, not questions — the poster gives the areas covered and trails off with "..." themselves. The typo "fucntion" is the poster's. The Telegram link preview is cut to a fixed length and visibly ends in "...", so
 
-### Q1210 · Tier D · 2023 · phone_technical (the algorithm question)
+### Q1199 · Tier D · 2023 · phone_technical (the algorithm question)
 
 算法题:给定n个股票,以及未来的价格,在一定budget的情况下,返回最大的收益. e.g. 当
 
@@ -11587,7 +11497,7 @@ c++ 常考语言知识virtual fucntion,virtual table. mutex,smart pointer...
 — chat_telegram · posted 2022-11-15 · full_text · [link](https://t.me/usinterview/15126)
   1 attestation(s) across 1 domain(s) · doubt: The worked example the poster was about to give ("e.g. 当...") is exactly where the preview cuts off, and that example is what would have pinned down the ambiguities — whether you may buy fractional or multiple units, and
 
-### Q1211 · Tier D · unknown · phone_technical (45-minute first round on campus, two questions)
+### Q1200 · Tier D · unknown · phone_technical (45-minute first round on campus, two questions)
 
 Geometric distribution expectation.
 
@@ -11595,7 +11505,7 @@ Geometric distribution expectation.
 — blog · posted 2020-06-29 · full_text · [link](https://www.jointaro.com/interviews/companies/jump-trading/experiences/software-engineer-intern-united-states-june-29-2020-no-offer-positive-3c7cf4f1)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1212 · Tier D · unknown · phone_technical
+### Q1201 · Tier D · unknown · phone_technical
 
 LeetCode: Implement decorator in Python
 
@@ -11603,7 +11513,7 @@ LeetCode: Implement decorator in Python
 — blog · posted 2024-02-22 · full_text · [link](https://www.jointaro.com/interviews/companies/jump-trading/experiences/software-engineer-internship-poland-february-22-2024-no-offer-neutral-bca9d2e2)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1213 · Tier D · unknown · phone_technical (简单自我介绍,没有过简历,直接做题)
+### Q1202 · Tier D · unknown · phone_technical (简单自我介绍,没有过简历,直接做题)
 
 1. n*n
 
@@ -11613,7 +11523,7 @@ LeetCode: Implement decorator in Python
 — 1point3acres · posted 2025-01-23 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/jumptrading-8699-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks this box, so this is the search engine's verbatim Highlights excerpt of the page rather than a page I loaded; the thread body itself is points-gated, so I cannot see the poster's full wording. The pre
 
-### Q1214 · Tier D · unknown · phone_technical
+### Q1203 · Tier D · unknown · phone_technical
 
 1面是hr面, 貌似不难拿. 2面tech面刷人比较多
 
@@ -11623,7 +11533,7 @@ LeetCode: Implement decorator in Python
 — nowcoder · posted 2024-03-31 · full_text · [link](https://www.nowcoder.com/feed/main/detail/0756d4d7b35848dea1fe94ca310dd663)
   1 attestation(s) across 1 domain(s) · doubt: Process description, not a question, and the commenter hedges with 貌似 ('seems'), so they may be relaying hearsay rather than their own loop.
 
-### Q1215 · Tier D · unknown · phone_technical (two questions, both to be coded up; 给的时间比较少)
+### Q1204 · Tier D · unknown · phone_technical (two questions, both to be coded up; 给的时间比较少)
 
 leetcode valid sudoku, 要写出来,给的时间比较少
 
@@ -11633,7 +11543,7 @@ leetcode valid sudoku, 要写出来,给的时间比较少
 — 1point3acres · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-933668-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres answers this host with a Cloudflare challenge, so the quote is the search engine's highlight of the page rather than bytes fetched here. A named LeetCode problem is the easiest kind of recall to invent, thou
 
-### Q1216 · Tier D · unknown · phone_technical
+### Q1205 · Tier D · unknown · phone_technical
 
 Basic OLS problems in the first round
 
@@ -11644,7 +11554,7 @@ Basic OLS problems in the first round
 
 ## Jump Trading — superday
 
-### Q1217 · Tier D · 2025 · superday (question 1 of the list the poster says they are sharing)
+### Q1206 · Tier D · 2025 · superday (question 1 of the list the poster says they are sharing)
 
 1.[0,1]上每
 
@@ -11654,7 +11564,7 @@ Basic OLS problems in the first round
 — chat_telegram · posted 2024-11-14 · full_text · [link](https://t.me/usinterview/20374)
   1 attestation(s) across 1 domain(s) · doubt: A five-character fragment — the preview dies immediately after "1.[0,1]上每" ("On [0,1], each"). This is not an answerable question and must not be treated as one; it is logged only because it attests that the list existed
 
-### Q1218 · Tier D · unknown · superday (One purely coding (C++), one mathematical/linear algebra on the whiteb)
+### Q1207 · Tier D · unknown · superday (One purely coding (C++), one mathematical/linear algebra on the whiteb)
 
 Implement a trie in C++.
 
@@ -11662,7 +11572,7 @@ Implement a trie in C++.
 — wso · posted 2014-01-06 · full_text · [link](https://www.wallstreetoasis.com/company/jump-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: 2013 vintage — over a decade old, so almost certainly not representative of Jump's current internship loop.
 
-### Q1219 · Tier D · unknown · superday
+### Q1208 · Tier D · unknown · superday
 
 How many 0's are in 1000! (factorial)?
 
@@ -11673,7 +11583,7 @@ How many 0's are in 1000! (factorial)?
 
 ## Jump Trading — take_home
 
-### Q1220 · Tier D · 2026 · take_home (the preparation instruction sent before the interview)
+### Q1209 · Tier D · 2026 · take_home (the preparation instruction sent before the interview)
 
 找个你喜欢的dataset 和quant researcher的一个比较open ended的面 总体感觉不错As a part of this interview,we would like for you to prepare the following:* Ple
 
@@ -11686,7 +11596,7 @@ How many 0's are in 1000! (factorial)?
 
 ## Kronos Research — phone_technical
 
-### Q1221 · Tier B · 2025 · phone_technical (the coding question that grew out of a probability question)
+### Q1210 · Tier B · 2025 · phone_technical (the coding question that grew out of a probability question)
 
 因為我不確定 C++ 的 next_permutation 要怎麼 call,就問說能不能先寫一個樣子,結果面試官就說可以請我寫一個 next_permutation
 
@@ -11696,7 +11606,7 @@ How many 0's are in 1000! (factorial)?
 — chat_telegram · posted 2025-04-14 · full_text · [link](https://t.me/aistockanalyst/883)
   1 attestation(s) across 1 domain(s) · doubt: This question arose improvised, out of the candidate admitting they could not recall the library call — so it is genuinely a question that was asked, but it was not part of a prepared bank and would not recur. The origin
 
-### Q1222 · Tier B · 2025 · phone_technical (the C++ semantics questions)
+### Q1211 · Tier B · 2025 · phone_technical (the C++ semantics questions)
 
 面試官會問一些比如說這個變數會不會被 copy,或是怎樣寫才不會被 copy,以及他們的好壞等等的
 
@@ -11706,7 +11616,7 @@ How many 0's are in 1000! (factorial)?
 — chat_telegram · posted 2025-04-14 · full_text · [link](https://t.me/aistockanalyst/885)
   1 attestation(s) across 1 domain(s) · doubt: The variable and the code under discussion are not shown, so the question is recorded at the level of "copy semantics were probed" rather than as a specific prompt. The author is reporting a pattern across the round ("會問
 
-### Q1223 · Tier D · 2025 · phone_technical (the whole of the first infra round)
+### Q1212 · Tier D · 2025 · phone_technical (the whole of the first infra round)
 
 第一關是先問我怎麼實作一個簡單的交易系統
 
@@ -11719,7 +11629,7 @@ How many 0's are in 1000! (factorial)?
 
 ## Mako Global — online_assessment
 
-### Q1224 · Tier B · 2024 · online_assessment (first-stage online assessment before assessment centre)
+### Q1213 · Tier B · 2024 · online_assessment (first-stage online assessment before assessment centre)
 
 Online maths and problem solving assessments. 37 questions in 15 minutes.
 
@@ -11727,7 +11637,7 @@ Online maths and problem solving assessments. 37 questions in 15 minutes.
 — interview_review_db · posted 2024-11-26 · full_text · [link](https://www.wallstreetoasis.com/company/mako-global/interview)
   1 attestation(s) across 1 domain(s) · doubt: This is a description of the test FORMAT and question count, not a specific question item; the poster never states any individual question from the maths test.
 
-### Q1225 · Tier B · 2014 · online_assessment (third rotation of the graduate assessment afternoon)
+### Q1214 · Tier B · 2014 · online_assessment (third rotation of the graduate assessment afternoon)
 
 logical tests : 60 questions in 20min (if in remember well). logical questions that don't need any calculations.
 
@@ -11738,7 +11648,7 @@ logical tests : 60 questions in 20min (if in remember well). logical questions t
 
 ## Mako Global — onsite
 
-### Q1226 · Tier B · 2021 · onsite (final-round trader interview)
+### Q1215 · Tier B · 2021 · onsite (final-round trader interview)
 
 you buy a near term expiry straddle and short a longer term expiry straddle, what are the various greeks on this spread, what happens to these greeks if underlying sharply moves up throughout the day
 
@@ -11746,7 +11656,7 @@ you buy a near term expiry straddle and short a longer term expiry straddle, wha
 — interview_review_db · posted 2022-02-23 · full_text · [link](https://www.wallstreetoasis.com/company/mako-global/interview)
   1 attestation(s) across 1 domain(s) · doubt: Poster is recalling roughly three months after the interview and does not use quotation marks, so the wording is his own reconstruction rather than the interviewer's verbatim phrasing. Job title 'Junior Trader' does not 
 
-### Q1227 · Tier B · 2008 · onsite (candidates standing in a circle, traders circling and demanding two-wa)
+### Q1216 · Tier B · 2008 · onsite (candidates standing in a circle, traders circling and demanding two-wa)
 
 what's your bid and offer in the orange/apple 1by 2?
 
@@ -11754,7 +11664,7 @@ what's your bid and offer in the orange/apple 1by 2?
 — interview_review_db · posted 2013-05-02 · full_text · [link](https://www.wallstreetoasis.com/company/mako-global/interview)
   1 attestation(s) across 1 domain(s) · doubt: Poster is recalling an interview from ~2008 in a 2013 post and says outright it was 'more than 5 years ago'; the theoretical fruit prices on the sheet are not reported, so the question is not answerable as stated. Pit-er
 
-### Q1228 · Tier B · 2008 · onsite (first part of a group interview with ~8 candidates)
+### Q1217 · Tier B · 2008 · onsite (first part of a group interview with ~8 candidates)
 
 we were all put in a conference room and told we had 10 minutes to complete a 30 question IQ test, the test was multiple choice
 
@@ -11765,7 +11675,7 @@ we were all put in a conference room and told we had 10 minutes to complete a 30
 
 ## Mako Global — phone_technical
 
-### Q1229 · Tier B · 2021 · phone_technical (second round after the numerical test)
+### Q1218 · Tier B · 2021 · phone_technical (second round after the numerical test)
 
 The next round is an HR interview with some basic technical questions on derivatives and speed maths
 
@@ -11773,7 +11683,7 @@ The next round is an HR interview with some basic technical questions on derivat
 — interview_review_db · posted 2022-02-23 · full_text · [link](https://www.wallstreetoasis.com/company/mako-global/interview)
   1 attestation(s) across 1 domain(s) · doubt: Describes a topic area rather than any specific question; not reproducible as an exam item.
 
-### Q1230 · Tier B · 2008 · phone_technical (campus-recruiting phone screen, 'bunch of brain teasers')
+### Q1219 · Tier B · 2008 · phone_technical (campus-recruiting phone screen, 'bunch of brain teasers')
 
 standard probaility questions....what are the chances of rolling six, two sixes. some bayes theory questions
 
@@ -11784,7 +11694,7 @@ standard probaility questions....what are the chances of rolling six, two sixes.
 
 ## Mako Global — superday
 
-### Q1231 · Tier B · 2024 · superday (group interview/discussion rotation at the assessment centre)
+### Q1220 · Tier B · 2024 · superday (group interview/discussion rotation at the assessment centre)
 
 Who out of the other candidates would you pick for this job?
 
@@ -11795,7 +11705,7 @@ Who out of the other candidates would you pick for this job?
 
 ## Mako Global — trading_game
 
-### Q1232 · Tier B · 2014 · trading_game (second rotation of the graduate assessment afternoon)
+### Q1221 · Tier B · 2014 · trading_game (second rotation of the graduate assessment afternoon)
 
 trading simulations : with two other market makers ==> a real simulation of what's happening in the market to price some fruits and buy/sell.
 
@@ -11806,7 +11716,7 @@ trading simulations : with two other market makers ==> a real simulation of what
 
 ## Mako Global — onsite
 
-### Q1233 · Tier D · 2008 · onsite (rapid-fire questions from three traders alternating maths, logic and r)
+### Q1222 · Tier D · 2008 · onsite (rapid-fire questions from three traders alternating maths, logic and r)
 
 was 76*49 and what's 5302-1434
 
@@ -11817,7 +11727,7 @@ was 76*49 and what's 5302-1434
 
 ## Man Group — unknown
 
-### Q1234 · Tier C · unknown · unknown (Poster says the interview consisted of 9 questions)
+### Q1223 · Tier C · unknown · unknown (Poster says the interview consisted of 9 questions)
 
 Interview question consisted of 9 questions - the typical questions of: what have you done for personal development on your own accord? What is your most relevant job experience? tell us what you know about MAN Group? What have you learnt recently about MAN? what does this programme offer you ? What does this programme do for your career? talk us through your resume? What are some transferrable skills you can bring to MAN? what makes you ready for the role? Tell us about MAN products / markets ?
 
@@ -11828,7 +11738,7 @@ Interview question consisted of 9 questions - the typical questions of: what hav
 
 ## Marshall Wace — online_assessment
 
-### Q1235 · Tier C · previous iterations of the Quant Associate Programme · online_assessment (60-minute technical assessment covering probability theory, statistics)
+### Q1224 · Tier C · previous iterations of the Quant Associate Programme · online_assessment (60-minute technical assessment covering probability theory, statistics)
 
 [3 marks] A researcher takes a random sample of 25 fourteen-year-old students from a large population and gives them an IQ test. The population mean IQ is known to be 100. The first student is found to have an IQ of 150. What is your expectation for the average IQ for the sample of 25 students?
 
@@ -11836,7 +11746,7 @@ Interview question consisted of 9 questions - the typical questions of: what hav
 — firm_official_pdf · posted unknown · full_text · [link](https://cdn.mwam.com/download/MW_Quant_Application_Guide.pdf)
   1 attestation(s) across 1 domain(s) · doubt: Marshall Wace is NOT on my assigned shard firm list — I added it because this is an unusually strong first-party source. The firm states these exact questions 'will not be used again this year', so they are retired items
 
-### Q1236 · Tier C · previous iterations of the Quant Associate Programme · online_assessment (60-minute technical assessment; question carries [3 marks] and is acco)
+### Q1225 · Tier C · previous iterations of the Quant Associate Programme · online_assessment (60-minute technical assessment; question carries [3 marks] and is acco)
 
 [3 marks] You have a table of items containing three columns of length n. Columns A and B contain only integers, while Column C contains only strings, all of which are 6 characters long. ... You use 'quicksort' to sort column A. What is the average time complexity when sorting n elements?
 
@@ -11844,7 +11754,7 @@ Interview question consisted of 9 questions - the typical questions of: what hav
 — firm_official_pdf · posted unknown · full_text · [link](https://cdn.mwam.com/download/MW_Quant_Application_Guide.pdf)
   1 attestation(s) across 1 domain(s) · doubt: Off-shard firm added deliberately (see log). The table of sample rows is mangled by PDF text extraction so I have elided it with '...' rather than reproduce garbled data; the firm says these questions are retired and wil
 
-### Q1237 · Tier C · previous iterations of the Quant Associate Programme · online_assessment (60-minute technical assessment; question carries [5 marks])
+### Q1226 · Tier C · previous iterations of the Quant Associate Programme · online_assessment (60-minute technical assessment; question carries [5 marks])
 
 [5 marks] A, B, C, D, E, F, G, H are distinct digits within the range 0-9 (inclusive). Work out their values such that the following two arithmetic equations hold: AA × BB = CDE, BB ÷ AA = F ÷ GH
 
@@ -11855,7 +11765,7 @@ Interview question consisted of 9 questions - the typical questions of: what hav
 
 ## Marshall Wace — onsite
 
-### Q1238 · Tier C · previous iterations of the Quant Associate Programme · onsite (Assessment centre in London; the brainteaser interview asks candidates)
+### Q1227 · Tier C · previous iterations of the Quant Associate Programme · onsite (Assessment centre in London; the brainteaser interview asks candidates)
 
 We each take turns to roll a dice. Each time a number comes up which had not previously come up, we cross it out from the list of numbers 1,2,3,4,5,6. The winner is the player to cross out the last number. Would you prefer to play first or second?
 
@@ -11863,7 +11773,7 @@ We each take turns to roll a dice. Each time a number comes up which had not pre
 — firm_official_pdf · posted unknown · full_text · [link](https://cdn.mwam.com/download/MW_Quant_Application_Guide.pdf)
   1 attestation(s) across 1 domain(s) · doubt: Off-shard firm added deliberately. Retired question per the firm's own statement; the PDF carries no date so I cannot say which recruiting cycle it came from.
 
-### Q1239 · Tier C · previous iterations of the Quant Associate Programme · onsite (Programming interview at the assessment centre, where candidates revie)
+### Q1228 · Tier C · previous iterations of the Quant Associate Programme · onsite (Programming interview at the assessment centre, where candidates revie)
 
 You are given an integer array cost where cost[i] is the cost of i th step on a staircase. Once you pay the cost, you can either climb one or two steps. You can either start from the step with index 0, or the step with index 1. Return the minimum cost to reach the top of the floor.
 
@@ -11874,7 +11784,7 @@ You are given an integer array cost where cost[i] is the cost of i th step on a 
 
 ## Marshall Wace — phone_technical
 
-### Q1240 · Tier C · previous iterations of the Quant Associate Programme · phone_technical (Final half hour of the two-hour Lab & Video interview, a technical que)
+### Q1229 · Tier C · previous iterations of the Quant Associate Programme · phone_technical (Final half hour of the two-hour Lab & Video interview, a technical que)
 
 [10 marks] An airline company has 105 aeroplanes in service which fly cargo between London and New York. At the end of each month an inventory is taken of which aeroplanes are at which of the two cities. Every month, the movements of the planes between airports can be summarised as follows: 60% of the planes in London remain in London the following month. 40% of the planes in London are in New York the following month. 100% of the planes in New York are in London the following month. None of the planes in New York remain in New York the following month. a) [7 marks] If at the end of this month there are 70 aeroplanes in London and 35 in New York, how many will there be in each city in T months' time? T is an integer >0. Assume fractional aeroplanes exist, so you can have half an aeroplane in each city for example. b) [3 marks] How many aeroplanes will there be in each city in the distant future, i.e. as T tends to infinity?
 
@@ -11882,7 +11792,7 @@ You are given an integer array cost where cost[i] is the cost of i th step on a 
 — firm_official_pdf · posted unknown · full_text · [link](https://cdn.mwam.com/download/MW_Quant_Application_Guide.pdf)
   1 attestation(s) across 1 domain(s) · doubt: Off-shard firm added deliberately. Firm states these are retired questions; the mark scheme suggests this was originally a written-exam item even though the guide files it under the Zoom technical section, so the round l
 
-### Q1241 · Tier C · previous iterations of the Quant Associate Programme · phone_technical (The Statistics/probability alternative to the Mathematics brainteaser )
+### Q1230 · Tier C · previous iterations of the Quant Associate Programme · phone_technical (The Statistics/probability alternative to the Mathematics brainteaser )
 
 [14 marks] In a legal dispute over paternity, Adam is the alleged father. The judge is a Bayesian statistician, and announces at the start that, in the interests of fairness, his prior belief is that there is a 50% chance Adam is the father. On the first day of the trial, testimonials are given. On the second day, it is revealed that the child has blood type B, and according to geneticists, this would happen with probability 50% if Adam is the father. Furthermore, based on incidence rates of B genes in the population, there is a 10% chance that this child would have blood type B if Adam is not the father. At the end of the second day, the judge announces that his assessment of the probability that Adam is the father is 75%. a) [5 marks] What were the judge's beliefs at the end of the first day? b) [4 marks] Deduce the ratio of the Judge's assessment of the likelihood of the testimonials given that Adam is the father vs given Adam is not the father. c) [5 marks] There is some dispute over the geneticist's assessment that "there is a 10% chance the child would have blood type B if Adam is not the father". Experts are divided in opinion, with estimates for this figure ranging uniformly between 10% and 20%. If the Judge summarises this uncertainty by assigning a Uniform(0.1,0.2) distribution for this figure, rather than using the 10% figure, derive the Judge's final assessment in this case.
 
@@ -11893,7 +11803,7 @@ You are given an integer array cost where cost[i] is the cost of i th step on a 
 
 ## Maven Securities — math_sequences_test
 
-### Q1242 · Tier B · 2026 · math_sequences_test (second stage after the probability OA)
+### Q1231 · Tier B · 2026 · math_sequences_test (second stage after the probability OA)
 
 2 6-minute tests, which were comprised of mental maths and sequences
 
@@ -11904,7 +11814,7 @@ You are given an integer array cost where cost[i] is the cost of i th step on a 
 
 ## Maven Securities — online_assessment
 
-### Q1243 · Tier B · 2026 · online_assessment (first stage after application; negative marking for wrong answers)
+### Q1232 · Tier B · 2026 · online_assessment (first stage after application; negative marking for wrong answers)
 
 an OA with 18 probability questions in 30 minutes, which had negative marking for incorrect answers
 
@@ -11912,7 +11822,7 @@ an OA with 18 probability questions in 30 minutes, which had negative marking fo
 — interview_review_db · posted 2025-11-14 · full_text · [link](https://www.wallstreetoasis.com/company/maven-securities/interview)
   1 attestation(s) across 1 domain(s) · doubt: Format and scoring rule only; no individual OA item is reproduced. Corroborated independently by a separate Maven WSO entry (Chicago Graduate Trader, Jan 2026) that also reports 18 probability/combinatorics questions in 
 
-### Q1244 · Tier B · 2026 · online_assessment (after the Arctic Shores cognitive games, before the first live round)
+### Q1233 · Tier B · 2026 · online_assessment (after the Arctic Shores cognitive games, before the first live round)
 
 If today is Monday, what day will it be in 80 days?
 
@@ -11920,7 +11830,7 @@ If today is Monday, what day will it be in 80 days?
 — interview_review_db · posted 2025-11-14 · full_text · [link](https://www.wallstreetoasis.com/company/maven-securities/interview)
   1 attestation(s) across 1 domain(s) · doubt: The poster puts this in quotation marks, which is the strongest form of attestation available here, but it is still recalled from an on-demand video round rather than transcribed. A closely related day-of-week question a
 
-### Q1245 · Tier B · 2026 · online_assessment (first of two online assessments for the Chicago Graduate Trader Progra)
+### Q1234 · Tier B · 2026 · online_assessment (first of two online assessments for the Chicago Graduate Trader Progra)
 
 How many combinations are there of the letters in the word "MISSISSIPPI"?
 
@@ -11928,7 +11838,7 @@ How many combinations are there of the letters in the word "MISSISSIPPI"?
 — interview_review_db · posted 2026-02-20 · full_text · [link](https://www.wallstreetoasis.com/company/maven-securities/interview)
   1 attestation(s) across 1 domain(s) · doubt: MISSISSIPPI is the single most famous textbook example of permutations with repeated letters, so it is exactly the kind of item a candidate might supply from memory of prep material rather than the test. Attestation is a
 
-### Q1246 · Tier B · 2026 · online_assessment (two-stage OA for the Chicago Graduate Trader Programme)
+### Q1235 · Tier B · 2026 · online_assessment (two-stage OA for the Chicago Graduate Trader Programme)
 
 Online assessment consisted of 18 simple probability and combinatorics questions in 30 minutes. Second online assessment a few days later consisted of ~5 minutes of mental math and ~5 minutes of completing sequences.
 
@@ -11936,7 +11846,7 @@ Online assessment consisted of 18 simple probability and combinatorics questions
 — interview_review_db · posted 2026-02-20 · full_text · [link](https://www.wallstreetoasis.com/company/maven-securities/interview)
   1 attestation(s) across 1 domain(s) · doubt: Format only, no items. The timings are approximate by the poster's own '~' notation.
 
-### Q1247 · Tier B · 2025 · online_assessment (first step after the online application)
+### Q1236 · Tier B · 2025 · online_assessment (first step after the online application)
 
 It included short probability questions, mental math, numerical patterns, and a few brainteasers related to expectation, conditioning, and logical inference.
 
@@ -11944,7 +11854,7 @@ It included short probability questions, mental math, numerical patterns, and a 
 — interview_review_db · posted 2025-11-12 · full_text · [link](https://www.wallstreetoasis.com/company/maven-securities/interview)
   1 attestation(s) across 1 domain(s) · doubt: Topic inventory rather than any item. Comes from the same submission whose question wording I flagged as suspiciously polished, so the narrative may also be reconstructed.
 
-### Q1248 · Tier B · 2022 · online_assessment (first stage of the Amsterdam graduate trader process)
+### Q1237 · Tier B · 2022 · online_assessment (first stage of the Amsterdam graduate trader process)
 
 1st stage involves 3 online tests: -mental maths -pattern/sequences -Cultural/motivation
 
@@ -11952,7 +11862,7 @@ It included short probability questions, mental math, numerical patterns, and a 
 — interview_review_db · posted 2022-11-02 · full_text · [link](https://www.wallstreetoasis.com/company/maven-securities/interview)
   1 attestation(s) across 1 domain(s) · doubt: Format only, no items, and no timings given. Four years old; the same poster's second round mentions 'a round of 11 common knowledge questions' which is not documented further.
 
-### Q1249 · Tier B · 2025 · online_assessment (candidate never reached a live interviewer)
+### Q1238 · Tier B · 2025 · online_assessment (candidate never reached a live interviewer)
 
 The questions were standard probability questions from the greenbook, but the arithmetic was a lot harder.
 
@@ -11960,7 +11870,7 @@ The questions were standard probability questions from the greenbook, but the ar
 — interview_review_db · posted 2026-04-03 · full_text · [link](https://www.wallstreetoasis.com/company/maven-securities/interview)
   1 attestation(s) across 1 domain(s) · doubt: No item is reproduced - the candidate only characterises the questions by reference to Xinfeng Zhou's green book. Useful as evidence that Maven's screens draw on green-book material, but it is not itself a question. Subm
 
-### Q1250 · Tier B · 2025 · online_assessment (only stage the candidate reached)
+### Q1239 · Tier B · 2025 · online_assessment (only stage the candidate reached)
 
 None of the questions were difficult, but the time was extremely limited. A few seconds to answer each question.
 
@@ -11971,7 +11881,7 @@ None of the questions were difficult, but the time was extremely limited. A few 
 
 ## Maven Securities — onsite
 
-### Q1251 · Tier B · 2025 · onsite (final stage of a five-stage process (maths tests, coding test, another)
+### Q1240 · Tier B · 2025 · onsite (final stage of a five-stage process (maths tests, coding test, another)
 
 Lots of number theory asked which is wasn't too prepped for, so id say that.
 
@@ -11979,7 +11889,7 @@ Lots of number theory asked which is wasn't too prepped for, so id say that.
 — interview_review_db · posted 2026-01-19 · full_text · [link](https://www.wallstreetoasis.com/company/maven-securities/interview)
   1 attestation(s) across 1 domain(s) · doubt: Names a topic only. The poster also does not say which of the five stages the number theory came in, so the round assignment to the in-person QR interview is my inference from the sentence order.
 
-### Q1252 · Tier B · 2026 · onsite (project deep-dive with two engineers after a HackerRank assessment and)
+### Q1241 · Tier B · 2026 · onsite (project deep-dive with two engineers after a HackerRank assessment and)
 
 They asked very specific follow-ups about my design choices, like how I handled concurrency and what trade-offs I considered. There were also some unexpected questions around threads and low-level behavior
 
@@ -11990,7 +11900,7 @@ They asked very specific follow-ups about my design choices, like how I handled 
 
 ## Maven Securities — phone_technical
 
-### Q1253 · Tier B · 2026 · phone_technical (follow-up to the 10^40 vs 40! comparison)
+### Q1242 · Tier B · 2026 · phone_technical (follow-up to the 10^40 vs 40! comparison)
 
 Please make me a 95% confidence interval for the factorials between which 10^40 is.
 
@@ -11998,7 +11908,7 @@ Please make me a 95% confidence interval for the factorials between which 10^40 
 — interview_review_db · posted 2025-11-14 · full_text · [link](https://www.wallstreetoasis.com/company/maven-securities/interview)
   1 attestation(s) across 1 domain(s) · doubt: The phrasing is mathematically loose - a '95% confidence interval' over a deterministic quantity is really a market-making style two-sided quote where you are held to being right 95% of the time - so this is likely the c
 
-### Q1254 · Tier B · 2026 · phone_technical (final item of the 15-minute first round)
+### Q1243 · Tier B · 2026 · phone_technical (final item of the 15-minute first round)
 
 a combinatorial problem about extracting different coloured cubes randomly and the probabilities for the towers they would make
 
@@ -12006,7 +11916,7 @@ a combinatorial problem about extracting different coloured cubes randomly and t
 — interview_review_db · posted 2025-11-14 · full_text · [link](https://www.wallstreetoasis.com/company/maven-securities/interview)
   1 attestation(s) across 1 domain(s) · doubt: A description of the problem's subject matter, not the problem: the number of cubes, the colour counts and the tower rule are all missing, so it cannot be reconstructed.
 
-### Q1255 · Tier B · 2025 · phone_technical (listed under WSO's 'Interview Questions' field for a QR internship pro)
+### Q1244 · Tier B · 2025 · phone_technical (listed under WSO's 'Interview Questions' field for a QR internship pro)
 
 You observe a symmetric random walk starting at zero. You are allowed to stop at any time, and your payoff when you stop is the position of the walk minus a cost that accumulates with each step. What stopping strategy maximizes your expected payoff?
 
@@ -12014,7 +11924,7 @@ You observe a symmetric random walk starting at zero. You are allowed to stop at
 — interview_review_db · posted 2025-11-12 · full_text · [link](https://www.wallstreetoasis.com/company/maven-securities/interview)
   1 attestation(s) across 1 domain(s) · doubt: STRONGEST RESERVATION IN THIS BATCH: this submission's three questions are all written in a uniform, polished, second-person textbook register unlike every other entry on the Maven page, and the process narrative is equa
 
-### Q1256 · Tier B · 2025 · phone_technical (listed under WSO's 'Interview Questions' field for a QR internship pro)
+### Q1245 · Tier B · 2025 · phone_technical (listed under WSO's 'Interview Questions' field for a QR internship pro)
 
 You quote both a bid and an ask on a product whose fair value jumps up or down randomly every second. Given that informed traders are more likely to hit your quotes when the fair value moves against you, how do you design a quoting strategy to avoid being picked off
 
@@ -12022,7 +11932,7 @@ You quote both a bid and an ask on a product whose fair value jumps up or down r
 — interview_review_db · posted 2025-11-12 · full_text · [link](https://www.wallstreetoasis.com/company/maven-securities/interview)
   1 attestation(s) across 1 domain(s) · doubt: Same reservation as the sibling question from this submission: uniform polished second-person register across all three questions suggests reconstruction or AI assistance rather than verbatim recall, and it was submitted
 
-### Q1257 · Tier B · 2025 · phone_technical (listed under WSO's 'Interview Questions' field for a QR internship pro)
+### Q1246 · Tier B · 2025 · phone_technical (listed under WSO's 'Interview Questions' field for a QR internship pro)
 
 You observe a sequence of coin flips, but you do not know whether the coin is fair or biased. You have a small prior belief that it may be biased. After seeing several flips that look suspicious, how would you decide whether the coin is likely biased?
 
@@ -12030,7 +11940,7 @@ You observe a sequence of coin flips, but you do not know whether the coin is fa
 — interview_review_db · posted 2025-11-12 · full_text · [link](https://www.wallstreetoasis.com/company/maven-securities/interview)
   1 attestation(s) across 1 domain(s) · doubt: Same reservation as the two sibling questions from this submission - uniform polished register, generic narrative, submitted 14 months late. Note also that a near-identical biased-coin Bayesian question is independently 
 
-### Q1258 · Tier B · 2022 · phone_technical (mental maths and markets portion of the second round)
+### Q1247 · Tier B · 2022 · phone_technical (mental maths and markets portion of the second round)
 
 Tell me about the current SP500 price. What will be the new price if it increases by 10%, and another 10% again. If we decrease the value by 10% and another 10% will we derive the same price as the original one?
 
@@ -12041,7 +11951,7 @@ Tell me about the current SP500 price. What will be the new price if it increase
 
 ## Maven Securities — superday
 
-### Q1259 · Tier B · 2023 · superday (mock trading with other applicants, then two rounds of maths/trading i)
+### Q1248 · Tier B · 2023 · superday (mock trading with other applicants, then two rounds of maths/trading i)
 
 Had to quickly answer a mental maths question, had to justify trades I was making and keep track of my position
 
@@ -12052,7 +11962,7 @@ Had to quickly answer a mental maths question, had to justify trades I was makin
 
 ## Maven Securities — online_assessment
 
-### Q1260 · Tier D · 2021 · online_assessment (first stage before a motivation video interview)
+### Q1249 · Tier D · 2021 · online_assessment (first stage before a motivation video interview)
 
 expected trials to get HHTT
 
@@ -12063,7 +11973,7 @@ expected trials to get HHTT
 
 ## Maven Securities — phone_technical
 
-### Q1261 · Tier D · 2026 · phone_technical (alongside mental maths percentage questions and a combinatorial cube p)
+### Q1250 · Tier D · 2026 · phone_technical (alongside mental maths percentage questions and a combinatorial cube p)
 
 Which one is larger 10^40 or 40!?
 
@@ -12074,7 +11984,7 @@ Which one is larger 10^40 or 40!?
 
 ## Millennium — phone_technical
 
-### Q1262 · Tier C · unknown · phone_technical (A recruiter sent the resume to the firm; HR described the process, the)
+### Q1251 · Tier C · unknown · phone_technical (A recruiter sent the resume to the firm; HR described the process, the)
 
 The interviewer asked many details of trading signals that I've worked on during my job, including how [the] signals were constructed, what data to use, and how to run backtest.
 
@@ -12087,7 +11997,7 @@ The interviewer asked many details of trading signals that I've worked on during
 
 ## Millennium — take_home
 
-### Q1263 · Tier C · interviewed September 2025 · take_home (Poster notes you may be routed to either the Quant Researcher or Quant)
+### Q1252 · Tier C · interviewed September 2025 · take_home (Poster notes you may be routed to either the Quant Researcher or Quant)
 
 4 rounds 1. 24hr Jupyter notebook 2. Technical Interview 3. Leetcode 4. Talk with seniors Overall quite normal interview question for quant interview.
 
@@ -12095,7 +12005,7 @@ The interviewer asked many details of trading signals that I've worked on during
 — interview_review_site · posted unknown · full_text · [link](https://www.wallstreetoasis.com/company/millennium/interview/quant-dev)
   1 attestation(s) across 1 domain(s) · doubt: Describes the round sequence, not a question; the WSO individual interview page shows no submission date, and level is not stated anywhere in the entry.
 
-### Q1264 · Tier C · unknown · take_home (Quant Research Intern process at Millennium)
+### Q1253 · Tier C · unknown · take_home (Quant Research Intern process at Millennium)
 
 First was a 24 hour coding assignment, then 2 interviews with portfolio managers who tested beahvioural and technical, 2 more interviews with the team which included a pair coding assessment and an interview focused on technicals (statistics, probability etc.)
 
@@ -12108,7 +12018,7 @@ First was a 24 hour coding assignment, then 2 interviews with portfolio managers
 
 ## Morgan Stanley — phone_technical
 
-### Q1265 · Tier B · 2026 · phone_technical (the run of probability questions that opened the round after a brief s)
+### Q1254 · Tier B · 2026 · phone_technical (the run of probability questions that opened the round after a brief s)
 
 Rolling dice three time, what's the probability of getting strictly increase number?
 
@@ -12118,7 +12028,7 @@ Rolling dice three time, what's the probability of getting strictly increase num
 — chat_telegram · posted 2026-01-25 · full_text · [link](https://t.me/aistockanalyst/1072)
   1 attestation(s) across 1 domain(s) · doubt: Complete and answerable as posed, assuming a fair six-sided die — which the prompt does not actually say. Morgan Stanley is a sell-side bank and is not one of the named target firms; the author says so themselves ("但總歸還是
 
-### Q1266 · Tier B · 2026 · phone_technical (the run of probability questions that opened the round)
+### Q1255 · Tier B · 2026 · phone_technical (the run of probability questions that opened the round)
 
 Given two iid RV X and Y N~(mu,sig), what's the min Expectation value of X+Y?
 
@@ -12128,7 +12038,7 @@ Given two iid RV X and Y N~(mu,sig), what's the min Expectation value of X+Y?
 — chat_telegram · posted 2026-01-25 · full_text · [link](https://t.me/aistockanalyst/1072)
   1 attestation(s) across 1 domain(s) · doubt: As written this is odd: if X and Y are i.i.d. normal then E[X+Y] = 2mu and there is nothing to minimise, so the prompt is either garbled in transcription or is missing a condition the interviewer stated aloud (a plausibl
 
-### Q1267 · Tier B · 2026 · phone_technical (the run of probability questions that opened the round)
+### Q1256 · Tier B · 2026 · phone_technical (the run of probability questions that opened the round)
 
 Given 99 unbiased coin and 1 two headed coin, P(H|2H)?
 
@@ -12138,7 +12048,7 @@ Given 99 unbiased coin and 1 two headed coin, P(H|2H)?
 — chat_telegram · posted 2026-01-25 · full_text · [link](https://t.me/aistockanalyst/1072)
   1 attestation(s) across 1 domain(s) · doubt: The notation "P(H|2H)" is the candidate's shorthand and is ambiguous — it is not stated whether the conditioning event is "two heads observed in two tosses of a randomly drawn coin", nor what the query event is. The setu
 
-### Q1268 · Tier B · 2026 · phone_technical (the run of probability questions that opened the round)
+### Q1257 · Tier B · 2026 · phone_technical (the run of probability questions that opened the round)
 
 Two people meet at bus stop, only wait for 15 min and leave, probability of they meet? (Poisson Distribution)?
 
@@ -12148,7 +12058,7 @@ Two people meet at bus stop, only wait for 15 min and leave, probability of they
 — chat_telegram · posted 2026-01-25 · full_text · [link](https://t.me/aistockanalyst/1072)
   1 attestation(s) across 1 domain(s) · doubt: The window over which the two arrivals are distributed is missing, and without it the probability is undetermined. The trailing "(Poisson Distribution)?" appears to be the candidate's own guess at the machinery rather th
 
-### Q1269 · Tier B · 2026 · phone_technical (model discussion prompted by logistic regression on the candidate's CV)
+### Q1258 · Tier B · 2026 · phone_technical (model discussion prompted by logistic regression on the candidate's CV)
 
 how do you explain logistic regression to your boss who know nothing ?
 
@@ -12158,7 +12068,7 @@ how do you explain logistic regression to your boss who know nothing ?
 — chat_telegram · posted 2026-01-25 · full_text · [link](https://t.me/aistockanalyst/1072)
   1 attestation(s) across 1 domain(s) · doubt: Complete as posed and needs no reconstruction. The candidate flags it as the first time they had met this kind of question and says it was surprisingly hard to answer. Morgan Stanley is a sell-side bank and is not one of
 
-### Q1270 · Tier B · 2026 · phone_technical (the statistics run — SLR assumptions, t-test, p-value, hypothesis test)
+### Q1259 · Tier B · 2026 · phone_technical (the statistics run — SLR assumptions, t-test, p-value, hypothesis test)
 
 what if F test give you value 50, how would you interpret it?
 
@@ -12170,7 +12080,7 @@ what if F test give you value 50, how would you interpret it?
 — chat_telegram · posted 2026-01-25 · full_text · [link](https://t.me/aistockanalyst/1072)
   1 attestation(s) across 1 domain(s) · doubt: The candidate explicitly failed this question in the room and looked the answer up afterwards, so what is in reported_answer is their own later reading, not the interviewer's. The degrees of freedom, which any interpreta
 
-### Q1271 · Tier B · 2026 · phone_technical (the technical Q&A, focused on models, time series and data handling)
+### Q1260 · Tier B · 2026 · phone_technical (the technical Q&A, focused on models, time series and data handling)
 
 What if your have large variable but small sample?
 
@@ -12182,7 +12092,7 @@ What if your have large variable but small sample?
 — chat_telegram · posted 2026-01-25 · full_text · [link](https://t.me/aistockanalyst/1072)
   1 attestation(s) across 1 domain(s) · doubt: A one-line prompt with no context about the modelling goal. The interviewer immediately followed with the reverse case, so this was a paired probe rather than a standalone problem. Morgan Stanley is a sell-side bank and 
 
-### Q1272 · Tier B · 2026 · phone_technical (the technical Q&A, focused on models, time series and data handling)
+### Q1261 · Tier B · 2026 · phone_technical (the technical Q&A, focused on models, time series and data handling)
 
 Assume our input data has one part is normally distribute at zero (can be positive & negative) and the other part is strictly positive to very large number, what would you do before input it to our model ?
 
@@ -12194,7 +12104,7 @@ Assume our input data has one part is normally distribute at zero (can be positi
 — chat_telegram · posted 2026-01-25 · full_text · [link](https://t.me/aistockanalyst/1072)
   1 attestation(s) across 1 domain(s) · doubt: This is the most fully specified question in the message and is answerable as written. The candidate's English is non-native and lightly ungrammatical, which is consistent with them typing out what they remembered hearin
 
-### Q1273 · Tier B · 2026 · phone_technical (the time-series portion, which the candidate says went badly)
+### Q1262 · Tier B · 2026 · phone_technical (the time-series portion, which the candidate says went badly)
 
 Given time series data, what would you do for missing value ?
 
@@ -12204,7 +12114,7 @@ Given time series data, what would you do for missing value ?
 — chat_telegram · posted 2026-01-25 · full_text · [link](https://t.me/aistockanalyst/1072)
   1 attestation(s) across 1 domain(s) · doubt: Complete as an open prompt, though deliberately unconstrained — no series, no missingness mechanism, no downstream model. The candidate says this section went badly and that they cannot recall it exactly ("大致這樣確切不記得"), w
 
-### Q1274 · Tier B · 2026 · phone_technical (the time-series portion, which the candidate says went badly)
+### Q1263 · Tier B · 2026 · phone_technical (the time-series portion, which the candidate says went badly)
 
 Which would you choose to estimate your time series model? R squared, MSE, RMSE, MAE?
 
@@ -12214,7 +12124,7 @@ Which would you choose to estimate your time series model? R squared, MSE, RMSE,
 — chat_telegram · posted 2026-01-25 · full_text · [link](https://t.me/aistockanalyst/1072)
   1 attestation(s) across 1 domain(s) · doubt: Complete, with the option set given. Carries the same explicit caveat as the previous item: the candidate wrote "大致這樣確切不記得" (roughly like this, I do not remember exactly) immediately after this section. Morgan Stanley is
 
-### Q1275 · Tier D · 2026 · phone_technical (the closing algorithm question)
+### Q1264 · Tier D · 2026 · phone_technical (the closing algorithm question)
 
 最後問演算法,find peak,相對簡單,先給了o(n) 問能更快嗎?
 
@@ -12229,7 +12139,7 @@ Which would you choose to estimate your time series model? R squared, MSE, RMSE,
 
 ## Old Mission Capital — math_sequences_test
 
-### Q1276 · Tier B · unknown · math_sequences_test (math assessment, then a technical interview with a recruiter, then a S)
+### Q1265 · Tier B · unknown · math_sequences_test (math assessment, then a technical interview with a recruiter, then a S)
 
 Trading has a math assessment, and then an interview (technical) with a recruiter, and then a Super day of interviews. I think all aspects of the process is primarily math, stats, and game theory focused.
 
@@ -12240,7 +12150,7 @@ Trading has a math assessment, and then an interview (technical) with a recruite
 
 ## Old Mission Capital — online_assessment
 
-### Q1277 · Tier B · unknown · online_assessment (OA in two parts: a math section with something like 35 questions, then)
+### Q1266 · Tier B · unknown · online_assessment (OA in two parts: a math section with something like 35 questions, then)
 
 Given a list of n numbers, return the median of each sublist up to the kth element.
 
@@ -12248,7 +12158,7 @@ Given a list of n numbers, return the median of each sublist up to the kth eleme
 — wso · posted 2024-11-15 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Poster hedges with 'I think it was', so the exact statement is uncertain; it is a well-known running-median problem.
 
-### Q1278 · Tier B · unknown · online_assessment (35 questions in the math half of the OA)
+### Q1267 · Tier B · unknown · online_assessment (35 questions in the math half of the OA)
 
 The first is a math section with something like 35 questions. Most problems are your typical probability and statistics questions and other math puzzles.
 
@@ -12256,7 +12166,7 @@ The first is a math section with something like 35 questions. Most problems are 
 — wso · posted 2024-11-15 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Section-level description with hedged question count ('something like 35').
 
-### Q1279 · Tier B · unknown · online_assessment (one LeetCode hard question in one hour with no test cases given)
+### Q1268 · Tier B · unknown · online_assessment (one LeetCode hard question in one hour with no test cases given)
 
 Had an online coding assessment, which asked a LeetCode hard question. I was given an hour to finish it with no test cases given.
 
@@ -12264,7 +12174,7 @@ Had an online coding assessment, which asked a LeetCode hard question. I was giv
 — wso · posted 2022-12-13 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Difficulty label only; no problem content.
 
-### Q1280 · Tier B · unknown · online_assessment (multiple choice Qs and a medium-ish leetcode Q, under an hour)
+### Q1269 · Tier B · unknown · online_assessment (multiple choice Qs and a medium-ish leetcode Q, under an hour)
 
 Just did the OA with multiple choice Qs and a medium-ish leetcode Q in under an hour.
 
@@ -12272,7 +12182,7 @@ Just did the OA with multiple choice Qs and a medium-ish leetcode Q in under an 
 — blind · posted 2022-10-19 · full_text · [link](https://www.teamblind.com/post/Old-Mission-Capital---Quant-Trader-TCWLB-QwSx7h11)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies a poster's employer, not their candidacy, so the badge below attests who they work for and nothing about whether they sat this interview. Reports the OA's shape, not its content — no multiple-choice topic 
 
-### Q1281 · Tier B · unknown · online_assessment
+### Q1270 · Tier B · unknown · online_assessment
 
 Initial Coding and Mathematics assessment, mainly brainteasers with some probability/statistics
 
@@ -12280,7 +12190,7 @@ Initial Coding and Mathematics assessment, mainly brainteasers with some probabi
 — wso · posted 2018-11 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview/quant-trading-intern)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. From 2018, so the as
 
-### Q1282 · Tier B · unknown · online_assessment (2 coding questions/exercises, one challenging and one easy)
+### Q1271 · Tier B · unknown · online_assessment (2 coding questions/exercises, one challenging and one easy)
 
 Coding portion of the assessment: 2 questions/exercises, one challenging and one easy
 
@@ -12291,7 +12201,7 @@ Coding portion of the assessment: 2 questions/exercises, one challenging and one
 
 ## Old Mission Capital — onsite
 
-### Q1283 · Tier B · unknown · onsite (one phone round with an engineer, then a final round onsite)
+### Q1272 · Tier B · unknown · onsite (one phone round with an engineer, then a final round onsite)
 
 I believe it's one phone round with an engineer and then a final round onsite with 2/3 engineers.
 
@@ -12299,7 +12209,7 @@ I believe it's one phone round with an engineer and then a final round onsite wi
 — blind · posted 2022-10-19 · full_text · [link](https://www.teamblind.com/post/Old-Mission-Capital---Quant-Trader-TCWLB-QwSx7h11)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies a poster's employer, not their candidacy, so the badge below attests who they work for and nothing about whether they sat this interview. Prefixed 'I believe', so the poster is not certain even of the roun
 
-### Q1284 · Tier B · unknown · onsite
+### Q1273 · Tier B · unknown · onsite
 
 A market making portion of the interview (feedback given was that it was too weak)
 
@@ -12307,7 +12217,7 @@ A market making portion of the interview (feedback given was that it was too wea
 — wso · posted 2025-04 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview/floor-trader)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Establishes that 
 
-### Q1285 · Tier B · unknown · onsite (5 back-to-back 1-hour interviews)
+### Q1274 · Tier B · unknown · onsite (5 back-to-back 1-hour interviews)
 
 implement deque which invalidates iterators, implement lazy leaky singletone, implement allocator, tell me about virtual memory, codeforces div2 D questions, sfinae simple stuff
 
@@ -12315,7 +12225,7 @@ implement deque which invalidates iterators, implement lazy leaky singletone, im
 — blind · posted 2022-09-30 · full_text · [link](https://www.teamblind.com/post/old-mission-capital-jump-trading-xnpmnp28)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies the replier's own employer (Meta) but not that they interviewed at either firm; and critically the replier never says which of the two firms this was: another commenter asks 'Was this jump or old mission ?
 
-### Q1286 · Tier B · unknown · onsite (20-minute phone screen, then a senior trader, then the CEO)
+### Q1275 · Tier B · unknown · onsite (20-minute phone screen, then a senior trader, then the CEO)
 
 Lots of questions about hypothetical scenarios to see how you think
 
@@ -12323,7 +12233,7 @@ Lots of questions about hypothetical scenarios to see how you think
 — wso · posted 2020-09 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview/trader-0)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. 'Hypothetical scenar
 
-### Q1287 · Tier B · unknown · onsite
+### Q1276 · Tier B · unknown · onsite
 
 Market making and options questions with a senior trader and the CEO
 
@@ -12331,7 +12241,7 @@ Market making and options questions with a senior trader and the CEO
 — wso · posted 2020-09 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview/trader-0)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. Topic list only; no 
 
-### Q1288 · Tier B · unknown · onsite
+### Q1277 · Tier B · unknown · onsite
 
 Statistics questions with a senior trader and the CEO
 
@@ -12342,7 +12252,7 @@ Statistics questions with a senior trader and the CEO
 
 ## Old Mission Capital — phone_technical
 
-### Q1289 · Tier B · unknown · phone_technical (Basic stats principles, (estimation, confidence intervals, normal dist)
+### Q1278 · Tier B · unknown · phone_technical (Basic stats principles, (estimation, confidence intervals, normal dist)
 
 Confidence interval on S&P 500 return past 30 years
 
@@ -12350,7 +12260,7 @@ Confidence interval on S&P 500 return past 30 years
 — wso · posted 2025-06-16 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: 'Floor Trader' is not one of the standard quant tracks and the post never states internship vs full time, so level and track are both soft.
 
-### Q1290 · Tier B · unknown · phone_technical
+### Q1279 · Tier B · unknown · phone_technical
 
 Confidence interval of portfolio value if you invested $1 in S&P 500 30 years ago
 
@@ -12358,7 +12268,7 @@ Confidence interval of portfolio value if you invested $1 in S&P 500 30 years ag
 — wso · posted 2025-06-16 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Listed in WSO's question field without a round attribution; I assigned it to the head-of-desk stats round from the narrative.
 
-### Q1291 · Tier B · unknown · phone_technical (Some basic mental math, fermi questions, and options strategy)
+### Q1280 · Tier B · unknown · phone_technical (Some basic mental math, fermi questions, and options strategy)
 
 If you think the market is overestimating volatility, what options strategy can you use
 
@@ -12366,7 +12276,7 @@ If you think the market is overestimating volatility, what options strategy can 
 — wso · posted 2025-06-16 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO lists all this candidate's questions in one block, so which of the two trader rounds asked the options question is inferred.
 
-### Q1292 · Tier B · unknown · phone_technical (Behavioral/situational questions)
+### Q1281 · Tier B · unknown · phone_technical (Behavioral/situational questions)
 
 how would you react if x happened in the trading pit? How do you handle stress and criticism?
 
@@ -12374,7 +12284,7 @@ how would you react if x happened in the trading pit? How do you handle stress a
 — wso · posted 2025-06-16 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: The poster redacts the scenario with a literal 'x', so the concrete prompt is not recoverable.
 
-### Q1293 · Tier B · unknown · phone_technical (very similar math problems to the OA and some market making games)
+### Q1282 · Tier B · unknown · phone_technical (very similar math problems to the OA and some market making games)
 
 One was on making a market on the total number of Olympic gold medals the US has won.
 
@@ -12382,7 +12292,7 @@ One was on making a market on the total number of Olympic gold medals the US has
 — wso · posted 2024-11-15 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Anonymous WSO submission; the target quantity is plausible but unverifiable.
 
-### Q1294 · Tier B · unknown · phone_technical (hypothetical scenarios, stats, and market making/options)
+### Q1283 · Tier B · unknown · phone_technical (hypothetical scenarios, stats, and market making/options)
 
 What is the expected value of a dice roll? Make me a market on __
 
@@ -12390,7 +12300,7 @@ What is the expected value of a dice roll? Make me a market on __
 — wso · posted 2023-10-26 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: The market-making prompt is literally redacted to 'Make me a market on __', so no underlying quantity is given.
 
-### Q1295 · Tier B · unknown · phone_technical
+### Q1284 · Tier B · unknown · phone_technical
 
 I was asked to write a feature for a C++ library on the linux command line.
 
@@ -12398,7 +12308,7 @@ I was asked to write a feature for a C++ library on the linux command line.
 — wso · posted 2022-12-13 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Does not say which feature or which library, so the task is unrecoverable.
 
-### Q1296 · Tier B · unknown · phone_technical
+### Q1285 · Tier B · unknown · phone_technical
 
 Asking to find the game theory optimal strategy in a simplified poker game
 
@@ -12406,7 +12316,7 @@ Asking to find the game theory optimal strategy in a simplified poker game
 — wso · posted 2022-09-09 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Does not specify the poker variant or bet structure, so the game cannot be reconstructed.
 
-### Q1297 · Tier B · unknown · phone_technical (4 questions asked, candidate got 2/4 correct)
+### Q1286 · Tier B · unknown · phone_technical (4 questions asked, candidate got 2/4 correct)
 
 Four points are chosen uniformly at random on the surface of a sphere. What is the probability that the center of the sphere lies inside the tetrahedron whose vertices are at the four points?
 
@@ -12414,7 +12324,7 @@ Four points are chosen uniformly at random on the surface of a sphere. What is t
 — wso · posted 2019-10-10 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: This is a famous Putnam problem that also appears in prep books; only the dated first-person account ties it to Old Mission.
 
-### Q1298 · Tier B · unknown · phone_technical (one of 4 questions in the trader phone call)
+### Q1287 · Tier B · unknown · phone_technical (one of 4 questions in the trader phone call)
 
 There was also a Markov Chain chess question. It essentially went as follows: You and I play chess. 1/2 games end in draws and in the other half I win with 2/3 probability and you win with 1/3. If the matches with either of us winning 3 consecutive games, what is the probability that I win?
 
@@ -12422,7 +12332,7 @@ There was also a Markov Chain chess question. It essentially went as follows: Yo
 — wso · posted 2019-10-10 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: The poster says 'it essentially went as follows' and the sentence 'If the matches with either of us winning 3 consecutive games' is garbled, so the stopping rule is a reconstruction.
 
-### Q1299 · Tier B · unknown · phone_technical (There were 7 questions and they all had to do with probability distrib)
+### Q1288 · Tier B · unknown · phone_technical (There were 7 questions and they all had to do with probability distrib)
 
 2) What is the expected value of rolling a fair dice? What if you can re-roll? What if the re-roll cost 1 dollar and you make 1 dollar for every dot on the die that is shown?
 
@@ -12430,7 +12340,7 @@ There was also a Markov Chain chess question. It essentially went as follows: Yo
 — wso · posted 2018-09-23 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Standard dice-with-reroll EV ladder found in every prep book; kept because the poster enumerates their whole 7-question round first-hand.
 
-### Q1300 · Tier B · unknown · phone_technical (one of 7 probability-distribution questions)
+### Q1289 · Tier B · unknown · phone_technical (one of 7 probability-distribution questions)
 
 4) In how many ways can you have three numbers that sum to 10? What about 11? 5) In how many ways can you have three numbers that some to n for any n greater than or equal to 3?
 
@@ -12438,7 +12348,7 @@ There was also a Markov Chain chess question. It essentially went as follows: Yo
 — wso · posted 2018-09-23 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: As transcribed the question omits whether the numbers are positive integers, ordered, or distinct, so it is under-specified.
 
-### Q1301 · Tier B · unknown · phone_technical (one of 7 probability-distribution questions)
+### Q1290 · Tier B · unknown · phone_technical (one of 7 probability-distribution questions)
 
 1) What is the expected value of a random variable x in [0,10]? What is the variance?
 
@@ -12446,7 +12356,7 @@ There was also a Markov Chain chess question. It essentially went as follows: Yo
 — wso · posted 2018-09-23 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Omits 'uniform', which the interviewer almost certainly said, so the transcription drops a word.
 
-### Q1302 · Tier B · unknown · phone_technical
+### Q1291 · Tier B · unknown · phone_technical
 
 There are 5 pirates and they are trying to split 100 gold coins in a rational way. The most senior pirate will choose to split in a certain way and all the other pirates will vote to agree or disagree. The most senior pirate is always the one to propose the split and must get at least a majority of the votes from the other pirates for the split to work. How should the senior-most pirate split the 100 gold coins such that he will survive and maximize his own earnings?
 
@@ -12454,7 +12364,7 @@ There are 5 pirates and they are trying to split 100 gold coins in a rational wa
 — wso · posted 2018-02-27 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: The poster says outright that 'Most questions seem to come straight from the quant interview books', and the pirate puzzle is the canonical example; also a 2014 interview.
 
-### Q1303 · Tier B · unknown · phone_technical
+### Q1292 · Tier B · unknown · phone_technical
 
 You have two decks of cards, one with 52 cards and one with 104. If your goal is to draw a black card followed by a red card, which deck would you choose?
 
@@ -12462,7 +12372,7 @@ You have two decks of cards, one with 52 cards and one with 104. If your goal is
 — wso · posted 2015-02-28 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: The same poster notes 'Some questions seemed to come straight from popular quant interview study books'; also a 2014 interview so likely stale.
 
-### Q1304 · Tier B · unknown · phone_technical (no calculator, quick response)
+### Q1293 · Tier B · unknown · phone_technical (no calculator, quick response)
 
 What is fifty six times sixty seven (no calculator, quick response)?
 
@@ -12470,7 +12380,7 @@ What is fifty six times sixty seven (no calculator, quick response)?
 — wso · posted 2015-02-28 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: 2014 vintage; a generic two-digit multiplication that any firm's mental-math screen could produce.
 
-### Q1305 · Tier B · unknown · phone_technical (multiple multi-digit arithmetic questions, done mentally)
+### Q1294 · Tier B · unknown · phone_technical (multiple multi-digit arithmetic questions, done mentally)
 
 There were multiple questions based on arithmetic operations involving multiple digits. These questions are supposed to answered without consulting a calculator nor using a pen and paper.
 
@@ -12478,7 +12388,7 @@ There were multiple questions based on arithmetic operations involving multiple 
 — wso · posted 2016-11-28 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Format description with no individual question; 2015 vintage.
 
-### Q1306 · Tier B · unknown · phone_technical
+### Q1295 · Tier B · unknown · phone_technical
 
 What is the probability of drawing a 4 of a kind in a 5 card poker hand?
 
@@ -12486,7 +12396,7 @@ What is the probability of drawing a 4 of a kind in a 5 card poker hand?
 — wso · posted 2014-03 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview entries are anonymous and unverified; the poster writes them up months after the fact (the 'Date Submitted' here trails the interview month), so wording is recalled rather than transcribed. The poster says 
 
-### Q1307 · Tier B · unknown · phone_technical (There were 7 questions)
+### Q1296 · Tier B · unknown · phone_technical (There were 7 questions)
 
 7 questions, all on probability distributions
 
@@ -12494,7 +12404,7 @@ What is the probability of drawing a 4 of a kind in a 5 card poker hand?
 — wso · posted 2018-09 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview/trading-intern-3)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Only the count an
 
-### Q1308 · Tier B · unknown · phone_technical
+### Q1297 · Tier B · unknown · phone_technical
 
 Recruiter call: why Old Mission, and what would you do in x situations
 
@@ -12502,7 +12412,7 @@ Recruiter call: why Old Mission, and what would you do in x situations
 — wso · posted 2025-04 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview/floor-trader)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Behavioral only; 
 
-### Q1309 · Tier B · unknown · phone_technical
+### Q1298 · Tier B · unknown · phone_technical
 
 Standard brainteaser questions of the kind asked at quant funds
 
@@ -12510,7 +12420,7 @@ Standard brainteaser questions of the kind asked at quant funds
 — wso · posted 2022-08 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview/junior-quant-trader)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. The poster explicitl
 
-### Q1310 · Tier B · unknown · phone_technical
+### Q1299 · Tier B · unknown · phone_technical
 
 Standard probability questions of the kind asked at quant funds
 
@@ -12518,7 +12428,7 @@ Standard probability questions of the kind asked at quant funds
 — wso · posted 2022-08 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview/junior-quant-trader)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. Same sentence as the
 
-### Q1311 · Tier B · unknown · phone_technical (4 questions in the trader phone interview; poster got 2 of 4)
+### Q1300 · Tier B · unknown · phone_technical (4 questions in the trader phone interview; poster got 2 of 4)
 
 Four challenging questions in the phone interview with a trader
 
@@ -12526,7 +12436,7 @@ Four challenging questions in the phone interview with a trader
 — wso · posted 2018-11 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview/quant-trading-intern)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. Gives the question c
 
-### Q1312 · Tier B · unknown · phone_technical
+### Q1301 · Tier B · unknown · phone_technical
 
 Phone interview questions mostly mental math
 
@@ -12534,7 +12444,7 @@ Phone interview questions mostly mental math
 — wso · posted 2014-03 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview/quantitative-research-intern)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. The poster themselve
 
-### Q1313 · Tier B · unknown · phone_technical
+### Q1302 · Tier B · unknown · phone_technical
 
 Phone interview questions on probability and statistics, several apparently taken from popular quant interview study books
 
@@ -12542,7 +12452,7 @@ Phone interview questions on probability and statistics, several apparently take
 — wso · posted 2014-03 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview/quantitative-research-intern)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. Explicit textbook ov
 
-### Q1314 · Tier B · unknown · phone_technical
+### Q1303 · Tier B · unknown · phone_technical
 
 Phone interview with probability and brainteaser questions; the poster advises reviewing combinatorics, expectation and conditional probability
 
@@ -12550,7 +12460,7 @@ Phone interview with probability and brainteaser questions; the poster advises r
 — wso · posted 2014-01 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview/trading-intern-2)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. The poster states th
 
-### Q1315 · Tier B · unknown · phone_technical
+### Q1304 · Tier B · unknown · phone_technical
 
 Combinatorics, expectation and conditional probability were the areas the poster says to review
 
@@ -12561,7 +12471,7 @@ Combinatorics, expectation and conditional probability were the areas the poster
 
 ## Old Mission Capital — trading_game
 
-### Q1316 · Tier B · unknown · trading_game (iterated quoting with running P&L, drawdown and exposure tracking)
+### Q1305 · Tier B · unknown · trading_game (iterated quoting with running P&L, drawdown and exposure tracking)
 
 Then market making game, you quote bid ask, interviewer either buys from or sells to you, and you update your bid ask for the next iteration. Keep track of maximum drawdown, current p&l, short/long exposure, weighted average price between rounds.
 
@@ -12572,7 +12482,7 @@ Then market making game, you quote bid ask, interviewer either buys from or sell
 
 ## Old Mission Capital — online_assessment
 
-### Q1317 · Tier C · unknown · online_assessment (OA是数学,behavioral essay,和coding三部分。数学是25分钟20题)
+### Q1306 · Tier C · unknown · online_assessment (OA是数学,behavioral essay,和coding三部分。数学是25分钟20题)
 
 OA是数学,behavioral essay,和coding三部分。数学是25分钟20题
 
@@ -12582,7 +12492,7 @@ OA是数学,behavioral essay,和coding三部分。数学是25分钟20题
 — 1point3acres · posted 2025-12-04 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/old-mission-capital-8743-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Cited to the firm's 一亩三分地 tag index because that listing is where the run read the text; the listing shows each thread's opening lines and reflows as new threads are posted, so this citation is less durable than a thread
 
-### Q1318 · Tier C · unknown · online_assessment (一共35道MC + 1道coding,OA ddl 在九月)
+### Q1307 · Tier C · unknown · online_assessment (一共35道MC + 1道coding,OA ddl 在九月)
 
 一共35道MC + 1道coding。 Instruction说coding推荐Python,允许计算器,要求最简分数答案或精确不循环小数
 
@@ -12592,7 +12502,7 @@ OA是数学,behavioral essay,和coding三部分。数学是25分钟20题
 — 1point3acres · posted 2025-11-21 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/old-mission-capital-8743-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Cited to the firm's 一亩三分地 tag index because that listing is where the run read the text; the listing shows each thread's opening lines and reflows as new threads are posted, so this citation is less durable than a thread
 
-### Q1319 · Tier C · unknown · online_assessment (第一部分 30或者45个选择题)
+### Q1308 · Tier C · unknown · online_assessment (第一部分 30或者45个选择题)
 
 第一部分 30或者45个选择题,我觉得非常难。有问到systems, latency, linux, c++, python。会给你几个coding snippets问你哪个是对的
 
@@ -12602,7 +12512,7 @@ OA是数学,behavioral essay,和coding三部分。数学是25分钟20题
 — 1point3acres · posted 2024-07-23 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/old-mission-capital-8743-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Cited to the firm's 一亩三分地 tag index because that listing is where the run read the text; the listing shows each thread's opening lines and reflows as new threads are posted, so this citation is less durable than a thread
 
-### Q1320 · Tier C · 2024 · online_assessment (推测是两个小时:30道MC + 算法2道)
+### Q1309 · Tier C · 2024 · online_assessment (推测是两个小时:30道MC + 算法2道)
 
 老任务几天前发了24NG swe,海投第二天收到OA。推测是两个小时:30道MC + 算法2道,目测选择题会考的比较杂也比较底层
 
@@ -12615,7 +12525,7 @@ OA是数学,behavioral essay,和coding三部分。数学是25分钟20题
 
 ## Old Mission Capital — phone_technical
 
-### Q1321 · Tier C · unknown · phone_technical
+### Q1310 · Tier C · unknown · phone_technical
 
 Phone interview with arithmetic operations to be done without pen or paper
 
@@ -12623,7 +12533,7 @@ Phone interview with arithmetic operations to be done without pen or paper
 — wso · posted unknown · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview/trader-intern)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. WSO carries no in
 
-### Q1322 · Tier D · unknown · phone_technical
+### Q1311 · Tier D · unknown · phone_technical
 
 Implement an unordered_map class in C++
 
@@ -12631,7 +12541,7 @@ Implement an unordered_map class in C++
 — wso · posted 2022-12-13 · full_text · [link](https://www.wallstreetoasis.com/company/old-mission-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Level inferred from the 'Senior Software Engineer' title rather than an explicit statement of years of experience.
 
-### Q1323 · Tier D · unknown · phone_technical
+### Q1312 · Tier D · unknown · phone_technical
 
 Market Making Questions
 
@@ -12642,7 +12552,7 @@ Market Making Questions
 
 ## Optiver — math_sequences_test
 
-### Q1324 · Tier B · 2025 · math_sequences_test (the format and content of the whole first stage)
+### Q1313 · Tier B · 2025 · math_sequences_test (the format and content of the whole first stage)
 
 內容真的就蠻像 GRE 圖表題的考法,只是時間限制非常緊,有些 90 秒有些 75 秒,雖然可以用計算機但還是讓人手忙腳亂
 
@@ -12655,7 +12565,7 @@ Market Making Questions
 
 ## Optiver — online_assessment
 
-### Q1325 · Tier B · 2025 · online_assessment (the composition of the first assessment)
+### Q1314 · Tier B · 2025 · online_assessment (the composition of the first assessment)
 
 0. OA-0, 40 Mathematical & Programming Questions, 3 hour 機率與排組題為主,題目偏難,但標準似乎不用很高就會通過 少數程式題都偏簡單
 
@@ -12665,7 +12575,7 @@ Market Making Questions
 — chat_telegram · posted 2025-04-14 · full_text · [link](https://t.me/aistockanalyst/891)
   1 attestation(s) across 1 domain(s) · doubt: A stage description: 40 questions in 3 hours, mostly probability and combinatorics. Not one question is reproduced, so nothing here is answerable. The quote is deliberately restricted to the header line, which is the par
 
-### Q1326 · Tier B · 2025 · online_assessment (the data-analysis stage, the fourth and hardest of the four)
+### Q1315 · Tier B · 2025 · online_assessment (the data-analysis stage, the fourth and hardest of the four)
 
 主要是資料分析超難,總時間只有十五分鐘,共五小題,題目給了一個 40000 列的 csv 檔案,要我去分析這份資料,問題是資料裡面有一堆問題,包含缺漏、Overflow 的數值
 
@@ -12675,7 +12585,7 @@ Market Making Questions
 — chat_telegram · posted 2025-04-14 · full_text · [link](https://t.me/aistockanalyst/891)
   1 attestation(s) across 1 domain(s) · doubt: What the five sub-questions actually asked of the data is never said — only that the file was 40,000 rows and deliberately dirty. The poster admits they cleaned it in Excel, answered two of five, and then "直接亂猜" (just gu
 
-### Q1327 · Tier B · unknown · online_assessment (part 1 — the first of two HackerRank coding questions)
+### Q1316 · Tier B · unknown · online_assessment (part 1 — the first of two HackerRank coding questions)
 
 第一道写一个newsProvider类,需要实现AddSubscription,RemoveSubscription,NewsReceived,HashMap方法。
 
@@ -12685,7 +12595,7 @@ Market Making Questions
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1328 · Tier B · unknown · online_assessment (part 3 — the mini-game the poster calls "Balloon")
+### Q1317 · Tier B · unknown · online_assessment (part 3 — the mini-game the poster calls "Balloon")
 
 1、Balloon,每次充气花费$0.1, 超过某个值会爆炸,爆炸前收回当前的金额。第一次有30轮,金额不限;第二次20轮,在上次获得的金额基础上打气。
 
@@ -12695,7 +12605,7 @@ Market Making Questions
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1329 · Tier B · unknown · online_assessment (part 3 — the mini-game the poster calls "Skyscraper")
+### Q1318 · Tier B · unknown · online_assessment (part 3 — the mini-game the poster calls "Skyscraper")
 
 2、Skyscraper,类似汉诺塔,三个柱子,一些不同颜色的块移动到答案一致。
 
@@ -12705,7 +12615,7 @@ Market Making Questions
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1330 · Tier B · unknown · online_assessment (part 3 — the mini-game the poster calls "the switch")
+### Q1319 · Tier B · unknown · online_assessment (part 3 — the mini-game the poster calls "the switch")
 
 4、the switch,有两个框,上面看和是不是奇数,下面框看两组箭头是不是相同。
 
@@ -12715,7 +12625,7 @@ Market Making Questions
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1331 · Tier B · unknown · online_assessment (part 3 — the mini-game the poster calls "code compare")
+### Q1320 · Tier B · unknown · online_assessment (part 3 — the mini-game the poster calls "code compare")
 
 5、code compare, 一个字符串,有四个选项,选相同字符串,每次估计就5-6秒。
 
@@ -12725,7 +12635,7 @@ Market Making Questions
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1332 · Tier B · unknown · online_assessment (part 3 — the mini-game the poster calls "figure it out")
+### Q1321 · Tier B · unknown · online_assessment (part 3 — the mini-game the poster calls "figure it out")
 
 7、figure it out,猜盖住的牌。最多16种组合,图形,颜色,图纹,点。每次会显示和盖住的牌对比错误和正确几项。
 
@@ -12735,7 +12645,7 @@ Market Making Questions
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1333 · Tier B · 2024 spring (applied March 2024, rejected late May 2024) · online_assessment (Third component of the Optiver SDE Intern OA, alongside HackerRank alg)
+### Q1322 · Tier B · 2024 spring (applied March 2024, rejected late May 2024) · online_assessment (Third component of the Optiver SDE Intern OA, alongside HackerRank alg)
 
 Zap-N 是比较有意思的一部分,它由若干个小游戏组成。这些小游戏考察反应力、记忆力、逻辑推理能力,整个玩一遍感觉非常累,但是趣味性还是很足的。
 
@@ -12747,7 +12657,7 @@ Zap-N 是比较有意思的一部分,它由若干个小游戏组成。这些小�
 — university_bbs · posted 2024-05-31 · full_text · [link](https://xjtu.app/t/topic/12756)
   1 attestation(s) across 1 domain(s) · doubt: Fetched directly and completely — xjtu.app serves full thread HTML with no login wall, so this text is byte-verified, and it is a first-person failure narrative written for reflection rather than for clout or currency, w
 
-### Q1334 · Tier B · 2025 (2025 Shanghai Software Developer Summer Internship; posted 2025-03-18) · online_assessment (part 1 of 3 — HackerRank coding, 2 problems)
+### Q1323 · Tier B · 2025 (2025 Shanghai Software Developer Summer Internship; posted 2025-03-18) · online_assessment (part 1 of 3 — HackerRank coding, 2 problems)
 
 第二道写一个卫星网络的类,要实现SatelliteConnected,RelationshipEstablished,MessageReceived三个方法。
 
@@ -12759,7 +12669,7 @@ Zap-N 是比较有意思的一部分,它由若干个小游戏组成。这些小�
 — university_bbs · posted 2025-03-18 · full_text · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: Read byte-exact from the Nowcoder page's server-rendered window.__INITIAL_STATE__ JSON (the page needed three fetch attempts before the SSR payload came back rather than an empty shell). Strong provenance and unusually s
 
-### Q1335 · Tier B · 2025 (2025 Shanghai Software Developer Summer Internship; posted 2025-03-18) · online_assessment (part 2 of 3 — 20 multiple-select multiple-choice questions (20道不定项选择题))
+### Q1324 · Tier B · 2025 (2025 Shanghai Software Developer Summer Internship; posted 2025-03-18) · online_assessment (part 2 of 3 — 20 multiple-select multiple-choice questions (20道不定项选择题))
 
 part2是20道不定项选择题:多线程利用多CPU架构;关系数据库中规范化是什么;二维数组两种遍历方式的快慢;哈希一些操作的时间复杂度;Linux的system call时间开销为50ns;对于动态数组,哪项平均时间复杂度最低;小明想学python和java,不推荐哪本书;子网掩码定义同一网络的IP地址范围;UDP传输会发生什么情况;四个16进制数哪些小于100;给栈操作选最后栈的内容;选择邻接矩阵比领接链表的优势;在多线程程序中修复错误共享;二进制表示16位整数需要多少位;TCP/IP在哪些情况下不是好的选择;位运算;哪一个概念不用于多线程中的同步;在给的一个二叉搜索树中对随机的一个node平均比较几次;向空堆中插入65个元素,深度是多少;哪些协议用于Linux进程间通信。
 
@@ -12771,7 +12681,7 @@ part2是20道不定项选择题:多线程利用多CPU架构;关系数据库中�
 — university_bbs · posted 2025-03-18 · full_text · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: Read byte-exact from the Nowcoder page's server-rendered window.__INITIAL_STATE__ JSON (the page needed three fetch attempts before the SSR payload came back rather than an empty shell). Strong provenance and unusually s
 
-### Q1336 · Tier B · 2025 暑期实习 / Summer Internship · online_assessment (笔试 part3「9个小游戏」,这是第 1 个(发帖人只记得其中 7 个))
+### Q1325 · Tier B · 2025 暑期实习 / Summer Internship · online_assessment (笔试 part3「9个小游戏」,这是第 1 个(发帖人只记得其中 7 个))
 
 1、Balloon,每次充气花费$0.1,超过某个值会爆炸,爆炸前收回当前的金额。第一次有30轮,金额不限;第二次20轮,在上次获得的金额基础上打气。本人采用激进的策略结束时是$35,应该不是投资goat。
 
@@ -12783,7 +12693,7 @@ part2是20道不定项选择题:多线程利用多CPU架构;关系数据库中�
 — nowcoder · posted 2025-03-18 · full_text · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: 凭记忆复盘,发帖人自己承认 part3 「另外两个记不清了」,说明回忆不完整;题目是概述式转述而非原题文本。发帖人明确说 part1 放弃作答,所以对 part1 细节的记忆可靠性更低。无第二人对同一场笔试的独立复盘可供交叉验证。 part3 共 9 个游戏,发帖人只记得 7 个(原文:「另外两个记不清了,求原谅」),所以这一段本身就是不完整的;游戏规则也是凭印象转述,参数(轮数、金额)可能有偏差。
 
-### Q1337 · Tier B · 2025 暑期实习 / Summer Internship · online_assessment (笔试 part3「9个小游戏」,这是第 5 个(发帖人只记得其中 7 个))
+### Q1326 · Tier B · 2025 暑期实习 / Summer Internship · online_assessment (笔试 part3「9个小游戏」,这是第 5 个(发帖人只记得其中 7 个))
 
 5、code compare,一个字符串,有四个选项,选相同字符串,每次估计就5-6秒。我只能记住前三个来做判断(囧)
 
@@ -12795,7 +12705,7 @@ part2是20道不定项选择题:多线程利用多CPU架构;关系数据库中�
 — nowcoder · posted 2025-03-18 · full_text · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: 凭记忆复盘,发帖人自己承认 part3 「另外两个记不清了」,说明回忆不完整;题目是概述式转述而非原题文本。发帖人明确说 part1 放弃作答,所以对 part1 细节的记忆可靠性更低。无第二人对同一场笔试的独立复盘可供交叉验证。 part3 共 9 个游戏,发帖人只记得 7 个(原文:「另外两个记不清了,求原谅」),所以这一段本身就是不完整的;游戏规则也是凭印象转述,参数(轮数、金额)可能有偏差。
 
-### Q1338 · Tier B · unknown · online_assessment (80 questions in 8 minutes; Multiple Choice; Passing Score: 65 out of 8)
+### Q1327 · Tier B · unknown · online_assessment (80 questions in 8 minutes; Multiple Choice; Passing Score: 65 out of 8)
 
 15/25 / ? = 14/35 A) 3/5 B) 63/30 C) 14/15 D) 9/6
 
@@ -12803,7 +12713,7 @@ part2是20道不定项选择题:多线程利用多CPU架构;关系数据库中�
 — wso · posted 2013-09-28 · full_text · [link](https://www.wallstreetoasis.com/forum/trading/optiver-trading-numerical-test)
   1 attestation(s) across 1 domain(s) · doubt: The arithmetic item is WSO editorial content illustrating the format, so it may have been invented by WSO as an example rather than transcribed from a real Optiver paper; the surrounding thread is genuine but this line h
 
-### Q1339 · Tier B · unknown · online_assessment (reported as timed; user says it was not purely mental arithmetic)
+### Q1328 · Tier B · unknown · online_assessment (reported as timed; user says it was not purely mental arithmetic)
 
 I got logic and IQ-test-similar questions, algebraic word problems, and problems where I had to draw a given shape on a piece of paper and perform instructions as given (like turn it to the right 90 degrees, flip it over from the right side, etc). This was all timed questions, too.
 
@@ -12814,7 +12724,7 @@ I got logic and IQ-test-similar questions, algebraic word problems, and problems
 
 ## Optiver — phone_technical
 
-### Q1340 · Tier B · unknown · phone_technical (这一轮开始是技术面,考察 coding 和 system design)
+### Q1329 · Tier B · unknown · phone_technical (这一轮开始是技术面,考察 coding 和 system design)
 
 system design 部分是经典题”Design a ticketing system“。
 
@@ -12827,7 +12737,7 @@ system design 部分是经典题”Design a ticketing system“。
 
 ## Optiver — trading_game
 
-### Q1341 · Tier B · 2025 · trading_game (the betting-game half of the stage)
+### Q1330 · Tier B · 2025 · trading_game (the betting-game half of the stage)
 
 有一半是玩下賭注的遊戲,給定遊戲規則跟我們手上有的錢,你想要怎麼下注的問題,你決定好要怎麼下注之後還會問你為什麼要那樣下注
 
@@ -12840,7 +12750,7 @@ system design 部分是经典题”Design a ticketing system“。
 
 ## Optiver — unknown
 
-### Q1342 · Tier B · 2024 spring (applied March 2024, rejected late May 2024) · unknown (Third round; interviewer said 'just p-code', so exact syntax was not r)
+### Q1331 · Tier B · 2024 spring (applied March 2024, rejected late May 2024) · unknown (Third round; interviewer said 'just p-code', so exact syntax was not r)
 
 这一面依旧是 coding,注重工程能力的考察,让我实现一个多线程应用程序中的某些关键调度逻辑。
 
@@ -12852,7 +12762,7 @@ system design 部分是经典题”Design a ticketing system“。
 — university_bbs · posted 2024-05-31 · full_text · [link](https://xjtu.app/t/topic/12756)
   1 attestation(s) across 1 domain(s) · doubt: Fetched directly and completely — xjtu.app serves full thread HTML with no login wall, so this text is byte-verified, and it is a first-person failure narrative written for reflection rather than for clout or currency, w
 
-### Q1343 · Tier B · unknown · unknown (user reports every question was followed by a confidence measure and t)
+### Q1332 · Tier B · unknown · unknown (user reports every question was followed by a confidence measure and t)
 
 You have a dartboard, circumscribed within a square. The square's dimensions are 10"x10". The circle is split into 20 equal sections, and each is marked with a number alternating from the low end to the high end of interval [1,20], so 1, 20, 2, 19, 3, etc. Also, inside the center of the dartboard, is another circle 1" in diameter. This is marked 50. So you have 21 sections with numbers in them, these are your point values (payoff in dollars), and the area outside the circle but in the square is worth 0. -What's the EV of the game? -What's the optimal strategy? -If I let you rethrow your first throw at the cost of $1, will you take it? What if you have 2 rethrows?
 
@@ -12863,7 +12773,7 @@ You have a dartboard, circumscribed within a square. The square's dimensions are
 
 ## Optiver — math_sequences_test
 
-### Q1344 · Tier C · unknown · math_sequences_test (80 questions in 8 minutes)
+### Q1333 · Tier C · unknown · math_sequences_test (80 questions in 8 minutes)
 
 their “80 in 8” (80 questions in 8 minutes) mental maths test
 
@@ -12871,7 +12781,7 @@ their “80 in 8” (80 questions in 8 minutes) mental maths test
 — blog · posted unknown · full_text · [link](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)
   1 attestation(s) across 1 domain(s) · doubt: Canary Wharfian reviews are user-submitted and moderated only for 'quality', so nothing independently confirms the reviewer sat this process; the entry also carries no absolute date, only a relative 'Added 3 years ago', 
 
-### Q1345 · Tier C · unknown · math_sequences_test
+### Q1334 · Tier C · unknown · math_sequences_test
 
 an identifying sequences test, e.g. you are shown a sequence of numbers, and must guess the next number or missing number
 
@@ -12882,7 +12792,7 @@ an identifying sequences test, e.g. you are shown a sequence of numbers, and mus
 
 ## Optiver — online_assessment
 
-### Q1346 · Tier C · 2026 · online_assessment (a commenter naming the three tests they had just been sent)
+### Q1335 · Tier C · 2026 · online_assessment (a commenter naming the three tests they had just been sent)
 
 Also did you prep for the OAs I just got mine. Number Logic, Zap-N and beat the odds
 
@@ -12890,7 +12800,7 @@ Also did you prep for the OAs I just got mine. Number Logic, Zap-N and beat the 
 — reddit_thread · posted 2025-09-28 · archive_only · [link](https://www.reddit.com/r/csMajors/comments/1nr4nej/optiver_behavioral_does_everyone_get_this_after_oa/ngor45u/)
   1 attestation(s) across 1 domain(s) · doubt: Three test names given in passing by someone who says they have just received the assessment, so first-hand and current, but with no description of any of them. Two of the three (Number Logic, Beat The Odds) match the na
 
-### Q1347 · Tier C · 2026 · online_assessment (the structure of the assessment as the poster gives it)
+### Q1336 · Tier C · 2026 · online_assessment (the structure of the assessment as the poster gives it)
 
 一共三个部分必须按照顺序做:1)Number Logic 25min 2)Beat the Odds 45min 3) Likelihood Test 25min
 
@@ -12900,7 +12810,7 @@ Also did you prep for the OAs I just got mine. Number Logic, Zap-N and beat the 
 — other · posted 2026-02-08 · archive_only · [link](https://www.1point3acres.com/bbs/thread-1164459-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Not a question — the section list and timings. It is worth logging because it independently corroborates, from a completely different platform and language, the module names and durations in the Optiver instruction table
 
-### Q1348 · Tier C · 2026 · online_assessment (coding question 1 of the 90-minute HackerRank section)
+### Q1337 · Tier C · 2026 · online_assessment (coding question 1 of the 90-minute HackerRank section)
 
 第一题:题目有点记不清楚了,但是不难,核心考点是考m个a和n个b的排列组合有多少个
 
@@ -12910,7 +12820,7 @@ Also did you prep for the OAs I just got mine. Number Logic, Zap-N and beat the 
 — other · posted 2025-08-13 · archive_only · [link](https://www.1point3acres.com/bbs/thread-1141209-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The poster states in the same breath that they cannot remember the question, so what is logged here is their reading of what it tested, not the prompt. Whether the arrangements were unrestricted or subject to some adjace
 
-### Q1349 · Tier C · 2026 · online_assessment (coding question 2 of the 90-minute HackerRank section)
+### Q1338 · Tier C · 2026 · online_assessment (coding question 2 of the 90-minute HackerRank section)
 
 第二题:股票交易,给你一个orders, 是一个2d array, 里面有 [1, 15]; [-1; 30]....1 代表买,-1 代表买,后面是价格;
 
@@ -12920,7 +12830,7 @@ Also did you prep for the OAs I just got mine. Number Logic, Zap-N and beat the 
 — other · posted 2025-08-13 · archive_only · [link](https://www.1point3acres.com/bbs/thread-1141209-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The input format is given concretely but the task is not — the post runs straight into the karma wall after "后面是价格;", so what you are supposed to compute from the order list is entirely missing. The poster also plainly m
 
-### Q1350 · Tier C · 2026 · online_assessment (the structure of the assessment and the poster's description of module)
+### Q1339 · Tier C · 2026 · online_assessment (the structure of the assessment and the poster's description of module)
 
 一共4 个modulus ​一、找规律 单选题,大部分都很straightforward,不会立马skip留到最后做,时间充足最后能有个五分钟检查
 
@@ -12930,7 +12840,7 @@ Also did you prep for the OAs I just got mine. Number Logic, Zap-N and beat the 
 — other · posted 2025-08-04 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: SNIPPET ONLY — I could not open this page. Everything here comes from a search engine's cached extract of it, preserved verbatim in raw/pages/websearch_highlights_1p3a.txt, so I cannot see what surrounds these lines, can
 
-### Q1351 · Tier C · 2026 · online_assessment (module 2 of four)
+### Q1340 · Tier C · 2026 · online_assessment (module 2 of four)
 
 二、搬房子 用最少的次数从下面变成上面的样子,似乎没有时间限制,想好再动手!!建议先把一楼的房子搞对,再234楼
 
@@ -12940,7 +12850,7 @@ Also did you prep for the OAs I just got mine. Number Logic, Zap-N and beat the 
 — other · posted 2025-08-04 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The puzzle is graphical — "turn the bottom into the top" refers to a picture that is not in the text and is certainly not in a search snippet — so the actual instance is unrecoverable. What survives is the mechanic (mini
 
-### Q1352 · Tier C · 2026 · online_assessment (module 3 of four)
+### Q1341 · Tier C · 2026 · online_assessment (module 3 of four)
 
 三、连连看 从四个选项中找到和example一样的那个,7-8位数字+字母有点类似车牌号,考反应速度,越往后越快
 
@@ -12950,7 +12860,7 @@ Also did you prep for the OAs I just got mine. Number Logic, Zap-N and beat the 
 — other · posted 2025-08-04 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: A description of the mechanic with no instance — no example string and no options are given, so nothing here is answerable. The detail that the strings are 7-8 alphanumeric characters and that the pace accelerates is spe
 
-### Q1353 · Tier C · 2026 · online_assessment (one of the probability items the poster reproduces in English)
+### Q1342 · Tier C · 2026 · online_assessment (one of the probability items the poster reproduces in English)
 
 You flip a coin 3 times. What is the probability that the outcome is the same for all flips? all Heads or all Tails.
 
@@ -12958,7 +12868,7 @@ You flip a coin 3 times. What is the probability that the outcome is the same fo
 — other · posted 2025-08-04 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: No answer and no answer options are given, although the poster says the module was multiple choice. The poster also characterises the whole module as 中规中矩的绿皮书统计题 — "bog-standard Green Book statistics questions" — which i
 
-### Q1354 · Tier C · 2026 · online_assessment (one of the probability items the poster reproduces in English)
+### Q1343 · Tier C · 2026 · online_assessment (one of the probability items the poster reproduces in English)
 
 You throw one dice two times. What is the probability that the 2nd throw has a different face value than the first throw?
 
@@ -12966,7 +12876,7 @@ You throw one dice two times. What is the probability that the 2nd throw has a d
 — other · posted 2025-08-04 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: No answer and no answer options are given, although the poster says the module was multiple choice. The poster also characterises the whole module as 中规中矩的绿皮书统计题 — "bog-standard Green Book statistics questions" — which i
 
-### Q1355 · Tier C · 2026 · online_assessment (one of the probability items the poster reproduces in English)
+### Q1344 · Tier C · 2026 · online_assessment (one of the probability items the poster reproduces in English)
 
 ss. Once you have won a toss, your strategy has been implemented, and you stop. If you have a total bankroll of $63 available to implement this strategy, what is your expected profit?
 
@@ -12974,7 +12884,7 @@ ss. Once you have won a toss, your strategy has been implemented, and you stop. 
 — other · posted 2025-08-04 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: No answer and no answer options are given, although the poster says the module was multiple choice. The poster also characterises the whole module as 中规中矩的绿皮书统计题 — "bog-standard Green Book statistics questions" — which i
 
-### Q1356 · Tier C · 2026 · online_assessment (one of the probability items the poster reproduces in English)
+### Q1345 · Tier C · 2026 · online_assessment (one of the probability items the poster reproduces in English)
 
 You will play a coin game against an opponent. A biased coin will be continually flipped where there is a 2/3 chance of Heads and a 1/3 chance of Tails. If Heads is flipped then you receive $1 from your opponent. If Tails is flipped then you pay $1 to your opponent. You start with $10 and your opponent starts with $20. You keep playing until one of you is bankrupt (= has $0 left); they will be declared the loser, the other will be declared the winner. What is the probability that you win?
 
@@ -12982,7 +12892,7 @@ You will play a coin game against an opponent. A biased coin will be continually
 — other · posted 2025-08-04 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: No answer and no answer options are given, although the poster says the module was multiple choice. The poster also characterises the whole module as 中规中矩的绿皮书统计题 — "bog-standard Green Book statistics questions" — which i
 
-### Q1357 · Tier C · 2024 · online_assessment (section 1 of the battery)
+### Q1346 · Tier C · 2024 · online_assessment (section 1 of the battery)
 
 1. 8-80。 8分钟80道算术题。选择题。有分数和小数。感觉有点难。本人zeta mac得分30+。
 
@@ -12992,7 +12902,7 @@ You will play a coin game against an opponent. A biased coin will be continually
 — other · posted 2023-10-12 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1019756-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Not a question — the parameters of the arithmetic sprint (80 items, 8 minutes, multiple choice, fractions and decimals included) plus the poster's Zetamac benchmark. This is the section another candidate elsewhere in thi
 
-### Q1358 · Tier C · 2024 · online_assessment (the assessment platform's own descriptions of its three tests, quoted )
+### Q1347 · Tier C · 2024 · online_assessment (the assessment platform's own descriptions of its three tests, quoted )
 
 1. ERQ This test will assess your knowledge of equity research and wider financial markets. The test takes approximately 20 minutes. 2. ZAP N This assessment consists of 9 short neuro-assessment games. Each game lasts between 2 and 15 minutes. The assessment takes about 60 minutes to complete overall. 3. ZAP Q Personality questionnaire to measure your personal talents. The duration is 20 minutes.
 
@@ -13000,7 +12910,7 @@ You will play a coin game against an opponent. A biased coin will be continually
 — other · posted 2023-10-12 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1019756-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Not a question — Optiver's own instruction text for three modules, pasted by a replier. It is valuable for two reasons: it names ZAP N and ZAP Q, and a reddit commenter elsewhere in this corpus independently reports bein
 
-### Q1359 · Tier C · unknown · online_assessment (part 1 — the second of two HackerRank coding questions)
+### Q1348 · Tier C · unknown · online_assessment (part 1 — the second of two HackerRank coding questions)
 
 卫星网络的类,要实现SatelliteConnected,RelationshipEstablished,MessageReceived三个方法。
 
@@ -13010,7 +12920,7 @@ You will play a coin game against an opponent. A biased coin will be continually
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1360 · Tier C · unknown · online_assessment (the opening statement of the NewsProvider coding question)
+### Q1349 · Tier C · unknown · online_assessment (the opening statement of the NewsProvider coding question)
 
 As the provider of a news aggregation service, you aim to provide your customers with a system that is as easy to use as possible. There are many different news providers, and it is tedious for users to subscribe to all of them manually, so you want to provide a single subscription that manages all the news providers for each customer.
 
@@ -13018,7 +12928,7 @@ As the provider of a news aggregation service, you aim to provide your customers
 — other · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1147508-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres is Cloudflare-blocked to this machine and archive.org has no snapshot of this thread, so only the search engine's cached extract is available. The cached extract elides the middle of the page, so this is the
 
-### Q1361 · Tier C · unknown · online_assessment (the filtering rules stated in the NewsProvider coding question)
+### Q1350 · Tier C · unknown · online_assessment (the filtering rules stated in the NewsProvider coding question)
 
 Each subscriber is only interested in a certain set of topics, and should only receive news about those topics. Each news item has an interest score and each subscriber nominates their minimum interest score.
 
@@ -13026,7 +12936,7 @@ Each subscriber is only interested in a certain set of topics, and should only r
 — other · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1147508-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres is Cloudflare-blocked to this machine and archive.org has no snapshot of this thread, so only the search engine's cached extract is available. Part of the same coding question as the record above rather than
 
-### Q1362 · Tier C · unknown · online_assessment (the custom-testing input format of the NewsProvider coding question)
+### Q1351 · Tier C · unknown · online_assessment (the custom-testing input format of the NewsProvider coding question)
 
 Input Format for Custom Testing Each line of input begins with a keyword followed by one or more parameters separated by whitespace, per the order described above. The keywords are:
 
@@ -13034,7 +12944,7 @@ Input Format for Custom Testing Each line of input begins with a keyword followe
 — other · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1147508-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres is Cloudflare-blocked to this machine and archive.org has no snapshot of this thread, so only the search engine's cached extract is available. The four keywords that follow ("subscribe", "unsubscribe", "news
 
-### Q1363 · Tier C · 2026 summer intern cycle (thread title '26 summer'); OA sat 2025(7-9月) per the post's tag line · online_assessment (module 4 of 4 — 四、概率 (probability), single-answer multiple choice. Pos)
+### Q1352 · Tier C · 2026 summer intern cycle (thread title '26 summer'); OA sat 2025(7-9月) per the post's tag line · online_assessment (module 4 of 4 — 四、概率 (probability), single-answer multiple choice. Pos)
 
 a coin and whilst you do this you keep track of the number of Heads and the number of Tails. You can think of this as a race between Heads and Tails. For example, if after 9 flips you have landed on Heads 7 times and Tails 2 times, then Heads is winning the race by 5. Now
 
@@ -13046,7 +12956,7 @@ a coin and whilst you do this you keep track of the number of Heads and the numb
 — university_bbs · posted unknown (the 2025(7-9月) tag dates the assessment, not the post) · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Recovered only as a search-engine verbatim highlight block; the thread body is hidden behind 1point3acres' 188-point paywall to a logged-out reader, so I could not byte-verify it against the live page. Poster is openly f
 
-### Q1364 · Tier C · unknown · online_assessment (roughly 10 different mini games)
+### Q1353 · Tier C · unknown · online_assessment (roughly 10 different mini games)
 
 the so-called “gamified assessment” presents you with roughly 10 different mini games, ranging from remembering incrementally longer strings of numbers to reaction time tests
 
@@ -13054,7 +12964,7 @@ the so-called “gamified assessment” presents you with roughly 10 different m
 — blog · posted unknown · full_text · [link](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)
   1 attestation(s) across 1 domain(s) · doubt: Canary Wharfian reviews are user-submitted and moderated only for 'quality', so nothing independently confirms the reviewer sat this process; the entry also carries no absolute date, only a relative 'Added 3 years ago', 
 
-### Q1365 · Tier C · unknown · online_assessment
+### Q1354 · Tier C · unknown · online_assessment
 
 an SHL “General Ability” test ... consists of questions testing your ability to calculate simple percentages, read data from graphs and interpret information
 
@@ -13065,7 +12975,7 @@ an SHL “General Ability” test ... consists of questions testing your ability
 
 ## Optiver — phone_technical
 
-### Q1366 · Tier C · unknown · phone_technical (这一轮开始是技术面,考察 coding 和 system design)
+### Q1355 · Tier C · unknown · phone_technical (这一轮开始是技术面,考察 coding 和 system design)
 
 coding 部分直接给到了 Concurrency Queue,并且平台对该题只有 Python 3 的高亮和补全。
 
@@ -13078,7 +12988,7 @@ coding 部分直接给到了 Concurrency Queue,并且平台对该题只有 Pytho
 
 ## Optiver — trading_game
 
-### Q1367 · Tier C · unknown · trading_game (no pen-and-paper or calculator; give a bid and ask with a fixed 10% sp)
+### Q1356 · Tier C · unknown · trading_game (no pen-and-paper or calculator; give a bid and ask with a fixed 10% sp)
 
 You are given a question, such as “How much money was spent in pubs in the UK, on the first day after the COVID lockdown?”
 
@@ -13086,7 +12996,7 @@ You are given a question, such as “How much money was spent in pubs in the UK,
 — blog · posted unknown · full_text · [link](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)
   1 attestation(s) across 1 domain(s) · doubt: Canary Wharfian reviews are user-submitted and moderated only for 'quality', so nothing independently confirms the reviewer sat this process; the entry also carries no absolute date, only a relative 'Added 3 years ago', 
 
-### Q1368 · Tier C · unknown · trading_game (after 4 rounds of the game)
+### Q1357 · Tier C · unknown · trading_game (after 4 rounds of the game)
 
 after 4 rounds of the game, I was asked my net position (how many times I brought - sold) and average price transacted for
 
@@ -13097,7 +13007,7 @@ after 4 rounds of the game, I was asked my net position (how many times I brough
 
 ## Optiver — unknown
 
-### Q1369 · Tier C · unknown · unknown (takes place with someone from the campus recruiting team)
+### Q1358 · Tier C · unknown · unknown (takes place with someone from the campus recruiting team)
 
 Why did you choose to study the degree that you are studying?
 
@@ -13105,7 +13015,7 @@ Why did you choose to study the degree that you are studying?
 — blog · posted unknown · full_text · [link](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)
   1 attestation(s) across 1 domain(s) · doubt: Canary Wharfian reviews are user-submitted and moderated only for 'quality', so nothing independently confirms the reviewer sat this process; the entry also carries no absolute date, only a relative 'Added 3 years ago', 
 
-### Q1370 · Tier C · unknown · unknown (takes place with someone from the campus recruiting team)
+### Q1359 · Tier C · unknown · unknown (takes place with someone from the campus recruiting team)
 
 Why do you want a career in trading specifically?
 
@@ -13113,7 +13023,7 @@ Why do you want a career in trading specifically?
 — blog · posted unknown · full_text · [link](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)
   1 attestation(s) across 1 domain(s) · doubt: Canary Wharfian reviews are user-submitted and moderated only for 'quality', so nothing independently confirms the reviewer sat this process; the entry also carries no absolute date, only a relative 'Added 3 years ago', 
 
-### Q1371 · Tier C · unknown · unknown (takes place with someone from the campus recruiting team)
+### Q1360 · Tier C · unknown · unknown (takes place with someone from the campus recruiting team)
 
 Why Optiver (over other market making firms)?
 
@@ -13121,7 +13031,7 @@ Why Optiver (over other market making firms)?
 — blog · posted unknown · full_text · [link](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)
   1 attestation(s) across 1 domain(s) · doubt: Canary Wharfian reviews are user-submitted and moderated only for 'quality', so nothing independently confirms the reviewer sat this process; the entry also carries no absolute date, only a relative 'Added 3 years ago', 
 
-### Q1372 · Tier C · unknown · unknown (takes place with someone from the campus recruiting team)
+### Q1361 · Tier C · unknown · unknown (takes place with someone from the campus recruiting team)
 
 Top skills that make a good trader, other than quantitative and technical skills?
 
@@ -13129,7 +13039,7 @@ Top skills that make a good trader, other than quantitative and technical skills
 — blog · posted unknown · full_text · [link](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)
   1 attestation(s) across 1 domain(s) · doubt: Canary Wharfian reviews are user-submitted and moderated only for 'quality', so nothing independently confirms the reviewer sat this process; the entry also carries no absolute date, only a relative 'Added 3 years ago', 
 
-### Q1373 · Tier C · unknown · unknown (takes place with someone from the campus recruiting team)
+### Q1362 · Tier C · unknown · unknown (takes place with someone from the campus recruiting team)
 
 Name a time you’ve worked in a team - Why do you think communication is important?
 
@@ -13137,7 +13047,7 @@ Name a time you’ve worked in a team - Why do you think communication is import
 — blog · posted unknown · full_text · [link](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)
   1 attestation(s) across 1 domain(s) · doubt: Canary Wharfian reviews are user-submitted and moderated only for 'quality', so nothing independently confirms the reviewer sat this process; the entry also carries no absolute date, only a relative 'Added 3 years ago', 
 
-### Q1374 · Tier C · unknown · unknown (takes place with someone from the campus recruiting team)
+### Q1363 · Tier C · unknown · unknown (takes place with someone from the campus recruiting team)
 
 What would you say is your strongest skill that makes you stand out against other applicants?
 
@@ -13145,7 +13055,7 @@ What would you say is your strongest skill that makes you stand out against othe
 — blog · posted unknown · full_text · [link](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)
   1 attestation(s) across 1 domain(s) · doubt: Canary Wharfian reviews are user-submitted and moderated only for 'quality', so nothing independently confirms the reviewer sat this process; the entry also carries no absolute date, only a relative 'Added 3 years ago', 
 
-### Q1375 · Tier C · unknown · unknown (takes place with someone from the campus recruiting team)
+### Q1364 · Tier C · unknown · unknown (takes place with someone from the campus recruiting team)
 
 What would you say is your weakest skill?
 
@@ -13153,7 +13063,7 @@ What would you say is your weakest skill?
 — blog · posted unknown · full_text · [link](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)
   1 attestation(s) across 1 domain(s) · doubt: Canary Wharfian reviews are user-submitted and moderated only for 'quality', so nothing independently confirms the reviewer sat this process; the entry also carries no absolute date, only a relative 'Added 3 years ago', 
 
-### Q1376 · Tier C · unknown · unknown
+### Q1365 · Tier C · unknown · unknown
 
 what role I’d take in a team, and what I’d do if I was confident on a solution to a particular problem, but a much more experienced team member disagrees with me
 
@@ -13161,7 +13071,7 @@ what role I’d take in a team, and what I’d do if I was confident on a soluti
 — blog · posted unknown · full_text · [link](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)
   1 attestation(s) across 1 domain(s) · doubt: Canary Wharfian reviews are user-submitted and moderated only for 'quality', so nothing independently confirms the reviewer sat this process; the entry also carries no absolute date, only a relative 'Added 3 years ago', 
 
-### Q1377 · Tier C · unknown · unknown (The second round takes place with a trader ... you are not allowed to )
+### Q1366 · Tier C · unknown · unknown (The second round takes place with a trader ... you are not allowed to )
 
 How long would it take you to do 2/17 in your head (to 3 decimal places)?
 
@@ -13169,7 +13079,7 @@ How long would it take you to do 2/17 in your head (to 3 decimal places)?
 — blog · posted unknown · full_text · [link](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)
   1 attestation(s) across 1 domain(s) · doubt: Canary Wharfian reviews are user-submitted and moderated only for 'quality', so nothing independently confirms the reviewer sat this process; the entry also carries no absolute date, only a relative 'Added 3 years ago', 
 
-### Q1378 · Tier C · unknown · unknown (The second round takes place with a trader ... you are not allowed to )
+### Q1367 · Tier C · unknown · unknown (The second round takes place with a trader ... you are not allowed to )
 
 Today is a Wednesday, what will be the day of the week on this date next year?
 
@@ -13177,7 +13087,7 @@ Today is a Wednesday, what will be the day of the week on this date next year?
 — blog · posted unknown · full_text · [link](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)
   1 attestation(s) across 1 domain(s) · doubt: Canary Wharfian reviews are user-submitted and moderated only for 'quality', so nothing independently confirms the reviewer sat this process; the entry also carries no absolute date, only a relative 'Added 3 years ago', 
 
-### Q1379 · Tier C · unknown · unknown (The second round takes place with a trader ... you are not allowed to )
+### Q1368 · Tier C · unknown · unknown (The second round takes place with a trader ... you are not allowed to )
 
 Simpson’s Paradox question: Was given various pieces of information on two football teams, playing two halves of a game, and they individually have a “pass ratio” for each half. It was asked that if Team X has a higher pass ratio than Team Y in the first half, and the same again in the second half, could Team Y have a higher pass ratio overall? I was then asked to give a numerical example.
 
@@ -13185,7 +13095,7 @@ Simpson’s Paradox question: Was given various pieces of information on two foo
 — blog · posted unknown · full_text · [link](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)
   1 attestation(s) across 1 domain(s) · doubt: Canary Wharfian reviews are user-submitted and moderated only for 'quality', so nothing independently confirms the reviewer sat this process; the entry also carries no absolute date, only a relative 'Added 3 years ago', 
 
-### Q1380 · Tier C · unknown · unknown (The second round takes place with a trader ... you are not allowed to )
+### Q1369 · Tier C · unknown · unknown (The second round takes place with a trader ... you are not allowed to )
 
 Explain what Delta is, would it be positive or negative on a call option and on a put option, and then the same question for vega.
 
@@ -13196,7 +13106,7 @@ Explain what Delta is, would it be positive or negative on a call option and on 
 
 ## Optiver — online_assessment
 
-### Q1381 · Tier D · 2025 · online_assessment (OA)
+### Q1370 · Tier D · 2025 · online_assessment (OA)
 
 Given a two-dimensional character matrix, create a function that identifies how many times the sequence "OPTIVER" appears. Matches can be found in straight lin
 
@@ -13206,7 +13116,7 @@ Given a two-dimensional character matrix, create a function that identifies how 
 — chat_telegram · posted 2025-06-10 · full_text · [link](https://t.me/usinterview/23610)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. Truncated at "straight li
 
-### Q1382 · Tier D · 2025 · online_assessment (OA question 1)
+### Q1371 · Tier D · 2025 · online_assessment (OA question 1)
 
 第一题是计算两个日期之间差了多少天
 
@@ -13216,7 +13126,7 @@ Given a two-dimensional character matrix, create a function that identifies how 
 — chat_telegram · posted 2025-07-14 · full_text · [link](https://t.me/usinterview/24161)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. No date range, calendar o
 
-### Q1383 · Tier D · 2025 · online_assessment (OA question 2)
+### Q1372 · Tier D · 2025 · online_assessment (OA question 2)
 
 第二题是验证给定的graph edges是不是一棵二叉树。如果是,返回二叉树的serialization;如果不是
 
@@ -13226,7 +13136,7 @@ Given a two-dimensional character matrix, create a function that identifies how 
 — chat_telegram · posted 2025-07-14 · full_text · [link](https://t.me/usinterview/24161)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. Truncated before the fail
 
-### Q1384 · Tier D · 2025 · online_assessment (OA question 1)
+### Q1373 · Tier D · 2025 · online_assessment (OA question 1)
 
 给两个日期求他们之间隔了多少天,每个月份多少天有现成得api可以调
 
@@ -13236,7 +13146,7 @@ Given a two-dimensional character matrix, create a function that identifies how 
 — chat_telegram · posted 2025-08-20 · full_text · [link](https://t.me/usinterview/24895)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. This indepe
 
-### Q1385 · Tier D · 2025 · online_assessment (OA question 2)
+### Q1374 · Tier D · 2025 · online_assessment (OA question 2)
 
 给一组有向边,判断它是否是合法的二叉树,如果不是的话输出对应的错误类型(invalid input,存在
 
@@ -13246,7 +13156,7 @@ Given a two-dimensional character matrix, create a function that identifies how 
 — chat_telegram · posted 2025-08-20 · full_text · [link](https://t.me/usinterview/24895)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The Telegra
 
-### Q1386 · Tier D · 2025 · online_assessment (OA format report (not a question))
+### Q1375 · Tier D · 2025 · online_assessment (OA format report (not a question))
 
 这个部分是 2 道中等难度的编程题 + 1 道近似解题(Approximate Solution),90 分钟做完。题型偏 DP(动态规划)、heap(堆)之类,考的就是数学
 
@@ -13256,7 +13166,7 @@ Given a two-dimensional character matrix, create a function that identifies how 
 — chat_telegram · posted 2025-08-12 · full_text · [link](https://t.me/usinterview/24735)
   1 attestation(s) across 1 domain(s) · doubt: Format only, no question. Worth keeping because the "2 coding + 1 Approximate Solution in 90 minutes" structure is specific and matches the four-section OA another Optiver candidate described (t.me/usinterview/... / 1p3a
 
-### Q1387 · Tier D · 2025 · online_assessment (OA format report (not a question))
+### Q1376 · Tier D · 2025 · online_assessment (OA format report (not a question))
 
 先是3道OA题目给了3hrs。之后给了电面,当场做题,没有能立刻pass所有testcases
 
@@ -13266,7 +13176,7 @@ Given a two-dimensional character matrix, create a function that identifies how 
 — chat_telegram · posted 2025-07-23 · full_text · [link](https://t.me/usinterview/24329)
   1 attestation(s) across 1 domain(s) · doubt: Format only. Notable because the Shanghai pipeline (3 questions / 3 hours) differs from the Amsterdam and US OA formats other candidates report, but no question content survives.
 
-### Q1388 · Tier D · 2025 · online_assessment (OA format report (not a question))
+### Q1377 · Tier D · 2025 · online_assessment (OA format report (not a question))
 
 2道题,一共120min的时间,实际90+min完成,总体难度中等偏上~
 
@@ -13276,7 +13186,7 @@ Given a two-dimensional character matrix, create a function that identifies how 
 — chat_telegram · posted 2025-07-07 · full_text · [link](https://t.me/usinterview/24044)
   1 attestation(s) across 1 domain(s) · doubt: Format only — the preview ends at the forum's hidden-content marker ("**** 本内容被作者隐藏 ****"), so the two questions are behind the author's own hide tag and were never visible.
 
-### Q1389 · Tier D · 2023 · online_assessment (a coding question, quoted with its concrete example inputs)
+### Q1378 · Tier D · 2023 · online_assessment (a coding question, quoted with its concrete example inputs)
 
 给定两个输入一个gas station distance {10,20,5,20} 一个对应station的gas price {3,4,2,3} 求从station 0出发到终点的最低价格 期间油箱大小最多50 liters且每升能
 
@@ -13286,7 +13196,7 @@ Given a two-dimensional character matrix, create a function that identifies how 
 — chat_telegram · posted 2022-09-12 · full_text · [link](https://t.me/usinterview/14640)
   1 attestation(s) across 1 domain(s) · doubt: The preview breaks off at "每升能" — exactly where the litres-per-distance conversion would have been given — so the problem as recorded is unsolvable: without the fuel-consumption rate the tank capacity of 50 litres cannot
 
-### Q1390 · Tier D · 2021 · online_assessment (the first question, which the poster spent 20 minutes decoding)
+### Q1379 · Tier D · 2021 · online_assessment (the first question, which the poster spent 20 minutes decoding)
 
 第一题我看了二十分钟才明白说的是什么,题目描述的很复杂,什么折叠蛋白质,实际就是给一个字符串,找出所有的index,满足以
 
@@ -13296,7 +13206,7 @@ Given a two-dimensional character matrix, create a function that identifies how 
 — chat_telegram · posted 2021-02-18 · full_text · [link](https://t.me/usinterview/5162)
   1 attestation(s) across 1 domain(s) · doubt: The preview cuts off at "满足以" — at the start of the predicate the indices have to satisfy, which is the entire question. What survives is the disguise (a protein-folding cover story over a string problem) and the format,
 
-### Q1391 · Tier D · 2023 · online_assessment (the third coding question)
+### Q1380 · Tier D · 2023 · online_assessment (the third coding question)
 
 第三道是有向图找最短路径,题目不难但有特殊的输入输出和错误处理要求
 
@@ -13306,7 +13216,7 @@ Given a two-dimensional character matrix, create a function that identifies how 
 — chat_telegram · posted 2023-02-11 · full_text · [link](https://t.me/usinterview/15503)
   1 attestation(s) across 1 domain(s) · doubt: The distinguishing feature the poster flags — the "special input/output and error-handling requirements" — is exactly what is not described, and at Optiver that is usually the point of the question rather than the graph 
 
-### Q1392 · Tier D · 2026 · online_assessment (the three problems, reproduced by their exact given titles)
+### Q1381 · Tier D · 2026 · online_assessment (the three problems, reproduced by their exact given titles)
 
 三道编程题Problem 1: Trading Sequence CountingProblem 2: Proportional Allocation BacktestProblem 3: Order Book Matching Simulation
 
@@ -13316,7 +13226,7 @@ Given a two-dimensional character matrix, create a function that identifies how 
 — chat_telegram · posted 2025-11-18 · full_text · [link](https://t.me/usinterview/26345)
   1 attestation(s) across 1 domain(s) · doubt: These are the problems' own titles rather than a candidate's paraphrase, which is unusual and makes them useful for identifying the same test elsewhere — but titles are all there is: no statement, no input format, no con
 
-### Q1393 · Tier D · 2026 · online_assessment (the second question, quoted with its example input)
+### Q1382 · Tier D · 2026 · online_assessment (the second question, quoted with its example input)
 
 第二题:Construct Binary Tree from InputInput: (A,B) (B,C) (A,D)每组里面Parent在前Child在后 要求
 
@@ -13326,7 +13236,7 @@ Given a two-dimensional character matrix, create a function that identifies how 
 — chat_telegram · posted 2026-06-15 · full_text · [link](https://t.me/usinterview/28811)
   1 attestation(s) across 1 domain(s) · doubt: Cut off at "要求" (the requirement), which is where the output format and the error cases — the part that makes a parent/child-pair tree question non-trivial — would have been. The example input is concrete and is the stro
 
-### Q1394 · Tier D · 2026 · online_assessment (the single design task)
+### Q1383 · Tier D · 2026 · online_assessment (the single design task)
 
 design a news subscription process engine两个小时
 
@@ -13336,7 +13246,7 @@ design a news subscription process engine两个小时
 — chat_telegram · posted 2026-07-27 · full_text · [link](https://t.me/usinterview/29070)
   1 attestation(s) across 1 domain(s) · doubt: A one-line brief. The poster goes on to sketch component names ("大概设计 newrechieved,ad...") but the preview is cut off there and the fragment is too garbled to transcribe as a requirement, so I have not. What must be desi
 
-### Q1395 · Tier D · 2024 · online_assessment (the composition of the coding section)
+### Q1384 · Tier D · 2024 · online_assessment (the composition of the coding section)
 
 OA:hackerrank 4 python coding (1 topological sorting,1 regex,1 python generator,1 prefix sum) + 1 system design 无时间限制
 
@@ -13346,7 +13256,7 @@ OA:hackerrank 4 python coding (1 topological sorting,1 regex,1 python generator,
 — chat_telegram · posted 2024-05-13 · full_text · [link](https://t.me/usinterview/18319)
   1 attestation(s) across 1 domain(s) · doubt: Five questions identified only by technique. No statement, no input, no constraint is given for any of them, so nothing here is answerable; it is an inventory of what the test covers. The "no time limit" claim is unusual
 
-### Q1396 · Tier D · 2023 · online_assessment (the basic-finance portion of the test)
+### Q1385 · Tier D · 2023 · online_assessment (the basic-finance portion of the test)
 
 还有问一些基础的的finance比如non-ig grade 和 IG是什么评级上下这种
 
@@ -13356,7 +13266,7 @@ OA:hackerrank 4 python coding (1 topological sorting,1 regex,1 python generator,
 — chat_telegram · posted 2023-03-16 · full_text · [link](https://t.me/usinterview/15529)
   1 attestation(s) across 1 domain(s) · doubt: The poster is giving an example of a question type ("what IG and non-IG mean as ratings, and where the boundary sits") rather than quoting one, and hedges it with "这种" (that sort of thing). The accounting questions that 
 
-### Q1397 · Tier D · 2025 · online_assessment (the two example item types the poster remembered)
+### Q1386 · Tier D · 2025 · online_assessment (the two example item types the poster remembered)
 
 包含給一堆 constraints,問六個人的座位的排序
 
@@ -13366,7 +13276,7 @@ OA:hackerrank 4 python coding (1 topological sorting,1 regex,1 python generator,
 — chat_telegram · posted 2025-04-14 · full_text · [link](https://t.me/aistockanalyst/891)
   1 attestation(s) across 1 domain(s) · doubt: The constraints — the entire content of a seating-order logic puzzle — are not given, only the shape of the item. The poster does supply hard format detail around it (24 questions in 36 minutes, roughly 90 seconds each, 
 
-### Q1398 · Tier D · 2025 · online_assessment (the second example item type the poster remembered)
+### Q1387 · Tier D · 2025 · online_assessment (the second example item type the poster remembered)
 
 給每一季銷售量的關係,要畫出每季銷售量的圓餅圖
 
@@ -13376,7 +13286,7 @@ OA:hackerrank 4 python coding (1 topological sorting,1 regex,1 python generator,
 — chat_telegram · posted 2025-04-14 · full_text · [link](https://t.me/aistockanalyst/891)
   1 attestation(s) across 1 domain(s) · doubt: The relationships between the quarterly figures are not reproduced, so the pie chart cannot be reconstructed. Worth noting that "draw a pie chart" is an unusual response format for a timed online test and the poster does
 
-### Q1399 · Tier D · 2026 · online_assessment (the poster's answers/test data for Q1 and Q2, given without the prompt)
+### Q1388 · Tier D · 2026 · online_assessment (the poster's answers/test data for Q1 and Q2, given without the prompt)
 
 Q1: 2011-1-3 2011-1-5Q2: A,B A,C C,D D,B
 
@@ -13386,7 +13296,7 @@ Q1: 2011-1-3 2011-1-5Q2: A,B A,C C,D D,B
 — chat_telegram · posted 2026-01-10 · full_text · [link](https://t.me/usinterview/26844)
   1 attestation(s) across 1 domain(s) · doubt: This is not a question — it is two lines of data (a pair of dates, and a set of letter pairs that look like graph edges) with the prompts entirely absent, because the poster attached them as images and wrote 如图. Telegram
 
-### Q1400 · Tier D · 2026 · online_assessment (test 1 of the five-test battery)
+### Q1389 · Tier D · 2026 · online_assessment (test 1 of the five-test battery)
 
 **1.** **Beat The Odds** This test will assess your ability to apply probability theory. You have a limited time per question; and 45 minutes to complete the assessment overall.
 
@@ -13394,7 +13304,7 @@ Q1: 2011-1-3 2011-1-5Q2: A,B A,C C,D D,B
 — reddit_thread · posted 2026-04-08 · archive_only · [link](https://www.reddit.com/r/quantfinance/comments/1urevoj/optiver_qr_intern_oa_preparation/)
   1 attestation(s) across 1 domain(s) · doubt: This is the assessment's own instruction text, not a question — it tells you what each test measures and how long you get, but no individual prompt is reproduced. Its value is that it is a verbatim paste rather than a re
 
-### Q1401 · Tier D · 2026 · online_assessment (test 2 of the five-test battery)
+### Q1390 · Tier D · 2026 · online_assessment (test 2 of the five-test battery)
 
 **2.** **NumberLogic** You will have 25 minutes to complete a numerical reasoning test.
 
@@ -13402,7 +13312,7 @@ Q1: 2011-1-3 2011-1-5Q2: A,B A,C C,D D,B
 — reddit_thread · posted 2026-04-08 · archive_only · [link](https://www.reddit.com/r/quantfinance/comments/1urevoj/optiver_qr_intern_oa_preparation/)
   1 attestation(s) across 1 domain(s) · doubt: This is the assessment's own instruction text, not a question — it tells you what each test measures and how long you get, but no individual prompt is reproduced. Its value is that it is a verbatim paste rather than a re
 
-### Q1402 · Tier D · 2026 · online_assessment (test 3 of the five-test battery)
+### Q1391 · Tier D · 2026 · online_assessment (test 3 of the five-test battery)
 
 **3.** **Likelihood-list** This test will assess your ability to rank possible outcomes from most likely to least likely based the information provided.
 
@@ -13410,7 +13320,7 @@ Q1: 2011-1-3 2011-1-5Q2: A,B A,C C,D D,B
 — reddit_thread · posted 2026-04-08 · archive_only · [link](https://www.reddit.com/r/quantfinance/comments/1urevoj/optiver_qr_intern_oa_preparation/)
   1 attestation(s) across 1 domain(s) · doubt: This is the assessment's own instruction text, not a question — it tells you what each test measures and how long you get, but no individual prompt is reproduced. Its value is that it is a verbatim paste rather than a re
 
-### Q1403 · Tier D · 2026 · online_assessment (test 4 of the five-test battery)
+### Q1392 · Tier D · 2026 · online_assessment (test 4 of the five-test battery)
 
 **4.** **Intervals** This test will assess your ability to estimate numerical values and quantify your uncertainty by setting upper and lower bounds around your answers. The overall assessment will take about 15 minutes to complete.
 
@@ -13418,7 +13328,7 @@ Q1: 2011-1-3 2011-1-5Q2: A,B A,C C,D D,B
 — reddit_thread · posted 2026-04-08 · archive_only · [link](https://www.reddit.com/r/quantfinance/comments/1urevoj/optiver_qr_intern_oa_preparation/)
   1 attestation(s) across 1 domain(s) · doubt: This is the assessment's own instruction text, not a question — it tells you what each test measures and how long you get, but no individual prompt is reproduced. Its value is that it is a verbatim paste rather than a re
 
-### Q1404 · Tier D · 2026 · online_assessment (test 5 of the five-test battery)
+### Q1393 · Tier D · 2026 · online_assessment (test 5 of the five-test battery)
 
 **5.** **Orderbooks** This test will assess your ability to find opportunities where buying and selling different combinations of items can result in a profit. The overall assessment will take about 15 minutes.
 
@@ -13426,7 +13336,7 @@ Q1: 2011-1-3 2011-1-5Q2: A,B A,C C,D D,B
 — reddit_thread · posted 2026-04-08 · archive_only · [link](https://www.reddit.com/r/quantfinance/comments/1urevoj/optiver_qr_intern_oa_preparation/)
   1 attestation(s) across 1 domain(s) · doubt: This is the assessment's own instruction text, not a question — it tells you what each test measures and how long you get, but no individual prompt is reproduced. Its value is that it is a verbatim paste rather than a re
 
-### Q1405 · Tier D · 2026 · online_assessment (the poster's section-by-section account of the test they had just take)
+### Q1394 · Tier D · 2026 · online_assessment (the poster's section-by-section account of the test they had just take)
 
 The probability was actually ok but the number logic? Man it's much harder than I thought, towards the end got some random arr number mixed I'm not doing this shi in a min? Skipped at least 5 questions
 
@@ -13434,7 +13344,7 @@ The probability was actually ok but the number logic? Man it's much harder than 
 — reddit_thread · posted 2026-04-09 · archive_only · [link](https://www.reddit.com/r/quantfinance/comments/1urtesj/optiver_oa_so_cooked/)
   1 attestation(s) across 1 domain(s) · doubt: Not a question — a candidate's reaction to a section. It corroborates the NumberLogic test named in the pasted Optiver instructions and adds a per-question time budget ("in a min"), but the description of the items thems
 
-### Q1406 · Tier D · 2026 · online_assessment (the poster's remark about a section they expected but did not get)
+### Q1395 · Tier D · 2026 · online_assessment (the poster's remark about a section they expected but did not get)
 
 Bit disappointed no 80 in 8 I really like those kind questions
 
@@ -13442,7 +13352,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — reddit_thread · posted 2026-04-09 · archive_only · [link](https://www.reddit.com/r/quantfinance/comments/1urtesj/optiver_oa_so_cooked/)
   1 attestation(s) across 1 domain(s) · doubt: "80 in 8" is used with no explanation, on the assumption the reader knows it — the natural reading is Optiver's 80-questions-in-8-minutes arithmetic sprint, and I am recording that reading as an inference, not as somethi
 
-### Q1407 · Tier D · 2026 · online_assessment (sequence 1 of the four the poster reconstructed from scratch paper)
+### Q1396 · Tier D · 2026 · online_assessment (sequence 1 of the four the poster reconstructed from scratch paper)
 
 1 2 3 16/5 25/8 36/13 ? 49/21
 
@@ -13452,7 +13362,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — other · posted unknown · archive_only · [link](https://www.1point3acres.com/bbs/thread-1164459-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The poster is explicit that these are reconstructed from their scratch paper and that they are not sure of the answers — 草稿纸上还记得的一些比较confused的题(不保证答案是对的), "some of the more confusing questions I can still remember from m
 
-### Q1408 · Tier D · 2026 · online_assessment (sequence 2 of the four the poster reconstructed from scratch paper)
+### Q1397 · Tier D · 2026 · online_assessment (sequence 2 of the four the poster reconstructed from scratch paper)
 
 2 2 3 4 5 8 8 ?16
 
@@ -13464,7 +13374,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — other · posted unknown · archive_only · [link](https://www.1point3acres.com/bbs/thread-1164459-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The poster is explicit that these are reconstructed from their scratch paper and that they are not sure of the answers — 草稿纸上还记得的一些比较confused的题(不保证答案是对的), "some of the more confusing questions I can still remember from m
 
-### Q1409 · Tier D · 2026 · online_assessment (the fifth sequence, cut off mid-list by the karma wall)
+### Q1398 · Tier D · 2026 · online_assessment (the fifth sequence, cut off mid-list by the karma wall)
 
 2 1 2 5 13
 
@@ -13474,7 +13384,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — other · posted unknown · archive_only · [link](https://www.1point3acres.com/bbs/thread-1164459-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Truncated: the karma-wall placeholder ("您好!本帖隐藏的内容需要积分高于 188 才可浏览") begins immediately after "13", so the rest of the sequence and the blank are not readable. Logged as a partial. The poster is explicit that these are re
 
-### Q1410 · Tier D · 2026 · online_assessment (a replier contesting the poster's answer to one of the sequences)
+### Q1399 · Tier D · 2026 · online_assessment (a replier contesting the poster's answer to one of the sequences)
 
 4 5 9 13 22 31 ?53 这个答案是不是应该是40而不是53?
 
@@ -13484,7 +13394,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — other · posted unknown · archive_only · [link](https://www.1point3acres.com/bbs/thread-1164459-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Not a question but a dispute over one, and it is the most useful thing on the page for calibration: it shows the "answers" in the original post are the candidate's guesses, not the assessment's key, and that at least one
 
-### Q1411 · Tier D · 2026 · online_assessment (a probability item listed after the karma wall)
+### Q1400 · Tier D · 2026 · online_assessment (a probability item listed after the karma wall)
 
 骰子掷出每个面的平均次数
 
@@ -13494,7 +13404,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — other · posted 2025-08-13 · archive_only · [link](https://www.1point3acres.com/bbs/thread-1141209-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Seven characters. This is a topic label, not a prompt: it reads as the coupon-collector expectation for a die, but "平均次数" could equally mean the expected count of each face in a fixed number of throws, and the poster giv
 
-### Q1412 · Tier D · 2026 · online_assessment (a probability item listed after the karma wall)
+### Q1401 · Tier D · 2026 · online_assessment (a probability item listed after the karma wall)
 
 掷 4 个骰子,乘积是奇数的概率
 
@@ -13504,7 +13414,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — other · posted 2025-08-13 · archive_only · [link](https://www.1point3acres.com/bbs/thread-1141209-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Short but genuinely self-contained — four dice, probability the product is odd — which is unusual for this genre. Still a paraphrase in the poster's words rather than the assessment's, and no answer is given. The poster 
 
-### Q1413 · Tier D · 2026 · online_assessment (the fourth section)
+### Q1402 · Tier D · 2026 · online_assessment (the fourth section)
 
 小游戏 比较放松了,比大小,看区别,轻松做了
 
@@ -13514,7 +13424,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — other · posted 2025-08-13 · archive_only · [link](https://www.1point3acres.com/bbs/thread-1141209-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: A format note, not a question. "比大小" (compare which is bigger) and "看区别" (spot the difference) are the poster's own shorthand for two reaction-speed games; they do not name them and do not give timings. Consistent with t
 
-### Q1414 · Tier D · 2026 · online_assessment (sequence 1 of the eight the poster lists)
+### Q1403 · Tier D · 2026 · online_assessment (sequence 1 of the eight the poster lists)
 
 12,28,36,84,88,168,?
 
@@ -13524,7 +13434,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — other · posted 2025-08-04 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: No answers are given for any of the eight, and no options either, even though the poster says the module was multiple choice — so what a candidate actually saw on screen was a sequence plus four choices, and only the ste
 
-### Q1415 · Tier D · 2026 · online_assessment (sequence 2 of the eight the poster lists)
+### Q1404 · Tier D · 2026 · online_assessment (sequence 2 of the eight the poster lists)
 
 4/3,1,5,8,23,47,?
 
@@ -13534,7 +13444,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — other · posted 2025-08-04 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: No answers are given for any of the eight, and no options either, even though the poster says the module was multiple choice — so what a candidate actually saw on screen was a sequence plus four choices, and only the ste
 
-### Q1416 · Tier D · 2026 · online_assessment (sequence 3 of the eight the poster lists)
+### Q1405 · Tier D · 2026 · online_assessment (sequence 3 of the eight the poster lists)
 
 3,1,2,6,12,144,?
 
@@ -13544,7 +13454,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — other · posted 2025-08-04 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: No answers are given for any of the eight, and no options either, even though the poster says the module was multiple choice — so what a candidate actually saw on screen was a sequence plus four choices, and only the ste
 
-### Q1417 · Tier D · 2026 · online_assessment (sequence 4 of the eight the poster lists)
+### Q1406 · Tier D · 2026 · online_assessment (sequence 4 of the eight the poster lists)
 
 1/5,2/3,3/11,3/6,5/17,4/9,?
 
@@ -13554,7 +13464,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — other · posted 2025-08-04 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: No answers are given for any of the eight, and no options either, even though the poster says the module was multiple choice — so what a candidate actually saw on screen was a sequence plus four choices, and only the ste
 
-### Q1418 · Tier D · 2026 · online_assessment (sequence 5 of the eight the poster lists)
+### Q1407 · Tier D · 2026 · online_assessment (sequence 5 of the eight the poster lists)
 
 7,14,24,6,12,22,?
 
@@ -13564,7 +13474,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — other · posted 2025-08-04 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: No answers are given for any of the eight, and no options either, even though the poster says the module was multiple choice — so what a candidate actually saw on screen was a sequence plus four choices, and only the ste
 
-### Q1419 · Tier D · 2026 · online_assessment (sequence 6 of the eight the poster lists)
+### Q1408 · Tier D · 2026 · online_assessment (sequence 6 of the eight the poster lists)
 
 19,18,20,60,15,14,16,?
 
@@ -13574,7 +13484,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — other · posted 2025-08-04 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: No answers are given for any of the eight, and no options either, even though the poster says the module was multiple choice — so what a candidate actually saw on screen was a sequence plus four choices, and only the ste
 
-### Q1420 · Tier D · 2026 · online_assessment (sequence 7 of the eight the poster lists)
+### Q1409 · Tier D · 2026 · online_assessment (sequence 7 of the eight the poster lists)
 
 4,2,6,6,30,150,?
 
@@ -13584,7 +13494,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — other · posted 2025-08-04 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: No answers are given for any of the eight, and no options either, even though the poster says the module was multiple choice — so what a candidate actually saw on screen was a sequence plus four choices, and only the ste
 
-### Q1421 · Tier D · 2026 · online_assessment (sequence 8 of the eight the poster lists)
+### Q1410 · Tier D · 2026 · online_assessment (sequence 8 of the eight the poster lists)
 
 1,3,7,17,41,99,?
 
@@ -13594,7 +13504,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — other · posted 2025-08-04 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: No answers are given for any of the eight, and no options either, even though the poster says the module was multiple choice — so what a candidate actually saw on screen was a sequence plus four choices, and only the ste
 
-### Q1422 · Tier D · 2024 · online_assessment (a probability item, whose opening is swallowed by the karma-wall place)
+### Q1411 · Tier D · 2024 · online_assessment (a probability item, whose opening is swallowed by the karma-wall place)
 
 道女孩数量大于男孩,问生孩子个数的期望。
 
@@ -13604,7 +13514,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — other · posted 2023-10-12 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1019756-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Decapitated. The karma-wall placeholder runs straight into this line, so the sentence begins mid-word at "道" (the tail of a question counter) and the entire stopping rule — the thing that defines the problem — is missing
 
-### Q1423 · Tier D · unknown · online_assessment (part 2 — item 1 of the 20 multiple-answer CS-fundamentals questions th)
+### Q1412 · Tier D · unknown · online_assessment (part 2 — item 1 of the 20 multiple-answer CS-fundamentals questions th)
 
 多线程利用多CPU架构
 
@@ -13614,7 +13524,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1424 · Tier D · unknown · online_assessment (part 2 — item 2 of the 20 multiple-answer CS-fundamentals questions th)
+### Q1413 · Tier D · unknown · online_assessment (part 2 — item 2 of the 20 multiple-answer CS-fundamentals questions th)
 
 关系数据库中规范化是什么
 
@@ -13624,7 +13534,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1425 · Tier D · unknown · online_assessment (part 2 — item 3 of the 20 multiple-answer CS-fundamentals questions th)
+### Q1414 · Tier D · unknown · online_assessment (part 2 — item 3 of the 20 multiple-answer CS-fundamentals questions th)
 
 二维数组两种遍历方式的快慢
 
@@ -13634,7 +13544,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1426 · Tier D · unknown · online_assessment (part 2 — item 4 of the 20 multiple-answer CS-fundamentals questions th)
+### Q1415 · Tier D · unknown · online_assessment (part 2 — item 4 of the 20 multiple-answer CS-fundamentals questions th)
 
 哈希一些操作的时间复杂度
 
@@ -13644,7 +13554,7 @@ Bit disappointed no 80 in 8 I really like those kind questions
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1427 · Tier D · unknown · online_assessment (part 2 — item 5 of the 20 multiple-answer CS-fundamentals questions th)
+### Q1416 · Tier D · unknown · online_assessment (part 2 — item 5 of the 20 multiple-answer CS-fundamentals questions th)
 
 Linux的system call时间开销为50ns
 
@@ -13654,7 +13564,7 @@ Linux的system call时间开销为50ns
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1428 · Tier D · unknown · online_assessment (part 2 — item 6 of the 20 multiple-answer CS-fundamentals questions th)
+### Q1417 · Tier D · unknown · online_assessment (part 2 — item 6 of the 20 multiple-answer CS-fundamentals questions th)
 
 对于动态数组,哪项平均时间复杂度最低
 
@@ -13664,7 +13574,7 @@ Linux的system call时间开销为50ns
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1429 · Tier D · unknown · online_assessment (part 2 — item 7 of the 20 multiple-answer CS-fundamentals questions th)
+### Q1418 · Tier D · unknown · online_assessment (part 2 — item 7 of the 20 multiple-answer CS-fundamentals questions th)
 
 小明想学python和java,不推荐哪本书
 
@@ -13674,7 +13584,7 @@ Linux的system call时间开销为50ns
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1430 · Tier D · unknown · online_assessment (part 2 — item 8 of the 20 multiple-answer CS-fundamentals questions th)
+### Q1419 · Tier D · unknown · online_assessment (part 2 — item 8 of the 20 multiple-answer CS-fundamentals questions th)
 
 子网掩码定义同一网络的IP地址范围
 
@@ -13684,7 +13594,7 @@ Linux的system call时间开销为50ns
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1431 · Tier D · unknown · online_assessment (part 2 — item 9 of the 20 multiple-answer CS-fundamentals questions th)
+### Q1420 · Tier D · unknown · online_assessment (part 2 — item 9 of the 20 multiple-answer CS-fundamentals questions th)
 
 UDP传输会发生什么情况
 
@@ -13694,7 +13604,7 @@ UDP传输会发生什么情况
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1432 · Tier D · unknown · online_assessment (part 2 — item 10 of the 20 multiple-answer CS-fundamentals questions t)
+### Q1421 · Tier D · unknown · online_assessment (part 2 — item 10 of the 20 multiple-answer CS-fundamentals questions t)
 
 四个16进制数哪些小于100
 
@@ -13704,7 +13614,7 @@ UDP传输会发生什么情况
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1433 · Tier D · unknown · online_assessment (part 2 — item 11 of the 20 multiple-answer CS-fundamentals questions t)
+### Q1422 · Tier D · unknown · online_assessment (part 2 — item 11 of the 20 multiple-answer CS-fundamentals questions t)
 
 给栈操作选最后栈的内容
 
@@ -13714,7 +13624,7 @@ UDP传输会发生什么情况
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1434 · Tier D · unknown · online_assessment (part 2 — item 12 of the 20 multiple-answer CS-fundamentals questions t)
+### Q1423 · Tier D · unknown · online_assessment (part 2 — item 12 of the 20 multiple-answer CS-fundamentals questions t)
 
 选择邻接矩阵比领接链表的优势
 
@@ -13724,7 +13634,7 @@ UDP传输会发生什么情况
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1435 · Tier D · unknown · online_assessment (part 2 — item 13 of the 20 multiple-answer CS-fundamentals questions t)
+### Q1424 · Tier D · unknown · online_assessment (part 2 — item 13 of the 20 multiple-answer CS-fundamentals questions t)
 
 在多线程程序中修复错误共享
 
@@ -13734,7 +13644,7 @@ UDP传输会发生什么情况
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1436 · Tier D · unknown · online_assessment (part 2 — item 14 of the 20 multiple-answer CS-fundamentals questions t)
+### Q1425 · Tier D · unknown · online_assessment (part 2 — item 14 of the 20 multiple-answer CS-fundamentals questions t)
 
 二进制表示16位整数需要多少位
 
@@ -13744,7 +13654,7 @@ UDP传输会发生什么情况
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1437 · Tier D · unknown · online_assessment (part 2 — item 15 of the 20 multiple-answer CS-fundamentals questions t)
+### Q1426 · Tier D · unknown · online_assessment (part 2 — item 15 of the 20 multiple-answer CS-fundamentals questions t)
 
 TCP/IP在哪些情况下不是好的选择
 
@@ -13754,7 +13664,7 @@ TCP/IP在哪些情况下不是好的选择
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1438 · Tier D · unknown · online_assessment (part 2 — item 16 of the 20 multiple-answer CS-fundamentals questions t)
+### Q1427 · Tier D · unknown · online_assessment (part 2 — item 16 of the 20 multiple-answer CS-fundamentals questions t)
 
 位运算
 
@@ -13764,7 +13674,7 @@ TCP/IP在哪些情况下不是好的选择
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1439 · Tier D · unknown · online_assessment (part 2 — item 17 of the 20 multiple-answer CS-fundamentals questions t)
+### Q1428 · Tier D · unknown · online_assessment (part 2 — item 17 of the 20 multiple-answer CS-fundamentals questions t)
 
 哪一个概念不用于多线程中的同步
 
@@ -13774,7 +13684,7 @@ TCP/IP在哪些情况下不是好的选择
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1440 · Tier D · unknown · online_assessment (part 2 — item 18 of the 20 multiple-answer CS-fundamentals questions t)
+### Q1429 · Tier D · unknown · online_assessment (part 2 — item 18 of the 20 multiple-answer CS-fundamentals questions t)
 
 在给的一个二叉搜索树中对随机的一个node平均比较几次
 
@@ -13784,7 +13694,7 @@ TCP/IP在哪些情况下不是好的选择
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1441 · Tier D · unknown · online_assessment (part 2 — item 19 of the 20 multiple-answer CS-fundamentals questions t)
+### Q1430 · Tier D · unknown · online_assessment (part 2 — item 19 of the 20 multiple-answer CS-fundamentals questions t)
 
 向空堆中插入65个元素,深度是多少
 
@@ -13794,7 +13704,7 @@ TCP/IP在哪些情况下不是好的选择
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1442 · Tier D · unknown · online_assessment (part 2 — item 20 of the 20 multiple-answer CS-fundamentals questions t)
+### Q1431 · Tier D · unknown · online_assessment (part 2 — item 20 of the 20 multiple-answer CS-fundamentals questions t)
 
 哪些协议用于Linux进程间通信
 
@@ -13804,7 +13714,7 @@ TCP/IP在哪些情况下不是好的选择
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1443 · Tier D · unknown · online_assessment (part 2 as a whole)
+### Q1432 · Tier D · unknown · online_assessment (part 2 as a whole)
 
 part2是20道不定项选择题
 
@@ -13814,7 +13724,7 @@ part2是20道不定项选择题
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1444 · Tier D · unknown · online_assessment (part 3 — the mini-game the poster calls "Shapeshift")
+### Q1433 · Tier D · unknown · online_assessment (part 3 — the mini-game the poster calls "Shapeshift")
 
 3、Shapeshift,考反应,出现矩形按左方向键,圆形按右方向键。
 
@@ -13824,7 +13734,7 @@ part2是20道不定项选择题
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1445 · Tier D · unknown · online_assessment (part 3 — the mini-game the poster calls "number Box")
+### Q1434 · Tier D · unknown · online_assessment (part 3 — the mini-game the poster calls "number Box")
 
 6、number Box,四个数和中间的结果,通过加减乘除法计算出结果
 
@@ -13834,7 +13744,7 @@ part2是20道不定项选择题
 — nowcoder · posted unknown · snippet_only · [link](https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789)
   1 attestation(s) across 1 domain(s) · doubt: nowcoder.com is behind an Aliyun WAF for this machine — www, m. and the /discuss/ form all returned the "为了更好的访问体验,请进行验证" interstitial on 2026-08-01 — so the post could not be read directly and only the search engine's c
 
-### Q1446 · Tier D · 2024 spring (applied March 2024, rejected late May 2024) · online_assessment (OA had three parts: 算法题 (HackerRank algorithms), 基础理论知识题 (multiple-cho)
+### Q1435 · Tier D · 2024 spring (applied March 2024, rejected late May 2024) · online_assessment (OA had three parts: 算法题 (HackerRank algorithms), 基础理论知识题 (multiple-cho)
 
 给到我的是一个 LogServer 背景的数据结构题
 
@@ -13846,7 +13756,7 @@ part2是20道不定项选择题
 — university_bbs · posted 2024-05-31 · full_text · [link](https://xjtu.app/t/topic/12756)
   1 attestation(s) across 1 domain(s) · doubt: Fetched directly and completely — xjtu.app serves full thread HTML with no login wall, so this text is byte-verified, and it is a first-person failure narrative written for reflection rather than for clout or currency, w
 
-### Q1447 · Tier D · 2024 spring (applied March 2024, rejected late May 2024) · online_assessment (OA had three parts: 算法题 (HackerRank algorithms), 基础理论知识题 (multiple-cho)
+### Q1436 · Tier D · 2024 spring (applied March 2024, rejected late May 2024) · online_assessment (OA had three parts: 算法题 (HackerRank algorithms), 基础理论知识题 (multiple-cho)
 
 一个图论题 ... 图论是拓扑排序
 
@@ -13858,7 +13768,7 @@ part2是20道不定项选择题
 — university_bbs · posted 2024-05-31 · full_text · [link](https://xjtu.app/t/topic/12756)
   1 attestation(s) across 1 domain(s) · doubt: Fetched directly and completely — xjtu.app serves full thread HTML with no login wall, so this text is byte-verified, and it is a first-person failure narrative written for reflection rather than for clout or currency, w
 
-### Q1448 · Tier D · 2022 spring (OA ~2022-03-10, HR call 2022-04-01) · online_assessment (Pre-HR online assessment, ~2022-03-10; one problem, one hour)
+### Q1437 · Tier D · 2022 spring (OA ~2022-03-10, HR call 2022-04-01) · online_assessment (Pre-HR online assessment, ~2022-03-10; one problem, one hour)
 
 大约是3.10左右笔试,一道题1h,应该是中等题;测试案例过了
 
@@ -13870,7 +13780,7 @@ part2是20道不定项选择题
 — university_bbs · posted 2022-04-01 · full_text · [link](https://www.nowcoder.com/feed/main/detail/21d4b025d67a421ba7b7273ecdb7f3ef)
   1 attestation(s) across 1 domain(s) · doubt: Read byte-exact out of the Nowcoder page's server-rendered window.__INITIAL_STATE__ JSON, including the 2022-04-01 timestamp. These are behavioural/motivational questions, not quantitative ones, and they are the generic 
 
-### Q1449 · Tier D · 2023 暑期实习(源帖标注「【2023暑实】」) · online_assessment (笔试共两道编程题、合计两小时,这是 Q1)
+### Q1438 · Tier D · 2023 暑期实习(源帖标注「【2023暑实】」) · online_assessment (笔试共两道编程题、合计两小时,这是 Q1)
 
 Q1:股票分红,输入 股价 分红 时间 输出 现股价
 
@@ -13882,7 +13792,7 @@ Q1:股票分红,输入 股价 分红 时间 输出 现股价
 — nowcoder · posted 2023-03-16 · full_text · [link](https://www.nowcoder.com/discuss/465910881050689536)
   2 attestation(s) across 1 domain(s) · doubt: 题目只有一行概述(「股票分红,输入 股价 分红 时间 输出 现股价」这种),没有完整题干、数据范围或样例,无法当作原题使用。发帖人身份标签是「数据分析师」,与所投的「数据科学家」岗一致,但没有说明是 quant research 还是 data science 线。岗位办公室未写明(发帖人 IP 在香港,但 Optiver 中国区暑期实习通常在上海,无法确认)。单人复盘,无交叉验证。
 
-### Q1450 · Tier D · 2023 暑期实习(源帖标注「【2023暑实】」) · online_assessment (笔试共两道编程题、合计两小时,这是 Q2)
+### Q1439 · Tier D · 2023 暑期实习(源帖标注「【2023暑实】」) · online_assessment (笔试共两道编程题、合计两小时,这是 Q2)
 
 Q2:动物表演,找某个时间房间内的最大动物
 
@@ -13894,7 +13804,7 @@ Q2:动物表演,找某个时间房间内的最大动物
 — nowcoder · posted 2023-03-16 · full_text · [link](https://www.nowcoder.com/discuss/465910881050689536)
   2 attestation(s) across 1 domain(s) · doubt: 题目只有一行概述(「股票分红,输入 股价 分红 时间 输出 现股价」这种),没有完整题干、数据范围或样例,无法当作原题使用。发帖人身份标签是「数据分析师」,与所投的「数据科学家」岗一致,但没有说明是 quant research 还是 data science 线。岗位办公室未写明(发帖人 IP 在香港,但 Optiver 中国区暑期实习通常在上海,无法确认)。单人复盘,无交叉验证。
 
-### Q1451 · Tier D · Summer 2026 · online_assessment (一共4 个modulus:一、找规律 二、搬房子 三、连连看 四、概率)
+### Q1440 · Tier D · Summer 2026 · online_assessment (一共4 个modulus:一、找规律 二、搬房子 三、连连看 四、概率)
 
 四、概率 单选题,中规中矩的绿皮书统计题,比如摇色子抛硬币赌钱
 
@@ -13904,7 +13814,7 @@ Q2:动物表演,找某个时间房间内的最大动物
 — 1point3acres · posted 2025 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1141422-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The poster characterises the section by reference to the Green Book (Xinfeng Zhou) instead of reproducing any item, so this is an overlap claim with a textbook rather than an actual question.
 
-### Q1452 · Tier D · unknown · online_assessment (我投递的 SDE Intern 岗位 OA 包括三个部分:算法题、基础理论知识题和 Zap-N)
+### Q1441 · Tier D · unknown · online_assessment (我投递的 SDE Intern 岗位 OA 包括三个部分:算法题、基础理论知识题和 Zap-N)
 
 [给到我的是] 一个图论题 ... 图论是拓扑排序
 
@@ -13917,7 +13827,7 @@ Q2:动物表演,找某个时间房间内的最大动物
 
 ## Optiver — phone_technical
 
-### Q1453 · Tier D · 2025 · phone_technical (phone screen design question)
+### Q1442 · Tier D · 2025 · phone_technical (phone screen design question)
 
 Design a queue,discuss the performance tradeoff.
 
@@ -13927,7 +13837,7 @@ Design a queue,discuss the performance tradeoff.
 — chat_telegram · posted 2025-08-08 · full_text · [link](https://t.me/usinterview/24673)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. This is the
 
-### Q1454 · Tier D · 2025 · phone_technical (section 1 of 3: background questions)
+### Q1443 · Tier D · 2025 · phone_technical (section 1 of 3: background questions)
 
 背景相关问题:日常工作,为什么选择Trading,问我是不是更喜欢创造PNL(为了解释,这个工作不是创造任何PNL的),问我如果Optiver有专门的Prop Tra
 
@@ -13937,7 +13847,7 @@ Design a queue,discuss the performance tradeoff.
 — chat_telegram · posted 2025-06-03 · full_text · [link](https://t.me/usinterview/23512)
   1 attestation(s) across 1 domain(s) · doubt: Behavioural, not quantitative, and truncated mid-question at "Prop Tra...". The forum role tag is 分析|数据科学类 (analysis / data science), mapped to quant_analyst. Sections 2 and 3 of the interview, which is where any technic
 
-### Q1455 · Tier D · 2024 · phone_technical (question (1) of four, the coding one)
+### Q1444 · Tier D · 2024 · phone_technical (question (1) of four, the coding one)
 
 (1) coding: 给一个数组,里面可能包含重复的数字。写
 
@@ -13947,7 +13857,7 @@ Design a queue,discuss the performance tradeoff.
 — chat_telegram · posted 2024-07-17 · full_text · [link](https://t.me/usinterview/18931)
   1 attestation(s) across 1 domain(s) · doubt: The preview cuts off at the verb "写" (write) — i.e. immediately before the poster said what you were actually asked to write — so the setup survives but the task does not. Logged for the round structure it fixes (four qu
 
-### Q1456 · Tier D · 2024 · phone_technical (the design question)
+### Q1445 · Tier D · 2024 · phone_technical (the design question)
 
 design 一个class提供四个api,带on的都是callback 用来update internal data structure。最后一
 
@@ -13957,7 +13867,7 @@ design 一个class提供四个api,带on的都是callback 用来update internal d
 — chat_telegram · posted 2024-10-25 · full_text · [link](https://t.me/usinterview/20082)
   1 attestation(s) across 1 domain(s) · doubt: The four APIs are never named and the preview truncates at "最后一" (the last...), so the actual interface — which is the whole question — is missing. What survives is the shape of the task and the on-prefixed-callback conv
 
-### Q1457 · Tier D · 2025 · phone_technical (the second bullet of the round's question list)
+### Q1446 · Tier D · 2025 · phone_technical (the second bullet of the round's question list)
 
 An array of 1000 integers of 0-1000000,how many bytes does it require to store?
 
@@ -13967,7 +13877,7 @@ An array of 1000 integers of 0-1000000,how many bytes does it require to store?
 — chat_telegram · posted 2024-12-12 · full_text · [link](https://t.me/usinterview/20685)
   1 attestation(s) across 1 domain(s) · doubt: Rare for this source in that the poster wrote the prompt out in English rather than paraphrasing it in Chinese, which suggests they were copying the interviewer's wording — but that also means it could have been copied f
 
-### Q1458 · Tier D · 2026 · phone_technical (the coding question, which the poster stresses was not LeetCode-style)
+### Q1447 · Tier D · 2026 · phone_technical (the coding question, which the poster stresses was not LeetCode-style)
 
 让实现2个function来买和卖股票,要保证多线程下股票不能超卖(用lock)
 
@@ -13977,15 +13887,7 @@ An array of 1000 integers of 0-1000000,how many bytes does it require to store?
 — chat_telegram · posted 2026-05-30 · full_text · [link](https://t.me/usinterview/28643)
   1 attestation(s) across 1 domain(s) · doubt: Complete enough to attempt, and the constraint that matters (no overselling under concurrency, lock-based) is stated explicitly — the poster even volunteers 非leetcode to distinguish it from the usual. What is missing is 
 
-### Q1459 · Tier D · 2026 · phone_technical (a reply describing what the technical round centres on)
-
-The technical interview is usually centered on probability, logical thinking and fast mental math rather than anything you would learn in a finance class.
-
-> The technical interview is usually centered on probability, logical thinking and fast mental math rather than anything you would learn in a finance class.
-— reddit_thread · posted 2026-02-04 · archive_only · [link](https://www.reddit.com/r/quantfinance/comments/1qvct6s/optiver_institutional_trader_intern_interview/o3h2tgo/)
-  1 attestation(s) across 1 domain(s) · doubt: Explicitly second-hand — the commenter opens "From what I have seen", not "when I did it" — and the content is the generic probability/logic/mental-math triad that appears in every thread of this kind, so it carries almo
-
-### Q1460 · Tier D · 2022 spring (OA ~2022-03-10, HR call 2022-04-01) · phone_technical (First-round HR/behavioural phone screen, conducted in English; ~15 min)
+### Q1448 · Tier D · 2022 spring (OA ~2022-03-10, HR call 2022-04-01) · phone_technical (First-round HR/behavioural phone screen, conducted in English; ~15 min)
 
 2、询问了为什么做这样的项目,有什么意义和创新?
 
@@ -13997,7 +13899,7 @@ The technical interview is usually centered on probability, logical thinking and
 — university_bbs · posted 2022-04-01 · full_text · [link](https://www.nowcoder.com/feed/main/detail/21d4b025d67a421ba7b7273ecdb7f3ef)
   1 attestation(s) across 1 domain(s) · doubt: Read byte-exact out of the Nowcoder page's server-rendered window.__INITIAL_STATE__ JSON, including the 2022-04-01 timestamp. These are behavioural/motivational questions, not quantitative ones, and they are the generic 
 
-### Q1461 · Tier D · 2022 spring (OA ~2022-03-10, HR call 2022-04-01) · phone_technical (First-round HR/behavioural phone screen, conducted in English; ~15 min)
+### Q1449 · Tier D · 2022 spring (OA ~2022-03-10, HR call 2022-04-01) · phone_technical (First-round HR/behavioural phone screen, conducted in English; ~15 min)
 
 3、为什么选择Optiver?
 
@@ -14009,7 +13911,7 @@ The technical interview is usually centered on probability, logical thinking and
 — university_bbs · posted 2022-04-01 · full_text · [link](https://www.nowcoder.com/feed/main/detail/21d4b025d67a421ba7b7273ecdb7f3ef)
   1 attestation(s) across 1 domain(s) · doubt: Read byte-exact out of the Nowcoder page's server-rendered window.__INITIAL_STATE__ JSON, including the 2022-04-01 timestamp. These are behavioural/motivational questions, not quantitative ones, and they are the generic 
 
-### Q1462 · Tier D · 2022 spring (OA ~2022-03-10, HR call 2022-04-01) · phone_technical (First-round HR/behavioural phone screen, conducted in English; ~15 min)
+### Q1450 · Tier D · 2022 spring (OA ~2022-03-10, HR call 2022-04-01) · phone_technical (First-round HR/behavioural phone screen, conducted in English; ~15 min)
 
 4、你做的项目和软开有什么关系?
 
@@ -14021,7 +13923,7 @@ The technical interview is usually centered on probability, logical thinking and
 — university_bbs · posted 2022-04-01 · full_text · [link](https://www.nowcoder.com/feed/main/detail/21d4b025d67a421ba7b7273ecdb7f3ef)
   1 attestation(s) across 1 domain(s) · doubt: Read byte-exact out of the Nowcoder page's server-rendered window.__INITIAL_STATE__ JSON, including the 2022-04-01 timestamp. These are behavioural/motivational questions, not quantitative ones, and they are the generic 
 
-### Q1463 · Tier D · 2022 spring (OA ~2022-03-10, HR call 2022-04-01) · phone_technical (First-round HR/behavioural phone screen, conducted in English; ~15 min)
+### Q1451 · Tier D · 2022 spring (OA ~2022-03-10, HR call 2022-04-01) · phone_technical (First-round HR/behavioural phone screen, conducted in English; ~15 min)
 
 1、你是怎么知道Op的?
 
@@ -14033,7 +13935,7 @@ The technical interview is usually centered on probability, logical thinking and
 — university_bbs · posted 2022-04-01 · full_text · [link](https://www.nowcoder.com/feed/main/detail/21d4b025d67a421ba7b7273ecdb7f3ef)
   1 attestation(s) across 1 domain(s) · doubt: Read byte-exact out of the Nowcoder page's server-rendered window.__INITIAL_STATE__ JSON, including the 2022-04-01 timestamp. These are behavioural/motivational questions, not quantitative ones, and they are the generic 
 
-### Q1464 · Tier D · 2022 spring (OA ~2022-03-10, HR call 2022-04-01) · phone_technical (First-round HR/behavioural phone screen, conducted in English; ~15 min)
+### Q1452 · Tier D · 2022 spring (OA ~2022-03-10, HR call 2022-04-01) · phone_technical (First-round HR/behavioural phone screen, conducted in English; ~15 min)
 
 2、你目前找IT开发工作有哪方面的偏向吗?
 
@@ -14045,7 +13947,7 @@ The technical interview is usually centered on probability, logical thinking and
 — university_bbs · posted 2022-04-01 · full_text · [link](https://www.nowcoder.com/feed/main/detail/21d4b025d67a421ba7b7273ecdb7f3ef)
   1 attestation(s) across 1 domain(s) · doubt: Read byte-exact out of the Nowcoder page's server-rendered window.__INITIAL_STATE__ JSON, including the 2022-04-01 timestamp. These are behavioural/motivational questions, not quantitative ones, and they are the generic 
 
-### Q1465 · Tier D · 2022 spring (OA ~2022-03-10, HR call 2022-04-01) · phone_technical (First-round HR/behavioural phone screen, conducted in English; ~15 min)
+### Q1453 · Tier D · 2022 spring (OA ~2022-03-10, HR call 2022-04-01) · phone_technical (First-round HR/behavioural phone screen, conducted in English; ~15 min)
 
 3、你知不知道Op的类似的公司?
 
@@ -14057,7 +13959,7 @@ The technical interview is usually centered on probability, logical thinking and
 — university_bbs · posted 2022-04-01 · full_text · [link](https://www.nowcoder.com/feed/main/detail/21d4b025d67a421ba7b7273ecdb7f3ef)
   1 attestation(s) across 1 domain(s) · doubt: Read byte-exact out of the Nowcoder page's server-rendered window.__INITIAL_STATE__ JSON, including the 2022-04-01 timestamp. These are behavioural/motivational questions, not quantitative ones, and they are the generic 
 
-### Q1466 · Tier D · 2022 spring (OA ~2022-03-10, HR call 2022-04-01) · phone_technical (First-round HR/behavioural phone screen, conducted in English; ~15 min)
+### Q1454 · Tier D · 2022 spring (OA ~2022-03-10, HR call 2022-04-01) · phone_technical (First-round HR/behavioural phone screen, conducted in English; ~15 min)
 
 4、问了下自己的技术栈?
 
@@ -14069,7 +13971,7 @@ The technical interview is usually centered on probability, logical thinking and
 — university_bbs · posted 2022-04-01 · full_text · [link](https://www.nowcoder.com/feed/main/detail/21d4b025d67a421ba7b7273ecdb7f3ef)
   1 attestation(s) across 1 domain(s) · doubt: Read byte-exact out of the Nowcoder page's server-rendered window.__INITIAL_STATE__ JSON, including the 2022-04-01 timestamp. These are behavioural/motivational questions, not quantitative ones, and they are the generic 
 
-### Q1467 · Tier D · 2022 spring (OA ~2022-03-10, HR call 2022-04-01) · phone_technical (First-round HR/behavioural phone screen, conducted in English; ~15 min)
+### Q1455 · Tier D · 2022 spring (OA ~2022-03-10, HR call 2022-04-01) · phone_technical (First-round HR/behavioural phone screen, conducted in English; ~15 min)
 
 5、你和科班学生有什么优劣势?
 
@@ -14081,7 +13983,7 @@ The technical interview is usually centered on probability, logical thinking and
 — university_bbs · posted 2022-04-01 · full_text · [link](https://www.nowcoder.com/feed/main/detail/21d4b025d67a421ba7b7273ecdb7f3ef)
   1 attestation(s) across 1 domain(s) · doubt: Read byte-exact out of the Nowcoder page's server-rendered window.__INITIAL_STATE__ JSON, including the 2022-04-01 timestamp. These are behavioural/motivational questions, not quantitative ones, and they are the generic 
 
-### Q1468 · Tier D · unknown · phone_technical (Optiver 的整个面试流程原则上都是英文交流)
+### Q1456 · Tier D · unknown · phone_technical (Optiver 的整个面试流程原则上都是英文交流)
 
 这一轮是 HR 面,问的都是 BQ
 
@@ -14091,7 +13993,7 @@ The technical interview is usually centered on probability, logical thinking and
 — university_bbs · posted unknown · full_text · [link](https://xjtu.app/t/topic/12756)
   1 attestation(s) across 1 domain(s) · doubt: No behavioural question is quoted, only that the round consisted entirely of them and was conducted in English.
 
-### Q1469 · Tier D · unknown · phone_technical (这一面依旧是 coding,注重工程能力的考察)
+### Q1457 · Tier D · unknown · phone_technical (这一面依旧是 coding,注重工程能力的考察)
 
 让我实现一个多线程应用程序中的某些关键调度逻辑
 
@@ -14104,7 +14006,7 @@ The technical interview is usually centered on probability, logical thinking and
 
 ## Optiver — unknown
 
-### Q1470 · Tier D · 2024 spring (applied March 2024, rejected late May 2024) · unknown (Second round; coding portion. Platform offered Python 3 highlighting/c)
+### Q1458 · Tier D · 2024 spring (applied March 2024, rejected late May 2024) · unknown (Second round; coding portion. Platform offered Python 3 highlighting/c)
 
 coding 部分直接给到了 Concurrency Queue
 
@@ -14116,7 +14018,7 @@ coding 部分直接给到了 Concurrency Queue
 — university_bbs · posted 2024-05-31 · full_text · [link](https://xjtu.app/t/topic/12756)
   1 attestation(s) across 1 domain(s) · doubt: Fetched directly and completely — xjtu.app serves full thread HTML with no login wall, so this text is byte-verified, and it is a first-person failure narrative written for reflection rather than for clout or currency, w
 
-### Q1471 · Tier D · unknown · unknown (takes place with someone from the campus recruiting team)
+### Q1459 · Tier D · unknown · unknown (takes place with someone from the campus recruiting team)
 
 Short introductions
 
@@ -14124,7 +14026,7 @@ Short introductions
 — blog · posted unknown · full_text · [link](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)
   1 attestation(s) across 1 domain(s) · doubt: Canary Wharfian reviews are user-submitted and moderated only for 'quality', so nothing independently confirms the reviewer sat this process; the entry also carries no absolute date, only a relative 'Added 3 years ago', 
 
-### Q1472 · Tier D · unknown · unknown (takes place with someone from the campus recruiting team)
+### Q1460 · Tier D · unknown · unknown (takes place with someone from the campus recruiting team)
 
 What is one of your biggest failures?
 
@@ -14132,7 +14034,7 @@ What is one of your biggest failures?
 — blog · posted unknown · full_text · [link](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)
   1 attestation(s) across 1 domain(s) · doubt: Canary Wharfian reviews are user-submitted and moderated only for 'quality', so nothing independently confirms the reviewer sat this process; the entry also carries no absolute date, only a relative 'Added 3 years ago', 
 
-### Q1473 · Tier D · unknown · unknown (takes place with someone from the campus recruiting team)
+### Q1461 · Tier D · unknown · unknown (takes place with someone from the campus recruiting team)
 
 Any hobbies that are not on your CV?
 
@@ -14140,7 +14042,7 @@ Any hobbies that are not on your CV?
 — blog · posted unknown · full_text · [link](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)
   1 attestation(s) across 1 domain(s) · doubt: Canary Wharfian reviews are user-submitted and moderated only for 'quality', so nothing independently confirms the reviewer sat this process; the entry also carries no absolute date, only a relative 'Added 3 years ago', 
 
-### Q1474 · Tier D · unknown · unknown (The second round takes place with a trader ... you are not allowed to )
+### Q1462 · Tier D · unknown · unknown (The second round takes place with a trader ... you are not allowed to )
 
 What is a call and put option?
 
@@ -14148,7 +14050,7 @@ What is a call and put option?
 — blog · posted unknown · full_text · [link](https://www.canarywharfian.co.uk/companies/53/optiver/interviews)
   1 attestation(s) across 1 domain(s) · doubt: Canary Wharfian reviews are user-submitted and moderated only for 'quality', so nothing independently confirms the reviewer sat this process; the entry also carries no absolute date, only a relative 'Added 3 years ago', 
 
-### Q1475 · Tier D · unknown · unknown (The second round takes place with a trader ... you are not allowed to )
+### Q1463 · Tier D · unknown · unknown (The second round takes place with a trader ... you are not allowed to )
 
 Can you name a few of the Greeks?
 
@@ -14159,7 +14061,7 @@ Can you name a few of the Greeks?
 
 ## PEAK6 — online_assessment
 
-### Q1476 · Tier C · unknown · online_assessment (After applying online, candidates have about a week to complete two on)
+### Q1464 · Tier C · unknown · online_assessment (After applying online, candidates have about a week to complete two on)
 
 The other consists of short probability questions; there are only ten and you have three minutes to answer each.
 
@@ -14167,7 +14069,7 @@ The other consists of short probability questions; there are only ten and you ha
 — forum_thread · posted unknown · snippet_only · [link](https://www.wallstreetoasis.com/forum/trading/peak6-assessment-test)
   1 attestation(s) across 1 domain(s) · doubt: Cloudflare blocked direct fetching so this comes from a search highlight only, with no visible date. It also contradicts a second reply in the same thread that says the probability section is 1 minute per question rather
 
-### Q1477 · Tier C · unknown · online_assessment (A different commenter's description of the same pre-interview online a)
+### Q1465 · Tier C · unknown · online_assessment (A different commenter's description of the same pre-interview online a)
 
 52x2=104 personality questions, 10 math/probability questions 1 min each, about 1 hours in total to finish the assessment.
 
@@ -14178,7 +14080,7 @@ The other consists of short probability questions; there are only ten and you ha
 
 ## PEAK6 — onsite
 
-### Q1478 · Tier C · unknown · onsite (Process described as online assessment, brief phone conversation, then)
+### Q1466 · Tier C · unknown · onsite (Process described as online assessment, brief phone conversation, then)
 
 The math portion is 8 questions, some mental math, some expected value problems with more information, you get pencil and paper for those.
 
@@ -14189,7 +14091,7 @@ The math portion is 8 questions, some mental math, some expected value problems 
 
 ## Point72 / Cubist — phone_technical
 
-### Q1479 · Tier C · 2026 · phone_technical (first round with a portfolio manager on a Cubist ML pod; two questions)
+### Q1467 · Tier C · 2026 · phone_technical (first round with a portfolio manager on a Cubist ML pod; two questions)
 
 X 和 Y 是independet standard normal. What is P[X > 3Y]
 
@@ -14199,7 +14101,7 @@ X 和 Y 是independet standard normal. What is P[X > 3Y]
 — forum_recall_zh · posted 2026-05-01 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1175215-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks direct fetching, so this was read only from a search-engine highlight, and the rest of the post is behind a 110-point karma wall. The typo 'independet' is preserved verbatim. Level is not stated anywh
 
-### Q1480 · Tier C · 2026 · phone_technical (second of two questions at the end of the 30-minute resume discussion)
+### Q1468 · Tier C · 2026 · phone_technical (second of two questions at the end of the 30-minute resume discussion)
 
 linear regression. How do we estimate beta. When n >> p, how to find beta?
 
@@ -14210,7 +14112,7 @@ linear regression. How do we estimate beta. When n >> p, how to find beta?
 
 ## Qube Research and Technologies — phone_technical
 
-### Q1481 · Tier B · interviewed February 2026 · phone_technical (All three rounds technical with a lot of questions on projects and pre)
+### Q1469 · Tier B · interviewed February 2026 · phone_technical (All three rounds technical with a lot of questions on projects and pre)
 
 Expected number of rolls to see every side of a dice
 
@@ -14218,7 +14120,7 @@ Expected number of rolls to see every side of a dice
 — interview_review_site · posted 2026-05-16 · full_text · [link](https://www.wallstreetoasis.com/company/qube-research-and-technologies/interview)
   1 attestation(s) across 1 domain(s) · doubt: This is the classic coupon-collector problem found in every probability text; the entry does not say which of the three rounds it came from.
 
-### Q1482 · Tier B · interviewed February 2026 · phone_technical (Same three-round technical process)
+### Q1470 · Tier B · interviewed February 2026 · phone_technical (Same three-round technical process)
 
 Basic stats questions on coin tosses, z score and p values, linear regression, penalization
 
@@ -14226,7 +14128,7 @@ Basic stats questions on coin tosses, z score and p values, linear regression, p
 — interview_review_site · posted 2026-05-16 · full_text · [link](https://www.wallstreetoasis.com/company/qube-research-and-technologies/interview)
   1 attestation(s) across 1 domain(s) · doubt: A list of topics rather than a question, so nothing reproducible; round attribution unknown.
 
-### Q1483 · Tier B · interviewed February 2026 · phone_technical (Same three-round technical process)
+### Q1471 · Tier B · interviewed February 2026 · phone_technical (Same three-round technical process)
 
 ML questions regarding correlation and high dimensions (what are the ways to deal with it, then they discuss your proposed solutions).
 
@@ -14234,7 +14136,7 @@ ML questions regarding correlation and high dimensions (what are the ways to dea
 — interview_review_site · posted 2026-05-16 · full_text · [link](https://www.wallstreetoasis.com/company/qube-research-and-technologies/interview)
   1 attestation(s) across 1 domain(s) · doubt: Summarised as a theme rather than a specific question; the open-ended discussion format means there may not have been one fixed question at all.
 
-### Q1484 · Tier D · interviewed August 2025 · phone_technical (Phone interview covering past processes, mainly stats questions, and a)
+### Q1472 · Tier D · interviewed August 2025 · phone_technical (Phone interview covering past processes, mainly stats questions, and a)
 
 Asked about t-stats
 
@@ -14242,7 +14144,7 @@ Asked about t-stats
 — interview_review_site · posted 2026-05-08 · full_text · [link](https://www.wallstreetoasis.com/company/qube-research-and-technologies/interview)
   1 attestation(s) across 1 domain(s) · doubt: Three words long — records only that t-statistics came up, with no actual question. Included for coverage of Qube's Paris equity-research intern pipeline, not because it is a usable problem.
 
-### Q1485 · Tier D · interviewed April 2025 · phone_technical (First interview with a PM, second interview on past experience plus ha)
+### Q1473 · Tier D · interviewed April 2025 · phone_technical (First interview with a PM, second interview on past experience plus ha)
 
 Hard questions on random forests
 
@@ -14250,7 +14152,7 @@ Hard questions on random forests
 — interview_review_site · posted 2026-05-01 · full_text · [link](https://www.wallstreetoasis.com/company/qube-research-and-technologies/interview)
   1 attestation(s) across 1 domain(s) · doubt: Records the topic only; WSO tags the poster as a 3rd+ Year Analyst so this is probably an experienced hire, but the entry does not say, so level is unknown.
 
-### Q1486 · Tier D · interviewed February 2025 · phone_technical (OA with 2 leetcode easy/medium questions; first interview behavioral/t)
+### Q1474 · Tier D · interviewed February 2025 · phone_technical (OA with 2 leetcode easy/medium questions; first interview behavioral/t)
 
 LRU Cache
 
@@ -14258,7 +14160,7 @@ LRU Cache
 — interview_review_site · posted 2025-02-20 · full_text · [link](https://www.wallstreetoasis.com/company/qube-research-and-technologies/interview)
   1 attestation(s) across 1 domain(s) · doubt: Named only as 'LRU Cache' (LeetCode 146) with no problem statement, and WSO's question field does not say which of the three stages it belonged to — I have guessed the final round from the 'medium/hard' description but t
 
-### Q1487 · Tier D · interviewed November 2024 · phone_technical (Stages were: theoretical ML interview; a two-week practical machine le)
+### Q1475 · Tier D · interviewed November 2024 · phone_technical (Stages were: theoretical ML interview; a two-week practical machine le)
 
 How does a RandomForest work?
 
@@ -14269,7 +14171,7 @@ How does a RandomForest work?
 
 ## Squarepoint Capital — online_assessment
 
-### Q1488 · Tier B · 2026 · online_assessment (first stage before live coding)
+### Q1476 · Tier B · 2026 · online_assessment (first stage before live coding)
 
 HackerRank exercise where you have to implement some functionalities and make sure that input data is cleaned (duplicates, corrupted data etc...).
 
@@ -14280,7 +14182,7 @@ HackerRank exercise where you have to implement some functionalities and make su
 
 ## Squarepoint Capital — onsite
 
-### Q1489 · Tier B · 2024 · onsite (stats half of the final mixed round)
+### Q1477 · Tier B · 2024 · onsite (stats half of the final mixed round)
 
 Assumptions of linear regression, correlation can be negative intra-month but positive across a year, how?
 
@@ -14291,7 +14193,7 @@ Assumptions of linear regression, correlation can be negative intra-month but po
 
 ## Squarepoint Capital — phone_technical
 
-### Q1490 · Tier B · 2025 · phone_technical (statistical problems alongside an LC-medium coding question)
+### Q1478 · Tier B · 2025 · phone_technical (statistical problems alongside an LC-medium coding question)
 
 # of throws expected to get 2 heads in a row
 
@@ -14299,7 +14201,7 @@ Assumptions of linear regression, correlation can be negative intra-month but po
 — interview_review_db · posted 2025-09-30 · full_text · [link](https://www.wallstreetoasis.com/company/squarepoint-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Poster gives it as an example ('e.g.') of a class of questions rather than as the interviewer's exact wording, and does not state whether the coin is fair. This is a canonical green-book expected-value problem, so overla
 
-### Q1491 · Tier B · 2025 · phone_technical (maths portion of the brainteaser rounds)
+### Q1479 · Tier B · 2025 · phone_technical (maths portion of the brainteaser rounds)
 
 If nx(n-1)/2 is the sum of 1,2,3,...n what is the equation for 1^2,2^2,3^2,....n^2
 
@@ -14307,7 +14209,7 @@ If nx(n-1)/2 is the sum of 1,2,3,...n what is the equation for 1^2,2^2,3^2,....n
 — interview_review_db · posted 2025-05-21 · full_text · [link](https://www.wallstreetoasis.com/company/squarepoint-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: The stated premise is wrong as transcribed - the sum of 1..n is n(n+1)/2, not n(n-1)/2 - so the poster has misremembered or mistyped the setup. Role title is 'Junior Discentionary trader' (sic), which is a discretionary 
 
-### Q1492 · Tier B · 2026 · phone_technical (second stage after the HackerRank OA)
+### Q1480 · Tier B · 2026 · phone_technical (second stage after the HackerRank OA)
 
 The excercise was a DP problem and I could not fully answer the optimal solution.
 
@@ -14315,7 +14217,7 @@ The excercise was a DP problem and I could not fully answer the optimal solution
 — interview_review_db · posted 2026-06-01 · full_text · [link](https://www.wallstreetoasis.com/company/squarepoint-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Names only the technique ('a DP problem'); the actual problem statement is never given.
 
-### Q1493 · Tier B · 2025 · phone_technical (third of five rounds)
+### Q1481 · Tier B · 2025 · phone_technical (third of five rounds)
 
 Definitions of Greeks for financial assets, but not asked in super technical way
 
@@ -14323,7 +14225,7 @@ Definitions of Greeks for financial assets, but not asked in super technical way
 — interview_review_db · posted 2025-02-22 · full_text · [link](https://www.wallstreetoasis.com/company/squarepoint-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Topic label rather than a question; which Greeks were asked about is not stated, and the poster does not say which of the five rounds it fell in.
 
-### Q1494 · Tier B · 2024 · phone_technical (after resume deep-dive, transitioned to technical questions)
+### Q1482 · Tier B · 2024 · phone_technical (after resume deep-dive, transitioned to technical questions)
 
 What is the difference between multi-thread and multi-processing
 
@@ -14331,7 +14233,7 @@ What is the difference between multi-thread and multi-processing
 — interview_review_db · posted 2025-01-13 · full_text · [link](https://www.wallstreetoasis.com/company/squarepoint-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Generic CS-fundamentals question that any firm could ask; nothing Squarepoint-specific about it. Level not stated even though the source was campus recruiting.
 
-### Q1495 · Tier B · 2024 · phone_technical (technical questions after the resume discussion)
+### Q1483 · Tier B · 2024 · phone_technical (technical questions after the resume discussion)
 
 explaining concepts like decorators in Python
 
@@ -14339,7 +14241,7 @@ explaining concepts like decorators in Python
 — interview_review_db · posted 2025-01-13 · full_text · [link](https://www.wallstreetoasis.com/company/squarepoint-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Given as an example ('such as'), so this is the poster's illustration rather than a verbatim question.
 
-### Q1496 · Tier B · 2025 · phone_technical (after CV-based questions)
+### Q1484 · Tier B · 2025 · phone_technical (after CV-based questions)
 
 she asked two probability questions i.e. playing tennis game
 
@@ -14347,7 +14249,7 @@ she asked two probability questions i.e. playing tennis game
 — interview_review_db · posted 2025-01-09 · full_text · [link](https://www.wallstreetoasis.com/company/squarepoint-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Only the theme ('playing tennis game') survives; the actual probability setup, scoring rule and question are all missing, so it is not reproducible.
 
-### Q1497 · Tier B · 2024 · phone_technical (financial intuition portion)
+### Q1485 · Tier B · 2024 · phone_technical (financial intuition portion)
 
 Talk about the current American tariff policy.
 
@@ -14358,7 +14260,7 @@ Talk about the current American tariff policy.
 
 ## Squarepoint Capital — superday
 
-### Q1498 · Tier B · 2025 · superday (after HR screen and two technical rounds (maths/proba and coding))
+### Q1486 · Tier B · 2025 · superday (after HR screen and two technical rounds (maths/proba and coding))
 
 You are basically handed a dataset, and you are ask to both analyse it and construct a predictive model from it. After that, you present your result to a researcher for one hour.
 
@@ -14369,7 +14271,7 @@ You are basically handed a dataset, and you are ask to both analyse it and const
 
 ## Squarepoint Capital — online_assessment
 
-### Q1499 · Tier C · IIT Kharagpur campus placement (FORESIGHT 2025 series) · online_assessment (OA followed by three technical interview rounds conducted online about)
+### Q1487 · Tier C · IIT Kharagpur campus placement (FORESIGHT 2025 series) · online_assessment (OA followed by three technical interview rounds conducted online about)
 
 The online assessment included two C++ programming challenges, one utilising binary search and the other involving string manipulation with hashing techniques.
 
@@ -14380,7 +14282,7 @@ The online assessment included two C++ programming challenges, one utilising bin
 
 ## Squarepoint Capital — phone_technical
 
-### Q1500 · Tier C · 2025 graduate, IIT Kharagpur campus placement · phone_technical (Three online rounds of approximately 45-50 minutes each for a Desk Qua)
+### Q1488 · Tier C · 2025 graduate, IIT Kharagpur campus placement · phone_technical (Three online rounds of approximately 45-50 minutes each for a Desk Qua)
 
 Solve a puzzle related to the Central Limit Theorem (Tip: Everyone was asked to solve a problem based on this topic.)
 
@@ -14388,7 +14290,7 @@ Solve a puzzle related to the Central Limit Theorem (Tip: Everyone was asked to 
 — campus_placement_blog · posted unknown · snippet_only · [link](https://medium.com/@swgiitkgp/foresight-2025-placement-at-squarepoint-capital-karan-ralhan-c65eb59d31d6)
   1 attestation(s) across 1 domain(s) · doubt: The poster names the topic but not the actual puzzle, so nothing reproducible; I read this via a search-engine highlight rather than fetching the Medium post, and the post carries no visible date in what I saw.
 
-### Q1501 · Tier C · 2025 graduate, IIT Kharagpur campus placement · phone_technical (Same Round 2; the poster lists four bullet points of what the round co)
+### Q1489 · Tier C · 2025 graduate, IIT Kharagpur campus placement · phone_technical (Same Round 2; the poster lists four bullet points of what the round co)
 
 Tackle a few puzzles (from Brainstellar and 50 Challenging, Book name: Practical Guide for Quantitative Finance)
 
@@ -14396,7 +14298,7 @@ Tackle a few puzzles (from Brainstellar and 50 Challenging, Book name: Practical
 — campus_placement_blog · posted unknown · snippet_only · [link](https://medium.com/@swgiitkgp/foresight-2025-placement-at-squarepoint-capital-karan-ralhan-c65eb59d31d6)
   1 attestation(s) across 1 domain(s) · doubt: The poster explicitly attributes the puzzles to Brainstellar and Xinfeng Zhou's Green Book rather than reproducing them, so no specific question survives — this is a first-person attestation that a firm draws on those ex
 
-### Q1502 · Tier C · unknown · phone_technical (coding portion)
+### Q1490 · Tier C · unknown · phone_technical (coding portion)
 
 Code: Leetcode 123: best time to buy and sell stock III, standard DP problem.
 
@@ -14404,7 +14306,7 @@ Code: Leetcode 123: best time to buy and sell stock III, standard DP problem.
 — forum_recall_zh · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/collection/253315)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks fetching so only the search highlight was seen, and the post body is explicitly marked hidden ('本内容被作者隐藏'). No date, office or level is visible.
 
-### Q1503 · Tier C · unknown · phone_technical (second question after a coding question)
+### Q1491 · Tier C · unknown · phone_technical (second question after a coding question)
 
 bayes - 1m tosses, 510k H, prob of non bias
 
@@ -14414,7 +14316,7 @@ bayes - 1m tosses, 510k H, prob of non bias
 — forum_recall_zh · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/collection/253315)
   1 attestation(s) across 1 domain(s) · doubt: Very terse shorthand from the candidate, not the interviewer's wording, and the excerpt is cut off with an ellipsis so further questions in the round are lost. Office inferred only from '要就英国的时间' (interview run on UK tim
 
-### Q1504 · Tier C · unknown · phone_technical (first question of the round)
+### Q1492 · Tier C · unknown · phone_technical (first question of the round)
 
 coding - number of the sum of subarray == k
 
@@ -14424,7 +14326,7 @@ coding - number of the sum of subarray == k
 — forum_recall_zh · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/collection/253315)
   1 attestation(s) across 1 domain(s) · doubt: Candidate shorthand, and the phrasing is garbled ('number of the sum of subarray'). Read only from a search highlight; 1point3acres blocks fetching. This is LeetCode 560, so it is also a very common practice problem.
 
-### Q1505 · Tier C · unknown · phone_technical (Python fundamentals quizzing before a HackerRank live coding exercise)
+### Q1493 · Tier C · unknown · phone_technical (Python fundamentals quizzing before a HackerRank live coding exercise)
 
 python 八股:1. tuple Vs. list 2. pass by reference Vs. pass by value? 3. difference between is and ==?
 
@@ -14434,7 +14336,7 @@ python 八股:1. tuple Vs. list 2. pass by reference Vs. pass by value? 3. diffe
 — forum_recall_zh · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/collection/253315)
   1 attestation(s) across 1 domain(s) · doubt: The search highlight breaks the run right after 'pass by reference Vs', so only the first fragment is safely verbatim; items 2 and 3 in question_text are reconstructed from the fragmented highlight. 1point3acres blocks f
 
-### Q1506 · Tier C · 2025 · phone_technical (first listed question of the loop)
+### Q1494 · Tier C · 2025 · phone_technical (first listed question of the loop)
 
 Newton's method to find sqrt with given precision (e.g. precision=6), follow up: other ways
 
@@ -14445,7 +14347,7 @@ Newton's method to find sqrt with given precision (e.g. precision=6), follow up:
 
 ## Squarepoint Capital — superday
 
-### Q1507 · Tier C · 2025 · superday (reply to a commenter asking what the onsite covered)
+### Q1495 · Tier C · 2025 · superday (reply to a commenter asking what the onsite covered)
 
 一个bond相关的dataset,任务指令式的数据处理加建模。数据比较脏,从EDA到预处理,train test划分,预测全流程
 
@@ -14458,7 +14360,7 @@ Newton's method to find sqrt with given precision (e.g. precision=6), follow up:
 
 ## Squarepoint Capital — phone_technical
 
-### Q1508 · Tier D · unknown · phone_technical (after a leetcode DP question in the same round)
+### Q1496 · Tier D · unknown · phone_technical (after a leetcode DP question in the same round)
 
 概率 a个红球 b个蓝球随便放。连续的红球算一组,问一共多少组。
 
@@ -14468,7 +14370,7 @@ Newton's method to find sqrt with given precision (e.g. precision=6), follow up:
 — forum_recall_zh · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/collection/253315)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks direct fetching, so this text was read only from a search-engine highlight of the collection page, not the thread itself; the excerpt is truncated by the site and the post carries no visible date. The
 
-### Q1509 · Tier D · unknown · phone_technical (second question of the round, after an easy coding question)
+### Q1497 · Tier D · unknown · phone_technical (second question of the round, after an easy coding question)
 
 岭回归, 证明岭回归的matrix是可逆的
 
@@ -14483,7 +14385,7 @@ Newton's method to find sqrt with given precision (e.g. precision=6), follow up:
 
 ## Tibra Capital — online_assessment
 
-### Q1510 · Tier B · interviewed July 2024 · online_assessment (First stage of the Graduate Quant Trader Developer process; poster say)
+### Q1498 · Tier B · interviewed July 2024 · online_assessment (First stage of the Graduate Quant Trader Developer process; poster say)
 
 First they sent me an online assessment with 3 problems, one of them related to house prices.
 
@@ -14491,7 +14393,7 @@ First they sent me an online assessment with 3 problems, one of them related to 
 — interview_review_site · posted 2025-02-17 · full_text · [link](https://www.wallstreetoasis.com/company/tibra-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Only one of the three problems is even characterised ('related to house prices') and none is stated, so nothing is reproducible; the house-price theme does corroborate two other Tibra recalls, which is reassuring for aut
 
-### Q1511 · Tier B · interviewed July 2024 · online_assessment (Second stage: 2 brainteasers with a 10-minute time limit each; poster )
+### Q1499 · Tier B · interviewed July 2024 · online_assessment (Second stage: 2 brainteasers with a 10-minute time limit each; poster )
 
 There were 2 brainteasers (10 minute time limit to solve each one). One of them was using algebra and geometry and the other was a brainteaser about the number of siblings. ... The topics were simultaneous equations (calculating total number of siblings based on relative siblings) and geometry based.
 
@@ -14499,7 +14401,7 @@ There were 2 brainteasers (10 minute time limit to solve each one). One of them 
 — interview_review_site · posted 2025-02-17 · full_text · [link](https://www.wallstreetoasis.com/company/tibra-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: The poster gives the topics but not the actual problems; I have joined two separate parts of the same WSO entry (the narrative and the 'Interview Questions' field) with an ellipsis, so the question_text is stitched rathe
 
-### Q1512 · Tier B · interviewed August 2024 · online_assessment (Candidate applied for a quant trader role, was rejected for lack of ex)
+### Q1500 · Tier B · interviewed August 2024 · online_assessment (Candidate applied for a quant trader role, was rejected for lack of ex)
 
 one question on pyramid tree (triangular numbers), one question on missing values in a time series, one question on implementing pricing logic on a house comparison problem
 
@@ -14507,7 +14409,7 @@ one question on pyramid tree (triangular numbers), one question on missing value
 — interview_review_site · posted 2024-09-02 · full_text · [link](https://www.wallstreetoasis.com/company/tibra-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Each of the three problems is named by topic only, not stated; the poster is describing the Accelerator programme's OA, which may differ from the main graduate OA. The house-pricing and time-series-gaps themes match two 
 
-### Q1513 · Tier B · interviewed August 2024 · online_assessment (After the HackerRank test; poster describes these as 'quite weird IQ-s)
+### Q1501 · Tier B · interviewed August 2024 · online_assessment (After the HackerRank test; poster describes these as 'quite weird IQ-s)
 
 Verbal reasoning was a weird film critic question where critic A and B had a short paragraph relating to a film without explicitly saying whether they recommended the film or not. You had to judge which option best matched the text.
 
@@ -14515,7 +14417,7 @@ Verbal reasoning was a weird film critic question where critic A and B had a sho
 — interview_review_site · posted 2024-09-02 · full_text · [link](https://www.wallstreetoasis.com/company/tibra-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: This is a generic third-party psychometric item from Talegent rather than a Tibra-authored quant question, so it has little quant-assessment value; the specific paragraphs and options are not reproduced.
 
-### Q1514 · Tier B · interviewed May 2020 · online_assessment (Winter Quant Trading Internship; first round is three tests — a progra)
+### Q1502 · Tier B · interviewed May 2020 · online_assessment (Winter Quant Trading Internship; first round is three tests — a progra)
 
 For the hackerrank assessment there are 3 questions: 1. Fill in missing data for time series 2. Given two strings test if the odd letters for the first string and the even letters for the second string can be rearranged to be each other. 3. Given a scenario where a person is trying to price a house based on the total area for a requested area. Based on input data, you have to determine which one are outliers, and from the filtered data determine the most appropriate price.
 
@@ -14526,7 +14428,7 @@ For the hackerrank assessment there are 3 questions: 1. Fill in missing data for
 
 ## Tibra Capital — phone_technical
 
-### Q1515 · Tier B · interviewed April 2022 · phone_technical (Three-step process: HackerRank programming test, Talegent IQ test with)
+### Q1503 · Tier B · interviewed April 2022 · phone_technical (Three-step process: HackerRank programming test, Talegent IQ test with)
 
 couple of brain teasers: 1) One was simple related to family relation 2) Other was something similar to max distance a car can go given the tyres use usage per km.
 
@@ -14534,7 +14436,7 @@ couple of brain teasers: 1) One was simple related to family relation 2) Other w
 — interview_review_site · posted 2022-04-30 · full_text · [link](https://www.wallstreetoasis.com/company/tibra-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: The poster hedges with 'something similar to', so the tyre-rotation problem is only approximately recalled; the family-relation teaser echoes the sibling brainteaser reported by a 2024 candidate, suggesting a recurring f
 
-### Q1516 · Tier B · interviewed 2015 · phone_technical (Poster prefaces the questions with 'I don't remember all the questions)
+### Q1504 · Tier B · interviewed 2015 · phone_technical (Poster prefaces the questions with 'I don't remember all the questions)
 
 Given a random variable x, and a series of random varies y_1, y_2, ..., y_x, what is the expected sum of the random variables y_1 ... y_x given that x is drawn from a normal distribution with mean 10, and variance 500, and y from uniform on the interval 0, 1. I think there was some speciication that if x is negative, we re draw x, but I'm not a 100% sure.
 
@@ -14547,7 +14449,7 @@ Given a random variable x, and a series of random varies y_1, y_2, ..., y_x, wha
 
 ## Tibra Capital — take_home
 
-### Q1517 · Tier B · interviewed July 2024 · take_home (Poster recommends Tibra's open-source notebooks on statistical analysi)
+### Q1505 · Tier B · interviewed July 2024 · take_home (Poster recommends Tibra's open-source notebooks on statistical analysi)
 
 The third round was a data analysis task. Prepare well on time series concepts - stationarity, ARIMA, GARCH, potentially VAR models and cointegration. Generate a few time series in python and model them, and try some trading strategies.
 
@@ -14555,7 +14457,7 @@ The third round was a data analysis task. Prepare well on time series concepts -
 — interview_review_site · posted 2025-02-17 · full_text · [link](https://www.wallstreetoasis.com/company/tibra-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Much of this passage is the poster's own preparation advice rather than a description of what was actually asked, so the specific dataset and task are unknown.
 
-### Q1518 · Tier B · interviewed December 2020 · take_home (Process: behavioral and coding tests, HR phone screen with two technic)
+### Q1506 · Tier B · interviewed December 2020 · take_home (Process: behavioral and coding tests, HR phone screen with two technic)
 
 The strategy exercise is the most difficult one. I needed to find relationships between different signal and think of a strategy and program it.
 
@@ -14568,7 +14470,7 @@ The strategy exercise is the most difficult one. I needed to find relationships 
 
 ## Tibra Capital — unknown
 
-### Q1519 · Tier B · interviewed June 2024 · unknown (Process: 3-question HackerRank OA with 3 days to finish, then a person)
+### Q1507 · Tier B · interviewed June 2024 · unknown (Process: 3-question HackerRank OA with 3 days to finish, then a person)
 
 Asked to graph PnL of a trading strategy
 
@@ -14579,7 +14481,7 @@ Asked to graph PnL of a trading strategy
 
 ## Tower Research Capital — onsite
 
-### Q1520 · Tier B · interviewed 2012 · onsite (45-minute campus interview with a couple of brainteasers and standard )
+### Q1508 · Tier B · interviewed 2012 · onsite (45-minute campus interview with a couple of brainteasers and standard )
 
 How many ways can you jump up stairs if you can only jump either 1 or 2 steps?
 
@@ -14589,7 +14491,7 @@ How many ways can you jump up stairs if you can only jump either 1 or 2 steps?
 — interview_review_site · posted 2012-11-22 · full_text · [link](https://www.wallstreetoasis.com/company/tower-research-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Dates from 2012 so it says little about the current process; the reported answer is the poster's own, not the interviewer's, and the role track within the intern programme is not stated.
 
-### Q1521 · Tier B · interviewed 2012 · onsite (Same campus interview; poster lists three questions)
+### Q1509 · Tier B · interviewed 2012 · onsite (Same campus interview; poster lists three questions)
 
 How do you find two numbers in an array that sum to x?
 
@@ -14600,7 +14502,7 @@ How do you find two numbers in an array that sum to x?
 
 ## Tower Research Capital — phone_technical
 
-### Q1522 · Tier B · interviewed December 2019 · phone_technical (Two phone interviews, one with a dev lead on C++ and one with a quant;)
+### Q1510 · Tier B · interviewed December 2019 · phone_technical (Two phone interviews, one with a dev lead on C++ and one with a quant;)
 
 How to find what overrides memory in C++?
 
@@ -14608,7 +14510,7 @@ How to find what overrides memory in C++?
 — interview_review_site · posted 2021-08-27 · full_text · [link](https://www.wallstreetoasis.com/company/tower-research-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Question is recorded in the candidate's own compressed phrasing ('what overrides memory') rather than the interviewer's; seniority is not stated so level is unknown.
 
-### Q1523 · Tier B · interviewed September 2019 · phone_technical (Poster describes 'Ton of brain teasers - consists of math, stats, and )
+### Q1511 · Tier B · interviewed September 2019 · phone_technical (Poster describes 'Ton of brain teasers - consists of math, stats, and )
 
 Fermi estimation questions: Estimate the surface area of a tennis ball. Number of Starbucks in NYC?
 
@@ -14616,7 +14518,7 @@ Fermi estimation questions: Estimate the surface area of a tennis ball. Number o
 — interview_review_site · posted 2020-01-03 · full_text · [link](https://www.wallstreetoasis.com/company/tower-research-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Two estimation prompts bundled together; the poster lists questions from two different phone rounds in one field, so the round split is uncertain.
 
-### Q1524 · Tier B · interviewed September 2019 · phone_technical (Part of a 'ton of brain teasers' covering math, stats and probability)
+### Q1512 · Tier B · interviewed September 2019 · phone_technical (Part of a 'ton of brain teasers' covering math, stats and probability)
 
 How would you replicate a fair coin using an unfair coin? Expected number of tosses? Vice versa?
 
@@ -14624,7 +14526,7 @@ How would you replicate a fair coin using an unfair coin? Expected number of tos
 — interview_review_site · posted 2020-01-03 · full_text · [link](https://www.wallstreetoasis.com/company/tower-research-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Von Neumann's fair-coin-from-biased-coin trick is a canonical textbook problem, so not firm-original; a second Tower entry from 2018 reports the same question, which corroborates the theme but may indicate a widely share
 
-### Q1525 · Tier B · interviewed September 2019 · phone_technical (Part of a 'ton of brain teasers' covering math, stats and probability)
+### Q1513 · Tier B · interviewed September 2019 · phone_technical (Part of a 'ton of brain teasers' covering math, stats and probability)
 
 If you three random variables X, Y, Z and you know the relationship between X and Y (say they're dependent), does that tell you anything about X and Z or Y and Z? What if the correlation between X and Y is 0.2 and the correlation between Y and Z is 0.5. What is the range for the correlation of X and Z?
 
@@ -14632,7 +14534,7 @@ If you three random variables X, Y, Z and you know the relationship between X an
 — interview_review_site · posted 2020-01-03 · full_text · [link](https://www.wallstreetoasis.com/company/tower-research-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Poster's typo ('If you three random variables') shows this is loosely transcribed; the round it belongs to is not specified.
 
-### Q1526 · Tier B · interviewed October 2019 · phone_technical (Candidates get matched to a specific team and the hiring managers for )
+### Q1514 · Tier B · interviewed October 2019 · phone_technical (Candidates get matched to a specific team and the hiring managers for )
 
 One was an algos question regarding the number of possible orderings of a collection of objects with different weights, where if two objects have a weight that sums up to too large a number, they cannot switch positions. You are given an initial ordering of the objects, and you're asked how many possible orderings can you reach from switching any adjacent ones.
 
@@ -14640,7 +14542,7 @@ One was an algos question regarding the number of possible orderings of a collec
 — interview_review_site · posted 2019-11-15 · full_text · [link](https://www.wallstreetoasis.com/company/tower-research-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO labels this 'Full Time' so I have coded it new_grad, but the entry never states whether the candidate was a student or experienced hire; the threshold value in the problem is not recorded, so it is underspecified.
 
-### Q1527 · Tier B · interviewed October 2019 · phone_technical (Second of the technical questions in the same phone round)
+### Q1515 · Tier B · interviewed October 2019 · phone_technical (Second of the technical questions in the same phone round)
 
 Another was a 3d geometry question about the surface distance between points chosen randomly on the surface of a sphere.
 
@@ -14648,7 +14550,7 @@ Another was a 3d geometry question about the surface distance between points cho
 — interview_review_site · posted 2019-11-15 · full_text · [link](https://www.wallstreetoasis.com/company/tower-research-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Described only in summary — the poster does not say whether the ask was the expected great-circle distance, its distribution, or something else — so the problem is not reproducible as stated.
 
-### Q1528 · Tier B · interviewed September 2018 · phone_technical (Poster describes the round as primarily technical with heavy ML/statis)
+### Q1516 · Tier B · interviewed September 2018 · phone_technical (Poster describes the round as primarily technical with heavy ML/statis)
 
 Given a biased coin with probability p, how would you replicate n independent tosses of a fair coin? How many tosses do you expect to make to achieve it? Can you give a lower bound on how many tosses you need to do it? A lower bound better than n?
 
@@ -14656,7 +14558,7 @@ Given a biased coin with probability p, how would you replicate n independent to
 — interview_review_site · posted 2018-09-09 · full_text · [link](https://www.wallstreetoasis.com/company/tower-research-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: The base problem (fair coin from a biased coin) is textbook, though the entropy lower-bound follow-ups are a genuinely harder extension; level is not stated in the entry.
 
-### Q1529 · Tier B · interviewed September 2018 · phone_technical (Machine learning portion of the same phone round)
+### Q1517 · Tier B · interviewed September 2018 · phone_technical (Machine learning portion of the same phone round)
 
 What are the differences between Lasso and Ridge? Why does Lasso have an effect of feature selection? What if instead of minimizing mean squared error we look at mean absolute error? How do you choose the number of trees in a random forest classifier? Is the more the better?
 
@@ -14664,7 +14566,7 @@ What are the differences between Lasso and Ridge? Why does Lasso have an effect 
 — interview_review_site · posted 2018-09-09 · full_text · [link](https://www.wallstreetoasis.com/company/tower-research-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: A chained battery of standard ML-theory questions recorded as one block; heavily ML-flavoured for a role WSO labels 'quant trader', which may mean the job title tag is imprecise.
 
-### Q1530 · Tier B · interviewed October 2015 · phone_technical (First round on HackerRank with about a dozen questions, some straightf)
+### Q1518 · Tier B · interviewed October 2015 · phone_technical (First round on HackerRank with about a dozen questions, some straightf)
 
 Was asked to explain the structure of the PGMs I was using, had to derive gradient updates for alternating least squares for matrix factorizations. Stats questions about linear regression - assumptions, L1 v/s L2 penalty.
 
@@ -14672,7 +14574,7 @@ Was asked to explain the structure of the PGMs I was using, had to derive gradie
 — interview_review_site · posted 2018-07-07 · full_text · [link](https://www.wallstreetoasis.com/company/tower-research-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: The questions were tailored to this candidate's own resume (probabilistic graphical models, recommendation engines), so they are not a standard question bank item; dates from 2015.
 
-### Q1531 · Tier B · interviewed September 2013 · phone_technical (Interview with basic math questions and fit-type questions)
+### Q1519 · Tier B · interviewed September 2013 · phone_technical (Interview with basic math questions and fit-type questions)
 
 How many golf balls fit in the empire state building? Explain thought process and detailed solution. Interviewers wanted to see train of thought was not looking for correct answer.
 
@@ -14680,7 +14582,7 @@ How many golf balls fit in the empire state building? Explain thought process an
 — interview_review_site · posted 2013-09-15 · full_text · [link](https://www.wallstreetoasis.com/company/tower-research-capital/interview)
   1 attestation(s) across 1 domain(s) · doubt: Very well-worn Fermi question that appears in countless prep lists; the entry is from 2013 so the process has almost certainly changed.
 
-### Q1532 · Tier B · interviewed April 2014 · phone_technical (Applied through campus recruitment; interviewer went through resume, t)
+### Q1520 · Tier B · interviewed April 2014 · phone_technical (Applied through campus recruitment; interviewer went through resume, t)
 
 Another detailed linear regression questions were asked, including problems about residual, variance and R^2. He also asked a question about independence and correlation.
 
@@ -14691,7 +14593,7 @@ Another detailed linear regression questions were asked, including problems abou
 
 ## Two Sigma — online_assessment
 
-### Q1533 · Tier B · unknown · online_assessment
+### Q1521 · Tier B · unknown · online_assessment
 
 I received an online assessment that tested coding and statistics ability (e.g., efficiently implementing linear regression).
 
@@ -14699,7 +14601,7 @@ I received an online assessment that tested coding and statistics ability (e.g.,
 — wso · posted 2025-11-12 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview)
   1 attestation(s) across 1 domain(s) · doubt: Given as an example of the OA's flavour rather than the literal task.
 
-### Q1534 · Tier B · unknown · online_assessment (a leetcode medium equivalent followed by a leetcode hard equivalent)
+### Q1522 · Tier B · unknown · online_assessment (a leetcode medium equivalent followed by a leetcode hard equivalent)
 
 ''Given a binary array, sort it so that all 0s come before all 1s."
 
@@ -14707,7 +14609,7 @@ I received an online assessment that tested coding and statistics ability (e.g.,
 — wso · posted 2025-03-25 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview)
   1 attestation(s) across 1 domain(s) · doubt: The poster labels this the 'leetcode hard equivalent' second question yet the stated problem is trivial, so their description of the OA is internally inconsistent.
 
-### Q1535 · Tier B · unknown · online_assessment (around 2-3 leetcode style hard questions, then an open ended data scie)
+### Q1523 · Tier B · unknown · online_assessment (around 2-3 leetcode style hard questions, then an open ended data scie)
 
 So it began with an online assessment of around 2-3 leetcode style hard questions, then to an open ended data science question (they ask pretty broad things).
 
@@ -14715,7 +14617,7 @@ So it began with an online assessment of around 2-3 leetcode style hard question
 — wso · posted 2024-11-17 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview)
   1 attestation(s) across 1 domain(s) · doubt: The poster's own 'Interview Questions' field literally says 'None.', so there is no question content at all beyond the format.
 
-### Q1536 · Tier B · unknown · online_assessment (3 hours, 2 coding tests plus 1 bonus)
+### Q1524 · Tier B · unknown · online_assessment (3 hours, 2 coding tests plus 1 bonus)
 
 first one is about writing a regression algorithm from scratch, second one using pandas package to solve some datascience problems. bonus question is a follow up for Q2
 
@@ -14723,7 +14625,7 @@ first one is about writing a regression algorithm from scratch, second one using
 — wso · posted 2024-11-15 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO's group tag says Investment Banking, which is clearly wrong for a regression-from-scratch plus pandas OA, so the role labelling on this entry is unreliable and I left role_track unknown.
 
-### Q1537 · Tier B · unknown · online_assessment (HackerRank focused on string manipulation with many test cases and mem)
+### Q1525 · Tier B · unknown · online_assessment (HackerRank focused on string manipulation with many test cases and mem)
 
 Design a random number generator that does not output a number that has already been generated.
 
@@ -14731,7 +14633,7 @@ Design a random number generator that does not output a number that has already 
 — blog · posted 2020-03-10 · full_text · [link](https://www.jointaro.com/interviews/companies/two-sigma/experiences/software-engineerinternship-united-kingdom-march-10-2020-no-offer-positive-fb1924e4)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1538 · Tier B · unknown · online_assessment (you get 3 hours)
+### Q1526 · Tier B · unknown · online_assessment (you get 3 hours)
 
 Two medium leetcode questions which I've seen before thus I was able to solve it in 30 minutes (you get 3 hours).
 
@@ -14739,7 +14641,7 @@ Two medium leetcode questions which I've seen before thus I was able to solve it
 — blind · posted 2021-04-20 · full_text · [link](https://www.teamblind.com/post/two-sigma-interview-advice-mazcdp6r)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies the poster's employer, not their candidacy, and threads are pseudonymous; nothing here can be tied to a named person or a dated application. Characterises the paper by difficulty band only; no problem is n
 
-### Q1539 · Tier B · unknown · online_assessment (2 coding and one systems / sys design round to follow)
+### Q1527 · Tier B · unknown · online_assessment (2 coding and one systems / sys design round to follow)
 
 Their OA questions felt like LC mediums (?)
 
@@ -14747,7 +14649,7 @@ Their OA questions felt like LC mediums (?)
 — blind · posted 2024-10-11 · full_text · [link](https://www.teamblind.com/post/two-sigma-interview-prep-bmq3cgkd)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies the poster's employer, not their candidacy, and threads are pseudonymous; nothing here can be tied to a named person or a dated application. The poster's own question mark shows they are unsure of the diff
 
-### Q1540 · Tier B · unknown · online_assessment (3 hr for 2 coding tests + 1 bonus coding)
+### Q1528 · Tier B · unknown · online_assessment (3 hr for 2 coding tests + 1 bonus coding)
 
 OA: write a regression algorithm from scratch; then use pandas to solve data science problems; bonus is a follow-up to the second
 
@@ -14755,7 +14657,7 @@ OA: write a regression algorithm from scratch; then use pandas to solve data sci
 — wso · posted 2024-10 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview/none)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. The submission ha
 
-### Q1541 · Tier B · unknown · online_assessment
+### Q1529 · Tier B · unknown · online_assessment
 
 OA testing coding and statistics ability, e.g. efficiently implementing linear regression
 
@@ -14763,7 +14665,7 @@ OA testing coding and statistics ability, e.g. efficiently implementing linear r
 — wso · posted 2025-11 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview/quantitative-researcher-5)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Corroborates the 
 
-### Q1542 · Tier B · unknown · online_assessment
+### Q1530 · Tier B · unknown · online_assessment
 
 OA of around 2-3 LeetCode-style hard questions, then an open-ended data science question
 
@@ -14771,7 +14673,7 @@ OA of around 2-3 LeetCode-style hard questions, then an open-ended data science 
 — wso · posted 2024-11 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview/quant-research-intern)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. 'Around 2-3' show
 
-### Q1543 · Tier B · unknown · online_assessment (2 questions: one LeetCode-medium equivalent, one LeetCode-hard equival)
+### Q1531 · Tier B · unknown · online_assessment (2 questions: one LeetCode-medium equivalent, one LeetCode-hard equival)
 
 First OA question: data structures and sweep line algorithms
 
@@ -14782,7 +14684,7 @@ First OA question: data structures and sweep line algorithms
 
 ## Two Sigma — onsite
 
-### Q1544 · Tier B · unknown · onsite (one model design round, one live coding, one stats round)
+### Q1532 · Tier B · unknown · onsite (one model design round, one live coding, one stats round)
 
 One is like model design- predict rent prices in Manhattan.
 
@@ -14790,7 +14692,7 @@ One is like model design- predict rent prices in Manhattan.
 — wso · posted 2026-01-14 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview)
   1 attestation(s) across 1 domain(s) · doubt: 'Junior Quant Researcher' does not state internship vs new grad, so level is unknown; the prompt is paraphrased in the poster's own shorthand.
 
-### Q1545 · Tier B · unknown · onsite (one of three rounds of tech interviews)
+### Q1533 · Tier B · unknown · onsite (one of three rounds of tech interviews)
 
 Stats round is about proof of OLS/optimizaition/Langrange, etc, quite difficult
 
@@ -14798,7 +14700,7 @@ Stats round is about proof of OLS/optimizaition/Langrange, etc, quite difficult
 — wso · posted 2026-01-14 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview)
   1 attestation(s) across 1 domain(s) · doubt: Topic list, not a question; also typo-heavy which suggests hasty recall.
 
-### Q1546 · Tier B · unknown · onsite (process: coding test, resume screen, final technical round, then anoth)
+### Q1534 · Tier B · unknown · onsite (process: coding test, resume screen, final technical round, then anoth)
 
 Come up with two uncorrelated but dependent variables.
 
@@ -14806,7 +14708,7 @@ Come up with two uncorrelated but dependent variables.
 — wso · posted 2025-10-05 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview)
   1 attestation(s) across 1 domain(s) · doubt: A very well-known stats interview chestnut; the poster in the same breath admits one of the other questions came from the Green Book, so their loop drew on standard prep material.
 
-### Q1547 · Tier B · unknown · onsite
+### Q1535 · Tier B · unknown · onsite
 
 One markov chain question that was from greenbook.
 
@@ -14814,7 +14716,7 @@ One markov chain question that was from greenbook.
 — wso · posted 2025-10-05 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview)
   1 attestation(s) across 1 domain(s) · doubt: The candidate explicitly identifies this as a Green Book (Xinfeng Zhou) problem, so the content is textbook — included only because a dated first-person recall attests Two Sigma actually asked it.
 
-### Q1548 · Tier B · unknown · onsite
+### Q1536 · Tier B · unknown · onsite
 
 Lots of questions regarding regression and how SS and SP would change based off different changes in the data.
 
@@ -14822,7 +14724,7 @@ Lots of questions regarding regression and how SS and SP would change based off 
 — wso · posted 2025-10-05 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview)
   1 attestation(s) across 1 domain(s) · doubt: 'SS and SP' is unexplained shorthand (sum of squares / sum of products), so the exact question is not recoverable.
 
-### Q1549 · Tier B · unknown · onsite (preceded by a take home OA)
+### Q1537 · Tier B · unknown · onsite (preceded by a take home OA)
 
 Biased gamblers ruin problems; Markov Chain problems; sampling uniformly from triangle
 
@@ -14830,7 +14732,7 @@ Biased gamblers ruin problems; Markov Chain problems; sampling uniformly from tr
 — wso · posted 2025-08-15 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview)
   1 attestation(s) across 1 domain(s) · doubt: Three distinct problems compressed into one field; all three are standard prep-book topics, and 'AI Research Scientist' is not clearly one of the named quant tracks.
 
-### Q1550 · Tier B · unknown · onsite
+### Q1538 · Tier B · unknown · onsite
 
 They asked me a probability question about weighted dice and the estimated value of each scenario.
 
@@ -14838,7 +14740,7 @@ They asked me a probability question about weighted dice and the estimated value
 — blog · posted 2014-03-03 · full_text · [link](https://www.jointaro.com/interviews/companies/two-sigma/experiences/software-developer-intern-united-states-march-3-2014-no-offer-neutral-4c6abeb4)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1551 · Tier B · unknown · onsite (HackerRank phone screen with coding questions, then onsite)
+### Q1539 · Tier B · unknown · onsite (HackerRank phone screen with coding questions, then onsite)
 
 Create your own random number generator given specific requirements.
 
@@ -14846,7 +14748,7 @@ Create your own random number generator given specific requirements.
 — blog · posted 2019-09-01 · full_text · [link](https://www.jointaro.com/interviews/companies/two-sigma/experiences/software-engineerinternship-new-york-ny-september-1-2019-no-offer-negative-2f251967)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1552 · Tier B · unknown · onsite (round 1 a buggy linked list and binary tree; round 2 a maximization pr)
+### Q1540 · Tier B · unknown · onsite (round 1 a buggy linked list and binary tree; round 2 a maximization pr)
 
 You were given a table with four currencies and their respective trading values (not symmetric). You were asked that, given a start currency and an end currency, you maximize the end value. You cannot trade for the same currency twice.
 
@@ -14854,7 +14756,7 @@ You were given a table with four currencies and their respective trading values 
 — blog · posted 2019-01-01 · full_text · [link](https://www.jointaro.com/interviews/companies/two-sigma/experiences/software-engineerinternship-new-york-ny-january-1-2019-no-offer-positive-bfe6e554)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1553 · Tier B · unknown · onsite (One is like model design- predict rent prices in Manhattan. Then live )
+### Q1541 · Tier B · unknown · onsite (One is like model design- predict rent prices in Manhattan. Then live )
 
 model design - predict rent prices in Manhattan
 
@@ -14862,7 +14764,7 @@ model design - predict rent prices in Manhattan
 — wso · posted 2026-01-14 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO entries are anonymous and self-submitted with no verification that the poster interviewed at all; the submission date here is Jan 14, 2026, about two months after the stated interview month, so the recall is retrospe
 
-### Q1554 · Tier B · unknown · onsite
+### Q1542 · Tier B · unknown · onsite
 
 Stats round is about proof of OLS/optimizaition/Langrange, etc, quite difficult. Sequential regression, multivariant regression, etc.
 
@@ -14870,7 +14772,7 @@ Stats round is about proof of OLS/optimizaition/Langrange, etc, quite difficult.
 — wso · posted 2026-01-14 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview)
   1 attestation(s) across 1 domain(s) · doubt: WSO entries are anonymous and self-submitted with no verification that the poster interviewed at all; the submission date here is Jan 14, 2026, about two months after the stated interview month, so the recall is retrospe
 
-### Q1555 · Tier B · unknown · onsite (1 LC hard, 1 LC hard, 2 LC medium + 1 LC Easy)
+### Q1543 · Tier B · unknown · onsite (1 LC hard, 1 LC hard, 2 LC medium + 1 LC Easy)
 
 Onsite was 3 rounds: 1 LC hard, 1 LC hard, 2 LC medium + 1 LC Easy, if you don't get all test cases for 1 problem you automatically get rejected
 
@@ -14878,7 +14780,7 @@ Onsite was 3 rounds: 1 LC hard, 1 LC hard, 2 LC medium + 1 LC Easy, if you don't
 — blind · posted 2021-04-21 · full_text · [link](https://www.teamblind.com/post/two-sigma-interview-advice-mazcdp6r)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies the poster's employer, not their candidacy, and threads are pseudonymous; nothing here can be tied to a named person or a dated application. The claim of an automatic rejection rule for a single failed tes
 
-### Q1556 · Tier B · unknown · onsite
+### Q1544 · Tier B · unknown · onsite
 
 I was asked standard leetcode (pretty easy ones actually) plus one guy wanted me to do some linear algebra derivations.
 
@@ -14886,7 +14788,7 @@ I was asked standard leetcode (pretty easy ones actually) plus one guy wanted me
 — blind · posted 2021-04-21 · full_text · [link](https://www.teamblind.com/post/two-sigma-interview-advice-mazcdp6r)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies the poster's employer, not their candidacy, and threads are pseudonymous; nothing here can be tied to a named person or a dated application. Which derivations were asked is not recorded.
 
-### Q1557 · Tier B · unknown · onsite (the first one was 3 tech interviews)
+### Q1545 · Tier B · unknown · onsite (the first one was 3 tech interviews)
 
 The tech questions were pretty tough. Graph, DFS and DP based.
 
@@ -14894,7 +14796,7 @@ The tech questions were pretty tough. Graph, DFS and DP based.
 — blind · posted 2021-07-24 · full_text · [link](https://www.teamblind.com/post/two-sigma-second-onsite-round-eyjckwjb)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies the poster's employer, not their candidacy, and threads are pseudonymous; nothing here can be tied to a named person or a dated application. Three topic labels and nothing more.
 
-### Q1558 · Tier B · unknown · onsite (three rounds)
+### Q1546 · Tier B · unknown · onsite (three rounds)
 
 Model design round: predict rent prices in Manhattan
 
@@ -14902,7 +14804,7 @@ Model design round: predict rent prices in Manhattan
 — wso · posted 2025-11 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview/junior-quant-researcher)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. The 'Junior Quant
 
-### Q1559 · Tier B · unknown · onsite
+### Q1547 · Tier B · unknown · onsite
 
 Stats round: proofs around OLS, optimization and Lagrange multipliers
 
@@ -14910,7 +14812,7 @@ Stats round: proofs around OLS, optimization and Lagrange multipliers
 — wso · posted 2025-11 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview/junior-quant-researcher)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Topic list with t
 
-### Q1560 · Tier B · unknown · onsite
+### Q1548 · Tier B · unknown · onsite
 
 Two Sigma QR intern final technical round: one coding, one stats and one data science round, then a round with 2-3 hiring managers
 
@@ -14918,7 +14820,7 @@ Two Sigma QR intern final technical round: one coding, one stats and one data sc
 — wso · posted 2025-08 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview/qr-intern)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. Pipeline descript
 
-### Q1561 · Tier B · unknown · onsite
+### Q1549 · Tier B · unknown · onsite
 
 First round on statistics with standard modeling questions built on your responses; final stage is a math round and a coding round
 
@@ -14926,7 +14828,7 @@ First round on statistics with standard modeling questions built on your respons
 — wso · posted 2023-09 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview/quant-research-intern-0)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. 'Fairly basic' co
 
-### Q1562 · Tier B · unknown · onsite
+### Q1550 · Tier B · unknown · onsite
 
 Onsite of 5 rounds: morning is 1 math, 1 coding, 1 open ended; afternoon is open ended and resume with hiring managers
 
@@ -14937,7 +14839,7 @@ Onsite of 5 rounds: morning is 1 math, 1 coding, 1 open ended; afternoon is open
 
 ## Two Sigma — phone_technical
 
-### Q1563 · Tier B · unknown · phone_technical (followed an online assessment testing coding and statistics ability)
+### Q1551 · Tier B · unknown · phone_technical (followed an online assessment testing coding and statistics ability)
 
 They asked a couple questions involving Mixture Gaussians (e.g., probability density and moments).
 
@@ -14945,7 +14847,7 @@ They asked a couple questions involving Mixture Gaussians (e.g., probability den
 — wso · posted 2025-11-12 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview)
   1 attestation(s) across 1 domain(s) · doubt: Describes the topic and the sub-parts asked but not the actual mixture parameters, so the question cannot be reconstructed.
 
-### Q1564 · Tier B · unknown · phone_technical (a leetcode style coding problem leetcode hard equivalent then some pro)
+### Q1552 · Tier B · unknown · phone_technical (a leetcode style coding problem leetcode hard equivalent then some pro)
 
 Question: "Given arrays (start & end) of the times users join and leave a server, find the max number of concurrent users on the server"
 
@@ -14953,7 +14855,7 @@ Question: "Given arrays (start & end) of the times users join and leave a server
 — wso · posted 2025-03-25 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview)
   1 attestation(s) across 1 domain(s) · doubt: Which round the quoted question came from (OA vs live interview) is ambiguous in the write-up; I assigned it to the 1:1 because the OA questions are listed separately.
 
-### Q1565 · Tier B · unknown · phone_technical
+### Q1553 · Tier B · unknown · phone_technical
 
 How would you make money with social media data?
 
@@ -14961,7 +14863,7 @@ How would you make money with social media data?
 — wso · posted 2024-10-04 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview)
   1 attestation(s) across 1 domain(s) · doubt: Open-ended discussion prompt with no ground truth; the round was described by the poster as 'supposed to be' a background chat, so framing may have shifted.
 
-### Q1566 · Tier B · unknown · phone_technical (initial OA, first technical interview, then onsite)
+### Q1554 · Tier B · unknown · phone_technical (initial OA, first technical interview, then onsite)
 
 Give the dependency completion order. Each dependency is timed.
 
@@ -14969,7 +14871,7 @@ Give the dependency completion order. Each dependency is timed.
 — blog · posted 2023-12-01 · full_text · [link](https://www.jointaro.com/interviews/companies/two-sigma/experiences/software-engineerinternship-argentina-december-1-2023-no-offer-negative-0a2a9073)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1567 · Tier B · unknown · phone_technical (purely coding; no self-introductions, system design questions or resum)
+### Q1555 · Tier B · unknown · phone_technical (purely coding; no self-introductions, system design questions or resum)
 
 The question was to implement your own hashmap.
 
@@ -14977,7 +14879,7 @@ The question was to implement your own hashmap.
 — blog · posted 2024-02-01 · full_text · [link](https://www.jointaro.com/interviews/companies/two-sigma/experiences/software-engineerinternship-united-states-february-1-2024-no-offer-neutral-8ea62a12)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1568 · Tier B · unknown · phone_technical
+### Q1556 · Tier B · unknown · phone_technical
 
 Question about creating slotted memory and storing data in C.
 
@@ -14985,7 +14887,7 @@ Question about creating slotted memory and storing data in C.
 — blog · posted 2024-08-11 · full_text · [link](https://www.jointaro.com/interviews/companies/two-sigma/experiences/software-engineerinternship-united-states-august-11-2024-no-offer-positive-c9dcb964)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1569 · Tier B · unknown · phone_technical
+### Q1557 · Tier B · unknown · phone_technical
 
 How do you pick random objects given weights?
 
@@ -14993,7 +14895,7 @@ How do you pick random objects given weights?
 — blog · posted 2019-06-05 · full_text · [link](https://www.jointaro.com/interviews/companies/two-sigma/experiences/software-engineerinternship-united-states-june-5-2019-no-offer-negative-9d46e9ec)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1570 · Tier B · unknown · phone_technical (first round on statistics; final stage has two rounds, first math and )
+### Q1558 · Tier B · unknown · phone_technical (first round on statistics; final stage has two rounds, first math and )
 
 Everything was fairly standard. They asked me basic linear algebra and statistics modeling questions.
 
@@ -15001,7 +14903,7 @@ Everything was fairly standard. They asked me basic linear algebra and statistic
 — wso · posted 2025-08-29 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview)
   1 attestation(s) across 1 domain(s) · doubt: Wall Street Oasis interview entries are anonymous and unverified by the site, and this one is a company roll-up page whose displayed sample of entries can change, so a later re-fetch may not show it. No actual question i
 
-### Q1571 · Tier B · Summer 2023 · phone_technical
+### Q1559 · Tier B · Summer 2023 · phone_technical
 
 I need to prove lots of stuff in probability and statistics like normal distributions and EV as well as hypothesis testing.
 
@@ -15009,7 +14911,7 @@ I need to prove lots of stuff in probability and statistics like normal distribu
 — reddit_thread · posted 2022-11-25 · full_text · [link](https://www.reddit.com/r/csMajors/comments/z3q0wf/a_summary_of_my_internship_hunt_for_summer_2023/)
   1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo
 
-### Q1572 · Tier B · unknown · phone_technical
+### Q1560 · Tier B · unknown · phone_technical
 
 Got a leetcode hard. Gave an ideal time complexity solution that the interviewer said he hadnt seen before and was very creative. Got rejected lmao
 
@@ -15017,7 +14919,7 @@ Got a leetcode hard. Gave an ideal time complexity solution that the interviewer
 — blind · posted 2021-04-20 · full_text · [link](https://www.teamblind.com/post/two-sigma-interview-advice-mazcdp6r)
   1 attestation(s) across 1 domain(s) · doubt: Blind verifies the poster's employer, not their candidacy, and threads are pseudonymous; nothing here can be tied to a named person or a dated application. The interesting content is the outcome, not the question, which 
 
-### Q1573 · Tier B · unknown · phone_technical
+### Q1561 · Tier B · unknown · phone_technical
 
 How would you make money using social media data?
 
@@ -15025,7 +14927,7 @@ How would you make money using social media data?
 — wso · posted 2024-01 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview/researcher)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site rewards submissions with content credits, which gives a mild incentive to embellish. A single sentence
 
-### Q1574 · Tier B · unknown · phone_technical
+### Q1562 · Tier B · unknown · phone_technical
 
 A LeetCode-hard equivalent coding problem in the one-on-one round
 
@@ -15033,7 +14935,7 @@ A LeetCode-hard equivalent coding problem in the one-on-one round
 — wso · posted 2025-02 · full_text · [link](https://www.wallstreetoasis.com/company/two-sigma-investments/interview/software-engineering-intern-1)
   1 attestation(s) across 1 domain(s) · doubt: WSO interview submissions are anonymous, self-reported and never verified against an actual application, and the site awards content credits for submitting, which gives a mild incentive to embellish. Difficulty by analog
 
-### Q1575 · Tier B · unknown · phone_technical
+### Q1563 · Tier B · unknown · phone_technical
 
 Probability-based questions after the coding problem in the one-on-one round
 
@@ -15044,7 +14946,7 @@ Probability-based questions after the coding problem in the one-on-one round
 
 ## Two Sigma — online_assessment
 
-### Q1576 · Tier C · unknown · online_assessment
+### Q1564 · Tier C · unknown · online_assessment
 
 第一题还是经典的Linear Interpolation,注意有重复数据的edge
 
@@ -15054,7 +14956,7 @@ Probability-based questions after the coding problem in the one-on-one round
 — 1point3acres · posted 2025-04 · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1134010-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The word 还是 ('still') implies the poster knew the question from earlier forum posts, so this is partly recognition rather than fresh recall; commenters in the thread ask for the matrix question details that the poster ne
 
-### Q1577 · Tier C · unknown · online_assessment (OA的三个题都是数值相关的,难度不大,3个小时非常充裕)
+### Q1565 · Tier C · unknown · online_assessment (OA的三个题都是数值相关的,难度不大,3个小时非常充裕)
 
 投的quant researcher intern,OA的三个题都是数值相关的,难度不大,3个小时非常充裕
 
@@ -15064,7 +14966,7 @@ Probability-based questions after the coding problem in the one-on-one round
 — 1point3acres · posted 2021-12-30 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/twosigma-1247-22.html)
   1 attestation(s) across 1 domain(s) · doubt: Read from the tag-page row preview via search rather than the thread body — 1point3acres is Cloudflare-blocked here and the full post sits behind a points paywall, so the question is truncated at the preview boundary and
 
-### Q1578 · Tier C · unknown · online_assessment
+### Q1566 · Tier C · unknown · online_assessment
 
 OA就是往常的那两道题一个linear interpolate, 一个daily temperature
 
@@ -15074,7 +14976,7 @@ OA就是往常的那两道题一个linear interpolate, 一个daily temperature
 — 1point3acres · posted 2021-12-27 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/twosigma-1247-22.html)
   1 attestation(s) across 1 domain(s) · doubt: Read from the tag-page row preview via search rather than the thread body — 1point3acres is Cloudflare-blocked here and the full post sits behind a points paywall, so the question is truncated at the preview boundary and
 
-### Q1579 · Tier C · unknown · online_assessment
+### Q1567 · Tier C · unknown · online_assessment
 
 地里常见的两道题,interpolation和linear regression。
 
@@ -15084,7 +14986,7 @@ OA就是往常的那两道题一个linear interpolate, 一个daily temperature
 — 1point3acres · posted 2022-12 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/twosigma-1247-8.html)
   1 attestation(s) across 1 domain(s) · doubt: Read from the tag-page row preview via search rather than the thread body — 1point3acres is Cloudflare-blocked here and the full post sits behind a points paywall, so the question is truncated at the preview boundary and
 
-### Q1580 · Tier C · unknown · online_assessment (一共三刀题, 第三题不算分)
+### Q1568 · Tier C · unknown · online_assessment (一共三刀题, 第三题不算分)
 
 1, linear Interpolation 法, 不允许调包. 2, 预测纽约市的温度, linear regression
 
@@ -15094,7 +14996,7 @@ OA就是往常的那两道题一个linear interpolate, 一个daily temperature
 — 1point3acres · posted 2023-10-30 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/twosigma-1247-8.html)
   1 attestation(s) across 1 domain(s) · doubt: Read from the tag-page row preview via search rather than the thread body — 1point3acres is Cloudflare-blocked here and the full post sits behind a points paywall, so the question is truncated at the preview boundary and
 
-### Q1581 · Tier C · unknown · online_assessment (90分钟两题)
+### Q1569 · Tier C · unknown · online_assessment (90分钟两题)
 
 申请的是sde intern,90分钟两题,第一题可能是leetcode easy/medium,第二题比较难
 
@@ -15104,7 +15006,7 @@ OA就是往常的那两道题一个linear interpolate, 一个daily temperature
 — 1point3acres · posted 2023-03-01 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/twosigma-1247-8.html)
   1 attestation(s) across 1 domain(s) · doubt: Read from the tag-page row preview via search rather than the thread body — 1point3acres is Cloudflare-blocked here and the full post sits behind a points paywall, so the question is truncated at the preview boundary and
 
-### Q1582 · Tier C · unknown · online_assessment (OA两道,全部case pass了)
+### Q1570 · Tier C · unknown · online_assessment (OA两道,全部case pass了)
 
 一道是地里出现过的IPO,round robin原理。一道是地理出现过的蓄水池,dfs + 一个memo可以解决。
 
@@ -15114,7 +15016,7 @@ OA就是往常的那两道题一个linear interpolate, 一个daily temperature
 — 1point3acres · posted 2024-11-27 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/twosigma-1247-5.html)
   1 attestation(s) across 1 domain(s) · doubt: Read from the tag-page row preview via search rather than the thread body — 1point3acres is Cloudflare-blocked here and the full post sits behind a points paywall, so the question is truncated at the preview boundary and
 
-### Q1583 · Tier C · unknown · online_assessment
+### Q1571 · Tier C · unknown · online_assessment
 
 第一题是linear interpolation 第二题是NYC weather
 
@@ -15127,7 +15029,7 @@ OA就是往常的那两道题一个linear interpolate, 一个daily temperature
 
 ## Two Sigma — phone_technical
 
-### Q1584 · Tier C · unknown · phone_technical
+### Q1572 · Tier C · unknown · phone_technical
 
 老题 random number generator, 需要unique 而且在给定range。
 
@@ -15137,7 +15039,7 @@ OA就是往常的那两道题一个linear interpolate, 一个daily temperature
 — 1point3acres · posted 2021-09-30 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/twosigma-1247-22.html)
   1 attestation(s) across 1 domain(s) · doubt: Read from the tag-page row preview via search rather than the thread body — 1point3acres is Cloudflare-blocked here and the full post sits behind a points paywall, so the question is truncated at the preview boundary and
 
-### Q1585 · Tier C · unknown · phone_technical
+### Q1573 · Tier C · unknown · phone_technical
 
 万年老题random number generator; 另外是process vs threads + latency vs throughput
 
@@ -15150,7 +15052,7 @@ OA就是往常的那两道题一个linear interpolate, 一个daily temperature
 
 ## Two Sigma — online_assessment
 
-### Q1586 · Tier D · unknown · online_assessment (OA, two questions)
+### Q1574 · Tier D · unknown · online_assessment (OA, two questions)
 
 就是地里常见的两道题,interpolation和linear regression
 
@@ -15160,7 +15062,7 @@ OA就是往常的那两道题一个linear interpolate, 一个daily temperature
 — chat_telegram · posted 2023-01-22 · full_text · [link](https://t.me/usinterview/15384)
   1 attestation(s) across 1 domain(s) · doubt: Topic names only; the poster is pointing at a shared forum question bank rather than describing the problems, and this is from December 2022.
 
-### Q1587 · Tier D · unknown · online_assessment (OA)
+### Q1575 · Tier D · unknown · online_assessment (OA)
 
 75分钟,2道题,IPO和split tree,题目描述巨长,IPO就是排序以后iterate,相同price的计两个数
 
@@ -15170,7 +15072,7 @@ OA就是往常的那两道题一个linear interpolate, 一个daily temperature
 — chat_telegram · posted 2023-03-28 · full_text · [link](https://t.me/usinterview/15577)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The poster explicitly say
 
-### Q1588 · Tier D · 2026 · online_assessment (OA — named by nickname only)
+### Q1576 · Tier D · 2026 · online_assessment (OA — named by nickname only)
 
 OA:下水道 + IPO 秒了
 
@@ -15180,7 +15082,7 @@ OA:下水道 + IPO 秒了
 — chat_telegram · posted 2026-04-08 · full_text · [link](https://t.me/usinterview/27929)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. The two que
 
-### Q1589 · Tier D · 2025 · online_assessment (a compiled list of Two Sigma OA questions, given by nickname and forum)
+### Q1577 · Tier D · 2025 · online_assessment (a compiled list of Two Sigma OA questions, given by nickname and forum)
 
 IPO + 下水道:https://www.1point3acres.com/bbs/thread-939983-1-1.html[*]Serve
 
@@ -15190,7 +15092,7 @@ IPO + 下水道:https://www.1point3acres.com/bbs/thread-939983-1-1.html[*]Serve
 — chat_telegram · posted 2025-09-19 · full_text · [link](https://t.me/usinterview/25382)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. This is exp
 
-### Q1590 · Tier D · 2026 · online_assessment (OA format report (not a question))
+### Q1578 · Tier D · 2026 · online_assessment (OA format report (not a question))
 
 申的是Two Sigma 的NG SWE,本来没抱太大希望,海投之后没多久就约了OA,两道题限时一起做。投之前听说这家挂经比较多,专门跑去翻了下地里做功课,好几个帖说OA地里都是
 
@@ -15200,7 +15102,7 @@ IPO + 下水道:https://www.1point3acres.com/bbs/thread-939983-1-1.html[*]Serve
 — chat_telegram · posted 2026-07-24 · full_text · [link](https://t.me/usinterview/29040)
   1 attestation(s) across 1 domain(s) · doubt: Format only, no question. The load-bearing content is the claim, repeated by several posters, that the Two Sigma OA questions are entirely recycled from ones already published on the forum. Posted 2026-07-24, eight days 
 
-### Q1591 · Tier D · 2023 · online_assessment (the first of the two problems)
+### Q1579 · Tier D · 2023 · online_assessment (the first of the two problems)
 
 第一题IPO求没有分到shares的bidder,输出的时候忘记转成list导致有3个test没过
 
@@ -15210,7 +15112,7 @@ IPO + 下水道:https://www.1point3acres.com/bbs/thread-939983-1-1.html[*]Serve
 — chat_telegram · posted 2022-09-26 · full_text · [link](https://t.me/usinterview/14767)
   1 attestation(s) across 1 domain(s) · doubt: The allocation rule — which is the entire problem — is not stated: how bids are ranked, how ties at the same price are broken and how the share pool is exhausted are all missing. A later poster (t.me/usinterview/27708) f
 
-### Q1592 · Tier D · 2023 · online_assessment (the second of the two problems)
+### Q1580 · Tier D · 2023 · online_assessment (the second of the two problems)
 
 第二题sewer tree structure,构建一个TreeNode
 
@@ -15220,7 +15122,7 @@ IPO + 下水道:https://www.1point3acres.com/bbs/thread-939983-1-1.html[*]Serve
 — chat_telegram · posted 2022-09-26 · full_text · [link](https://t.me/usinterview/14767)
   1 attestation(s) across 1 domain(s) · doubt: Eight words. The input format, what the tree represents and what has to be returned are all absent — "build a TreeNode" is not a specification. Its worth is as the earliest dated attestation of the problem that three lat
 
-### Q1593 · Tier D · 2026 · online_assessment (the IPO problem, described with the poster's own solution approach)
+### Q1581 · Tier D · 2026 · online_assessment (the IPO problem, described with the poster's own solution approach)
 
 楼主遇到了ipo 和 下水道,原题到处都搜得到ipo比较麻烦,我参考了hack2hire里面的解法,先排序再分组,同价区做round-robin,一开始忘了同价组用timest
 
@@ -15230,7 +15132,7 @@ IPO + 下水道:https://www.1point3acres.com/bbs/thread-939983-1-1.html[*]Serve
 — chat_telegram · posted 2026-03-25 · full_text · [link](https://t.me/usinterview/27708)
   1 attestation(s) across 1 domain(s) · doubt: What is recorded is the poster's solution recipe, not the problem statement, and they say outright that they took it from "hack2hire" — a third-party prep site — rather than deriving it, so this is a description of an an
 
-### Q1594 · Tier D · 2025 · online_assessment (the first of three problems on the quant OA)
+### Q1582 · Tier D · 2025 · online_assessment (the first of three problems on the quant OA)
 
 第一题还是经典的Linear Interpolation,注意有重复数据的edge case
 
@@ -15240,7 +15142,7 @@ IPO + 下水道:https://www.1point3acres.com/bbs/thread-939983-1-1.html[*]Serve
 — chat_telegram · posted 2025-06-21 · full_text · [link](https://t.me/usinterview/23803)
   1 attestation(s) across 1 domain(s) · doubt: The duplicate-data edge case the poster flags is the one genuinely informative detail; what is being interpolated, and over what, is not said. The poster lists the three problems in a single unpunctuated run and gives to
 
-### Q1595 · Tier D · 2025 · online_assessment (the second of three problems on the quant OA)
+### Q1583 · Tier D · 2025 · online_assessment (the second of three problems on the quant OA)
 
 第二题是NYC temp dataset,简单的median,variance和regression
 
@@ -15250,7 +15152,7 @@ IPO + 下水道:https://www.1point3acres.com/bbs/thread-939983-1-1.html[*]Serve
 — chat_telegram · posted 2025-06-21 · full_text · [link](https://t.me/usinterview/23803)
   1 attestation(s) across 1 domain(s) · doubt: Names a dataset (NYC temperatures) and three statistics, but not what was to be regressed on what, nor over what period. The poster lists the three problems in a single unpunctuated run and gives topic labels rather than
 
-### Q1596 · Tier D · 2025 · online_assessment (the third, bonus problem on the quant OA)
+### Q1584 · Tier D · 2025 · online_assessment (the third, bonus problem on the quant OA)
 
 第三题bonus是matrix计算相关的再改
 
@@ -15260,7 +15162,7 @@ IPO + 下水道:https://www.1point3acres.com/bbs/thread-939983-1-1.html[*]Serve
 — chat_telegram · posted 2025-06-21 · full_text · [link](https://t.me/usinterview/23803)
   1 attestation(s) across 1 domain(s) · doubt: The least informative of the three — "matrix-computation related" with the sentence then cut off mid-thought. Recorded only to register that the 2025 quant OA had a third bonus item of this kind. The poster lists the thr
 
-### Q1597 · Tier D · 2024 · online_assessment (the format of the test)
+### Q1585 · Tier D · 2024 · online_assessment (the format of the test)
 
 OA 180min 还是地里那三道原题
 
@@ -15270,7 +15172,7 @@ OA 180min 还是地里那三道原题
 — chat_telegram · posted 2024-05-21 · full_text · [link](https://t.me/usinterview/18407)
   1 attestation(s) across 1 domain(s) · doubt: No question content at all — this is format plus a complaint. It earns its place as evidence about the bank rather than about any question: an independent poster stating that the same three problems recurred across three
 
-### Q1598 · Tier D · 2026 · online_assessment (question 1 of three)
+### Q1586 · Tier D · 2026 · online_assessment (question 1 of three)
 
 第一题是一个list 把二维的点用线段连起来得到一个分段线性函数 求target x对应函数值
 
@@ -15280,7 +15182,7 @@ OA 180min 还是地里那三道原题
 — chat_telegram · posted 2026-02-27 · full_text · [link](https://t.me/usinterview/27360)
   1 attestation(s) across 1 domain(s) · doubt: Stated compactly but completely enough to be implementable, which is unusual here. What is missing is everything that makes it an interview question rather than an exercise — whether the points arrive sorted, what happen
 
-### Q1599 · Tier D · 2026 · online_assessment (questions 2 and 3 of three)
+### Q1587 · Tier D · 2026 · online_assessment (questions 2 and 3 of three)
 
 后两题考的都是拿pandas处理数据
 
@@ -15290,7 +15192,7 @@ OA 180min 还是地里那三道原题
 — chat_telegram · posted 2026-02-27 · full_text · [link](https://t.me/usinterview/27360)
   1 attestation(s) across 1 domain(s) · doubt: Not a question — a one-line characterisation of two questions the poster chose not to describe. Logged for the tooling datapoint (a Two Sigma QR assessment testing pandas directly) and nothing more.
 
-### Q1600 · Tier D · unknown · online_assessment (两道必做题,一道选做题)
+### Q1588 · Tier D · unknown · online_assessment (两道必做题,一道选做题)
 
 第一题是一堆点的线性插值,第二题是NY和一些town的数据处理
 
@@ -15300,7 +15202,7 @@ OA 180min 还是地里那三道原题
 — 1point3acres · posted 2023-01-18 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/twosigma-1247-8.html)
   1 attestation(s) across 1 domain(s) · doubt: Read from the tag-page row preview via search rather than the thread body — 1point3acres is Cloudflare-blocked here and the full post sits behind a points paywall, so the question is truncated at the preview boundary and
 
-### Q1601 · Tier D · unknown · online_assessment
+### Q1589 · Tier D · unknown · online_assessment
 
 还是地里那两题。1. 双指针+排序 2. 二分法
 
@@ -15310,7 +15212,7 @@ OA 180min 还是地里那三道原题
 — 1point3acres · posted 2025-11-15 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/twosigma-1247-5.html)
   1 attestation(s) across 1 domain(s) · doubt: Read from the tag-page row preview via search rather than the thread body — 1point3acres is Cloudflare-blocked here and the full post sits behind a points paywall, so the question is truncated at the preview boundary and
 
-### Q1602 · Tier D · unknown · online_assessment
+### Q1590 · Tier D · unknown · online_assessment
 
 OA: Friends circle & string chains
 
@@ -15318,7 +15220,7 @@ OA: Friends circle & string chains
 — 1point3acres · posted 2020-12-20 · snippet_only · [link](https://www.1point3acres.com/bbs/tag/twosigma-1247-30.html)
   1 attestation(s) across 1 domain(s) · doubt: Read from the tag-page row preview via search rather than the thread body — 1point3acres is Cloudflare-blocked here and the full post sits behind a points paywall, so the question is truncated at the preview boundary and
 
-### Q1603 · Tier D · unknown · online_assessment
+### Q1591 · Tier D · unknown · online_assessment
 
 OA是万年不变的两道题(FC & SC)
 
@@ -15331,7 +15233,7 @@ OA是万年不变的两道题(FC & SC)
 
 ## Two Sigma — onsite
 
-### Q1604 · Tier D · 2024 · onsite (quant onsite)
+### Q1592 · Tier D · 2024 · onsite (quant onsite)
 
 twitter 预测股价;纽约出租车供应和需求建模;线性回归解析解;lasso、ridge;lasso的最小角算法的几何解释
 
@@ -15341,7 +15243,7 @@ twitter 预测股价;纽约出租车供应和需求建模;线性回归解析解;
 — chat_telegram · posted 2024-11-14 · full_text · [link](https://t.me/usinterview/20368)
   1 attestation(s) across 1 domain(s) · doubt: A run-on list with no punctuation, so my splitting into five separate topics is an interpretation; none of the items has an actual problem statement.
 
-### Q1605 · Tier D · 2025 · onsite (the algorithms round)
+### Q1593 · Tier D · 2025 · onsite (the algorithms round)
 
 算法:给你一个人们之间是否认识的关系网,保证人们之间认识情况建出的图是一棵树,请问我最多在图里选择多少人,
 
@@ -15354,7 +15256,7 @@ twitter 预测股价;纽约出租车供应和需求建模;线性回归解析解;
 
 ## Two Sigma — phone_technical
 
-### Q1606 · Tier D · unknown · phone_technical (phone coding)
+### Q1594 · Tier D · unknown · phone_technical (phone coding)
 
 手寫Huffman Encoding
 
@@ -15364,7 +15266,7 @@ twitter 预测股价;纽约出租车供应和需求建模;线性回归解析解;
 — chat_telegram · posted 2022-11-17 · full_text · [link](https://t.me/usinterview/15135)
   1 attestation(s) across 1 domain(s) · doubt: post is tagged 码农类General (generic software-engineer track) at a trading firm; mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. Three characters of quest
 
-### Q1607 · Tier D · 2026 · phone_technical (the phone screen, described as an in-memory database design/implementa)
+### Q1595 · Tier D · 2026 · phone_technical (the phone screen, described as an in-memory database design/implementa)
 
 店面:遇到了in memory DB要求能support 1. create table 'tabl
 
@@ -15374,7 +15276,7 @@ twitter 预测股价;纽约出租车供应和需求建模;线性回归解析解;
 — chat_telegram · posted 2026-04-08 · full_text · [link](https://t.me/usinterview/27929)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. Cut off in 
 
-### Q1608 · Tier D · 2026 · phone_technical (phone screen coding)
+### Q1596 · Tier D · 2026 · phone_technical (phone screen coding)
 
 力扣跳跃游戏系列
 
@@ -15384,7 +15286,7 @@ twitter 预测股价;纽约出租车供应和需求建模;线性回归解析解;
 — chat_telegram · posted 2026-03-06 · full_text · [link](https://t.me/usinterview/27446)
   1 attestation(s) across 1 domain(s) · doubt: The forum role tag on this post is 码农类General (generic software engineer) at a trading firm, mapped to quant_developer as the nearest controlled value, so the role label may overstate how "quant" the role is. Six charact
 
-### Q1609 · Tier D · 2026 · phone_technical (the tech-screen implementation task)
+### Q1597 · Tier D · 2026 · phone_technical (the tech-screen implementation task)
 
 Tech screen:从头implement一个hashmap,不能用任何自带的hashtale lib。实现两个
 
@@ -15394,7 +15296,7 @@ Tech screen:从头implement一个hashmap,不能用任何自带的hashtale lib。
 — chat_telegram · posted 2025-09-19 · full_text · [link](https://t.me/usinterview/25390)
   1 attestation(s) across 1 domain(s) · doubt: The preview is cut off at "实现两个" (implement two ...), exactly where the two required methods would have been named, so which operations the hashmap had to support is unknown. The constraint that no built-in hashtable lib
 
-### Q1610 · Tier D · unknown · phone_technical (first an online coding assessment on HackerRank (two LeetCode mediums))
+### Q1598 · Tier D · unknown · phone_technical (first an online coding assessment on HackerRank (two LeetCode mediums))
 
 Encode and decode a Huffman tree.
 
@@ -15402,7 +15304,7 @@ Encode and decode a Huffman tree.
 — blog · posted 2025-08-11 · full_text · [link](https://www.jointaro.com/interviews/companies/two-sigma/experiences/software-engineerinternship-panama-august-11-2025-no-offer-positive-0f5740aa)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1611 · Tier D · unknown · phone_technical
+### Q1599 · Tier D · unknown · phone_technical
 
 How to implement Huffman coding trees.
 
@@ -15410,7 +15312,7 @@ How to implement Huffman coding trees.
 — blog · posted 2018-10-01 · full_text · [link](https://www.jointaro.com/interviews/companies/two-sigma/experiences/software-engineerinternship-san-jose-ca-october-1-2018-no-offer-positive-52aa52d8)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1612 · Tier D · unknown · phone_technical (75-minute online assessment, then a phone screen with one hour for one)
+### Q1600 · Tier D · unknown · phone_technical (75-minute online assessment, then a phone screen with one hour for one)
 
 Implement malloc using an array.
 
@@ -15418,7 +15320,7 @@ Implement malloc using an array.
 — blog · posted 2024-02-01 · full_text · [link](https://www.jointaro.com/interviews/companies/two-sigma/experiences/swe-intern-new-york-ny-february-1-2024-no-offer-positive-8cc55909)
   1 attestation(s) across 1 domain(s) · doubt: jointaro.com aggregates self-reported interview experiences; the poster is anonymous and Taro does not verify that the person actually interviewed, and the site rewrites submissions into a house style, so wording may be 
 
-### Q1613 · Tier D · unknown · phone_technical (video call with a Two Sigma SWE, walking through a coding problem in t)
+### Q1601 · Tier D · unknown · phone_technical (video call with a Two Sigma SWE, walking through a coding problem in t)
 
 How to debug a binary tree.
 
@@ -15429,7 +15331,7 @@ How to debug a binary tree.
 
 ## Valkyrie Trading — phone_technical
 
-### Q1614 · Tier C · unknown · phone_technical (Poster lists a numbered set of six questions; other entries on the sam)
+### Q1602 · Tier C · unknown · phone_technical (Poster lists a numbered set of six questions; other entries on the sam)
 
 1. Tell me about yourself and why are you interested in joining Valkyrie? 2. Why did you change your field from Computer Engineering to Quantitative Finance? 3. What are the Greeks related to Options? 4. What is skewness and Kurtosis of a Probability distribution? 5. What is the Volatility Curve and what is it's significance? 6. I also had a Python Coding Question: Suppose there are two variables a and b, a = 2 b = a b = b+1 print(a) What is the Output of the above code snippet?
 
@@ -15440,7 +15342,7 @@ How to debug a binary tree.
 
 ## Virtu Financial — phone_technical
 
-### Q1615 · Tier B · interviewed June 2025 · phone_technical (HR call first, then an interview with a current trader; poster notes m)
+### Q1603 · Tier B · interviewed June 2025 · phone_technical (HR call first, then an interview with a current trader; poster notes m)
 
 The question was something along the lines of given a stream of ticker data with dates and times, how would you sort them in various ways.
 
@@ -15448,7 +15350,7 @@ The question was something along the lines of given a stream of ticker data with
 — interview_review_site · posted 2026-07-23 · full_text · [link](https://www.wallstreetoasis.com/company/virtu-financial/interview)
   1 attestation(s) across 1 domain(s) · doubt: The poster explicitly hedges with 'something along the lines of', so the wording is admittedly approximate; 'Winternship' is a diversity insight programme and may not map onto the standard quant intern track.
 
-### Q1616 · Tier B · interviewed February 2025 · phone_technical (Technical round covered a programming task, linear regression and some)
+### Q1604 · Tier B · interviewed February 2025 · phone_technical (Technical round covered a programming task, linear regression and some)
 
 Create an example of two random variables that are dependent but uncorrelated.
 
@@ -15456,7 +15358,7 @@ Create an example of two random variables that are dependent but uncorrelated.
 — interview_review_site · posted 2026-06-24 · full_text · [link](https://www.wallstreetoasis.com/company/virtu-financial/interview)
   1 attestation(s) across 1 domain(s) · doubt: This exact problem is a standard textbook exercise that also appears in Xinfeng Zhou's Green Book, and the poster themselves says the round contained 'green book related questions', so the question is not firm-original; 
 
-### Q1617 · Tier B · interviewed January 2026 · phone_technical (Stage 1 HackerRank easy-medium leetcode; stage 2 HR with one brainteas)
+### Q1605 · Tier B · interviewed January 2026 · phone_technical (Stage 1 HackerRank easy-medium leetcode; stage 2 HR with one brainteas)
 
 How to make a market/how market-making trading works
 
@@ -15464,7 +15366,7 @@ How to make a market/how market-making trading works
 — interview_review_site · posted 2026-05-01 · full_text · [link](https://www.wallstreetoasis.com/company/virtu-financial/interview)
   1 attestation(s) across 1 domain(s) · doubt: Very generic topic statement rather than a specific problem; carries little firm-specific signal.
 
-### Q1618 · Tier B · interviewed October 2025 · phone_technical (Phone interviews asking coding, brainteasers and statistics, then onsi)
+### Q1606 · Tier B · interviewed October 2025 · phone_technical (Phone interviews asking coding, brainteasers and statistics, then onsi)
 
 What is the best way to get/estimate median from given number list with some statistics?
 
@@ -15472,7 +15374,7 @@ What is the best way to get/estimate median from given number list with some sta
 — interview_review_site · posted 2026-01-20 · full_text · [link](https://www.wallstreetoasis.com/company/virtu-financial/interview)
   1 attestation(s) across 1 domain(s) · doubt: Non-native English phrasing makes the intended question ambiguous (streaming median vs. robust estimation); level is not stated anywhere in the entry.
 
-### Q1619 · Tier B · interviewed February 2025 · phone_technical (After an online assessment of 5 fairly easy leetcode-style questions w)
+### Q1607 · Tier B · interviewed February 2025 · phone_technical (After an online assessment of 5 fairly easy leetcode-style questions w)
 
 Some questions about financial markets. Like who are market makers? Also some brain teasers, quite easy.
 
@@ -15480,7 +15382,7 @@ Some questions about financial markets. Like who are market makers? Also some br
 — interview_review_site · posted 2025-02-27 · full_text · [link](https://www.wallstreetoasis.com/company/virtu-financial/interview)
   1 attestation(s) across 1 domain(s) · doubt: Only one concrete question ('who are market makers?') is given and it is trivially generic; round attribution inferred from the narrative since the poster had only reached the HR screen.
 
-### Q1620 · Tier B · interviewed January 2026 · phone_technical (Operations/generalist role: visa eligibility check, behaviourals about)
+### Q1608 · Tier B · interviewed January 2026 · phone_technical (Operations/generalist role: visa eligibility check, behaviourals about)
 
 Number of flips needed on a fair coin to land on heads twice in a row
 
@@ -15488,7 +15390,7 @@ Number of flips needed on a fair coin to land on heads twice in a row
 — interview_review_site · posted 2026-01-28 · full_text · [link](https://www.wallstreetoasis.com/company/virtu-financial/interview)
   1 attestation(s) across 1 domain(s) · doubt: The role is an operations/generalist role at Virtu, not a labelled quant track, so role_track is left unknown; the problem itself (expected flips to HH) is a canonical textbook Markov-chain exercise that appears in many 
 
-### Q1621 · Tier B · interviewed March 2025 · phone_technical (After a 75-minute online coding test with 5 easy-to-medium leetcode qu)
+### Q1609 · Tier B · interviewed March 2025 · phone_technical (After a 75-minute online coding test with 5 easy-to-medium leetcode qu)
 
 Length of every edge of a cube is twice as long. How much does the volume grow?
 
@@ -15496,7 +15398,7 @@ Length of every edge of a cube is twice as long. How much does the volume grow?
 — interview_review_site · posted 2025-04-13 · full_text · [link](https://www.wallstreetoasis.com/company/virtu-financial/interview)
   1 attestation(s) across 1 domain(s) · doubt: Trade Operations Analyst is not a quant role, so role_track is unknown and this may be out of scope for a quant question bank; the brainteaser itself is trivial.
 
-### Q1622 · Tier C · 2024 · phone_technical (after a technical dive into the candidate's background)
+### Q1610 · Tier C · 2024 · phone_technical (after a technical dive into the candidate's background)
 
 a probability puzzle consisting of chances of making a basket which is a function of the fraction of baskets made in the previous n-1 shots
 
@@ -15506,7 +15408,7 @@ a probability puzzle consisting of chances of making a basket which is a functio
 — interview_review_db · posted unknown · snippet_only · [link](https://www.wallstreetoasis.com/company/virtu-financial/interview/quant-research)
   1 attestation(s) across 1 domain(s) · doubt: My direct fetch of this WSO page timed out, so the text comes from a search-engine highlight rather than the page itself, and I could not read the submission date. The puzzle as described is under-specified (the initial 
 
-### Q1623 · Tier C · 2024 · phone_technical (coding round after the probability phone screen)
+### Q1611 · Tier C · 2024 · phone_technical (coding round after the probability phone screen)
 
 a coding screen where you are asked to replicate a simulation of a game, and the biggest challenge here is making sure you walk through all the logic and edge cases
 
@@ -15517,7 +15419,7 @@ a coding screen where you are asked to replicate a simulation of a game, and the
 
 ## Wolverine Trading — online_assessment
 
-### Q1624 · Tier C · unknown · online_assessment (Tested through HackerRank, then two phone interviews)
+### Q1612 · Tier C · unknown · online_assessment (Tested through HackerRank, then two phone interviews)
 
 Hackerrank was fairly straightforward coding questions with some slightly advanced stats and probability questions.
 
@@ -15528,7 +15430,7 @@ Hackerrank was fairly straightforward coding questions with some slightly advanc
 
 ## Wolverine Trading — phone_technical
 
-### Q1625 · Tier C · unknown · phone_technical (Process began with a coding challenge of simple coding exercises, then)
+### Q1613 · Tier C · unknown · phone_technical (Process began with a coding challenge of simple coding exercises, then)
 
 One was with a trader and was technical consistently of questions varying from option theory, coding, data science, probability, and a brain teaser at the end.
 
@@ -15536,7 +15438,7 @@ One was with a trader and was technical consistently of questions varying from o
 — interview_review_site · posted unknown · snippet_only · [link](https://www.wallstreetoasis.com/company/wolverine-trading/interview)
   1 attestation(s) across 1 domain(s) · doubt: Direct fetching of the Wolverine WSO page was repeatedly blocked by Cloudflare, so I saw this only via a search-engine highlight and could not recover the poster's role, level, office or submission date. Lists topics rat
 
-### Q1626 · Tier C · unknown · phone_technical (Poster describes phone interviews as standard brainteasers and fit que)
+### Q1614 · Tier C · unknown · phone_technical (Poster describes phone interviews as standard brainteasers and fit que)
 
 There was a Bayes question, some expected value questions, and a sorting algorithm question.
 
@@ -15547,7 +15449,7 @@ There was a Bayes question, some expected value questions, and a sorting algorit
 
 ## Wolverine Trading — take_home
 
-### Q1627 · Tier C · unknown · take_home (Poster describes the algorithm questions in the online take-home as am)
+### Q1615 · Tier C · unknown · take_home (Poster describes the algorithm questions in the online take-home as am)
 
 There was also a I believe minitab output, but could've been another statistical software output and you were asked to identify to things from that output which is something that I have never seen before. Also they asked a questions about strike prices which is pretty uncommon for proprietary trading as most firms alomst prefer that you have no previous financial knowledge coming into the position.
 
@@ -15560,7 +15462,7 @@ There was also a I believe minitab output, but could've been another statistical
 
 ## WorldQuant — phone_technical
 
-### Q1628 · Tier B · 2025 · phone_technical (the first of two puzzle questions after the behavioural section)
+### Q1616 · Tier B · 2025 · phone_technical (the first of two puzzle questions after the behavioural section)
 
 第一題是問有 100 個硬幣,其中有 20 個是正面的,80 個是反面的,但是那些硬幣的正反面我無法得知,而且我可以去翻任意數量的硬幣,題目是問我要怎麼把硬幣分成兩堆,使得兩堆的「正面硬幣數目」一樣
 
@@ -15570,7 +15472,7 @@ There was also a I believe minitab output, but could've been another statistical
 — chat_telegram · posted 2025-04-14 · full_text · [link](https://t.me/aistockanalyst/881)
   1 attestation(s) across 1 domain(s) · doubt: This is a complete, self-contained and answerable statement — one of the few in this shard that needs no reconstruction. Against that: it is a very widely circulated puzzle, which cuts both ways — firms do reuse classics
 
-### Q1629 · Tier B · 2025 · phone_technical (the puzzle asked after the probability question)
+### Q1617 · Tier B · 2025 · phone_technical (the puzzle asked after the probability question)
 
 後面問了一個益智遊戲,大綱主要是問有一堆一模一樣的球,其中有一顆是壞掉的,可能是比較重或是比較輕,問我要怎麼用一個天平來用最少的次數找出壞掉的球
 
@@ -15583,7 +15485,7 @@ There was also a I believe minitab output, but could've been another statistical
 
 ## WorldQuant — online_assessment
 
-### Q1630 · Tier C · unknown · online_assessment (WorldQuant China campus written test, reposted by a Chinese programmin)
+### Q1618 · Tier C · unknown · online_assessment (WorldQuant China campus written test, reposted by a Chinese programmin)
 
 300层楼,3个一样的小球,设计一个策略,得到小球摔碎的临界层数,并且要求最坏情况下所试次数最少。
 
@@ -15595,7 +15497,7 @@ There was also a I believe minitab output, but could've been another statistical
 — forum_repost_zh · posted 2011-07-31 · compilation_only · [link](http://cxyclub.cn/n/8051/)
   1 attestation(s) across 1 domain(s) · doubt: SECOND-HAND: the poster explicitly writes '先贴一个网上找到的去年的WorldQuant笔试题' - he found it online rather than sitting the test. The credited origin URL is titled 'worldquant-written-test-2007', so the paper is roughly 2007-2010
 
-### Q1631 · Tier C · unknown · online_assessment (WorldQuant China campus written test, reposted by a Chinese programmin)
+### Q1619 · Tier C · unknown · online_assessment (WorldQuant China campus written test, reposted by a Chinese programmin)
 
 一百个眼镜,摆成一个圈,全部正面向上,第一个人将每个翻动一次,一共翻了100次;第二个人从no.2开始隔一个翻一次,也翻100次;第3个人从no.3开始隔两个翻一次,翻100次,问100个人之后,多少眼镜正面向上
 
@@ -15607,7 +15509,7 @@ There was also a I believe minitab output, but could've been another statistical
 — forum_repost_zh · posted 2011-07-31 · compilation_only · [link](http://cxyclub.cn/n/8051/)
   1 attestation(s) across 1 domain(s) · doubt: SECOND-HAND repost, not a first-person sitting - the page author writes '先贴一个网上找到的去年的WorldQuant笔试题' and credits zhiqiang.org's 'worldquant-written-test-2007'. Roughly 2007-2010 vintage and almost certainly obsolete. The 
 
-### Q1632 · Tier C · unknown · online_assessment (WorldQuant China campus written test, reposted by a Chinese programmin)
+### Q1620 · Tier C · unknown · online_assessment (WorldQuant China campus written test, reposted by a Chinese programmin)
 
 一个蛋糕,切成连续的n块,有m个豆,问如果每小块上放一种豆,并且要求相邻的2块上的豆不一样,有多少种方法。
 
@@ -15619,7 +15521,7 @@ There was also a I believe minitab output, but could've been another statistical
 — forum_repost_zh · posted 2011-07-31 · compilation_only · [link](http://cxyclub.cn/n/8051/)
   1 attestation(s) across 1 domain(s) · doubt: SECOND-HAND repost, not a first-person account. Also ambiguous as stated: '切成连续的n块' does not say whether the pieces form a line or a ring, which changes the answer. Roughly 2007-2010 vintage.
 
-### Q1633 · Tier C · unknown · online_assessment (WorldQuant China campus written test, reposted by a Chinese programmin)
+### Q1621 · Tier C · unknown · online_assessment (WorldQuant China campus written test, reposted by a Chinese programmin)
 
 一条东西向长街,你站在街中间,街北是一排门,你有一把钥匙,请写出一种策略,要求X/N在最坏情况下最少,X为你到达正确的门时所走的总路程,N为正确的门距原点的距离,可以假设门与门之间距离为1。
 
@@ -15634,7 +15536,7 @@ There was also a I believe minitab output, but could've been another statistical
 
 ## WorldQuant — phone_technical
 
-### Q1634 · Tier C · 2023 暑期实习 (2023 summer internship) · phone_technical (P2 opened with 本科和研究生分别最喜欢的一门课程、深挖简历 (favourite undergrad and postgrad)
+### Q1622 · Tier C · 2023 暑期实习 (2023 summer internship) · phone_technical (P2 opened with 本科和研究生分别最喜欢的一门课程、深挖简历 (favourite undergrad and postgrad)
 
 日期星期几判定、4:6到x:8胜率一半一半可达成的概率、骰子投到6停止的期望(几何概型)
 
@@ -15644,7 +15546,7 @@ There was also a I believe minitab output, but could've been another statistical
 — campus_recruiting_forum · posted unknown · full_text · [link](https://www.nowcoder.com/discuss/481798326732455936)
   1 attestation(s) across 1 domain(s) · doubt: Three distinct questions are compressed into one comma-separated line and the middle one ('4:6到x:8胜率一半一半可达成的概率') is too elliptical to reconstruct reliably — the scoring context is missing. Page shows no post date.
 
-### Q1635 · Tier C · 暑期实习 (summer internship) · phone_technical (Fifth of five first-round problems, the algorithm question)
+### Q1623 · Tier C · 暑期实习 (summer internship) · phone_technical (Fifth of five first-round problems, the algorithm question)
 
 算法题:由自然数组成的n*n矩阵,找到最长连续整数路径,并求出这个长度(每次只能向上下左右移动一格,起点不限)
 
@@ -15654,7 +15556,7 @@ There was also a I believe minitab output, but could've been another statistical
 — chinese_recall_forum · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1020313-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Seen only via a search-engine highlight because 1point3acres blocks direct fetching; no post date visible on the snippet.
 
-### Q1636 · Tier C · 暑期实习 (summer internship) · phone_technical (Second round was mostly about the candidate's internship and research )
+### Q1624 · Tier C · 暑期实习 (summer internship) · phone_technical (Second round was mostly about the candidate's internship and research )
 
 两个人同时出硬币,可以选择出正反面,如果同正你赢3块,如果同负赢1块,如果不同输两块,求最佳策略及期望盈利。
 
@@ -15666,7 +15568,7 @@ There was also a I believe minitab output, but could've been another statistical
 — chinese_recall_forum · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1020313-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: The reported_answer is from a reply commenter, not the interviewer, and the highlight truncates it mid-sentence; seen only via search highlight because 1point3acres blocks fetching, so I could not read the full thread or
 
-### Q1637 · Tier D · 2025 · phone_technical (the opening probability question)
+### Q1625 · Tier D · 2025 · phone_technical (the opening probability question)
 
 有一題是 uniform 的 X 跟 Y,問我 XY > 0.5 的機率
 
@@ -15676,7 +15578,7 @@ There was also a I believe minitab output, but could've been another statistical
 — chat_telegram · posted 2025-04-14 · full_text · [link](https://t.me/aistockanalyst/881)
   1 attestation(s) across 1 domain(s) · doubt: The support of the uniforms is not stated — the poster writes only "uniform 的 X 跟 Y". Standard uniforms on [0,1] are the obvious reading and the poster mentions needing an integral, but the interval is genuinely absent f
 
-### Q1638 · Tier D · 2023 暑期实习 (2023 summer internship) · phone_technical (P1: 自我介绍、学术背景、深挖简历 (self-intro, academic background, deep dive on CV),)
+### Q1626 · Tier D · 2023 暑期实习 (2023 summer internship) · phone_technical (P1: 自我介绍、学术背景、深挖简历 (self-intro, academic background, deep dive on CV),)
 
 玩24点智力游戏、推24点成功概率
 
@@ -15686,7 +15588,7 @@ There was also a I believe minitab output, but could've been another statistical
 — campus_recruiting_forum · posted unknown · full_text · [link](https://www.nowcoder.com/discuss/481798326732455936)
   1 attestation(s) across 1 domain(s) · doubt: Nowcoder recall notes are terse bullet lists, so the question is compressed to a phrase and the exact numbers dealt in the 24-game are not recorded; the page as fetched does not display a post date, so post_date is unkno
 
-### Q1639 · Tier D · 2023 暑期实习 (2023 summer internship) · phone_technical (Coding portion of the first 30-minute half)
+### Q1627 · Tier D · 2023 暑期实习 (2023 summer internship) · phone_technical (Coding portion of the first 30-minute half)
 
 写一个长字符串中判断list内元素是否存在并优化
 
@@ -15696,7 +15598,7 @@ There was also a I believe minitab output, but could've been another statistical
 — campus_recruiting_forum · posted unknown · full_text · [link](https://www.nowcoder.com/discuss/481798326732455936)
   1 attestation(s) across 1 domain(s) · doubt: Terse bullet-point recall; the constraints (alphabet size, list size, whether substring or exact match) are not recorded, so the problem is underspecified.
 
-### Q1640 · Tier D · 暑期实习 (summer internship) · phone_technical (Poster notes 他们家真的很喜欢出绿皮书原题的brain teaser (this firm really likes setti)
+### Q1628 · Tier D · 暑期实习 (summer internship) · phone_technical (Poster notes 他们家真的很喜欢出绿皮书原题的brain teaser (this firm really likes setti)
 
 圆上n个点在半圆的几率
 
@@ -15706,7 +15608,7 @@ There was also a I believe minitab output, but could've been another statistical
 — chinese_recall_forum · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1020313-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: 1point3acres blocks direct fetching so I only saw this through a search-engine highlight and could not confirm the post date or read the full thread; the poster themselves flags that these are verbatim Green Book (Xinfen
 
-### Q1641 · Tier D · 暑期实习 (summer internship) · phone_technical (Second of five first-round problems; poster comments 小学奥数的味道 (has the )
+### Q1629 · Tier D · 暑期实习 (summer internship) · phone_technical (Second of five first-round problems; poster comments 小学奥数的味道 (has the )
 
 一天中秒针和分针垂直的次数
 
@@ -15716,7 +15618,7 @@ There was also a I believe minitab output, but could've been another statistical
 — chinese_recall_forum · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1020313-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Seen only via a search-engine highlight because 1point3acres blocks fetching; no post date visible. Clock-hand angle problems are a common puzzle genre, so the item is not firm-distinctive.
 
-### Q1642 · Tier D · 暑期实习 (summer internship) · phone_technical (Third of five first-round problems)
+### Q1630 · Tier D · 暑期实习 (summer internship) · phone_technical (Third of five first-round problems)
 
 两个人掷骰子,先手先掷到6的概率
 
@@ -15726,7 +15628,7 @@ There was also a I believe minitab output, but could've been another statistical
 — chinese_recall_forum · posted unknown · snippet_only · [link](https://www.1point3acres.com/bbs/thread-1020313-1-1.html)
   1 attestation(s) across 1 domain(s) · doubt: Poster explicitly tags it 绿皮 (Green Book), so it is a textbook problem; seen only via search highlight since 1point3acres blocks fetching, and no post date is visible.
 
-### Q1643 · Tier D · 暑期实习 (summer internship) · phone_technical (Fourth of five first-round problems)
+### Q1631 · Tier D · 暑期实习 (summer internship) · phone_technical (Fourth of five first-round problems)
 
 e^pai和pai^e比大小
 
@@ -15739,7 +15641,7 @@ e^pai和pai^e比大小
 
 ## unidentified firm (the message is a general industry overview and never names the employer whose superday it describes) — trading_game
 
-### Q1644 · Tier B · 2025 · trading_game (the card game, described with the stake and the re-betting rule)
+### Q1632 · Tier B · 2025 · trading_game (the card game, described with the stake and the re-betting rule)
 
 講講卡牌 主要就是放四張A在桌上,你有100塊來猜花色,看你想怎麼bet。牌會依次揭開,每次可以重新下注
 
@@ -15749,7 +15651,7 @@ e^pai和pai^e比大小
 — chat_telegram · posted 2025-04-22 · full_text · [link](https://t.me/aistockanalyst/906)
   1 attestation(s) across 1 domain(s) · doubt: The betting rules are only sketched — whether the stake compounds, what the payout odds are, and whether you must bet on every card are all unstated, and those determine the answer. The poster reports reaching an expecte
 
-### Q1645 · Tier D · 2025 · trading_game (the market-making prompt)
+### Q1633 · Tier D · 2025 · trading_game (the market-making prompt)
 
 造市問題比較有趣,以前沒遇過,問題聽說很經典,給你大樓電梯,如何造市
 
@@ -15762,7 +15664,7 @@ e^pai和pai^e比大小
 
 ## unnamed foreign (外资) quant firm recruiting at Tsinghua/Peking University — onsite
 
-### Q1646 · Tier D · unknown · onsite (the speaker recalling questions they were personally asked)
+### Q1634 · Tier D · unknown · onsite (the speaker recalling questions they were personally asked)
 
 解释一下Kerr黑洞是什么;解释一下EPR悖论
 
@@ -15775,7 +15677,7 @@ e^pai和pai^e比大小
 
 ## zd (unidentified Chinese fund, referred to only by initials) — take_home
 
-### Q1647 · Tier B · unknown · take_home (a group-chat participant relaying what a fellow intern encountered)
+### Q1635 · Tier B · unknown · take_home (a group-chat participant relaying what a fellow intern encountered)
 
 之前一个一起实习的同学去面过zd的qr岗,给的是一个project,给定entrust和trade的数据,撮合出最细颗粒度的ob,错误率不得高于4%
 
@@ -15788,7 +15690,7 @@ e^pai和pai^e比大小
 
 ## 孝庸基金 (unidentified Chinese fund, name written in homophone-obfuscated form) — online_assessment
 
-### Q1648 · Tier D · unknown · online_assessment (the opening line of the pasted group-chat transcript)
+### Q1636 · Tier D · unknown · online_assessment (the opening line of the pasted group-chat transcript)
 
 孝庸基金量化岗笔试题是敲代码,坦克大战
 

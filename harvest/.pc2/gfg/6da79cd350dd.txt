@@ -1,0 +1,38 @@
+Overview of the Assessment 
+ I recently appeared for the Round 1 online assessment at Akuna Capital for the C++ Software Engineering Intern role. The assessment consisted of three algorithmic problems designed to test your problem-solving skills, simulation capabilities, and understanding of data structures. 
+ The total duration of the assessment was 80 minutes, so time management was as important as problem-solving. The problems were conceptual but required careful implementation and handling of edge cases. 
+ Problem 1: Market Order Simulation (Conceptual Overview) 
+ Idea: 
+ The first problem simulated a simplified market order tracking system, where you had to manage incoming buy and sell orders and cancellations, and determine the current best market quote. 
+ Key Concepts: 
+ Maintain best bid and best offer prices and corresponding quantities. 
+ Incorporate orders that improve the current quote or match the best price. 
+ Handle order cancellations, updating the quote accurately. 
+ Only consider orders that meet certain eligibility criteria (like multiples of a given unit). 
+ Approach: 
+ Use maps or heaps to track current bids and offers efficiently. 
+ For each new order, check if it improves the best quote or needs to be added to an existing price bucket. 
+ When an order is canceled, recalculate the best quote by aggregating relevant orders. 
+ Learning Points: 
+ Real-world systems often require careful bookkeeping and simulations, not just classical algorithms. 
+ Managing multiple orders at the same price and handling cancellations are common edge cases in financial systems. 
+ Problem 2: Data Throttling Simulation (Conceptual Overview) 
+ Idea: 
+ The second problem focused on controlling the rate at which data is published, similar to throttling logs in a large system. The goal was to calculate how much data could actually be processed when there is a maximum allowed limit per time window. 
+ Key Concepts: 
+ Each data item has a size and a timestamp. 
+ A sliding time window keeps track of the total processed size. 
+ If adding a new item exceeds the limit, it must be dropped. 
+ Windows are inclusive, so careful handling of boundary conditions is required. 
+ Approach: 
+ Use a queue or deque to manage the current window efficiently. 
+ Track the running total of bytes in the current window. 
+ For each new log or data item: 
+ Remove entries outside the window. 
+ Check if adding the new item exceeds the limit. 
+ Accept or drop the item and update the window accordingly. 
+ Learning Points: 
+ Sliding window problems are common in rate-limiting, streaming, and real-time systems. 
+ Correct handling of window boundaries is crucial to avoid off-by-one errors. 
+ Choosing the right data structure (like deque) simplifies implementation and keeps the solution efficient. 
+ Due to the strict 80-minute limit, I didn’t get enough time to fully read or attempt the third problem. From the brief glance I got, it seemed to involve algorithmic logic combined with data structure usage, similar in style to the first two problems.In such scenarios, time management is key.Even without solving it, I tried to quickly assess complexity and potential approaches mentally.This experience highlighted the importance of prioritizing problems and not getting stuck on a single question for too long.

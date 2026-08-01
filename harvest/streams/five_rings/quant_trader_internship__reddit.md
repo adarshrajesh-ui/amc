@@ -1,9 +1,9 @@
 # Five Rings · quant trader internship · reddit
 
 - **Source family:** reddit
-- **Items:** 6
-- **Date range:** 2025-10-12 – 2026-07-28 (7/6 dated)
-- **Tier mix:** B=1, D=5
+- **Items:** 5
+- **Date range:** 2025-10-12 – 2026-07-28 (6/5 dated)
+- **Tier mix:** B=1, D=4
 
 ---
 ### Q1 · Tier B · unknown · online_assessment
@@ -45,11 +45,3 @@ I did it last year and it was 17 min, 17 questions brutal mental maths.
 > I did it last year and it was 17 min, 17 questions brutal mental maths.
 — reddit_thread · posted 2026-07-21 · archive_only · [link](https://www.reddit.com/r/quantfinance/comments/1v8csts/five_rings_quant_trading_intern_oa/p0auxxj/)
   2 attestation(s) across 1 domain(s) · doubt: First-hand but a year stale by their own admission, and it contradicts the 19-question figure circulating in the same thread — 17 questions in 17 minutes versus 19 questions at a minute each. Both cannot describe the sam
-
-### Q6 · Tier D · unknown · online_assessment (17 minutes)
-
-17 minutes is pure mental math, no time to think
-
-> 17 minutes is pure mental math, no time to think
-— reddit_thread · posted 2026-07-27 · full_text · [link](https://www.reddit.com/r/quantfinance/comments/1v8csts/five_rings_quant_trading_intern_oa/)
-  1 attestation(s) across 1 domain(s) · doubt: Read from the Arctic Shift mirror of the reddit dump (arctic-shift.photon-reddit.com), because reddit.com refuses this host; the quote is verbatim from the archived comment body, so an edit or deletion after archiving wo

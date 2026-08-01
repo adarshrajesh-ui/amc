@@ -4,20 +4,20 @@
 
 | Metric | Result |
 |---|---|
-| Questions shipped | **1,648** clusters from 1,823 raw records (155 duplicate attestations merged) |
+| Questions shipped | **1,636** clusters from 1,823 raw records (155 duplicates merged, 32 rejected) |
 | Firms | 48 |
 | Distinct source URLs | 802 |
-| Streams published | 333 |
-| **SIG, quant trader, internship** | **87** (target 120, rework floor 40) |
+| Streams published | 331 |
+| **SIG, quant trader, internship** | **89** (target 120, rework floor 40) |
 | SIG, all tracks | 380 |
-| Tier mix | A=5 · B=831 · C=286 · D=526 · REJECT=20 |
-| Chinese-sourced | 583 clusters (35.4%) — target was 40% |
-| Dated | 1,460 (88.6%); 2025-or-later 625 (37.9%) |
+| Tier mix | A=5 · B=823 · C=285 · D=523 · REJECT=32 |
+| Chinese-sourced | ~35% — target was 40% |
+| Dated | 88.6%; 2025-or-later 37.9% |
 | Access | full_text 1,422 · snippet_only 316 · archive_only 56 · compilation_only 9 |
-| **Forgery detection** | **20/20 fakes rejected** — gate needed ≥19. *Score is inflated; see §6.* |
-| **Positive control** | **20/20 real questions retained** — gate needed ≥16. *Also inflated; see §6.* |
 | **Independent quote re-verification** | 45 sampled, **37 CONFIRMED, 3 PARTIAL, 0 CONTRADICTED, 5 unreachable** |
 | Red team | 94 attacked → 13 BROKEN, 14 WOUNDED, 67 SURVIVED |
+| Reddit provenance census | 135 records, 99 accounts → **19 records on 11 non-candidate accounts** |
+| **Forgery detection** | 20/20 in both runs — **but both runs are confounded and neither is a valid measurement. See §6.1.** |
 
 **Shortfalls, up front.** SIG QT internship came in at 87 against a target of 120 — above the
 rework floor but short, because the communities that host this recall actively self-censor
@@ -70,7 +70,23 @@ Reddit records are therefore demoted to Tier D.
 
 ## 3. SIG quant trader internship — the primary target
 
-**87 questions.** The funnel map is at `firms/sig.yaml` (71 quote-backed evidence items).
+**89 questions**, against a target of 120. The funnel map is at `firms/sig.yaml` (71 quote-backed
+evidence items).
+
+**The gap will not close by relabelling, and the reason is itself a finding.** 92 SIG quant-trader
+records sat at `level: unknown`, which looked like cheap headroom. Resolving them yielded **53
+new-grad and only 2 defensible internship**. Not one of the 92 contains "intern", "summer",
+"placement" or 实习 anywhere in its stored text — and that is positive evidence rather than missing
+evidence, because SIG's job titles are level-bearing and the review sites keep the intern-marked
+titles in separate facets (`Quant trader intern (26)`, `Trading intern (39)` sit alongside
+`Assistant trader (134)`). SIG's own material fixes the levels: the Assistant Trader Program is
+filed as a graduate programme, and a university careers guide describes internships as "a stepping
+stone to becoming an Assistant Trader" — sequential roles, not synonyms.
+
+36 records stay genuinely indeterminate, and that is the cartography biting: because SIG runs the
+*identical paper* for both pipelines, thread framing establishes nothing. One r/quant thread is
+titled around the "FT Quant Trading OA" and the OP confirms full-time, while a commenter in the
+same thread says "This was for the trading internship though".
 
 **The vendor contradiction resolved, and it is the most useful finding in the run.** Prep sites
 disagree wildly on SIG's OA format: 16 questions in 20 minutes (everythingquant), 9 in 60
@@ -165,19 +181,60 @@ post-date the removal, so they preserve the removal notice rather than the post.
 
 Ranked. This section is the point of the artifact.
 
-1. **The control-set score is inflated and should not be read as 100% precision.** Two design
-   flaws, both found by agents rather than by me. All 20 forgeries had
-   `source_quote == question_text[:120]`, a mid-word programmatic truncation absent from real
-   records — the adjudicator spotted the pattern, disclosed that it used it as a prior, and
-   verified each item independently anyway, but the test was contaminated. Separately the 20
-   positive controls were drawn *from the corpus the pipeline had already admitted*, so retaining
-   them is partly circular. **A clean rerun needs forgeries minted through the same formatting path
-   as real records, and positive controls sourced independently of the corpus.**
+1. **I have no valid precision measurement. Two control runs, both scoring 20/20, both
+   confounded — in different ways.** This is the most important caveat in the document and I would
+   rather state it than bank a number I cannot defend.
+
+   *Run 1* leaked through formatting: every forgery had `source_quote == question_text[:120]`, a
+   mid-word truncation no real record carried. The adjudicator spotted it, disclosed that it used
+   the pattern as a prior, and verified items independently anyway. Its positive controls were also
+   drawn from the corpus already admitted, making retention partly circular.
+
+   *Run 2* fixed both of those — hand-written quotes longer than their questions with poster
+   framing and typos, zero prefix leaks, and 20 positive controls sourced independently off hosts
+   the corpus does not use. It scored 20/20 again. **And it is still confounded:** the adjudicator
+   reported that host fetchability perfectly separates the set. Every real control sits on a
+   directly fetchable host (GitHub, GeeksforGeeks, Quora, Business Insider); every forgery sits on
+   a Cloudflare-blocked one (Reddit, 1point3acres, Blind, WSO, Nowcoder). It says it worked each
+   item independently and only saw the partition when tallying — credible, given its decisive test
+   was genuinely hard work — but the shortcut existed.
+
+   That confound is not carelessness, it is structural: **real recall lives on blocked hosts, and
+   independently verifiable clean sources live on fetchable ones**, so any control set inherits the
+   correlation. A valid test has to cross the two factors deliberately — forgeries planted on
+   fetchable hosts and real controls drawn from blocked ones.
+
+   The adjudicator also caught a generator fingerprint I left: my seven fabricated Reddit IDs walk
+   near-alphabetically in their second character (1**p**4…, 1**q**m…, 1**r**r…, 1**s**h…, 1**s**k…,
+   1**t**9…, 1**u**2…), because I wrote them in sequence.
+
+   What run 2 *did* establish is a genuinely strong verification technique, independent of the
+   confound: **monotone post-ID versus claimed date.** Forums number posts with a globally
+   increasing counter, so an ID and a date are two independent assertions that must agree. The
+   adjudicator built a Reddit ID-to-date curve from 6,405 archived posts via the Wayback CDX index
+   and found six of seven fabricated Reddit items landing 102–192 days away from their claimed
+   dates. That test is cheap, mechanical, and should be run across the whole corpus in future work.
 2. **Tier labels describe sourcing effort, not confirmation.** Tier B means one dated full-text
    post. It does not mean two people agree. Real multi-source corroboration in the SIG corpus is
    about **1.3%**.
-3. **2026-vintage Reddit recall.** Demoted to Tier D wholesale. This is where every bot found in
-   this run lives, and it already injected a false claim about SIG's OA format.
+3. **Reddit provenance, now measured as a census rather than a sample.** All 135 Reddit
+   attestations were screened against the Arctic Shift mirror, re-deriving the author of every one
+   rather than trusting the stored `poster_context` (which named the wrong author on 21 of 135,
+   always because the collector cited a thread URL and named one participant while quoting
+   another). Result: **19 records across 11 non-candidate accounts**, up from the red team's floor
+   of 7. Every one is sole-sourced to the flagged account, so each loses its entire basis.
+
+   The largest is `hocobozos`, contaminating 8 Akuna records: on 2022-10-01 it posted 674 comments
+   across 605 distinct subreddits in all 24 hours at a 64-second median gap, then a year later
+   produced first-person recall of four different Akuna processes, three on one day. **Akuna loses
+   42% of its Reddit attestations and Citadel 60%**; SIG is the cleanest at 4 of 73.
+
+   The screen's restraint matters as much as its hits: 11 accounts flagged by automated artifact
+   detection were cleared by hand as false positives — Berkeley students using "AI" to mean
+   *Academic Intern*, someone joking "As an AI language model" in r/ProgrammerHumor in 2023, and
+   users quoting others' refusals inside arguments. Flagging those would have destroyed real
+   questions. Note also that a fresh throwaway account posting one detailed OA recall is *typical*
+   rather than suspicious, because people fear NDA consequences.
 4. **Telegram (215 attestations).** `t.me/usinterview` is a **mirror, not a witness** — a bot
    reposting 1point3acres link previews, so the stored quote is a truncated preview and it never
    constitutes independent corroboration of the thread it mirrors. All Tier D.
