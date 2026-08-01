@@ -3,16 +3,22 @@
 A single copy-pasteable prompt for an agentic tool (Cursor Cloud Agent, Claude Code, Codex, etc.)
 with web access and the ability to spawn many parallel subagents and run Python.
 
-It builds a corpus of **actually-asked** quant online-assessment and interview questions —
-harvested from first-person candidate recall posts, not from books, not from SEO listicles, not
-from the model's memory — with every question welded to a verbatim source quote at a live URL, a
-programmatic quote-verification gate, and a seeded-forgery calibration test that measures how often
-the authenticity filter is fooled.
+It harvests **actually-asked** quant online-assessment and interview questions from first-person
+candidate recall posts — English forums, the much larger Chinese 面经/笔经 ecosystem, and the public
+chat layer — and publishes them as many parallel per-source **streams** for a human with real
+domain experience to triage by eye.
 
-The design assumption is that the hard problem is **not** finding questions. It is that a
-sufficiently motivated language model will happily invent 400 plausible SIG questions, and plausible
-is indistinguishable from real by inspection. So every mechanism below exists to make fabrication
-*mechanically* detectable rather than a matter of trust.
+Two design assumptions:
+
+1. The hard problem is not finding questions. It is that a language model will cheerfully invent 400
+   plausible SIG questions, and plausible is indistinguishable from real by inspection. So every
+   mechanism here exists to make fabrication *mechanically* detectable: verbatim quotes re-checked
+   against live pages by script, plus seeded forgeries and positive controls that measure the
+   filter's precision and recall.
+2. The division of labor is that **the machine guarantees provenance and the human judges
+   plausibility.** That inverts the usual instinct to hand back a small, confidently-filtered set.
+   The agent is explicitly forbidden from discarding a provenance-verified question just because it
+   doubts it; it labels the doubt and ships, so the human's option set is never silently narrowed.
 
 Copy everything below the horizontal rule.
 
@@ -39,11 +45,33 @@ report.
 Under-spending is a defect. Do not ask me questions — resolve ambiguity by collecting more evidence
 and reporting the disagreement.
 
-**The one asymmetry that governs everything:** delivering 120 verified-real questions is a success.
-Delivering 400 questions of which 80 are invented is a *total* failure, because it poisons the
-entire corpus — once I find one fake, I cannot trust any of the other 399, and the whole artifact
-goes in the bin. When quota and integrity conflict, integrity wins and you report the shortfall in
-the first paragraph.
+## The division of labor — read this twice
+
+**You are not the final judge of whether a question is real. I am.** I have sat these assessments
+and I can tell a genuine SIG sequences item from a laundered textbook problem by looking at it. What
+I cannot do is check four hundred URLs.
+
+So the split is:
+
+- **You guarantee provenance.** That a specific human posted this specific text, at this specific
+  live URL, on this specific date, describing this specific firm and round. This is a factual claim
+  you can verify mechanically, and you are held to it absolutely.
+- **I judge plausibility.** Whether the question smells like the real test.
+
+Two consequences, and they cut in opposite directions, so hold both:
+
+1. **Fabrication is fatal.** Delivering 150 provenance-verified questions is a success. Delivering
+   500 of which 80 are invented is a *total* failure — one fake I catch means I cannot trust the
+   other 499, and the whole artifact goes in the bin. Every question you write must be one you read
+   at a URL you actually opened.
+2. **Over-filtering is nearly as bad.** Do not throw away a question because *you* find it
+   implausible. Your taste is worse than mine here. If the provenance is real, it ships — tagged
+   with your doubts, sorted below the strong material, but it ships. A question you silently dropped
+   is one I never get to judge.
+
+The corpus should therefore be **wide**. Many parallel streams, high volume, every item carrying its
+receipts, sorted so the strongest is on top and the weakest is clearly labeled — not a small
+pre-digested set reflecting your judgment of what I want.
 
 ---
 
@@ -148,16 +176,19 @@ changed (vendor switch, new section, changed timing) and cite the recalls that s
 ## 2.5 Quotas
 
 Targets, not licenses to pad. Missing a quota honestly is fine and gets reported; hitting one with
-weak or invented records is the failure described in the mission.
+invented records is the failure described in the mission. Because I do the plausibility filtering,
+these counts are **all provenance-verified tiers combined (A through D)**, not Tier A+B only.
 
-| Scope | Tier A+B target | Floor below which the shard is reworked |
+| Scope | Target | Floor below which the shard is reworked |
 |---|---|---|
-| SIG, quant trader, internship | 60 | 25 |
-| Each remaining Tier-A firm | 25 | 8 |
-| Each Tier-B firm | 10 | 3 |
-| Corpus total | 400 | — |
-| Share of corpus from the current + prior cycle | ≥50% | — |
-| Share of corpus at Tier A | ≥35% | — |
+| SIG, quant trader, internship | 120 | 40 |
+| Each remaining Tier-A firm | 50 | 15 |
+| Each Tier-B firm | 20 | 5 |
+| Corpus total | 900 | — |
+| Distinct streams published | ≥60 | — |
+| Chinese-sourced share of corpus | ≥40% | — |
+| Current + prior cycle share | ≥50% | — |
+| Tier A+B share | ≥40% | — |
 
 Rework means sending fresh agents at the shard with different query formulations and different
 source families — not relaxing the rubric until the number goes up.
@@ -169,7 +200,8 @@ source families — not relaxing the rubric until the number goes up.
 Do not run five Google searches and declare the internet exhausted. Work every source family below,
 and log coverage per family per firm in `SOURCES.md`, including the ones that produced nothing.
 
-**English forums and social:**
+## 3.0 English-language sources
+
 Reddit — r/quant, r/quantfinance, r/FinancialCareers, r/csMajors, r/leetcode, r/cscareerquestions,
 and university subreddits (Waterloo, Berkeley, CMU, UIUC, GaTech, NYU, UMich, Cornell, Imperial,
 Oxbridge, UNSW/USYD). Search Reddit natively, via `site:reddit.com`, via old.reddit, and via
@@ -177,36 +209,111 @@ third-party Reddit search mirrors. **Recall posts get deleted** — NDA nerves, 
 the poster getting cold feet — so also check public deleted-content mirrors and cached copies for
 threads whose titles survive in search results but whose bodies are gone. A removed post that a
 mirror preserved is often the highest-signal evidence in the corpus.
-Blind (teamblind.com) · Wall Street Oasis · QuantNet · Elite Trader · Hacker News threads ·
-X/Twitter recruiting-season threads · Discord and Slack (usually unscrapable — log as blocked, do
-not guess at contents).
 
-**Chinese-language sources — do not skip these, they are the richest vein for OA recall:**
-一亩三分地 / 1point3acres (`instant.1point3acres.com`), 牛客网 / Nowcoder, 知乎 / Zhihu,
-小红书 / Xiaohongshu, CSDN, Bilibili, 豆瓣, WeChat public accounts (`mp.weixin.qq.com`).
-Search in Chinese with the native vocabulary, not translated English: 面经 (interview recall),
-笔经 (written-test recall), 笔试 (written test), 真题 (actual past questions), 实习 (internship),
-暑期实习 (summer internship), 量化交易 (quant trading), 量化研究员 (quant researcher),
-OA, 面试流程 (interview process), 时间限制 (time limit), plus firm names in Chinese
-(e.g. 世坤, 简街, 城堡, 光速, Optiver 的笔试). Combine firm × role × cycle × recall-type terms.
+Blind (teamblind.com) · Wall Street Oasis · QuantNet · Elite Trader · Hacker News threads ·
+X/Twitter recruiting-season threads.
 
 **Question-bank and coding platforms:**
-LeetCode Discuss company tags · GeeksforGeeks interview-experience posts · HackerRank/CodeSignal
-discussion threads · Glassdoor per-company interview-question pages filtered to the exact role
-title · Levels.fyi and Interviewing.io writeups where they contain real recall.
+LeetCode Discuss company tags · GeeksforGeeks interview-experience posts · HackerRank and CodeSignal
+discussion threads · Glassdoor per-company pages filtered to the exact role title ·
+Levels.fyi and Interviewing.io writeups where they contain real recall.
 
-**Long-tail:**
-GitHub repos and gists collecting 面经 / OA questions (search both English and Chinese repo names) ·
-public Google Docs and Sheets that student quant clubs circulate · university career-center and
-quant-club prep documents · Quizlet decks built from real assessments (search firm + "OA") ·
-YouTube and TikTok videos where candidates narrate their assessment · Medium and Substack writeups ·
-personal blogs.
+**Long tail:**
+GitHub repos and gists collecting OA questions · public Google Docs and Sheets circulated by student
+quant clubs · university career-center and quant-club prep documents · Quizlet decks built from real
+assessments (search firm name plus "OA") · YouTube and TikTok videos where candidates narrate their
+assessment · Medium and Substack writeups · personal blogs.
 
-**Access discipline:** stick to publicly reachable pages. Do not create accounts, defeat logins,
-bypass paywalls, or hammer sites — respect rate limits and back off on 429s. When a source is
-login-walled (Glassdoor and 1point3acres frequently are), record what the public search snippet
-shows, mark `access: snippet_only`, and cap that record's tier. Snippet-only evidence is real
-evidence; pretending you read the full thread is not.
+## 3.1 Chinese-language sources — the richest vein, worked hardest
+
+Most real OA recall for these firms is written in Chinese by candidates from mainland/overseas
+Chinese university pipelines. If your Chinese-language yield is not several times your
+English-language yield, you have under-worked this section. Assign it more agents than English.
+
+**Compiled recall sites (面经/笔经 aggregators — the core targets):**
+一亩三分地 / 1point3acres (`instant.1point3acres.com` — the single densest source for US OA recall) ·
+牛客网 / Nowcoder (`nowcoder.com` — 笔经/面经 discussion boards, huge campus-recruiting traffic) ·
+应届生求职网 / Yingjiesheng (`yingjiesheng.com` — the classic 校招 board, deep 笔经 archives) ·
+看准网 / Kanzhun (the Chinese Glassdoor) · 脉脉 / Maimai (the Chinese Blind, strong for anonymous
+workplace and recruiting talk) · 实习僧 / Shixiseng (internship-specific) · 拉勾 · 大街网.
+
+**Forum / BBS layer (the Chinese Reddit equivalents):**
+百度贴吧 / Baidu Tieba (per-firm and per-university bars) · 豆瓣小组 / Douban groups (job-hunting
+groups are active and searchable) · 水木社区 / newsmth (`newsmth.net` — the Tsinghua BBS; its
+job-hunting and 校招 boards are an old, high-quality, frequently-overlooked archive) ·
+北大未名 BBS and other university BBSes · 知乎 / Zhihu (long-form answers to "XX 的面试是什么体验") ·
+V2EX · 虎扑 / Hupu · 小木虫 / muchong (academic job boards) · Chiphell.
+
+**Social and video:**
+小红书 / Xiaohongshu (RedNote — heavy recruiting-experience content, often as image posts, so read
+the captions and comments) · 微博 / Weibo · Bilibili (candidates narrate whole OAs on video;
+read the video description and the 弹幕/comments) · 抖音 / Douyin.
+
+**Long-form article platforms:**
+WeChat public accounts (`mp.weixin.qq.com`) · CSDN · 掘金 / Juejin · 简书 / Jianshu ·
+博客园 / cnblogs · 知乎专栏.
+
+**Shared compilation documents — high yield, usually missed:**
+Students circulate compiled 面经 in public collaborative docs. Search for and follow public links to
+语雀 / Yuque knowledge bases, 石墨文档, 飞书 / Lark docs, Google Docs and Sheets shared in Chinese
+forums, and GitHub repos with Chinese names (search `面经`, `笔试`, `量化`, `实习`, `真题` as repo
+and file names, not just English). These compilations are secondhand by nature, so treat the
+compilation as a **pointer**: chase each item back to its original post where possible, and where
+you cannot, ship it labeled `access: compilation_only`.
+
+**Search craft — this is where most agents fail:**
+Do not translate English queries. Use the native vocabulary and combine it as
+firm × role × cycle × recall-type:
+面经 (interview recall) · 笔经 (written-test recall) · 笔试 (written test) · 真题 (actual past
+questions) · 题库 (question bank) · 手撕 (live coding) · OA · 网测 (online test) ·
+实习 / 暑期实习 / 日常实习 (internship variants) · 校招 (campus recruiting) · 2026届 (2026 cohort) ·
+量化交易员 (quant trader) · 量化研究员 (quant researcher) · 面试流程 (interview process) ·
+时间限制 (time limit) · 几道题 (how many questions) · 挂了 (got rejected) · 求米 / 加米 (the
+1point3acres points-economy phrases that appear in genuine recall posts).
+
+Use Chinese firm names and nicknames alongside English ones: 世坤 (WorldQuant) · 简街 (Jane Street) ·
+城堡 (Citadel) · 光速 (Jump, colloquial) · 千禧 (Millennium) · 德劭 (D. E. Shaw) · 两西格玛 /
+两西 (Two Sigma) · 老虎 · plus firms that are simply written in Latin script inside Chinese posts
+(SIG, Optiver, IMC, HRT, DRW), which means you must run mixed-script queries like
+`SIG 量化 实习 面经` and `Optiver 笔试 2026届`.
+
+**Use Chinese search engines, not just Google.** Baidu, Sogou (搜狗), and Bing China index Chinese
+forum content Google misses entirely. Critically, **WeChat articles are not in Google's index** —
+reach them through Sogou's WeChat search vertical or through direct `mp.weixin.qq.com` links posted
+in forums. Also use each platform's *native* search (Zhihu, Xiaohongshu, Bilibili, Nowcoder,
+1point3acres), which surfaces material no external crawler has.
+
+## 3.2 Chat platforms — Discord, QQ, WeChat, Telegram
+
+Real-time chat is where the freshest recall lands, often days before it reaches a forum. It is also
+the hardest to reach honestly, so the rule is: **take what is genuinely public, and log the rest as
+blocked rather than guessing at its contents.**
+
+- **Discord** — quant-prep, trading, university quant-club, and OA-discussion servers. Find them via
+  server-listing directories (Disboard and similar), via invite links posted in Reddit and forum
+  threads, and via search engines indexing servers that expose public read-only channels or publish
+  web-visible archives and transcripts. Some communities post recruiting-season recap channels
+  publicly. Where a server needs an account to read, mark it `blocked: requires_membership` and move
+  on — do not join, and do not speculate about what is inside.
+- **QQ 群 and WeChat 群** — the dominant venue for Chinese campus-recruiting coordination. You will
+  rarely read them directly. What you *can* do is catch their spillover: group numbers, screenshots,
+  and pasted 面经 dumps get reposted into Tieba, Douban, Nowcoder, Xiaohongshu, and Yuque docs
+  constantly. Hunt the spillover, cite the public repost, and record that its upstream was a chat
+  group.
+- **Telegram** — public quant and recruiting channels are web-readable at `t.me/s/<channel>` without
+  an account. Search for firm names and 面经/OA vocabulary there.
+
+For every chat source, record `source_type: chat_*` and treat screenshot-only evidence as its own
+access class (§7.2): a legible screenshot of an OA is strong evidence about content but you cannot
+byte-verify a quote from it, so it ships labeled and cannot reach the top tier on its own.
+
+## 3.3 Access discipline
+
+Stick to publicly reachable pages. Do not create accounts, defeat logins, bypass paywalls, or hammer
+sites — respect rate limits and back off on 429s. When a source is login-walled (Glassdoor,
+1point3acres, and Nowcoder frequently gate full threads), record what the public search snippet
+shows, mark `access: snippet_only`, and label the record accordingly. Snippet-only evidence is real
+evidence and it ships; pretending you read the full thread is fabrication.
 
 ---
 
@@ -229,16 +336,22 @@ twice over: it tells collectors what to search for, and it gives adjudicators a 
 a "SIG QT intern OA question" that claims a format contradicting every mapped account of that OA is
 probably fabricated.
 
-**S2 — Collection (≥30 parallel agents, sharded by firm × source-family).** Each agent works its
-shard exhaustively: multiple query formulations, multiple search engines, pagination past page one,
-following intra-thread links and "see my other post" references, and mining the comment trees where
-the actual questions usually are. Each agent must log every query it ran and every URL it opened,
-including the duds.
+**S2 — English collection (≥25 parallel agents, sharded by firm × source-family).** Each agent works
+its shard exhaustively: multiple query formulations, multiple search engines, pagination past page
+one, following intra-thread links and "see my other post" references, and mining the comment trees
+where the actual questions usually are. Each agent must log every query it ran and every URL it
+opened, including the duds.
 
-**S3 — Chinese-language collection (≥8 parallel agents).** Same shards, native-language queries,
-run separately because the query craft and the sources are different enough that bolting it onto S2
-guarantees it gets skipped. Preserve original-language text verbatim in `source_quote` and put the
-English rendering in `question_text_en`. Never overwrite the original with a translation.
+**S3 — Chinese collection (≥20 parallel agents — more than S2, deliberately).** Same firm shards,
+but sharded again across the §3.1 platform families so that 1point3acres, Nowcoder, Yingjiesheng,
+Xiaohongshu, Zhihu, Tieba, newsmth, Bilibili, WeChat-via-Sogou, and the shared-doc layer each get a
+dedicated agent rather than one agent nominally "covering Chinese sources." Run native-language
+queries only. Preserve original text verbatim in `source_quote`; put the English rendering in
+`question_text_en`. Never overwrite the original with a translation — I want to read the Chinese.
+
+**S3b — Chat-layer collection (≥4 agents).** Discord directories and publicly readable servers,
+`t.me/s/` channels, and systematic hunting of QQ/WeChat-group spillover reposted into public forums
+and shared docs, per §3.2.
 
 **S4 — Extraction and normalization.** Convert each find into a schema-valid record (§7). One record
 per question. Preserve the reported wording; do not "clean up" a question into textbook prose,
@@ -279,7 +392,7 @@ a timed paper matching the *real* section structure, question counts, and time l
 only from Tier A/B questions. This is the deliverable I will actually practice against, so the
 timing and section shape matter as much as the content.
 
-**S12 — Verification packet and report.** Build §8 and §9.
+**S12 — Stream publication and report.** Build the triage deck (§8) and the report (§9).
 
 Track and report factory metrics: queries run, URLs fetched, candidates screened, records admitted,
 rejects by reason, per-station defect rate, control-set performance, rework loops.
@@ -320,20 +433,28 @@ defect.
 - A single post claiming implausible breadth — every section of every firm's OA, perfectly recalled.
 - Answer reads as though written by a language model.
 
-## 5.3 Tiers
+## 5.3 Tiers are sort order, not a gate
+
+Per §MISSION, tiers rank what I look at first. They are **not** permission to delete. Everything with
+real provenance ships somewhere.
 
 - **Tier A — Confirmed.** ≥2 independent first-person attestations, dated within three cycles, at
   least one with full-text access, consistent with the process map, survived the S8 attack.
 - **Tier B — Probable.** One strong first-person attestation with rich incidental detail, dated,
   consistent with the process map, survived the S8 attack.
-- **Tier C — Reported.** Attested but weakly — snippet-only access, undated, aggregated secondhand,
-  or role/level ambiguous. Ships in a clearly separated section.
-- **Rejected.** Everything else. Rejects are kept in `rejects/` with reasons — I want to see what you
-  threw away, because an over-aggressive filter is also a failure mode and I can only catch it if
-  the reject pile is visible.
+- **Tier C — Reported.** Attested but weakly — snippet-only, undated, secondhand via a compilation,
+  screenshot-only, or role/level ambiguous. Ships in its own clearly labeled section.
+- **Tier D — Unfiltered.** Provenance checks out but the §5.2 negative signals fire hard, or you
+  simply doubt it. Ships anyway, in `streams/tier_d/`, with your doubt stated in one line. This tier
+  exists specifically so your skepticism cannot silently shrink my option set.
 
-Report the tier distribution per firm. A firm that comes back 90% Tier C means that firm's shard
-needs rework, not that the firm has weak questions.
+**Rejected** is reserved for the four mechanical failures only: no URL; the quote does not verify
+against the page; sole attestation is a textbook or listicle; or the record is a duplicate already
+counted in a cluster. Rejects go to `rejects/` with reasons, because over-filtering is a failure
+mode I can only catch if the pile is visible.
+
+Report the tier distribution per firm. A firm that comes back 90% Tier C or D means that shard needs
+rework, not that the firm has weak questions.
 
 ---
 
@@ -415,7 +536,7 @@ attestations:
     post_date: 2026-01-14
     retrieved_at: 2026-02-02T11:04:00Z
     archive_url: https://web.archive.org/…
-    access: full_text                     # | snippet_only | archive_only
+    access: full_text                     # see §7.3
     poster_context: "…account history, university, other recall posts…"
 independent_attestation_count: 2
 tier: A
@@ -437,36 +558,89 @@ confidence_notes: "…residual doubt, stated plainly…"
 
 ## 7.2 `source_type` vocabulary
 
-`reddit_thread` · `1point3acres` · `nowcoder` · `zhihu` · `xiaohongshu` · `csdn` · `wechat_article` ·
-`blind` · `wso` · `quantnet` · `glassdoor` · `leetcode_discuss` · `github_repo` · `student_doc` ·
-`youtube` · `blog` · `x_twitter` · `other`
+**English:** `reddit_thread` · `blind` · `wso` · `quantnet` · `elitetrader` · `glassdoor` ·
+`leetcode_discuss` · `geeksforgeeks` · `github_repo` · `student_doc` · `youtube` · `blog` ·
+`x_twitter` · `hackernews`
+
+**Chinese:** `1point3acres` · `nowcoder` · `yingjiesheng` · `kanzhun` · `maimai` · `shixiseng` ·
+`zhihu` · `xiaohongshu` · `weibo` · `bilibili` · `douyin` · `tieba` · `douban` · `newsmth` ·
+`university_bbs` · `v2ex` · `hupu` · `muchong` · `wechat_article` · `csdn` · `juejin` · `jianshu` ·
+`cnblogs` · `yuque` · `shimo` · `lark_doc`
+
+**Chat:** `chat_discord` · `chat_telegram` · `chat_qq_repost` · `chat_wechat_repost` · `chat_slack`
+
+**Other:** `other` — and if you use it more than a handful of times, the vocabulary is wrong; extend
+it and say so.
+
+## 7.3 `access` vocabulary
+
+`full_text` — you fetched and read the whole page.
+`snippet_only` — login-walled; you have the public search snippet.
+`archive_only` — original is gone; an archive snapshot carries the quote.
+`compilation_only` — found in a secondhand compilation, original post not locatable.
+`screenshot_only` — the question is legible in an image, so no byte-verifiable text quote exists.
+Transcribe it, mark it, and cap at Tier C: strong evidence about content, unverifiable as a quote.
 
 ---
 
-# 8. THE VERIFICATION PACKET
+# 8. THE STREAM DECK — THE PRIMARY DELIVERABLE
 
-I will hand-check your work before I use it, so build for that explicitly. `VERIFY.md` is a
-spot-check packet I can adjudicate in about twenty minutes:
+This is what I actually consume. Everything else in the repo is supporting evidence. Build it for
+one purpose: **maximum questions per minute of my attention**, so I can run down them and call real
+or fake by eye.
 
-- **40 sampled questions**, stratified across tiers and firms, over-weighted toward SIG QT intern.
-- Each shown with: the question, firm/role/round/cycle, the verbatim source quote, the clickable
-  URL, the attestation count, a ≤25-word argument for why it is real, and — mandatory — **the single
-  strongest argument that it might be fake**. If you cannot articulate a doubt, you have not thought
-  about it hard enough.
-- **10 items from the reject pile** with rejection reasons, so I can check for over-filtering.
-- **The control-set results** from §6.2 and §6.3, including any forgery that survived.
+## 8.1 Streams
 
-Emit `verify_packet.jsonl` alongside it with a blank `human_verdict` field per item, plus
-`tools/apply_verdicts.py`, which ingests my filled-in verdicts and re-weights the corpus: recompute
-tiers under the corrected rubric, and propagate my rejections to structurally similar records
-(same source type, same collector agent, same signal profile). My manual pass should improve the
-whole corpus, not just the 40 rows I looked at.
+Publish one file per stream at `streams/<firm>/<role>_<level>__<source_family>.md`, e.g.
+`streams/sig/quant_trader_internship__1point3acres.md`. Keeping source families separate rather than
+merged is deliberate: sources have characteristic reliability, and once I have read twenty items from
+a stream I can judge the whole stream, which is far faster than judging items one at a time.
+
+Each stream file opens with a five-line header — source family, firm, role, item count, date range,
+tier mix — and then lists items in this exact shape, sorted best-first:
+
+```
+### Q17 · Tier B · Summer 2026 · OA section 2 (20 questions / 10 min)
+
+<the question, exactly as reported, Chinese preserved with English underneath>
+
+> verbatim source quote
+— 1point3acres, posted 2026-01-14, retrieved 2026-02-02, full text · [link] · [archive]
+  1 attestation · doubt: single poster, no corroboration found
+```
+
+Question first and prominent, evidence directly beneath, everything else compressed to one line. Do
+not bury questions under paragraphs of adjudication prose — your reasoning belongs in the YAML
+records, not in my reading path.
+
+## 8.2 The merged deck
+
+`TRIAGE.md` interleaves every stream into one scannable document, grouped by firm then round, sorted
+by tier. Same compact item format. This is the file I open first. Put SIG quant-trader internship at
+the top regardless of size.
+
+## 8.3 Verdict capture
+
+Emit `triage.jsonl` — one row per question, carrying id, firm, role, round, cycle, tier, question
+text, source URL, and a blank `human_verdict` field.
+
+Ship `tools/apply_verdicts.py`, which ingests my filled-in verdicts and propagates them: recompute
+tiers, and push my judgments onto structurally similar records — same source family, same collector
+agent, same poster, same signal profile. If I reject four items from one stream, that stream should
+be re-scored automatically. My pass over a few dozen rows should improve the whole corpus.
+
+## 8.4 Calibration section
+
+At the end of `TRIAGE.md`, in this order: the §6.2 forgery score with any survivor quoted in full,
+the §6.3 positive-control score, the quote-gate pass rate, and **15 items from the reject pile** with
+reasons so I can check what you threw away.
 
 ---
 
 # 9. OUTPUT CONTRACT
 
 ```
+/streams/         THE DELIVERABLE — one file per firm × role × source family
 /spec/            schemas, tiering rubric, acceptance gates
 /firms/           per-firm process maps from S1
 /questions/       one YAML per question, foldered by firm and role
@@ -477,33 +651,40 @@ whole corpus, not just the 40 rows I looked at.
 /analysis/        textbook_overlap.md, format_drift.md, coverage gaps
 /reports/         station reports, red-team log, control-set results
 /tools/           verify_quotes.py, dedupe.py, apply_verdicts.py
+TRIAGE.md         the merged scannable deck — I open this first
+triage.jsonl      every question with a blank human_verdict field
 questions.jsonl   the whole corpus, machine-readable
-VERIFY.md         the human spot-check packet
 SOURCES.md        coverage per source family per firm, including dead ends
-REPORT.md         the human answer
+REPORT.md         the numbers behind the deck
 ```
 
 `REPORT.md`, in this order:
 
 1. **Scoreboard, first, in numbers.** Total questions by tier; count for SIG QT internship
-   specifically; forgery-detection score; positive-control score; quote-gate pass rate. No preamble.
-2. **SIG QT internship** — its own section: the mapped funnel, the questions by round, what is
+   specifically; English vs. Chinese yield; forgery-detection score; positive-control score;
+   quote-gate pass rate. No preamble.
+2. **Stream inventory** — every stream, its item count, its tier mix, and a one-line reliability
+   note, so I know which streams to read first and which to discount.
+3. **SIG QT internship** — its own section: the mapped funnel, the questions by round, what is
    known about timing and format, and what could not be established.
-3. **Per-firm tables** — question counts by tier, round, and type.
-4. **Format drift** — which firms changed their assessments recently and the evidence for it.
-5. **Coverage and dead ends** — which firms, sources, and cycles came back empty, and whether that
+4. **Per-firm tables** — question counts by tier, round, and type.
+5. **Format drift** — which firms changed their assessments recently and the evidence for it.
+6. **Coverage and dead ends** — which firms, sources, and cycles came back empty, and whether that
    means no data exists or you could not reach it. These are different and I need them distinguished.
-6. **What I should distrust** — the weakest parts of the corpus, named specifically.
+   List every chat source logged as `blocked` here.
+7. **What I should distrust** — the weakest parts of the corpus, named specifically.
 
 ---
 
 # 10. TONE CONTRACT
 
 - Numbers before narrative. Report counts, not adjectives.
-- Report shortfalls in the first paragraph, not in a closing caveat. "SIG QT intern yielded 23 Tier-A
-  questions, below the 60 target, because the 2026-cycle threads are mostly deleted" is a good
-  sentence and I want it up front.
-- Never inflate coverage by promoting weak records. A short honest corpus beats a padded one.
+- Report shortfalls in the first paragraph, not in a closing caveat. "SIG QT intern yielded 44
+  questions against a target of 120, because the 2026-cycle 1point3acres threads are points-gated"
+  is a good sentence and I want it up front.
+- Never inflate coverage by promoting weak records into higher tiers. Tier honestly and let volume
+  come from breadth of sources, not from grade inflation.
+- In the streams, get out of the way. One line of doubt per item, no essays.
 - No hedging boilerplate, no "interview questions vary by candidate," no lecture about NDAs, no
   padding a thin shard with textbook problems to hit a number.
 
@@ -515,11 +696,16 @@ REPORT.md         the human answer
 - Paraphrasing, cleaning up, or reconstructing anything in a `source_quote` field. Verbatim or absent.
 - Citing a URL you did not open, or inventing an archive link.
 - Textbook or listicle as sole attestation.
+- **Dropping a provenance-verified question because you personally doubt it.** Label it Tier D and
+  ship it. Deciding for me is the failure mode this whole design exists to prevent.
 - A record without firm, role track, level, round, and a date (or an explicit `unknown` plus a tier cap).
 - Promoting full-time or SWE-track questions into the internship QT set.
 - Collapsing duplicate attestations into one and thereby destroying the corroboration count.
-- Creating accounts, defeating logins or paywalls, or ignoring rate limits.
-- Stopping at the first page of results, or running only English queries.
+- Translating a Chinese source and discarding the original text.
+- Assigning one agent to "cover Chinese sources." Shard by platform, per §3.1.
+- Creating accounts, joining private servers, defeating logins or paywalls, or ignoring rate limits.
+- Speculating about the contents of a chat source you could not read.
+- Stopping at the first page of results, or searching only in English, or only on Google.
 - Shipping with a failing control gate, or without the reject pile.
 - Declaring completion while the SIG QT internship shard is thin, without saying so in line one.
 
@@ -528,6 +714,8 @@ REPORT.md         the human answer
 # 12. START
 
 Begin with S0. Print the station roster, the schemas, the tiering rubric, the acceptance gates, and
-the sharding plan across firms and source families. Seal the control sets. Then run the factory to
-completion without stopping to ask permission, reporting progress by station. When the gates are
-green, deliver `VERIFY.md` first and `REPORT.md` second.
+the sharding plan across firms, languages, and source families. Seal the control sets. Then run the
+factory to completion without stopping to ask permission, reporting progress by station.
+
+When the gates are green, deliver `TRIAGE.md` first, the `streams/` directory second, and
+`REPORT.md` third.
