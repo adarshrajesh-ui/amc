@@ -3,6 +3,11 @@
 A single copy-pasteable prompt for an agentic tool (Cursor Cloud Agent, Claude Code, Codex, etc.)
 with web access and the ability to spawn many parallel subagents and run Python.
 
+> **Using Cursor?** Prefer the skill at `.cursor/skills/quant-question-harvest/`, which is the same
+> method as an invocable, parameterized `/quant-question-harvest <firm and role>` with the source
+> lists split into on-demand references. This file is the standalone variant for tools without skill
+> support, and hardcodes SIG quant trader internship as the target.
+
 It harvests **actually-asked** quant online-assessment and interview questions from first-person
 candidate recall posts — English forums, the much larger Chinese 面经/笔经 ecosystem, and the public
 chat layer — and publishes them as many parallel per-source **streams** for a human with real
