@@ -1,10 +1,12 @@
 # Quant developer / software engineering questions
 
-122 questions across 15 firms, split out from the 346-question corpus.
+122 questions across 15 firms, out of the 346-question corpus.
 
-These are the developer and SWE tracks, kept separate because they are a different assessment from the trading and research pipelines — at SIG, for instance, the developer track sits a CodeSignal coding OA while trader and researcher candidates sit the same 17-question maths paper.
+The developer and SWE tracks, a genuinely different assessment from the trading and research pipelines. This set is the largest because developer-track recall is shared far more freely, not because these firms mostly ask coding questions.
 
-Note the skew: this set is large because developer-track recall is shared far more freely than trader-track recall, not because these firms mostly ask coding questions.
+**By level:** internship 74 · experienced 19 · unknown 19 · new_grad 10
+
+Tier is sort order, not confirmation: A means multiple independent dated attestations, B a single dated full-text one, C weak or snippet-only, D provenance real but a negative signal fired. See `REPORT.md` §6.
 
 ---
 
@@ -14,17 +16,23 @@ Note the skew: this set is large because developer-track recall is shared far mo
 
 Given a list of string. Each string of the form s1-s2, where s1 is a computer connected to s2 and vice versa. If a hacker attacks one of your computer, then its connected computers will also be hacked and in turn its connected computers will also get hacked just like chain reaction. We have to find maximum count of computers that will get hacked.
 
+*Reported answer:* build an adjacency list from it (Remember it should be an undirected graph). After building the graph apply BFS utility function starting from each vertex and find the maximum count we can get and keep track of visited vertices to avoid cycles. That maximum count is the answer.
+
 <sub>blog · 2019 · [source](https://www.geeksforgeeks.org/interview-experiences/de-shaw-on-campus-internship-interview-experience-2019/)</sub>
 
 **2.** `B` · internship · online_assessment · unknown
 
 You are given an unweighted undirected graph. Your task is to color the leaf nodes of the graph. A node x is diverse if all the leaf nodes in its subtree have different colors. Return an array of size n where the i th element of the array represents the minimum number of different colors required to make the number of diverse nodes in the graph greater than or equal to i . (where n is the number of nodes)
 
+*Reported answer:* Writer solved it with BFS and passed all test cases
+
 <sub>blog · 2023 · [source](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2023/)</sub>
 
 **3.** `B` · internship · online_assessment · unknown
 
 Given an array arr of n integers, in a single operation, one can reduce any element of the array by 1. Find the minimum number of operations required to make the array a bitonic array. Example of bitonic array: [0,1,2,3,2,1,0,0]
+
+*Reported answer:* Writer tried two pointers, passed 8/15 test cases
 
 <sub>blog · 2023 · [source](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2023/)</sub>
 
@@ -56,11 +64,15 @@ You have been given N strings, you need to create a minimum length string such t
 
 Given an array of n numbers, find the number of triplets such that Ai<Aj<Ak or Ai>Aj>Ak where i, j, k are indices and i<j<k
 
+*Reported answer:* The O(n^3) approach would not pass all the test cases and the solution needed to be optimized to O(n^2) or O(n log(n))
+
 <sub>blog · 2020-08 · [source](https://www.geeksforgeeks.org/interview-experiences/de-shaw-internship-interview-experience-on-campus-2021-2/)</sub>
 
 **9.** `B` · internship · online_assessment · unknown
 
 You are given x lions, y tigers, z leopards, and w panthers and m cages in a line; fill all m cages so no two same animals are adjacent, and count the total number of ways
+
+*Reported answer:* Constraints 0<=x,y,z,w<=51; the writer says it was to be solved using DP
 
 <sub>blog · 2020-08 · [source](https://www.geeksforgeeks.org/interview-experiences/de-shaw-internship-interview-experience-on-campus-2021-2/)</sub>
 
@@ -68,11 +80,15 @@ You are given x lions, y tigers, z leopards, and w panthers and m cages in a lin
 
 Given an array of positive integers, find out the number of sub-arrays that consist of prime numbers only.
 
+*Reported answer:* Example given: [2,3,1,7,2] -> subarrays [2],[3],[2,3],[7],[2],[7,2], answer 6
+
 <sub>blog · 2020-08 · [source](https://www.geeksforgeeks.org/interview-experiences/de-shaw-summer-internship-interview-experience-2021-on-campus-vit-vellore/)</sub>
 
 **11.** `B` · internship · online_assessment · unknown
 
 Two arrays are given, a binary array A and a cost array B of the same length; convert A to all 1s at minimum cost, where flipping A[i] costs B[i] but is free if A[i-1] and A[i+1] are both 1
+
+*Reported answer:* Writer passed no test cases on this question
 
 <sub>blog · 2020-08 · [source](https://www.geeksforgeeks.org/interview-experiences/de-shaw-summer-internship-interview-experience-2021-on-campus-vit-vellore/)</sub>
 
@@ -80,11 +96,15 @@ Two arrays are given, a binary array A and a cost array B of the same length; co
 
 A matrix is given or r rows and c columns. Each cell is a factory that has a loot amount of a(i,j). We can start looting from any cell. The Directions allowed to move are Down & Right with a constraint that i can loot a factory only is previous loot is lesser than this loot. We need to find the maximum number of factories that can be looted.
 
+*Reported answer:* Dynamic programming, worth 30 marks
+
 <sub>blog · 2021 · [source](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experienceon-campus-internship-2021/)</sub>
 
 **13.** `B` · internship · online_assessment · unknown
 
 Given that you have three items A, B, and C that you need to put them in a particular order such that there are no three consecutive same items. Given n queries of the form (a, b, c) where a, b and c are the number of items A, B, and C that you have, find the maximum number of A, B, and C items that you can order by following the above constraint.
+
+*Reported answer:* Math, with low constraints, per the poster's own tag
 
 <sub>blog · 2022 · [source](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022/)</sub>
 
@@ -104,11 +124,15 @@ A couple of open-ended problems that required some knowledge of basic ML techniq
 
 The most unexpected question was: how would you color a 3-colorable graph?
 
+*Reported answer:* I was initially thinking that you had to do something efficient, which isn't possible. But he just wanted some way of doing it.
+
 <sub>blog · 2013-11-01 · [source](https://www.jointaro.com/interviews/companies/de-shaw/experiences/quantitative-analystsoftware-developer-intern-new-york-ny-november-1-2013-accepted-offer-positive-763017cd)</sub>
 
 **17.** `B` · internship · onsite · 2025
 
 Design a custom class over an n x m canvas of zeros supporting draw(r, c), delete(r, c) and move(r1, c1, r2, c2), where the most recently drawn shape on a cell is the one displayed
+
+*Reported answer:* First solution O(N) per operation; optimised to O(logN) per operation with a hashmap and a queue
 
 <sub>blog · 2025 · [source](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experience-for-technology-developer-intern-2025/)</sub>
 
@@ -116,11 +140,15 @@ Design a custom class over an n x m canvas of zeros supporting draw(r, c), delet
 
 Given two numbers represented as linked lists of the same length, add the numbers with reversing, modifying, extra space and recursion all disallowed
 
+*Reported answer:* Writer first proposed O(N^2), then an optimised approach after 10-15 minutes
+
 <sub>blog · 2025 · [source](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experience-for-technology-developer-intern-2025/)</sub>
 
 **19.** `B` · internship · onsite · unknown
 
 Given an array of strings A, find the longest string all of whose prefixes also appear in the array
+
+*Reported answer:* Example: for ['a','ab','abc','abcd','aaaaa','aabsd'] the answer is 'abcd'; writer used a hashmap of all strings and checked prefixes
 
 <sub>blog · 2020-08 · [source](https://www.geeksforgeeks.org/interview-experiences/de-shaw-summer-internship-interview-experience-2021-on-campus-vit-vellore/)</sub>
 
@@ -128,11 +156,15 @@ Given an array of strings A, find the longest string all of whose prefixes also 
 
 Given pickup, drop and tip arrays where trip i earns drop[i]-pickup[i]+tip[i] and the next pickup must be at or after the last drop, maximise earnings
 
+*Reported answer:* Writer concluded dynamic programming was the way to go but their code segfaulted before time ran out
+
 <sub>blog · 2020-08 · [source](https://www.geeksforgeeks.org/interview-experiences/de-shaw-summer-internship-interview-experience-2021-on-campus-vit-vellore/)</sub>
 
 **21.** `B` · internship · phone_technical · unknown
 
 Q8) Puzzle. Given 10 stacks each stack contains 10 coins of 1 gram each. But one stack all coins with weight 9 gram. You have a weighing machine. You have to find the faulty stack in minimum number of weighings ?
+
+*Reported answer:* For best case, you just need one weighing. Take 1 coin from first stack, 2 from second, 3 from third and so on and weigh them together. If there was no faulty stack, then this weight would be 550. Now if weight is 549 then 1st stack is faulty, if 548 then 2nd and so on.
 
 <sub>blog · 2019 · [source](https://www.geeksforgeeks.org/interview-experiences/de-shaw-on-campus-internship-interview-experience-2019/)</sub>
 
@@ -158,6 +190,8 @@ Given an array of n integers and an integer x, provide an algorithm that determi
 
 You are given a string which contains only a's and b's. A "good string" can be split into 3 parts. First part should contain only a's(can contain 0 also), second should contain b's and third should contain a's. Now we need to find the length of the largest good string by deleting some characters from the string.
 
+*Reported answer:* Example given: s = "aaabbaabbbaa" answer = 10; solved recursively with an index and a 0/1/2 state variable, then memoised
+
 <sub>blog · 2023 · [source](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2023/)</sub>
 
 **26.** `B` · internship · phone_technical · unknown
@@ -170,11 +204,15 @@ Why did you use MongoDB over MySQL, and which database performs better under dif
 
 There is an N-floor building and you have one egg. You need to find the lowest floor from which the egg breaks on dropping. Follow-up: what is the most optimal method with 2 eggs?
 
+*Reported answer:* One egg: linear scan upward, O(N). Two eggs: use one egg to shorten the search range, then linear search inside it
+
 <sub>blog · 2021-07 · [source](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022-2/)</sub>
 
 **28.** `B` · internship · phone_technical · unknown
 
 Which of the two is bigger, 50^99 or 99! ? Why?
+
+*Reported answer:* Writer answered 50^99 and justified it by rewriting both numbers in terms of 100; the interviewers were not fully satisfied
 
 <sub>blog · 2021-07 · [source](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022-2/)</sub>
 
@@ -200,17 +238,23 @@ Implement a Python-style list (which can hold different types of data in one lis
 
 Given a regex built from \d, \w, $, ^, + and *, generate as many kinds of matching strings as possible
 
+*Reported answer:* Writer tokenised the regex into [symbol, modifier] pairs and grew a vector of candidate strings built from 'a' and '1'
+
 <sub>blog · 2020-08 · [source](https://www.geeksforgeeks.org/interview-experiences/de-shaw-summer-internship-interview-experience-2021-on-campus-vit-vellore/)</sub>
 
 **33.** `B` · internship · phone_technical · unknown
 
 There are n goods, the i-th of weight wi, and m trucks; load the trucks so each carries almost equal weight
 
+*Reported answer:* Writer gave a DP solution for m == 2 and was not asked to generalise
+
 <sub>blog · 2019-08 · [source](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus/)</sub>
 
 **34.** `B` · internship · phone_technical · unknown
 
 Design a data structure with insert, delete and search in O(1) worst case, then add getRandom in O(1)
+
+*Reported answer:* Once told the data was in range 1-9999 the writer used a direct-address array of 0/1 flags
 
 <sub>blog · 2019-08 · [source](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus/)</sub>
 
@@ -230,6 +274,8 @@ You have N machines which produce bolts (each bolt weighing exactly 10 gm) with 
 
 There are two traffic lights between your house and office. While going from your house to the office, you stop two times but while returning home from the office you stop only once. Given that the traffic lights are always red whenever you encounter them, how is this situation possible.
 
+*Reported answer:* Hint given by the poster: you don't need to stop at a traffic light when you need to turn left
+
 <sub>blog · 2022 · [source](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022/)</sub>
 
 **38.** `B` · internship · phone_technical · unknown
@@ -248,11 +294,15 @@ Given a linked list and a node, how will you delete that node from the linked li
 
 Given a binary tree, first, print its left side view then its right side view. Print the root node only once.
 
+*Reported answer:* The interviewer wanted the approach, the time complexities and a dry run on two test cases
+
 <sub>blog · 2022 · [source](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022/)</sub>
 
 **41.** `B` · internship · phone_technical · unknown
 
 You are given a function getManager(int id) which returns the manager of the employee whose id is passed. You need to implement a function getCManager(int id1, int id2) which should return the lowest common manager of the two employees whose id is passed. You are not provided with the actual tree structure, only the getManager function.
+
+*Reported answer:* The poster's accepted answer was to store all managers of one employee in an unordered_set and then walk the other employee's managers checking membership
 
 <sub>blog · 2022 · [source](https://www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022/)</sub>
 
@@ -260,11 +310,15 @@ You are given a function getManager(int id) which returns the manager of the emp
 
 Given a sum and you have to find the no. of ways to form that sum using only consecutive numbers. For ex: sum = 21 ... Ans: 3 (total counts)
 
+*Reported answer:* The poster solved it with the two pointer method
+
 <sub>blog · 2020 · [source](https://www.geeksforgeeks.org/interview-experiences/de-shaw-internship-interview-experience-on-campus-2020/)</sub>
 
 **43.** `B` · internship · phone_technical · unknown
 
 you have given bombs and you have to find the min intensity of all the bombs such that you can skip max 2 bombs.
+
+*Reported answer:* The poster gave a DP approach which the interviewers accepted, but could not write working code
 
 <sub>blog · 2020 · [source](https://www.geeksforgeeks.org/interview-experiences/de-shaw-internship-interview-experience-on-campus-2020/)</sub>
 
@@ -283,6 +337,8 @@ Given a matrix(n * m) and a queen positioned at (n-1,m/2). Find the number of wa
 **46.** `C` · new_grad · phone_technical · unknown
 
 Given stock prizes for N days. Each day you could either buy a stock or sell some/all of the stocks you have purchased previously. It is also allowed to not perform any operation for a day. Buying a stock will count as a negative addition to profit and selling will count as a positive addition to the profit. Find the maximum profit that could be achieved given the Stock prizes for N days. Example : [1,5,2,100,3,2]
+
+*Reported answer:* Find the next maximum Stock price for each day and buy that stock only if there is any available higher prize. So the profit will be: For each ith day buying a stock ( - stockPrize[i] ) and selling the stock at a later day with highest stock prize ( i.e. +max(stockPrize[i+1,n-1] ) ). This range maximum could be easily computed using suffix maximum, given a solution in linear time.
 
 <sub>blog · unknown · [source](https://www.geeksforgeeks.org/interview-experiences/de-shaw-off-campus-fresher-interview-experience/)</sub>
 
@@ -314,11 +370,15 @@ What is a Trie Data Structure? Explain it's node structure and working? What is 
 
 A simple Game Theory question: Given Two Players A and B separated by N number of tiles. In a move, each one can move one or two-step ahead. Who will win if player A starts and each one plays alternately and optimally. The player who is not able to make any move losses the game.
 
+*Reported answer:* if you write down all the values of f() you will find that it decomposes to f(n) = 0 if n is a multiple of 3 otherwise f(n)=1
+
 <sub>blog · unknown · [source](https://www.geeksforgeeks.org/interview-experiences/de-shaw-off-campus-fresher-interview-experience/)</sub>
 
 **52.** `C` · internship · phone_technical · unknown
 
 You are a given a text written in JSON ... Now he asked me to design a structure which can store this information from this code and answer the queries efficiently. For example if the query is A.B.C then answer will be {D:45}, similarly if the query is A.C.B then answer will be 98, formally I have to return all the information inside the given path or determine that the given path is invalid. An invalid path means a path which does not exists for example B.A
+
+*Reported answer:* Lastly I thought an approach using TRIE data structure (better than the previous one) and I was able to code it at the time of interview
 
 <sub>blog · unknown · [source](https://www.geeksforgeeks.org/interview-experiences/de-shaw-interview-experience-for-2021-internship-on-campus/)</sub>
 
@@ -764,6 +824,8 @@ Given a list of items and their utilitites, give an algorithm to maximise utilit
 
 Again, start and end times. Again, overlapping intervals. But this time the task changed subtly. Instead of asking for the global maximum number of simultaneous employees, they asked for the maximum number of direct overlaps centered around a single employee. ... If one employee ends at time 5 and another starts at time 5, do they overlap? In this problem, yes.
 
+*Reported answer:* Sort the start times. Sort the end times. For each interval, determine how many intervals finish strictly before it starts. Then determine how many intervals begin strictly after it ends. Everything else overlaps. Binary search; O(n log n).
+
 <sub>blog · 2026-02-22 · [source](https://hiya31.medium.com/what-they-asked-me-in-the-citadel-securities-hackerrank-coding-round-ed3ceded3c04)</sub>
 
 
@@ -790,6 +852,8 @@ What is the difference between multi-thread and multi-processing
 **1.** `C` · unknown · online_assessment · unknown
 
 If day is a “Good” Day, [there] is a 60% chance that the next day will be “Good” and a 40% chance it will be “Bad”. If day is a “Bad” Day, there is a 70% chance that the next day will be “Bad” and 30% chance it will be “Good”. If today is Good Day, on average, how many days do we have to wait until the next “Bad” Day?
+
+*Reported answer:* No final number stated. A commenter gives the full method: 如果今天是好天气,1天后是坏天气的概率是0.4,2天后坏天气的概率是0.6*0.4,3天后坏天气的概率是0.6*0.6*0.4 ... n天后的坏天气概率是0.6^(n-1)*0.4, then sums n * P(n) by the 错位相减 (shift-and-subtract) trick, noting it matches the Markov-chain answer.
 
 <sub>1point3acres · 2021-02 · [source](https://www.1point3acres.com/bbs/thread-719224-1-1.html)</sub>
 
