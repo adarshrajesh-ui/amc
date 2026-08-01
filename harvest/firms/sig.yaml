@@ -1,0 +1,919 @@
+firm: Susquehanna International Group
+aliases: [SIG, Susquehanna, Susquehanna International Group LLP, 海纳国际集团]
+harvested: 2026-08-01
+harvester_note: >-
+  Process map only. Every claim below carries a URL whose content was actually retrieved plus a
+  verbatim quote. 1point3acres was NEVER fetched (Cloudflare 403, verified by curl); all 1p3a
+  quotes come from WebSearch "Highlights" snippets and are marked source_type: 1point3acres_snippet.
+  Glassdoor was not fetched either, but the search tool side-loaded the full page text to disk,
+  which was read; marked source_type: glassdoor_sideloaded.
+
+# ---------------------------------------------------------------------------
+# SIG'S OWN STATED PROCESS (primary source, applies to trading tracks)
+# ---------------------------------------------------------------------------
+official_process_per_sig:
+  confidence: high
+  steps: ["Application", "Online Assessment", "Phone Interviews", "Office Interview", "Job Offer"]
+  note: >-
+    SIG's own wording is "Office Interview", not "Superday". Candidates and prep vendors say
+    "superday"; SIG does not. Note also that SIG's own gloss on the OA is "Quantitative and
+    problem-solving skills" — which happens to contain both of the two test names candidates
+    report ("Quantitative Evaluation" and "Problem Solving Assessment").
+  evidence:
+    - url: https://au.gradconnection.com/employers/susquehanna-international-group/jobs/susquehanna-international-group-quantitative-trader-internship-november-2026-3/
+      quote: "Our Interview Process: 1. Application 2. Online Assessment (Quantitative and problem-solving skills) 3. Phone Interviews (Behavioural and technical) 4. Office Interview (Trader interview, trade floor visit, and office tour) 5. Job Offer"
+      date: 2026-07
+      source_type: sig_own_job_posting
+      role: Quantitative Trader Internship November 2026 (Sydney)
+    - url: https://simplify.jobs/p/d11d99ce-06a3-4c8c-b15f-e6d562a1190a/Graduate-Quantitative-Trader
+      quote: "Our Interview Process: 1. Application2. Online Assessment (Quantitative and problem-solving skills) 3. Phone Interviews (Behavioural and technical)4. Office Interview (Trader interview, trade floor visit, and office tour)5. Job Offer"
+      date: 2026-07
+      source_type: sig_own_job_posting_mirror
+      role: Graduate Quantitative Trader (Sydney)
+    - url: https://www.quantblueprint.com/jobs/sig-quantitative-trading-internship-november-2026-expression-of-interest
+      quote: "- Application\n- Online Assessment (Quantitative and problem-solving skills) - Phone Interviews (Behavioural and technical)\n- Office Interview (Trader interview, desk rotation, office tour)\n- Job Offer"
+      date: 2026
+      source_type: sig_own_job_posting_mirror
+      note: "Same SIG boilerplate, but 'desk rotation' instead of 'trade floor visit'."
+
+# ---------------------------------------------------------------------------
+# THE CENTRAL FINDING
+# ---------------------------------------------------------------------------
+headline_finding:
+  summary: >-
+    SIG runs (at least) THREE distinct first-round assessments, and the apparent contradiction in
+    the prep-vendor literature dissolves once you separate them by TRACK and by DATE.
+  assessments:
+    - id: A
+      name: "SIG Quantitative Evaluation"
+      shape: "~16 questions in 20-25 minutes"
+      who: "Quant Trader / trading tracks"
+      when: "observed 2020 through Feb 2024; not observed in any account after Feb 2024"
+    - id: B
+      name: "The Susquehanna Problem Solving Assessment"
+      shape: "17 free-response questions in 60 minutes"
+      who: "Quant Trader AND Quant Research AND Quant Systematic Trading — one shared question bank"
+      when: "observed Aug 2024 through Feb 2026, continuous"
+    - id: C
+      name: "coding OA (CodeSignal / C++)"
+      shape: "2 questions in 60 min (2023) -> 3-4 questions (2025 onward)"
+      who: "Software Engineer / SDE / Trading Systems Engineer"
+      when: "2023 through Dec 2025"
+  track_hypothesis_verdict: >-
+    PARTIALLY CONFIRMED, but not in the way the brief proposed. The quant-vs-developer split is
+    real and strongly evidenced: quant tracks get a math OA, software tracks get a coding OA
+    (candidate-attested on both sides). The QT-vs-QR split is FALSE: quant traders and quant
+    researchers demonstrably sit the SAME 17-question test from the SAME question bank. The
+    16-in-20 vs 17-in-60 discrepancy is NOT a track difference — it is a FORMAT CHANGE over time.
+
+# ---------------------------------------------------------------------------
+tracks:
+
+  quant_trader:
+
+    internship:
+      confidence: high
+      canonical_shape: "OA -> HR/recruiter phone (behavioural + 1-2 easy probability) -> technical interview with a trader -> office interview / superday"
+      rounds:
+        - index: 1
+          name: "Online Assessment"
+          candidate_names: ["OA", "online test", "online assessment", "Quantitative Evaluation", "SIG Problem Solving Assessment"]
+          platform: unknown
+          platform_note: >-
+            COULD NOT ESTABLISH from any candidate account. "Mercer Mettl" is asserted by
+            jobtestprep, aptitude-test-prep, tradermath and extern; "HackerEarth" by
+            quantblueprint. No candidate names a platform for the math OA.
+          questions: 17
+          time_limit_min: 60
+          questions_note: "17/60 is the post-Aug-2024 format. Before that it was ~16 in 20-25 min — see format_drift."
+          sections: 1
+          sections_note: >-
+            No candidate account describes named sections. Question numbering runs 1..17 straight
+            through (1p3a thread-1144112 shows 'Question 16' and 'Question 17'). Vendors claiming
+            4 named sections (Sequences / Mental Math / Pattern Recognition / Probability & EV)
+            are describing question TYPES, not test structure.
+          answer_format: free_response_numeric
+          answer_format_note: "Every reproduced problem reads 'Compute the …' — not multiple choice."
+          negative_marking: unknown
+          calculator: unknown
+          can_go_back: probably_yes
+          can_go_back_note: "Inferred, not stated: candidates describe re-checking earlier questions and budgeting time across the paper."
+          proctored: unknown
+          expected_completion: "not expected to finish"
+          evidence:
+            - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview/graduate-quant-trader
+              quote: "First Round - standard online assessment, 17 questions in 1 hour, probability, basic calculus, etc."
+              date: 2024-08
+              source_type: wso
+              location: Philadelphia
+              role: Graduate Quant Trader
+            - url: https://saykind.github.io/files/interviews/quant-SIG-problems.pdf
+              quote: "The Susquehanna Problem Solving Assessment / Duration: 1 hour / Test had 17 questions, but you're not expected to solve all of it."
+              date: 2024-11-29
+              source_type: personal_blog_pdf
+              note: "Named author, David Saykin. Post date from saykind.github.io/sitemap.xml. Track = Quant Research, but see cross_track_link."
+            - url: https://www.glassdoor.com/Interview/Susquehanna-International-Group-Quantitative-Trader-Interview-Questions-EI_IE24446.0,31_KO32,51.htm
+              quote: "Online probability assessment with 17 questions to be completed in an hour. The topics covered are bayes rule, logic, and markov chains. The next round is screen with a recruiter, they will ask behavior and probability questions."
+              date: 2025-06-30
+              source_type: glassdoor_sideloaded
+              role: Quantitative Trader
+            - url: https://www.glassdoor.com/Interview/Susquehanna-International-Group-Quantitative-Trader-Interview-Questions-EI_IE24446.0,31_KO32,51.htm
+              quote: "Online assessment with 17 questions for an hour. Topics are mostly math, logic, probability, and a bit of calculus. Then phone call with an member of the HR team discussing the usual (location, graduation date) and two easy probability questions."
+              date: 2024-10-28
+              source_type: glassdoor_sideloaded
+              role: Quantitative Trader
+            - url: https://www.1point3acres.com/bbs/thread-1166650-1-1.html
+              quote: "17题，题型是地里一样的，但是很多数字有改动，有的表述细节稍有变动，而且有的数字改动之后计算量明显增加，如果前面的简单题反复验算会"
+              quote_en: "17 questions, the question types are the same as those on the forum, but many numbers have been changed, some wording details slightly altered, and after the number changes the computation load noticeably increases; if you repeatedly re-verify the easy questions earlier on you will…"
+              date: 2026-02-27
+              source_type: 1point3acres_snippet
+              thread_title: "SIG QT QR Online assessment"
+              note: "Thread title names BOTH tracks for one assessment. Latest confirmation of the 17/60 format."
+            - url: https://www.1point3acres.com/bbs/thread-1166650-1-1.html
+              quote: "选的方式非常不合理，筛出来的一定是反复练习过SIG专有题库才能过的，只看过普通Quant题库是不可能第一次就在一小时内答完他家17题的。"
+              quote_en: "…it is impossible to finish their 17 questions within one hour on your first attempt if you have only worked through an ordinary quant question bank."
+              date: 2026-02
+              source_type: 1point3acres_snippet
+            - url: https://www.1point3acres.com/bbs/thread-1086565-1-1.html
+              quote: "Trader OA 与QR相似，分享一下面经，求大家赏赐大米。感谢！ 1. Assume that in a bakery, each customer buys only one item at a time. There is a 70% chance a customer will buy a croissant and a 30% chance a customer will buy a muffin. There are only 2 muffins left and 5 people are still waiting in line."
+              quote_en: "Trader OA is similar to QR, sharing my interview experience…"
+              date: 2024
+              source_type: 1point3acres_snippet
+              thread_title: "SIG Trader OA 新人求米！"
+              note: "Load-bearing: this trader-track question is verbatim Problem 3 of the QR Problem Solving Assessment PDF."
+            - url: https://www.1point3acres.com/bbs/thread-1084480-1-1.html
+              quote: "SIG Quant 17题面经 新人求大米！"
+              date: 2024
+              source_type: 1point3acres_snippet
+
+        - index: 2
+          name: "HR / recruiter phone screen"
+          length_min: 30
+          format: "behavioural + 1-2 easy probability questions"
+          evidence:
+            - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview/quantitative-trader-intern
+              quote: "One online test, consisting of 16 questions in 25 minutes. You should be fast. The phone interview is with HR, easy probability question but focused on behaviorals."
+              date: 2024-02
+              source_type: wso
+              location: Philadelphia
+              role: Quantitative Trader Intern
+              outcome: "Accepted Offer"
+            - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview
+              quote: "One phone typical behavioural vibe check, with a single tech question (probability). Then invited to a technical which was a deeper dive into math. Study up on the green book and you will probably be fine. Got an offer elsewhere and didn't proceed afterward."
+              date: 2025-09
+              source_type: wso
+              location: "bala cynwyd"
+              role: "Quant Trader Intern - Quantitative Trading"
+              outcome: "Declined Offer"
+              sample_question: "25 horses, 5 lanes, min number races to find the fastest 3 horses"
+            - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview
+              quote: "I first did a online assessment, probability/statistics questions medium level difficulty, then had a phone call with hr, one easy technical then behaviorals, why sig, why trading, e.tc, then a phone call with a trader who asked expected value/markov chain prob questions, rejected after this stage"
+              date: 2024-09
+              source_type: wso
+              location: New York
+              role: "Trader Intern - Quantitative Trading"
+
+        - index: 3
+          name: "Technical interview with a trader"
+          format: "deeper probability / expected value / Markov chains; open-ended, interviewer mutates the conditions"
+          evidence:
+            - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview
+              quote: "then a phone call with a trader who asked expected value/markov chain prob questions"
+              date: 2024-09
+              source_type: wso
+            - url: https://www.glassdoor.com/Interview/Susquehanna-International-Group-Quantitative-Trader-Interview-Questions-EI_IE24446.0,31_KO32,51.htm
+              quote: "It was a 30 mins interview. The first 20/25 min was focusing on tech questions, followed by 5 min general questions. The recruiter worked with me throughout the tech questions, they wanted the interviewer to talk through the process when solving the questions."
+              date: 2025-03-12
+              source_type: glassdoor_sideloaded
+              location: Dublin
+
+        - index: 4
+          name: "Office Interview (candidates say 'superday')"
+          confidence: low
+          format: "could not establish in detail — see could_not_establish"
+          evidence:
+            - url: https://www.glassdoor.com/Interview/Susquehanna-International-Group-Quantitative-Trader-Interview-Questions-EI_IE24446.0,31_KO32,51.htm
+              quote: "Multiple technical rounds with traders and some with traders turned HR. Got to on site but wasn't extended an offer. 2 behavioral rounds woven in between all the technical logic questions."
+              date: 2024-08-16
+              source_type: glassdoor_sideloaded
+              location: New York
+            - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview/quantitative-trading-intern
+              quote: "Two rounds of phone interview's consisting mainly of brainteasers. Then onsite interview consisting of a 4 interviews with actual traders."
+              date: 2014-03
+              source_type: wso
+              location: Bala Cynwyd
+            - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview/trader-intern
+              quote: "Round 1: 3 Fit + 3 Technical probability questions Round 2: 1 probability, 2 brainteasers Round 3: From what I heard it is an on-site interview round with 6 or so interviews"
+              date: 2014-11
+              source_type: wso
+              location: Bala Cynwyd
+              note: "Round 3 is explicitly hearsay ('From what I heard')."
+
+      timeline:
+        - stage: "apply -> OA invite"
+          observed: "next day"
+          evidence:
+            - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview/quant-trader-intern
+              quote: "Applied in September, received an online assessment invitation the day after."
+              date: 2020-09
+              source_type: wso
+        - stage: "whole process"
+          observed: "'Less than 1 month' to '2-3 months'; most commonly '1-2 months'"
+          evidence:
+            - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview
+              quote: "Length of Process 1-2 months"
+              date: 2025-09
+              source_type: wso
+              role: "Quant Trader Intern"
+            - url: https://www.glassdoor.com/Interview/Susquehanna-International-Group-Quantitative-Trader-Interview-Questions-EI_IE24446.0,31_KO32,51.htm
+              quote: "I applied online.The process took 2 weeks.I interviewed at Susquehanna International Group (New York, NY) in Sep 2024"
+              date: 2024-10-09
+              source_type: glassdoor_sideloaded
+            - url: https://www.glassdoor.com/Interview/Susquehanna-International-Group-Quantitative-Trader-Interview-Questions-EI_IE24446.0,31_KO32,51.htm
+              quote: "I applied online.The process took 2 months.I interviewed at Susquehanna International Group in Aug 2024"
+              date: 2024-09-27
+              source_type: glassdoor_sideloaded
+
+      could_not_establish:
+        - "OA vendor platform (no candidate names one)"
+        - "Calculator permitted or not"
+        - "Negative marking"
+        - "Proctoring / webcam"
+        - "Whether the superday includes a group trading game, market-making game or poker round — asserted by vendors, absent from every candidate account retrieved"
+        - "Number of office-interview rounds in the current era (only 2014-era candidate numbers exist: '4 interviews', '6 or so')"
+        - "Whether internship OA differs from full-time OA (evidence says no; the split is temporal)"
+
+    new_grad:
+      confidence: high
+      note: >-
+        Indistinguishable from the internship pipeline in every retrieved account. Same 17/60 OA,
+        same HR-phone-then-trader shape. The single most-cited datapoint in this whole map (the
+        WSO Aug-2024 review) is a NEW GRAD ('Graduate Quant Trader'), not an intern.
+      rounds:
+        - index: 1
+          name: "Online Assessment"
+          questions: 17
+          time_limit_min: 60
+          evidence:
+            - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview/graduate-quant-trader
+              quote: "First Round - standard online assessment, 17 questions in 1 hour, probability, basic calculus, etc."
+              date: 2024-08
+              source_type: wso
+        - index: 2
+          name: "Phone Interview"
+          evidence:
+            - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview/graduate-quant-trader
+              quote: "Second Round - Phone Interview, asked 2 probability questions, medium difficulty. Brief behavioral Qs, i.e. what do you do in your free time? Why are you interested in trading? Answered both technical questions correctly, and was well within the interview timeframe. Interviewer seemed to think it went well also. Rejected 4 days later"
+              date: 2024-08
+              source_type: wso
+              note: >-
+                This submission also ticks 'Phone Interview', 'Skills Test' AND 'Personality Test'
+                in WSO's structured checkbox field, but the author's own prose describes no
+                personality test. Treated as uncorroborated.
+      structured_field_note: >-
+        WSO's checkbox for the math OA is inconsistent across submissions: some tick
+        "Skills Test", others tick "IQ / Intelligence Test". Both refer to the same OA.
+
+  quant_researcher:
+    internship:
+      confidence: medium
+      rounds:
+        - index: 1
+          name: "Online Assessment (The Susquehanna Problem Solving Assessment)"
+          questions: 17
+          time_limit_min: 60
+          same_test_as_quant_trader: true
+          evidence:
+            - url: https://www.1point3acres.com/bbs/thread-1084760-1-1.html
+              quote: "刚做完，大部分题目只是改了数字 题不难但是太多了，只有一小时，没有做完"
+              quote_en: "Just finished. Most of the questions only had the numbers changed. The questions aren't hard but there are too many; only one hour, didn't finish."
+              date: 2024-09-06
+              source_type: 1point3acres_snippet
+              thread_title: "SIG QR OA 2024 秋 17题"
+            - url: https://www.1point3acres.com/bbs/thread-1082367-1-1.html
+              quote: "新题库…感觉还挺难的… 还有两道新题是地里的，求绿色三角形的重量"
+              quote_en: "New question bank… feels quite hard… two more new questions are from the forum, find the weight of the green triangle"
+              date: 2024
+              source_type: 1point3acres_snippet
+              thread_title: "SIG QR 17题OA"
+            - url: https://www.1point3acres.com/interview/thread/1144112
+              quote: "Comprehensive 2026 SIG Quantitative Research OA with 17 detailed questions and answers."
+              date: 2026
+              source_type: 1point3acres_snippet
+        - index: 2
+          name: "First technical phone interview"
+        - index: 3
+          name: "Recruiter / recruiting-team call (background, career interest, team preferences)"
+          evidence:
+            - url: https://www.1point3acres.com/bbs/thread-1089922-1-1.html
+              quote: "我SIG过了OA，过了第一轮技术电面，现在这一轮是说是和recruiting team里一个人聊background, career interest"
+              quote_en: "I passed SIG's OA and the first technical phone round; this round is said to be a chat with someone from the recruiting team about background and career interest."
+              date: 2024-10-04
+              source_type: 1point3acres_snippet
+            - url: https://www.1point3acres.com/bbs/thread-1089922-1-1.html
+              quote: "主要是recruiter和你聊过去项目和经历，根据这个给你介绍几个组，然后让你给一两个preference，但不用选定。再给你介绍一下后面的流程。全面完之后才到team match环节。"
+              quote_en: "Mainly the recruiter talks with you about past projects and experience, introduces a few teams based on that, then asks you for one or two preferences (not binding), then explains the rest of the process. Team matching only happens after all interviews are done."
+              date: 2024-10
+              source_type: 1point3acres_snippet
+            - url: https://www.1point3acres.com/bbs/thread-1089922-1-1.html
+              quote: "奥奥是BQ之后纯概率"
+              quote_en: "Ah, so it's pure probability after the behavioural part."
+              date: 2024-10-05
+              source_type: 1point3acres_snippet
+        - index: 4
+          name: "Interview with a researcher"
+          evidence:
+            - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview
+              quote: "OA, HR interview and interview with researcher, asked some general algorithm questions about different strategies."
+              date: 2025-12
+              source_type: wso
+              location: Philadelphia
+              role: "Quant Researcher - Quantitative Research"
+              sample_question: "Different strategies, where do they come from, which one will make more money, which one will have higher volatility"
+        - index: 5
+          name: "team match"
+          note: "Occurs only after all interviews complete (see round 3 evidence)."
+      could_not_establish: ["superday structure", "platform", "whether PhD candidates get a different OA"]
+
+    new_grad:
+      confidence: medium
+      note: "Saykin's Problem Solving Assessment was taken as a full-time QR candidate."
+      evidence:
+        - url: https://saykind.github.io/interviews/quant-SIG/
+          quote: "A quant recruiter reached out to me on Linkedin asking if I'm interested in internship, I said that I'm currently looking for full-time positions only and he forwarded my CV to another recruiter from SIG. They sent me an email saying that I should complete The Susquehanna Problem Solving Assessment."
+          date: 2024-11-29
+          source_type: personal_blog
+      recruiter_call_content:
+        evidence:
+          - url: https://www.1point3acres.com/bbs/thread-1157580-1-1.html
+            quote: "会问你喜欢research还是trading, why sig, 绿皮书等公交车类型的probablity问题，还有简单的markov骰子问题"
+            quote_en: "They ask whether you prefer research or trading, why SIG, green-book bus-type probability questions, and a simple Markov dice question."
+            date: 2025-10/2025-12
+            source_type: 1point3acres_snippet
+            thread_context: "2025(10-12月) 金工类 博士 全职@sig - 网上海投 - HR筛选"
+
+  quant_systematic_trading:
+    confidence: low
+    note: >-
+      SIG posts "Quantitative Systematic Trading" internships (Dublin, London, NYC) as a separate
+      track. 1point3acres threads consistently pair it with QR — "SIG Quant Research & Quant
+      Systematic Trading OA", "SIG qr/qst intern HR一轮游", "SIG Quant Research & Systematic
+      Trading挂经" — implying a SHARED pipeline with QR rather than a distinct one. No
+      QST-specific assessment format was established.
+    evidence:
+      - url: https://www.1point3acres.com/bbs/tag/sig-905-1.html
+        quote: "SIG Quant Research & Systematic Trading挂经 … SIG qr/qst intern HR一轮游 … SIG Quant Research & Quant Systematic Trading OA"
+        date: 2026
+        source_type: 1point3acres_snippet
+        note: "Thread-title inventory from the SIG company tag page (534 threads, 407 面经)."
+
+  quant_developer_swe:
+    internship:
+      confidence: high
+      note: >-
+        This is the track that reconciles the 'CodeSignal 70min 4 questions' claim. Software
+        candidates get a coding OA, never the math OA. Strongly candidate-attested.
+      rounds:
+        - index: 1
+          name: "Coding online assessment"
+          platform: CodeSignal
+          platform_confidence: high
+          questions: 2
+          time_limit_min: 60
+          era: "2023 cycle (Summer 2024 internships)"
+          test_cases: "6 per question (3 visible + 3 hidden)"
+          evidence:
+            - url: https://www.1point3acres.com/bbs/tag/sig-905-15.html
+              quote: "考完SIG的OA， 用的是CodeSignal。 两道题60分钟。 题目和地里一样。第一题：击中船只。第二道题：利口酒吧。全对。"
+              quote_en: "Finished SIG's OA. It used CodeSignal. Two questions, 60 minutes. Same questions as on the forum. Q1: hitting ships. Q2: LeetCode bar. All correct."
+              date: 2023-11-30
+              source_type: 1point3acres_snippet
+            - url: https://www.1point3acres.com/bbs/tag/sig-905-16.html
+              quote: "刚刚完成了SIG发来的白嫖的CodeSignal OA，总时长1个小时写2道题，每道题都只有6个test case（3个明 + 3个暗）。我是没有找内推，直接海投收到的OA。第一题是battleshi"
+              quote_en: "Just completed the free CodeSignal OA SIG sent. One hour total for 2 questions, each with only 6 test cases (3 visible + 3 hidden). I got the OA from a cold application, no referral. Q1 was battleshi[p]…"
+              date: 2023-08-11
+              source_type: 1point3acres_snippet
+            - url: https://www.1point3acres.com/bbs/tag/sig-905-15.html
+              quote: "做了2024 Summer SDE intern的OA （好像是白嫖）。60分钟两道题，大概在easy-median左右，是地里分享过的题目，固定的。"
+              quote_en: "Did the 2024 Summer SDE intern OA (seems to be sent to everyone). 60 minutes, two questions, roughly easy-to-medium, questions already shared on the forum, fixed."
+              date: 2023-10-08
+              source_type: 1point3acres_snippet
+            - url: https://www.1point3acres.com/bbs/tag/sig-905-16.html
+              quote: "SIG SWE Intern 2024 OA 一共两道题一个小时时间非常充裕"
+              quote_en: "SIG SWE Intern 2024 OA — two questions in total, one hour, very comfortable on time."
+              date: 2023-08-13
+              source_type: 1point3acres_snippet
+          recurring_questions: ["battleship / sea battle grid simulation", "LeetCode 98 Validate Binary Search Tree"]
+          anti_cheat_signal:
+            url: https://www.1point3acres.com/bbs/thread-1143725-1-1.html
+            quote: "建议做OA时别在同一个浏览器上开LC。 截图后最好把链接抹掉"
+            quote_en: "Suggest not having LeetCode open in the same browser while doing the OA. After screenshotting, better to erase the link."
+            date: 2025-08-31
+            source_type: 1point3acres_snippet
+
+        - index: 1
+          name: "Coding online assessment (Trading Systems Engineer variant)"
+          language: "C++"
+          questions: 3
+          time_limit_min: unknown
+          era: "Dec 2025"
+          evidence:
+            - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview/trading-systems-engineer-intern
+              quote: "First, took an online assessment which consisted of 3 different questions in C++. All fairly simple mostly just string manipulation and array problems."
+              date: 2025-12
+              source_type: wso
+              location: "Bala Cynwd"
+
+        - index: 2
+          name: "Recruiter phone call"
+          evidence:
+            - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview/trading-systems-engineer-intern
+              quote: "Afterwards, had a recruiter phone call where we discussed motivations for applying to the role, why SIG, as well as what I was looking for in my summer job."
+              date: 2025-12
+              source_type: wso
+
+        - index: 3
+          name: "Technical screen"
+          evidence:
+            - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview/trading-systems-engineer-intern
+              quote: "Then had a technical screen with a member on the team. It was mostly using numpy and pandas library for some reason. They tested us on joins, merges, and aggregates. Recruiters gave me the resources beforehand so it was nothing crazy."
+              date: 2025-12
+              source_type: wso
+
+        - index: 4
+          name: "Superday (onsite, flown out)"
+          confidence: high
+          structure: "tour + lunch, then 3 interview rounds, then a senior-member conversation, then a recruiter wrap-up"
+          evidence:
+            - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview/trading-systems-engineer-intern
+              quote: "The superday they flew me out to Philly and then gave us lunch at the Bala Cynwd office after a tour. Then there were 3 separate rounds, one where we implemented a C++ std::vector, a system design question, and then a math round. This was then followed by a talk with a more senior member to learn more about the company philosophy. The final round was with the recruiter for any final questions."
+              date: 2025-12
+              source_type: wso
+              note: "The ONLY detailed first-person superday account retrieved for ANY SIG track."
+            - url: https://www.teamblind.com/post/SIG-Interview-Process-w22t1O4b
+              quote: "I've completed all interviews including last round which was 3 hours long & 2 LCs were asked"
+              date: 2023-08-21
+              source_type: teamblind
+
+    new_grad:
+      confidence: medium
+      rounds:
+        - index: 1
+          name: "Coding OA"
+          questions: 4
+          platform: CodeSignal
+          evidence:
+            - url: https://www.1point3acres.com/bbs/thread-1143725-1-1.html
+              quote: "四道题 第三道又臭又长"
+              quote_en: "Four questions; the third one was long and tedious."
+              date: 2025-08
+              source_type: 1point3acres_snippet
+              thread_context: "2025(7-9月) 码农类General 硕士 全职@sig - 网上海投 - 在线笔试"
+            - url: https://www.teamblind.com/post/SIG-Interview-Process-w22t1O4b
+              quote: "Could you share what did they ask in 90mins code signal round?"
+              date: 2026-05-15
+              source_type: teamblind
+              note: "Attests a 90-minute CodeSignal variant exists alongside the shorter one."
+            - url: https://www.teamblind.com/post/SIG-Interview-Process-w22t1O4b
+              quote: "Hi OP, do you remember what kind of questions did they ask you? I have a CodeSignal round coming up in couple days."
+              date: 2025-06-05
+              source_type: teamblind
+
+  quant_analyst:
+    confidence: could_not_establish
+    note: >-
+      No candidate account of a SIG role branded "Quant Analyst" with a distinct assessment was
+      found. SIG's own posted analyst titles are Operations Analyst, Macro Analyst and Equity
+      Analyst — none of which are quant-trading tracks. 1point3acres has "SIG Power Analyst
+      hr轮挂经" (an energy-desk analyst role), which I could not open. The vendor claim that SIG
+      runs a distinct Quant Analyst pipeline is unsupported.
+
+  non_quant_reference_tracks:
+    note: "Recorded only to prevent cross-contamination of the quant map."
+    equity_research:
+      evidence:
+        - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview
+          quote: "Made it to the 1st round for summer in ER . There were 2 probably questions and then market questions and cv, general ones"
+          date: 2025-10
+          source_type: wso
+          location: Dublin
+    operations:
+      evidence:
+        - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview
+          quote: "It was a pretty straightforward process for me, mainly behavioral questions and more leaning towards my resume. Will most likely ask why the firm and what is a market maker. Also would recommend researching options trading beforehand. There is a case study but its pretty straightforward and not difficult at all."
+          date: 2025-07
+          source_type: wso
+          location: Bala Cynwyd
+    discovery_day:
+      note: "A first-year insight program, NOT part of the QT funnel. Behavioural only."
+      evidence:
+        - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview
+          quote: "Just a chill behavioural, why I chose SIG, remember this is a program for first years. No coding questions whatsoever. I was unsuccessful because my GPA was too low."
+          date: 2025-06
+          source_type: wso
+          location: Sydney
+
+# ---------------------------------------------------------------------------
+cross_track_link:
+  claim: "Quant Trader and Quant Research sit the same assessment, drawn from one shared question bank."
+  confidence: high
+  reasoning: >-
+    Three independent strands. (1) A trader-track candidate posted, as question 1 of his
+    "SIG Trader OA" writeup, the identical bakery/croissant/muffin problem that appears as
+    Problem 3 of the QR "Susquehanna Problem Solving Assessment" PDF — and prefaced it with
+    "Trader OA 与QR相似" (Trader OA is similar to QR). (2) A 1point3acres thread is titled
+    "SIG QT QR Online assessment" — one test, both tracks. (3) Problems 9 and 10 of the QR PDF
+    reappear as Question 16 and Question 17 of a 2026 QR OA writeup with only the numbers
+    changed (win prob 3/4 -> 2/3; frog target B(5,4) -> B(5,6)), matching the Feb-2026
+    candidate's description of a stable bank with mutated numbers.
+  evidence:
+    - url: https://www.1point3acres.com/bbs/thread-1086565-1-1.html
+      quote: "Trader OA 与QR相似，分享一下面经"
+      date: 2024
+      source_type: 1point3acres_snippet
+    - url: https://saykind.github.io/files/interviews/quant-SIG-problems.pdf
+      quote: "Problem 3. Assume that in a bakery, each customer buys only one item at a time. There is a 70% chance a customer will buy a croissant and a 30% chance a customer will buy a muffin. There are only 2 muffins left and 5 people are still waiting in line."
+      date: 2024-11-29
+      source_type: personal_blog_pdf
+    - url: https://www.1point3acres.com/bbs/thread-1144112-1-1.html
+      quote: "Question 17: A frog is traveling from point A(0,0) to point B(5,6) but each step can only be 1 unit up or 1 unit to the right. Additionally, the frog refuses to move three steps in the same direction consecutively. Compute the number of ways the frog can move from A to B."
+      date: 2026
+      source_type: 1point3acres_snippet
+    - url: https://saykind.github.io/files/interviews/quant-SIG-problems.pdf
+      quote: "Problem 10. A frog is travelling from point A(0, 0) to point B(5, 4) but each step can only be 1 unit up or 1 unit to the right. Additionally, the frog refuses to move three steps in the same direction consecutively. Compute the number of ways the frog can move from A to B."
+      date: 2024-11-29
+      source_type: personal_blog_pdf
+
+# ---------------------------------------------------------------------------
+conflicts:
+  - id: C1
+    claim_a: "The quant OA is ~16 questions in 20 minutes (the 'SIG Quantitative Evaluation')."
+    claim_b: "The quant OA is 17 questions in 60 minutes (the 'SIG Problem Solving Assessment')."
+    assessment: >-
+      BOTH ARE TRUE, AT DIFFERENT TIMES. This is the single most important resolution in this map.
+      Claim A has genuine candidate support but only up to Feb 2024: a Sydney QT candidate
+      (interviewed Feb 2024) wrote "Quantitative Evaluation which requires you to finish 16
+      problems in 20 minutes", and a Philadelphia QT intern (Feb 2024, accepted offer) wrote
+      "One online test, consisting of 16 questions in 25 minutes." Claim B has candidate support
+      from Aug 2024 onward and nothing before: WSO Aug 2024, Glassdoor Oct 2024, the Saykin PDF
+      Nov 2024, Glassdoor Jun 2025, 1p3a Feb 2026. There is no overlap. Anyone presenting the
+      16-in-20 format as CURRENT is working from stale information; anyone presenting it as
+      FABRICATED is also wrong.
+    resolution: temporal_not_track
+
+  - id: C2
+    claim_a: "SIG's quant OA is a math test."
+    claim_b: "SIG's OA is 4 CodeSignal algorithm questions in 70 minutes."
+    assessment: >-
+      BOTH TRUE, DIFFERENT TRACKS. This is the track hypothesis and it HOLDS for
+      quant-vs-developer. Math OA: quant trader / quant research. Coding OA: SWE / SDE /
+      Trading Systems Engineer, candidate-attested on CodeSignal with 2 questions in 60 min
+      (2023) and 4 questions (2025). A "SIG OA question" is therefore only checkable against the
+      right track — a coding question attributed to a quant trader OA, or a probability question
+      attributed to the SWE OA, is a red flag.
+    resolution: track_split_confirmed
+
+  - id: C3
+    claim_a: "jobtestprep: 'The Problem-Solving Assessment is made up of nine challenging numerical reasoning questions. You are given 60 minutes to solve all nine.'"
+    claim_b: "Candidates: 17 questions in 60 minutes."
+    assessment: >-
+      Claim B wins decisively. jobtestprep gets the test NAME and the 60-minute duration right
+      (both independently confirmed by the Saykin PDF, which is titled with SIG's own wording
+      from a recruiter email), but the count is wrong by a factor of nearly two. Five independent
+      candidate sources across three platforms and two languages say 17; the 1p3a 2026 writeup
+      even numbers its questions up to "Question 17". Nine is vendor error, possibly a
+      description of a shortened practice product.
+    resolution: candidate_accounts_win
+
+  - id: C4
+    claim_a: "quantblueprint: '60-90 minutes, ~50-80 questions across the four sections', 'Negative marking: YES', 'Adaptive', platform 'HackerEarth'."
+    claim_b: "Candidates: one undivided 17-question, 60-minute free-response paper."
+    assessment: >-
+      Claim A is unsupported on every dimension and contradicted on most. No candidate reports
+      50-80 questions, four sections, negative marking, adaptivity, or HackerEarth. The
+      free-response format visible in the reproduced test ("Compute the probability…") is
+      structurally incompatible with the negative-marking-and-guessing advice quantblueprint
+      gives. Reject.
+    resolution: vendor_invention
+
+  - id: C5
+    claim_a: "quantt.co.uk: 'runs 60 to 75 minutes and contains roughly 30 to 50 questions'."
+    claim_b: "Candidates: 17 questions in 60 minutes."
+    assessment: >-
+      Duration roughly right, count wrong. 30-50 is not supported by any candidate. Note this
+      page also asserts the OA is done 'without a calculator' while other vendors insist a
+      calculator is allowed — the vendors do not even agree with each other. Reject the count.
+    resolution: vendor_invention
+
+  - id: C6
+    claim_a: "programhelp: '每道题都有严格时间限制，做完就进入下一题，不能回看' (each question is individually timed; you cannot go back)."
+    claim_b: "Candidates describe budgeting time across the whole paper and re-checking earlier questions."
+    assessment: >-
+      Claim A is contradicted. The Feb-2026 candidate explicitly frames the risk as spending too
+      long re-verifying the EARLY easy questions ("如果前面的简单题反复验算会…"), and several
+      candidates report simply running out of time and not finishing — both of which presuppose a
+      single 60-minute budget over 17 questions, not per-question timers. Reject the per-question
+      timer claim. (Note programhelp's own separate page contradicts this one, describing a
+      Mercer Mettl test where you may use a calculator.)
+    resolution: candidate_accounts_win
+
+  - id: C7
+    claim_a: "A Dublin trading candidate (Sept 2025): 'There were 27 questions to complete.'"
+    claim_b: "Everyone else in the same period: 17 questions."
+    assessment: >-
+      UNRESOLVED — recorded as a genuine outlier, not dismissed. This is a specific, dated,
+      first-person WSO account from Dublin. Possibilities I cannot distinguish: a Dublin/EMEA
+      variant; a different SIG test (aptitude-test-prep names a third assessment, the 'SIG
+      Capital Markets Assessment', which I could not tie to any candidate); the role being
+      generic 'Trading' rather than Quant Trader; or simple miscounting. A related Glassdoor
+      account (NY, Sep 2024) says '20ish probability and statistics questions', which could be a
+      loose recollection of 17 or could be a third value. Do NOT treat 17 as a hard falsifier of
+      Dublin-sourced claims.
+    resolution: unresolved
+
+  - id: C8
+    claim_a: "everythingquant: 'SIG's quantitative evaluation consists of 16 technical questions, with a time limit of 20 minutes.'"
+    claim_b: "The current test is 17 in 60."
+    assessment: >-
+      NOT vendor invention, contrary to what the framing of this task assumed. This exact shape is
+      corroborated by two independent candidates who interviewed in Feb 2024 (Sydney: '16 problems
+      in 20 minutes'; Philadelphia: '16 questions in 25 minutes'). everythingquant is describing a
+      real assessment — it is just describing the PREVIOUS one and presenting it as current.
+      Stale, not fabricated.
+    resolution: stale_but_real
+
+  - id: C9
+    claim_a: "tradermath: internships get the 20-min Quantitative Evaluation, full-time gets the 60-min Problem Solving Assessment."
+    claim_b: "The split is by date, not by level."
+    assessment: >-
+      Claim A fails on my data and tradermath itself hedges it into meaninglessness ("we have
+      heard of cases where those applying full-time actually receive the Quantitative Evaluation
+      and those applying for the internship receive the 60-minute Problem Solving Assessment").
+      Counter-evidence: a Feb-2024 INTERN got the short test; an Aug-2024 GRADUATE got the long
+      one; a Nov-2024 FULL-TIME candidate got the long one; a 2024 INTERN-track QR candidate got
+      the long one. Level does not predict format; date does.
+    resolution: candidate_accounts_win
+
+# ---------------------------------------------------------------------------
+format_drift:
+  - date_range: "before 2024-03 -> after 2024-08"
+    track: "quant trader / quant research"
+    change: >-
+      The quant first-round assessment changed from a short, fast ~16-question / 20-25-minute
+      test (the "SIG Quantitative Evaluation") to a long-form 17-question / 60-minute
+      free-response test (the "Susquehanna Problem Solving Assessment"). No candidate account
+      reports the short format after Feb 2024 and none reports the long format before Aug 2024.
+      The changeover window is therefore Mar-Jul 2024, i.e. immediately before the autumn 2024
+      campus cycle.
+    confidence: high
+    evidence_before:
+      - url: https://www.glassdoor.com/Interview/Susquehanna-International-Group-Quantitative-Trader-Interview-Questions-EI_IE24446.0,31_KO32,51.htm
+        quote: "Quantitative Evaluation which requires you to finish 16 problems in 20 minutes. Areas would be covered: Markov Chains, Bayes rules, Porbability, Steps to go accross in Squares. You have to response quick and precisely."
+        date: 2024-03-17
+        interviewed: 2024-02
+        location: Sydney
+        source_type: glassdoor_sideloaded
+      - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview/quantitative-trader-intern
+        quote: "One online test, consisting of 16 questions in 25 minutes. You should be fast."
+        date: 2024-02
+        location: Philadelphia
+        role: "Quantitative Trader Intern"
+        outcome: "Accepted Offer"
+        source_type: wso
+      - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview/quant-trader-intern
+        quote: "Applied in September, received an online assessment invitation the day after. It consisted of maybe 15 questions on expected value and area calculation. Didn't progress."
+        date: 2020-09
+        location: Dublin
+        source_type: wso
+        note: "Earliest datapoint; consistent with the short-format era."
+    evidence_after:
+      - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview/graduate-quant-trader
+        quote: "First Round - standard online assessment, 17 questions in 1 hour, probability, basic calculus, etc."
+        date: 2024-08
+        source_type: wso
+      - url: https://www.1point3acres.com/bbs/thread-1084760-1-1.html
+        quote: "题不难但是太多了，只有一小时，没有做完"
+        date: 2024-09-06
+        source_type: 1point3acres_snippet
+      - url: https://saykind.github.io/files/interviews/quant-SIG-problems.pdf
+        quote: "The Susquehanna Problem Solving Assessment / Duration: 1 hour / Test had 17 questions"
+        date: 2024-11-29
+        source_type: personal_blog_pdf
+      - url: https://www.1point3acres.com/bbs/thread-1166650-1-1.html
+        quote: "17题，题型是地里一样的，但是很多数字有改动"
+        date: 2026-02-27
+        source_type: 1point3acres_snippet
+    vendor_corroboration_of_direction:
+      url: https://www.jobtestprep.com/sig-online-assessment
+      quote: "The SIG Problem Solving has supplanted an earlier test known as the SIG Quantitative Evaluation. The latter consisted of 14 questions to be solved in 20 minutes, and is no longer in use at SIG."
+      note: >-
+        jobtestprep independently describes the same replacement in the same direction, which
+        raises confidence in the drift itself. Its "14 questions" figure is not what candidates
+        report (they say 15-16), and its "9 questions" figure for the new test is wrong.
+
+  - date_range: "2023 -> 2025"
+    track: "software engineer / SDE"
+    change: >-
+      The coding OA grew from 2 questions in 60 minutes (2023 cycle, CodeSignal, battleship +
+      LeetCode 98, 6 test cases each) to 3-4 questions (2025 cycle; 4 for general SWE full-time,
+      3 in C++ for the Trading Systems Engineer intern track). A 90-minute CodeSignal variant is
+      also attested by 2026.
+    confidence: medium
+    evidence_before:
+      - url: https://www.1point3acres.com/bbs/tag/sig-905-16.html
+        quote: "总时长1个小时写2道题，每道题都只有6个test case（3个明 + 3个暗）"
+        date: 2023-08-11
+        source_type: 1point3acres_snippet
+    evidence_after:
+      - url: https://www.1point3acres.com/bbs/thread-1143725-1-1.html
+        quote: "四道题 第三道又臭又长"
+        date: 2025-08
+        source_type: 1point3acres_snippet
+      - url: https://www.wallstreetoasis.com/company/susquehanna-international-group/interview/trading-systems-engineer-intern
+        quote: "an online assessment which consisted of 3 different questions in C++"
+        date: 2025-12
+        source_type: wso
+      - url: https://www.teamblind.com/post/SIG-Interview-Process-w22t1O4b
+        quote: "Could you share what did they ask in 90mins code signal round?"
+        date: 2026-05-15
+        source_type: teamblind
+
+  - date_range: "2024 -> 2026"
+    track: "quant"
+    change: >-
+      NO format change within the long-form era, but the question bank is refreshed by mutating
+      numbers while keeping the problem skeletons. The frog problem's destination moved
+      B(5,4) -> B(5,6) (and a third-party homework site shows a B(7,4) variant); the token-betting
+      problem's win probability moved 3/4 -> 2/3.
+    confidence: high
+    evidence:
+      - url: https://www.1point3acres.com/bbs/thread-1166650-1-1.html
+        quote: "题型是地里一样的，但是很多数字有改动，有的表述细节稍有变动"
+        quote_en: "The question types are the same as on the forum, but many numbers have been changed and some wording details slightly altered."
+        date: 2026-02-27
+        source_type: 1point3acres_snippet
+      - url: https://www.1point3acres.com/bbs/thread-1084760-1-1.html
+        quote: "大部分题目只是改了数字"
+        quote_en: "Most of the questions only had the numbers changed."
+        date: 2024-09-06
+        source_type: 1point3acres_snippet
+    implication_for_fabrication_detection: >-
+      A claimed SIG OA question should be checked on SKELETON, not on numbers. Matching numbers
+      to a known instance is weak evidence of authenticity (banks are public); a novel skeleton
+      that matches no known SIG problem type is a red flag.
+
+# ---------------------------------------------------------------------------
+vendor_claims_rejected:
+  - source: quantblueprint.com
+    url: https://www.quantblueprint.com/blog/acing-sig-quantitative-evaluation-2024-assessment
+    claim: "60-90 minutes, ~50-80 questions across four sections; negative marking YES; adaptive difficulty; delivered through HackerEarth"
+    why_rejected: >-
+      Every element is uncorroborated and most are contradicted. No candidate reports 50-80
+      questions, sections, negative marking, adaptivity or HackerEarth. Negative marking is
+      structurally implausible against the observed free-response format.
+    verdict: reject
+
+  - source: quantt.co.uk
+    url: https://www.quantt.co.uk/resources/sig-interview
+    claim: "The SIG quant test runs 60 to 75 minutes and contains roughly 30 to 50 questions"
+    why_rejected: "Duration plausible; count unsupported by any of the six independent candidate accounts, all of which say 17."
+    verdict: reject_count_accept_duration
+
+  - source: jobtestprep.com / jobtestprep.co.uk
+    url: https://www.jobtestprep.com/sig-online-assessment
+    claim: "nine challenging numerical reasoning questions ... 60 minutes"
+    why_rejected: "Count contradicted by six candidate sources saying 17, including a candidate reproduction numbered to 17."
+    partially_accepted: >-
+      The test NAME ("SIG Problem-Solving Assessment"), the 60-minute duration, and the claim
+      that it replaced an earlier "SIG Quantitative Evaluation" are all independently corroborated
+      by candidate evidence. Mercer|Mettl remains unverified but is not contradicted.
+    verdict: mixed
+
+  - source: everythingquant.com
+    url: https://everythingquant.com/guides/quantitative-research-at-sig/
+    claim: "SIG's quantitative evaluation consists of 16 technical questions to answer in 20 minutes"
+    why_rejected: >-
+      NOT rejected as fabrication. Corroborated by two Feb-2024 candidates (Sydney "16 problems in
+      20 minutes"; Philadelphia "16 questions in 25 minutes"). It is a real, correctly-described
+      assessment presented as current when it appears to have been retired around mid-2024.
+    verdict: stale_but_real
+
+  - source: tradermath.org
+    url: https://www.tradermath.org/knowledge-base/sig-interview-guide
+    claim: "A 60-minute test referred to as the SIG Problem Solving Assessment with 17 open-ended questions"
+    why_rejected: >-
+      NOT rejected. This is the most accurate vendor description found: the name, duration, count
+      AND the open-ended answer format all match the candidate-reproduced test exactly. Its
+      companion claim that the split is internship-vs-full-time is wrong (it is temporal), and
+      tradermath itself hedges that claim away.
+    verdict: accurate_on_format_wrong_on_split
+
+  - source: programhelp.net
+    url: https://programhelp.net/vo/sig-quant-interview-guide/
+    claim: "每道题都有严格时间限制，做完就进入下一题，不能回看 (each question strictly timed, cannot go back)"
+    why_rejected: "Contradicted by candidate descriptions of budgeting a single 60-minute allowance across 17 questions and re-checking earlier ones."
+    verdict: reject
+
+  - source: programhelp.net
+    url: https://programhelp.net/oa/sig-oa-interview-review/
+    claim: "70min 4道纯算法题，平台是 Codesignal (70 min, 4 pure algorithm questions, CodeSignal)"
+    why_rejected: >-
+      NOT rejected for the SOFTWARE track. The platform (CodeSignal) and the 4-question count are
+      both candidate-corroborated for 2025 SWE full-time. The 70-minute figure specifically is not
+      candidate-confirmed (a 2023 candidate says 60 min for 2 questions; a Blind user references a
+      90-min variant). It IS wrong if applied to the quant tracks.
+    verdict: right_track_wrong_scope
+
+  - source: programhelp.net
+    url: https://programhelp.net/oa/how-to-pass-sig-online-assessment/
+    claim: "9 道题 / 60 分钟 / 多选 + 填空 / 允许计算器, on Mercer Mettl"
+    why_rejected: "The 9-question count matches jobtestprep, not candidates. Same error, likely copied."
+    verdict: reject_count
+
+  - source: aptitude-test-prep.com
+    url: https://aptitude-test-prep.com/employers/finance-and-investment-banking-assessments/sig-problem-solving-assessment/
+    claim: "9-15 questions in 60 minutes; Mettl; pen, paper and calculator allowed; 7 days to complete; you may move freely between questions"
+    why_rejected: >-
+      Count too low. The mechanics claims (calculator, 7-day window, free navigation, tab-switch
+      detection) are plausible and internally consistent, and the free-navigation claim is weakly
+      supported by candidate behaviour — but NONE is candidate-attested. Hold as unverified.
+    verdict: unverified_mechanics_reject_count
+
+  - source: theinterviewden.com
+    url: https://theinterviewden.com/companies/sig-trading-interview
+    claim: "Rapid-fire timed arithmetic ... sometimes bundled with a personality / decision-making questionnaire and a sequence-pattern section"
+    why_rejected: >-
+      No candidate account describes a personality questionnaire or a separate sequence section as
+      part of SIG's OA. The only trace is an unexplained "Personality Test" checkbox on one WSO
+      submission whose own free text mentions no such thing. Also mischaracterises the OA as a
+      rapid-fire arithmetic screen, which the reproduced 17-question paper plainly is not.
+    verdict: reject
+
+  - source: interviewchamp.ai
+    url: https://interviewchamp.ai/interview-questions/sig/quant-research-new-grad
+    claim: "Recruiter outreach -> 90-min HackerRank technical screen -> ..."
+    why_rejected: "HackerRank is named nowhere else; no candidate account mentions it for any SIG track. Contradicts the CodeSignal evidence for coding and the unnamed-platform math OA for quant."
+    verdict: reject
+
+  - source: extern.com
+    url: https://www.extern.com/post/susquehanna-sig-internship-guide
+    claim: "a 20-minute online quantitative assessment (logic puzzles and brain teasers on Mettl) ... and a final Super Day (~90 minutes, technical plus fit)"
+    why_rejected: "Presents the retired 20-minute format as the current 2027-28 cycle format. Also, a '~90 minute Super Day' is contradicted by the one detailed first-person onsite account, which describes a full day with travel, tour, lunch and five separate conversations."
+    verdict: reject
+
+# ---------------------------------------------------------------------------
+superday_status:
+  confidence: could_not_establish
+  finding: >-
+    IMPORTANT NEGATIVE RESULT. The group trading game, the market-making game and the poker round
+    are asserted by techinterview.org, quantt.co.uk, tradermath, theinterviewden, quantblueprint
+    and interviewchamp — but I could not find a single first-person candidate account describing
+    any of them at a SIG interview. SIG's own posting says only "Office Interview (Trader
+    interview, trade floor visit, and office tour)". SIG's own marketing about poker refers to the
+    post-offer TRAINING programme, not the interview. The nearest candidate-side support is one
+    Blind comment on a QR thread.
+  what_candidates_actually_say:
+    - url: https://www.teamblind.com/post/DD41JZvG
+      quote: "You can find comp online. A lot of the interview process includes playing betting games. Career progression is essentially getting a portion of PnL but this is desk dependent."
+      date: 2023-07-25
+      source_type: teamblind
+      note: "Posted by a Meta employee replying to a QR candidate; the only candidate-side support for games in the interview."
+    - url: https://www.glassdoor.com/Interview/Susquehanna-International-Group-Quantitative-Trader-Interview-Questions-EI_IE24446.0,31_KO32,51.htm
+      quote: "Multiple technical rounds with traders and some with traders turned HR. Got to on site but wasn't extended an offer. 2 behavioral rounds woven in between all the technical logic questions."
+      date: 2024-08-16
+      source_type: glassdoor_sideloaded
+      note: "Reached the onsite and describes NO game, NO poker, NO group exercise."
+  implication_for_fabrication_detection: >-
+    A question claimed to come from "the SIG superday poker round" or "the SIG group market-making
+    game" cannot be corroborated against any real account in this corpus. Flag such claims as
+    unverified provenance even if the question itself is plausible.
+
+# ---------------------------------------------------------------------------
+consistency_prior_summary:
+  use: "Quick reference for scoring a claimed SIG question's stated format."
+  rules:
+    - "Quant trader / quant researcher, 2024-08 onward: 17 free-response questions, 60 minutes, one undivided paper, no reported sections. A claim of multiple-choice, per-question timers, or a section structure is off-pattern."
+    - "Quant trader, 2024-02 and earlier: ~16 questions in 20-25 minutes. A short-format claim dated 2025+ is off-pattern; a short-format claim dated 2023-24 is fine."
+    - "A coding/algorithm question attributed to the QUANT TRADER or QUANT RESEARCH OA is off-pattern. Coding OAs belong to SWE/SDE/Trading Systems Engineer."
+    - "A probability/EV question attributed to the SWE CodeSignal OA is off-pattern."
+    - "Question phrasing on the quant OA is imperative and free-response: 'Compute the probability...', 'Compute the expected...'. Multiple-choice phrasing is off-pattern."
+    - "Numbers within a known SIG problem skeleton drift year to year. Skeleton match = authentic; exact-number match = weak evidence either way."
+    - "Any provenance citing a SIG superday poker round or group trading game is unverified in this corpus."
+    - "Dublin accounts are the one place a non-17 count (27) is attested. Do not hard-reject Dublin-sourced counts."
+
+could_not_establish_global:
+  - "OA vendor platform for the quant tracks (Mercer Mettl vs HackerEarth vs SIG's own portal) — vendor-only, no candidate attestation"
+  - "Calculator permitted"
+  - "Scratch paper permitted"
+  - "Negative marking / scoring model (a 1p3a thread title implies a >=100 point threshold but the body is paywalled)"
+  - "Whether navigation between questions is free (inferred yes, never stated by a candidate)"
+  - "Proctoring / webcam / ID verification for the quant OA"
+  - "Existence of a separate sequences test, mental-math test, or personality questionnaire as distinct stages"
+  - "Superday internals for quant tracks: number of rounds, presence of trading games, poker, group exercises"
+  - "Office-level differences beyond the single Dublin 27-question outlier"
+  - "Quant Analyst as a distinct track with its own assessment"
+  - "Hong Kong office pipeline (zero candidate accounts retrieved)"
+  - "London office pipeline (zero candidate accounts retrieved; SIG posts London QST internships)"
+  - "Chicago office pipeline (one WSO trader row exists in the index table but the detail text was not retrievable)"
+  - "Any Reddit evidence at all — five differently-phrased searches returned no Reddit thread content"
+  - "The 'SIG Capital Markets Assessment', a third named test claimed by aptitude-test-prep, could not be tied to any candidate account"
