@@ -1,0 +1,3035 @@
+     
+ 
+ 
+     
+     
+     
+     
+     
+     
+     
+       
+     
+      
+     
+     
+     
+     最新！Citadel datathon OA题目20240330-CSDN博客 
+         
+     
+         
+         
+     
+               
+     
+     
+         
+     
+     
+     
+         
+       
+     
+     
+     
+     
+       
+     
+     
+     
+ 
+   
+     
+
+         
+     
+     
+
+     
+     
+     
+     
+     
+         
+           
+           
+           
+ 
+ 
+   
+     
+       
+         最新！Citadel datathon OA题目20240330 
+      
+
+       
+               最新推荐文章于 2026-07-31 21:53:19 发布
+
+           
+               
+               原创 
+
+              
+                     最新推荐文章于 2026-07-31 21:53:19 发布 
+                 · 
+                 2.4k 阅读 
+                 
+                   · 
+                   
+                   
+                   
+                      26
+                   
+                
+
+                 · 
+                 
+                   
+                   
+                   
+                      27
+                   
+                 
+
+                     · 
+                     
+                       本内容遵循CC 4.0 BY-SA版权协议 
+                       
+                                  版权声明：本文为博主原创文章，遵循  CC 4.0 BY-SA  版权协议，转载请附上原文出处链接和本声明。
+                      
+
+                    
+
+                     
+                       GEO检测 
+                       
+                     
+              
+
+          
+
+           
+
+ 
+   
+     
+       · 
+       
+         收录于 
+         
+     
+       
+         
+         量化笔面试 
+      
+
+       
+         当前文章被收录于：
+
+         
+
+         
+           
+             
+               
+             
+             
+               
+                 量化笔面试
+
+               
+               
+                 
+                   7 
+                   篇文章 
+                 
+                  
+                 
+                   3 
+                   人学习 
+                 
+              
+
+            
+
+          
+
+        
+
+         
+             订阅专栏 
+           查看详情 
+        
+
+      
+
+    
+
+     
+       
+         
+         量化笔试 
+      
+
+       
+         当前文章被收录于：
+
+         
+
+         
+           
+             
+               
+             
+             
+               
+                 量化笔试
+
+               
+               
+                 
+                   7 
+                   篇文章 
+                 
+                  
+                 
+                   1 
+                   人学习 
+                 
+              
+
+            
+
+          
+
+        
+
+         
+             订阅专栏 
+           查看详情 
+        
+
+      
+
+    
+
+            
+ 
+   
+   
+     当前文章被以下社区和专栏收录：
+
+     
+       
+
+    
+
+  
+
+
+
+        
+
+      
+
+    
+
+  
+
+
+
+
+          
+
+      
+
+    
+
+  
+
+     
+
+
+
+     
+         
+         
+         
+                 
+                       关注我们，每周发布最新的笔面试题目和解析 
+
+
+ 
+
+
+  前言 
+
+
+ 申请完Datathon后就会发OA，时间60min 15道选择题，题目相较以往有一些变化，但是不多，整体不算难，以数理统计、机器学习和python编程为主，下面给个汇总版。外资也有很多不错的选择，同学们可以内资、外资一起投，找实习的时候可以多尝试些不同的方向，寻找适合自己并且感兴趣的，为秋招做准备。
+
+
+ 春招和暑期实习和笔试也陆陆续续开始了，欢迎同学们在 公众号后台 留言投稿，你们的每条留言小编都会仔细查看，投稿一场完整笔试的同学有机会获得一杯奶茶的现金奖励，累计投稿三场将免费加入知识星球。
+
+
+ 
+
+
+  题目1  
+
+ In Python, which of the following gives the correct order, from first to last, of scope resolution?
+
+
+ A. local function, enclosing function, global statements, built-in names
+
+
+ B. local function, global statements, built-in names, enclosing function
+
+
+ C. built-in names, global statements, local function, enclosing function
+
+
+ D. built-in names, global statements, enclosing function, local function
+
+
+ E. local function, global statements, enclosing function, built-in names
+
+
+ 【参考答案】A
+
+
+ 在Python中，变量的作用域解析遵循LEGB规则，这表示查找变量时，Python会按照以下顺序进行：局部（Local）作用域、封闭（Enclosed）作用域、全局（Global）作用域和内置（Built-in）作用域。
+
+
+ 
+
+
+  题目2  
+
+ In Python, if you had to iteratively read over two files line-by-line, which of the following would be the BEST way to accomplish this task?
+
+
+ A. Use with open () to open the two files as f1 and f2 then use readline() and a for loop to iteratively read lines from each file
+
+
+ B. Use open () to open the two files as f1 and f2, then use readline() and a for loop to iteratively read lines from each file
+
+
+ C. Use with open () to open the two files as f1 and f2, then use zip() to iterate over the two files together
+
+
+ D. Use open () to open the two files as f1 and f2, then use zip() to iterate over the two files together
+
+
+ E. Implement a file seek () function and call the function for the two files simultaneously
+
+
+ 【参考答案】C
+
+
+ 选项C是最佳选择，因为它利用了with语句来确保文件在使用后能够正确关闭，并且使用zip()函数同时迭代两个文件，这使得可以方便地逐行比较或处理两个文件的内容。与仅使用open()的B和D选项相比，with语句提供了更好的资源管理。而A和B虽然也能达到逐行读取文件的目的，但它们没有提供同时处理两个文件的简洁方式。E选项提出的方法并不是处理这种情况的标准或最佳做法。
+
+
+ 
+
+
+  题目3  
+
+ In Python, which of the following statements are true?:
+
+
+ • I. The pipe module can be used to run shell commands in a program
+
+• Il. A pickle can store any Python object except tuples in string format
+
+• Ill. If you have a Python program called player.py, then you can import the module by running import player. py 
+
+
+ A. l and Il only
+
+
+ B. I and Ill only
+
+
+ C. Il and Ill only
+
+
+ D. I, Il, and Ill
+
+
+ E. None of A through D
+
+
+ 【参考答案】E
+
+
+ I. Python中并没有一个叫做pipe的标准模块用来运行shell命令。虽然Python可以通过其他方式（如subprocess模块）执行shell命令，但没有直接叫做pipe的模块。
+
+
+ II. pickle模块可以存储几乎所有Python对象，包括元组。其主要限制不是不能存储元组，而是它不能存储一些不能序列化的对象，如文件句柄、数据库连接等。因此，这个陈述是不正确的。
+
+
+ III. 在Python中导入模块时，不应包含文件扩展名.py。正确的导入语句应该是import player，而不是import player.py。因此，这个陈述也是不正确的。
+
+
+ 
+
+
+  题目4  
+
+ Suppose you are given a highway congestion dataset with one feature - the average vehicle speed. It is found that if the average speed is above 70 kilometers per hour, then there are no accidents on the highway. However, if the average speed is below 70 kilometers per hour, then there is at least one accident on the highway. You would like to build a classifier for this problem using support vector machines (SVM). Your colleague suggests that this approach could be problematic due to imbalances in the distribution of vehicle speeds. Is your colleague correct, and why or why not?
+
+
+ A. Your colleague is correct - a SVM's performance will suffer because of the reason he mentioned
+
+
+ B. Your colleague is incorrect - SVMs assign greater weights to the data near the boundary so will perform fine
+
+
+ C. Your colleague is correct - SVMs are bad at classifying traffic-related data in general
+
+
+ D. Your colleague is incorrect - although linear VMs will perform poorly, radial basis VMs will perform fine
+
+
+ E. None of the above
+
+
+ 【参考答案】B
+
+
+ SVM的核心思想是找到一个最优的决策边界（或超平面），这个边界能够最大化不同类别之间的间隔。在本例中，"平均速度高于70公里/小时没有事故"与"平均速度低于70公里/小时有事故"之间存在一个清晰的分界线，即平均速度等于70公里/小时。SVM特别擅长处理这种类型的问题，因为它会自动调整模型参数，使得边界附近的点（即支持向量）对模型的影响最大。这意味着，尽管数据的分布可能在不同的速度区间内有所不平衡，SVM通过其优化过程能够有效地处理这一点，因此你的同事对于SVM性能可能受到影响的担忧是不成立的。
+
+
+ 
+
+
+  题目5  
+
+ 3% of a country's population has a particular disease. The national health institute has developed a test for this disease: the test has a 98% "true positive" rate (the probability that a person will test positive given that they have the disease). However, it also has a 4% "false positive" rate (the probability that a person will test positive given that they do NOT have the disease). If you simultaneously take the test twice, and it comes out with two positive results, which of the following is CLOSEST to the probability that you actually have the disease, assuming the tests are independent?
+
+
+ A. 0.96
+
+
+ B. 0.95
+
+
+ C. 0.94
+
+
+ D. 0.93
+
+
+ E. 0.92
+
+
+ 【参考答案】B
+
+
+ 这个问题可以通过应用贝叶斯定理来解决，考虑到患病人口的比例、测试的真阳性率和假阳性率。
+
+
+ 
+
+
+  题目6  
+
+ What is the MAIN advantage of using a random forest over a decision tree?
+
+
+ A. It can be parallelized
+
+
+ B. It captures non-linear decision boundaries
+
+
+ C. It allows for batch learning
+
+
+ D. It reduces overfitting
+
+
+ E. It uses less memory
+
+
+ 【参考答案】D
+
+
+ 随机森林是一种集成学习方法，通过结合多个决策树的预测来提高模型的准确性和稳定性。每棵树在训练时使用的是随机抽取的数据集的子集以及随机选择的特征，这种方法有助于减少模型对训练数据的过度拟合。
+
+
+ 
+
+
+  题目7  
+
+ You have a dataset with two features, employee _age (range of 20 to 60) and annual_salary (range of 50,000 to 500,000). Which of the following situations is MOST likely to occur if you feed the dataset as is to a K - means clustering algorithm?
+
+
+ A. The data will be appropriately clustered
+
+
+ B. The program will run out of memory due to the large annual_salary values
+
+
+ C. There will be numerical overflows due to the large annual_salary values
+
+
+ D. The clusters will not be meaningful due to the disparity between the variances of the two features
+
+
+ E. None of the above
+
+
+ 【参考答案】D
+
+
+ K-均值聚类算法在处理特征尺度差异较大的数据时可能会遇到问题，因为算法在计算距离时可能会过分强调数值范围较大的特征。在这个例子中，年薪的范围（50,000到500,000）远大于年龄的范围（20到60），这可能导致聚类结果过分依赖于年薪特征，而忽略了年龄特征。因此，如果不对数据进行适当的规范化或标准化处理，聚类结果可能不会有意义。这并不意味着程序会因为年薪值较大而内存不足或出现数值溢出，也不意味着数据不能被聚类，而是指聚类结果可能不会反映数据的真实结构。
+
+
+ 
+
+
+  题目8  
+
+ Which of the following machine learning algorithms is NOT sensitive to the initial variables used in the optimization algorithm?
+
+
+ A. Hidden Markov models
+
+
+ B. Artificial neural networks
+
+
+ C. Random forests
+
+
+ D. Support vector machines
+
+
+ E. k - nearest neighbors
+
+
+ 【参考答案】E
+
+
+ k-最近邻（k-NN）算法的工作原理是在特征空间中查找最接近的k个邻居，然后根据这些邻居的标签来决定新数据点的标签。因为k-NN算法直接基于数据点之间的距离进行操作，而不需要训练过程中的优化算法，所以它不依赖于初始变量。
+
+
+ 
+
+
+  题目9  
+
+ Which of the following assumptions is NOT necessary when performing multiple linear regression with homoskedastic errors?
+
+
+ A. The distribution of errors is normal
+
+
+ B. The variables are continuous
+
+
+ C. The variables are uncorrelated
+
+
+ D. The error variance is constant across sample data
+
+
+ E. The sample data are independent
+
+
+ 【参考答案】B
+
+
+ 在进行多元线性回归分析时，有几个核心假设需要考虑，但变量必须是连续的并不是其中之一。实际上，多元线性回归可以处理连续和/或分类变量作为预测变量。关键的假设包括误差项具有常数方差（同方差性），误差项之间相互独立，以及误差分布近似正态分布等。而变量之间不相关的假设是指预测变量之间不应该存在完全的多重共线性。因此，变量是否连续并不影响多元线性回归模型的基本假设要求，尤其是在考虑具有同方差误差的情况下。
+
+
+ 
+
+
+  题目10  
+
+ You have two fair coins and one coin with heads on both sides. You pick a coin at random and toss it twice. If it reads heads both times, what is the probability it also reads heads after a third toss?
+
+
+ A. 1/6
+
+
+ B. 1/3
+
+
+ C. 1/2
+
+
+ D. 2/3
+
+
+ E. 5/6
+
+
+ 【参考答案】E
+
+
+ 
+
+
+  题目11  
+
+ A government office has two officers handling people's requests. Suppose that the time between request arrivals at the first officer's desk is random and follows an exponential distribution withλ=μ1\lambda=\mu_1 . Similarly, the time between request arrivals at the second officer's desk is also random and follows an exponential distribution with λ=μ2\lambda=\mu_2 . The first officer has probability P1P_1 of referring any request he receives to the office supervisor, and the second officer has probability P2P_2 of doing so. What is the average time between requests referred to the supervisor?
+
+
+ A. P1/μ1+P2/μ2P_1/\mu_1 + P_2/\mu_2
+
+
+ B. (P1+P2)/(μ1+μ2)(P_1+P_2) / (\mu_1+\mu_2)
+
+
+ C. 1/(μ1P1+μ2P2)1/(\mu_1P_1+\mu_2P_2)
+
+
+ D. 1/μ1P1+1/μ2P21/\mu_1P_1 + 1/\mu_2P_2
+
+
+ E. None of the above
+
+
+ 【参考答案】C
+
+
+ 
+
+
+  题目12  
+
+ Consider a function f(x,y)f(x, y) of two variables xx and yy . Which of the following statements is ALWAYS true? Here, maxkmax_k and minkmin_k , refer to the maximum over kk and the minimum over kk respectively.
+
+
+ A. maxx,minyf(x,y)=minymaxxf(x,y)max_x,min_y f(x, y) = min_ymax_xf(x, y)
+
+
+ B. maxx,minyf(x,y)≤minymaxxf(x,y)max_x,min_y f(x, y) \leq min_ymax_xf(x, y)
+
+
+ C. maxx,minyf(x,y)≥minymaxxf(x,y)max_x,min_y f(x, y) \geq min_ymax_xf(x, y)
+
+
+ D. maxx,minyf(x,y)<minymaxxf(x,y)< span="">max_x,min_y f(x, y) < min_ymax_xf(x, y)
+
+
+ E. None of the above, because the answer depends on the specific functional form of f
+
+
+ 【参考答案】B
+
+
+ 这个陈述基于最小化和最大化操作的属性。当你首先对一个变量取最大值，然后对另一个变量取最小值，你可能限制了自己只能访问函数的一个较小的值范围。相反，如果你首先对一个变量取最小值，然后对另一个变量取最大值，这通常允许你访问函数值的一个更大范围。因此，第一个操作（先最大化，再最小化）得到的结果通常不会超过第二个操作（先最小化，再最大化）的结果，这是因为第二个操作在优化过程中考虑了更广泛的可能性。
+
+
+ 
+
+
+  题目13  
+
+ Suppose you have NN samples drawn from NN independent and identical distributions. You use the method of Maximum Likelihood Estimators to estimate the true parameters Θ\Theta governing these distributions, and it gives you parameters Θ\Theta . Which of the following statements is true?
+
+
+ A. As NN grows asymptotically large, Θ\Theta becomes an unbiased estimator for Θ\Theta
+
+
+ B. As NN grows asymptotically large, no other unbiased estimator of Θ\Theta can achieve a strictly smaller mean squared error value on the sample than Θ\Theta does
+
+
+ C. Θ\Theta tends to be normally distributed for large sample sizes
+
+
+ D. If the MLEs for Θ1\Theta_1 , Θ2\Theta_2 are Θ1,Θ2\Theta_1, \Theta_2 , respectively, then the MLE of any function of Θ1,Θ2\Theta_1, \Theta_2 is that same function with Θ1,Θ2\Theta_1, \Theta_2 as arguments instead
+
+
+ E. All of the above
+
+
+ 【参考答案】E
+
+
+ A选项正确，因为最大似然估计（MLE）在样本数量趋向于无限大时，成为无偏估计器，意味着它的期望值等于真实参数值Θ。
+
+
+ B选项也正确，根据Cramér-Rao下界，任何无偏估计器的方差都不会小于通过MLE得到的估计器的方差，在大样本极限下，MLE达到了这个下界。
+
+
+ C选项正确，根据中心极限定理，大样本量下的MLE估计量倾向于正态分布，这是因为它可以被看作多个独立随机变量的和（或平均），每个变量都贡献了对参数估计的信息。
+
+
+ D选项也正确，这是估计量不变性的一个例子，意味着如果Θ1, Θ2是通过最大似然估计得到的参数，那么Θ1, Θ2的任何函数的最大似然估计就是该函数以Θ1, Θ2作为参数。这一性质是最大似然估计特有的特性之一。
+
+
+ 
+
+
+  题目14  
+
+  A space probe is controlled by 7 different instructions from the ground. The probabilities of sending these instructions vary - the three most common instructions have probabilities 1/2. 1/4, and 1/8 of being sent, respectively. The remaining four instructions are equally likely to be sent. In expectation, what is the minimum number of whole number bits required to communicate with the probe?
+
+
+ A. 2
+
+
+ B. 3
+
+
+ C. 4
+
+
+ D. 5
+
+
+ E. 6
+
+
+ 【参考答案】A
+
+
+ 
+
+
+  题目15  
+
+ 15. An alternative to k - means clustering is k - medoids clustering. This algorithm chooses actual data points as centers, as opposed to choosing centroids (the mean of data points in a cluster) as centers. Which of the following BEST describes why the k - mediods algorithm is often used over the k - means 
+
+
+ algorithm?
+
+
+ • I. The k - medoids algorithm runs faster than the k - means algorithm does
+
+
+ • I. The k - medoids algorithm is more robust to outliers than the k - means algorithm is
+
+
+ • Ill. It is easier to choose the value of k in the k - mediods algorithm than in the k - means algorithm
+
+
+ A. I only
+
+
+ B. lI only
+
+
+ C. Ill only
+
+
+ D. I and Il only
+
+
+ E. ll and Ill only
+
+
+ 【参考答案】B
+
+
+ k-medoids算法相比于k-means算法的一个主要优势是它对异常值更加鲁棒。因为k-medoids选取实际的数据点作为簇的中心（称为medoids），而这些medoids对异常值不那么敏感，所以当数据包含异常值时，k-medoids能够提供更稳定的聚类结果。与此相反，k-means通过计算簇内所有点的平均值来确定簇中心，这会使得结果对异常值非常敏感，因为异常值会显著影响平均值。
+
+
+ 关于运行速度，k-medoids算法通常不比k-means快，实际上由于需要在数据点中寻找medoids，它可能会更慢。同时，选择k的值对于两种算法来说都是一个挑战，没有一种算法在这方面明显更容易。因此，II是描述k-medoids算法相对于k-means算法优势的正确答案。
+
+
+ 
+
+
+  题目16  
+
+ A bag contains one fair coin, two two-headed coins, and three two-tailed coins. Each of the six coins is flipped, but the outcomes of five of the coins are hidden from you. randomly. If the outcome you see is heads, what is the probability that the fair coin (which may or may not be the coin that was shown to you) landed heads up?
+
+
+ A. 1/5
+
+
+ B. 2/5
+
+
+ C. 1/2
+
+
+ D. 3/5
+
+
+ E. 4/5
+
+
+ 【参考答案】B
+
+
+ 
+
+
+  题目17  
+
+ Marty has a bar of gold. Marty's friend Shea is to be paid this gold over the course of 15 days, such that on day XX , 0<=X<=150 <= X <= 15 , Shea has exactly X/15X/15 of the total gold. Additionally, on day 0, Shea has no available gold to use as change. What is the MINIMUM number of pieces that Marty must break the gold bar into so that he can pay Shea in this way?
+
+
+ A. 4
+
+
+ B. 5
+
+
+ C. 7
+
+
+ D. 8
+
+
+ E. 15
+
+
+ 【参考答案】A
+
+
+ 分金条问题，只需将金条分成4块（1/15, 2/15, 4/15, 和8/15），就可以确保在每一天按照要求支付给谢伊，同时避免任何时候需要从谢伊那里找零。因此，马蒂最少需要将金条分成4块。
+
+
+  其他思路或想法欢迎在留言区交流补充 
+
+
+ 
+
+
+  最后介绍一下我们的知识星球  
+
+ 一个专门为那些寻求在 量化投资 、 数据科学 和 机器学习 领域内深度学习与交流交流的专业人士和爱好者设计的社群。创建这个星球，目的是为了沉淀有价值的内容，构建一个质量更高、更专注的学习和交流环境，从而帮助每一位成员提升自己。
+
+
+ 
+
+
+ 在这个知识星球里，你将获得：
+
+
+   1.实习/校招/社招笔面试经验交流与分享： 包含学习路线、准备笔面试的规划、方法、技巧等，同时提供 全市面最全 的真题资料，帮助你充分准备，助力你成为offer收割机。
+
+
+ 
+
+
+   2.专业知识与技能提升：   
+
+
+  数据处理与分析： 分享如何处理和分析数据，包括使用最新的工具和技术，以及数据清洗和预处理的最佳实践。 
+
+
+  量化策略： 深入量化交易的世界，学习如何从零开始设计、测试和优化你的量化策略。提供丰富的案例和实践指导，帮助你打造出稳健的交易模型
+
+
+  因子挖掘： 分享如何在庞大的数据海洋中发现影响市场的隐藏因素。将因子分析融入量化策略，增强模型的预测能力。
+
+
+  组合优化： 介绍如何通过组合优化提高投资组合的性能，包括风险管理和资产配置的策略。 
+
+
+  交易系统开发： 分享交易系统的开发过程，从系统架构设计到实现，包括API接口的使用、自动化交易的实现等。 
+
+
+  高性能计算： 分享如何应用高性能计算技术处理大规模数据集，提高计算效率
+
+
+ 
+
+
+  3.不定期行业大咖分享： 邀请量化投资与机器学习领域的行业专家，分享他们的知识、见解和经验。 
+
+
+  4.编程技巧与算法知识： 不定期分享编程技巧、算法知识、学习方法和个人心得，帮助成员更有效地规划时间和学习路径。
+
+
+   5.大厂面试内推渠道： 实时发布大厂面试内推信息，为你的职业发展提供支持。
+
+
+ 
+
+
+  我们致力于打造一个全面、高效且互帮互助的社群。无论你是量化投资和机器学习领域的初学者，还是已有深厚背景的专业人士，这里都将是你学习新知识、分享经验、扩展人脉的理想之地。
+
+
+ 
+ 
+
+
+
+
+                
+
+        
+
+     
+
+
+
+
+
+   
+ 
+   
+     
+       标签 
+       
+           #机器学习 
+           #大数据 
+           #python 
+           #数据分析 
+           #人工智能 
+      
+
+    
+
+  
+
+
+
+
+
+
+ 
+   
+  
+
+    
+       
+       
+        确定要放弃本次机会？
+      
+
+       福利倒计时 
+       
+          
+         : 
+          
+         : 
+          
+      
+
+       
+         
+           
+           立减 ¥ 
+            
+        
+
+         普通VIP年卡可用 
+      
+
+       立即使用 
+  
+
+
+
+     
+       
+         
+             
+                
+                 
+                  量化投资和人工智能
+                 
+               
+            
+
+             
+                 关注 
+               关注 
+            
+
+        
+
+         
+           
+             
+               
+                 
+                 
+                 
+                 
+                    26
+                 
+               
+                点赞 
+
+            
+
+             
+               
+                 
+                 
+                  
+               
+                踩 
+
+            
+
+             
+               
+                 
+                 
+                 
+                 
+                    27
+                 
+               
+               
+                 
+                   
+                    收藏
+                   
+                
+
+              
+
+               
+                 
+                  觉得还不错?
+                   
+                    一键收藏
+                   
+                  
+                
+
+              
+
+            
+
+             
+               
+                 
+                 知道了 
+              
+
+                 
+                 
+                 
+                      0
+                 
+               
+                评论 
+
+            
+
+             
+               
+                 
+                 分享 
+               
+                 
+                 
+                   
+                     复制链接 
+                  
+
+                   
+                     分享到 QQ 
+                  
+
+                   
+                     分享到新浪微博 
+                  
+
+                   
+                     
+
+                     
+                       扫一扫
+                    
+
+                  
+
+                
+
+              
+
+            
+
+                 
+                   
+                     
+                     打赏 
+                   
+                    打赏 
+
+                
+
+           
+             
+               
+                
+             
+             
+               
+                     
+                       
+                       打赏 
+                     
+                 
+                   
+                   举报 
+                 
+              
+
+               
+                 
+                   
+                   举报 
+                 
+              
+
+            
+
+          
+
+         
+      
+
+       
+             
+                 专栏目录 
+          
+
+
+
+
+
+
+
+ 
+ 
+ 
+               
+                     
+
+              
+
+             
+               
+ 
+	 
+		 
+			 
+				 
+					 AMLA 2026前瞻：高级 机器学习 在工业4.0与机器人中的突破实践
+
+				 
+			
+
+			 
+				 
+					  m0_69581581的博客  
+				
+
+				 
+					 07-29 
+					  
+					302
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 于是**量化感知训练（QAT）**与**知识蒸馏**成为标配。本文从AMLA 2026收录的热点方向出发，结合**PyTorch 2.0.1**与**TensorFlow 2.12**的 最新 实践，展示高级 机器学习 在工业4.0环境下的技术突破与工程代码。以经典的 **DQN（Deep Q-Network）** 为例，其状态空间可包含关节角度、目标坐标、障碍物距离，动作空间为关节速度增量。- **TFLite INT8量化**：单次前向 1.4 ms，精度下降1.5%，满足工业机器人控制周期（≤5ms）。
+
+			 
+		
+
+	
+
+
+
+              
+
+  
+   
+       
+           参与评论 
+         您还未登录，请先 
+         登录 
+         后发表或查看评论 
+      
+
+  
+
+               
+                 
+
+ 
+	 
+		 
+			 
+				 
+					 彩笔运维勇闯 机器学习 --一元线性回归
+
+				 
+			
+
+			 
+				 
+					  MlEQorPX3的博客  
+				
+
+				 
+					 07-30 
+					  
+					171
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 找一条直线，让它尽可能“贴合”我们已有的数据点均方误差（MSE）最后送大家一句话： 机器学习 没有想象中难，难的是持续学习和动手实践。从一条直线开始，我们终将画出自己的曲线。
+
+			 
+		
+
+	
+
+
+
+ 
+	 
+		 
+			 
+				 
+					 【 机器学习 |DAY07】集成学习（Ensemble Learning）笔记
+
+				 
+			
+
+			 
+				 
+					  m0_73999950的博客  
+				
+
+				 
+					 07-29 
+					  
+					387
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 本笔记系统梳理集成学习核心脉络：从“群策群力”的思想出发，对比Bagging（并行降方差）与Boosting（串行降偏差）的设计逻辑与适用场景。深入拆解随机森林的样本与特征双重随机、AdaBoost的样本权重指数更新与加权投票机制，以及GBDT如何利用函数空间梯度下降拟合残差，将提升树泛化为任意可微损失下的梯度提升框架。结合sklearn API参数解析与代码示例。
+
+			 
+		
+
+	
+
+
+
+		 
+			
+		 
+ 
+	 
+		 
+			 
+				 
+					 彩笔运维勇闯 机器学习 --逻辑回归
+
+				 
+			
+
+			 
+				 
+					  aMI3Brh8B的博客  
+				
+
+				 
+					 07-27 
+					  
+					225
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 
+
+			 
+		
+
+	
+
+
+
+ 
+	 
+		 
+			 
+				 
+					 北科大 |  机器学习 助力CM247LC增材制造：裂纹抑制与强塑性协同提升
+
+				 
+			
+
+			 
+				 
+					  3D科学谷  
+				
+
+				 
+					 07-30 
+					  
+					316
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 （a）基于 机器学习 的L-PBF成形CM247LC工艺参数优化策略，（b）和（c）体积能量密度对裂纹密度和相对密度的影响，（d）基于正交试验最优参数制备样品的金相图，（e）和（f）基于增强数据集建立的RF模型，（g）和（h）贝叶斯优化获得的实测目标值，（i）本工作ML最优参数下裂纹密度与文献报道裂纹密度的对比，（j）基于 机器学习 优化参数制备样品的金相图。（a）沿BD方向的EBSD-IPF图，（b）GOS图，（c）KAM图，（d）晶粒尺寸（Feret直径）分布图，（e）和（f）SEM-BSD形貌图。
+
+			 
+		
+
+	
+
+
+
+ 
+	 
+		 
+			 
+				 
+					 【 机器学习 】（30）—— 嵌入空间
+
+				 
+			
+
+			 
+				 
+					  qq_36245787的博客  
+				
+
+				 
+					 07-31 
+					  
+					489
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 第 29 篇把 Embedding 说成「用短稠密向量代替超长 One-Hot」。向量落在哪里、彼此远近代表什么，需要放到。
+
+			 
+		
+
+	
+
+
+
+ 
+	 
+		 
+			 
+				 
+					 彩笔运维勇闯 机器学习 --cpu与qps的线性关系
+
+				 
+			
+
+			 
+				 
+					  Cw576iow3的博客  
+				
+
+				 
+					 07-30 
+					  
+					194
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 理解线性关系。
+
+			 
+		
+
+	
+
+
+
+ 
+	 
+		 
+			 
+				 
+					  机器学习 中的数据表示
+
+				 
+			
+
+			 
+				 
+					  TJdxCf5W2的博客  
+				
+
+				 
+					 07-27 
+					  
+					157
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 ## 2. 数值数据的表示与标准化数值数据是最简单的形式，但即使如此，也需要考虑尺度问题。假设我们有一个房价数据集，包含“面积（平方米）”和“房间数”两列，它们数值范围差异很大（面积可能100-500，房间数1-5）。：对于无序类别（如颜色），One-Hot Encoding是更安全的选择，因为它不暗示任何顺序关系。例如，高维稀疏特征（如One-Hot编码后的文本数据）可能适合线性模型，而密集嵌入（如Word2Vec）更适合深度学习。### 3. 文本数据的向量化表示文本是非结构化数据的典型代表。
+
+			 
+		
+
+	
+
+
+
+ 
+	 
+		 
+			 
+				 
+					 四条语句跑完 机器学习 ：让模型成为一个 SQL 函数
+
+				 
+			
+
+			 
+				 
+					  allwefantasy的专栏  
+				
+
+				 
+					 07-28 
+					  
+					221
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				  机器学习 不必迫使 Agent 离开 SQL。本文用 RandomForest 与 KMeans 的测试环境结果，演示从特征工程、训练、模型注册到预测如何收敛为四类 SQL 语句。
+
+			 
+		
+
+	
+
+
+
+ 
+	 
+		 
+			 
+				 
+					 彩笔运维勇闯 机器学习 --决策树
+
+				 
+			
+
+			 
+				 
+					  vJc0b4RxD的博客  
+				
+
+				 
+					 07-27 
+					  
+					196
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 
+
+			 
+		
+
+	
+
+
+
+ 
+	 
+		 
+			 
+				 
+					 “顶会”看安全（十六）：深入分析函数内联及其对基于 机器学习 的二进制分析的安全影响
+
+				 
+			
+
+			 
+				 
+					  虹科网络安全的博客  
+				
+
+				 
+					 07-27 
+					  
+					380
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 系统研究函数内联如何影响基于 机器学习 的二进制安全分析，并证明攻击者可以通过“极端内联”制造能够规避 ML 模型的二进制变体。论文的研究对象主要有两条线。第一条线是​编译器机制线​。作者深入分析 LLVM 中函数内联的完整决策流程，包括外部因素和内部因素。外部因素包括源代码中的内联提示、优化级别、编译器选项；
+
+			 
+		
+
+	
+
+
+
+ 
+	 
+		 
+			 
+				 
+					 AI推动工业智能化转型~系列文章04： 机器学习 体系总览：监督、无监督与强化学习的工业映射
+
+				 
+			
+
+			 
+				 
+					  IT_XiaoFan_的博客  
+				
+
+				 
+					 07-30 
+					  
+					396
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 本文梳理监督、无监督、强化学习三大 机器学习 范式的核心差异，依据监督信号类型划分各自工业适用场景，并补充半监督、自监督两类过渡方案。结合高炉冶炼等流程工业场景，详细介绍各类范式在预测、诊断、工况挖掘、异常检测、优化控制中的落地路径，点明标签质量、试错成本、样本效率等工业落地痛点。文章搭建完整的 机器学习 选型决策逻辑，给出落地实操经验：工业表格数据优先选用 GBDT；无标签数据优先采用无监督方法探索数据规律；强化学习必须依托数字孪生仿真完成预验证。来自华北理工大学段一凡的博客文章
+
+			 
+		
+
+	
+
+
+
+ 
+	 
+		 
+			 
+				 
+					 彩笔运维勇闯 机器学习 --多元线性回归
+
+				 
+			
+
+			 
+				 
+					  XEyqEK3fY的博客  
+				
+
+				 
+					 07-29 
+					  
+					198
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 先理解业务、再清洗数据、最后建模调参。
+
+			 
+		
+
+	
+
+
+
+ 
+	 
+		 
+			 
+				 
+					  机器学习 -线性回归-广告销量预测案例
+
+				 
+			
+
+			 
+				 
+					  天海行者的专栏  
+				
+
+				 
+					 07-27 
+					  
+					200
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 线性回归广告销量预测案例摘要 本案例演示了使用广告投放数据预测销量的完整流程。通过标准化处理特征后，对比了正规方程法(LinearRegression)和随机梯度下降法(SGDRegressor)两种线性回归实现方式。关键步骤包括：数据清洗、特征标准化(注意测试集只transform)、模型训练与评估。正规方程计算精确但 大数据 集效率低，SGD适合 大数据 但需调参。使用MSE和R²评估模型性能，其中R²>0.7表示模型解释力较好。完整代码展示了从数据加载到模型评估的端到端实现。
+
+			 
+		
+
+	
+
+
+
+ 
+	 
+		 
+			 
+				 
+					 【 机器学习 】（27）—— 神经网络多分类
+
+				 
+			
+
+			 
+				 
+					  qq_36245787的博客  
+				
+
+				 
+					 07-28 
+					  
+					631
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 专栏前半段的分类多是「高效 / 非高效」二选一。车型档位、故障类型、手写数字这类问题，选项往往有三个以上，而且。
+
+			 
+		
+
+	
+
+
+
+ 
+	 
+		 
+			 
+				 
+					  Python 全栈项目--基于 机器学习 的金融风险评估系统
+
+				 
+			
+
+			 
+				 
+					  exlink2012的专栏  
+				
+
+				 
+					 07-28 
+					  
+					787
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 本文介绍了一个基于 机器学习 的金融风险评估系统 Python 全栈项目。系统采用前后端分离架构，后端使用FastAPI框架实现JWT鉴权、风险评估和统计功能，前端使用Vue 3构建交互界面。项目实现了用户注册登录、申请人金融特征录入、风险评分及等级划分、历史记录查询和统计看板等功能。数据库采用SQLite存储用户和风险评估数据。项目特色在于完整串联了从前端到后端的全流程开发，并内置了轻量级风险评分模型（可替换为真实 机器学习 模型）。文章详细说明了系统架构、功能模块、数据模型、接口设计和核心代码实现，并提供了部署运行
+
+			 
+		
+
+	
+
+
+
+ 
+	 
+		 
+			 
+				 
+					  机器学习 -算法模型系列文章：05-决策树 一个数字决定分裂生死：决策树的基尼系数与信息熵对决
+
+				 
+			
+
+			 
+				 
+					  tigerhhzz的博客  
+				
+
+				 
+					 07-27 
+					  
+					458
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 摘要 决策树通过一系列if/else判断进行预测，关键在于如何选择最优分裂特征和阈值。本文以员工离职预测为例，详细解析了决策树的构建过程： 核心指标：基尼系数和信息熵用于衡量节点纯度，基尼系数计算为1-Σp²，信息熵计算为-Σp·log₂p。两者都反映数据混乱程度，值越小纯度越高。 特征选择：通过对比不同特征划分后的基尼系数/信息熵，选择能最大程度降低混乱度的特征作为节点。在1000名员工案例中，"满意度<5"的划分效果（基尼0.3）显著优于"收入<10000元"（基尼0.45）。 实际应用：使用sklea
+
+			 
+		
+
+	
+
+
+
+ 
+	 
+		 
+			 
+				 
+					 彩笔运维勇闯 机器学习 --最小二乘法的数学推导
+
+				 
+			
+
+			 
+				 
+					  KA18oTh7U的博客  
+				
+
+				 
+					 07-29 
+					  
+					184
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 # 总结通过这篇文章，我们从运维的实际需求出发，一步步推导了最小二乘法的数学原理。作为彩笔运维，我深刻体会到： 机器学习 不是魔法，而是建立在扎实数学基础上的工具。记住：任何复杂系统，都是从最基础的原点开始构建的。作为一个只会写Shell脚本的“彩笔运维”，我决定从最基础的最小二乘法开始，一步步踏入 机器学习 的门槛。这篇文章，我将从数学原理出发，结合可运行的 Python 代码，深入剖析最小二乘法。## 从线性回归问题说起想象一个场景：你有一组服务器历史负载数据，横轴是时间（小时），纵轴是CPU使用率（%）。
+
+			 
+		
+
+	
+
+
+
+ 
+	 
+		 
+			 
+				 
+					 K-Means 聚类的目标函数：簇内误差平方和
+
+					 最新发布
+
+				 
+			
+
+			 
+				 
+					  Frost_Descent的博客  
+				
+
+				 
+					 07-31 
+					  
+					4342
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 K-Means 是一种无监督迭代式的聚类算法：给定数据集与预设簇数K，算法把样本划分为K个不相交的簇，使得同一簇内样本尽可能相似，不同簇间样本尽可能远离。核心思想：> “让簇内‘抱团’，让簇间‘疏远’。
+
+			 
+		
+
+	
+
+
+
+ 
+	 
+		 
+			 
+				 
+					 射频GaN功放高阻抗匹配效率优化简略
+
+				 
+			
+
+			 
+				 
+					  Micro_ET  
+				
+
+				 
+					 07-28 
+					  
+					229
+					 
+				
+
+			
+
+		
+
+		 
+			 
+				 GaN PA 通过其高击穿电场特性，允许在更高工作电压（如 28V、48V）下运行，这直接导致其最佳负载阻抗远高于传统 GaAs 或 LDMOS器件。优化高阻抗匹配是释放 GaN 效率潜力的关键，核心在于降低匹配网络损耗、拓宽带宽并赋能高效架构。
+
+			 
+		
+
+	
+
+
+
+              
+
+ 
+
+ 
+            
+ 
+ 
+     
+         
+             
+                 
+             
+        
+
+         
+             
+                 
+                     量化投资和人工智能 
+                 
+            
+
+             
+               
+                 
+                  博客等级
+                 
+                   
+              
+
+                 码龄7年 
+               
+            
+
+        
+
+    
+
+     
+       
+           
+              30  
+             原创 
+         
+       
+        
+         489 
+         点赞 
+       
+        
+         471 
+         收藏 
+       
+       
+          1444  
+         粉丝 
+       
+    
+
+     
+          
+             关注   
+        
+
+         
+         私信 
+        
+
+    
+
+
+
+   
+     
+         
+           
+             
+               
+             
+          
+
+           
+             
+               
+             
+          
+
+           
+             
+               
+             
+          
+
+    
+
+     
+
+     
+     
+
+     
+
+  
+
+ 
+     
+          
+ 
+ 
+  
+
+    
+
+
+
+
+
+ 
+     TA的精选 
+     
+         
+         
+             
+             新 
+             【Datawhale AI夏令营】多模态RAG 
+             
+             
+                180 阅读   
+            
+
+        
+
+         
+             
+             新 
+             【K8S】详解Labels​​ 和 ​​Annotations 
+             
+             
+                1298 阅读   
+            
+
+        
+
+         
+             
+             热 
+             【完整教程】WSL发行版迁移到D盘 
+             
+             
+                4118 阅读   
+            
+
+        
+
+         
+             
+             热 
+              Windows 系统中扩大 WSL2 的内存限制 
+             
+             
+                3821 阅读   
+            
+
+        
+
+         
+             
+             热 
+             全是原题？东吴金科2024量化研究员笔试0402 
+             
+             
+                2994 阅读   
+            
+
+        
+
+         
+           
+             查看更多   
+          
+
+    
+
+
+    
+    
+     大家在看 
+     
+       
+         
+           
+          工业时序建模方法论
+           
+        
+
+         
+           
+          Lightning OPD 2.0：跨教师蒸馏去风格化
+           
+        
+
+         
+           
+          本体驱动RAG解决标准引用失真
+             
+             735 
+           
+        
+
+         
+           
+          钢丝绳电动升降机选型四要点
+           
+        
+
+         
+           
+          Azure Stack Hub基础架构备份详解
+           
+        
+
+       
+    
+
+  
+
+         
+             TA的历史创作历程 
+           
+             
+               
+                 
+                   
+                
+
+                 
+                   
+                           
+                              2025年  
+                              20篇  
+
+                           
+                              2024年  
+                              7篇  
+
+                           
+                              2023年  
+                              1篇  
+
+                           
+                              2022年  
+                              2篇  
+
+                  
+
+                
+
+                 
+                   
+                
+
+              
+
+            
+
+          
+
+        
+
+ 
+     分类专栏 
+     
+         
+             
+                 
+                     
+
+                     
+                     
+                        rag
+                     
+                 
+                 1篇 
+            
+
+             
+                 
+                     
+
+                     
+                     
+                        kubernetes
+                     
+                 
+                 2篇 
+            
+
+             
+                 
+                     
+
+                     
+                     
+                        人工智能
+                     
+                 
+                 4篇 
+            
+
+             
+                 
+                     
+
+                     
+                     
+                        昇腾
+                     
+                 
+                 2篇 
+            
+
+             
+                 
+                     
+
+                     
+                     
+                        CUDA
+                     
+                 
+                 11篇 
+            
+
+             
+                 
+                     
+
+                     
+                     
+                        python
+                     
+                 
+                 3篇 
+            
+
+             
+                 
+                     
+
+                     
+                     
+                        大模型
+                     
+                 
+                 7篇 
+            
+
+             
+                 
+                     
+
+                     
+                     
+                        开源
+                     
+                 
+                 1篇 
+            
+
+             
+                 
+                     
+
+                     
+                     
+                        环境配置
+                     
+                 
+                 6篇 
+            
+
+             
+                 
+                     
+
+                     
+                     
+                        量化笔面试
+                     
+                 
+                 7篇 
+            
+
+             
+                 
+                     
+
+                     
+                     
+                        量化笔试
+                     
+                 
+                 7篇 
+            
+
+             
+                 
+                     
+
+                     
+                     
+                        系统安装
+                     
+                 
+                 1篇 
+            
+
+             
+                 
+                     
+
+                     
+                     
+                        数据可视化
+                     
+                 
+                 1篇 
+            
+
+             
+                 
+                     
+
+                     
+                     
+                        数据挖掘
+                     
+                 
+                 1篇 
+            
+
+         
+    
+
+     
+        展开全部    
+        收起    
+    
+
+
+
+   
+       
+           
+              上一篇：
+           
+           
+             
+              蒙玺投资2024春笔试题目0329
+             
+           
+       
+       
+           
+            下一篇：
+           
+           
+             
+              稳博投资开发类笔试题目0329
+             
+           
+       
+  
+
+     
+       
+          
+ 
+  
+  
+
+      
+
+    
+
+     
+ 
+   
+     
+       
+         
+      
+
+       · AI 阅读助手
+
+    
+
+  
+
+   
+     
+
+     
+
+  
+
+
+
+ 
+ 
+     
+         目录 
+         
+             
+             
+                 
+
+            
+
+            
+
+        
+
+            展开全部   
+
+            收起   
+
+    
+
+
+
+ 
+
+ 
+ 
+ 
+ 
+        
+
+ 
+     
+             
+               
+                       
+
+              
+
+      
+
+         
+ 
+   
+     
+       
+         
+      
+
+       · AI 阅读助手
+
+    
+
+  
+
+   
+     
+
+     
+
+  
+
+
+
+           
+               
+               目录 
+               
+                   
+                       
+                           
+
+                      
+
+                  
+
+              
+
+                  展开全部   
+
+                  收起   
+
+              
+
+          
+
+           
+
+               
+                    
+ 
+  
+
+              
+
+   
+       
+           
+              上一篇：
+           
+           
+             
+              蒙玺投资2024春笔试题目0329
+             
+           
+       
+       
+           
+            下一篇：
+           
+           
+             
+              稳博投资开发类笔试题目0329
+             
+           
+       
+  
+
+           
+                   分类专栏 
+                   
+                       
+                           
+                               
+                                   
+                                       
+
+                                       
+                                       
+                                          rag
+                                       
+                                   
+                                   1篇 
+                              
+
+                               
+                                   
+                                       
+
+                                       
+                                       
+                                          kubernetes
+                                       
+                                   
+                                   2篇 
+                              
+
+                               
+                                   
+                                       
+
+                                       
+                                       
+                                          人工智能
+                                       
+                                   
+                                   4篇 
+                              
+
+                               
+                                   
+                                       
+
+                                       
+                                       
+                                          昇腾
+                                       
+                                   
+                                   2篇 
+                              
+
+                               
+                                   
+                                       
+
+                                       
+                                       
+                                          CUDA
+                                       
+                                   
+                                   11篇 
+                              
+
+                               
+                                   
+                                       
+
+                                       
+                                       
+                                          python
+                                       
+                                   
+                                   3篇 
+                              
+
+                               
+                                   
+                                       
+
+                                       
+                                       
+                                          大模型
+                                       
+                                   
+                                   7篇 
+                              
+
+                               
+                                   
+                                       
+
+                                       
+                                       
+                                          开源
+                                       
+                                   
+                                   1篇 
+                              
+
+                               
+                                   
+                                       
+
+                                       
+                                       
+                                          环境配置
+                                       
+                                   
+                                   6篇 
+                              
+
+                               
+                                   
+                                       
+
+                                       
+                                       
+                                          量化笔面试
+                                       
+                                   
+                                   7篇 
+                              
+
+                               
+                                   
+                                       
+
+                                       
+                                       
+                                          量化笔试
+                                       
+                                   
+                                   7篇 
+                              
+
+                               
+                                   
+                                       
+
+                                       
+                                       
+                                          系统安装
+                                       
+                                   
+                                   1篇 
+                              
+
+                               
+                                   
+                                       
+
+                                       
+                                       
+                                          数据可视化
+                                       
+                                   
+                                   1篇 
+                              
+
+                               
+                                   
+                                       
+
+                                       
+                                       
+                                          数据挖掘
+                                       
+                                   
+                                   1篇 
+                              
+
+                           
+                      
+
+                         
+                            展开全部    
+                            收起    
+                        
+
+                  
+
+          
+
+        
+
+     
+
+
+ 
+     
+         
+             
+                 
+                 目录 
+                 
+                     
+                         
+                             
+
+                        
+
+                    
+
+                
+
+                
+
+            
+
+        
+
+     
+
+
+
+      
+
+       
+
+         
+       
+
+       
+
+ 
+ 
+	 
+		 评论 	
+	 
+
+   
+	
+	
+
+	 
+		    被折叠的    条评论
+		  为什么被折叠? 
+		  
+		  到【灌水乐园】发言                                 
+		
+
+		 
+
+		 
+			 查看更多评论  
+		
+
+	
+
+
+
+ 
+   
+     
+      添加红包
+        
+    
+
+     
+       
+         祝福语 
+         
+           
+            
+        
+
+         请填写红包祝福语或标题
+
+      
+
+       
+         红包数量 
+         
+           
+           个 
+        
+
+         红包个数最小为10个
+
+      
+
+       
+         红包总金额 
+         
+           
+           元 
+        
+
+         红包金额最低5元
+
+      
+
+       
+         余额支付 
+         
+          当前余额 3.43 元
+           前往充值 > 
+        
+
+      
+
+       
+         
+          需支付： 10.00 元
+        
+
+         取消 
+         确定 
+      
+
+     
+  
+
+
+
+ 
+   
+     
+     下一步 
+  
+
+   
+     
+     知道了 
+  
+
+
+
+
+
+
+ 
+   
+     
+       
+         
+           
+             
+             成就一亿技术人!
+
+           
+           
+
+        
+
+         
+           
+
+           
+            领取后你会自动成为博主和红包主的粉丝
+             规则 
+          
+
+         
+      
+
+       
+         
+           
+             
+               
+             
+             
+               hope_wisdom
+ 发出的红包
+            
+
+           
+        
+
+         
+            
+           
+          
+
+        
+
+      
+
+    
+
+     
+
+  
+
+
+
+ 
+	 打赏作者   
+
+	 
+		 
+		 
+			 
+		 
+		 
+		 
+			 量化投资和人工智能
+
+			 你的鼓励将是我创作的最大动力
+
+		 
+	 
+	 
+			  
+
+
+	
+
+	 
+     ¥1 
+     ¥2 
+     ¥4 
+     ¥6 
+     ¥10 
+     ¥20 
+	
+
+	 
+		 
+			 
+				 
+					 扫码支付：  ¥1 
+				
+
+				 
+					 
+					 
+					 获取中 
+					
+
+				
+
+				 
+					 
+					 
+					 扫码支付 
+				
+
+			
+
+		
+
+		 
+			 您的余额不足，请更换扫码支付或 充值 
+
+			  打赏作者 
+
+		
+
+	
+
+
+
+      
+       
+       实付 元 
+
+        使用余额支付 
+
+       
+         
+           
+             
+             点击重新获取 
+          
+
+        
+
+                   扫码支付 
+
+      
+
+       
+         
+      
+
+       
+         
+         钱包余额 
+           0 
+           
+             
+             
+               
+                 抵扣说明：
+
+                  1.余额是钱包充值的虚拟货币，按照1:1的比例进行支付金额的抵扣。
+ 2.余额无法直接购买下载，可以购买VIP、付费专栏及课程。
+
+              
+
+            
+
+          
+
+      
+
+         余额充值  
+    
+
+     
+       
+    
+
+     
+
+   
+     
+     
+     
+     
+   
+   
+   
+   
+   
+   
+   
+   
+   
+     
+   
+   
+   
+   
+   
+   
+   
+   
+     
+   
+   
+   
+   
+  

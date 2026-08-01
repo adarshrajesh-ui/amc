@@ -1,0 +1,336 @@
+           Medium                       What They Asked Me in the Citadel Securities HackerRank Coding Round | by HIYA CHATTERJEE | Medium                                                                                                                                                                                                                                                                                                                                                Sitemap      Open in app      Sign up  
+    Sign in  
+
+
+
+        
+  
+ 
+
+
+    Get app  
+     Write
+  
+     Search 
+ 
+     Sign up  
+    Sign in  
+
+
+
+        
+
+ 
+
+
+
+
+
+  
+      
+
+        
+          Software Development  
+
+
+
+
+      Software Engineering  
+
+
+
+
+      Finance  
+
+
+
+
+      Python  
+
+
+
+
+      Money  
+
+
+
+
+
+
+
+
+     What They Asked Me in the Citadel Securities HackerRank Coding Round               
+
+
+ 
+
+
+
+         HIYA CHATTERJEE  
+
+
+
+ 
+
+
+ 
+    4 min read    ·  
+ Feb 22, 2026 
+ 
+
+             
+
+
+
+  
+   -- 
+
+
+
+        1 
+ 
+
+
+
+         
+   
+
+
+ 
+
+
+
+  
+           
+
+
+
+              Listen
+
+ 
+
+
+  
+
+
+
+
+        Share
+
+ 
+
+
+
+
+
+
+
+
+
+   Press enter or click to view image in full size       
+
+ The email I received after the round   I went into the Citadel Securities HackerRank round expecting standard interview problems.
+ I was wrong.
+ This wasn’t a LeetCode-style warm-up session. It was a controlled stress test of how you think when constraints tighten and ambiguity creeps in. If you’re aiming for serious trading firms, quant-leaning engineering teams, or high-performance systems work, this round reveals more about you than you realize.
+ The setup was deceptively simple: two coding questions, ninety minutes, large constraints, no partial credit for elegant ideas that time out. On paper, it looked manageable. In reality, it was a precision filter.
+  The first problem  looked harmless at a glance. You’re given arrays of start times and end times for employees. Each pair represents when someone is active. The task: compute the maximum number of employees overlapping at any single moment.
+ It sounds like a brute-force exercise. For each interval, check how many others intersect it. That instinct is natural. It’s also fatal when the constraint quietly says n can be as large as 2 × 10⁵.
+ That’s when the problem reveals its true identity. This is not about pairwise comparison. It’s a maximum concurrency problem. The same structural class as Meeting Rooms II. The same abstraction as peak resource usage in distributed systems. The same mathematics that underpins capital utilization during volatile market regimes.
+ The only viable approach is to step back and recognize the pattern. Sort the start times. Sort the end times. Sweep through them in order, tracking how many intervals are currently active. Increase when a new interval begins. Decrease when one ends. Track the maximum. The dominant cost becomes sorting, O(n log n), which survives the input size.
+ The trick isn’t coding it. The trick is recognizing it within seconds. In trading infrastructure, that recognition is everything. An engineer who brute forces an order-matching simulation under peak load doesn’t get a warning — they get a system failure.
+ But Citadel wasn’t finished.
+  The second question  looked similar, and that similarity was intentional. Again, start and end times. Again, overlapping intervals. But this time the task changed subtly. Instead of asking for the global maximum number of simultaneous employees, they asked for the maximum number of direct overlaps centered around a single employee.
+ That difference destroys the sweep-line shortcut.
+ Now the question isn’t “what is the peak concurrency across time?” It’s “for each interval, how many other intervals intersect this one?” You can’t just count active intervals globally. You must count overlaps relative to each interval individually.
+ And again, brute force collapses at scale.
+ The solution required a different mental model. Sort the start times. Sort the end times. For each interval, determine how many intervals finish strictly before it starts. Then determine how many intervals begin strictly after it ends. Everything else overlaps. Binary search becomes the tool of choice. The complexity remains O(n log n), but the reasoning shifts from global sweeping to precise boundary accounting.
+ And the boundaries are the trap.
+ If one employee ends at time 5 and another starts at time 5, do they overlap? In this problem, yes. That single equality condition changes the entire answer. Get the inequality wrong and your result quietly fails edge cases. In trading systems, that’s the difference between a correct risk calculation and a silent model error.
+ What struck me wasn’t the algorithms themselves. It was the layering.
+ The first question tested whether you recognize classical algorithmic structure under constraint pressure. The second tested whether you can adapt when a familiar pattern almost applies — but not quite. It forced you to reason carefully about inclusive intervals, edge cases, and performance simultaneously.
+ This is exactly how quant-aligned engineering interviews are designed.
+ Markets are interval systems. Orders live and die over time windows. Risk accumulates and unwinds across overlapping exposures. Latency spikes when too many processes activate simultaneously. These problems weren’t abstract puzzles. They were simplified mirrors of real production realities.
+ And the emotional component is real. During the second problem, there’s a moment where brute force tempts you because it’s easy to write. But you know the constraints won’t forgive you. That pause — that internal debate — is the interview.
+ Citadel isn’t testing whether you can code. They’re testing whether you can recognize structure under pressure, choose the right abstraction quickly, and reason about boundaries without sloppiness.
+ For aspiring quants and serious SWE candidates, the takeaway is clear. Stop thinking in terms of isolated problems. Start thinking in terms of problem families. Concurrency. Interval algebra. Binary search over monotonic structure. Complexity as a first-class constraint.
+ The difference between average preparation and elite preparation is recognition speed. When you see intervals and large n, your brain should immediately scan for sweep-line or binary search formulations. Not after five minutes. Instantly.
+ Because in real systems — and in real trading — hesitation compounds.
+ That HackerRank round wasn’t about passing tests. It was about proving you can think like someone trusted with capital, latency, and scale.
+ And that’s a very different bar.
+
+
+
+
+ 
+
+ 
+       Software Development 
+ 
+    Software Engineering 
+ 
+    Finance 
+ 
+    Python 
+ 
+    Money 
+ 
+
+
+
+ 
+                 
+
+
+
+  
+   -- 
+
+
+           
+
+
+
+  
+   -- 
+
+
+ 
+        1 
+ 
+
+
+
+         
+   
+
+
+ 
+
+
+             
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+           
+
+ 
+     
+
+ 
+  
+
+
+     Written by  HIYA CHATTERJEE       196 followers  
+   ·   0 following 
+
+   I tell stories that matter. 
+
+
+
+  
+
+
+
+
+
+      
+  
+ 
+
+
+  
+ 
+ 
+
+
+
+
+
+   
+   
+ 
+  
+ 
+
+ 
+
+
+
+
+       
+ 
+ 
+ 
+ 
+
+  
+ 
+ 
+ 
+ 
+
+
+
+
+
+      
+ 
+ 
+ 
+ 
+
+  
+ 
+ 
+ 
+ 
+
+
+
+
+
+  
+      Help
+ 
+   Status
+ 
+   About
+ 
+   Careers
+ 
+   Press
+ 
+   Blog
+ 
+   Store
+ 
+   Privacy
+ 
+   Rules
+ 
+   Terms
+ 
+   Text to speech
+ 
+
+
+
+
+
+
+
+
+
+                
+  

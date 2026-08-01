@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Telegram Widget</title>
+    <base target="_blank">
+    <script>document.cookie="stel_dt="+encodeURIComponent((new Date).getTimezoneOffset())+";path=/;max-age=31536000;samesite=None;secure"</script><script>
+try { if (window.localStorage && localStorage["stel_tme_token"]) {
+  var arr = [];
+  for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    arr.push(encodeURIComponent(key) + '=' + encodeURIComponent(localStorage[key]));
+  }
+  var ls = arr.join('; ');
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', location.href);
+  xhr.setRequestHeader('X-Requested-With', 'relogin');
+  xhr.setRequestHeader('X-Local-Storage', ls);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      if (typeof xhr.responseBody == 'undefined' && xhr.responseText) {
+        document.write(xhr.responseText);
+        document.close();
+      }
+    }
+  };
+  xhr.withCredentials = true;
+  xhr.send();
+  document.close();
+  document.open();
+  console.log('xhr reload');
+} } catch (e) {}
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="MobileOptimized" content="176" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="robots" content="noindex, nofollow" />
+    
+    <link rel="icon" type="image/svg+xml" href="//telegram.org/img/website_icon.svg?4">
+<link rel="apple-touch-icon" sizes="180x180" href="//telegram.org/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//telegram.org/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="//telegram.org/img/favicon-16x16.png">
+<link rel="alternate icon" href="//telegram.org/img/favicon.ico" type="image/x-icon" />
+    <link href="//telegram.org/css/font-roboto.css?1" rel="stylesheet" type="text/css">
+    <link href="//telegram.org/css/widget-frame.css?74" rel="stylesheet" media="screen">
+    
+    <style>
+:root {
+  color-scheme: light;
+}        .user-color-12 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #3391d4 0px, #3391d4 5px, #7dd3f0 5px, #7dd3f0 10px);
+          --user-accent-color: #3391d4;
+          --user-background: #3391d41f;
+        }        .user-color-10 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #27a910 0px, #27a910 5px, #a7dc57 5px, #a7dc57 10px);
+          --user-accent-color: #27a910;
+          --user-background: #27a9101f;
+        }        .user-color-8 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #e0802b 0px, #e0802b 5px, #fac534 5px, #fac534 10px);
+          --user-accent-color: #e0802b;
+          --user-background: #e0802b1f;
+        }        .user-color-7 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #e15052 0px, #e15052 5px, #f9ae63 5px, #f9ae63 10px);
+          --user-accent-color: #e15052;
+          --user-background: #e150521f;
+        }        .user-color-9 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #a05ff3 0px, #a05ff3 5px, #f48fff 5px, #f48fff 10px);
+          --user-accent-color: #a05ff3;
+          --user-background: #a05ff31f;
+        }        .user-color-11 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #27acce 0px, #27acce 5px, #82e8d6 5px, #82e8d6 10px);
+          --user-accent-color: #27acce;
+          --user-background: #27acce1f;
+        }        .user-color-13 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #dd4371 0px, #dd4371 5px, #ffbe9f 5px, #ffbe9f 10px);
+          --user-accent-color: #dd4371;
+          --user-background: #dd43711f;
+        }        .user-color-14 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #247bed 0px, #247bed 5px, #f04856 5px, #f04856 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #247bed;
+          --user-background: #247bed1f;
+        }        .user-color-15 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #d67722 0px, #d67722 5px, #1ea011 5px, #1ea011 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #d67722;
+          --user-background: #d677221f;
+        }        .user-color-16 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #179e42 0px, #179e42 5px, #e84a3f 5px, #e84a3f 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #179e42;
+          --user-background: #179e421f;
+        }        .user-color-17 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #2894af 0px, #2894af 5px, #6fc456 5px, #6fc456 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #2894af;
+          --user-background: #2894af1f;
+        }        .user-color-18 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #0c9ab3 0px, #0c9ab3 5px, #ffad95 5px, #ffad95 10px, #ffe6b5 10px, #ffe6b5 15px);
+          --user-accent-color: #0c9ab3;
+          --user-background: #0c9ab31f;
+        }        .user-color-19 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #7757d6 0px, #7757d6 5px, #f79610 5px, #f79610 10px, #ffde8e 10px, #ffde8e 15px);
+          --user-accent-color: #7757d6;
+          --user-background: #7757d61f;
+        }        .user-color-20 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #1585cf 0px, #1585cf 5px, #f2ab1d 5px, #f2ab1d 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #1585cf;
+          --user-background: #1585cf1f;
+        }        body.dark .user-color-12, html.theme_dark .user-color-12 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #52bfff 0px, #52bfff 5px, #0b5494 5px, #0b5494 10px);
+          --user-accent-color: #52bfff;
+          --user-background: #52bfff1f;
+        }        body.dark .user-color-10, html.theme_dark .user-color-10 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #a7eb6e 0px, #a7eb6e 5px, #167e2d 5px, #167e2d 10px);
+          --user-accent-color: #a7eb6e;
+          --user-background: #a7eb6e1f;
+        }        body.dark .user-color-8, html.theme_dark .user-color-8 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #ecb04e 0px, #ecb04e 5px, #c35714 5px, #c35714 10px);
+          --user-accent-color: #ecb04e;
+          --user-background: #ecb04e1f;
+        }        body.dark .user-color-7, html.theme_dark .user-color-7 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #ff9380 0px, #ff9380 5px, #992f37 5px, #992f37 10px);
+          --user-accent-color: #ff9380;
+          --user-background: #ff93801f;
+        }        body.dark .user-color-9, html.theme_dark .user-color-9 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #c697ff 0px, #c697ff 5px, #5e31c8 5px, #5e31c8 10px);
+          --user-accent-color: #c697ff;
+          --user-background: #c697ff1f;
+        }        body.dark .user-color-11, html.theme_dark .user-color-11 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #40d8d0 0px, #40d8d0 5px, #045c7f 5px, #045c7f 10px);
+          --user-accent-color: #40d8d0;
+          --user-background: #40d8d01f;
+        }        body.dark .user-color-13, html.theme_dark .user-color-13 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #ff86a6 0px, #ff86a6 5px, #8e366e 5px, #8e366e 10px);
+          --user-accent-color: #ff86a6;
+          --user-background: #ff86a61f;
+        }        body.dark .user-color-14, html.theme_dark .user-color-14 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #3fa2fe 0px, #3fa2fe 5px, #e5424f 5px, #e5424f 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #3fa2fe;
+          --user-background: #3fa2fe1f;
+        }        body.dark .user-color-15, html.theme_dark .user-color-15 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #ff905e 0px, #ff905e 5px, #32a527 5px, #32a527 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #ff905e;
+          --user-background: #ff905e1f;
+        }        body.dark .user-color-16, html.theme_dark .user-color-16 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #66d364 0px, #66d364 5px, #d5444f 5px, #d5444f 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #66d364;
+          --user-background: #66d3641f;
+        }        body.dark .user-color-17, html.theme_dark .user-color-17 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #22bce2 0px, #22bce2 5px, #3da240 5px, #3da240 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #22bce2;
+          --user-background: #22bce21f;
+        }        body.dark .user-color-18, html.theme_dark .user-color-18 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #22bce2 0px, #22bce2 5px, #ff9778 5px, #ff9778 10px, #ffda6b 10px, #ffda6b 15px);
+          --user-accent-color: #22bce2;
+          --user-background: #22bce21f;
+        }        body.dark .user-color-19, html.theme_dark .user-color-19 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #9791ff 0px, #9791ff 5px, #f2731d 5px, #f2731d 10px, #ffdb59 10px, #ffdb59 15px);
+          --user-accent-color: #9791ff;
+          --user-background: #9791ff1f;
+        }        body.dark .user-color-20, html.theme_dark .user-color-20 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #3da6eb 0px, #3da6eb 5px, #eea51d 5px, #eea51d 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #3da6eb;
+          --user-background: #3da6eb1f;
+        }.user-color-6, .user-color-4, .user-color-2, .user-color-0, .user-color-1, .user-color-3, .user-color-5,   .user-color-default {
+    --user-accent-color: var(--accent-color);
+    --user-accent-background: var(--accent-background);
+    --user-line-gradient: linear-gradient(45deg, var(--accent-color), var(--accent-color));
+  }</style>
+    <script>TBaseUrl='//telegram.org/';</script>
+  </head>
+  <body class="widget_frame_base tgme_widget body_widget_post emoji_image nodark">
+    <div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/885" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6ODg1LCJ0IjoxNzg1NTY1NzU1LCJoIjoiZmM1NzYwODliYmNlMjdlMDE1In0" data-peer="c2315344187_877670828740714183" data-peer-hash="dac1e516c7ccbb39ee" data-post-id="885">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    <a class="tgme_widget_message_bubble_logo" href="//core.telegram.org/widgets"></a>
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">Infrastructure 加面 - 視訊面試<br/>因為同學在面試的時候有談到不怎麼喜歡做研究，所以 HR 就也問我的意願，想不想試試看他們的 infra 職位，我就當作是多一個機會也說想面看看<br/>這個職位的待遇跟 researcher 不太一樣，是有比較高的 base，績效獎金就比較少<br/>總共分為兩關，第一關是先問我怎麼實作一個簡單的交易系統，面試官蠻和善的，說如果有語法不熟的話可以查網路，我剛開始寫的時候腦袋還沒有開機，還好只有當機幾分鐘，之後就都還算寫的蠻順的，基本上就是 STL 用一用就都能解決的題目，而且我在寫的過程中有變數寫錯或是哪裡不小心漏掉的地方，面試官也都有提醒我，超感謝他；第二關就換 infra team 的主管了，主管考的題目比較偏基礎的部分，問到怎麼樣寫 C++ 才能比較快，或是怎麼樣寫他會有怎樣的 behavior，這部分雖然我覺得對我來說蠻困難的（畢竟我最近寫 C++ 都是直接在 leetcode 上面寫然後直接編，也不會寫到比較特殊的用法），但整體來說主管真的非常友善，有時候我只講一個輪廓，他也會提出一些可能的解釋甚至跟我討論為什麼那樣想，或是我想做的是什麼（我對 C++ char 指標的用法真的完全不熟，被 string 養壞了），在這邊我也蠻慶幸蝦皮那時候有考我 template 怎麼寫，這邊就有用到 template，還好我有惡補才不至於直接開天窗，蠻有趣的部分是面試官會問一些比如說這個變數會不會被 copy，或是怎樣寫才不會被 copy，以及他們的好壞等等的。<br/><br/>最後也有和面試官們聊到為什麼不想念研究所（講一講還真的發現自己更適合 infra team），以及更具體的工作內容，工作內容的部分其實聽起來完全就是 backend engineer，只是 infra 做的更 specific 一點，是要做一個虛擬的交易所介面來讓 researcher 來用，這跟我本來的想像差蠻多的，我本來的想像是可能要顧機器，上去 aws 看或是設定一些有的沒的，或是做 Ops 的東西，幫助 researcher 他們部署或測試他們的模型，這樣聽下來其實蠻心動的，雖然說 researcher 不完全都是在做研究的工作，也會寫一定的 code，不過骨子裡其實還是 infra 最接近 engineer 的屬性，希望之後還真的有機會做這份工作 &gt;&lt;。面試官們也特別說他們其實不太加班的，基本上都是有彈性的上班時間，做太久也效率很差，他們也說這在量化交易這行算是蠻稀有的存在，因為這行是要跟全世界的各大公司競爭的，很少有不用加班的（特別是聽他們說其實他們接到的需求非常多，想做的改善也很多，還不用加班去完成它，真的蠻佩服的）。如果說真的能不用加班的話，這個 position 應該完全能媲美 Google 的了。<br/><br/>一個禮拜之後寄信問 HR，HR 說還要再等一個禮拜，看來是想要讓我等滿三個月嗎…（我會等這麼久是因為我是第一個面試的 new grad，而我同學是最後一個面的）<br/><br/>結果 + 心得<br/>最後在我寄信問的下禮拜三，HR 就打電話聯絡我說慘遭拒絕，拒絕的原因我可以理解成他們調整內部 hiring bar，因為要收一個 new grad 的話，他們要付出的成本其實蠻高的，也因為這樣，所以他們必須非常確定團隊很需要這個人才能給 offer，說白了就是在 team match 的時候要有人覺得我非常適合；第二個理由我覺得就比較像是小吹毛求疵了，HR 說面試官們的 feedback 都是正面的，只是跟我同學比起來我可能 C++ 的部分稍微差一點，我覺得我的表現幾乎算是只有在語法上的一個小失誤（對於我的小失誤，面試官也說沒關係他知道我意思就好），我覺得要解釋成我演算法比較爛的話有點冤枉 QQ，我在演算法的地方都是直接給最佳解，除了中間有小誤會面試官意思的地方。雖然不太認同他們的 feedback，但其實很感謝 HR 願意給我 feedback，因為有很多公司都不願意給這方面的資訊，甚至有的還會無聲無息，給人的感覺就不太好，至少我知道我是被刷掉了。<br/><br/>總結起來我覺得應該就是在語法那邊我不知道哪根筋不對，就寫了顯然是錯的寫法（關於 char* 的用法）。不過就結果來說，他們的 hiring process 還要拉更長一點，因為 infra 的部分是吃到明年的 head count，在流程上面還要再等一個月以上之類的。以結果論來說的話我沒有拿到 offer 也算是讓我不用再多考慮這個因素吧，不完全是壞事。最後 HR 也說了因為我在面試表現都蠻不錯的，之後如果我還對他們的 position 有興趣的話，都歡迎再挑戰一次，到時候我的優先度絕對是會比第一次單純丟履歷還要高一些，聽到這邊我覺得應該也算是圓滿結束了吧，結束了三個月的忐忑不安。<br/><br/>最後就是我的一些小發現，對於 Kronos 的關卡篩人的方式我覺得真的是蠻吃運氣的（可能是因為不同 team 來面試的標準就不太一樣），拿我面 Quantitative researcher 的那兩關來說好了，我遇到的都沒有給我很 intense 的感覺，但是聽也有面但被刷掉的 Googler 說，他遇到的蠻困難的，面試官給他一堆機率題目還什麼的，總之就是聽起來很可怕，跟我遇到的完全是兩個世界（儘管我也答的不怎麼樣，但就沒有到那麼猛烈的感覺）。還有在 OA 就被刷掉的好像是因為一些小地方沒寫到完美就下去了，雖然說以分數來看，沒有到標準的就該被刷掉，可是這樣的標準我覺得會讓公司錯過一些也是很有價值的人（個人淺見而已，以面試官們面試要付出的成本來看的話，這種超嚴格的標準也蠻合理的）。<br/><br/>還有其實每一間公司要看的東西都差蠻多的，像我沒有被 Google 跟 Kronos 錄取，但我有上 MixerBox；被 Kronos 刷掉的進了 Google，一定還有很多例子是這樣的，面試的公司跟錄取與否完全就不能以薪資待遇當作唯一標準（本來就不是，但我一直有一種這樣的既視感），也就是說越強的人不一定就有更高薪的 offer，也要看公司測驗的能力是哪部份的。講了那麼多廢話，總之就是既然每間公司想要的不一樣，那在準備的時候也就能對自己想要的公司特別加強某些部份，也就是說可以透過自己的長處去選一個自己能達到的最好公司（例如：演算法就很強，去 Google 就輕輕鬆鬆，數學機率很強的就去面 Quant 的），更可以在面試的過程更加了解自己缺的是哪個部份，需不需要把它補起來。<br/><br/>如果沒意外的話，之後要轉職的時候應該還是會再挑戰一次 Kronos，到時候希望我有足夠的能力 + 運氣能體驗一下 Kronos 的文化。</div>
+<div class="tgme_widget_message_footer js-message_footer">
+  <div class="tgme_widget_message_link accent_color"><a href="https://t.me/aistockanalyst/885" class="link_anchor flex_ellipsis"><span class="ellipsis">t.me/aistockanalyst</span>/885</a></div>
+  <div class="tgme_widget_message_info js-message_info">
+    <span class="tgme_widget_message_views">36</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/885"><time datetime="2025-04-14T04:22:36+00:00" class="datetime">Apr 14, 2025 at 04:22</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div>
+    <script src="https://oauth.tg.dev/js/telegram-widget.js?24"></script>
+
+    <script src="//telegram.org/js/widget-frame.js?67"></script>
+    <script>TWidgetAuth.init({"api_url":"https:\/\/t.me\/api\/method?api_hash=1f4736830bf40aa915","upload_url":"https:\/\/t.me\/api\/upload?api_hash=bb48e314160fa63b3b","unauth":true,"bot_id":1288099309});
+TWidgetPost.init();
+try{var a=new XMLHttpRequest;a.open("POST","");a.setRequestHeader("Content-type","application/x-www-form-urlencoded");a.send("_rl=1")}catch(e){}
+</script>
+  </body>
+</html>
+<!-- page generated in 19.11ms -->

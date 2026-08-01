@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>leetcode – Telegram</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible"
+     content="IE=edge" />
+    <meta name="MobileOptimized" content="176" />
+    <meta name="HandheldFriendly" content="True" />
+    
+<meta property="og:title" content="leetcode">
+<meta property="og:image" content="">
+<meta property="og:site_name" content="Telegram">
+<meta property="og:description" content="">
+
+<meta property="twitter:title" content="leetcode">
+<meta property="twitter:image" content="">
+<meta property="twitter:site" content="@Telegram">
+
+<meta property="al:ios:app_store_id" content="686449807">
+<meta property="al:ios:app_name" content="Telegram Messenger">
+<meta property="al:ios:url" content="tg://resolve?domain=leetcode_cn">
+
+<meta property="al:android:url" content="tg://resolve?domain=leetcode_cn">
+<meta property="al:android:app_name" content="Telegram">
+<meta property="al:android:package" content="org.telegram.messenger">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@Telegram">
+<meta name="twitter:description" content="
+">
+
+    <link rel="prev" href="/s/leetcode_cn?before=47">
+<link rel="canonical" href="/s/leetcode_cn?before=67">
+
+    <script>window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches&&document.documentElement&&document.documentElement.classList&&document.documentElement.classList.add('theme_dark');</script>
+    <link rel="icon" type="image/svg+xml" href="//telegram.org/img/website_icon.svg?4">
+<link rel="apple-touch-icon" sizes="180x180" href="//telegram.org/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//telegram.org/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="//telegram.org/img/favicon-16x16.png">
+<link rel="alternate icon" href="//telegram.org/img/favicon.ico" type="image/x-icon" />
+    <link href="//telegram.org/css/font-roboto.css?1" rel="stylesheet" type="text/css">
+    <link href="//telegram.org/css/widget-frame.css?74" rel="stylesheet" media="screen">
+    <link href="//telegram.org/css/telegram-web.css?39" rel="stylesheet" media="screen">
+    <script>TBaseUrl='/';</script>
+    <style>        .user-color-12 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #3391d4 0px, #3391d4 5px, #7dd3f0 5px, #7dd3f0 10px);
+          --user-accent-color: #3391d4;
+          --user-background: #3391d41f;
+        }        .user-color-10 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #27a910 0px, #27a910 5px, #a7dc57 5px, #a7dc57 10px);
+          --user-accent-color: #27a910;
+          --user-background: #27a9101f;
+        }        .user-color-8 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #e0802b 0px, #e0802b 5px, #fac534 5px, #fac534 10px);
+          --user-accent-color: #e0802b;
+          --user-background: #e0802b1f;
+        }        .user-color-7 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #e15052 0px, #e15052 5px, #f9ae63 5px, #f9ae63 10px);
+          --user-accent-color: #e15052;
+          --user-background: #e150521f;
+        }        .user-color-9 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #a05ff3 0px, #a05ff3 5px, #f48fff 5px, #f48fff 10px);
+          --user-accent-color: #a05ff3;
+          --user-background: #a05ff31f;
+        }        .user-color-11 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #27acce 0px, #27acce 5px, #82e8d6 5px, #82e8d6 10px);
+          --user-accent-color: #27acce;
+          --user-background: #27acce1f;
+        }        .user-color-13 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #dd4371 0px, #dd4371 5px, #ffbe9f 5px, #ffbe9f 10px);
+          --user-accent-color: #dd4371;
+          --user-background: #dd43711f;
+        }        .user-color-14 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #247bed 0px, #247bed 5px, #f04856 5px, #f04856 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #247bed;
+          --user-background: #247bed1f;
+        }        .user-color-15 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #d67722 0px, #d67722 5px, #1ea011 5px, #1ea011 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #d67722;
+          --user-background: #d677221f;
+        }        .user-color-16 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #179e42 0px, #179e42 5px, #e84a3f 5px, #e84a3f 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #179e42;
+          --user-background: #179e421f;
+        }        .user-color-17 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #2894af 0px, #2894af 5px, #6fc456 5px, #6fc456 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #2894af;
+          --user-background: #2894af1f;
+        }        .user-color-18 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #0c9ab3 0px, #0c9ab3 5px, #ffad95 5px, #ffad95 10px, #ffe6b5 10px, #ffe6b5 15px);
+          --user-accent-color: #0c9ab3;
+          --user-background: #0c9ab31f;
+        }        .user-color-19 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #7757d6 0px, #7757d6 5px, #f79610 5px, #f79610 10px, #ffde8e 10px, #ffde8e 15px);
+          --user-accent-color: #7757d6;
+          --user-background: #7757d61f;
+        }        .user-color-20 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #1585cf 0px, #1585cf 5px, #f2ab1d 5px, #f2ab1d 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #1585cf;
+          --user-background: #1585cf1f;
+        }        body.dark .user-color-12, html.theme_dark .user-color-12 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #52bfff 0px, #52bfff 5px, #0b5494 5px, #0b5494 10px);
+          --user-accent-color: #52bfff;
+          --user-background: #52bfff1f;
+        }        body.dark .user-color-10, html.theme_dark .user-color-10 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #a7eb6e 0px, #a7eb6e 5px, #167e2d 5px, #167e2d 10px);
+          --user-accent-color: #a7eb6e;
+          --user-background: #a7eb6e1f;
+        }        body.dark .user-color-8, html.theme_dark .user-color-8 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #ecb04e 0px, #ecb04e 5px, #c35714 5px, #c35714 10px);
+          --user-accent-color: #ecb04e;
+          --user-background: #ecb04e1f;
+        }        body.dark .user-color-7, html.theme_dark .user-color-7 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #ff9380 0px, #ff9380 5px, #992f37 5px, #992f37 10px);
+          --user-accent-color: #ff9380;
+          --user-background: #ff93801f;
+        }        body.dark .user-color-9, html.theme_dark .user-color-9 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #c697ff 0px, #c697ff 5px, #5e31c8 5px, #5e31c8 10px);
+          --user-accent-color: #c697ff;
+          --user-background: #c697ff1f;
+        }        body.dark .user-color-11, html.theme_dark .user-color-11 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #40d8d0 0px, #40d8d0 5px, #045c7f 5px, #045c7f 10px);
+          --user-accent-color: #40d8d0;
+          --user-background: #40d8d01f;
+        }        body.dark .user-color-13, html.theme_dark .user-color-13 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #ff86a6 0px, #ff86a6 5px, #8e366e 5px, #8e366e 10px);
+          --user-accent-color: #ff86a6;
+          --user-background: #ff86a61f;
+        }        body.dark .user-color-14, html.theme_dark .user-color-14 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #3fa2fe 0px, #3fa2fe 5px, #e5424f 5px, #e5424f 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #3fa2fe;
+          --user-background: #3fa2fe1f;
+        }        body.dark .user-color-15, html.theme_dark .user-color-15 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #ff905e 0px, #ff905e 5px, #32a527 5px, #32a527 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #ff905e;
+          --user-background: #ff905e1f;
+        }        body.dark .user-color-16, html.theme_dark .user-color-16 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #66d364 0px, #66d364 5px, #d5444f 5px, #d5444f 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #66d364;
+          --user-background: #66d3641f;
+        }        body.dark .user-color-17, html.theme_dark .user-color-17 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #22bce2 0px, #22bce2 5px, #3da240 5px, #3da240 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #22bce2;
+          --user-background: #22bce21f;
+        }        body.dark .user-color-18, html.theme_dark .user-color-18 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #22bce2 0px, #22bce2 5px, #ff9778 5px, #ff9778 10px, #ffda6b 10px, #ffda6b 15px);
+          --user-accent-color: #22bce2;
+          --user-background: #22bce21f;
+        }        body.dark .user-color-19, html.theme_dark .user-color-19 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #9791ff 0px, #9791ff 5px, #f2731d 5px, #f2731d 10px, #ffdb59 10px, #ffdb59 15px);
+          --user-accent-color: #9791ff;
+          --user-background: #9791ff1f;
+        }        body.dark .user-color-20, html.theme_dark .user-color-20 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #3da6eb 0px, #3da6eb 5px, #eea51d 5px, #eea51d 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #3da6eb;
+          --user-background: #3da6eb1f;
+        }.user-color-6, .user-color-4, .user-color-2, .user-color-0, .user-color-1, .user-color-3, .user-color-5,   .user-color-default {
+    --user-accent-color: var(--accent-color);
+    --user-accent-background: var(--accent-background);
+    --user-line-gradient: linear-gradient(45deg, var(--accent-color), var(--accent-color));
+  }</style>
+  </head>
+  <body class="widget_frame_base tgme_webpreview emoji_image thin_box_shadow tme_mode no_transitions">
+    <div class="tgme_background_wrap">
+      <canvas id="tgme_background" class="tgme_background" width="50" height="50" data-colors="dbddbb,6ba587,d5d88d,88b884"></canvas>
+      <div class="tgme_background_pattern"></div>
+    </div>
+    <header class="tgme_header search_collapsed">
+  <div class="tgme_container">
+    <div class="tgme_header_search">
+      <form class="tgme_header_search_form" action="/s/leetcode_cn">
+        <svg class="tgme_header_search_form_icon" width="20" height="20" viewBox="0 0 20 20"><g fill="none" stroke="#7D7F81" stroke-width="1.4"><circle cx="9" cy="9" r="6"></circle><path d="M13.5,13.5 L17,17" stroke-linecap="round"></path></g></svg>
+        <input class="tgme_header_search_form_input js-header_search" placeholder="Search" name="q" autocomplete="off" value="" />
+        <a href="/s/leetcode_cn" class="tgme_header_search_form_clear"><svg class="tgme_action_button_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20"><g class="icon_body" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#000000" stroke-width="1.5"><path d="M6 14l8-8m0 8L6 6" stroke-dasharray="0,11.314" stroke-dashoffset="5.657"/><path d="M26 14l8-8m0 8l-8-8" stroke-dasharray="0.371,10.943" stroke-dashoffset="5.842"/><path d="M46 14l8-8m0 8l-8-8" stroke-dasharray="1.982,9.332" stroke-dashoffset="6.647756"/><path d="M66 14l8-8m0 8l-8-8" stroke-dasharray="5.173,6.14" stroke-dashoffset="8.243"/><path d="M86 14l8-8m0 8l-8-8" stroke-dasharray="7.866,3.448" stroke-dashoffset="9.59"/><path d="M106 14l8-8m0 8l-8-8" stroke-dasharray="9.471,1.843" stroke-dashoffset="10.392"/><path d="M126 14l8-8m0 8l-8-8" stroke-dasharray="10.417,0.896" stroke-dashoffset="10.866"/><path d="M146 14l8-8m0 8l-8-8" stroke-dasharray="10.961,0.353" stroke-dashoffset="11.137"/><path d="M166 14l8-8m0 8l-8-8" stroke-dasharray="11.234,0.08" stroke-dashoffset="11.274"/><path d="M186 14l8-8m0 8l-8-8"/></g></svg></a>
+      </form>
+    </div>
+    <div class="tgme_header_right_column">
+      <section class="tgme_right_column">
+        <div class="tgme_channel_info">
+          <div class="tgme_channel_info_header">
+            <i class="tgme_page_photo_image bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i>
+            <div class="tgme_channel_info_header_title_wrap">
+              <div class="tgme_channel_info_header_title"><span dir="auto">leetcode</span></div>
+              <div class="tgme_channel_info_header_labels"></div>
+            </div>
+            <div class="tgme_channel_info_header_username"><a href="https://t.me/leetcode_cn">@leetcode_cn</a></div>
+          </div>
+          <div class="tgme_channel_info_counters"><div class="tgme_channel_info_counter"><span class="counter_value">3</span> <span class="counter_type">subscribers</span></div><div class="tgme_channel_info_counter"><span class="counter_value">65</span> <span class="counter_type">links</span></div></div>
+          
+          <a class="tgme_channel_download_telegram" href="//telegram.org/dl?tme=d8f1f68bcd5fb4f46e_1000272409017410763">
+            <svg class="tgme_channel_download_telegram_icon" width="21px" height="18px" viewBox="0 0 21 18"><g fill="none"><path fill="#ffffff" d="M0.554,7.092 L19.117,0.078 C19.737,-0.156 20.429,0.156 20.663,0.776 C20.745,0.994 20.763,1.23 20.713,1.457 L17.513,16.059 C17.351,16.799 16.62,17.268 15.88,17.105 C15.696,17.065 15.523,16.987 15.37,16.877 L8.997,12.271 C8.614,11.994 8.527,11.458 8.805,11.074 C8.835,11.033 8.869,10.994 8.905,10.958 L15.458,4.661 C15.594,4.53 15.598,4.313 15.467,4.176 C15.354,4.059 15.174,4.037 15.036,4.125 L6.104,9.795 C5.575,10.131 4.922,10.207 4.329,10.002 L0.577,8.704 C0.13,8.55 -0.107,8.061 0.047,7.614 C0.131,7.374 0.316,7.182 0.554,7.092 Z"></path></g></svg>Download Telegram
+          </a>
+          <div class="tgme_footer">
+            <div class="tgme_footer_column">
+              <h5><a href="//telegram.org/faq">About</a></h5>
+            </div>
+            <div class="tgme_footer_column">
+              <h5><a href="//telegram.org/blog">Blog</a></h5>
+            </div>
+            <div class="tgme_footer_column">
+              <h5><a href="//telegram.org/apps">Apps</a></h5>
+            </div>
+            <div class="tgme_footer_column">
+              <h5><a href="//core.telegram.org/">Platform</a></h5>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="tgme_header_info">
+      <a class="tgme_channel_join_telegram" href="//telegram.org/dl?tme=d8f1f68bcd5fb4f46e_1000272409017410763">
+        <svg class="tgme_channel_join_telegram_icon" width="19px" height="16px" viewBox="0 0 19 16"><g fill="none"><path fill="#ffffff" d="M0.465,6.638 L17.511,0.073 C18.078,-0.145 18.714,0.137 18.932,0.704 C19.009,0.903 19.026,1.121 18.981,1.33 L16.042,15.001 C15.896,15.679 15.228,16.111 14.549,15.965 C14.375,15.928 14.211,15.854 14.068,15.748 L8.223,11.443 C7.874,11.185 7.799,10.694 8.057,10.345 C8.082,10.311 8.109,10.279 8.139,10.249 L14.191,4.322 C14.315,4.201 14.317,4.002 14.195,3.878 C14.091,3.771 13.926,3.753 13.8,3.834 L5.602,9.138 C5.112,9.456 4.502,9.528 3.952,9.333 L0.486,8.112 C0.077,7.967 -0.138,7.519 0.007,7.11 C0.083,6.893 0.25,6.721 0.465,6.638 Z"></path></g></svg>Join
+      </a>
+      <a class="tgme_header_link" href="https://t.me/leetcode_cn">
+        <i class="tgme_page_photo_image bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i>
+        <div class="tgme_header_title_wrap">
+          <div class="tgme_header_title"><span dir="auto">leetcode</span></div>
+          <div class="tgme_header_labels"></div>
+        </div>
+        <div class="tgme_header_counter">3 subscribers</div>
+      </a>
+    </div>
+  </div>
+</header>
+<main class="tgme_main" data-url="/leetcode_cn">
+  <div class="tgme_container">
+    <section class="tgme_channel_history js-message_history">
+      <div class="tgme_widget_message_centered js-messages_more_wrap"><a href="/s/leetcode_cn?before=47" class="tme_messages_more js-messages_more" data-before="47"></a></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/47" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NDcsInQiOjE3ODU1NjUxODMsImgiOiIwN2I0ZTkyYWYwMzZjOTA5MWUifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[Remove Duplicates from Sorted List][title]<br/><br/> Description<br/><br/>Given a sorted linked list, delete all duplicates such that each element appear only *once*.<br/><br/>**Example 1:**<br/><br/>```<br/>Input: 1-&gt;1-&gt;2<br/>Output: 1-&gt;2<br/>```<br/><br/>**Example 2:**<br/><br/>```<br/>Input: 1-&gt;1-&gt;2-&gt;3-&gt;3<br/>Output: 1-&gt;2-&gt;3<br/>```<br/><br/>**Tags:** Linked List<br/><br/><br/> 思路<br/><br/>题意是删除链表中重复的元素，很简单，我们只需要遍历一遍链表，遇到链表中相邻元素相同时，把当前指针指向下下个元素即可。<br/><br/>```java<br/>/**<br/> * Definition for singly-linked list.<br/> * public class ListNode {<br/> *     int val;<br/> *     ListNode next;<br/> *     ListNode(int x) { val = x; }<br/> * }<br/> */<br/>class Solution {<br/>    public ListNode deleteDuplicates(ListNode head) {<br/>        if (head == null || <a href="http://head.next/" target="_blank" rel="noopener">head.next</a> == null) return head;<br/>        ListNode curr = head;<br/>        while (<a href="http://curr.next/" target="_blank" rel="noopener">curr.next</a> &#33;= null) {<br/>            if (curr.next.val == curr.val) {<br/>                <a href="http://curr.next/" target="_blank" rel="noopener">curr.next</a> = <a href="http://curr.next.next/" target="_blank" rel="noopener">curr.next.next</a>;<br/>            } else {<br/>                curr = <a href="http://curr.next/" target="_blank" rel="noopener">curr.next</a>;<br/>            }<br/>        }<br/>        return head;<br/>    }<br/>}<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list" target="_blank" rel="noopener">https://leetcode.com/problems/remove-duplicates-from-sorted-list</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://leetcode.com/problems/remove-duplicates-from-sorted-list/">
+  
+  <div class="link_preview_site_name accent_color" dir="auto">LeetCode</div>
+  <i class="link_preview_image" style="background-image:url('https://cdn4.telesco.pe/file/f63zzhLDofVirTi0GpHrnDjzgmF6JCvNiSYKTnvKara1Cv7OuQan0b2NE1DdeWfXpZniXsZBiR8k15JAgFyUDVBxSiDWw8_x60Xspzzqgf9NCQXLUwRMvx1GJykBQ5tWvnmSms5OSpIM9Y8sXApGaLqm4Ymum2YvqqfRqLCo5fCZxVCZSORCXsxs81T0Bsuit5ajuiNTUsfHA-20DUe5DaI-YDUhnphznpMYZPBnVQ9DO3Cq6DBJgSMjeORMUzA22KbjHTDI4xGkEb07jQVZYqMReL19b1YBJN8BFla-ryklUjRLSLF9b0RJ05b7sAulXr5KF-DdDbPFFsUJ2iMi5Q.jpg');padding-top:52%"></i>
+  <div class="link_preview_title" dir="auto">Remove Duplicates from Sorted List - LeetCode</div>
+  <div class="link_preview_description" dir="auto">Can you solve this real interview question? Remove Duplicates from Sorted List - Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.<br/><br/>&nbsp;<br/><br/>Example 1:<br/><br/>[https://asset…</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">7</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/47"><time datetime="2021-11-21T11:00:04+00:00" class="time">11:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/48" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NDgsInQiOjE3ODU1NjUxODMsImgiOiJkNmUzYTg2YWZhODYwMDVlMGUifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[Merge Sorted Array][title]<br/><br/> Description<br/><br/>Given two sorted integer arrays *nums1* and *nums2*, merge *nums2* into *nums1* as one sorted array.<br/><br/>**Note:**<br/><br/>- The number of elements initialized in *nums1* and *nums2* are *m* and *n* respectively.<br/>- You may assume that *nums1* has enough space (size that is greater or equal to *m* + *n*) to hold additional elements from *nums2*.<br/><br/>**Example:**<br/><br/>```<br/>Input:<br/>nums1 = [1,2,3,0,0,0], m = 3<br/>nums2 = [2,5,6],       n = 3<br/><br/>Output: [1,2,2,3,5,6]<br/>```<br/><br/>**Tags:** Array, Two Pointers<br/><br/><br/> 思路<br/><br/>题意是给两个已排序的数组 `nums1` 和 `nums2`，合并 `nums2` 到 `nums1` 中，两数组元素个数分别为 `m` 和 `n`，而且 `nums1` 数组的长度足够容纳 `m + n` 个元素，如果我们按顺序排下去，那肯定要开辟一个新数组来保存元素，如果我们选择逆序，这样利用 `nums1` 自身空间足矣，不会出现覆盖的情况，依次把大的元素插入到 `nums1` 的末尾，确保 `nums2` 中的元素全部插入到 `nums1` 即可。<br/><br/>```java<br/>class Solution {<br/>    public void merge(int[] nums1, int m, int[] nums2, int n) {<br/>        int p = m-- + n-- - 1;<br/>        while (m &gt;= 0 &amp;&amp; n &gt;= 0)<br/>            nums1[p--] = nums1[m] &gt; nums2[n] ? nums1[m--] : nums2[n--];<br/>        while (n &gt;= 0)<br/>            nums1[p--] = nums2[n--];<br/>    }<br/>}<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode.com/problems/merge-sorted-array" target="_blank" rel="noopener">https://leetcode.com/problems/merge-sorted-array</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://leetcode.com/problems/merge-sorted-array/">
+  
+  <div class="link_preview_site_name accent_color" dir="auto">LeetCode</div>
+  <i class="link_preview_image" style="background-image:url('https://cdn4.telesco.pe/file/dpjpG99AJp8j3zrvEhFwPfsEcCGZIiE7EuQVhinkq26qbc7_W-WSrWdoiBvZNbBiQ3qKTxUwoFRECI9zd1hUlKo3Ay6Ig5q-mkGwlKvSJHuymxxNMhSlGJCeygYFlpYgdI0AGFlKxNgaNyssBcoEYwVJD0kTYt6Xqw3fWBpt4FeLtTC3M7cD4Vx88y_DEusuTFw7vgqv8ZIxNg_Pg4kPgmtFnz2H2eSOhQsbbrEUeyWddCXQgOij5g5MNPkijn7_4dbwaLqj7zY8JW9trxeizdhfMnqxlPmC0G7schGLPB8WpTsQp2VInACX_3_XI9yGP20aW0_l7A4qsR1prMif0w.jpg');padding-top:52%"></i>
+  <div class="link_preview_title" dir="auto">Merge Sorted Array - LeetCode</div>
+  <div class="link_preview_description" dir="auto">Can you solve this real interview question? Merge Sorted Array - You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.<br/><br/>Merge nums1…</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">5</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/48"><time datetime="2021-11-21T19:00:06+00:00" class="time">19:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/49" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NDksInQiOjE3ODU1NjUxODMsImgiOiJkMzQyYjUyY2ZkN2I1ZGM4MDgifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[Same Tree][title]<br/><br/> Description<br/><br/>Given two binary trees, write a function to check if they are the same or not.<br/><br/>Two binary trees are considered the same if they are structurally identical and the nodes have the same value.<br/><br/>**Example 1:**<br/><br/>```<br/>Input:     1         1<br/>          / &#092;       / &#092;<br/>         2   3     2   3<br/><br/>        [1,2,3],   [1,2,3]<br/><br/>Output: true<br/>```<br/><br/>**Example 2:**<br/><br/>```<br/>Input:     1         1<br/>          /           &#092;<br/>         2             2<br/><br/>        [1,2],     [1,null,2]<br/><br/>Output: false<br/>```<br/><br/>**Example 3:**<br/><br/>```<br/>Input:     1         1<br/>          / &#092;       / &#092;<br/>         2   1     1   2<br/><br/>        [1,2,1],   [1,1,2]<br/><br/>Output: false<br/>```<br/><br/>**Tags:** Tree, Depth-first Search<br/><br/><br/> 思路<br/><br/>题意是比较两棵二叉树是否相同，那么我们就深搜比较各个节点即可。<br/><br/>```java<br/>/**<br/> * Definition for a binary tree node.<br/> * public class TreeNode {<br/> *     int val;<br/> *     TreeNode left;<br/> *     TreeNode right;<br/> *     TreeNode(int x) { val = x; }<br/> * }<br/> */<br/>class Solution {<br/>    public boolean isSameTree(TreeNode p, TreeNode q) {<br/>        if (p == null &amp;&amp; q == null) return true;<br/>        if (p == null || q == null) return false;<br/>        if (p.val == q.val) {<br/>            return isSameTree(p.left, q.left) &amp;&amp; isSameTree(p.right, q.right);<br/>        }<br/>        return false;<br/>    }<br/>}<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode.com/problems/same-tree" target="_blank" rel="noopener">https://leetcode.com/problems/same-tree</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://leetcode.com/problems/same-tree/">
+  
+  <div class="link_preview_site_name accent_color" dir="auto">LeetCode</div>
+  <i class="link_preview_image" style="background-image:url('https://cdn4.telesco.pe/file/ESzHOeUiMkzCb-0p51JAe5t9QUvmWG_5_QlivTb6xtCoZVWMYobsT7l2x5zfgPZ-KqpoUx9yMEbYhmSwXzEy8LCTEJNicKbcYy-OV0IW7nLy59SE6gsbJQvnVk0oHfwxG3Jx7l6wUStn46aWj_8usTZThdynX69fN3ot7v6mog55BaWodrDYVQECOKB215rrnM5VneFR2YHaF2B52riQ6m_iOynGpiGeXyi6eT3PfqY1W1Nh91NvG6TIwWJOkJkvvNVZj09izV0TJsfTpxMVMe6gOx96NkUGZc71A9n1Co315MlxKM8qtlob6fRu63fPsLFrJx6u4z1XOMJ4RuJsQg.jpg');padding-top:52%"></i>
+  <div class="link_preview_title" dir="auto">Same Tree - LeetCode</div>
+  <div class="link_preview_description" dir="auto">Can you solve this real interview question? Same Tree - Given the roots of two binary trees p and q, write a function to check if they are the same or not.<br/><br/>Two binary trees are considered the same if they are structurally identical, and the nodes have the…</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">5</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/49"><time datetime="2021-11-22T03:00:06+00:00" class="time">03:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/50" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NTAsInQiOjE3ODU1NjUxODMsImgiOiJmMmEyZWVkZWMyMWRmMWI5MTgifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[Symmetric Tree][title]<br/><br/> Description<br/><br/>Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).<br/><br/>For example, this binary tree `[1,2,2,3,4,4,3]` is symmetric:<br/><br/>```<br/>    1<br/>   / &#092;<br/>  2   2<br/> / &#092; / &#092;<br/>3  4 4  3<br/>```<br/><br/>But the following `[1,2,2,null,3,null,3]` is not:<br/><br/>```<br/>    1<br/>   / &#092;<br/>  2   2<br/>   &#092;   &#092;<br/>   3    3<br/>```<br/><br/>**Note:**<br/><br/>Bonus points if you could solve it both recursively and iteratively.<br/><br/>**Tags:** Tree, Depth-first Search, Breadth-first Search<br/><br/><br/> 思路 0<br/><br/>题意是判断一棵二叉树是否左右对称，首先想到的是深搜，比较根结点的左右两棵子树是否对称，如果左右子树的值相同，那么再分别对左子树的左节点和右子树的右节点，左子树的右节点和右子树的左节点做比较即可。<br/><br/>```java<br/>/**<br/> * Definition for a binary tree node.<br/> * public class TreeNode {<br/> *     int val;<br/> *     TreeNode left;<br/> *     TreeNode right;<br/> *     TreeNode(int x) { val = x; }<br/> * }<br/> */<br/>class Solution {<br/>    public boolean isSymmetric(TreeNode root) {<br/>        return root == null || helper(root.left, root.right);<br/>    }<br/><br/>    public boolean helper(TreeNode left, TreeNode right) {<br/>        if (left == null || right == null) return left == right;<br/>        if (left.val &#33;= right.val) return false;<br/>        return helper(left.left, right.right) &amp;&amp; helper(left.right, right.left);<br/>    }<br/>}<br/>```<br/><br/> 思路 1<br/><br/>第二种思路就是宽搜了，宽搜肯定要用到队列，Java 中可用 `LinkedList` 替代，也是要做到左子树的左节点和右子树的右节点，左子树的右节点和右子树的左节点做比较即可。<br/><br/>```java<br/>/**<br/> * Definition for a binary tree node.<br/> * public class TreeNode {<br/> *     int val;<br/> *     TreeNode left;<br/> *     TreeNode right;<br/> *     TreeNode(int x) { val = x; }<br/> * }<br/> */<br/>class Solution {<br/>     public boolean isSymmetric(TreeNode root) {<br/>        if (root == null) return true;<br/>        LinkedList&lt;TreeNode&gt; q = new LinkedList&lt;&gt;();<br/>        q.add(root.left);<br/>        q.add(root.right);<br/>        TreeNode left, right;<br/>        while (q.size() &gt; 1) {<br/>            left = q.pop();<br/>            right = q.pop();<br/>            if (left == null &amp;&amp; right == null) continue;<br/>            if (left == null || right == null) return false;<br/>            if (left.val &#33;= right.val) return false;<br/>            q.add(left.left);<br/>            q.add(right.right);<br/>            q.add(left.right);<br/>            q.add(right.left);<br/>        }<br/>        return true;<br/>    }<br/>}<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode.com/problems/symmetric-tree" target="_blank" rel="noopener">https://leetcode.com/problems/symmetric-tree</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://leetcode.com/problems/symmetric-tree/">
+  
+  <div class="link_preview_site_name accent_color" dir="auto">LeetCode</div>
+  <i class="link_preview_image" style="background-image:url('https://cdn4.telesco.pe/file/rQpXrcmbW2yNuQZOMfXs10ACGHbHXBdUyq6qMAe4quoG8QbOLEkj3sd8Q3FuieT3qoXdWXVYVlTusXGBBrrBOpMVKbLHxsg99XCztrdgwLKrsd6gIn69NLk4mHnvgwwPCXfTuOPH0RvpeqDhiKiMNV1YHRb32GZ2ouhoTYBkrVPKlPLHMJMH-cPAU0uja9UpawL1QKbR15OcA2P6FOOda4Ng9BgLn5t3Lgd9OBW6J-wC0gXjvH8pzh94cL98S9S-o_xGxrIi5qS2bz4fFOhOUBK5uOPcSZXMmOTxrfTJrYppi-ti0orJ_NzrfgVUd_mp8l-nKVrySCIFlbAfYeenRg.jpg');padding-top:52%"></i>
+  <div class="link_preview_title" dir="auto">Symmetric Tree - LeetCode</div>
+  <div class="link_preview_description" dir="auto">Can you solve this real interview question? Symmetric Tree - Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).<br/><br/>&nbsp;<br/><br/>Example 1:<br/><br/>[https://assets.leetcode.com/uploads/2021/02/19/symtree1.jpg]<br/><br/><br/>Input:…</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">4</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/50"><time datetime="2021-11-22T11:00:08+00:00" class="time">11:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/51" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NTEsInQiOjE3ODU1NjUxODMsImgiOiJlN2UyYjM1ZjRkNjRiMTRiNTMifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[Maximum Depth of Binary Tree][title]<br/><br/> Description<br/><br/>Given a binary tree, find its maximum depth.<br/><br/>The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.<br/><br/>**Note:** A leaf is a node with no children.<br/><br/>**Example:**<br/><br/>Given binary tree `[3,9,20,null,null,15,7]`,<br/><br/>```<br/>    3<br/>   / &#092;<br/>  9  20<br/>    /  &#092;<br/>   15   7<br/>```<br/><br/>return its depth = 3.<br/><br/>**Tags:** Tree, Depth-first Search<br/><br/><br/> 思路<br/><br/>题意是找到二叉树的最大深度，很明显，深搜即可，每深入一次节点加一即可，然后取左右子树的最大深度。<br/><br/>```java<br/>/**<br/> * Definition for a binary tree node.<br/> * public class TreeNode {<br/> *     int val;<br/> *     TreeNode left;<br/> *     TreeNode right;<br/> *     TreeNode(int x) { val = x; }<br/> * }<br/> */<br/> class Solution {<br/>     public int maxDepth(TreeNode root) {<br/>         if (root == null) return 0;<br/>         return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));<br/>     }<br/> }<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode.com/problems/maximum-depth-of-binary-tree" target="_blank" rel="noopener">https://leetcode.com/problems/maximum-depth-of-binary-tree</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://leetcode.com/problems/maximum-depth-of-binary-tree/">
+  
+  <div class="link_preview_site_name accent_color" dir="auto">LeetCode</div>
+  <i class="link_preview_image" style="background-image:url('https://cdn4.telesco.pe/file/NeR2IxUvNkhSJ-YOj6UzGLWRXrNdZgZWWNrUmlqmqG_-JJjHPUTDSQvgVxJO5-1AoupuEDF2B6zQDh08bRZgKGTW-FSJw1EdHrZXOSyC88eUq6Qzhp6xbAY7ZB8GMNpRXRA06OxcA5mwt9G407NyPi6kU4xPJtnm9zZLywkWP57Na7ndQ_fgVw-FRCycRf0lzbAjGh8n5KqnHcTB3bgIugXRxD2cdfyjpijqGagqLJY3LIjlunleNgpT6jLsKdRvWJZhvx-CMViwzAuBFfKJalfsYPjHNxhDXLHA2Rz4TIJr6WPIBCv1Z3cvHSCHtJcSEfaZhTD16vuTJZCMj4PQUQ.jpg');padding-top:52%"></i>
+  <div class="link_preview_title" dir="auto">Maximum Depth of Binary Tree - LeetCode</div>
+  <div class="link_preview_description" dir="auto">Can you solve this real interview question? Maximum Depth of Binary Tree - Given the root of a binary tree, return its maximum depth.<br/><br/>A binary tree&#39;s maximum depth&nbsp;is the number of nodes along the longest path from the root node down to the farthest leaf…</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">4</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/51"><time datetime="2021-11-22T19:00:04+00:00" class="time">19:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/52" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NTIsInQiOjE3ODU1NjUxODMsImgiOiJkMjU4OGZiYjgzMjNlMzc4M2UifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[Binary Tree Level Order Traversal II][title]<br/><br/> Description<br/><br/>Given a binary tree, return the *bottom-up level order* traversal of its nodes&#39; values. (ie, from left to right, level by level from leaf to root).<br/><br/>For example:<br/><br/>Given binary tree `[3,9,20,null,null,15,7]`,<br/><br/>```<br/>    3<br/>   / &#092;<br/>  9  20<br/>    /  &#092;<br/>   15   7<br/>```<br/><br/>return its bottom-up level order traversal as:<br/><br/>```<br/>[<br/>  [15,7],<br/>  [9,20],<br/>  [3]<br/>]<br/>```<br/><br/>**Tags:** Tree, Breadth-first Search<br/><br/><br/> 思路 0<br/><br/>题意是从下往上按层遍历二叉树，每一层是从左到右，按层遍历，很明显，宽搜第一时间符合，因为是从下往上，所以插入的时候每次插到链表头即可。<br/><br/>```java<br/>/**<br/> * Definition for a binary tree node.<br/> * public class TreeNode {<br/> *     int val;<br/> *     TreeNode left;<br/> *     TreeNode right;<br/> *     TreeNode(int x) { val = x; }<br/> * }<br/> */<br/>class Solution {<br/>    public List&lt;List&lt;Integer&gt;&gt; levelOrderBottom(TreeNode root) {<br/>        if (root == null) return Collections.emptyList();<br/>        List&lt;List&lt;Integer&gt;&gt; list = new LinkedList&lt;&gt;();<br/>        LinkedList&lt;TreeNode&gt; q = new LinkedList&lt;&gt;();<br/>        q.add(root);<br/>        while(&#33;q.isEmpty()) {<br/>            int size = q.size();<br/>            List&lt;Integer&gt; sub = new LinkedList();<br/>            for(int i = 0; i &lt; size; ++i) {<br/>                TreeNode node = q.remove();<br/>                sub.add(node.val);<br/>                if (node.left &#33;= null) q.add(node.left);<br/>                if (node.right &#33;= null) q.add(node.right);<br/>            }<br/>            list.add(0, sub);<br/>        }<br/>        return list;<br/>    }<br/>}<br/>```<br/><br/> 思路 1<br/><br/>另一种思路就是深搜，深搜的时候同时记录深度，然后在相应的层插入节点值即可。<br/><br/>```java<br/>/**<br/> * Definition for a binary tree node.<br/> * public class TreeNode {<br/> *     int val;<br/> *     TreeNode left;<br/> *     TreeNode right;<br/> *     TreeNode(int x) { val = x; }<br/> * }<br/> */<br/>class Solution {<br/>    public List&lt;List&lt;Integer&gt;&gt; levelOrderBottom(TreeNode root) {<br/>        List&lt;List&lt;Integer&gt;&gt; list = new LinkedList&lt;&gt;();<br/>        helper(list, root, 0);<br/>        return list;<br/>    }<br/><br/>    private void helper(List&lt;List&lt;Integer&gt;&gt; list, TreeNode root, int level) {<br/>        if (root == null) return;<br/>        if (level &gt;= list.size()) {<br/>            list.add(0, new LinkedList&lt;&gt;());<br/>        }<br/>        helper(list, root.left, level + 1);<br/>        helper(list, root.right, level + 1);<br/>        list.get(list.size() - level - 1).add(root.val);<br/>    }<br/>}<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode.com/problems/binary-tree-level-order-traversal-ii" target="_blank" rel="noopener">https://leetcode.com/problems/binary-tree-level-order-traversal-ii</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://leetcode.com/problems/binary-tree-level-order-traversal-ii/">
+  
+  <div class="link_preview_site_name accent_color" dir="auto">LeetCode</div>
+  <i class="link_preview_image" style="background-image:url('https://cdn4.telesco.pe/file/rM_ixmuG0CQe6knts3W1Q3A0SnvTvsdHiB41iE8wCGFGAHBmzTQx9dktSQT5m8MpjZeMPK-8JGzQVuAnIn1qXmACwV-YRdHrm7c3WQ_7LsPAYt_tjiQVCtawfCTFEAT5LuYTMbPdrBgWf396h3vaCgw-RPY5ODzp5pw9BxWArhy2PA_RFzGPKcIzWcW7KOj_NiIVdAwKWeyEE5ryqKl1Yo9OSlkxf14yKZlQihVxjd1zJMLDIouwQv_uWVMHFOw2Ktr8gNYb0wJ9z9j4KV255rKxbQZQoFrf_8RjSTvztpBJhWJY907clgzqiyrQti_onKKPQnCwV1UHj0QdY7DIBA.jpg');padding-top:52%"></i>
+  <div class="link_preview_title" dir="auto">Binary Tree Level Order Traversal II - LeetCode</div>
+  <div class="link_preview_description" dir="auto">Can you solve this real interview question? Binary Tree Level Order Traversal II - Given the root of a binary tree, return the bottom-up level order traversal of its nodes&#39; values. (i.e., from left to right, level by level from leaf to root).<br/><br/>&nbsp;<br/><br/>Example…</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">10</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/52"><time datetime="2021-11-23T03:00:04+00:00" class="time">03:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/53" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NTMsInQiOjE3ODU1NjUxODMsImgiOiIxZjlkMTMxNzk1NTNjZjRmMzAifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[Convert Sorted Array to Binary Search Tree][title]<br/><br/> Description<br/><br/>Given an array where elements are sorted in ascending order, convert it to a height balanced BST.<br/><br/>For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of *every* node never differ by more than 1.<br/><br/>**Example:**<br/><br/>```<br/>Given the sorted array: [-10,-3,0,5,9],<br/><br/>One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST:<br/><br/>      0<br/>     / &#092;<br/>   -3   9<br/>   /   /<br/> -10  5<br/>```<br/><br/>**Tags:** Tree, Depth-first Search<br/><br/><br/> 思路<br/><br/>题意是把一个有序数组转化为一棵二叉搜索树，二叉搜索树具有以下性质：<br/><br/>1. 若任意节点的左子树不空，则左子树上所有节点的值均小于它的根节点的值；<br/><br/>2. 若任意节点的右子树不空，则右子树上所有节点的值均大于它的根节点的值；<br/><br/>3. 任意节点的左、右子树也分别为二叉查找树；<br/><br/>4. 没有键值相等的节点。<br/><br/>所以我们可以用递归来构建一棵二叉搜索树，每次把数组分为两半，把数组中间的值作为其父节点，然后把数组的左右两部分继续构造其左右子树。<br/><br/><br/>```java<br/>/**<br/> * Definition for a binary tree node.<br/> * public class TreeNode {<br/> *     int val;<br/> *     TreeNode left;<br/> *     TreeNode right;<br/> *     TreeNode(int x) { val = x; }<br/> * }<br/> */<br/>class Solution {<br/>    public TreeNode sortedArrayToBST(int[] nums) {<br/>        if (nums == null || nums.length == 0) return null;<br/>        return helper(nums, 0, nums.length - 1);<br/>    }<br/><br/>    private TreeNode helper(int[] nums, int left, int right) {<br/>        if (left &gt; right) return null;<br/>        int mid = (left + right) &gt;&gt;&gt; 1;<br/>        TreeNode node = new TreeNode(nums[mid]);<br/>        node.left = helper(nums, left, mid - 1);<br/>        node.right = helper(nums, mid + 1, right);<br/>        return node;<br/>    }<br/>}<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree" target="_blank" rel="noopener">https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/">
+  
+  <div class="link_preview_site_name accent_color" dir="auto">LeetCode</div>
+  <i class="link_preview_image" style="background-image:url('https://cdn4.telesco.pe/file/aeacR5ibZDtByJZhg2O64Q6sgZrrYF4XnUZnffKy9PSi5FoQGQUDyslEPrd1wJyR49-kCvtcyhzTf6XMXzP5l6_IxUgIPbPhKucVj4zLQTVXJywU6EDrq7IS_G5XdbUAvgkm6Usm_flL025P3JfkfwA6sgo1VeiTh4F1a7WLIrN64inUF3dc-62ts8rz4rIhHrx1nwRZhAEYJMAnyKiEHHTUHSWLnt_v7UOnNmgWbk1xxZB9mUJLofvJvcE8K-QiY84Fb0ZsVSQcLLclsWzseVIKASUX1w_06YYBCgD1_5eOSi31NaX_ZvQs3XSygIupeVVbz--a3JxwkUU0GHDl-Q.jpg');padding-top:52%"></i>
+  <div class="link_preview_title" dir="auto">Convert Sorted Array to Binary Search Tree - LeetCode</div>
+  <div class="link_preview_description" dir="auto">Can you solve this real interview question? Convert Sorted Array to Binary Search Tree - Given an integer array nums where the elements are sorted in ascending order, convert it to a height-balanced binary search tree.<br/><br/>&nbsp;<br/><br/>Example 1:<br/><br/>[https://assets.lee…</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">6</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/53"><time datetime="2021-11-23T11:00:05+00:00" class="time">11:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/54" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NTQsInQiOjE3ODU1NjUxODMsImgiOiIwMmI1YzJjNjliNGRlZWQ3MTIifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[Balanced Binary Tree][title]<br/><br/> Description<br/><br/>Given a binary tree, determine if it is height-balanced.<br/><br/>For this problem, a height-balanced binary tree is defined as:<br/><br/>&gt; a binary tree in which the depth of the two subtrees of *every* node never differ by more than 1.<br/><br/>**Example 1:**<br/><br/>Given the following tree `[3,9,20,null,null,15,7]`:<br/><br/>```<br/>    3<br/>   / &#092;<br/>  9  20<br/>    /  &#092;<br/>   15   7<br/>```<br/><br/>Return true.<br/>**Example 2:**<br/><br/>Given the following tree `[1,2,2,3,3,null,null,4,4]`:<br/><br/>```<br/>       1<br/>      / &#092;<br/>     2   2<br/>    / &#092;<br/>   3   3<br/>  / &#092;<br/> 4   4<br/>```<br/><br/>Return false.<br/><br/>**Tags:** Tree, Depth-first Search<br/><br/><br/> 思路<br/><br/>题意是判断一棵二叉树是否是高度平衡的，所谓二叉树高度平衡指的是二叉树的每个节点的两棵子树的高度差都不超过 1，那么我们只需计算左右子树的高度，判断其高度差是否不超过 1 即可，如果超过 1，就代表其不是高度平衡的，立即返回不是即可，我这里用返回 `-1` 代表不是。<br/><br/>```java<br/>/**<br/> * Definition for a binary tree node.<br/> * public class TreeNode {<br/> *     int val;<br/> *     TreeNode left;<br/> *     TreeNode right;<br/> *     TreeNode(int x) { val = x; }<br/> * }<br/> */<br/>class Solution {<br/>    public boolean isBalanced(TreeNode root) {<br/>        return helper(root) &#33;= -1;<br/>    }<br/><br/>    private int helper(TreeNode node) {<br/>        if (node == null) return 0;<br/>        int l = helper(node.left);<br/>        if (l == -1) return -1;<br/>        int r = helper(node.right);<br/>        if (r == -1) return -1;<br/>        if (Math.abs(l - r) &gt; 1) return -1;<br/>        return 1 + Math.max(l, r);<br/>    }<br/>}<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode.com/problems/balanced-binary-tree" target="_blank" rel="noopener">https://leetcode.com/problems/balanced-binary-tree</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://leetcode.com/problems/balanced-binary-tree/">
+  
+  <div class="link_preview_site_name accent_color" dir="auto">LeetCode</div>
+  <i class="link_preview_image" style="background-image:url('https://cdn4.telesco.pe/file/Y51u4qSCPi_ie9a-eWVVg4VG2mS8Z41YFEBRdvlZof9NW_lhJdW-NTiGpu6raiVbq70HHJ5ipdhnuyU6tth8EtAfiz_foySCOWh8Q3hSBTehXz0qMjSdZk_GK-zL6_OZmKuS-tcUTPX9uNE6c_BoS04vbXmS_dtz4WYeiBthyH1bIvB58WALB2m2TEngr7nu-OH0yUaPzXxi62sMaJoLVCcV7ECqjJ4jiviqNTg-CC5jwp59tkLk3iYqU9JSSs5l-rEx9ShAi36GYuftynC-__0qogyffZh-l41RGEhjbTLPbPNSUmzeoAPouQ1vdx3HOd-mUs0q52bXVWS14_LnSg.jpg');padding-top:52%"></i>
+  <div class="link_preview_title" dir="auto">Balanced Binary Tree - LeetCode</div>
+  <div class="link_preview_description" dir="auto">Can you solve this real interview question? Balanced Binary Tree - Given a binary tree, determine if it is height-balanced.<br/><br/>&nbsp;<br/><br/>Example 1:<br/><br/>[https://assets.leetcode.com/uploads/2020/10/06/balance_1.jpg]<br/><br/><br/>Input: root = [3,9,20,null,null,15,7]<br/>Output: true…</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">6</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/54"><time datetime="2021-11-23T19:00:04+00:00" class="time">19:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/55" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NTUsInQiOjE3ODU1NjUxODMsImgiOiI1NGZlMTlkM2ZkYTVmZjVmM2MifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[Minimum Depth of Binary Tree][title]<br/><br/> Description<br/><br/>Given a binary tree, find its minimum depth.<br/><br/>The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.<br/><br/>**Note:** A leaf is a node with no children.<br/><br/>**Example:**<br/><br/>Given binary tree `[3,9,20,null,null,15,7]`,<br/><br/>```<br/>    3<br/>   / &#092;<br/>  9  20<br/>    /  &#092;<br/>   15   7<br/>```<br/><br/>return its minimum depth = 2.<br/><br/>**Tags:** Tree, Depth-first Search, Breadth-first Search<br/><br/><br/> 思路 0<br/><br/>题意是查找二叉树的最小深度，也就是找到从根结点到叶子节点的最小深度，最容易想到的当然是深搜，如果节点的左右深度都不是 0 的话，说明该节点含有左右子树，所以它的最小高度就是 1 加上其左右子树高度较小者，否则如果左子树为空或者右子树为空或者两者都为空，那么就是 1 加上非空子树高度。<br/><br/>```java<br/>/**<br/> * Definition for a binary tree node.<br/> * public class TreeNode {<br/> *     int val;<br/> *     TreeNode left;<br/> *     TreeNode right;<br/> *     TreeNode(int x) { val = x; }<br/> * }<br/> */<br/>class Solution {<br/>    public int minDepth(TreeNode root) {<br/>        if (root == null) return 0;<br/>        int l = minDepth(root.left);<br/>        int r = minDepth(root.right);<br/>        if (l &#33;= 0 &amp;&amp; r &#33;= 0) return 1 + Math.min(l, r);<br/>        return l + r + 1;<br/>    }<br/>}<br/>```<br/><br/> 思路 1<br/><br/>第二种思路就是利用宽搜了，搜索到该层有叶子节点，那就返回该层宽度即可。<br/><br/>```java<br/>/**<br/> * Definition for a binary tree node.<br/> * public class TreeNode {<br/> *     int val;<br/> *     TreeNode left;<br/> *     TreeNode right;<br/> *     TreeNode(int x) { val = x; }<br/> * }<br/> */<br/>class Solution {<br/>    public int minDepth(TreeNode root) {<br/>        if (root == null) return 0;<br/>        LinkedList&lt;TreeNode&gt; q = new LinkedList&lt;&gt;();<br/>        q.add(root);<br/>        int ans = 1;<br/>        while (&#33;q.isEmpty()) {<br/>            int size = q.size();<br/>            for (int i = 0; i &lt; size; ++i) {<br/>                TreeNode node = q.remove();<br/>                if (node.left == null &amp;&amp; node.right == null) {<br/>                    return ans;<br/>                }<br/>                if (node.left &#33;= null) q.add(node.left);<br/>                if (node.right &#33;= null) q.add(node.right);<br/>            }<br/>            ++ans;<br/>        }<br/>        return 520;<br/>    }<br/>}<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode.com/problems/minimum-depth-of-binary-tree" target="_blank" rel="noopener">https://leetcode.com/problems/minimum-depth-of-binary-tree</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://leetcode.com/problems/minimum-depth-of-binary-tree/">
+  
+  <div class="link_preview_site_name accent_color" dir="auto">LeetCode</div>
+  <i class="link_preview_image" style="background-image:url('https://cdn4.telesco.pe/file/dNsXkm0iypOv7OGFpw30Ee5ihuimvfahLZuZuEtcX81s7rd_8nne-tbS_kj3--oHT6ZkiuP6Q9_O9fN37PiDCx6pBrNpgCdJ8j9xZsvETjQfcF12SKHL9g0o2HvHOm6mImagG4F3fSV3NcGzgQEsU-uJpyPtA6PM2Hk6Y78lk2HUB1BO5OlBiHY-t5EEVHimwHRrxLvcfYg4K4MLpO2R0YEPqAnD5q5j92hhrsq6bdks2FDpQx06JhF3zynYS1OIUdudYFGAbphTFNggbViuzwhzyv22p1tchEPwRPMJBkpe9SN_okOPvhjfFzpkZXDCpM__IXaFCmbST6S81PksyA.jpg');padding-top:52%"></i>
+  <div class="link_preview_title" dir="auto">Minimum Depth of Binary Tree - LeetCode</div>
+  <div class="link_preview_description" dir="auto">Can you solve this real interview question? Minimum Depth of Binary Tree - Given a binary tree, find its minimum depth.<br/><br/>The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.<br/><br/>Note:&nbsp;A leaf is a…</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">5</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/55"><time datetime="2021-11-24T03:00:05+00:00" class="time">03:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/56" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NTYsInQiOjE3ODU1NjUxODMsImgiOiI1NWQ4ZGY2YzI0YzkxMjM3ZTgifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[Path Sum][title]<br/><br/> Description<br/><br/>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.<br/><br/>**Note:** A leaf is a node with no children.<br/><br/>**Example:**<br/><br/>Given the below binary tree and `sum = 22`,<br/><br/>```<br/>      5<br/>     / &#092;<br/>    4   8<br/>   /   / &#092;<br/>  11  13  4<br/> /  &#092;      &#092;<br/>7    2      1<br/>```<br/><br/>return true, as there exist a root-to-leaf path `5-&gt;4-&gt;11-&gt;2` which sum is 22.<br/><br/>**Tags:** Tree, Depth-first Search<br/><br/><br/> 思路<br/><br/>题意是查找二叉树中是否存在从根结点到叶子的路径和为某一值，利用深搜在遇到叶子节点时判断是否满足即可。<br/><br/><br/>```java<br/>/**<br/> * Definition for a binary tree node.<br/> * public class TreeNode {<br/> *     int val;<br/> *     TreeNode left;<br/> *     TreeNode right;<br/> *     TreeNode(int x) { val = x; }<br/> * }<br/> */<br/>class Solution {<br/>    public boolean hasPathSum(TreeNode root, int sum) {<br/>        if (root == null) return false;<br/>        if (root.left == null &amp;&amp; root.right == null) return sum == root.val;<br/>        return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);<br/>    }<br/>}<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode.com/problems/path-sum" target="_blank" rel="noopener">https://leetcode.com/problems/path-sum</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://leetcode.com/problems/path-sum/">
+  
+  <div class="link_preview_site_name accent_color" dir="auto">LeetCode</div>
+  <i class="link_preview_image" style="background-image:url('https://cdn4.telesco.pe/file/gtUfJYVTfJsSevqr6bzwdWDCynBRmv7sHOBxgx182-qNNZCGbZCfUTHHWI0H07ugY-m_bT-k-I-bgiMxRWVfEoJsJYAC7JbHXZy1x2McBTF4AVRJ7oR9-hrD2vGHYG0G9YsaiaMQWWkJm9HagKIEgfxw6jV4NPod8277nfkEDfHeDhQKpexVB4tnphQzSZRP-9TL4OejwhUYgRH8id58TL16onZVDuyURUEpZGmPSSrvksy614Aztwi3Ja1-zyvkAiqhtKqGkdA_Cq9iercRAohp4MVfoXSaTVk4kjQlQhQRk3qiQ01UJOtmwTaZfgbtAvK1ioariq9AYNd9HtjiYw.jpg');padding-top:52%"></i>
+  <div class="link_preview_title" dir="auto">Path Sum - LeetCode</div>
+  <div class="link_preview_description" dir="auto">Can you solve this real interview question? Path Sum - Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.<br/><br/>A leaf is a node with no…</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">5</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/56"><time datetime="2021-11-24T11:00:05+00:00" class="time">11:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/57" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NTcsInQiOjE3ODU1NjUxODMsImgiOiI1ZjIyZTIzNzAxYmU5YzdiYjcifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[Pascal&#39;s Triangle][title]<br/><br/> Description<br/><br/>Given a non-negative integer *numRows*, generate the first *numRows* of Pascal&#39;s triangle.<br/><br/>&#33;[img](<a href="https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif" target="_blank" rel="noopener">https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif</a>)<br/>In Pascal&#39;s triangle, each number is the sum of the two numbers directly above it.<br/><br/>**Example:**<br/><br/>```<br/>Input: 5<br/>Output:<br/>[<br/>     [1],<br/>    [1,1],<br/>   [1,2,1],<br/>  [1,3,3,1],<br/> [1,4,6,4,1]<br/>]<br/>```<br/><br/>**Tags:** Array<br/><br/><br/> 思路<br/><br/>题意是给出行数，输出帕斯卡尔三角形，很简单的模拟，就不多说了。<br/><br/>```java<br/>class Solution {<br/>    public List&lt;List&lt;Integer&gt;&gt; generate(int numRows) {<br/>        if (numRows == 0) return Collections.emptyList();<br/>        List&lt;List&lt;Integer&gt;&gt; list = new ArrayList&lt;&gt;();<br/>        for (int i = 0; i &lt; numRows; ++i) {<br/>            List&lt;Integer&gt; sub = new ArrayList&lt;&gt;();<br/>            for (int j = 0; j &lt;= i; ++j) {<br/>                if (j == 0 || j == i) {<br/>                    sub.add(1);<br/>                } else {<br/>                    List&lt;Integer&gt; upSub = list.get(i - 1);<br/>                    sub.add(upSub.get(j - 1) + upSub.get(j));<br/>                }<br/>            }<br/>            list.add(sub);<br/>        }<br/>        return list;<br/>    }<br/>}<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode.com/problems/pascals-triangle" target="_blank" rel="noopener">https://leetcode.com/problems/pascals-triangle</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif">
+  
+  
+  <div class="link_preview_video_player js-message_video_player" style="">
+  <i class="link_preview_video_thumb" style="background-image:url('https://cdn4.telesco.pe/file/u3zYkAF6EnTPuavgqBoeOgEFFw2QXx9V53VM7SgYEGFo9wTrc9v29iSNAQhvpVHOLsxCEG-Tcy-LD0Ss2AHihHqgkLPGp6ha0SnFBfIFmSXO6wPYpM3qRcBn_PuDNT-AYFoXKdby8GA6PqQs98mCYvaSG_SVQfuZ4NmE9Yco05Yk5cduF7hx4UWgIfgylgvbFcq1jZPG_oNIfvZH_ZjYLnVHdOPJu6JG7LqBBJQZmYM-urg9SuhRizhEBt7AWBA8N6I0BdQTJklvMcqCnI6rO_zujxigjFpI-0IhBpK0gcPd0CWRYoBs4yHJ05x4qTCvKXaD6xRxkK-IffiH-WAliw')"></i>
+  <div class="link_preview_video_wrap" style="padding-top:92.307692307692%">
+    <video class="link_preview_video js-message_video" src="https://cdn4.telesco.pe/file/e8f3874e65.mp4?token=O5HKFi2sApJPyODllR4GV0b7U03_qTFW2Uru_iarToeN795QsMYrj_AX6Ei-M-KKDex3l5oWJ-i6TaQwfsVMyPtjM_6wzradthBdQy8_48Sp48ay2-Gdw08HEqh2Rah0yOFZ2UfpdLB4Qm7ctF2_yBzNQ5o5OnAxKnXF4V4yIXmNXE-3Mjg-A9iWzy-ewEaSfDPeVHDYGhJKerU8RxvDGOl4Wx0xjkFA1pq16qKe91oQYKBuSVH2kDzfo87zmXYXqhNyDoAEspJK2B_JT5WEsScXO58kDu5w775ZE8EUIRB052GDX7OSW41FB1bPICQ5o0RYrfMoux4gtGWPxiVJqA" width="100%" height="100%" preload muted autoplay loop playsinline></video>
+  </div>
+  
+</div>
+  
+  
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">5</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/57"><time datetime="2021-11-24T19:00:05+00:00" class="time">19:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/58" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NTgsInQiOjE3ODU1NjUxODMsImgiOiI0ZjczODFlZmU2NWRmNzc2YWUifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[Pascal&#39;s Triangle II][title]<br/><br/> Description<br/><br/>Given a non-negative index *k* where *k* ≤ 33, return the *k*th index row of the Pascal&#39;s triangle.<br/><br/>Note that the row index starts from 0.<br/><br/>&#33;[img](<a href="https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif" target="_blank" rel="noopener">https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif</a>)<br/>In Pascal&#39;s triangle, each number is the sum of the two numbers directly above it.<br/><br/>**Example:**<br/><br/>```<br/>Input: 3<br/>Output: [1,3,3,1]<br/>```<br/><br/>**Follow up:**<br/><br/>Could you optimize your algorithm to use only *O*(*k*) extra space?<br/><br/>**Tags:** Array<br/><br/><br/> 思路<br/><br/>题意是指定输出帕斯卡尔三角形的某一行，模拟即可，优化后的代码如下所示。<br/><br/>```java<br/>class Solution {<br/>    public List&lt;Integer&gt; getRow(int rowIndex) {<br/>        List&lt;Integer&gt; res = new ArrayList&lt;&gt;();<br/>        for (int i = 0; i &lt;= rowIndex; ++i) {<br/>            res.add(1);<br/>            for (int j = i - 1; j &gt; 0; --j) {<br/>                res.set(j, res.get(j - 1) + res.get(j));<br/>            }<br/>        }<br/>        return res;<br/>    }<br/>}<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode.com/problems/pascals-triangle-ii" target="_blank" rel="noopener">https://leetcode.com/problems/pascals-triangle-ii</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif">
+  
+  
+  <div class="link_preview_video_player js-message_video_player" style="">
+  <i class="link_preview_video_thumb" style="background-image:url('https://cdn4.telesco.pe/file/UAiTSmfO4B3OjGYkbDa-OjzwVTFvHlma0b1H7YOPHV_22iO1M-DjK_Fxx4ilXRJSRQBPAB_EvlF8upIqlc2O5qIMWRaHV9ayY-5yHpgrdeS5xaJHtHD_C83WHV_LwWIS5b3dh_LC_McbfbPAJu61EhNcCSJ5OLbBEzUqLNBZw2iZTQk7DRfRke_fTaRmrnc1OdrXaqjT0Ed2tHWQ-46Lmto4n67m4J8kY37fUo7it7Cs05t8O0e5JAXY32CfWQ8a5hulYDZniykggg242-EamH3xNyyUkClC2ndf6_nuFs61FmQYMxta8jDd1EtZ0ehQ011Oe0xmpLV3SK_7mgUyNg')"></i>
+  <div class="link_preview_video_wrap" style="padding-top:92.307692307692%">
+    <video class="link_preview_video js-message_video" src="https://cdn4.telesco.pe/file/e8f3874e65.mp4?token=AjJyvmoAy5YcnfslJgd65Dp9At7kk-Oc4MXlMssjaFv_ixMyxCPxO6WU_TltbFo5dLoTnXKc4-VPhI-5_bBKAWedWxZrSca42JJEhHB_B1TUKylfZuLnnhOn0nXEUCs2dMylPRNG083T45pOqvaVTz8SZv4gDfUdRlJkDBGWgOY0IbzP4iedbUpSA_MV1lfF6tYiCYYqnAvSBzCNIfABNpxOaNv58GBUtPvz63DfUW89eqtY5udi2JyNM4bd_jT0XkKdN7fGWCBlD2_1QdOp7rSJ0w-Bk-36HG-Jq2QLzV5-kla2Ab_AiNB1ZLd9kcBbSoq0V2WOJdQmmIUDXLftXQ" width="100%" height="100%" preload muted autoplay loop playsinline></video>
+  </div>
+  
+</div>
+  
+  
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">6</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/58"><time datetime="2021-11-25T03:00:05+00:00" class="time">03:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/59" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NTksInQiOjE3ODU1NjUxODMsImgiOiI4YjBiZGZiOWRmNjA4ODM4NDAifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[Best Time to Buy and Sell Stock][title]<br/><br/> Description<br/><br/>Say you have an array for which the *i*&lt;sup&gt;th&lt;/sup&gt; element is the price of a given stock on day *i*.<br/><br/>If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.<br/><br/>Note that you cannot sell a stock before you buy one.<br/><br/>**Example 1:**<br/><br/>```<br/>Input: [7,1,5,3,6,4]<br/>Output: 5<br/>Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.<br/>             Not 7-1 = 6, as selling price needs to be larger than buying price.<br/>```<br/><br/>**Example 2:**<br/><br/>```<br/>Input: [7,6,4,3,1]<br/>Output: 0<br/>Explanation: In this case, no transaction is done, i.e. max profit = 0.<br/>```<br/><br/>**Tags:** Array, Dynamic Programmin<br/><br/><br/> 思路<br/><br/>题意是给出一个数组代表每天的股票金额，让你在最多买卖一次的情况下算出最大的收益额，最简单的就是模拟即可，每次记录当前值减去最小值的差值，与上一次的进行比较然后更新最大值即可。<br/><br/>```java<br/>class Solution {<br/>    public int maxProfit(int[] prices) {<br/>        int max = 0, minPrice = Integer.MAX_VALUE;<br/>        for (int i = 0; i &lt; prices.length; ++i) {<br/>            if (prices[i] &lt; minPrice) minPrice = prices[i];<br/>            int delta = prices[i] - minPrice;<br/>            if (delta &gt; max) max = delta;<br/>        }<br/>        return max;<br/>    }<br/>}<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock" target="_blank" rel="noopener">https://leetcode.com/problems/best-time-to-buy-and-sell-stock</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/">
+  
+  <div class="link_preview_site_name accent_color" dir="auto">LeetCode</div>
+  <i class="link_preview_image" style="background-image:url('https://cdn4.telesco.pe/file/YQQCES4oBcTR72YV_QUmeVcXV5NURA-yOrllWMqFHSaO0lhNPH3HRhDnL9Ox8Lnf7okpGU2EketJdz4PND59-sbxz2hAudILC2JVDomKhhIy6-ryakZ7b8GXzMkydfXj3D6H3l1kkN-JOa_mBmXQakzIkrnswvYwDVe25WcLP32BE8iKMZ1BF7HWJ6GQOxHOSEBv_HonXnZhrtLjaJVKrme1XZiNlOyWHQfgzp99ORN9RXHYv3ueeFssH4VGpgqANSf-NPRhmMts2rgQyaDcyv_q4hlyXWYwjgns_CywO_IRdklSIN7K_aYdKPxUy-jO64b760qEhimzFh2TB4rA-A.jpg');padding-top:52%"></i>
+  <div class="link_preview_title" dir="auto">Best Time to Buy and Sell Stock - LeetCode</div>
+  <div class="link_preview_description" dir="auto">Can you solve this real interview question? Best Time to Buy and Sell Stock - You are given an array prices where prices[i] is the price of a given stock on the ith day.<br/><br/>You want to maximize your profit by choosing a single day to buy one stock and choosing…</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">7</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/59"><time datetime="2021-11-25T11:00:05+00:00" class="time">11:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/60" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NjAsInQiOjE3ODU1NjUxODMsImgiOiI2MGY1YmZhMGYxMjdkMjVhN2YifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[Best Time to Buy and Sell Stock II][title]<br/><br/> Description<br/><br/>Say you have an array for which the *i*&lt;sup&gt;th&lt;/sup&gt; element is the price of a given stock on day *i*.<br/><br/>Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).<br/><br/>**Note:** You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).<br/><br/>**Example 1:**<br/><br/>```<br/>Input: [7,1,5,3,6,4]<br/>Output: 7<br/>Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.<br/>             Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.<br/>```<br/><br/>**Example 2:**<br/><br/>```<br/>Input: [1,2,3,4,5]<br/>Output: 4<br/>Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.<br/>             Note that you cannot buy on day 1, buy on day 2 and sell them later, as you are<br/>             engaging multiple transactions at the same time. You must sell before buying again.<br/>```<br/><br/>**Example 3:**<br/><br/>```<br/>Input: [7,6,4,3,1]<br/>Output: 0<br/>Explanation: In this case, no transaction is done, i.e. max profit = 0.<br/>```<br/><br/>**Tags:** Array, Greedy<br/><br/><br/> 思路<br/><br/>题意是给出一个数组代表每天的股票金额，在每天只能买或卖的情况下求出收益最高值，这...，这也太简单了吧，把所有相邻递增的值都加起来即可。<br/><br/>```java<br/>class Solution {<br/>    public int maxProfit(int[] prices) {<br/>        int max = 0;<br/>        for (int i = 1; i &lt; prices.length; ++i) {<br/>            if (prices[i] &gt; prices[i - 1]) max += prices[i] - prices[i - 1];<br/>        }<br/>        return max;<br/>    }<br/>}<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii" target="_blank" rel="noopener">https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/">
+  
+  <div class="link_preview_site_name accent_color" dir="auto">LeetCode</div>
+  <i class="link_preview_image" style="background-image:url('https://cdn4.telesco.pe/file/n2cA0v7ObEeyEOLLYLh6C3NhBon9cQWSTFlJPztk7iVFQx4kiHMR9UtPoOu1UuC6k19aaUVD95vb1J9DcaGGeQlJKV3wM0gSE6yfe7dXVBHoWLfSpgAZsu31KIXDQ-10cdkdyjA6EGfkyNjsldcV5ORsyb4PBk4hZswoJBeXYCBFPeV38w8XSDGGyVthBIIA0NNvjEL8AAUWwWhgtv07Em4Q7ClXxpI3xAcUT1Vt0RVVtN2cSkuw9mg4Oq8POa_71u3NSOXkrwlGgfs8H1v2r8dQtT8n_I0dWGGEs1nwqHiq8ussaDfZZujRv-AucDitvinoHPORhSTKmPo0LqLJhA.jpg');padding-top:52%"></i>
+  <div class="link_preview_title" dir="auto">Best Time to Buy and Sell Stock II - LeetCode</div>
+  <div class="link_preview_description" dir="auto">Can you solve this real interview question? Best Time to Buy and Sell Stock II - You are given an integer array prices where prices[i] is the price of a given stock on the ith day.<br/><br/>On each day, you may decide to buy and/or sell the stock. You can only hold…</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">7</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/60"><time datetime="2021-11-25T19:00:05+00:00" class="time">19:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/61" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NjEsInQiOjE3ODU1NjUxODMsImgiOiI4YTA5MjZlMDJmMDVlMjM0NmMifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[长度最小的子数组][title]<br/><br/> 题目描述<br/><br/>给定一个含有&nbsp;**n** 个正整数的数组和一个正整数&nbsp;**s** ，找出该数组中满足其和 **≥ s** 的长度最小的连续子数组，并返回其长度。如果不存在符合条件的连续子数组，返回 0。<br/><br/>**示例：**<br/><br/>```<br/>输入：s = 7, nums = [2,3,1,2,4,3]<br/>输出：2<br/>解释：子数组 [4,3] 是该条件下的长度最小的连续子数组。<br/>```<br/><br/>**进阶：**<br/><br/>* 如果你已经完成了 _O_(_n_) 时间复杂度的解法, 请尝试 _O_(_n_ log _n_) 时间复杂度的解法。<br/><br/>**标签：** 数组、双指针、二分查找<br/><br/><br/> 思路 0<br/><br/>直接暴力法，两重 for 循环，记录最小长度即可，代码很简单，如下所示：<br/><br/><br/>```java<br/>class Solution {<br/>    public int minSubArrayLen(int s, int[] nums) {<br/>        int ans = Integer.MAX_VALUE;<br/>        for (int i = 0; i &lt; nums.length; i++) {<br/>            int sum = nums[i];<br/>            if (sum &gt;= s) {<br/>                return 1;<br/>            }<br/>            for (int j = i + 1; j &lt; nums.length; j++) {<br/>                sum += nums[j];<br/>                if (sum &gt;= s) {<br/>                    ans = Math.min(ans, j - i + 1);<br/>                    break;<br/>                }<br/>            }<br/>        }<br/>        return ans == Integer.MAX_VALUE ? 0 : ans;<br/>    }<br/>}<br/>```<br/><br/> 思路 1<br/><br/>对上面进行优化，我们通过首位两个指针来模拟滑动窗口，如果加起来值小于 s，则向右扩大窗口直至不小于 s，然后固定窗口右侧来向左缩小窗口，同时更新符合条件的最小窗口长度即可，代码如下所示：<br/><br/>```java<br/>class Solution {<br/>    public int minSubArrayLen(int s, int[] nums) {<br/>        int left = 0, right = 0, sum = 0, ans = Integer.MAX_VALUE;<br/>        while (right &lt; nums.length) {<br/>            sum += nums[right++]; // 向右扩大窗口<br/>            while (sum &gt;= s) { // 如果不小于 s，则收缩窗口左边界<br/>                ans = Math.min(ans, right - left);// 更新结果<br/>                sum -= nums[left++]; // 向左缩小窗口<br/>            }<br/>        }<br/>        return ans == Integer.MAX_VALUE ? 0 : ans;<br/>    }<br/>}<br/>```<br/><br/> 思路 2<br/><br/>进阶中说了，尝试使用 O(nlogn) 时间复杂度的解法，由于数组都是正整数构成，所以前缀和一定是递增的，想到的应该就是用二分查找了，可以用 sums 数组来存储 nums 数组的前缀和，sums[i] 代表 nums[0] 到 nums[i - 1] 总和，然后遍历 sums 数组，对 sums[i] + s 进行二分查找然后不断更新结果即可，具体代码如下所示：<br/><br/><br/>```java<br/>class Solution {<br/>    public int minSubArrayLen(int s, int[] nums) {<br/>        int ans = Integer.MAX_VALUE;<br/>        int[] sums = new int[nums.length + 1];<br/>        for (int i = 0; i &lt; nums.length; i++) {<br/>            sums[i + 1] = sums[i] + nums[i];<br/>        }<br/>        for (int i = 0; i &lt; nums.length; i++) {<br/>            int target = s + sums[i]; // 确定要搜索的目标值<br/>            // Java 二分查找 Arrays.binarySearch 如果找到就会返回该元素的索引；<br/>            // 如果没找到就会返回一个负数，这个负数取反之后再减一就是查找的值应该在数组中的位置；<br/>            // 例如 [-1, 0, 1, 5] 中二分查找 2，其返回值就是 -4，其 -(-4) - 1 = 3，所以 2 这个元素插入到数组的索引就是 3<br/>            int bound = Arrays.binarySearch(sums, target);<br/>            if (bound &lt; 0) {<br/>                bound = -bound - 1;<br/>            }<br/>            if (bound &lt; sums.length) { // 当 bound 确定插入点不在 sums 数组的最后面时，说明不小于 target 的值了<br/>                ans = Math.min(ans, bound - i);<br/>            }<br/>        }<br/>        return ans == Integer.MAX_VALUE ? 0 : ans;<br/>    }<br/>}<br/>```<br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode-cn.com/problems/minimum-size-subarray-sum" target="_blank" rel="noopener">https://leetcode-cn.com/problems/minimum-size-subarray-sum</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://leetcode-cn.com/problems/minimum-size-subarray-sum/">
+  
+  <div class="link_preview_site_name accent_color" dir="auto">力扣 LeetCode</div>
+  
+  <div class="link_preview_title" dir="auto">209. 长度最小的子数组 - 力扣（LeetCode）</div>
+  <div class="link_preview_description" dir="auto">给定一个含有 n 个正整数的数组和一个正整数 target 。 找出该数组中满足其和 ≥ target 的长度最小的 连续子数组 [numsl, numsl+1, ..., numsr-1, numsr] ，并返回其长度。如果不存在符合条件的子数组，返回 0 。 示例 1： 输入：target = 7, nums = [2,3,1,2,4,3] 输出：2 解释：子数组 [4,3] 是该条件下的长度最小的子数组。 示例 2： 输入：target = 4, nums = [1,4,4] 输出：1 示例 3：…</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">8</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/61"><time datetime="2021-11-26T03:00:05+00:00" class="time">03:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/62" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NjIsInQiOjE3ODU1NjUxODMsImgiOiJiNjIzYzIyMzMzMGU5YWFlMjEifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[Diameter of Binary Tree][title]<br/><br/> Description<br/><br/>Given a binary tree, you need to compute the length of the diameter of the tree. The diameter of a binary tree is the length of the **longest** path between any two nodes in a tree. This path may or may not pass through the root.<br/><br/>**Example:**<br/>Given a binary tree <br/><br/>```<br/>          1<br/>         / &#092;<br/>        2   3<br/>       / &#092;     <br/>      4   5    <br/>```<br/><br/>Return **3**, which is the length of the path [4,2,1,3] or [5,2,1,3].<br/><br/>**Note:** The length of path between two nodes is represented by the number of edges between them.<br/><br/>**Tags:** Tree<br/><br/><br/> 思路<br/><br/>题意是让你算出二叉树中最远的两个节点的距离，分别计算左右子树的最大高度，然后不断迭代出其和的最大值就是最终结果。<br/><br/>```java<br/>/**<br/> * Definition for a binary tree node.<br/> * public class TreeNode {<br/> *     int val;<br/> *     TreeNode left;<br/> *     TreeNode right;<br/> *     TreeNode(int x) { val = x; }<br/> * }<br/> */<br/>class Solution {<br/>    int max = 0;<br/><br/>    public int diameterOfBinaryTree(TreeNode root) {<br/>        helper(root);<br/>        return max;<br/>    }<br/><br/>    private int helper(TreeNode root) {<br/>        if (root == null) return 0;<br/>        int l = helper(root.left);<br/>        int r = helper(root.right);<br/>        if (l + r &gt; max) max = l + r;<br/>        return Math.max(l, r) + 1;<br/>    }<br/>}<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode.com/problems/diameter-of-binary-tree" target="_blank" rel="noopener">https://leetcode.com/problems/diameter-of-binary-tree</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://leetcode.com/problems/diameter-of-binary-tree/">
+  
+  <div class="link_preview_site_name accent_color" dir="auto">LeetCode</div>
+  <i class="link_preview_image" style="background-image:url('https://cdn4.telesco.pe/file/b47F3fpQx4DiZPrYmREd4lf6iNUO6FW5Ts5ctkubNWF1RNDHC1aA9t7kaN9tk2V7r_5uoRixHaTkK4oSnByM-5YFBBzjYCNYowbJicn7ECoko4fWPI1frR345rEm85C01BzItxqDMEsJz0TyGlUbQAnTiED1Nf6SxGkkJQ2wS0I8nlXQl7SEKAPogfVkPrIc5VQHBSo4g5IRMCe-pl0_H-lAfl2eGpILs4cPp0R-C_MIgLzx2kdgz7Q620azCz8TykVAgpEUOpcFaka-xD3PXW9A6-siYiNlkO-Ehp46V5OtuIO0qY-JDH9U9FoDAxdJISHv0vEJCTQJQYvt822Kmg.jpg');padding-top:52%"></i>
+  <div class="link_preview_title" dir="auto">Diameter of Binary Tree - LeetCode</div>
+  <div class="link_preview_description" dir="auto">Can you solve this real interview question? Diameter of Binary Tree - Given the root of a binary tree, return the length of the diameter of the tree.<br/><br/>The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path…</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">9</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/62"><time datetime="2021-11-26T11:00:05+00:00" class="time">11:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/63" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NjMsInQiOjE3ODU1NjUxODMsImgiOiI4ZmQxYWI1YzliMmU0ZDg5Y2IifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[Brick Wall][title]<br/><br/> Description<br/><br/>There is a brick wall in front of you. The wall is rectangular and has several rows of bricks. The bricks have the same height but different width. You want to draw a vertical line from the **top** to the **bottom** and cross the **least** bricks.<br/><br/>The brick wall is represented by a list of rows. Each row is a list of integers representing the width of each brick in this row from left to right.<br/><br/>If your line go through the edge of a brick, then the brick is not considered as crossed. You need to find out how to draw the line to cross the least bricks and return the number of crossed bricks.<br/><br/>**You cannot draw a line just along one of the two vertical edges of the wall, in which case the line will obviously cross no bricks.**<br/><br/>**Example:**<br/><br/>```<br/>Input:<br/>[[1,2,2,1],<br/> [3,1,2],<br/> [1,3,2],<br/> [2,4],<br/> [3,1,2],<br/> [1,3,1,1]]<br/>Output: 2<br/>```<br/><br/>Explanation:<br/>&#33;[img](<a href="https://leetcode.com/static/images/problemset/brick_wall.png" target="_blank" rel="noopener">https://leetcode.com/static/images/problemset/brick_wall.png</a>)<br/><br/>**Note:**<br/><br/>1. The width sum of bricks in different rows are the same and won&#39;t exceed INT_MAX.<br/><br/>2. The number of bricks in each row is in range [1,10,000]. The height of wall is in range [1,10,000]. Total number of bricks of the wall won&#39;t exceed 20,000.<br/><br/>**Tags:** Hash Table<br/><br/><br/> 思路<br/><br/>题意根据图示已经描述得很清楚了，就是在从底部到顶部，求最少交叉的数量，我们可以把每堵墙可以穿过的地方保存到哈希表中，每次遇到哈希表中的值加一，代表就是这条路不用交叉的数量，最终我们可以算出不用交叉的最大值，让总墙数减去其值就是最少交叉的数量。<br/><br/>```java<br/>class Solution {<br/>    public int leastBricks(List&lt;List&lt;Integer&gt;&gt; wall) {<br/>        Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();<br/>        int width = 0, max = 0;<br/>        for (List&lt;Integer&gt; sub : wall) {<br/>            int p = 0;<br/>            for (int i = 0, len = sub.size() - 1; i &lt; len; ++i) {<br/>                p += sub.get(i);<br/>                Integer v = map.get(p);<br/>                map.put(p, (v == null ? 0 : v) + 1);<br/>            }<br/>        }<br/>        for (Integer integer : map.values()) {<br/>            if (integer &gt; max) max = integer;<br/>        }<br/>        return wall.size() - max;<br/>    }<br/>}<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode.com/problems/brick-wall" target="_blank" rel="noopener">https://leetcode.com/problems/brick-wall</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://leetcode.com/static/images/problemset/brick_wall.png">
+  
+  
+  <i class="link_preview_image" style="background-image:url('https://cdn4.telesco.pe/file/CM5d5Z7yzYINhsze4vr1EtyJM-GIqKw7EIEfw9t8KojNKygRPXG-PuI0k1zahgIOCyMXfIuCZndlEYHB9J7MA6yhjXrx49IOeAD8rHTwJGqgPoZxlzS6D6f-uBwFPPUyDTPOOZI55y3i7L1fjSiOvFe-JJfE0ZmB6vKWKxDnSCn1opWZejHWU5BUXDxJlw0E2rTpWjYKoC9etpu6zacnLwfbkc_l0wuVpFUN5m9g3ODAq3qkyAZxsaaZiwOr_QOXWvjdU8_EQUt0-t0uqrcr7INN4D9Zt6CDMUmWWg7OcvYtJKb4NXeWyWVvByJu4riQ1i5KXoFdG3S2gXzUGVjLHA.jpg');padding-top:51.984635083227%"></i>
+  
+  
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">12</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/63"><time datetime="2021-11-26T19:00:05+00:00" class="time">19:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/64" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NjQsInQiOjE3ODU1NjUxODMsImgiOiJiYjdjODEyMWRkZDBmOWQwMDIifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[最佳观光组合(Best Sightseeing Pair)][title]<br/><br/> 题目描述<br/><br/>给定正整数数组 `A`，`A[i]` 表示第 `i` 个观光景点的评分，并且两个景点 `i` 和 `j` 之间的距离为 `j - i`。<br/><br/>一对景点（`i &lt; j`）组成的观光组合的得分为（`A[i] + A[j] + i - j`）：景点的评分之和**减去**它们两者之间的距离。<br/><br/>返回一对观光景点能取得的最高分。<br/><br/>**示例：**<br/><br/>```<br/>输入：[8,1,5,2,6]<br/>输出：11<br/>解释：i = 0, j = 2, A[i] + A[j] + i - j = 8 + 5 + 0 - 2 = 11<br/>```<br/><br/>**提示：**<br/><br/>1.  `2 &lt;= A.length &lt;= 50000`<br/>2.  `1 &lt;= A[i] &lt;= 1000`<br/><br/>**标签：** 数组<br/><br/><br/> 思路<br/><br/>直接暴力两层 for 循环肯定过不了关，我们把公式变化为 `(A[i] + i) + (A[j] - j)`，看到此应该就可以想到在每次遍历 `j` 时，只需要知道 `max(A[i] + i)` 即可。<br/><br/>```java<br/>class Solution {<br/><br/>    public int maxScoreSightseeingPair(int[] A) {<br/>        int ans = 0, cur = A[0] + 0;<br/>        for (int j = 1; j &lt; A.length; j++) {<br/>            ans = Math.max(ans, cur + A[j] - j); // 计算当前最大得分<br/>            cur = Math.max(cur, A[j] + j);       // 更新最大的 A[i] + i<br/>        }<br/>        return ans;<br/>    }<br/><br/>    public static void main(String[] args) {<br/>        Solution solution = new Solution();<br/>        int[] A = new int[]{8, 1, 5, 2, 6};<br/>        System.out.println(solution.maxScoreSightseeingPair(A));<br/>    }<br/>}<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode-cn.com/problems/best-sightseeing-pair" target="_blank" rel="noopener">https://leetcode-cn.com/problems/best-sightseeing-pair</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://leetcode-cn.com/problems/best-sightseeing-pair/">
+  
+  <div class="link_preview_site_name accent_color" dir="auto">力扣 LeetCode</div>
+  
+  <div class="link_preview_title" dir="auto">1014. 最佳观光组合 - 力扣（LeetCode）</div>
+  <div class="link_preview_description" dir="auto">给你一个正整数数组 values，其中 values[i] 表示第 i 个观光景点的评分，并且两个景点 i 和 j 之间的 距离 为 j - i。 一对景点（i &lt; j）组成的观光组合的得分为 values[i] + values[j] + i - j ，也就是景点的评分之和 减去 它们两者之间的距离。 返回一对观光景点能取得的最高分。 示例 1： 输入：values = [8,1,5,2,6] 输出：11 解释：i = 0, j = 2, values[i] + values[j] + i - j =…</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">17</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/64"><time datetime="2021-11-27T03:00:04+00:00" class="time">03:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/65" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NjUsInQiOjE3ODU1NjUxODMsImgiOiIyZDk2YWQ0YTYwNWNkZDg1YjcifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[从先序遍历还原二叉树][title]<br/><br/> 题目描述<br/><br/>我们从二叉树的根节点 `root`&nbsp;开始进行深度优先搜索。<br/><br/>在遍历中的每个节点处，我们输出&nbsp;`D`&nbsp;条短划线（其中&nbsp;`D`&nbsp;是该节点的深度），然后输出该节点的值。（_如果节点的深度为 `D`，则其直接子节点的深度为 `D + 1`。根节点的深度为 `0`）。_<br/><br/>如果节点只有一个子节点，那么保证该子节点为左子节点。<br/><br/>给出遍历输出&nbsp;`S`，还原树并返回其根节点&nbsp;`root`。<br/><br/>**示例 1：**<br/><br/>**&#33;[](<a href="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/04/12/recover-a-tree-from-preorder-traversal.png" target="_blank" rel="noopener">https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/04/12/recover-a-tree-from-preorder-traversal.png</a>)**<br/><br/>```<br/>输入：&quot;1-2--3--4-5--6--7&quot;<br/>输出：[1,2,5,3,4,6,7]<br/>```<br/><br/>**示例 2：**<br/><br/>**&#33;[](<a href="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/04/12/screen-shot-2019-04-10-at-114101-pm.png" target="_blank" rel="noopener">https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/04/12/screen-shot-2019-04-10-at-114101-pm.png</a>)**<br/><br/>```<br/>输入：&quot;1-2--3---4-5--6---7&quot;<br/>输出：[1,2,5,3,null,6,null,4,null,7]<br/>```<br/><br/>**示例 3：**<br/><br/>&#33;[](<a href="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/04/12/screen-shot-2019-04-10-at-114955-pm.png" target="_blank" rel="noopener">https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/04/12/screen-shot-2019-04-10-at-114955-pm.png</a>)<br/><br/>```<br/>输入：&quot;1-401--349---90--88&quot;<br/>输出：[1,401,null,349,88,90]<br/>```<br/><br/>**提示：**<br/><br/>*   原始树中的节点数介于 `1` 和 `1000` 之间。<br/>*   每个节点的值介于 `1` 和 `10 ^ 9` 之间。<br/><br/>**标签：** 树、深度优先搜索<br/><br/><br/> 思路 0<br/><br/>主要就是根据先序遍历如何把树构建出来，其最主要就是找到当前待插入节点它爹，优先插入到它爹的左子节点，我们可以用一个链表来做辅助，该链表索引代表层级，元素存放其节点，由于是先序遍历（根-左-右），也就是右覆盖左时，此时左树已遍历完成，故无需考虑覆盖问题，利用该链表，我们根据层级便可轻松找到它爹，具体如下所示：<br/><br/>```java<br/>/**<br/> * Definition for a binary tree node.<br/> * public class TreeNode {<br/> *     int val;<br/> *     TreeNode left;<br/> *     TreeNode right;<br/> *     TreeNode(int x) { val = x; }<br/> * }<br/> */<br/>public class Solution {<br/>    public TreeNode recoverFromPreorder(String S) {<br/>        char[] chars = S.toCharArray();<br/>        int len = chars.length;<br/>        List&lt;TreeNode&gt; levels = new LinkedList&lt;&gt;();<br/>        for (int i = 0; i &lt; len; ) {<br/>            int level = 0, val = 0;<br/>            while (chars[i] == &#39;-&#39;) { // 获取所在层级，Character.isDigit() 会比较慢<br/>                ++i;<br/>                ++level;<br/>            }<br/>            while (i &lt; len &amp;&amp; chars[i] &#33;= &#39;-&#39;) { // 获取节点的值<br/>                val = val * 10 + chars[i++] - &#39;0&#39;;<br/>            }<br/>            TreeNode curNode = new TreeNode(val);<br/>            if (level &gt; 0) {<br/>                TreeNode parent = levels.get(level - 1);<br/>                if (parent.left == null) { // 如果节点只有一个子节点，那么保证该子节点为左子节点。<br/>                    parent.left = curNode;<br/>                } else {<br/>                    parent.right = curNode;<br/>                }<br/>            }<br/>            levels.add(level, curNode); // 因为是先序遍历（根-左-右），也就是右覆盖左时，此时左树已遍历完成，故无需考虑覆盖问题<br/>        }<br/>        return levels.get(0);<br/>    }<br/>}<br/>```<br/><br/><br/> 思路 1<br/><br/>基于上面的思路，其实我们没有必要把所有层级都保存下来，由于是先序遍历，在找待插入节点它爹时，我们可以把不小于它层级的元素都删除，基于此，用一个辅助栈便可完成寻爹之旅，具体如下所示：<br/><br/>```java<br/>/**<br/> * Definition for a binary tree node.<br/> * public class TreeNode {<br/> *     int val;<br/> *     TreeNode left;<br/> *     TreeNode right;<br/> *     TreeNode(int x) { val = x; }<br/> * }<br/> */<br/>public class Solution {<br/>    public TreeNode recoverFromPreorder(String S) {<br/>        char[] chars = S.toCharArray();<br/>        int len = chars.length;<br/>        LinkedList&lt;TreeNode&gt; stack = new LinkedList&lt;&gt;();<br/>        for (int i = 0; i &lt; len; ) {<br/>            int level = 0, val = 0;<br/>            while (chars[i] == &#39;-&#39;) { // 获取所在层级，Character.isDigit() 会比较慢<br/>                ++i;<br/>                ++level;<br/>            }<br/>            while (i &lt; len &amp;&amp; chars[i] &#33;= &#39;-&#39;) { // 获取节点的值<br/>                val = val * 10 + chars[i++] - &#39;0&#39;;<br/>            }<br/>            TreeNode curNode = new TreeNode(val);<br/>            while (stack.size() &gt; level) { // 栈顶不是父亲，栈顶出栈<br/>                stack.removeLast();<br/>            }<br/>            if (level &gt; 0) {<br/>                TreeNode parent = stack.getLast();<br/>                if (parent.left == null) { // 如果节点只有一个子节点，那么保证该子节点为左子节点。<br/>                    parent.left = curNode;<br/>                } else {<br/>                    parent.right = curNode;<br/>                }<br/>            }<br/>            stack.addLast(curNode);<br/>        }<br/>        return stack.get(0);<br/>    }<br/>}<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode-cn.com/problems/recover-a-tree-from-preorder-traversal" target="_blank" rel="noopener">https://leetcode-cn.com/problems/recover-a-tree-from-preorder-traversal</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/04/12/recover-a-tree-from-preorder-traversal.png">
+  
+  
+  <i class="link_preview_image" style="background-image:url('https://cdn4.telesco.pe/file/CofkXoDGdA0ILI7kDkjLE_oWHBc_17ftRnEGJNy_kRQ9q4cxUypmYHedKGJQExIOAPQvZdt2n-D6OlAX0sFVLA9Op70LXo0GdozpC0X493AJgLWaQdvFtlvmH58mwuY0WuYV30teOe7tNDQBNmZn7mU_gJJdZlsl5AvrBaH4R6XYiIYgHcZ0Aj0U2qLWUduAZYJ8tAy40fPc4rTkYnhyU_h6VQmIQ6VOtIPdeyfEXfmd6hqq9PxK5zi0e0P0aWqzwxyPRFJNJ-xlOyE5ZnWyJpHgufqZXHMzm3QkoM7tRN9fFDzNCjCrnFsHfiWlv53ZxoorWxOW3BNa7TohtJWGqQ.jpg');padding-top:62.406015037594%"></i>
+  
+  
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">46</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/65"><time datetime="2021-11-27T11:00:06+00:00" class="time">11:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="leetcode_cn/66" data-view="eyJjIjotMTQxOTQyMDk2MywicCI6NjYsInQiOjE3ODU1NjUxODMsImgiOiJjNmExZjliMjhiOTQ1NWQ1MjEifQ">
+  <div class="tgme_widget_message_user"><a href="https://t.me/leetcode_cn"><i class="tgme_widget_message_user_photo bgcolor2" data-content="l"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPGRlZnM%2BPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHgyPSIwJSIgeTE9IjAlIiB5Mj0iMTAwJSI%2BPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYjFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY2NWZmZiIvPjwvbGluZWFyR3JhZGllbnQ%2BPC9kZWZzPjxzdHlsZT50ZXh0e2ZvbnQ6NjAwIDQ0cHggLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWYsJ0FwcGxlIENvbG9yIEVtb2ppJywnU2Vnb2UgVUkgRW1vamknLCdTZWdvZSBVSSBTeW1ib2wnOy13ZWJraXQtdXNlci1zZWxlY3Q6bm9uZTt1c2VyLXNlbGVjdDpub25lfTwvc3R5bGU%2BPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZykiLz48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSI1MCIgeT0iNjYiIGZpbGw9IiNmZmYiPkw8L3RleHQ%2BPC9zdmc%2B"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/leetcode_cn"><span dir="auto">leetcode</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">[跳水板(Diving Board LCCI)][title]<br/><br/> 题目描述<br/><br/>你正在使用一堆木板建造跳水板。有两种类型的木板，其中长度较短的木板长度为`shorter`，长度较长的木板长度为`longer`。你必须正好使用`k`块木板。编写一个方法，生成跳水板所有可能的长度。<br/><br/>返回的长度需要从小到大排列。<br/><br/>**示例：**<br/><br/>```<br/>输入：<br/>shorter = 1<br/>longer = 2<br/>k = 3<br/>输出： {3,4,5,6}<br/>```<br/><br/>**提示：**<br/><br/>*   0 &lt; shorter &lt;= longer<br/>*   0 &lt;= k &lt;= 100000<br/><br/>**标签：** 递归、记忆化<br/><br/><br/> 思路<br/><br/>这题乍一看，好像得用递归或动态规划来解，仔细一想，其实就是高中数学学过的等差数列知识。<br/><br/>当 `k == 0` 时，返回 `[]` 即可；<br/><br/>当 `shorter == longer` 时，返回 `[k * shorter]` 即可；<br/><br/>当 `shorter &#33;= longer` 时，那么其实就是一个首项为 `k * shorter`，末项为 `k * longer`，公差为 `longer - shorter` 的等差数列么；<br/><br/>我们根据以上情况就可以写出如下代码了：<br/><br/><br/>```java<br/>public class Solution {<br/>    public int[] divingBoard(int shorter, int longer, int k) {<br/>        if (k == 0) {<br/>            return new int[0];<br/>        }<br/>        if (shorter == longer) {<br/>            return new int[]{shorter * k};<br/>        }<br/>        int[] ans = new int[k + 1];<br/>        int st = k * shorter;// 等差数列的首项<br/>        int delta = longer - shorter;// 公差<br/>        for (int i = 0; i &lt;= k; i++) {<br/>            ans[i] = st + i * delta;<br/>        }<br/>        return ans;<br/>    }<br/>}<br/>```<br/><br/><br/> 结语<br/><br/>如果你同我一样热爱数据结构、算法、LeetCode，可以关注我 GitHub 上的 LeetCode 题解：[awesome-java-leetcode][ajl]<br/><br/><br/><br/>[title]: <a href="https://leetcode-cn.com/problems/diving-board-lcci" target="_blank" rel="noopener">https://leetcode-cn.com/problems/diving-board-lcci</a><br/>[ajl]: <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener">https://github.com/Blankj/awesome-java-leetcode</a></div><a class="tgme_widget_message_link_preview" href="https://leetcode-cn.com/problems/diving-board-lcci/">
+  
+  <div class="link_preview_site_name accent_color" dir="auto">力扣 LeetCode</div>
+  
+  <div class="link_preview_title" dir="auto">面试题 16.11. 跳水板 - 力扣（LeetCode）</div>
+  <div class="link_preview_description" dir="auto">你正在使用一堆木板建造跳水板。有两种类型的木板，其中长度较短的木板长度为shorter，长度较长的木板长度为longer。你必须正好使用k块木板。编写一个方法，生成跳水板所有可能的长度。 返回的长度需要从小到大排列。 示例 1 输入： shorter = 1 longer = 2 k = 3 输出： [3,4,5,6] 解释： 可以使用 3 次 shorter，得到结果 3；使用 2 次 shorter 和 1 次 longer，得到结果 4 。以此类推，得到最终结果。 提示： 0 &lt; shorter &lt;=…</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">187</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/leetcode_cn/66"><time datetime="2021-11-27T19:00:05+00:00" class="time">19:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div>
+    </section>
+  </div>
+</main>
+    <script src="//telegram.org/js/jquery.min.js"></script>
+    <script src="//telegram.org/js/jquery-ui.min.js"></script>
+    <script src="//telegram.org/js/tgwallpaper.min.js?3"></script>
+<script src="//telegram.org/js/tgsticker.js?32"></script>
+
+    <script src="//telegram.org/js/widget-frame.js?67"></script>
+    <script src="//telegram.org/js/telegram-web.js?14"></script>
+    <script>TWeb.init();
+</script>
+    
+  </body>
+</html>
+<!-- page generated in 205.17ms -->

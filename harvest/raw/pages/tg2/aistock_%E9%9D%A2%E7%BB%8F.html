@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stock Analyst – Telegram</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible"
+     content="IE=edge" />
+    <meta name="MobileOptimized" content="176" />
+    <meta name="HandheldFriendly" content="True" />
+    
+<meta property="og:title" content="Stock Analyst">
+<meta property="og:image" content="https://cdn5.telesco.pe/file/ED3VWCbRdagPz1oHPni2IB59WReRWikfKz9Vk2rQOgFqzBOjYvK0k0DAvzSDikq9UCpKQ_ueqSoLD_z-yLLu1kwjgcUt9WqyxJ4esIFZ4RwkQx0Ctj8zsfZuE1RZJD0uMEdjHILZdOrTgWMZ3ElBNQKJMkUfyzxPvGbR2t20RRq142ZJxnFck-ABH2f05-utWwCH4_ybtyXugHdXYMjDOZl1QxTgaXW421fJv4Nawi6jYBl0zddas6xat020C3K_EjTzNG8HBkkyAjbfQ8WkurRGDvZWFEd3Q0MOyaCJ22Qi1H3a_VhlDw4Aztx-GUTnw1QxGihdmc_m6EbUvtYZDA.jpg">
+<meta property="og:site_name" content="Telegram">
+<meta property="og:description" content="https://aistockanalyst.wordpress.com/">
+
+<meta property="twitter:title" content="Stock Analyst">
+<meta property="twitter:image" content="https://cdn5.telesco.pe/file/ED3VWCbRdagPz1oHPni2IB59WReRWikfKz9Vk2rQOgFqzBOjYvK0k0DAvzSDikq9UCpKQ_ueqSoLD_z-yLLu1kwjgcUt9WqyxJ4esIFZ4RwkQx0Ctj8zsfZuE1RZJD0uMEdjHILZdOrTgWMZ3ElBNQKJMkUfyzxPvGbR2t20RRq142ZJxnFck-ABH2f05-utWwCH4_ybtyXugHdXYMjDOZl1QxTgaXW421fJv4Nawi6jYBl0zddas6xat020C3K_EjTzNG8HBkkyAjbfQ8WkurRGDvZWFEd3Q0MOyaCJ22Qi1H3a_VhlDw4Aztx-GUTnw1QxGihdmc_m6EbUvtYZDA.jpg">
+<meta property="twitter:site" content="@Telegram">
+
+<meta property="al:ios:app_store_id" content="686449807">
+<meta property="al:ios:app_name" content="Telegram Messenger">
+<meta property="al:ios:url" content="tg://resolve?domain=aistockanalyst">
+
+<meta property="al:android:url" content="tg://resolve?domain=aistockanalyst">
+<meta property="al:android:app_name" content="Telegram">
+<meta property="al:android:package" content="org.telegram.messenger">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@Telegram">
+<meta name="twitter:description" content="https://aistockanalyst.wordpress.com/
+">
+
+    <link rel="prev" href="/s/aistockanalyst?q=%E9%9D%A2%E7%BB%8F&before=144">
+<link rel="canonical" href="/s/aistockanalyst?q=%E9%9D%A2%E7%BB%8F&before=1312">
+
+    <script>window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches&&document.documentElement&&document.documentElement.classList&&document.documentElement.classList.add('theme_dark');</script>
+    <link rel="icon" type="image/svg+xml" href="//telegram.org/img/website_icon.svg?4">
+<link rel="apple-touch-icon" sizes="180x180" href="//telegram.org/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//telegram.org/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="//telegram.org/img/favicon-16x16.png">
+<link rel="alternate icon" href="//telegram.org/img/favicon.ico" type="image/x-icon" />
+    <link href="//telegram.org/css/font-roboto.css?1" rel="stylesheet" type="text/css">
+    <link href="//telegram.org/css/widget-frame.css?74" rel="stylesheet" media="screen">
+    <link href="//telegram.org/css/telegram-web.css?39" rel="stylesheet" media="screen">
+    <script>TBaseUrl='/';</script>
+    <style>        .user-color-12 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #3391d4 0px, #3391d4 5px, #7dd3f0 5px, #7dd3f0 10px);
+          --user-accent-color: #3391d4;
+          --user-background: #3391d41f;
+        }        .user-color-10 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #27a910 0px, #27a910 5px, #a7dc57 5px, #a7dc57 10px);
+          --user-accent-color: #27a910;
+          --user-background: #27a9101f;
+        }        .user-color-8 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #e0802b 0px, #e0802b 5px, #fac534 5px, #fac534 10px);
+          --user-accent-color: #e0802b;
+          --user-background: #e0802b1f;
+        }        .user-color-7 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #e15052 0px, #e15052 5px, #f9ae63 5px, #f9ae63 10px);
+          --user-accent-color: #e15052;
+          --user-background: #e150521f;
+        }        .user-color-9 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #a05ff3 0px, #a05ff3 5px, #f48fff 5px, #f48fff 10px);
+          --user-accent-color: #a05ff3;
+          --user-background: #a05ff31f;
+        }        .user-color-11 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #27acce 0px, #27acce 5px, #82e8d6 5px, #82e8d6 10px);
+          --user-accent-color: #27acce;
+          --user-background: #27acce1f;
+        }        .user-color-13 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #dd4371 0px, #dd4371 5px, #ffbe9f 5px, #ffbe9f 10px);
+          --user-accent-color: #dd4371;
+          --user-background: #dd43711f;
+        }        .user-color-14 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #247bed 0px, #247bed 5px, #f04856 5px, #f04856 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #247bed;
+          --user-background: #247bed1f;
+        }        .user-color-15 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #d67722 0px, #d67722 5px, #1ea011 5px, #1ea011 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #d67722;
+          --user-background: #d677221f;
+        }        .user-color-16 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #179e42 0px, #179e42 5px, #e84a3f 5px, #e84a3f 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #179e42;
+          --user-background: #179e421f;
+        }        .user-color-17 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #2894af 0px, #2894af 5px, #6fc456 5px, #6fc456 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #2894af;
+          --user-background: #2894af1f;
+        }        .user-color-18 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #0c9ab3 0px, #0c9ab3 5px, #ffad95 5px, #ffad95 10px, #ffe6b5 10px, #ffe6b5 15px);
+          --user-accent-color: #0c9ab3;
+          --user-background: #0c9ab31f;
+        }        .user-color-19 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #7757d6 0px, #7757d6 5px, #f79610 5px, #f79610 10px, #ffde8e 10px, #ffde8e 15px);
+          --user-accent-color: #7757d6;
+          --user-background: #7757d61f;
+        }        .user-color-20 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #1585cf 0px, #1585cf 5px, #f2ab1d 5px, #f2ab1d 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #1585cf;
+          --user-background: #1585cf1f;
+        }        body.dark .user-color-12, html.theme_dark .user-color-12 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #52bfff 0px, #52bfff 5px, #0b5494 5px, #0b5494 10px);
+          --user-accent-color: #52bfff;
+          --user-background: #52bfff1f;
+        }        body.dark .user-color-10, html.theme_dark .user-color-10 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #a7eb6e 0px, #a7eb6e 5px, #167e2d 5px, #167e2d 10px);
+          --user-accent-color: #a7eb6e;
+          --user-background: #a7eb6e1f;
+        }        body.dark .user-color-8, html.theme_dark .user-color-8 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #ecb04e 0px, #ecb04e 5px, #c35714 5px, #c35714 10px);
+          --user-accent-color: #ecb04e;
+          --user-background: #ecb04e1f;
+        }        body.dark .user-color-7, html.theme_dark .user-color-7 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #ff9380 0px, #ff9380 5px, #992f37 5px, #992f37 10px);
+          --user-accent-color: #ff9380;
+          --user-background: #ff93801f;
+        }        body.dark .user-color-9, html.theme_dark .user-color-9 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #c697ff 0px, #c697ff 5px, #5e31c8 5px, #5e31c8 10px);
+          --user-accent-color: #c697ff;
+          --user-background: #c697ff1f;
+        }        body.dark .user-color-11, html.theme_dark .user-color-11 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #40d8d0 0px, #40d8d0 5px, #045c7f 5px, #045c7f 10px);
+          --user-accent-color: #40d8d0;
+          --user-background: #40d8d01f;
+        }        body.dark .user-color-13, html.theme_dark .user-color-13 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #ff86a6 0px, #ff86a6 5px, #8e366e 5px, #8e366e 10px);
+          --user-accent-color: #ff86a6;
+          --user-background: #ff86a61f;
+        }        body.dark .user-color-14, html.theme_dark .user-color-14 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #3fa2fe 0px, #3fa2fe 5px, #e5424f 5px, #e5424f 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #3fa2fe;
+          --user-background: #3fa2fe1f;
+        }        body.dark .user-color-15, html.theme_dark .user-color-15 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #ff905e 0px, #ff905e 5px, #32a527 5px, #32a527 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #ff905e;
+          --user-background: #ff905e1f;
+        }        body.dark .user-color-16, html.theme_dark .user-color-16 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #66d364 0px, #66d364 5px, #d5444f 5px, #d5444f 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #66d364;
+          --user-background: #66d3641f;
+        }        body.dark .user-color-17, html.theme_dark .user-color-17 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #22bce2 0px, #22bce2 5px, #3da240 5px, #3da240 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #22bce2;
+          --user-background: #22bce21f;
+        }        body.dark .user-color-18, html.theme_dark .user-color-18 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #22bce2 0px, #22bce2 5px, #ff9778 5px, #ff9778 10px, #ffda6b 10px, #ffda6b 15px);
+          --user-accent-color: #22bce2;
+          --user-background: #22bce21f;
+        }        body.dark .user-color-19, html.theme_dark .user-color-19 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #9791ff 0px, #9791ff 5px, #f2731d 5px, #f2731d 10px, #ffdb59 10px, #ffdb59 15px);
+          --user-accent-color: #9791ff;
+          --user-background: #9791ff1f;
+        }        body.dark .user-color-20, html.theme_dark .user-color-20 {
+          --user-line-gradient: repeating-linear-gradient(-45deg, #3da6eb 0px, #3da6eb 5px, #eea51d 5px, #eea51d 10px, #ffffff 10px, #ffffff 15px);
+          --user-accent-color: #3da6eb;
+          --user-background: #3da6eb1f;
+        }.user-color-6, .user-color-4, .user-color-2, .user-color-0, .user-color-1, .user-color-3, .user-color-5,   .user-color-default {
+    --user-accent-color: var(--accent-color);
+    --user-accent-background: var(--accent-background);
+    --user-line-gradient: linear-gradient(45deg, var(--accent-color), var(--accent-color));
+  }</style>
+  </head>
+  <body class="widget_frame_base tgme_webpreview emoji_image thin_box_shadow tme_mode no_transitions">
+    <div class="tgme_background_wrap">
+      <canvas id="tgme_background" class="tgme_background" width="50" height="50" data-colors="dbddbb,6ba587,d5d88d,88b884"></canvas>
+      <div class="tgme_background_pattern"></div>
+    </div>
+    <header class="tgme_header search_collapsed">
+  <div class="tgme_container">
+    <div class="tgme_header_search">
+      <form class="tgme_header_search_form has_value" action="/s/aistockanalyst">
+        <svg class="tgme_header_search_form_icon" width="20" height="20" viewBox="0 0 20 20"><g fill="none" stroke="#7D7F81" stroke-width="1.4"><circle cx="9" cy="9" r="6"></circle><path d="M13.5,13.5 L17,17" stroke-linecap="round"></path></g></svg>
+        <input class="tgme_header_search_form_input js-header_search" placeholder="Search" name="q" autocomplete="off" value="面经" />
+        <a href="/s/aistockanalyst" class="tgme_header_search_form_clear"><svg class="tgme_action_button_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20"><g class="icon_body" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#000000" stroke-width="1.5"><path d="M6 14l8-8m0 8L6 6" stroke-dasharray="0,11.314" stroke-dashoffset="5.657"/><path d="M26 14l8-8m0 8l-8-8" stroke-dasharray="0.371,10.943" stroke-dashoffset="5.842"/><path d="M46 14l8-8m0 8l-8-8" stroke-dasharray="1.982,9.332" stroke-dashoffset="6.647756"/><path d="M66 14l8-8m0 8l-8-8" stroke-dasharray="5.173,6.14" stroke-dashoffset="8.243"/><path d="M86 14l8-8m0 8l-8-8" stroke-dasharray="7.866,3.448" stroke-dashoffset="9.59"/><path d="M106 14l8-8m0 8l-8-8" stroke-dasharray="9.471,1.843" stroke-dashoffset="10.392"/><path d="M126 14l8-8m0 8l-8-8" stroke-dasharray="10.417,0.896" stroke-dashoffset="10.866"/><path d="M146 14l8-8m0 8l-8-8" stroke-dasharray="10.961,0.353" stroke-dashoffset="11.137"/><path d="M166 14l8-8m0 8l-8-8" stroke-dasharray="11.234,0.08" stroke-dashoffset="11.274"/><path d="M186 14l8-8m0 8l-8-8"/></g></svg></a>
+      </form>
+    </div>
+    <div class="tgme_header_right_column">
+      <section class="tgme_right_column">
+        <div class="tgme_channel_info">
+          <div class="tgme_channel_info_header">
+            <i class="tgme_page_photo_image bgcolor2" data-content="SA"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i>
+            <div class="tgme_channel_info_header_title_wrap">
+              <div class="tgme_channel_info_header_title"><span dir="auto">Stock Analyst</span></div>
+              <div class="tgme_channel_info_header_labels"></div>
+            </div>
+            <div class="tgme_channel_info_header_username"><a href="https://t.me/aistockanalyst">@aistockanalyst</a></div>
+          </div>
+          <div class="tgme_channel_info_counters"><div class="tgme_channel_info_counter"><span class="counter_value">196</span> <span class="counter_type">subscribers</span></div><div class="tgme_channel_info_counter"><span class="counter_value">364</span> <span class="counter_type">photos</span></div><div class="tgme_channel_info_counter"><span class="counter_value">3</span> <span class="counter_type">videos</span></div><div class="tgme_channel_info_counter"><span class="counter_value">92</span> <span class="counter_type">files</span></div><div class="tgme_channel_info_counter"><span class="counter_value">253</span> <span class="counter_type">links</span></div></div>
+          <div class="tgme_channel_info_description"><a href="https://aistockanalyst.wordpress.com/" target="_blank" rel="noopener">https://aistockanalyst.wordpress.com/</a></div>
+          <a class="tgme_channel_download_telegram" href="//telegram.org/dl?tme=e012488346242e549a_13374658974689894696">
+            <svg class="tgme_channel_download_telegram_icon" width="21px" height="18px" viewBox="0 0 21 18"><g fill="none"><path fill="#ffffff" d="M0.554,7.092 L19.117,0.078 C19.737,-0.156 20.429,0.156 20.663,0.776 C20.745,0.994 20.763,1.23 20.713,1.457 L17.513,16.059 C17.351,16.799 16.62,17.268 15.88,17.105 C15.696,17.065 15.523,16.987 15.37,16.877 L8.997,12.271 C8.614,11.994 8.527,11.458 8.805,11.074 C8.835,11.033 8.869,10.994 8.905,10.958 L15.458,4.661 C15.594,4.53 15.598,4.313 15.467,4.176 C15.354,4.059 15.174,4.037 15.036,4.125 L6.104,9.795 C5.575,10.131 4.922,10.207 4.329,10.002 L0.577,8.704 C0.13,8.55 -0.107,8.061 0.047,7.614 C0.131,7.374 0.316,7.182 0.554,7.092 Z"></path></g></svg>Download Telegram
+          </a>
+          <div class="tgme_footer">
+            <div class="tgme_footer_column">
+              <h5><a href="//telegram.org/faq">About</a></h5>
+            </div>
+            <div class="tgme_footer_column">
+              <h5><a href="//telegram.org/blog">Blog</a></h5>
+            </div>
+            <div class="tgme_footer_column">
+              <h5><a href="//telegram.org/apps">Apps</a></h5>
+            </div>
+            <div class="tgme_footer_column">
+              <h5><a href="//core.telegram.org/">Platform</a></h5>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="tgme_header_info">
+      <a class="tgme_channel_join_telegram" href="//telegram.org/dl?tme=e012488346242e549a_13374658974689894696">
+        <svg class="tgme_channel_join_telegram_icon" width="19px" height="16px" viewBox="0 0 19 16"><g fill="none"><path fill="#ffffff" d="M0.465,6.638 L17.511,0.073 C18.078,-0.145 18.714,0.137 18.932,0.704 C19.009,0.903 19.026,1.121 18.981,1.33 L16.042,15.001 C15.896,15.679 15.228,16.111 14.549,15.965 C14.375,15.928 14.211,15.854 14.068,15.748 L8.223,11.443 C7.874,11.185 7.799,10.694 8.057,10.345 C8.082,10.311 8.109,10.279 8.139,10.249 L14.191,4.322 C14.315,4.201 14.317,4.002 14.195,3.878 C14.091,3.771 13.926,3.753 13.8,3.834 L5.602,9.138 C5.112,9.456 4.502,9.528 3.952,9.333 L0.486,8.112 C0.077,7.967 -0.138,7.519 0.007,7.11 C0.083,6.893 0.25,6.721 0.465,6.638 Z"></path></g></svg>Join
+      </a>
+      <a class="tgme_header_link" href="https://t.me/aistockanalyst">
+        <i class="tgme_page_photo_image bgcolor2" data-content="SA"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i>
+        <div class="tgme_header_title_wrap">
+          <div class="tgme_header_title"><span dir="auto">Stock Analyst</span></div>
+          <div class="tgme_header_labels"></div>
+        </div>
+        <div class="tgme_header_counter">196 subscribers</div>
+      </a>
+    </div>
+  </div>
+</header>
+<main class="tgme_main" data-url="/aistockanalyst">
+  <div class="tgme_container">
+    <section class="tgme_channel_history js-message_history">
+      <div class="tgme_widget_message_centered js-messages_more_wrap"><a href="/s/aistockanalyst?q=%E9%9D%A2%E7%BB%8F&before=144" class="tme_messages_more js-messages_more" data-before="144"></a></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/144" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6MTQ0LCJ0IjoxNzg1NTYzODkyLCJoIjoiNzZkNDA2ZDM3YWU0MzY4MzI0In0">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">1965年，美国第一位获得诺贝尔经济学奖的著名经济学家萨缪尔森（Samuelson），根据《随机过程》布朗粒子位移服从正态分布的错误假设，建立了描述股票价格随机波动现象的几何布朗运动模型。<br/><br/>1970年，布莱克（Black）和斯科尔斯（Scholes）基于萨缪尔森的几何布朗运动模型，推导出了著名的B-S期权定价公式。由于B-S期权定价公式为股票、债券、货币、商品等金融衍生产品的定价提供了数学工具，B-S期权定价公式迅速被广泛应用于金融市场，直接导致了“第二次华尔街数学革命”，使金融市场获得了空前规模的发展。1997年，斯科尔斯因此获得了第二十九届诺贝尔经济学奖，布莱克不幸英年早逝，没有与斯科尔斯一起领奖。<br/><br/>由于几何布朗运动模型与实际股票价格波动现象和运行趋势严重不符，导致B-S期权定价公式成为造成 1987、1997 和 2007 年三次重大金融危机的罪魁祸首。<br/><br/>英国著名数学家斯图尔特（Stewart）在《改变世界的17个方程》书中写道：B-S期权定价公式改变了世界，它不仅创造了一个金额难以估计的产业，而且也造成了人类历史上最大的金融体系崩溃。<br/><br/>畅销书《黑天鹅》作者塔勒布（Taleb）在《金融时报》上发表了题为“破坏市场的伪科学”专栏文章，对金融数学进行了严厉的批判：人们从一次又一次的金融危机中得出了“金融数学的有效性与占星术一样不靠谱”和“金融数学通过创造风险来危害金融系统”的结论。塔勒布痛斥金融数学理论获得诺贝尔奖不仅是对科学的侮辱，而且一直使金融体系面临崩溃的风险。<br/><br/><a href="https://blog.sciencenet.cn/blog-3418723-1458326.html" target="_blank" rel="noopener">https://blog.sciencenet.cn/blog-3418723-1458326.html</a></div><a class="tgme_widget_message_link_preview" href="https://blog.sciencenet.cn/blog-3418723-1458326.html">
+  
+  <div class="link_preview_site_name accent_color" dir="auto">blog.sciencenet.cn</div>
+  
+  <div class="link_preview_title" dir="auto">科学网—教科书中两种对立冲突的布朗运动理论及实际应用效果 - 高宏的博文</div>
+  <div class="link_preview_description" dir="auto">布朗运动是物理学中的一个著名现象。1827年，英国植物学家布朗用显微镜观察悬浮在液体中的花粉微粒时，发现微粒总是在做无规则运动。后来人们发现，这 ... ,科学网</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">29</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta">edited &nbsp;<a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/144"><time datetime="2024-12-02T07:57:18+00:00" class="time">07:57</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/183" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6MTgzLCJ0IjoxNzg1NTYzODkyLCJoIjoiZTQyMDEyZGVjNGI5OWUwOGU3In0">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+<div class="tgme_widget_message_forwarded_from accent_color">Forwarded from&nbsp;<span class="tgme_widget_message_forwarded_from_name"><span dir="auto">Preview</span></span></div>
+
+<div class="tgme_widget_message_text js-message_text" dir="auto"><b>[Becker] </b><a href="https://www.solidot.org/story?sid=79952" target="_blank" rel="noopener" onclick="return confirm('Open this link?\n\n'+this.href);"><b>美国公司大幅裁减中层经理职位</b></a><br/><br/>2024-12-04 14:52 by 来自12个星球的敌人<br/><br/>Revelio Labs 的数据显示，美国大型企业在过去两年的大规模重组中裁减了数千个中层管理职位，没有重新招聘的迹象。其他职位的招聘人数出现了反弹，但今年 10 月中层管理职位的招聘数量比 2022 年 4 月的水平低 42%。Meta、花旗、UPS 和亚马逊都以效率目标的理由缩减了管理层规模，或者增加了员工对主管的比例。中层管理人员占 2023 年裁员人数的 32%，高于 2019 年的 20%。被裁的中层经理通常年龄在 40-50 岁左右，他们面临的就业前景有限，因为企业是永久裁减而不是暂时冻结招聘相关职位。<br/><br/><a href="https://slashdot.org/story/24/12/03/1534254/middle-manager-hiring-has-plunged" target="_blank" rel="noopener">https://slashdot.org/story/24/12/03/1534254/middle-manager-hiring-has-plunged</a><br/><br/><a href="?q=%23%E5%95%86%E4%B8%9A">#商业</a> <a href="https://t.me/PKUChatBot?start=re-16b3d0f5" target="_blank" rel="noopener" onclick="return confirm('Open this link?\n\n'+this.href);"><i class="emoji" style="background-image:url('//telegram.org/img/emoji/40/E286A9.png')"><b>↩️</b></i></a></div>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">43</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/183"><time datetime="2024-12-04T08:29:24+00:00" class="time">08:29</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/322" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6MzIyLCJ0IjoxNzg1NTYzODkyLCJoIjoiMWI1OTAwYTljODRmYjFlNTZlIn0">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">Google 最近在量子計算有了新突破，其新型量子晶片「Willow」，透過新的量子錯誤更正技術，證明了量子電腦可以在運算規模擴大的同時保持更低的錯誤率，是未來大規模量子運算的關鍵。在 Willow 的首度展示中，研究人員證明它能在大約 5 分鐘內完成一項需要全球最大超級電腦耗時約 10^25 年的任務（只是通常這種任務都沒有什麼實際用途就是了）。<br/>（我有一个咖啡杯计算机，往地上一扔5秒钟就可以算出来咖啡杯摔碎时候的碎片轨迹细节，经典计算机114514年都算不出来。）<br/>量子電腦使用的「量子位元」（qubits）可以是 0 和 1 的「疊加態」特性，讓它能在短時間內處理極大量的資料，比傳統超級電腦快上好幾個數量級。但是這麼讚的東西，喊了這麼多年，為什麼到現在還沒看到實用化？<br/>因為量子電腦有個致命弱點：會出錯。算得再快答案是錯的那就沒啥●用了。這是因為量子位元很「玻璃心」，容易受外界干擾無法穩定，而導致計算錯誤。為了解決這個問題，科學家發展出「量子除錯」技術，將一個「邏輯量子位元」的訊息分散到多個「物理量子位元」（一般我們說的「幾位元」指的是這個）上，形成穩定的資訊保護結構。這有點像是RAID磁碟陣列在備份資料的原理一樣，會犧牲一些儲存空間來做資料比對與除錯。更簡單的，是我們的郵局銀行帳號，最後一個數字也是用來確保在提款機上按帳號不小心按錯時的檢查與防呆裝置。<br/>Google 的新晶片 Willow，擁有 105 個（物理）量子位元。研究人員利用一種名為「表面碼」（surface code）的量子錯誤更正技術，讓量子位元共同合作保護訊息，即使部分位元出現錯誤，其餘位元仍能檢查並修正這些錯誤。<br/>測試結果發現，使用「距離-7表面碼」技術時，錯誤率為0.143%，經過更正後，邏輯量子位元的壽命是物理量子位元的2.4倍。表面碼的距離越長（可以想成用越多的物理量子位元來保護邏輯量子位元），量子位元的錯誤率越低，當距離達29時，錯誤率可低至百億分之一。<br/>只是低錯誤率背後的代價，就是你需要更多的物理量子位元來進行同樣的運算，系統變更大，製作難度跟成本當然也就提高了。</div>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">46</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta">edited &nbsp;<a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/322"><time datetime="2024-12-12T07:48:41+00:00" class="time">07:48</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/399" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6Mzk5LCJ0IjoxNzg1NTYzODkyLCJoIjoiODU0YmRjOTliODUzNGY3YzA4In0">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+<div class="tgme_widget_message_forwarded_from accent_color">Forwarded from&nbsp;<a class="tgme_widget_message_forwarded_from_name" href="https://t.me/ithome_full/392287"><span dir="auto">IT之家 (全文)</span></a></div>
+
+<a class="tgme_widget_message_photo_wrap 6000377708799964674 1397071804_456242690" href="https://t.me/aistockanalyst/399" style="width:800px;background-image:url('https://cdn4.telesco.pe/file/p0TLErLyWZ7wodemsjNuEfFuKHcvVGy1gJoGMsPQJ55cV0ShWRYzGFKxbghM9cXKrUlvt9tDe4cc2k1Ay8Y7TR783xxFMWMsyrWxTVyH8fH6gZU1uaZKqDjm0bSs5f5f7WCRXdYjqDOwqv4PsfKnGiA6Co5PDvYrYKYH4xHdyEvOU6TE2wU8kps52DY4A5O_jrFuEJaJqXcfpUcA-FFck9ba4OuunNHnJO6aL-5II1lIRPmklh1lRL56kPweZfzS5mjh1oemyaODiaXhWA09m4WSSN4vICvzygRpJ_G1ErmRPTmf1xr_WerV5iqhAHttqYzC4hznEHlTbfqGgK3qZA.jpg')">
+  <div class="tgme_widget_message_photo" style="padding-top:53.75%"></div>
+</a><div class="tgme_widget_message_text js-message_text" dir="auto"><a href="https://www.ithome.com/0/819/392.htm" target="_blank" rel="noopener" onclick="return confirm('Open this link?\n\n'+this.href);"><b><u>戴尔创始人迈克尔・戴尔：并不担心 AI PC 遇冷，产品更新通常会被低估</u></b></a><br/><br/>IT之家 12 月 22 日消息，据《财富》杂志报道，虽然戴尔公司高层最近承认，客户未能像预期那样迅速转向新一代 AI PC，投资者为此感到失望，但戴尔创始人兼 CEO 迈克尔・戴尔表示，自己<b>并不为此感到担忧</b>。<br/><br/>“我已经<b>不止一次</b>经历过这样的情况了，产品更新通常会被低估，有时进展稍微快一点，有时则较慢。”他承认目前企业客户更新个人电脑的进度“确实有所延迟”。但他同时认为，这并不是是否购买新电脑的问题，而是<b>何时推出足够的新特性和功能的问题</b>。<br/><br/>他认为：“我们的目标是在每一次更新中加入足够的新功能，让足够多的用户说，‘现在是时候了。’”对于那些负责大公司 PC 采购的高管来说，他更称<b>不采用 AI PC 将是“错误的选择”</b>，更称自家客户对此“没有任何怀疑。”<br/><br/>在 AI 领域，戴尔在基础设施解决方案方面的表现要<b>远超 PC</b>，其 AI 服务器的销售帮助公司上个季度实现了 80% 的收入增长。例如，戴尔正在与埃隆・马斯克的 xAI 合作，提供支持上万个英伟达 AI 芯片的服务器，助力其在孟菲斯的 Colossus 超级计算机项目。报道称，无论是 AI 数据中心还是 AI PC，所有这些最终都离不开数据、计算和网络，而这正是戴尔的“强项”所在。<br/><br/>据IT之家此前报道，戴尔预计截至明年 2 月份的季度营收约为 245 亿美元，低于分析师平均预期的 254 亿美元。调整后每股收益预计为 2.40 美元至 2.60 美元，也低于市场平均预期的 2.66 美元。</div>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">51</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/399"><time datetime="2024-12-22T08:34:47+00:00" class="time">08:34</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/408" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6NDA4LCJ0IjoxNzg1NTYzODkyLCJoIjoiZGYzNTQ5Mjc3YTEyYzgyODM1In0">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">在2000年时，量子信息处理理论上最大的瓶颈——噪声问题刚被解决，人们创立了量子纠错码，以及容错量子计算的阈值定理。所以 Nielsen &amp; Chuang 在一开始就强调这个理论的重要性：如果我们能够把量子计算的噪声水平降低到某个“阈值”之下，就可以通过量子纠错来进一步降低错误率，实现可靠的量子计算机。量子信息处理技术发展的核心目标就是降低错误率，直到超过阈值，实现容错量子计算和量子信息处理。<br/><br/>过去20多年，容错量子计算取得了重大进展，不论是理论还是实验。在2000年时，基于稳定子编码，容错量子计算错误阈值通常被认为在万分之一量级。到2010年前后，人们基于拓扑理论提出了表面码，阈值为1%左右，提升两个量级。随着容错阈值的急剧提升，量子计算的实用化前景一下子就被打开了，获得了工业界越来越多的关注。当然这也需要付出一定代价，利用表面码纠错时，需要消耗更多物理资源，大概1000个物理量子比特，可以实现一个容错的逻辑量子比特。据估算，要实现超越经典计算，且可纠错的实用量子计算机，大概需要1000个逻辑量子比特，那么所需的物理量子比特就是百万个。这在工程上是巨大的挑战！近年来，为了让纠错理论与实验技术更好的匹配，人们也提出了很多新的想法，比如量子错误缓解等。<br/><br/>在2010年后，基于超导电路量子比特的量子计算异军突起，已经与离子阱量子计算和光量子计算一起成为目前最有前途的量子计算候选系统。基于超导电路和离子阱的量子计算机，其量子逻辑门的错误率都已降低到1%以下，达到了表面码的容错量子计算阈值。不仅如此，基于这两个物理系统量子计算机的量子比特数目也在快速增长，目前都逼近100个。基于超导电路的量子计算，也已经于2019年实现了量子优越性实验。正是在此基础上，许多大公司如谷歌、IBM等才信心满满的认为，人们可以在2025年前后首次演示容错量子逻辑门，并到2030年之后实现实用的容错量子计算。目前，从工业界到学术界，人们都在研究如何把实现了量子优越性的中尺度含噪声量子计算机用于处理真正有价值的问题，发挥它独特的作用。</div>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">51</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/408"><time datetime="2024-12-23T09:19:09+00:00" class="time">09:19</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/534" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6NTM0LCJ0IjoxNzg1NTYzODkyLCJoIjoiMGI4MzljNGQyNWE3ODRjNDVjIn0">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">量化投资与有效市场假说<br/>根据投资的目的来分类的话，仅仅希望能够跟随市场平均水平的投资方式叫做被动投资，如果希望投资组合的收益能够超过市场表现，那么这种投资方式叫做主动投资。对于做主动投资的人来说，有效市场假说就好像洪水猛兽，因为它直接认定没有办法通过历史数据来获得超额收益。有效市场假说（efficient-market hypothesis）是由Eugene Fama于1970年提出的。他另外一个很有名的工作是Fama-French三因子模型，据说他拿这个模型赚了十多年钱，赚完了才把它公布出来，结果又得了个诺贝尔经济学奖。好了，我们回来讲一下这个有效市场假说。这个假说通过一些假设，推出了市场的定价一直处于一个有效的状态下，即市场上的定价已经综合反映了各方面的信息。既然市场定价已经综合反映了市面上的各种信息，那么我们再根据这些信息和历史规律来试图找到一个更为有效的定价就是徒劳的。有效市场假说直接否定了主动投资的可行性。<br/><br/>有效市场假说的想法是说假设股票有效价格的改变是由各种消息驱动的，好消息和坏消息的的到来是随机的。市场的参与者都是独立、理性并且追求利润的，因此当消息传播到市场上之后，这些参与者的投机行为就能够使得价格迅速恢复到新消息下的有效价位上。因此，在这个调节机制下，价格会保持合理，市场会持续有效。根据市场有效的程度，该假说还可以分为论断强弱不同的若干版本。在市场是弱式效率（weak form efficiency）时，我们无法从历史的价量中找到帮助我们盈利的规律；在半强式效率（semi-strong form efficiency）时，从公开渠道获得的所有信息都是无助于我们找到有用规律的；在强式效率（strong form efficiency）时，假说断定从任何渠道获得的信息都无法帮助我们盈利。<br/><br/>这样的假说听起来还挺令人沮丧的。但是个人认为有效市场假说中本身就肯定了肯定了理性市场参与者对于信息进行加工处理然后反作用于市场的作用，亦即正是由于这一部分人通过加工利用这些信息赚到了钱，才把价格拉回到了有效的位置上。如果我们能比其他市场参与者更加迅速地对于市面上的信息做出反应，就能获取相应的利润。从实证的角度上来说，股票市场确实会常常出现“不有效”的定价。A股市场的不有效现象更为明显，其主要原因还是参与者的成熟度离美股市场还有一定的差距，亦即我国股市的定价偏离的机会仍然较多，这也给量化投资以更多的机会。<br/><br/>回头看一下前面把量化投资比作西医的比喻还挺恰当的。量化投资所做的事情就是要找到市场的病灶，即市场定价不合理之处，然后通过投资并且盈利来纠正这样的不合理定价。<br/><br/>再谈量化投资概念<br/>有好多名词大家常常和量化投资一起见到，比如说基本面分析、技术面分析、程序化交易等等，它们和量化交易又怎样的关系呢？<br/><br/>首先来讲讲基本面分析（fundamental analysis）和技术面分析（technical analysis）。基本面分析主要依靠公司财务数据和宏观经济数据，比较常见的公司财务数据有原始数据有公司的总资产、总负债、每股收益等，比较常见的宏观经济数据有GDP增速、国家外汇和黄金储备、货币供应量等。不过就基本面的定义而说，基本面还包括市面上的新闻、公告和舆情信息。而技术面分析主要依靠股票市场历史上的交易价格和成交量，虽然其原始数据比较单调，但在技术面分析中却发展出了大量的分析手段，从价量数据中衍生出相当多的技术指标。<br/><br/>那么基本面分析和技术面分析和量化投资是什么样的关系呢？很多人认为量化投资主要是做技术面分析，其实确实如此，在量化投资领域所用到的技术面信息更多一些。在所利用的基本面信息中，也是更多的用到数量化的公司财务数据和指数化的宏观经济数据，而新闻、公告、舆情等信息的利用相对来讲不是十分充分。究其原因，相比于传统的量化而言，量化投资所需要的数据更倾向于数量化的数据，甚至是结构化的数据；另外，在传统量化中，由于主要靠人工来进行分析，希望数据量尽可能少而精，但与此相反，在量化投资中，我们更倾向于找寻数据中的规律，因此希望有更多的数据。基本面分析中所用到的新闻、公告、舆情信息不便于进行结构化和数量化，因此在目前的量化投资中用到的不多；基本面分析中所用到的财务数据由于其更新频率通常为季度甚至是年度数据，导致其数据量较少，也给其在量化投资中的应用带来了一定的困难。<br/><br/>总结一下，在量化投资中确实更倾向于利用技术面分析中的一些数据，但量化投资也会使用基本面分析中带给我们的数据；目前基本面分析中的信息利用的较少，是由于其使用上的困难，但个人认为将基本面分析中的信息放进量化投资框架中进行研究肯定是量化投资未来的发展方向之一。<br/><br/>那么量化投资是不是一定是程序化交易呢？<br/><br/>答案是不一定。量化投资讲的是一种投资分析的方法。完全可以通过量化投资得到一个结果，然后手动下单交易，并且目前在业界很多中低频交易策略（按星期或者月频率调仓）中，就是通过量化投资方法生成相应的交易方案之后，通过交易员来手动下单操作的。不过如果做出来的量化投资策略就是一个高频的交易，比如日内的择时，甚至是以秒为时间计量的高频交易，这样的策略如果靠人工操作就无法保证其对于量化策略的执行力，因此这样的策略最后一定是靠程序化交易的。</div>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">82</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/534"><time datetime="2025-01-08T10:07:09+00:00" class="time">10:07</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/570" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6NTcwLCJ0IjoxNzg1NTYzODkyLCJoIjoiNDRjMGFmMjhjZDE2ZTJjYzM5In0">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">第一阶段：初窥门径<br/><br/>我的专业可以说是和量化没有什么关系。最初就是在大学无聊的时候，凭借着所学的财务知识，开始炒炒股票，想象着通过股票给自己赚学费和生活费的美好场景。当然，结果应该和多数人一样，吃了多少最后都会吐多少回去，甚至在那波行情下，溜的慢的裤衩子都得给扒下来。于是我开始明白，在二级市场上想生存下来，要么比别人聪明，包括行情判断、反应迅速、数据敏感，这些是天赋问题，要么就比别人资源丰富，其中就包括技术工具，这是后天可以习得的。<br/><br/>那是我第一次接触交易。而开始接触量化实际上是在17年了，那时候币圈开始火爆，和多数人一样，想在这新兴市场捞一桶金。我自知并不比别人聪明，只能去丰富自己的工具，于是开始自学python，在网上寻找相关课程。我永远记得从零开始手写一个双均线策略到完成回测的激动心情，即使回测效果并不理想，但仍有即将掌握世界密码的成就感。<br/><br/>第二阶段：迷茫无助<br/><br/>之后的一段时间，我开始疯狂的写策略跑回测，就好像野狗遇见旱厕一般（这么比喻好像不太恰当），那段实际，几乎把市面上常用的技术指标跑了一个遍，以至于后来我看到BOLL、MACD、RSI这些指标就像谈了一个人zha对象一样，又爱又恨，给了我目标和希望，但一用来开始实盘，就开始抢我的钱。当然也是后来才知道，回测的时候除了考虑过拟合和未来函数的问题，还需要考虑手续费和滑点，以及大体量资金的冲击价格等。<br/><br/>于是我放弃单一指标，开始尝试指标的组合，比如在特定周期下，突破BOLL上轨，同时MACD和RSI的信号线上穿0，我就想这么多信号指示我开多，那我开个多总不会骗我了吧，事实证明，行，他们组合起来骗我。然后我又尝试多周期的思路，行，他们换着时间骗我。<br/><br/>之后我开始调整思路，也许是我下单的方式不合理，我那时喜欢一波流，把全部仓位直接满着干，当时币圈流传着梭哈老哥的一句话，“别跟我说什么技术指标，老夫赌博都是一把梭，赢了会所嫩模，输了下海干活。”但当老哥真的下海干活了的时候，也没有带上我。于是我痛定思痛，开始研究胜率与投注之间的关系，也就是凯利公式。但当我把实际上需要考虑的因素添加到回测中时，发现所有的指标胜率也不过就是50％上下，这不是跟猜大小一样吗？<br/><br/>果然，童话里都是骗人的，量化一点儿都不好玩儿...<br/><br/>第三阶段：力不从心<br/><br/>后来，我开始总结多指标、多周期以及凯利公式为什么会失效。因为这些指标的有效率都在50%左右，无论是使用多指标或多周期去组合，都是在50%的叠加，这种叠加不会产生1+1大于2的效果，综合效率依然是在50%左右。而对于凯里公式来说，需要一个确定胜率或者赔率，而在回测的过程中，如果过去一段时间属于趋势行情，那么趋势指标确定的胜率就会高一些，但实际上趋势不一定会延续，若接下来转为震荡行情，那么过去的胜率就是失效的，最终导致仓位判断的整体失效。<br/><br/>之后的很长一段时间，我都沉浸在研究震荡策略的乐趣中，因为经济学中有一句话，“价格围绕价值上下波动”，也就是说，在正常的市场活动中，无论当时价格上涨或下跌多么剧烈，最终都会回到正常的价格区间。<br/><br/>然而...<br/><br/>无论是币圈还是期货，都特么有不正常的时候。那一批资金盘子就好像盯着我的仨瓜俩枣一样，一定要把我拉爆了或者止损线了才会回归，无论我怎么优化，当出现极端行情的时候，盈利的头寸永远无法覆盖亏损。<br/><br/>于是我开始研究趋势类策略。<br/><br/>之前一直没有做趋势类策略是因为我一直觉得趋势就是个伪命题，所有的趋势都是行情走出来之后才能判断为趋势，如果在趋势走出来之前就能判断出趋势，那还做个鸡毛量化，直接一把梭哈不就完事儿了吗？如果趋势走出来之后再进场，那不纯纯的高位接盘侠、大冤种吗？可以看出，在趋势行情下，这利润确实很香，也比较稳定。但我刚才说了，趋势是走出来之后才能看到的，如果开仓之后是一段震荡行情，那就是很差的结果了。<br/><br/>在震荡行情下，效果就不太好看了。其实这就是趋势策略的最大问题，我们无法判断趋势的到来，所以当开仓的单子错了时就要止损，如果接下来的行情，震荡的时间和空间明显大于趋势的时间和空间，那么趋势的利润也不一定能够覆盖掉亏损。<br/><br/>品种不一样，特性不一样，震荡要考虑波动幅度，趋势考虑动能持续性，想把一个策略用在所有品种或者一个品种的所有时间段，无法也不能入门。确切的说，没有找到合适的因子。但是单纯延续你的思路可以试着做两个策略，一个只做趋势（比如追涨），要做到趋势策略在下跌时不亏，震荡时少亏。另一个做震荡策略，或者叫趋势反转策略。两者互补，可以动态调整两套策略间参数，能够自对冲或者互补。<br/><br/><br/>当我们问分析师这样一个问题，“市场接下来会怎么走”，“有可能上涨，有一定可能下跌，也不排除震荡的可能”。这传说中的“可能”三连，看似段子，实则也确实是段子。但这句话确实包含了市场的一个简单道理，市场无非就存在两种形式——趋势和震荡。对于交易不得门道的来说，震荡市会慢慢磨损你的本金，趋势梭哈反了会让你一把下海。那么有没有一套策略可以帮助我们识别行情，穿越牛熊呢？<br/><br/>不妨尝试一下做周期共振。一、在大周期下，以MACD的水上下情况判断行情强弱，二、小周期下 ，以RSI的超买超卖情况作为入场时机，这样就保证我们在趋势行情下，当短期价格过度回调时及时抄入，相对于突破模式，可以获得较低的入场成本，以及当趋势走反时，可以以更小的损耗及时止损。<br/><br/>策略优化方向：1.趋势判断上可以再加一项指标联合判断，比如在20根k线的均线之上同时在macd水上，让趋势判断更精准，当然可能会降低交易频率。2.仓位管理上面，可以结合凯利公式或海龟交易法则，同时做移动的加仓止盈止损。<br/><br/><br/>STC指标，全称Schaff Trend Cycle，是一种基于趋势周期的交易策略，结合了MACD（Moving Average Convergence Divergence）和随机振荡器的概念，它结合了动量指标和周期分析的元素，帮助交易者判断市场的买入和卖出时机。<br/><br/>STC指标，既保持了MACD的趋势判断准确性，同时又平滑了随机震荡的磨损。当然，按照以往的经验，任何指标从长期来看都只有半对半的概率，趋势类指标也只能在趋势行情有好的表现，在震荡行情也只能做一些平滑处理。<br/><br/>STC有其自己优缺性，优点在于结合了MACD的动量分析和周期性振荡器的优点，能够更全面地反映市场的趋势和周期性波动。缺点就是与大多数技术指标一样，STC指标在识别趋势反转时可能会有一定的滞后性。同时STC指标的参数（如周期长度）可能需要根据不同的市场环境进行调整，过度优化可能导致指标失效。总之，单独依靠某一技术指标想在市场生存是不可能的，几乎所有的指标只能适合某种特定行情，都会在某些时刻失效。甚至多指标结合的手段也只能平滑某些亏损，也无法匹配所有行情，一套完整有效的策略，应该结合行情判断、仓位管理、参数调整等方面综合起来。</div>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">87</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta">edited &nbsp;<a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/570"><time datetime="2025-01-15T01:20:38+00:00" class="time">01:20</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/571" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6NTcxLCJ0IjoxNzg1NTYzODkyLCJoIjoiYmNjZTU4MDdmZGRiNDc3MzUzIn0">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">挖掘因子就一定比规则型策略强吗？量化就比主观选股强吗？<br/><br/>看了几篇券商金工的报告，策略大都很简单，主要是对一些技术指标进行量化再选股或者择时，但是筛选的参数很多还是主观设计的。老板也说现在基本不用机器学习。所以现在国内机构的量化领域机器学习应用的还很少吗？是因为效果不如简单的策略吗？（经常overfitting等）<br/><br/>事情的真相是这样的：<br/><br/>一家公司会有很多个策略，有那么3-5个策略是一直赚钱而且赚最多的，贡献了绝大部分利润，也占用了80%以上的仓位或者资金。我们称这种策略为“主力策略”，这些策略一般都是数学形式极为简单，可能就是一根均线，一个一元线性回归，甚至连回归都没有。这些主力策略可能是公司的创始人和核心人员早期创立的<br/><br/>另外三十个策略，加在一起也只占用很少一部分资金，往往是招来的初中级量化研究员做的，或者是创始人不断在进行自我尝试。这里面可能有十多个都是所谓的机器学习策略。需要注意到：这三十个策略加在一起，很有可能是不赚钱的<br/><br/>好多年前开发出来的双均线策略至今依然有效，而且斩获颇丰，反倒是那些个用来装逼的高大上策略，一批又一批的被扫进了历史的垃圾堆。均线真的吊打这学习那学习的<br/><br/>那为什么要不停的招quant，不停的搞新策略呢？<br/><br/>理由1：需要和投资人或者领导有故事可讲，我们有xx人的研究团队，我们一直使用世界前沿的人工智能技术，使用机器学习里的xx模型，使用超级计算机计算，我们每年在科技上的投入是xxx。投资人一听，真牛逼，果断投钱！但是如果我和投资人说，我们就是3个策略，靠一跟均线赚钱，这策略8年前就做出来了，一直都没改过。同时投资人听到另外一家私募说的像前者那样天花乱坠，那么投资人很可能就把钱投给了对方。或者，如果是对大机构的领导讲，就这3个策略一根均线一直跑着就可以了，领导可能会想，你们就做这3个策略就想成天闲着不干活了？就坐在功劳簿上数钱了？就不思进取了？那我还花钱养着你们干啥，明年考核KPI增加几项，必须上线20个新策略，其中8个必须是机器学习！领导还等着用这个故事向更大的领导汇报呢<br/><br/>理由2：需要有人不断洗数据，盯盘，debug，写ppt汇总信息汇报。但是如果让员工只干这些活，员工会觉得自己会被当做苦力，会不愿意。员工希望自己能学到做策略的真谛，但是我又不愿意把那3个核心策略的内容告诉员工，怎么办？同样也是给员工讲一下和理由1差不多的故事，然后说，我来带你搞高端大气上档次，狂拽酷炫吊炸天的机器学习，但是同时日常的洗数据，debug的工作，也是你的kpi的一部分。员工立刻满意的笑了，屁颠屁颠的每天用4个小时挖因子调参。但是我心理清楚，他们产出的大部分都是垃圾，他们存在的意义，是另外4个小时里面的洗数据，盯盘，debug，写ppt，而我支付的底薪，主要是4个小时的苦力。另外4个小时，我只会安排你搞我不熟悉的策略，因为我自己没有时间搞，所以我购买你的时间，让你去挖因子调参数。如果真的有东西搞出来，我就发奖金，没有东西搞出来，就不发奖金。这一点我一般都会和员工或者下属明说，让对方明白事情的本质。同时我也知道很多机构不会像我这么明说。这时候有人会问，那你的核心策略会不会带员工搞？想得美，交学费！投钱也行<br/><br/>理由2也是我不建议量化初学者去私募的主要原因<br/><br/>那么机器学习到底能不能赚钱呢？答案是：能，但是赚钱的原因不是因为使用了机器学习，而是因为使用了赚钱的因子。使用同样的因子但不使用机器学习，一样能赚钱。如果因子本身不赚钱，机器学习搞的再花哨，也是rubbish in，rubbish out<br/><br/>那么有没有必须使用机器学习才能赚钱的策略呢？答案是：有。但是这种策略会涉及到大量非线性的成分，极容易过拟合，泛化能力极为不稳定。搞这种策略，费力不讨好，投入产出比极差。所以我是不会搞的，对于其他人，当排除了我上面提到的两点理由以后，我不知道还有多少人会真的投入资源搞这个。高频搞机器学习？那推断时间都不够用。现在发现ml特别是复杂的dl也就适用于分钟线15分钟线啊最多几十个tick这种频率了，低了过拟合，高了推断太慢<br/><br/>所以现在可以回答题主的问题，目前量化交易还是一定量的涉及机器学习的，但是涉及到的机器学习，大部分的目的不是为了赚钱，而是讲故事<br/><br/>为什么机器学习不好用？<br/><br/>因为价格数据是信噪比极低的时间序列，如果从里面提取白噪音的话，白噪音的比例可能占到90%以上，这样低信噪比的时间序列，如果是做日频的话，数据点也少的可怜，例如国债期货从2015年到现在也就1800多天，试问1800个数据点，90%以上的噪音，这样的数据集，无论用再牛的机器学习方法，管你什么卷积、增强啥的，能得到什么东西呢？机器学习本质上是一种统计上的拟合，通过对cost function做优化来寻找最优参数。对于这么大的噪音，你会发基本上是在拟合噪音。如果采取某些手段能提取出噪音里面非噪音的成分，得到的结果和直接用线性回归结果是差不多的。我以前在某家老外的公司里专门的尝试过ARIMA拟合，SVM以及好多种机器学习模型，发现拟合以后和直接用周期差不多的均线结果没什么差别，也是同样的道理<br/><br/>如果用1分钟bar， 以国债期货举例，1800多天，一天250多个bar， 有45万个数据点。如果用10秒钟，那就是270万个，这样用机器学习还稍微好一些，但是你会遇到的问题是，预测的周期短，滑点的影响就越严重，可能1个tick的滑点就导致策略实盘亏钱了。为了咬住这1个tick，资金容量就上不去了。以国债期货举例，100手能做到零滑点是困难的，而100手对应的合约值也就是1个亿，6%的保证金=600万，也就是实际资金量可能就小几千万，几个品种加起来，资金量最多就小几个亿。资金量再大一些就玩不动了，就只能降频。降频以后，就变成前面讲的那种稀疏数据集的情况了<br/><br/>如果是股票横截面，2000天x3000支股票=600万个数据点，但是这里面样本的相关性、共线性等等影响，实际有效的样本量也有限，不过总比期货好一些。但是无论如何，低信噪比这个问题是绕不过去的<br/><br/>什么场景适合用机器学习呢？图像识别身份证、图像识别车牌号，人脸识别，这种数据集信噪比远远高于金融数据，且分布稳定，训练样本数量也可以轻松搞到几千万上亿<br/><br/>ML用于金融数据最大的问题是信噪比太低，“同分布”的数据量太少。 其他领域ml效果好的往往都有比较确定的模式，只是模式很难规则化而已。比如人脸识别，虽然很难通过规则话程序语言描述人脸，但100个普通人来识别人脸，错误率非常低。说明这里是有一个规律性pattern的。这样的话，只要给出足够数量的数据，模型性能会显著提高。另外一个例子是智能驾驶，你并不需要if else编程遍历到所有可能情况，只需要让传感器采集到足够长时间多地域的数据，自动驾驶能够很好的处理这些情况。 以上的例子从数据角度来说，都符合pattern相对固定，数据充足的，信噪比高的特征。这也是ML方法最适合的地方<br/><br/>而即使是这样，在做预测的时候也需要主动选取特征，feature engineering也是一门巨大的学问。有人也许会说最近很火的cnn/deep learning，不是可以by pass feature engineering这些，直接靠数据和计算力暴力撸么。我是这样理解的，人类识别特征和模式的能力远高于计算机， 如果需要让计算机逼近取代人的调参和feature engineering经验，那么你所需要的数据量是非线性增长的。很多通常运用ML的场所，数据量本身不是制约，或说，数据量的制约取决于你有多大的决心去获取数据。而机器运算能力的同步增长让更是让模型能够处理的数据大大提升。在这种情况下，deep learning才火起来<br/><br/>然而金融世界里，事情并没有这么美好，最大的制约，在我看来数据是不足的。有人可能会笑，说tick level data，哪怕国内3秒一跳的股市也有4000多行一天，怎么能算是数据不足呢<br/><br/>这里假设也用之前开车的例子来解释。金融世界里，如果你想训练出这么一个老司机，那么你会发现这辆车一会在人行道上， 一会倒开，一会儿飞起来， 前一刻有用的规律不一定能够稳定到下一刻。 又好比给一张股票k线图，100个人可能有100个说法， 语音识别，图像识别领域，不会出现这么低的识别度的。所以，对一个正常开车的老司机，你坐副驾驶一个月能够总结出他开车方法，那么对于金融世界里这种逗逼老司机，又要积累多长时间的数据才能总结出它的行为模式呢<br/><br/>也就是说金融时间序列里，训练集发现的pattern可能并不稳定， 也许只是过拟合的噪音， 哪怕确定不是噪音，pattern本身也会演化。这两个月的市场，和前两个月的市场，明显性状不一样。有个东东叫regime switch...哪怕你做的日内中高频，相对统计性状不受基本面太大影响，日度的波动率的变化也会有明显的变化，而这对你的pnl影响是非常直接的<br/><br/>在金融数据这块还是偏好线性的描述，规则化的描述，因为这样即使错了，我知道错误在哪里，利润来源在哪里。哪怕需要更复杂的信号组合，也偏向random forest或者svm这种相对不那么容易过拟合的模型<br/><br/>不需要机器学习，用线性回归就可以解决问题</div>
+<div class="tgme_widget_message_reactions js-message_reactions"><span class="tgme_reaction"><i class="emoji" style="background-image:url('//telegram.org/img/emoji/40/F09F918D.png')"><b>👍</b></i>2</span></div><div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">147</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta">edited &nbsp;<a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/571"><time datetime="2025-01-15T01:48:43+00:00" class="time">01:48</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/640" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6NjQwLCJ0IjoxNzg1NTYzODkyLCJoIjoiZjZiYjY4YjljZTNmNzRjMTNmIn0">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto"><a href="https://youtu.be/CfxuqbB9dj4?si=U2pLQulxcpsbj2BC" target="_blank" rel="noopener">https://youtu.be/CfxuqbB9dj4?si=U2pLQulxcpsbj2BC</a></div><a class="tgme_widget_message_link_preview" href="https://youtu.be/CfxuqbB9dj4?si=U2pLQulxcpsbj2BC">
+  <i class="link_preview_right_image" style="background-image:url('https://cdn4.telesco.pe/file/MwqWgpypjiJcIB-6x1GO7jrfLNuSMubWzuWUbqqDmivSQgVdIspeMEVP7fEZNrGu5WqGDhC2GhWeJBZqiT6kN0XeuQpfPejEdzB6gOF_ZtC20mKphL49GbmO_OKPm0qkUe2ulpGlC5mWUVuTH4Rlbh45cZjHwAePjbPUgqwJqjvae3itSyGR9ZJLqaMQr0FKknj1nAFzN8eo_O5D-gAyRKz9HlKGTKVd9cG4Yivo-xci_Ggbf49dPRPwWy_CxlTbZDKN2nMEDKNuTnr__O5uHohiCiaDFG_OyGZ0B0uLPa3VH5VxF-fmt1_17ELRQLF7uPifPbB3ZX42PO9LJft3QA.jpg')"></i>
+  <div class="link_preview_site_name accent_color" dir="auto">YouTube</div>
+  
+  <div class="link_preview_title" dir="auto">傲慢、短视、扼杀创新，垄断巨头英特尔是如何走向倒塌的？</div>
+  <div class="link_preview_description" dir="auto">曾经的芯片巨头英特尔，如今却四面楚歌——股价大跌、暂停派息、产品暴雷、现金缺乏、裁员，甚至CEO Pat Gelsinger突然被赶下了台。到底是什么导致了英特尔的衰落？我们在研究时发现，这家公司不仅两次错过增长点、丢失了主营市场、技术开始落后，最重要的是，连管理团队都没有确定的方向，此前11位董事会成员中，居然只有一位拥有丰富的半导体行业经验，有嘉宾对英特尔董事会的评价竟是“失能”、“荒唐”，公司因此形成了外行领导内行、扼杀创新、逐利又保守的环境。这期视频我们将解析：英特尔到底做错了哪些事？推出的自救…</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">56</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/640"><time datetime="2025-01-26T05:29:47+00:00" class="time">05:29</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/767" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6NzY3LCJ0IjoxNzg1NTYzODkyLCJoIjoiNGI4MDU2ZGNmZDQxMmRhNTk0In0">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">没有偷懒的办法，下面是我认为的“捷径”，有条件还是跟着课堂学<br/>0、如果下面的数学书真的看不进去，直接读Shreve。Shreve的两卷本已经对读者的数学程度要求较浅了。记得第二卷开始介绍filtration（或信息集）的时候，心里赞叹怎么能讲得这么直观。<br/>1、测度与概率认真学个若干遍。学过了就不用再学实变了；如果只学了实变，再学一遍测度与概率、专注于概率测度的特殊性，做题弄扎实。书也有很多，入门使用北师大严士健老师的教材挺好。<br/>2、泛函分析认真学个若干遍。起初可以用普通泛函教材，甚至为工科准备的。然后可以看看（也可以不看）有一本和概率结合很紧的教材：Bobrowski. Functional analysis for Probability and Stochastic Processes，国内高教有影印版<br/>3、Shreve的两卷本和其它金融数学教材，如Platen、wilmott、hull的，这里有很多，目的是将数学与金融联系起来。对于想走学术范的，看bm和随机微积分，就是被国内译为随机计算那本。如果还需要更高标准，再看Protter的半鞅和随机微分方程。<br/><br/>还有其它好书，与经济类结合的也有不少，可以当小说去读。<br/>我觉得这样是最快的了，中间遇到忘记的东西再去查比如数学分析高等代数。 最后再看自己的方向的结合金融的书。</div>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">49</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/767"><time datetime="2025-02-20T09:23:33+00:00" class="time">09:23</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/794" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6Nzk0LCJ0IjoxNzg1NTYzODkyLCJoIjoiYjFkYTYxYWY1ZGY2ZDI1MDIwIn0">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+<div class="tgme_widget_message_forwarded_from accent_color">Forwarded from&nbsp;<a class="tgme_widget_message_forwarded_from_name" href="https://t.me/xhqcankao/17759"><span dir="auto">风向旗参考快讯</span></a></div>
+
+<div class="tgme_widget_message_text js-message_text" dir="auto"><b>马斯克称美国社保是史上最大庞氏骗局</b><br/><br/>马斯克表示美国社保是“有史以来最大的庞氏骗局”。他担心美国政府支持的养老金不再安全，因为越来越少的处于工作年龄的美国人可以为寿命更长的退休人员支付养老金。马斯克上周五现身乔·罗根的播客节目，他将美国社保比作一个非法的金字塔骗局，其回报不是通过谨慎的资本配置产生的，而是来自新投资者的资金涌入。由于社会保障占美国联邦政府总支出的1/5，该体系正面临压力，因为支付养老金的工作年龄的美国人越来越少。同时，退休人员寿命延长，加剧了这些压力因素。马斯克说：“社会保障是有史以来最大的庞氏骗局。我们最好马上解决现有问题，因为如果现在很糟糕，未来会更糟。”<br/><br/>—— <a href="https://cj.sina.cn/article/norm_detail?url=https://finance.sina.com.cn/stock/usstock/c/2025-03-04/doc-inenmxpv5619308.shtml" target="_blank" rel="noopener" onclick="return confirm('Open this link?\n\n'+this.href);">新浪财经</a></div>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">72</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/794"><time datetime="2025-03-04T07:06:03+00:00" class="time">07:06</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/835" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6ODM1LCJ0IjoxNzg1NTYzODkyLCJoIjoiYjFlYjgwNmMwZTlmZmFjN2IzIn0">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+<div class="tgme_widget_message_forwarded_from accent_color">Forwarded from&nbsp;<a class="tgme_widget_message_forwarded_from_name" href="https://t.me/cnbeta_com/440109"><span dir="auto">cnBeta.COM中文业界资讯站 - 总频道(精选新闻)</span></a></div>
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">投资人：特斯拉名声被马斯克毁了 他要忙不过来就把CEO辞了吧<br/><br/><br/> 特斯拉最早的投资人之一、Gerber Kawasaki财富投资管理公司CEO罗斯·格伯（ Ross Gerber）3月19日对英国天空新闻表示，特斯拉已陷入危机，身兼多职的马斯克时间过于紧张，他要么放弃在特朗普政府的工作，要么辞去特斯拉CEO一职。特斯拉投资人罗斯·格伯 视频截图格伯称，特斯拉拥有“最好的电动汽车”，在应对气候变化方面是一家至关重要的公司，但是，特斯拉的声誉正被马斯克摧毁，销量直线下降。“我是少数以投资者和用户身份与特斯拉合作超过十年的人，也是最了解这家公司的人。”格伯表示，自从马斯克2022年收购推特以来，投资人们就开始担心，“因为他缺乏专注，在那段时间发了很多垃圾信息。但当时我不知道事情会发展到这个地步。”格伯表示，每个人的时间都是有限的，马斯克现在致力于在特朗普政府的工作，“那才是他花时间的地方，他没有在经营特斯拉。”“我觉得特斯拉需要一个新的CEO，我决定从今天开始表达这个观点，这是我第一次在节目上这么说。是时候找人来管理特斯拉了。”格伯说。他表示，特斯拉已经被忽视太久了，“所以，要么埃隆（马斯克）放弃其他工作，回到特斯拉当CEO，要么他就专心留在政府，继续做他正在做的事。”“所以你的意思是，如果马斯克不打算辞去政府的工作，他就得（从特斯拉）走人？”主持人追问。“是的，我认为是时候了。”格伯给出了肯定的回答。自去年12月以来，特斯拉的市值已暴跌逾8000亿美元。据美国广播公司（ABC）18日报道，由于特斯拉股价连续下跌，该公司的几名董事会成员和高管最近几周一共抛售了总价值超1亿美元的特斯拉股票。与此同时，特斯拉在美国乃至全球范围内的销量也大幅下降。根据金融分析公司标普全球（Samp;P Global）的数据，今年1月，特斯拉美国销量下降了约11%。其他数据也显示，特斯拉1月的欧洲销售额较去年同期暴跌了约50%，2月在中国的出货量较去年同期也下跌了49%。在天空新闻看来，特斯拉销量下滑的原因很大程度上与西方市场电动汽车需求下滑，以及中国竞争对手的挑战有关。3月4日，马萨诸塞州利特尔顿的特斯拉超级充电站被纵火。 利特尔顿消防局有分析认为，马斯克的政治立场让特斯拉销量雪上加霜。《华尔街日报》称，2022年，在马斯克涉足政治之前，汽车咨询公司Strategic Vision发现，有22%的受访者表示他们下一次购车时“肯定会考虑”特斯拉，但到2024年夏天，这一比例已降至7%，并一直维持在这一水平。Strategic Vision总裁亚历山大·爱德华兹此前表示，这种急剧下降在汽车行业中是罕见的，“而且，我们没有看到任何回升迹象。”爱德华兹认为，特斯拉以前对注重环保的购车者有吸引力，但现在马斯克政治立场“右倾”，这两者是互相矛盾的。值得一提的是，近期全美多地特斯拉门店爆发反马斯克示威，特斯拉设施遭到人为破坏，还有特斯拉车主被攻击为“纳粹”或收到威胁信息。马斯克17日在社交平台X发文，抱怨外界对他的不满，并将其归咎于“觉醒病毒”。“我的公司生产人们喜爱的优质产品，我从未伤害过任何人。为什么我会遭受仇恨和暴力？因为我对‘觉醒寄生虫’及其控制的人类来说是一个致命的威胁。”马斯克写道。 ...<br/><br/>PC版：<a href="https://www.cnbeta.com.tw/articles/soft/1486890.htm" target="_blank" rel="noopener">https://www.cnbeta.com.tw/articles/soft/1486890.htm</a><br/>手机版：<a href="https://m.cnbeta.com.tw/view/1486890.htm" target="_blank" rel="noopener">https://m.cnbeta.com.tw/view/1486890.htm</a></div><a class="tgme_widget_message_link_preview" href="https://www.cnbeta.com.tw/articles/soft/1486890.htm">
+  <i class="link_preview_right_image" style="background-image:url('https://cdn4.telesco.pe/file/SnkMMFzDQicjfk4KzEsANNYnIkTFFf5BRhKAswFCso0EbUFBF4Bo_pseYUlVH96OiOsM0VJE9mX25pT6fNsw8JSLkIGpFb3Ug6ilwwmnjnOPpZfbfuCv2gJMlB4mSpio4Bzac0_RWJ8ZzH431TUn0Vs06WC6Jc0hPMCzzU54liPGe1iMo33vwBYZ0CS8MhbYiHjy_fQf_RHC7M-KmV_OiunUS4MMaS3e3jOcPecr2nbwlUv-M2A3Dtw6LGqt1B_z7cdNZsHOxu5L-Tw7eEnIa2at10K5dAYIYcbpzd_pt4kq3OGBqat10w3MDtqHygO4B0_Jy7iVJV3TGYea4BjvKg.jpg')"></i>
+  <div class="link_preview_site_name accent_color" dir="auto">cnBeta.COM</div>
+  
+  <div class="link_preview_title" dir="auto">投资人：特斯拉名声被马斯克毁了 他要忙不过来就把CEO辞了吧 - Tesla 特斯拉电动汽车 - cnBeta.COM</div>
+  <div class="link_preview_description" dir="auto">在马斯克深度参与特朗普政府后，他的政治影响力逐渐上升，而特斯拉却亮起了“红灯”。去年12月以来，该公司股价腰斩，董事会成员和高管纷纷抛售其股票。与此同时，特斯拉面临着销量下滑、遭遇强烈抵制等困境。</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">70</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/835"><time datetime="2025-03-21T11:40:47+00:00" class="time">11:40</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/937" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6OTM3LCJ0IjoxNzg1NTYzODkyLCJoIjoiMjU2MzBlYmFjYjkyYmUyN2QyIn0">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">量化行业为什么喜欢博士？<br/><br/>金融量化方向更需要的是什么知识，一个CS博士，一个纯数学博士，哪个会更吃香？博士那么多的理论知识真的在量化行业可以使用进去吗？<br/><br/>只要是理工科博士，足够聪明，都差不多，并不会区分具体是什么博士。这个行业需要的能力本质上就两大块：科研和销售，科研产出策略，销售负责拉钱； 一边出产品，一边拉皮条。量化喜欢博士显然是因为喜欢科研能力，肯定不指望博士去拉钱。一般只要是优秀的理工科博士，科研能力是够用的，所以无所谓。<br/><br/>如果非要在这两个专业方向的博士比较一下，需要避开这两个专业的possible的硬伤，这些硬伤不是每个博士都有，但是一旦有，在量化机构里是不受欢迎的。<br/><br/>纯数学博士可能存在的硬伤是不会写代码，所谓不会写代码是指不会写企业级的代码，那种平时算个东西随手写个脚本的写法不叫写代码。尤其是搞纯数学的博士，如果是那种成天用草稿纸证明定理那种，一般不会要。我曾经见到过一些老外的对冲基金招人广告专门标上：不要 pure mathematics，不要只会搞 fancy mathematics 的，既然他们广告这么写，说明肯定是遇到过这种类型的。像我听说过还有招到工科博士不熟悉写代码，招的时候认为都博士了，进来恶补肯定没问题，但是入职以后各种拒绝写代码也不愿意恶补，后来被开掉。<br/><br/>cs博士一般coding肯定没问题，但是一个可能的硬伤是数理功底不好，例如有些cs博士专门搞什么数据库、网格、体系结构之类的，对随机过程、概率论、信号与系统等等之类的方向没有建立起充足的sense，还有那种搞机器学习、深度学习的调包侠之类的，这类的博士尽管在各自的领域都有所建树，但是他们熟悉的方向与研发策略要用到的技能树和意识偏差太大，所以往往也不受欢迎。<br/><br/>所以面试时候的一个指导性思路就是：<br/>数学博士：考编程 <br/>cs博士：考数学<br/><br/><br/>帮助你过简历关：<br/>有一件好的经历（目的是证明你有做成事的能力，包括但不限于：好成绩，好论文，好竞赛，创业经历，和量化相关的实习经历等等）<br/><br/>帮助你过面试和onsite：<br/><br/>代码方面：中低频quant需要LeetCode hard能有思路并手写伪代码；高频quant要求更高，例如算法竞赛成绩，或者低延迟开发经验<br/><br/>数学方面：概率论，统计推断，随机过程和机器学习是基础，如果你走深度学习量化策略岗，那需要懂最新的深度学习方法。以上是内外资的共同要求，其余为内资千奇百怪的考核：物理竞赛题；量子力学；理论力学；微分几何等千奇百怪的东西，这些随缘就行，是如果前面的数学没学过的话可能会参考到的，没必要非得学会。<br/><br/>金融知识：非必须。不过如果懂一些基本的证券知识对于中低频quant是更好的，对高频则完全无要求。</div>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">91</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/937"><time datetime="2025-05-26T02:49:24+00:00" class="time">02:49</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/951" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6OTUxLCJ0IjoxNzg1NTYzODkyLCJoIjoiNThkYjViOTI5ZjlkZDMzMTEzIn0">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">来谈一下在大陆招人的量化交易公司，他们面向本科生开放的两类岗位分别是 quant 和 dev，quant 是制定交易策略的，一般来说不需要什么基础只要人足够聪明就行，因此也会有很多天坑博士转来做 quant，当然本科生也是可以做的，我觉得这个其实主要看自己是否感兴趣了。dev 主要是来写交易系统等一系列相关基础组件的。量化行业不像传统互联网一次招很多人，对于代码的质量要求是非常高的，所以几乎不存在转码进入的可能。同时金融行业因为要维护自己的高逼格因此对于 dev 的学历要求往往也非常高，具体来说应该是清北华五这个级别才有入场的可能。对于所有的公司来说，不管他们宣传上怎么说，quant 的地位都是要高于 dev 的，可能不同的只是鄙视程度的区别。<br/><br/><br/><br/>大家考虑选择量化实习的时候，一般会考虑以下几个因素：公司的名声、实习期间能不能学到东西、钱钱。个人推荐去一个真正能学到东西的公司，因为实习更多的是一个体验的过程，你在实习期间能知道量化行业都在干什么，也能知道自己是不是真的喜欢量化行业。对于实习生而言，工资一般是日薪1000-2000之间（不同公司略有区别，不过基本是在这个量级里面）。直接看实习薪资是一个快速判断这是不是间好公司的方法。日薪一千我认为可以算是及格，低于一千的我劝你快逃<i class="emoji" style="background-image:url('//telegram.org/img/emoji/40/F09F9882.png')"><b>😂</b></i><br/><br/><br/>因为一直有在负责公司在清北的校园招聘，来讲一下对于清北数学系学生，该做哪些准备可以增加你进入量化公司的机率，先说明以下的这些建议只针对数学系的学生有效<br/><br/>主要分为博士生和本科生两种身份<br/><br/>如果你是博士生，那么我们最看重的是你的论文，既然你是数学系的，我期待你的论文是跟量化交易有直接相关的，面试的过程通常就是跟你讨论你的论文研究内容，如果你的研究有发表在顶级期刊，而且我们很欣赏你的策略的话很可能就直接录取了。当然对于博士生，我们还是会对本科学历进行筛选，本博落差太大的洗学历的通常也不会要，本科出身还是很重要的<br/><br/>再来是本科生，对于本科生顾好成绩是最最优先顺位的事情！跟你竞争外资量化职缺的人全是清北本科的学霸，而且清北本科也只是一个最基础的条件而已，你要想当你的对手全都是A+的成绩，你只有B-的成绩根本不会被注意到！有拿过国奖最好，没拿过国奖至少数学专业课都要A+，体育政治等杂质我们不在乎，有修过研究生课（纯数应数都可以）是更好的，我们会请你分享修过研究生课的经验，你从中学到了什么，为什么对这门课感兴趣。对于本科生我们其实不太在乎你有没有实际做过量化交易的经验（任何比赛或实习经验都没有也没关系），反正进公司之后也都是要从头教你，我们只想要找最聪明的人，能学的快积极上进就好了<br/><br/><br/><br/><br/>如果你是数学系的又不小心读到了博士，还想要再转到量化行业。尤其是搞纯数学的博士，如果是那种成天用草稿纸手推证明定理那种，一般不会要。我曾经见到过一些外资的对冲基金招人广告专门标上：不要纯数学的，既然他们广告这么写，说明肯定是遇到过这种类型的。招的时候认为都能拿到博士了，进来恶补肯定没问题，但是入职以后各种拒绝学习也不愿意恶补，后来被开掉。<br/><br/>面试时有机会遇到千奇百怪的问题，例如我自己就被问过：「解释一下Kerr黑洞是什么；解释一下EPR悖论」等千奇百怪的东西，这些随缘就行。<br/><br/>dev 面试肯定不会涉及任何金融相关的知识。而对于 quant，如果懂一些基本的选择权知识是更好的。<br/><br/>虽然是外资企业，但我遇到的专业面试都是全中文的（估计是因为他们专程来清北招聘），英文只有在人资最后谈薪水时稍微用英文聊了五分钟，确定你有最基本能日常对话就行。</div>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">205</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/951"><time datetime="2025-07-26T16:46:49+00:00" class="time">16:46</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/966" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6OTY2LCJ0IjoxNzg1NTYzODkyLCJoIjoiZTQxZDliYmVmN2QzZWU1Y2UzIn0">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">博士的本质不是学生，而是打工人。<br/><br/>只要搞清楚这个本质问题，就很容易理解高水平研究型大学，研究生人数比本科人数多的情况了。十几年前我在清华读本科时，就非常惊讶的得知，学校的研究生人数居然有本科生的两倍，最近查了下学校的招生情况，这个比例更加拉大了，一届本科生3000多人，一届研究生（硕+博）9000人左右，研究生/本科生人数比例要比交大还要夸张许多。<br/><br/>后来自己读了研，毕业后又工作了几年，才逐渐领悟到，研究生的本质不是读书学习，而是打工干活，如果说硕士研究生还有个从学习到打工的过渡的话，博士研究生就是纯粹的打工人了。研究生是科研工作的主力军，也是直接从事科研工作中的体力劳动的群体，以及从事部分脑力劳动的群体，特别是硬核理工科，虽然想法和灵感非常重要，但是实证的实验是一切理论的基础，需要进行大量的体力劳动，并且是形式上高度重复的体力劳动。<br/><br/>现在的研究生就是伪装成学生身份的打工人，利用有一些优惠的学生身份、学校提供的高性价比宿舍和食堂（越来越不够用），好看光鲜装点门面的学位，就能用极低的报酬（甚至有的是自掏学费）驱使着研究生勤奋努力地工作。以绝大多数高水平硬核理工科课题组的工作强度，所谓的“996”都是不能容忍的懒虫，特别是重视实验的科学，很多课题组都常态化一两点结束、经常性通宵连轴转、偶尔实验室住上几个星期。在产出了或高水平或垃圾的科研成果的同时，只需要付出廉价的宿舍、食堂、微薄的奖学金，就能打造世界一流的研究型大学。不只是国内，这个风气是北美带头并带入巅峰的。<br/><br/>但是绝大多数读博的人都没有认清读博的“打工”本质，还认为博士只是读书学习的一个阶段，所以大家都习惯性使用“读博”，而不是“干博士”“做博士”。虽然获得博士学位有个博资考试，但那个的难度对于正经博士来说都是有手就行，获得博士最大的难度在于做出足够出色的科研成果并通过答辩，这也足以表明博士的核心是“打工出活”而不是“学习考试”。我在巴黎综合理工大学读研时，即使是个渣渣硕士，在课题组里做项目时，都需要跟课题组（名义上是法国国防部）签订劳动合同，我跟导师名义上是同事关系，而不是领导与下属或者师傅与学徒，欧陆在对劳动者的保障上做得远比其他地区更到位（甚至有些太过了头）。<br/><br/>几十年前，大部分博士的梦想都是进入科研圈，终生从事科研工作，其中最佳选项莫过于获得衣食无忧的终身教职。以前研究生名额很少，虽然学术圈的竞争激烈，但那也是一个导师退休后七八位竞争者抢一个教职，随着不断的扩招，一个导师退休后，可能有七八百位竞争者抢一个教职。还有不少黑心的高校用挂着“特聘教授”头衔的临时工岗位，变本加厉地压榨博士的劳动力，然后一脚踢开。<br/><br/>现如今，能在科研圈找到终身教职越来越难，那么对是否要读博的考虑也应该更慎重，读博不应该像上高中或者上本科那样，不明不白、按部就班、能上就上，而是应该放入到自己长期的职业发展规划中去考虑。就好像很多人错误地把“考大学”当作人生的终极目标，高考之后彻底失去努力和生活的方向，也有不少人错误地把“获得最高学位”当作人生的终极目标，成功读博士后彻底失去努力和生活的方向。<br/><br/>博士的本质是严格的学术训练并产出学术成果，除了家里不差钱或者物质欲望极低，全凭兴趣热爱读博外，更应该慎重地考虑是否读博。绝大多数人博士毕业后都在28~32这个年轻区间，如果是本科就毕业的打工人，就算是四平八稳的发展也至少是中层管理或者专家了，博士毕业生对标的应该是自己学术领域内的资深专家，一进入企业就能独立解决研发中的难题，甚至带着一群初级职员攻克项目。<br/><br/>在社会里打拼，虽然也很难成为专家或者中层管理者，但至少工作强度和难度远远不会像很多理工类博士这么变太压榨，收入待遇也不会这么微薄可怜，并且还能一定程度上拥有真正意义上的生活。人最终一辈子是生活在社会中而非校园里的，早些清楚社会的复杂与险恶，积攒经验找对努力方向或者趁早看开躺平，都远比在虚幻的气泡里漫无目的地拼命剥削自己要有意义得多。<br/><br/>二十多岁是一个人的精力体力和学识思维最顶峰的阶段，也是为未来的职业发展打基础的关键阶段。对待越来越膨胀的博士名额，切记不能把它当作提高学历的机会，而是一个短期打工的临时工岗位，这个临时工岗位的工作强度非常大、收入非常低甚至有的要倒贴钱，最大的收获是提供成为某一领域专家的机会。如果自己的职业发展规划中需要成为某个领域的专家，那么就不要犹豫地去赌博，并且要足够勤奋努力地进行学术训练并做出有竞争力的成果。如果并没有这个需要，那么就不要为了除了光鲜好看之外一无是处的帽子浪费人生中非常宝贵的三五年。</div>
+<div class="tgme_widget_message_reactions js-message_reactions"><span class="tgme_reaction"><i class="emoji" style="background-image:url('//telegram.org/img/emoji/40/E29DA4.png')"><b>❤</b></i>3</span></div><div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">91</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/966"><time datetime="2025-11-13T11:21:17+00:00" class="time">11:21</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/1211" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6MTIxMSwidCI6MTc4NTU2Mzg5MiwiaCI6ImFmZTdhOWY3ZmE4ZDhjNzRlOCJ9">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">逃离理论物理：不伺候学术界的“老登”<br/><br/>张小珺：<br/>你博士在斯坦福读了极难的理论高能物理，为什么后来转行做AI？<br/><br/>姚顺宇：<br/>高能理论已经发展到了实验完全追不上的阶段….这个时候谁做的好谁做的不好，其实就依赖于领域那些老登（资深大佬）的主观判断。<br/>我在那个领域呆时间越长就越觉得，人这一辈子也没多长，为什么要把自己时间浪费在伺候老登身上？<br/><br/>张小珺：<br/>所以AI 的魅力在于绝对客观？<br/><br/>姚顺宇：<br/>现在的 AI 就像18世纪的热力学⋯就像现在大家不能理解这个 Language model 里面那一个矩阵元是在干什么，其实大家也不理解。<br/>但是不妨碍你有一些好的经验规律，比如热力学的各种定律，和现在的各种 Scaling Law。<br/><br/><a href="https://youtu.be/Gk_KUg3qED0?si=XhpT7QbXV726Wdus" target="_blank" rel="noopener">https://youtu.be/Gk_KUg3qED0?si=XhpT7QbXV726Wdus</a><br/><br/><a href="https://youtu.be/ttkd0t5qTD4?si=ZurwuiCyezLO0y_4" target="_blank" rel="noopener">https://youtu.be/ttkd0t5qTD4?si=ZurwuiCyezLO0y_4</a></div><a class="tgme_widget_message_link_preview" href="https://youtu.be/Gk_KUg3qED0?si=XhpT7QbXV726Wdus">
+  <i class="link_preview_right_image" style="background-image:url('https://cdn4.telesco.pe/file/na5d1CyyY8h6QclIGI9w5_Hc7zeqBy2qCA-5Z1zCUxIwjB06lkf3Hji3pcvSDSi5yqEN-MV3Y69hDNm8NAd_6k8y6dPPaaFuHbHR9QZvdDLpk6L1jE1ITLtHl1TPwhSb7ViN-o_gp8FdaP_BLGdqn-v370jV5H_y4MMDo6iEOh3M2m2sxjO_M63_MxR8eCitBx_47VTIPvzZIx1kxoRx-66utCFTi75EIIZv6S57p2QcofCpM3HVH1WP0xEgYnl9fe0oFplG2e-hVt-khqlJAktwhJv8DRaRF0JpMRtwET1KTgzXocV_c_xHsnAItfoidgsI3wv0Ts2lS_lIRNFjTw.jpg')"></i>
+  <div class="link_preview_site_name accent_color" dir="auto">YouTube</div>
+  
+  <div class="link_preview_title" dir="auto">140. 对姚顺宇的4小时访谈：请允许我小疯一下！在Anthropic和Gemini训模型、技术预测、英雄主义已过去</div>
+  <div class="link_preview_description" dir="auto">姚顺宇戴了一副茶色眼镜走过来，这副眼镜会随光线变化而改变颜色。<br/><br/><br/>硅谷AI业界有两位Yao Shunyu，他们曾是清华同一届毕业生，这让姚顺雨与姚顺宇时常成为话题人物。<br/><br/><br/>前一位姚顺雨2025年从OpenAI跳槽到腾讯，他去年来过我们节目（第115集 (https://www.xiaoyuzhoufm.com/episode/68c29ca12c82c9dccadba127) ）；后一位姚顺宇也于同年跳槽，从Anthropic来到Google DeepMind。<br/><br/><br/>今天的嘉宾姚顺宇，毕业于清华和斯…</div>
+</a>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">47</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta">edited &nbsp;<a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/1211"><time datetime="2026-05-17T17:51:45+00:00" class="time">17:51</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/1234" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6MTIzNCwidCI6MTc4NTU2Mzg5MiwiaCI6IjJlZjJmZGYwMTg2NmIxMzQ1ZiJ9">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">小登求教，读博去量子计算有前途嘛（理论or实验）<br/><br/>【Alice】<br/>很难出国<br/><br/>【Bob】<br/>没有，几十年内用不起来<br/><br/>【Carol】<br/>实验要么就是凝聚态实验要么就是AMO实验<br/><br/>【Dave】<br/>我在做理论（坐标国外），看你的目的了<br/><br/>【Eve】<br/>理论还可以，实验纯傻逼<br/><br/>【Dave】<br/>就当纯理论做没问题的，就像做复杂度、做密码学<br/><br/>【Dave】<br/>短期内想发大财除非去骗钱<br/><br/>【Francis】<br/>Re Bob: 保守了至少还有上百年跟商用核聚变一样慢<br/><br/>【Grace】<br/>Re Bob: 肯定不用那么久，ai很快就突破智力边界了<br/><br/>【洞主】<br/>Re Carol: 这两个毕业之后有什么出路嘛<br/><br/>【洞主】<br/>Re Dave: 这种毕业出来只能找教职嘛（疑惑）<br/><br/>【Francis】<br/>Re 洞主: 教授、或转行去半导体厂蹲产线<br/><br/>【Carol】<br/>Re Grace: 量子计算一直都是工程实现的问题<br/><br/>【Carol】<br/>Re 洞主: 实验物理正常出路，如果量子计算没有商业化的话<br/><br/>【洞主】<br/>Re Carol: 现在量子的初创呢？<br/><br/>【Francis】<br/>Re 洞主: 全靠政府补助在活着<br/><br/>【洞主】<br/>Re Francis: 这么惨淡嘛<br/><br/>【Dave】<br/>Re 洞主: 也不完全。我组里有学长去JP Morgan当了一年Applied Research Lead，研究量子密码学的，不过已经辞职在找教职了。<br/>也有隔壁组的同学马上要去英伟达发小财了。<br/><br/>【Dave】<br/>Re 洞主: 量子的初创的我感觉本质都是在骗钱。。<br/><br/>【洞主】<br/>Re Dave: 物理和计算机都有吧，所以很纠结<br/><br/>【Eve】<br/>Re Francis: 高盛大小摩基本是冷门top phd的收留处<br/><br/>【Alice】<br/>Re Francis: 最近美股量子很火的<br/><br/>【Francis】<br/>Re Alice: 川普政府最近宣布，將對 9 家量子電腦公司提供補助，並同步取得少數股權，等於正式把量子科技納入美國政府的「戰略投資組合」。<br/><br/>其中 IBM （IBM）新成立的量子晶片公司 Anderon 拿下 10 億美元，用來在紐約 Albany 建立美國首座專用量子晶片製造設施。GlobalFoundries （GFS）也獲得 3.75 億美元用於建立量子晶圓廠，專注於生產用於大規模量子電腦的多種架構和技術模式，美國政府將持有約 1％ 股權。<br/>其他像 D-Wave Quantum（QBTS）、Rigetti Computing（RGTI）、Infleqtion（INFQ）、Honeywell（HON） 旗下準備 IPO 的 Quantinuum 等，以及許多量子新創，各自獲得約 1 億美元資金。<br/><br/>值得注意的是，政府持股對象不是 IBM 母公司，而是新設立的獨立公司，而這些受補貼公司為獲得資金的條件，就是讓政府持有少數股權（非控股股權），以提升美國納稅人的投資回報。這種模式其實很像過去一年美國在半導體、鋼鐵、核能與稀土等領域的操作，也顯示想鞏固國安與科技主導權。<br/><br/>這次是根據《晶片與科學法案》提供約 20 億美元的激勵措施，交易仍需待完成最終協議，市場反應也很給面子，先前躺了一陣子的板塊昨日集體噴出，IBM 上漲 12%，部分量子概念股甚至飆升超過 20％，即使未列入名單的部分公司如 IonQ（IONQ）也連帶提升。<br/><br/>【Francis】<br/>Re Alice: 纯粹炒作而已，这些公司都完全没有任何盈利能力<br/><br/>【Hans】<br/>Re Eve: 说反了吧，实验反而更容易转行就业还好点，做量子信息理论或什么量子密码学不就是纯坑人？<br/><br/>所以量子计算是不是跟robotics差不多，主打一个demo好看骗投资人<br/><br/>【Alice】<br/>物理系几个教授办了两仪万象量子科技，但感觉应该比robotics还遥远<br/><br/>【Bob】<br/>demo也不好看吧<br/><br/>【洞主】<br/>Re Alice: 段路明也有公司<br/><br/>【Carol】<br/>Re 洞主: 华翊量子<br/><br/>【Dave】<br/>量子公司很重要的一部分是国家投钱支持，甚至一些电信方面的国企直接开始做量子业务。国外对量子技术的封锁程度比英伟达GPU还狠，这个要是真被国外拉开身位想追上就难了。民用方面还很遥远，真到能分解RSA那天再谈</div>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">46</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta">edited &nbsp;<a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/1234"><time datetime="2026-05-22T00:39:10+00:00" class="time">00:39</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/1287" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6MTI4NywidCI6MTc4NTU2Mzg5MiwiaCI6ImNmZmIzZmMyNzAyMDg5NGI2MSJ9">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">想学习量化交易，想请各位大佬给点建议和指点<br/>本人还是本科生，也想研究生从事量化交易相关方向<br/><br/>【Alice】<br/>打算着手学习量化。不过好像绩点落下了很多。很卡绩点吗。<br/>然后自己也在从事实盘操作和理论<br/><br/>【Bob】<br/>刷绿皮书（以及gpa保持前1/3），学机器学习（MLP打基础以及CNN/LSTM/Transformer等模型架构），找学长学姐内推实习。<br/><br/>【Bob】<br/>机器学习中传统的PCA，树模型也很（可能更）重要<br/><br/>【Bob】<br/>等你有实习经历后gpa就不太重要了，gpa以及清本这个名头是让对面相信你是个聪明人，给你做事的机会。但如果已经做出来了，那成果就足够了<br/><br/>【Bob】<br/>gpa只是增加你找到实习的概率，内推一般远比gpa好用</div>
+<div class="tgme_widget_message_reactions js-message_reactions"><span class="tgme_reaction"><i class="emoji" style="background-image:url('//telegram.org/img/emoji/40/F09F918D.png')"><b>👍</b></i>1</span><span class="tgme_reaction"><i class="emoji" style="background-image:url('//telegram.org/img/emoji/40/F09F9881.png')"><b>😁</b></i>1</span></div><div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">68</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/1287"><time datetime="2026-06-13T14:24:46+00:00" class="time">14:24</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/1288" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6MTI4OCwidCI6MTc4NTU2Mzg5MiwiaCI6IjFkYzVmMzQ2ZWY2MDkxMGZlNiJ9">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">孝庸基金量化岗笔试题是敲代码，坦克大战<br/><br/>【Alice】<br/>可以复习一下概率论<br/><br/>【Bob】<br/>qr的话笔试一般是考概率论，随机过程，统计，博弈论（不太多），编程（一般是python，动态规划考的多），ML/DL。也有考project的，给个实际的场景题目让你在规定时间（可能一下午，也可能两三天）写个project。也有考的很奇怪的。之前一个一起实习的同学去面过zd的qr岗，给的是一个project，给定entrust和trade的数据，撮合出最细颗粒度的ob，错误率不得高于4%（其实感觉要么全对要么错一大堆hh，而且qr要求撮订单簿就很离谱）。笔试一般无所谓的，你要记住，你是有华子的titlle的人才（清本的竞争力可能更大，因为我自己感觉，很多私募喜欢清本，特别是保送的）。只要笔试不太难看，其实无所谓。主要是看面试，看你想做的和他们需求的是否一致，你的过往经历是否对他们胃口，你是否展示出能大干一场的潜力，你对于他们问的一些问题（这些极有可能是他们在开发策略的时候正在遇到并且还没想到好的解决方法的问题)是否能给出让人耳目一新的精彩回答<br/><br/>qd的话不太清楚。但是应该都是需要对cpp很了解，高性能低延迟框架需要熟悉，有的还会要求会做fpga的定制化加速</div>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">86</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/1288"><time datetime="2026-06-16T09:00:32+00:00" class="time">09:00</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div><div class="tgme_widget_message_wrap js-widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap js-widget_message" data-post="aistockanalyst/1311" data-view="eyJjIjotMjMxNTM0NDE4NywicCI6MTMxMSwidCI6MTc4NTU2Mzg5MiwiaCI6IjU1ZjAwNmNhMzU0Y2IyNmJiOCJ9">
+  <div class="tgme_widget_message_user"><a href="https://t.me/aistockanalyst"><i class="tgme_widget_message_user_photo bgcolor2" data-content="S"><img src="https://cdn5.telesco.pe/file/aDomjl3crLPE-FAqByV-rATn3RQ_igsWpc_fp-08K-NI8AOc_yBxP2SD9IW6jnVWjB7WYE9CdrcdB6NAizlbl2gomTl85X8D_fWM9NqFwr0ORnhuhNuhJeEcuR3icxaggZpLkfLHKIKkc_Qd1BTncyTHK-_dgLiAn0jNyG14vf-toMWdKPKtltdxz_yfoUaPHVSNkvpEaDh87t-PLo6btOAsOsi7R7Pdy7r2LlGbLLx5VPRe26Yq9uOmqbyL_KeHuiPiE2LslbeUAZIgaiSYG6eLQLYsOzaUSXMdY2H6wsPTUr-KLwClrPGuXVIZYP9yWwR8EDd2mceh2p-qIFoCIQ.jpg"></i></a></div>
+  <div class="tgme_widget_message_bubble">
+    
+        <i class="tgme_widget_message_bubble_tail">
+      <svg class="bubble_icon" width="9px" height="20px" viewBox="0 0 9 20">
+        <g fill="none">
+          <path class="background" fill="#ffffff" d="M8,1 L9,1 L9,20 L8,20 L8,18 C7.807,15.161 7.124,12.233 5.950,9.218 C5.046,6.893 3.504,4.733 1.325,2.738 L1.325,2.738 C0.917,2.365 0.89,1.732 1.263,1.325 C1.452,1.118 1.72,1 2,1 L8,1 Z"></path>
+          <path class="border_1x" fill="#d7e3ec" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0 L9,0 L9,20 L7,20 L7,20 L7.002,18.068 C6.816,15.333 6.156,12.504 5.018,9.58 C4.172,7.406 2.72,5.371 0.649,3.475 C-0.165,2.729 -0.221,1.464 0.525,0.649 C0.904,0.236 1.439,0 2,0 Z"></path>
+          <path class="border_2x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.5 L9,0.5 L9,20 L7.5,20 L7.5,20 L7.501,18.034 C7.312,15.247 6.64,12.369 5.484,9.399 C4.609,7.15 3.112,5.052 0.987,3.106 C0.376,2.547 0.334,1.598 0.894,0.987 C1.178,0.677 1.579,0.5 2,0.5 Z"></path>
+          <path class="border_3x" d="M9,1 L2,1 C1.72,1 1.452,1.118 1.263,1.325 C0.89,1.732 0.917,2.365 1.325,2.738 C3.504,4.733 5.046,6.893 5.95,9.218 C7.124,12.233 7.807,15.161 8,18 L8,20 L9,20 L9,1 Z M2,0.667 L9,0.667 L9,20 L7.667,20 L7.667,20 L7.668,18.023 C7.477,15.218 6.802,12.324 5.64,9.338 C4.755,7.064 3.243,4.946 1.1,2.983 C0.557,2.486 0.52,1.643 1.017,1.1 C1.269,0.824 1.626,0.667 2,0.667 Z"></path>
+        </g>
+      </svg>
+    </i>
+    <div class="tgme_widget_message_author accent_color"><a class="tgme_widget_message_owner_name" href="https://t.me/aistockanalyst"><span dir="auto">Stock Analyst</span></a></div>
+
+
+<div class="tgme_widget_message_text js-message_text" dir="auto">菲爾茲獎得獎名單：王虹、邓煜、白杰文、Jacob Tsimerman<br/><br/>王虹 和 邓煜 甚至还是同班同学！<br/><br/>王虹 和 韦东奕 是同齡人<br/><br/>王虹1991年出生于广西桂林，2011年本科毕业<br/><br/>韦东奕1991年出生于山东济南，2014年本科毕业<br/><br/>王虹在北大被做题家们打得怀疑人生，差点跑法国转专业学了建筑。她今年在北大报告的时候，也说她当年在北大成绩实际上是不好的，她如果留在北大连保研资格都没有。她这辈子最大的逆天改命点就是决定去法国。她刚到法国的时候，数学成绩在同一届同学里面并不算突出，而且基础知识面不是很广，分析学的很多结论和技巧并不是很熟练。<br/><br/>数学竞赛对于我来说，就是进入大学的一块敲门砖。实际上，我有一群数学竞赛出身，现在在做教育的朋友，大家的普遍意见就是数学竞赛的选拔价值远远超过教育价值，如果学有余力，并且能保证进入好大学，那就应该去学大学数学，而不是搞竞赛，就像王虹这样，16岁能上北大，那就上北大。我们没有这种能力，只能捡起竞赛这块敲门砖，把门敲开。 我想如果有一天，中国能像法国的数学预科班一样，给学有余力的初高中同学都能提供大学的数学教育，并且用大学数学做选拔，让大家不用像竞赛一样，在那么小的知识集合上卷技巧性和熟练度，那才是中国数学真正崛起的时候。现在还差得远呢。。 稍微说一下预科班这个事情吧，预科班实际上是一个设立在高中，但是却接收高中毕业生的一个上重点大学前的额外的学校，不能简单和高中超前学习类比。但我的点是，法国佬的卷王，可以通过卷预科班这种方式上重点大学，预科班学的是正常的培养科学家的路径上知识。而我们必须在准备高考或者竞赛这种主要目的落在应付选拔的项目上花费大量时间，这其实是极大的浪费。<br/><br/>王虹是没搞竞赛，可是她早两年上大学了啊。 绝大多数说竞赛有用的，对照组是局限在高中课内学习，不是提前接触大学专业课。你要问他们“如果有条件，十六岁上大学和搞竞赛哪个对数学能力的发展更好”，我觉得不会有几个人认为应该搞竞赛而不是提前进入大学专业学习。 而我国的高校招生制度决定了，如果不是像王虹的父母这样早早布局在低年龄段跳级，也没能进入屈指可数的那几个中学少年班，绝大部分人是没有机会在十六岁上大学的。在没有机会早上大学的前提下，搞竞赛比把所有时间花在课内学习上要好。 真要有机会提前进入大学学习，哪有几个人会接着搞中学竞赛啊。 所以大部分竞赛党的认知，本来就是“搞竞赛比搞课内强，提前学大学比什么都强”。王虹的经历恰恰为这个观点提供了一个正面的例子。</div>
+<div class="tgme_widget_message_footer compact js-message_footer">
+  
+  <div class="tgme_widget_message_info short js-message_info">
+    <span class="tgme_widget_message_views">51</span><span class="copyonly"> views</span><span class="tgme_widget_message_meta"><a class="tgme_widget_message_date" href="https://t.me/aistockanalyst/1311"><time datetime="2026-07-14T06:39:16+00:00" class="time">06:39</time></a></span>
+  </div>
+</div>
+  </div>
+  
+</div></div>
+    </section>
+  </div>
+</main>
+    <script src="//telegram.org/js/jquery.min.js"></script>
+    <script src="//telegram.org/js/jquery-ui.min.js"></script>
+    <script src="//telegram.org/js/tgwallpaper.min.js?3"></script>
+<script src="//telegram.org/js/tgsticker.js?32"></script>
+
+    <script src="//telegram.org/js/widget-frame.js?67"></script>
+    <script src="//telegram.org/js/telegram-web.js?14"></script>
+    <script>TWeb.init();
+</script>
+    
+  </body>
+</html>
+<!-- page generated in 144.11ms -->
