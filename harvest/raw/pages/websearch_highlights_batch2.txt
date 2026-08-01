@@ -1,0 +1,179 @@
+Evidence snapshot — WebSearch "Highlights" blocks, captured 2026-08-01 (second batch).
+
+Why this file exists: the four pages below are readable to a browser but not to this machine.
+  - nowcoder.com sits behind an Aliyun WAF. Verified 2026-08-01: GET
+    https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789 and the
+    /discuss/ and m.nowcoder.com forms all return HTTP 200 carrying the interstitial
+    "为了更好的访问体验，请进行验证" (aliyun_waf_aa/aliyun_waf_bb meta tags, sceneId 19x5u7lo)
+    instead of the post. m.nowcoder.com returns the page title only.
+  - 1point3acres.com is Cloudflare-blocked to this machine (direct curl and the r.jina.ai
+    text proxy both return the security interstitial). archive.org/wayback/available reports
+    no snapshot for thread-686183; the CDX endpoint returned HTTP 503 (rate limited).
+The search engine's cached extract is therefore the only copy of these pages this machine
+can read, and everything harvested from them is access="snippet_only".
+
+Text below is reproduced byte-for-byte as the search tool returned it, including its own
+"..." elision markers and, for thread-1147508, the mojibake the engine produced by decoding
+that page's GB2312 bytes as Latin-1.
+
+================================================================================
+RESULT A
+Title: 985废柴挑战顶级量化optiver笔试_牛客网
+URL: https://www.nowcoder.com/feed/main/detail/3d62edffa9dc40c883d3d019dd7f6789
+Query that produced it: 牛客网 optiver 笔试 newsProvider AddSubscription RemoveSubscription NewsReceived 卫星
+--------------------------------------------------------------------------------
+卫星网络的类，要实现SatelliteConnected，RelationshipEstablished，MessageReceived三个方法。too hard!part2是20道不定项选择题：多线程利用多CPU架构；关系数据库中规范化是什么；二维数组两种遍历方式的快慢；哈希一些操作的时间复杂度；Linux的system call时间开销为50ns；对于动态数组，哪项平均时间复杂度最低；小明想学python和java，不推荐哪本书；子网掩码定义同一网络的IP地址范围；UDP传输会发生什么情况；四个16进制数哪些小于100；给栈操作选最后栈的内容；选择邻接矩阵比领接链表的优势；在多线程程序中修复错误共享；二进制表示16位整数需要多少位；TCP/IP在哪些情况下不是好的选择；位运算；哪一个概念不用于多线程中的同步；在给的一个二叉搜索树中对随机的一个node平均比较几次；向空堆中插入65个元素，深度是多少；哪些协议用于Linux进程间通信。part3是9个小游戏。1、Balloon，每次充气花费$0.1, 超过某个值会爆炸，爆炸前收回当前的金额。第一次有30轮，金额不限；第二次20轮，在上次获得的金额基础上打气。本人采用激进的策略结束时是$35,应该不是投资goat。2、Skyscraper，类似汉诺塔，三个柱子，一些不同颜色的块移动到答案一致。3、Shapeshift，考反应，出现矩形按左方向键，圆形按右方向键。4、the switch，有两个框，上面看和是不是奇数，下面框看两组箭头是不是相同。5、code compare， 一个字符串，有四个选项，选相同字符串，每次估计就5-6秒。我只能记住前三个来做判断(囧)6、number Box，四个数和中间的结果，通过加减乘除法计算出结果7、figure it out，猜盖住的牌。最多16种组合，图形，颜色，图纹，点。每次会显示和盖住的牌对比错误和正确几项。另外两个记不清了，求原谅。#找实习#
+
+--- earlier retrieval of the same page, query: 牛客网 Optiver 笔试 面经 真题 数字推理 ---
+985废柴挑战顶级量化optiver笔试_牛客网
+...
+# 985废柴挑战顶级量化optiver笔试
+...
+5 Shanghai Software Developer Summer Internshippart1是HackerRank里的，个人实力不济，选择躺平。第一道写一个newsProvider类，需要实现AddSubscription，RemoveSubscription，NewsReceived，HashMap方法。第二道写一个卫星
+
+================================================================================
+RESULT B
+Title: SIG 1轮+2轮面经|sig面经|一亩三分地海外面经版
+URL: https://www.1point3acres.com/bbs/thread-686183-1-1.html
+Query that produced it: 1point3acres SIG 1轮+2轮面经 圆里随机画n条线 扔硬币 HTH HHT
+--------------------------------------------------------------------------------
+SIG 面经 第一轮： 1. 圆里随机画n条线，问能把圆分成几分 （期望）？ 把分成的份数和交点个数对应起来，然后算交点个数的期望。 2. 扔硬币 进入 HTH HHT 之一就结束，问进入每一个的概率是多大？（不太记得具体ending state是啥了） 3. 三
+...
+| 有几个交点，就能推算出分成了几块 n 条线 m 个交点是 n+m+1 块 m = sum_{i,j} I（i,j）每两条线是否相交的indicator function 两条线相交的概率是1/3 （只用考虑4个点的顺序） 就可以算了 rank那个可以看这里 https://math.stackexchange.com/q ... t-matrix-if-a2-ne-0 |
+| --- |
+...
+| 第一轮第一题是认真的吗？ 刚用了很长时间算了一下，感觉有几个点需要注意： 首先，任意两条线相交的概率是1/3; 其次，需要考虑所有线两两组合的情况，即有choose 2 from n 种情况，以下表示为C； 然后，n条线m个交点可以把平面分成 n+m+1块； 为了方便，可以用C 表示 然后可以列出式子 \sum_{k=0}^{C} (n+k+1)* (choose k from C) (1/3)^k*(2/3)^(C-k), 然后还要用组合恒等式k*(choose k from n) = n*(choose k-1 from n-1) 最后得出期望是 n + 1 + n*(n-1)/6; 如果面到这个题绝壁完蛋 |
+| --- |
+...
+，就能推算出分成了几块 n
+...
+线 m 个交点是 n+
+...
+| 感谢！ 我估计我写错了，rank那道题我应该是会的，我当时应该是想问第3题，不过我事后也找到了一个解释，说是不一定，是吧？ 圆这道题真不错，学习到了 1. n条线m个交点，分成的块数是n+m+1，为啥啊？画了几个例子，确实如此，但没想到如何证明 2. 1/3那个有点印象，类似的题看到过，两个结合在一起让人眼前一亮，那么也就是相当于n+n*(n-1)/6+1？ 题目很精彩 |
+| --- |
+...
+2020-11-25 10:56有几个交点，就能推算出分成了几块
+...
+条线 m 个交点是 n+m+1 块
+...
+问第二轮第一
+...
+四面体内，做sampling |
+| --- |
+
+--- earlier retrieval of the same page, query: SIG 笔试 面经 真题 群 分享 概率题 ---
+# SIG 1轮+2轮面经
+...
+SIG 面经 第一轮： 1. 圆里随机画n条线，问能把圆分成几分 （期望）？ 把分成的份数和交点个数对应起来，然后算交点个数的期望。 2. 扔硬币 进入 HTH HHT 之一就结束，问进入每一个的概率是多大？（不太记得具体ending state是啥了） 3. 三
+...
+2020-11-11 11:
+...
+第一轮的第一题
+
+================================================================================
+RESULT C
+Title: SIG OA和一面/二面挂经|sigPM面经|一亩三分地数科面经版
+URL: https://www.1point3acres.com/bbs/thread-1042392-1-1.html
+Query that produced it: 1point3acres SIG 1轮+2轮面经 圆里随机画n条线 扔硬币 HTH HHT
+--------------------------------------------------------------------------------
+›海外面经›数科面经› SIG OA和一面/二面挂经
+...
+SIG OA和一面/二面挂经 海外面经 sig |
+| --- | --- |
+...
+| 注册一亩三分地论坛，查看更多干货！ 您需要登录才可以下载或查看附件。没有帐号？注册账号 x . .и 图片好像一次上传不完。OA就很简单 都是题库里的内容最多变了变数字 只要地里的题全都会做了，oa肯定没有问题的。 .. 一面流程和其他地里小伙伴也差不多，先问了问要不要sponsor，然后说可以sponsor。然后问了问认不认识SIG工作的朋友什么的。 您好！本帖隐藏的内容需要积分高于 188 才可浏览您当前积分为 0。使用VIP即刻解锁阅读权限或查看其他获取积分的方式 游客，您好！本帖隐藏的内容需要积分高于 188 才可浏览您当前积分为 0。 VIP即刻解锁阅读权限或查看其他获取积分的方式 Unlock interview details and practice with AI Curated Interview Questions from Top Companies /3*C^2_n 然后用交点个数算块数=刀数+交点数+1就完事了。 二面就纯bq，问了一些地里其他一样的bq，类似与why QR? why SIG这种之类的。 莫名其妙挂了 不明白 |
+| --- |
+...
+| 猫咪猫咪爪 发表于 2024-02-18 15:38:50很好的解法。一个小问题是：这两条线不一定“平行”，在圆内不相交即可。 确实 是我口误了 |
+| --- |
+...
+| 匿名用户 发表于 2024-2-5 01:31. ---- 为什么两刀相交的概率是1/3呀 就是我们考虑圆上任意四个点（因为两刀两个点，三个点的情况测度为0，比起两刀四个点，可以忽略掉在算期望的时候）；用两条线连起来这四个点的方式一共三种，两种情况下这两刀是平行的，第三种情况是两刀是相交的，所以两刀相交的概率就是1/3.。求加米。。。 |
+| --- |
+...
+| 很好的解法。一个小问题是：这两条线不一定“平行”，在圆内不相交即可。 |
+| --- |
+
+================================================================================
+RESULT D
+Title: SIG第一轮电面 面经|sigPM面经|一亩三分地数科面经版
+URL: https://www.1point3acres.com/bbs/thread-1118978-1-1.html
+Query that produced it: 1point3acres SIG 1轮+2轮面经 圆里随机画n条线 扔硬币 HTH HHT
+--------------------------------------------------------------------------------
+一亩三分地»论坛›海外求职›海外面经›数科面经› SIG第一轮电面 面经
+...
+| 回复: 5 | 直达 SIG第一轮电面 面经 海外面经 sig |
+| --- | --- |
+...
+| 注册一亩三分地论坛，查看更多干货！ 您需要登录才可以下载或查看附件。没有帐号？注册账号 x 才结束的电话面试，一共俩题，第一题地里原题就不多啰嗦了，第二题第一部分也是地里的，第二部分算扩展我写下来： X is uniformly [0, 您好！本帖隐藏的内容需要积分高于 188 才可浏览您当前积分为 0。使用VIP即刻解锁阅读权限或查看其他获取积分的方式 游客，您好！本帖隐藏的内容需要积分高于 188 才可浏览您当前积分为 0。 VIP即刻解锁阅读权限或查看其他获取积分的方式 Unlock interview details and practice with AI Curated Interview Questions from Top Companies X. Χ 第二部分答案2/3，希望有大佬能给个简单思路，说实话面试官提醒但没听明白...QR岗 新人求米 |
+| --- |
+...
+| 最近刚面完，我想说第二部分答案不是2/3，而是3/4 =2/3 * 3/4+1 * 1/4，真的被版主误导了。。。哎 |
+| --- |
+
+================================================================================
+RESULT E
+Title: Optiver OA 棰樼洰|optiver闈㈢粡|涓€浜╀笁鍒嗗湴娴峰闈㈢粡鐗�
+URL: https://www.1point3acres.com/bbs/thread-1147508-1-1.html
+Query that produced it: 牛客网 optiver 笔试 newsProvider AddSubscription RemoveSubscription NewsReceived 卫星
+--------------------------------------------------------------------------------
+optiver鐨凮A鏈変笁涓儴鍒�, 杩欓噷鍒嗕韩涓€涓涓€閮ㄥ垎coding鐪熼, 鎴戠殑浜嗘垜涓€涓湅鍙嬩篃鎶曚簡, 閬囧埌鐨勫ソ鍍忔槸鍦伴噷鏈変汉鍒嗕韩杩囩殑鐑皵鐞冪殑棰�
+...
+As the provider of a news aggregation service, you aim to provide your customers with a system that is as easy to use as possible. There are many different news providers, and it is tedious for users to subscribe to all of them manually, so you want to provide a single subscription that manages all the news providers for each customer.
+...
+Each subscriber is only interested in a certain set of topics, and should only receive news about those topics. Each news item has an interest score and each subscriber nominates their minimum interest score. A subscriber should not be sent news that has a score lower than the subscriber鈥檚 minimum.
+...
+The system may have to handle
+...
+lot of data and subscriptions, so it must be robust and not overload subscribers with too much data. We then choose to decouple the news input feed from the output towards the subscribers, giving more control to the system
+...
+Complete the functions described below in the
+...
+1. NewsProvider
+...
+*澶嶅埗浠ｇ爜
+...
+**Guaranteed input constraints:**
+...
+*
+1. timestamp
+...
+*澶嶅埗浠ｇ爜*
+...
+Input Format for Custom Testing
+Each line of input begins with a keyword followed by one or more parameters separated by whitespace, per the order described above. The keywords are:
+...
+*
+1. "subscribe"
+...
+*澶嶅埗浠ｇ爜*
+...
+, which indicates a call to
+...
+1. AddSubscription
+*澶嶅埗浠ｇ爜*
+.
+2.
+1. "unsubscribe"
+*澶嶅埗浠ｇ爜*
+, which indicates a call to
+1. RemoveSubscription
+*澶嶅埗浠ｇ爜*
+.
+...
+2.
+1. "news"
+*澶嶅埗浠ｇ爜*
+, which indicates a call to
+1. NewsReceived
+*澶嶅埗浠ｇ爜*
+.
+...
+2.
+1. "publish"
+...
+*澶嶅埗浠ｇ爜*
+, which indicates a call to
+...
+1. Publish
+...
+*澶嶅埗浠ｇ爜*
