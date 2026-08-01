@@ -211,14 +211,16 @@ slices between the `Last Updated :` line and the `Comment`/`Explore` footer.
 1. **`codeforces.com/blog/entry/145050`** — a competitive programmer's write-up of a
    D. E. Shaw online assessment, with the problems stated in full and dated. Fetchable,
    attributed to a named handle, and the author has no product to sell.
-2. **`www.wallstreetoasis.com/company/old-mission-capital/interview/quant-trader`** and
-   the Old Mission listing page — the only substantial public account of Old Mission's
-   two-part OA: a ~35-question math section, then a coding question the poster remembers
-   as running median, followed by a market-making round on *the total number of Olympic
-   gold medals the US has won*. That last one is specific enough that it is very unlikely
-   to be confabulated.
+2. **`www.wallstreetoasis.com/company/old-mission-capital/interview`** — the July 2024
+   Quant Trader submission on the Old Mission listing page is the only substantial public
+   account of that firm's two-part OA: a ~35-question math section, then a coding question
+   the poster remembers as running median, followed by a market-making round on *the total
+   number of Olympic gold medals the US has won*. That last one is specific enough that it
+   is very unlikely to be confabulated. (The same submission also has a permalink at
+   `/interview/quant-trader`; the records are filed under the listing URL, which is where
+   they were first read, and the permalink was dropped to avoid double-counting.)
 3. **`www.geeksforgeeks.org/interview-experiences/d-e-shaw-internship-interview-experience-on-campus-2022/`**
-   — a QTE intern who was selected, reproducing eleven distinct problems across three
+   — a QTE intern who was selected, reproducing nine distinct problems across three
    rounds with the interviewers' follow-ups, including the `getManager`/`getCManager`
    lowest-common-manager problem where the tree structure is deliberately withheld.
 
