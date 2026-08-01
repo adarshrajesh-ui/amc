@@ -35,7 +35,7 @@ A gardener is eagerly waiting for his two favorite flowers to bloom. The purple 
 
 - [ ] remove
 
-### SIG-002  ·  `B` · qanalyst · unknown · online_assessment · Mar 2024
+### SIG-002  ·  `B` · qtrader · unknown · online_assessment · Mar 2024
 
 Mickey and Minnie plan to meet at a cafe, but will each independently show up at a uniformly random time between 9:00 to 10:00. Mickey will only wait 10 minutes for Minnie before leaving, but Minnie will wait 30 minutes for Mickey before leaving. What is the probability they end up meeting each other?
 
@@ -43,7 +43,7 @@ Mickey and Minnie plan to meet at a cafe, but will each independently show up at
 
 - [ ] remove
 
-### SIG-003  ·  `B` · unknown · internship · unknown · Dec 2017
+### SIG-003  ·  `B` · qtrader · internship · unknown · Dec 2017
 
 You seem to be doing fairly well up to now, why do you think that is?
 
@@ -59,7 +59,7 @@ A simple probability question simple math and you have to explain your train of 
 
 - [ ] remove
 
-### SIG-005  ·  `C` · qresearcher · new_grad · online_assessment · 2026
+### SIG-005  ·  `C` · qtrader · new_grad · online_assessment · 2026
 
 Compute the weight of the green triangle in pounds if the following system is balanced and weighs 96 pounds in total.
 
@@ -75,7 +75,7 @@ A boat fires torpedoes at another boat, the probability that the torpedo hits is
 
 - [ ] remove
 
-### SIG-007  ·  `B` · unknown · internship · unknown · Feb 2023
+### SIG-007  ·  `B` · qtrader · internship · unknown · Feb 2023
 
 Compute conditional probabilities, and explain one's thought process.
 
@@ -107,7 +107,7 @@ Which financial derivatives do you have experience trading?
 
 - [ ] remove
 
-### SIG-011  ·  `C` · qresearcher · unknown · phone_technical · unknown
+### SIG-011  ·  `C` · qtrader · unknown · phone_technical · unknown
 
 2. 扔硬币 进入 HTH HHT 之一就结束,问进入每一个的概率是多大?(不太记得具体ending state是啥了)
 
@@ -131,7 +131,7 @@ The last question ("3 biased coins") was a standard Bayes' problem; was somethin
 
 - [ ] remove
 
-### SIG-014  ·  `B` · qresearcher · new_grad · online_assessment · 2025 Jul-Sep (2025(7-9月)); thread titled '2026'
+### SIG-014  ·  `B` · qtrader · new_grad · online_assessment · 2025 Jul-Sep (2025(7-9月)); thread titled '2026'
 
 [Question 14 — full stem NOT recovered. Attested only through the reply thread, where a reader disputes the answer:] 你好,第14题我看AB等于32也可以?排列如下,查了也满足要求:1,4,3,2 / 2,1,4,3 / 4,3,2,1 / 3,2,1,4
 
@@ -163,7 +163,7 @@ the probability of seeing a shooting star in 1 hour is 91%. What is the probabil
 
 - [ ] remove
 
-### SIG-018  ·  `B` · unknown · internship · unknown · 2021
+### SIG-018  ·  `B` · qtrader · internship · unknown · 2021
 
 Given x identical marbles how can you figure out which is the dissimilar marble in y uses of the scale
 
@@ -171,7 +171,7 @@ Given x identical marbles how can you figure out which is the dissimilar marble 
 
 - [ ] remove
 
-### SIG-019  ·  `C` · qresearcher · unknown · phone_technical · unknown
+### SIG-019  ·  `C` · qtrader · unknown · phone_technical · unknown
 
 1. 圆里随机画n条线,问能把圆分成几分 (期望)? 把分成的份数和交点个数对应起来,然后算交点个数的期望。
 
@@ -179,7 +179,7 @@ Given x identical marbles how can you figure out which is the dissimilar marble 
 
 - [ ] remove
 
-### SIG-020  ·  `B` · unknown · internship · unknown · 2020
+### SIG-020  ·  `B` · qtrader · internship · unknown · 2020
 
 You have 9 coins, one of which is heavier than the others, and a scale. How can you determine which coin is heavier by only using the scale twice?
 
@@ -187,7 +187,7 @@ You have 9 coins, one of which is heavier than the others, and a scale. How can 
 
 - [ ] remove
 
-### SIG-021  ·  `C` · qresearcher · new_grad · online_assessment · 2026
+### SIG-021  ·  `C` · qtrader · new_grad · online_assessment · 2026
 
 You roll three fair 6-sided dice. If they all show the same number, you earn $20. If exactly two of the numbers are the same, you earn $10. If all of the numbers are different, you lose $2. Compute your expected return per roll in dollars. (Round to the nearest cent.)
 
@@ -195,7 +195,7 @@ You roll three fair 6-sided dice. If they all show the same number, you earn $20
 
 - [ ] remove
 
-### SIG-022  ·  `B` · unknown · internship · unknown · Apr 2023
+### SIG-022  ·  `B` · qtrader · internship · unknown · Apr 2023
 
 If you play a game and your opponent doubles the stakes of the game, what likelihood should you have of winning for you to accept this instead of having to resign the game.
 
@@ -203,7 +203,7 @@ If you play a game and your opponent doubles the stakes of the game, what likeli
 
 - [ ] remove
 
-### SIG-023  ·  `B` · qresearcher · unknown · unknown · Feb 2024
+### SIG-023  ·  `B` · qtrader · unknown · unknown · Feb 2024
 
 what is the expectation of a coin tossing game.
 
@@ -227,7 +227,7 @@ A can finish a job in 100 min, B can finish the same job in 120 min. A and B wor
 
 - [ ] remove
 
-### SIG-026  ·  `B` · unknown · internship · unknown · 2023
+### SIG-026  ·  `B` · qtrader · internship · unknown · 2023
 
 You are playing a game where you and your opponent have put $10 in the pot each. Your opponent bets another $10. What is the minimum probability of you winning to call this $10 bet?
 
@@ -235,7 +235,7 @@ You are playing a game where you and your opponent have put $10 in the pot each.
 
 - [ ] remove
 
-### SIG-027  ·  `B` · qresearcher · unknown · unknown · Nov 2024
+### SIG-027  ·  `B` · qtrader · unknown · unknown · Nov 2024
 
 Calculate the probability of having a disease if the test is positive. What is the probability if the test is positive twice?
 
@@ -243,7 +243,7 @@ Calculate the probability of having a disease if the test is positive. What is t
 
 - [ ] remove
 
-### SIG-028  ·  `C` · qresearcher · unknown · onsite · unknown
+### SIG-028  ·  `C` · qtrader · unknown · onsite · unknown
 
 二面就纯bq,问了一些地里其他一样的bq,类似与why QR? why SIG这种之类的。
 
@@ -251,7 +251,7 @@ Calculate the probability of having a disease if the test is positive. What is t
 
 - [ ] remove
 
-### SIG-029  ·  `B` · unknown · internship · unknown · Nov 2018
+### SIG-029  ·  `B` · qtrader · internship · unknown · Nov 2018
 
 If you get multiple offers, how would you choose?
 
@@ -267,7 +267,7 @@ If you had a deck of 52 playing cards, no jokers. What is the probability of pul
 
 - [ ] remove
 
-### SIG-031  ·  `B` · unknown · internship · unknown · 2022
+### SIG-031  ·  `B` · qtrader · internship · unknown · 2022
 
 Q: How many ways can you sit in a circle of 5 people that you end up sitting with your best friend?
 
@@ -291,7 +291,7 @@ I have a painting, if it's an original it's worth 500k if it isn't it's worth 10
 
 - [ ] remove
 
-### SIG-034  ·  `C` · unknown · unknown · unknown · unknown
+### SIG-034  ·  `C` · qtrader · unknown · unknown · unknown
 
 you have 8 marbles, 1 weighs less than the others but you cannot tell which one is lighter by touching them. they give you a balance and you only have 2 chances to measure all 8 to find out which one is the lighter one. How would you do it?
 
@@ -307,7 +307,7 @@ a couple of questions which required having formulas learnt off
 
 - [ ] remove
 
-### SIG-036  ·  `B` · qresearcher · unknown · online_assessment · 2026
+### SIG-036  ·  `B` · qtrader · unknown · online_assessment · 2026
 
 Question 2: I need to seat 5 toddlers (Anna, Brian, Charlie, Dixie, Eva) at a round table with these rules: i) Anna won’t sit next to Brian or Eva. ii) Brian won’t sit next to Charlie. iii) Dixie won’t sit next to Eva or Charlie. If Dixie is sitting to the left of Anna, who is sitting to the left of Brian?
 
@@ -323,7 +323,7 @@ an online maths test consisting of probability questions
 
 - [ ] remove
 
-### SIG-038  ·  `C` · qresearcher · new_grad · online_assessment · 2026
+### SIG-038  ·  `C` · qtrader · new_grad · online_assessment · 2026
 
 I need to seat 5 toddlers (Anna, Brian, Charlie, Dixie, Eva) at a round table with these rules: i) Anna won’t sit next to Brian or Eva. ii) Brian won’t sit next to Charlie. iii) Dixie won’t sit next to Eva or Charlie. If Dixie is sitting to the left of Anna, who is sitting to the left of Brian?
 
@@ -347,7 +347,7 @@ If day is a “Good” Day, [there] is a 60% chance that the next day will be �
 
 - [ ] remove
 
-### SIG-041  ·  `C` · unknown · unknown · phone_technical · unknown
+### SIG-041  ·  `C` · qtrader · unknown · phone_technical · unknown
 
 [第二轮第一题 — statement point-gated. All that surfaced are two readers asking about it:] 请问第二轮第一题是在那个三角形平面,还是四面体内,做sampling ... 想问三角形要怎样做?
 
@@ -355,7 +355,7 @@ If day is a “Good” Day, [there] is a 60% chance that the next day will be �
 
 - [ ] remove
 
-### SIG-042  ·  `B` · qresearcher · unknown · unknown · May 2026
+### SIG-042  ·  `B` · qtrader · unknown · unknown · May 2026
 
 A classic question of whether HHT or HTH will appear first.
 
@@ -363,7 +363,7 @@ A classic question of whether HHT or HTH will appear first.
 
 - [ ] remove
 
-### SIG-043  ·  `B` · qresearcher · unknown · online_assessment · 2026
+### SIG-043  ·  `B` · qtrader · unknown · online_assessment · 2026
 
 Two friends canoe upstream for 3 hours, only to realize that their campsite is downstream. They turn around and paddle downstream for 4 hours. The next morning, they pack up and get back on the river to canoe to their original starting point 28 miles upstream and arrive at 2 pm. Assume the river always flows at a constant rate of 2 miles per hour, and the two friends always paddle at a constant rate. What time did they leave for their return trip?
 
@@ -411,7 +411,7 @@ You have $100 and get an extra $100 to play a casino game where you bet on flips
 
 - [ ] remove
 
-### SIG-049  ·  `B` · qresearcher · unknown · phone_technical · Jan 2025
+### SIG-049  ·  `B` · qtrader · unknown · phone_technical · Jan 2025
 
 what’s the probability of getting HTH before HHT of flipping a fair coin?
 
@@ -419,7 +419,7 @@ what’s the probability of getting HTH before HHT of flipping a fair coin?
 
 - [ ] remove
 
-### SIG-050  ·  `B` · unknown · internship · unknown · Apr 2023
+### SIG-050  ·  `B` · qtrader · internship · unknown · Apr 2023
 
 There are two fair dices, you should dice another if you didn’t get 6 for that dice. Calculate the Expected number of times you get dice 1=6.
 
@@ -427,7 +427,7 @@ There are two fair dices, you should dice another if you didn’t get 6 for that
 
 - [ ] remove
 
-### SIG-051  ·  `B` · qanalyst · unknown · unknown · Nov 2025
+### SIG-051  ·  `B` · qtrader · unknown · unknown · Nov 2025
 
 A problem on Bayes theorem with multiple extensions. By the end (and under interview conditions) it got slightly tricky.
 
@@ -451,7 +451,7 @@ Years ago, I was asked about coin flipping outcome with normal coins and a biase
 
 - [ ] remove
 
-### SIG-054  ·  `C` · qresearcher · unknown · online_assessment · unknown
+### SIG-054  ·  `C` · qtrader · unknown · online_assessment · unknown
 
 青蛙想从(0,0)跳到(7,4),每次只能向右跳一格或向上跳一格。青蛙不愿意同方向连续跳三次。共多少种不同跳法?
 
@@ -459,7 +459,7 @@ Years ago, I was asked about coin flipping outcome with normal coins and a biase
 
 - [ ] remove
 
-### SIG-055  ·  `A` · qresearcher · new_grad · online_assessment · 2026
+### SIG-055  ·  `A` · qtrader · new_grad · online_assessment · 2026
 
 A frog is traveling from point A(0,0) to point B(5,6) but each step can only be 1 unit up or 1 unit to the right. Additionally, the frog refuses to move three steps in the same direction consecutively. Compute the number of ways the frog can move from A to B.
 
@@ -467,7 +467,7 @@ A frog is traveling from point A(0,0) to point B(5,6) but each step can only be 
 
 - [ ] remove
 
-### SIG-056  ·  `B` · qanalyst · unknown · phone_technical · 2024
+### SIG-056  ·  `B` · qtrader · unknown · phone_technical · 2024
 
 Given 5 fair dices. What is the probability to get results containing 3 same values.
 
@@ -491,7 +491,7 @@ if you've done it before then its the same questions with different numbers
 
 - [ ] remove
 
-### SIG-059  ·  `C` · qresearcher · new_grad · online_assessment · 2026
+### SIG-059  ·  `C` · qtrader · new_grad · online_assessment · 2026
 
 Suppose you have 3 tokens for a betting game and your goal is to reach 5 tokens before running out. Each turn you bet as many tokens as possible but not more than needed to reach 5. You win each bet with probability 2/3​. Compute the probability you reach 5 tokens before running out. (Give your answer as a reduced fraction.)
 
@@ -507,7 +507,7 @@ How would you price an option contract given its strike price and possible fair 
 
 - [ ] remove
 
-### SIG-061  ·  `B` · qresearcher · unknown · online_assessment · Dec 2024
+### SIG-061  ·  `B` · qtrader · unknown · online_assessment · Dec 2024
 
 A logic puzzle asking to determine lies and who speaks the truth
 
@@ -515,7 +515,7 @@ A logic puzzle asking to determine lies and who speaks the truth
 
 - [ ] remove
 
-### SIG-062  ·  `C` · qresearcher · new_grad · online_assessment · 2026
+### SIG-062  ·  `C` · qtrader · new_grad · online_assessment · 2026
 
 You walk into a barn and see a collection of spiders, chickens, and cows. You notice that there are 520 legs in total. The number of chickens is twice the number of cows and the number of spiders is twice the number of chickens. Compute the number of spiders.
 
@@ -523,7 +523,7 @@ You walk into a barn and see a collection of spiders, chickens, and cows. You no
 
 - [ ] remove
 
-### SIG-063  ·  `B` · unknown · internship · unknown · Dec 2017
+### SIG-063  ·  `B` · qtrader · internship · unknown · Dec 2017
 
 You have 8 marbles. One is heavier than the rest. You have a balance scales and you can use it only twice. Can you determine which marble is heaviest?
 
@@ -531,7 +531,7 @@ You have 8 marbles. One is heavier than the rest. You have a balance scales and 
 
 - [ ] remove
 
-### SIG-064  ·  `C` · unknown · unknown · superday · 2024
+### SIG-064  ·  `C` · qtrader · unknown · superday · 2024
 
 [终面题目本身在积分墙后。可确认的是终面至少有三题,且第 1、3 题连读者读完题解都无从下手:] 请问lz final round 第1,3题有什么可以参考的思路吗? 看了之后没什么头绪。。。然后lz是有finance背景吗?
 
@@ -539,7 +539,7 @@ You have 8 marbles. One is heavier than the rest. You have a balance scales and 
 
 - [ ] remove
 
-### SIG-065  ·  `B` · qresearcher · unknown · unknown · 2025
+### SIG-065  ·  `B` · qtrader · unknown · unknown · 2025
 
 Basic questions like how would you apply ML and AI to your job?
 
@@ -782,7 +782,7 @@ What is a Trie Data Structure? Explain it's node structure and working? What is 
 
 - [ ] remove
 
-### DES-027  ·  `B` · qresearcher · unknown · phone_technical · unknown
+### DES-027  ·  `B` · qtrader · unknown · phone_technical · unknown
 
 You call to someone's house and ask if they have two children. The answer happens to be yes. Then you ask if one of their children is a boy. The answer happens to be yes again. What's the probability that the second child is a boy?
 
@@ -958,7 +958,7 @@ Design and implement a class that can be used to allocate and de-allocate a cert
 
 - [ ] remove
 
-### DES-049  ·  `B` · qresearcher · unknown · phone_technical · unknown
+### DES-049  ·  `B` · qtrader · unknown · phone_technical · unknown
 
 You call to someone's house and ask if they have two children. The answer happens to be yes. Then you ask if one of their children's names is William. The answer happens to be yes again. (We assume William is a boy's name, and that it's possible that both children are Williams.) What's the probability that the second child is a boy?
 
@@ -1017,7 +1017,7 @@ Given an array arr of n integers, in a single operation, one can reduce any elem
 
 ## Jump Trading  (26)
 
-### JUMP-001  ·  `B` · qresearcher · unknown · phone_technical · unknown
+### JUMP-001  ·  `B` · qtrader · unknown · phone_technical · unknown
 
 1)Can you create a linked list? Do it. 2) Let's say we want to change places of 2 nodes in linked list. Can you create a function for that.
 
@@ -1065,7 +1065,7 @@ a straightforward whiteboard question with two separate tasks: 1. Convert decima
 
 - [ ] remove
 
-### JUMP-007  ·  `C` · unknown · unknown · unknown · unknown
+### JUMP-007  ·  `C` · qtrader · unknown · unknown · unknown
 
 I'm dealing a deck of cards. You can stop it at any time and if the next card is red, you win. What is the optimal strategy for winning?
 
@@ -1073,7 +1073,7 @@ I'm dealing a deck of cards. You can stop it at any time and if the next card is
 
 - [ ] remove
 
-### JUMP-008  ·  `B` · qresearcher · unknown · phone_technical · unknown
+### JUMP-008  ·  `B` · qtrader · unknown · phone_technical · unknown
 
 What are ensemble methods? Can you describe boosted tree methods?
 
@@ -1137,7 +1137,7 @@ Given a char buffer[4096], write a malloc implementation.
 
 - [ ] remove
 
-### JUMP-016  ·  `B` · qresearcher · unknown · phone_technical · unknown
+### JUMP-016  ·  `B` · qtrader · unknown · phone_technical · unknown
 
 Suppose you backtested a trading strategy, it did very well. But in live trading, you keep losing money, what would you do?
 
@@ -1145,7 +1145,7 @@ Suppose you backtested a trading strategy, it did very well. But in live trading
 
 - [ ] remove
 
-### JUMP-017  ·  `B` · qresearcher · internship · onsite · unknown
+### JUMP-017  ·  `B` · qtrader · internship · onsite · unknown
 
 a math problem about the probability an array is sorted after swapping the first two if they're out of order, swapping the new second and third if they're out of order, and so on until swapping the last two if they're out of order
 
@@ -1153,7 +1153,7 @@ a math problem about the probability an array is sorted after swapping the first
 
 - [ ] remove
 
-### JUMP-018  ·  `C` · unknown · unknown · unknown · unknown
+### JUMP-018  ·  `C` · qtrader · unknown · unknown · unknown
 
 There are four balls, two black and two white. You pick two and random and flip their color from one to the other and repeat. How many times would you do this to ensure all four balls are the same color?
 
@@ -1177,7 +1177,7 @@ How I would store key value pairs, then a discussion about how I would implement
 
 - [ ] remove
 
-### JUMP-021  ·  `C` · unknown · unknown · unknown · unknown
+### JUMP-021  ·  `C` · qtrader · unknown · unknown · unknown
 
 What is the probability that two people in a room full of 15 share the same birthday?
 
@@ -1185,7 +1185,7 @@ What is the probability that two people in a room full of 15 share the same birt
 
 - [ ] remove
 
-### JUMP-022  ·  `B` · qresearcher · unknown · phone_technical · unknown
+### JUMP-022  ·  `B` · qtrader · unknown · phone_technical · unknown
 
 Suppose you sit on the road side and observe cars driving by. Assume the distribution of cars driving by is according to an exponential distribution. Now you observe a first car after sitting for x mins, a second car after sitting for y min. Given those observations, can you estimate the parameter in the distribution?
 
@@ -1201,7 +1201,7 @@ Implement a users endpoint against a written spec: return status code 400 if age
 
 - [ ] remove
 
-### JUMP-024  ·  `C` · unknown · unknown · unknown · unknown
+### JUMP-024  ·  `C` · qtrader · unknown · unknown · unknown
 
 A bee starts at a hive. It has a 20% chance to move forward, a 50% chance to stay still, and a 30% to move backward. What percentage of the time does it spend in the hive?
 
@@ -1228,7 +1228,7 @@ Two of the questions were leetcode medium-ish. But not exactly leetcode question
 
 ## Citadel  (20)
 
-### CIT-001  ·  `B` · unknown · unknown · datathon · 2024
+### CIT-001  ·  `B` · qdeveloper · unknown · datathon · 2024
 
 In Python, if you had to iteratively read over two files line-by-line, which of the following would be the BEST way to accomplish this task? A. Use with open () to open the two files as f1 and f2 then use readline() and a for loop to iteratively read lines from each file B. Use open () to open the two files as f1 and f2, then use readline() and a for loop to iteratively read lines from each file C. Use with open () to open the two files as f1 and f2, then use zip() to iterate over the two files together D. Use open () to open the two files as f1 and f2, then use zip() to iterate over the two files together E. Implement a file seek () function and call the function for the two files simultaneously
 
@@ -1236,7 +1236,7 @@ In Python, if you had to iteratively read over two files line-by-line, which of 
 
 - [ ] remove
 
-### CIT-002  ·  `B` · unknown · unknown · datathon · 2024
+### CIT-002  ·  `B` · qtrader · unknown · datathon · 2024
 
 Consider a function f(x,y)f(x, y) of two variables xx and yy . Which of the following statements is ALWAYS true? Here, maxkmax_k and minkmin_k , refer to the maximum over kk and the minimum over kk respectively. A. maxx,minyf(x,y)=minymaxxf(x,y)max_x,min_y f(x, y) = min_ymax_xf(x, y) B. maxx,minyf(x,y)≤minymaxxf(x,y)max_x,min_y f(x, y) \leq min_ymax_xf(x, y) C. maxx,minyf(x,y)≥minymaxxf(x,y)max_x,min_y f(x, y) \geq min_ymax_xf(x, y) D. maxx,minyf(x,y)<minymaxxf(x,y)< span="">max_x,min_y f(x, y) < min_ymax_xf(x, y) E. None of the above, because the answer depends on the specific functional form of f
 
@@ -1244,7 +1244,7 @@ Consider a function f(x,y)f(x, y) of two variables xx and yy . Which of the foll
 
 - [ ] remove
 
-### CIT-003  ·  `B` · unknown · unknown · datathon · 2024
+### CIT-003  ·  `B` · qtrader · unknown · datathon · 2024
 
 What is the MAIN advantage of using a random forest over a decision tree? A. It can be parallelized B. It captures non-linear decision boundaries C. It allows for batch learning D. It reduces overfitting E. It uses less memory
 
@@ -1252,7 +1252,7 @@ What is the MAIN advantage of using a random forest over a decision tree? A. It 
 
 - [ ] remove
 
-### CIT-004  ·  `B` · unknown · unknown · datathon · 2024
+### CIT-004  ·  `B` · qtrader · unknown · datathon · 2024
 
 A government office has two officers handling people's requests. Suppose that the time between request arrivals at the first officer's desk is random and follows an exponential distribution withλ=μ1\lambda=\mu_1 . Similarly, the time between request arrivals at the second officer's desk is also random and follows an exponential distribution with λ=μ2\lambda=\mu_2 . The first officer has probability P1P_1 of referring any request he receives to the office supervisor, and the second officer has probability P2P_2 of doing so. What is the average time between requests referred to the supervisor? A. P1/μ1+P2/μ2P_1/\mu_1 + P_2/\mu_2 B. (P1+P2)/(μ1+μ2)(P_1+P_2) / (\mu_1+\mu_2) C. 1/(μ1P1+μ2P2)1/(\mu_1P_1+\mu_2P_2) D. 1/μ1P1+1/μ2P21/\mu_1P_1 + 1/\mu_2P_2 E. None of the above
 
@@ -1260,7 +1260,7 @@ A government office has two officers handling people's requests. Suppose that th
 
 - [ ] remove
 
-### CIT-005  ·  `B` · unknown · unknown · datathon · 2024
+### CIT-005  ·  `B` · qdeveloper · unknown · datathon · 2024
 
 In Python, which of the following statements are true?: • I. The pipe module can be used to run shell commands in a program • Il. A pickle can store any Python object except tuples in string format • Ill. If you have a Python program called player.py, then you can import the module by running import player. py A. l and Il only B. I and Ill only C. Il and Ill only D. I, Il, and Ill E. None of A through D
 
@@ -1268,7 +1268,7 @@ In Python, which of the following statements are true?: • I. The pipe module c
 
 - [ ] remove
 
-### CIT-006  ·  `B` · unknown · unknown · datathon · 2024
+### CIT-006  ·  `B` · qtrader · unknown · datathon · 2024
 
 Suppose you are given a highway congestion dataset with one feature - the average vehicle speed. It is found that if the average speed is above 70 kilometers per hour, then there are no accidents on the highway. However, if the average speed is below 70 kilometers per hour, then there is at least one accident on the highway. You would like to build a classifier for this problem using support vector machines (SVM). Your colleague suggests that this approach could be problematic due to imbalances in the distribution of vehicle speeds. Is your colleague correct, and why or why not? A. Your colleague is correct - a SVM's performance will suffer because of the reason he mentioned B. Your colleague is incorrect - SVMs assign greater weights to the data near the boundary so will perform fine C. Your colleague is correct - SVMs are bad at classifying traffic-related data in general D. Your colleague is incorrect - although linear VMs will perform poorly, radial basis VMs will perform fine E. None of the above
 
@@ -1276,7 +1276,7 @@ Suppose you are given a highway congestion dataset with one feature - the averag
 
 - [ ] remove
 
-### CIT-007  ·  `B` · unknown · unknown · datathon · 2024
+### CIT-007  ·  `B` · qtrader · unknown · datathon · 2024
 
 You have two fair coins and one coin with heads on both sides. You pick a coin at random and toss it twice. If it reads heads both times, what is the probability it also reads heads after a third toss? A. 1/6 B. 1/3 C. 1/2 D. 2/3 E. 5/6
 
@@ -1284,7 +1284,7 @@ You have two fair coins and one coin with heads on both sides. You pick a coin a
 
 - [ ] remove
 
-### CIT-008  ·  `B` · unknown · unknown · datathon · 2024
+### CIT-008  ·  `B` · qtrader · unknown · datathon · 2024
 
 Which of the following assumptions is NOT necessary when performing multiple linear regression with homoskedastic errors? A. The distribution of errors is normal B. The variables are continuous C. The variables are uncorrelated D. The error variance is constant across sample data E. The sample data are independent
 
@@ -1292,7 +1292,7 @@ Which of the following assumptions is NOT necessary when performing multiple lin
 
 - [ ] remove
 
-### CIT-009  ·  `B` · unknown · unknown · datathon · 2024
+### CIT-009  ·  `B` · qtrader · unknown · datathon · 2024
 
 3% of a country's population has a particular disease. The national health institute has developed a test for this disease: the test has a 98% "true positive" rate (the probability that a person will test positive given that they have the disease). However, it also has a 4% "false positive" rate (the probability that a person will test positive given that they do NOT have the disease). If you simultaneously take the test twice, and it comes out with two positive results, which of the following is CLOSEST to the probability that you actually have the disease, assuming the tests are independent? A. 0.96 B. 0.95 C. 0.94 D. 0.93 E. 0.92
 
@@ -1300,7 +1300,7 @@ Which of the following assumptions is NOT necessary when performing multiple lin
 
 - [ ] remove
 
-### CIT-010  ·  `B` · unknown · unknown · datathon · 2024
+### CIT-010  ·  `B` · qtrader · unknown · datathon · 2024
 
 15. An alternative to k - means clustering is k - medoids clustering. This algorithm chooses actual data points as centers, as opposed to choosing centroids (the mean of data points in a cluster) as centers. Which of the following BEST describes why the k - mediods algorithm is often used over the k - means algorithm? • I. The k - medoids algorithm runs faster than the k - means algorithm does • I. The k - medoids algorithm is more robust to outliers than the k - means algorithm is • Ill. It is easier to choose the value of k in the k - mediods algorithm than in the k - means algorithm A. I only B. lI only C. Ill only D. I and Il only E. ll and Ill only
 
@@ -1308,7 +1308,7 @@ Which of the following assumptions is NOT necessary when performing multiple lin
 
 - [ ] remove
 
-### CIT-011  ·  `B` · unknown · unknown · datathon · 2024
+### CIT-011  ·  `B` · qtrader · unknown · datathon · 2024
 
 A space probe is controlled by 7 different instructions from the ground. The probabilities of sending these instructions vary - the three most common instructions have probabilities 1/2. 1/4, and 1/8 of being sent, respectively. The remaining four instructions are equally likely to be sent. In expectation, what is the minimum number of whole number bits required to communicate with the probe? A. 2 B. 3 C. 4 D. 5 E. 6
 
@@ -1316,7 +1316,7 @@ A space probe is controlled by 7 different instructions from the ground. The pro
 
 - [ ] remove
 
-### CIT-012  ·  `B` · unknown · unknown · datathon · 2024
+### CIT-012  ·  `B` · qtrader · unknown · datathon · 2024
 
 Suppose you have NN samples drawn from NN independent and identical distributions. You use the method of Maximum Likelihood Estimators to estimate the true parameters Θ\Theta governing these distributions, and it gives you parameters Θ\Theta . Which of the following statements is true? A. As NN grows asymptotically large, Θ\Theta becomes an unbiased estimator for Θ\Theta B. As NN grows asymptotically large, no other unbiased estimator of Θ\Theta can achieve a strictly smaller mean squared error value on the sample than Θ\Theta does C. Θ\Theta tends to be normally distributed for large sample sizes D. If the MLEs for Θ1\Theta_1 , Θ2\Theta_2 are Θ1,Θ2\Theta_1, \Theta_2 , respectively, then the MLE of any function of Θ1,Θ2\Theta_1, \Theta_2 is that same function with Θ1,Θ2\Theta_1, \Theta_2 as arguments instead E. All of the above
 
@@ -1324,7 +1324,7 @@ Suppose you have NN samples drawn from NN independent and identical distribution
 
 - [ ] remove
 
-### CIT-013  ·  `B` · unknown · unknown · datathon · 2024
+### CIT-013  ·  `B` · qdeveloper · unknown · datathon · 2024
 
 In Python, which of the following gives the correct order, from first to last, of scope resolution? A. local function, enclosing function, global statements, built-in names B. local function, global statements, built-in names, enclosing function C. built-in names, global statements, local function, enclosing function D. built-in names, global statements, enclosing function, local function E. local function, global statements, enclosing function, built-in names
 
@@ -1348,7 +1348,7 @@ Given an nxn chess board, return the minimum number of knight moves it would tak
 
 - [ ] remove
 
-### CIT-016  ·  `B` · unknown · unknown · datathon · 2024
+### CIT-016  ·  `B` · qtrader · unknown · datathon · 2024
 
 Marty has a bar of gold. Marty's friend Shea is to be paid this gold over the course of 15 days, such that on day XX , 0<=X<=150 <= X <= 15 , Shea has exactly X/15X/15 of the total gold. Additionally, on day 0, Shea has no available gold to use as change. What is the MINIMUM number of pieces that Marty must break the gold bar into so that he can pay Shea in this way? A. 4 B. 5 C. 7 D. 8 E. 15
 
@@ -1364,7 +1364,7 @@ Marty has a bar of gold. Marty's friend Shea is to be paid this gold over the co
 
 - [ ] remove
 
-### CIT-018  ·  `B` · unknown · unknown · datathon · 2024
+### CIT-018  ·  `B` · qtrader · unknown · datathon · 2024
 
 Which of the following machine learning algorithms is NOT sensitive to the initial variables used in the optimization algorithm? A. Hidden Markov models B. Artificial neural networks C. Random forests D. Support vector machines E. k - nearest neighbors
 
@@ -1372,7 +1372,7 @@ Which of the following machine learning algorithms is NOT sensitive to the initi
 
 - [ ] remove
 
-### CIT-019  ·  `B` · unknown · unknown · datathon · 2024
+### CIT-019  ·  `B` · qtrader · unknown · datathon · 2024
 
 You have a dataset with two features, employee _age (range of 20 to 60) and annual_salary (range of 50,000 to 500,000). Which of the following situations is MOST likely to occur if you feed the dataset as is to a K - means clustering algorithm? A. The data will be appropriately clustered B. The program will run out of memory due to the large annual_salary values C. There will be numerical overflows due to the large annual_salary values D. The clusters will not be meaningful due to the disparity between the variances of the two features E. None of the above
 
@@ -1380,7 +1380,7 @@ You have a dataset with two features, employee _age (range of 20 to 60) and annu
 
 - [ ] remove
 
-### CIT-020  ·  `B` · unknown · unknown · datathon · 2024
+### CIT-020  ·  `B` · qtrader · unknown · datathon · 2024
 
 A bag contains one fair coin, two two-headed coins, and three two-tailed coins. Each of the six coins is flipped, but the outcomes of five of the coins are hidden from you. randomly. If the outcome you see is heads, what is the probability that the fair coin (which may or may not be the coin that was shown to you) landed heads up? A. 1/5 B. 2/5 C. 1/2 D. 3/5 E. 4/5
 
@@ -1439,7 +1439,7 @@ You will play a coin game against an opponent. A biased coin will be continually
 
 - [ ] remove
 
-### OPT-007  ·  `C` · unknown · internship · online_assessment · 2026 summer intern cycle (thread title '26 summer'); OA sat 2025(7-9月) per the post's tag line
+### OPT-007  ·  `C` · qtrader · internship · online_assessment · 2026 summer intern cycle (thread title '26 summer'); OA sat 2025(7-9月) per the post's tag line
 
 a coin and whilst you do this you keep track of the number of Heads and the number of Tails. You can think of this as a race between Heads and Tails. For example, if after 9 flips you have landed on Heads 7 times and Tails 2 times, then Heads is winning the race by 5. Now
 
@@ -1463,7 +1463,7 @@ Design a queue,discuss the performance tradeoff.
 
 - [ ] remove
 
-### OPT-010  ·  `D` · unknown · experienced · phone_technical · 2024
+### OPT-010  ·  `D` · qdeveloper · experienced · phone_technical · 2024
 
 design 一个class提供四个api,带on的都是callback 用来update internal data structure。最后一
 
@@ -1725,7 +1725,7 @@ A market making portion of the interview (feedback given was that it was too wea
 
 - [ ] remove
 
-### OMC-009  ·  `B` · qresearcher · internship · phone_technical · unknown
+### OMC-009  ·  `B` · qtrader · internship · phone_technical · unknown
 
 What is the probability of drawing a 4 of a kind in a 5 card poker hand?
 
@@ -1749,7 +1749,7 @@ What is the probability of drawing a 4 of a kind in a 5 card poker hand?
 
 - [ ] remove
 
-### OMC-012  ·  `B` · qresearcher · internship · phone_technical · unknown
+### OMC-012  ·  `B` · qtrader · internship · phone_technical · unknown
 
 What is fifty six times sixty seven (no calculator, quick response)?
 
@@ -1765,7 +1765,7 @@ If you think the market is overestimating volatility, what options strategy can 
 
 - [ ] remove
 
-### OMC-014  ·  `B` · qresearcher · internship · phone_technical · unknown
+### OMC-014  ·  `B` · qtrader · internship · phone_technical · unknown
 
 You have two decks of cards, one with 52 cards and one with 104. If your goal is to draw a black card followed by a red card, which deck would you choose?
 
@@ -1867,7 +1867,7 @@ How can we get the output of the combination of two strings with some requiremen
 
 ## G-Research  (11)
 
-### GRES-001  ·  `C` · qresearcher · unknown · unknown · unknown
+### GRES-001  ·  `C` · qtrader · unknown · unknown · unknown
 
 What is the Delta of an at-the-money binary option with a payoff 0 at < $100, and payoff 1 at ≥ $100, as it approaches expiry?
 
@@ -1875,7 +1875,7 @@ What is the Delta of an at-the-money binary option with a payoff 0 at < $100, an
 
 - [ ] remove
 
-### GRES-002  ·  `C` · qresearcher · unknown · unknown · unknown
+### GRES-002  ·  `C` · qtrader · unknown · unknown · unknown
 
 How many ways are there to tile dominos (with size 2 × 1) on a grid of 2 × n? How about on a grid of 3 × 2n?
 
@@ -1883,7 +1883,7 @@ How many ways are there to tile dominos (with size 2 × 1) on a grid of 2 × n? 
 
 - [ ] remove
 
-### GRES-003  ·  `C` · qresearcher · unknown · unknown · unknown
+### GRES-003  ·  `C` · qtrader · unknown · unknown · unknown
 
 A stock has beta of 2.0 and stock specific daily volatility of 2%. Suppose that yesterday's closing price was $100 and today the market goes up by 1%. What's the probability of today's closing price being at least $103? What's the probability that the closing price is at least $110?
 
@@ -1891,7 +1891,7 @@ A stock has beta of 2.0 and stock specific daily volatility of 2%. Suppose that 
 
 - [ ] remove
 
-### GRES-004  ·  `C` · qresearcher · unknown · unknown · unknown
+### GRES-004  ·  `C` · qtrader · unknown · unknown · unknown
 
 (You probably need to look up numbers for this.) Suppose the moon were to disintegrate, and fall to earth over 5000 years. How does this influx of power compare to that of the Sun? Much more, about the same, or much less?
 
@@ -1899,7 +1899,7 @@ A stock has beta of 2.0 and stock specific daily volatility of 2%. Suppose that 
 
 - [ ] remove
 
-### GRES-005  ·  `C` · qresearcher · unknown · unknown · unknown
+### GRES-005  ·  `C` · qtrader · unknown · unknown · unknown
 
 I have $50 and I'm gambling on a series of coin flips. For each head I win $2 and for each tail I lose $1. What's the probability that I will run out of money?
 
@@ -1907,7 +1907,7 @@ I have $50 and I'm gambling on a series of coin flips. For each head I win $2 an
 
 - [ ] remove
 
-### GRES-006  ·  `C` · qresearcher · unknown · unknown · unknown
+### GRES-006  ·  `C` · qtrader · unknown · unknown · unknown
 
 Suppose that X and Y are mean zero, unit variance random variables. If least squares regression (without intercept) of Y against X gives a slope of β (i.e. it minimises E[(Y − βX)^2]), what is the slope of the regression of X against Y?
 
@@ -1915,7 +1915,7 @@ Suppose that X and Y are mean zero, unit variance random variables. If least squ
 
 - [ ] remove
 
-### GRES-007  ·  `C` · qresearcher · unknown · unknown · unknown
+### GRES-007  ·  `C` · qtrader · unknown · unknown · unknown
 
 Let R(n) be a random draw of integers between 0 and n − 1 (inclusive). I repeatedly apply R, starting at 10^100. What's the expected number of repeated applications until I get zero?
 
@@ -1923,7 +1923,7 @@ Let R(n) be a random draw of integers between 0 and n − 1 (inclusive). I repea
 
 - [ ] remove
 
-### GRES-008  ·  `C` · qresearcher · unknown · unknown · unknown
+### GRES-008  ·  `C` · qtrader · unknown · unknown · unknown
 
 Consider all 100 digit numbers, i.e. those between 0 to 10^100 − 1, inclusive. For each number, take the product of non-zero digits (treat the product of digits of 0 as 1), and sum across all the numbers. What's the last digit?
 
@@ -1931,7 +1931,7 @@ Consider all 100 digit numbers, i.e. those between 0 to 10^100 − 1, inclusive.
 
 - [ ] remove
 
-### GRES-009  ·  `C` · qresearcher · unknown · unknown · unknown
+### GRES-009  ·  `C` · qtrader · unknown · unknown · unknown
 
 (Hard) A company has a competition to win a car. Each contestant needs to pick a positive integer. If there's at least one unique choice, the person who made the smallest unique choice wins the car. If there are no unique choices, the company keeps the car and there's no repeat of the competition. It turns out that there are only three contestants, and you're one of them. Everyone knows before picking their numbers that there are only three contestants. How should you make your choice?
 
@@ -1939,7 +1939,7 @@ Consider all 100 digit numbers, i.e. those between 0 to 10^100 − 1, inclusive.
 
 - [ ] remove
 
-### GRES-010  ·  `C` · qresearcher · unknown · unknown · unknown
+### GRES-010  ·  `C` · qtrader · unknown · unknown · unknown
 
 I meet someone with 2 children, and I learn that one of the children is a boy. What's the probability that the other child is also a boy? What if one of the children is a boy born on a Tuesday?
 
@@ -1947,7 +1947,7 @@ I meet someone with 2 children, and I learn that one of the children is a boy. W
 
 - [ ] remove
 
-### GRES-011  ·  `C` · qresearcher · unknown · unknown · unknown
+### GRES-011  ·  `C` · qtrader · unknown · unknown · unknown
 
 If I break a stick of unit length into three random pieces, what's the expected length of the largest piece?
 
@@ -1958,7 +1958,7 @@ If I break a stick of unit length into three random pieces, what's the expected 
 
 ## Five Rings  (10)
 
-### 5RINGS-001  ·  `B` · unknown · internship · phone_technical · unknown
+### 5RINGS-001  ·  `B` · qtrader · internship · phone_technical · unknown
 
 what is the maximum number of pieces you can cut a pizza using 10 straight cuts?
 
@@ -1982,7 +1982,7 @@ A series of fast-paced estimation-style questions in the first interview
 
 - [ ] remove
 
-### 5RINGS-004  ·  `B` · qresearcher · internship · phone_technical · unknown
+### 5RINGS-004  ·  `B` · qtrader · internship · phone_technical · unknown
 
 A question on ordered stats. X and Y in a normal distribution. Find the distribution/expectation value of max(X, Y).
 
@@ -2089,7 +2089,7 @@ Implement APIs for a tree class backend — Tree node的定义已知,所有API�
 
 - [ ] remove
 
-### JS-007  ·  `B` · unknown · unknown · online_assessment · unknown(标题中的 20240401 是发帖日期,不是考试季)
+### JS-007  ·  `B` · qtrader · unknown · online_assessment · unknown(标题中的 20240401 是发帖日期,不是考试季)
 
 一个盒子有 100 元钱,你和对手分别在纸上写下数字,如果数字之和小于等于 100,那么你们可以各自拿到与自己写下数字价值相同的钱,而如果数字之和大于 100 则两个人都拿不到钱。假设对手是理性的,你的最优策略是什么? Follow up:不再假设对手理性,并且将这个博弈进行 1000 遍,第一次对手说他会写 80,你会怎么办?如果游戏进行了十次,他每次都写 80,你会如何权衡? 思路或想法欢迎在留言区交流
 
@@ -2097,7 +2097,7 @@ Implement APIs for a tree class backend — Tree node的定义已知,所有API�
 
 - [ ] remove
 
-### JS-008  ·  `B` · unknown · unknown · unknown · unknown
+### JS-008  ·  `B` · qtrader · unknown · unknown · unknown
 
 一个盒子有 100 元钱,你和对手分别在纸上写下数字,如果数字之和小于等于 100,那么你们可以各自拿到与自己写下数字价值相同的钱,而如果数字之和大于 100 则两个人都拿不到钱。假设对手是理性的,你的最优策略是什么? Follow up:不再假设对手理性,并且将这个博弈进行 1000 遍,第一次对手说他会写 80,你会怎么办?如果游戏进行了十次,他每次都写 80,你会如何权衡?
 
@@ -2105,7 +2105,7 @@ Implement APIs for a tree class backend — Tree node的定义已知,所有API�
 
 - [ ] remove
 
-### JS-009  ·  `C` · qresearcher · unknown · unknown · unknown
+### JS-009  ·  `C` · qtrader · unknown · unknown · unknown
 
 A typical question is like given a game, what is the optimal strategy?
 
@@ -2124,7 +2124,7 @@ Design a supermarket queue. Operations: add customer, change cu
 
 ## Morgan Stanley  (10)
 
-### MS-001  ·  `B` · qresearcher · unknown · phone_technical · 2026
+### MS-001  ·  `B` · qtrader · unknown · phone_technical · 2026
 
 Given 99 unbiased coin and 1 two headed coin, P(H|2H)?
 
@@ -2132,7 +2132,7 @@ Given 99 unbiased coin and 1 two headed coin, P(H|2H)?
 
 - [ ] remove
 
-### MS-002  ·  `B` · qresearcher · unknown · phone_technical · 2026
+### MS-002  ·  `B` · qtrader · unknown · phone_technical · 2026
 
 Rolling dice three time, what's the probability of getting strictly increase number?
 
@@ -2140,7 +2140,7 @@ Rolling dice three time, what's the probability of getting strictly increase num
 
 - [ ] remove
 
-### MS-003  ·  `B` · qresearcher · unknown · phone_technical · 2026
+### MS-003  ·  `B` · qtrader · unknown · phone_technical · 2026
 
 what if F test give you value 50, how would you interpret it?
 
@@ -2148,7 +2148,7 @@ what if F test give you value 50, how would you interpret it?
 
 - [ ] remove
 
-### MS-004  ·  `B` · qresearcher · unknown · phone_technical · 2026
+### MS-004  ·  `B` · qtrader · unknown · phone_technical · 2026
 
 Given time series data, what would you do for missing value ?
 
@@ -2156,7 +2156,7 @@ Given time series data, what would you do for missing value ?
 
 - [ ] remove
 
-### MS-005  ·  `B` · qresearcher · unknown · phone_technical · 2026
+### MS-005  ·  `B` · qtrader · unknown · phone_technical · 2026
 
 how do you explain logistic regression to your boss who know nothing ?
 
@@ -2164,7 +2164,7 @@ how do you explain logistic regression to your boss who know nothing ?
 
 - [ ] remove
 
-### MS-006  ·  `B` · qresearcher · unknown · phone_technical · 2026
+### MS-006  ·  `B` · qtrader · unknown · phone_technical · 2026
 
 Two people meet at bus stop, only wait for 15 min and leave, probability of they meet? (Poisson Distribution)?
 
@@ -2172,7 +2172,7 @@ Two people meet at bus stop, only wait for 15 min and leave, probability of they
 
 - [ ] remove
 
-### MS-007  ·  `B` · qresearcher · unknown · phone_technical · 2026
+### MS-007  ·  `B` · qtrader · unknown · phone_technical · 2026
 
 What if your have large variable but small sample?
 
@@ -2180,7 +2180,7 @@ What if your have large variable but small sample?
 
 - [ ] remove
 
-### MS-008  ·  `B` · qresearcher · unknown · phone_technical · 2026
+### MS-008  ·  `B` · qtrader · unknown · phone_technical · 2026
 
 Given two iid RV X and Y N~(mu,sig), what's the min Expectation value of X+Y?
 
@@ -2188,7 +2188,7 @@ Given two iid RV X and Y N~(mu,sig), what's the min Expectation value of X+Y?
 
 - [ ] remove
 
-### MS-009  ·  `B` · qresearcher · unknown · phone_technical · 2026
+### MS-009  ·  `B` · qtrader · unknown · phone_technical · 2026
 
 Which would you choose to estimate your time series model? R squared, MSE, RMSE, MAE?
 
@@ -2196,7 +2196,7 @@ Which would you choose to estimate your time series model? R squared, MSE, RMSE,
 
 - [ ] remove
 
-### MS-010  ·  `B` · qresearcher · unknown · phone_technical · 2026
+### MS-010  ·  `B` · qtrader · unknown · phone_technical · 2026
 
 Assume our input data has one part is normally distribute at zero (can be positive & negative) and the other part is strictly positive to very large number, what would you do before input it to our model ?
 
@@ -2223,7 +2223,7 @@ Estimate the number of barrels of oil you could fit on an aircraft carrier, numb
 
 - [ ] remove
 
-### CTC-003  ·  `B` · qresearcher · internship · online_assessment · interviewed June 2016
+### CTC-003  ·  `B` · qtrader · internship · online_assessment · interviewed June 2016
 
 an online assessment consisting of probability/brainteaser questions, ~10 to be completed in thirty minutes
 
@@ -2274,7 +2274,7 @@ You have 27 race horses. You can race five of them at a time. You don't know wha
 
 ## DRW  (8)
 
-### DRW-001  ·  `B` · qresearcher · unknown · onsite · unknown
+### DRW-001  ·  `B` · qtrader · unknown · onsite · unknown
 
 How would you derive the Ordinary Least Squares?
 
@@ -2298,7 +2298,7 @@ How would you find all the words that are anagrams of each other in a text docum
 
 - [ ] remove
 
-### DRW-004  ·  `B` · unknown · unknown · superday · unknown
+### DRW-004  ·  `B` · qdeveloper · unknown · superday · unknown
 
 A graph problem at the on-site superday, described as quite difficult
 
@@ -2341,7 +2341,7 @@ Implement a game according to some specs. No test cases given
 
 ## Tower Research Capital  (8)
 
-### TOWER-001  ·  `B` · unknown · internship · onsite · interviewed 2012
+### TOWER-001  ·  `B` · qdeveloper · internship · onsite · interviewed 2012
 
 How do you find two numbers in an array that sum to x?
 
@@ -2349,7 +2349,7 @@ How do you find two numbers in an array that sum to x?
 
 - [ ] remove
 
-### TOWER-002  ·  `B` · qanalyst · unknown · phone_technical · interviewed September 2019
+### TOWER-002  ·  `B` · qtrader · unknown · phone_technical · interviewed September 2019
 
 How would you replicate a fair coin using an unfair coin? Expected number of tosses? Vice versa?
 
@@ -2357,7 +2357,7 @@ How would you replicate a fair coin using an unfair coin? Expected number of tos
 
 - [ ] remove
 
-### TOWER-003  ·  `B` · qanalyst · unknown · phone_technical · interviewed September 2019
+### TOWER-003  ·  `B` · qtrader · unknown · phone_technical · interviewed September 2019
 
 Fermi estimation questions: Estimate the surface area of a tennis ball. Number of Starbucks in NYC?
 
@@ -2381,7 +2381,7 @@ What are the differences between Lasso and Ridge? Why does Lasso have an effect 
 
 - [ ] remove
 
-### TOWER-006  ·  `B` · qanalyst · unknown · phone_technical · interviewed September 2019
+### TOWER-006  ·  `B` · qtrader · unknown · phone_technical · interviewed September 2019
 
 If you three random variables X, Y, Z and you know the relationship between X and Y (say they're dependent), does that tell you anything about X and Z or Y and Z? What if the correlation between X and Y is 0.2 and the correlation between Y and Z is 0.5. What is the range for the correlation of X and Z?
 
@@ -2397,7 +2397,7 @@ Given a biased coin with probability p, how would you replicate n independent to
 
 - [ ] remove
 
-### TOWER-008  ·  `B` · unknown · internship · onsite · interviewed 2012
+### TOWER-008  ·  `B` · qtrader · internship · onsite · interviewed 2012
 
 How many ways can you jump up stairs if you can only jump either 1 or 2 steps?
 
@@ -2416,7 +2416,7 @@ You were given a table with four currencies and their respective trading values 
 
 - [ ] remove
 
-### 2SIG-002  ·  `B` · qresearcher · unknown · phone_technical · unknown
+### 2SIG-002  ·  `B` · qtrader · unknown · phone_technical · unknown
 
 How would you make money with social media data?
 
@@ -2424,7 +2424,7 @@ How would you make money with social media data?
 
 - [ ] remove
 
-### 2SIG-003  ·  `B` · qresearcher · internship · onsite · unknown
+### 2SIG-003  ·  `B` · qtrader · internship · onsite · unknown
 
 Two Sigma QR intern final technical round: one coding, one stats and one data science round, then a round with 2-3 hiring managers
 
@@ -2464,7 +2464,7 @@ Two medium leetcode questions which I've seen before thus I was able to solve it
 
 - [ ] remove
 
-### 2SIG-008  ·  `B` · qresearcher · unknown · phone_technical · unknown
+### 2SIG-008  ·  `B` · qtrader · unknown · phone_technical · unknown
 
 How would you make money using social media data?
 
@@ -2499,7 +2499,7 @@ Tell me about the current SP500 price. What will be the new price if it increase
 
 - [ ] remove
 
-### MAVEN-004  ·  `B` · qresearcher · internship · phone_technical · 2025
+### MAVEN-004  ·  `B` · qtrader · internship · phone_technical · 2025
 
 You observe a symmetric random walk starting at zero. You are allowed to stop at any time, and your payoff when you stop is the position of the walk minus a cost that accumulates with each step. What stopping strategy maximizes your expected payoff?
 
@@ -2507,7 +2507,7 @@ You observe a symmetric random walk starting at zero. You are allowed to stop at
 
 - [ ] remove
 
-### MAVEN-005  ·  `B` · qresearcher · internship · phone_technical · 2025
+### MAVEN-005  ·  `B` · qtrader · internship · phone_technical · 2025
 
 You quote both a bid and an ask on a product whose fair value jumps up or down randomly every second. Given that informed traders are more likely to hit your quotes when the fair value moves against you, how do you design a quoting strategy to avoid being picked off
 
@@ -2515,7 +2515,7 @@ You quote both a bid and an ask on a product whose fair value jumps up or down r
 
 - [ ] remove
 
-### MAVEN-006  ·  `B` · qresearcher · internship · phone_technical · 2025
+### MAVEN-006  ·  `B` · qtrader · internship · phone_technical · 2025
 
 You observe a sequence of coin flips, but you do not know whether the coin is fair or biased. You have a small prior belief that it may be biased. After seeing several flips that look suspicious, how would you decide whether the coin is likely biased?
 
@@ -2534,7 +2534,7 @@ How many combinations are there of the letters in the word "MISSISSIPPI"?
 
 ## Marshall Wace  (6)
 
-### MW-001  ·  `C` · qresearcher · new_grad · onsite · previous iterations of the Quant Associate Programme
+### MW-001  ·  `C` · qtrader · new_grad · onsite · previous iterations of the Quant Associate Programme
 
 We each take turns to roll a dice. Each time a number comes up which had not previously come up, we cross it out from the list of numbers 1,2,3,4,5,6. The winner is the player to cross out the last number. Would you prefer to play first or second?
 
@@ -2542,7 +2542,7 @@ We each take turns to roll a dice. Each time a number comes up which had not pre
 
 - [ ] remove
 
-### MW-002  ·  `C` · qresearcher · new_grad · online_assessment · previous iterations of the Quant Associate Programme
+### MW-002  ·  `C` · qtrader · new_grad · online_assessment · previous iterations of the Quant Associate Programme
 
 [3 marks] A researcher takes a random sample of 25 fourteen-year-old students from a large population and gives them an IQ test. The population mean IQ is known to be 100. The first student is found to have an IQ of 150. What is your expectation for the average IQ for the sample of 25 students?
 
@@ -2550,7 +2550,7 @@ We each take turns to roll a dice. Each time a number comes up which had not pre
 
 - [ ] remove
 
-### MW-003  ·  `C` · qresearcher · new_grad · phone_technical · previous iterations of the Quant Associate Programme
+### MW-003  ·  `C` · qtrader · new_grad · phone_technical · previous iterations of the Quant Associate Programme
 
 [10 marks] An airline company has 105 aeroplanes in service which fly cargo between London and New York. At the end of each month an inventory is taken of which aeroplanes are at which of the two cities. Every month, the movements of the planes between airports can be summarised as follows: 60% of the planes in London remain in London the following month. 40% of the planes in London are in New York the following month. 100% of the planes in New York are in London the following month. None of the planes in New York remain in New York the following month. a) [7 marks] If at the end of this month there are 70 aeroplanes in London and 35 in New York, how many will there be in each city in T months' time? T is an integer >0. Assume fractional aeroplanes exist, so you can have half an aeroplane in each city for example. b) [3 marks] How many aeroplanes will there be in each city in the distant future, i.e. as T tends to infinity?
 
@@ -2558,7 +2558,7 @@ We each take turns to roll a dice. Each time a number comes up which had not pre
 
 - [ ] remove
 
-### MW-004  ·  `C` · qresearcher · new_grad · phone_technical · previous iterations of the Quant Associate Programme
+### MW-004  ·  `C` · qtrader · new_grad · phone_technical · previous iterations of the Quant Associate Programme
 
 [14 marks] In a legal dispute over paternity, Adam is the alleged father. The judge is a Bayesian statistician, and announces at the start that, in the interests of fairness, his prior belief is that there is a 50% chance Adam is the father. On the first day of the trial, testimonials are given. On the second day, it is revealed that the child has blood type B, and according to geneticists, this would happen with probability 50% if Adam is the father. Furthermore, based on incidence rates of B genes in the population, there is a 10% chance that this child would have blood type B if Adam is not the father. At the end of the second day, the judge announces that his assessment of the probability that Adam is the father is 75%. a) [5 marks] What were the judge's beliefs at the end of the first day? b) [4 marks] Deduce the ratio of the Judge's assessment of the likelihood of the testimonials given that Adam is the father vs given Adam is not the father. c) [5 marks] There is some dispute over the geneticist's assessment that "there is a 10% chance the child would have blood type B if Adam is not the father". Experts are divided in opinion, with estimates for this figure ranging uniformly between 10% and 20%. If the Judge summarises this uncertainty by assigning a Uniform(0.1,0.2) distribution for this figure, rather than using the 10% figure, derive the Judge's final assessment in this case.
 
@@ -2566,7 +2566,7 @@ We each take turns to roll a dice. Each time a number comes up which had not pre
 
 - [ ] remove
 
-### MW-005  ·  `C` · qresearcher · new_grad · online_assessment · previous iterations of the Quant Associate Programme
+### MW-005  ·  `C` · qtrader · new_grad · online_assessment · previous iterations of the Quant Associate Programme
 
 [3 marks] You have a table of items containing three columns of length n. Columns A and B contain only integers, while Column C contains only strings, all of which are 6 characters long. ... You use 'quicksort' to sort column A. What is the average time complexity when sorting n elements?
 
@@ -2574,7 +2574,7 @@ We each take turns to roll a dice. Each time a number comes up which had not pre
 
 - [ ] remove
 
-### MW-006  ·  `C` · qresearcher · new_grad · onsite · previous iterations of the Quant Associate Programme
+### MW-006  ·  `C` · qtrader · new_grad · onsite · previous iterations of the Quant Associate Programme
 
 You are given an integer array cost where cost[i] is the cost of i th step on a staircase. Once you pay the cost, you can either climb one or two steps. You can either start from the step with index 0, or the step with index 1. Return the minimum cost to reach the top of the floor.
 
@@ -2585,7 +2585,7 @@ You are given an integer array cost where cost[i] is the cost of i th step on a 
 
 ## Virtu Financial  (6)
 
-### VIRTU-001  ·  `B` · unknown · unknown · phone_technical · interviewed March 2025
+### VIRTU-001  ·  `B` · qtrader · unknown · phone_technical · interviewed March 2025
 
 Length of every edge of a cube is twice as long. How much does the volume grow?
 
@@ -2593,7 +2593,7 @@ Length of every edge of a cube is twice as long. How much does the volume grow?
 
 - [ ] remove
 
-### VIRTU-002  ·  `B` · qresearcher · unknown · phone_technical · interviewed October 2025
+### VIRTU-002  ·  `B` · qtrader · unknown · phone_technical · interviewed October 2025
 
 What is the best way to get/estimate median from given number list with some statistics?
 
@@ -2601,7 +2601,7 @@ What is the best way to get/estimate median from given number list with some sta
 
 - [ ] remove
 
-### VIRTU-003  ·  `C` · qresearcher · unknown · phone_technical · 2024
+### VIRTU-003  ·  `C` · qtrader · unknown · phone_technical · 2024
 
 a probability puzzle consisting of chances of making a basket which is a function of the fraction of baskets made in the previous n-1 shots
 
@@ -2617,7 +2617,7 @@ How to make a market/how market-making trading works
 
 - [ ] remove
 
-### VIRTU-005  ·  `C` · qresearcher · unknown · phone_technical · 2024
+### VIRTU-005  ·  `C` · qtrader · unknown · phone_technical · 2024
 
 a coding screen where you are asked to replicate a simulation of a game, and the biggest challenge here is making sure you walk through all the logic and edge cases
 
@@ -2636,7 +2636,7 @@ Some questions about financial markets. Like who are market makers? Also some br
 
 ## Da Vinci Derivatives  (5)
 
-### DAVINCI-001  ·  `B` · qresearcher · internship · unknown · interviewed August 2024
+### DAVINCI-001  ·  `B` · qtrader · internship · unknown · interviewed August 2024
 
 you are tossing a dice and keeping track of the cumulative sum. what is the probability of ever getting total sum x(for x = 3,4). then asked for what value of x is this probability maximum.
 
@@ -2652,7 +2652,7 @@ rapid fire questions such as "What's your favorite color?", "What's 6 * 76?", mo
 
 - [ ] remove
 
-### DAVINCI-003  ·  `B` · qresearcher · internship · unknown · interviewed August 2024
+### DAVINCI-003  ·  `B` · qtrader · internship · unknown · interviewed August 2024
 
 4 cards on a table of value 10, 20, 30, 40 face down and shuffled. you can either pick card or get 25. how to max your score ? what is exp value of the game ?
 
@@ -2679,7 +2679,7 @@ What's your intuition about delta of an ATM option if the implied volatility to 
 
 ## Squarepoint Capital  (5)
 
-### SQP-001  ·  `B` · qanalyst · unknown · onsite · 2024
+### SQP-001  ·  `B` · qtrader · unknown · onsite · 2024
 
 Assumptions of linear regression, correlation can be negative intra-month but positive across a year, how?
 
@@ -2687,7 +2687,7 @@ Assumptions of linear regression, correlation can be negative intra-month but po
 
 - [ ] remove
 
-### SQP-002  ·  `C` · qanalyst · unknown · phone_technical · unknown
+### SQP-002  ·  `C` · qtrader · unknown · phone_technical · unknown
 
 python 八股:1. tuple Vs. list 2. pass by reference Vs. pass by value? 3. difference between is and ==?
 
@@ -2703,7 +2703,7 @@ What is the difference between multi-thread and multi-processing
 
 - [ ] remove
 
-### SQP-004  ·  `B` · qresearcher · internship · superday · 2025
+### SQP-004  ·  `B` · qtrader · internship · superday · 2025
 
 You are basically handed a dataset, and you are ask to both analyse it and construct a predictive model from it. After that, you present your result to a researcher for one hour.
 
@@ -2749,7 +2749,7 @@ you buy a near term expiry straddle and short a longer term expiry straddle, wha
 
 ## Balyasny Asset Management  (2)
 
-### BAM-001  ·  `B` · qresearcher · unknown · phone_technical · 2025
+### BAM-001  ·  `B` · qtrader · unknown · phone_technical · 2025
 
 a phone round asking probability brainteasers
 
@@ -2757,7 +2757,7 @@ a phone round asking probability brainteasers
 
 - [ ] remove
 
-### BAM-002  ·  `B` · unknown · internship · phone_technical · 2024
+### BAM-002  ·  `B` · qtrader · internship · phone_technical · 2024
 
 You have a biased coin that lands heads 60% of the time. How can you use it to simulate a fair coin flip?
 
@@ -2768,7 +2768,7 @@ You have a biased coin that lands heads 60% of the time. How can you use it to s
 
 ## Bridgewater Associates  (2)
 
-### BW-001  ·  `B` · unknown · internship · phone_technical · 2024
+### BW-001  ·  `B` · qtrader · internship · phone_technical · 2024
 
 It's a philosophical question. Is television damaging to society?
 
@@ -2861,7 +2861,7 @@ Two RVs following uniform[0,1]. What's the probability of the smaller RV is less
 
 ## Point72 / Cubist  (1)
 
-### P72-001  ·  `C` · qresearcher · unknown · phone_technical · 2026
+### P72-001  ·  `C` · qtrader · unknown · phone_technical · 2026
 
 linear regression. How do we estimate beta. When n >> p, how to find beta?
 

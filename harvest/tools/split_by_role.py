@@ -27,15 +27,15 @@ TIER = {"A": 0, "B": 1, "C": 2, "D": 3}
 TRACKS = {
     "quant_trader": (
         "QTRADER.md", "Quant trader questions",
-        "The trading track: probability, expected value, market making, mental arithmetic, "
-        "estimation and game theory. At SIG this track sits the same 17-question / 60-minute "
-        "maths paper as quant research, so the two sets are worth reading together.",
-    ),
-    "quant_researcher": (
-        "QRESEARCH.md", "Quant researcher questions",
-        "The research track: statistics, regression, stochastic processes, modelling and "
-        "data tasks. Overlaps heavily with the trader track at firms that run one paper for "
-        "both.",
+        "Everything that is not software: probability, expected value, market making, mental "
+        "arithmetic, estimation, game theory, statistics, regression and modelling.\n\n"
+        "This pool merges the former quant-trader, quant-researcher and quant-analyst sets. "
+        "The merge is defensible rather than merely tidy — SIG runs the *same* 17-question / "
+        "60-minute paper for trader and researcher candidates, so the real fault line in this "
+        "material is maths versus code, not trader versus researcher.\n\n"
+        "It also absorbs the questions whose source never stated a track, placed by reading "
+        "each one's topic. Those carry `role_inferred` in the JSON with a stated basis, so an "
+        "inference of mine is distinguishable from a label a candidate actually gave.",
     ),
     "quant_developer": (
         "QDEV.md", "Quant developer / software engineering questions",

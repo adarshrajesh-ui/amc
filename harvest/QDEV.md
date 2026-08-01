@@ -1,10 +1,10 @@
 # Quant developer / software engineering questions
 
-122 questions across 15 firms, out of the 346-question corpus.
+128 questions across 16 firms, out of the 346-question corpus.
 
 The developer and SWE tracks, a genuinely different assessment from the trading and research pipelines. This set is the largest because developer-track recall is shared far more freely, not because these firms mostly ask coding questions.
 
-**By level:** internship 74 · experienced 19 · unknown 19 · new_grad 10
+**By level:** internship 75 · unknown 23 · experienced 20 · new_grad 10
 
 Tier is sort order, not confirmation: A means multiple independent dated attestations, B a single dated full-text one, C weak or snippet-only, D provenance real but a negative signal fired. See `REPORT.md` §6.
 
@@ -691,7 +691,54 @@ Implement 一个connect four的游戏,区别在于新放进去球会掉在最底
 <sub>chat_telegram · 2022-09-19 · [source](https://t.me/usinterview/14711)</sub>
 
 
-## DRW  (5)
+## Citadel  (6)
+
+**1.** `B` · unknown · datathon · 2024
+
+In Python, which of the following gives the correct order, from first to last, of scope resolution? A. local function, enclosing function, global statements, built-in names B. local function, global statements, built-in names, enclosing function C. built-in names, global statements, local function, enclosing function D. built-in names, global statements, enclosing function, local function E. local function, global statements, enclosing function, built-in names
+
+*Reported answer:* 【参考答案】A
+
+<sub>blog · 2024-06-25 · [source](https://blog.csdn.net/dcdsc/article/details/139953481)</sub>
+
+**2.** `B` · unknown · datathon · 2024
+
+In Python, if you had to iteratively read over two files line-by-line, which of the following would be the BEST way to accomplish this task? A. Use with open () to open the two files as f1 and f2 then use readline() and a for loop to iteratively read lines from each file B. Use open () to open the two files as f1 and f2, then use readline() and a for loop to iteratively read lines from each file C. Use with open () to open the two files as f1 and f2, then use zip() to iterate over the two files together D. Use open () to open the two files as f1 and f2, then use zip() to iterate over the two files together E. Implement a file seek () function and call the function for the two files simultaneously
+
+*Reported answer:* 【参考答案】C
+
+<sub>blog · 2024-06-25 · [source](https://blog.csdn.net/dcdsc/article/details/139953481)</sub>
+
+**3.** `B` · unknown · datathon · 2024
+
+In Python, which of the following statements are true?: • I. The pipe module can be used to run shell commands in a program • Il. A pickle can store any Python object except tuples in string format • Ill. If you have a Python program called player.py, then you can import the module by running import player. py A. l and Il only B. I and Ill only C. Il and Ill only D. I, Il, and Ill E. None of A through D
+
+*Reported answer:* 【参考答案】E
+
+<sub>blog · 2024-06-25 · [source](https://blog.csdn.net/dcdsc/article/details/139953481)</sub>
+
+**4.** `B` · internship · online_assessment · unknown
+
+Given an nxn chess board, return the minimum number of knight moves it would take to get from point (a,b) to point(c,d)
+
+<sub>glassdoor · 2023-09-24 · [source](https://www.glassdoor.com/Interview/Citadel-Software-Engineering-Intern-Interview-Questions-EI_IE14937.0,7_KO8,35.htm)</sub>
+
+**5.** `D` · experienced · onsite · 2023
+
+2) C++ 函数 void func(int8_t i);void main() { int32_t x = 1; func(x); }会发生什么 ?
+
+*English:* 2) A C++ function void func(int8_t i); void main() { int32_t x = 1; func(x); } — what happens?
+
+<sub>chat_telegram · 2022-08-18 · [source](https://t.me/usinterview/14353)</sub>
+
+**6.** `D` · experienced · phone_technical · 2026
+
+Find all elements equal to K in a sorted array.
+
+<sub>chat_telegram · 2026-06-30 · [source](https://t.me/usinterview/28985)</sub>
+
+
+## DRW  (6)
 
 **1.** `B` · new_grad · online_assessment · unknown
 
@@ -717,11 +764,54 @@ You will have to download Amazon DCV Viewer and remote into an EC2 instance. You
 
 <sub>blind · 2025-02-05 · [source](https://www.teamblind.com/post/drw-senior-software-engineer-interview-2fu5tboo)</sub>
 
-**5.** `B` · unknown · take_home · unknown
+**5.** `B` · unknown · superday · unknown
+
+A graph problem at the on-site superday, described as quite difficult
+
+<sub>wso · 2020-09 · [source](https://www.wallstreetoasis.com/company/drw/interview/full-time)</sub>
+
+**6.** `B` · unknown · take_home · unknown
 
 Implement a game according to some specs. No test cases given
 
 <sub>glassdoor · 2025-05-22 · [source](https://www.glassdoor.com/Interview/DRW-Interview-Questions-E235115.htm)</sub>
+
+
+## Optiver  (5)
+
+**1.** `D` · experienced · online_assessment · 2025
+
+Given a two-dimensional character matrix, create a function that identifies how many times the sequence "OPTIVER" appears. Matches can be found in straight lin
+
+<sub>chat_telegram · 2025-06-10 · [source](https://t.me/usinterview/23610)</sub>
+
+**2.** `D` · experienced · online_assessment · 2026
+
+design a news subscription process engine两个小时
+
+*English:* Design a news subscription process engine. Two hours.
+
+<sub>chat_telegram · 2026-07-27 · [source](https://t.me/usinterview/29070)</sub>
+
+**3.** `D` · experienced · phone_technical · 2025
+
+Design a queue,discuss the performance tradeoff.
+
+<sub>chat_telegram · 2025-08-08 · [source](https://t.me/usinterview/24673)</sub>
+
+**4.** `D` · experienced · phone_technical · 2024
+
+design 一个class提供四个api,带on的都是callback 用来update internal data structure。最后一
+
+*English:* Design a class exposing four APIs; the ones prefixed with "on" are callbacks used to update the internal data structure. The last...
+
+<sub>chat_telegram · 2024-10-25 · [source](https://t.me/usinterview/20082)</sub>
+
+**5.** `D` · experienced · phone_technical · 2025
+
+An array of 1000 integers of 0-1000000,how many bytes does it require to store?
+
+<sub>chat_telegram · 2024-12-12 · [source](https://t.me/usinterview/20685)</sub>
 
 
 ## Two Sigma  (5)
@@ -755,58 +845,6 @@ How do you pick random objects given weights?
 A LeetCode-hard equivalent coding problem in the one-on-one round
 
 <sub>wso · 2025-02 · [source](https://www.wallstreetoasis.com/company/two-sigma-investments/interview/software-engineering-intern-1)</sub>
-
-
-## Optiver  (4)
-
-**1.** `D` · experienced · online_assessment · 2025
-
-Given a two-dimensional character matrix, create a function that identifies how many times the sequence "OPTIVER" appears. Matches can be found in straight lin
-
-<sub>chat_telegram · 2025-06-10 · [source](https://t.me/usinterview/23610)</sub>
-
-**2.** `D` · experienced · online_assessment · 2026
-
-design a news subscription process engine两个小时
-
-*English:* Design a news subscription process engine. Two hours.
-
-<sub>chat_telegram · 2026-07-27 · [source](https://t.me/usinterview/29070)</sub>
-
-**3.** `D` · experienced · phone_technical · 2025
-
-Design a queue,discuss the performance tradeoff.
-
-<sub>chat_telegram · 2025-08-08 · [source](https://t.me/usinterview/24673)</sub>
-
-**4.** `D` · experienced · phone_technical · 2025
-
-An array of 1000 integers of 0-1000000,how many bytes does it require to store?
-
-<sub>chat_telegram · 2024-12-12 · [source](https://t.me/usinterview/20685)</sub>
-
-
-## Citadel  (3)
-
-**1.** `B` · internship · online_assessment · unknown
-
-Given an nxn chess board, return the minimum number of knight moves it would take to get from point (a,b) to point(c,d)
-
-<sub>glassdoor · 2023-09-24 · [source](https://www.glassdoor.com/Interview/Citadel-Software-Engineering-Intern-Interview-Questions-EI_IE14937.0,7_KO8,35.htm)</sub>
-
-**2.** `D` · experienced · onsite · 2023
-
-2) C++ 函数 void func(int8_t i);void main() { int32_t x = 1; func(x); }会发生什么 ?
-
-*English:* 2) A C++ function void func(int8_t i); void main() { int32_t x = 1; func(x); } — what happens?
-
-<sub>chat_telegram · 2022-08-18 · [source](https://t.me/usinterview/14353)</sub>
-
-**3.** `D` · experienced · phone_technical · 2026
-
-Find all elements equal to K in a sorted array.
-
-<sub>chat_telegram · 2026-06-30 · [source](https://t.me/usinterview/28985)</sub>
 
 
 ## Bridgewater Associates  (1)
@@ -865,4 +903,13 @@ If day is a “Good” Day, [there] is a 60% chance that the next day will be �
 Given a random variable x, and a series of random varies y_1, y_2, ..., y_x, what is the expected sum of the random variables y_1 ... y_x given that x is drawn from a normal distribution with mean 10, and variance 500, and y from uniform on the interval 0, 1. I think there was some speciication that if x is negative, we re draw x, but I'm not a 100% sure.
 
 <sub>interview_review_site · 2016-11-07 · [source](https://www.wallstreetoasis.com/company/tibra-capital/interview)</sub>
+
+
+## Tower Research Capital  (1)
+
+**1.** `B` · internship · onsite · interviewed 2012
+
+How do you find two numbers in an array that sum to x?
+
+<sub>interview_review_site · 2012-11-22 · [source](https://www.wallstreetoasis.com/company/tower-research-capital/interview)</sub>
 
